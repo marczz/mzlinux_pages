@@ -1,0 +1,305 @@
+<!--
+.. description:
+.. date: 2014-07-31
+.. slug: netconf
+.. tags:
+.. link:
+.. book: mzlinux
+.. title: Network Configuration
+-->
+
+[TOC]
+
+
+See also at readthedocs _not yet_
+[Unix Memo](http://unix-memo.readthedocs.org/en/latest/):
+[Network Commands Memo
+](http://unix-memo.readthedocs.org/en/latest/net_commands.html)
+[Wpa Supplicant
+](http://unix-memo.readthedocs.org/en/latest/wpa.html),
+[Network Manager Memo
+](http://unix-memo.readthedocs.org/en/latest/commands.html#network-manager)
+
+See also [VPN](/node/vpn "internal reference").
+
+# How to manage your network
+
+To manage your network connections, and peculiarly the wireless
+connections, you have to choose between to paths.
+
+-   The legacy script way, using the basic driver, route and wireless
+    tools to do configuration, report, and management of the
+    network. It is used by the *ifup/ifdown* script, or also by the
+    new _netctl_. If you follow this path you can benefit from many
+    helpers like _guessnet_ or the many _wpa_supplicant_ clients. It
+    can aloow you to finely tune-up your configuration to automatize
+    most of the process following your particular needs, and
+    environment.
+-   The network manager way, that aleviate the task of programming the
+    scripts configuration.  The managers detect every change in your
+    network environment, and let you choose among the available
+    networks, and can either auto-connect to private network if you
+    have registered the proper authentication data, or propose you to
+    fill it through a Gui.
+
+The choice between the two ways of configuring your network is not
+easy, the network manager way is the easier, that makes it the primary
+choice for people that cannot, or does not want to write a complex
+configuration.  But these managers, and still more the graphical
+interface are heavy not appropriate for headless machines. There is a
+total lack of portability of the registered data from one piece of
+software to another one, and even moving the configuration from one
+machine to another one with the same software, is possible, but not
+clearly proposed.
+
+Using the legacy scripts allow you to finely tweak your
+configuration. On my laptop I say _If there is an ethernet link and
+you can join by arp one of these servers, use this configuration,
+otherwise if you join this other ...._ And when I am inan environment
+that I use to meet, my configuration is completely automatic. I can
+not achieve that with these network managers.  On the other hand
+configuring, by hand, a new network, will require a true proficiency
+and knowledge of many networking tools. Even when you use to find it
+easy, after a pause of some months, you begin again to do mistakes. So
+when in a new situation, that you meet only once or few times, the
+network manager way is easier, if you accept the cost.
+
+So you may end up wanting to use combine both. but it is difficult,
+the configuration are completely distinct, the change you do in one
+place is not reflected in the other one.  Worse when two management
+tools compete to control a driver, they can produce an unusable
+network.  When trying to make my _ifup/down_ an network-manager
+collaborate, I get contradictory routes, and have no more
+connectivity. So I choose to keep both but to have only one enabled,
+usually the script way, and when roaming, and I don't feel to plunge
+in the gears of the wireless extension and tools, I switch to a
+manager.
+
+# Network management references
+
+-   [ArchWiki: Network Configuration
+    ](https://wiki.archlinux.org/index.php/Network_configuration)
+-   [ArchWiki: Android tethering
+    ](https://wiki.archlinux.org/index.php/Android_tethering)
+-   [Debian Reference: Network setup
+    ](http://www.debian.org/doc/manuals/reference/ch05.en.html).
+-   [Debian Wiki: Network Configuration
+    ](http://wiki.debian.org/NetworkConfiguration).
+-   [Debian Wiki: How to use a WiFi interface
+    ](https://wiki.debian.org/WiFi/HowToUse)
+
+# Network management Tools
+
+-   [connman](http://connman.net/) is a light daemon for managing
+    Internet connections within embedded Linux devices.
+    It can be controled by a command-line front-end, by menu
+    indicators, or a gtk frontend.<br />
+    Note that the Debian (sid) package is (as 2013) very outdated, and
+    barely usable and does not includes any frontend.
+    -   [git.kernel.org: connman
+        ](http://git.kernel.org/cgit/network/connman/connman.git/tree)
+    -   [GitHub: connman-deb](https://github.com/pfl/connman-deb)
+        unofficial packaging of the last connman.
+    -   [ArchLinux: connman
+        ](https://wiki.archlinux.org/index.php/Connman)
+    -   [Ubuntu Wiki:connman](https://wiki.ubuntu.com/ConnMan)
+    -   [UnbuntuGeeks: Connection Manager (ConnMan)
+        ](http://www.ubuntugeek.com/connection-manager-connman-managing-internet-connections-in-linux.html)
+-   [Guessnet](http://guessnet.alioth.debian.org/) is a network
+    detection tool to use when moving a machine among networks which
+    don't necessarily provide DHCP.
+-   [w:Wicd] (GPL): [Wicd Home](http://wicd.sourceforge.net/)
+    is a python network manager. there is a python-GTK client,
+    as well as command-line and an ncurses clients. Wicd
+    has no gnome dependency. It uses
+    wpa-supplicant
+    to manage wireless connections. Wicd being a python daemon is not
+    slim 13M/3M shared for the daemon, 10M/4M for the monitor.
+    -   [ArchLinux: Wicd](https://wiki.archlinux.org/index.php/Wicd)
+    -   [Debian Wiki: wicd usage](https://wiki.debian.org/WiFi/HowToUse#Wicd)
+-   [wifi-radar](http://wifi-radar.tuxfamily.org/) (GPL)
+    is a Python/PyGTK2  utility for managing WiFi profiles on GNU/Linux.
+-   [netctl](https://wiki.archlinux.org/index.php/Netctl)
+    is the standard networking management for Archlinux since it
+    switched to systemd.
+    [Git repo](https://projects.archlinux.org/netctl.git/tree/)
+    and [GitHub mirror](https://github.com/joukewitteveen/netctl)
+-   **wpa_gui**  is a graphical frontend for *wpa_supplicant*
+    using the *qt4* toolkit. It belongs to the
+    [kernel.org WPA supplicant software
+    ](http://wireless.kernel.org/en/users/Documentation/wpa_supplicant).
+    *wpa_gui* can report network scanning, choose an AP, and fill in
+    the *wpa_supplicant* configuration.  It has a footprint of 20M
+    resident/17M shared.
+
+# Systemd-networkd
+
+From the [Manual
+](https://www.freedesktop.org/software/systemd/man/systemd-networkd.service.html)
+_systemd-networkd is a system service that manages networks. It
+detects and configures network devices as they appear, as well as
+creating virtual network devices.
+
+Networks are configured in .network files, see [systemd.network
+](https://www.freedesktop.org/software/systemd/man/systemd.network.html)
+and virtual network devices are configured in .netdev files, see
+[/systemd.netdev
+](https://www.freedesktop.org/software/systemd/man/systemd.netdev.html)
+
+You can use it instead of the _ifupdown_ scripts and Network manager.
+
+You don't have to install anything, it is included in  systemd
+since July 2014, systemd version 215.
+
+-   [ArchWiki: systemd-networkd
+    ](https://wiki.archlinux.org/index.php/Systemd-networkd)
+    is an extensive howto on the configuration and use of
+    _systemd-networkd_.
+
+There are many tutorial to explain how to switch in Debian from
+[Network-Manager](#network-manager "internal reference")
+to _systemd-networkd_:
+
+-   [How to switch from NetworkManager to systemd-networkd on Linux
+    ](http://xmodulo.com/switch-from-networkmanager-to-systemd-networkd.html)
+    a Xmodulo tutorial.
+-   [Using systemd-networkd to work your net
+    ](https://www.redpill-linpro.com/techblog/2016/08/17/systemd-network.html)
+    on Redpill Linpro Blog.
+-   [Systemd based network setup on Debian Edu jessie workstations
+    ](https://sunweavers.net/blog/node/34) in  sunweaver's blog.
+-   [Switching to systemd-networkd
+    ](https://www.joachim-breitner.de/blog/664-Switching_to_systemd-networkd)
+    in Joachim Breitner's Blog.
+-   [systemd-networkd reseau filaire
+    ](https://debian-facile.org/doc:reseau:systemd:network)
+    a _Debian Facile_ tutorial.
+
+
+# Network Manager {#network-manager}
+
+See at readthedocs _not yet_
+[nm memo
+](http://unix-memo.readthedocs.org/en/latest/commands.html#network-manager)
+
+[w:NetworkManager] ( GPL) is a networking configuration daemon
+which try to provide a painless and automatic network setup. It is
+part of the gnome project but communicate thru dbus and has no gnome
+dependencies by itself. The gnome front-end add some more dependencies.
+In Debian you can install `gnome-network-manager` with few package
+dependencies if you disable all _recommended_ packages.
+Otherwise you will pull all the gnome desktop.<br />
+NetworkManager by itself is a small daemon 6M/4M shared, nm-applet add
+16M/12M shared and can fit in any systray, like the built-in systray
+in fluxbox.
+
+-   [NetworkManager Home](http://projects.gnome.org/NetworkManager/)
+-   [Network Manager Wiki
+    ](https://wiki.gnome.org/Projects/NetworkManager) references
+    all the official man pages and documents. _But pages moves and
+    many links are broken in the gnome wiki._
+    -   [Network Manager Configuration plugins
+        ](https://wiki.gnome.org/Projects/NetworkManager/SystemSettings)
+    -   [Network Manager System Setting
+        ](https://wiki.gnome.org/Projects/NetworkManager/SystemSettings/jessie)
+-   [ArchWiki: Network Manager
+    ](https://wiki.archlinux.org/index.php/Network_manager)
+    is the most complete page on _nm_ settings.
+    It includes a [Command line section
+    ](https://wiki.archlinux.org/index.php/NetworkManager#Command_line)
+    with _nmcli_, _nmtui_, _nmcli-dmenu_.
+-   [Debian Wiki: Network Configuration
+    ](https://wiki.debian.org/NetworkConfiguration)
+-   [Debian Wiki: Network Manager
+    ](http://wiki.debian.org/NetworkManager)
+-   [Ubuntu community help: NetworkManager
+    ](https://help.ubuntu.com/community/NetworkManager),
+    [Roaming Profiles With NetworkManager
+    ](https://help.ubuntu.com/community/RoamingProfilesWithNetworkManager).
+-   [Fedora: Network Manager
+    ](https://fedoraproject.org/wiki/Tools/NetworkManager)
+-   [Gentoo: Network Manager
+    ](https://wiki.gentoo.org/wiki/NetworkManager)
+-   [nmcli
+    ](http://fedoraproject.org/wiki/Features/NetworkManagerCmdline)
+    is a command line client included in Network Manager since
+    version 0.8.0
+-   [Red Hat Networking Guide: Using nmcli
+    ](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Networking_Guide/sec-Using_the_NetworkManager_Command_Line_Tool_nmcli.html)
+-   In recent releases _greater than 0.9.10_ you find also a ncurses
+    client _nmtui_ wich allows to connect/disconnect, choose
+    connections and edit them.
+-   [cnetworkmanager](http://vidner.net/martin/software/cnetworkmanager/)
+    (GPL) is a Python command line client for network manager, it
+    is no more developed since 2009 and no more in Debian. The
+    author Martin Vidner
+    [does not intend to develop it any more
+    ](http://gnome-networkmanager.2324886.n4.nabble.com/Migrating-from-cnetworkmanager-to-nmcli-td5841.html)
+    and encourage us to
+    [migrate to nmcli
+    ](http://repo.or.cz/w/cnetworkmanager.git/blob_plain/HEAD:/nmcli-migration.html).
+-   [networkmanager-dmenu
+    ](https://github.com/firecat53/networkmanager-dmenu)
+    is a python script to control network manager with
+    [dmenu](#dmenu "internal reference"), it can
+    also be used with [rofi](#rofi "internal reference").
+
+# Low level Wireless Tools
+
+-   [Linux Wireless LAN Howto
+    ](http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/Wireless.html)
+    _(2007)_
+    wireless LAN resources for Linux from Jean Tourrilhes [
+    [Wireless LANs in use
+    ](http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/Linux.Wireless.usage.html),
+    [Wireless Extensions for Linux
+    ](http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/Linux.Wireless.Extensions.html),
+    [Wireless LAN technology overview
+    ](http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/Linux.Wireless.Overview.html),
+    [Wireless Tools
+    ](http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/Tools.html)
+    ]
+-   [Linux Wireless Networking
+    ](http://www.linuxhomenetworking.com/linux-hn/wmp11-linux.htm)
+    chapter 13 of
+    [Linux Home Networking](http://www.linuxhomenetworking.com/#Linux)
+-   [Wireless Security](http://www.linux-wireless.org/) (sniffers,
+    standards, encryption, drivers, Access Point, WPA, antenna,
+    connectors) *Not updated since 2005*
+-   [Debian Wiki: Wifi](https://wiki.debian.org/WiFi)
+-   A [Wireless Distribution System (Wikipedia)
+    ](http://en.wikipedia.org/wiki/Wireless_Distribution_System)
+    enables the interconnection of access points wirelessly, openWRT
+    support a
+    [WDS configuration
+    ](http://wiki.openwrt.org/OpenWrtDocs/Configuration).
+-   [Debian Wiki: WiFi AdHoc](http://wiki.debian.org/WiFi/AdHoc)
+    describes how to establish a decentralized WiFi network without
+    access point.  see also Wikipedia: [w:Wireless ad hoc network]
+-   Wikipedia: [w:Wireless intrusion prevention system].
+-   [hostapd](http://hostap.epitest.fi/hostapd/)
+    (GPL and BSD): IEEE 802.11 AP, IEEE 802.1X/WPA/WPA2/EAP/RADIUS
+    Authenticator with dynamic TKIP/CCMP keying, that run on
+    Prism2/2.5/3, madwifi (Atheros ar521x), Prism54.org (Prism
+    GT/Duette/Indigo)
+
+
+
+# wifi analyzers
+
+-   [Kismet](http://www.kismetwireless.net/)
+    is an 802.11 layer2 wireless network detector, sniffer, and
+    intrusion detection system.
+-   [Horst
+    ](http://br1.einfach.org/gitweb?p=horst;a=blob;f=README;hb=HEAD)
+    is a scanning and analysis tool for IEEE802.11 wireless ad-hoc
+    networks and the OLSR mesh routing protocol.
+-   [aircrack-ng](http://www.aircrack-ng.org/doku.php)
+    an 802.11 WEP and WPA-PSK keys cracking program and set of tools
+    for auditing wireless networks.
+
+
+<!-- Local Variables: -->
+<!-- mode: markdown -->
+<!-- ispell-local-dictionary: "english" -->
+<!-- End: -->
