@@ -956,14 +956,15 @@ support: submodules, subtrees, and wrappers they are compared in
 
 
 ## git-submodule
--   [Git Submodule Tutorial
-    ](https://git.wiki.kernel.org/index.php/GitSubmoduleTutorial)
+-   [Git Submodule Tutorial](https://git.wiki.kernel.org/index.php/GitSubmoduleTutorial)
+    _2012_.
 -   [git-submodules(1)
     ](https://www.kernel.org/pub/software/scm/git/docs/git-submodule.html)
 -   [Git user manual: submodules
     ](http://www.kernel.org/pub/software/scm/git/docs/user-manual.html#submodules)
--   [GitHub Help: Working with submodules](http://help.github.com/submodules/)
 -   [Pro Git: Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
+-   [Lars Vogel: Using submodules in Git](https://www.vogella.com/tutorials/GitSubmodules/article.html)
+-   [GitHub Help: Working with submodules](http://help.github.com/submodules/)
 
 We need to avoid [Submodules Gotchas
 ](https://git.wiki.kernel.org/index.php/GitSubmoduleTutorial#Gotchas)
@@ -972,8 +973,8 @@ publishing the change to the superproject that references it or you
 won’t be able to clone the repository as shown in
 [Pitfalls with submodules
 ](https://www.kernel.org/pub/software/scm/git/docs/user-manual.html#_pitfalls_with_submodules)
-
-    [Issues with Submodules](http://progit.org/book/ch6-6.html#issues_with_submodules)
+and [Pro Git: Issues with Submodules
+](https://git-scm.com/book/en/v2/Git-Tools-Submodules_issues_with_submodules)
 
 ## Subtree merge
 A subtree merge is used to contain a repository in a folder within a
@@ -997,8 +998,11 @@ repository.
     ](http://scottwb.com/blog/2012/07/14/merge-git-repositories-and-preseve-commit-history/).
 
 ## git-subtree
+See also my
+[Git Subtree — Git Memo](https://git-memo.readthedocs.io/en/latest/subtree.html).
+
 -   [git-subtree
-    ](http://git.kernel.org/?p=git/git.git;a=blob;f=contrib/subtree/git-subtree.txt)
+    ](https://git.kernel.org/pub/scm/git/git.git/plain/contrib/subtree/git-subtree.txt)
     was first developed by Avery Pennarun and since april 2012 merged
     in git mainline and available in the contrib directory.
 -   [Understanding Git Subtree
@@ -1006,9 +1010,18 @@ repository.
 -   Jakub Suder's [Sharing code between projects with git subtree
     ](http://psionides.eu/2010/02/04/sharing-code-between-projects-with-git-subtree/)
      is a tutorial to git-subtree _2010_.
--   [Alternatives To Git Submodule: Git Subtree
-    ](http://blogs.atlassian.com/2013/05/alternatives-to-git-submodule-git-subtree/)
-    a git-subtree tutorial by  Nicola Paolucci _2013_.
+-   Nicola Paolucci wrote [Alternatives To Git Submodule: Git Subtree
+    ](https://www.atlassian.com/blog/git/alternatives-to-git-submodule-git-subtree)
+    _2013 updated 2017_ a git-subtree tutorial and [The power of Git subtree
+    ](https://developer.atlassian.com/blog/2015/05/the-power-of-git-subtree/)
+    _2015_.
+-   [Understanding Git Subtree - HPC @ Uni.lu
+    ](https://hpc.uni.lu/blog/2014/understanding-git-subtree/)
+    includes a comparison with git submodules.
+-   [Using Git subtrees for repository separation – Making Software
+    ](https://makingsoftware.wordpress.com/2013/02/16/using-git-subtrees-for-repository-separation/)
+    _2013_
+
 
 ## Other tools
 Some other tools to act on a group of repositories
