@@ -963,8 +963,13 @@ support: submodules, subtrees, and wrappers they are compared in
 -   [Git user manual: submodules
     ](http://www.kernel.org/pub/software/scm/git/docs/user-manual.html#submodules)
 -   [Pro Git: Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
--   [Lars Vogel: Using submodules in Git](https://www.vogella.com/tutorials/GitSubmodules/article.html)
+-   [Lars Vogel: Using submodules in Git
+    ](https://www.vogella.com/tutorials/GitSubmodules/article.html)
 -   [GitHub Help: Working with submodules](http://help.github.com/submodules/)
+-   [Mastering Git submodules – Christophe Porteneuve – Medium
+    ](https://medium.com/@porteneuve/mastering-git-submodules-34c65e940407)
+-   [Working with submodules - The GitHub Blog
+    ](https://github.blog/2016-02-01-working-with-submodules/)
 
 We need to avoid [Submodules Gotchas
 ](https://git.wiki.kernel.org/index.php/GitSubmoduleTutorial#Gotchas)
@@ -1015,6 +1020,12 @@ See also my
     _2013 updated 2017_ a git-subtree tutorial and [The power of Git subtree
     ](https://developer.atlassian.com/blog/2015/05/the-power-of-git-subtree/)
     _2015_.
+-   [git subtrees: a tutorial – Vinícius Baggio Fuentes – Medium
+    ](https://medium.com/@v/git-subtrees-a-tutorial-6ff568381844)
+-   [Mastering Git subtrees – Christophe Porteneuve – Medium
+    ](https://medium.com/@porteneuve/mastering-git-subtrees-943d29a798ec)
+-   [When to use git subtree? - Stack Overflow
+    ](https://stackoverflow.com/questions/32407634/when-to-use-git-subtree)
 -   [Understanding Git Subtree - HPC @ Uni.lu
     ](https://hpc.uni.lu/blog/2014/understanding-git-subtree/)
     includes a comparison with git submodules.
@@ -1022,6 +1033,15 @@ See also my
     ](https://makingsoftware.wordpress.com/2013/02/16/using-git-subtrees-for-repository-separation/)
     _2013_
 
+### comparisons with submodules
+-   [Handling Dependencies with Submodules and Subtrees - GitHub Cheatsheets
+    ](https://github.github.com/training-kit/downloads/submodule-vs-subtree-cheat-sheet/)
+-   [Git: submodules vs. subtrees - Andrey Nering
+    ](https://andrey.nering.com.br/2016/git-submodules-vs-subtrees/)
+-   [Differences between git submodule and subtree - Stack Overflow
+    ](https://stackoverflow.com/questions/31769820/differences-between-git-submodule-and-subtree)
+-   [Git Submodules vs Git Subtrees | Code Wins Arguments
+    ](https://codewinsarguments.co/2016/05/01/git-submodules-vs-git-subtrees/)
 
 ## Other tools
 Some other tools to act on a group of repositories
