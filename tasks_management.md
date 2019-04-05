@@ -97,8 +97,8 @@ not connected with ifttt. The premium plan is 25€ a year.
 
 # Tasks on linux desktop
 
-See also the sections [Org Mode](file:///node/org-mode/) and
-[Calendar and Address Book](file:///node/calendar)
+See also the sections [Org Mode](/node/org-mode/) and
+[Calendar and Address Book](/node/calendar)
 
 -   Wikipedia: [Comparison of note taking software
     ](https://en.wikipedia.org/wiki/Comparison_of_notetaking_software)

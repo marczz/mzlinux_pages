@@ -152,7 +152,7 @@ domains which are targeted by many packages.
         for emacs dictionary interface,
     -   [LaTeX](/node/latex "internal reference") for emacs latex interface.
 -   Other applications are in their own section you can find them by
-    [searching this site for <i>Emacs</i>](/search/node/emacs).
+    searching this site for <i>Emacs</i>.
 
 ## Emacs packaging, and configuration system.
 -   Emacs packaging is done thru

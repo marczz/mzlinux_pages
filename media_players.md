@@ -16,7 +16,6 @@ See also [Streaming](/node/streaming "internal reference"),
 [Video Edit](/node/video_edit  "internal reference"),
 
 -----
-<!-- previous /node/181 -->
 
 # References
 ## Sound
@@ -594,7 +593,7 @@ MikMod
 
 
 mpd text clients
-:  [mpd](/node/#mpd "internal reference") can be controlled by text clients
+:  [mpd](#mpd "internal reference") can be controlled by text clients
    like mpc, ncmpc, bash mp; they are referenced in the
    [mpd section](#mpd "internal reference").
 
@@ -931,10 +930,9 @@ To use bookmarks in mpd we can use
 
 
 # Video Players {#video_players}
-<!-- previous /node/166 -->
 
 All
-[UPnP media clients](/node/streaming#upnp_media_clients "internal rreference"),
+[UPnP media clients](/node/streaming#upnp_media_clients "internal reference"),
 all [media centers](#media_centers "internal link"),
 and many of the
 [Music Streamers](/node/streaming "internal reference")
@@ -1196,7 +1194,7 @@ Other control tools are:
     interactively at the console or terminal with an ncurses-based
     interface, or with a X11 interface named **aumix-X11**.
 
-amixer, alsamixer from [alsa][/node/sound_libs#alsa] utilities.
+amixer, alsamixer from [alsa](/node/sound_libs#alsa) utilities.
 :   amixer is the alsa text based mixer
 
     refs: [amixer(1)
@@ -1216,7 +1214,7 @@ amixer, alsamixer from [alsa][/node/sound_libs#alsa] utilities.
     ](http://jonatkins.org/SDL_mixer/SDL_mixer.html)
 
 # Media centers and distributions {#media_centers}
-<!-- previous /node/411 -->
+
 [freevo](http://freevo.sourceforge.net/)
 :   A linux distribution for multimedia either on a standalone PVR
     computer with a TV+remote, as well as on a regular desktop computer

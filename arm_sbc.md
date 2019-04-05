@@ -944,7 +944,7 @@ and optional USB or cloud backup
     -   [my raspberry RPI Monitor](http://192.168.1.8:8888/)
     Rpimonitord uses 3 daemons processes in perl 7.6M/1.9M 6.8M/1.5M
     6.6M/1.2M ~ $7.6 + 6.8 - 1.5 + 6.6 - 1.2 => 18.3  $
--   [mzlinux:/node/monitoring#conky|conky] can be used with raspberry.
+-   [conky](/node/monitoring#conky) can be used with raspberry.
     [Conky for the Raspberry Pi
     ](http://jeffskinnerbox.me/posts/2012/Nov/02/conky-for-the-raspberry-pi/)
 -   [w:Raspcontrol]

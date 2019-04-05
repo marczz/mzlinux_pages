@@ -367,7 +367,7 @@ Wikipedia has a [w:Pulseaudio] page.
         using streamripper. It is in Debian.
     -   _Icecast_ can be used to [stream with MPD
         ](https://wiki.archlinux.org/index.php/Icecast#Streaming_with_MPD),
-        but [MPD](#/node/media_players#MPD "internal reference")
+        but [MPD](/node/media_players#MPD "internal reference")
         has its [own HTTP streaming server
         ](https://wiki.archlinux.org/index.php/Music_Player_Daemon/Tips_and_tricks#HTTP_streaming).
 -   <a name="jinzora"></a>[Jinzora

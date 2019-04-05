@@ -46,8 +46,8 @@ area
 
 
 Basic network monitoring tools like _netstat_, _nmap_, _iptraf_,
-_tracepath_, _traceroute_, _mtr_ are in the section [IP
-Tools](http://www.mzlinux.org/node/ip_tools/ "Internal reference").
+_tracepath_, _traceroute_, _mtr_ are in the section
+[IP Tools](/node/ip_tools/ "Internal reference").
 
 
 [conky](http://conky.sourceforge.net/) (GPL) <a name="conky"></a>
@@ -57,7 +57,7 @@ Tools](http://www.mzlinux.org/node/ip_tools/ "Internal reference").
     system but also from running daemons like cupsd, mpd, xmm2,
     audacious
 
-    In Debian there is thre packages:
+    In Debian there is three packages:
 
     -   The basic _conky-cli_ useful in servers or piped with
         [dzen2](/node/desktop#dzen "internal reference") it includes

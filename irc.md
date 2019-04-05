@@ -130,7 +130,7 @@ and also available in the help of most clients.
     online [EPIC Help Pages](http://help.epicsol.org)
 -   <a name=irssi></a>[irssi](https://irssi.org/)
     is a terminal based IRC client for UNIX systems. It also supports
-    [OTR](#/node/xmpp#otr "internal reference")
+    [OTR](/node/xmpp#otr "internal reference")
     with [Irsii-OTR](https://github.com/cryptodotis/irssi-otr/)
     _in Debian_, FISH and alternate  protocols ( XMPP, SILC, ICB,
     [RobustIRC](robustirc.net)) via

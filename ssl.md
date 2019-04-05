@@ -15,13 +15,9 @@
 This Page is on Transport Layer Security (TLS) and its predecessor,
 Secure Sockets Layer (SSL) they provides endpoint authentication
 and communications privacy using cryptography. See also
-<!-- [Gnu privacy Guard (GPG) and PGP page](/node/ "internal
-reference"),
--->
-[SSH](/node/ssh "internal reference"),
-<!--[Javascript encryption libraries](/node/107#js_encrypt "internal
---reference")
--->
+[Gnu privacy Guard (GPG) and PGP page of my Unix Memo
+](https://unix-memo.readthedocs.io/en/latest/gnupg.html) and the
+[SSH page](https://unix-memo.readthedocs.io/en/latest/ssh.html).
 
 -   [w:Transport Layer Security],
     [w:Symmetric-key cryptography],

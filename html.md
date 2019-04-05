@@ -338,7 +338,7 @@ pr  esentations.
 -   [pandoc](http://johnmacfarlane.net/pandoc/)
     can produce html5 and dzslides from markdown or restructured text.
     from markdown and (subsets of) reStructuredText, HTML, and LaTeX
--   [Slides with Org Mode](/node/#org-mode#org-mode_slides "internal reference")
+-   [Slides with Org Mode](/node/org-mode#org-mode_slides "internal reference")
      explains how you can produce html5 or S5 slides with org-mode.
 -   [remark](https://github.com/gnab/remark) (MIT license)
     is a javascript, in-browser, markdown slideshow.

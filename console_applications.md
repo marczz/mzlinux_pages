@@ -98,7 +98,7 @@ in this site, you can make a search to find the appropriate page.
   It is similar to top, but allows to scroll the list vertically and horizontally to see all processes and their full command lines.
   Tasks related to processes (killing,  renicing)  can  be  done with keyboards shortcuts
 
-[links2]((http://atrey.karlin.mff.cuni.cz/~clock/twibright/links/)
+[links2](http://atrey.karlin.mff.cuni.cz/~clock/twibright/links/)
 : browser that can work in text mode, or graphic mode with X11, fb or
   framebuffer. See [Browsers
   ](/node/browsers "internal reference").
@@ -149,7 +149,7 @@ See also [Framebuffers Terminals
 : image viewer for framebuffer console.
   part of the [fbida](http://linux.bytesex.org/fbida/) suite
 
-[fbpdf]((/node/ps_pdf_djvu#fbpdf "internal reference")
+[fbpdf](/node/ps_pdf_djvu#fbpdf "internal reference")
 : A small framebuffer pdf viewer based on MuPdf.
 
 [fim](http://www.autistici.org/dezperado/)

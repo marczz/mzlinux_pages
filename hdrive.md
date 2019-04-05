@@ -394,9 +394,6 @@ the count reaches about 250 million or low level disk format.
 
 # Hard Disk spindown {#hd_spindown}
 
-See also the related [Power Management page
-](http://mzlinux/node/149 "local reference")
-where you find reference on `/proc/sys/vm/` kernel parameters.
 
 -   [spin down USB Hard disk
     ](http://www.nslu2-linux.org/wiki/FAQ/SpinDownUSBHarddisks)

@@ -508,10 +508,10 @@ support includes
     [Mattermost](/node/social_networks#mattermost "internal reference")
     server
 -   [slack-libpurple](https://github.com/dylex/slack-libpurple)
-    for access to [Slack](/node/slack#mattermost "internal reference")
+    for access to [Slack](/node/social_networks#slack "internal reference")
 -   [purple-rocketchat
     ](https://bitbucket.org/EionRobb/purple-rocketchat)
-    for [Rocket.Chat]](/node/slack#rocketchat "internal reference").
+    for [Rocket.Chat](/node/social_networks#rocketchat "internal reference").
 -   [whatsapp-purple](https://github.com/davidgfnet/whatsapp-purple/)
     for [WhatsApp](#whatsapp "internal reference").
 -   [puprle-facebook](https://github.com/dequis/purple-facebook).

@@ -218,7 +218,7 @@ or as __extlinux__ from ext2/3fs _but not ext4_.
 
 ## /dev/console
 -   For post booting configuration of the linux console terminal go to
-    [Console configuration](http://mzlinux/node/console "Internal reference")
+    [Console configuration](/node/console "Internal reference")
 -   At boot the console is set by default to `/dev/tty0` but can be
     changed by setting *optionally multiple* console device in a kernel
     boot option `console={device,options }*`.
