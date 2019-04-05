@@ -1,21 +1,15 @@
-<!--
-.. description:
-.. date: 2014-08-17
-.. slug: ffmpeg
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: FFmpeg and Libav
--->
+---
+title: FFmpeg and Libav
+---
 
-[TOC]
+{{% toc /%}}
 
 ------
 
 # References
 
-There are two forks of [w:FFmpeg], [w:FFmpeg] itself and and
-[w:Libav]. Most distributions like _Debian_ and _Ubuntu_ after the fork
+There are two forks of {{< wp "FFmpeg" >}}, {{< wp "FFmpeg" >}} itself and and
+{{< wp "Libav" >}}. Most distributions like _Debian_ and _Ubuntu_ after the fork
 switched to _libav_ before comming back in july 2015 to _ffmeg_; while
 _Gentoo_ offer both and _Archlinux_ never adopted _libav_ and stick to _FFmpeg_.
 
@@ -59,7 +53,7 @@ The following references can be used for both projects.
     ](http://howto-pages.org/ffmpeg/) by Howard Pritchett _2012_.
 -   [Jetson/H264 Codec - eLinux.org](https://elinux.org/Jetson/H264_Codec)
     gives examples of playing and recording
-    [H264](/node/codecs#H264 "internal reference") from ffmpeg.
+    {{< iref "codecs#H264" "H264" >}} from ffmpeg.
 -   [Convert videos to MP4 format using ffmpeg
     ](https://www.bugcodemaster.com/article/convert-videos-mp4-format-using-ffmpeg) and
     [Convert videos to MP4 format using ffmpeg

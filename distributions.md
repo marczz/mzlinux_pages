@@ -1,17 +1,10 @@
-<!--
-.. description:
-.. date: 2015-06-17
-.. slug: distributions
-.. tags:
-.. link:
-.. title: Linux Distributions
-.. book: mzlinux
--->
+---
+title: Linux Distributions
+---
 
-[TOC]
+{{% toc /%}}
 
-See also the  [Lightweight Linuxes
-](/node/lightweight_distributions  "internal reference") section.
+See also the  {{< iref "lightweight_distributions" "Lightweight Linuxes" >}} section.
 
 A full state of distributions is given in
 [DistroWatch](http://distrowatch.com).
@@ -57,7 +50,7 @@ A full state of distributions is given in
 -   [Pepermint Linux OS](https://en.wikipedia.org/wiki/Peppermint_Linux_OS)
     is a cloud-centric OS based on Lubuntu, with LXDE as default user interface.  It
     creates a hybrid desktop that integrates both cloud and local application.  It
-    provides [w:Site-Specific Browsers] or SSBs. Essentially many modern web
+    provides {{< wp "Site-Specific Browsers" >}} or SSBs. Essentially many modern web
     applications offer much advanced functionality and SSBs allow these apps to be more
     directly integrated with the desktop. Ice now supports SSB's through four web
     browsers, Chrome, Chromium, Firefox, and Vivaldi. The
@@ -67,7 +60,7 @@ A full state of distributions is given in
 
 # Debian derivatives
 _See the also sections:
-[Debian administration](/node/debian_admin  "internal reference") and
+{{< iref "debian_admin" "Debian administration" >}} and
 [Package management
 ](node/debian_admin#package_management "internal reference").
 
@@ -123,7 +116,7 @@ allows to create your own customized Debian Live system.
     standard Debian Live image.
 
 # Gentoo
-<!-- See the [Portage Notes](/node/portage_notes "internal reference") the
+<!-- See the {{< iref "portage_notes" "Portage Notes" >}} the
     Gentoo packaging system.-->
 
 -   [Gentoo](http://www.gentoo.org/),
@@ -186,7 +179,7 @@ allows to create your own customized Debian Live system.
 
 # minor dists
 
--   [w:Solus] is a desktop operating system based on the Linux kernel.
+-   {{< wp "Solus" >}} is a desktop operating system based on the Linux kernel.
     -   [Solus Home](https://solus-project.com/)
 -   [NixOs](https://nixos.org/)
     is a Linux distribution built on top of the

@@ -1,23 +1,13 @@
-<!--
-.. description:
-.. date: 2015-09-30
-.. slug: package_dev
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Debian package Developement
--->
+---
+title: Debian package Developement
+---
 
-[TOC]
+{{% toc /%}}
 
-See also [Debian administration
-](/node/debian_admin "internal reference") subsections:
-[Package management
-](/node/debian_admin#package_management "internal reference"),
-[Package Repositories
-](/node/debian_admin#package_repository "internal reference"),
-[Apt Pinning
-](/node/debian_admin#apt_pinning "internal reference").
+See also {{< iref "debian_admin" "Debian administration" >}} subsections:
+{{< iref "debian_admin#package_management" "Package management" >}},
+{{< iref "debian_admin#package_repository" "Package Repositories" >}},
+{{< iref "debian_admin#apt_pinning" "Apt Pinning" >}}.
 
 
 # Package Building
@@ -200,9 +190,8 @@ git-buildpackage is a tool suite to help with Debian packages in Git repositorie
 
 # Backporting
 
-See main section [Debian administration
-](/node/debian_admin "internal reference") :
-[Backports](/node/debian_admin#backports  "internal reference").
+See main section {{< iref "debian_admin" "Debian administration" >}} :
+{{< iref "debian_admin#backports" "Backports" >}}.
 
 
 -   [Debian Wiki: Simple Backport creation

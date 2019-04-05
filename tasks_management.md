@@ -1,20 +1,14 @@
-<!--
-.. description:
-.. date: 2011-05-29
-.. slug: tasks_management
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Tasks Management
--->
+---
+title: Tasks Management
+---
 
-[TOC]
+{{% toc /%}}
 
 ----
 
-See also [Documents management](/node/documents "internal reference")
+See also {{< iref "documents" "Documents management" >}}
 and the section
-[Read List](/node/documents#read-list "internal reference").
+{{< iref "documents#read" "Read List" >}}.
 
 # GTD
 
@@ -67,7 +61,7 @@ not connected with ifttt. The premium plan is 25€ a year.
 
 ## Other online services
 
--   [w:evernote] is a proprietary service/application to store notes,
+-   {{< wp "evernote" >}} is a proprietary service/application to store notes,
     images and all kind of information. The basic plan is of free use.
     It supports search and tagging and you can sync everything between
     computers. Evernote supports mobile devices too like Android It has
@@ -76,7 +70,7 @@ not connected with ifttt. The premium plan is 25€ a year.
     [Geeknote](http://www.geeknote.me/) console client whose deb
     packages are available on [notesalexp deb
     repo](http://notesalexp.org/).
--   [w:Todoist] is a project management application for personal and
+-   {{< wp "Todoist" >}} is a project management application for personal and
     professional productivity.  Todoist is available in Web, Windows
     (PC and Windows 10 Mobile), macOS, Android, Android Wear, iOS
     (iPhone and iPad), watchOS (Apple Watch), Google Chrome, Firefox,
@@ -97,8 +91,8 @@ not connected with ifttt. The premium plan is 25€ a year.
 
 # Tasks on linux desktop
 
-See also the sections [Org Mode](/node/org-mode/) and
-[Calendar and Address Book](/node/calendar)
+See also the sections {{< iref "org" "Org Mode" >}} and
+{{< iref "calendar" "Calendar and Address Book" >}}
 
 -   Wikipedia: [Comparison of note taking software
     ](https://en.wikipedia.org/wiki/Comparison_of_notetaking_software)
@@ -150,7 +144,7 @@ See also the sections [Org Mode](/node/org-mode/) and
     -   [Simpletask
         ](https://play.google.com/store/apps/details?id=nl.mpcjanssen.todotxtholo)
         is also using the same todo.txt format
--   [w:WikidPad] (BSD License) is a python-based wiki-like outliner
+-   {{< wp "WikidPad" >}} (BSD License) is a python-based wiki-like outliner
     for storing thoughts, ideas, to-do lists, contacts, and other notes
     with Wiki-like linking between pages.
 -   [Yokadi](http://yokadi.github.com/) is a command-line oriented,
@@ -159,12 +153,12 @@ See also the sections [Org Mode](/node/org-mode/) and
 
 # Note taking software {#note_taking}
 
--   [w:Note-taking],
-    [w:Comparison of notetaking software]
+-   {{< wp "Note-taking" >}},
+    {{< wp "Comparison of notetaking software" >}}
 
 
 
--   [w:Workflowy] freemium note taking software.
+-   {{< wp "Workflowy" >}} freemium note taking software.
     Work mainly on web, but there are apps in ios, android, windows,
     Linux.
     -   [WorkFlowy Site](https://workflowy.com/)

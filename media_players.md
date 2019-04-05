@@ -1,19 +1,12 @@
-<!--
-.. description:
-.. date: 2015-04-08
-.. slug: media_players
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Sound and Video Players
--->
+---
+title: Sound and Video Players
+---
 
-[TOC]
+{{% toc /%}}
 
-
-See also [Streaming](/node/streaming "internal reference"),
-[FFmpeg section](/node/ffmpeg  "internal reference"),
-[Video Edit](/node/video_edit  "internal reference"),
+See also {{< iref "streaming" "Streaming" >}},
+{{< iref "ffmpeg" "FFmpeg section" >}},
+{{< iref "video_edit" "Video Edit" >}},
 
 -----
 
@@ -25,13 +18,13 @@ See also [Streaming](/node/streaming "internal reference"),
     is outdated *1998*.
 -   [Wikipedia list of Linux audio software
     ](http://en.wikipedia.org/wiki/Linux_audio_software),
-    [w:Comparison of audio player software],
+    {{< wp "Comparison of audio player software" >}},
     [Comparison of media players
     ](http://en.wikipedia.org/wiki/Comparison_of_media_players)
     including many features,
     [Category: Linux Media Players
     ](https://en.wikipedia.org/wiki/Category:Linux_media_players)
-    and [w:List of Linux audio software].
+    and {{< wp "List of Linux audio software" >}}.
 -   [linux-sound.org](http://linux-sound.org/).
 -   [ArchWiki list of audio applications
     ](https://wiki.archlinux.org/index.php/List_of_applications/Multimedia#Audio).
@@ -43,8 +36,7 @@ See also [Streaming](/node/streaming "internal reference"),
     gives a list of GPL sound applications.
 
 ## DVD/CD
-See also [DVD and CD recording
-](/node/dvd_cd_recording "internal reference")
+See also {{< iref "dvd_cd_recording" "DVD and CD recording" >}}
 
 -   ArchWiki:
     -   [Optical disc drive
@@ -67,14 +59,14 @@ See also [DVD and CD recording
 
 Some Media players can handle both video and audio, the following
 players are refered to in the
-[Video players section](#video_players "internal reference"):
-[Gnash](#gnash  "internal reference")
-[Mplayer](#mplayer  "internal reference"),
-[mpv](#mpv "internal reference"),
-[Xine](#xine "internal reference"),
-[Videolan Client (VLC)](#videolan  "internal reference")
+{{< iref "#video_players" "Video players section" >}}:
+{{< iref "#gnash" "Gnash" >}}
+{{< iref "#mplayer" "Mplayer" >}},
+{{< iref "#mpv" "mpv" >}},
+{{< iref "#xine" "Xine" >}},
+{{< iref "#videolan" "Videolan Client (VLC)" >}}
 
-Wikipedia: [w:Comparison of audio player software],
+Wikipedia: {{< wp "Comparison of audio player software" >}},
 [Comparison of free software for audio - Players
 ](https://en.wikipedia.org/wiki/Comparison_of_free_software_for_audio#Players)
 
@@ -86,7 +78,7 @@ Wikipedia: [w:Comparison of audio player software],
     0.99.75, but seem to begin again in 2007 with a new gtk2 interface,
     and has slept again the next year
 
-<a href="amarok"></a>[w:Amarok_(software)|Amarok] (GPL)
+<a href="amarok"></a>{{< wp "Amarok_(software)"  "Amarok" >}} (GPL)
 :   said to be a very good audio player with a QT user interface,
     but is quite heavy and targeted to KDE. Amarok has been redesigned
     between v1.4 and v2.0, and many forks from previous version 1.4
@@ -94,12 +86,12 @@ Wikipedia: [w:Comparison of audio player software],
 
     -   _Amarok_ requires _KDE runtime_, which is a very heavy
         dependency, if your desktop is not KDE.
-    -   [Clementine](#clementine "internal reference")
+    -   {{< iref "#clementine" "Clementine" >}}
         is a fork of the version 1.4
         wich uses Qt and gstreamer, and so is less deeply immersed in KDE.
-    -   [Exaile](#exaile  "internal reference") is a GTK+ clone of amarok.
+    -   {{< iref "#exaile" "Exaile" >}} is a GTK+ clone of amarok.
     -   _Amarok_ is the primary client for
-        [Ampache](/node/streaming#ampache "internal reference")
+        {{< iref "streaming#ampache" "Ampache" >}}
         this feature is not shared by the above derivatives.
     -   _Amarok_ can [play UPnP / DLNA streams
         ](https://userbase.kde.org/Amarok/Manual/Organization/Collection/RemoteCollections/UPnP)
@@ -149,9 +141,9 @@ Wikipedia: [w:Comparison of audio player software],
 <a name="audacious"></a>[Audacious](http://audacious-media-player.org/)
 :   Audacious is an GPL, XMMS like app written in GTK 2, that
     support nearly the same plugins. It is a fork of BMP, like are
-    [xmms2](#xmms2 "internal reference") and
-    [Bmpx](#bmpx "internal reference").
-    [xmms2](#xmms2 "internal reference")
+    {{< iref "#xmms2" "xmms2" >}} and
+    {{< iref "#bmpx" "Bmpx" >}}.
+    {{< iref "#xmms2" "xmms2" >}}
     Other forks are build in a client-server model, but
     Audacious was first a single player, but now can be controlled
     through DBUS.
@@ -185,7 +177,7 @@ Wikipedia: [w:Comparison of audio player software],
     -   [ArchWiki - Audacious
         ](https://wiki.archlinux.org/index.php/Audacious)
 
-<a name="banshee"></a>[w:Banshee_(music_player)|Banshee]
+<a name="banshee"></a>{{< wp "Banshee_(music_player)"  "Banshee" >}}
 :   An other music player using Gstreamer framework, but built
     upon Mono and Gtk#.
 
@@ -199,7 +191,7 @@ Wikipedia: [w:Comparison of audio player software],
 
 <a name="clementine"></a>[Clementine](http://www.clementine-player.org/)
 :   Clementine is a QT fork of amarok 1.4, with which it shares main features.
-    [w:Clementine_(software)|Wikipedia: Clementine].
+    {{< wp "Clementine_(software)"  "Wikipedia: Clementine" >}}.
     Clementine can play internet streams, transcode music into MP3, Ogg Vorbis, speex, FLAC or AAC,
     manage tags, use CUE sheets, be controlled from android phone, and many
     [features](http://www.clementine-player.org/about), playing main
@@ -219,8 +211,8 @@ Wikipedia: [w:Comparison of audio player software],
     ](https://github.com/exaile/exaile/tree/master/plugins/mpris)),
     bidirectional last.fm support, a shoutcast directory browser, tag
     editing thru an
-    [ExFalso](/node/tag_management#mutagen "internal reference")
-    plugin, [DAAP protocol](/node/streaming#daap "internal reference")
+    {{< iref "tag_management#mutagen" "ExFalso" >}}
+    plugin, {{< iref "streaming#daap" "DAAP protocol" >}}
     _client and server_ support.  As a PyGTK player you
     can expect a memory footprint of 81M/39M shared (one ogg file
     loaded). Exaile is no longer in Debian since _jessie_.
@@ -257,21 +249,21 @@ Wikipedia: [w:Comparison of audio player software],
     MP3 or anything supported by _gstreamer_.
     It can be interfaced through MPRIS D-Bus interface.  _in Debian_.
 
-    -   Wikipedia: [w:Guayadeque Music Player].
+    -   Wikipedia: {{< wp "Guayadeque Music Player" >}}.
 
-[mplayer](#mplayer "internal reference")
+{{< iref "#mplayer" "mplayer" >}}
 :   MPlayer is a movie player. It plays most video and **audio**
     formats. He is described in the
-    [Video Players section](#mplayer) MPlayer can be used to
+    {{< iref "#mplayer" "Video Players section" >}} MPlayer can be used to
     record streaming audio with a command line like:
     `mplayer -playlist playlist.txt -ao pcm -aofile mystream.wav -vc dummy -vo null`
     It can be used from a cron tab like:
     `0 11 * * 1-5 /home/username/scripts/streamrecorder >& /dev/null 0 14 * * 1-5 killall -9 mplayer`
 
-[Music Player Daemon](#mpd "internal reference")
+{{< iref "#mpd" "Music Player Daemon" >}}
 :   has a subsection.
 
-[w:Muine]
+{{< wp "Muine" >}}
 :   An other music player using Gstreamer framework, but built
     upon Mono and Gtk#  (like _Banshee_), not used on my systems.
 
@@ -300,25 +292,23 @@ Wikipedia: [w:Comparison of audio player software],
 <a name=quodlibet></a>[QuodLibet](http://code.google.com/p/quodlibet/)
 :   Quod Libet (GPL) is a GTK+-based audio player written in
     Python. It uses
-    [gstreamer](/node/streaming#gstreamer "internal reference")
+    {{< iref "streaming#gstreamer" "gstreamer" >}}
     and supports Ogg Vorbis, FLAC, MP3, Musepack/Wavepack,
     MOD, MP4, TrueAudio, WMA.<br /> _QuodLibet_ uses playlists based
     on regular expressions and can display and edit tags.
 
-    As other PyGTK players _like [Exaile](#exaile "internal
-    reference")_ __QuodLibet__ is quite memory hungry (52M resident
+    As other PyGTK players _like {{< iref "#exaile" "Exaile" >}}_ __QuodLibet__ is quite memory hungry (52M resident
     when playing mp3) as is ExFalso and if you are not using a full
     gnome desktop, you need to avoid _python-gnome2_ otherwise you
     pull all the libraries and daemons..
 
     Even if we can find _QuodLibet_ too big as a background player, it
     is a nice tool for the _listen then tag_ game _like its brother
-    _[Exaile](#exaile "internal reference")_.
+    _{{< iref "#exaile" "Exaile" >}}_.
 
     __Quodlibet__ use the python library
-   [mutagen](/node/tag_management#mutagen "internal reference") and
-   share code with the [ExFalso](/node/tag_management#exfalso
-   "internal reference") tag editor.
+   {{< iref "tag_management#mutagen" "mutagen" >}} and
+   share code with the {{< iref "tag_management#exfalso" "ExFalso" >}} tag editor.
 
     -   [ExFalso/Quodlibet manual
         ](https://quodlibet.readthedocs.org/en/latest/)
@@ -336,7 +326,7 @@ Wikipedia: [w:Comparison of audio player software],
 <a name="rhythmnbox"></a>[Rhythmbox](http://en.wikipedia.org/wiki/Rhythmbox)
 :   [Rhythmbox]((https://wiki.gnome.org/Apps/Rhythmbox)
     (GPL) is a gnome audio player using the
-    [GStreamer](#gstreamer  "internal reference") media framework.
+    {{< iref "#gstreamer" "GStreamer" >}} media framework.
 
     Main features:
     -   play streamed Internet radio and podcasts
@@ -409,7 +399,7 @@ Wikipedia: [w:Comparison of audio player software],
 <a name="audiopreview"></a>
 [audiopreview](http://audiopreview.codealpha.net/audiopreview/)
 :   is a simple command line tool based on
-    [gstreamer](/node/streaming#gstreamer "internal reference")
+    {{< iref "streaming#gstreamer" "gstreamer" >}}
     to play previews of audio and video
     files, and internet streams. It can also be used as a
     regular media player. It is no longer in Debian since jessie,
@@ -463,7 +453,7 @@ cdda2wav
 :   [cdda2wav(1)
     ](http://manpages.debian.org/cgi-bin/man.cgi?query=cdda2wav%281%29)
     is a sampling utility for CD-ROM (see
-    [cdda2wav entry in the Sound Editors, recorders section](/node/sound_edit#cdda2wav)),
+    {{< iref "sound_edit#cdda2wav" "cdda2wav entry in the Sound Editors, recorders section" >}}),
     it can also be used as a CD player.
 
 [Cjukebox](http://muth.org/Robert/Cjukebox/)
@@ -493,7 +483,7 @@ cdda2wav
     -   [GitHub cmus repository
         ](https://github.com/cmus/cmus)
     -   [cmus wiki](https://github.com/cmus/cmus/wiki)
-    -   Wikipedia [w:Cmus]
+    -   Wikipedia {{< wp "Cmus" >}}
     -   [ArchWiki - Cmus](https://wiki.archlinux.org/index.php/Cmus)
 
 [Herrie](https://github.com/EdSchouten/herrie) (BSD Licence)
@@ -518,7 +508,7 @@ MikMod
 ](http://manpages.debian.org/cgi-bin/man.cgi?query=madplay)
 :   madplay is a command-line MPEG audio decoder and player based
     on the  MAD library
-    [libmad](/node/sound_libs#item_libmad "internal reference") and the
+    {{< iref "sound_libs#item_libmad" "libmad" >}} and the
     [Mad audio decoder](http://www.underbit.com/products/mad/).
     madplay reads and decodes one or more input files containing MPEG
     audio data and plays them on the native audio device. It can also
@@ -537,15 +527,15 @@ MikMod
     with the  FFmpeg plugin we add  (WMA, RealAudio, AAC, MP4).
     _Moc_ works as a daemon and can be controlled by a command line or
     via conky, but it is not usable thru the network like the music
-    servers [Mpd](#mpd  "internal reference") or
-    [Xmms2](#xmms2 "internal reference"). It uses 6M resident.
+    servers {{< iref "#mpd" "Mpd" >}} or
+    {{< iref "#xmms2" "Xmms2" >}}. It uses 6M resident.
 
    -   [MOC Readme](http://moc.daper.net/node/87)
    -   [Python Music On Console](http://moc.lophus.org/)
        is a wrapper around moc.
    -   [ArchWiki - Moc](https://wiki.archlinux.org/index.php/Moc).
 
-<a name="mpg123"></a>[w:Mpg123]
+<a name="mpg123"></a>{{< wp "Mpg123" >}}
 :   Mpg123 (LGPL) is a very fast decoder and player for mp3 _or any
     MPEG 1.0/2.0/2.5 stream (layers 1, 2 and 3)_ running on
     unix and w32 it support a lot aof audio interfaces including alsa,
@@ -572,7 +562,7 @@ MikMod
     mpg321 climbed progressively up to 36M, while mpg123 staid at 1M
     resident.
 
-    Of course [madplay](#madplay "internal reference") that is based on the same libmad library
+    Of course {{< iref "#madplay" "madplay" >}} that is based on the same libmad library
     has analogous performance in term of speed and memory fottprints, than mpg321.
     _It should be slower because doing only fixed arithmetic,
     but I found it 10% faster on an intel dual core._
@@ -593,22 +583,22 @@ MikMod
 
 
 mpd text clients
-:  [mpd](#mpd "internal reference") can be controlled by text clients
+:  {{< iref "#mpd" "mpd" >}} can be controlled by text clients
    like mpc, ncmpc, bash mp; they are referenced in the
-   [mpd section](#mpd "internal reference").
+   {{< iref "#mpd" "mpd section" >}}.
 
 
 __ogg123__, __oggdec__
 :  both GPL,  are part of the _vorbis tools_ which are the command lines utility
-   of the [w:Vorbis] reference implementation, other decoders for
+   of the {{< wp "Vorbis" >}} reference implementation, other decoders for
    ogg-vorbis are [Tremor](http://wiki.xiph.org/Tremor "wiki.xiph.org Tremor"),
    [Tremolo](http://wss.co.uk/pinknoise/tremolo/ "wss.co.uk pinknoise/tremolo")
    (GPL) _for arm platforms_ and ffmpeg _(see
-   [Video Encoders](/node/video_edit "internal link")_.
+   {{< iref "video_edit" "Video Encoders" >}}_.
 
    Performance of compression and quality  of _vorbis_ and mp3 are
    available in quantity and number, _(look on
-   [w:Vobis|Wikipedia:   Vorbis page])_ but we compare less often
+   {{< wp "Vobis"  "Wikipedia:   Vorbis page" >}})_ but we compare less often
    speed and memory footprint. I compared _oggdec_ ,_mpg123_ and
    _mpg321_ on an intel dual core 2GHz, for the same wave file encoded
    at similar compression rate. I found _oggdec_ 20% slower than the
@@ -674,17 +664,17 @@ See also [EmacsWiki: MusicPlayers](http://www.emacswiki.org/emacs/MusicPlayers)
 :   EMMS (GPLv3) is the Emacs Multi-Media System, a small
     application to play multimedia files from Emacs using external
     players. It can use mpg321, ogg123, mplayer, xine or
-    [mpd](#mpd "internal reference"), or any simple player available as unix command
+    {{< iref "#mpd" "mpd" >}}, or any simple player available as unix command
     line client.
 
 [libmpdee](https://svn.musicpd.org/libmpdee/trunk/libmpdee.el)
 :   LMibmpdee <a name="libmpdee"></a>
-    is a client library for  [mpd](#mpd "internal reference")
+    is a client library for  {{< iref "#mpd" "mpd" >}}
     in emacslisp.
 
 [Mingus](http://github.com/pft/mingus).
 :   Mingus is an extension of
-    [LMibmpdee](#libmpdee "internal reference")
+    {{< iref "#libmpdee" "LMibmpdee" >}}
     by Niels Giesen.  The interface resembles that of
     ncmpc, and it provides extensive playlist editing facilities. It
     can be interfaced from emacs-w3m an dired.  _mingus stays home_ is
@@ -738,13 +728,12 @@ playing music  and managing playlists.
     with the flac plugin, .pls, .rss, playlist from SoundCloud,  XSPF
     playlists.
 -   Mpd can output to alsa, or Jack and can send
-    it's output thru network by using the [libao](/node/sound_lib#item_libao)
-    and [esound](/node/streaming#item_esound "internal reference") or
-    [use PulseAudio](/node/streaming#pulseaudio "internal reference").
+    it's output thru network by using the {{< iref "sound_lib#item_libao" "libao" >}}
+    and {{< iref "streaming#item_esound" "esound" >}} or
+    {{< iref "streaming#pulseaudio" "use PulseAudio" >}}.
     The choice is down by setting
     [configuration options](https://www.musicpd.org/doc/user/config.html).
--   By using [pulseaudio-dlna
-    ](/node/streaming#pulseaudio-dlna "internal reference")
+-   By using {{< iref "streaming#pulseaudio" "pulseaudio-dlna" >}}
     MPD can act as a UPnP / DLNA server.
 -   MPD has its own [HTTP streaming server
     ](https://wiki.archlinux.org/index.php/Music_Player_Daemon/Tips_and_tricks#HTTP_streaming)
@@ -772,20 +761,19 @@ playing music  and managing playlists.
     gives the configuration for a Bluetooh headset.
     See also
     [Gentoo Wiki - Bluetooth Headset](https://wiki.gentoo.org/wiki/Bluetooth_Headset).
-    and the [Bluetooth section](/node/bluetooth "internal reference").
+    and the {{< iref "bluetooth" "Bluetooth section" >}}.
 
 -   xmms2 team has published a
     [comparison of xmms2 and mpd
     ](https://xmms2.org/wiki/XMMS2_vs_MPD),
-    may be slightly biased in favor of [xmms2](/node/181#xmms2 "internal
-    reference"),
+    may be slightly biased in favor of {{< iref "181#xmms2" "xmms2" >}},
     it omits that _mpd_ is
     lighter in memory and cpu than xmms2, and also that if the client
-    development effort of [xmms2](#xmms2 "internal reference")
+    development effort of {{< iref "#xmms2" "xmms2" >}}
     is presently greater than the older
     _mpd_, _mpd_ has still more language bindings and clients. In any case
     both server are worthwhile to try.
--   mpd can be controlled by a [MPRIS](/node/sound_libs#mpris) client
+-   mpd can be controlled by a {{< iref "sound_libs#mpris" "MPRIS" >}} client
     through the [mpDris2](https://github.com/eonpatapon/mpDris2)
     <a name="mpdris2"></a> daemon that is run in the user session and
     monitors a local or distant mpd server.
@@ -813,14 +801,13 @@ the list is not always up-to date and some software are obsoletes.
 
 A selection of clients:
 
--   [Ampache](/node/streaming#ampache "internal reference")
-    A  stream server for (see the [Ampache entry
-    ](/node/streaming#ampache "internal reference"))
+-   {{< iref "streaming#ampache" "Ampache" >}}
+    A  stream server for (see the {{< iref "streaming#ampache" "Ampache entry" >}})
     That can control many mpd instances for local play.
 -   [Ario](http://ario-player.sourceforge.net/) a GTK2 client for _mpd_
-    and [xmms2](#xmms2 "internal reference")  inspired by Rhythmbox.
+    and {{< iref "#xmms2" "xmms2" >}}  inspired by Rhythmbox.
     _17M resident 10M shared_.
--   [Conky](/node/monitoring#conky "Internal reference")
+-   {{< iref "monitoring#conky" "Conky" >}}
     the monitoring daemon has a plugin to display the mpd state.
 -   [emms](http://www.gnu.org/software/emms)
     the emacs multimedia player, can control mpd.
@@ -839,7 +826,7 @@ A selection of clients:
     Gnome Music Player Client with playlist and tag management. It is
     a GTK client with light gnome dependencies (13M resident,10M, 3M
     added on my sys. ).
--   [Jinzora](/node/streaming#jinzora "internal reference")
+-   {{< iref "streaming#jinzora" "Jinzora" >}}
     A web based streaming and media management system.
 -   [libmpdee](http://git.musicpd.org/cgit/master/libmpd.git/)
     <a name="libmpdee"></a>
@@ -932,15 +919,15 @@ To use bookmarks in mpd we can use
 # Video Players {#video_players}
 
 All
-[UPnP media clients](/node/streaming#upnp_media_clients "internal reference"),
-all [media centers](#media_centers "internal link"),
+{{< iref "streaming#upnp_media_clients" "UPnP media clients" >}},
+all {{< iref "#media_centers" "media centers" >}},
 and many of the
-[Music Streamers](/node/streaming "internal reference")
+{{< iref "streaming" "Music Streamers" >}}
 can also stream video,
 so you can also look around in these sections.
 
 Of course video players allow also to play music, for other sound
-players see the [Music Players section](#sound_players "internal link").
+players see the {{< iref "#sound_players" "Music Players section" >}}.
 
 Wikipedia has a big
 [Comparison of media players
@@ -948,7 +935,7 @@ Wikipedia has a big
 including many features,
 a [Category: Linux Media Players
 ](https://en.wikipedia.org/wiki/Category:Linux_media_players)
-and a page [w:List of Linux audio software].
+and a page {{< wp "List of Linux audio software" >}}.
 
 
 ## Gstreamer {#gstreamer}
@@ -956,7 +943,7 @@ and a page [w:List of Linux audio software].
 GStreamer (LGPL) is a streaming-media framework, based on graphs of filters
 which operate on media data. Applications using this library can do
 anything from real-time sound processing to playing videos.it is
-[referenced in the Music Streamer section](/node/streaming#gstreamer)
+{{< iref "streaming#gstreamer" "referenced in the Music Streamer section" >}}
 
 ## [Gnash](http://gnashdev.org/) {#gnash}
 
@@ -995,9 +982,9 @@ The supported codecs are:
 
 **gmplayer** is MPlayer with a graphical user interface;
 
-[SMPlayer](#smplayer "internal reference") (GPL) is a GUI for mplayer or [mpv](#mpv  "internal reference").
+{{< iref "#smplayer" "SMPlayer" >}} (GPL) is a GUI for mplayer or {{< iref "#mpv" "mpv" >}}.
 
-[mencoder](/node/video_edit#mencoder "internal reference")
+{{< iref "video_edit#mencoder" "mencoder" >}}
 is the encoder included in the mplayer distribution.
 
 **References:**
@@ -1007,7 +994,7 @@ is the encoder included in the mplayer distribution.
 -   [MPlayer Features](http://www.mplayerhq.hu/design7/info.html).
 -   [mplayer(1)
     ](http://manpages.debian.org/cgi-bin/man.cgi?query=mplayer(1))
--   Wikipedia [w:MPlayer]
+-   Wikipedia {{< wp "MPlayer" >}}
 -   [ArchWiki: Mplayer](https://wiki.archlinux.org/index.php/MPlayer)
 
 
@@ -1017,7 +1004,7 @@ is the encoder included in the mplayer distribution.
 
 _MPlayer2_ was a fork of mplayer, that  the internal gui
 _gmplayer_ and the encoder _mencoder_; and use shared libratries
-instead of embedding [ffmpeg](/node/ffmpeg "internal reference").
+instead of embedding {{< iref "ffmpeg" "ffmpeg" >}}.
 It is dead and replaced with mpv.
 
 Mpv also drop _mencoder_, but replace it with internal
@@ -1030,7 +1017,7 @@ There are numerous other
 -   [mpv manual](https://mpv.io/manual/stable/),
     [FAQ](https://github.com/mpv-player/mpv/wiki/FAQ) and
     [Wiki](https://github.com/mpv-player/mpv/wiki).
--   Wikipedia: [w:Mpv_(media_player)|MPV]
+-   Wikipedia: {{< wp "Mpv_(media_player)"  "MPV" >}}
 -   [Archwiki -  Mpv](https://wiki.archlinux.org/index.php/Mpv)
 -   [Gentoo Wiki - mpv](https://wiki.gentoo.org/wiki/Mpv)
 
@@ -1040,7 +1027,7 @@ in deb-multimedia.
 
 ### MPV frontends
 
-mpv itself has only a rudimentary [pseudo-gui](#mpv_pseudo-gui "internal reference")
+mpv itself has only a rudimentary {{< iref "#mpv_pseudo" "pseudo-gui" >}}
 and many
 [third party frontends
 ](https://github.com/mpv-player/mpv/wiki/Applications-using-mpv#gui-frontends)
@@ -1048,7 +1035,7 @@ see also the [list on Wikipedia
 ](https://en.wikipedia.org/wiki/Mpv_(media_player)#Interface_and_graphical_front-ends).
 
 <a name="smplayer"></a>[SMPlayer](http://www.smplayer.info/)
-(GPL) is a GUI for [mplayer](#mplayer "internal reference") or mpv
+(GPL) is a GUI for {{< iref "#mplayer" "mplayer" >}} or mpv
 written in C++ with Qt4/Qt5. It supports [numerous formats and codecs
 ](http://www.smplayer.info/en/supported-formats-and-codecs), it can
 play YouTube videos. And support [chromecast
@@ -1083,7 +1070,7 @@ On amd64 _Sayonara_ consume 68M res / 51M shr for _Sayonara
 
 [Totem](http://en.wikipedia.org/wiki/Totem_(media_player)) (GPL)
 is a media player (audio and video) for GNOME based on xine-lib or
-[GStreamer](#gstreamer "internal reference"). Totem is able to play
+{{< iref "#gstreamer" "GStreamer" >}}. Totem is able to play
 all mainstream media formats supported by one of the two backends. It
 also understands numerous playlist formats, including SHOUTcast, M3U,
 XML Shareable Playlist Format (XSPF), SMIL, Windows Media Player
@@ -1109,12 +1096,11 @@ media player, and streamin server. Supported video formats and streaming
 protocols are given in the [VLC features list
 ](http://www.videolan.org/vlc/features.html)
 
-Since version 3.0.1 VLC support [Chromecast
-](/node/streaming#chromecast "internal reference").
+Since version 3.0.1 VLC support {{< iref "streaming#chromecast" "Chromecast" >}}.
 
 **Refs:**
 
--   [w:Wikipedia VLC media player]
+-   {{< wp "Wikipedia VLC media player" >}}
 -   videolan.org documentation: [VLC Play-Howto (en)
     ](http://www.videolan.org/doc/play-howto/en/play-howto-en.html) (
     [french
@@ -1154,22 +1140,22 @@ interface which aims to provide a common programmatic API for
 controlling media players.
 
 The players supporting MPRIS include
-[Audacious](#audacious "internal reference"),
-[Clementine](#clementine "internal reference"),
+{{< iref "#audacious" "Audacious" >}},
+{{< iref "#clementine" "Clementine" >}},
 , Dragon Player,
-[Exaile](#exaile  "internal reference"),
-[Guayadeque](#guayadeque  "internal reference"),
-[BMPx](#bmpx  "internal reference"),
-[Mopidy](/node/streaming#mopidy "internal reference") with mopidy-mpris,
-[MPD](#mpd  "internal reference") via
-[mpDris2](#mpdris2 "internal reference"),
-[mpv](#mpv "internal reference) with the help of
+{{< iref "#exaile" "Exaile" >}},
+{{< iref "#guayadeque" "Guayadeque" >}},
+{{< iref "#bmpx" "BMPx" >}},
+{{< iref "streaming#mopidy" "Mopidy" >}} with mopidy-mpris,
+{{< iref "#mpd" "MPD" >}} via
+{{< iref "#mpdris2" "mpDris2" >}},
+{{< iref "#mpv" "mpv" >}} with the help of
 [lua-mpris](https://github.com/dodo/lua-mpris#mpv),
-[Qmmp](#qmmp "internal rference"),
+{{< iref "#qmmp" "Qmmp" >}},
 Songbird via a plugin,
-[VLC](#vlc  "internal reference") when launched with
+{{< iref "#vlc" "VLC" >}} when launched with
 `vlc --control dbus`,
-[Xmms2](#xmms2  "internal reference") via xmms2-mpris-bridge.
+{{< iref "#xmms2" "Xmms2" >}} via xmms2-mpris-bridge.
 
 This
 [shell script](https://gist.github.com/exic/1d051e3a15f61e06caf4), is
@@ -1194,7 +1180,7 @@ Other control tools are:
     interactively at the console or terminal with an ncurses-based
     interface, or with a X11 interface named **aumix-X11**.
 
-amixer, alsamixer from [alsa](/node/sound_libs#alsa) utilities.
+amixer, alsamixer from {{< iref "sound_libs#alsa" "alsa" >}} utilities.
 :   amixer is the alsa text based mixer
 
     refs: [amixer(1)
@@ -1208,7 +1194,7 @@ amixer, alsamixer from [alsa](/node/sound_libs#alsa) utilities.
 [SDL\_mixer](http://www.libsdl.org/projects/SDL_mixer/)
 :   A simple multi-channel audio mixer for SDL. It supports 4 channels
     of 16 bit stereo audio, plus a single channel of music, mixed by
-    [MikMod](#item_mikmod) MOD, Timidity MIDI and SMPEG MP3 libraries.
+    {{< iref "#item_mikmod" "MikMod" >}} MOD, Timidity MIDI and SMPEG MP3 libraries.
     The command line utilities are **playmus** and **playwave**
 :   [SDL Mixer documentation
     ](http://jonatkins.org/SDL_mixer/SDL_mixer.html)
@@ -1242,7 +1228,7 @@ amixer, alsamixer from [alsa](/node/sound_libs#alsa) utilities.
     -       [MythTV UPnP](http://www.mythtv.org/wiki/UPnP):
              MythTV has a built-in UPnP server.
     -       [ArchWiki: MythTV](https://wiki.archlinux.org/index.php/MythTV)
-    -       Wikipedia: [w:MythTV]
+    -       Wikipedia: {{< wp "MythTV" >}}
 
     In 2018 no prepackged _MythTV_ exists for Debian you have to build
     your package from the source as described in
@@ -1256,7 +1242,7 @@ amixer, alsamixer from [alsa](/node/sound_libs#alsa) utilities.
     release in 2017_
 
 ## Kodi {#kodi}
-<a name="xbmc"></a>[w:Kodi] Kodi (formerly XBMC) (GPL)
+<a name="xbmc"></a>{{< wp "Kodi" >}} Kodi (formerly XBMC) (GPL)
 is a cross-platform digital media hub and HTPC (Home theater PC)
 software designed to be a    media player for the living-room TV.<br />
 

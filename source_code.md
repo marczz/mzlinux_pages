@@ -1,13 +1,8 @@
-<!--
-.. description:
-.. date: 2015-06-04
-.. slug: source_code
-.. tags:
-.. link:
-.. title: Source Code
--->
+---
+title: Source Code
+---
 
-[TOC]
+{{% toc /%}}
 
 # Literate Programming {#literate_programming}
 
@@ -19,29 +14,29 @@ you are doing source code documentation. But there is no crisp barrier
 between the two concepts.
 
 The two main components in traditional literate programming languages
-like [w:WEB] or [w:CWEB] are *tangle*, which produces compilable code
+like {{< wp "WEB" >}} or {{< wp "CWEB" >}} are *tangle*, which produces compilable code
 from the source texts, and *weave*, which produces nicely-formatted
 documentation.
 
 There is a related
-[section on source code beautifiers](#code_beautifiers "internal reference").
+{{< iref "#code_beautifiers" "section on source code beautifiers" >}}.
 
--   [w:Literate_programming|Wikipedia: Literate programming]
+-   {{< wp "Literate_programming"  "Wikipedia: Literate programming" >}}
 -   [SGML/XML and Literate Programming](http://www.oasis-open.org/cover/xmlLitProg.html)
 -   [www.literateprogramming.com](http://www.literateprogramming.com/)
     is an _outdated_ index of literate programming links and book reviews.
 -   [antiweb](http://packages.python.org/antiweb/) (GPL)
     <a name="antiweb"></a>
     ([Pypi entry](ihttp://pypi.python.org/pypi/antiweb/))
-    is an inverse literate programming tool in the [noweb](#noweb) family..
+    is an inverse literate programming tool in the {{< iref "#noweb" "noweb" >}} family..
     In opposite to _web_ the documentation is weaved from syntactic correct source code.
     The result is a restructed text file, that can be used in the
-    [sphinx document generator](/node/405#sphinx "internal reference").
+    {{< iref "405#sphinx" "sphinx document generator" >}}.
 -   [Cog](http://nedbatchelder.com/code/cog/) (MIT license.)
     <a name="cog" "Internal reference"></a>
     is a code generation tool. It is a preprocessor with all power of
     python. While __Cog__ is mainly aimed at *tangling* a source file with included python chunks,
-    it can be also combined  with [Sphinx](/node/405 "internal reference")
+    it can be also combined  with {{< iref "405" "Sphinx" >}}
     for documentation generation as described in
     [Producing documentation for python code in a file with reST, docutils, cog and paver
     ](http://oneau.wordpress.com/2010/05/24/documenting-python-code-with-rest-docutils-pygments-cog-and-paver/)
@@ -49,7 +44,7 @@ There is a related
     generator, written in Literate CoffeeScript. It produces an HTML
     document that displays your comments in Markdown intermingled with
     your code with syntax highlighting with
-    [Highlight.js](#highlight_js "internal Reference").
+    {{< iref "#highlight_js" "Highlight.js" >}}.
 -   [Doxygen](http://www.stack.nl/~dimitri/doxygen) is a documentation
     system for C++, C, Java, Objective-C, Python, IDL.
     [Doxymacs](http://doxymacs.sourceforge.net/) make using Doxygen
@@ -57,20 +52,20 @@ There is a related
 -   [FunnelWeb](http://www.ross.net/funnelweb/) a language independant
     literate programming tool which use a common source file to *tangle*
     a program and weave a latex or html documentation. .
--   [Haskell](/node/44#haskell "Internal link") has semi literate programming support.
+-   {{< iref "44#haskell" "Haskell" >}} has semi literate programming support.
     It can extract the source code from a _LaTeX_ source.
--   The [w:Leo_(text_editor)|Leo text editor] is an outlining editor which supports
+-   The {{< wp "Leo_(text_editor)"  "Leo text editor" >}} is an outlining editor which supports
     optional noweb and CWEB markup.
--   [w:noweb]<a name="noweb"></a> is a literate programming tool, created in 1989 by
+-   {{< wp "noweb" >}}<a name="noweb"></a> is a literate programming tool, created in 1989 by
     Norman Ramsey. It has *tangle* and *weave* components as do
-    [w:WEB] or [w:CWEB] but is independent of the code language.
+    {{< wp "WEB" >}} or {{< wp "CWEB" >}} but is independent of the code language.
     [noweb Home](http://www.cs.tufts.edu/~nr/noweb/).
     -   Noweb has a python clone
         [noweb.py](https://github.com/JonathanAquino/noweb.py)
         that uses the  noweb syntax.
 -   [Pnw](https://pypi.python.org/pypi/pnw/) (Apache license)
      is a text processing and literate programming tool inspired by
-    [antiweb](#antiweb) and [noweb](#noweb).
+    {{< iref "#antiweb" "antiweb" >}} and {{< iref "#noweb" "noweb" >}}.
 -   [PyLit](https://pypi.python.org/pypi/pylit) (GPL) is a python tool that feature a
     _bidirectional text/code converter_; it can convert between the _code_ form
     and the _text_ form  the _code_  without loss of information.
@@ -89,15 +84,15 @@ There is a related
     Pweave is a scientific report generator and a literate programming tool for Python
     developed after Sweave. Pweave can capture the results and plots
     from data analysis and works well with numpy, scipy and matplotlib.
-    Pweave uses [noweb](#noweb) syntax, but it is also weave a python code between
+    Pweave uses {{< iref "#noweb" "noweb" >}} syntax, but it is also weave a python code between
     `<<>>=` and `@` blocks and include the results and capture matplotlib
     plots in the document. Pweave supports reST, Sphinx, Latex,
     and Pandoc markdown markups. <br />
     For a quick overview look at the
     [example from the documentation](http://mpastell.com/pweave/examples.html).
--   [w:Sweave] is a function in  R that enables integration of R code into LaTeX.
--   [org-babel](/node/404#babel "internal link") is a literate programming extension for
-    [Org mode](/node/404 "internal link").
+-   {{< wp "Sweave" >}} is a function in  R that enables integration of R code into LaTeX.
+-   {{< iref "404#babel" "org-babel" >}} is a literate programming extension for
+    {{< iref "404" "Org mode" >}}.
 
 #  Source code beautifiers {#code_beautifiers}
 -   [Wikipedia: Prettyprint](http://en.wikipedia.org/wiki/Pretty-printing)
@@ -137,7 +132,7 @@ There is a related
     [wide range of common languages and markup formats](http://pygments.org/languages/)
     and can output to HTML, RTF, LaTeX and ANSI sequences.
     It has a [Command Line Interface](http://pygments.org/docs/cmdline/)
-    and is often used by [Structured Text Formatters](/node/269 "Internal reference")
+    and is often used by {{< iref "269" "Structured Text Formatters" >}}
     like Rest, Sphinx, Markdown, MoinMoin... or webframeworks like Wordpress, Hyde ....
 -   [Ostermiller syntax package](http://ostermiller.org/syntax/features.html)(GPL)
     is a java program that add syntax coloring to web pages for source

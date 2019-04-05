@@ -1,16 +1,8 @@
-<!--
-.. description:
-.. date: 2015-05-03
-.. slug: python_dbms
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Python database programming in python
--->
+---
+title: Python database programming in python
+---
 
-
-
-[TOC]
+{{% toc /%}}
 
 -----
 
@@ -18,7 +10,7 @@ This page deals with database programming in python, at the low and higher
 level i.e. Object Relational Mappers.
 
 The database management systems are in the
-[Databases section](/node/dbms "internal reference") and sub-sections.
+{{< iref "dbms" "Databases section" >}} and sub-sections.
 
 ## Low level DBMS interfaces
 -   [Python Wiki: Database programming
@@ -55,9 +47,9 @@ The database management systems are in the
     [PEP 249](http://www.python.org/dev/peps/pep-0249/) nor ported to py3k.
 -   [mysql-python: MySQLdb](http://mysql-python.sourceforge.net/MySQLdb.html)(GPL)
     is an thread-compatible, PEP249 compatible,   low level interface to
-    [MySQL](/node/dbms "internal reference"). _for version 1.2 only
+    {{< iref "dbms" "MySQL" >}}. _for version 1.2 only
     python 2_. It is packaged in debian.
-    See [PyMySQL](#pymysql "local reference) for a compatible
+    See {{< iref "#pymysql" "PyMySQL" >}} for a compatible
     python 3 library.
 -   [MySQL Connector/Python](https://launchpad.net/myconnpy) (GPL) compatible
     with PEP249. It is a pure python implementation. You find the
@@ -97,7 +89,7 @@ The database management systems are in the
     is a python binding to Firebird. It works on Python 2.5+
     (including Python 3.x).
 
-## [CouchDB](/node/dbms#couchdb)
+## {{< iref "dbms#couchdb" "CouchDB" >}}
 -   [Getting started with  couchDB and Python
     ](http://wiki.apache.org/couchdb/Getting_started_with_Python)
     in the CouchDB Wiki, list all python interfaces.
@@ -163,7 +155,7 @@ The database management systems are in the
     -   [sleepy.mongoose
         ](https://github.com/kchodorow/sleepy.mongoose/wiki/)
         uses PyMongo to provide a RESTful interface too MongoDB
--   [w:Redis] (BSD License) is an in-memory, key-value data store
+-   {{< wp "Redis" >}} (BSD License) is an in-memory, key-value data store
     with optional persistence.
     [redis-py](https://github.com/andymccurdy/redis-py)
     is the Python interface to the Redis key-value store.
@@ -185,8 +177,8 @@ The database management systems are in the
          Oracle, PostgreSQL, SQLite, memcache ...)
     -    [Introduction to shove in EvilChuck blog
         ](http://www.evilchuck.com/2008/02/tell-python-to-shove-it.html)
--   [w:Zope Object Database] is an object-oriented database for
-    storing Python objects.  It is part of [w:Zope] but an also be
+-   {{< wp "Zope Object Database" >}} is an object-oriented database for
+    storing Python objects.  It is part of {{< wp "Zope" >}} but an also be
     used independently.
     -   [ZODB Documentation](http://www.zodb.org/)
     -   [SQLite dictionnary-like object for LARGE datasets Recipe

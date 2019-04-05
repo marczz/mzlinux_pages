@@ -1,14 +1,8 @@
-<!--
-.. description:
-.. date: 2015-06-20
-.. slug: freedesktop
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Freedesktop
--->
+---
+title: Freedesktop
+---
 
-[TOC]
+{{% toc /%}}
 
 ---
 
@@ -46,7 +40,7 @@
 -   [xdg-utils](http://portland.freedesktop.org/)
     is a set of command line utilities for Free Desktop:  creating
     menus, opening files, setting mime types it includes the command
-    [man:xdg-desktop-menu]
+    {{< man "xdg-desktop-menu" >}}
     which is used  for (un)installing freedesktop menu items i.e. `.desktop` files
     for freedesktop compatible environments.
 -   To build the full desktop menu many distribution use a command to browse the freedesktop
@@ -159,7 +153,7 @@ desktop to store your data their default set in
 
 These system defaults can be changed in  this file.
 
-The program [man:xdg-user-dirs-update] is run very early in the login
+The program {{< man "xdg-user-dirs-update" >}} is run very early in the login
 phase. This program reads a configuration file, and a set of default
 directories. It then creates localized versions of these directories
 in the users home directory and sets up a config file in

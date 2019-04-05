@@ -1,48 +1,40 @@
-<!--
-.. description:
-.. date: 2015-03-24
-.. slug: desktop
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Linux Desktops
--->
+---
+title: Linux Desktops
+---
 
-[TOC]
+{{% toc /%}}
 
 ----------------
 
-The lower level is [Xorg](/node/xorg "internal reference")
+The lower level is {{< iref "xorg" "Xorg" >}}
 
-See also the section [File Managers
-](/node/file_managers "internal reference"),
-[X Terminals
-](/node/xterminals "internal reference"),
-[Desktop components](#desktop_components "internal reference").
+See also the section {{< iref "file_managers" "File Managers" >}},
+{{< iref "xterminals" "X Terminals" >}},
+{{< iref "#desktop_components" "Desktop components" >}}.
 
 --------------
 
 # Desktop environments {#desktop_environments}
 
-A [w:Desktop environment] refers to a style of graphical user interface and also to a
-common set of libraries ([w:Widget library]) used to build the desktop components.
+A {{< wp "Desktop environment" >}} refers to a style of graphical user interface and also to a
+common set of libraries ({{< wp "Widget library" >}}) used to build the desktop components.
 
-Presently most desktop environment use either [w:Qt_(framework)|QT] or
-[w:GTK+], they include various
-[desktop components](#desktop_components "internal link"), mainly
-a [window manager](#window_manager "internal reference")
-and a [file-manager](#file_manager "internal reference").
+Presently most desktop environment use either {{< wp "Qt_(framework)"  "QT" >}} or
+{{< wp "GTK+" >}}, they include various
+{{< iref "#desktop_components" "desktop components" >}}, mainly
+a {{< iref "#window_manager" "window manager" >}}
+and a {{< iref "#file_manager" "file-manager" >}}.
 
 Some [window manager]((#window_manager "internal reference") are inseparable
 from the desktop environment they use as _i3_, _fluxbox_, _awesome_
  and many light window manager. You will find an entry for them in the
-[window manager section](#window_manager "internal reference")
+{{< iref "#window_manager" "window manager section" >}}
 
 You find a nice [comparison of memory footprints of  light linux desktops
 ](http://l3net.wordpress.com/lightweight-linux/)  in
 [layer3 networking blog](http://l3net.wordpress.com/).
 
-Wikipedia [w:Comparison of X Window System desktop environments]
+Wikipedia {{< wp "Comparison of X Window System desktop environments" >}}
 gives also some information on the size of each-one.
 
 ## Main stream desktop environment
@@ -51,18 +43,18 @@ They are called _full desktop environment_
 but we should call most of them _greedy_ as they eat 80% of the resources of you machines.
 I don't use them so this list is brief.
 
--   [w:KDE] and [w:KDE Software Compilation].
+-   {{< wp "KDE" >}} and {{< wp "KDE Software Compilation" >}}.
     [ArchLinux: KDE](https://wiki.archlinux.org/index.php/KDE)
--   [w:GNOME] there is the older Gnome2 and the newer Gnome3, look at
-    [w:GNOME|Wikipedia] to learn about the differences and
-    [w:Controversy over GNOME 3].
+-   {{< wp "GNOME" >}} there is the older Gnome2 and the newer Gnome3, look at
+    {{< wp "GNOME"  "Wikipedia" >}} to learn about the differences and
+    {{< wp "Controversy over GNOME 3" >}}.
     [ArchLinux: GNOME](https://wiki.archlinux.org/index.php/GNOME)
--   [w:Unity] is a shell interface for the GNOME desktop environment developed by
+-   {{< wp "Unity" >}} is a shell interface for the GNOME desktop environment developed by
     Canonical Ltd for its Ubuntu operating system.
     [ArchLinux:Unity](https://wiki.archlinux.org/index.php/Unity)
--   [w:MATE] is a desktop environment forked from  GNOME 2.
+-   {{< wp "MATE" >}} is a desktop environment forked from  GNOME 2.
     [ArchLinux: Mate](https://wiki.archlinux.org/index.php/MATE)
--   [w:Cinnamon_(user_interface)|Cinnamon]  is a fork of GNOME Shell based
+-   {{< wp "Cinnamon_(user_interface)"  "Cinnamon" >}}  is a fork of GNOME Shell based
     on the desktop metaphor, like GNOME 2. Cinnamon uses  as window manager _Muffin_,
     a fork of the GNOME 3 window manager _Mutter_.
     [ArchLinux: Cinnamon](https://wiki.archlinux.org/index.php/Cinnamon)
@@ -85,12 +77,12 @@ on my computer. xfce4 is not so small than it aims to be.
 
 ## LXDE  {#lxde}
 
-[w:LXDE] (GPL and LGPL) is a lightweight desktop environment for
+{{< wp "LXDE" >}} (GPL and LGPL) is a lightweight desktop environment for
 Unix. It uses  the GTK+ toolkit. The components of lxde are not
 strongly bound with a common library set as in KDE, Gnome or Xfce.
 The standard component include the  window manager
-[Openbox](#openbox "internal reference"), and the file
-manager [PCManFM](/node/file_managers#pcmanfm "internal reference"))
+{{< iref "#openbox" "Openbox" >}}, and the file
+manager {{< iref "file_managers#pcmanfm" "PCManFM" >}})
 but you are free to use an other one.
 
 
@@ -112,16 +104,16 @@ but you are free to use an other one.
 # Window managers
 
 See also the the
-[Desktop environment](#desktop_environments "internal reference") and
-[Desktop Components Page](#desktop_components "internal reference")
+{{< iref "#desktop_environments" "Desktop environment" >}} and
+{{< iref "#desktop_components" "Desktop Components Page" >}}
 
--   Wikipedia [w:Comparison of X window managers] gives the characteristics:
+-   Wikipedia {{< wp "Comparison of X window managers" >}} gives the characteristics:
     Language, License, Type (stacking/dynamic/tiling), Configurable
     titlebar buttons, Graphical configuration, Hotkeys,	ICCCM/EWMH
     compliant, Panel for window switching, Tabbed windows,
     Themeable.<br />
     The light window managers are also compared with full environments
-    in the [w:Comparison of X Window System desktop environments].
+    in the {{< wp "Comparison of X Window System desktop environments" >}}.
 -   [ArchWiki - Window manager
     ](https://wiki.archlinux.org/index.php/Window_manager)
 -   [ArchLinux list of Window Managers
@@ -142,11 +134,11 @@ See also the the
     to create custom Linux-based systems for embedded products.
 
 
--   [w:Compiz] is a [w:Compositing window manager] that can be used with gnome or KDE.
+-   {{< wp "Compiz" >}} is a {{< wp "Compositing window manager" >}} that can be used with gnome or KDE.
     - [Compiz Home](http://www.compiz.org/).
     - [Phoronix: The Cost Of Running Compiz](http://www.phoronix.com/scan.php?page=article&item=compiz_speed_test).
     -   [Gentoo Compiz Fusion HowTo](http://en.gentoo-wiki.com/wiki/Compiz-Fusion)
--   [w:Mutter] is a [w:Compositing window manager] and the standard window manager for Gnome.
+-   {{< wp "Mutter" >}} is a {{< wp "Compositing window manager" >}} and the standard window manager for Gnome.
     -   [Phoronix: Mutter Can Cause A Gaming/OpenGL Performance Hit Too
         ](http://www.phoronix.com/scan.php?page=article&item=mutter_composite_hit)
 
@@ -156,11 +148,11 @@ The
 ](http://standards.freedesktop.org/wm-spec/latest/)
 is the freedesktop standard API to interact with a window manager.
 This specification complete the
-[w:inter-Client_Communication_Conventions_Manual|Inter-Client Communication Conventions Manual (ICCCM)],
+{{< wp "inter-Client_Communication_Conventions_Manual"  "Inter-Client Communication Conventions Manual (ICCCM)" >}},
 which defines window manager interactions at a lower level.
 
 The [wmctrl page](http://tripie.sweb.cz/utils/wmctrl/)
-and the [w:EWMH|Wikipedia EWMH page] give some window managers that
+and the {{< wp "EWMH"  "Wikipedia EWMH page" >}} give some window managers that
 implement EWMH _aewm, awsome, blackbox, bspwm, compiz, edwm,
 enlightenment, evilwm, fluxbox, fvwm, i3, icewm, interfacewm, jwm,
 kwin, matchbox, metacity,openbox, pekwm, penbox, sawfish, spectrwm,
@@ -171,11 +163,11 @@ EWMH _ratpoison, ion, pwm, evilwm, flwm, windowlab, ctwm_. Of course
 this incomplete list is subject to change with new releases.
 
 The window managers that are EWMH compliant are also
-[w:inter-Client_Communication_Conventions_Manual|ICCCM] compliant
+{{< wp "inter-Client_Communication_Conventions_Manual"  "ICCCM" >}} compliant
 as it is the base of EWMH. You can find on line the
 [ICCCM specification](http://tronche.com/gui/x/icccm/).
 
-See also the [WM Control](#wm_control "internal reference") subsection.
+See also the {{< iref "#wm_control" "WM Control" >}} subsection.
 
 
 ## Low resource tiling and dynamic Window Managers {#tiling_wm}
@@ -193,7 +185,7 @@ There is also a [Tutorial index
 -   [Awesome](http://awesome.naquadah.org/)
     _active project_,
     a framework dynamic window manager which follows Freedesktop
-    standards, [EWMH compiliant](#ewmh "internal reference"),
+    standards, {{< iref "#ewmh" "EWMH compiliant" >}},
     and is extensible using Lua. It is packaged in Debian.
     -   [Alberto Pettarin: awesome is awesome!
         ](http://www.albertopettarin.it/blog/2015/07/07/awesome-is-awesome.html)
@@ -204,9 +196,9 @@ There is also a [Tutorial index
     Debian.
 
     There is also a derivative aimed to the console terminal
-    [dvtm](/node/console#dvtm "internal reference").
--   [i3](#i3_wm "internal reference") has its own section.
--   [w:larswm] _last release 2004_ a dynamic, tiling window manager
+    {{< iref "console#dvtm" "dvtm" >}}.
+-   {{< iref "#i3_wm" "i3" >}} has its own section.
+-   {{< wp "larswm" >}} _last release 2004_ a dynamic, tiling window manager
     following _9wm_ model. It is _(yet)_ packaged in Debian.
 -   [RatPoison](http://www.nongnu.org/ratpoison) (GPL)
     is a simple light window manager with nographics, no window
@@ -215,7 +207,7 @@ There is also a [Tutorial index
     <br/>
     The screen can be split into non-overlapping frames. All
     windows are kept maximized inside their frames.
-        - [w:Ratpoison|Wikipedia Ratpoison page]
+        - {{< wp "Ratpoison"  "Wikipedia Ratpoison page" >}}
         - [RatPoison manual](http://www.nongnu.org/ratpoison/doc/)
         - [ArchLinux RatPoison tutorial](http://wiki.archlinux.org/index.php/Ratpoison)
         - [Gentoo Ratpoison HowTo](http://en.gentoo-wiki.com/wiki/Ratpoison)
@@ -223,26 +215,26 @@ There is also a [Tutorial index
     which is highly customizable via scripts and
     usable with keyboard and mouse. It supports conventional, tabbed and tiled
     window management with low memory usage. It is the predecessor of
-    [i3](#i3_wm "internal reference")
+    {{< iref "#i3_wm" "i3" >}}
 
 ## Low resource Stacking WM
 
 -   [aewm](http://www.red-bean.com/~decklin/aewm/) (MIT License)
     _last release end 2007_, which is controlled entirely with the
-    mouse. It is [EWMH compliant](#ewmh "internal reference") and is in Debian.
+    mouse. It is {{< iref "#ewmh" "EWMH compliant" >}} and is in Debian.
 -   [aewm++](http://sapphire.sourceforge.net/) (MIT License)
     _active project packaged in Debian_
     based on aewm but  written in C++.
     -   aewm++ contains desktop utilities packaged in Debian as
         aewm++-goodies, an apllication bar, a panel, and a session
         manager.
-        It is [EWMH compliant](#ewmh "internal reference").
+        It is {{< iref "#ewmh" "EWMH compliant" >}}.
 -   [evilwm](http://evilwm.sourceforge.net/) (Artistic licence)
     _active project_, A minimal keyboard driven window manager. It
-    supports [EWMH](#ewmh "internal reference") and is packaged in
+    supports {{< iref "#ewmh" "EWMH" >}} and is packaged in
     Debian.  _last release 2011_
 -   [Icewm](http://www.icewm.org/) (LGPL)
-    a light [EWMH compliant](#ewmh "internal reference") wm,
+    a light {{< iref "#ewmh" "EWMH compliant" >}} wm,
     fully usable with keyboard, with a task bar, multiple workspaces
     and configuration tools.<br />
     It uses few libraries outside of standard X11, and its own library
@@ -255,7 +247,7 @@ There is also a [Tutorial index
     footprint of Fvwm95) Window manager using only Xlib and
     (optionally) the shape extension and libXpm. It is said to be
     one of the window managers with less dependencies, and smaller footprints.
-    It supports [EWMH](#ewmh "internal reference")
+    It supports {{< iref "#ewmh" "EWMH" >}}
     and is packaged in Debian.
 -   [Oroborus](http://www.oroborus.org/) _minimal maintenance since
     2005, but with bugfix in 2010_ minimalistic window manager.
@@ -278,7 +270,7 @@ floating, on an individual window base.
     ](http://i3wm.org/docs/wsbar.html)
 -   [Lukáš Zapletal’s i3 configuration
     ](http://i3wm.org/docs/user-contributed/lzap-config.html)
--   [w:I3_(window_manager)|Wikipedia: I3]
+-   {{< wp "I3_(window_manager)"  "Wikipedia: I3" >}}
 -   [GitHub mirror of i3](https://github.com/mgsnova/i3/)
 -   [ArchLinux: I3](https://wiki.archlinux.org/index.php/I3)
 -   _I3_ use [i3status](http://i3wm.org/i3status/manpage.html) to generate
@@ -309,13 +301,13 @@ which are temporarily added the called programs to update status.
     compatible to i3status / i3bar.
     -   [i3pystatus documentation
         ](http://i3pystatus.readthedocs.io/en/latest/)
--   [j4status](#j4status "internal reference") below is an alternative
+-   {{< iref "#j4status" "j4status" >}} below is an alternative
     to _i3-status_;
 -   [GitHub: i3-py](https://github.com/ziberna/i3-py)
     contains python tools for i3. No new commit since 2012 (checked
     april 2016) but there are many forks.<br />
     The script _winmenu.py_
-    launches [dmenu](#dmenu "internal reference") (with vertical
+    launches {{< iref "#dmenu" "dmenu" >}} (with vertical
     patch) with a list of clients, sorted after workspaces. Selecting
     a client jumps to that window.
 -   [GitHub: quickswitch-for-i3
@@ -324,7 +316,7 @@ which are temporarily added the called programs to update status.
     is a python script using _i3-py_ that
     allows you to quickly switch to and locate windows on all your
     workspaces, using an interactive
-    [dmenu](#dmenu "internal reference") prompt.
+    {{< iref "#dmenu" "dmenu" >}} prompt.
     A more recent fork is [Oliver Uvman - quickswitch-for-i3
     ](https://github.com/OliverUv/quickswitch-for-i3)
 -   [GitHub: i3-wm-scripts](https://github.com/MicahChambers/i3-wm-scripts)
@@ -344,9 +336,9 @@ which are temporarily added the called programs to update status.
 [Openbox](http://icculus.org/openbox/) is a window-manager with root menu, dock, no
 taskbar (use fspanel, fbpanel, pypanel), a configuration management tool named
 [obconf](http://icculus.org/openbox/obconf/ "icculus.org obconf").
-Openbox is the standard window manager of [Lxde](#lxde "internal reference")
-It can be used with many [file managers](#file_managers "internal reference")
-most often with [PCManFM](#pcmanfm "internal reference").
+Openbox is the standard window manager of {{< iref "#lxde" "Lxde" >}}
+It can be used with many {{< iref "#file_managers" "file managers" >}}
+most often with {{< iref "#pcmanfm" "PCManFM" >}}.
 
 OpenBox use 10M resident memory including 5.5M shared.
 
@@ -356,7 +348,7 @@ OpenBox use 10M resident memory including 5.5M shared.
 -   [An Openbox Guide](http://urukrama.wordpress.com/openbox-guide/) and
     [Openbox Faq](http://urukrama.wordpress.com/openbox-faq/) in
     [Urukrama Web Log](http://urukrama.wordpress.com/)
--   man pages: [man:openbox(1)], [man:openbox-session(1)]
+-   man pages: {{< man "openbox(1)" >}}, {{< man "openbox-session(1)" >}}
 
 ## Fluxbox
 
@@ -438,8 +430,7 @@ if the chosen panel does not include one.
     with menu not the background.
 -   You can complete your fluxbox desktops with some other light
     components referenced in the
-    [Desktop components sections
-    ](#desktop_components "internal reference")
+    {{< iref "#desktop_components" "Desktop components sections" >}}
 
 
 
@@ -505,8 +496,8 @@ These are the most common keyboard shortcuts used in icewm to make your life eas
 
 # Wayland compositors {#wayland_compositors}
 
-See also the [Wayland Section](/node/xorg#wayland "internal reference"),
-[Wayland Terminals](/node/xterminals#wayland_terminals "internal reference").
+See also the {{< iref "xorg#wayland" "Wayland Section" >}},
+{{< iref "xterminals#wayland_terminals" "Wayland Terminals" >}}.
 
 -   [Enlightenment](https://en.wikipedia.org/wiki/Enlightenment_(software)) (BSD
     License) is a compositing window manager for Xorg or a  since version 20 a Wayland
@@ -624,7 +615,7 @@ the suckless-tools package in Debian.
     -   [bemenu API documentation](http://cloudef.pw/bemenu/).
 -   [dmenu-pango-imlib](https://github.com/Cloudef/dmenu-pango-imlib)
     is a dmenu fork with pango and imlib support.
--   [lemonbar](#lemonbar "internal reference")
+-   {{< iref "#lemonbar" "lemonbar" >}}
     in the status bar section.
 -   [pdmenu](https://joeyh.name/code/pdmenu/) full screen console
     menuing system for Unix.
@@ -654,7 +645,7 @@ the suckless-tools package in Debian.
     [slmenu, and some seriously wicked console wizardry
     ](http://inconsolation.wordpress.com/2013/03/16/bonus-slmenu-and-some-seriously-wicked-console-wizardry/)
     in [incosolation blog](http://inconsolation.wordpress.com).
--   [yabar](#yabar "internal reference") in the status bar section.
+-   {{< iref "#yabar" "yabar" >}} in the status bar section.
 
 ### Dzen {#dzen}
 [Dzen](https://github.com/robm/dzen)
@@ -822,7 +813,7 @@ use desktop shortcuts.
 You can choose to not have a pinboard on your desktop. A pinboard is easily
 hidden by floating windows, and is a non-sense with tiling wm that use
 all the screen but to use a menu system or a
-[Launch Bar](#launch_bars "internal reference").
+{{< iref "#launch_bars" "Launch Bar" >}}.
 
 -   [fbdesk](http://fluxbox.sourceforge.net/fbdesk/) (3.8M) aimed at
     FluxBox/BlackBox, it is in debian.
@@ -886,7 +877,7 @@ in X applications, quite often bound to Ctl-X/Ctl-C Ctl-X/Ctl-V.
 For emacs before v. 24  kill and yank commands used the primary
 selection, not they use the clipboard.
 
--   Wikipedia: [w:Clipboard manager]
+-   Wikipedia: {{< wp "Clipboard manager" >}}
 -   [freedesktop Specifications/ClipboardsWiki
     ](http://www.freedesktop.org/wiki/Specifications/ClipboardsWiki)
 -   [Freedesktop clipboard specification
@@ -898,19 +889,19 @@ selection, not they use the clipboard.
 The X11 applications  provide some tools to deal
 with the selections
 
--   [man:xcutsel] is used to copy the current selection into a cut
+-   {{< man "xcutsel" >}} is used to copy the current selection into a cut
     buffer and to make a selection that contains the current
     contents of the cut buffer.
     By  default,  xcutsel  will  use the selection named PRIMARY, but
     this can be changed by the option `-selection`.
--   [man:xclipboard] in the _x11-apps_ package is an X application to
+-   {{< man "xclipboard" >}} in the _x11-apps_ package is an X application to
     display the CLIPBOARD selection. Memory footprints: 4M res / 2M
     shr.
 
     The selection displayed by _xclipboard_ is the CLIPBOARD, *not the
     PRIMARY*.
 
--   [man:xcb] allows up to 8 cut buffers to be manipulated either via
+-   {{< man "xcb" >}} allows up to 8 cut buffers to be manipulated either via
     the command line, or with the mouse in a point and click
     manner. It uses 4.1M res / 3.6M shr.
 
@@ -919,8 +910,7 @@ data among computers or mobile platforms like
 -   [wepaste.com](http://www.wepaste.com/)
 -   [IPShare.net](http://www.ipshare.net/) for use on lan.
 
-You can also use any [pastebin
-](/node/clouds#pastebin "internal reference").
+You can also use any {{< iref "clouds#pastebin" "pastebin" >}}.
 
 
 Some newer command line to manage selection:
@@ -929,9 +919,9 @@ Some newer command line to manage selection:
     synchronize the three selectionS; _in debian_.
 -   [clipmenu](https://github.com/cdown/clipmenu)
     is a simple clipboard manager using
-    [dmenu](#dmenu "internal reference")
-    (or [rofi](#rofi "internal reference")) and
-    [xsel](#xsel "internal reference");
+    {{< iref "#dmenu" "dmenu" >}}
+    (or {{< iref "#rofi" "rofi" >}}) and
+    {{< iref "#xsel" "xsel" >}};
     _clipmenud_ polls the clipboard every 0.5 seconds,  changes to the
     clipboard contents is writen to a cache; clipmenu reads the cache
     directory, and call dmenu to select one.
@@ -960,7 +950,7 @@ Some newer command line to manage selection:
 There are also many clipboard managers:
 -   [clipit](https://github.com/shantzu/ClipIt)
     is a lightweight GTK+ clipboard manager forked from
-    [parcellite](#parcellite "internal reference).
+    {{< iref "#parcellite" "parcellite" >}}.
     Clipit seat in your tray, and allow to select clipboard history.
     It can also be used from the command line.
     Clipit has preferences to manage _CLIPBOARD_ and _PRIMARY_
@@ -980,7 +970,7 @@ There are also many clipboard managers:
     _seem abandoned since 2012 but still in debian stretch_.
 -   [gpaste](https://github.com/Keruspe/GPaste)
     is a clipboard management system for Gnome. in Debian.
--   [w:Glipper] is a clipboard utility for Gnome. _in debian_.
+-   {{< wp "Glipper" >}} is a clipboard utility for Gnome. _in debian_.
 -   [Parcellite](https://github.com/rickyrockrat/parcellite){: #parcellite}
     is a lightweight GTK+ clipboard manager
 -   [qlipper](https://github.com/pvanek/qlipper)
@@ -1024,15 +1014,15 @@ more applications on the ArchWiki page.
 ## desktop background
 You can use the following programs to set the X desktop backgound:
 
--   [man:xsetroot]
--   [man:fbsetbg]
+-   {{< man "xsetroot" >}}
+-   {{< man "fbsetbg" >}}
 -   Esetroot
 -   wmsetbg
 -   feh
 -   hsetroot
 -   chbg
--   [display](/node/images#imagemagick "internal reference")
--   [pqiv](/node/images#pqiv "internal reference")
+-   {{< iref "images#imagemagick" "display" >}}
+-   {{< iref "images#pqiv" "pqiv" >}}
 -   xv
 -   xsri
 -   xli
@@ -1052,7 +1042,7 @@ feh, esetroot and wmsetbg support pseudo transparency
 These tools allow to control windows from an
 [EWMH](# ewmh "internal reference") compliant manager.
 They complement the basic utilities that can only give informations on
-the window property like [man:xwininfo] or [man:xprop].
+the window property like {{< man "xwininfo" >}} or {{< man "xprop" >}}.
 
 
 -   [xdotool](https://github.com/jordansissel/xdotool/)

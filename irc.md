@@ -1,41 +1,35 @@
-<!--
-.. description:
-.. date: 2016-04-28
-.. slug: irc
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: IRC
--->
+---
+title: IRC
+---
 
-[TOC]
+{{% toc /%}}
 
 -----------------
 
-See also [XMPP](/node/xmpp "internal reference")
+See also {{< iref "xmpp" "XMPP" >}}
 
 # common Internet Messaging refs
--   Wikipedia: [w:Instant messaging],
-    [w:list of instant messaging protocols],
-    [w:Comparison of instant messaging protocols],
-    [w:Comparison of instant messaging clients],
-    [w:Instant messaging].
+-   Wikipedia: {{< wp "Instant messaging" >}},
+    {{< wp "list of instant messaging protocols" >}},
+    {{< wp "Comparison of instant messaging protocols" >}},
+    {{< wp "Comparison of instant messaging clients" >}},
+    {{< wp "Instant messaging" >}}.
 
 
 # IRC References
 
 Some Jabber clients are also supporting IRC, they are listed in the
-[XMPP Page](/node/xmpp "internal reference"). There are also jabber to
+{{< iref "xmpp" "XMPP Page" >}}. There are also jabber to
 irc gateways that allow to connect to irc from any jabber client.
 
--   Wikipedia:  [w:Internet Relay Chat],
-    [w:Comparison of Internet Relay Chat clients],
-    [w:Comparison of instant messaging protocols],
-    [w:Internet Relay Chat services],
-    [w:Comparison of Internet Relay Chat services],
-    [w:IRC daemon],
-    [w:Comparison of Internet Relay Chat daemons],
-    [w:List of Internet Relay Chat commands]
+-   Wikipedia:  {{< wp "Internet Relay Chat" >}},
+    {{< wp "Comparison of Internet Relay Chat clients" >}},
+    {{< wp "Comparison of instant messaging protocols" >}},
+    {{< wp "Internet Relay Chat services" >}},
+    {{< wp "Comparison of Internet Relay Chat services" >}},
+    {{< wp "IRC daemon" >}},
+    {{< wp "Comparison of Internet Relay Chat daemons" >}},
+    {{< wp "List of Internet Relay Chat commands" >}}
 -   [Awesome IRC](https://github.com/davisonio/awesome-irc)
     a list of tools, software & other resources related to the
     Internet Relay Chat (IRC) protocol.
@@ -53,14 +47,14 @@ irc gateways that allow to connect to irc from any jabber client.
     the [freenode Knowledge Database](http://freenode.net/kb/all)
     explains _Channels_, _Connecting to freenode_, _Connecting with SASL_
     _General Expectations for Conduct_, _Nickname Registration_.
-    -   Wikipedia: [w:Freenode]
+    -   Wikipedia: {{< wp "Freenode" >}}
 -   [SwiftIRC](http://www.swiftirc.net/) has a
     [Wiki](http://wiki.swiftirc.net/wiki/Main_Page) with commands
     memos.
 -   [Search Irc](http://searchirc.com/) for channels or servers.
 
 ## IRC Commands
-A List of commands is givent in Wikipedia: [w:List of IRC Commands]
+A List of commands is givent in Wikipedia: {{< wp "List of IRC Commands" >}}
 and also available in the help of most clients.
 
 -   [toxin](http://toxin.jottit.com/) has list of
@@ -85,9 +79,9 @@ and also available in the help of most clients.
 
 # IRC Clients {#irc_clients}
 -   Wikipedia:
-    [w:Comparison of instant messaging clients],
-    [w:Comparison of Internet Relay Chat clients],
--   [bitlbee](/node/xmpp#bitlbee) is an IRC to
+    {{< wp "Comparison of instant messaging clients" >}},
+    {{< wp "Comparison of Internet Relay Chat clients" >}},
+-   {{< iref "xmpp#bitlbee" "bitlbee" >}} is an IRC to
     other chat networks gateway, such as AIM, ICQ, Microsoft Messenger, Yahoo!,
     Jabber and Google Talk, and Facebook Messenger,
     Twitter, Identi.ca, and status.net.
@@ -95,11 +89,11 @@ and also available in the help of most clients.
     protocols with your irc client. bitlbee can be usefull if you want
     to use only a light irc client to take part in chats from many
     protocols including jabber/ssl as in gmail accounts.</br>
-    [Bitlebee main entry](/node/xmpp#bitlbee "internal reference")
-    is in the [XMPP Page](/node/xmpp "internal reference")
+    {{< iref "xmpp#bitlbee" "Bitlebee main entry" >}}
+    is in the {{< iref "xmpp" "XMPP Page" >}}
 -   [CenterIm](http://www.centerim.org/) (GPL) is a ncurses
     ICQ/Yahoo!/AIM/IRC/MSN/Jabber/GaduGadu/RSS/LiveJournal Client.<br />
-    it replaced [w:Centericq] dead since 2007.
+    it replaced {{< wp "Centericq" >}} dead since 2007.
 -   <a name="emacs_irc"></a>__Emacs irc clients__ are numerous,
     all of them are GPLed:
 
@@ -130,7 +124,7 @@ and also available in the help of most clients.
     online [EPIC Help Pages](http://help.epicsol.org)
 -   <a name=irssi></a>[irssi](https://irssi.org/)
     is a terminal based IRC client for UNIX systems. It also supports
-    [OTR](/node/xmpp#otr "internal reference")
+    {{< iref "xmpp#otr" "OTR" >}}
     with [Irsii-OTR](https://github.com/cryptodotis/irssi-otr/)
     _in Debian_, FISH and alternate  protocols ( XMPP, SILC, ICB,
     [RobustIRC](robustirc.net)) via
@@ -144,7 +138,7 @@ and also available in the help of most clients.
     is a console AIM, ICQ, IRC, and Lily CMC client  written in C.
 -   [Polari](https://wiki.gnome.org/Apps/Polari)
     is a gnome graphical irc client that uses the
-    [Telepathy framework](/node/xmpp#telepathy "internal reference").
+    {{< iref "xmpp#telepathy" "Telepathy framework" >}}.
 
 -    <a name="xchat"></a>[XChat](http://xchat.org) (GPL) is a GTK+
     IRC client _no development since 2010_
@@ -163,7 +157,7 @@ and also available in the help of most clients.
     is an IRC client based on XChat, but unlike XChat it’s
     completely free for both Windows and Unix and it is actively
     developed it is scriptable with Python and Perl. It supports
-    [FISH encryption](/node/xmpp#fish "internal reference")
+    {{< iref "xmpp#fish" "FISH encryption" >}}
     thru [FISHLIM addon
     ](http://fishlim.kodafritt.se/) _in Debian package hexchat-plugins_,
     and OTR through the plugin
@@ -238,7 +232,7 @@ External Documentation:
     ](https://wiki.archlinux.org/index.php/WeeChat)
 -   [Gentoo Wiki: WeeChat
     ](https://wiki.gentoo.org/wiki/WeeChat).
--   Wikipedia [w:Weechat]
+-   Wikipedia {{< wp "Weechat" >}}
 -   [InWee](https://github.com/susam/inwee)
     is a  wrapper script to send text messages
     and commands to WeeChat from shell or from within WeeChat via
@@ -256,8 +250,8 @@ Plugins for other protocols:
 -   [whatsapp.py
     ](https://weechat.org/scripts/source/whatsapp.py.html/)
     is a plugin to talk to
-    [WhatsApp](/node/xmpp#whatsapp "internal reference") using
-    [Yowsup](/node/xmpp#yowsup "internal reference").
+    {{< iref "xmpp#whatsapp" "WhatsApp" >}} using
+    {{< iref "xmpp#yowsup" "Yowsup" >}}.
 -   [weetweet.py](https://weechat.org/scripts/source/weetweet.py.html/)
     is a plugin for twitter messaging, it requires the python library
     twitter lib.
@@ -270,16 +264,16 @@ Plugins for other protocols:
     more)!.
 
 In addition to these plugins we can use a bridge IRC to other protocol
-via [BitlBee](/node/xmpp#bitlbee "internal reference"),
-[Spectrum2](/node/xmpp#spectrum2 "internal reference"),
-[matterbrige](/node/xmpp#matterbridge "internal reference")
+via {{< iref "xmpp#bitlbee" "BitlBee" >}},
+{{< iref "xmpp#spectrum2" "Spectrum2" >}},
+{{< iref "xmpp#matterbridge" "matterbrige" >}}
 
 
 
 Plugins for secure messaging:
 
 -   [Weechat-OTR](https://github.com/mmb/weechat-otr#readme)
-    is a plugin allowing to use [OTR](/node/xmpp#otr) with weechat.
+    is a plugin allowing to use {{< iref "xmpp#otr" "OTR" >}} with weechat.
 -   [crypt.py](https://weechat.org/scripts/source/crypt.py.html/)
     Encrypt/decrypt messages using openssl.
 -   `ircrypt.py` in the  GitHub project
@@ -288,7 +282,7 @@ Plugins for secure messaging:
     [IRCrypt ptotocol ](https://github.com/IRCrypt/documentation).
 -   `fish.py` from [GitHub weechat-fish
     ](https://github.com/freshprince/weechat-fish) provide
-    [FiSH encryption](/node/xmpp#fish "internal reference").
+    {{< iref "xmpp#fish" "FiSH encryption" >}}.
 
 Weechat has some frontends:
 
@@ -310,9 +304,9 @@ Weechat has some frontends:
     -   [KiwiIRC live client](https://kiwiirc.com/)
 
 # IRC Bots
--   Wikipedia: [w:Internet Relay Chat bot] and
-    [w:Comparison of Internet Relay Chat bots]
--   [w:Eggdrop] (GPL] is written in the C language and has plugins
+-   Wikipedia: {{< wp "Internet Relay Chat bot" >}} and
+    {{< wp "Comparison of Internet Relay Chat bots" >}}
+-   {{< wp "Eggdrop" >}} (GPL] is written in the C language and has plugins
     in C and TCL. _last release 2011_.
     -   [Eggdrop Home](http://www.eggheads.org/)
 -   [EnergyMech](http://www.energymech.net/) (GPL) is a fork of Eggdrop
@@ -348,7 +342,7 @@ is an IRC bot framework written in python. It is in Debian, but
 only the old _2009_ v0.83.4.1 stable release. The last commit is
 in 2015 but there where no official release between 2009 and 2015
 _as seen  in 2018_. SupyBot is now replaced by
-[limonaria](#limonaria "internal reference").
+{{< iref "#limonaria" "limonaria" >}}.
 
 -   [GitHub Supybot git repository
     ](https://github.com/Supybot/Supybot/)

@@ -1,24 +1,17 @@
-<!--
-.. description:
-.. date: 2015-04-08
-.. slug: sound_edit
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Sound encoders and editors
--->
+---
+title: Sound encoders and editors
+---
 
-[TOC]
-
+{{% toc /%}}
 
 # Low level encoders
-The [Video Encoders](/node/video_edit "internal reference")
+The {{< iref "video_edit" "Video Encoders" >}}
 are often also audio encoders. In the
-[Video Encoders](/node/video_edit "linkreference")
+{{< iref "video_edit" "Video Encoders" >}}
 page you find
-[libav](/node/video_edit#libav "internal reference"),
-[ffmpeg](/node/video_edit#ffmpeg "internal reference"),
-[Mencoder](/node/video_edit#mencoder "internal reference"),
+{{< iref "video_edit#libav" "libav" >}},
+{{< iref "video_edit#ffmpeg" "ffmpeg" >}},
+{{< iref "video_edit#mencoder" "Mencoder" >}},
 which are also audio  audio encoders.
 
 ## encoder list
@@ -73,7 +66,7 @@ Mp3Wrap
 
 
 Vorbis tools <a name="vorbistools"></a>
-:   The [vorbis](/node/codecs#ogg_vorbis) package contains
+:   The {{< iref "codecs#ogg_vorbis" "vorbis" >}} package contains
     runtime libraries for use in programs that support Ogg Vorbis, as
     well as an encoder `oggenc`, a decoder `oggdec`, a tool to split
     vorbis files `vcut`, a playback tool `ogg123`, and a comment editor
@@ -137,7 +130,7 @@ FLAC  <a name="flac"></a>
 :   Speex is a patent-free audio codec designed especially for
     voice.
 
-:   See also [libfishsound](/node/178#item_libfishsound) for a
+:   See also {{< iref "178#item_libfishsound" "libfishsound" >}} for a
     programming interface
 
 :   refs:[speex.org](http://www.speex.org/),
@@ -181,8 +174,8 @@ faad2
 
 [Grip](http://nostatic.org/grip/) <a name="grip"></a>
 :   Grip is a GTK+ based front-end for CD rippers (such as
-    [cdparanoia](#cdparanoia) and [cdda2wav](#cdda2wav)) and
-    MP3 encoders as [bladeenc](#bladeenc), [oggenc](#vorbisyools)
+    {{< iref "#cdparanoia" "cdparanoia" >}} and {{< iref "#cdda2wav" "cdda2wav" >}}) and
+    MP3 encoders as {{< iref "#bladeenc" "bladeenc" >}}, {{< iref "#vorbisyools" "oggenc" >}}
     , lame , ... Grip allows you to rip entire tracks or just a section
     of a track. Grip supports the CDDB protocol for accessing track
     information on disc database servers. Gcd is the included cd
@@ -230,7 +223,7 @@ faad2
 # High Level sound editors
 ## Desktop editors
 [audacity](http://audacity.sourceforge.net/)<a name="audacity"></a>
-:   [w:Audacity] (GPL) is a free audio editor. You can record sounds, play
+:   {{< wp "Audacity" >}} (GPL) is a free audio editor. You can record sounds, play
     sounds, import and export wav, aiff, Vorbis, and MP3 files, mix
     tracks together, or apply effects to your recordings. It also has a
     built-in amplitude envelope editor, a customizable spectrogram mode
@@ -248,7 +241,7 @@ faad2
     [Audacity Tutorials](http://wiki.librivox.org/index.php/Audacity_Tutorials)
 
     Audacity allow to do noise removal also called
-    [w:Audio_restoration], it is explained in
+    {{< wp "Audio_restoration" >}}, it is explained in
     [Audacity Documentation: Noise Reduction](http://wiki.audacityteam.org/wiki/Noise_Reduction)
     and further detailled in [Detailed Audacity Noise Removal
     ](http://wiki.librivox.org/index.php/Detailed_Audacity_Noise_Removal)
@@ -257,9 +250,9 @@ faad2
     on [Noise Cleaning](http://wiki.librivox.org/index.php/Noise_Cleaning)
 
 [Ardour](http://ardour.org/)<a name="ardour">
-:   [w:Ardour] (GPL) is a powerful multitrack Hard-Disk Recording system by
+:   {{< wp "Ardour" >}} (GPL) is a powerful multitrack Hard-Disk Recording system by
     Paul Davis and others. It supports
-    [LADSPA](/node/178/#item_ladspa "internal link") audio filter
+    {{< iref "178" "LADSPA" >}} audio filter
     plugins.
 :   [Ardour sourceforge page](http://ardour.sourceforge.net),
     [LAU doc on ardour](http://www.djcj.org/LAU/ardour).
@@ -275,49 +268,48 @@ __Ceres__ <a name="ceres"></a> (BSD like license)
 :   _dir2ogg_ is a python script which converts mp3, m4a, wma,
     and wav files into ogg-vorbis format. It uses _mplayer_, _mpg123_
     or _lame_, _faad_, _flac_, _mpcdec_, _cdparanoia_ or _cedax_ or
-    _cdda2wav_.<br /> [XCJA](#xcfa "internal reference") is an
+    _cdda2wav_.<br /> {{< iref "#xcfa" "XCJA" >}} is an
     alternative to _dir2ogg_.
 
-[w:Ecasound]<a name="ecasound"></a>
+{{< wp "Ecasound" >}}<a name="ecasound"></a>
 :   [ecasound (__Home__)](http://nosignal.fi/ecasound/)
     (GPL) is a sound processing application designed for basic
     effect processing, mixing, multitrack recording and signal
-    recycling. It supports OSS and [ALSA](/node/177) sound drivers,
+    recycling. It supports OSS and {{< iref "177" "ALSA" >}} sound drivers,
     wav, mp3, aiff, cdda, au, snd, raw and standard file streams
 
 [gnac](http://gnac.sourceforge.net/) (GPL) <a name="gnac">
 :   _Gnac_ is an audio conversion program for GTK3 using Gstreamer,
-    like [OggConvert
-    ](/node/video_edit#oggconvert "internal reference")
-    and [SoundConverter](#soundconverter "internal reference").
+    like {{< iref "video_edit#oggconvert" "OggConvert" >}}
+    and {{< iref "#soundconverter" "SoundConverter" >}}.
     But _gnac_ and _oggconvert_ have less gnome dependencies than
     SoundConverter.
 
 [GNU Sound](http://www.gnu.org/software/gnusound/)
 :   __Gnu sound__ (GPL) is a multitrack sound editor for Gnome.
 
-[w:Jokosher]
+{{< wp "Jokosher" >}}
 :   __Jokosher__ (GPL) is a non-linear multi-track digital audio
     editor,it is being developed in Python,
     using the GTK+ interface and GStreamer as an audio back-end.
 
-[OggConvert](/node/video_edit#oggconvert "internal reference")
+{{< iref "video_edit#oggconvert" "OggConvert" >}}
 :   __0ggconvert__ (LGPL) convert audio and video files of various
     types into  Ogg Vorbis audio format, and video formats. It uses _GStreamer_<br />
-    [SoundConverter](#soundconverter "internal reference"),
-    and [gnac](#gnac "internal reference"),
-    [PiTiVi](/node/video_edit#pitivi "internal reference")
+    {{< iref "#soundconverter" "SoundConverter" >}},
+    and {{< iref "#gnac" "gnac" >}},
+    {{< iref "video_edit#pitivi" "PiTiVi" >}}
     are  alternatives to
     _OggConvert_.
 
 
-[PiTiVi](/node/video_edit#pitivi "internal reference")
+{{< iref "video_edit#pitivi" "PiTiVi" >}}
 :   __PiTivi__ (LGPL) is an audio/video editing software written
     in python CTK+ that uses the gstreamer framework.
 
 [Rezound](http://rezound.sourceforge.net)<a name="rezound"></a>
-:   [w:ReZound] (GPL) is a graphical audio file editor. It supports
-    [LADSPA](/node/178/#ladspa "internal reference") audio filter
+:   {{< wp "ReZound" >}} (GPL) is a graphical audio file editor. It supports
+    {{< iref "178" "LADSPA" >}} audio filter
     plugins. It can use the formats: wave, aiff/aiff/-c, next
     berkeley/ircam/carl, raw, ogg vorbis, mpeg layer 3,2,1, flac, midi
     sample dump. It interfaces with OSS, portaudio, JACK.
@@ -326,8 +318,7 @@ __Ceres__ <a name="ceres"></a> (BSD like license)
 [SoundConverter](http://soundconverter.org/) (GPL) <a name="soundconverter">
 :   SoundConverter is a sound converter to ogg/vorbis for Gnome
     using gstreamer, it is similar to
-    [gnac](#gnac "internal reference") and [OggConvert
-    ](/node/video_edit#oggconvert "internal reference"),
+    {{< iref "#gnac" "gnac" >}} and {{< iref "video_edit#oggconvert" "OggConvert" >}},
     but while _oggconvert_ deal both with video and sound formats,
     _soundconverter_ and _gnac_ focus only on sounds.<br />
     _soundconverter_ as more gnome dependencies than _oggconvert_
@@ -357,13 +348,13 @@ __Ceres__ <a name="ceres"></a> (BSD like license)
         SNDLIB_ALSA_DEVICE="usb-audio" snd
 
 [SoX](http://sox.sourceforge.net)<a name="sox"></a>
-:   [w:SoX] _Sound eXchange_ (GPL) is a sound file format converter SoX can
+:   {{< wp "SoX" >}} _Sound eXchange_ (GPL) is a sound file format converter SoX can
     convert between many different digitized sound formats and perform
     simple sound manipulation functions, including sound effects.
     :   refs:
     -   [SoX Home]((http://sox.sourceforge.net/),
         [sox features](http://sox.sourceforge.net/Docs/Features).
-    -   Wikipedia: [w:SoX]
+    -   Wikipedia: {{< wp "SoX" >}}
     -   [SoX Documentation](http://sox.sourceforge.net/Docs/Documentation)
     -   manpages: [sox(1)
         ](http://sox.sourceforge.net/sox.html)
@@ -376,10 +367,10 @@ __Ceres__ <a name="ceres"></a> (BSD like license)
 
 
 [Sweep](http://www.metadecks.org/software/sweep/)<a name="sweep"></a>
-:   [w:Sweep_(software)|Sweep] (GPL) is an editor for sound samples.
+:   {{< wp "Sweep_(software)"  "Sweep" >}} (GPL) is an editor for sound samples.
     It operates on `.wav`, `.aiff` and `.au` formats, and has
     multiple undo/redo levels and filters. It supports
-    [LADSPA](/node/178#ladspa "internal reference") audio filter
+    {{< iref "178#ladspa" "LADSPA" >}} audio filter
     plugins.<br />
     The last release was in 2008.
 :   refs: [sweep(1)
@@ -393,7 +384,7 @@ __Ceres__ <a name="ceres"></a> (BSD like license)
     _cdparanoia_, _icedax_ and a choice among many tools to perform
     the re-encoding: _mplayer_, _vorbis-tools_, _lame_, _mppen_c,
     _sox_, etc.<br />
-    [dir2org](#dir2org "internal reference") is
+    {{< iref "#dir2org" "dir2org" >}} is
     similar to _Xcfa_ , but has ogg-vorbis as only target format.
 
 ## Command line tools
@@ -411,11 +402,11 @@ __Ceres__ <a name="ceres"></a> (BSD like license)
     is a simple script that uses the cdda2wav and ogg123
     to encode audio tracks.
 :   cddawav and cdda2ogg are part of the
-    [cdrecord](/node/189#item_cdrecord) package
+    {{< iref "189#item_cdrecord" "cdrecord" >}} package
 
 gst-tools
 :   This is the basic command-line tools used for
-    [GStreamer](/node/188#item_gstreamer)
+    {{< iref "188#item_gstreamer" "GStreamer" >}}
 
 [mp3diags](http://mp3diags.sourceforge.net/)
 :   _mp3diags_ is a program to diagnostic and repair mp3 files.
@@ -447,8 +438,8 @@ and [Mp3Wrap](http://mp3wrap.sourceforge.net/)
 :   normalize is a tool for adjusting the volume of audio files to
     a standard level.
     It is in the Debian package _normalize-audio_
-:   refs: [man:normalize-audio],
-    [man:normalize-mp3] (for mp3 __and__ ogg-vorbis)
+:   refs: {{< man "normalize-audio" >}},
+    {{< man "normalize-mp3" >}} (for mp3 __and__ ogg-vorbis)
 
 [Gnormalize](http://gnormalize.sourceforge.net/)
 :   Gnormalize is a perl-Gtk2 program that decodes the
@@ -465,16 +456,16 @@ and [Mp3Wrap](http://mp3wrap.sourceforge.net/)
     well as 2 scripts that utilize these modules to do Replay Gain.
     It is in Debian as _python-rgain_
 
-[man:vorbisgain]
+{{< man "vorbisgain" >}}
 :   calculate the replay gain for Ogg Vorbis files. _in Debian_.
 
 # Speech synthesis and recognition
-[w:Speech_synthesis|Wikipedia: Speech synthesis], [w:Comparison of speech synthesizers],
-[w:Speech recognition], [w:List of speech recognition software],
-[w:Speech recognition in Linux].
+{{< wp "Speech_synthesis"  "Wikipedia: Speech synthesis" >}}, {{< wp "Comparison of speech synthesizers" >}},
+{{< wp "Speech recognition" >}}, {{< wp "List of speech recognition software" >}},
+{{< wp "Speech recognition in Linux" >}}.
 
 [Festival](http://www.cstr.ed.ac.uk/projects/festival/) (BSD License)
-:   [w:Festival Speech Synthesis System] is a multi-lingual speech synthesis
+:   {{< wp "Festival Speech Synthesis System" >}} is a multi-lingual speech synthesis
     system developed at Centre for Speech Technology Research (CSTR) at the
     University of Edinburgh and Carnegie Mellon University.
 

@@ -1,15 +1,8 @@
-<!--
-.. description:
-.. date: 2015-12-18
-.. slug: debian_admin
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Debian Administration
--->
+---
+title: Debian Administration
+---
 
-[TOC]
-
+{{% toc /%}}
 
 ## Debian Official documentation
 
@@ -166,7 +159,7 @@ __Apt Pinning__ is described in:
     between Stable Testing, and Unstable sources.
 -   [Apt-Pinning for Beginners
     ](http://jaqque.sbih.org/kplug/apt-pinning.html)
--   [man:apt_preferences]
+-   {{< man "apt_preferences" >}}
 
 
 

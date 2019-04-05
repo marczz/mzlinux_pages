@@ -1,26 +1,20 @@
-<!--
-.. description:
-.. date: 2015-04-10
-.. slug: sound_libs
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Sound and Video Processing Libraries
--->
+---
+title: Sound and Video Processing Libraries
+---
 
-[TOC]
+{{% toc /%}}
 
 # Sound Libraries
 [audiofile](http://www.68k.org/~michael/audiofile/) <a name="audiofile"></a>
 :   The Audio File library is an implementation of SGI's Audio File
     Library, which provides an API for accessing audio file formats
     like AIFF/AIFF-C, WAVE, and NeXT/Sun .snd/.au files. This library
-    is used by the [EsounD](/node/streaming#esound "internal reference") daemon,
-    [AlsaPlayer](/node/media_players#alsaplayer "internal reference"),
-    [Ecasound](/node/sound_edit#ecasound "internal reference"),
-    [Glame](/node/media_players#glame "internal link"), brasero, ekiga,
+    is used by the {{< iref "streaming#esound" "EsounD" >}} daemon,
+    {{< iref "media_players#alsaplayer" "AlsaPlayer" >}},
+    {{< iref "sound_edit#ecasound" "Ecasound" >}},
+    {{< iref "media_players#glame" "Glame" >}}, brasero, ekiga,
     madplay, mplayer and a lot of gnome libraries ...
-:   It provides [sfconvert](/node/sound_edit#sfconvert "internal reference") to
+:   It provides {{< iref "sound_edit#sfconvert" "sfconvert" >}} to
     convert between the aiff, aifc, next, or wave formats and `sfinfo`
     to prints information regarding files from this format.
 
@@ -29,14 +23,14 @@ ladcca)<a name="ladcca"></a>
 :   LADCCA stands for Linux Audio Developer's Configuration and
     Connection API. It is a session management system for audio
     applications on GNU/Linux. It understands the
-    [Jack](/node/streaming#jack "internal reference")
-    low latency audio API and the [Alsa](/node/sound_edit#alsa) MIDI sequencer
+    {{< iref "streaming#jack" "Jack" >}}
+    low latency audio API and the {{< iref "sound_edit#alsa" "Alsa" >}} MIDI sequencer
     interface.
 :   [LASH](http://www.nongnu.org/lash/)
     stands for Linux Audio Session Handler. It is a session management
     system for audio applications on GNU/Linux. It understands the
-    [Jack](/node/streaming#jack "internal reference" ) low latency audio API and the
-    [Alsa](/node/sound_edit#alsa "internal reference") MIDI sequencer interface.
+    {{< iref "streaming#jack" "Jack" >}} low latency audio API and the
+    {{< iref "sound_edit#alsa" "Alsa" >}} MIDI sequencer interface.
 
 [Ladspa](http://www.ladspa.org/) (Linux Audio Developer's Simple Plugin API)<a name="ladspa"></a>
 :   Ladspa plugins:
@@ -46,14 +40,14 @@ ladcca)<a name="ladcca"></a>
         Linux.
 
 :   Ladspa is used by
-    [Ardour](/node/sound_edit#ardour "internal reference"),
-    [Ecasound](/node/sound_edit#ecasound "internal reference"), *GNU Sound*,
-    [GStreamer](/node/streaming#gstreamer "internal reference"),
-    [audacity](/node/sound_edit#audacity "internal reference"),
-    [MusE](/node/streaming#muse "internal reference"),
-    [ReZound](/node/sound_edit#rezound "internal reference"),
-    [Snd](/node/sound_edit#snd "internal reference"),
-    [Sweep](/node/sound_edit#sweep "internal reference")
+    {{< iref "sound_edit#ardour" "Ardour" >}},
+    {{< iref "sound_edit#ecasound" "Ecasound" >}}, *GNU Sound*,
+    {{< iref "streaming#gstreamer" "GStreamer" >}},
+    {{< iref "sound_edit#audacity" "audacity" >}},
+    {{< iref "streaming#muse" "MusE" >}},
+    {{< iref "sound_edit#rezound" "ReZound" >}},
+    {{< iref "sound_edit#snd" "Snd" >}},
+    {{< iref "sound_edit#sweep" "Sweep" >}}
 
 [libao](http://www.xiph.org/ao/)<a name="libao"></a>
 :   Libao is a cross-platform audio library that allows programs to
@@ -65,17 +59,17 @@ ladcca)<a name="ladcca"></a>
     `/etc/libao.conf` or `.libao` with the syntax `default_driver=x`
 
 :   Libao is needed by
-    [mpg321](/node/media_players#mpg321 "internal reference"), the python bindins
+    {{< iref "media_players#mpg321" "mpg321" >}}, the python bindins
     are provided by the package pyao.
 
-:   An interesting feature of the [esd](/node/streaming#esound "internal reference") driver of
+:   An interesting feature of the {{< iref "streaming#esound" "esd" >}} driver of
     libao is the possibility to send sound to networked computer by
     using the option `"host=hostname:port"`.
 
 libfishsound
 :   FishSound (libfishsound) provides a simple programming
     interface for decoding and encoding audio data using the codecs
-    [Vorbis](#vorbis)and[Speex](#speex).
+    {{< iref "#vorbis" "Vorbis" >}}and{{< iref "#speex" "Speex" >}}.
 
 :   Refs:[libfishsound api](http://www.annodex.net/software/libfishsound/html/)
 
@@ -85,7 +79,7 @@ libfishsound
     Frequencies, as well as the so-called MPEG 2.5 format. All three
     audio layers (Layer I, Layer II, and Layer III a.k.a. MP3) are
     fully implemented.
-    [madplay](/node/sound_players#madplay "internal reference")
+    {{< iref "sound_players#madplay" "madplay" >}}
     is a command line front-end to libmad.
 
     The [Mad home page](http://www.underbit.com/products/mad/) cite
@@ -94,7 +88,7 @@ libfishsound
 
 [liboggz](https://xiph.org/oggz/doc/)<a name="liboggz"></a>
 :   Oggz provides a simple programming interface for reading and
-    writing Ogg (cf. [Vorbis](#vorbis "internal reference"), [libogg](#libogg "internal reference"))
+    writing Ogg (cf. {{< iref "#vorbis" "Vorbis" >}}, {{< iref "#libogg" "libogg" >}})
     files and streams.
 
 [Ogg Vorbis](node/codecs#ogg_vorbis "Internal reference")
@@ -105,10 +99,10 @@ libfishsound
 
     - Libogg is a library for manipulating Ogg bitstream. , the
     python bindins are provided by the package pyogg.
-    - The [libvorbis](#libogg "internal reference") package contains runtime
+    - The {{< iref "#libogg" "libvorbis" >}} package contains runtime
     libraries for use in programs that support Ogg Vorbis.
-    - See also [libfishsound](#libfishsound "internal reference") and
-    [liboggz](#liboggz "internal reference")for a programming interface
+    - See also {{< iref "#libfishsound" "libfishsound" >}} and
+    {{< iref "#liboggz" "liboggz" >}}for a programming interface
     - [xiph.org  Ogg homepage](http://www.xiph.org/ogg/).
     _(in french:  [page francophone du format Ogg Vorbis](http://ptaff.ca/ogg/)
     )_.
@@ -134,10 +128,9 @@ libfishsound
     ](http://manpages.debian.org/cgi-bin/man.cgi?query=sndfile-resample(1))
     is a sample rate converter.
 
-:   libsndfile is required by [alsaplayer](/node/media_players#alsaplayer)
-    [libsamplerate](#libsamplerate) [sweep](/node/sound_edit#sweep)
-    [jack-audio-connection-kit-example-clients
-    ](/node/streaming#jack "internal reference").
+:   libsndfile is required by {{< iref "media_players#alsaplayer" "alsaplayer" >}}
+    {{< iref "#libsamplerate" "libsamplerate" >}} {{< iref "sound_edit#sweep" "sweep" >}}
+    {{< iref "streaming#jack" "jack-audio-connection-kit-example-clients" >}}.
 
 [libsamplerate](http://www.mega-nerd.com/SRC/))<a name="libsamplerate"></a>
 :   Secret Rabbit Code (aka libsamplerate) is a Sample Rate
@@ -336,8 +329,7 @@ The conversion of format is done by using the `plug` conversion and a slave pcm;
 ## Pulseaudio
 
 Pulseaudio sound server is
-[in the streaming section
-](/node/streaming#pulseaudio "internal reference")
+{{< iref "streaming#pulseaudio" "in the streaming section" >}}
 
 # Video Libraries
 
@@ -359,10 +351,10 @@ DVB and Video4Linux<a name="v4l"></a>
     parallel port and USB video cameras.
 
 SDL
-:   see [in sound libraries](#sdl "internal reference")
+:   see {{< iref "#sdl" "in sound libraries" >}}
 
 General Graphic Interface (GGI))<a name="gci"></a>
-: The [w:General Graphics Interface] project aims to
+: The {{< wp "General Graphics Interface" >}} project aims to
 develop a reliable, stable and fast graphics system that works
 everywhere.
 

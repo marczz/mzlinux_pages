@@ -1,35 +1,28 @@
-<!--
-.. description:
-.. date: 2016-05-08
-.. slug: sip
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: SIP
--->
+---
+title: SIP
+---
 
-[TOC]
+{{% toc /%}}
 
 -----------------
 
-See also the related page [XMPP](/node/xmpp "internal reference")
-where are included the XMPP/Jingle clients like [Pidgin
-](/node/xmpp#pidgin "internal reference"),
-[Psi](/node/xmpp#psi "internal reference"),
-[Jabbin](/node/xmpp#jabbin "internal reference"),
-[Gajim](/node/xmpp#jabbin "internal reference").
+See also the related page {{< iref "xmpp" "XMPP" >}}
+where are included the XMPP/Jingle clients like {{< iref "xmpp#pidgin" "Pidgin" >}},
+{{< iref "xmpp#psi" "Psi" >}},
+{{< iref "xmpp#jabbin" "Jabbin" >}},
+{{< iref "xmpp#jabbin" "Gajim" >}}.
 
-Other related pages are [IRC](/node/irc "internal reference"),
-[XMPP](/node/xmpp "internal reference")
-and [Social Networks](/node/social_networks "internal reference")
+Other related pages are {{< iref "irc" "IRC" >}},
+{{< iref "xmpp" "XMPP" >}}
+and {{< iref "social_networks" "Social Networks" >}}
 
 
 # VoIp protocols references
 
--   Wikipedia: [w:Voice over IP], [w:Session Initiation Protocol],
-    [w:H.323, [w:IAX], [w:List of SIP software],
-    [w:Comparison of VoIP software], [w:List of codecs],
-    [w:Comparison of audio coding formats]
+-   Wikipedia: {{< wp "Voice over IP" >}}, {{< wp "Session Initiation Protocol" >}},
+    {{< wp "H.323, [w:IAX" >}}, {{< wp "List of SIP software" >}},
+    {{< wp "Comparison of VoIP software" >}}, {{< wp "List of codecs" >}},
+    {{< wp "Comparison of audio coding formats" >}}
 -   [voip-info.org](http://voip-info.org) a reference guide to all
     things VOIP (
     [VOIP Service Providers
@@ -82,11 +75,11 @@ and [Social Networks](/node/social_networks "internal reference")
 
 # VoiP servers and proxys
 
--   [w:FreeSWITCH] is a  telephony platform that lie between
+-   {{< wp "FreeSWITCH" >}} is a  telephony platform that lie between
     a softphone and a PBX or a carrier-class softswitch.
     [FreeSwitch Wiki
     ](https://freeswitch.org/confluence/display/FREESWITCH/FreeSWITCH+Explained) and
--   [w:OpenSER] now named [Kamailio](http://www.kamailio.org/) (GPL)
+-   {{< wp "OpenSER" >}} now named [Kamailio](http://www.kamailio.org/) (GPL)
     is a SIP proxy server, call router, and user agent registration
     server. It is a fork from __SER__ in 2004.
     [Kamailo has a Debian repository
@@ -108,16 +101,16 @@ and [Social Networks](/node/social_networks "internal reference")
     call routing etc.  Unlike PBX-type solutions such as Asterisk for
     example, the B2BUA doesn't perform any media relaying or
     processing.
--   [w:SIP Express Router] (GPL) is a SIP server, SIP registrar,
+-   {{< wp "SIP Express Router" >}} (GPL) is a SIP server, SIP registrar,
     proxy or redirect server. It is packaged in Debian.
 -   The [SIP Router Project](http://sip-router.org/)
     is the common development framework for SER and Kamailio.
 
 ## Asterisk
--   [w:Asterisk] is a complete PBX in software.
+-   {{< wp "Asterisk" >}} is a complete PBX in software.
     Asterisk does voice over IP in four protocols, and can interoperate
     with almost all standards-based telephony equipment.
-    Asterisk uses the [w:Inter-Asterisk eXchange] or __IAX2__ protocol.
+    Asterisk uses the {{< wp "Inter-Asterisk eXchange" >}} or __IAX2__ protocol.
 -   [Asterisk Home](http://www.asterisk.org/),
     [Asterisk Wiki](https://wiki.asterisk.org/wiki/display/AST/Home),
     [vo-ip.org: Asterisk](http://www.voip-info.org/wiki/view/Asterisk).
@@ -160,25 +153,25 @@ _mainly sip clients_
     sip and H.323 compatible videoconferencing and VOIP/IP-Telephony
     application. The documentation is in
     [Ekiga Wiki](http://wiki.ekiga.org/)
--   [w:Empathy_(Software)|Empathy] (GPL) is an instant messaging
+-   {{< wp "Empathy_(Software)"  "Empathy" >}} (GPL) is an instant messaging
     client which supports text, voice, video, file transfers, and a
     large inter-application communication nearly identical to pidgin
     but including SIP. It is written in C against gnome libraries, so
     it has importants Gnome dependencies. See
-    [Empathy in my xmpp page](/node/xmpp#empathy).
+    {{< iref "xmpp#empathy" "Empathy in my xmpp page" >}}.
 -   The [eZuce SRN](http://srn.ezuce.com/) is a distributed
     collaboration system for research community.
--   <a name="jitsi"></a>[w:Jitsi] (apache License)
+-   <a name="jitsi"></a>{{< wp "Jitsi" >}} (apache License)
     is a VoIP, videoconferencing, instant messaging application for
     Windows, Linux, Mac OS X and Android written in Java. It supports
-    XMPP including [Jingle](/node/xmpp#jingle "internal reference")
-    and [OTR encryption](/node/xmpp#jingle "internal reference") and
-    other proprietary IM protocols [w:Microsoft Notification Protocol]
-    _MSN, .NET, or Live_, [w:OSCAR_PROTOCOL|OSCAR] _AIM/ICQ/MobileMe_,
-    the [w:SIMPLE]  _IM and presence protocol suite based on SIP_,
-    [w:Facebook Messenger] and voice/video conferencing
+    XMPP including {{< iref "xmpp#jingle" "Jingle" >}}
+    and {{< iref "xmpp#jingle" "OTR encryption" >}} and
+    other proprietary IM protocols {{< wp "Microsoft Notification Protocol" >}}
+    _MSN, .NET, or Live_, {{< wp "OSCAR_PROTOCOL"  "OSCAR" >}} _AIM/ICQ/MobileMe_,
+    the {{< wp "SIMPLE" >}}  _IM and presence protocol suite based on SIP_,
+    {{< wp "Facebook Messenger" >}} and voice/video conferencing
     (SIP/RTP/SRTP/ZRTP). _Jitsi_ supports
-    [CUSAX](#cusax "internal reference") and has built-in
+    {{< iref "#cusax" "CUSAX" >}} and has built-in
     IPv6, NAT traversal and DNSSEC.
     -   [Jitsi Home](https://jitsi.org/)
     -   [Jitsi Meet](https://jitsi.org/Projects/JitsiMeet) (apache
@@ -199,12 +192,12 @@ _mainly sip clients_
     uses only 7M resident/5M shared.
 -   [Minisip](http://www.minisip.org/) (LGPL for the libraries, GPL
     for the application) User Agent running on Linux.
--   [w:Pidgin_(software)|Pidgin] (GPL)
+-   {{< wp "Pidgin_(software)"  "Pidgin" >}} (GPL)
     is a multi-platform instant messaging client for many commonly
     used instant messaging protocols _(but not yet SIP!)_. It is
     written in C, Python, Perl. See
-    [Pidgin in my xmpp page](/node/xmpp#pidgin "local reference").
--   [w:Mumble] (BSD License) is a voice chat application for groups.
+    {{< iref "xmpp#pidgin" "Pidgin in my xmpp page" >}}.
+-   {{< wp "Mumble" >}} (BSD License) is a voice chat application for groups.
     It is primarily intended for gaming.
 -   [w:QuteCom](GPL) _[QuteCom Home](http://www.qutecom.org/)_
     previously _Wengophone_ is a sip client written in C++ with Qt
@@ -232,31 +225,31 @@ _mainly sip clients_
 -   [Ring](https://ring.cx/) (GPL)
     is a secure and distributed voice, video and chat communication
     platform that replaced _sflphone_. It supports SIP, IAX2, RTP,
-    STUN, SRV and accept many codecs including [w:Opus].  It features
+    STUN, SRV and accept many codecs including {{< wp "Opus" >}}.  It features
     a daemon and desktop clients, and can output to pulseaudio.
     Desktop clients for gnome, kde, and a python client are
     available. The gnome version is in Debian and Ubuntu under the
     name _sflphone-gnome_.
-    -   [w:Ring_(software)|Wikipedia: Ring].
+    -   {{< wp "Ring_(software)"  "Wikipedia: Ring" >}}.
 
--   [Tox](/node/xmpp#tox "internal reference) (GPL)
+-   {{< iref "xmpp#tox" "Tox" >}} (GPL)
     is a Voice, video, instant messaging, file transfers client it is
-    [in the XMPP section](/node/xmpp#tox "internal reference).
-    It uses its [Tox protocol](/node/xmpp#tox "internal reference)
-    and has suport for [w:Opus] codex.
+    {{< iref "xmpp#tox" "in the XMPP section" >}}.
+    It uses its {{< iref "xmpp#tox" "Tox protocol" >}}
+    and has suport for {{< wp "Opus" >}} codex.
 -   [Twinkle](http://twinkle.dolezel.info/)
     soft phone for VOIP using SIP protocol. It has a light interface not depending
     of any desktop, even if it can integrate with Kde. It takes 20M
     Resident/15M shared.
-    -   Wikipedia [w:Twinkle (software)]
+    -   Wikipedia {{< wp "Twinkle (software)" >}}
 
 # Alt Open source Protocols
--   [w:Mumble] (BSD License) Mumble is a voice over IP (VoIP)
+-   {{< wp "Mumble" >}} (BSD License) Mumble is a voice over IP (VoIP)
     application written in C++/QT primarily designed for use by gamers
     and is similar to programs such as TeamSpeak.  It features
     encrypted communication encoded in Opus with high sound quality
-    and low latency.  It uses the [w:Interactive Connectivity
-    Establishment] (ICE) protocol.
+    and low latency.  It uses the
+    {{< wp "Interactive Connectivity Establishment" >}} (ICE) protocol.
     -   [Mumble Home](https://wiki.mumble.info/wiki/Main_Page).
     -   [GitHub - Mumble](https://github.com/mumble-voip/mumble)
 
@@ -264,15 +257,15 @@ _mainly sip clients_
 I just give a pointer to most popular VoIP solutions. We should prefer
 open source.
 
--   [w:Skype] or [Skype Home Page](http://www.skype.com/)
+-   {{< wp "Skype" >}} or [Skype Home Page](http://www.skype.com/)
     P2P telephony and videoconferences is a closed proprietary
     protocol,
     There are [numerous reasons to prefer an open source protocol
     ](https://wiki.ubuntu.com/SkypeEthics)
-    considered only the  [w:Skype#Privacy|Skype lack of privacy]
+    considered only the  {{< wp "Skype#Privacy"  "Skype lack of privacy" >}}
     and its use for censorship. Morever skype pretend to have
-    encryption but [w:Skype#Security_and_privacy|is not secure] and it
-    [w:Global_surveillance_disclosures_(2013–present)|has been shown]
+    encryption but {{< wp "Skype#Security_and_privacy"  "is not secure" >}} and it
+    {{< wp "Global_surveillance_disclosures_(2013–present)"  "has been shown" >}}
     that that agencies such as the NSA and the FBI have
     the ability to eavesdrop on Skype.
     <br />
@@ -285,7 +278,7 @@ open source.
         ](https://help.ubuntu.com/community/SkypeTroubleshooting)
     -   [Debian Wiki: Skype](https://wiki.debian.org/skype)
 
--   [w:Discord_(software)|Discord]
+-   {{< wp "Discord_(software)"  "Discord" >}}
     is a proprietary freeware VoIP application designed for
     gaming communities. The multi-platform Discord client is built
     on the Electron framework. It allows voice calling, Video calling
@@ -293,7 +286,7 @@ open source.
     There are paid addons and gadgets.
     -   [Discord Home](https://discordapp.com/)
 
--   [w:TeamSpeak] (proprietary, Freeware)
+-   {{< wp "TeamSpeak" >}} (proprietary, Freeware)
     is a VoIP  application for audio conference.
 
 
@@ -310,7 +303,7 @@ open source.
     [sipgate.co.uk](http://www.sipgate.co.uk)(uk PSTN),
     [www.voipstunt.com](http://www.voipstunt.com/en/)(PSTN, many free
     destinations),
-    [w:SIP_Broker],
+    {{< wp "SIP_Broker" >}},
 -   A list of SIP provider prefixes, as well as SIP providers,
     can be found in the [Provider WhitePage
     ](http://www.sipbroker.com/sipbroker/action/providerWhitePages)

@@ -1,24 +1,17 @@
-<!--
-.. description:
-.. date: 2015-08-29
-.. slug: filesystems
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: File Systems
--->
+---
+title: File Systems
+---
 
-[TOC]
+{{% toc /%}}
 
 See also the companion pages on
-[network filesystems](/node/network_filesystems "internal reference"),
-[encrypted filesystems
-](/node/encrypted_filesystems "internal reference")
+{{< iref "network_filesystems" "network filesystems" >}},
+{{< iref "encrypted_filesystems" "encrypted filesystems" >}}
 The lower level is in the section
-[Hard Drive](/node/hdrive "internal reference")
+{{< iref "hdrive" "Hard Drive" >}}
 where you find the
-[partition tables](/node/hdrive#partition_table "internal reference")
-and [partitioning](/node/hdrive#partitioning "internal reference").
+{{< iref "hdrive#partition_table" "partition tables" >}}
+and {{< iref "hdrive#partitioning" "partitioning" >}}.
 
 ----
 
@@ -37,16 +30,16 @@ and [partitioning](/node/hdrive#partitioning "internal reference").
     -   [Quota mini-HOWTO](http://www.tldp.org/HOWTO/Quota.html)
         _2003_
 -   Wikipedia:
-    [w:List of file systems],
-    [w:Comparison of file systems], [w:Fat], [w:ext2], [w:ext3],
-    [w:ext4], [w:XFS], [w:Reiser4], [w:ZFS], [w:Btrfs], [w:NTFS],
-    [w:Network File System],
-    [w:Andrew file system],
-    [w:Server Message Block] (SMB), [w:Samba software],
+    {{< wp "List of file systems" >}},
+    {{< wp "Comparison of file systems" >}}, {{< wp "Fat" >}}, {{< wp "ext2" >}}, {{< wp "ext3" >}},
+    {{< wp "ext4" >}}, {{< wp "XFS" >}}, {{< wp "Reiser4" >}}, {{< wp "ZFS" >}}, {{< wp "Btrfs" >}}, {{< wp "NTFS" >}},
+    {{< wp "Network File System" >}},
+    {{< wp "Andrew file system" >}},
+    {{< wp "Server Message Block" >}} (SMB), {{< wp "Samba software" >}},
     [fuse](http://en.wikipedia.org/wiki/FUSE_%28Linux%29),
-    [w:JFFS2], [w:UBIFS], [w:SquashFS], [w:UnionFS],
-    [w:Sysfs], [w:Procfs],
-    [w:Redundant_array_of_independent_disks|RAID]
+    {{< wp "JFFS2" >}}, {{< wp "UBIFS" >}}, {{< wp "SquashFS" >}}, {{< wp "UnionFS" >}},
+    {{< wp "Sysfs" >}}, {{< wp "Procfs" >}},
+    {{< wp "Redundant_array_of_independent_disks"  "RAID" >}}
 -   [ArchWiki: File Systems
     ](https://wiki.archlinux.org/index.php/File_systems)
 -   [Gentoo Wiki: Filesystems
@@ -58,8 +51,8 @@ and [partitioning](/node/hdrive#partitioning "internal reference").
     ](https://raid.wiki.kernel.org/index.php/Performance)
 
 # Disk filesystems
--   [w:Ext4] filesystem is the previous default filesystem on linux
-    and the successor of  [w:ext2]and [w:ext3]
+-   {{< wp "Ext4" >}} filesystem is the previous default filesystem on linux
+    and the successor of  {{< wp "ext2" >}}and {{< wp "ext3" >}}
     -   [ArchWiki: Ext4](https://wiki.archlinux.org/index.php/Ext4)
     -   [GentooWiki: Ext4](https://wiki.gentoo.org/wiki/Ext4)
     -   [Linux kernel documentation - Ext4
@@ -77,9 +70,9 @@ and [partitioning](/node/hdrive#partitioning "internal reference").
     All characteristics of the ext2/3 file system are part of the
     output of [dumpe2fs(8)](http://man.cx/dumpe2fs(8)).
 
--   [w:ReiserFS] is a very fast journaled filesystem based on fast
+-   {{< wp "ReiserFS" >}} is a very fast journaled filesystem based on fast
     balanced tree (Reiser4 uses dancing trees).
--   [w:ZFS] ([w:CDDL] License) is a  file system and logical volume manager designed by Sun.
+-   {{< wp "ZFS" >}} ({{< wp "CDDL" >}} License) is a  file system and logical volume manager designed by Sun.
      ZFS ihas data integrity verification, support for high storage capacities,
     filesystem and volume management, snapshots and copy-on-write clones, continuous integrity checking and automatic repair, RAID-Z and native NFSv4 ACLs.
     -   A blog from Richard Hartmann:
@@ -97,7 +90,7 @@ and [partitioning](/node/hdrive#partitioning "internal reference").
         is the the  open source successor to the ZFS project.
     -   [ArchWiki: ZFS](https://wiki.archlinux.org/index.php/ZFS)
     -   [Gentoo Wiki: ZFS](https://wiki.gentoo.org/wiki/ZFS)
--   [w:XFS] is a journaling file system created by Silicon Graphics,
+-   {{< wp "XFS" >}} is a journaling file system created by Silicon Graphics,
     It is based on allocation group which allow good performance on
     parallel input/output (I/O) operations, and  file system
     bandwidth.
@@ -112,9 +105,9 @@ and [partitioning](/node/hdrive#partitioning "internal reference").
         ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html-single/performance_tuning_guide/index#sect-Red_Hat_Enterprise_Linux-Performance_Tuning_Guide-Configuring_file_systems_for_performance-Tuning_XFS)
 
 ## Btrfs
-[w:Btrfs] (GPL) is a copy-on-write file system
+{{< wp "Btrfs" >}} (GPL) is a copy-on-write file system
 which is an improvement of ext3/ext4 file system. It offers numerous
-[w:Btrfs#Features|new features] including copy-on-write snapshots of files and subvolumes,
+{{< wp "Btrfs#Features"  "new features" >}} including copy-on-write snapshots of files and subvolumes,
 checksums, transparent compresssion.
 
 -   The main site is the
@@ -128,8 +121,8 @@ checksums, transparent compresssion.
 -   [GentooWiki: Btrfs](https://wiki.gentoo.org/wiki/Btrfs),
     [Btrfs/System Root Guide - Gentoo Wiki
     ](https://wiki.gentoo.org/wiki/Btrfs/System_Root_Guide)
--   Manpages: [man:mkfs.btrfs(8)], [man:btrfsctl(8)],
-    [man:btrfs-show(8)], [man:mkfs.btrfs(8)] and other in brtfs-tools.
+-   Manpages: {{< man "mkfs.btrfs(8)" >}}, {{< man "btrfsctl(8)" >}},
+    {{< man "btrfs-show(8)" >}}, {{< man "mkfs.btrfs(8)" >}} and other in brtfs-tools.
 -   [Ubuntu Community Help: Btrfs
     ](https://help.ubuntu.com/community/btrfs).
 -   [Suse storage administration: Btrfs filesystem
@@ -148,7 +141,7 @@ checksums, transparent compresssion.
 
 
 # Flash memory and ssd filesystems
--   Wikipedia: [w:Secure Digital]
+-   Wikipedia: {{< wp "Secure Digital" >}}
 -   Gentoo Wiki: [SSD](https://wiki.gentoo.org/wiki/SSD) and
     [SD card](https://wiki.gentoo.org/wiki/SDCard). A precious source
     of information on these media.
@@ -172,7 +165,7 @@ checksums, transparent compresssion.
         [pdf](http://linux-mtd.infradead.org/~dwmw2/jffs2.pdf))
         Look also at the previously referred
         [FAQ](http://www.linux-mtd.infradead.org/faq/general.html)
--   [w:SquashFS] is a compressed read-only file system, squashFS is
+-   {{< wp "SquashFS" >}} is a compressed read-only file system, squashFS is
     capable of de-duplicating the data
     -   [SquashFS HOWTO
         ](http://www.tldp.org/HOWTO/html_single/SquashFS-HOWTO/)
@@ -181,10 +174,10 @@ checksums, transparent compresssion.
         ](https://wiki.gentoo.org/wiki/SquashFS)
     -   [SquashFs Home Page at sourceforge
         ](http://squashfs.sourceforge.net/)
--   [w:UBIFS] is a successor to JFFS2. But while JFFS2 file system
+-   {{< wp "UBIFS" >}} is a successor to JFFS2. But while JFFS2 file system
     works on top of MTD devices, but UBIFS works on top of
-    [w:Unsorted Block Images] (UBI) volumes, and cannot operate on top
-    of [w:Memory_Technology_Device|MTD].
+    {{< wp "Unsorted Block Images" >}} (UBI) volumes, and cannot operate on top
+    of {{< wp "Memory_Technology_Device"  "MTD" >}}.
     -   [linux-mtd](http://www.linux-mtd.infradead.org/)
         main reference for
         [UBIFS](http://www.linux-mtd.infradead.org/doc/ubifs.html) and
@@ -225,7 +218,7 @@ checksums, transparent compresssion.
 
 # LVM {#lvm}
 
--   Wikipedia: [w:LVM]
+-   Wikipedia: {{< wp "LVM" >}}
 -   [LVM2](http://sources.redhat.com/lvm2) an
     userspace toolset that provide logical volume management, lvm is
     build on top of the kernel module
@@ -265,21 +258,21 @@ checksums, transparent compresssion.
     ](http://sourceforge.net/p/fuse/wiki/FileSystems/) including
     [network file systems
     ](http://sourceforge.net/p/fuse/wiki/NetworkFileSystems/)
--   See also the list in Wikipedia: [w:Filesystem in Userspace].
--   __Fuse__ can be used with [Gvfs](#gvfs "internal reference") with
+-   See also the list in Wikipedia: {{< wp "Filesystem in Userspace" >}}.
+-   __Fuse__ can be used with {{< iref "#gvfs" "Gvfs" >}} with
     a D-bus daemon `gvfs-fuse` to access all gvfs enabled file systems
     including *sftp*, *ftp*, *dav*, dav over ssl *davs*, *smb*,
     smb-browse (with gvfs-ls), *http*, obexftp, medias (burn, cdda,
     gphoto2) and archive mounting support, for info look at my
-    [Gvfs section](#gvfs "internal reference").
+    {{< iref "#gvfs" "Gvfs section" >}}.
 
 -   [adbfs](http://collectskin.com/adbfs/)
     Mount an Android device filesystem.
--   [w:archivemount] (LGPL)
+-   {{< wp "archivemount" >}} (LGPL)
     is a FUSE file system to mount archives supported by libarchive,
     including write support. It support tar, pax, cpio, ISO9660 CD,
     zip archives, shar.  It is in Debian. You can also use the
-    [GVFS archive backend](#gvfs "internal reference") to mount
+    {{< iref "#gvfs" "GVFS archive backend" >}} to mount
     it with fuse.
     -   [archivemount Home](http://www.cybernoia.de/software/archivemount/)
     -   [Tutorial: Mounting archives with FUSE and archivemount
@@ -308,8 +301,8 @@ checksums, transparent compresssion.
     in Debian.
     -   [ArchWiki: CurlFtpFS
         ](https://wiki.archlinux.org/index.php/CurlFtpFS)
-    -   [man:+curlftpfs(1)] gives mount options.
--   [w:Davfs2] is a fuse module for dav file system including https
+    -   {{< man "+curlftpfs(1)" >}} gives mount options.
+-   {{< wp "Davfs2" >}} is a fuse module for dav file system including https
     encrypted connection.
 -   [fuseiso](http://sourceforge.net/projects/fuseiso/)
     mount optical disk image formats as .iso, .nrg, .bin, .mdf and
@@ -352,7 +345,7 @@ checksums, transparent compresssion.
 
 # Gvfs {#gvfs}
 
-[w:Gvfs] is a userspace virtual filesystem where mount runs as a
+{{< wp "Gvfs" >}} is a userspace virtual filesystem where mount runs as a
 separate processes which you talk to via D-Bus. It also contains a gio
 module that seamlessly adds gvfs support to all applications using the
 gio API. It also supports exposing the gvfs mounts to non-gio
@@ -385,8 +378,8 @@ The gvfs section is now in my
     as
     [The /proc filesystem documentation
     ](https://docs.fedoraproject.org/en-US/Fedora/17/html/System_Administrators_Guide/ch-proc.html)
--   The man page [man:proc(5)]
-    and [man:procinfo(8)]
+-   The man page {{< man "proc(5)" >}}
+    and {{< man "procinfo(8)" >}}
 
 -   A very interesting part of /proc is
     [directory /proc/sys](http://www.linuxinsight.com/proc_sys_hierarchy.html)
@@ -400,8 +393,8 @@ The gvfs section is now in my
     ](https://docs.fedoraproject.org/en-US/Fedora/17/html/System_Administrators_Guide/s2-proc-dir-sys.html)
 
     You can use it directly as a
-    pseudo file system or thru the [man:sysctl(8)] utility
-    and [man:sysctl.conf(5)] .
+    pseudo file system or thru the {{< man "sysctl(8)" >}} utility
+    and {{< man "sysctl.conf(5)" >}} .
 -   [ArchWiki: Sysctl](https://wiki.archlinux.org/index.php/Sysctl)
 -   `/proc/sys/net/ipv4` is for the network configuration it is documented
     in the
@@ -425,10 +418,10 @@ The gvfs section is now in my
 -   [kernel documentation:
     Accessing PCI device resources through sysfs
     ](https://www.kernel.org/doc/Documentation/filesystems/sysfs-pci.txt)
--   [man:lspci(8)] uses the `/proc/bus/pci/devices` and the
+-   {{< man "lspci(8)" >}} uses the `/proc/bus/pci/devices` and the
     `/sys/bus/pci` key as explained in
     [Debian Wiki: HowToIdentifyADevice/PCI](http://wiki.debian.org/HowToIdentifyADevice/PCI).<br />
-    Look also to [man:update-pciids(8)] to maintain the dtabase of pci id
+    Look also to {{< man "update-pciids(8)" >}} to maintain the dtabase of pci id
     `/usr/share/misc/pci.id` that you can also find at
     [The PCI ID Repository - public repository of all known ID's used in PCI devices
     ](http://pci-ids.ucw.cz/).
@@ -438,14 +431,14 @@ The gvfs section is now in my
     ](https://www.kernel.org/doc/Documentation/hwmon/sysfs-interface)
 
 ## Tmpfs {#tmpfs}
-[w:tmpfs] is a file system which keeps all files in virtual
-memory. It uses [w:swap space] as backing store in case of low
+{{< wp "tmpfs" >}} is a file system which keeps all files in virtual
+memory. It uses {{< wp "swap space" >}} as backing store in case of low
 memory situations.
 
 -   [tmpfs - ArchWiki](https://wiki.archlinux.org/index.php/Tmpfs)
 -   [tmpfs - Gentoo Wiki](https://wiki.gentoo.org/wiki/Tmpfs)
 
-[man:systemd-tempfile(8)] is a service that creates, deletes, and cleans up volatile and
+{{< man "systemd-tempfile(8)" >}} is a service that creates, deletes, and cleans up volatile and
 temporary files and directories, based on the configuration file format and location
 specified in [:man:tmpfiles.d(5)].
 
@@ -478,7 +471,7 @@ you can adopt it if you want.
 You may configure _tmpfs_ in `/etc/default/tmpfs` in Debian.
 
 The creation of tmpfiles by systemd is controled by
-[man:tmpfiles.d(5)] see also [man:systemd-tmpfiles(8)]
+{{< man "tmpfiles.d(5)" >}} see also {{< man "systemd-tmpfiles(8)" >}}
 
 -   [Debian: What's new in Debian 7.0 - Temporary filesystems
     ](https://www.debian.org/releases/wheezy/amd64/release-notes/ch-whats-new.en.html#tmpfs-filesystems)
@@ -487,12 +480,12 @@ The creation of tmpfiles by systemd is controled by
 
 ## Other kernel fs
 
--   [w:debugfs]  make debug information available to user space.
+-   {{< wp "debugfs" >}}  make debug information available to user space.
     -   [Kernel documentation: debugfs.txt
         ](https://www.kernel.org/doc/Documentation/filesystems/debugfs.txt)
 -   _devtmpfs_ is like _tmpfs_ but every device with a major/minor
     will provide a device node in devtmpfs.
-    -   Wikipedia [w:device] explain the device support in the kernel
+    -   Wikipedia {{< wp "device" >}} explain the device support in the kernel
         evolution.
     -   [kernel commit creating devtmpfs
         ](http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/commit/?id=2b2af54a5bb6f7e80ccf78f20084b93c398c3a8b).
@@ -502,7 +495,7 @@ The creation of tmpfiles by systemd is controled by
         ](https://www.kernel.org/doc/Documentation/filesystems/devpts.txt).
 -   [ramfs](https://wiki.debian.org/ramfs) is a dynamically resizable
     ram-based filesystem, the two main uses of ramfs is the above
-    [tmpfs](#tmpfs "internal reference") that in contrast to original
+    {{< iref "#tmpfs" "tmpfs" >}} that in contrast to original
     ramfs is able to write to swap space and
     [initramfs](https://wiki.debian.org/initramfs) that contain a
     gzipped cpio archive attached to the kernel image.
@@ -511,9 +504,9 @@ The creation of tmpfiles by systemd is controled by
 
 # Loop device
 
--   Wikipedia: [w:Loop device]
--   Loppdevice can be used to store a [w:Disk image]
--   Manpages: [man:losetup(8)]
+-   Wikipedia: {{< wp "Loop device" >}}
+-   Loppdevice can be used to store a {{< wp "Disk image" >}}
+-   Manpages: {{< man "losetup(8)" >}}
 
 
 ## Loop device memo

@@ -1,14 +1,8 @@
-<!--
-.. description:
-.. date: 2015-05-03
-.. slug: python_libraries
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Python Libraries
--->
+---
+title: Python Libraries
+---
 
-[TOC]
+{{% toc /%}}
 
 -----
 
@@ -17,7 +11,7 @@ Subset of the
 [Python full module index](http://docs.python.org/3/py-modindex.html)
 ([py2k](http://docs.python.org/2/modindex.html)),
 The modules not included in the standard library are in the section:
-[Libraries](#libraries "internal reference").
+{{< iref "#libraries" "Libraries" >}}.
 
 Some modules are commented in the
 [Python Module of the Week - PyMOTW](https://pymotw.com/3/) from
@@ -86,9 +80,9 @@ The source code of python modules is found in the
     mainly the [partials decorator
     ](http://docs.python.org/3/library/functools.html#functools.partial)
     that allow to do a partial binding on arguments of a function ie a
-    [w:partial application]
-    *see also [w:currying] and
-    [w:Closure_(computer_science)|closure]*.
+    {{< wp "partial application" >}}
+    *see also {{< wp "currying" >}} and
+    {{< wp "Closure_(computer_science)"  "closure" >}}*.
     Examples of use are in
     [PyMOTW: functools](https://pymotw.com/3/functools/index.html).
     <br />
@@ -127,8 +121,7 @@ The source code of python modules is found in the
         License) that you can use on any machine with python and an
         ajax enabled browser like firefox, chrome, opera (vivaldi),
         safari,....
-    -   See also the [pcre references
-        ](/node/programming_languages#pcre "internal reference")
+    -   See also the {{< iref "programming_languages#pcre" "pcre references" >}}
 
 ## Development tools
 -   The <a name="distutils"></a>
@@ -137,7 +130,7 @@ The source code of python modules is found in the
     is described in
     [Distributing Python Modules](http://docs.python.org/3/distutils/)
     and [Installing Python Modules](http://docs.python.org/3/install/)
-     see also [Libraries: packaging](#packaging "internal reference")
+     see also {{< iref "#packaging" "Libraries: packaging" >}}
      for alternatives and enhancements of _distutils_.
 -   [doctest](http://docs.python.org/3/library/doctest.html) -
     [py2k](http://docs.python.org/2/library/doctest.html) -
@@ -165,12 +158,12 @@ The source code of python modules is found in the
     _new in version3.3_ is a mock object library. It allows you to
     replace parts of your system under test with mock objects and make
     assertions about how they have been used. _See also the
-    [mock libraries section](#mock_objects "internal reference")
+    {{< iref "#mock_objects" "mock libraries section" >}}
     for alternatives.
 -   <a name="venv_module"></a>
     [venv](http://docs.python.org/3/library/venv.html) is
     a port to standard library of
-    [virtualenv](#virtualenv "internal reference"), it is available
+    {{< iref "#virtualenv" "virtualenv" >}}, it is available
     since python 3.3 and is used with the `python -m venv` or with
     `pyvenv` script.<br />
 -   <a name="venv_module"></a>
@@ -178,7 +171,7 @@ The source code of python modules is found in the
     [PyMOTW Page](https://pymotw.com/3/venv/)
     is
     a port to standard library of
-    [virtualenv](#virtualenv "internal reference"), it is available
+    {{< iref "#virtualenv" "virtualenv" >}}, it is available
     since python 3.3 and is used with  `python -m venv`.<br />
     This is further developped in
     [Python Packaging User Guide: Creating and using virtual
@@ -206,7 +199,7 @@ The source code of python modules is found in the
     -   [introduction to TkInter](http://effbot.org/tkinterbook/)
         by Fredrik Lundh in
         [zone.effbot.org](http://effbot.org/zone/index.htm).
--   [PyGtk](/node/pygtk "internal link") Python wrapper for the GTK library
+-   {{< iref "pygtk" "PyGtk" >}} Python wrapper for the GTK library
 
 ## Operating System services {#os_modules}
 -   [argparse](http://docs.python.org/3/library/argparse.html)
@@ -259,8 +252,7 @@ The source code of python modules is found in the
 
 ## Databases and Object Relational Mappers
 
-They are covered in the [databases programming section
-](/node/python_dbms "internal reference").
+They are covered in the {{< iref "python_dbms" "databases programming section" >}}.
 
 ## Processes {#process_modules}
 -   [subprocess](http://docs.python.org/3/library/subprocess.html) -
@@ -303,8 +295,8 @@ They are covered in the [databases programming section
     A framework for network servers.
 
 ### High Level
-See also the [xCGI stuff](/node/python_web#wsgi "internal reference") and
-[Web programming](/node/python_web "internal reference").
+See also the {{< iref "python_web#wsgi" "xCGI stuff" >}} and
+{{< iref "python_web" "Web programming" >}}.
 
 -   [email](http://docs.python.org/3/library/email.html) Parsing,
     manipulating, and generating email messages, including MIME
@@ -334,7 +326,7 @@ See also the [xCGI stuff](/node/python_web#wsgi "internal reference") and
     implemented for use from Python.
 
 ## Serializing {#serializing_modules}
-See also [Python Libraries - serializing](#serializing_libs "internal reference")
+See also {{< iref "#serializing_libs" "Python Libraries - serializing" >}}
 
 -   Doug Hellmann PyMOTW[Data Persistence and Exchange
     ](https://pymotw.com/3/persistence.html)
@@ -342,12 +334,11 @@ See also [Python Libraries - serializing](#serializing_libs "internal reference"
 -   [json](http://docs.python.org/3/library/json.html)  -
     [py2k](http://docs.python.org/library/json.html) -
     Encode and decode the
-    [JSON](/node/107/#json "internal link") format..
+    {{< iref "107" "JSON" >}} format..
     [PyMOTW: json](https://pymotw.com/3/json/)</br >
     You can use the included script `json.mtool` to validate and pretty-print a
     json string. _jsonpickle_ (see
-    [Python Libraries - serializing](#serializing_libs "internal
-    reference"))
+    {{< iref "#serializing_libs" "Python Libraries - serializing" >}})
     extend the standard Python module _json_.
 -   [pickle](http://docs.python.org/3/library/pickle.html) -
     [py2k](http://docs.python.org/3/library/pickle.html) -
@@ -357,10 +348,7 @@ See also [Python Libraries - serializing](#serializing_libs "internal reference"
     Python object persistence.
 
 ## Structured Markup {#markup_modules}
-See also [XML Parsers Libraries](#xml_parsers}
-
--   [Structured Markup Processing Tools
-    ](https://docs.python.org/3/library/markup.html)
+See also {{< iref "#xml_parsers" "XML Parsers Libraries" >}}
     ([py2k](https://docs.python.org/2/library/markup.html))
 -   [xml.etree.ElementTree](https://docs.python.org/3/library/xml.etree.elementtree.html)
     The ElementTree XML API.<br/>
@@ -376,7 +364,7 @@ See also [XML Parsers Libraries](#xml_parsers}
 
 # Libraries
 The standard Python modules are in the
-[Modules section](#modules "internal reference") and
+{{< iref "#modules" "Modules section" >}} and
 the [Python 3 full module index](http://docs.python.org/3/modindex.html) or
 [Python 2.7 full module index](http://docs.python.org/2/py-modindex.html).
 
@@ -387,7 +375,7 @@ In the python wiki, and a more recent in [awesome-python
 
 _This section also includes python script collections_,
 
-see also the [xCGI stuff](/node/python_web#wsgi "internal reference").
+see also the {{< iref "python_web#wsgi" "xCGI stuff" >}}.
 
 ## Packages repositories
 
@@ -448,30 +436,29 @@ see also the [xCGI stuff](/node/python_web#wsgi "internal reference").
 ## Data Model
 -   [toolz](http://toolz.readthedocs.org)
     provides a set of utility functions for iterators, functions, and dictionaries.
-    They extend the [standard libraries itertools and functools
-    ](#functools "internal reference") .
+    They extend the {{< iref "#functools" "standard libraries itertools and functools" >}} .
 
 ## Build Automation {#build_automation}
 The continuous integration software is in the main
-[Continuous Integration](/node/software_design#continuous_integration "internal reference")
+{{< iref "software_design#continuous_integration" "Continuous Integration" >}}
 
 
--   see also the Wikipedia [w:Category:Compiling tools],
-    [w:Category:Build automation],  [w:Continuous integration]
+-   see also the Wikipedia {{< wp "Category:Compiling tools" >}},
+    {{< wp "Category:Build automation" >}},  {{< wp "Continuous integration" >}}
 -   [Buildout](http://www.buildout.org/) (Zope Public License)
     is a Python-based build system for creating,
     assembling and deploying applications from multiple
-    parts. Wikipedia: [w:Buildout].
+    parts. Wikipedia: {{< wp "Buildout" >}}.
 -   [Paver](http://paver.github.com/paver/)(BSD license) is a
     Python-based software project scripting tool
 -   [Doit](http://pydoit.org/) <a name="pydoit"></a>
     alias *pydoit* alias *python-doit* is a tool that brings
     the power of build-tools to execute any kind of task. It integrates
-    [inotify](/node/schedulers#inotify "internal reference").
+    {{< iref "schedulers#inotify" "inotify" >}}.
 -   [Redo](https://github.com/apenwarr/redo) (GPL) from Avery Pennarun
     is a Gnu Make replacement in python allowing recursive build.
 -   [Scons](http://www.scons.org/wiki/AboutSCons) (MIT license) is a Gnu
-    Make replacement in python. Wikipedia: [w:Scons] _Scons is in
+    Make replacement in python. Wikipedia: {{< wp "Scons" >}} _Scons is in
     Debian._
     [Scons Versus Other Build Tools
     ](http://www.scons.org/wiki/SconsVsOtherBuildTools)
@@ -636,7 +623,7 @@ Read first the
   module into a C, C++, or Tcl application. The embedded Python module is
   used just as if it was written in the same language as the application
   itself, without requiring any knowledge of the Python/C API.
-- [w:Pyrex_(programming_language)|Pyrex (Wikipedia Page)]
+- {{< wp "Pyrex_(programming_language)"  "Pyrex (Wikipedia Page)" >}}
   generates the glue  necesary to use C extension for  Python. It goes
   further than swig an pyinline because  it helps to create new python
   extension type. Pyrex  deals with the basic types just  as SWIG, but
@@ -644,13 +631,13 @@ Read first the
   structures and arbitrary C data structures, without knowing anything
   about the Python/C API.
   [Pyrex Home Page](http://www.cosc.canterbury.ac.nz/greg.ewing/python/Pyrex/)
-- [w:Cython] (Apache License)
+- {{< wp "Cython" >}} (Apache License)
   is a derivative of the Pyrex language, and supports more features
   and optimizations than Pyrex.
 
 ## Graphic User Interfaces
-The standard modules are in the [Modules Section](#modules "Internal Reference")
-there is also the page on [Web Programming](/node/python_web "Internal Reference")
+The standard modules are in the {{< iref "#modules" "Modules Section" >}}
+there is also the page on {{< iref "python_web" "Web Programming" >}}
 
 -   [EasyGui](http://easygui.sourceforge.net/)
     is a module for very simple *non event driven* GUI programming
@@ -659,13 +646,13 @@ there is also the page on [Web Programming](/node/python_web "Internal Reference
     user interfaces on Unix/Linux systems.
 -   [PyZenity](http://brianramos.com/?page_id=38)
     is an interface to Zenity.
--   [PyjamasDesktop](/node/python_web#pyjamasdesktop "Internal Reference")
+-   {{< iref "python_web#pyjamasdesktop" "PyjamasDesktop" >}}
     in the section
-    [Web Programming](/node/python_web "Internal Reference").
+    {{< iref "python_web" "Web Programming" >}}.
 
 
 ## Icalendar
-You may also want to look at the [Icalendar Section](/node/calendar "Internal reference")
+You may also want to look at the {{< iref "calendar" "Icalendar Section" >}}
 
 -   [iCalendar package for Python](http://codespeak.net/icalendar/)
     (LGPL) is an older project than vobject, no more developed
@@ -700,7 +687,7 @@ You may also want to look at the [Icalendar Section](/node/calendar "Internal re
 ## Network services {#network_libs}
 ### Low Level
 #### Ip manipulation
-See also the [ipaddress module](#ip_address_module "Internal Reference")
+See also the {{< iref "#ip_address_module" "ipaddress module" >}}
 
 -   [ipaddr](http://code.google.com/p/ipaddr-py/) (Apache License)
     is a library for working with IP addresses, both IPv4 and IPv6 developed by Google.
@@ -787,7 +774,7 @@ See also the [ipaddress module](#ip_address_module "Internal Reference")
 -   <a name="setuptools"></a> The new
     [Setuptools](http://pythonhosted.org/setuptools/index.html)
     from version 1.x (2013) reconcile Setuptools with the
-    [Distribute](#distribute "internal reference") fork in a single
+    {{< iref "#distribute" "Distribute" >}} fork in a single
     merge. By now we can use it on both Python 2.x and Python 3.x
     where it replaces the two previous forks.
 -   [PyPi: setuptools](http://pypi.python.org/pypi/setuptools)
@@ -799,34 +786,34 @@ See also the [ipaddress module](#ip_address_module "Internal Reference")
         ](https://pythonhosted.org/setuptools/pkg_resources.html)
 -   <a name="distribute">[Distribute](http://pythonhosted.org/distribute/)
     was a fork from the older version of
-    [Setuptools](#setuptools "internal reference")
+    {{< iref "#setuptools" "Setuptools" >}}
     project version 0.x, it is now deprecated after a merge with
-    [Setuptools](#setuptools "internal reference").
+    {{< iref "#setuptools" "Setuptools" >}}.
     It was  providing  a drop-in replacement for
-    [setuptools](#setuptools "internal reference") and offered Python
+    {{< iref "#setuptools" "setuptools" >}} and offered Python
     3 support with the same commands than
-    [Setuptools](#setuptools "internal reference").<br >
+    {{< iref "#setuptools" "Setuptools" >}}.<br >
     [The Hitchhiker’s Guide to Packaging
     ](http://guide.python-distribute.org/index.html)
     (don't confuse with the [Hitchhiker’s Guide to Python
     ](http://docs.python-guide.org/en/latest/) which is an up to date guide to all
     python development)
-    was a guide to [Distribute](#distribute "internal reference")
-    and [Pip](#pip "internal reference"), which is the base of the present
-    [Python Packaging Guide](#pypa "internal reference")
--   The [module distutils](#distutils "internal reference")
+    was a guide to {{< iref "#distribute" "Distribute" >}}
+    and {{< iref "#pip" "Pip" >}}, which is the base of the present
+    {{< iref "#pypa" "Python Packaging Guide" >}}
+-   The {{< iref "#distutils" "module distutils" >}}
     is part of the standard library.
 -   [PIP](http://www.pip-installer.org/en/latest/)<a name="pip"></a>
     is an enhancement of setuptool and a replacement for easy_install,
     it is complementary with
-    [virtualenv](#virtualenv "internal reference") and can be used
+    {{< iref "#virtualenv" "virtualenv" >}} and can be used
     inside virtualenv.
 -    <a name="fabric"></a>[Fabric](http://docs.fabfile.org/)
     (BSD License) is a library and command-line tool for streamlining
     the use of SSH for application deployment or systems
     administration tasks.  It is similar to Makefiles but with the
     ability to execute commands on a remote server. <br />
-    Fabric uses [paramiko](#paramiko "Internal Reference").<br/>
+    Fabric uses {{< iref "#paramiko" "paramiko" >}}.<br/>
     The [Fabric documentation](http://docs.fabfile.org/) provides a
     [Tutorial](http://docs.fabfile.org/en/latest/tutorial.html),
     [Recipes](http://wiki.fabfile.org/Recipes)
@@ -852,7 +839,7 @@ See also the [ipaddress module](#ip_address_module "Internal Reference")
     ](https://wiki.python.org/moin/LanguageParsing)
 
 ### PEG Parsers
-They use [w:Parsing expression grammar] you can look at the
+They use {{< wp "Parsing expression grammar" >}} you can look at the
 [slides of the presentation
 ](http://www.brynosaurus.com/pub/lang/peg-slides.pdf) by Bryan Ford
 the author of PEG grammars (2004).
@@ -950,8 +937,7 @@ is found on the web): lxml.html, BeautifulSoup, and html5lib.
     [PyRSS2Gen on PyPi](https://pypi.python.org/pypi/PyRSS2Gen)
 
 ### static html content generation {#static_html}
-See also the [Static Site section
-](/node/static_sites "internal reference").
+See also the {{< iref "static_sites" "Static Site section" >}}.
 
 -   [Houdini.py](http://python-houdini.61924.nl/)
     ([GitHub Repository](https://github.com/FSX/houdini.py)
@@ -972,12 +958,12 @@ See also the [Static Site section
      by François Pinard is a python preprocessor that was written
      to help porting Pymacs to Python 3.
 
-We can also use [literate programming tools](/node/literate_programming "internal reference") like
-[cog](/node/literate_programming#cog "internal reference") or [template engines](/node/python_web#template_engines  "internal reference") like [Jinja2](/node/python_web#jinja2  "internal reference")
+We can also use {{< iref "literate_programming" "literate programming tools" >}} like
+{{< iref "literate_programming#cog" "cog" >}} or {{< iref "python_web#template_engines" "template engines" >}} like {{< iref "python_web#jinja2" "Jinja2" >}}
 
 ## Processes {#process}
 See also the
-[python modules in the process section](#process_modules "internal reference")
+{{< iref "#process_modules" "python modules in the process section" >}}
 
 -   [Dbus-Python](http://dbus.freedesktop.org/doc/dbus-python/) is the python Dbus bindings.
     Freedesktop has a [Dbus Python Tutorial](http://dbus.freedesktop.org/doc/dbus-python/doc/tutorial.html).  There are also some
@@ -985,7 +971,7 @@ See also the
     [Dbus Python API](http://dbus.freedesktop.org/doc/dbus-python/api/).
 -   [Pyinotify](https://github.com/seb-m/pyinotify)
     is a Python package used for monitoring filesystems events
-    with [inotify](http://inotify.aiken.cz/) _Wikipedia: [w:inotify]_.
+    with [inotify](http://inotify.aiken.cz/) _Wikipedia: {{< wp "inotify" >}}_.
     The [pynotify documentation](https://github.com/seb-m/pyinotify/wiki)
     includes a tutorial and some examples.
     -   Pynotify is used in
@@ -1002,8 +988,8 @@ shells process combinators like the pipe.
 -   [envoy](https://github.com/kennethreitz/envoy)
     is a wrapper around the subprocess module. It is in pypi and
     similar to _sh_; but the project seems less active _2014_.
--   [ipython](#ipython "internal reference") referenced
-    [above](#ipython "internal reference") can be
+-   {{< iref "#ipython" "ipython" >}} referenced
+    {{< iref "#ipython" "above" >}} can be
     [used as a system interactive shell
     ](http://ipython.readthedocs.io/en/stable/interactive/shell.html).
 -   [plumbum](http://plumbum.readthedocs.io/en/latest/)
@@ -1059,7 +1045,7 @@ They are compared in two threads from 2014 and 2015 of _HackerNews_:
     Python 2 or 3, in _pypi_ under the name _pypecli_, _2015_.
 
 ## Serializing {#serializing_libs}
-See also [Modules:Serializing](#serializing_module "internal reference")
+See also {{< iref "#serializing_module" "Modules:Serializing" >}}
 
 -   [jsonpickle](http://jsonpickle.github.com/)
     is a Python library for serialization and deserialization of
@@ -1130,9 +1116,9 @@ which compare _mock_, _flexmock_, _mox_, _Mocker_, _Dingus_, and _fudge_.
 All the following libraries can be used in Python 3.
 
 -   [MiniMock](http://pypi.python.org/pypi/MiniMock)
-    is a simple library for doing [w:Mock_object|Mock objects] with doctest.
+    is a simple library for doing {{< wp "Mock_object"  "Mock objects" >}} with doctest.
 -   [Mock](http://www.voidspace.org.uk/python/mock/)  is a  library for
-    [w:Mock objects] in python including py3k. It is designed for use with unittest.
+    {{< wp "Mock objects" >}} in python including py3k. It is designed for use with unittest.
     It has a very
     [good quality and detailed documentation](http://www.voidspace.org.uk/python/mock/).<br />
     It is integrated in the standard library as
@@ -1259,7 +1245,7 @@ All the following libraries can be used in Python 3.
     VirtualEnv, and bundle it up so that it can run one platforms that
     do not have *your version of* python installed
 -   Since python 3.3 the standard python library includes the
-    module [venv](#venv_module "internal reference") which replace
+    module {{< iref "#venv_module" "venv" >}} which replace
     virtualenv.
 
 <!-- Local Variables: -->

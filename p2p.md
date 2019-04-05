@@ -1,29 +1,23 @@
-<!--
-.. description:
-.. date: 2017-02-17
-.. slug: p2p
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: P2P
--->
+---
+title: P2P
+---
 
-[TOC]
+{{% toc /%}}
 
-See also [IRC](/node/irc "internal reference"),
-[XMPP](/node/xmpp "internal reference"),
-[SIP](/node/sip "internal reference"),
-[Social Networks](/node/social_networks "internal reference").
+See also {{< iref "irc" "IRC" >}},
+{{< iref "xmpp" "XMPP" >}},
+{{< iref "sip" "SIP" >}},
+{{< iref "social_networks" "Social Networks" >}}.
 
 -----------------
 
 
 # P2P references
--   Wikipedia: [w:P2P], [w:Friend-to-friend] _F2F_, [w:Anonymous P2P],
-    [w:Private peer-to-peer], [w:Darknet], [w:I2P] _invisible internet
-    project_, [w:Comparison of file sharing applications],
-    [w:Direct Connect (protocol)|Direct Connect],
-    [w:Advanced Direct Connect], [w:Comparison of ADC software]
+-   Wikipedia: {{< wp "P2P" >}}, {{< wp "Friend-to-friend" >}} _F2F_, {{< wp "Anonymous P2P" >}},
+    {{< wp "Private peer-to-peer" >}}, {{< wp "Darknet" >}}, {{< wp "I2P" >}} _invisible internet
+    project_, {{< wp "Comparison of file sharing applications" >}},
+    {{< wp "Direct Connect (protocol)"  "Direct Connect" >}},
+    {{< wp "Advanced Direct Connect" >}}, {{< wp "Comparison of ADC software" >}}
 -   [infoAnarchy](http://www.infoanarchy.org/) is a wiki on the
     subject of information retrieval, distribution and management.
     It contains numerous references to P2P.
@@ -34,14 +28,14 @@ See also [IRC](/node/irc "internal reference"),
 Bittorent is a client application for the torrent peer-to-peer (P2P)
 file distribution protocol.
 
--   Wikipedia: [w:BitTorrent],
-    [w:BitTorrent clients],
-    [w:Comparison of BitTorrent clients],
-    [w:BitTorrent tracker],
-    [w:Comparison of BitTorrent tracker software]
-    [w:Local Peer Discovery],
-    [w:Peer exchange],
-    [w:BitTorrent protocol encryption]
+-   Wikipedia: {{< wp "BitTorrent" >}},
+    {{< wp "BitTorrent clients" >}},
+    {{< wp "Comparison of BitTorrent clients" >}},
+    {{< wp "BitTorrent tracker" >}},
+    {{< wp "Comparison of BitTorrent tracker software" >}}
+    {{< wp "Local Peer Discovery" >}},
+    {{< wp "Peer exchange" >}},
+    {{< wp "BitTorrent protocol encryption" >}}
 -   [BitTorrent Home](http://www.bittorrent.com/)
 -   [infoAnarchy BitTorrent page
     ](http://www.infoanarchy.org/wiki/index.php/BitTorrent)),
@@ -55,13 +49,13 @@ file distribution protocol.
     _uTorrent_ popular windoze client, integrated tracker,
     but we could also use the _azureus_ integrated tracker.
 
-Bittorent can be identified by `.torrent` files, [w: Magnet link], or
+Bittorent can be identified by `.torrent` files, {{< wp " Magnet link" >}}, or
 by a sha1 hash sum. The Magnet link can contain many hashes used by
 diverse protocols. Bittorents client use the _btih_ which is the SHA-1
 hash sums of the "info" sections of BitTorrent metafiles i.e
 `.torrent` files. In the magnet link the _btih_ is written
 ``xt=urn:btih:[ Info Hash (Hex) ]``. For more info on Magnet link
-look at the [w: Magnet link|Wikipedia Page].
+look at the {{< wp " Magnet link"  "Wikipedia Page" >}}.
 
 [Torrent to Magnet](http://torrent2magnet.com/) is a web service to
 convert between `.torrent` files and magnet links.
@@ -73,11 +67,10 @@ informations in a `.torrent` file.
 ## Bittorent clients
 -   [ArchWiki: list of bittorent clients
     ](https://wiki.archlinux.org/index.php/List_of_applications#BitTorrent_clients).
--   [aria2](/node/file_transfer#aria2) is a utility for downloading
+-   {{< iref "file_transfer#aria2" "aria2" >}} is a utility for downloading
     files it supports BitTorrent and also HTTP(S), FTP, SFTP,
-    and [w:Metalink]. It is referenced [in the File Transfer section
-    ](/node/file_transfer#aria2)
--   [w:rTorrent] is a text-based ncurses BitTorrent client written in
+    and {{< wp "Metalink" >}}. It is referenced {{< iref "file_transfer#aria2" "in the File Transfer section" >}}
+-   {{< wp "rTorrent" >}} is a text-based ncurses BitTorrent client written in
     C++, based on the libTorrent libraries for Unix.
     -   [rTorrent and LibTorrent Wiki
         ](https://github.com/rakshasa/rtorrent/wiki)
@@ -91,7 +84,7 @@ informations in a `.torrent` file.
     -   wTorrent is a web interface to rTorrent
         [ArchWiki: wTorrent
         ](https://wiki.archlinux.org/index.php/WTorrent)
--   [w:Transmission_(BitTorrent_client)|Transmission]
+-   {{< wp "Transmission_(BitTorrent_client)"  "Transmission" >}}
     is a light-weight and cross-platform BitTorrent client. It
     provides a daemon and cli, and an optional GTK or QT GUI.
     It is in any linux distribution including Debian.
@@ -110,7 +103,7 @@ informations in a `.torrent` file.
 ## WebTorrent {#webtorrent}
 [WebTorrent](https://webtorrent.io/) protocol works just like
 BitTorrent protocol, except it uses
-[WebRTC](#webrtc "internal reference") instead of TCP/uTP as
+{{< iref "#webrtc" "WebRTC" >}} instead of TCP/uTP as
 the transport protocol, it implies changes to the tracker
 protocol. Therefore, a browser-based WebTorrent client can only
 connect to other clients that support WebTorrent/WebRTC.
@@ -129,7 +122,7 @@ The Desktop reference client is
 [WebTorrent Desktop](https://webtorrent.io/desktop/), they are
 download for Linux (.deb package), Mac, Windoze.
 
-In the browser, WebTorrent uses [WebRTC](#webrtc "internal reference")
+In the browser, WebTorrent uses {{< iref "#webrtc" "WebRTC" >}}
 (data channels) for peer-to-peer transport. _WebTorrent does not
 support UDP/TCP peers in browser_.
 
@@ -161,11 +154,11 @@ WebRTC is supported by Chrome ≥ 28, Firefox ≥ 22, Opera ≥ 18 , Safari
 
 On android it is supported by Chrome ≥ 28, Firefox ≥ 24 , Opera ≥ 12.
 
-WebRTC is used for [WebTorrents](#webtorrent "internal reference"),
-[P2P File Transfer](#p2p_file_transfer "internal reference") and
-[WebRTC Video Conferences](#webrtc_conference "internal reference").
+WebRTC is used for {{< iref "#webtorrent" "WebTorrents" >}},
+{{< iref "#p2p_file_transfer" "P2P File Transfer" >}} and
+{{< iref "#webrtc_conference" "WebRTC Video Conferences" >}}.
 
--   Wikipedia: [w:WebRTC]
+-   Wikipedia: {{< wp "WebRTC" >}}
 -   [Getting Started with WebRTC
     ](https://www.html5rocks.com/en/tutorials/webrtc/basics/)
 -   Chrome developpers [WebRTC Home](https://webrtc.org/)
@@ -192,11 +185,9 @@ WebRTC is used for [WebTorrents](#webtorrent "internal reference"),
     that you can also use on Firefox.
 
 # P2P file sharing software {#p2p_file_sharing}
-See also [File Transfer](/node/file_transfer "internal reference"),
-[Temporary storage
-](/node/clouds#temporary_storage "internal reference")
-and [Clouds
-](/node/clouds "internal reference").
+See also {{< iref "file_transfer" "File Transfer" >}},
+{{< iref "clouds#temporary_storage" "Temporary storage" >}}
+and {{< iref "clouds" "Clouds" >}}.
 
 Before choosing a P2P file sharing protocol we must be aware of the
 lack of privacy of P2P and the risk for anybody to  be framed for
@@ -205,10 +196,10 @@ DRM material. It is explained in an article from Washington university
 cse [Tracking the Trackers](http://dmca.cs.washington.edu/index.html),
 and the associated [FAQ](http://dmca.cs.washington.edu/faq.html).
 
-Wikipedia [w:Privacy in file sharing networks] explain that most or
+Wikipedia {{< wp "Privacy in file sharing networks" >}} explain that most or
 all P2P network can be tracked even eMule or Gnutella. So we have to
-rely on [w:Anonymous P2P], mainly through [w:I2P]; or on
-[w:Friend-to-friend|F2F (Friend to Friend].
+rely on {{< wp "Anonymous P2P" >}}, mainly through {{< wp "I2P" >}}; or on
+{{< wp "Friend-to-friend"  "F2F (Friend to Friend" >}}.
 
 
 -   [infoAnarchy](http://www.infoanarchy.org/) Reviews of File Sharing /
@@ -216,17 +207,17 @@ rely on [w:Anonymous P2P], mainly through [w:I2P]; or on
     ](http://www.infoanarchy.org/wiki/index.php/Main_Page)
 -   [ArchWiki: list of P2P applications (other than bittorent)
     ](https://wiki.archlinux.org/index.php/List_of_applications#Other_P2P_networks).
--   [w:Freenet] is a censorship-resistant peer-to-peer distributed
+-   {{< wp "Freenet" >}} is a censorship-resistant peer-to-peer distributed
     data store.
     -   [Freenet Home page](http://freenetproject.org/)
--   [w:giFT] stands for giFT: Internet File Transfer. It is a daemon
+-   {{< wp "giFT" >}} stands for giFT: Internet File Transfer. It is a daemon
     that combines the capability of peer-to-peer file sharing
-    protocols (Gnutella, Ares Galaxy, [w:OpenFT], FastTrack, OpenNap)
+    protocols (Gnutella, Ares Galaxy, {{< wp "OpenFT" >}}, FastTrack, OpenNap)
     for a simple GUI client) _gift developpement stopped in 2004_.
     -   [giFT Home](http://gift.sourceforge.net/)
--   [w:GNUnet]
+-   {{< wp "GNUnet" >}}
     GNUnet is a framework for secure and
-    [w:Anonymous_P2P|anonymous peer-to-peer networking] that does
+    {{< wp "Anonymous_P2P"  "anonymous peer-to-peer networking" >}} that does
     not use any centralized or otherwise trusted services. It's goal
     is to provide  security and respects privacy.
     -   [GNUnet Home](https://gnunet.org/)
@@ -242,7 +233,7 @@ rely on [w:Anonymous P2P], mainly through [w:I2P]; or on
         HTTP for browser-to-native communication and soon WebRTC for
         browser-to-browser communication. _still alpha in 2017_.
         -   [gnunet.io: gnunet-web server](https://gnunet.io/).
--   [w:Gnutella] is a popular P2P file sharing network;
+-   {{< wp "Gnutella" >}} is a popular P2P file sharing network;
     Gnutella is not associated with the GNU project.
     -   [Comparison of Gnutella software
     ](https://en.wikipedia.org/wiki/Gnutella#Software)
@@ -252,10 +243,10 @@ rely on [w:Anonymous P2P], mainly through [w:I2P]; or on
     BitTorrent,  DC++, Gnutella 1/2. The server can be remote
     controled by telnet, WEB browser or GTK+ interface. It is
     available in Debian.
--   [w:OneSwarm] is a privacy-preserving P2P client developed at the
+-   {{< wp "OneSwarm" >}} is a privacy-preserving P2P client developed at the
     University of Washington. It is written in java, and is based on
     Azureus (Vuze) BitTorrent client, it keeps compatibility with
-    traditional BitTorrent clients, but is aimed at using [w:F2F]
+    traditional BitTorrent clients, but is aimed at using {{< wp "F2F" >}}
     network in order that your data is shared with friends, shared
     with some friends but not others, and so forth.
     OneSwarm download are available for Linux, Windoze and Mac OS X.
@@ -271,7 +262,7 @@ rely on [w:Anonymous P2P], mainly through [w:I2P]; or on
     -   [OnionShare Wiki
         ](https://github.com/micahflee/onionshare/wiki)
         provides the OnionShare Manual.
--   [w:RetroShare] is an open source, cross-platform Friend-to-Friend
+-   {{< wp "RetroShare" >}} is an open source, cross-platform Friend-to-Friend
     application that in addition of social networking (chat) offers
     file sharing, even fo big files with 1GB or more.  Your privacy is
     protected with anonymous tunnels and only your direct friends
@@ -279,14 +270,13 @@ rely on [w:Anonymous P2P], mainly through [w:I2P]; or on
     P2P / F2F / I2P software it's developpement is active.
 
     It is referenced
-    [in the Xmpp Page](/node/xmpp#retroshare "internal reference")
--   [w:Robert] is a file sharing application that relies upon the
+    {{< iref "xmpp#retroshare" "in the Xmpp Page" >}}
+-   {{< wp "Robert" >}} is a file sharing application that relies upon the
     security and encryption of peers and tunnels inside of I2P.
--   [Tox](/node/xmpp#tox "internal reference")
+-   {{< iref "xmpp#tox" "Tox" >}}
     out of instant messaging and video call allow ptivate and secure
     file sharing. Tox has clients for Linux, Windoze, OS X, FreeBSD,
-    Android, IOS. See the [Tox entry in the Xmpp Page
-    ](/node/xmpp#tox "internal reference")
+    Android, IOS. See the {{< iref "xmpp#tox" "Tox entry in the Xmpp Page" >}}
 
 
 ## P2P file transfer {#p2p_file_transfer}
@@ -295,14 +285,13 @@ saved in the cloud they are available for big files, and once the
 transfer done the file can not be stolen.
 
 Some applications use dedicated applications, some have a web
-interface with transfer in [w:WebRTC], mainly those built on
-[WebTorrent](#webtorrent "internal reference) and work with
-[w:WebRTC#Support|compatible browsers], some have both.
+interface with transfer in {{< wp "WebRTC" >}}, mainly those built on
+{{< iref "#webtorrent" "WebTorrent" >}} and work with
+{{< wp "WebRTC#Support"  "compatible browsers" >}}, some have both.
 
-For uploading on android with the web interface see the [this note
-](/node/clouds#android_web_upload "internal reference).
+For uploading on android with the web interface see the {{< iref "clouds#android_web_upload" "this note" >}}.
 
-Take care than most [WebTorrent](#webtorrent "internal reference)
+Take care than most {{< iref "#webtorrent" "WebTorrent" >}}
 based application don't offer encryption or any privacy, your file can
 be viewed by any body having or guessing the URL or magnet Link.
 
@@ -381,7 +370,7 @@ be viewed by any body having or guessing the URL or magnet Link.
 -   [Awesome WebRTC list of chat applications
     ](http://awesome.openrtc.io/#chat)
 -   [apptr.tc](https://appr.tc/)
-    is a [WebRTC](#webrtc "internal reference") application from the
+    is a {{< iref "#webrtc" "WebRTC" >}} application from the
     [Chrome developers WebRTC samples
     ](https://webrtc.github.io/samples/).
 -   [WebRTC Experiment](https://www.webrtc-experiment.com/)
@@ -435,7 +424,7 @@ architecture like :
 
 # Other P2P software
 
--   [w:Bitcoin]
+-   {{< wp "Bitcoin" >}}
     is a decentralized P2P electronic cash system without a central
     server or trusted parties. Users hold the cryptographic keys to
     their own money and make transactions directly with each other.

@@ -1,22 +1,16 @@
-<!--
-.. description:
-.. date: 2016-11-18
-.. slug: dbms
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: DBMS
--->
+---
+title: DBMS
+---
 
-[TOC]
+{{% toc /%}}
 
 For the python interfaces look at the section
-[Python Database Programming](/node/python_dbms "internal reference").
+{{< iref "python_dbms" "Python Database Programming" >}}.
 
 # SQL
 
--   [w:SQL|Wikipedia: SQL], [w:Comparison of relational database management systems],
-    [w:Comparison of object-relational database management systems]
+-   {{< wp "SQL"  "Wikipedia: SQL" >}}, {{< wp "Comparison of relational database management systems" >}},
+    {{< wp "Comparison of object-relational database management systems" >}}
 -   [SQL 92](http://www.contrib.andrew.cmu.edu/~shadow/sql/sql1992.txt) Second Informal Review Draft
 
 ## SQL Tutorials
@@ -81,7 +75,7 @@ For the python interfaces look at the section
 
 # MySQL{#mysql}
 
-[w:MySQL] (GPL) was a product of the firm _MySQL AB_, it as been
+{{< wp "MySQL" >}} (GPL) was a product of the firm _MySQL AB_, it as been
 bought by _Sun_; then by _Oracle_.
 So we cannot be too optimistic about the GPL future of MySql.
 
@@ -113,7 +107,7 @@ basis.
 # PostgreSQL
 [PostgreSQL](http://www.postgresql.org/) ([PostgreSQL Licence
     ](http://www.postgresql.org/about/licence/) BSD like)
--   Wikipedia: [w:PostgreSQL]
+-   Wikipedia: {{< wp "PostgreSQL" >}}
 -   [PostgeSQL Manual](http://www.postgresql.org/docs/devel/static/).
 -   [MySQL vs PostgreSQL](http://www.wikivs.com/wiki/MySQL_vs_PostgreSQL)
 -   [ArchWiki: PostgreSQL](https://wiki.archlinux.org/index.php/PostgreSQL)
@@ -200,7 +194,7 @@ basis.
 
 
 # No SQL databases
--   Wikipedia: [w:NOSQL]
+-   Wikipedia: {{< wp "NOSQL" >}}
 
 
 -   [Cassandra Home at apache.org](http://cassandra.apache.org/),
@@ -214,24 +208,24 @@ basis.
     high-performance, distributed memory object caching system,
     intended for use in speeding up dynamic web applications by
     alleviating database load.
--   [w:Redis] (BSD License) is a networked, in-memory, key-value data
+-   {{< wp "Redis" >}} (BSD License) is a networked, in-memory, key-value data
     store with optional durability. It is written in ANSI C.
      - [Redis Home](http://redis.io)
      - [The Little Redis Book](http://openmymind.net/redis.pdf)
        an open pdf book by Karl Seguin.
--   [w:Riak] (Apache License 2.0)
+-   {{< wp "Riak" >}} (Apache License 2.0)
      is a key/value store following the principles of
-     [w:Dynamo_(storage_system)|Amazon's Dynamo].
+     {{< wp "Dynamo_(storage_system)"  "Amazon's Dynamo" >}}.
      - [Riak Home](http://basho.com/products/)
 
 ## CouchDB {#couchdb}
 
--   [w:Document-oriented database]s are members of the [w:NoSQL] family.
--   Wikipedia: [w:CouchDB]  ([w:Apache License] 2.0) is a
+-   {{< wp "Document-oriented database" >}}s are members of the {{< wp "NoSQL" >}} family.
+-   Wikipedia: {{< wp "CouchDB" >}}  ({{< wp "Apache License" >}} 2.0) is a
     document-oriented, Non-Relational DataBase Management Server.
     CouchDB is written in Erlang language.
     -    The Wikipedia page contains
-         [w:CouchDB#Examples|an example of use of HTTP API through curl].
+         {{< wp "CouchDB#Examples"  "an example of use of HTTP API through curl" >}}.
 -   [CouchDB Home (Apache fondation)](http://couchdb.apache.org/),
     [CouchDb Wiki](http://wiki.apache.org/couchdb/).
 -   [CouchDB: The Definitive Guide](http://books.couchdb.org/relax/)
@@ -247,8 +241,8 @@ basis.
 -   [ubuntu fr: DesktopCouch](http://doc.ubuntu-fr.org/desktopcouch)
 
 ## MongoDB
--   [w:MongoDB] Cloud-scale document oriented database,
-    [MongoDB Home](http://www.mongodb.org/) ([w:Affero General Public License|GNU AGPL]).
+-   {{< wp "MongoDB" >}} Cloud-scale document oriented database,
+    [MongoDB Home](http://www.mongodb.org/) ({{< wp "Affero General Public License"  "GNU AGPL" >}}).
 -   [sleepy.mongoose](https://github.com/kchodorow/sleepy.mongoose/wiki/)
      provide a RESTful interface too MongoDB.
 -   [mongodb-rest](https://github.com/tdegrunt/mongodb-rest)

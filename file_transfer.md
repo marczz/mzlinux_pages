@@ -1,40 +1,31 @@
-<!--
-.. description:
-.. date: 2017-02-25
-.. slug: file_transfer
-.. tags:
-.. link:
-.. book mzlinux
-.. title: File Transfer
--->
+---
+title: File Transfer
+---
 
-[TOC]
+{{% toc /%}}
 
-See also [Synchronization
-](/node/backup#synchronization "internal reference"),
-[Backup](/node/backup "internal reference"),
-[P2P file sharing software
-](/node/p2p#p2p_file_sharing "internal reference"),
-[Temporary storage
-](/node/clouds#temporary_storage "internal reference").
+See also {{< iref "backup#synchronization" "Synchronization" >}},
+{{< iref "backup" "Backup" >}},
+{{< iref "p2p#p2p_file_sharing" "P2P file sharing software" >}},
+{{< iref "clouds#temporary_storage" "Temporary storage" >}}.
 
-[Webdav](/node/webdav "internal reference") is in a separate page.
+{{< iref "webdav" "Webdav" >}} is in a separate page.
 
 # Common references
 
--   Wikipedia: [w:File sharing], [w:List of file transfer protocols],
+-   Wikipedia: {{< wp "File sharing" >}}, {{< wp "List of file transfer protocols" >}},
 
 
 # FTP {#ftp}
--   Wikipedia: [w:List of file transfer protocols],
-    [w:File Transfer Protocol], [w:FTPS], [w:Trivial File Transfer Protocol],
-    [w:List of FTP server software], [w:Comparison of FTP server software],
-    [w:Comparison of FTP client software],
+-   Wikipedia: {{< wp "List of file transfer protocols" >}},
+    {{< wp "File Transfer Protocol" >}}, {{< wp "FTPS" >}}, {{< wp "Trivial File Transfer Protocol" >}},
+    {{< wp "List of FTP server software" >}}, {{< wp "Comparison of FTP server software" >}},
+    {{< wp "Comparison of FTP client software" >}},
 -   [Wikibook: Communication Networks/File Transfer Protocol
     ](http://en.wikibooks.org/wiki/Communication_Networks/File_Transfer_Protocol)
 
 ## clients
--   [w:FireFTP] (Mozilla Public License) is a ftp client plugin for
+-   {{< wp "FireFTP" >}} (Mozilla Public License) is a ftp client plugin for
     mozilla. It supports FTP, FTPS, and SFTP.
 -   [gFTP](http://gftp.seul.org/) (GPL)
     multithreaded file transfer client, it supports the FTP,
@@ -52,18 +43,17 @@ See also [Synchronization
     - [Proftpd doc index](http://www.proftpd.org/docs/)
     - [ProFTPD mini-HOWTO Index](http://www.proftpd.org/docs/howto/)
     - [ProFTPD FTPS support](http://www.proftpd.org/docs/howto/TLS.html)
--   [w:Pure-FTPd] (BSD License)
+-   {{< wp "Pure-FTPd" >}} (BSD License)
 -   [vsftpd](https://security.appspot.com/vsftpd.html) (GPL)
     FTP server
     -   [vstpd conf manual
         ](https://security.appspot.com/vsftpd/vsftpd_conf.html)
 
 # HTTP download {#http_download}
-See also the [main HTTP section
-](/node/IP#http "internal reference")
+See also the {{< iref "IP#http" "main HTTP section" >}}
 
 -   <a name="wget"></a>[wget](http://www.gnu.org/software/wget/) (GPL),
-    Wikipedia: [w:Wget],
+    Wikipedia: {{< wp "Wget" >}},
     [GNU Wget Manual
     ](http://www.gnu.org/software/wget/manual/html_node/index.html),
     [The Wget Wgiki
@@ -81,8 +71,8 @@ See also the [main HTTP section
     TFTP.  curl supports SSL certificates, HTTP POST, HTTP PUT, FTP
     uploading, HTTP form based upload, proxies, cookies, user+password
     authentication (Basic, Digest, NTLM, Negotiate, kerberos...),
-    [w:Metalink], file transfer resume, proxy tunneling, socks, IPV6.
-    -   Wikipedia [w:cURL]
+    {{< wp "Metalink" >}}, file transfer resume, proxy tunneling, socks, IPV6.
+    -   Wikipedia {{< wp "cURL" >}}
     -   [cURL Documentation](http://curl.haxx.se/docs/):
         [cURL Manual](http://curl.haxx.se/docs/manual.html),
         [cURL FAQ](http://curl.haxx.se/docs/faq.html)
@@ -94,21 +84,20 @@ See also the [main HTTP section
 
 # Multiprotocol download utilities
 
--   [w:cURL] (MIT License)
+-   {{< wp "cURL" >}} (MIT License)
     Client-side URL transfer library and command-line client,
     supporting FTP, FTPS, Gopher, HTTP, HTTPS, SCP, SFTP, TFTP,
     Telnet, DICT, the file URI scheme, LDAP, LDAPS, IMAP,
     POP3, SMTP and RTSP. See the
-    [Curl main entry
-    ](#curl "internal reference")
+    {{< iref "#curl" "Curl main entry" >}}
 -   <a name=aria2></a>[aria2](https://aria2.github.io/)
     is a utility for downloading files. The supported protocols are
-    HTTP(S), FTP, SFTP, BitTorrent, and [w:Metalink].
+    HTTP(S), FTP, SFTP, BitTorrent, and {{< wp "Metalink" >}}.
     -   [ArchWiki: aria2
         ](https://wiki.archlinux.org/index.php/Aria2).
     -   see also [Metalink client feature comparison
         ](https://en.wikipedia.org/wiki/Metalink#Metalink_client_feature_comparison)
--   [wget](#wget "internal reference")
+-   {{< iref "#wget" "wget" >}}
     upports HTTP, HTTPS, and FTP protocols.
 
 <!--  Local Variables: -->

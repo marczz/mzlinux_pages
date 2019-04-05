@@ -1,15 +1,8 @@
-<!--
-.. description:
-.. date: 2014-12-30
-.. slug: nginx
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Nginx
--->
+---
+title: Nginx
+---
 
-[TOC]
-
+{{% toc /%}}
 
 [Nginx](http://nginx.org/)
 (BSD-like license) is a small http server that can be
@@ -17,7 +10,7 @@ used as standalone HTTP server or as a reverse proxy server before
 another big server to reduce load.
 There are many plugins available to extend the core functionality of
 Nginx.
-Wikipedia: [w:Nginx].
+Wikipedia: {{< wp "Nginx" >}}.
 
 
 On raspberry each nginx worker process begin at 1.6M/0.5M and grow to
@@ -25,8 +18,7 @@ On raspberry each nginx worker process begin at 1.6M/0.5M and grow to
 single processor. The master process is 4M/1.4M.
 
 On raspberry I now use nginx + php-fpm the nginx configuration for
-fastcgi with php-fpm is commented [below
-](#fastcgi_php-fpm "internal reference").
+fastcgi with php-fpm is commented {{< iref "#fastcgi_php" "below" >}}.
 
 To the nginx processes are added the fastcgi processes, in the case of
 this site for php-fpm and python.
@@ -148,7 +140,7 @@ their appearance in the configuration file. If there is a match the
 __first__ match is used, if there is no match the longest prefix is used.
 
 # fastcgi with php-fpm configuration {: #fastcgi_php-fpm}
-See also [PHP-FPM section](/node/php#php-fpm "internal reference").
+See also {{< iref "php#php" "PHP-FPM section" >}}.
 
 The configuration that comes from distrib in `fastcgi_params`
 configuration file is:

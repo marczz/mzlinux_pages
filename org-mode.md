@@ -1,14 +1,8 @@
-<!--
-.. description:
-.. date: 2011-06-10
-.. slug: org-mode
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Org Mode
--->
+---
+title: Org Mode
+---
 
-[TOC]
+{{% toc /%}}
 
 # Org Mode
 
@@ -143,7 +137,7 @@
     ](http://sebsauvage.net/python/html2csv.py).
 -   [Tufte Org Mode](https://github.com/tsdye/tufte-org-mode)
     is a front end for
-    [Tufte Latex](/node/latex#tufte-latex "internal reference")
+    {{< iref "latex#tufte" "Tufte Latex" >}}
 
 ## Slides with Org Mode {#org-mode_slides}
 There are many ways to produce slides with an org mode formatted text;
@@ -151,7 +145,7 @@ There are many ways to produce slides with an org mode formatted text;
 -   [Beamer presentations in org-mode
     ](http://orgmode.org/worg/exporters/beamer/tutorial.html)
     may be the more achieved. It uses the
-    [LaTeX class Beamer](/node/latex#beamer "internal reference").
+    {{< iref "latex#beamer" "LaTeX class Beamer" >}}.
     It allow to deal with the Beamer complexity at an higher level.
     Some complicated layout can be achieved from Org Mode,
     but it definitely needs that you conceive a source text, very customized for the backend.
@@ -163,11 +157,11 @@ There are many ways to produce slides with an org mode formatted text;
 -   There is also a Worg tutorial titled
     [Writing Non-Beamer presentations in org-mode](http://orgmode.org/worg/org-tutorials/non-beamer-presentations.html) by Eric Schulte,
     that introduces shortly Epresent and
-    [S5 presentations](/node/346#s5-slides "internal reference") .
+    {{< iref "346#s5" "S5 presentations" >}} .
 -   [Epresent](https://github.com/eschulte/epresent) is an Emacs minor mode
     for giving presentations inside the Emacs Window.
 -   [org-s5](https://github.com/sigma/org-s5) by Yann Hodique
-    provides a glue to produce [S5 based presentations](/node/346#s5-slides "internal reference")
+    provides a glue to produce {{< iref "346#s5" "S5 based presentations" >}}
     from Org-Mode files.
 -   An [altered version of Org-mode's existing html export to produce static S5](http://orgmode.org/worg/org-tutorials/non-beamer-presentations.html#sec-3-1)
     is described in

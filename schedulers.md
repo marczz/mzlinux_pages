@@ -1,24 +1,19 @@
-<!--
-.. description:
-.. date: 2015-03-20
-.. slug: schedulers
-.. tags:
-.. link:
-.. title: System Schedulers
--->
+---
+title: System Schedulers
+---
 
-[TOC]
+{{% toc /%}}
 
 # References
 
--   Wikipedia [w:cron], [w:anacron], [w:inotify]
+-   Wikipedia {{< wp "cron" >}}, {{< wp "anacron" >}}, {{< wp "inotify" >}}
 -   Markus Gattol [overview of cron, anacron, ntp, chrony
     ](http://www.markus-gattol.name/ws/time.html)
     with many examples.
 
 # cron
 
--   Wikipedia [w:cron]
+-   Wikipedia {{< wp "cron" >}}
 -   [Gentoo: cron](https://wiki.gentoo.org/wiki/Cron)
 -   [ArchWiki: cron](https://wiki.archlinux.org/index.php/Cron)
 -   [Chronic](http://habilis.net/cronic/)
@@ -37,7 +32,7 @@
 Inotify is an inode-base file system notification mechanism
 implementated in the linux kernel.
 
--   Wikipedia [w:inotify]
+-   Wikipedia {{< wp "inotify" >}}
 -   Michael Kerrisk in [lwn.net](https://lwn.net) has written an
     introduction to inotify structure:
     [Filesystem notification, part 1: An overview of dnotify and
@@ -51,11 +46,11 @@ implementated in the linux kernel.
     are tools to allow inotify's features to be used
     from within shell scripts. _inotyfy-tools is a debian package_.
 
-    -   [man:inotifywatch(1)] listens for filesystem events using
-        Linux's [man:inotify(7)] interface, then outputs a summary
+    -   {{< man "inotifywatch(1)" >}} listens for filesystem events using
+        Linux's {{< man "inotify(7)" >}} interface, then outputs a summary
         count of the events received on each file or directory.
-    -   [man:inotifywait(1)] waits for changes to files using
-        [man:inotify(7)] interface. It is suitable for waiting for
+    -   {{< man "inotifywait(1)" >}} waits for changes to files using
+        {{< man "inotify(7)" >}} interface. It is suitable for waiting for
         changes to files from shell scripts. It can either exit once
         an event occurs, or continually execute and output events as
         they occur.

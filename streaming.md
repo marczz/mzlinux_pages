@@ -1,25 +1,19 @@
-<!--
-.. description:
-.. date: 2015-04-08
-.. slug: streaming
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Streaming
--->
+---
+title: Streaming
+---
 
-[TOC]
+{{% toc /%}}
 
 See also
-[FFmpeg section](/node/ffmpeg  "internal reference"),
-and [Media Players](/node/media_players "internal reference")
+{{< iref "ffmpeg" "FFmpeg section" >}},
+and {{< iref "media_players" "Media Players" >}}
 for the clients.
 
 ---
 
 # References
--   Wikipedia [w:Streaming media] and
-    [w:List of streaming media systems].
+-   Wikipedia {{< wp "Streaming media" >}} and
+    {{< wp "List of streaming media systems" >}}.
 -   [Streaming Media With Linux part 1
     ](http://www.linuxdevcenter.com/pub/a/linux/2001/03/23/streaming_media.html)
     and
@@ -63,7 +57,7 @@ for the clients.
         [gst-xmllaunch(1)
         ](http://manpages.debian.org/cgi-bin/man.cgi?query=gst-xmllaunch(1))
         are tools that builds and runs basic
-        [GStreamer](#gstreamer "internal reference")
+        {{< iref "#gstreamer" "GStreamer" >}}
         pipelines it allows playing and transforming sounds and images.
 
     They are many clients available, some listed below, but to
@@ -76,16 +70,16 @@ for the clients.
     Gstreamer is the basis of
     [numerous applications](http://gstreamer.freedesktop.org/apps/)
     the following are refered in these pages:
-    [audiopreview](/node/media_players#audiopreview "internal reference"),
-    [Bmpx](/node/media_players#bmpx "internal reference"),
-    [gnash](/node/media_players#gnash "internal reference"),
-    [Exaile](/node/media_players#exaile "internal reference"),
-    [Jokosher](/node/sound_edit#jokosher "internal reference"),
-    [PiTiVi](/node/video_edit#pitivi "internal reference"),
+    {{< iref "media_players#audiopreview" "audiopreview" >}},
+    {{< iref "media_players#bmpx" "Bmpx" >}},
+    {{< iref "media_players#gnash" "gnash" >}},
+    {{< iref "media_players#exaile" "Exaile" >}},
+    {{< iref "sound_edit#jokosher" "Jokosher" >}},
+    {{< iref "video_edit#pitivi" "PiTiVi" >}},
     [OggConvert](node/sound_edit#oggconvert "internal reference"),
-    [Thoggen](/node/video_edit#thoggen "internal reference"),
-    [Totem](/node/media_players#totem "internal reference"),
-    [Towel](/node/media_players#towel "internal reference").
+    {{< iref "video_edit#thoggen" "Thoggen" >}},
+    {{< iref "media_players#totem" "Totem" >}},
+    {{< iref "media_players#towel" "Towel" >}}.
 
     [Gstreamer Documentation](http://gstreamer.freedesktop.org/documentation/):
     [Overview of all Plug-ins
@@ -109,7 +103,7 @@ for the clients.
 -   [TomaHawk](http://tomahawk-player.org/) (GPL)
     is a multisource, multi-platform media player.
     It can hook via plugins on numerous source API,
-    including [ampache](#ampache "internal reference")
+    including {{< iref "#ampache" "ampache" >}}
     and owncloud.
 
 # Stream servers {#streamservers}
@@ -141,9 +135,8 @@ for the clients.
 -   [litestream](http://litestream.org/ "litestream.org Home") (BSD
     license) is a mp3 streaming server written in C. It is compatible
     with the shoutcast protocol and with muse.
--   [Music Player Daemon
-    ](/node/media_players#mpd "internal reference") has a subsection.
-    in the [Media Players](/node/media_players#mpd "internal reference").
+-   {{< iref "media_players#mpd" "Music Player Daemon" >}} has a subsection.
+    in the {{< iref "media_players#mpd" "Media Players" >}}.
 -   <a name="mopidy"></a>[Mopidy](https://www.mopidy.com/)
     is a music server written in Python.
     It can play music from local files, radio streams, and cloud
@@ -180,13 +173,12 @@ need transcoding.
     ](http://mpd.wikia.com/wiki/Client:Ampache)
 -   Some players can interface to ampache through the XML api, like:
     [viridian](http://viridian.daveeddy.com/),
-    [mpd](/node/media_players#mpd "internal reference"),
-    [VideoLan Client (VLC)
-    ](/node/media_players#vlc "internal reference")
+    {{< iref "media_players#mpd" "mpd" >}},
+    {{< iref "media_players#vlc" "VideoLan Client (VLC)" >}}
     _for playlist only, not the xml api_,
-    [Amarok](/node/media_players#amarok "internal reference") or
-    [Clementine](/node/media_players#clementine "internal reference"),
-    [Rhythmbox](/node/media_players#rhythmbox "internal reference")
+    {{< iref "media_players#amarok" "Amarok" >}} or
+    {{< iref "media_players#clementine" "Clementine" >}},
+    {{< iref "media_players#rhythmbox" "Rhythmbox" >}}
     can play ampache streams thru a plugin,
     [Viridian](http://viridian.daveeddy.com/about/) a python/pygtk client,
     [TomaHawk](https://github.com/tomahawk-player/tomahawk) or the
@@ -207,8 +199,7 @@ need transcoding.
 -   For any system you can also use any client that understand UpNP
     or DAAP or Subsonic API, if you have
     [enabled the API in ampache](https://github.com/ampache/ampache/wiki/API).
--   Ampache combined with [coherence UPnP/DLNA server
-    ](#coherence "internal reference") provide
+-   Ampache combined with {{< iref "#coherence" "coherence UPnP/DLNA server" >}} provide
     [Ampache-Coherence DLNA/UPnP MediaServer
     ](https://github.com/ampache/ampache/wiki/Coherence),
     It is also described in the [Coherence Wiki
@@ -219,13 +210,13 @@ need transcoding.
 [PulseAudio](http://www.freedesktop.org/wiki/Software/PulseAudio/)
 (LGPL library, GPL server) is a a networked sound
 server, that has support in audacious, gst (gst-pulse), libao,
-[mpd](/node/media_players#mpd448 "internal reference"),
+{{< iref "media_players#mpd448" "mpd" >}},
  mplayer, qmmp, xine.... There is an alsa bridge, with which alsa can
 be both a backend and a frontend to PulseAudio, through it any alsa
 player can use PulseAudio.
 
 
-Wikipedia has a [w:Pulseaudio] page.
+Wikipedia has a {{< wp "Pulseaudio" >}} page.
 
 -   [Freedesktop PulseAudio Home
     ](http://www.freedesktop.org/wiki/Software/PulseAudio/)
@@ -242,8 +233,8 @@ Wikipedia has a [w:Pulseaudio] page.
     -   [network setup
         ](https://www.freedesktop.org/wiki/Software/PulseAudio/Documentation/User/Network/)
     -   module-cli Command Line Language is described in
-        the man page [man:pulse-cli-syntax(5)]
--   Wikipedia [w:PulseAudio]
+        the man page {{< man "pulse-cli-syntax(5)" >}}
+-   Wikipedia {{< wp "PulseAudio" >}}
 -   Ubuntu has a basic
     [PulseAudio page](https://wiki.ubuntu.com/PulseAudio),
     note there the importance of `/etc/asound.conf`.
@@ -310,8 +301,8 @@ Wikipedia has a [w:Pulseaudio] page.
     ](https://wiki.archlinux.org/index.php/PulseAudio/Configuration#default.pa)
     in `~/.config/pulse/default.pa`  and  when  that  file  doesn't  exist
     `/etc/pulse/default.pa` to configure modules.
-    The same commands can also be entered during runtime  in  the  [man:pacmd(1)]
-    tool they follow [man:pulse-cli-syntax(5)].
+    The same commands can also be entered during runtime  in  the  {{< man "pacmd(1)" >}}
+    tool they follow {{< man "pulse-cli-syntax(5)" >}}.
 -   [client.conf -  PulseAudio client applications configuration
     ](https://wiki.archlinux.org/index.php/PulseAudio/Configuration#client.conf)
     is used to configure runtime options for individual clients.
@@ -322,13 +313,13 @@ Wikipedia has a [w:Pulseaudio] page.
     `autospawn = no`.<br/>
     The client read `~/config/pulse/client.conf` and if it does
     not exists `/etc/pulse/client.conf`.
-    See [man:pulse-client.conf(5)] for more information
+    See {{< man "pulse-client.conf(5)" >}} for more information
 -   [daemon.conf - daemon configuration
     ](https://wiki.archlinux.org/index.php/PulseAudio/Configuration#daemon.conf)
     defines base settings like the default sample rates used by
     modules, resampling methods, realtime scheduling ... . These can
     not be changed at runtime without restarting the PulseAudio
-    daemon.  See the [man:pulse-daemon.conf] for information.
+    daemon.  See the {{< man "pulse-daemon.conf" >}} for information.
 -   To start manually pulseaudio to debug it, first disable
     _as above_ and stop the autospawned session then start again
     with `pulseaudio -v` to get info messages,
@@ -339,10 +330,10 @@ Wikipedia has a [w:Pulseaudio] page.
     pa-applet is not a replacement to padevchooser and pavucontrol,
     but offer basic functions for regular desktop usage.
 -   Pulseaudio can stream to UPnP / DLNA with
-    [pulseaudio-dlna](#pulseaudio-dlna "internal reference").
+    {{< iref "#pulseaudio" "pulseaudio-dlna" >}}.
 
 ## Video and Music
--   <a name="icecast"></a>[w:Icecast] (GPL) streaming server
+-   <a name="icecast"></a>{{< wp "Icecast" >}} (GPL) streaming server
     (audio/video) with support of Ogg/Vorbis and Ogg/Theora, Opus,
     WebM and MP3 streams.
     Icecast is small 2.3M many threads on my armel nas server.:
@@ -367,7 +358,7 @@ Wikipedia has a [w:Pulseaudio] page.
         using streamripper. It is in Debian.
     -   _Icecast_ can be used to [stream with MPD
         ](https://wiki.archlinux.org/index.php/Icecast#Streaming_with_MPD),
-        but [MPD](/node/media_players#MPD "internal reference")
+        but {{< iref "media_players#MPD" "MPD" >}}
         has its [own HTTP streaming server
         ](https://wiki.archlinux.org/index.php/Music_Player_Daemon/Tips_and_tricks#HTTP_streaming).
 -   <a name="jinzora"></a>[Jinzora
@@ -415,7 +406,7 @@ Wikipedia has a [w:Pulseaudio] page.
         -   [Jamstash online site]([http://jamstash.com/)
 
     There are many derivatives of _subsonic_, they are listed in the
-    Wikipedia [w:Subsonic] page, among the active projects that are
+    Wikipedia {{< wp "Subsonic" >}} page, among the active projects that are
     completly free (not a freemium like Subsonic itself) you can
     find:
 
@@ -429,26 +420,24 @@ Wikipedia has a [w:Pulseaudio] page.
         a Python implementation of the Subsonic server API.
         _active in 2018_.
 
--   [VideoLan Client (VLC)
-    ](/node/media_players#videolan "internal reference") is in the
-    [Video Players section
-    ](/node/media_players#video_players "internal reference").
+-   {{< iref "media_players#videolan" "VideoLan Client (VLC)" >}} is in the
+    {{< iref "media_players#video_players" "Video Players section" >}}.
 
 
 # UPnP / DLNA
 
-This section is about [w:Universal Plug and Play] UPnP which allows
+This section is about {{< wp "Universal Plug and Play" >}} UPnP which allows
 device-to-device networking of appliances, I uses the TCP/IP, UDP and
 HTTP protocols and supports zero configuration networking see the
-[w:Universal Plug and Play|wikipedia page for more info].
+{{< wp "Universal Plug and Play"  "wikipedia page for more info" >}}.
 
 When talking of UPnP we should distinguish, the
-[w:Internet Gateway Device Protocol] (IGD) which is a method of
-automatically configuring port forwarding to allow [w:NAT traversal];
-and broadcasting of digital media which is used by [w:DLNA] devices.
+{{< wp "Internet Gateway Device Protocol" >}} (IGD) which is a method of
+automatically configuring port forwarding to allow {{< wp "NAT traversal" >}};
+and broadcasting of digital media which is used by {{< wp "DLNA" >}} devices.
 
--   Wikipedia: [w:Universal Plug and Play],
-    [w:Internet Gateway Device Protocol], [w:DLNA].
+-   Wikipedia: {{< wp "Universal Plug and Play" >}},
+    {{< wp "Internet Gateway Device Protocol" >}}, {{< wp "DLNA" >}}.
 -   [DLNA Home Page](https://www.dlna.org/)
 -   [Complete Guide to wifi - UPnP DLNA Network Audio
     ](https://www.computeraudiophile.com/ca/ca-academy/the-complete-guide-to-hifi-upnp-dlna-network-audio/)
@@ -457,8 +446,8 @@ and broadcasting of digital media which is used by [w:DLNA] devices.
 
 ## UPnP Media servers {#upnp_servers}
 -   Wikipedia:
-    [w:Comparison of UPnP AV media servers],
-    [w:List of UPnP AV media servers and clients]
+    {{< wp "Comparison of UPnP AV media servers" >}},
+    {{< wp "List of UPnP AV media servers and clients" >}}
 -   [BRisa](http://brisa.garage.maemo.org/) is an UPnP framework written
     in Python. It provides a Media Server and Media Renderer to play medias,
     and a Media Applet to start/stop media servers/renderers. _no
@@ -471,7 +460,7 @@ and broadcasting of digital media which is used by [w:DLNA] devices.
     (MIT License) is a UPnP/DLNA Framework that provides a
     server. Coherence developper resigned, and the development ceased
     in 2014, but there are some maintenance commits in the repository that merge the
-    change made by  [Cohen](#cohen "internal reference") a fork of
+    change made by  {{< iref "#cohen" "Cohen" >}} a fork of
     _Coherence_
     -   [Github: Coherence
         ](https://github.com/coherence-project/Coherence)
@@ -499,7 +488,7 @@ and broadcasting of digital media which is used by [w:DLNA] devices.
     ](http://sourceforge.net/projects/fuppes/).
 -   <a name="gerbera"></a>[Gerbera](https://gerbera.io/)
     is an upnp media server written in C++, the continuation of
-    [MediaTomb](#mediatomb "internal reference").
+    {{< iref "#mediatomb" "MediaTomb" >}}.
     It is packaged in Debian.
     -   [Gerbera Documention](http://docs.gerbera.io/en/latest/).
 -   <a name="gmediaserver"></a>[GMediaServer
@@ -508,7 +497,7 @@ and broadcasting of digital media which is used by [w:DLNA] devices.
     updated since 2007 but still packaged in Debian._
 -   <a name="mediatomb"></a>[MediaTomb](http://mediatomb.cc/) (GPL)
     is an UPnP AV Mediaserver for Linux. It is not updated since 2010,
-    and continued by [Gerbera](#gerbera "internal reference").
+    and continued by {{< iref "#gerbera" "Gerbera" >}}.
 -   [ReadyMedia previously MiniDLNA
     ](http://sourceforge.net/projects/minidlna/) (GPL)
     is server software with the aim of being fully compliant with
@@ -523,7 +512,7 @@ and broadcasting of digital media which is used by [w:DLNA] devices.
     -   A [comparison of Mediatomb vs. MiniDLNA
         ](http://blog.flexion.org/2009/12/18/mediatomb-minidlna/)
         _outdated 2009!_
--   [MythTV](/node/media_players#mythtv "internal reference")
+-   {{< iref "media_players#mythtv" "MythTV" >}}
     has a [builtin UPnP server](https://www.mythtv.org/wiki/UPnP).
 -   <a name=pulseaudio-dlna"></a>[pulseaudio-dlna
     ](https://github.com/masmu/pulseaudio-dlna)
@@ -547,10 +536,10 @@ and broadcasting of digital media which is used by [w:DLNA] devices.
     with _PS3 Media server_, _Serviio_, _KooRaRoo_, _Plex_.
 -   [uShare _GeexBox page_](http://ushare.geexbox.org/) (GPL)
     is an Upnp (TM) A/V Media Server based on
-    [GmediaServer](#gmediaserver "internal reference").
+    {{< iref "#gmediaserver" "GmediaServer" >}}.
     -    [nas-central: Ushare - UPnP Media Server for Linux
          ](http://buffalo.nas-central.org/wiki/Ushare_-_UPnP_Media_Server_for_Linux).
--   [Kodi (Xbmc)](/node/media_players#kodi "internal reference")
+-   {{< iref "media_players#kodi" "Kodi (Xbmc)" >}}
     has a [builtin UPnP server](http://kodi.wiki/view/UPnP/Server).
 
 ### Rygel {#rygel}
@@ -597,12 +586,12 @@ Taken from the [Rygel Wiki - features
 
     -   [DVB Daemon](https://wiki.gnome.org/Projects/DVBDaemon):
         Provides live TV (DVB) channel streams.
-    -   [Rhythmbox](/node/media_players#rythmbox "internal reference").
-    -   [PulseAudio](#pulseaudio "internal reference").
+    -   {{< iref "media_players#rythmbox" "Rhythmbox" >}}.
+    -   {{< iref "#pulseaudio" "PulseAudio" >}}.
     -   [GRILO](https://wiki.gnome.org/Projects/Grilo)
         a framework focused on making media discovery and browsing
         easy, used with Rygel and
-        [Totem](/node/media_servers#totem "internal reference").
+        {{< iref "media_servers#totem" "Totem" >}}.
 
 -   Export of GStreamer pipelines as media items on the network,
     specified through gst-launch syntax in the user configuration.
@@ -625,14 +614,13 @@ Taken from the [Rygel Wiki - features
 -   [GMediaRender](http://gmrender.nongnu.org/) (GPL)
     is a UPnP media renderer for Linux,  It provides UPnP controllers
     to render media content from a UPnP media server. _Like
-    [GMediaServer](#gmediaserver "internal reference") this project
+    {{< iref "#gmediaserver" "GMediaServer" >}} this project
     is no longer maintained and is not updated since 2007 and still in
     debian_.
     -   [gmrender-resurrect
         ](https://github.com/hzeller/gmrender-resurrect)
         is a newer fork of gmediarender.
--   _rygel-playbin_ is a media renderer par of the [Rygel
-    ](#rygel "internal reference") upnp media server.
+-   _rygel-playbin_ is a media renderer par of the {{< iref "#rygel" "Rygel" >}} upnp media server.
 -   [simple-dlna-browser
     ](https://github.com/javier-lopez/learn/blob/master/sh/tools/simple-dlna-browser)
     is a simple shell script to browse dlna servers.
@@ -640,16 +628,16 @@ Taken from the [Rygel Wiki - features
 ## Media Players with Upnp support
 These streaming server acts as  UPnP media renderers.
 
--   [Amarok](/node/media_players#amarok "internal reference")
+-   {{< iref "media_players#amarok" "Amarok" >}}
     can [play UPnP / DLNA streams
     ](https://userbase.kde.org/Amarok/Manual/Organization/Collection/RemoteCollections/UPnP)
     this feature is not shared by the Clementine or Exaile forks.
--   [Banshee](/node/media_players#banshee "internal reference") a mono
+-   {{< iref "media_players#banshee" "Banshee" >}} a mono
     player.
--   [Kodi (Xbmc)](/node/media_players#kodi "internal reference")
+-   {{< iref "media_players#kodi" "Kodi (Xbmc)" >}}
     can [act as an UPnP client](https://kodi.wiki/view/UPnP/Client)
     that can be controlled by an UPnP control point.
--   [MPD](/node/media_players#mpd "internal reference")
+-   {{< iref "media_players#mpd" "MPD" >}}
     can natively read UPnP streams on the local network with the
     native upnp plugin
     but there is also a frontend to serve UPnP content _upmdcli_
@@ -662,16 +650,16 @@ These streaming server acts as  UPnP media renderers.
         ohMedia services (including a Radio service to listen to
         Internet streams), see also
         [Upmpdcli downloads](https://www.lesbonscomptes.com/upmpdcli/downloads.html).
--   [Rhythmnbox](/node/media_players#rhythmnbox  "internal reference")
+-   {{< iref "media_players#rhythmnbox" "Rhythmnbox" >}}
     can play UPnP medias, and DAAP via a plugin which uses
     _libdmapsharing_.
--   [Totem](/node/media_players#totem "internal reference")
+-   {{< iref "media_players#totem" "Totem" >}}
     has a DLNA plugins from
-    [coherence project](#coherence "internal reference")
+    {{< iref "#coherence" "coherence project" >}}
     which allows it to work as UPnP media client.
--   [VLC](/node/media_players#vlc "internal reference")
+-   {{< iref "media_players#vlc" "VLC" >}}
     can play UPnP medias since 1.2.0 release.
--   [Kodi](/node/media_players#kodi "internal reference")
+-   {{< iref "media_players#kodi" "Kodi" >}}
     can play UPnP medias.
 
 ## Hardware including an UPNP renderer
@@ -697,8 +685,8 @@ may function as a complete music playing application.
     is a framework for creating UPnP devices and control points.
     GUPnP-Tools is a set of utilities to work with UPnP. It includes
     an AV control point `gupnp-av-cp`, a Generic Control Point
-    `gnupnp-universal-cp` an uploader `gupnp-upload` and a [w:Simple
-    Service Discovery Protocol] (SSDP) commandline client
+    `gnupnp-universal-cp` an uploader `gupnp-upload` and a
+    {{< wp "Simple Service Discovery Protocol" >}} (SSDP) commandline client
     `gssdp-discover`.
 
     On amd64 _gupnp-av-cp_ takes 25 res / 17M shr
@@ -710,7 +698,7 @@ may function as a complete music playing application.
     is provided. On amd64 upplay takes 53M res / 35M shr on may 2018
     for 1.2.11, which is very heavy for a control point.
 
--   [Kodi](/node/media_players#kodi "internal reference")
+-   {{< iref "media_players#kodi" "Kodi" >}}
     can  [act as an UPnP Control Point
         ](https://kodi.wiki/view/UPnP/Client#Sending_video_to_other_UPnP_targets).
 
@@ -734,23 +722,22 @@ More control points and server are in the
 
 
 ## DAAP {#daap}
--   The [w:Digital Audio Access Protocol] (DAAP) is a proprietary
+-   The {{< wp "Digital Audio Access Protocol" >}} (DAAP) is a proprietary
     protocol by Apple that does the same job than UPnP but being
     proprietary. As Itunes is quite popular, it is widespread, so
     there are also opensource software to play DAAP.  Daap is also
-    used by [w:Roku] products.
+    used by {{< wp "Roku" >}} products.
 
--   DAAP is played by applications such as [Rhythmnbox
-    ](/node/media_players#rhythmnbox  "internal reference"),
-    [Amarok](/node/media_players#amarok "internal reference"),
-    [Exaile](/node/media_players#exaile "internal reference")
-    [Banshee](/node/media_players#exaile "internal reference"),
-    [Kodi](/node/media_players#kodi "internal reference").
+-   DAAP is played by applications such as {{< iref "media_players#rhythmnbox" "Rhythmnbox" >}},
+    {{< iref "media_players#amarok" "Amarok" >}},
+    {{< iref "media_players#exaile" "Exaile" >}}
+    {{< iref "media_players#exaile" "Banshee" >}},
+    {{< iref "media_players#kodi" "Kodi" >}}.
 -   [Network your music with DAAP for Linux ](http://forums.techarena.in/guides-tutorials/1368286.htm)
     examine DAAP server solutions on Linux. _2010_
--   [w:Firefly]
+-   {{< wp "Firefly" >}}
     (GPL)<a name="firefly"></a> is an open-source media server (or
-    daemon) for the [w:Roku] Server Protocol (RSP) and Digital Audio
+    daemon) for the {{< wp "Roku" >}} Server Protocol (RSP) and Digital Audio
     Access Protocol (DAAP).  It has support for MP3, AAC, Ogg, FLAC,
     and WMA and support on-the-fly transcoding of Ogg, FLAC, ALAC, and
     WMA.
@@ -762,7 +749,7 @@ More control points and server are in the
         ](http://www.mediasmartserver.net/wiki/index.php/FirePlay)
         is a web player for Firefly music streams.
     -   __Forked-dappd__  (GPL) is a fork
-        of [Firefly](#firefly "internal node") the original code is at
+        of {{< iref "#firefly" "Firefly" >}} the original code is at
         `git://git.debian.org/~jblache/forked-daapd.git` and now
         [mirrored on GitHub
         ](https://github.com/jasonmc/forked-daapd).
@@ -772,7 +759,7 @@ More control points and server are in the
      is a media server supporting the DAAP protocol written in Python
      that  uses the mutagen media metadata library. _not updated since 2011_
     _spydaap_ can stream mp3s, ogg, flac, and Quicktime videos. It is used in an
-    [Exaile](/node/media_players#exaile "internal reference") plugin.
+    {{< iref "media_players#exaile" "Exaile" >}} plugin.
 
 ## UPnP IGD client/server
 
@@ -782,7 +769,7 @@ More control points and server are in the
     -   [GitHub _ MiniUPnP](https://github.com/miniupnp/miniupnp).
 
 # Chromecast {#chromecast}
-[w:Chromecast] are digitals players by Google. They can display video
+{{< wp "Chromecast" >}} are digitals players by Google. They can display video
 up to 1080p for second generation and 4K ultra HD for Chromecast
 ultra.
 
@@ -797,14 +784,14 @@ They [support the following codecs
 -   Audio codecs: HE-AAC, LC-AAC, MP3, Vorbis, WAV (LPCM),
     FLAC (up to 96kHz/24-bit), Opus.
 
-The cast protocol [w:Google Cast] is a proprietary protocol. There is
+The cast protocol {{< wp "Google Cast" >}} is a proprietary protocol. There is
 a SDK to allow applications to interract with Chromecat devices
-and on  [w:Google_Cast#Compatible_devices|Compatible devices] which
+and on  {{< wp "Google_Cast#Compatible_devices"  "Compatible devices" >}} which
 include android TV and many sounbars and speakers.
 A list of these devices is in the Google help page
 [Chromecast built-in](https://www.google.com/chromecast/built-in).
 
-On Wikipedia you find a [w:List of apps with Google Cast support].
+On Wikipedia you find a {{< wp "List of apps with Google Cast support" >}}.
 
 Google Chromecast Help
 ](https://support.google.com/chromecast/chromecast/).
@@ -852,7 +839,7 @@ Chrome.
     The author and maintainer step down in 2017 and is seeking a
     new maintainer.
 -   Pulseaudio can stream to Chromecast ( and UPnP / DLNA) with
-    [pulseaudio-dlna](#pulseaudio-dlna "internal reference")
+    {{< iref "#pulseaudio" "pulseaudio-dlna" >}}
     streaming server.
 -   [Transformer votre Raspberry Pi en Chromecast
     ](https://www.supinfo.com/articles/single/7029--transformer-votre-raspberry-pi-chromecast).
@@ -872,34 +859,33 @@ Chrome.
 
 ## Chromecast support in media players
 Some media players have built-in support for Chromecast like
-[VLC](/node/media_players#vlc "internal reference"),
-[SMPlayer](/node/media_players#smplayer "internal reference"),
-[Emby](/node/media_players#emby "internal reference").
+{{< iref "media_players#vlc" "VLC" >}},
+{{< iref "media_players#smplayer" "SMPlayer" >}},
+{{< iref "media_players#emby" "Emby" >}}.
 
 Other players that use pulseaudio as output device can use
-[pulseaudio-dlna](#pulseaudio-dlna "internal reference") or
-[mkchromecast](#mkchromecast "internal reference")
+{{< iref "#pulseaudio" "pulseaudio-dlna" >}} or
+{{< iref "#mkchromecast" "mkchromecast" >}}
 this can be used for instance with mpd, mpv, mplayer2, ffmpeg.
 
 When a player can output to http we can also send this URL to
-chromecast with many applications [referenced above
-](#casting_apps "internal reference"). This can be used with mpd,
+chromecast with many applications {{< iref "#casting_apps" "referenced above" >}}. This can be used with mpd,
 or icecast.
 
 
 # Sound Servers
--   [PulseAudio](#pulseaudio "internal reference"):
-    is referenced [above](#pulseaudio "internal reference").
--   <a name="esound"></a>[w:ESound]
+-   {{< iref "#pulseaudio" "PulseAudio" >}}:
+    is referenced {{< iref "#pulseaudio" "above" >}}.
+-   <a name="esound"></a>{{< wp "ESound" >}}
     the Enlightened Sound Daemon, is a server process that mixes
     several audio streams for playback by a single audio device.
     Now esd is largely replaced by
-    [PulseAudio](#pulseaudio "internal reference").
+    {{< iref "#pulseaudio" "PulseAudio" >}}.
 -   <a name="jack"><a>[Jack](http://jackit.sourceforge.net)
     JACK is a low-latency audio server. It can connect a number of
     different applications to an audio device, as well as allowing them
     to share audio between themselves.
-    -   Wikipedia [w:JACK Audio Connection Kit]
+    -   Wikipedia {{< wp "JACK Audio Connection Kit" >}}
     -   [ArchWiki: JACK Audio Connection Kit
         ](https://wiki.archlinux.org/index.php/JACK_Audio_Connection_Kit)
 

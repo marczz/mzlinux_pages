@@ -1,22 +1,15 @@
-<!--
-.. description:
-.. date: 2015-06-12
-.. slug: images
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Images
--->
+---
+title: Images
+---
 
-[TOC]
+{{% toc /%}}
 
-Among [w: image file formats].
+Among {{< wp " image file formats" >}}.
 this section deals with _raster_ or _bitmap_ file format, the _vector_
 file format are in the
-[SVG section](#svg "internal reference"),
-and the [PDF and Postscript section
-](/node/ps_pdf_djvu "internal reference"). They are
-compared in the Wikipedia page [w:Comparison of graphics file formats].
+{{< iref "#svg" "SVG section" >}},
+and the {{< iref "ps_pdf_djvu" "PDF and Postscript section" >}}. They are
+compared in the Wikipedia page {{< wp "Comparison of graphics file formats" >}}.
 
 
 # Image formats
@@ -39,7 +32,7 @@ Compressed lossless formats
 -   [Multiple-image Network Graphics (MNG)
     ](http://www.libmng.com/pub/mng/index.html)
     A PNG-like Image Format Supporting Animation and Transparent JPEG
--   [w:Exchangeable_image_file_format|EXIF]
+-   {{< wp "Exchangeable_image_file_format"  "EXIF" >}}
     or _Exchangeable image file format_ is a specification for the
     image file format used by digital cameras.
 
@@ -47,17 +40,17 @@ Lossy Formats
 :
 
 -   [JPEG](http://en.wikipedia.org/wiki/JPEG ),
-    [w:JPEG] is a method of compression for images, __jpeg/exif__ is
+    {{< wp "JPEG" >}} is a method of compression for images, __jpeg/exif__ is
     the most common image format used by digital cameras.
 -   [TIFF](http://en.wikipedia.org/wiki/TIFF) a lossy or losseless
     image format widely used for scanning, faxing, word processing, optical character recognition.
     It supports multiple images in one file, even if fiew viewers can display them
-    _(but [imview](#imview "internal reference") does)_.
+    _(but {{< iref "#imview" "imview" >}} does)_.
     Multiple  images tiff files can be splited or combined with
-    [libtiff-tools](#libtiff-tools "internal reference"), or even by
-    [GraphicsMagick](#graphicsmagick "internal reference")/ImageMagick
+    {{< iref "#libtiff" "libtiff-tools" >}}, or even by
+    {{< iref "#graphicsmagick" "GraphicsMagick" >}}/ImageMagick
     but these two last will use a lot of memory by loading all pages.
--   [w:WebP] is an open image format developped by Google
+-   {{< wp "WebP" >}} is an open image format developped by Google
     both with lossless and lossy compression. Google tests show an
     improvement in size of roughly 25% both in lossless format tested
     against _png_ and lossy format compared to _jpeg_.
@@ -71,18 +64,18 @@ Lossy Formats
     -   Among viewers _Gthumb_ supports _WebP_. There is a
         [WebP plugin for imlib2](https://github.com/gawen947/imlib2-webp)
         so _imlib2_ based software
-        like [feh](#feh "internal reference") or
-        [sxiv](#sxiv "internal reference")
+        like {{< iref "#feh" "feh" >}} or
+        {{< iref "#sxiv" "sxiv" >}}
         should display the _WebP_ format.
 
 # Image metadata
 
-[w:Exchangeable_image_file_format|EXIF]
+{{< wp "Exchangeable_image_file_format"  "EXIF" >}}
 or _Exchangeable image file format_
 is a specification for the image file format used by digital cameras.
 The unofficial site of EXIF is [EXIF.org](http://www.exif.org/).
 
-[w:EXtensible Metadata Platform] (XMP) is a standard, created by Adobe
+{{< wp "EXtensible Metadata Platform" >}} (XMP) is a standard, created by Adobe
 Systems Inc., for processing and storing standardized and proprietary
 information relating to the contents of a file.  XMP can be used in
 several file formats such as PDF, JPEG, JPEG 2000, JPEG XR, GIF, PNG,
@@ -94,7 +87,7 @@ Interchange Model data.
 
 The [IPTC core schema for XMP](http://www.iptc.org/IPTC4XMP/)
 can store in XMP header information originally part of
-[w:IPTC Information Interchange Model].
+{{< wp "IPTC Information Interchange Model" >}}.
 The [IPTC core shema specification
 ](http://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata-201007_1.pdf)
 describe the name and role of tags used in IPTC.
@@ -105,8 +98,8 @@ ImageMagic and GraphicksMagic. Number of viewers can also display exif
 data: geekie, eog, fbi, gtkam, gphoto2, ristretto.... .
 
 But  only few program that can __write exif__ , among them GIMP,
-[ImageMagic](#imagemagick "internal reference"),
-[GraphicsMagic](#graphicsmagick "internal reference"),
+{{< iref "#imagemagick" "ImageMagic" >}},
+{{< iref "#graphicsmagick" "GraphicsMagic" >}},
 exif, gexif,  exiv2, and exiftools.
 
 -   [Exiftags](http://johnst.org/sw/exiftags/) (BSD Licence)
@@ -143,8 +136,8 @@ exif, gexif,  exiv2, and exiftools.
 -   [xwd(1)](http://man.cx/xwd(1)) dump an image of an X window
 -   [xloadimage(1)](http://man.cx/xloadimage(1))
     load images into an X11 window or onto the root window
--   [man:edisplay] is the viewer provided by
-    [Exact Image](#exactimage "internal reference")
+-   {{< man "edisplay" >}} is the viewer provided by
+    {{< iref "#exactimage" "Exact Image" >}}
 -   <a name="fbida"></a>[fbida](http://linux.bytesex.org/fbida/)
     contains __fbi__ an image viewer for framebuffer console, _ida_ a
     small motif-based image viewer. _fbgs_ is a wrapper script to
@@ -161,7 +154,7 @@ exif, gexif,  exiv2, and exiftools.
     Less than even the standard lxde _Gpicview._ Even on my image test
     directory it takes only 19M/9M, you can compare with _geeqie_,
     _gthumb_, or even the _pqiv_ command line. It's only contender is
-    [sxiv](#sxiv "internal reference").
+    {{< iref "#sxiv" "sxiv" >}}.
 
     -   A summary of feh capacities is given on the
         [Feh page of the previous maintener
@@ -182,8 +175,8 @@ exif, gexif,  exiv2, and exiftools.
     metadata (info from jpeg files), and integration with programs
     like UFraw, ImageMagick, Gimp, gPhoto or ExifTool.<br /> Geeqie
     has a medium footprint less than
-    [Gthumb](#gthumb "internal reference") and above the lighter
-    [feh](#feh "internal reference") or
+    {{< iref "#gthumb" "Gthumb" >}} and above the lighter
+    {{< iref "#feh" "feh" >}} or
     _Gpicview_.  30 M resident/25 M shared at start moving to 93M/27M
     on my image test directory. Like gthumb it does not garbage
     collect and the footprints are always increasing during a session.
@@ -200,7 +193,7 @@ exif, gexif,  exiv2, and exiftools.
     an interface less user friendly than bigger viewer software.
     It is the standard picture viewer of LXDE, but has minimal
     dependencies using only GTK2 and glib2, and is desktop independant.
--   <a name="gthumb"></a>[w:Gthumb] (GPL) is an image viewer and
+-   <a name="gthumb"></a>{{< wp "Gthumb" >}} (GPL) is an image viewer and
     organizer. It belongs to gnome but it has very mild gnome
     dependencies and is more a GTK+ software. Its features include
     filesystem browsing, slide show, image catalogs, web album
@@ -217,9 +210,9 @@ exif, gexif,  exiv2, and exiftools.
         seem to shrink when moving to small or even empty directory.
         _I noticed garbage collection on a previous version, but with
         the new one tested 3.4.4 it does no more happen._
--   [Graphics Magick](#graphickmagick "internal reference)
+-   {{< iref "#graphickmagick" "Graphics Magick" >}}
     provide a command to display images. `gm display`.
--   [ImageMagick](#imagemagick "internal reference) display images
+-   {{< iref "#imagemagick" "ImageMagick" >}} display images
     with its command `display`.
 -   <a name="imview"></a>[imview
     ](http://hugues.zahlt.info/software_imview.html)
@@ -229,7 +222,7 @@ exif, gexif,  exiv2, and exiftools.
     from 2008, it is now minimally maintained. It has small memory
     footprints 9.5M resident / 8.5M shared. When loading all files from
     my test directory the memory footprint is 43M / 14M
--   [w:libjpeg|LibJpeg] contains the following utilities: `cjpeg` and
+-   {{< wp "libjpeg"  "LibJpeg" >}} contains the following utilities: `cjpeg` and
     `djpeg`, for performing file formats conversions, `rdjpgcom` and
     `wrjpgcom`, for inserting and extracting textual comments in JFIF
     files, `jpegtran` for lossless transcoding between different JPEG
@@ -251,7 +244,7 @@ exif, gexif,  exiv2, and exiftools.
         ](http://mirageiv.sourceforge.net/docs.html)
 
 -   <a name="pqiv"></a>[PQIV](https://github.com/phillipberndt/pqiv)
-    is the continuation of [QIV](#qiv "internal reference).
+    is the continuation of {{< iref "#qiv" "QIV" >}}.
     It is an image viewer written in C using GTK 2 or GTK 3 and
     GLIB 2. It is actively maintained in 2017, and is in Debian.
     It start at 26M resident / 21M shared on a small thumbnail,
@@ -259,21 +252,21 @@ exif, gexif,  exiv2, and exiftools.
 -   <a name="qiv"></a>[QIV - Quick Image Viewer](http://spiegl.de/qiv/)
     (GPL) is a gdk/Imlib2 image viewer. it is in Debian.
     Development of _qiv_ stopped in 2013, but it continues in
-    [PQIV](#pqiv "internal reference).
+    {{< iref "#pqiv" "PQIV" >}}.
 -   [Ristretto
     ](http://goodies.xfce.org/projects/applications/ristretto)
     is a fast and lightweight picture-viewer for the Xfce desktop environment.
 -   <a name="sxiv"></a>[sxiv](https://github.com/muennich/sxiv)
     is a lightweight and scriptable image viewer written in C.
     Its only dependency besides xlib is imlib2. It is in Debian.
-    Iis an alternative to [feh](#feh "internal reference"),
-    [qiv](#qiv  "internal reference") or
-    [pqiv](#pqiv  "internal reference").
+    Iis an alternative to {{< iref "#feh" "feh" >}},
+    {{< iref "#qiv" "qiv" >}} or
+    {{< iref "#pqiv" "pqiv" >}}.
 
     It start at 5.7M / 4.7M on a small png thumbnail and 20M /5M
     browsing my test image directory (34M / 5M when also making
     thumbnails). For those who want a very lean image viewer, it is
-    the only contender to [feh](#feh "internal reference") among the
+    the only contender to {{< iref "#feh" "feh" >}} among the
     viewer I tested.
 
     -   [ArchWiki: sxiv](https://wiki.archlinux.org/index.php/Sxiv)
@@ -320,8 +313,8 @@ _Notes_
     formats are planed. It has utilities similar to ImageMagick ones
     `econvert`, `edisplay`, `edentify`,
 
-    It has also [man:hocr2pdf] to create a searchable PDF from hOCR input.
-    and barcode recognition with [man:bardecode]
+    It has also {{< man "hocr2pdf" >}} to create a searchable PDF from hOCR input.
+    and barcode recognition with {{< man "bardecode" >}}
 
 -   <a name="gimp"></a>[Gimp](http://www.gimp.org)
     is an image manipulation and paint program.
@@ -346,7 +339,7 @@ _Notes_
 -   <a name="graphicsmagick"></a>
     [Graphics Magick](http://www.graphicsmagick.org/)
     ([bunch of MIT like licenses](http://www.graphicsmagick.org/Copyright.html))
-    is a fork of [ImageMagick](#imagamagick "internal reference")
+    is a fork of {{< iref "#imagamagick" "ImageMagick" >}}
     with roughly the same capabilities. GraphicsMagick provides a
     [command line utility
     ](http://www.graphicsmagick.org/utilities.html)
@@ -356,7 +349,7 @@ _Notes_
         Used as an image viewer _display_ has tiny footprints
         10M resident/ 8M shared both for for the the _Image Magick_ and
         _Graphics Magick_ versions. In the same range than the winner
-        [feh](#feh "internal reference").
+        {{< iref "#feh" "feh" >}}.
         But the user interface of display is more limited.
     -   [convert](http://www.graphicsmagick.org/convert.html)
         convert an image from one format
@@ -471,10 +464,10 @@ _Notes_
 
 # Vector Graphic software {#svg}
 
-See also the [postscript, pdf, djvu Page](/node/ps_pdf_djvu/).
+See also the {{< iref "ps_pdf_djvu" "postscript, pdf, djvu Page" >}}.
 
 ## Documentation
--   Wikipedia: [w:Scalable Vector Graphics]
+-   Wikipedia: {{< wp "Scalable Vector Graphics" >}}
     an detailed review including support in browsers and software.
 -   [Scalable Vector Graphics (SVG)](http://www.w3.org/Graphics/SVG/)
     from W3C
@@ -488,8 +481,8 @@ See also the [postscript, pdf, djvu Page](/node/ps_pdf_djvu/).
 -   [Aafigure](http://packages.python.org/aafigure/)
     is used to convert drawings in plain text documents to HTML, PDF,
     SVG,png. It can be integrated with
-    [docutils](/node/rest#docutils "internal reference"),
-    [Sphinx](/node/rest#sphinx "internal reference"),
+    {{< iref "rest#docutils" "docutils" >}},
+    {{< iref "rest#sphinx" "Sphinx" >}},
     [MoinMoin](http://moinmo.in/).
 -   [Autotrace](http://autotrace.sourceforge.net/) (GPL) is a bitmaps
     to vector graphics converter. It was and may be still the more
@@ -497,17 +490,17 @@ See also the [postscript, pdf, djvu Page](/node/ps_pdf_djvu/).
     longer developped since 2004. [potracegui](http://potracegui.sourceforge.net)
     is a gui frontend that support potrace and autotrace.
 -   [Blockdiag](http://blockdiag.com/en/index.html) is a set of graph generators
-    from text source similar to [graphviz](#graphviz "internal reference")’s `dot` format.
+    from text source similar to {{< iref "#graphviz" "graphviz" >}}’s `dot` format.
     It includes  block diagrams, sequence diagrams,  activity diagrams, and network diagrams.<br />
     In the [sphinx contribs](https://bitbucket.org/birkenfeld/sphinx-contrib)
-    there is a [Sphinx](/node/rest#sphinx "internal reference") extension for _Blockdiag_.
+    there is a {{< iref "rest#sphinx" "Sphinx" >}} extension for _Blockdiag_.
 -   [Dia](http://live.gnome.org/Dia) (GPL) a GTK+ based diagram
     creation program that save diagrams to a custom XML format and can
     export them to EPS, SVG, XFIG, WMF and PNG, ...
 -   [Ditaa](http://ditaa.sourceforge.net/)
     is a java tool that convert ascii art to bitmap diagram (or EPS
     with a plugin), _no vector graphic presently_. It can be used
-    within DocuWiki, [Org Mode](/node/org-mode "internal reference").
+    within DocuWiki, {{< iref "org" "Org Mode" >}}.
 -   [Gnuplot](http://www.gnuplot.info/)
     [ad-hoc Open Source License
     ](http://gnuplot.cvs.sourceforge.net/gnuplot/gnuplot/Copyright)
@@ -525,7 +518,7 @@ See also the [postscript, pdf, djvu Page](/node/ps_pdf_djvu/).
     -   [gnuplot demos](http://gnuplot.sourceforge.net/screenshots/)
 -   <a name="inkscape"></a>[inkscape](http://www.inkscape.org/)
     is a SVG based generic vector-drawing program.
-    -   Wikipedia [w:Inskcape]
+    -   Wikipedia {{< wp "Inskcape" >}}
     -   Documentation:
         [inskape manual
         ](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/index.php)
@@ -543,7 +536,7 @@ See also the [postscript, pdf, djvu Page](/node/ps_pdf_djvu/).
 -   [ivtools](http://www.ivtools.org/ivtools/) drawing editors for
     PostScript, TeX, and web graphics and vector graphic shell
     _no longer developed, since 2009_.
--   [w:libsrvg]
+-   {{< wp "libsrvg" >}}
     is the gnome SVG rendering library  The  command-line _rsvg_
     part of the package _librsvg2-bin_ convert SVG files into
     raster images.
@@ -661,7 +654,7 @@ graphs, and _neato_ for drawing undirected graphs.
         or GD, automatic code generation, and more.
     -   [Sql2Dot](http://www.graphviz.org/Misc/sql2dot/)
         is a java parser to transform PostgreSQL sql into dot.
--   [Sphinx](/node/rest#sphinx "internal reference")
+-   {{< iref "rest#sphinx" "Sphinx" >}}
     has the extension [sphinx.ext.graphviz
     ](http://sphinx-doc.org/ext/graphviz.html)
     to embed Graphviz graphs in Sphinx Rest.
@@ -673,7 +666,7 @@ graphs, and _neato_ for drawing undirected graphs.
 -   [Graphviz filter for AsciiDoc
     ](http://asciidoc.org/asciidoc-graphviz-sample.html)
     allow to draw graphs via graphviz in
-    [Asciidoc](/node/asciidoc "internal reference").
+    {{< iref "asciidoc" "Asciidoc" >}}.
 -   [gitit plugin Dot.hs
     ](https://github.com/jgm/gitit/blob/master/plugins/Dot.hs)
     allows you to include a graphviz dot diagram in a _gitit_ page.

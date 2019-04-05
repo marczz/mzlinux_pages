@@ -1,27 +1,19 @@
-<!--
-.. description:
-.. date: 2014-07-06
-.. slug: clouds
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Clouds
--->
+---
+title: Clouds
+---
 
-[TOC]
+{{% toc /%}}
 
-
--   See also [Distributed File Systems
-    ](/node/network_filesystems#distributed_filesystems "internal reference"),
-    [File systems synchronization](/node/scm#fs_sync "internal reference"),
-    [backup](/node/backup  "internal reference").
+-   See also {{< iref "network_filesystems#distributed_filesystems" "Distributed File Systems" >}},
+    {{< iref "scm#fs_sync" "File systems synchronization" >}},
+    {{< iref "backup" "backup" >}}.
 
 ------
 
 # Clouds references
--   Wikipedia: [w:File hosting service],
-    [w:Comparison of file hosting services],
-    [w:Comparison of online backup services].
+-   Wikipedia: {{< wp "File hosting service" >}},
+    {{< wp "Comparison of file hosting services" >}},
+    {{< wp "Comparison of online backup services" >}}.
 -   [ArchWiki: backup - cloud storage
     ](https://wiki.archlinux.org/index.php/Synchronization_and_backup_programs#Cloud_storage).
 
@@ -44,7 +36,7 @@
 -   [AWS Free Usage Tier](http://aws.amazon.com/free/) allow some free
     use during one year.
     -   [Hidden Charges when using Amazon AWS' Free Tier](http://mhlakhani.com/blog/2011/01/hidden-charges-aws-free-tier/)
--   [w:Amazon S3] (Wikipedia),
+-   {{< wp "Amazon S3" >}} (Wikipedia),
     [S3 Home Page](http://aws.amazon.com/s3).
 -   [AWS monthly calculator](http://calculator.s3.amazonaws.com/calc5.html)
 -   [AWS Command line interface
@@ -108,7 +100,7 @@
     services.
 
 # Blackblaze B2 {#b2}
-[w:BlackBlaze] has many products available at
+{{< wp "BlackBlaze" >}} has many products available at
 [Backblaze Home](http://www.backblaze.com/)
 _Personal backup_ is an online backup tool using AES encryption
 ([more on BlackBlaze encryption
@@ -153,7 +145,7 @@ B2 is [integrated in many softwares
 a _duplicity backend_ and an unofficial [duplicity backend
 ](https://github.com/matthewbentley/duplicity_b2), a
 [B2 fuse backend](https://github.com/sondree/b2_fuse),
-it works with [rclone](#rclone "internal reference"),
+it works with {{< iref "#rclone" "rclone" >}},
 CyberDuck and it's command line
 [duck](https://trac.cyberduck.io/wiki/help/en/howto/cli).
 
@@ -165,7 +157,7 @@ has  10 GB of free web-storage,
 File sharing links, Mobile web access,
 free android, iphone,  ipad application.
 
--   Wikipedia: [w:Box.com]
+-   Wikipedia: {{< wp "Box.com" >}}
 -   To know the current promotions follow the _promotions faq_ link
     in the [support Home Page](https://support.box.com/home)
 -   Business plan 180$/year for 1TB max 2GB/file.
@@ -211,8 +203,8 @@ free android, iphone,  ipad application.
     in `~/davfs2/secret`.
 
     To use box dav filesystem you should disable lock by option
-    `use_locks 0` in [man:davfs2.conf]. See also other options in
-    [man:mount.davfs].
+    `use_locks 0` in {{< man "davfs2.conf" >}}. See also other options in
+    {{< man "mount.davfs" >}}.
 
     A bash script is available in
     [boxdav GitHub repository](https://github.com/seecinq/boxdav).
@@ -251,7 +243,7 @@ Dropbox is packaged for main linux distributions, and mobiles.
 
 The dropbox daemon footprint is 50M res/16M shr
 
--   Wikipedia: [w:Dropbox]
+-   Wikipedia: {{< wp "Dropbox" >}}
 -   [ArchLinux: Dropbox](https://wiki.archlinux.org/index.php/Dropbox)
 -   [Dropbox wiki](http://www.dropboxwiki.com/)
     -   [Dropbox Forums FAQ](http://www.dropboxwiki.com/Forums_FAQ/)
@@ -408,7 +400,7 @@ There are also some third party tools:
     [mega-cmd](https://github.com/t3rm1n4l/megacmd)
     which features a ftp like interface, plus some extensions.
     Now you can use the official
-    [MEGAcmd](#megacmd "internal reference")
+    {{< iref "#megacmd" "MEGAcmd" >}}
 -   [Mega.py (GitHub)](https://github.com/ckornacker/mega.py)
     is a Python library for the Mega.co.nz API, currently supporting,
     login, uploading, downloading, deleting, searching,
@@ -427,7 +419,7 @@ There are also some third party tools:
 
 # Openstack {#openstack}
 
--   Wikipedia: [w:OpenStack] (Apache License) is a cloud computing
+-   Wikipedia: {{< wp "OpenStack" >}} (Apache License) is a cloud computing
     project to provide an infrastructure as a service (IaaS).
 -   [OpenStack Fondation](http://www.openstack.org/foundation/)
     [GitHub: OpenStack](https://github.com/openstack)
@@ -465,13 +457,13 @@ There are also some third party tools:
     ](http://programmerthoughts.com/openstack/swift-on-pi/)
 
 ## Openstack storage providers
--   Openstack is underlying technology for [w:Rackspace] Cloud
+-   Openstack is underlying technology for {{< wp "Rackspace" >}} Cloud
     Servers. They provide  [openstack object storage
     ](https://www.rackspace.com/cloud/files) at the price of
     0.095€/G x month with trafic at 0.10€/GB  _2017 first TB storage and 10T
     traffic_ so for 100G storage and 100G traffic ~ 20€/month.
     _seems very expensive compared to OVH_.
--   <a name="ovh_openstack">[w:OVH] provides
+-   <a name="ovh_openstack">{{< wp "OVH" >}} provides
     [openstack/swift object storage
     ](https://www.ovh.com/fr/public-cloud/storage/object-storage/)
     at the price of 0.012€ G/month inbound traffic free, outbound
@@ -489,8 +481,8 @@ There are also some third party tools:
     openstack/swift API OVH offers SFTP, Rsync, SCP, HTTPS access to
     the storage.
 
-    See below the abandoned [Hubic offer](#hubic "internal reference"), and
-    their [cloud vps](#ovh_vps "internal reference").
+    See below the abandoned {{< iref "#hubic" "Hubic offer" >}}, and
+    their {{< iref "#ovh_vps" "cloud vps" >}}.
 
 
 # [OVH hubiC](http://www.ovh.fr/hubiC/) {#hubic}
@@ -514,7 +506,7 @@ as well.
     some library incompatibilities. See
     [Le client HubiC sous Debian - Inios
     ](https://inios.fr/hubic-sur-debian).
--   We can also use [rclone](#rclone "internal reference") which has
+-   We can also use {{< iref "#rclone" "rclone" >}} which has
     [Hubic support](https://rclone.org/hubic/). As rclone allow among
     its [commands](https://rclone.org/docs/#subcommands) copy and
     synchronize, it can be a more usable tool to access Hubic from
@@ -522,17 +514,17 @@ as well.
     -   [Backups dans le cloud hubic avec duplicity et rclone(rsync)
         ](http://nogues.pro/blog/backup-hubic-duplicity-rsync.html)
         by Pierre Noguès.
--   HubiC  rely on  [OpenStack](#openstack "local reference") / Swift
+-   HubiC  rely on  {{< iref "#openstack" "OpenStack" >}} / Swift
     so we can use the OpenStack / Swift api, but with the new api we
-    need to use [w:Oauth] authentication. Some of the following linked
+    need to use {{< wp "Oauth" >}} authentication. Some of the following linked
     project have not yet been updated to new api _(October 2013)_.
 -   [hubic2swiftgate](https://github.com/oderwat/hubic2swiftgate)
     is a php gateway which supports OAuth2 with api.hubic.com. It has
     to be installed on a webserver using a ssl-certificate.
-    It can be used with [duplicity](/node/backup#duplicity "internal reference"),
-    [openstack swift client](#openstack  "internal reference"),
-    [cyberduck](#duck  "internal reference"),
-    [ftp-clouds](#openstack  "internal reference").
+    It can be used with {{< iref "backup#duplicity" "duplicity" >}},
+    {{< iref "#openstack" "openstack swift client" >}},
+    {{< iref "#duck" "cyberduck" >}},
+    {{< iref "#openstack" "ftp-clouds" >}}.
     It replace the now deprecated
     [Toorop/HubicSwiftGateway](https://github.com/Toorop/HubicSwiftGateway).
 -   [Forum hubiC](https://forums.hubic.com/)
@@ -636,7 +628,7 @@ It provides a server that build on Linux, and clients for many OS.
 There is a linux client allowing synchronization as well as Mac OS,
 windows, android, iphone clients.
 
--   Wikipedia: [w:Yandex Disk]
+-   Wikipedia: {{< wp "Yandex Disk" >}}
 -   Yandex allow webdav access, that you can use with davfs:
 
         $ mount -t davfs https://webdav.yandex.ru /tmp/yandex_disk
@@ -650,7 +642,7 @@ windows, android, iphone clients.
 
 # Other clouds
 
--   [w:Adrive] (Wikipedia) it has only a web interface, in java, and
+-   {{< wp "Adrive" >}} (Wikipedia) it has only a web interface, in java, and
     Linux compatible.  ADrive offers 50 GiB of free data storage but
     with adds and Marketing Emails. The premium feature 100GB of
     storage cost $25 per year _2017_ provides Webdav SCP, SFTP and
@@ -694,7 +686,7 @@ windows, android, iphone clients.
     [WebDav option](https://www.cloudme.com/en/webdav)
 -   [CloudWatt](https://www.cloudwatt.com/fr/)
     is a storage solution based on
-    [OpenStack](#openstack "local reference")
+    {{< iref "#openstack" "OpenStack" >}}
     It has storage plan free
     until 50G 10G trafic, 100G 26€/year, 1To 260€year; trafic
     1.4€/To _2017_.
@@ -717,7 +709,7 @@ windows, android, iphone clients.
     previously SkyDrive is a Microsoft cloud hosting.  It offers 15 GB
     of free storage. There is no built-in encryption, of course no
     linux client!  For a longer description look at Wikipedia
-    [w:OneDrive].
+    {{< wp "OneDrive" >}}.
     -   [official OneDrive SDK for Python
         ](https://github.com/OneDrive/onedrive-sdk-python)
     -   [bash-onedrive-upload
@@ -733,7 +725,7 @@ windows, android, iphone clients.
     -   [skillion/onedrive](https://github.com/skilion/onedrive) (GPL)
         a client written in D to sync with onedrive. It is packaged in
         Debian as _onedrive_ since _stretch_.
-    -   [SME](#sme "internal reference") allows access to one drive.
+    -   {{< iref "#sme" "SME" >}} allows access to one drive.
 
 -   [SpiderOak](https://spideroak.com/) 2GB free, 100GB for 120$/year
     [SpiderOak Android](http://www.appbrain.com/app/spideroak/com.spideroak.android)
@@ -963,11 +955,9 @@ There is a free Linux and
 
 
 # Temporary storage {#temporary_storage}
-See also [P2P File sharing
-](/node/p2p#p2p_file_sharing "internal reference"),
-[Task Management](/node/tasks_management  "internal reference"),
-[Notes Taking
-](/node/tasks_management#note_taking  "internal reference").
+See also {{< iref "p2p#p2p_file_sharing" "P2P File sharing" >}},
+{{< iref "tasks_management" "Task Management" >}},
+{{< iref "tasks_management#note_taking" "Notes Taking" >}}.
 
 _I list only services with a password protection and/or encryption._
 
@@ -978,7 +968,7 @@ android native file manager, or an other like ES file manager, or
 drive, or numerous other options. UC browser has a different interface
 but that works also.
 
--   Wikipedia: [w:File hosting service]
+-   Wikipedia: {{< wp "File hosting service" >}}
 -   [Send large files: 10 free tools
     ](http://www.creativebloq.com/design-tools/send-large-files-clients-free-tools-3132117)
     _february 2016_
@@ -1034,8 +1024,7 @@ but that works also.
     protection.
 -   [Send Anywhere](https://send-anywhere.com/)
     described
-    [in the P2P file sharing section
-    ](/node/p2p#sendanywhere "internal reference") is
+    {{< iref "p2p#sendanywhere" "in the P2P file sharing section" >}} is
     mainly a P2P service, but it includes cloud storage to free the
     user from the contraint that both browser need to be open during
     all the transfer time.
@@ -1054,7 +1043,7 @@ but that works also.
 ## Pastebin {#pastebin}
 
 There are many similar services that we name with the common name
-[w:Pastebin] from the first [w:pastebin.com] they allow a free web clip by pasting
+{{< wp "Pastebin" >}} from the first {{< wp "pastebin.com" >}} they allow a free web clip by pasting
 some text, and they give you an url to retrieve the text.
 
 You can use to create you post a web page and
@@ -1081,7 +1070,7 @@ syntax highlighting,
     It has an [xml RPC interface
     ](http://paste.debian.net/rpc-interface.html)  and
     [xml RPC clients](http://paste.debian.net/paste.pl?show_template=clients)
-    including [pastebinit](#pastebinit "internal reference") and an
+    including {{< iref "#pastebinit" "pastebinit" >}} and an
     emacs client _debpaste_ in elpa and also as Debian package.
 -   [fpaste or paste.fedoraproject.org
     ](https://paste.fedoraproject.org/) is the fedora pastebin service
@@ -1153,7 +1142,7 @@ can interface with many pastebin.
 -   <a name="pastbinit"></a>
     [pastebinit](https://help.ubuntu.com/community/Pastebinit)
     can use  [paste.ubuntu.com](http://paste.ubuntu.com),
-    [paste.debian.net](#paste_debian "internal reference"),
+    {{< iref "#paste_debian" "paste.debian.net" >}},
     [pastebin.mozilla.org](http://pastebin.mozilla.org),
     [pastebin.ca](http://pastebin.ca), slexy.org,
     [yourpaste.net](http://yourpaste.net), paste.drizzle.org, paste.kde.org,
@@ -1224,8 +1213,8 @@ _They are self-hosted solutions._
    [this list
    ](https://github.com/ether/etherpad-lite/wiki/Sites-that-run-Etherpad-Lite),
    like the french [framapad](https://framapad.org/).
--  See also [codepad](#codepad "internal reference") in the
-   [pastbin list](#pastbin "internal reference")).
+-  See also {{< iref "#codepad" "codepad" >}} in the
+   {{< iref "#pastbin" "pastbin list" >}}).
 -  [CryptPad](https://github.com/xwiki-labs/cryptpad)(AGPL and private licence)
    is the zero knowledge realtime online node.js collaborative editor, it can use
    MongoDB or [leveldb](https://en.wikipedia.org/wiki/LevelDB). A docker configuration,

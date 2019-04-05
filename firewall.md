@@ -1,20 +1,14 @@
-<!--
-.. description:
-.. date: 2017-05-18
-.. slug: firewall
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Firewall
--->
+---
+title: Firewall
+---
 
-[TOC]
+{{% toc /%}}
 
-See also [IP](/node/IP "internal reference")
+See also {{< iref "IP" "IP" >}}
 
 # References
--   Wikipedia: [w:Comparison of firewalls],
-    [w:List of router and firewall distributions]
+-   Wikipedia: {{< wp "Comparison of firewalls" >}},
+    {{< wp "List of router and firewall distributions" >}}
 -   [firewall howto](http://www.tldp.org/HOWTO/Firewall-HOWTO.html)
     _2000_.
 -   [FAQ: Firewall Forensics
@@ -48,7 +42,7 @@ See also [IP](/node/IP "internal reference")
     It is available in Debian and Ubuntu distributions.
     -   [GitHub - fwbuilder](https://github.com/fwbuilder/fwbuilder)
         clone of the SourceForge fwbuilder repostiory.
--   <a name="firehol"></a>[w:FireHOL] (GPL)
+-   <a name="firehol"></a>{{< wp "FireHOL" >}} (GPL)
     is a Bash shell script designed as a wrapper for iptables.
     It uses a plain text configuration file. The companion script
     _FireQOS_ is used to set up traffic shaping.
@@ -58,8 +52,7 @@ See also [IP](/node/IP "internal reference")
     -   [ArchWiki - FireHol
         ](https://wiki.archlinux.org/index.php/Firehol).
     -   _FireHol_ also produce the
-        [netdata monitoring application
-        ](/node/monitoring#netdata "internal reference").
+        {{< iref "monitoring#netdata" "netdata monitoring application" >}}.
 
 # Firewall distributions {#firewall_distributions}
 There are many Open Source Linux distributions that run as
@@ -73,8 +66,8 @@ private
 port fowarding, Network File System (nfs), Qos Bandwidth
 Management, ssh client and server, Samba file sharing,
 [socks proxy server](http://en.wikipedia.org/wiki/SOCKS),
-[Upnp](/node/streaming#upnp "internal reference"),
-[Virtual Private Networkss (VPN)](/node/vpn "internal reference")
+{{< iref "streaming#upnp" "Upnp" >}},
+{{< iref "vpn" "Virtual Private Networkss (VPN)" >}}
 of different flavours (IPsec, OpenVpn, PPTP),
 [Wireless Distribution System
 ](http://en.wikipedia.org/wiki/Wireless_Distribution_System),
@@ -83,13 +76,13 @@ of different flavours (IPsec, OpenVpn, PPTP),
 [WPA](http://en.wikipedia.org/wiki/Wi-Fi_Protected_Access),
 [WPA2](http://en.wikipedia.org/wiki/WPA2).
 
--   Wikipedia: [w:Comparison of firewalls],
-    [w:List of router and firewall distributions]
+-   Wikipedia: {{< wp "Comparison of firewalls" >}},
+    {{< wp "List of router and firewall distributions" >}}
 -   [Hardware Firewall: Choosing the Right Firewall Distribution
     ](https://www.datamation.com/security/before-building-a-hardware-firewall.html)
     consider _PfSense_, _OPNSense_, _Untangle_, _Smoothwall Express_,
 
--   [w:fli4l] (GPL)
+-   {{< wp "fli4l" >}} (GPL)
     acronym for __fl__exible __i__nternet router __for__ __l__inux
     is a Linux distribution for small   i386, x86-64. If can run from
     a SD card, or CDrom.
@@ -112,18 +105,18 @@ of different flavours (IPsec, OpenVpn, PPTP),
     [added to dd-wrt
     ](http://wiki.milkfish.org.sipwerk.com/index.php?n=Milkfish-dd.RouterConfiguration)
     _MilkFish seems no more maintained since 2010._
--   [w:OPNSense] (BSD Licence)
+-   {{< wp "OPNSense" >}} (BSD Licence)
     is a FreeBSD-based firewall and router.  It is a fork of
-    [pfSense](#pfsense "internal link")
+    {{< iref "#pfsense" "pfSense" >}}
     in 2015 when the later changed its license.
-    [pfSense](#pfsense "internal link") itself was forked from
+    {{< iref "#pfsense" "pfSense" >}} itself was forked from
     _m0n0wall_.  It is supported on i386 and amd64 and some arm
     platforms.
     -   [Opensense Home](https://opnsense.org/)
 
--   <a name="pfsense"></a>[w:PfSense] (Apache License)
+-   <a name="pfsense"></a>{{< wp "PfSense" >}} (Apache License)
     is a FreeBSD-based firewall and router based on
-    [w:FreeBSD].  It provides
+    {{< wp "FreeBSD" >}}.  It provides
     firewall, router, wireless access point, DHCP server, DNS server,
     and as a VPN endpoint. pfSense supports installation of
     third-party packages like Snort or Squid through its Package
@@ -145,7 +138,7 @@ of different flavours (IPsec, OpenVpn, PPTP),
 
 
 # Iptables {#iptables}
--   [w:Netfilter|Wikipedia: Netfilter]
+-   {{< wp "Netfilter"  "Wikipedia: Netfilter" >}}
 -   [Netfilter](http://www.netfilter.org/)
     is a very maintained project as seen in the
     [Netfilter Git Repo](https://git.netfilter.org/)
@@ -185,7 +178,7 @@ of different flavours (IPsec, OpenVpn, PPTP),
     ](http://www.frozentux.net/ipsysctl-tutorial/ipsysctl-tutorial.html)
     _2002_.
 -   [Debian Wiki - Iptables](https://wiki.debian.org/iptables)
--   manual: [man:iptables]
+-   manual: {{< man "iptables" >}}
 -   [piste](http://ipset.netfilter.org/)
     is a companion application for the iptables. It allows you to
     setup rules to quickly and easily block a set of IP addresses
@@ -226,8 +219,8 @@ utility called _nft_.
 #   Packet Filter
 [Packet Filter (PF)](https://en.wikipedia.org/wiki/PF_(firewall))
 is a  stateful packet filter, a central piece of software for
-firewalling. It is comparable to iptables, [w:ipfw], and
-[w:ipfilter]. This is an OpenBSD project.
+firewalling. It is comparable to iptables, {{< wp "ipfw" >}}, and
+{{< wp "ipfilter" >}}. This is an OpenBSD project.
 
 
 
@@ -277,7 +270,7 @@ generating a connection attempt on a set of prespecified closed ports.
 -   [ArchWiki: Port Knocking
     ](https://wiki.archlinux.org/index.php/Port_knocking).
     describe port knocking with iptable only and with the
-    [knockd](#knockd "internal reference") daemon.
+    {{< iref "#knockd" "knockd" >}} daemon.
 
 -   [portknocking.org](http://www.portknocking.org/)
     gives some documentation and list
@@ -484,7 +477,7 @@ iptables modules
     :   `ulog` is an alternative to log in shorewall files, it is better
         suited to shorewall because it allows to keep a separate log
         file for shorewall messages, it needs the **ulogd** daemon, and
-        is explained below in [Shorewall logging](#shorewall_logging).
+        is explained below in {{< iref "#shorewall_logging" "Shorewall logging" >}}.
 
         The package `kmod-ipt-ulog` (4K pkg 6K jffs2) gives
         ipt\_ulog module. and the package `iptables-mod-ulog` (2.5 K

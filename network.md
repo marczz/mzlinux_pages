@@ -1,15 +1,11 @@
-<!--
-.. description:
-.. date: 2015-01-06
-.. slug: network
-.. tags:
-.. link:
-.. title: Network
--->
+---
+title: Network
+---
+
 
 # References
 More specific documentation is available under each subsection, and
-in the [Security chapter](/node/security "internal reference").
+in the {{< iref "security" "Security chapter" >}}.
 
 -   The source of all doc is the rfc
     ([rfc.net the repository of RFC](http://rfc.net),

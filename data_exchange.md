@@ -1,33 +1,26 @@
-<!--
-.. description:
-.. date: 2015-06-09
-.. slug: data_exchange
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Data exchange formats
--->
+---
+title: Data exchange formats
+---
 
-[TOC]
+{{% toc /%}}
 
--   Wikipedia: [w:Data exchange], [w:serialization],
-    [w:Comparison of data serialization formats] (json, yaml, xml,
-    property-lists, Comma-separated values, ...), [w:Binary-to-text encoding]
--   RSS and Atom formats are [in the rss readers section
-    ](/node/rss_readers#rss_formats "internal reference").
+-   Wikipedia: {{< wp "Data exchange" >}}, {{< wp "serialization" >}},
+    {{< wp "Comparison of data serialization formats" >}} (json, yaml, xml,
+    property-lists, Comma-separated values, ...), {{< wp "Binary-to-text encoding" >}}
+-   RSS and Atom formats are {{< iref "rss_readers#rss_formats" "in the rss readers section" >}}.
 
 
 # Json/ Yaml
 
-See also the related [Javascript Page](/node/javascript "internal reference")
+See also the related {{< iref "javascript" "Javascript Page" >}}
 
 ## Json  {#json}
--   [w:Json|Wikipedia: Json]
+-   {{< wp "Json"  "Wikipedia: Json" >}}
 -   [Json Home](http://json.org/) with an introduction and a list of
     implementations in numerous languages.
 -   Json format is defined in the
     [rfc4627](http://www.ietf.org/rfc/rfc4627.txt).
--   [w:JsonML] JSON Markup Language is  used to map between XML  and JSON.
+-   {{< wp "JsonML" >}} JSON Markup Language is  used to map between XML  and JSON.
     JsonML allows easy manipulation of the markup in JavaScript.
     [JsonML.org Home](http://jsonml.org/).<br />
 -   [awesome-json](https://github.com/burningtree/awesome-json)
@@ -39,9 +32,8 @@ See also the related [Javascript Page](/node/javascript "internal reference")
     available.
 
 ## Json libraries and bindings
--   [Python modules for Json
-    ](/node/python_libraries#serializing_modules "internal reference"),
-    and [libraries](/node/python_libraries#serializing_libs "internal reference"),
+-   {{< iref "python_libraries#serializing_modules" "Python modules for Json" >}},
+    and {{< iref "python_libraries#serializing_libs" "libraries" >}},
 -   [Json in javascript](http://www.json.org/js.html)
 -   [libjson](http://sourceforge.net/projects/libjson/)
     (FreeBSD License)is a fast, lightweight JSON parser written in C++.
@@ -63,7 +55,7 @@ See also the related [Javascript Page](/node/javascript "internal reference")
     ](http://www.freeformatter.com/json-formatter.html)
 
 ## Yaml {#yaml}
--   [w:Yaml] is a human-readable data serialization format designed
+-   {{< wp "Yaml" >}} is a human-readable data serialization format designed
      to be easily mapped to  list, associative array, and scalar.<br />
     It is a superset of JSON and is more easily human readable, but
     harder to parse.
@@ -77,8 +69,7 @@ See also the related [Javascript Page](/node/javascript "internal reference")
     lists of YAML resources.
 -   Yaml has a [binding for all main programming languages
     ](http://en.wikipedia.org/wiki/Yaml#Bindings).
--   [Python Libraries for Yaml
-    ](/node/python_libraries#serializing_libs "internal reference")
+-   {{< iref "python_libraries#serializing_libs" "Python Libraries for Yaml" >}}
 
 
 # XML {#xml}
@@ -104,8 +95,8 @@ See also the related [Javascript Page](/node/javascript "internal reference")
     ](http://shudson310.blogspot.com/)
 
 ## Xml Tools
-[Xml edition with Emacs](/node/emacs#xml_emacs "internal reference")
-is in [Emacs Section](/node/emacs "internal reference").xs
+{{< iref "emacs#xml_emacs" "Xml edition with Emacs" >}}
+is in {{< iref "emacs" "Emacs Section" >}}.xs
 
 -   [Apache XML Project](http://xml.apache.org/)( Xerces: XML
     parsers in Java and C++, Xalan: XSL stylesheet processors in Java
@@ -188,25 +179,24 @@ is in [Emacs Section](/node/emacs "internal reference").xs
 There are two concurent formats for representing spreadsheets, charts,
 presentations and word processing documents in XML:
 
--   [w: Office Open XML] a specification originally by Microsoft and now
+-   {{< wp " Office Open XML" >}} a specification originally by Microsoft and now
     the ISO ECMA-376 specification, starting with Microsoft Office
     2007, it has become the default file format of Microsoft Office.
 
-    On Wikipedia here is a huge list of [w:Office Open XML software],
-    allowed by the [w:Microsoft_Open_Specification_Promise|Covenant
-    Not to Sue of Microsoft].
+    On Wikipedia here is a huge list of {{< wp "Office Open XML software" >}},
+    allowed by the {{< wp "Microsoft_Open_Specification_Promise"  "Covenant     Not to Sue of Microsoft" >}}.
 
     The ISO standard comprise 6546 pages to compare with the
     OpenDocument specification wich aim at he same goals and is only
     867 pages in length.
 
--   [w:OpenDocument] (ODF) is an XML open OASIS standard. It has been
+-   {{< wp "OpenDocument" >}} (ODF) is an XML open OASIS standard. It has been
     developped by Sun Microsystems with IBM contributions.
 
-    The leading implementation is [w:OpenOffice.org], and
-    its fork [w: LibreOffice]
+    The leading implementation is {{< wp "OpenOffice.org" >}}, and
+    its fork {{< wp " LibreOffice" >}}
 
--   Wikipedia a list of [w:OpenDocument software]
+-   Wikipedia a list of {{< wp "OpenDocument software" >}}
 
 # XSL {#xsl}
 

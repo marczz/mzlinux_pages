@@ -1,29 +1,23 @@
-<!--
-.. description:
-.. date: 2016-02-06
-.. slug: spaced_repetition
-.. tags:
-.. link:
-.. title: Spaced Repetition
--->
+---
+title: Spaced Repetition
+---
 
-[TOC]
-
+{{% toc /%}}
 
 # References
--   Wikipedia: [w:Memory], [w:Memory improvement], [w:Memorization],  [w:Rote learning],
-    [w:Mnemonic],[w:Mnemonic major system]
--   The [w:Art of memory] is the use of mnemotechnics, this
+-   Wikipedia: {{< wp "Memory" >}}, {{< wp "Memory improvement" >}}, {{< wp "Memorization" >}},  {{< wp "Rote learning" >}},
+    {{< wp "Mnemonic" >}},{{< wp "Mnemonic major system" >}}
+-   The {{< wp "Art of memory" >}} is the use of mnemotechnics, this
     Wikipedia article summarize the differents techniques like the
-    [w:Method of loci] which is a general designation for mnemonic
+    {{< wp "Method of loci" >}} which is a general designation for mnemonic
     techniques that rely upon memorized spatial relationships to
     establish, order and recollect memorial content.
--   [w:Spaced repetition] is a learning technique that incorporates
+-   {{< wp "Spaced repetition" >}} is a learning technique that incorporates
     increasing intervals of time between subsequent review of previously
-    learned material. It is used in [w:Flashcard] Software.
-    Wikipedia has a [w:List of flashcard software], the two
+    learned material. It is used in {{< wp "Flashcard" >}} Software.
+    Wikipedia has a {{< wp "List of flashcard software" >}}, the two
     outstanding Open Source Software being Anki and Mnemosyne.
--   An other application is [w:Incremental reading] only available in
+-   An other application is {{< wp "Incremental reading" >}} only available in
     SuperMemo and Org-drill _and in alpha state in an Anki plugin_.
 
 # Flashcard principles.
@@ -32,7 +26,7 @@
 # Main stream software.
 
 The two more popular and achieved software are written in python
-[w:Anki] (GNU AGPL) and  [w:Mnemosyne_(software)|Mnemosyne] (GPL).
+{{< wp "Anki" >}} (GNU AGPL) and  {{< wp "Mnemosyne_(software)"  "Mnemosyne" >}} (GPL).
 Anki has a lot more feature. Anki 2 is based on the
 [Sm2 algorithm from Piotr Wozniak](http://www.supermemo.com/english/ol/sm2.htm)
 the reason to prefer it to other algorithm is
@@ -74,11 +68,11 @@ users or from adds_.
 -   [Flashcard Exchange](http://www.flashcardexchange.com/) _Paid
     service, 20$ to use main features_ see
     [WikiPedia: Flashcard Exchange](http://en.wikipedia.org/wiki/Flashcard_Exchange)
--   [w:Quizlet], [Quilet Home](http://quizlet.com/) _Adds powered_.
+-   {{< wp "Quizlet" >}}, [Quilet Home](http://quizlet.com/) _Adds powered_.
 -   [FlashCard Machine](http://www.flashcardmachine.com/)
 -   [FlashCardDb](http://flashcarddb.com/)
 
-## [w:Anki]
+## {{< wp "Anki" >}}
 -   [Anki 2 Home](http://ankisrs.net/anki2.html)
 -   [Anki 2 Manual](http://ankisrs.net/docs/dev/manual.html)
 -   [AnkiWeb: the online web interface to Anki 2](https://ankiweb.net/)

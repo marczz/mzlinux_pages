@@ -1,15 +1,8 @@
-<!--
-.. description:
-.. date: 2014-07-31
-.. slug: netconf
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Network Configuration
--->
+---
+title: Network Configuration
+---
 
-[TOC]
-
+{{% toc /%}}
 
 See also at readthedocs _not yet_
 [Unix Memo](http://unix-memo.readthedocs.org/en/latest/):
@@ -20,7 +13,7 @@ See also at readthedocs _not yet_
 [Network Manager Memo
 ](http://unix-memo.readthedocs.org/en/latest/commands.html#network-manager)
 
-See also [VPN](/node/vpn "internal reference").
+See also {{< iref "vpn" "VPN" >}}.
 
 # How to manage your network
 
@@ -108,7 +101,7 @@ manager.
 -   [Guessnet](http://guessnet.alioth.debian.org/) is a network
     detection tool to use when moving a machine among networks which
     don't necessarily provide DHCP.
--   [w:Wicd] (GPL): [Wicd Home](http://wicd.sourceforge.net/)
+-   {{< wp "Wicd" >}} (GPL): [Wicd Home](http://wicd.sourceforge.net/)
     is a python network manager. there is a python-GTK client,
     as well as command-line and an ncurses clients. Wicd
     has no gnome dependency. It uses
@@ -157,7 +150,7 @@ since July 2014, systemd version 215.
     _systemd-networkd_.
 
 There are many tutorial to explain how to switch in Debian from
-[Network-Manager](#network-manager "internal reference")
+{{< iref "#network" "Network-Manager" >}}
 to _systemd-networkd_:
 
 -   [How to switch from NetworkManager to systemd-networkd on Linux
@@ -182,7 +175,7 @@ See at readthedocs _not yet_
 [nm memo
 ](http://unix-memo.readthedocs.org/en/latest/commands.html#network-manager)
 
-[w:NetworkManager] ( GPL) is a networking configuration daemon
+{{< wp "NetworkManager" >}} ( GPL) is a networking configuration daemon
 which try to provide a painless and automatic network setup. It is
 part of the gnome project but communicate thru dbus and has no gnome
 dependencies by itself. The gnome front-end add some more dependencies.
@@ -241,8 +234,8 @@ in fluxbox.
 -   [networkmanager-dmenu
     ](https://github.com/firecat53/networkmanager-dmenu)
     is a python script to control network manager with
-    [dmenu](#dmenu "internal reference"), it can
-    also be used with [rofi](#rofi "internal reference").
+    {{< iref "#dmenu" "dmenu" >}}, it can
+    also be used with {{< iref "#rofi" "rofi" >}}.
 
 # Low level Wireless Tools
 
@@ -275,8 +268,8 @@ in fluxbox.
     ](http://wiki.openwrt.org/OpenWrtDocs/Configuration).
 -   [Debian Wiki: WiFi AdHoc](http://wiki.debian.org/WiFi/AdHoc)
     describes how to establish a decentralized WiFi network without
-    access point.  see also Wikipedia: [w:Wireless ad hoc network]
--   Wikipedia: [w:Wireless intrusion prevention system].
+    access point.  see also Wikipedia: {{< wp "Wireless ad hoc network" >}}
+-   Wikipedia: {{< wp "Wireless intrusion prevention system" >}}.
 -   [hostapd](http://hostap.epitest.fi/hostapd/)
     (GPL and BSD): IEEE 802.11 AP, IEEE 802.1X/WPA/WPA2/EAP/RADIUS
     Authenticator with dynamic TKIP/CCMP keying, that run on

@@ -1,23 +1,15 @@
-<!--
-.. description:
-.. date: 2015-12-22
-.. slug: security
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Security
--->
+---
+title: Security
+---
 
-[TOC]
+{{% toc /%}}
 
-See also the [Authentication section
-](/node/authentication "internal reference"),
+See also the {{< iref "authentication" "Authentication section" >}},
 
-An important part of security is [Network security
-](/node/network_security "internal reference").
+An important part of security is {{< iref "network_security" "Network security" >}}.
 
 # General references {#references}
--   Wikipedia: [w:Category:Computer security exploits]
+-   Wikipedia: {{< wp "Category:Computer security exploits" >}}
 -   [Security HOWTO](http://www.tldp.org/HOWTO/Security-HOWTO.html)
     is a guide for the linux administrator _2004_.
 -   [Gentoo Security Handbook
@@ -86,9 +78,9 @@ An important part of security is [Network security
     ](https://www.supinfo.com/articles/single/7486-securiser-son-infrastructure-avec-gnu-linux-partie-2).
 
 # Secure Programming
--   Wikipedia: [w:Security testing], [w:Buffer overflow],
-    [w:Heap overflow], [w:Buffer overflow protection],
-    [w:Dangling pointer].
+-   Wikipedia: {{< wp "Security testing" >}}, {{< wp "Buffer overflow" >}},
+    {{< wp "Heap overflow" >}}, {{< wp "Buffer overflow protection" >}},
+    {{< wp "Dangling pointer" >}}.
 -   [Secure Programming for Linux and Unix HOWTO
     ](http://www.dwheeler.com/secure-programs/Secure-Programs-HOWTO/index.html)
     by David A. Wheeler. provide a set of guidelines for writing secure
@@ -120,7 +112,7 @@ An important part of security is [Network security
 
 
 # Cryptography
--   Wikipedia : [w:Public-key cryptography]
+-   Wikipedia : {{< wp "Public-key cryptography" >}}
 -   For a security guide look at
     [bettercrypto](https://bettercrypto.org/)
     The guide is [Applied Crypto Hardening (pdf)
@@ -159,14 +151,13 @@ An important part of security is [Network security
 
 # Forensic tools {forensic_tools}
 You find some Forensic open source distributions referenced in the
-section [Forensic Distributions
-](/node/lightweight_distributions#forensic_distributions "internal reference")
-like [Kali Linux](/node/lightweight_distributions#kali "internal reference")
-and [REMnux](/node/lightweight_distributions#remnux "internal reference").
+section {{< iref "lightweight_distributions#forensic_distributions" "Forensic Distributions" >}}
+like {{< iref "lightweight_distributions#kali" "Kali Linux" >}}
+and {{< iref "lightweight_distributions#remnux" "REMnux" >}}.
 
--   Wikipedia: [w:Computer forensics], [w:Digital forensic process],
-    [w:List of digital forensics tools], [w:Mobile device forensics],
-    [w:Network forensics]
+-   Wikipedia: {{< wp "Computer forensics" >}}, {{< wp "Digital forensic process" >}},
+    {{< wp "List of digital forensics tools" >}}, {{< wp "Mobile device forensics" >}},
+    {{< wp "Network forensics" >}}
 -   [Kali list of tools
     ](http://tools.kali.org/tools-listing)
     each tool name reference a page describing it.
@@ -209,7 +200,7 @@ and [REMnux](/node/lightweight_distributions#remnux "internal reference").
 
 # Policy Kit
 
-[w:PolicyKit] is a component for controlling system-wide privileges,
+{{< wp "PolicyKit" >}} is a component for controlling system-wide privileges,
 it replaces _sudo_.
 
 -   [PolicyKit Home at freedesktop.org
@@ -220,7 +211,7 @@ it replaces _sudo_.
 # Hardened kernel and distribution.
 
 -   [grsecurity](http://grsecurity.net/) is a security enhancement to
-    the Linux kernel. It use [w:Role-based access control] (RBAC) and
+    the Linux kernel. It use {{< wp "Role-based access control" >}} (RBAC) and
     limit chroot. It can be [used in Debian
     ](https://wiki.debian.org/grsecurity) through unofficial repositories.
 

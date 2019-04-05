@@ -1,13 +1,8 @@
-<!--
-.. description:
-.. date: 2014-09-04
-.. slug: dbus
-.. tags:
-.. link:
-.. title: Dbus
--->
+---
+title: Dbus
+---
 
-[TOC]
+{{% toc /%}}
 
 # Dbus References
 -   [freedesktop.org - Software - dbus
@@ -31,8 +26,8 @@
     [Introspection
     ](http://cheesehead-techblog.blogspot.fr/2012/08/dbus-tutorial-introspection-figuring.html)
 
--   Dbus Cli tools: [man:dbus-send+1], [man:gdbus+1],
-    [man:mdbus2+1], [man:dfeet+1]
+-   Dbus Cli tools: {{< man "dbus-send+1" >}}, {{< man "gdbus+1" >}},
+    {{< man "mdbus2+1" >}}, {{< man "dfeet+1" >}}
 
 # Dbus API
 -   [Dbus Python API](http://dbus.freedesktop.org/doc/dbus-python/api/)
@@ -77,7 +72,7 @@
         /org/freedesktop/login1 \
         org.freedesktop.DBus.Introspectable.Introspect
 
-Now using [man:gdbus+1|gdbus]:
+Now using {{< man "gdbus+1"  "gdbus" >}}:
 
 -   list methods, signal and properties:
 
@@ -86,7 +81,7 @@ Now using [man:gdbus+1|gdbus]:
         --object-path="/org/freedesktop/login1" --recurse
 
 
-With [man:qdbus+1|qdbus]
+With {{< man "qdbus+1"  "qdbus" >}}
 
 -   list methods, signal and properties:
 
@@ -95,10 +90,10 @@ With [man:qdbus+1|qdbus]
 
 # Dbus monitoring tools
 
--   [man:dbus-monitor+1]
+-   {{< man "dbus-monitor+1" >}}
 -   [DFeet
     ](https://wiki.gnome.org/action/show/Apps/DFeet?action%3Dshow&redirect%3DDFeet),
-    [lman:dfeet+1]
+    {{< lman "dfeet+1" >}}
 -   [Bustle
     ](http://www.willthompson.co.uk/bustle/)
 

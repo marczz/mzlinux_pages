@@ -1,19 +1,13 @@
-<!--
-.. description:
-.. date: 2018-06-15
-.. slug: proxy
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Proxy
--->
+---
+title: Proxy
+---
 
-[TOC]
+{{% toc /%}}
 
 # HTTP Proxies {#http_proxies}
-Wikipedia: [w:Proxy server] review the different types of proxy
-servers.  An [w:open proxy] is a proxy server that is accessible by
-any Internet user. An [w:anonymizer] or an _anonymous proxy_ make
+Wikipedia: {{< wp "Proxy server" >}} review the different types of proxy
+servers.  An {{< wp "open proxy" >}} is a proxy server that is accessible by
+any Internet user. An {{< wp "anonymizer" >}} or an _anonymous proxy_ make
 activity on the Internet untraceable by acting as an intermediary and
 privacy shield between a client and the Internet. A
 [Reverse proxy](http://en.wikipedia.org/wiki/Reverse_proxy)
@@ -24,10 +18,10 @@ communication at the network layer without modifying the request or
 response beyond what is required for proxy authentication and
 identification.
 
--   Wikipedia: [w:Proxy server], [w:HTTP Tunnel],
-    [w:Category:Free proxy servers], [w:Category:Forward_proxy],
-    [w:Category:Reverse proxy],
-    [w:Category:Proxy server software for Linux].
+-   Wikipedia: {{< wp "Proxy server" >}}, {{< wp "HTTP Tunnel" >}},
+    {{< wp "Category:Free proxy servers" >}}, {{< wp "Category:Forward_proxy" >}},
+    {{< wp "Category:Reverse proxy" >}},
+    {{< wp "Category:Proxy server software for Linux" >}}.
 -   [proxycheck](http://www.corpit.ru/mjt/proxycheck.html) (GPL)
     is a  tool to check whenever a given host or set of hosts has
     an open proxy server running. One use is to allow to know which
@@ -48,9 +42,8 @@ identification.
     -   [Explanation of unencrypted explicit proxy and
         transparent proxying of TLS-protected traffic
         ](https://docs.mitmproxy.org/stable/concepts-howmitmproxyworks/).
--   [Nginx](/node/nginx "internal reference") can be used as a
-    proxy/reverse_proxy see the [nginx section
-    ](/node/nginx "internal reference"), the
+-   {{< iref "nginx" "Nginx" >}} can be used as a
+    proxy/reverse_proxy see the {{< iref "nginx" "nginx section" >}}, the
     [proxying examples ](http://wiki.nginx.org/Configuration#Proxying_examples)
     and the module
     [ngx_http_proxy_module
@@ -100,7 +93,7 @@ settings to be changed.
     -   [User based access control for Skype
         ](http://blog.davidvassallo.me/2011/03/16/user-based-access-control-for-skype/)
         uses _Dante_ socks server.
--   [w:shadowsocks] (Apache License)
+-   {{< wp "shadowsocks" >}} (Apache License)
     encrypted socks proxy project, widely used in mainland China to
     circumvent Internet censorship. The GitHub repositories provides
     client and servers in many languages C, Go, python, rust ...
@@ -172,12 +165,12 @@ settings to be changed.
 -   [ffproxy](http://ffproxy.sourceforge.net/) (GPL)
     is a filtering HTTP/HTTPS proxy server. It is in Debian. _Last
     release 2005_.
--   <a name="polipo"></a>[w:Polipo] (MIT License) is a caching web
+-   <a name="polipo"></a>{{< wp "Polipo" >}} (MIT License) is a caching web
     proxy. It is designed to be fast, and lightweight. It supports
     IPv4, IPv6, traffic filtering and privacy-enhancement.  It can be
     configured to use on-disk cache, but in contrast to Squid there is
     no control of the cache size. Polipo can be used with
-    [Privoxy](#privoxy "internal reference") for intercepting
+    {{< iref "#privoxy" "Privoxy" >}} for intercepting
     advertisement and other undesirables.  The development of Polipo
     stopped at end of year 2016, the author of Polipo Juliusz
     Chroboczek says:
@@ -194,8 +187,8 @@ settings to be changed.
     intercept the HTTPS with a MITM proxy.
 
     If you want to use a caching proxy, you can now replace it with
-    [Squid](#squid "internal reference") and for filtering
-    [Privoxy](#privoxy "internal reference").
+    {{< iref "#squid" "Squid" >}} and for filtering
+    {{< iref "#privoxy" "Privoxy" >}}.
     Polipo is in Debian.
     -   [Polipo Home](https://www.irif.fr/~jch//software/polipo/).
     -   [Polipo Manual
@@ -212,7 +205,7 @@ settings to be changed.
         _2012_,  is a mod of Privoxy
         tailored for use on a
         [Freedom Box](http://wiki.debian.org/FreedomBox)
--   [w:Tinyproxy] (GPL) is a HTTP proxy server daemon for
+-   {{< wp "Tinyproxy" >}} (GPL) is a HTTP proxy server daemon for
     Unix. Designed to be fast and small, it is useful when the system
     resources for a larger proxy are unavailable. It has been put to
     uses such as a tether on the iPhone, and on the OpenWrt.
@@ -225,24 +218,24 @@ settings to be changed.
     -   [GitHub - TinyProxy](https://github.com/tinyproxy/tinyproxy).
 
 # Content Filtering Proxies
--   <a name="dansguardian"></a>[w:DansGuardian] (GPL)
+-   <a name="dansguardian"></a>{{< wp "DansGuardian" >}} (GPL)
     is a web content filter. It filters the actual content of pages
     based on many methods including phrase matching, PICS filtering
     and URL filtering.
 
-    [Squid](#squid "internal reference") is the recommended Proxy
+    {{< iref "#squid" "Squid" >}} is the recommended Proxy
     but DansGuardian work also many proxy servers, such as
-    [Polipo](#polipo "internal reference")  or
-    [Tinyproxy](#tinyproxy "internal reference").
+    {{< iref "#polipo" "Polipo" >}}  or
+    {{< iref "#tinyproxy" "Tinyproxy" >}}.
 
     _DansGuardian_ development stopped in 2012.
-    [E2Guardian](#e2guardian "internal reference") is a recent fork of
+    {{< iref "#e2guardian" "E2Guardian" >}} is a recent fork of
     _DansGuardian_. _DansGuardian_ is in Debian.
--    <a name="e2guardian"></a>[w: E2Guardian] (GPL)
+-    <a name="e2guardian"></a>{{< wp " E2Guardian" >}} (GPL)
     e2guardian filters the content of pages based on many methods
     including phrase matching, PICS filtering and URL filtering.
     _e2guardian_ works with a caching Proxy like
-    [Squid](#squid "internal reference"). E2Guardian is in Debian.
+    {{< iref "#squid" "Squid" >}}. E2Guardian is in Debian.
     -   [GitHub: e2guardian](https://github.com/e2guardian/e2guardian)
     -   [e2guardian Wiki
         ](https://github.com/e2guardian/e2guardian/wiki).
@@ -261,7 +254,7 @@ possibly UDP) connection and send them through the SOCKS or HTTP
 proxy.
 
 
--   [Dante](#dante "internal reference") contains the
+-   {{< iref "#dante" "Dante" >}} contains the
     [proxify](http://www.inet.no/dante/doc/1.4.x/socksify.1.html)
     utility for runtime socksification of selected programs by
     redirecting all networking-related system calls to a library in
@@ -293,11 +286,11 @@ proxy.
     builtin socks support to use SOCKS.
 
     _tsocks_ is still in Debian, but _no more developed since
-    2002_. You may prefer [Dante](#dante "internal reference") which
+    2002_. You may prefer {{< iref "#dante" "Dante" >}} which
     has a similar library _socksify_ or
-    [torsocks](#tor "internal reference")
+    {{< iref "#tor" "torsocks" >}}
     which is an improved version of tsocks or
-    [Redsocks](#redsocks "internal reference").
+    {{< iref "#redsocks" "Redsocks" >}}.
 
 # HTTP Tunnel {#http_tunnel}
 We can capture the output of a network application and encapsulate it
@@ -366,12 +359,12 @@ HTTP/HTTPS.
 
 
 # Tor {#tor}
-[w:Tor_(anonymity_network)|Tor] routes Internet traffic through a
-worldwide volunteer network of servers. It uses [w:Onion routing]
+{{< wp "Tor_(anonymity_network)"  "Tor" >}} routes Internet traffic through a
+worldwide volunteer network of servers. It uses {{< wp "Onion routing" >}}
 to encrypt multiple times the data, and send it through successive Tor
 relay.
 
-This concept is also used in the [w:I2P anonymous network].
+This concept is also used in the {{< wp "I2P anonymous network" >}}.
 
 -   [Tor Project](https://www.torproject.org/).
 -   [Tor documentation

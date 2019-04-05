@@ -1,14 +1,8 @@
-<!--
-.. description:
-.. date: 2017-11-03
-.. slug: français
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Français
--->
+---
+title: Français
+---
 
-[TOC]
+{{% toc /%}}
 
 # Reférences
 -   [Gallica](http://gallica.bnf.fr/), bibliothèque numérique de la
@@ -33,7 +27,7 @@
 
 # Grammaire, orthographe et conjugaison
 
-Pour la conjugaison on peut utiliser les [dictionnaires](/node/299 "internal reference")
+Pour la conjugaison on peut utiliser les {{< iref "299" "dictionnaires" >}}
 
 -   [Le Devoir conjugal](http://www.pomme.ualberta.ca/devoir/) de Martin Beaudoin
     permet d'obtenir la conjugaison de plus de 7400 verbes français.

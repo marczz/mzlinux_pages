@@ -1,41 +1,34 @@
-<!--
-.. description:
-.. date: 2018-02-26
-.. slug: templating
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Templating engines
--->
+---
+title: Templating engines
+---
 
-[TOC]
+{{% toc /%}}
 
 # General references
 
 A popular category of template engine is _logic-less_ template engines
 that have no control flow statements, all control are driven by data.
-In this category you find [Mustache](#mustache "internal reference"),
-c-template, [Handlebars](#handlebars "internal reference"), [Dust.js
-](#dustjs "internal reference").
+In this category you find {{< iref "#mustache" "Mustache" >}},
+c-template, {{< iref "#handlebars" "Handlebars" >}}, {{< iref "#dustjs" "Dust.js" >}}.
 
 An other important characteristic of templating language is template
 inheritance, which is available in
-[jinja2](#jinja2 "internal reference"),
-[pug](#pug "internal reference"),
-[Nunjucks](#nunjucks  "internal reference"),
+{{< iref "#jinja2" "jinja2" >}},
+{{< iref "#pug" "pug" >}},
+{{< iref "#nunjucks" "Nunjucks" >}},
 some mustache implementations implementing the
 [template inheritance proposal
 ](https://github.com/mustache/spec/pull/75) like
-[Hogan](#hogan "internal reference"), and _hxmustache_.
+{{< iref "#hogan" "Hogan" >}}, and _hxmustache_.
 
 Template inheritance allows you to build a base “skeleton” template
 that contains some blocks that child templates can override.
 You find more explanation in [Flask: Template Inheritance
 ](http://flask.pocoo.org/docs/dev/patterns/templateinheritance/).
 
--   The [w:Template_engine_(web)|Wikipedia template engines page]
+-   The {{< wp "Template_engine_(web)"  "Wikipedia template engines page" >}}
     includes a comparison of templates engines, it is accompanied by a
-    [w:Comparison of web template engines].
+    {{< wp "Comparison of web template engines" >}}.
 -   [Comparing  node.js template engines: Jade, Mustache, Dust, Nunjucks, EJS
     ](https://developer.ibm.com/node/2014/11/11/compare-javascript-templates-jade-mustache-dust/)
     _2014_.
@@ -69,13 +62,13 @@ You find more explanation in [Flask: Template Inheritance
         [supporting template inheritance
         ](https://github.com/nadako/hxmustache/blob/master/README.md#template-inheritance).
 -   <a name="handlebars"></a>
-    [w:Mustache_%28template_system%29#Handlebars|Handlebars] is an
-    extension de [Mustache](#mustache "internal reference") writen in
+    {{< wp "Mustache_%28template_system%29#Handlebars"  "Handlebars" >}} is an
+    extension de {{< iref "#mustache" "Mustache" >}} writen in
     node.js.
     -   [Handlebars Home](http://handlebarsjs.com/)
     -   [Handlebars Github](https://github.com/wycats/handlebars.js)
         explain the extensions made to
-        [Mustache](#mustache "internal reference").
+        {{< iref "#mustache" "Mustache" >}}.
     -   [Handlebars helpers](http://assemble.io/helpers/)
         a list of more than 130 helpers for handlebars.
     -   [GitHub: Handlebars helpers
@@ -85,8 +78,8 @@ You find more explanation in [Flask: Template Inheritance
     is a logicless asynchronous template enginefor the browser and
     node.js..
     -   [Dust.js - GitHub] https://github.com/linkedin/dustjs)
--   [Slim](#slim "internal reference") that you find
-    [below](#slim "internal reference") has a [logic-less mode
+-   {{< iref "#slim" "Slim" >}} that you find
+    {{< iref "#slim" "below" >}} has a [logic-less mode
     ](http://www.rubydoc.info/gems/slim/file/doc/logic_less.md)
     inspired by Mustache.
 
@@ -95,7 +88,7 @@ You find more explanation in [Flask: Template Inheritance
 -   <a name="pug"></a>[Pug](https://pugjs.org/)  (MIT License) _
     _formerly known as Jade_ is a _node.js_, _tag-free_ template
     engine derived from Haml.  It is similar to
-    [Slim](#slim "internal reference").
+    {{< iref "#slim" "Slim" >}}.
     Pug support [template inheritance
     ](https://pugjs.org/language/inheritance.html).
     -   [GitHub Pug](https://github.com/pugjs/pug)
@@ -107,25 +100,24 @@ You find more explanation in [Flask: Template Inheritance
     -   [PyPugjs (GitHub)](https://github.com/kakulukia/pypugjs)
         is the python port of Pug. _PyPugjs_ can
         convert any Pug source to Django, Jinja2, Mako or
-        [Tornado template](#tornado "internal reference").
+        {{< iref "#tornado" "Tornado template" >}}.
     [GitHub: eknc/pug](https://github.com/eknkc/pug)
     is a port of Pug template engine, it compiles templates to
     standard [go templates](https://golang.org/pkg/html/template/)
 -   <a name="jinja2"></a>[Jinja2](http://jinja.pocoo.org)
     (BSD license) is a Python template engine similar to the
-    [Django](/node/python_web#django "internal reference")
+    {{< iref "python_web#django" "Django" >}}
     template engine.  It can be used to generate any markup as well as
     sourcecode.
     -   The web framework [Django](http://www.djangoproject.com/) (BSD
         License) includes a template language similar to
-        [jinja2](#jinja2 "internal Reference").
+        {{< iref "#jinja2" "jinja2" >}}.
     -   [swig](https://github.com/paularmstrong/swig)
         was a Node.js and browser-based JavaScript template engine
         similar to Jinja2; but it is no longer maintained.
 -   <a name="nunjucks"></a>[Nunjucks
     ](http://mozilla.github.io/nunjucks/)
-    is a javascript templating engine inspired by [Jinja2
-    ](#jinja2 "internal reference").
+    is a javascript templating engine inspired by {{< iref "#jinja2" "Jinja2" >}}.
     Nunjucks support [template inheritance
     ](http://mozilla.github.io/nunjucks/templating.html#template-inheritance).
     -   [Nunjucks templating Doc
@@ -135,7 +127,7 @@ You find more explanation in [Flask: Template Inheritance
      is a _tag-free_ Ruby templating language, derived
     from _HAML_. There are
     also port to _Python_, _javascript_ with  _Coffee script_,
-    _Clojure_. _Slim_ is similar to [Pug](#pug "internal reference").
+    _Clojure_. _Slim_ is similar to {{< iref "#pug" "Pug" >}}.
     It allows to embed other  generators like Markdown.
     A plugin implement also a [logic-less mode
     ](http://www.rubydoc.info/gems/slim/file/doc/logic_less.md)
@@ -143,7 +135,7 @@ You find more explanation in [Flask: Template Inheritance
     -   [Skim (GitHub)](https://github.com/jfirebaugh/skim) (MIT License)
         is a partial python port of _Slim_.
     -   [Plim (GitHub)](https://github.com/avanov/Plim) is a Python port Slim
-        built on top of [Mako Templates](#mako "internal reference")
+        built on top of {{< iref "#mako" "Mako Templates" >}}
         It uses Mako's preprocessor feature to translate its syntax
         into a valid HTML/Mako markup.
     -   [Slm (GitHub)](https://github.com/slm-lang/slm) (MIT License)
@@ -152,12 +144,12 @@ You find more explanation in [Flask: Template Inheritance
         comparable speed to ECT and Hogan.
 -   <a name="twig"></a>[Twig](https://twig.symfony.com/) (BSD License)
     is a PHP template engine similar to
-    [Jinja2](#jinja2 "internal reference")
-    -   [w:Twig_(template_engine)|Wikipedia: Twig] gives the syntax
+    {{< iref "#jinja2" "Jinja2" >}}
+    -   {{< wp "Twig_(template_engine)"  "Wikipedia: Twig" >}} gives the syntax
         essentials.
     -   [Twig.js](https://github.com/twigjs/twig.js)
         javaScript implementation of Twig.
--   <a name="haml"></a>[w:HAML] (MIT License)
+-   <a name="haml"></a>{{< wp "HAML" >}} (MIT License)
     is a ruby templating language which inpired many newer templating
     languages like _Pug_, _Nunjuck_, _jinja2_,or _Slim_.
     -   [HAML Home](http://haml.info/)
@@ -198,7 +190,7 @@ sipported backends.
     output.
 
 # Python _only_ templating
-See also [Python Web](/node/python_web "internal reference").
+See also {{< iref "python_web" "Python Web" >}}.
 
 -   [Templating in Python](http://wiki.python.org/moin/Templating)
     in the python wiki gives a list of python templating engines and
@@ -215,14 +207,13 @@ See also [Python Web](/node/python_web "internal reference").
 -   [Genshi](http://genshi.edgewall.org/) (BSD
     like license) defines itself as a Python toolkit for stream-based
     generation of output for the web. It has replaced the older
-    [w:Kid_(templating_language)|Kid]
+    {{< wp "Kid_(templating_language)"  "Kid" >}}
 
 -   [Mako](http://www.makotemplates.org/)<a name="mako"></a>
     (MIT License) is a template library written in Python. Mako is used as a
     Python Server Page language. _Mako_ was previously named _Mighty_.
     Mako is used by reddit.com and is the default template language f
-    or the [Pylons and Pyramid web frameworks
-    ](/node/python_web#pylon "internal reference").
+    or the {{< iref "python_web#pylon" "Pylons and Pyramid web frameworks" >}}.
 
 
 <!-- Local Variables: -->

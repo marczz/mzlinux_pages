@@ -1,20 +1,14 @@
-<!--
-.. description:
-.. date: 2015-01-30
-.. slug: backup
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Backup
--->
+---
+title: Backup
+---
 
-[TOC]
+{{% toc /%}}
 
 # General References
 
--   Wikipedia: [w:Comparison of backup software],
-    [w:List of backup software],
-    [w:Comparison of online backup services]
+-   Wikipedia: {{< wp "Comparison of backup software" >}},
+    {{< wp "List of backup software" >}},
+    {{< wp "Comparison of online backup services" >}}
 -   [Debian Wiki: Backup And Recovery
     ](https://wiki.debian.org/BackupAndRecovery)
     gives a list of backup related Debian Packages.
@@ -31,7 +25,7 @@
     [Cache Directory Tagging Standard _cachedir_
     ](http://www.brynosaurus.com/cachedir/spec.html)
     allow to identify cache directories. Usually yo won't backup
-    them, [obnam](#obnam "local reference") can exclude cachedir.
+    them, {{< iref "#obnam" "obnam" >}} can exclude cachedir.
 
     A _cachedir_ is a directory containing a file named `CACHEDIR.TAG`
     containing as first 43 octets the string:
@@ -67,10 +61,10 @@ files whose a small part is changing often (like a live database).
 Recently some git based backup tools, like gibak,  make also their way
 in the backup kit.
 
-See also the [backup section](#backup "internal reference") that cover
+See also the {{< iref "#backup" "backup section" >}} that cover
 classical backups where a changed file is copied again entirely
-and the [Synchronization section](#synchronization "internal reference")
-that includes [rsync](#rsync  "internal reference")
+and the {{< iref "#synchronization" "Synchronization section" >}}
+that includes {{< iref "#rsync" "rsync" >}}
  and its derived frontends and variants, like _unison_.
 
 -   [from Arch Wiki:Incremental Backup Programs
@@ -106,7 +100,7 @@ save only the changed data blobs.
         ](https://github.com/borgbackup/community/)
 
     The backup programs closer to Borg bnam by its features was
-    [Obnam](#obnam "internal reference"). Note that obnam can backup
+    {{< iref "#obnam" "Obnam" >}}. Note that obnam can backup
     over SFTP without any software on the remote side, while Attic
     backup over ssh, by running attic /borg on the remote side.
 
@@ -202,10 +196,10 @@ save only the changed data blobs.
     Rackspace Cloud Files, Dreamhost DreamObjects and others.
 
     Compared  to opensource deduplicating alternative exists like
-    [Attic](#attic "internal reference"),
-    [borg](#borg "internal reference"),
-    [zbackup](#zbackup "internal reference"),
-    bup, [obnaml](#obnam "internal reference") it can
+    {{< iref "#attic" "Attic" >}},
+    {{< iref "#borg" "borg" >}},
+    {{< iref "#zbackup" "zbackup" >}},
+    bup, {{< iref "#obnam" "obnaml" >}} it can
     access natively some 3rd-party storage while the rest can only
     mount them with fuse; and it invalidates programs that want
     to do checksumming on the remote backup, because
@@ -294,7 +288,7 @@ save only the changed data blobs.
     an alternative build for KDE.  _TimeVault_ is still available in
     Ubuntu but unmaitained since 2010, there is no longer a package in
     Debian. We should replace it with
-    [BackInTime](#backintime "internal reference").
+    {{< iref "#backintime" "BackInTime" >}}.
 -   [Zumastor](http://www.zumastor.org/)
     provides improved snapshots and remote replication.
     It needs we apply a set of kernel patches. _No more developed
@@ -318,7 +312,7 @@ protocol.
 
 While rsync solutions use hardlinks to keep incremental backups
 _rdiff-backup_ keep changes in the form of
-[w:Delta_encoding|delta files], these diff
+{{< wp "Delta_encoding"  "delta files" >}}, these diff
 can be applied also with [rdiff](http://librsync.sourceforge.net/).
 
 The programs based on librdiff are chunk based backup and are
@@ -331,7 +325,7 @@ the same file while _zbackup_, _attic_, _borg_ and the git format
 based backup tools do global deduplication, so they can recognize two
 similar or identical files.
 
--   Wikipedia [w:Rsync#Variations|Rsync variations].
+-   Wikipedia {{< wp "Rsync#Variations"  "Rsync variations" >}}.
 -   Tutorial:
     [Automated Backups With rdiff-backup
     ](http://howtoforge.com/linux_rdiff_backup)
@@ -363,7 +357,7 @@ similar or identical files.
 [Duplicity](http://duplicity.nongnu.org/) (GPL)
 backs directories by producing encrypted tar-format volumes and
 uploading them to a remote or local file server.  It uses rdiffdir
-that is an extension of [librsync](#librsync "internal reference) to
+that is an extension of {{< iref "#librsync" "librsync" >}} to
 directories.  It is similar with _rdiff-backup_ but uses can use
 encryption. _Debian package available_.
 
@@ -373,19 +367,19 @@ your backup on servers where you have disk space but no real
 control like most cloud storage services servers.  Duplicity
 can use any file system with access thru ssh/scp/sftp, local file
 access, rsync, ftp/ftps, HSI, WebDAV, Tahoe-LAFS, PAR2,
-[Blackblaze B2](/node/clouds/#b2 "internal reference"),
-boto ([Amazon S3](/node/clouds/#aws "internal reference"),
-Google Cloud Storage), [Mega](/node/clouds/#mega "internal reference")
+{{< iref "clouds" "Blackblaze B2" >}},
+boto ({{< iref "clouds" "Amazon S3" >}},
+Google Cloud Storage), {{< iref "clouds" "Mega" >}}
 _but the interface library mega.py is obsolete, see below for an
 alsternative way using MegaFuse_,
 Rackspace,
-[Dropbox](/node/clouds#dropbox "internal reference"),
+{{< iref "clouds#dropbox" "Dropbox" >}},
 google docs,
-[OpenStack swift](/node/clouds/#openstack "internal reference"),
-[Hubic](/node/clouds/#hubic "internal reference"), (v > 7.0),
+{{< iref "clouds" "OpenStack swift" >}},
+{{< iref "clouds" "Hubic" >}}, (v > 7.0),
 Azure (v > 7.0),
-[Google Drive](/node/clouds/#gdrive "internal reference")
-through [PyDrive](/node/clouds#gdrive "internal reference").
+{{< iref "clouds" "Google Drive" >}}
+through {{< iref "clouds#gdrive" "PyDrive" >}}.
 
 -   [duplicity(1)](http://duplicity.nongnu.org/duplicity.1.html)
 -   [ArchWiki: Duplicity](https://wiki.archlinux.org/index.php/duplicity)
@@ -411,7 +405,7 @@ through [PyDrive](/node/clouds#gdrive "internal reference").
     It uses rsync like diff for incremental backup. BoxBackup provides a
     [comparison with duplicity and hdup
     ](http://www.boxbackup.org/wiki/BoxComparison) _the hdup column apply to it's successor
-    [rdup](#rdup "internal reference") for most items_. It is packaged in Debian.
+    {{< iref "#rdup" "rdup" >}} for most items_. It is packaged in Debian.
 
 ## Duplicity frontends
 Many frontends and wrapper for duplicity are availables:
@@ -443,7 +437,7 @@ Many frontends and wrapper for duplicity are availables:
 -   [simplicity](https://github.com/sitaramc/simplicity) (GPL) a
     300 LOC shell duplicity wrapper by  Sitaram Chamarty.
 -   _Duplicity_ is one of the backends of
-    [backupninja](#backupninja "internal reference")
+    {{< iref "#backupninja" "backupninja" >}}
 -   _Duplicity_ has a gnome2 GUI
     [deja-dup](https://launchpad.net/deja-dup).
 
@@ -466,7 +460,7 @@ Many frontends and wrapper for duplicity are availables:
     -   [GitHub Duplicati](https://github.com/duplicati/duplicati)
 
 # Git based
--   [w:FlyBack|Wikipedia: FlyBack],
+-   {{< wp "FlyBack"  "Wikipedia: FlyBack" >}},
     [FlyBack](http://flyback-project.org/)
     (GPL) is a python program that uses git is used in
     [Flyback – Snapshot-based backup tool based on rsync
@@ -485,7 +479,7 @@ Many frontends and wrapper for duplicity are availables:
 
 # rsync based snapshots {#rsync_backup}
 
-See also the [rsync section](#rsync "internal reference")
+See also the {{< iref "#rsync" "rsync section" >}}
 
 -   [Easy Automated Snapshot-Style Backups with Linux and Rsync
     ](http://www.mikerubel.org/computers/rsync_snapshots/)
@@ -556,12 +550,12 @@ See also the [rsync section](#rsync "internal reference")
     similar to the System Restore feature in Windows and the Time
     Machine tool in Mac OS. Snapshots are taken using rsync and
     hard-links. TimeShift is similar to applications like
-    [rsnapshot](#rsnapshot "internal reference"),
-    [BackInTime](#backintime "internal reference") and
-    [TimeVault](#timevault "internal reference")
+    {{< iref "#rsnapshot" "rsnapshot" >}},
+    {{< iref "#backintime" "BackInTime" >}} and
+    {{< iref "#timevault" "TimeVault" >}}
     but is designed to protect only system files and
     settings .o backup user data we should use
-    [BackInTime](#backintime "internal reference"). It comes with a
+    {{< iref "#backintime" "BackInTime" >}}. It comes with a
     GTK GUI frontend.
     TimeShift is an active project _in 2018_, it is available in an
     Ubuntu ppa and in Debian since buster;
@@ -578,7 +572,7 @@ License) _last release 2008_,
 [yacdbak (Yet Another CD Backup Tool)](http://yacdbak.sourceforge.net/)
 (GPL) _last release 2001_. Some other allow to do CD/DVD backup
 among other backends and have recent release like
-[DAR](#dar "internal reference").
+{{< iref "#dar" "DAR" >}}.
 
 -   [afbackup](http://sourceforge.net/projects/afbackup) (GPL): a
     very robust client/server network backup tool, but with a cryptic
@@ -589,7 +583,7 @@ among other backends and have recent release like
     -   [Bacula Home](http://www.bacula.org/)
     -   [bacula user manual](http://www.bacula.org/en/rel-manual),
     -   [Bacula Wiki](http://wiki.bacula.org/doku.php).
-    -   [Burp](#burp "internal reference") is a fork of Bacula but with a
+    -   {{< iref "#burp" "Burp" >}} is a fork of Bacula but with a
         different approach, it is based on librsync.
     -   [Bareos](http://www.bareos.org/en/) (AGPL) is a backup of
         Bacula, Bacula developpers [disagree with the fork
@@ -645,10 +639,9 @@ among other backends and have recent release like
 
 # Synchronization {#synchronization}
 ## rsync {#rsync}
-See also the [Section on rsync backup
-](#rsync_backup "internal reference")
+See also the {{< iref "#rsync_backup" "Section on rsync backup" >}}
 
--   [w:rsync|Wikipedia: rsync] is a detailled description of rsync and
+-   {{< wp "rsync"  "Wikipedia: rsync" >}} is a detailled description of rsync and
     its algorithm. It also includes a list of rsync frontends.
 -   [rsync web page](http://rsync.samba.org/),
     -   [rsync(1)](http://www.samba.org/ftp/rsync/rsync.html),
@@ -685,19 +678,17 @@ See also the [Section on rsync backup
 
 -    CFQ scheduler is one way to limit  disk I/O for rsync, it is
      referenced on my page
-     [Performance Tuning - Input/output scheduling
-     ](/node/performances#io_scheduling "local reference").
+     {{< iref "performances#io_scheduling" "Performance Tuning - Input/output scheduling" >}}.
 -   You may need to control internet bandwith with the tools in the
     section
-    [Performance Tuning -  Network bandwith control
-     ](/node/performances#qos "local reference").
+    {{< iref "performances#qos" "Performance Tuning -  Network bandwith control" >}}.
 
 ### Rsync frontends
 -   [Grsync](http://www.opbyte.it/grsync/) (GPL)
     is a GTK Graphic User Interface for rsync. It is packaged in Debian.
 -   [gadmin-rsync
     ](http://dalalven.dtdns.net/linux/gadmintools-webpage/app_pages/gadmin-rsync.html) (GPL)
-    part of [w:GADmintools] ([Gadmin Tools Home
+    part of {{< wp "GADmintools" >}} ([Gadmin Tools Home
     ](http://dalalven.dtdns.net/linux/gadmintools-webpage/))
     is a C/GTK+ graphical user interface for rsync, it is packaged in
     debian. _There are also frontends for samba, proftpd, dhcpd3-server,
@@ -715,7 +706,7 @@ See also the [Section on rsync backup
 
 ## Other synchronization tool
 
--   [w:Conduit] (GPL)
+-   {{< wp "Conduit" >}} (GPL)
     is a synchronization program for GNOME. It allows the user to
     synchronize photos, files, folders, RSS feeds, emails, notes,
     contacts, calendars, and tasks. It is packaged in Debian.
@@ -739,7 +730,7 @@ See also the [Section on rsync backup
 -   [Csync2]( http://oss.linbit.com/csync2/) (GPL)
     is a program to synchronizes files in a cluster using the
     rsync-algorithm through
-    [librsync](#librsync "internal reference). It maintains a
+    {{< iref "#librsync" "librsync" >}}. It maintains a
     database of modified files so it is able to handle deletion of
     files and file modification conflicts. It is provided in Debian.
     -   [csync2 git repository](http://git.linbit.com/csync2.git/)

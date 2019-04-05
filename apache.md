@@ -1,15 +1,8 @@
-<!--
-.. description:
-.. date: 2014-12-19
-.. slug: apache
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Apache httpd
--->
+---
+title: Apache httpd
+---
 
-
-[TOC]
+{{% toc /%}}
 
 # Apache documentation
 - [APACHE](http://www.apache.org)
@@ -29,9 +22,9 @@
      [mod\_[wsgi](http://code.google.com/p/modwsgi/).
 -   [Apache HowTos:](http://httpd.apache.org/docs/current/howto/)
 -   [Apache Virtual Host documentation](http://httpd.apache.org/docs/current/vhosts/)
-    used to implement [w:Virtual hosting]
+    used to implement {{< wp "Virtual hosting" >}}
     -   There are difficulties to have a proper certificate when using
-    [w:https://en.wikipedia.org/wiki/Virtual_hosting#Name-based|Name Based Virtual hosting]
+    {{< wp "https://en.wikipedia.org/wiki/Virtual_hosting#Name-based"  "Name Based Virtual hosting" >}}
     as described in the previous Wikipedia Page and
     [HTTPS Virtual Hosts in Apache](http://www.crsr.net/Notes/Apache-HTTPS-virtual-host.html)
     [Dynamic Content with CGI](http://httpd.apache.org/docs/current/howto/cgi.html)
@@ -42,7 +35,7 @@
     ](http://httpd.apache.org/docs/current/ssl/ssl_howto.html),
     [Apache Module mod_ssl
     ](http://httpd.apache.org/docs/current/mod/mod_ssl.html),
-    [SSL FAQ](http://httpd.apache.org/docs/current/ssl/ssl_faq.html). See also the page [SSL/TLS](/node/159).
+    [SSL FAQ](http://httpd.apache.org/docs/current/ssl/ssl_faq.html). See also the page {{< iref "159" "SSL/TLS" >}}.
 -   [Apache XML Project](http://xml.apache.org/)
     (Xerces: XML parsers in Java and C++, Xalan: XSL stylesheet processors in Java & C+,
     Cocoon: XML-based web publishing, FOP: XSL Formatting Object
@@ -121,7 +114,7 @@ one.
 # Apache Authentication Authorization and Access Control
 
 General references on httpd authentication are in the section
-[Authentication](/node/156/)
+{{< iref "156" "Authentication" >}}
 
 Each Apache security policy is handled by an
 [Apache modules](http://httpd.apache.org/docs/current/mod/) they
@@ -252,7 +245,7 @@ With apache2-mpm-prefork we need the modules:
 
 # php5 fcgi on apache 2.2
 We should prefer __php-fpm__ for configuration look at
-[php-fpm (section)](/node/php#php-fpm "internal reference").
+{{< iref "php#php" "php-fpm (section)" >}}.
 
 -   For apache2.2 we can use [mod_fcgid
     ](https://httpd.apache.org/mod_fcgid/mod/mod_fcgid.html#fcgidwrapper)

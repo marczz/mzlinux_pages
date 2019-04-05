@@ -1,14 +1,8 @@
-<!--
-.. description:
-.. date: 2016-01-26
-.. slug: content_management
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Content Management
--->
+---
+title: Content Management
+---
 
-[TOC]
+{{% toc /%}}
 
 # content management system (CMS)
 
@@ -19,17 +13,17 @@ application programming interface for creating a customized content
 management system. I have only few links of general CMS.
 
 Look also at
-[Wiki section](#wikis "Internal reference"),
-[Blogger](#bloggers "Internal reference")
+{{< iref "#wikis" "Wiki section" >}},
+{{< iref "#bloggers" "Blogger" >}}
 and
-[Web Frameworks](/node/python_web#web_frameworks "Internal reference").
+{{< iref "python_web#web_frameworks" "Web Frameworks" >}}.
 For a broader view look at the following wikipedia pages.
 
 - Wikipedia :
-  [w:Content management system],
-  [w:Content management framework],
-  [w:Comparison of content management systems],
-  [w:Web framework].
+  {{< wp "Content management system" >}},
+  {{< wp "Content management framework" >}},
+  {{< wp "Comparison of content management systems" >}},
+  {{< wp "Web framework" >}}.
 - [Drupal](http://www.drupal.org/) is a CMS with PHP +
   Mysql/Postgresql which include a lot of modules which provide a
   wide assortment of features. ref:
@@ -53,9 +47,9 @@ For a broader view look at the following wikipedia pages.
 For content delivery an alternative is P2P content delivery in which
 clients provide resources as well as use them.
 
--   Wikipedia: [w:Content delivery network] (CDN)
+-   Wikipedia: {{< wp "Content delivery network" >}} (CDN)
 
--   [w:Cloudflare] is a CDN with advanced DDoS protection.
+-   {{< wp "Cloudflare" >}} is a CDN with advanced DDoS protection.
     It works by reverse proxying your Site. _Cloudflare_ offer a
     [Free plan](https://www.cloudflare.com/plans/)
     for small personal websites or
@@ -72,7 +66,7 @@ the websites an in
 -   [Wiki](http://en.wikipedia.org/wiki/Wiki) page from wikipedia,
     they also provide a
     [Comparison of wiki software](http://en.wikipedia.org/wiki/Comparison_of_wiki_software)
-    and [w:Comparison of wiki hosting services]
+    and {{< wp "Comparison of wiki hosting services" >}}
 -   [WikiWikiWeb](http://c2.com/cgi/wiki?WikiWikiWeb) (perl) the
     first wiki, [WikiEngines](http://c2.com/cgi/wiki?WikiEngines)
 -   [MediaWiki](http://www.mediawiki.org/ "mediawiki.org") (php, mysql)
@@ -104,8 +98,7 @@ the websites an in
     accept pages written in Asciidoc, Creole, Markdown, Org Mode, Pod,
     RDoc, ReStructuredText, Textile, MediaWiki.  It is the software
     that powers up the GitHub wiki pages.
-    -   [Gollum-Site
-        ](/node/static_sites#gollumsite "internal reference")
+    -   {{< iref "static_sites#gollumsite" "Gollum-Site" >}}
         is a static site generator for Gollum.
     -   [code of Gollum GitHub Demo
         ](https://github.com/gollum/gollum-demo)
@@ -140,9 +133,8 @@ at python.org.
 _Gitology_, _gazest_, _Hatta_ are listed in the above section.
 
 The static site generators
-are in the [list of python powered static sites generators
-](/node/static_sites#python_static_sites_list "internal reference") in the
-[static generator section](/node/static_sites "internal reference")
+are in the {{< iref "static_sites#python_static_sites_list" "list of python powered static sites generators" >}} in the
+{{< iref "static_sites" "static generator section" >}}
 
 -   The [Infogami](http://infogami.org/) wiki is powered
     up by web.py.
@@ -158,7 +150,7 @@ are in the [list of python powered static sites generators
 
 # Blog Software {#bloggers}
 I give only few links to most known blogging software, you'll find them on
-Wikipedia: [w:Weblog software], and focus on lightweight bloggers.
+Wikipedia: {{< wp "Weblog software" >}}, and focus on lightweight bloggers.
 
 -   Main stream bloggers:
     [WordPress](http://wordpress.org/),
@@ -199,13 +191,13 @@ Wikipedia: [w:Weblog software], and focus on lightweight bloggers.
     an alternative to Google Alerts.
 
 # Search engines
-Wikipedia: [w:Category:Free search engine software]
+Wikipedia: {{< wp "Category:Free search engine software" >}}
 
 -   [Lucene](http://lucene.apache.org/) (Apache License)
     is a java search engine supported by the Apache foundation.
     [elasticsearch](http://www.elasticsearch.org/) (Apache License)
     is a distributed, RESTful,  search server based on Apache Lucene.
-    - Wikipedia: [w:Lucene] and [w:Elasticsearch]
+    - Wikipedia: {{< wp "Lucene" >}} and {{< wp "Elasticsearch" >}}
     - A [collection of elasticsearch tutorials
       ](http://getelastomer.com/blog/category/elasticsearch-tutorials/)
     - [answers in stackoverflow: to Beginner's guide to
@@ -231,13 +223,13 @@ Wikipedia: [w:Category:Free search engine software]
 -   [Sphinx](http://sphinxsearch.com/) (GPL)
     is a C++ search engine, running either as a stand alone service or
     interfaced with a DBMS; MySQL, MariaDB, PostgreSQL, ODBC
-    - Wikipedia: [w:Sphinx]
+    - Wikipedia: {{< wp "Sphinx" >}}
 -   [Xapian](http://www.xapian.org/)(GPL) is  a full text  search engine
     library  written in  C++, with  bindings to  allow use  from Perl,
     Python, PHP, Java, Tcl, C#, Ruby and Lua.
     [Recoll](http://www.lesbonscomptes.com/recoll/) (GPL) is a full text
     desktop search tool  based on xapian.
-    - Wikipedia pages for [w:Xapian] and [w:recoll]
+    - Wikipedia pages for {{< wp "Xapian" >}} and {{< wp "recoll" >}}
 -   [Woosh](https://bitbucket.org/mchaput/whoosh/wiki/Home) (BSD License)
      is a searching library implemented in pure Python.
 -   [Zend_Search_Lucene

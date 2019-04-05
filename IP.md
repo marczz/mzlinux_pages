@@ -1,51 +1,44 @@
-<!--
-.. description:
-.. date: 2016-05-09
-.. slug: IP
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: IP protocols
--->
+---
+title: IP protocols
+---
 
-[TOC]
+{{% toc /%}}
 
-See also [Network Configuration](/node/netconf "internal reference"),
-[Network Tools](/node/nettools "internal reference").
+See also {{< iref "netconf" "Network Configuration" >}},
+{{< iref "nettools" "Network Tools" >}}.
 
-The [w:Link layer] _layer 2 of OSI_ group
+The {{< wp "Link layer" >}} _layer 2 of OSI_ group
 ARP, NDP, OSPF, Tunnels (L2TP), PPP, MAC,
 (Ethernet, DSL, ISDN, FDDI)
 
-The OSI Layer 3 [network layer] or the TCP/IP [w:Internet layer]
+The OSI Layer 3 [network layer] or the TCP/IP {{< wp "Internet layer" >}}
 group many protocols among which
-IPv4/IPv6 (see [iptools](/node/nettools#ip_tools"internal reference"),
+IPv4/IPv6 (see {{< iref "nettools#ip_tools" "iptools" >}},
 ICMP, ICMPv6, ECN, IGMP, IPsec.
 
-The [w:Transport layer] _Layer 4 of OSI_ contains
-TCP, UDP (see [TCP /UDP tools
-](/node/nettools#tcp_udp_tools"internal reference"),
+The {{< wp "Transport layer" >}} _Layer 4 of OSI_ contains
+TCP, UDP (see {{< iref "nettools#tcp_udp_tools" "TCP /UDP tools" >}},
 DCCP, SCTP, RSVP  we can add
-[SOCKS](#socks "internal reference") in the OSI layer 5
-[w: session layer].
+{{< iref "#socks" "SOCKS" >}} in the OSI layer 5
+{{< wp " session layer" >}}.
 
-The [w:Application layer] OSI Level 7 and Application Layer of TCP
-stack from [w:internet protocol suite] _TCP/IP stack_ group many
+The {{< wp "Application layer" >}} OSI Level 7 and Application Layer of TCP
+stack from {{< wp "internet protocol suite" >}} _TCP/IP stack_ group many
 protocols, some referenced in other pages it groups
-BGP, [DHCP](#dhcp  "internal reference"),
-[DNS](/node/dns  "internal reference"),
-[FTP](/node/file_transfer#ftp "internal reference"),
-[HTTP](#http "internal reference"),
-[IMAP](/node/mail  "internal reference"),
-[IRC](/node/irc "internal reference"),
-LDAP MGCP, NNTP, [NTP](/node/ntp  "internal reference"),
-[POP](/node/mail  "internal reference"),
+BGP, {{< iref "#dhcp" "DHCP" >}},
+{{< iref "dns" "DNS" >}},
+{{< iref "file_transfer#ftp" "FTP" >}},
+{{< iref "#http" "HTTP" >}},
+{{< iref "mail" "IMAP" >}},
+{{< iref "irc" "IRC" >}},
+LDAP MGCP, NNTP, {{< iref "ntp" "NTP" >}},
+{{< iref "mail" "POP" >}},
 ONC/RPC, RTP, RTSP, RIP,
-[SIP](/node/sip "internal reference"),
-[SMTP](/node/mail  "internal reference"),
-[SNMP](/node/monitoring  "internal reference"),
-SSH, Telnet, [TLS/SSL](/node/ssl "internal reference"),
-[XMPP](/node/xmpp "internal reference")
+{{< iref "sip" "SIP" >}},
+{{< iref "mail" "SMTP" >}},
+{{< iref "monitoring" "SNMP" >}},
+SSH, Telnet, {{< iref "ssl" "TLS/SSL" >}},
+{{< iref "xmpp" "XMPP" >}}
 
 
 
@@ -53,13 +46,13 @@ SSH, Telnet, [TLS/SSL](/node/ssl "internal reference"),
 -----------------
 # General References
 
--   Wikipedia: [w:Lists of network protocols], [w:Internet Protocol]
-    (IP) , [w:Internet protocol suite] (TCP/IP),    [w:UDP]
--   Wikipedia [w:OSI model],
-    [w:Link layer] _layer 2 of OSI_, [w:Internet layer] or
+-   Wikipedia: {{< wp "Lists of network protocols" >}}, {{< wp "Internet Protocol" >}}
+    (IP) , {{< wp "Internet protocol suite" >}} (TCP/IP),    {{< wp "UDP" >}}
+-   Wikipedia {{< wp "OSI model" >}},
+    {{< wp "Link layer" >}} _layer 2 of OSI_, {{< wp "Internet layer" >}} or
     [network layer] _Layer 3 of OSI_,
-    [w:Transport layer] _Layer 4_,
-    [w: session layer] _layers 5_ , _6 presentation_ and [w:Application layer]
+    {{< wp "Transport layer" >}} _Layer 4_,
+    {{< wp " session layer" >}} _layers 5_ , _6 presentation_ and {{< wp "Application layer" >}}
     _layer 7_,
 -   UDP protocol is defined in the
     [rfc 768](http://rfc.net/rfc768.html)
@@ -72,8 +65,8 @@ SSH, Telnet, [TLS/SSL](/node/ssl "internal reference"),
 
 # Bridge
 
--   [w:Bridging (networking)|Wikipedia Bridging],
-    [w:Address Resolution Protocol|ARP]
+-   {{< wp "Bridging (networking)"  "Wikipedia Bridging" >}},
+    {{< wp "Address Resolution Protocol"  "ARP" >}}
 -   [Kernel networking: Bridges
     ](http://www.linuxfoundation.org/collaborate/workgroups/networking/bridge)
 -   [Cisco: Bridging and Switching Basics
@@ -98,15 +91,15 @@ SSH, Telnet, [TLS/SSL](/node/ssl "internal reference"),
     implements is a virtual switch. Read also
     [VDE Basic Networking Tutorial
     ](http://wiki.v2.cs.unibo.it/wiki/index.php?title=VDE_Basic_Networking).
--   A [w:network switch] is a device that use packet switching to
+-   A {{< wp "network switch" >}} is a device that use packet switching to
     receive data from a source device, process and forward it to the
     destination device.
--   The [w:Spanning Tree Protocol] (STP) is a network protocol that builds
+-   The {{< wp "Spanning Tree Protocol" >}} (STP) is a network protocol that builds
     a logical loop-free topology for Ethernet networks.
 
 # SOCKS {#socks}
-[w:Socket Secure] (SOCKS) is an Internet protocol of the OSI [w:
-session layer] (layer 5). I forward packets between a client and
+{{< wp "Socket Secure" >}} (SOCKS) is an Internet protocol of the
+OSI {{< wp "session layer" >}} (layer 5). I forward packets between a client and
 server through a proxy server. SOCKS5 additionally provides
 authentication.
 
@@ -127,8 +120,8 @@ authentication.
 # DHCP {#dhcp}
 
 -   [Wikipedia: DHCP](http://en.wikipedia.org/wiki/DHCP),
-    [w:Comparison of DHCP server software], [w:DHCPD],
-    [w:Wake-on-LAN].
+    {{< wp "Comparison of DHCP server software" >}}, {{< wp "DHCPD" >}},
+    {{< wp "Wake-on-LAN" >}}.
 -   [DHCP RFC - Dynamic Host Configuration Protocol RFC's
     ](http://www.bind9.net/rfc-dhcp) , and
     [DHCP Articles and Links](http://www.bind9.net/dhcp) at bind9.net.
@@ -182,7 +175,7 @@ authentication.
     works under Linux and BSD.
 
     -   [ArchWiki: dhcpcd](https://wiki.archlinux.org/index.php/Dhcpcd)
-    -   Man pages [man:dhcpd], [man: dhcpcd.conf)
+    -   Man pages {{< man "dhcpd" >}}, [man: dhcpcd.conf)
 
 -   [udhcp Server/Client Package](http://udhcp.busybox.net) are a
     lightweight implementation of dhcp daemon and client, they are now
@@ -193,7 +186,7 @@ authentication.
     [Readme dumpleases](http://udhcp.busybox.net/README.dumpleases)
     and [udhcp.conf example configuration
     file](http://udhcp.busybox.net/udhcpd.conf).
--   [Dnsmasq](/node/dns "internal reference") (GPL)
+-   {{< iref "dns" "Dnsmasq" >}} (GPL)
     beside a dns cache server is also a dhcpd server. It supports
     static address assignments, multiple networks, Bootp and
     vendor-encapsulated options, DHCP-relay and RFC3011 subnet
@@ -207,7 +200,7 @@ authentication.
 # Network Boot (PXE, Bootp) {#network_boot}
 -   [Wikipedia: PXE (Preboot eXecution Environment)
     ](http://en.wikipedia.org/wiki/Preboot_Execution_Environment),
-    [w:Bootstrap Protocol] (Bootp),
+    {{< wp "Bootstrap Protocol" >}} (Bootp),
 -   [Network Boot and Exotic Root HOWTO
     ](http://tldp.org/HOWTO/Network-boot-HOWTO/index.html) _2002_.
 -   [ArchWiki: Diskless system
@@ -241,15 +234,14 @@ authentication.
     provides a diskless or systemless environment for client machines.  DRBL uses
     distributed hardware resources and makes it possible for clients to fully access
     local hardware.  It also includes
-    [Clonezilla](/node/hdrive#clonezilla "internal reference")
+    {{< iref "hdrive#clonezilla" "Clonezilla" >}}
     partition and disk cloning utility.
 
 # HTTP {#http}
-See also [HTTP file download
-](/node/file_transfer#http_download "internal reference"),
-[Proxy](/node/proxy "internal reference").
+See also {{< iref "file_transfer#http_download" "HTTP file download" >}},
+{{< iref "proxy" "Proxy" >}}.
 
--   [w:Hypertext_Transfer_Protocol|Wikipedia: Hypertext Transfer Protocol]
+-   {{< wp "Hypertext_Transfer_Protocol"  "Wikipedia: Hypertext Transfer Protocol" >}}
 -   RFC:
     -   [RFC1945 - HTTP/1.0
         ](http://www.apps.ietf.org/rfc/rfc1945.html),
@@ -264,7 +256,7 @@ See also [HTTP file download
     -   [RFC3875 - The Common Gateway Interface (CGI) Version 1.1
         ](http://www.apps.ietf.org/rfc/rfc3875.html)
 -   Http Headers are given in
-    [w:List_of_HTTP_headers|Wikipedia: List of HTTP headers],
+    {{< wp "List_of_HTTP_headers"  "Wikipedia: List of HTTP headers" >}},
     [The Quick reference to HTTP headers
     ](http://www.cs.tut.fi/~jkorpela/http.html)
     gives cross references to the
@@ -288,11 +280,10 @@ See also [HTTP file download
     _linkchecker-web_ and
     [linkchecker](https://linkchecker.github.io/linkchecker/), .
 -   See also other Python programmatic browsers tools in the
-    [Web client side programming section
-    ](/node/python_web#web-client-programming "internal reference")
+    {{< iref "python_web#web" "Web client side programming section" >}}
 
 # WEB Protocols {#web_protocols}
--   [w:CGI]
+-   {{< wp "CGI" >}}
     -   [CGI resource index](http://cgi.resourceindex.com/)
     -   [W3C Forms](http://www.w3.org/TR/html4/interact/forms.html)
         are used to call CGI scripts.
@@ -300,7 +291,7 @@ See also [HTTP file download
     -   [CGI Made Really Easy](http://www.jmarshall.com/easy/cgi/)
         by James Marshall.
 
--   [w:FastCGI]
+-   {{< wp "FastCGI" >}}
     Under the CGI model, you have to pay the price of spawning a new
     process for each request. To spawn child processes under different
     user accounts, your gateway probably runs under quite high
@@ -313,15 +304,15 @@ See also [HTTP file download
         ](http://fastcgi.com/drupal/node/5)
     -   [FastCGI Developer's Kit
         ](http://fastcgi.com/devkit/doc/fcgi-devel-kit.htm)
--   [w:SCGI]
+-   {{< wp "SCGI" >}}
     Simple Common Gateway Interface (SCGI) is a protocol similar to
     FastCGI  as an alternative to the CGI protocol.
     -   Samuel Alexander [scgi-c-library
         ](https://github.com/semitrivial/scgi-c-library)
         and [Introducing: The SCGI C Library
         ](http://www.xamuel.com/scgilib/)
--   [w:Web Server Gateway Interface|WSGI] the main page is
-    [Python Web - WSGI](/node/python_web#wsgi "internal reference")
+-   {{< wp "Web Server Gateway Interface"  "WSGI" >}} the main page is
+    {{< iref "python_web#wsgi" "Python Web - WSGI" >}}
     some non python links follow.
     -   [The uWSGI project documentation
         ](http://uwsgi-docs.readthedocs.org/en/latest/)
@@ -333,9 +324,8 @@ See also [HTTP file download
         ](https://github.com/unbit/uwsgi).
 
 # IP routing
-_The [network management utilities](/node/netconf "internal reference")
-are in the [Network Configuration Section
-](/node/netconf "internal reference")._
+_The {{< iref "netconf" "network management utilities" >}}
+are in the {{< iref "netconf" "Network Configuration Section" >}}._
 
 -   kernel source tree documentation:
     [Documentation networking
@@ -370,12 +360,12 @@ are in the [Network Configuration Section
 
 # IP V6 {#ipv6}
 
--   [w:IPv6|Wikipedia: IPv6], [w:IPv6 address], [w:IPv6 packet],
-    [w:ICMPv6], [w:Multicast_address#IPv6|IPv6 Multicast address],
-    [w:DHCPv6], [w:Comparison of IPv6 support in operating systems].
--   Wikipedia: [w:IPv6 transition mechanism], [w:Tunnel broker],
-    [w:List of IPv6 tunnel brokers], [w:6in4], [w:6to4], [w:Teredo tunneling],
-    [w:IPv6 rapid deployment] or 6rd, [w:NAT64].
+-   {{< wp "IPv6"  "Wikipedia: IPv6" >}}, {{< wp "IPv6 address" >}}, {{< wp "IPv6 packet" >}},
+    {{< wp "ICMPv6" >}}, {{< wp "Multicast_address#IPv6"  "IPv6 Multicast address" >}},
+    {{< wp "DHCPv6" >}}, {{< wp "Comparison of IPv6 support in operating systems" >}}.
+-   Wikipedia: {{< wp "IPv6 transition mechanism" >}}, {{< wp "Tunnel broker" >}},
+    {{< wp "List of IPv6 tunnel brokers" >}}, {{< wp "6in4" >}}, {{< wp "6to4" >}}, {{< wp "Teredo tunneling" >}},
+    {{< wp "IPv6 rapid deployment" >}} or 6rd, {{< wp "NAT64" >}}.
 -   [IPv6 Homepage](http://www.worldipv6launch.org/)
 -   [Deep Space 6](http://www.deepspace6.net/), the Linux IPv6 Portal
     -   [IPV6 Documentation
@@ -420,9 +410,9 @@ are in the [Network Configuration Section
 
 ## Ipv6 Tunnels
 ### 6to4 doc
-You find both the name [w:6to4], and [w:6in4]. [w:6to4] is the
+You find both the name {{< wp "6to4" >}}, and {{< wp "6in4" >}}. {{< wp "6to4" >}} is the
 Internet transition mechanism, it uses for the packet transport the
-protocol [w:6in4]. BUt the two names are often used interchangeably.
+protocol {{< wp "6in4" >}}. BUt the two names are often used interchangeably.
 
 -   [Quick and dirty IPv6 with 6to4
     ](http://backreference.org/2010/06/27/quick-and-dirty-ipv6-with-6to4/)
@@ -435,7 +425,7 @@ protocol [w:6in4]. BUt the two names are often used interchangeably.
     ](http://www.shorewall.net/6to4.htm#Tunnel6to4).
 
 ### Tunnel Brokers
--   Wikipedia: [w:Tunnel broker], [w:List of IPv6 tunnel brokers]
+-   Wikipedia: {{< wp "Tunnel broker" >}}, {{< wp "List of IPv6 tunnel brokers" >}}
 -   [Hurricane Electric Free IPv6 Tunnel Broker
     ](http://tunnelbroker.net/index.php)
 -   [ArchWiki: IPv6 tunnel broker setup
@@ -449,13 +439,13 @@ protocol [w:6in4]. BUt the two names are often used interchangeably.
 
 ### Tunnel Tools
 -   [TAYGA - NAT64 for Linux](http://www.litech.org/tayga/)
-    a stateless [w:NAT64] implementation for Linux.
+    a stateless {{< wp "NAT64" >}} implementation for Linux.
 -   [jool](https://www.jool.mx/en/index.html)
-    a statefull [w:NAT64] implementation for Linux.
+    a statefull {{< wp "NAT64" >}} implementation for Linux.
 -   [Miredo : Teredo for Linux and BSD](http://www.remlab.net/miredo/)
     used for terredo and packaged in Debian.
 
-    The [w:Teredo_tunneling|Teredo IPv6 tunneling protocol]
+    The {{< wp "Teredo_tunneling"  "Teredo IPv6 tunneling protocol" >}}
     encapsulates IPv6 packets into UDP/IPv4 datagrams, to allow hosts
     behind NAT devices to access the IPv6 Internet.  Miredo can
     provide IPv6 connectivity to a dual-stack IPv6/IPv4. It can also

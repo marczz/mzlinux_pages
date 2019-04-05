@@ -1,20 +1,14 @@
-<!--
-.. description:
-.. date: 2011-09-04
-.. slug: web_servers
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Web Servers
--->
+---
+title: Web Servers
+---
 
-[TOC]
+{{% toc /%}}
 
 -    The main stream servers have their own page:
-    [Apache](/node/apache "internal reference"),
-    [Lighttpd](/node/lighttpd "internal reference"),
-    [Nginx](/node/nginx "internal reference").
--   See also [PHP-FPM](/node/php/php-fpm "internal reference").
+    {{< iref "apache" "Apache" >}},
+    {{< iref "lighttpd" "Lighttpd" >}},
+    {{< iref "nginx" "Nginx" >}}.
+-   See also {{< iref "php" "PHP-FPM" >}}.
 
 # Server Architectures
 
@@ -47,12 +41,10 @@
     In the **event-driven architecture** a single thread is mapped to
     multiple connections. The events are queued and processed by an
     *event-loop* that multiplexes multiple connections to a single
-    flow of execution. This is the model used by [lighttpd
-    ](/node/lighttpd "internal reference"), [nginx](#nginx "internal reference"),
-    the python web server [Tornado
-    ](/node/web_frameworks#tornado "internal reference"),
-    [cyclone](/node/web_frameworks#cyclone "internal reference"),
-    the emacs server [elnode](/node/emacs#elnode "internal reference") and many
+    flow of execution. This is the model used by {{< iref "lighttpd" "lighttpd" >}}, {{< iref "#nginx" "nginx" >}},
+    the python web server {{< iref "web_frameworks#tornado" "Tornado" >}},
+    {{< iref "web_frameworks#cyclone" "cyclone" >}},
+    the emacs server {{< iref "emacs#elnode" "elnode" >}} and many
     new servers.
 
     For more details look at the B. Erb chapters on
@@ -102,14 +94,14 @@ __ACME__ tiny http servers
     authentication server is _libapache2-mod-webkdc_.
 -   [WebAuth with UNIX Guide
     ](https://itservices.stanford.edu/service/web/centralhosting/webauth/unix).
--   [w:Pubcookie] (Apache License)
+-   {{< wp "Pubcookie" >}} (Apache License)
     Pubcookie is a protocol and a software package
     for providing single sign-on within web applications
     and websites of an organization.
     -   [PubCookie Home](http://www.pubcookie.org/)
 
 # web log analysis
--   [w:analog] web log analysis program
+-   {{< wp "analog" >}} web log analysis program
 -   Available in Debian as package _analog_.
 -   If installed on localhost you can access it at
     [analog server statistics](/analog/)
@@ -152,7 +144,7 @@ __ACME__ tiny http servers
     ](http://svn.osafoundation.org/m2crypto/trunk/doc/howto.ca.html) uses the perl script CA.pl
 -   [Introducing SSL and Certificates using OpenSSL
     ](http://old.pseudonym.org/ssl/wwwj-index.html) by Frederick J. Hirsch
--   [ldoc:apache2.2-common/README.Debian.gz]
+-   {{< ldoc "apache2.2-common/README.Debian.gz" >}}
 -   The package ssl-cert  is a wrapper for openssl req  to create self-signed certificates.
 -   we can use the command line
 

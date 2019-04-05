@@ -1,15 +1,8 @@
-<!--
-.. description:
-.. date: 2014-12-23
-.. slug: lighttpd
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Lighttpd
--->
+---
+title: Lighttpd
+---
 
-
-[TOC]
+{{% toc /%}}
 
 [lighttpd](http://www.lighttpd.net/) is a low memory footprint http server (1.3 Meg
     base+cgi) with FastCGI, CGI, SSI, Auth, Output-Compression,
@@ -98,8 +91,8 @@ The failure to recognize it is the [bug 1427](http://redmine.lighttpd.net/issues
      _php_, _python_, _perl_ or _C/C++_ programs.
 
     [mod\_scgi](http://redmine.lighttpd.net/projects/lighttpd/wiki/Docs:ModSCGI)
-    is a clone of _mod_fasctcgi_, but using the [w:SCGI] protocol instead of
-    [w:FastCGI]. Perl, Python, PHP have a _SCGI_ interface as well as a
+    is a clone of _mod_fasctcgi_, but using the {{< wp "SCGI" >}} protocol instead of
+    {{< wp "FastCGI" >}}. Perl, Python, PHP have a _SCGI_ interface as well as a
     FastCGI one, _SCGI_ is also used with Java, Haskell, Ruby ...
 -   [mod\_magnet](http://redmine.lighttpd.net/projects/lighttpd/wiki/Docs:ModMagnet)
     allows you to do more complex URL rewrites and caching than

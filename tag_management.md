@@ -1,14 +1,8 @@
-<!--
-.. description:
-.. date: 2015-04-08
-.. slug: tag_management
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Tag, playlist, lyrics Management
--->
+---
+title: Tag, playlist, lyrics Management
+---
 
-[TOC]
+{{% toc /%}}
 
 #References
 
@@ -23,7 +17,7 @@
 # Tag Management Software
 [amded](https://github.com/ft/amded).
 :    amded by Niels Giesen is a command line tagging program based
-     on [taglib](#taglib "internal reference").
+     on {{< iref "#taglib" "taglib" >}}.
      It can be used from Emacs with
      [tagit.el](https://github.com/pft/elisp-assorted/blob/master/taggit.el)
      Taggit.el has support for Dired mode and Mingus.
@@ -58,13 +52,12 @@
 
 <a name=exfalso"></a>[ExFalso](https://github.com/quodlibet/quodlibet)
 :   ExFalso is part of
-    [quodlibet](/node/media_players#quodlibet "internal reference")
-    media player, and a python/GTK+ frontend to [mutagen](#mutagen
-    "internal reference").
+    {{< iref "media_players#quodlibet" "quodlibet" >}}
+    media player, and a python/GTK+ frontend to {{< iref "#mutagen" "mutagen" >}}.
 
     With the ExFalso gui, a command line _oberon_ is also provided.
     In Debian _exfalso_ and
-    [quodlibet](/node/media_players#quodlibet "internal reference")
+    {{< iref "media_players#quodlibet" "quodlibet" >}}
     are two distinct packageS. than
 
     -   [ExFalso/Quodlibet manual
@@ -89,7 +82,7 @@ id3ren
     or “guessed” from the path and the filename. _in Debian_
 
 [Kid3](http://kid3.sourceforge.net/) (GPL)<a name='kid3'></a>
-:    Kid3 is a Qt interface to [taglib](#taglib "internal reference")
+:    Kid3 is a Qt interface to {{< iref "#taglib" "taglib" >}}
      It can process MP3, Ogg/Vorbis, Opus, DSF, FLAC, MPC, APE,
      MP4/AAC, MP2, Speex, TrueAudio, WavPack, WMA, WAV, AIFF.
      Kid3 allow easy mass tagging. It can be compiled with or without KDE,
@@ -116,8 +109,7 @@ id3ren
     (mp4, m4a, etc.), VorbisComments (ogg, flac), Musepack (mpc),
     Monkey’s Audio (.ape) and WavPack (wv).
 
-    _puddletag_ is written in python/QT and uses the [mutagen
-    ](#mutagen "internal reference") library.
+    _puddletag_ is written in python/QT and uses the {{< iref "#mutagen" "mutagen" >}} library.
 
     -   [puddletag GitHub repository
         ](https://github.com/keithgg/puddletag).
@@ -126,8 +118,8 @@ id3ren
 
 [pyrenamer](http://www.infinicode.org/code/pyrenamer/)
 :   mass file renamer _not a tag editor_ written in PyGTK that can use
-    [hachoir-metadata](#hachoir-metadata "internal reference") or
-    [eyed3](#eyed3 "internal reference") You can rename files using
+    {{< iref "#hachoir" "hachoir-metadata" >}} or
+    {{< iref "#eyed3" "eyed3" >}} You can rename files using
     patterns, search and replace, substitutions, insert or delete
     text. You can also rename images using their EXIF tags and music
     using their metadata tags.<br/>
@@ -181,8 +173,8 @@ id3lib <a name="id3lib"></a>
     The code date from 2003 and seems no longer updated.
 
 :   Id3lib (alias id3lib) is used by grip,
-    [easytag](#easytag "internal reference") and
-    [tagtool](#tagtool "internal reference")
+    {{< iref "#easytag" "easytag" >}} and
+    {{< iref "#tagtool" "tagtool" >}}
 
 :   It has some small utilities   `id3cp`, `id3info`, `id3convert`,  id3tag,
     which are in the _debian_ package _libid3-tools_; and a separate package
@@ -203,8 +195,7 @@ libid3tag
 
 [mutagen](https://bitbucket.org/lazka/mutagen)<a name="mutagen"></a>
 :   Mutagen (GPL) is a Python module to handle audio metadata it comes
-    with a GTK frontend named [ExFalso](#exfalso "internal
-    reference").
+    with a GTK frontend named {{< iref "#exfalso" "ExFalso" >}}.
     It supports AIFF, AAC, ASF, FLAC, MP4, MP3, Ogg FLAC, Ogg Speex, Ogg
     Theora, Ogg Vorbis, Monkey audio, True Audio, OptimFROG, and
     WavPack audio files, since v1.21 (2013) Ogg opus. All versions of
@@ -212,15 +203,15 @@ libid3tag
 
 :   [Mutagen Documentation](https://mutagen.readthedocs.org/en/latest/)
 
-:   Mutagen is used in the players [quodlibet](/node/media_players#quodlibet "internal reference"),
-    and [Exaile](/node/media_players#exaile "internal reference") thru the __ExFalso__ plugin,
+:   Mutagen is used in the players {{< iref "media_players#quodlibet" "quodlibet" >}},
+    and {{< iref "media_players#exaile" "Exaile" >}} thru the __ExFalso__ plugin,
     It is also used in the tag editing frontends
-    [ExFalso](#exfalso "internal reference") which is the reference
+    {{< iref "#exfalso" "ExFalso" >}} which is the reference
     implementation of mutagen, and part of the
-    [quodlibet](/node/media_players#quodlibet "internal reference")
+    {{< iref "media_players#quodlibet" "quodlibet" >}}
     software.
-    [pytagsfs](#pytagsfs "internal reference") and
-    [puddletag](#puddletag "internal reference")
+    {{< iref "#pytagsfs" "pytagsfs" >}} and
+    {{< iref "#puddletag" "puddletag" >}}
 
 :   [The Building Coder: MP3 Manipulation Using Python, Mutagen and Ffmpeg
     ](http://thebuildingcoder.typepad.com/blog/2013/02/mp3-manipulation-using-python-mutagen-and-ffmpeg.html)
@@ -235,23 +226,23 @@ libid3tag
     written in C++ and while part of KDE it has no dependency to KDE or
     QT. It is used in numerous applications including
     audacious-plugins,
-    [amarok](/node/media_players#amarok "internal reference"),
-    [cowbell](#cowbell "internal reference"),
+    {{< iref "media_players#amarok" "amarok" >}},
+    {{< iref "#cowbell" "cowbell" >}},
     emms, forked-daapd, gmediaserver,
-    [gstreamer-plugins](/node/streaming#gstreamer "internal reference"),
-    [kid3](#kid3  "internal reference") and
-    [kid3-cli](#kid3  "internal reference"),
-    [mediatomb](/node/streaming#mediatomb "internal reference"),
-    [moc](/node/media_players#moc "internal reference"),
-    [Firefly Media server](/node/streaming#firefly "internal reference"),
-    [ncmpcpp](/node/media_players#ncmpcpp "internal reference"), ...
+    {{< iref "streaming#gstreamer" "gstreamer-plugins" >}},
+    {{< iref "#kid3" "kid3" >}} and
+    {{< iref "#kid3" "kid3-cli" >}},
+    {{< iref "streaming#mediatomb" "mediatomb" >}},
+    {{< iref "media_players#moc" "moc" >}},
+    {{< iref "streaming#firefly" "Firefly Media server" >}},
+    {{< iref "media_players#ncmpcpp" "ncmpcpp" >}}, ...
 
     -   [tagpy](http://mathema.tician.de/software/tagpy)
         provides python bindings to Taglib
 
 # Cue, bookmarks, Audiobooks
 ## Cue sheet {#cuesheet}
-A [w:Cue_sheet_(computing)|Cue sheet] is a metadata file which
+A {{< wp "Cue_sheet_(computing)"  "Cue sheet" >}} is a metadata file which
 describes how the tracks of a CD or DVD are laid out. For audio files
 they are usefull when a big record contain many titles. Quite few
 Linux music players support Cue sheets: amarok, audacious through the .cue
@@ -368,7 +359,7 @@ They are used for
 or
 [podcasts novels or podcast audiobooks
 ](https://en.wikipedia.org/wiki/Podcast#Podcast_novels)
-The podcast is then called an [w:Oggcast]
+The podcast is then called an {{< wp "Oggcast" >}}
 
 See also auphonic.com
 [Chapter Marks for MP3, MP4 Audio and Vorbis Comment (Enhanced Podcasts)
@@ -384,7 +375,7 @@ The ogg chapter extension is similar to the
 [matroska chapter extension
 ](http://savvyadmin.com/adding-chapters-to-videos-using-mkv-containers/)
 other metadata can be stored in
-[w:Vorbis comment].
+{{< wp "Vorbis comment" >}}.
 
 A vorbis chapter is only a comment like:
 
@@ -423,15 +414,15 @@ chapters.
         ](http://wiki.gpodder.org/wiki/Git)
 
 ## Audiobook
-Audiobooks use often the [w:MPEG-4_Part_14|MPEG-4] format.
+Audiobooks use often the {{< wp "MPEG-4_Part_14"  "MPEG-4" >}} format.
 
 Audiobooks can also use an other format and a
-[cue sheet](#cuesheet "internal reference").
+{{< iref "#cuesheet" "cue sheet" >}}.
 
 -   [ArchWiki: audiobook
     ](https://wiki.archlinux.org/index.php/Audiobook)
     present how to create ios compatible audiobooks, that is how to
-    convert to AAC and [w:mp4b] using command line tools like [MP4Box
+    convert to AAC and {{< wp "mp4b" >}} using command line tools like [MP4Box
     ](https://gpac.wp.imt.fr/mp4box/) _from the GPAC package_,
     faac encoder and the tools in the package mp4v2-utils.
 -   [Audio Book Creator - abc
@@ -450,7 +441,7 @@ files. WebVTT cues allow to include hierarchical chapters.
 Xiph.org plan to add support for included WebVTT comments in the ogg
 format.
 
--   Wikipedia: [w:WebVTT]
+-   Wikipedia: {{< wp "WebVTT" >}}
 -   [caniuse browser support for WebVTT
     ](http://caniuse.com/#feat=webvtt)
 -   [jwplayer: browser support for various features of the WebVTT format
@@ -459,13 +450,13 @@ format.
 
 # playlists
 
-A [w:Playlist] is a list of songs there are many popular playlist formats:
+A {{< wp "Playlist" >}} is a list of songs there are many popular playlist formats:
 
--   [w:m3u], a simple text-based list of the locations of the items, with each item on a new line.
--   [w:PLS], a text playlist in .ini format It can store (cache)
+-   {{< wp "m3u" >}}, a simple text-based list of the locations of the items, with each item on a new line.
+-   {{< wp "PLS" >}}, a text playlist in .ini format It can store (cache)
     information on the song title and length (this is supported in
     extended M3U only).
--   [w:XML_Shareable_Playlist_Format|XML Shareable Playlist Format]
+-   {{< wp "XML_Shareable_Playlist_Format"  "XML Shareable Playlist Format" >}}
     (XSPF) is an XML-based playlist format for digital media created and
     supported by the the Xiph.Org Foundation at
     [xspf.org](http://xspf.org/). It is supported by amarok, ampache,
@@ -480,7 +471,7 @@ A [w:Playlist] is a list of songs there are many popular playlist formats:
 # Lyrics
 
 To synchronizes song lyrics with an audio file we use lyrics
--   Wikipedia: [w:LRC_(file_format)]
+-   Wikipedia: {{< wp "LRC_(file_format)" >}}
 -   [emms-lyrics](http://www.gnu.org/software/emms/manual/Lyrics.html)
     allows to display lyrics with
     [EMMS, The Emacs Multimedia System](http://www.gnu.org/software/emms/)
@@ -497,7 +488,7 @@ To synchronizes song lyrics with an audio file we use lyrics
     for .lrc files written in python compatable with audacious and other players.
 -   [lyric mode for emacs](http://www.emacswiki.org/emacs/LyricMode) is a major
     mode for editing lyric (.lrc) files.
--   [mpd](/node/media_players#mpd "internal reference")
+-   {{< iref "media_players#mpd" "mpd" >}}
     has [many hacks](http://mpd.wikia.com/wiki/Hacks)
     to display lyrics, it is also built in [ncmpc++](http://unkart.ovh.org/ncmpcpp/)
 

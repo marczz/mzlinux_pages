@@ -1,28 +1,23 @@
-<!--
-.. description:
-.. date: 2015-05-31
-.. slug: gtk
-.. tags:
-.. link:
-.. title: GTK
--->
+---
+title: GTK
+---
 
-[TOC]
+{{% toc /%}}
 
 # Glib GObject
--   [w:GTK+|Wikipedia: GTK+], [w:Glib], [w:GObject]
+-   {{< wp "GTK+"  "Wikipedia: GTK+" >}}, {{< wp "Glib" >}}, {{< wp "GObject" >}}
 -   [GTK home page](http://www.gtk.org/) (and Gimp toolkit)
--   The Gnome library [w:GLib] is a cross-platform  library that began as part of
-    the [w:GTK+] project but contain now non-GUI-specific code.
-    _Glib_ provides the core object system used in Gnome [w:GObject]), the main loop
+-   The Gnome library {{< wp "GLib" >}} is a cross-platform  library that began as part of
+    the {{< wp "GTK+" >}} project but contain now non-GUI-specific code.
+    _Glib_ provides the core object system used in Gnome {{< wp "GObject" >}}), the main loop
     implementation, and a large set of utility functions for strings and
     common data structures. It provides typedefs to ensure portability
     and a large set of containers.
--   [w:GObject] (LGPL) The GLib Object System, or GObject, is a library
+-   {{< wp "GObject" >}} (LGPL) The GLib Object System, or GObject, is a library
     that provides a portable object system.  Gobject depens on Glib
     and libc and is used by GTK+ (and so by gnome) and gnome.<br />
     GObject is used by the programming languages
-    [Vala and Genie](/node/programming_languages#vala "internal reference")
+    {{< iref "programming_languages#vala" "Vala and Genie" >}}
 -   [List of Gnome Development Guides
     ](https://developer.gnome.org/guides)
 -   Gnome:  [Glib Reference Manual](http://library.gnome.org/devel/glib/stable/)
@@ -90,7 +85,7 @@ has a list of tutorials.
     - [Wrapping and resizing GtkLabel dynamically](http://tadeboro.blogspot.com/search/label/Tips)
 
 # GTK+ Libraries and Bindings
--   [w:Pango] is a library for laying out and rendering of text, with an emphasis on internationalization
+-   {{< wp "Pango" >}} is a library for laying out and rendering of text, with an emphasis on internationalization
     - [Pango Home](http://www.pango.org) [
     [The gtk-i18n-list Archives](http://mail.gnome.org/archives/gtk-i18n-list/)
     ]
@@ -132,7 +127,7 @@ has a list of tutorials.
 library. GTK2 binding is deprecated but still much used.
 
 -   [PyGTK 2.x Reference](http://www.pygtk.org/pygtk2reference/index.html)
--   [w:PyGTK|Wikipedia: PyGTK]
+-   {{< wp "PyGTK"  "Wikipedia: PyGTK" >}}
 -   [PyGTK 2.0 Tutorial](http://www.pygtk.org/pygtk2tutorial/index.html),
 -   [Articles and Tutorials about PyGTK](http://www.pygtk.org/articles.html) from pygtk.org.
 

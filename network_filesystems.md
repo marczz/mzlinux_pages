@@ -1,40 +1,34 @@
-<!--
-.. description:
-.. date: 2015-09-01
-.. slug: network_filesystems
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Network File Systems
--->
+---
+title: Network File Systems
+---
 
-[TOC]
+{{% toc /%}}
 
 See also the companion pages on
-[filesystems](/node/filesystems "internal reference"),
-[encrypted filesystems](/node/encrypted_filesystems "internal reference").
+{{< iref "filesystems" "filesystems" >}},
+{{< iref "encrypted_filesystems" "encrypted filesystems" >}}.
 
 ----
 
 # General References
--   [Fuse](/node/filesystems#fuse "internal link")
+-   {{< iref "filesystems#fuse" "Fuse" >}}
     allows also numerous network filesystems: _sshfs_,
     _smbNetfs_, _fusedav_, _nasfs_, ...
--   A [w:storage area network] (SAN)
+-   A {{< wp "storage area network" >}} (SAN)
     attach remote computer storage to servers in such a way that the
     devices appear as locally attached devices. Most storage networks
     use the SCSI protocol for communication between servers and disk
     drive devices. They use technology such:
-    -   [w:Fibre Channel]
+    -   {{< wp "Fibre Channel" >}}
         a gigabit-speed network technology.
-    -   [w:ISCSI]
+    -   {{< wp "ISCSI" >}}
         or scsi over IP. [Open-iSCSI](http://www.open-iscsi.org/)
         GPL is an implementation of iSCSI protocol for linux. [iSCSI Target](http://iscsitarget.sourceforge.net/) is a GPL iSCSI target for linux.
-    -   [w:ATA over Ethernet] (AoE)
+    -   {{< wp "ATA over Ethernet" >}} (AoE)
         is an ethernet protocol (on the same layer than IP) to access ATA
         devices. AoE is simpler and cheaper than ISCSI, being independant
         from IP it is not routable.
--   [w:Network Attached Storage] (NAS)
+-   {{< wp "Network Attached Storage" >}} (NAS)
     are servers that provide file system storage on the network,at the
     level of the file system, in contrast to SAN that work at the block
     level. NAS use protocol like NFS, SMB (aka CIFS), Upnp ...
@@ -42,7 +36,7 @@ See also the companion pages on
     it supports disconnected operation, i.e. full access to a cached
     section of the file space during voluntary or involuntary network
     or server outages.
--   [WebDav section](/node/webdav "internal reference")
+-   {{< iref "webdav" "WebDav section" >}}
     has the references to the DAV oriented virtual file systems like
     davfs2, gvfs-dav, fusedav ...
 -   [Container storage for dummies
@@ -54,9 +48,9 @@ See also the companion pages on
 
 # NFS {#nfs}
 The references to use of a disc-less Linux workstation with root
-filesystems via NFS. are in the [Dhcp protocol section](/node/61).
+filesystems via NFS. are in the {{< iref "61" "Dhcp protocol section" >}}.
 
--   Wikipedia: [w:Network File System]
+-   Wikipedia: {{< wp "Network File System" >}}
     gives the history of the different versions of NFS.
 -   The
     [Linux NFS-HOWTO](http://nfs.sourceforge.net/nfs-howto/)
@@ -90,10 +84,10 @@ filesystems via NFS. are in the [Dhcp protocol section](/node/61).
     is a user-mode file server for NFS (v3, 4.0, 4.1, 4.1 pNFS, 4.2).
     It is in Debian.
 
--   [man:exports(5)] references the exports
+-   {{< man "exports(5)" >}} references the exports
     option used by the server nfs daemon.
   - We can use
-    [man:showmount(8)] to examine exports of a
+    {{< man "showmount(8)" >}} to examine exports of a
     server
 
            showmount [-adehv] [--all] [--directories] [--exports]\
@@ -101,7 +95,7 @@ filesystems via NFS. are in the [Dhcp protocol section](/node/61).
 
 -   You should run the command `exportfs -ra to` force nfsd to
     re-read the /etc/exports file
-    ([man:exportfs(8)])
+    ({{< man "exportfs(8)" >}})
     If you can't find the exportfs command, then you can kill nfsd with
     the `-HUP` flag
 -   `hard,intr` is recommended on all fs, it means the program
@@ -121,7 +115,7 @@ filesystems via NFS. are in the [Dhcp protocol section](/node/61).
 To forward nfs v3 through NAT is not trivial because the number of
 services used and the use of portmapped ports. To view the ports
 used on some machine you can use
-[man:rpcinfo(8)] it can be necessary to
+{{< man "rpcinfo(8)" >}} it can be necessary to
 secure your firewall rules to tie down the ports of the nfs
 services to fixed values.
 
@@ -200,7 +194,7 @@ is easier.
 # CIFS, Samba {#samba}
 
 ## CIFS references
-[w:Samba_(software)|Wikipedia: Samba] and [w:Server_Message_Block|SMB/CIFS].
+{{< wp "Samba_(software)"  "Wikipedia: Samba" >}} and {{< wp "Server_Message_Block"  "SMB/CIFS" >}}.
 
 -   [Samba Home](http://www.samba.org/) and [Samba Wiki
     ](http://wiki.samba.org/index.php)
@@ -289,7 +283,7 @@ is easier.
         sudo nbtscan -r 192.168.1.0/24
 
 # High Availability
-See also [Cloud Storage](/node/clouds "internal reference").
+See also {{< iref "clouds" "Cloud Storage" >}}.
 
 -   [ClusterLabs Home](http://clusterlabs.org/)
     an open source high availability cluster stack grouping
@@ -302,16 +296,16 @@ See also [Cloud Storage](/node/clouds "internal reference").
 
 # Distributed filesystems {#distributed_filesystems}
 
-See also [Cloud Storage](/node/clouds "internal reference").
+See also {{< iref "clouds" "Cloud Storage" >}}.
 -   [Linux-HA](http://linux-ha.org/wiki/Main_Page).
 -   [ Red Hat - Configuring and managing high availability clusters
     ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8-beta/html/configuring_and_managing_high_availability_clusters/)
 -   [Cluster From Scratch - pdf HA Guide
     ](http://www.clusterlabs.org/doc/Cluster_from_Scratch.pdf)
--   Wikipedia: [w: Comparison of distributed file systems]
+-   Wikipedia: {{< wp " Comparison of distributed file systems" >}}
 -   [ArchWiki: list of distributed filesystems
     ](https://wiki.archlinux.org/index.php/List_of_applications#Distributed_file_systems).
--   [w:Ceph (software)|Ceph] is a distributed object store and filesystem.
+-   {{< wp "Ceph (software)"  "Ceph" >}} is a distributed object store and filesystem.
     -   [Gentoo Wiki: ceph](https://wiki.gentoo.org/wiki/Ceph)
     -   [ArchWiki: ceph](https://wiki.archlinux.org/index.php/Ceph).
     -   [Ceph Home](https://ceph.com/)
@@ -325,7 +319,7 @@ See also [Cloud Storage](/node/clouds "internal reference").
         ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/logical_volume_manager_administration/LVM_administration#cluster_setup),
         [Creating a Mirrored LVM Logical Volume in a Cluster
         ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/logical_volume_manager_administration/mirvol_create_ex).
--   [w:DRBD] (Distributed Replicated Block Device) (GPLv2) is a distributed
+-   {{< wp "DRBD" >}} (Distributed Replicated Block Device) (GPLv2) is a distributed
     storage system normally used on high availability (HA) clusters.
     It implements a network RAID1 storage.
     [DRBD Home](http://www.drbd.org/home/) is hosted by LINBIT.<br />
@@ -359,7 +353,7 @@ See also [Cloud Storage](/node/clouds "internal reference").
         ](https://www.supinfo.com/articles/single/2140-installation-configuration-drbd),
         [Mise en place d'un SAN ISCSI sous linux avec DRBD
         ](https://www.supinfo.com/articles/single/3921-mise-place-san-iscsi-linux-avec-drbd)
--   [w:GlusterFS] (GPL and LGPL)
+-   {{< wp "GlusterFS" >}} (GPL and LGPL)
     is a clustered file-system. It aggregates various storage bricks
     over Infiniband RDMA or TCP/IP.
     -   [GlusterFS Documentation](https://docs.gluster.org/en/latest/)
@@ -380,26 +374,26 @@ See also [Cloud Storage](/node/clouds "internal reference").
         a tutorial on GlusterFs.
     -   [GlusterFS sur Ubuntu/Debian
         ](https://linuxfr.org/wiki/glusterfs-sur-ubuntu-debian).
--   [w:Global File System 2] (GFS2)  (GPL)
-    is a  is a [w:shared-disk file system] available for Linux computer
+-   {{< wp "Global File System 2" >}} (GFS2)  (GPL)
+    is a  is a {{< wp "shared-disk file system" >}} available for Linux computer
     clusters. It requires all nodes to have direct concurrent access to
     the same shared block storage and has no disconnected operating
-    mode like other [w:shared-disk file systems] like [w:OCFS2], [w:Lustre],
-    [w:Lizardfs].
+    mode like other {{< wp "shared-disk file systems" >}} like {{< wp "OCFS2" >}}, {{< wp "Lustre" >}},
+    {{< wp "Lizardfs" >}}.
 
-    In contrast  [w:distributed file systems] like GlusterFS, Ceph, BeeGFS  do not share
+    In contrast  {{< wp "distributed file systems" >}} like GlusterFS, Ceph, BeeGFS  do not share
     block level access to the same storage but use a network protocol
     and can have a disconnected operating mode.
     It uses Fibre Channel, iSCSI, AoE or DRDB in primary/primary mode devices as
     storage.
 
-    _Not to be confused with [w:Google File System] a proprietary distributed
+    _Not to be confused with {{< wp "Google File System" >}} a proprietary distributed
     fs also known by the acronym GFS or GoogleFS._
--   [w:Network_block_device|NBD (Network block device)]
+-   {{< wp "Network_block_device"  "NBD (Network block device)" >}}
     ([nbd home](http://nbd.sourceforge.net/) )
     kernel module, allows remote servers to be used as local block
     devices
--   [w:Tahoe-LAFS]
+-   {{< wp "Tahoe-LAFS" >}}
     _the Least Authority File System_ is a distributed filesystem
     written in python over Fuse, that features high reliability,
     strong security properties, and a fine-grained sharing model.
@@ -413,7 +407,7 @@ See also [Cloud Storage](/node/clouds "internal reference").
 # Cluster Management
 
 ## Heartbeat and Pacemaker
-__Heartbeat__ i;e; [w:Linux-HA] is  a high-availability clustering
+__Heartbeat__ i;e; {{< wp "Linux-HA" >}} is  a high-availability clustering
 solution for Linux, FreeBSD, OpenBSD, Solaris and Mac OS X.
 
 -   [The Linux-HA User’s Guide

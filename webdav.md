@@ -1,14 +1,8 @@
-<!--
-.. description:
-.. date: 2015-01-09
-.. slug: webdav
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: WebDAV
--->
+---
+title: WebDAV
+---
 
-[TOC]
+{{% toc /%}}
 
 # References
 -   [WebDAV *(Wikipedia)*](http://en.wikipedia.org/wiki/WebDAV)
@@ -58,10 +52,10 @@ Most Unix _dav_ clients (_cadaver_, _fusedav_,davfs2) and pieces of
 software that provide a direct _dav_ access, are based on the
 [neon library](http://www.webdav.org/neon/doc/html/) (GPL), including
 the
-[gvfs](/node/396 "local link") _webdav access_ is based on _fuse_,
+{{< iref "396" "gvfs" >}} _webdav access_ is based on _fuse_,
 since _fusedav_ uses neon.
 
-[gvfs](/node/396 "local link") is used by all the _gnome_ stuff
+{{< iref "396" "gvfs" >}} is used by all the _gnome_ stuff
 such as _nautilus_, and the [Emacs tramp package
 ](http://www.gnu.org/software/tramp/#GVFS-based-methods)
 
@@ -133,11 +127,11 @@ The kde stuff as _konqueror_  use the _libkio_ library.
     _libphodav_.
 -   [litmus](http://webdav.org/neon/litmus/) is a WebDAV server protocol
     compliance test suite. _litmus_ is built using the _neon_ library.
--   [Apache](/node/apache "internal reference") has a
+-   {{< iref "apache" "Apache" >}} has a
     [webdav module](http://httpd.apache.org/docs/2.0/mod/mod_dav.html)
--   [Lighttpd](/node/lighttpd  "internal reference") has a
+-   {{< iref "lighttpd" "Lighttpd" >}} has a
     [mod_webdav module](http://redmine.lighttpd.net/wiki/1/Docs:ModWebDAV)
--   [Nginx](/node/nginx "internal reference") has a [ngx_http_dav_module
+-   {{< iref "nginx" "Nginx" >}} has a [ngx_http_dav_module
     ](http://nginx.org/en/docs/http/ngx_http_dav_module.html)
     that is complemented with [nginx-dav-ext-module
     ](https://github.com/arut/nginx-dav-ext-module) to have the

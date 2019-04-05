@@ -1,26 +1,17 @@
-<!--
-.. description:
-.. date: 2015-01-05
-.. slug: authentication
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Authentication
--->
+---
+title: Authentication
+---
 
-[TOC]
+{{% toc /%}}
 
 ---
 
 Apache authentication is in the
-[Apache Page
-](/node/apache/#apache-authentication-authorization-and-access-control
-"internal reference"),
-[Nginx Authentication](/node/nginx "internal reference").
-See also [Security](/node/security "internal reference"),
-[Passwords Managers
-](/node/passwords_managers "internal reference"),
-[Network Security](/node/Network Security "internal reference")
+{{< iref "apache" "Apache Page" >}},
+{{< iref "nginx" "Nginx Authentication" >}}.
+See also {{< iref "security" "Security" >}},
+{{< iref "passwords_managers" "Passwords Managers" >}},
+{{< iref "Network" "Network Security" >}}
 
 # Authentication references
 -   Wikipedia:
@@ -60,7 +51,7 @@ See also [Security](/node/security "internal reference"),
     as part of the authentication of SMTP, POP and IMAP, as well as in
     LDAP, XMPP, BEEP, and other protocols.
     It is of the authentication methods supported by
-    [w:Simple Authentication and Security Layer] (SASL)
+    {{< wp "Simple Authentication and Security Layer" >}} (SASL)
 -   [SANS](http://www.sans.org/) is an institute for information
     security training and security certification. It has a
     [collection of Authentication related papers
@@ -82,15 +73,15 @@ password, PIN, TAN, etc.
     speed, pattern in key press intervals, etc
 
 -   Wikipedia:
-    [w:Authentication#Types_of_Authentication|Types of Authentication],
-    [w:Multi-factor authentication],
-    [w:Strong Authentication],
-    [w:Comparison of authentication solutions],
-    [w:One-time password],
-    [w:S/KEY],
-    [w:Security token],
-    [w:Smart Card],
-    [w:Google Authenticator]
+    {{< wp "Authentication#Types_of_Authentication"  "Types of Authentication" >}},
+    {{< wp "Multi-factor authentication" >}},
+    {{< wp "Strong Authentication" >}},
+    {{< wp "Comparison of authentication solutions" >}},
+    {{< wp "One-time password" >}},
+    {{< wp "S/KEY" >}},
+    {{< wp "Security token" >}},
+    {{< wp "Smart Card" >}},
+    {{< wp "Google Authenticator" >}}
 
 ## One Time Password - OTP
 A one-time password (OTP) is a password that is valid for only one
@@ -98,7 +89,7 @@ login session or transaction.
 So OTP is not vulnerable to replay attacks.
 
 The OTP may be calculated on a time basis (TOTP) or derived by a
-mathematical algorithm or [w:Hash chain] among wich  HOTP.
+mathematical algorithm or {{< wp "Hash chain" >}} among wich  HOTP.
 
 The OTP may be delivered by SMS, mobile phose, prprietary tokens,
 web-based methods, or hardcopy on paper or plastic card.
@@ -117,10 +108,10 @@ intervals, so passwords generated close together in time from the same
 secret key will be equal.
 
 
--   [w:One-time password],
-    [w:Time-based One-time Password Algorithm],
-    [w:HMAC-based One-time Password Algorithm],
-    [w:S/KEY],[w:OTPW],
+-   {{< wp "One-time password" >}},
+    {{< wp "Time-based One-time Password Algorithm" >}},
+    {{< wp "HMAC-based One-time Password Algorithm" >}},
+    {{< wp "S/KEY" >}},{{< wp "OTPW" >}},
 
 
 -   [One Time PassWord - ArchWiki
@@ -136,14 +127,14 @@ secret key will be equal.
     [android-ppp](http://code.google.com/p/android-ppp/) _updated 2013_.
 
 ### Google Authenticator
-[w:Google Authenticator] (proprietary)
+{{< wp "Google Authenticator" >}} (proprietary)
 is a client for Android, iOS, and BlackBerry, and also PAM module
 for the server side, that uses TOTP and HOTP. Authenticator
 provides a six- to eight-digit one-time password which in addition
 to the username and password allow log in to Google services or
 third-party applications, such as password managers or file
 hosting services. It has
-[w:Google_Authenticator#Implementations|numerous implementations].
+{{< wp "Google_Authenticator#Implementations"  "numerous implementations" >}}.
 
 -   [Archwiki: Google Authenticator
     ](https://wiki.archlinux.org/index.php/Google_Authenticator)
@@ -156,8 +147,8 @@ hosting services. It has
 
 ## Security Token
 
--   Wikipedia: [w:Security Token]
--   [w:YubiKey] implement HOTP and TOTP
+-   Wikipedia: {{< wp "Security Token" >}}
+-   {{< wp "YubiKey" >}} implement HOTP and TOTP
 -   [U2F — FIDO Universal 2nd Factor
     ](https://www.yubico.com/about/background/fido/)
     is supported by Github, Dropbox, Gitlab, Bitbucket, it can be used
@@ -199,13 +190,13 @@ hosting services. It has
     (PDF french) by Sebastien Varrette.
 
 # Password Strength
--   Wikipedia: [w:Password strength],
+-   Wikipedia: {{< wp "Password strength" >}},
     [Key Size](http://en.wikipedia.org/wiki/Key_size),
     [Key strengthening](http://en.wikipedia.org/wiki/Key_strengthening),
     [Password](http://en.wikipedia.org/wiki/Password),
     [Password cracking](http://en.wikipedia.org/wiki/Password_cracking),
-    [w:cryptographic hash functions],
-    [w:comparison of cryptographic hash functions].
+    {{< wp "cryptographic hash functions" >}},
+    {{< wp "comparison of cryptographic hash functions" >}}.
 -   [OWASP](https://www.owasp.org/):
     [Authentication Cheat Sheet
     ](https://www.owasp.org/index.php/Authentication_Cheat_Sheet)
@@ -278,11 +269,11 @@ hosting services. It has
         ](https://www.cygnius.net/snippets/passtest.html)
 
 ## Hash cracking {#hash_cracking}
-See also [Brute forcers](/node/network-security#brute_forcers "local reference")
-in the [network security section](/node/network-security "local reference").
+See also {{< iref "network" "Brute forcers" >}}
+in the {{< iref "network" "network security section" >}}.
 
-[w:Password Cracking] is now mainly done by [w:Rainbow tables] and
-[w:Brute-force attack] There are many programs to apply these methods.
+{{< wp "Password Cracking" >}} is now mainly done by {{< wp "Rainbow tables" >}} and
+{{< wp "Brute-force attack" >}} There are many programs to apply these methods.
 
 -   [RainbowCrack](http://project-rainbowcrack.com/) (private licence)
     is a rainbow table hash craker, binary are  available for linux and window.
@@ -466,7 +457,7 @@ Myc onfig is in `/etc/pam.d/system-auth`
 and `/etc/nsswitch.conf`
 
 # Polkit
-[w:Polkit], previously known as Policy Kit is an application-level toolkit
+{{< wp "Polkit" >}}, previously known as Policy Kit is an application-level toolkit
 for defining and handling the policy that allows unprivileged
 processes to speak to privileged processes.
 
@@ -504,8 +495,8 @@ removable storage, etc.
     ](http://www.tldp.org/HOWTO/8021X-HOWTO/index.html) _2004_.
 
 # Httpd authentication
--   Wikipedia: [w:Digest access authentication], [w:HTTP cookie],
-    [w:HTTP+HTML form-based authentication],
+-   Wikipedia: {{< wp "Digest access authentication" >}}, {{< wp "HTTP cookie" >}},
+    {{< wp "HTTP+HTML form-based authentication" >}},
 -   [rfc2617](http://www.faqs.org/rfcs/rfc2617.html) basic and digest
     authentication
 -   [The definitive guide to forms based website authentication
@@ -517,13 +508,13 @@ removable storage, etc.
     (french translation:
     [Authentification basique
     ](http://www.voidspace.org.uk/python/articles/authentication_francais.shtml))
--   [w:OAuth] provides a method for clients to access server resources on behalf
+-   {{< wp "OAuth" >}} provides a method for clients to access server resources on behalf
     of a resource  owner (such as a different client or an end-user).
     It also provides a process for end-users to authorize third-party access to their server
     resources without sharing their credentials, using user-agent redirections.
 
 ## OpenId
--   [w:OpenId]   is a URL based distributed identity system, see also
+-   {{< wp "OpenId" >}}   is a URL based distributed identity system, see also
     [OpenId Home](http://openid.net/).
 -   __MyOpenId__  provider have shut down their service in  February
     2014.
@@ -537,7 +528,7 @@ removable storage, etc.
     [openidenabled Home Page](http://www.openidenabled.com/)
 
 ## SSO
--   [w:Single sign-on] allows users to log in once and gain
+-   {{< wp "Single sign-on" >}} allows users to log in once and gain
     access to all systems without being prompted to log in again.
     This is typically accomplished using LDAP, when the sites are on
     the same domain it can also be achieved using cookies.

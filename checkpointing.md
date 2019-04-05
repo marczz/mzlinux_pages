@@ -1,29 +1,23 @@
-<!--
-.. description:
-.. date: 2016-01-01
-.. slug: checkpointing
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Checkpointing
--->
+---
+title: Checkpointing
+---
 
-[TOC]
+{{% toc /%}}
 
-See also [Xpra](/node/xorg#xpra "internal reference"),
-[Winswitch](/node/xorg#winswitch "internal reference"),
-[Terminal emulators](/node/xterminals "local reference"), .
+See also {{< iref "xorg#xpra" "Xpra" >}},
+{{< iref "xorg#winswitch" "Winswitch" >}},
+{{< iref "xterminals" "Terminal emulators" >}}, .
 
-[w:Application_checkpointing|Checkpointing]
+{{< wp "Application_checkpointing"  "Checkpointing" >}}
 consists of storing a snapshot of the current application state,
 and later on, uses it for restarting the execution in case of failure.
 
 We also put under this header application to detach and reattach processes
 
-[Xpra](/node/xorg#xpra "internal reference") and
-[Winswitch](/node/xorg#winswitch "internal reference") also detach and reattach a
+{{< iref "xorg#xpra" "Xpra" >}} and
+{{< iref "xorg#winswitch" "Winswitch" >}} also detach and reattach a
 process, but from an Xorg session to another, they are put in the
-[Xorg section](/node/xorg#winswitch "internal reference").
+{{< iref "xorg#winswitch" "Xorg section" >}}.
 
 -   [Berkeley Lab Checkpoint/Restart (BLCR)
     ](http://crd.lbl.gov/departments/computer-science/CLaSS/research/BLCR/)
@@ -34,7 +28,7 @@ process, but from an Xorg session to another, they are put in the
     and packaged in debian.
 -   [CRIU](http://criu.org/) (GPL)
     is an userspace applications  to freeze a running application (or part of it)
-    and checkpoint it to persistent storage. [w:CRIU|Wikipedia: CRIU] is in Debian
+    and checkpoint it to persistent storage. {{< wp "CRIU"  "Wikipedia: CRIU" >}} is in Debian
     and in active development in 2019. There are many HOW-TOs and uses cases rreferences
     in the [CRIU Home Page](http://criu.org/). It is in Debian.
 -   [cryopid](http://sourceforge.net/projects/cryopid2/) (BSD license)
@@ -48,7 +42,7 @@ process, but from an Xorg session to another, they are put in the
     provides examples of use.
     -   [ArchWiki: Dtach](https://wiki.archlinux.org/index.php/Dtach)
 -   <a name="abduco"></a>[abduco](http://www.brain-dump.org/projects/abduco/) (ISC Licence)
-    is a fork of [dtach](#dtach "internal reference") with some
+    is a fork of {{< iref "#dtach" "dtach" >}} with some
     [improvements](http://www.brain-dump.org/projects/abduco/#dtach)
     [Git Repository](https://github.com/martanne/abduco)
 -   [DMTCP: Distributed MultiThreaded CheckPointing
@@ -69,10 +63,10 @@ process, but from an Xorg session to another, they are put in the
 # Terminal multiplexors {#terminal_multiplexors}
 
 -   [Gnu Screen documentation](http://aperiodic.net/screen/)
--   [dvtm](/node/console#dvtm "internal reference") by itself does only console
+-   {{< iref "console#dvtm" "dvtm" >}} by itself does only console
     virtual terminal management, but it can be launched with
-    [abucco](#abucco  "internal reference") or
-    [dtach](#dtach  "internal reference") to provide session management.
+    {{< iref "#abucco" "abucco" >}} or
+    {{< iref "#dtach" "dtach" >}} to provide session management.
 
 ## Tmux {#tmux}
 [tmux](http://tmux.sourceforge.net/) (BSD License)
@@ -117,7 +111,7 @@ may be switched between sessions.
     in his
     [byobu blogs](http://blog.dustinkirkland.com/search/label/Byobu).
     <br/> Wikipedia:
-    [w:Byobu_(software)|Byobu],
+    {{< wp "Byobu_(software)"  "Byobu" >}},
     [byobu(1)
     ](http://manpages.debian.org/cgi-bin/man.cgi?query=byobu&format=html&locale=en).
 

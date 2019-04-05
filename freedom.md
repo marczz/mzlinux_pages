@@ -1,14 +1,8 @@
-<!--
-.. description:
-.. date: 2016-05-03
-.. slug: freedom
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Freedom of information
--->
+---
+title: Freedom of information
+---
 
-[TOC]
+{{% toc /%}}
 
 -----------------
 
@@ -17,20 +11,20 @@
 
 # Freedom of Software
 
--   Wikipedia: [w:Internet privacy], [w:Freedom of information],
-    [w:Anonymity] _and subpages_, [w:Internet censorship], [w:I2P],
-    [w:Anonymous P2P], [w:Tor_(anonymity_network)|Tor]
+-   Wikipedia: {{< wp "Internet privacy" >}}, {{< wp "Freedom of information" >}},
+    {{< wp "Anonymity" >}} _and subpages_, {{< wp "Internet censorship" >}}, {{< wp "I2P" >}},
+    {{< wp "Anonymous P2P" >}}, {{< wp "Tor_(anonymity_network)"  "Tor" >}}
 -   The [gnu.org](http://www.gnu.org/) site and the
     [Philosophy of the GNU Project](http://www.gnu.org/philosophy/philosophy.html)
     page is a good start point, to help us to choose between
     [freedom or power](http://www.gnu.org/philosophy/freedom-or-power.html)
 -   You can also find some links in my french page
-    [Liberté, égalité, fraternité: Le logiciel](/node/225)
+    {{< iref "225" "Liberté, égalité, fraternité: Le logiciel" >}}
 -   A recent essay on this question is
     [Toward a new self-definition for open source
     ](http://blog.ianbicking.org/2009/09/10/a-new-self-definition-for-foss/)
     by Ian Bicking.
--   [w:The Guardian Project (software)|The Guardian Project] is a
+-   {{< wp "The Guardian Project (software)"  "The Guardian Project" >}} is a
     global collective of people that develop open source mobile
     security software and operating system enhancements.
     -   [The Guardian Project Home](https://guardianproject.info/)

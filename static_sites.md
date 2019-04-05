@@ -1,14 +1,8 @@
-<!--
-.. description:
-.. date: 2016-01-26
-.. slug: static_sites
-.. tags:
-.. link:
-.. book:mzlinux
-.. title: Static Sites Generators
--->
+---
+title: Static Sites Generators
+---
 
-[TOC]
+{{% toc /%}}
 
 # References
 
@@ -59,124 +53,124 @@ You can find also some more complete and up to date lists:
 The site generators are written in various languages:
 
 -   _python_: <a name="python_static_sites_list"></a>
-    [Acrylamid](#acrylamid "internal reference"),
-    [Chisel](#chisel "internal reference"),
-    [Cyrax](#cyrax "internal reference"),
-    [Elyse](#elyse "internal reference"),
-    [Growl](#growl "internal reference"),
-    [Hyde](#hyde "internal reference"),
-    [liquidluck](#liquidluck "internal reference"),
-    [MarkDoc](#markdoc "internal reference"),
-    [MarkWiki](#markwiki "internal reference"),
-    [Mkdocs](#mkdocs "internal reference"),
-    [Nib](#nib  "internal reference"),
-    [Nikola](#nikola  "internal reference"),
-    [Pelican](#pelican "internal reference"),
-    [Mynt](#mynt "internal reference"),
-    [Poole](#poole "internal reference"),
-    [simple-docs](#simple-docs  "internal reference"),
-    [StrangeCase](#stangecase "internal reference"),
-    [Soho](#soho "internal reference"),
-    [Webber](#webber "internal reference"),
-    [Wok](#wok "internal reference").
+    {{< iref "#acrylamid" "Acrylamid" >}},
+    {{< iref "#chisel" "Chisel" >}},
+    {{< iref "#cyrax" "Cyrax" >}},
+    {{< iref "#elyse" "Elyse" >}},
+    {{< iref "#growl" "Growl" >}},
+    {{< iref "#hyde" "Hyde" >}},
+    {{< iref "#liquidluck" "liquidluck" >}},
+    {{< iref "#markdoc" "MarkDoc" >}},
+    {{< iref "#markwiki" "MarkWiki" >}},
+    {{< iref "#mkdocs" "Mkdocs" >}},
+    {{< iref "#nib" "Nib" >}},
+    {{< iref "#nikola" "Nikola" >}},
+    {{< iref "#pelican" "Pelican" >}},
+    {{< iref "#mynt" "Mynt" >}},
+    {{< iref "#poole" "Poole" >}},
+    {{< iref "#simple" "simple-docs" >}},
+    {{< iref "#stangecase" "StrangeCase" >}},
+    {{< iref "#soho" "Soho" >}},
+    {{< iref "#webber" "Webber" >}},
+    {{< iref "#wok" "Wok" >}}.
 -   _Ruby_:
-    [Awestruct](#awestruct "internal reference"),
-    [Bonsai](#bonsai "internal reference"),
-    [Jekyll](#jekyll "internal reference"),
-    [Gollum-site](#gollumsite "internal reference"),
-    [Middleman](#middleman "internal reference"),
-    [Nanoc](#nanoc "internal reference"),
-    [Ruho](#ruhoh "internal reference"),
-    [shelob](#shelob "internal reference"),
+    {{< iref "#awestruct" "Awestruct" >}},
+    {{< iref "#bonsai" "Bonsai" >}},
+    {{< iref "#jekyll" "Jekyll" >}},
+    {{< iref "#gollumsite" "Gollum-site" >}},
+    {{< iref "#middleman" "Middleman" >}},
+    {{< iref "#nanoc" "Nanoc" >}},
+    {{< iref "#ruhoh" "Ruho" >}},
+    {{< iref "#shelob" "shelob" >}},
     [many more referenced in the ruby toolbox
     ](https://www.ruby-toolbox.com/categories/static_website_generation).
--   _Haskell_: [Hakyll](#hakyll "internal reference")
+-   _Haskell_: {{< iref "#hakyll" "Hakyll" >}}
 -   in _Php_:
-    [Couscous](#couscous "internal reference"),
-    [Daux.io](#dauxio "internal reference"),
-    [Ewiki](#ewiki "internal reference"),
--   _node.js_: [docpad](#docpad "internal reference"),
-    [BlackSmith](#blacksmith "internal reference"),
-    [Codex](#codex "internal reference"),
-    [Docsify](#docsify "internal reference"),
-    [Hexo](#hexo "internal reference"),
-    [GitBook](#gitbook  "internal reference"),
-    [Punch](#punch "internal reference"),
-    [Wintersmith](#wintersmith "internal reference"),
--   _shell_:  [simple-static](#simple_static "internal reference"),
-    [sw](#sw "internal reference"), [werc](#werc  "internal reference")
--   emacs-lisp [o-blog](#o_blog "internal reference"),
-    [org-page](#org-page "internal reference"),
-    [org-site](#org-site "internal reference")
+    {{< iref "#couscous" "Couscous" >}},
+    {{< iref "#dauxio" "Daux.io" >}},
+    {{< iref "#ewiki" "Ewiki" >}},
+-   _node.js_: {{< iref "#docpad" "docpad" >}},
+    {{< iref "#blacksmith" "BlackSmith" >}},
+    {{< iref "#codex" "Codex" >}},
+    {{< iref "#docsify" "Docsify" >}},
+    {{< iref "#hexo" "Hexo" >}},
+    {{< iref "#gitbook" "GitBook" >}},
+    {{< iref "#punch" "Punch" >}},
+    {{< iref "#wintersmith" "Wintersmith" >}},
+-   _shell_:  {{< iref "#simple_static" "simple-static" >}},
+    {{< iref "#sw" "sw" >}}, {{< iref "#werc" "werc" >}}
+-   emacs-lisp {{< iref "#o_blog" "o-blog" >}},
+    {{< iref "#org" "org-page" >}},
+    {{< iref "#org" "org-site" >}}
 -   _go_:
-    [Hugo](#hugo "internal reference"),
+    {{< iref "#hugo" "Hugo" >}},
 
 # List by page format
--   [Markdown](/node/markdown "internal reference"):
-    [Acrylamid](#acrylamid "internal reference"),
-    [Awestruct](#awestruct "internal reference"),
-    [BlackSmith](#blacksmith "internal reference"),
-    [Bonsai](#bonsai "internal reference"),
-    [Couscous](#couscous "internal reference"),
-    [Daux.io](#dauxio "internal reference"),
-    [Docpad](#docpad "internal reference")
-    [Chisel](#chisel "internal reference"),
-    [Codex](#codex "internal reference"),
-    [Elyse](#elyse "internal reference"),
-    [GitBook](#gitbook  "internal reference"),
-    [Gollum-Site](#gollum "internal reference"),
-    [Hakyll](#hakyll "internal reference"),
-    [Hexo](#hexo "internal reference"),
-    [Hugo](#hugo "internal reference"),
-    [Hyde](#hyde "internal reference"),
-    [Jekyll](#jekyll "internal reference"),
-    [liquidluck](#liquidluck "internal reference"),
-    [MarkDoc](#markdoc "internal reference"),
-    [MarkWiki](#markwiki "internal reference"),
-    [Middleman](#middleman "internal reference"),
-    [Mkdocs](#mkdocs "internal reference"),
-    [Mynt](#mynt "internal reference"),
-    [nanoc](#nanoc "internal reference"),
-    [Nib](#nib  "internal reference"),
-    [Nikola](#nikola  "internal reference"),
-    [Pelican](#pelican "internal reference"),
-    [Poole](#poole "internal reference"),
-    [Punch](#punch "internal reference"),
-    [Ruho](#ruhoh "internal reference"),
-    [simple-docs](#simple-docs  "internal reference"),
-    [simple-static](#simple_static "internal reference"),
-    [sw](#sw "internal reference"),
-    [werc](#werc  "internal reference")
-    [Wintersmith](#wintersmith "internal reference"),
-    [Wok](#wok "internal reference").
+-   {{< iref "markdown" "Markdown" >}}:
+    {{< iref "#acrylamid" "Acrylamid" >}},
+    {{< iref "#awestruct" "Awestruct" >}},
+    {{< iref "#blacksmith" "BlackSmith" >}},
+    {{< iref "#bonsai" "Bonsai" >}},
+    {{< iref "#couscous" "Couscous" >}},
+    {{< iref "#dauxio" "Daux.io" >}},
+    {{< iref "#docpad" "Docpad" >}}
+    {{< iref "#chisel" "Chisel" >}},
+    {{< iref "#codex" "Codex" >}},
+    {{< iref "#elyse" "Elyse" >}},
+    {{< iref "#gitbook" "GitBook" >}},
+    {{< iref "#gollum" "Gollum-Site" >}},
+    {{< iref "#hakyll" "Hakyll" >}},
+    {{< iref "#hexo" "Hexo" >}},
+    {{< iref "#hugo" "Hugo" >}},
+    {{< iref "#hyde" "Hyde" >}},
+    {{< iref "#jekyll" "Jekyll" >}},
+    {{< iref "#liquidluck" "liquidluck" >}},
+    {{< iref "#markdoc" "MarkDoc" >}},
+    {{< iref "#markwiki" "MarkWiki" >}},
+    {{< iref "#middleman" "Middleman" >}},
+    {{< iref "#mkdocs" "Mkdocs" >}},
+    {{< iref "#mynt" "Mynt" >}},
+    {{< iref "#nanoc" "nanoc" >}},
+    {{< iref "#nib" "Nib" >}},
+    {{< iref "#nikola" "Nikola" >}},
+    {{< iref "#pelican" "Pelican" >}},
+    {{< iref "#poole" "Poole" >}},
+    {{< iref "#punch" "Punch" >}},
+    {{< iref "#ruhoh" "Ruho" >}},
+    {{< iref "#simple" "simple-docs" >}},
+    {{< iref "#simple_static" "simple-static" >}},
+    {{< iref "#sw" "sw" >}},
+    {{< iref "#werc" "werc" >}}
+    {{< iref "#wintersmith" "Wintersmith" >}},
+    {{< iref "#wok" "Wok" >}}.
 -   _ReSTructured text_:
-    [Acrylamid](#acrylamid "internal reference"),
-    [Flask-rst](#flask-rst "internal reference"),
-    [Gollum-Site](#gollum "internal reference"),
-    [Hyde](#hyde "internal reference"),
-    [Jekyll](#jekyll "internal reference"),
-    [liquidluck](#liquidluck "internal reference"),
-    [Nikola](#nikola  "internal reference"),
-    [Pelican](#pelican "internal reference"),
-    [Soho](#soho "internal reference"),
-    [Wok](#wok "internal reference"),
+    {{< iref "#acrylamid" "Acrylamid" >}},
+    {{< iref "#flask" "Flask-rst" >}},
+    {{< iref "#gollum" "Gollum-Site" >}},
+    {{< iref "#hyde" "Hyde" >}},
+    {{< iref "#jekyll" "Jekyll" >}},
+    {{< iref "#liquidluck" "liquidluck" >}},
+    {{< iref "#nikola" "Nikola" >}},
+    {{< iref "#pelican" "Pelican" >}},
+    {{< iref "#soho" "Soho" >}},
+    {{< iref "#wok" "Wok" >}},
 -   _AsciiDoc_:
-    [Awestruct](#awestruct "internal reference"),
-    [GitBook](#gitbook  "internal reference"),
-    [Gollum-Site](#gollum "internal reference"),
-    [Hexo](#hexo "internal reference") through a plugin,
-    [Hugo](#hugo "internal reference") through a plugin,
-    [Hyde](#hyde "internal reference"),
-    [Pelican](#pelican "internal reference"),
+    {{< iref "#awestruct" "Awestruct" >}},
+    {{< iref "#gitbook" "GitBook" >}},
+    {{< iref "#gollum" "Gollum-Site" >}},
+    {{< iref "#hexo" "Hexo" >}} through a plugin,
+    {{< iref "#hugo" "Hugo" >}} through a plugin,
+    {{< iref "#hyde" "Hyde" >}},
+    {{< iref "#pelican" "Pelican" >}},
 -   _Org-mode_:
-    [Gollum-Site](#gollum "internal reference"),
-    [Hexo](#hexo "internal reference") through a plugin,
-    [Hugo](#hugo "internal reference") through a plugin,
-    [Hyde](#hyde "internal reference") through a plugin,
-    [Jekyll](#jekyll "internal reference") through a plugin,
-    [o-blog](#o_blog "internal reference"),
-    [org-page](#org-page "internal reference"),
-    [org-site](#org-site "internal reference")
+    {{< iref "#gollum" "Gollum-Site" >}},
+    {{< iref "#hexo" "Hexo" >}} through a plugin,
+    {{< iref "#hugo" "Hugo" >}} through a plugin,
+    {{< iref "#hyde" "Hyde" >}} through a plugin,
+    {{< iref "#jekyll" "Jekyll" >}} through a plugin,
+    {{< iref "#o_blog" "o-blog" >}},
+    {{< iref "#org" "org-page" >}},
+    {{< iref "#org" "org-site" >}}
 
 # Site generators list
 -   [Awestruct](http://awestruct.org/) (MIT License)
@@ -209,9 +203,9 @@ The site generators are written in various languages:
 -   [Ewiki](http://soultcer.net/wiki/Code/eWiki)<a name="ewiki"></a>
     is a small Wiki written in PHP. It uses Git as backend and a
     [custom markup.](http://github.com/soult/ewiki/blob/master/doc/markup.txt)
--   [Flask](/node/python_web#flask "internal reference")
+-   {{< iref "python_web#flask" "Flask" >}}
     You can transfom your
-    [Flask](/node/python_web#flask "internal reference")
+    {{< iref "python_web#flask" "Flask" >}}
     application to a static site with <a name="frozen-flask"></a>
     [Frozen-Flask](https://github.com/SimonSapin/Frozen-Flask)
     (BSD License) by Simon Sapin.
@@ -225,9 +219,9 @@ The site generators are written in various languages:
         is also available.
 -   [Flask-rst](https://github.com/jarus/flask-rst) <a name="flask-rst">
     is a python tool to create a website from a source of
-    reStructuredText that uses [Flask](/node/263#flask "internal reference").
+    reStructuredText that uses {{< iref "263#flask" "Flask" >}}.
 -   [Gollum-Site](https://github.com/dreverri/gollum-site)<a name="gollumsite">
-    is a static site generator for [Gollum](/node/116/#gollum "internal reference")
+    is a static site generator for {{< iref "116" "Gollum" >}}
     like _Gollum_ it is  written in Ruby with a git backend and accept pages written in
     _Asciidoc_, _Creole_, _Markdown_, _Org Mode_, _Pod_, _RDoc_,
     _ReStructuredText_, _Textile_, _MediaWiki_.
@@ -235,13 +229,13 @@ The site generators are written in various languages:
     -  [Riak](http://basho.com/) had previously its wiki written in Gollum and Gollum-site,
         you can still find the source of the
         [Riak-Wiki on GitHub](https://github.com/ghaskins/riak_wiki).
-        But now Riak switched to [middleman](#middleman "internal reference")
+        But now Riak switched to {{< iref "#middleman" "middleman" >}}
     -   _Gollum-Site_ has not followed the _Gollum_ new release and is still linked to _Gollum_ 1.4.
         and many sites either changed of static generator or upgraded to _Gollum_ 2, but dropped
         _Gollum-Site_
 -   <a name="growl"></a>[Growl](http://github.com/xfire/growl/tree) (GPL)
     an other  python static site generator inspired by
-    [Jekyll](#jekyll "internal reference").
+    {{< iref "#jekyll" "Jekyll" >}}.
     It uses _MarkDown_ as markup language, and  has
     [Minimal dependencies](http://github.com/xfire/growl/blob/master/README.markdown)
     python python-yaml and a templating engine like jinja2.
@@ -252,7 +246,7 @@ The site generators are written in various languages:
     _Markdown_ and TeX support.
 -   [Hugo](https://gohugo.io/) is a static site
     generator written in go. It is in Debian. More on
-    [Hugo section](#hugo "internal reference") below.
+    {{< iref "#hugo" "Hugo section" >}} below.
 -   <a name="hexo"></a> [Hexo](https://hexo.io)
     (MIT License) a blog framework, powered by Node.js.
     -   [GitHub - Hexo](https://github.com/hexojs/hexo)
@@ -309,11 +303,10 @@ The site generators are written in various languages:
     previously powered by Markdoc is now a blog using Nanodoc.
 -   <a name="markwiki"></a>[MarkWiki
     ](http://pythonhosted.org/MarkWiki/) (BSD License)
-    is a _Python_ + [Flask
-    ](/node/python_web#flask "internal reference") wiki _not static_
+    is a _Python_ + {{< iref "python_web#flask" "Flask" >}} wiki _not static_
     that uses Markdown to create pages.  Markwiki has an option to
     _freeze_ the wiki with
-    [Frozen-Flask](/node/python_web#frozen-flask "internal reference")
+    {{< iref "python_web#frozen" "Frozen-Flask" >}}
     and export it to a static site.
     -   [GitHub: MarkWiki](https://github.com/mblayman/markwiki)
 -   <a name="metalsmith"></a>[Metalsmith](http://www.metalsmith.io/)
@@ -366,7 +359,7 @@ The site generators are written in various languages:
 -   <a name="o-blog"></a>[o-blog](http://renard.github.io/o-blog)
     (Licence: [WTFPL](http://sam.zoy.org/wtfpl/)) by Sébastien Gross _renard_,
     is a static site generator managed from emacs. The pages are written in
-    [org-mode](/node/org-mode "internal reference"). It allows blogs and static pages.
+    {{< iref "org" "org-mode" >}}. It allows blogs and static pages.
     [GitHub: o-blog](https://github.com/renard/o-blog).
 -   <a name="org-page"></a>[org-page
     ](https://github.com/kelvinh/org-page) (GPL)
@@ -428,7 +421,7 @@ The site generators are written in various languages:
 -   <a name="punch"></a> [Punch
     ](http://laktek.github.io/punch/) (MIT License)
     is a node.js static site generator that uses
-    [Mustache](/node/python_web#mustache "internal reference") for
+    {{< iref "python_web#mustache" "Mustache" >}} for
     templating _and mustache itself use Json for the data_ and
     _Markdown_ to write pages.
     -   [Punch GitHub repository](https://github.com/laktek/punch)
@@ -445,7 +438,7 @@ The site generators are written in various languages:
     [Vee GitHub repository](https://github.com/estrabd/vee)
 -   [WinterSmith](https://github.com/jnordberg/wintersmith)
     is a _node.js cofeescript_ static site generator for _MarkDown_ pages
-    inspired by [BlackSmith](#blacksmith "internal reference").
+    inspired by {{< iref "#blacksmith" "BlackSmith" >}}.
     It uses [marked](https://github.com/chjj/marked) to parse
     markdown and the [jade](https://github.com/visionmedia/jade)
     _node.js_ templating engine.
@@ -455,7 +448,7 @@ The site generators are written in various languages:
 Many of the previous generators can be used for documentaion, even if
 most o them where primary aimed to blogging.
 ## All pupose generators used for documentation
--   [Hexo](#hexo "internal reference")
+-   {{< iref "#hexo" "Hexo" >}}
     -   [Project Documentation with Hexo Static Site Generator
         ](https://www.sitepoint.com/project-documentation-hexo/).
     -   The [exo site documentation](https://hexo.io/docs/)
@@ -468,10 +461,10 @@ most o them where primary aimed to blogging.
         and [Meteor Guide](https://guide.meteor.com/) -
         [GitHub](https://github.com/meteor/guide),
         are a fairly complete examples of documentaion.
--   [Jekyll](#jekyll "internal reference")
+-   {{< iref "#jekyll" "Jekyll" >}}
     -   [How GitHub uses GitHub to document GitHub · GitHub
         ](https://github.com/blog/1939-how-github-uses-github-to-document-github).
--   [MetalSmith](#metalsmith "internal reference")
+-   {{< iref "#metalsmith" "MetalSmith" >}}
     -   [Building a Static Documentation Site with Metalsmith
         ](https://gregleeds.com/building-a-static-documentation-site-with-metalsmith/).
     -   [Building Technical Documentation with Metalsmith
@@ -540,7 +533,7 @@ Building doc with Hugo:
     (MIT license) is a Python Flask website for
     viewing _Markdown_ documentation files online. It is not a static
     site generator, but can be used for this task with
-    [Frozen-Flask](#frozen-flask  "internal reference").
+    {{< iref "#frozen" "Frozen-Flask" >}}.
     -   [GitHub - simple-docs](https://github.com/chrislaskey/simple-docs)
 -   <a name="simple_static"></a>[simple-static
     ](https://github.com/wlangstroth/simple-static)
@@ -548,14 +541,14 @@ Building doc with Hugo:
     targeted to documentation.
     It is written in awk and shell using
     [md2html.awk](node/markdown/#md2html_awk "internal reference").
-    It is based on [sw](#sw "internal reference").
+    It is based on {{< iref "#sw" "sw" >}}.
 -   <a name="sw">[sw](https://github.com/jroimartin/sw)
     is a minimal static site generator for _Markdown_ pages using the
     shell and common utilities grep, sed, awk (with
-    [md2html.awk](/node/markdown/#md2html_awk "internal reference"))...
+    {{< iref "markdown" "md2html.awk" >}})...
     <br/>
-    _sw_ is inspired by [werc](#werc "internal reference"), and
-    [simple-static](#simple_static "internal reference") is a fork of
+    _sw_ is inspired by {{< iref "#werc" "werc" >}}, and
+    {{< iref "#simple_static" "simple-static" >}} is a fork of
     _sw_.
 -   <a name="werc"></a>[werc](http://werc.cat-v.org/)
     (Public domain or MIT license or ISC license)
@@ -573,7 +566,7 @@ Building doc with Hugo:
 -   <a name="blacksmith"></a>
     [BlackSmith](ttps://github.com/flatiron/blacksmith) (MIT License)
     is a node.js static site generator for markdown pages. It was
-    developed by [w:Nodejitsu] people and
+    developed by {{< wp "Nodejitsu" >}} people and
     the _Nodejitsu_ site was built with _BlackSmith_.
 
     But _Nodejitsu_ was acquired in 2015 and _Blacksmith_ non longer
@@ -584,7 +577,7 @@ Building doc with Hugo:
         is [available in GitHub](https://github.com/nodejitsu/handbook).
     -   [blacksmith-sites](https://github.com/flatiron/blacksmith-sites)
         is a collection of templates for  _BlackSmith_.
-    -   [winterSmith](#wintersmith "internal reference") is derived from _BlackSmith_.
+    -   {{< iref "#wintersmith" "winterSmith" >}} is derived from _BlackSmith_.
 
 -   <a name="bonsai"></a>[Bonsai (GitHub)
     ](https://github.com/benschwarz/bonsai)
@@ -614,7 +607,7 @@ Building doc with Hugo:
 
     We can use blocks of text formatted in _Markdown_,
     _Textile_, _reStructuredText_, _AsciiDoc_ and use
-    [Pygments](/node/311#pygments "Internal reference") for source
+    {{< iref "311#pygments" "Pygments" >}} for source
     code.
 
     _Hyde has a very slow activity and no commit since beginning 2016._
@@ -658,7 +651,7 @@ Building doc with Hugo:
     is a static site generator, written in Python, geared toward
     creating a simple site or blog. It uses inja2 and _Markdown_ is
     inspired by
-    [Poole](#poole "internal reference").
+    {{< iref "#poole" "Poole" >}}.
     _slow activity 21 commits between 2014 an 2018_.
     -   An example is
         [John Reese (author of Nib) noswap site](http://noswap.com/)
@@ -683,7 +676,7 @@ Building doc with Hugo:
         <br/>
         [Prof Gra site](http://profgra.org/lycee/index.html)
         is also still available.
-    -    See also the derived [Nib](#nib "internal reference").
+    -    See also the derived {{< iref "#nib" "Nib" >}}.
 -   <a name="ruhoh"></a>[Ruhoh](https://github.com/ruhoh/ruhoh.rb)
     (MIT License)
     is a static site generator in ruby, using _mustache_ for templates
@@ -703,7 +696,7 @@ Building doc with Hugo:
     _soho is obsolete, last release 2012_.
 -    <a name="strangecase"></a>[StrangeCase
     ](http://colinta.com/projects/StrangeCase.html) (BSD Like license)
-    is the equivalent of [Nanoc](#nanoc)
+    is the equivalent of {{< iref "#nanoc" "Nanoc" >}}
     but written in Python.
     _StrangeCase is not updated since beginning 2014._
     -   [GitHub - StrangeCase
@@ -794,7 +787,7 @@ Building doc with Hugo:
      Use Google appengine to index the rss feed, and a javascript frontend.
 -   [Gabe Weatherhead uses Sphider on his Pelican site](http://www.macdrifter.com/2012/08/self-hosted-search.html), its sphider search is running at
     [Nerd Query](http://nerdquery.com/).
-     _[Sphider reference](/node/111#sphider "local reference")_
+     _{{< iref "111#sphider" "Sphider reference" >}}_
 
 
 

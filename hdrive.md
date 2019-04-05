@@ -1,22 +1,16 @@
-<!--
-.. description:
-.. date: 2011-07-23
-.. slug: hdrive
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Hard Drive
--->
+---
+title: Hard Drive
+---
 
-[TOC]
+{{% toc /%}}
 
-See also [File Systems](/node/filesystems "internal reference").
+See also {{< iref "filesystems" "File Systems" >}}.
 
 
 # References
--   Wikipedia: [w:Hard_disk_drive], [w:Solid-state drive],
-    [w:Automatic acoustic management], [w:S.M.A.R.T.],
-    [w:GNOME Disks] _debian package: gnome-disk-utility_, [w:RAID]
+-   Wikipedia: {{< wp "Hard_disk_drive" >}}, {{< wp "Solid-state drive" >}},
+    {{< wp "Automatic acoustic management" >}}, {{< wp "S.M.A.R.T." >}},
+    {{< wp "GNOME Disks" >}} _debian package: gnome-disk-utility_, {{< wp "RAID" >}}
 -   [Red Hat Storage Administration Guide
     ](https://access.redhat.com/site/documentation/en-US/Red_Hat_Enterprise_Linux/7-Beta/html/Storage_Administration_Guide/index.html)
 -   [Red Hat LVM Administrator Guide
@@ -36,34 +30,34 @@ See also [File Systems](/node/filesystems "internal reference").
     ](https://wiki.archlinux.org/index.php/List_of_applications/Utilities#Disks)
 
 # Disk Interfaces
--   [w:USB#USB_2.0|USB 2.0] Max speed 280 Mbit/s (35 MB/s)
--   [w:USB 3.0]  5 Gbit/s (625 MB/s)
--   [w:USB_3.0#3.1|USB 3.1] Gen 1:  5 Gbit/s (625 MB/s);
+-   {{< wp "USB#USB_2.0"  "USB 2.0" >}} Max speed 280 Mbit/s (35 MB/s)
+-   {{< wp "USB 3.0" >}}  5 Gbit/s (625 MB/s)
+-   {{< wp "USB_3.0#3.1"  "USB 3.1" >}} Gen 1:  5 Gbit/s (625 MB/s);
     Gen 2: 10 Gbit/s (1250 MB/s)
--   [w:USB_3.0#3.2|USB 3.2] Gen 1x1:  5 Gbit/s (625 MB/s); Gen 1x2:
+-   {{< wp "USB_3.0#3.2"  "USB 3.2" >}} Gen 1x1:  5 Gbit/s (625 MB/s); Gen 1x2:
     10 Gbit/s (1250 MB/s) over 2 lanes; Gen 2x1: 10 Gbit/s (1250 MB/s);
     Gen 2x2: 20 Gbit/s (2500 MB/s) over 2 lanes;
--   [w:Serial_ATA#SATA_revision_1.0_(1.5_Gbit/s,_150_MB/s,_Serial_ATA-150)]
+-   {{< wp "Serial_ATA#SATA_revision_1.0_(1.5_Gbit/s,_150_MB/s,_Serial_ATA-150)" >}}
     1.5 Gbit/s, 150 MB/s
--   [w:Serial_ATA#SATA_revision_2.0_(3_Gbit/s,_300_MB/s,_Serial_ATA-300)]
+-   {{< wp "Serial_ATA#SATA_revision_2.0_(3_Gbit/s,_300_MB/s,_Serial_ATA-300)" >}}
     3 Gbits/s, 150MB/s.
--   [w:Serial_ATA#SATA_revision_3.0_(6_Gbit/s,_600_MB/s,_Serial_ATA-600)]
+-   {{< wp "Serial_ATA#SATA_revision_3.0_(6_Gbit/s,_600_MB/s,_Serial_ATA-600)" >}}
     6Gbits/s, 600MB/s
 -   SATA revision 3.2 and 3.3: 16 Gbit/s, 1969 MB/s.
 
 
 # GPT -  GUID Partition Table {#partition_table}
--   Wikipedia: [w:Master boot record], [w:GUID Partition Table] (GPT):
+-   Wikipedia: {{< wp "Master boot record" >}}, {{< wp "GUID Partition Table" >}} (GPT):
     a more modern partitioning scheme, replacing the purpose of the MBR,
-    [w:Globally unique identifier] (GID),
-    [w:Universally unique identifier] (UUID),
-    [w:Unified Extensible Firmware Interface] (UEFI)
+    {{< wp "Globally unique identifier" >}} (GID),
+    {{< wp "Universally unique identifier" >}} (UUID),
+    {{< wp "Unified Extensible Firmware Interface" >}} (UEFI)
     is meant as a replacement for the BIOS firmware interface,
--   The [w:GUID Partition Table] (GPT) is part of
-    [w:Unified Extensible Firmware Interface] (UEFI).
-    It has numerous advantages over [w:Master boot record|MBR] it uses
-    [w:Universally unique identifier|Universally unique identifier (UUID)]
-    also named [w:Globally_Unique_Identifier|GUID] for
+-   The {{< wp "GUID Partition Table" >}} (GPT) is part of
+    {{< wp "Unified Extensible Firmware Interface" >}} (UEFI).
+    It has numerous advantages over {{< wp "Master boot record"  "MBR" >}} it uses
+    {{< wp "Universally unique identifier"  "Universally unique identifier (UUID)" >}}
+    also named {{< wp "Globally_Unique_Identifier"  "GUID" >}} for
     partition types, disk, and partitions. It allows a minimum of 128 partition table entries
     so logical and extended partitions are no longer necessary.
     It uses 64-bit LBA for storing Sector numbers  allowing up to 2 ZiB disks,
@@ -77,8 +71,8 @@ See also [File Systems](/node/filesystems "internal reference").
     in the kernel to support GPT,
 
 # partitions managers. {#partionning}
-See also [File Systems](/node/filesystems "internal reference")
-where you find [LVM](/node/filesystems#lvm "internal reference").
+See also {{< iref "filesystems" "File Systems" >}}
+where you find {{< iref "filesystems#lvm" "LVM" >}}.
 
 -   [ArchWiki: partitionning
     ](https://wiki.archlinux.org/index.php/Partitioning)
@@ -98,7 +92,7 @@ where you find [LVM](/node/filesystems#lvm "internal reference").
     -   [Parted Cheat-Sheet
         ](http://www.troubleshooters.com/linux/parted_cheat.htm)
         by Steve litt.
--   <a name="gparted"></a>[w:Gparted] is the gnome front end for libparted. It supports
+-   <a name="gparted"></a>{{< wp "Gparted" >}} is the gnome front end for libparted. It supports
     btrfs, ext2 / ext3 / ext4, fat16 / fat32,  hfs / hfs+,  linux-swap, lvm2 pv, nilfs2,
     ntfs, reiserfs / reiser4,  udf, ufs, xfs. The detailed suported operations for each
     file system is summarized in the [feature page](https://gparted.org/features.php).
@@ -106,7 +100,7 @@ where you find [LVM](/node/filesystems#lvm "internal reference").
     -   [gparted manual](https://gparted.org/display-doc.php?name=help-manual)
     -   [ArchWiki: GParted
         ](https://wiki.archlinux.org/index.php/GParted)
-    -   [GParted Live](#gparted_live "internal reference")
+    -   {{< iref "#gparted_live" "GParted Live" >}}
         is a small bootable GNU/Linux distribution for x86 based computers.
 
 -   [ArchWiki: fdisk and gdisk
@@ -121,17 +115,10 @@ where you find [LVM](/node/filesystems#lvm "internal reference").
     partition drives,  resize partitions, mount and unmount partitions, query
     S.M.A.R.T. attributes. It uses _udisk2_.
     It has support for LUKS encryption.
-    -   [gnome-disk-utility git repository
-        )(https://git.gnome.org/browse/gnome-disk-utility/)
-
-# Disk Cloning
-There are many ways of cloning a disk. We can clone the disk sector by sector; by doing
-so the tool has no need to know about the underlying file system. It is nevertheless
-possible to skip empty blocks and compress an image. This is the way to clone with
-[dd](#dd "internalreference") and its variants, it can also be an alternative of some
+    -   {{< iref "#dd" "gnome-disk-utility git repository         )(https://git.gnome.org/browse/gnome-disk-utility/)  # Disk Cloning There are many ways of cloning a disk. We can clone the disk sector by sector; by doing so the tool has no need to know about the underlying file system. It is nevertheless possible to skip empty blocks and compress an image. This is the way to clone with [dd" >}} and its variants, it can also be an alternative of some
 utility when they don't know the file system.
 
--   Wikipedia: [w:Disk cloning], [w:List of disk cloning software]
+-   Wikipedia: {{< wp "Disk cloning" >}}, {{< wp "List of disk cloning software" >}}
 -   [ArchWiki: Disk cloning
     ](https://wiki.archlinux.org/index.php/Disk_cloning)
 -   [Clone HOWTO](http://www.tldp.org/HOWTO/Clone-HOWTO/index.html)
@@ -140,8 +127,8 @@ utility when they don't know the file system.
     and partition images to and from a TFTP server. _2002_.
 -   <a name="clonezilla">[Clonezilla](http://sourceforge.net/projects/clonezilla/) (GPL)
     is a partition or disk clone tool with text interface, it is frontend to
-    [Partclone](#partclone "internal reference") but can use also
-    [dd](#dd "internal reference"), [partimage](#partimage "internal reference")
+    {{< iref "#partclone" "Partclone" >}} but can use also
+    {{< iref "#dd" "dd" >}}, {{< iref "#partimage" "partimage" >}}
     and _ntfsclone_.
     Filesystem supported: ext2, ext3, ext4, reiserfs, xfs, jfs of
     GNU/Linux, FAT, NTFS of MS Windows, HFS+ of Mac OS, UFS of BSD,
@@ -153,9 +140,9 @@ utility when they don't know the file system.
         vian NFS, Samba or on an SSH server.
     -   [clonezilla Live documantation
        ](https://clonezilla.org/clonezilla-usage/general-live-use.php).
--   <a name="dd"></a>[w:Dd_(Unix)|dd] (GPL)
+-   <a name="dd"></a>{{< wp "Dd_(Unix)"  "dd" >}} (GPL)
     is a unix command part of _coreutils_ used to copy partitions. the
-    [w:Dd_(Unix)|Wikipedia dd Page] and man page have many examples of use.
+    {{< wp "Dd_(Unix)"  "Wikipedia dd Page" >}} and man page have many examples of use.
     -   [coreutils manual: dd page
         ](http://www.gnu.org/software/coreutils/manual/html_node/dd-invocation.html)
     -   [ArchWiki: Cloning - using dd
@@ -176,7 +163,7 @@ utility when they don't know the file system.
     -   [dcfldd(1)](https://manpages.debian.org/testing/dcfldd/dcfldd.1.en.html)
 -   <a name="dc3dd"></a>[dc3dd](https://sourceforge.net/projects/dc3dd/)
     is a patched version of Coreutil dd, with added features similar to
-    [dcfldd](#dcfldd "internal reference") i.e on the fly hashing (md5, sha-1, sha-256,
+    {{< iref "#dcfldd" "dcfldd" >}} i.e on the fly hashing (md5, sha-1, sha-256,
     and sha-512), progress report, pattern wiping, write errors to a file,  group
     errors in the error log, split output.
     -   [dc3dd(1)](https://manpages.debian.org/stretch/dc3dd/dc3dd.1.en.html)
@@ -209,7 +196,7 @@ utility when they don't know the file system.
     can be used to copy ext2, ext3, and ext4 partitions efficiently by only copying the
     used blocks. Make shure to use the `-a` flag to include all data, without it e2image
     only includes fs metadata.
-    [gparted](#gparted "internal reference") uses e2image to copy ext2/3/4 partitions.
+    {{< iref "#gparted" "gparted" >}} uses e2image to copy ext2/3/4 partitions.
 -   <a name="fsarchiver"></a>[FSArchiver](http://www.fsarchiver.org/)
     is a system tool that allows you to save the contents of a
     file-system to a compressed and optionally encrypted archive
@@ -218,29 +205,27 @@ utility when they don't know the file system.
     file attributes (permissions, timestamps, symbolic-links,
     hard-links, extended-attributes, …). It checksum everything and so
     you can restore the sane part of a corrupted archive.
-    _FSArchiver_ is in Debian and included in [SystemRescueCd
-    ](#sysrescd "internal reference").
+    _FSArchiver_ is in Debian and included in {{< iref "#sysrescd" "SystemRescueCd" >}}.
 -   <a name="partclone">[Partclone](https://partclone.org/) (GPL)
     provides utilities to save and restore used blocks on a partition. It is similar to
-    [PartImage](#partimage  "internal reference") but has a wider file system support
+    {{< iref "#partimage" "PartImage" >}} but has a wider file system support
     ext2, ext3, ext4, hfs+, reiserfs, reiser4, btrfs, vmfs3, vmfs5, xfs, jfs, ufs, ntfs,
     fat(12/16/32), exfat, f2fs, nilfs.
     -   [partclone utilities man pages](https://partclone.org/usage/).
     -   [partclone GitHub repository](https://github.com/Thomas-Tsai/partclone).
     -   [partclone wiki](https://github.com/Thomas-Tsai/partclone/wiki)
--   <a name="partimage"></a>[w:Partimage]
+-   <a name="partimage"></a>{{< wp "Partimage" >}}
     is an ncurses disk cloning utility. It does not support ext4 or btrfs
     filesystems. and is now replaced by
-    [FSArchiver](#fsarchiver "internal reference"). You can also consider
-    [Partclone](#partclone  "internal reference").
+    {{< iref "#fsarchiver" "FSArchiver" >}}. You can also consider
+    {{< iref "#partclone" "Partclone" >}}.
     -   [partimage Home](http://www.partimage.org/)
 -   <a name=testdisk"></a>[TestDisk](http://www.cgsecurity.org/wiki/TestDisk)
     TestDisk can find lost partitions for many file systems including
     DOS/Windows FAT12, FAT16, FAT32, exFat, NTFS; linux  ext2, ext3, ext4,
     btrfs, GFS2, GFS2, RAID 1/4/5/6, swap, lvm, lvm2; zfs, reiserfs
     ...
-    Testdisk is included in [System Rescue CD
-    ](#sysrescd "internal reference").
+    Testdisk is included in {{< iref "#sysrescd" "System Rescue CD" >}}.
     -   [TestDisk step by step
         ](http://www.cgsecurity.org/wiki/TestDisk_Step_By_Step)
 
@@ -255,13 +240,13 @@ utility when they don't know the file system.
     etc. There is x386, amd64, PPC, an ARM V7 version.
 -   <a name="gparted_live"></a>[GParted Live](https://gparted.org/livecd.php)
     is a small bootable GNU/Linux distribution for x86/amd64 based computers.
-    In addition to [GParted](#gparted  "internal reference") and
-    [Gnu Parted](#parted "internal reference") it contains
-    [Clonezilla](#clonezilla "internal reference"),   doClone,
-    [FSArchiver](#fsarchiver "internal reference"),   G4L,   g4u,
-    [PartImage](#partimage  "internal reference"),
-    [Partclone](#partclone  "internal reference"),
-    [TestDisk](#testdisk "internal reference").
+    In addition to {{< iref "#gparted" "GParted" >}} and
+    {{< iref "#parted" "Gnu Parted" >}} it contains
+    {{< iref "#clonezilla" "Clonezilla" >}},   doClone,
+    {{< iref "#fsarchiver" "FSArchiver" >}},   G4L,   g4u,
+    {{< iref "#partimage" "PartImage" >}},
+    {{< iref "#partclone" "Partclone" >}},
+    {{< iref "#testdisk" "TestDisk" >}}.
     -   [Gparted Live manual
         ](https://gparted.org/display-doc.php?name=gparted-live-manual)
 -   [Super Grub2 Disk](http://www.supergrubdisk.org/wiki/SuperGRUB2Disk)
@@ -272,12 +257,12 @@ utility when they don't know the file system.
     [SystemRescueCd](http://www.sysresccd.org/)
     is a rescue system for x86 and amd64 on CD or USB stick. It is based on Gentoo and
     provides many tools: fdisk, GRUB, Syslinux
-    [Gnu Parted](#parted "internal reference"),
-    [GParted](#gparted  "internal reference"),
-    [PartImage](#partimage  "internal reference"),
-    [FSArchiver](#fsarchiver "internal reference"),
-    [ddrescue](#ddrescue "internalreference"),
-    [TestDisk](#testdisk "internal reference"),
+    {{< iref "#parted" "Gnu Parted" >}},
+    {{< iref "#gparted" "GParted" >}},
+    {{< iref "#partimage" "PartImage" >}},
+    {{< iref "#fsarchiver" "FSArchiver" >}},
+    {{< iref "#ddrescue" "ddrescue" >}},
+    {{< iref "#testdisk" "TestDisk" >}},
     borgbackup, rsnapshot, iozone,
     lvm2, Ntfs3g, samba,
     fstools, grub2, lilo, rsync, rdiff-backup,  Xorg or
@@ -289,7 +274,7 @@ utility when they don't know the file system.
         ](http://www.sysresccd.org/Online-Manual-EN)
         the chapter on Grub, lvm, partitioning are easy tutorials on
         these subjects.
-    -   Wikipedia: [w:SystemRescueCD]
+    -   Wikipedia: {{< wp "SystemRescueCD" >}}
 
 # hdparm
 -   [ArchWiki: hdparm](https://wiki.archlinux.org/index.php/hdparm)
@@ -307,7 +292,7 @@ utility when they don't know the file system.
 # smartmontool
 
 [smartmontools](http://www.smartmontools.org/)(GPL)
-:   contains two programs to report [w:S.M.A.R.T.] able hard drives
+:   contains two programs to report {{< wp "S.M.A.R.T." >}} able hard drives
 
 -   [ArchWiki: S.M.A.R.T.](https://wiki.archlinux.org/index.php/S.M.A.R.T.)
 -   [Ubuntu Help: smartmontools
@@ -503,7 +488,7 @@ is used to tune the operation of the virtual memory (VM) subsystem
 of the Linux kernel and the writeout of dirty data to disk.
 
 # RAID
--   [w:RAID|Wikipedia: RAID]
+-   {{< wp "RAID"  "Wikipedia: RAID" >}}
 -   [Linux Raid kernel Wiki
     ](https://raid.wiki.kernel.org/index.php/Linux_Raid).
     [Linux SATA RAID FAQ](http://linux-ata.org/faq-sata-raid.html)

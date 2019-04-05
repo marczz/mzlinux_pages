@@ -1,22 +1,16 @@
-<!--
-.. description:
-.. date: 2014-01-16
-.. slug: password-managers
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Password Managers
--->
+---
+title: Password Managers
+---
 
-[TOC]
+{{% toc /%}}
 
 ---
 
-_See also  [Authentication](/node/authentication "internal reference"),
-[Security](/node/security "internal reference"),
-[Network Security](/node/Network Security "internal reference")._
+_See also  {{< iref "authentication" "Authentication" >}},
+{{< iref "security" "Security" >}},
+{{< iref "Network" "Network Security" >}}._
 
-A [w:Password_manager|Password Manager] holds your passwords in an
+A {{< wp "Password_manager"  "Password Manager" >}} holds your passwords in an
 encrypted local database. Some password managers comes under the form
 of a desktop application, others are web based, last some mobile
 device application are also available.
@@ -115,7 +109,7 @@ session the memory and swap protection is a primary concern.
 -   [Ked Password Manager](http://kedpm.sourceforge.net/)
     (GPL) is a python password manager, it is a replacement for
     [Figaro password manager](http://fpm.sourceforge.net/)
-    or [Fpm2](#fpm2 "internal reference").
+    or {{< iref "#fpm2" "Fpm2" >}}.
     Ked has both a  CLI and GTK2 based GUI front-ends.
 -   [revelation](http://oss.codepoet.no/revelation/) (GPL)
     is a password manager for the GNOME 2 desktop. It organizes
@@ -138,13 +132,13 @@ session the memory and swap protection is a primary concern.
 
 is a password manager for Windows written in C++ (v1) or C#.  It is
 also available for ios, android and linux.  Keepass stores many
-different information in a database encrypted [w:AES] for database v3
-i.e. keepass 1.x and v4 i.e. keepass 2.x or [w:Twofish] only for v3.
+different information in a database encrypted {{< wp "AES" >}} for database v3
+i.e. keepass 1.x and v4 i.e. keepass 2.x or {{< wp "Twofish" >}} only for v3.
 
 -   [Awesome Keepass](https://github.com/lgg/awesome-keepass)
     is a list of Keepass resources [this Tiki page
     ](https://suite.tiki.org/KeePass) also explore Keepass resources.
--   Wikipedia: [w:KeePass]
+-   Wikipedia: {{< wp "KeePass" >}}
 -   Two versions of Keepass are availables 1.x and 2.x, they use a
     different database format.
 -   Keepass 2.x is a portable application written in mono that run
@@ -165,7 +159,7 @@ i.e. keepass 1.x and v4 i.e. keepass 2.x or [w:Twofish] only for v3.
         screens of web sites. You can export your entries in CSV
         clear text or own xml format and import it from KeePassX xml,
         Kwallet xml, PwManager or from
-        [password gorilla](#password_gorilla) CSV.
+        {{< iref "#password_gorilla" "password gorilla" >}} CSV.
 -   <a name="keepassxc>[KeepassXC](https://keepassxc.org/)
     is a fork or KeepassX with many additional features,
     including two factor authentication with Yubikey or OTP.
@@ -205,7 +199,7 @@ i.e. keepass 1.x and v4 i.e. keepass 2.x or [w:Twofish] only for v3.
     is a Python 3 curses-based password manager compatible to KeePass v.1.x and
     KeePassX. In 2018 it is still maintained even if the author, Karsten-Kai König
     _raymontag_, reimplement it in Rust. It is also the author of
-    [Kppy](#kppy "internal reference").
+    {{< iref "#kppy" "Kppy" >}}.
 -   [kpcli](http://kpcli.sourceforge.net/) (Perl artistic Licence)
     is a command line perl interface to KeePass 1.x or 2.x database files
 -   [passhole](https://github.com/purdueLUG/passhole) (GPL)
@@ -285,7 +279,7 @@ i.e. keepass 1.x and v4 i.e. keepass 2.x or [w:Twofish] only for v3.
 -   <a name="kppy">[kppy](https://github.com/raymontag/kppy)
     a python 3 module to read/write Keepass1.x database, maintained in 2018,
     but the author, Karsten-Kai König _raymontag_, who authored also
-    [keepass](#keepassc "internal reference") now focus on keepass access from rust.
+    {{< iref "#keepassc" "keepass" >}} now focus on keepass access from rust.
 
 ## Keepass database conversion
 
@@ -304,7 +298,7 @@ i.e. keepass 1.x and v4 i.e. keepass 2.x or [w:Twofish] only for v3.
    ](https://www.harmj0y.net/blog/redteaming/a-case-study-in-attacking-keepass/)
    This study suppose an attacker having administrative rights on the user deskstop; so
    able to either start a keylogger, or slurp the keepass database. It uses
-   [hashcat](/node/authentication#hashcat "internal reference") or a custom python
+   {{< iref "authentication#hashcat" "hashcat" >}} or a custom python
    script to attack the database, some other methods (DAPI) are specific to windows.
 -  [KeeThief – A Case Study in Attacking KeePass Part 2
    ](http://www.harmj0y.net/blog/redteaming/keethief-a-case-study-in-attacking-keepass-part-2/)
@@ -312,7 +306,7 @@ i.e. keepass 1.x and v4 i.e. keepass 2.x or [w:Twofish] only for v3.
    _KeeThief_.
 -   [How to Hack KeePass Passwords using Hashcat
     ](https://www.rubydevices.com.au/blog/how-to-hack-keepass) uses the popular hash
-    cracker [hashcat](/node/authentication#hashcat "internal reference").
+    cracker {{< iref "authentication#hashcat" "hashcat" >}}.
 
 # Password Safe family
 <a name="password_safe"></a>[w:Password Safe](Artistic License)
@@ -339,8 +333,7 @@ ancrypted with the Twofish algorithm.
     ](http://pwsafe.org/relatedprojects.shtml).
 -   <a name="loxodo"></a>[Loxodo
     ](http://www.christoph-sommer.de/loxodo/) (GPL)
-    is a Python application that uses [Password Safe
-    ](#password_safe "internal reference")
+    is a Python application that uses {{< iref "#password_safe" "Password Safe" >}}
     v3 database format. [Loxodo GitHub repository
     ](https://github.com/sommer/loxodo).
 -   [MyPasswordSafe](http://www.semanticgap.com/myps) (GPL)
@@ -367,8 +360,7 @@ ancrypted with the Twofish algorithm.
     authentication.  <br />
     The main documentation is the
     [Help File](http://www.fpx.de/fp/Software/Gorilla/help.html).
-    Password Gorilla uses a [passwordsafe
-    ](#passord_safe "internal reference") compatible
+    Password Gorilla uses a {{< iref "#passord_safe" "passwordsafe" >}} compatible
     database version 2 or 3. _Look at help file for comparison_.<br/>
     The memory foot print of password gorilla is 12M resident / 5M
     shared.<br />
@@ -390,7 +382,7 @@ ancrypted with the Twofish algorithm.
 -   <a name="pypwsafe"></a>[pypwsafe
     ](https://github.com/ronys/pypwsafe) (GPL)
     is a pure python library that support
-    [password safe](#password_safe "internal reference") database V3.
+    {{< iref "#password_safe" "password safe" >}} database V3.
 -   [Java PasswordSafe (jpwsafe)
     ](http://sourceforge.net/projects/jpwsafe/)
     is a java clone of passwordsafe
@@ -441,7 +433,7 @@ ancrypted with the Twofish algorithm.
         ](https://github.com/zx2c4/password-store).
 -   [Pwman](http://pwman.sourceforge.net/)
     is a ncurses password manager based on the ui design of
-    [abook addressbook](/node/calendar#abook "internal reference").
+    {{< iref "calendar#abook" "abook addressbook" >}}.
     It uses GPG to encrypt files. An unofficial Debian Package is
     available in the
     [pwman sourceforge repository
@@ -520,7 +512,7 @@ ancrypted with the Twofish algorithm.
     allows to encrypt/decrypt with AES inside Firefox.
     [cryptfire.com](http://cryptfire.com/) offers a Javascript standalone
     AES crypt/decript script.
--   See also [Keefox](#keefox "internal reference") above.
+-   See also {{< iref "#keefox" "Keefox" >}} above.
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->

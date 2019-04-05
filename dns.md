@@ -1,14 +1,8 @@
-<!--
-.. description:
-.. date: 2011-08-30
-.. slug: dns
-.. tags:
-.. link:
-.. title: Data Name Server
-.. book: mzlinux
--->
+---
+title: Data Name Server
+---
 
-[TOC]
+{{% toc /%}}
 
 # References
 -   [Domain Name System from Wikipedia
@@ -17,9 +11,9 @@
     [french](http://fr.wikipedia.org/wiki/Domain_Name_System)) explains
     the basis of DNS and provide a lot of links including links to the
     RFCs
--   Wikipedia: [w:Category:Domain name system],  [w:BIND],
-    [w:Dynamic DNS], [w:Comparison of DNS server software],
-    [w:Category:DNS server software for Linux].
+-   Wikipedia: {{< wp "Category:Domain name system" >}},  {{< wp "BIND" >}},
+    {{< wp "Dynamic DNS" >}}, {{< wp "Comparison of DNS server software" >}},
+    {{< wp "Category:DNS server software for Linux" >}}.
 -   The two main RFC are
     [RFC 1034](http://tools.ietf.org/html/rfc1034)
     Domain Names - Concepts and Facilities and
@@ -30,7 +24,7 @@
     [DNSSEC
     ](https://fedoraproject.org/wiki/Networking/NameResolution/DNSSEC).
 -   [ZoneEdit Web DNS lookup](http://www.zoneedit.com/lookup.html).
--   [w:OpenDNS] is a free DNS  resolution service that offers phishing
+-   {{< wp "OpenDNS" >}} is a free DNS  resolution service that offers phishing
     protection. [OpenDNS Home](http://www.opendns.com/)
 -   Daniel J. Bernstein [djbdns](http://cr.yp.to/djbdns.html),
     [Wikipedia page](http://en.wikipedia.org/wiki/Djbdns)
@@ -55,8 +49,8 @@ also implemented in the Service Location Protocol (SLP) (
 and
 [rfc 3224](http://tools.ietf.org/html/rfc3224)).
 
--   Wikipedia: [w:[Zeroconf], [w:Avahi_software)|Avahi],
-    [w:Multicast DNS] (mDNS),
+-   Wikipedia: {{< wp "[Zeroconf" >}}, {{< wp "Avahi_software)"  "Avahi" >}},
+    {{< wp "Multicast DNS" >}} (mDNS),
 -   [zeroconf.org: Zero Configuration Networking
     ](http://www.zeroconf.org/).
 -   The Zeroconf model is implemented in the
@@ -75,18 +69,18 @@ and
     the current support of avahi by softwares.
 
 # DNS Tools
--   Wikipedia: [w:Category:DNS software], [w:Dig_(command)|Dig]
+-   Wikipedia: {{< wp "Category:DNS software" >}}, {{< wp "Dig_(command)"  "Dig" >}}
 -   [DIG HowTo](http://www.madboa.com/geek/dig/) by Paul Heinlein.
 -   [host (1) manual](ftp://ftp.isc.org/isc/bind9/9.11.1/doc/arm/man.host.html)
--   [w:Whois] allows to determine the owner of a domain name or an IP address.
-    You can learn about whois in the [w:Whois|whois Wikipedia page] or in the
+-   {{< wp "Whois" >}} allows to determine the owner of a domain name or an IP address.
+    You can learn about whois in the {{< wp "Whois"  "whois Wikipedia page" >}} or in the
     [whois overview](http://navigators.com/whois.html "navigators.com whois.html")
     and query it thru the commandline
     [whois(1)](http://man.cx/whois) or a web gateway such as
     [geektools whois gateway](http://www.geektools.com/whois.php)
 -   [DNSd](https://github.com/behrooza/dnsd) is a daemon that provides
     a local DNS backend to forward the queries/answers to/from
-    [w:Google Public DNS] over
+    {{< wp "Google Public DNS" >}} over
     HTTPS.
 
 
@@ -128,7 +122,7 @@ and
     €4,33/year for *org.uk* or *me.uk*, €6,89/year for *fr*
     -   [How to use ddclient with Namecheap
         ](http://www.ducky-pond.com/posts/2014/Feb/how-to-use-ddclient-with-namecheap/).
--   [Polipo](/node/web_servers "internal reference") does not use
+-   {{< iref "web_servers" "Polipo" >}} does not use
     `gethostbyname` but use its own resolve code, and it does not look at
     `/etc/hosts`, so we have to disable polypo for the domains where we
     want to use `/etc/hosts` or use the dns cache itself.
@@ -136,8 +130,7 @@ and
 
 # Unbound
 [unbound](https://unbound.net/) (BSD license) is a validating,
-recursive, and caching DNS resolver. Along [w:Unbound (DNS
-server)|Wikipedia]
+recursive, and caching DNS resolver. Along {{< wp "Unbound (DNS server)"  "Wikipedia" >}}
 > Unbound has supplanted the Berkeley Internet
 > Name Daemon (BIND) as the default, base-system name server in several
 > open source projects, where it is perceived as smaller, more modern,
@@ -145,11 +138,11 @@ server)|Wikipedia]
 
 Unbound is packaged in Debian.
 
--   Wikipedia: [w:Unbound (DNS server)|unbound]
+-   Wikipedia: {{< wp "Unbound (DNS server)"  "unbound" >}}
 -   [ArchWiki: unbound](https://wiki.archlinux.org/index.php/Unbound).
 
 # Bind
--   Wikipedia: [w:BIND]
+-   Wikipedia: {{< wp "BIND" >}}
 -   Paul Vixie Bind
     [Internet Systems Consortium official Page](http://www.isc.org/index.pl?/sw/bind/)
     and
@@ -172,7 +165,7 @@ Dnsmasq is also a dhcpd server. It supports static address assignments,
 multiple networks, Bootp and vendor-encapsulated options, DHCP-relay and
 RFC3011 subnet specifiers.
 
--   Wikipedia: [w:dnsmasq]
+-   Wikipedia: {{< wp "dnsmasq" >}}
 -   [Dnsmasq Home page documentation](http://thekelleys.org.uk/dnsmasq/doc.html)
 -   [Dnsmasq FAQ](http://thekelleys.org.uk/dnsmasq/docs/FAQ)
 -   [Dnsmasq french tutorial](http://www.drazzib.com/docs-dnsmasq.html)

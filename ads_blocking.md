@@ -1,14 +1,8 @@
-<!--
-.. description:
-.. date: 2015-03-28
-.. slug: ads_blocking
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Ads blocking
--->
+---
+title: Ads blocking
+---
 
-[TOC]
+{{% toc /%}}
 
 # Why blocking
 I will not discuss this controversial topic, but I adhere to
@@ -36,11 +30,10 @@ support these methods. There are two possibilities:
 -   You forbid to load images or frames from a list of ad servers.
 
 There are references to description of these two methods in my
-[browser section](/node/browser "internal reference").
+{{< iref "browser" "browser section" >}}.
 
 If you want to block ad servers you will want to look at
-the [lists of ads serving sites
-](#ads_site_lists "internal reference").
+the {{< iref "#ads_site_lists" "lists of ads serving sites" >}}.
 
 Blocking at browser level has the following advantages
 
@@ -78,8 +71,7 @@ But it has the following drawbacks:
     family. What about the others browsers?
 
 ## Blocking with a proxy
-If you run an [HTTP Proxy
-](/node/proxy{#http_proxies "internal reference")
+If you run an {{< iref "proxy" "HTTP Proxy" >}}
 it is probably the good place to block ads, it is the minimal load
 because you have to test only request to http. It has an easy and
 centralized administration, you have the ability to filter with
@@ -141,16 +133,15 @@ socket they use (and not the host name) you don't need a distinc
 http daemon. This is the case of lighttpd with the `SERVER["socket]`
 configuration option.
 
-You can find in my [dnsmasq section
-](/node/dns#dnsmasq "internal reference")
+You can find in my {{< iref "dns#dnsmasq" "dnsmasq section" >}}
 how to use dnsmasq to block ads. A similar strategy is used by Sam
 Hocevar in the old page _2002_
 [Eradicating doubleclick.net from the planet
 ](http://sam.zoy.org/writings/internet/doubleclick.html).
 
 An all-in-one solution for adds blocking at the DNS level is
-[w:Pi6-Hole] (European Union Public License) which use
-[dnsmasq](/node/dns#dnsmasq "internal reference"),
+{{< wp "Pi6-Hole" >}} (European Union Public License) which use
+{{< iref "dns#dnsmasq" "dnsmasq" >}},
 cURL, Lighttpd, PHP and the
 [AdminLTE Dashboard](https://github.com/almasaeed2010/AdminLTE)
 to block DNS requests for known tracking and advertising domains.

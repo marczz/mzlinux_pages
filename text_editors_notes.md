@@ -1,14 +1,8 @@
-<!--
-.. description:
-.. date:
-.. slug: text_editors_notes
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Text Editors Notes
--->
+---
+title: Text Editors Notes
+---
 
-[TOC]
+{{% toc /%}}
 
 # VI
 

@@ -1,15 +1,8 @@
-<!--
-.. description:
-.. date: 2015-05-03
-.. slug: software_design
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Software Design
--->
+---
+title: Software Design
+---
 
-
-[TOC]
+{{% toc /%}}
 
 # General References
 
@@ -24,36 +17,35 @@
 # Design patterns
 -   [Wikipedia: Design Pattern](http://en.wikipedia.org/wiki/Design_pattern_(computer_science))
     contains definition, and links to this field as long as an
-    [w:Design_pattern_(computer_science)#Classification_and_list|index
-    of patterns].
+    {{< wp "Design_pattern_(computer_science)#Classification_and_list"  "index     of patterns" >}}.
 -   The Wikipedia Page
     [Design Pattern (gang of four)](http://en.wikipedia.org/wiki/Design_Patterns)
     detail with references to sub-pages each pattern of the book by
     Gamma et al.
 -   The use of design patterns in Python is described
-    [in the Python page](/node/34#python_design_patterns)
+    {{< iref "34#python_design_patterns" "in the Python page" >}}
 
 ## Agile methods
--   Wikipedia: [w:Agile software development],
-    [w:Scrum_(software_development)|Scrum]
--   [w:Extreme_programming|Wikipedia: Extreme Programming]
-    [w:Extreme programming practices] and
-    [w:Extreme project management]
+-   Wikipedia: {{< wp "Agile software development" >}},
+    {{< wp "Scrum_(software_development)"  "Scrum" >}}
+-   {{< wp "Extreme_programming"  "Wikipedia: Extreme Programming" >}}
+    {{< wp "Extreme programming practices" >}} and
+    {{< wp "Extreme project management" >}}
 -   [Extreme Programming Roadmap](http://c2.com/cgi/wiki?ExtremeProgrammingRoadmap) at c2.com
 -   Ron Jeffries' blog [Category XProgramming](http://www.xprogramming.com/)
 
 
 # Project management
--   Wikipedia: [w:Project management software],
-    [w:Project management],
-    [w:Project planning],
-    [w:Comparison of project management software]
+-   Wikipedia: {{< wp "Project management software" >}},
+    {{< wp "Project management" >}},
+    {{< wp "Project planning" >}},
+    {{< wp "Comparison of project management software" >}}
 -   [TaskJuggler]( http://www.taskjuggler.org/)  (GPL) is a  project management software.
     Version 2 is programmed in C++ using the Qt toolkit and KDE libraries.
     TaskJuggler III is completely re-implemented  in ruby.<br />
     -   [Creating Gantt charts by Exporting to TaskJuggler
     ](http://orgmode.org/worg/org-tutorials/org-taskjuggler.html)
-        export from [Org Mode](/node/389#orgmode "internal reference") to TaskJuggler.
+        export from {{< iref "389#orgmode" "Org Mode" >}} to TaskJuggler.
     -   [emacs taskjuggler-mode for editing taskjuggler tasks
     ](http://www.skamphausen.de/cgi-bin/ska/taskjuggler-mode)
 -   [Project Planning with org-mode
@@ -61,16 +53,15 @@
     by Peter Jones.
 
 # Continuous Integration {#continuous_integration}
-A concept closely related to [w:Continuous integration] is [w:DevOps]
+A concept closely related to {{< wp "Continuous integration" >}} is {{< wp "DevOps" >}}
 _(DEVelopement & OPerationS)_ they both prone automation and monitoring
 at all steps of software construction, from building, integration,
 testing, releasing, deployment and infrastructure management.
 
-See also [Build Automation
-](/node/python_libraries#build_automation "internal reference").
+See also {{< iref "python_libraries#build_automation" "Build Automation" >}}.
 
--   Wikipedia  [w:Continuous integration],
-    [w:Category:Continuous integration]
+-   Wikipedia  {{< wp "Continuous integration" >}},
+    {{< wp "Category:Continuous integration" >}}
 -   [Awesome DevOps](https://github.com/joubertredrat/awesome-devops)
     listov DevOps Resources.
 -   [Awesome Continuous Integration and Continuous Delivery
@@ -78,14 +69,14 @@ See also [Build Automation
 -   [Stackify: list of Continuous integration tools
     ](https://stackify.com/top-continuous-integration-tools/)
     _mars 2017_.
--   [w:Buddy_(software)|Buddy] (private license)
+-   {{< wp "Buddy_(software)"  "Buddy" >}} (private license)
     is a web-based and self-hosted
     continuous integration and delivery software for Git.
     There is a cloud version and an on premise version _Buddy Go_
     that  employs Docker containers. There is a free cloud plan with 5
     projects and 120 runs/month.
     -   [Buddy Home](https://buddy.works/)
--   [w:Jenkins_(software)|Jenkins] (MIT License)
+-   {{< wp "Jenkins_(software)"  "Jenkins" >}} (MIT License)
     is a java continuous integration server.  It supports SCM tools
     including CVS, Subversion, Git, Mercurial, Perforce and
     Clearcase. Jenkins is langage agnostic.  Jenkins is available in
@@ -99,7 +90,7 @@ See also [Build Automation
     -   Numerous Python [packages for Jenkins integration
         ](https://pypi.python.org/pypi?%3Aaction=search&term=jenkins&submit=search)
         are available in [PyPi](https://pypi.python.org/pypi).
--   [w:Travis CI]) (MIT license)
+-   {{< wp "Travis CI" >}}) (MIT license)
     is a hosted continuous integration service written in ruby
     integrated with GitHub, it support many languages
     [including python
@@ -113,8 +104,8 @@ See also [Build Automation
 
 ## UML References
 
--   Wikipedia: [w:Unified Modeling Language], [w:List of UML tools], [w:Class diagram],
-    [w:Activity diagram], [w:Use Case Diagram], [w:Sequence diagram]
+-   Wikipedia: {{< wp "Unified Modeling Language" >}}, {{< wp "List of UML tools" >}}, {{< wp "Class diagram" >}},
+    {{< wp "Activity diagram" >}}, {{< wp "Use Case Diagram" >}}, {{< wp "Sequence diagram" >}}
 -   [OMG: UML Resource Page](http://www.uml.org/)
 -   [uml-diagrams.org](http://www.uml-diagrams.org/)
      Everything about the last specification of UML, diagram by diagram.
@@ -135,10 +126,10 @@ See also [Build Automation
     -   [ArgoUml-Graphviz](http://argouml-graphviz.tigris.org/) uses graphviz to position and
         postprocess UML diagrams produced by ArgoUml.
 -   [Blockdiag](http://blockdiag.com/en/index.html) is a set of graph generators
-    from text source similar to [graphviz](#graphviz "internal reference")’s `dot` format.
+    from text source similar to {{< iref "#graphviz" "graphviz" >}}’s `dot` format.
     It includes  block diagrams, sequence diagrams,  activity diagrams, and network diagrams.<br />
     In the [sphinx contribs](https://bitbucket.org/birkenfeld/sphinx-contrib)
-    there is a [Sphinx](/node/405#sphinx "internal reference") extension for _Blockdiag_.
+    there is a {{< iref "405#sphinx" "Sphinx" >}} extension for _Blockdiag_.
 -   [Bouml](http://www.bouml.fr/) previously GPL has now a private licence.
 -   [Dia](http://projects.gnome.org/dia/docs.html) supports UML Class and activity diagrams.
 -   [Dia Links](http://projects.gnome.org/dia/links.html) gives Dia extensions,
@@ -149,7 +140,7 @@ See also [Build Automation
     choice that contain the bare bones of the classes represented in
     the diagram. It supports Ada, C, C++, Java, PHP, PHP5, Python,
     Ruby, shapefile, SQL and C\#. It is packaged in Debian.
--   [w:Graphviz] [w:DOT language] can be used to draw UML diagrams,
+-   {{< wp "Graphviz" >}} {{< wp "DOT language" >}} can be used to draw UML diagrams,
     either by hand as described in
     [UML Diagrams Using Graphviz Dot](http://www.ffnn.nl/pages/articles/media/uml-diagrams-using-graphviz-dot.php)
     or as output of many tools of this page.
@@ -190,14 +181,14 @@ See also [Build Automation
 # Unit Tests
 
 Python has its own page
-[Unit tests in python](/node/python_programming#python_unit_tests} "internal reference")
+{{< iref "python_programming#python_unit_tests" "Unit tests in python" >}}
 
 -   [Kent Beck seminal paper on unit testing](http://www.xprogramming.com/testfram.htm)
--   [w:Unit_testing|Unit testing] is is an essential step of
-    [w:Software testing] before [w:Integration testing]
--   [w:Extreme Programming] is a technic of [w:test driven development]
-    and  use unit tests as an early step, and [w:Acceptance Tests] are used for
-    [w:Integration testing].
+-   {{< wp "Unit_testing"  "Unit testing" >}} is is an essential step of
+    {{< wp "Software testing" >}} before {{< wp "Integration testing" >}}
+-   {{< wp "Extreme Programming" >}} is a technic of {{< wp "test driven development" >}}
+    and  use unit tests as an early step, and {{< wp "Acceptance Tests" >}} are used for
+    {{< wp "Integration testing" >}}.
 -   [Awesome Testing](https://github.com/TheJambo/awesome-testing)
     a list of resources for software testing.
 -   [Awesome Test Automation
@@ -213,38 +204,38 @@ Python has its own page
     [Agile Methods](http://ronjeffries.com/categories/agile-related/),
     [XProgramming](http://ronjeffries.com/categories/xprogramming/).
 -   [Testing Framework wiki](http://c2.com/cgi/wiki?TestingFramework)
--   [w:Test double] is a term coined to reference differents technics to use objects or procedures
+-   {{< wp "Test double" >}} is a term coined to reference differents technics to use objects or procedures
     that look and behave like their release-intended counterparts. It is used in the popular paper of
     Martin Fowler: [Mocks Aren't Stubs](http://martinfowler.com/articles/mocksArentStubs.html)
--   [w:Mock object]  are simulated objects that mimic the behavior of real objects in controlled ways.
+-   {{< wp "Mock object" >}}  are simulated objects that mimic the behavior of real objects in controlled ways.
     They allow to incorporate into a unit test complex, a fake object when real  objects would be
     impossible to use directly.
     -   [Testing Framework wiki: Mock Object Page](http://c2.com/cgi/wiki?MockObject)
     -   For python look at the section
-        [Mock objects Libraries](/node/325#mock_objects "internal reference")
+        {{< iref "325#mock_objects" "Mock objects Libraries" >}}
 -   [junit](http://www.junit.org/index.htm) java testing framework
 -   [cppunit](http://cppunit.sourceforge.net/)
 
 # Miscellaneous graphing tools
 
 -   [Railroad Diagram Generator](http://railroad.my28msec.com/rr/ui)
-    is an online tool for creating SVG [w:syntax diagrams], also known as railroad
+    is an online tool for creating SVG {{< wp "syntax diagrams" >}}, also known as railroad
     diagrams, from context-free grammars specified in EBNF.
 
 # Websocket
--   [w:WebSocket] is a protocol providing full-duplex communication
+-   {{< wp "WebSocket" >}} is a protocol providing full-duplex communication
     channels over a single TCP connection.
--   __PubSub__ or [w:publish subscribe] is a messaging pattern where
+-   __PubSub__ or {{< wp "publish subscribe" >}} is a messaging pattern where
     publishers (senders) characterize published messages into classes
     without knowledge of which subscribers (receivers) there may
     be. Similarly, subscribers subscribe to one or more classes
     without knowledge of publishers.
--   [w:Web Application Messaging Protocol] WAMP is a WebSocket
+-   {{< wp "Web Application Messaging Protocol" >}} WAMP is a WebSocket
     subprotocol registered at IANA, specified[2] to offer routed RPC
     and PubSub.
 -   [Wamp Proto Home](http://wamp-proto.org/),
     [Wamp Proto comparison](http://wamp-proto.org/compared/).
--   [w:Web_Application_Messaging_Protocol#Comparison|Wikipedia Wamp Comparison]
+-   {{< wp "Web_Application_Messaging_Protocol#Comparison"  "Wikipedia Wamp Comparison" >}}
     with other protocols.
 -   [REST vs WebSocket Comparison
     ](http://blog.arungupta.me/rest-vs-websocket-comparison-benchmarks/)

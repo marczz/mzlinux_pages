@@ -1,31 +1,22 @@
-<!--
-.. description:
-.. date: 2014-08-26
-.. slug: lightweight_distributions
-.. tags:
-.. link:
-.. book:mzlinux
-.. title: Lightweight Distributions
--->
+---
+title: Lightweight Distributions
+---
 
-[TOC]
+{{% toc /%}}
 
 _See also the pages:
-[Distributions](/node/distributions "internal reference"),
-[Forensic Distributions
-](/node/network-security#forensic_distributions  "internal reference"),
-[Firewall distributions
-](/node/firewall#firewall_distributions  "internal reference"),
-[Rescue Systems](/node/hdrive#rescue_systems "internal reference").
+{{< iref "distributions" "Distributions" >}},
+{{< iref "network" "Forensic Distributions" >}},
+{{< iref "firewall#firewall_distributions" "Firewall distributions" >}},
+{{< iref "hdrive#rescue_systems" "Rescue Systems" >}}.
 
 # Lightweight Distributions
 
-Debian Live and GRML are in the main [Distributions section
-](/node/distributions "internal reference").
+Debian Live and GRML are in the main {{< iref "distributions" "Distributions section" >}}.
 
--   Wikipedia: [w:Lightweight Linux distribution] includes a
+-   Wikipedia: {{< wp "Lightweight Linux distribution" >}} includes a
     comparison of lightweight Linux distributions. There is also
-    a [w:List of Linux distributions that run from RAM].
+    a {{< wp "List of Linux distributions that run from RAM" >}}.
 -   A full state of distributions is given in
     [DistroWatch](http://distrowatch.com).
 -   [linuxbasis.com](http://www.linuxbasis.com/distributions.html?/distributions1.html)
@@ -35,7 +26,7 @@ Debian Live and GRML are in the main [Distributions section
     utilities into a single small executable.
 -   [uClibc -- a C library for embedded systems](http://www.uclibc.org/)
 
--   [w:Alpine Linux],
+-   {{< wp "Alpine Linux" >}},
     [Alpine Linux Home](https://www.alpinelinux.org/)
 -   [Damn Small Linux](http://www.damnsmalllinux.org/) was a
     business card size (50MB) distribution, stopped since 2012.
@@ -46,11 +37,11 @@ Debian Live and GRML are in the main [Distributions section
     [Knoppix Wiki](http://knoppix.net/wiki/Main_Page),
     [Knoppix Remastering Howto
     ](http://knoppix.net/wiki/Knoppix_Remastering_Howto)
--   [Lxde](/node/desktop#lxde "internal reference") (GPL) is a lightweight
+-   {{< iref "desktop#lxde" "Lxde" >}} (GPL) is a lightweight
     desktop environment. An Lxde desktop is included in Debian,
     in Ubuntu,
     Archlinux, Slitaz, Gentoo, VectorLinux,  Knoppix and other. Look
-    at [Lxde section](/node/desktop#lxde "internal reference") and
+    at {{< iref "desktop#lxde" "Lxde section" >}} and
     [Lxde Home](http://lxde.org/lxde)
     for details on how to install in your favorite distribution, and
     of included components.
@@ -77,7 +68,7 @@ Debian Live and GRML are in the main [Distributions section
     based raid-1_.
 
 # Embedded distributions
--   Wikipedia [w:Comparison of mobile operating systems]
+-   Wikipedia {{< wp "Comparison of mobile operating systems" >}}
 -   [Embedded Linux Wiki ](http://elinux.org/Main_Page)
 -   [Ångström distribution
     ](http://en.wikipedia.org/wiki/%C3%85ngstr%C3%B6m_distribution)(GPL)
@@ -86,7 +77,7 @@ Debian Live and GRML are in the main [Distributions section
     Gumstix and Kouchuk-Bars, Hawkboard, BeagleBoard, BeagleBone and
     BeagleBone Black, PandaBoard, OpenPandora, OMAPEVM, Base for Openmoko
     distribution, Archos 5/7/101/32/28 ....
--   [w:Firefox OS] is an open-source operating system made for
+-   {{< wp "Firefox OS" >}} is an open-source operating system made for
     smartphones, tablet computers and smart TVs designed by
     Mozilla and external contributors, based on the rendering engine
     of  Firefox and the Linux kernel.
@@ -104,20 +95,20 @@ Debian Live and GRML are in the main [Distributions section
         is a prototype of some Freedom Box services on a plug computer.
 -   [Gentoo Embedded Handbook
     ](https://gentoo-handbook.lugons.org/proj/en/base/embedded/handbook/index.xml)
--   [w:Maemo] is a development platform, [w:MeeGo] is a Linux project
+-   {{< wp "Maemo" >}} is a development platform, {{< wp "MeeGo" >}} is a Linux project
     by Intel and Nokia that merge Moblin from Intel and Maemo from
     Nokia.
-    [w:Mer]  is a fork of MeeGo trying to recover a more open (source) mind.
--   [w:OpenEmbedded] is a tool which allows
+    {{< wp "Mer" >}}  is a fork of MeeGo trying to recover a more open (source) mind.
+-   {{< wp "OpenEmbedded" >}} is a tool which allows
     developers to create a fully usable Linux base for various embedded
     systems. It supports Ångström, KaeilOS, Openmoko, SHR, SlugOS,
     WebOS.
     -    [OpenEmbedded Home](http://www.openembedded.org/)
--   [w: Tizen] is an open source software platform for smartphones,
+-   {{< wp " Tizen" >}} is an open source software platform for smartphones,
     tablets, smart TVs, and more. It is the continuation of Meego by
     Samsung, Intel and als.  Tizen's main components are Linux,
     Enlightenment and WebKit.  [Tizen Homepage](https://www.tizen.org/)
--   [w:Sailfish_OS|Sailfish] is an other derivative of Meego
+-   {{< wp "Sailfish_OS"  "Sailfish" >}} is an other derivative of Meego
     opensource but with a proprietary interface.
 
 ## Software suites

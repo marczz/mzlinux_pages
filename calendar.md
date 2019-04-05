@@ -1,26 +1,21 @@
-<!--
-.. description:
-.. date: 2015-04-08
-.. slug: calendar
-.. tags:
-.. link:
-.. title: Calendar and Address Book
--->
+---
+title: Calendar and Address Book
+---
 
-[TOC]
+{{% toc /%}}
 
-See also [Tasks Management](/node/app_tasks "internal reference")
-and [Org Mode](/node/org-mode "internal reference")
+See also {{< iref "app_tasks" "Tasks Management" >}}
+and {{< iref "org" "Org Mode" >}}
 
 # Icalendar references
 
--   Wikipedia: [w:Calendaring_software],
-    [w:VCard|Wikipedia VCard],
-    [w:ICalendar],
-    [w:List of applications with iCalendar support]
-    [w:CalDAV],
-    [w:CardDAV],
-    [w:Comparison of CalDAV and CardDAV implementations].
+-   Wikipedia: {{< wp "Calendaring_software" >}},
+    {{< wp "VCard"  "Wikipedia VCard" >}},
+    {{< wp "ICalendar" >}},
+    {{< wp "List of applications with iCalendar support" >}}
+    {{< wp "CalDAV" >}},
+    {{< wp "CardDAV" >}},
+    {{< wp "Comparison of CalDAV and CardDAV implementations" >}}.
 -   Guide to Internet Calendaring
     [RFC 3283](http://www.ietf.org/rfc/rfc3283.txt)
 -   Internet Calendaring and Scheduling Core Object Specification
@@ -52,9 +47,9 @@ and [Org Mode](/node/org-mode "internal reference")
 
 # icalendar, CalDAV, CardDAV libraries
 -   Wikipedia:
-    [w:CalDAV],
-    [w:CardDAV],
-    [w:Comparison of CalDAV and CardDAV implementations].
+    {{< wp "CalDAV" >}},
+    {{< wp "CardDAV" >}},
+    {{< wp "Comparison of CalDAV and CardDAV implementations" >}}.
 
 -   [cardDAV PHP](https://github.com/graviox/CardDAV-PHP) (affero GPL)
     by Christian Putzke,
@@ -110,7 +105,7 @@ and [Org Mode](/node/org-mode "internal reference")
     allow users to access calendar data on a server, and to schedule
     meetings with other users on that server or other servers.
 -   The CalDAV Access protocol is an extension of
-    the [WebDAV Protocol](/node/webdav title="internalreference"),
+    the {{< iref "webdav" "WebDAV Protocol" >}},
     it has been published as
     [RFC 4791](http://tools.ietf.org/html/rfc4791 "ietf.org rfc4791").
 -   [Apple calendar server](http://trac.calendarserver.org/)
@@ -142,7 +137,7 @@ and [Org Mode](/node/org-mode "internal reference")
 -   [AgenDAV](http://agendav.org/) (GPL)
     a CalDAV web client in PHP+AJAX  with shared calendars support.
     [AgenDAV GitHub](https://github.com/adobo/agendav/),  _active in 2015_.
--   [Asynk](#asynk "internal reference") is a caldav client.
+-   {{< iref "#asynk" "Asynk" >}} is a caldav client.
 -   [CardDavMATE](http://www.inf-it.com/open-source/clients/carddavmate/)
     (Affero GPL)
     is a JavaScript+jQuery CardDAV web client.
@@ -246,7 +241,7 @@ repository.
 -   [clcal](http://www.hyborian.demon.co.uk/clcal/)
     a basic command-line calendar written in C. The entries are in a custom format
     and there is no import/export option. _The last resource file is 2008_.
--   [w:Chandler_(software)|Chandler]
+-   {{< wp "Chandler_(software)"  "Chandler" >}}
     a calendar sharing application  _dead since 2006_
 -   [DayPlanner](http://www.day-planner.org/) (GPL)
     a Perl program that uses Icalendar format.
@@ -311,9 +306,9 @@ repository.
 
 # Address Books
 
--   Wikipedia [w:Category:Personal information managers],
-    [w:List of personal information managers],
-    [w:Comparison of notetaking software], [w:Outliner], [w:Outline Processor Markup Language]
+-   Wikipedia {{< wp "Category:Personal information managers" >}},
+    {{< wp "List of personal information managers" >}},
+    {{< wp "Comparison of notetaking software" >}}, {{< wp "Outliner" >}}, {{< wp "Outline Processor Markup Language" >}}
 -   <a name="abook"></a>[abook](http://abook.sourceforge.net/) (GPL)
     text-based addressbook program
     designed to use with mutt mail client. Abook is written in C + Ncurses.

@@ -1,18 +1,12 @@
-<!--
-.. description:
-.. date: 2015-05-27
-.. slug: python_web
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Python Web Programming
--->
+---
+title: Python Web Programming
+---
 
-[TOC]
+{{% toc /%}}
 
 ----
 
-The [Templating libraries](/node/templating.md "local reference")
+The {{< iref "templating" "Templating libraries" >}}
 are in their own section.
 
 # General references
@@ -36,7 +30,7 @@ The standard library provides the following modules:
 -   [http.client](http://docs.python.org/3/library/http.client.html)
     implement the client side of the HTTP and HTTPS protocols.
     It is normally  used though the
-    [utllib module](#urllib "internal reference").
+    {{< iref "#urllib" "utllib module" >}}.
     in python 2 it is called [httplib
     ](http://docs.python.org/2/library/httplib.html)
 -   [http.cookies](http://docs.python.org/3/library/http.cookies.html)
@@ -45,8 +39,7 @@ The standard library provides the following modules:
     It supports both simple string-only cookies, and also any
     serializable data-type as cookie value, it is principally useful
     for server-side code see following
-    [http.cookiesjar][#http_cookiesjar "internal reference") for
-    client side processing. [urllib.request](#urllib "internal reference")
+    [http.cookiesjar]{{< iref "#urllib" "#http_cookiesjar "internal reference") for     client side processing. [urllib.request" >}}
     also handle cookies with the class _HTTPCookieProcessor_.
     -   In python 2 this module was named [cookie
         ](http://docs.python.org/2/library/cookie.html).Doug Hellmann
@@ -68,7 +61,7 @@ The standard library provides the following modules:
         <a name="urllib_request"></a>for opening and reading URLs
         using basic and digest  authentication, redirections, cookies,
         etc.,
-        _The [Requests package](#request "internal reference")
+        _The {{< iref "#request" "Requests package" >}}
         is recommended for a higher-level http client interface._
     -   _urllib.error_ containing the exceptions raised by urllib.request,
     -   [urllib.parse]
@@ -89,7 +82,7 @@ The standard library provides the following modules:
     which help in opening URLs (mostly HTTP) using basic and digest
     authentication, redirections, cookies to
     provide facilities close to the new
-    [python3 urlllib module](#urllib "internal reference").
+    {{< iref "#urllib" "python3 urlllib module" >}}.
     -   [urllib/urllib2 porting from Python2 to Python3
         ](http://docs.pythonsprints.com/python3_porting/py-porting.html#url-related-modules).
     -   [HOWTO Fetch Internet Resources Using The urllib2 Package
@@ -113,7 +106,7 @@ The standard library provides the following modules:
 -   [Requests](http://docs.python-requests.org/en/latest/) (Apache2 License)
     <a name="request"></a>
     is an improvement of _urllib2_ powered by  httplib and
-    [urllib3](#urllib3  "internal reference").
+    {{< iref "#urllib3" "urllib3" >}}.
     allow you to send HTTP/1.1 requests. You can add headers,
     form data, multipart files,
     and parameters with simple Python dictionaries, and access the response data
@@ -122,19 +115,19 @@ The standard library provides the following modules:
     <a name="urllib3"></a>
     is an HTTP library with thread-safe connection pooling, file post,
     compresion. It works with python2 and python3. An upper layer is
-    provided by the [request library](#request "internal reference").
+    provided by the {{< iref "#request" "request library" >}}.
     [urllib3 documentation](http://urllib3.readthedocs.org/en/latest/).
 
 # WSGI {#wsgi}
 
 [WSGI or Web Server Gateway Interfaces](http://en.wikipedia.org/wiki/WSGI)
 define an interface between web servers and web applications or
-[Web frameworks](#web_frameworks "Internal reference") for the Python
+{{< iref "#web_frameworks" "Web frameworks" >}} for the Python
 programming language.
 
 Numerous Web application frameworks are
 [supporting WSGI](http://wsgi.readthedocs.org/en/latest/frameworks.html):
-see the [framework section](#web_frameworks "Internal reference")
+see the {{< iref "#web_frameworks" "framework section" >}}
 
 
 -   The   [new wsgi specification PEP 3333](https://www.python.org/dev/peps/pep-3333/)
@@ -168,7 +161,7 @@ see the [framework section](#web_frameworks "Internal reference")
     [James WSGI Server](http://wsgiarea.pocoo.org/james/).
 -   [Gunicorn](http://gunicorn.org/) <a name="gunicorn"></a>(MIT License)
      is a Python WSGI HTTP Server for UNIX built on pre-fork worker
-     model. It is usually deployed behind [nginx](/node/nginx "internal reference").
+     model. It is usually deployed behind {{< iref "nginx" "nginx" >}}.
      -   [Gunicorn documentation](http://docs.gunicorn.org/)
 -   [uWSGI](http://projects.unbit.it/uwsgi/wiki)
     is a fast application container server coded in pure C.
@@ -176,7 +169,7 @@ see the [framework section](#web_frameworks "Internal reference")
     -   [The uWSGI project documentation](http://uwsgi-docs.readthedocs.org/en/latest/)
     -   [ArchWiki: uWsgi](https://wiki.archlinux.org/index.php/Uwsgi)
     -   [django can be used with uWSGI](https://docs.djangoproject.com/en/dev/howto/deployment/wsgi/uwsgi/).
-    -   See below in the [wsgi Servers section](#wsgi_servers) how
+    -   See below in the {{< iref "#wsgi_servers" "wsgi Servers section" >}} how
         uWSGI can be used with apache, nginx, lighttpd, and cherokee.
 -   Applications can also be tested with
     [WebTest](http://pythonpaste.org/webtest/) that provides an interface to run WSGI applications
@@ -191,16 +184,16 @@ see the [framework section](#web_frameworks "Internal reference")
     [WSGI servers/gateways](http://trac.saddi.com/flup/wiki/FlupServers)
     which speak AJP, FastCGI, and SCGI.
     [flup on pypi](https://pypi.python.org/pypi/flup/)
--   [Apache](/node/apache  "internal reference")
+-   {{< iref "apache" "Apache" >}}
     provides a wsgi [mod_wsgi](http://code.google.com/p/modwsgi/) module.
     It allows also to run uwsgi with [Apache2 mod_uwsgi or mod_proxy_uwsgi
     ](http://projects.unbit.it/uwsgi/wiki/RunOnApache2).
--   [nginx](/node/nginx "internal reference").
+-   {{< iref "nginx" "nginx" >}}.
     has also its [wsgi module](http://wiki.nginx.org/NginxNgxWSGIModule)
     and alternatively can also
     [delegate to uwsgi](http://projects.unbit.it/uwsgi/wiki/RunOnNginx)
-    or act as a reverse proxy in front of [Gunicorn](#gunicorn)
--   [Lighttpd](/node/lighttpd "internal reference")
+    or act as a reverse proxy in front of {{< iref "#gunicorn" "Gunicorn" >}}
+-   {{< iref "lighttpd" "Lighttpd" >}}
     recommends to run wsgi via FastCGI in its
     [HOW-TO WSGI](http://redmine.lighttpd.net/projects/4/wiki/Howto_WSGI).
     There is an [experimental uwsgi module](http://projects.unbit.it/uwsgi/wiki/RunOnLighttpd)
@@ -211,9 +204,9 @@ see the [framework section](#web_frameworks "Internal reference")
 
 ##  WSGI Libraries
 As a WSGI Library is the heart of a Web framework you may want to look also at the
-[Web Frameworks section](#web_frameworks "internal reference")
+{{< iref "#web_frameworks" "Web Frameworks section" >}}
 
-The [http libraries](#http_libraries "internal reference")
+The {{< iref "#http_libraries" "http libraries" >}}
 can also be used for wsgi programming, but are mainly used on the client side.
 
 [wsgi.org](http://www.wsgi.org/) has lists of
@@ -258,7 +251,7 @@ that may be more up-to-date than the
     -   [GitHub: Sergey Schetinin (Maluke) ]()
 -   [werkzeug](http://werkzeug.pocoo.org/) (BSD License) <a name="werkzeug"></a>
     is a wsgi framework for python 2.x/3.x. It is the base of
-    [Flask](#flask "internal reference")
+    {{< iref "#flask" "Flask" >}}
     the development is hosted in the
     [werkzeug gitHub Repository](http://github.com/mitsuhiko/werkzeug/).
 
@@ -300,13 +293,12 @@ that may be more up-to-date than the
 See also the [CGI protocol references
 ](internet_application#web_protocols "internal reference")
 
-See also the [http libraries section
-](#http_libraries "internal reference"),
-[urllib.request](#urllib_request "internal reference"),
-[http.cookies](#http_cookies "internal reference"),
-[http.cookiesjar](#http_cookiesjar "internal reference"),
-and the third party modules [urllib3](#urllib3 "internal reference"),
-[request](#request "internal reference").
+See also the {{< iref "#http_libraries" "http libraries section" >}},
+{{< iref "#urllib_request" "urllib.request" >}},
+{{< iref "#http_cookies" "http.cookies" >}},
+{{< iref "#http_cookiesjar" "http.cookiesjar" >}},
+and the third party modules {{< iref "#urllib3" "urllib3" >}},
+{{< iref "#request" "request" >}}.
 
 -   [CGI scripts references](http://wiki.python.org/moin/CgiScripts)
 -   [cgitb module](http://docs.python.org/3/library/cgitb.html)
@@ -361,7 +353,7 @@ has a list of
     [James WSGI Server](http://wsgiarea.pocoo.org/james/).
 -   [Gunicorn](http://gunicorn.org/) <a name="gunicorn"></a>(MIT License)
     is a Python WSGI HTTP Server for UNIX built on pre-fork worker
-    model. It is usually deployed behind [nginx](/node/nginx "internal reference").
+    model. It is usually deployed behind {{< iref "nginx" "nginx" >}}.
     -   [Gunicorn documentation](http://docs.gunicorn.org/)
     -   [uWSGI](http://uwsgi-docs.readthedocs.org/en/latest/)
     is a fast application container server coded in pure C.
@@ -382,16 +374,16 @@ has a list of
     WSGI servers/gateways
     which speak AJP, FastCGI, and SCGI.
     [flup on pypi](https://pypi.python.org/pypi/flup/)
--   [Apache](/node/apache  "internal reference")
+-   {{< iref "apache" "Apache" >}}
     provides a wsgi [mod_wsgi](http://code.google.com/p/modwsgi/) module.
     It allows also to run uwsgi with [Apache2 mod_uwsgi or mod_proxy_uwsgi
     ](http://uwsgi-docs.readthedocs.org/en/latest/Apache.htm).
--   [nginx](/node/nginx "internal reference").
+-   {{< iref "nginx" "nginx" >}}.
     has also its [wsgi module](http://wiki.nginx.org/NginxNgxWSGIModule)
     that
     [supports uwsgi](http://uwsgi-docs.readthedocs.org/en/latest/Nginx.html)
-    It can also act as a reverse proxy in front of [Gunicorn](#gunicorn)
--   [Lighttpd](/node/lighttpd "internal reference")
+    It can also act as a reverse proxy in front of {{< iref "#gunicorn" "Gunicorn" >}}
+-   {{< iref "lighttpd" "Lighttpd" >}}
     used to run wsgi via FastCGI in its
     [HOW-TO WSGI](http://redmine.lighttpd.net/projects/4/wiki/Howto_WSGI).
     There is an now an experimental
@@ -407,8 +399,8 @@ has a list of
 ##  WSGI Libraries
 As a WSGI Library is the heart of a Web framework you may want to look
 also at the
-[Web Frameworks section](#web_frameworks "internal reference").
-The [http libraries](#httpl_libraries "internal reference")
+{{< iref "#web_frameworks" "Web Frameworks section" >}}.
+The {{< iref "#httpl_libraries" "http libraries" >}}
 can also be used for wsgi programming, but are mainly used
 on the client side.
 
@@ -460,16 +452,16 @@ that is more recent than the
         [Pylon webob  repository](https://github.com/Pylons/webob)
     -   [WebOb static](http://webob.readthedocs.org/en/latest/modules/static.html)
         is a tiny module to serve from WSGI your files/directories.
-    -   [w:Python_Paste|Paste]:
+    -   {{< wp "Python_Paste"  "Paste" >}}:
         [Python Paste](http://pythonpaste.org/) (MIT License) is not
         properly a web framework but rather _a framework for web
         frameworks_ that use the wsgi standard to provide python
         modules to act as middleware.  Paste is used in the Pylons web
         application framework.<br/>
-        Paste is now replaced by [WebOb](#webob "Internal reference").
+        Paste is now replaced by {{< iref "#webob" "WebOb" >}}.
 -   [werkzeug](http://werkzeug.pocoo.org/) (BSD License) <a name="werkzeug"></a>
     is a wsgi framework for python 2.x/3.x. It is the base of
-    [Flask](#flask "internal reference")
+    {{< iref "#flask" "Flask" >}}
     the development is hosted in the
     [werkzeug gitHub Repository](http://github.com/mitsuhiko/werkzeug/).
 
@@ -513,12 +505,12 @@ that is more recent than the
 
 ## CGI
 See also the The
-[http libraries section](#httpl_libraries "internal reference"),
-[urllib.request](#urllib_request "internal reference"),
-[http.cookies](#http_cookies "internal reference"),
-[http.cookiesjar](#http_cookiesjar "internal reference"),
-and the third party modules [urllib3](#urllib3 "internal reference"),
-[request](#request "internal reference").
+{{< iref "#httpl_libraries" "http libraries section" >}},
+{{< iref "#urllib_request" "urllib.request" >}},
+{{< iref "#http_cookies" "http.cookies" >}},
+{{< iref "#http_cookiesjar" "http.cookiesjar" >}},
+and the third party modules {{< iref "#urllib3" "urllib3" >}},
+{{< iref "#request" "request" >}}.
 
 -   [python.org CGI scripts references](http://wiki.python.org/moin/CgiScripts)
 -   [cgitb module](http://docs.python.org/3/library/cgitb.html)
@@ -545,10 +537,10 @@ A [web application framework
 ](http://en.wikipedia.org/wiki/Web_application_framework)
 is aimed to supporting the development of dynamic websites, Web
 applications and Web services. They are closely related to
-[WSGI](#wsgi "Internal reference") that provide interface with web
-servers and they all use a [template engine](#template_engines "Internal reference").
+{{< iref "#wsgi" "WSGI" >}} that provide interface with web
+servers and they all use a {{< iref "#template_engines" "template engine" >}}.
 
-The [static site generators](/node/static_sites "Internal reference") have their own section.
+The {{< iref "static_sites" "static site generators" >}} have their own section.
 
 -   Two large lists of frameworks:
     [python wiki: Web frameworks](http://wiki.python.org/moin/WebFrameworks) and
@@ -663,7 +655,7 @@ you can find many others by
     ](http://pythonhosted.org/MarkWiki/) (BSD License)
     is a _Python_ + Flask wiki _not static_ that uses Markdown to create pages.
     Markwiki has an option to _freeze_ the wiki with
-    [Frozen-Flask](#frozen-flask  "internal reference") and export it to a
+    {{< iref "#frozen" "Frozen-Flask" >}} and export it to a
     static site.
     -   [GitHub: MarkWiki](https://github.com/mblayman/markwiki)
 -   <a name="simple-docs"></a>[simple-docs
@@ -671,7 +663,7 @@ you can find many others by
     (MIT license) is a Python Flask website for
     viewing _Markdown_ documentation files online. It is not a static
     site generator, but can be used for this task with
-    [Frozen-Flask](#frozen-flask  "internal reference").
+    {{< iref "#frozen" "Frozen-Flask" >}}.
 
 ## Nevow
 [Nevow](https://launchpad.net/nevow)
@@ -693,7 +685,7 @@ in 2009_.
 (BSD License) is a lightweight
 web framework that uses a common api to templating engines like
 Cheetah, Cherry Templates, Kid, Myghty, Breve, Genshi, Mako
-and [WebOb](#webob "Internal reference") as wsgi framework.
+and {{< iref "#webob" "WebOb" >}} as wsgi framework.
 [Wikipedia:Pylons](http://en.wikipedia.org/wiki/Pylons_%28web_framework%29)
 
 [Pyramid](http://www.pylonsproject.org/projects/pylons-framework/)
@@ -703,7 +695,7 @@ is a minimalistic web framework inspired by Zope, Pylons and Django.
 [Tornado](http://www.tornadoweb.org/) (Apache License)
 is a Python web framework and asynchronous networking library.
 
--   [w:Tornado_(web_server|Wikipedia: Tornado]
+-   {{< wp "Tornado_(web_server"  "Wikipedia: Tornado" >}}
 -   [cyclone](http://cyclone.io/) (Apache License) <a name="cyclone"></a>
     is a web server framework
     for Python that implements the Tornado API as a Twisted protocol.
@@ -718,7 +710,7 @@ as templating engine, Cherrypy to wrap the http protocol and
 optionaly MochiKit to wrap javascript in a pythonic way.
 [Wikipedia: Turbogears](http://en.wikipedia.org/wiki/Turbogears)
 
-Turbogears uses [Pylons and WebOb](#webob "Internal reference").
+Turbogears uses {{< iref "#webob" "Pylons and WebOb" >}}.
 
 ## web2py
 [web2py](http://mdp.cti.depaul.edu/examples/default/index)
@@ -790,12 +782,11 @@ systems.
 
 
 # Web client side programming {#web-client-programming}
-See also the section [XML parsers
-](/node/python_libraries#xml_parsers "internal reference")
+See also the section {{< iref "python_libraries#xml_parsers" "XML parsers" >}}
 
 In the following list the most up-to-date frameworks to do web client
-programming seems to be [mechanize](#mechanize "internal reference") and
-[splinter](#splinter "internal reference").
+programming seems to be {{< iref "#mechanize" "mechanize" >}} and
+{{< iref "#splinter" "splinter" >}}.
 
 -   [Python Wiki: Web client programming
     ](http://wiki.python.org/moin/WebClientProgramming)
@@ -842,10 +833,8 @@ programming seems to be [mechanize](#mechanize "internal reference") and
     a fork of mechanize, is a simple scripting language intended for
     programmatic or automated browsing of Web sites. _Last release
     2007_
--   The modules of the [Structured markup section
-    ](/node/python_libraries#structured_markup_libs "internal reference")
-    are also relevant, mainly [XML Parsers
-    ](/node/python_libraries#xml_parsers "internal reference")
+-   The modules of the {{< iref "python_libraries#structured_markup_libs" "Structured markup section" >}}
+    are also relevant, mainly {{< iref "python_libraries#xml_parsers" "XML Parsers" >}}
     [HTML5lib](http://code.google.com/p/html5lib/),
     [ElementTree](http://www.effbot.org/zone/element-index.htm),
     [lxml.html](http://codespeak.net/lxml/lxmlhtml.html),

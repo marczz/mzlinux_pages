@@ -1,11 +1,7 @@
-<!--
-.. description:
-.. date: 2015-01-06
-.. slug: system-administration
-.. tags:
-.. link:
-.. title: System Administration
--->
+---
+title: System Administration
+---
+
 
 # References
 -   For basic concepts it is always usefull to refer to the bible i.e.

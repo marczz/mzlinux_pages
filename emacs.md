@@ -1,14 +1,8 @@
-<!--
-.. description:
-.. date: 2014-03-29
-.. slug: emacs
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Emacs
--->
+---
+title: Emacs
+---
 
-[TOC]
+{{% toc /%}}
 
 # Emacs references
 -   [gnu.emacs.sources
@@ -77,8 +71,8 @@
     ](https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-en.org)
     by 陈斌 Chen bin.
 -   [oremacs](http://oremacs.com/) blog of Oleh Krehel the author
-    of [ivy](#ivy "internal reference),
-    [Hydra](#hydra "internal reference), _ace-link_, _ace-window_,
+    of {{< iref "#ivy" "ivy" >}},
+    {{< iref "#hydra" "Hydra" >}}, _ace-link_, _ace-window_,
     _avy_, _define-word_, _lispy_, _org-download_, _worf_,
     and many packages in his [GitHub repository
     ](https://github.com/abo-abo/).
@@ -130,27 +124,26 @@ domains which are targeted by many packages.
 
 ## References from other pages
 -   Look also at
-    [Emacs sound players
-    ](/node/media_players#emacs_players "internal reference"),
-    [Org Mode](/node/org-mode "internal reference").
+    {{< iref "media_players#emacs_players" "Emacs sound players" >}},
+    {{< iref "org" "Org Mode" >}}.
 -   Look at
-    -   [Git](/node/scm#emacs_git "internal reference")
+    -   {{< iref "scm#emacs_git" "Git" >}}
         for emacs git interface, and diff frontends.
-    -   [IRC](/node/irc#emacs_irc "internal reference")
+    -   {{< iref "irc#emacs_irc" "IRC" >}}
         for emacs irc clients,
-    -   [Xmpp](/node/xmpp#emacs_jabber "internal reference")
+    -   {{< iref "xmpp#emacs_jabber" "Xmpp" >}}
         for emacs jabber client,
-    -   [Calendar and PIM](/node/calendar#bbdb "internal reference")
+    -   {{< iref "calendar#bbdb" "Calendar and PIM" >}}
         for _bbdb_,
-    -   [Mail](/node/mail "internal reference") for emacs MUA
-        [Gnus](/node/mail#gnus "internal reference") and
-        [mu4e](/node/mail#mu4e "internal reference"))
-    -   [RSS](/node/rss_readers "internal reference")
+    -   {{< iref "mail" "Mail" >}} for emacs MUA
+        {{< iref "mail#gnus" "Gnus" >}} and
+        {{< iref "mail#mu4e" "mu4e" >}})
+    -   {{< iref "rss_readers" "RSS" >}}
         for emacs rss readers,
-        [RSS](/node/rss_readers#newsticker "internal reference")
-    -   [Dictionary Software](/node/dictionaries "internal reference")
+        {{< iref "rss_readers#newsticker" "RSS" >}}
+    -   {{< iref "dictionaries" "Dictionary Software" >}}
         for emacs dictionary interface,
-    -   [LaTeX](/node/latex "internal reference") for emacs latex interface.
+    -   {{< iref "latex" "LaTeX" >}} for emacs latex interface.
 -   Other applications are in their own section you can find them by
     searching this site for <i>Emacs</i>.
 
@@ -216,9 +209,9 @@ domains which are targeted by many packages.
 -   [Oleh Krehel _abo-abo_ oremacs
     ](https://github.com/abo-abo/oremacs) by the author of
     [oremacs blog](http://oremacs.com/) and many packages
-    [Ivy](#ivy "internal reference"),
-    [swiper](#ivy "internal reference"),
-    [hydra](#hydra "internal reference") and others.
+    {{< iref "#ivy" "Ivy" >}},
+    {{< iref "#ivy" "swiper" >}},
+    {{< iref "#hydra" "hydra" >}} and others.
 
 
 ## Packages provided inside emacs distrib
@@ -241,15 +234,15 @@ domains which are targeted by many packages.
     [ReplaceRegexp Examples](http://www.emacswiki.org/emacs/ReplaceRegexp).
 -   [Gnus](http://www.gnus.org/) and
     [mu4e](http://www.djcbsoftware.nl/code/mu/mu4e/index.html) are in
-    the [mail page](/node/mail "internal reference")
-    ([Gnus](/node/mail#gnus "internal reference"),
-    [mu4e](/node/mail#mu4e "internal reference"))
+    the {{< iref "mail" "mail page" >}}
+    ({{< iref "mail#gnus" "Gnus" >}},
+    {{< iref "mail#mu4e" "mu4e" >}})
 
 ## Other packages
 -   [Ag.el](https://github.com/Wilfred/ag.el) allows you to search
     using ag from inside Emacs.
 -   <a name="amx"></a>[amx](https://github.com/DarwinAwardWinner/amx) is a fork of
-    [smex](#smex "internal reference") that provide an alternative
+    {{< iref "#smex" "smex" >}} that provide an alternative
     interface for M-x in Emacs.it can use ido and ivy completion.
     _in elpa._
 -   <a name=define-word"</a>[define-word
@@ -265,11 +258,11 @@ domains which are targeted by many packages.
 -   [find-file-in-project
     ](https://github.com/technomancy/find-file-in-project)
     find a file in any project using find. It is in melpa and use
-    [ivy](#ivy "internal reference).
+    {{< iref "#ivy" "ivy" >}}.
 -   [guide-key](https://github.com/kai2nenobu/guide-key)
     automatically pops up the keys following your favorite
     prefixes. It can also highlight particular commands choosen by
-    regex. It is less polished than [Hydra](#hydra local reference")
+    regex. It is less polished than {{< iref "#hydra" "Hydra" >}}
     but does not need manual configuration of the completions.<br/>
     A fork of _guide-key_ is
     [emacs-which-key](https://github.com/justbur/emacs-which-key)
@@ -326,12 +319,12 @@ domains which are targeted by many packages.
     a `.projectile` file in it. It is in melpa. I use it with some
     extensions
     -   [counsel-projectile](https://github.com/ericdanan/counsel-projectile)
-        enhence projectile with [counsel](#ivy "local reference"),
+        enhence projectile with {{< iref "#ivy" "counsel" >}},
         the [manual is in the README
         ](https://github.com/ericdanan/counsel-projectile/blob/master/README.md).
     -   [persp-projectile
             ](https://github.com/bbatsov/persp-projectile) (for
-            [perspective](#perspective "local reference"))
+            {{< iref "#perspective" "perspective" >}})
     -   [Exploring large projects with Projectile and Helm Projectile
         ](http://tuhdo.github.io/helm-projectile.html)
 -   [scpaste](https://github.com/technomancy/scpaste)
@@ -342,7 +335,7 @@ domains which are targeted by many packages.
 -   <a name=smex"></a>[smex](https://github.com/nonsequitur/smex)
     is a M-x enhancement for Emacs. Built on top of Ido, it proposes
     your most frequently used commands. A more recent fork is
-    [amx](#amx "internal reference). _in elpa_
+    {{< iref "#amx" "amx" >}}. _in elpa_
 -   [use-package](https://github.com/jwiegley/use-package) add a
     macro which allows you to isolate each emacs package
     configuration.  I'm reluctant to use it because, if it is missing
@@ -455,7 +448,7 @@ https://emacs.stackexchange.com/questions/12235/edit-file-as-root-over-when-alre
 # Emacs Xml Resources {#xml_emacs}
 -   [nxml mode](http://www.thaiopensource.com/nxml-mode/)
     an emacs mode for editing xml based on
-    [w:Relax NG].
+    {{< wp "Relax NG" >}}.
     -   [Paper on nxml](http://www.xmlhack.com/read.php?item=2061) at
         xmlhack.com _2003_.
     -   [EmacsWiki NxmlMode

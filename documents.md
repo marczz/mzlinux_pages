@@ -1,26 +1,20 @@
-<!--
-.. description:
-.. date: 2013-08-02
-.. slug: documents
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Documents management.
--->
+---
+title: Documents management.
+---
 
-[TOC]
+{{% toc /%}}
 
 # References
 -   [ArchWiki: list of applications - Documents
     ](https://wiki.archlinux.org/index.php/List_of_applications/Documents)
--   Wikipedia [w:Comparison of reference management software]
+-   Wikipedia {{< wp "Comparison of reference management software" >}}
 
 # Applications
--   [w:Referencer] is a GNOME application to organize documents or
+-   {{< wp "Referencer" >}} is a GNOME application to organize documents or
     references, and generate a BibTeX file. It is tagetet to pdf
     papers more than books, so it uses
-    [w:Digital object identifier|DOI (Digital object identifier)] rather than
-    [w:ISBN]. It is in Debian.
+    {{< wp "Digital object identifier"  "DOI (Digital object identifier)" >}} rather than
+    {{< wp "ISBN" >}}. It is in Debian.
 -   [cb2Bib](http://www.molspaces.com/cb2bib/) is a open source application for extracting unformatted,
     or unstandardized bibliographic references from email alerts,
     journal Web pages, and PDF files.
@@ -29,13 +23,13 @@
     BibTeX, COPAC, EndNote refer, EndNote XML, Pubmed XML, ISI web of
     science, US Library of Congress MODS XML, RIS, and Word 2007
     bibliography. It is in debian.
--   [w:Bebop_(software)|Bebop (BibTeX Publisher)] is an Ajax/PHP
+-   {{< wp "Bebop_(software)"  "Bebop (BibTeX Publisher)" >}} is an Ajax/PHP
     BibTeX front-end that allows browsing by author, year, document
     type, topic and keywords. It uses a single BibTeX file and don't
     uses a DBMS.<br/>
-    Bibliographic entries can be exported as BibTeX through [w:unAPI],
+    Bibliographic entries can be exported as BibTeX through {{< wp "unAPI" >}},
     making it compatible with Zotero.
--   [w:Zotero] (AGPL)
+-   {{< wp "Zotero" >}} (AGPL)
     is a reference management software to manage bibliographic data
     and related research materials (such as PDF files).
     Features include web browser integration, online syncing,
@@ -52,7 +46,7 @@ There are some web service that use to keep a list of your read list
 url, and transform and clean the articles such it can be easily read
 offline on any device computer, smartphone or ebook readers.
 
--   [w:Instapaper] is a tool for saving web pages to read later on
+-   {{< wp "Instapaper" >}} is a tool for saving web pages to read later on
     one's Android or iOS device, computer, ereader, or smartphone.
 
     You can save your article to epub, customize the article by
@@ -68,7 +62,7 @@ offline on any device computer, smartphone or ebook readers.
     The premium feature for 3$/mont offers illimited highlight, and
     full text search.
 
--   [w:Pocket_(application)|Pocket] is an application and service for
+-   {{< wp "Pocket_(application)"  "Pocket" >}} is an application and service for
     managing a reading list of articles from the Internet. It is
     available for OS X, Windows, iOS, Android, Windows Phone,
     BlackBerry, Kobo eReaders, and web browsers.
@@ -85,15 +79,13 @@ offline on any device computer, smartphone or ebook readers.
     of articles, so they stay available even if they are no more
     published on the web.
 
--   [w:Readability_(service)|Readability]
-    which replaced [Readability Bookmarklet
-    ](#readability "internal reference")
-    was closed on December 10, 2016 see [below
-    ](#readability "internal reference")
+-   {{< wp "Readability_(service)"  "Readability" >}}
+    which replaced {{< iref "#readability" "Readability Bookmarklet" >}}
+    was closed on December 10, 2016 see {{< iref "#readability" "below" >}}
 
 -   [Wallabag](https://wallabag.org/)
     extracts the article's content without artefacts, and save it for
-    later reading. It allows also [w:Web annotation] of the saved
+    later reading. It allows also {{< wp "Web annotation" >}} of the saved
     pages. There are mobile applications for ios, android, pocketbook,
     kobo, kindle; and browsers plugins for Firefox, Chrome, Opera.
     It provides RSS feeds for each article status.
@@ -138,7 +130,7 @@ and more ...
 
 In Safari there is now a [builtin Reader Mode
 ](http://www.theregister.co.uk/2010/06/08/safari_reader_based_on_open_source_project/)
-based on [Readability plugin](#readability "internal reference"),
+based on {{< iref "#readability" "Readability plugin" >}},
 this buton is available as well on Mac OSX and on IOS.
 
 There are also many open source libraries for cleaning feeds, or web
@@ -225,8 +217,7 @@ you can remove these limitation for 24€ / year or self-host it for
 
 An other application to grab the texts of feeds and make it readable
 is [f43.me](https://f43.me/) (MIT License) it can use for uncluttering
-pages either a fork of [Full-Text RSS](#full-text_rss "internal
-reference") named [j0k3r/graby](https://github.com/j0k3r/graby) or the
+pages either a fork of {{< iref "#full" "Full-Text RSS" >}} named [j0k3r/graby](https://github.com/j0k3r/graby) or the
 [Mercury Web Parser API]()
 
 As the author [Jérémy Benoist](https://github.com/j0k3r) is also a

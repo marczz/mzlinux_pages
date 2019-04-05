@@ -1,22 +1,16 @@
-<!--
-.. description:
-.. date: 2015-06-27
-.. slug: console
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Console configuration
--->
+---
+title: Console configuration
+---
 
-[TOC]
+{{% toc /%}}
 
 ---
 
-See also [Xorg section](/node/xorg "internal reference"),
-[Checkpointing](/node/checkpointing "internal reference").
+See also {{< iref "xorg" "Xorg section" >}},
+{{< iref "checkpointing" "Checkpointing" >}}.
 
 # References
--   Wikipedia [w:Linux Console],
+-   Wikipedia {{< wp "Linux Console" >}},
 -   [ArchWiki: console
     ](https://wiki.archlinux.org/index.php/Linux_console)
 -   [The Linux keyboard and console HOWTO
@@ -33,32 +27,31 @@ See also [Xorg section](/node/xorg "internal reference"),
     ](https://wiki.archlinux.org/index.php/Linux_console/Keyboard_configuration)
 -   <a name="dvtm"></a>[dvtm](http://www.brain-dump.org/projects/dvtm/)
     ( MIT/X11 license) (dynamic virtual terminal manager) brings the concept of
-    [tiling window management](/node/desktop#tiling_wm "internal reference")
-    used in [dwm](/node/desktop#dwm "internal reference") to the console.
+    {{< iref "desktop#tiling_wm" "tiling window management" >}}
+    used in {{< iref "desktop#dwm" "dwm" >}} to the console.
     It allows to work with multiple console based programs. It is in Debian.
     -   [dvtm additional documentation](http://waxandwane.org/dvtm.html)
         contains a [dvtm-commands pdf cheat sheet
         ](http://waxandwane.org/dvtm/dvtm-commands-A4.pdf).
     -   _Dtvm_ itself don't have session management but you can use
-        [abucco](/node/checkpointing#abucco  "internal reference") or
-        [dtach](/node/checkpointing#dtach  "internal reference")
+        {{< iref "checkpointing#abucco" "abucco" >}} or
+        {{< iref "checkpointing#dtach" "dtach" >}}
         to provide the session management.
     -   _Dtvm_ can also be used in an X virtual console.
-    -   We can also use in console a [Terminal multiplexor
-        ](/node/checkpointing#terminal_multiplexors "internal reference")
-        like screen or [tmux](/node/checkpointing#tmux "internal reference").
+    -   We can also use in console a {{< iref "checkpointing#terminal_multiplexors" "Terminal multiplexor" >}}
+        like screen or {{< iref "checkpointing#tmux" "tmux" >}}.
 
 # Setting console Keyboard and Font
-See also [input method](/node/input_methods "internal reference"),
+See also {{< iref "input_methods" "input method" >}},
 
--   The keyboard and font are set at startup with [man:setupcon] from the package
+-   The keyboard and font are set at startup with {{< man "setupcon" >}} from the package
     console-setup.
--   [man:setupcon] default is to read the keyboard configuration from
+-   {{< man "setupcon" >}} default is to read the keyboard configuration from
     `/etc/default/keyboard` which can be overrided by `~/.keyboard`. The syntax of these
-    files is given in [man:keyboard(5)].
--   [man:setupcon] read the font configuration from `/etc/default/console-setup`
+    files is given in {{< man "keyboard(5)" >}}.
+-   {{< man "setupcon" >}} read the font configuration from `/etc/default/console-setup`
     overrided by ` ~/.console-setup` whose syntax is given in
-    [man:console-setup(5)].
+    {{< man "console-setup(5)" >}}.
 -   You can change `/etc/default/keyboard` by editing it or by running:
 
         # dpkg-reconfigure keyboard-configuration
@@ -72,13 +65,13 @@ See also [input method](/node/input_methods "internal reference"),
 -   Debian Wiki explains [How to set keyboard layout in initramfs
     ](https://wiki.debian.org/Keyboard#How_to_set_keyboard_layout_in_initramfs),
     and _How to enable USB keyboard in initramfs_.
--   A lower level utility to manipulate [man:keymaps(5)] is [man:loadkeys].
--   A lower level utility to manipulate console fonts is [man:setfont(8)]
--   The locale is seen by running [man:locale] without arguments. The default are set in
+-   A lower level utility to manipulate {{< man "keymaps(5)" >}} is {{< man "loadkeys" >}}.
+-   A lower level utility to manipulate console fonts is {{< man "setfont(8)" >}}
+-   The locale is seen by running {{< man "locale" >}} without arguments. The default are set in
     `/etc/default/locale` and can be changed by editing this file or running
-    [man:update-locale(8)].
+    {{< man "update-locale(8)" >}}.
 -   You can see all locales by running `locale -a`, the available locale are configured
-    in `/etc/locale.gen` and can have to be regenerated with [man:locale-gen] when you
+    in `/etc/locale.gen` and can have to be regenerated with {{< man "locale-gen" >}} when you
     change this file.
 
 -   [Linux Support for Funny/Functional Keys](http://rick.vanrein.org/linux/funkey).
@@ -89,19 +82,19 @@ See also [input method](/node/input_methods "internal reference"),
 
 ## Lower level Utilities
 
-[man:showkey]
+{{< man "showkey" >}}
 :   prints to standard output either the scan codes (`-s`) or the
     keycode (`-k`) or the ascii code(`-a`) of each key pressed.
     _It can be used only on console._
 
-[man:loadkeys]
+{{< man "loadkeys" >}}
 :   load a kernel keymap for the console.
 
-[man:dumpkeys]
+{{< man "dumpkeys" >}}
 :   writes the current contents of the keyboard drivers translation
     tables
 
-[man:unicode\_start]
+{{< man "unicode\_start" >}}
 :   Enables Unicode processing in the current console.
 
 -   first reload the keys in unicode to produce UTF-8 encoded
@@ -163,10 +156,10 @@ and more.
 
 Kmscon can also run in listen-mode and replace virtual terminals. This
 allows to run multiple graphics-servers (like kmscon,  X-Server,
-[Wayland Compositors](/node/xorg#wayland "internal reference")
+{{< iref "xorg#wayland" "Wayland Compositors" >}}
 simultaneously on all seats.
 
--   Wikipedia [w:kmscon]
+-   Wikipedia {{< wp "kmscon" >}}
 -   [Freedesktop: kmscon - KMS/DRM based System Console
     ](http://www.freedesktop.org/wiki/Software/kmscon/)
 -   [ArchWiki: kmscon
@@ -174,7 +167,7 @@ simultaneously on all seats.
     _kmscon is in Arch but not yet Debian.
 -   [kmscon introduction
     ](https://dvdhrm.wordpress.com/2012/12/10/kmscon-introduction/)
-    describe the use of _kmscon_ for [w:multiseat configuration]
+    describe the use of _kmscon_ for {{< wp "multiseat configuration" >}}
 -   _kmscon- is build upon [libstm](https://www.freedesktop.org/wiki/Software/libtsm/)
     _Terminal-emulator State Machine_ This library is very similar to libvte but without
     GTK+ bindings, it allows mainly to interpret terminal escape sequences in a Xterm

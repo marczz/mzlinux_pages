@@ -1,14 +1,8 @@
-<!--
-.. description:
-.. date: 2015-01-09
-.. slug: virtualization
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Virtualization
--->
+---
+title: Virtualization
+---
 
-[TOC]
+{{% toc /%}}
 
 # Emulators and virtualization References
 
@@ -23,7 +17,7 @@
 _not a true virtualization_
 
 
--   [w:chroot|Wikipedia: chroot]
+-   {{< wp "chroot"  "Wikipedia: chroot" >}}
 -   [Debian wiki: chroot](https://wiki.debian.org/chroot)
 -   [chroot chapter of debian reference manual
     ](http://www.debian.org/doc/manuals/reference/ch09.en.html#_chroot_system)
@@ -52,7 +46,7 @@ _not a true virtualization_
     ](https://www.debian.org/releases/stable/) :
     [Appendix D.3. Installing Debian GNU/Linux from a Unix/Linux System
     ](https://www.debian.org/releases/stable/amd64/apds03.html.en)
-    uses [man:debootstrap] and a chroot.
+    uses {{< man "debootstrap" >}} and a chroot.
 -   [Ubuntu documentation: Debootstrap Chroot
     ](https://help.ubuntu.com/community/DebootstrapChroot)
 -   [debootstick](http://drakkar-lig.github.io/debootstick/)
@@ -115,7 +109,7 @@ allows one to freely run Linux on Windows 2000/XP/vISTA/7.
     Linux on x86 hardware containing virtualization extensions (Intel
     VT or AMD-V). It consists of a loadable kernel module, kvm.ko, and
     a processor specific module, kvm-intel.ko or kvm-amd.ko. KVM also
-    requires a modified [QEMU](#qemu "internal link") although work is
+    requires a modified {{< iref "#qemu" "QEMU" >}} although work is
     underway to get the required changes upstream. The kernel component
     of KVM is included in mainline Linux, as of 2.6.20 and later.
 
@@ -219,7 +213,7 @@ PowerPC, and S390 guests.
     [QEMU User manual](http://wiki.qemu.org/download/qemu-doc.html),
     [Qemu networking](http://wiki.qemu.org/Documentation/Networking).
 -   [The qemu forum](http://qemu-forum.ipi.fi/),
--   Wikipedia: [w:Qemu].
+-   Wikipedia: {{< wp "Qemu" >}}.
 -   [Qemu Wikibook](http://en.wikibooks.org/wiki/QEMU) has sections:
     [Installing QEMU](http://en.wikibooks.org/wiki/QEMU/Installing_QEMU),
     [Creating and Manipulating Images](http://en.wikibooks.org/wiki/QEMU/Images),
@@ -312,7 +306,7 @@ systems and networks to communicate and interact.
     [Ubuntu help: VMware/Server](https://help.ubuntu.com/community/VMware/Server "help.ubuntu.com VMware Server").
 
 # Wine
--   [w:Wine (software)] implementation of the Win32 API,
+-   {{< wp "Wine (software)" >}} implementation of the Win32 API,
 -   [Wine hq](http://www.winehq.com/)
 -   [Wine Documentation](http://www.winehq.org/site/documentation) and
     [HowTo](http://wiki.winehq.org/HowTo)
@@ -354,15 +348,15 @@ systems and networks to communicate and interact.
 
 # Sandboxing
 
--   [w:Flatpak]
+-   {{< wp "Flatpak" >}}
     is a package management system, and application virtualization for
     Linux , it provides a sandbox environment.
--   [w:AppImage]
+-   {{< wp "AppImage" >}}
     An Appimage is a downloadable file for Linux that
     contains an application and everything the application needs to
     run (e.g., libraries, icons, fonts, translations, etc.)
     -   [AppImage Wiki](https://github.com/AppImage/AppImageKit/wiki).
--   [w:Snappy_(package_manager)|Snappy]
+-   {{< wp "Snappy_(package_manager)"  "Snappy" >}}
     is a distribution agnostic software deployment and package
     management system for Linux.
     -   [snaptcraft.io](https://snapcraft.io/)

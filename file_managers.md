@@ -1,16 +1,11 @@
-<!--
-.. description:
-.. date: 2015-03-25
-.. slug: file_managers
-.. tags:
-.. link:
-.. title: File Managers
--->
+---
+title: File Managers
+---
 
-[TOC]
+{{% toc /%}}
 
 # Reference
--   Wikipedia: [w:File manager], [Comparison of file managers].
+-   Wikipedia: {{< wp "File manager" >}}, [Comparison of file managers].
 -   [ArchWiki: list of file managers
     ](https://wiki.archlinux.org/index.php/List_of_applications#File_managers)
 
@@ -20,7 +15,7 @@
     superseded by Midnight Commander. The ded design date from 1988,
     but there is still available build and even deb packages on the
     home page.
--   The [w:Midnight Commander] (GPL) is a console application written with Ncurses
+-   The {{< wp "Midnight Commander" >}} (GPL) is a console application written with Ncurses
 (or S-Lang).
     -   The [Midnight Commander Development site
     ](https://www.midnight-commander.org)
@@ -47,12 +42,12 @@
     emacs bindings_. It provides a curses interface with a view on the
     directory hierarchy. _in debian_ .
     _ranger_ development is active in 2015.
-    -   Wikipedia [w:Ranger_(file_manager)|ranger].
+    -   Wikipedia {{< wp "Ranger_(file_manager)"  "ranger" >}}.
     -   [ArchWiki: Ranger](https://wiki.archlinux.org/index.php/Ranger).
 
 # Graphical file managers
 
--   Wikipedia: [w:File manager], [Comparison of file managers].
+-   Wikipedia: {{< wp "File manager" >}}, [Comparison of file managers].
 -   [ArchWiki: File manager functionality
     ](https://wiki.archlinux.org/index.php/File_manager_functionality)
 
@@ -61,7 +56,7 @@
     is a
     light GTK-2 file manager, it is comparable to Thunar, but have
     lower requirements, and you may prefer it if you don't have xfce.
-    -   _PCManFM_  is part of [lxde](/node/desktop#lxde "internal reference")
+    -   _PCManFM_  is part of {{< iref "desktop#lxde" "lxde" >}}
     -   _pcmanfm_ memory footprint is 14M Resident/ 10M shr for an empty
         directory but it will grow when opening directories with many
         files (and bitmaps thumbnails) and as so many applications;
@@ -69,7 +64,7 @@
     -   _pcmanfm_ can be used as a desktop manager daemon with the options
         `--desktop -d`, it then uses 11M resident/8.5 shared
         _before opening any folder_.
-    -   Wikipedia: [w:PCMan File Manager].
+    -   Wikipedia: {{< wp "PCMan File Manager" >}}.
     -   [Archlinux: PCManFM](https://wiki.archlinux.org/index.php/PCManFM)
         contains a usefull section on [Volume handling
         ](https://wiki.archlinux.org/index.php/PCManFM#Volume_handling),
@@ -119,7 +114,7 @@
         ](https://github.com/IgnorantGuru/spacefm/wiki/plugins),
         [trile7 script directory
         ](http://code.google.com/p/bashscripts/source/browse/trunk/)
--   [w:Thunar] (GPL) the
+-   {{< wp "Thunar" >}} (GPL) the
     [xfce](http://xfce.org/) window manager.
     -    [Thunar Home](http://docs.xfce.org/xfce/thunar/start)
     -    Thunar project was publishing  a
@@ -137,7 +132,7 @@
 -   [gentoo file manager](http://www.obsession.se/gentoo/)
     Is a GTK3 2 panels, commander like, file manager, it is not
     related to the Gentoo Linux distribution. Gentoo uses the
-    [w:GIO_(GNOME)|GIO] library. _Gentoo_ uses 18M resident / 12M shared.
+    {{< wp "GIO_(GNOME)"  "GIO" >}} library. _Gentoo_ uses 18M resident / 12M shared.
 -   [emelfm2](http://emelfm2.net/) is a two panels,
     Norton commander (or Midnight commander)
     like file manager for  Gtk3. Emlfm2 uses 16M resident memory / 12M shared.
@@ -151,7 +146,7 @@
     [Konqueror](http://konqueror.kde.org/)
 -   A Gnome user can not avoid
     [Nautilus](https://wiki.gnome.org/action/show/Apps/Nautilus)
-    now renamed [w:GNOME Files].
+    now renamed {{< wp "GNOME Files" >}}.
     -   [ArchWiki: GNOME Files
         ](https://wiki.archlinux.org/index.php/GNOME_Files)
     -   Nautilus seems
@@ -163,7 +158,7 @@
 
 # Web File managers
 
--   [shellinbox section](/node/raspberry#shellinabox "internal reference")
+-   {{< iref "raspberry#shellinabox" "shellinbox section" >}}
 -   [elfinder](http://elfinder.org/) (BSD License)
     elFinder is a file manager for web, written in JavaScript using jQuery UI.
     It can create and extract archives. A QuickLook function allows to preview

@@ -1,21 +1,14 @@
-<!--
-.. description:
-.. date: 2015-07-01
-.. slug: text_editors
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Text Editors
--->
+---
+title: Text Editors
+---
 
-[TOC]
+{{% toc /%}}
 
-[Emacs has its own section](/node/emacs "internal reference")
-where you find also [emacs compatible editors
-](/node/emacs#terminal_editors_emacslike "internal reference").
+{{< iref "emacs" "Emacs has its own section" >}}
+where you find also {{< iref "emacs#terminal_editors_emacslike" "emacs compatible editors" >}}.
 
 # List of text editors
--   Wikipedia [w:Comparison of text editors].
+-   Wikipedia {{< wp "Comparison of text editors" >}}.
 -   [ArchWiki: List of Text Editors
     ](https://wiki.archlinux.org/index.php/List_of_applications#Text_editors)
 
@@ -42,7 +35,7 @@ In 2015 I made a new test on nano 2.2.6 finding on amd64 3.7M res /
      [GitHub: Craig Barnes - nanorc](https://github.com/craigbarnes/nanorc)
 
 ## vi
--   Wikipedia [w:vi]
+-   Wikipedia {{< wp "vi" >}}
 -   [neatvi](http://repo.or.cz/neatvi.git)
     is a small ex/vi editor for editing bidirectional utf-8 text.
 -   [vis](https://github.com/martanne/vis)
@@ -170,7 +163,7 @@ neovim uses 8.8M/5.3M.
 nvim-qt uses 37M/30M.
 
 ## misc terminal editors
--   [w:ne (text editor)|ne] (GPL)
+-   {{< wp "ne (text editor)"  "ne" >}} (GPL)
     is a small curses editor. ne supports UTF-8, syntax highlighting,
     regular expressions, configurable menus and keybindings and autocomplete.
     -   [ne Home page](http://ne.di.unimi.it/),
@@ -180,7 +173,7 @@ nvim-qt uses 37M/30M.
     -   _ne_ footprints as for v 2.5 2015 are 2.9M res / 2.6M shr
 -   [cream](http://cream.sourceforge.net/)
     is a configuration of  Vim, aimed to simplify it's use for vim
-    beginners and implementing a [w:IBM Common User Access|CUA]
+    beginners and implementing a {{< wp "IBM Common User Access"  "CUA" >}}
     keybinding. It is in debian.
 
 # Javascript editors

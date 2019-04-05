@@ -1,30 +1,24 @@
-<!--
-.. description:
-.. date: 2015-05-27
-.. slug: programming_languages
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Programming Languages
--->
+---
+title: Programming Languages
+---
 
-[TOC]
+{{% toc /%}}
 
 # General References
 
 More references on  Wikipedia:
 
--   [w:List of programming languages]
--   [w:List of programming languages by type]
--   [w:Comparison of programming languages]
--   [w:List of object-oriented programming languages]
--   [w:Category:Object-oriented programming languages]
--   [w:List of JVM languages].
--   [w:List of concurrent and parallel programming languages]
--   [w:List of programming languages for artificial intelligence]
--   [w:Category:Functional languages]
--   [w:Category:Compiling tools]
--   [w:Category:Unix programming tools]
+-   {{< wp "List of programming languages" >}}
+-   {{< wp "List of programming languages by type" >}}
+-   {{< wp "Comparison of programming languages" >}}
+-   {{< wp "List of object-oriented programming languages" >}}
+-   {{< wp "Category:Object-oriented programming languages" >}}
+-   {{< wp "List of JVM languages" >}}.
+-   {{< wp "List of concurrent and parallel programming languages" >}}
+-   {{< wp "List of programming languages for artificial intelligence" >}}
+-   {{< wp "Category:Functional languages" >}}
+-   {{< wp "Category:Compiling tools" >}}
+-   {{< wp "Category:Unix programming tools" >}}
 
 -   [Rosetta Code](http://rosettacode.org)
     present solutions to the same task in as many different languages
@@ -43,27 +37,27 @@ More references on  Wikipedia:
     [awesome-awesomeness
     ](https://github.com/bayandin/awesome-awesomeness) and
     [awesome](https://github.com/sindresorhus/awesome).
-# [w:programming paradigms]
+# {{< wp "programming paradigms" >}}
 I mention only some paradigms look at
-[w:programming paradigms|Wikipedia: programming paradigms] for a full
+{{< wp "programming paradigms"  "Wikipedia: programming paradigms" >}} for a full
 list.
 
--   [w:Comparison of programming paradigms]
--   [w:Category:Programming paradigms]
+-   {{< wp "Comparison of programming paradigms" >}}
+-   {{< wp "Category:Programming paradigms" >}}
 
-[w:Constraint Programming]
+{{< wp "Constraint Programming" >}}
 :   is a form of declarative programming,
     where relations between variables are stated in the form of
     constraints. Constraints do not specify a step or sequence of
     steps to execute, but rather the properties of a solution to be
     found. Constraint programming can be expressed in the form of
-    [w:constraint logic programming] like in prolog, or realized in
+    {{< wp "constraint logic programming" >}} like in prolog, or realized in
     imperative programming via a separate library. There are
     constraints library for all major programming languages
     ( [List in Wikipedia
     ](https://en.wikipedia.org/wiki/Constraint_programming#Constraint_programming_libraries_for_imperative_programming_languages))
 
-[w:Declarative programming]
+{{< wp "Declarative programming" >}}
 :   is a style of building computer
     programs, that expresses the logic of a computation without
     describing its control flow. It is an umbrella for
@@ -71,70 +65,70 @@ list.
     Domain-specific languages, Functional programming,
     Hybrid languages, Logic programming, Modeling
 
-[w:Functional programming]
+{{< wp "Functional programming" >}}
 :   is a declarative programming which
     treats computation as the evaluation of mathematical functions and
     avoids changing-state and mutable data.
     Among functional programming languages whe find Common Lisp,
     Scheme, Clojure, Racket,Erlang, OCaml, Haskell.
-    A language is [w:purely functional] if it guarantees the (weak)
-    equivalence of [w:call-by-name], [w:call-by-value] and
-    [w:call-by-need], often by excluding updates of entities
-    in the program's [w:runtime system].
+    A language is {{< wp "purely functional" >}} if it guarantees the (weak)
+    equivalence of {{< wp "call-by-name" >}}, {{< wp "call-by-value" >}} and
+    {{< wp "call-by-need" >}}, often by excluding updates of entities
+    in the program's {{< wp "runtime system" >}}.
     Variables are used in a mathematical sense, with identifiers
     referring to immutable, persistent values.
 
-[w:Metaprogramming]
+{{< wp "Metaprogramming" >}}
 :   is the writing of computer programs with the
     ability to treat programs as their data. It means that a program
     could be designed to read, generate, analyse or transform other
     programs, and even modify itself while running.
 
     It includes:
-    -   [w:Template metaprogramming] like in C++ or D;
-    -   [w:Reflection_(computer_programming)|reflective programming]
+    -   {{< wp "Template metaprogramming" >}} like in C++ or D;
+    -   {{< wp "Reflection_(computer_programming)"  "reflective programming" >}}
         i.e. the ability of a computer program to examine _type
         introspection_ and modify its' structure and behavior at runtime.
         this feature is present in many languages like ECMAScript, clojure,
         Java, lisp, Objective-C, Perl, PHP, Python, R, Ruby, scheme ...
         -
 
-[w:Object-oriented programming] (OOP)
+{{< wp "Object-oriented programming" >}} (OOP)
 :   is a paradigm based on the
-    concept of [w:objects], which are [w:data structures] that contain
+    concept of {{< wp "objects" >}}, which are {{< wp "data structures" >}} that contain
     data, in the form of fields, known as attributes; and code, in the
     form of procedures, known as methods.  An object's procedures can
     access and often modify the attributes of the object with which
     they are associated (objects have a notion of "this"). Most
-    popular OOP languages are [w:class-based], meaning that objects are
+    popular OOP languages are {{< wp "class-based" >}}, meaning that objects are
     instances of classes, which also determines their type.  Most OOP
-    language combines OOP with [w:imperative],
-    [w:procedural programming].  Significant object-oriented languages
+    language combines OOP with {{< wp "imperative" >}},
+    {{< wp "procedural programming" >}}.  Significant object-oriented languages
     include Python, C++, Objective-C, Smalltalk, Delphi, Java, C#,
     Perl, Ruby and PHP.
 
-[w:Polymorphism (computer science)|Polymorphism]
+{{< wp "Polymorphism (computer science)"  "Polymorphism" >}}
 :   is the provision
     of a single interface to entities of different types.
     -   If a function denotes different and potentially heterogeneous
         implementations depending on a limited range of individually
         specified types and combinations, it is called
-        [w:ad hoc polymorphism]. Ad hoc polymorphism is supported in
-        many languages using [w:function overloading].
+        {{< wp "ad hoc polymorphism" >}}. Ad hoc polymorphism is supported in
+        many languages using {{< wp "function overloading" >}}.
     -   If the code can be used transparently with any number of new
-        types, it is called [w:parametric polymorphism]. In the
+        types, it is called {{< wp "parametric polymorphism" >}}. In the
         object-oriented programming community, this is often known as
-        [w:generic programming]. In the functional programming
+        {{< wp "generic programming" >}}. In the functional programming
         community, this is often simply called polymorphism.
-    -   [w:Subtyping] (or inclusion polymorphism) is a concept wherein a
+    -   {{< wp "Subtyping" >}} (or inclusion polymorphism) is a concept wherein a
         name may denote instances of many different classes as long as
         they are related by some common superclass.[3] In
         object-oriented programming, this is often referred to simply
         as polymorphism.
 
-[w:Reflection (computer programming)|Reflection]
+{{< wp "Reflection (computer programming)"  "Reflection" >}}
 :   reflection is the ability of a computer program to examine (see
-    [w:type introspection]) and modify the structure and behavior
+    {{< wp "type introspection" >}}) and modify the structure and behavior
     (specifically the values, meta-data, properties and functions) of
     the program at runtime.
 
@@ -142,9 +136,9 @@ list.
     gives examples of reflection in ECMAScript, Java, Objective-C,
     Perl, PHP, Python, R, Ruby.
 
-[w:Type inference]
+{{< wp "Type inference" >}}
 :   refers to the automatic deduction of the data type of an
-    expression. If some, but not all, [w:type annotations] are already
+    expression. If some, but not all, {{< wp "type annotations" >}} are already
     present it is referred to as type reconstruction.
 
     It is a feature present in some strongly statically typed
@@ -176,7 +170,7 @@ list.
     There is a [page of results
     ](http://attractivechaos.github.io/plb/)
 
-# Language comparisons [Rust](#rust}, [NIM](#nim), [ŋo](#golang)
+# Language comparisons {{< iref "#rust" "Rust" >}}, {{< iref "#golang" "ŋo" >}}
 {#language_comparison}
 -   [Of  Rust, D, Go and Nim, which is the strongest language and why?
     - Quora
@@ -235,16 +229,16 @@ list.
     ](http://www.bradcypert.com/2017/06/28/5-programming-languages-you-could-learn-from/)
     by Brad Cypert _2017_ Nim, Go, F#, Rust Clojure.
 
-# [w:ATS_(programming_language)|ATS]
+# {{< wp "ATS_(programming_language)"  "ATS" >}}
 
 ATS is a derivative of Ocaml that focus on theorem proving support.
 ATS is very quick, a lot better than Ocaml and Haskell,
 and comparable to C cf. [The  benchmarks game](http://shootout.alioth.debian.org/)
 
-# [w:C (programming language)|C]
+# {{< wp "C (programming language)"  "C" >}}
 -   [Wikipedia: C (programming language)](http://en.wikipedia.org/wiki/C_(programming_language)),
     [C syntax](http://en.wikipedia.org/wiki/C_syntax),
-    [w:C preprocessor].
+    {{< wp "C preprocessor" >}}.
 -   A wikibook :
     [C Programming](http://en.wikibooks.org/wiki/C_Programming)
     (GNU FDL)
@@ -274,12 +268,12 @@ and comparable to C cf. [The  benchmarks game](http://shootout.alioth.debian.org
     ](http://stackoverflow.com/questions/tagged/c) on
     [StackOverflow](http://stackoverflow.com/).
 -   See also the section on
-    [Security and Encryption](/node/security "internal reference")
+    {{< iref "security" "Security and Encryption" >}}
     which has references on secure programming techniques.
 
 ## C compilers
 -   [GCC home page](http://gcc.gnu.org/)(FAQ , doc)
--   [w: Distcc] is a tool for speeding up compilation of source code
+-   {{< wp " Distcc" >}} is a tool for speeding up compilation of source code
     by using distributed computing.
 -   [ArcWiki: Distcc](https://wiki.archlinux.org/index.php/Distcc).
 -   [Gentoo: Distcc](https://wiki.gentoo.org/wiki/Distcc),
@@ -311,25 +305,25 @@ and comparable to C cf. [The  benchmarks game](http://shootout.alioth.debian.org
     a review of the most funny comments.
 -   About the  [Single Function Exit Point
     ](http://c2.com/cgi/wiki?SingleFunctionExitPoint) rule.
--   [w:lint_(software)|Lint] is the original static code analyzer for C.
--   [w:Splint] (GPL) is an enhancement of Lint.
+-   {{< wp "lint_(software)"  "Lint" >}} is the original static code analyzer for C.
+-   {{< wp "Splint" >}} (GPL) is an enhancement of Lint.
     [Splint Manual](http://splint.org/manual/)
--   [w:Frama-C] (LGPL) is a set of interoperable program analyzers for C programs.
+-   {{< wp "Frama-C" >}} (LGPL) is a set of interoperable program analyzers for C programs.
 -   [C-C++ Beautifier HOW-TO](http://www.yolinux.com/HOWTO/C-C++Beautifier-HOWTO.html)
     by Alavoor Vasudevan.
 -   Other links to program pretty-printing are in the section
-    [Source code beautifiers](/node/source_code "internal reference")
+    {{< iref "source_code" "Source code beautifiers" >}}
 
 ## C libraries
 -   [Gnu Libc](http://www.gnu.org/software/libc/ "www.gnu.org libc")
     (GPL)
     *[Glibc manual](http://www.gnu.org/software/libc/manual/ "www.gnu.org libc/manual")*.
--   The Gnome library [w:GLib] is a cross-platform  library that began as part of
-    the [w:GTK+] project but contain now non-GUI-specific code.
-    _Glib_ provides the core object system used in Gnome [w:GObject]), the main loop
+-   The Gnome library {{< wp "GLib" >}} is a cross-platform  library that began as part of
+    the {{< wp "GTK+" >}} project but contain now non-GUI-specific code.
+    _Glib_ provides the core object system used in Gnome {{< wp "GObject" >}}), the main loop
     implementation, and a large set of utility functions for strings and
     common data structures. It provides typedefs to ensure portability
-    and a large set of containers. Glib, GObject and other GTK+ components are in the [GTK+ section](/node/193 "internal node").
+    and a large set of containers. Glib, GObject and other GTK+ components are in the {{< iref "193" "GTK+ section" >}}.
 -   [AT&T Open Source software tools (pdf)
     ](http://www2.research.att.com/~astopen/publications/open-2000-1.pdf)
     (Common Public License) ast, Graphviz, sfio, dytona ....
@@ -351,12 +345,11 @@ and comparable to C cf. [The  benchmarks game](http://shootout.alioth.debian.org
         [myregextester](https://www.myregextester.com/),
         [reg-exp](http://reg-exp.com/),
         [pythex](http://pythex.org/) _python regexp_.
-    -   See also the [Python _re_ references
-        ](/node/python_libraries#python_re "internal reference")
+    -   See also the {{< iref "python_libraries#python_re" "Python _re_ references" >}}
 
 ### antlr
 
-[w:Antlr] (ANother Tool for Language Recognition) provides a framework for
+{{< wp "Antlr" >}} (ANother Tool for Language Recognition) provides a framework for
 constructing recognizers, compilers, and translators from grammatical
 descriptions containing C++ or Java actions
 
@@ -381,12 +374,12 @@ descriptions containing C++ or Java actions
 ### System Functions
 
 njamd
-:   A malloc debugger [man:libnjamd(3)], [man:malloc(3)]
+:   A malloc debugger {{< man "libnjamd(3)" >}}, {{< man "malloc(3)" >}}
 
 efence
-:   An other malloc debugger [man:efence(3)]
+:   An other malloc debugger {{< man "efence(3)" >}}
 
-# [w:C++]
+# {{< wp "C++" >}}
 
 -   [Bjarne Stroustrup's homepage](http://www.research.att.com/~bs/)
 -   [Programming Using C++
@@ -402,13 +395,13 @@ efence
 -   [the metakit home page](http://equi4.com/metakit/)
     from [meta4]((http://www.equi4.com/).
 
-# [w:Caml]
+# {{< wp "Caml" >}}
 -   [Objective Caml Home](http://ocaml.org/),
 -   [manual](http://caml.inria.fr/pub/docs/manual-ocaml/)
 -   [Functional programming using Caml Light
     ](http://caml.inria.fr/pub/docs/fpcl/index.html)
 
-## [w:Clojure] {#clojure}
+## {{< wp "Clojure" >}} {#clojure}
 Clojure (eclipse public license) is a lisp dialect that compiles
 directly to JVM bytecode (and the CLR, and JavaScript). It supports
 multithreaded programming.
@@ -469,13 +462,13 @@ multithreaded programming.
 -   [Category Clojure - Rosetta Code
     ](http://rosettacode.org/wiki/Category:Clojure)
 
-# [w:D(programming_language)|D]
+# {{< wp "D(programming_language)"  "D" >}}
 -   The [D Programming Language](http://digitalmars.com/d/) originated
     as a re-engineering of C++, and as C++ is an object-oriented,
     imperative, multi-paradigm system programming language
 
-# [w:Go_(programming_language)|Go]
--   [w:Go_(programming_language)|Go] is a compiled, garbage-collected,
+# {{< wp "Go_(programming_language)"  "Go" >}}
+-   {{< wp "Go_(programming_language)"  "Go" >}} is a compiled, garbage-collected,
      concurrent programming language developed by Google.
 -   [Go Home Page](http://golang.org/)
 -   [Go Documentation](https://golang.org/doc/)
@@ -505,7 +498,7 @@ multithreaded programming.
     explain compilation of go on arm systems, it gives also a list of
     linux nas, where go is usable.
 
-# [w:Haskell_(programming_language)|Haskell] {#haskell}
+# {{< wp "Haskell_(programming_language)"  "Haskell" >}} {#haskell}
 -   [Haskell Home](http://www.haskell.org/)
     in the [Haskell Wiki](http://www.haskell.org/haskellwiki/)
 -   [Hugs](http://www.haskell.org/hugs/) is a bytecode interpreter for Haskell.
@@ -545,7 +538,7 @@ multithreaded programming.
     by Tommy M. McGuire are working programs that solve real-world
     problems.
 
-# [w:Haxe]
+# {{< wp "Haxe" >}}
 Haxe (GPL, MIT) is a multiplatform programming language and compiler
 that can translate the Haxe language into Adobe Flash applications,
 JavaScript programs, Java, C#, C++ standalone applications, Python,
@@ -553,21 +546,21 @@ PHP, Apache CGI, and Node.js server-side applications.
 
 The Haxe compiler is developed in the OCaml. Haxe is a general-purpose
 language with object-oriented programming, exceptions, and
-[w:type inference] with class parameters. [w:Generic classes],
-[w:Reflection (computer programming)|Reflection], [w:iterators], and
+{{< wp "type inference" >}} with class parameters. {{< wp "Generic classes" >}},
+{{< wp "Reflection (computer programming)"  "Reflection" >}}, {{< wp "iterators" >}}, and
 [w:functional programming) are built-in functionality of the language and libraries.
 
 -   [Haxe Home](http://haxe.org/).
 
-# [w:Java_(programming language)|Java]
+# {{< wp "Java_(programming language)"  "Java" >}}
 
 -   [Java2python](https://github.com/natural/java2python/) (GPL)
     library to translate Java source code to Python.
 
-# [w:Lua (programming language)|Lua]
+# {{< wp "Lua (programming language)"  "Lua" >}}
 -   [lua](http://www.lua.org/) (MIT License) [
     [lua projects](http://www.lua.org/uses.html)]
--   [w:Lua_(programming_language)|Wikipedia: Lua (programming language)] has a feature list,
+-   {{< wp "Lua_(programming_language)"  "Wikipedia: Lua (programming language)" >}} has a feature list,
     programming examples of the Lua programming language and numerous references to software
     that can embed lua code.
 -   [awesome-lua (by forhappy)
@@ -610,20 +603,20 @@ language with object-oriented programming, exceptions, and
 -   [lunatic python](http://labix.org/lunatic-python) (LGPL)
     is a two way bridge between lua and python.
 -   Julien Danjou who implemented the Lua programming language in the window manager
-    [Awesome](/node/desktop "reference"),
+    {{< iref "desktop" "Awesome" >}},
     does not appreciate the lua design so he made some
     [rants about Lua](https://julien.danjou.info/blog/2008/rants-about-lua) in 2008
     that he extended in 2011 in [why not Lua](https://julien.danjou.info/blog/2011/why-not-lua)
 -   [lua ncurses](https://github.com/msva/lua-ncurses)
     is a wrapper around the ncurses library for terminal programming.
 
-# [w:Mirah_%28programming_language%29|Mirah]
+# {{< wp "Mirah_%28programming_language%29"  "Mirah" >}}
 -   [Mirah](http://en.wikipedia.org/wiki/Mirah_%28programming_language%29) (Apache License)
     is a programming language based on Ruby syntax,
     local type inference, hybrid static/dynamic type system, that compile to JVM bytecode.
 -   [Mirah Home](http://www.mirah.org/)
 
-# [w:Nim] {#nim}
+# {{< wp "Nim" >}} {#nim}
 
 Nim is an imperative compiled language supporting metaprogramming,
 functional, message passing, procedural, and object-oriented
@@ -636,7 +629,7 @@ The compiler generates optimized C code and defers compilation to an
 external compiler, it can also generate C++ and Objective C
 
 Nim is a statically typed programming language, it supports
-[w:Macro_(computer_science)#Syntactic_macros|syntactic macros]
+{{< wp "Macro_(computer_science)#Syntactic_macros"  "syntactic macros" >}}
 and term rewriting macros.
 
 There are existing bindings for many libraries, for example GTK+2,
@@ -681,7 +674,7 @@ new bindings from C code.
     -   [Nim features
         ](http://goran.krampe.se/2015/03/26/nim-voodoo/)
         describe the main features and facilities of Nim. It peculiarly
-        stressed up [w:Meta programming].
+        stressed up {{< wp "Meta programming" >}}.
     -   [Nim Crash Course in LXC
         ](http://goran.krampe.se/2017/10/24/nim-crash-course-inside-lxc)
         _lxc part is optional_.
@@ -712,10 +705,10 @@ new bindings from C code.
     [gh_nimrod_doc_pagesusage guide ](http://gradha.github.io/gh_nimrod_doc_pages/)
 
 
-# [w:Perl]
+# {{< wp "Perl" >}}
 
 -   [PERL Home](http://www.perl.com/) (GPL or Artistic License)
--   [w:Perl_6]
+-   {{< wp "Perl_6" >}}
 -   [free perl books
     ](http://www.freeprogrammingresources.com/perlbook.html).
 -   [wikiversity topic:Perl](http://en.wikiversity.org/wiki/Topic:Perl)
@@ -729,12 +722,12 @@ new bindings from C code.
     ](http://www.greenteapress.com/perl/perl.pdf)
 -   [wikibook: Perl Programming](http://en.wikibooks.org/wiki/Perl_Programming)
 
-# [w:Prolog]
+# {{< wp "Prolog" >}}
 -   [SWI-Prolog: Edinburgh compatible Prolog compiler](http://www.swi-prolog.org/)
--   Wikipedia [w:Logic_programming], [w:Category:Logic programming]
+-   Wikipedia {{< wp "Logic_programming" >}}, {{< wp "Category:Logic programming" >}}
 
-# [w:Ruby_(programming_language)|Ruby]
-_Ruby is covered by GPL or the GPL compatible [w:Ruby License]_
+# {{< wp "Ruby_(programming_language)"  "Ruby" >}}
+_Ruby is covered by GPL or the GPL compatible {{< wp "Ruby License" >}}_
 
 -   [Ruby home page](http://www.ruby-lang.org/)
 -   [Ruby in twenty minutes](http://www.ruby-lang.org/en/documentation/quickstart/)
@@ -748,7 +741,7 @@ _Ruby is covered by GPL or the GPL compatible [w:Ruby License]_
 -   [Programming Ruby](http://www.ruby-doc.org/docs/ProgrammingRuby/)
      _first edition, year 2000_
 -   [Wikibook: Ruby Programming](http://en.wikibooks.org/wiki/Ruby_programming_language)
--   [w:JRuby] (GPL) is a Java implementation of the Ruby programming language.
+-   {{< wp "JRuby" >}} (GPL) is a Java implementation of the Ruby programming language.
 -   [w:Ruby on Rails](MIT License) is a web application framework for the Ruby programming language.
 -   [Rubygems](http://rubygems.org/) the Ruby community's gem hosting service.
 -   [gem command reference](http://docs.rubygems.org/read/book/2)
@@ -760,9 +753,9 @@ highly safe code.
 It is designed to be memory safe.
 
 The type system supports a mechanism similar to type classes, called
-'traits', inspired directly by  Haskell that allows  an [w:ad-hoc polymorphism].
+'traits', inspired directly by  Haskell that allows  an {{< wp "ad-hoc polymorphism" >}}.
 
-Rust features [w:type inference], its object system uses
+Rust features {{< wp "type inference" >}}, its object system uses
 _implementation_ that fulfill a role similar to that of classes.
 
 -   [Rust book - The Rust Programming Language
@@ -827,12 +820,12 @@ stopped in 2015.
 -   [Rusthon C++11 Backend
     ](http://rusthon-lang.blogspot.fr/2015/02/rusthon-c11-backend.html)
 
-# [w:Scala_(programming_language)|Scala]
+# {{< wp "Scala_(programming_language)"  "Scala" >}}
 _Scala_ combine object-oriented language and functional programming and
 compile to java byte code.  Scala speed compare with java speed in
 [The computer language benchmarks game](http://shootout.alioth.debian.org/)
 
-# [w:Scheme (programming language)|Scheme]
+# {{< wp "Scheme (programming language)"  "Scheme" >}}
 -   [Revised6 Report on the Algorithmic Language Scheme (R6RS)
     ](http://www.r6rs.org/)
 -   [Revised(5) Report on the Algorithmic Language Scheme (R5RS)
@@ -850,13 +843,13 @@ compile to java byte code.  Scala speed compare with java speed in
     ](http://www-sop.inria.fr/members/Manuel.Serrano/bigloo/) de
     [Manuel Serrano](http://www-sop.inria.fr/members/Manuel.Serrano/)
     compile scheme to C or JVM; and has now a support for Android.
--   [w:Kawa], [Kawa Home](http://www.gnu.org/software/kawa/),
+-   {{< wp "Kawa" >}}, [Kawa Home](http://www.gnu.org/software/kawa/),
     the Java-based Scheme system,
     [Hello world in Scheme (Kawa) for Android
     ](http://per.bothner.com/blog/2010/AndroidHelloScheme/)
     from [Per Bothner](http://per.bothner.com/index.html)
     the creator of Kawa.
--   [w:Racket] is the new name of PLT Scheme.
+-   {{< wp "Racket" >}} is the new name of PLT Scheme.
     [Racket Home Page](http://racket-lang.org/)
     [[The TeachScheme! Project](http://www.teach-scheme.org/)
     including the book
@@ -874,7 +867,7 @@ compile to java byte code.  Scala speed compare with java speed in
     TeX2page, pregexp, Schelog)
 -   [Jaffer](http://people.csail.mit.edu/jaffer/)'s
     [SCM Home Page](http://people.csail.mit.edu/jaffer/SCM.html)
--   [w:GNU Guile]:
+-   {{< wp "GNU Guile" >}}:
     [GNU Guile Home Page](http://www.gnu.org/software/guile/guile.html),
     [Gnu Guile projects and libraries](http://www.gnu.org/software/guile/gnu-guile-projects.html)
     [Guile FAQ](http://www.gnu.org/software/guile/docs/faq/guile-faq.html)
@@ -886,8 +879,8 @@ compile to java byte code.  Scala speed compare with java speed in
     opengl, gtk bindings.
 -   [sawfish](http://sawfish.wikia.com/wiki/Main_Page) lisp window manager
 
-## [w:Lisp_(programming_language)|Lisp]
--   Wikipedia: [w:Common Lisp]
+## {{< wp "Lisp_(programming_language)"  "Lisp" >}}
+-   Wikipedia: {{< wp "Common Lisp" >}}
 -   [CLISP](http://clisp.cons.org/)
 
 
@@ -901,26 +894,26 @@ compile to java byte code.  Scala speed compare with java speed in
 -   [Dorai Sitaram \\eval for TeX
     ](http://www.ccs.neu.edu/home/dorai/eval4tex/eval4tex-doc.html)
 
-# [w:Unicon_programming_language|Unicon] and [w:Icon_(programming_language)|Icon]
--    [w:Icon_(programming_language)|Icon] is a programming language with syntax similar
+# {{< wp "Unicon_programming_language"  "Unicon" >}} and {{< wp "Icon_(programming_language)"  "Icon" >}}
+-    {{< wp "Icon_(programming_language)"  "Icon" >}} is a programming language with syntax similar
      to C or Pascal released in  1977. It features goal directed execution and many facilities
      for managing strings and textual patterns. There is a
      [WikiBook: Icon Programming](http://en.wikibooks.org/wiki/Icon_Programming).
      [The Icon Programming Language  (home page)](http://www.cs.arizona.edu/icon/index.htm).
--    [w:Unicon_programming_language|Unicon] (GPL) was developed in 1996.
+-    {{< wp "Unicon_programming_language"  "Unicon" >}} (GPL) was developed in 1996.
      It descends from Icon but offers better access to the operating system
      as well as support for object-oriented programming.
 
-# [w:Vala_(programming_language)|Vala], [w:Genie_%28programming_language%29|Genie] <a name="vala"></a>
--   [w:Vala_(programming_language)|Vala] (LGPL)
+# {{< wp "Vala_(programming_language)"  "Vala" >}}, {{< wp "Genie_%28programming_language%29"  "Genie" >}} <a name="vala"></a>
+-   {{< wp "Vala_(programming_language)"  "Vala" >}} (LGPL)
     is a programming language whose syntax borrows heavily from C#.
-    Vala is compiled to C and uses the [w:GObject] object system.
+    Vala is compiled to C and uses the {{< wp "GObject" >}} object system.
 -   [Gnome Project: Vala](https://wiki.gnome.org/Projects/Vala)
 -   [Valadoc](https://wiki.gnome.org/Projects/Valadoc)
     is a documentation generator for generating API documentation from Vala source code
 -   [Libgee](https://wiki.gnome.org/action/show/Projects/Libgee)
     (LGPL) is a collection library written in vala, which provides
--   [w:Genie_%28programming_language%29|Genie] is an alternative,
+-   {{< wp "Genie_%28programming_language%29"  "Genie" >}} is an alternative,
     more pythonic, syntax for Vala, that generates the same code.
 
 <!-- Local Variables: -->

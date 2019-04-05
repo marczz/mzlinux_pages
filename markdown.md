@@ -1,16 +1,10 @@
-<!--
-.. description:
-.. date: 2010-01-19
-.. slug: markdown
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: MarkDown
--->
+---
+title: MarkDown
+---
 
-[TOC]
+{{% toc /%}}
 
-# [w:Markdown]
+# {{< wp "Markdown" >}}
 
 -   [Markdown](http://daringfireball.net/projects/markdown/)
     (BSD style license) is a text-to-HTML conversion tool originaly
@@ -18,41 +12,41 @@
     haskell, lua. Markdown can be used in many CMS _often thru plugins_
     Instiki Wiki (ruby powered wiki), ikiwiki. dokuwiki,
     [Moinmoin](http://moinmo.in/), [WolfCms](http://www.wolfcms.org/),
-    [Gollum](/node/116/#gollum "internal reference").
+    {{< iref "116" "Gollum" >}}.
     It is widely used in Django
     powered applications _using the python implementation_.
 
     It is the most usual syntax for
     [Static site generators](node/static_site/ "internal reference")
     and used in
-    [Awestruct](/node/static_site/#awestruct "internal reference"),
-    [BlackSmith](/node/static_site/#blacksmith "internal reference"),
-    [Bonsai](/node/static_site/#bonsai "internal reference"),
+    {{< iref "static_site" "Awestruct" >}},
+    {{< iref "static_site" "BlackSmith" >}},
+    {{< iref "static_site" "Bonsai" >}},
     [Docpad](node/static_site/#docpad "internal reference")
-    [Chisel](/node/static_site/#chisel "internal reference"),
-    [Codex](/node/static_site/#codex "internal reference"),
-    [elyse](/node/static_site/#elyse "internal reference"),
-    [Growl](/node/static_site/#growl "internal reference"),
-    [Gollum-site](/node/static_site/#gollumsite "internal reference"),
-    [Jekyll](/node/static_site/#jekyll "internal reference"),
-    [Hakyll](/node/static_site/#hakyl "internal reference"),
-    [Hyde](/node/static_site#hyde "internal reference"),
-    [liquidluck](/node/static_site/#liquidluck "internal reference"),
+    {{< iref "static_site" "Chisel" >}},
+    {{< iref "static_site" "Codex" >}},
+    {{< iref "static_site" "elyse" >}},
+    {{< iref "static_site" "Growl" >}},
+    {{< iref "static_site" "Gollum-site" >}},
+    {{< iref "static_site" "Jekyll" >}},
+    {{< iref "static_site" "Hakyll" >}},
+    {{< iref "static_site#hyde" "Hyde" >}},
+    {{< iref "static_site" "liquidluck" >}},
     [MarkDoc](node/static_site/#markdoc "internal reference"),
-    [MarkWiki](/node/static_site/#markwiki "internal reference"),
-    [Middleman](/node/static_site/#middleman "internal reference"),
-    [Mynt](/node/static_site/#mynt "internal reference"),
-    [nanoc](/node/static_site/#nanoc "internal reference"),
-    [Nib](/node/static_site/#nib  "internal reference"),
-    [Nikola](/node/static_site/#nikola  "internal reference"),
-    [Pelican](/node/static_site/#pelican "internal reference"),
-    [poole](/node/static_site/#poole "internal reference"),
-    [Ruho](/node/static_site/#ruhoh "internal reference"),
-    [simple-static](/node/static_site/#simple_static "internal reference"),
-    [sw](/node/static_site/#sw "internal reference"),
-    [werc](/node/static_site/#werc  "internal reference")
-    [Wintersmith](/node/static_site/#wintersmith "internal reference"),
-    [Wok](/node/static_site/#wok "internal reference").
+    {{< iref "static_site" "MarkWiki" >}},
+    {{< iref "static_site" "Middleman" >}},
+    {{< iref "static_site" "Mynt" >}},
+    {{< iref "static_site" "nanoc" >}},
+    {{< iref "static_site" "Nib" >}},
+    {{< iref "static_site" "Nikola" >}},
+    {{< iref "static_site" "Pelican" >}},
+    {{< iref "static_site" "poole" >}},
+    {{< iref "static_site" "Ruho" >}},
+    {{< iref "static_site" "simple-static" >}},
+    {{< iref "static_site" "sw" >}},
+    {{< iref "static_site" "werc" >}}
+    {{< iref "static_site" "Wintersmith" >}},
+    {{< iref "static_site" "Wok" >}}.
 
 -   [markdown mailing list at Gmame
     ](http://dir.gmane.org/gmane.text.markdown.general)
@@ -103,21 +97,21 @@ definition lists,  Markdown inside HTML blocks, source code
 higlighting.
 Most extensions are bound to one parser and their syntax is given by
 the parser manual. See below for each parser. The
-[Pandoc](#pandoc "internal reference") extensions are widely used,
+{{< iref "#pandoc" "Pandoc" >}} extensions are widely used,
 but many are specific to Pandoc.
 
 At least three extensions are quite widespread and many parsers try to
 implement them
 
 -   The Older one is
-    [php markdown extra](#php-markdown-extra "internal reference")
+    {{< iref "#php" "php markdown extra" >}}
     that add: Inline HTML, Markdown Inside HTML Blocks,
     Special Attributes, Fenced Code Blocks with <code>~~~</code>,
     Tables, Definition Lists,
     Footnotes, Output, Abbreviations, Emphasis, Backslash Escapes.<br />
-    [Python-markdown](#python-markdown "internal reference")group the
+    {{< iref "#python" "Python-markdown" >}}group the
     same features in
-    [python-markdown-extra](#python-markdown-extra "internal reference");
+    {{< iref "#python" "python-markdown-extra" >}};
     and add a rich set of custom extensions.
     <br />
     The other extensions use to build up on markdown extra and extend
@@ -175,7 +169,7 @@ implement them
 (a flavor of) MarkDown language by John Mac Farlane.
 
 John Mac Farlane previously produced many markdown parsers like
-[pandoc](#pandoc) or [peg-markdown](#peg-markdown).
+{{< iref "#pandoc" "pandoc" >}} or {{< iref "#peg" "peg-markdown" >}}.
 
 The [specification](http://spec.commonmark.org/) has its [source
 on GitHub](http://spec.commonmark.org/). There is also a
@@ -216,8 +210,8 @@ Using recommonmark you can [use Markdown in Sphinx
     (2009 version) or
     [md2html.awk](https://github.com/wlangstroth/simple-static/blob/master/md2html.awk).
     <a name="md2html_awk"></a>.
-    it is used in [simple-static](/node/static_site/#simple_static "internal reference") and
-    [sw](/node/static_site/#sw "internal reference").
+    it is used in {{< iref "static_site" "simple-static" >}} and
+    {{< iref "static_site" "sw" >}}.
 
 ## Bash
 
@@ -244,7 +238,7 @@ Using recommonmark you can [use Markdown in Sphinx
 -   <a name="hoedown"></a>
     [Hoedown](https://github.com/hoedown/hoedown)(BSD like license)
     is a markdown processing library in C. it is a fork of the now frozen
-    [sundown](#sundown "internal reference") with the same extensions.
+    {{< iref "#sundown" "sundown" >}} with the same extensions.
     -   [Hoedown Wiki](https://github.com/hoedown/hoedown/wiki)
     -   [Hoedown bindings
         ](https://github.com/hoedown/hoedown/wiki/Bindings):
@@ -255,8 +249,7 @@ Using recommonmark you can [use Markdown in Sphinx
         [Rust](http://doc.rust-lang.org/rustdoc/html/markdown/),
         Tcl.
 -   <a name="lowdown">[lowdown](https://kristaps.bsd.lv/lowdown/)
-    (ISC Licence) is a C markdown processor, it is a fork of [Hoedown
-    ](#hoedown "internal reference"), see the home page for
+    (ISC Licence) is a C markdown processor, it is a fork of {{< iref "#hoedown" "Hoedown" >}}, see the home page for
     differences. A major feature additions is the troff ouput format.
     -   [GitHub - lowdown](https://github.com/kristapsdz/lowdown)
 -   <a name="mdp"></a>[mdp](https://github.com/visit1985/mdp)(GPL)
@@ -267,7 +260,7 @@ Using recommonmark you can [use Markdown in Sphinx
     [multimarkdown](http://fletcherpenney.net/multimarkdown/)
     (GPL and MIT licenses)
     is an extension to markdown. It is written in C and extend
-    [peg-markdown](#peg-markdown) to work with complete documents and
+    {{< iref "#peg" "peg-markdown" >}} to work with complete documents and
     convert them into other formats, including complete XHTML
     documents, LaTeX, PDF, OpenDocument. It allows like php-markdown
     tables and definition list and add metadata, header and footer,
@@ -278,7 +271,7 @@ Using recommonmark you can [use Markdown in Sphinx
     -   [MultiMarkdown CMS](http://fletcherpenney.net/multimarkdown/cms/)
         [MultiMarkdown CMS GitHub repository](https://github.com/fletcher/MultiMarkdown-CMS)
         is a CMS for markdown by Fletcher T. Penney.
-        -   Wikipedia [w:multimarkdown]
+        -   Wikipedia {{< wp "multimarkdown" >}}
 -   <a name="peg-markdown"></a>
     [peg-markdown](https://github.com/jgm/peg-markdown)
     (GPL) by  John MacFarlane _author of pandoc_
@@ -298,7 +291,7 @@ Using recommonmark you can [use Markdown in Sphinx
          [docs directory of Misaka
          ](https://github.com/FSX/misaka/tree/master/docs).
      -   Sundown is frozen since 2012 the development continue on a
-         fork named [hoedown](#hoedown "internal reference).
+         fork named {{< iref "#hoedown" "hoedown" >}}.
 
 ## Clojure
 
@@ -351,7 +344,7 @@ Using recommonmark you can [use Markdown in Sphinx
     to work with cloud services as Dropbox or GitHub but allow also to
     export your document in source format and html to any local
     location. It uses the
-    [showdown module](#showdown "internal reference").
+    {{< iref "#showdown" "showdown module" >}}.
     -   [Dillinger GitHub repository
         ](https://github.com/joemccann/dillinger)
 -   [DocToc](https://github.com/thlorenz/doctoc) is a Node.js
@@ -381,7 +374,7 @@ Using recommonmark you can [use Markdown in Sphinx
     GitHub Flavored Markdown features.
 -   [marked-man](https://github.com/kapouer/ronnjs) (BSD License)
     uses the javascript converter
-    [marked](#marked "internal reference") to convert markdown to roff.
+    {{< iref "#marked" "marked" >}} to convert markdown to roff.
 -   [pagedown](http://code.google.com/p/pagedown/) (MIT License)
     is the version of Attacklab's Showdown and WMD as used on Stack
     Overflow.  It includes a converter to HTML that can be used both
@@ -392,7 +385,7 @@ Using recommonmark you can [use Markdown in Sphinx
     by  John Fraser is a javascript formatter for markdown.
     It is used by
     [wmd editor](http://wmd-editor.com/) and
-    [Dillinger](#dillinger "internal reference").
+    {{< iref "#dillinger" "Dillinger" >}}.
     [Showdown & Highlight.js - Markdown and syntax highlighting in Javascript
     ](http://softwaremaniacs.org/playground/showdown-highlight/)
     provides  _showdown_ on-line as markdown converter.
@@ -419,7 +412,7 @@ Using recommonmark you can [use Markdown in Sphinx
 
 ##  Lua
 -   [lua-discount](http://asbradbury.org/projects/lua-discount)
-    binding for [Discount](#discount "internal reference")
+    binding for {{< iref "#discount" "Discount" >}}
 -   <a name="lunamark">[Lunamark
     ](https://github.com/jgm/lunamark) (MIT)
     is a lua library and command-line program for conversion of
@@ -442,7 +435,7 @@ Using recommonmark you can [use Markdown in Sphinx
 ## Nim {#markdown-nim}
 -   [midnight_dynamite
     ](https://github.com/gradha/midnight_dynamite)
-    is a [hoedown](#hoedown "internal reference") binding for Nim.
+    is a {{< iref "#hoedown" "hoedown" >}} binding for Nim.
 
 ## PHP
 -   [php markdown](http://www.michelf.com/projects/php-markdown/) (BSD License) is a php PEAR
@@ -473,13 +466,13 @@ Using recommonmark you can [use Markdown in Sphinx
     is available on the [html2text page](http://www.aaronsw.com/2002/html2text/.
 -   [Grip](https://github.com/joeyespo/grip) (MIT LIcense)
     by Joe Esposito
-    is a [Flask](/node/263#flask "internal reference") application
+    is a {{< iref "263#flask" "Flask" >}} application
     to preview or output html of a Markdown file as it looks on GitHUb
     wikis. It has support for GitHub flavored Markdown.
 -   [Hoep](https://github.com/Anomareh/Hoep)
-    an [hoedown](#hoedown "internal reference") binding for Python.
+    an {{< iref "#hoedown" "hoedown" >}} binding for Python.
 -   [python-hoedown](https://github.com/hhatto/python-hoedown)
-    an [hoedown](#hoedown "internal reference") binding for Python.
+    an {{< iref "#hoedown" "hoedown" >}} binding for Python.
 -   [Markdown Preprocessor](http://noswap.com/projects/markdownpp/)
     (BSD like licence)
     is a Python module designed to add a preprocessor on top of  Markdown.
@@ -491,7 +484,7 @@ Using recommonmark you can [use Markdown in Sphinx
 -   [MarkLess](https://github.com/wiesmann/Markless)(BSD)
     is a small python script to render markdown as unicode text. That
     is the text decorations are rendered with unicode fonts, not with
-    escape sequence as does [mdp](#mdp "internal reference").
+    escape sequence as does {{< iref "#mdp" "mdp" >}}.
 -   [Moo](https://github.com/pyrocat101/moo)
     is an editor-agnostic markdown live previewer.
     Write markdown in any editor, and view pretty HTML output in
@@ -501,9 +494,9 @@ Using recommonmark you can [use Markdown in Sphinx
     reStructuredText live previewer. It add to _Moo_ a ReStructured
     text previewer.
     Meow is built on top of
-    [Bottle](/node/python_web#bottle "internal reference"),
-    [Cherrypy](/node/python_web#cherrypy "internal reference") and
-    can use [hoedown](#hoedown "internal reference").
+    {{< iref "python_web#bottle" "Bottle" >}},
+    {{< iref "python_web#cherrypy" "Cherrypy" >}} and
+    can use {{< iref "#hoedown" "hoedown" >}}.
 -   [Parm](http://limodou.github.io/parm/README.html)
     parse markdown syntax to html, supports semantic-ui and bootstrap
     css framework, disqus, and can be used to
@@ -518,8 +511,7 @@ Using recommonmark you can [use Markdown in Sphinx
 is a python converter is, it allows many [extensions
 ]((https://pythonhosted.org/Markdown/extensions).
 
-See also the [Mardown CheatSheet
-](/node/markdown_cheatsheet "internal reference") for python-markdown.
+See also the {{< iref "markdown_cheatsheet" "Mardown CheatSheet" >}} for python-markdown.
 
 
 There is a [Python-Markdown version 2 or markdown2
@@ -532,7 +524,7 @@ also [in PyPi](https://pypi.python.org/pypi/markdown2).
     [Python Markdown2 Extra
     ](https://github.com/trentm/python-markdown2/wiki/Extras)
     regroup a set of extensions that imitate and extend
-    [php-markdown extra](#php-markdown-extra "internal reference")
+    {{< iref "#php" "php-markdown extra" >}}
     by adding :
 
     -   [abbreviations
@@ -565,8 +557,8 @@ also [in PyPi](https://pypi.python.org/pypi/markdown2).
         This is enabled by default;
 
         To illustrate this extension I put here a
-        `[reference to attribute list](#attribute-list)`
-        [reference to attribute list](#attribute-list).
+        `{{< iref "#attribute" "reference to attribute list" >}}`
+        {{< iref "#attribute" "reference to attribute list" >}}.
 
     -   [definition lists
         ](https://pythonhosted.org/Markdown/extensions/attr_list.html)
@@ -677,7 +669,7 @@ also [in PyPi](https://pypi.python.org/pypi/markdown2).
 
 # Markdown documentation generators
 Some markdown to slideshow converters are given in the
-[html slideshow page](/node/html#slideshow "internal reference")
+{{< iref "html#slideshow" "html slideshow page" >}}
  landslide, markdown2deckjs, Deck.rb, keydown ...
 
 The reference to ebook generators are in a
@@ -686,11 +678,11 @@ The reference to ebook generators are in a
 
 Some few [Static site generators](node/static_site/ "internal reference") are
 either targeted to documentation, or support it easily:
-   [elyse](/node/static_site/#elyse "internal reference"),
-   [markdoc](/node/static_site/#markdoc "internal reference"),
-   [poole](/node/static_site/#poole "internal reference"),
-   [simple-static](/node/static_site/#simple_static "internal reference"),
-   [sw](/node/static_site/#sw "internal reference")
+   {{< iref "static_site" "elyse" >}},
+   {{< iref "static_site" "markdoc" >}},
+   {{< iref "static_site" "poole" >}},
+   {{< iref "static_site" "simple-static" >}},
+   {{< iref "static_site" "sw" >}}
 
 -   [markdown to ebook](https://github.com/k2052/markdown-to-ebook)
     is an ebook that explain how creating ebooks using Markdown.

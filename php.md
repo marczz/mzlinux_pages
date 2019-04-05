@@ -1,15 +1,8 @@
-<!--
-.. description:
-.. date: 2014-12-17
-.. modified:
-.. slug: php
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: PHP
--->
+---
+title: PHP
+---
 
-[TOC]
+{{% toc /%}}
 
 # PHP references
 

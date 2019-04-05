@@ -1,30 +1,24 @@
-<!--
-.. description:
-.. date: 2016-04-28
-.. slug: xmpp
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: XMPP
--->
+---
+title: XMPP
+---
 
-[TOC]
+{{% toc /%}}
 
-See also [IRC](/node/irc "internal reference"),
-[Social Networks](/node/social_networks "internal reference"),
-[SIP](/node/sip "internal reference") and
-[P2P](/node/xmpp "internal reference").
+See also {{< iref "irc" "IRC" >}},
+{{< iref "social_networks" "Social Networks" >}},
+{{< iref "sip" "SIP" >}} and
+{{< iref "xmpp" "P2P" >}}.
 
 -----------------
 
 # References
--   Wikipedia: [w:Xmpp|Extensible Messaging and Presence Protocol (Xmpp)],
-    [w:Comparison of instant messaging protocols],
-    [w:Comparison of instant messaging clients],
-    [w:Comparison of XMPP server software],
-    [w:Instant messaging],
-    [w:Jingle (protocol)|Jingle Protocol],
-    [w:SIMPLE_(instant_messaging_protocol)|Simple]
+-   Wikipedia: {{< wp "Xmpp"  "Extensible Messaging and Presence Protocol (Xmpp)" >}},
+    {{< wp "Comparison of instant messaging protocols" >}},
+    {{< wp "Comparison of instant messaging clients" >}},
+    {{< wp "Comparison of XMPP server software" >}},
+    {{< wp "Instant messaging" >}},
+    {{< wp "Jingle (protocol)"  "Jingle Protocol" >}},
+    {{< wp "SIMPLE_(instant_messaging_protocol)"  "Simple" >}}
     an instant messaging (IM) and presence protocol suite based on SIP.
 -   [ArchWiki: List of instant messaging software
     ](https://wiki.archlinux.org/index.php/List_of_applications/Internet#Instant_messaging)
@@ -43,7 +37,7 @@ See also [IRC](/node/irc "internal reference"),
     references all xmmp standards and extensions.
 -   [XMPP software : Clients Servers Libraries Projects
     ](http://xmpp.org/software)
--   <a name="jingle"></a>[w:Jingle (protocol)|Jingle Protocol]
+-   <a name="jingle"></a>{{< wp "Jingle (protocol)"  "Jingle Protocol" >}}
     is an extension to XMPP which adds peer-to-peer (P2P) session
     control (signaling) for multimedia.  Interactions such as in voice
     over IP (VoIP) or videoconferencing communications, or also for
@@ -51,11 +45,11 @@ See also [IRC](/node/irc "internal reference"),
     telepathy like empathy, minirc; software base on it like pidgin,
     Coccinella, Gajim, Google Talk, Macabber (file transfer only),
     Pidgin, Psi, Jabbin, Tapioca. It is also supported by telephony
-    software like [w:Yate_(telephony_engine)|Yate] or
-    [w:Asterisk_(PBX)|Asterisk].
+    software like {{< wp "Yate_(telephony_engine)"  "Yate" >}} or
+    {{< wp "Asterisk_(PBX)"  "Asterisk" >}}.
 
     It is defined in many XEP documents
-    (see list on Wikipedia: [w:Jingle (protocol)]) among which:
+    (see list on Wikipedia: {{< wp "Jingle (protocol)" >}}) among which:
 
     -   [XEP-0166: Jingle](http://www.xmpp.org/extensions/xep-0166.html)
         defines a framework for initiating and managing peer-to-peer
@@ -86,11 +80,11 @@ See also [IRC](/node/irc "internal reference"),
         experimental draft that replace the obsolete
         [XEP-0027: Current Jabber OpenPGP Usage
         ](http://www.xmpp.org/extensions/xep-0027.html)
-        see the [OpenPGP section](#openpgp "internal reference").
+        see the {{< iref "#openpgp" "OpenPGP section" >}}.
         for description and list of clients.
     -   [XEP-0364: Current Off-the-Record Messaging Usage
         ](https://xmpp.org/extensions/xep-0364.html)
-        see the [OTR section](#otr "internal reference").
+        see the {{< iref "#otr" "OTR section" >}}.
     -   [XEP-0378: OTR Discovery
         ](https://xmpp.org/extensions/xep-0378.html).
 -   [XMPP Internet of Things](http://www.xmpp-iot.org/)
@@ -108,14 +102,14 @@ See also [IRC](/node/irc "internal reference"),
     -   [MUC](http://wiki.jabberfr.org/MUC)
     -   [Jwchat tutorial](http://wiki.jabberfr.org/JWChat)
     -   [linuxFR - xmpp](http://linuxfr.org/sections/xmpp)
--   The proprietary [w:Yahoo! Messenger Protocol] is handled by many
+-   The proprietary {{< wp "Yahoo! Messenger Protocol" >}} is handled by many
     open source clients: Ayttm, BitlBee, CenterIm, Empathy, Jitsi,
     minbif, Pidgin, Polari, Spectrum2
--   XMPP is used in [w:Distributed social network] Wikipedia gives a
-    [w:Comparison of software and protocols for distributed social networking]
+-   XMPP is used in {{< wp "Distributed social network" >}} Wikipedia gives a
+    {{< wp "Comparison of software and protocols for distributed social networking" >}}
 -   [MucSearch](http://search.wensley.org.uk/)
     a conference web search service.
--   [w:SIMPLE_(instant_messaging_protocol)|SIMPLE] is IM over sip,
+-   {{< wp "SIMPLE_(instant_messaging_protocol)"  "SIMPLE" >}} is IM over sip,
     ietf has [rfc 3428 SIP Extension for Instant Messaging
     ](http://www.ietf.org/rfc/rfc3428.txt)
 
@@ -135,22 +129,22 @@ See also [IRC](/node/irc "internal reference"),
     proprietary XMPP Server.
     -   [jabber.org FAQ](http://www.jabber.org/faq.html)
 -   [jabber.apinc.org](http://jabber.apinc.org/) run the server
-    [jabber.fr](#jabberfr "internal reference")
--   [w:Movim] run a jabber server, the domain
+    {{< iref "#jabberfr" "jabber.fr" >}}
+-   {{< wp "Movim" >}} run a jabber server, the domain
     jappix.com is now handled by movim.
     -   [movim.eu](http://movim.eu)
 -   [OTR.im](https://www.otr.im/chat.htm)
     offers a free and secure Jabber service nammed __jabber.otr.im__
     It is also possible to connect through our Tor hidden service.
     The server use SSL/TLS  and accept only
-    [OTR encoded](#otr "internal reference") conversations.
+    {{< iref "#otr" "OTR encoded" >}} conversations.
 
 
 
 # Xmpp  console clients
 
 -   Wikipedia:
-    [w:Comparison of instant messaging clients],
+    {{< wp "Comparison of instant messaging clients" >}},
 -   [Jabber.fr: Clients](http://wiki.jabberfr.org/Clients)
 -   [xmpp.org: Clients](http://xmpp.org/xmpp-software/clients/)
 -   [ArchWiki: xmpp console clients
@@ -177,12 +171,12 @@ See also [IRC](/node/irc "internal reference"),
     It can use Gnupg to provide encryption and can be scripted in
     Python , Perl or Ruby. Ekg2 is the Debian package _ekg2-jabber_.
     -   [Ekg2 Wiki](http://bugs.ekg2.org/projects/ekg2/wiki)
--   [Finch](#finch "internal reference") the libpurple based client
-    is in the [pidgin entry](/node/pidgin "internal reference")
--   [Irssi](/node/irssi "internal reference") support XMPP through a
+-   {{< iref "#finch" "Finch" >}} the libpurple based client
+    is in the {{< iref "pidgin" "pidgin entry" >}}
+-   {{< iref "irssi" "Irssi" >}} support XMPP through a
     plugin, but if you want an Irssi like interface, and a more
     complete interface to XMPP you may prefer
-    [Profanity](#profanity "internal reference")
+    {{< iref "#profanity" "Profanity" >}}
 -   <a name="emacs_jabber"></a>
     [jabber.el](http://emacs-jabber.sourceforge.net/)
     is an emacs Xmpp client. jabber.el support SSL and STARTTLS.
@@ -208,8 +202,8 @@ See also [IRC](/node/irc "internal reference"),
     user chat), external actions triggers
     [Xep 0146: client remote control
     ](http://xmpp.org/extensions/xep-0146.html); and encryption with
-    [OpenPGP](#openpgp "internal reference") and
-    [OTR (Off-the-Record Messaging)](#otr "internal reference")
+    {{< iref "#openpgp" "OpenPGP" >}} and
+    {{< iref "#otr" "OTR (Off-the-Record Messaging)" >}}
     It uses a memory footprint of 13M res/8M shared.
     It that can connect only to one account.
 
@@ -224,12 +218,12 @@ See also [IRC](/node/irc "internal reference"),
     -   [Mcabber source repository](http://mcabber.com/hg/),
         [a mirror in GitHub](https://github.com/weiss/mcabber).
 
--   [Poezio](https://poez.io/) [w:Zlib License]
+-   [Poezio](https://poez.io/) {{< wp "Zlib License" >}}
     is a console XMPP client written in python
     Its main target is MUC (MultiUserChat). It support anonymous
     authentication, roster,  one-to-one conversations,
-    [OTR](#otr "internal reference"),
-    [OpenPGP](#openpgp "internal reference").
+    {{< iref "#otr" "OTR" >}},
+    {{< iref "#openpgp" "OpenPGP" >}}.
     Poezio support only one account.
     Being a python3 client the memory
     footprints of poezio are quite heavy for a console client
@@ -240,16 +234,16 @@ See also [IRC](/node/irc "internal reference"),
         ](https://jabber.at/p/apt-repository/).
 -   <a name="profanity">[profanity](http://www.profanity.im) (GPL)
     is a C-ncurses console based client for XMPP,
-    inspired by [irssi](/node/irc#irssi "internal reference").  It
+    inspired by {{< iref "irc#irssi" "irssi" >}}.  It
     features XMPP chat services, including GoogleTalk and Facebook.
-    [OTR encryption](#otr "internal reference"),
-    [OpenPGP](#openpgp "internal reference"),
-    [OMEMO](#omemo  "internal reference"),
+    {{< iref "#otr" "OTR encryption" >}},
+    {{< iref "#openpgp" "OpenPGP" >}},
+    {{< iref "#omemo" "OMEMO" >}},
     MUC (multi user chatroom), roster management with
     grouping, Desktop notifications via libnotify.  plugins in C,
     Python, Ruby, and Lua. Profanity take 27M res / 15M shr.
     Profanity is in debian.
-    -   [w:Profanity_(instant_messaging_client)|Wikipedia: Profanity]
+    -   {{< wp "Profanity_(instant_messaging_client)"  "Wikipedia: Profanity" >}}
     -   [Profanity GitHub repo](https://github.com/boothj5/profanity)
     -   [Profanity user guide](http://www.profanity.im/userguide.html)
 
@@ -258,22 +252,21 @@ See also [IRC](/node/irc "internal reference"),
     -   [Profanity OMEMO plugin
         ](https://github.com/ReneVolution/profanity-omemo-plugin)
 -   _primitivus_ is a console client for
-    [Salut à Toi](#salutatoi "internal reference")
+    {{< iref "#salutatoi" "Salut à Toi" >}}
     the Debian package is _sat-xmpp-primitivus_.
--   [Weechat](/node/irc#weechat "internal reference")
+-   {{< iref "irc#weechat" "Weechat" >}}
     has an
     [xmpp plugin](https://github.com/weechat/scripts/blob/master/python/jabber.py)
     but it does not handle anonymous authentication nor chatrooms,
     There is also a fork
     [sleduc/weechat-xmpp](https://github.com/sleduc/weechat-xmpp),
-    and you can always use [bitlbee](#bitlbee "internal reference")
+    and you can always use {{< iref "#bitlbee" "bitlbee" >}}
     or bitlbee-purple.
-    You find [weechat on IRC section
-    ](/node/irc#weechat "internal reference").
+    You find {{< iref "irc#weechat" "weechat on IRC section" >}}.
 -   <a name="xmpp-client"></a>[xmpp-client](https://github.com/agl/xmpp-client)
     (BSD Licence)
     is a golang XMPP client with OTR support.
-    [coy.im](#coyim "internal reference") is a fork of _xmpp-client_.
+    {{< iref "#coyim" "coy.im" >}} is a fork of _xmpp-client_.
 
 # Xmpp Graphical clients
 _I don't mention client with heavy desktop dependencies
@@ -281,7 +274,7 @@ like_ gnome-jabber (gabber), gossip
 _(said to be lightweight but need libgnome and all bonobo framework)_ ...
 
 -   Wikipedia:
-    [w:Comparison of instant messaging clients],
+    {{< wp "Comparison of instant messaging clients" >}},
 -   [Jabber.fr: Clients](http://wiki.jabberfr.org/Clients)
 -   [xmpp.org: Clients](http://xmpp.org/xmpp-software/clients/)
 -   [ArchWiki: xmpp graphical clients
@@ -297,32 +290,32 @@ _(said to be lightweight but need libgnome and all bonobo framework)_ ...
         plugins on _ubuntu_, 7.5M _debian_.
     -   [ayttm git repo
         ](https://sourceforge.net/p/ayttm/git/ci/master/tree/)
--   [w:Coccinella_(software)|Coccinella] (GPL)
+-   {{< wp "Coccinella_(software)"  "Coccinella" >}} (GPL)
     is a cross-platform xmmp client with a built-in whiteboard. It
-    supports  [w:Jingle (protocol)|Jingle] allowing voice
+    supports  {{< wp "Jingle (protocol)"  "Jingle" >}} allowing voice
     including Google Talk. _last release 2010_
     -    [Souceforge - Coccinella
         ](https://sourceforge.net/projects/coccinella/)
 -   <a name="coyim"></a>[coyIM](https://coy.im) (GPL)
     is a Go language / GTK3  xmpp client based on
-    [xmpp-client](#xmpp-client "internal reference") and
+    {{< iref "#xmpp" "xmpp-client" >}} and
     [otr3](https://github.com/twstrike/otr3) a Go implementation of the
     OTR 3 protocol. OTR is enabled by default, as Tor when it is available.
     coyIM is in Debian.
     -   [GitHub - coyim](https://github.com/coyim/coyim/).
 -   <a name="dino"></a> [Dino](https://github.com/dino/dino)
     is a GTK+/Vala xmpp client with
-    [OMEMO](#omemo "internal reference") support.
+    {{< iref "#omemo" "OMEMO" >}} support.
 -   <a name="empathy"></a> [Empathy
     ](https://wiki.gnome.org/action/show/Apps/Empathy)
     is a messaging program which uses
-    [Telepathy](#telepathy "internal reference") for
+    {{< iref "#telepathy" "Telepathy" >}} for
     protocol support and inherit from the large  Voice and Video
     protocol support from
-    [Telepathy](#telepathy "internal reference"),
-    Look at [w:Empathy_(software)|Wikipedia: Empathy] for a
+    {{< iref "#telepathy" "Telepathy" >}},
+    Look at {{< wp "Empathy_(software)"  "Wikipedia: Empathy" >}} for a
     full list of protocol, note that empathy support SIP and
-    [w:Jingle (protocol)|Jingle] allowing Google Talk, on the other
+    {{< wp "Jingle (protocol)"  "Jingle" >}} allowing Google Talk, on the other
     hand it lack the privacy support of Pidgin.  It is based on
     __gossip__ for the user interface, and inherit from gossip gnome
     dependencies. Nevetherless empathy just waiting idly is 35M
@@ -333,7 +326,7 @@ _(said to be lightweight but need libgnome and all bonobo framework)_ ...
     Gajim handle ssl connections and connect to google talk service.
     Gajim can be either linked to gnome libraries and services or
     used without gnome. _in Debian_. _Gajim_ has support for
-    [Jingle](#jingle "internal reference") voice protocol.
+    {{< iref "#jingle" "Jingle" >}} voice protocol.
     Gajim is a python module that has a memory footprint of 75M res /
     33M shr.
     -   [ArchWiki: Gajim](https://wiki.archlinux.org/index.php/Gajim)
@@ -348,19 +341,18 @@ _(said to be lightweight but need libgnome and all bonobo framework)_ ...
     is a QT Gadu-Gadu and XMPPclient for Linux, BSD, Mac OS X and
     Windows.  It has numerous plugins (over 40 plugins). _Kadu is in
     Debian_
--   [Jitsi](/node/sip#jitsi "internal reference") (LGPL)
+-   {{< iref "sip#jitsi" "Jitsi" >}} (LGPL)
     is a xmmp and sip client written in java.  It support xmmp
-    [w:Jingle (protocol)|Jingle] allowing google talk and video calls.
+    {{< wp "Jingle (protocol)"  "Jingle" >}} allowing google talk and video calls.
     It has also sip support.  As usual for java apps, it is an heavy
     software, ~300M resident,
-    [Jitsi entry in the Sip Section
-    ](/node/sip#jitsi "internal reference").
+    {{< iref "sip#jitsi" "Jitsi entry in the Sip Section" >}}.
 -   <a name="psi"></a>[Psi](http://psi-im.org/) (GPL)
     QT 4.x Jabber Client(26M/20M shared). Psi
     can handle ssl connections and [connect to google talk service
     ](http://www.google.com/support/talk/bin/answer.py?answer=24074)
     and is in Debian.
-    -   [w:Psi_(instant_messaging_client)|Wikipedia: Psi]
+    -   {{< wp "Psi_(instant_messaging_client)"  "Wikipedia: Psi" >}}
     -   Psi has a nice [Wiki](http://psi-im.org/wiki) with documentation,
         not only for the client; but also aimed to jabber protocol
         use.
@@ -378,8 +370,7 @@ _(said to be lightweight but need libgnome and all bonobo framework)_ ...
         mainly a GTK desktop and you have to load the shared library,
         Psi is still lighter than Pidgin and Empathy.
     -   [Psi +](http://psi-plus.com/wiki/en:main) is a fork of PSI
-        that add numerous minor features including [OTR encryption
-        ](#otr "internal reference"). It has a debian and docker
+        that add numerous minor features including {{< iref "#otr" "OTR encryption" >}}. It has a debian and docker
         packages on the download section.
         It is also provided in Debian in the package _psi-plus_.
         -   [Psi+ list of plugins
@@ -404,18 +395,18 @@ _(said to be lightweight but need libgnome and all bonobo framework)_ ...
     ](http://www.igniterealtime.org/projects/spark/index.jsp)
     (Apache License) is a java based client proposed by
     [ignite realtime](http://igniterealtime.org/) the authors of
-    [Openfire](#openfire "internal reference") and of the obsoleted
+    {{< iref "#openfire" "Openfire" >}} and of the obsoleted
     SparkWeb.
     It features built-in support for group chat, telephony
     integration, and strong security. It installs under windows, linux
     and mac.
-    It is an heavy software but with [w:Jingle (protocol)|Jingle]
+    It is an heavy software but with {{< wp "Jingle (protocol)"  "Jingle" >}}
     support.
     -   [Spark GitHub repository
         ](https://github.com/igniterealtime/Spark)
 -   [Swift](https://swift.im/) (GPL) is a C++ / QT Xmpp client.
     <a name=swift"></a>
-    Swift uses[BOSH](#bosh "internal reference")
+    Swift uses{{< iref "#bosh" "BOSH" >}}
     for connecting to servers over HTTP
     where network conditions prohibit standard connection methods.
     The debian package is *swift_im*. It is also available on windows
@@ -427,11 +418,11 @@ _(said to be lightweight but need libgnome and all bonobo framework)_ ...
     IPv6,r gateways to legacy IM networks (AIM, ICQ, Microsoft
     Messenger service, Yahoo! Messenger and ...).
     It has also a plugin system including plugins for
-    [Off-the-record messaging](#otr "internal reference")
-    and [GPG-signed/encrypted messages](#openpgp "internal reference").
+    {{< iref "#otr" "Off-the-record messaging" >}}
+    and {{< iref "#openpgp" "GPG-signed/encrypted messages" >}}.
     There is a Debian package.
 
-    -   Wikipedia: [w:Tkabber]
+    -   Wikipedia: {{< wp "Tkabber" >}}
     -   [Tkabber documentation
         ](http://tkabber.jabber.ru/files/doc/tkabber.html).
     -   [Tkabber plugins
@@ -443,9 +434,9 @@ _(said to be lightweight but need libgnome and all bonobo framework)_ ...
 <a name="pidgin"></a>[Pidgin](http://pidgin.im/) (GPL)
 GTK2-based Instant Messaging (IM) application (50M res / 21
 shared).
-It uses [libpurple](#libpurple "internal reference") which ensure
+It uses {{< iref "#libpurple" "libpurple" >}} which ensure
 supports for AIM, Gadu-Gadu, Google Talk, iChat, ICQ, IRC, Jabber,
-[w:Jingle (protocol)|Jingle], Lotus
+{{< wp "Jingle (protocol)"  "Jingle" >}}, Lotus
 Sametime, MSN, Napster, SILC, Tlen.pl, Yahoo!,and Zephyr.
 
 To have a complete list of protocols look at
@@ -453,7 +444,7 @@ To have a complete list of protocols look at
 ](https://developer.pidgin.im/wiki/ThirdPartyPlugins).
 
 Since version 2.6 pidgin support video and voice chat support over XMPP,
-i.e.  [w:Jingle (protocol)|Jingle protocol]
+i.e.  {{< wp "Jingle (protocol)"  "Jingle protocol" >}}
 _the Jabber/Google Talk protocol_.<br />
 Pidgin is quite heavy, Pidgin without any extension is 46M res/24M shr.
 If you don't run gnome you can still compile it as long as you
@@ -463,9 +454,9 @@ as Gaim.*.  Pidgin is documented in:
 -   [Pidgin Home](http://pidgin.im/)
 -   [Pidgin wiki](http://developer.pidgin.im/wiki).
 -   [Pidgin FAQ](http://developer.pidgin.im/wiki/FAQ)
--   [w:/Pidgin_(instant_messaging_client)|Wikipedia: Pidgin]
+-   {{< wp "/Pidgin_(instant_messaging_client)"  "Wikipedia: Pidgin" >}}
 -   [ArchWiki: Pidgin](https://wiki.archlinux.org/index.php/Pidgin)
--   [w:Pidgin_(software)|Wikipedia: Pidgin]
+-   {{< wp "Pidgin_(software)"  "Wikipedia: Pidgin" >}}
 -   <a name="finch"></a>**finch** is a curse client for pidgin,
     finch allows to reuse your pidgin settings, and a great level
     of compatibility with pidgin, but it is a heavy ncurses client
@@ -478,14 +469,14 @@ Yahoo!, MSN, IRC, Jabber/XMPP/Google Talk, Napster, Zephyr,
 Gadu-Gadu, Bonjour, Groupwise, Sametime, SIMPLE, MySpaceIM, and
 MXit, Facebook chat, Rocket.Chat, Mattermost, Matrix.im, Telegram, and
 more.
-_libpurple_ is part of [pidgin](#pidgin "internal reference") and
+_libpurple_ is part of {{< iref "#pidgin" "pidgin" >}} and
 used by
-[finch](#finch "internal reference"),
-[minbif](#minbif "internal reference"),
-[telepathy haze](#telepathy  "internal reference") and through it
+{{< iref "#finch" "finch" >}},
+{{< iref "#minbif" "minbif" >}},
+{{< iref "#telepathy" "telepathy haze" >}} and through it
 by the telepathy clients,
-[Spectrum](#spectrum  "internal reference"),
-[bitlbee-libpurple](#bitlbee "internal reference").
+{{< iref "#spectrum" "Spectrum" >}},
+{{< iref "#bitlbee" "bitlbee-libpurple" >}}.
 
 
 
@@ -499,24 +490,24 @@ The [Additional protocols plugins
 ](https://developer.pidgin.im/wiki/ThirdPartyPlugins#AdditionalProtocols)
 support includes
 -   [Tox protocol plugin](http://tox.dhs.org/) (GPL) for
-    [Tox protocol](#tox "internal reference").
+    {{< iref "#tox" "Tox protocol" >}}.
 -   [telegram-purle plugin
     ](https://github.com/majn/telegram-purple)
-    allow a bridge to [Telegram](#telegram "internal reference")
+    allow a bridge to {{< iref "#telegram" "Telegram" >}}
 -   [purple-mattermost](https://github.com/EionRobb/purple-mattermost)
     connect to a
-    [Mattermost](/node/social_networks#mattermost "internal reference")
+    {{< iref "social_networks#mattermost" "Mattermost" >}}
     server
 -   [slack-libpurple](https://github.com/dylex/slack-libpurple)
-    for access to [Slack](/node/social_networks#slack "internal reference")
+    for access to {{< iref "social_networks#slack" "Slack" >}}
 -   [purple-rocketchat
     ](https://bitbucket.org/EionRobb/purple-rocketchat)
-    for [Rocket.Chat](/node/social_networks#rocketchat "internal reference").
+    for {{< iref "social_networks#rocketchat" "Rocket.Chat" >}}.
 -   [whatsapp-purple](https://github.com/davidgfnet/whatsapp-purple/)
-    for [WhatsApp](#whatsapp "internal reference").
+    for {{< iref "#whatsapp" "WhatsApp" >}}.
 -   [puprle-facebook](https://github.com/dequis/purple-facebook).
 
-[Pidgin](#pidgin "internal reference") has many
+{{< iref "#pidgin" "Pidgin" >}} has many
 [Security and privacy plugins
 ](https://developer.pidgin.im/wiki/ThirdPartyPlugins#SecurityandPrivacy):
 
@@ -537,13 +528,13 @@ support includes
 -   [GPG/OpenPGP Plugin for Pidgin
     ](https://github.com/segler-alex/Pidgin-GPG/wiki)
     works asynchronously and allows you to send an
-    [GPG](#openpgp "internal reference")
+    {{< iref "#openpgp" "GPG" >}}
     encrypted message to peer even if she is offline.
     _OTR would be possible only online_
-    but PGP does not allow [w:Deniable authentication|deniability].
+    but PGP does not allow {{< wp "Deniable authentication"  "deniability" >}}.
     _In Debian_.
 -   [pidgin-OTR](https://bugs.otr.im/plugins/pidgin-otr) an
-    [OTR](#otr "internal reference") plugin for Pidgin _in
+    {{< iref "#otr" "OTR" >}} plugin for Pidgin _in
     Debian_. See also [How to: Use OTR on Linux
     ](https://ssd.eff.org/en/module/how-use-otr-linux)
     by The Electronic Frontier Foundation.
@@ -568,24 +559,24 @@ standalone XMPP connection managers; [Which BOSH Server Do You Need?
 compare these two options.
 
 The following clients have support for BOSH
-[Converse](#converse  "internal reference")
-[Gajim](#gajim "internal reference"),
-[JWChat](#jwchat "internal reference"),
-[jsxc](#jsxc "internal reference"),
-[Movim](#movim "internal reference"),
-[Pidgin](#pidgin "internal reference"),
-[Speeqe](#swpeeqe "internal reference"),
-[Swift](#swift "internal reference"),
-[Tigase Web client](#tigaseweb "internal reference"),
-[xmpp4js](#xmpp4js "internal reference") and Soashable,
+{{< iref "#converse" "Converse" >}}
+{{< iref "#gajim" "Gajim" >}},
+{{< iref "#jwchat" "JWChat" >}},
+{{< iref "#jsxc" "jsxc" >}},
+{{< iref "#movim" "Movim" >}},
+{{< iref "#pidgin" "Pidgin" >}},
+{{< iref "#swpeeqe" "Speeqe" >}},
+{{< iref "#swift" "Swift" >}},
+{{< iref "#tigaseweb" "Tigase Web client" >}},
+{{< iref "#xmpp4js" "xmpp4js" >}} and Soashable,
 Adium _client for Mac OS X_.
 
 The following XMPP servers include built-in support for BOSH:
-[ejabberd](#ejaberd "internal reference"),
+{{< iref "#ejaberd" "ejabberd" >}},
 Jabber XCP, M-Link, MongooseIM,
-[Openfire](#openfire "internal reference"),
-[Prosody](#prosody  "internal reference"),
-[Tigase](#tigase "internal reference").
+{{< iref "#openfire" "Openfire" >}},
+{{< iref "#prosody" "Prosody" >}},
+{{< iref "#tigase" "Tigase" >}}.
 
 -   [AjaxJabber](http://ajaxbber.sourceforge.net/)
     (LGPL) is what it's name announce!.
@@ -618,7 +609,7 @@ Jabber XCP, M-Link, MongooseIM,
         ](https://opkode.com/blog/2013/11/11/conversejs-otr-support/).
 -   <a name="jsxc"></a>[jsxc](https://www.jsxc.org/)
     is a real-time xmpp javascript app it requires an external XMPP
-    server. It supports [OMEMO](#omemo "internal reference").
+    server. It supports {{< iref "#omemo" "OMEMO" >}}.
     It is in the Debian package _libjs-jsxc_.<br/>
     They offer to install your [own managed virtual XMPP server
     ](https://www.jsxc.org/managed.html)
@@ -626,13 +617,13 @@ Jabber XCP, M-Link, MongooseIM,
     -   [GitHub jsxc](https://github.com/jsxc/jsxc)
 -   <a name=jwchat></a>[Jwchat](http://stefan-strigler.de/jwchat/)
     is a XMPP web client. It supports communication over
-    [BOSH](#bosh "internal reference") and MUC. _Jwchat is in Debian_.
+    {{< iref "#bosh" "BOSH" >}} and MUC. _Jwchat is in Debian_.
     Jwchat is  discontinued since 2011, but you can still find a live
     client
     -   [JWChat at jwchat.org](https://jwchat.org/).
     -   [Jwchat tutorial](http://wiki.jabberfr.org/JWChat).
     -   [Jwchat GitHub repo](https://github.com/sstrigler/jwchat)
--   <a name="movim"></a>[w:Movim]
+-   <a name="movim"></a>{{< wp "Movim" >}}
     is a Web client, developed largely in PHP which can be
     deployed on a web server (Apache, nginx ... ) . This server
     provides a social network Web interface XMPP which will be the
@@ -670,7 +661,7 @@ Jabber XCP, M-Link, MongooseIM,
 
 -   <a name="xmpp4js">[Xmpp4Js](http://xmpp4js.sourceforge.net/) (LGPL)
     is an XMPP client library written in pure Javascript. It connects
-    to a server using [BOSH](#bosh "internal reference").  Xmpp4Js was
+    to a server using {{< iref "#bosh" "BOSH" >}}.  Xmpp4Js was
     originally derived from
     [Soashable](http://soashable.sourceforge.net/)
 
@@ -678,21 +669,21 @@ Jabber XCP, M-Link, MongooseIM,
 -   <a name="chatsecure"></a>[Chatsecure](https://chatsecure.org/)
     (GPL)
     is a Xmpp client for android and IOS supporting
-    [OTR](#otr "internal reference") and
-    [OMEMO](#omemo "internal reference").
+    {{< iref "#otr" "OTR" >}} and
+    {{< iref "#omemo" "OMEMO" >}}.
     It is developped by
-    [w:The_Guardian_Project_(software)|The Guardian Project]
+    {{< wp "The_Guardian_Project_(software)"  "The Guardian Project" >}}
     -   [ChatSecure, Conversations and Zom — ChatSecure
     ](https://chatsecure.org/blog/chatsecure-conversations-zom/).
 -   <a name="conversation"></a>[Conversations
     ](https://github.com/siacs/Conversations) (GPL)
     XMPP/Jabber client for Android 4.0+ with end-to-end encryption
-    with [OMEMO](#omemo "internal reference"),
-    [OTR](#otr "internal reference"), or
-    [OpenPGP](#openpgp "internal reference").
+    with {{< iref "#omemo" "OMEMO" >}},
+    {{< iref "#otr" "OTR" >}}, or
+    {{< iref "#openpgp" "OpenPGP" >}}.
     See the [homepage](https://github.com/siacs/Conversations)
     for a list of features and supported XEP.
--   [Salut à Toi](#saluatoi) (AGPL) has an Android client.
+-   {{< iref "#saluatoi" "Salut à Toi" >}} (AGPL) has an Android client.
 -   [Tigase Android messenger
     ](http://www.tigase.net/content/android-messenger) (AGPL)
     is a XMPP client. It supports all XMPP specifications RFC 6120 -
@@ -702,19 +693,18 @@ Jabber XCP, M-Link, MongooseIM,
 -   [Beem](http://beem-project.com/projects/beem/) (GPL)
     _last release 2013_
 -   [Xabber](https://www.xabber.com/)  (GPL) Xmpp client for
-    Android, it supports [OTR](#otr "internal reference").
+    Android, it supports {{< iref "#otr" "OTR" >}}.
 -   <a name= "zom"></a>[Zom](https://zom.im/) is an ios and android
     xmpp client supporting
-    [OTR](#otr "internal reference") and
-    [OMEMO](#omemo "internal reference")
-    created by the [ChatSecure project
-    ](#chatsecure "internal reference").
+    {{< iref "#otr" "OTR" >}} and
+    {{< iref "#omemo" "OMEMO" >}}
+    created by the {{< iref "#chatsecure" "ChatSecure project" >}}.
 
 # IRC to Xmpp gateways
 By IRC to Xmpp we mean here a software allowing an IRC Client to talk
 to remote Xmpp clients.
 
--   <a name="bitlbee"></a> [w:bitlbee] (GPL) is an IRC to other chat
+-   <a name="bitlbee"></a> {{< wp "bitlbee" >}} (GPL) is an IRC to other chat
     networks gateway, such as AIM, ICQ, Microsoft Messenger, Yahoo!,
     Jabber, Google Talk, and Facebook Messenger, Twitter, Identi.ca,
     and status.net.  It allows you to browse other chat protocols with
@@ -722,7 +712,7 @@ to remote Xmpp clients.
     light irc client to take part in chats from many protocols
     including jabber/ssl as in gmail accounts.
 
-    Bitlbee has support for [OTR](#otr "internal reference")
+    Bitlbee has support for {{< iref "#otr" "OTR" >}}
     with _libotr_.
 
     The bitlbee
@@ -748,8 +738,7 @@ to remote Xmpp clients.
     -   [Emacs and BitlBee
         ](http://www.emacswiki.org/cgi-bin/wiki?BitlBee)
     -   [bitlbee-otr](https://wiki.bitlbee.org/bitlbee-otr) add
-        support for [Off-the-Record Messaging (OTR)
-        ](#otr "internal reference") either by a plugin
+        support for {{< iref "#otr" "Off-the-Record Messaging (OTR)" >}} either by a plugin
         _bitlbee-plugin-otr is in Debian_ or Bitlbee has an
         optional native support for OTR since 3.0, which can be
         enabled at compile time.
@@ -785,7 +774,7 @@ to remote Xmpp clients.
     WhatsApp  no longer work due
     to whatsapp forbidding libpurple access.
     _bitlbee-libpurple_ is in debian. See also the
-    [libpurple section](#libpurple "internal reference")
+    {{< iref "#libpurple" "libpurple section" >}}
 
     -   [Using BitlBee with the libpurple IM backend
         ](https://wiki.bitlbee.org/HowtoPurple)
@@ -798,11 +787,11 @@ to remote Xmpp clients.
 -   <a name="minbif"></a>
     [minbif](https://symlink.me/projects/minbif/wiki)
     is an IRC to other IM gateway using
-    [libpurple](#libpurple "internal reference")
+    {{< iref "#libpurple" "libpurple" >}}
     it support many protocols: aim, bonjour, Gadu-Gadu, ICQ, IRC,
     XMPP (includes Google Talk and Facebook Chat),
     Sametime (meanwhile), MSN, MySpaceIM, novell GroupWise, QQ, SILC,
-    [w:SIMPLE_(instant_messaging_protocol)|SIMPLE],
+    {{< wp "SIMPLE_(instant_messaging_protocol)"  "SIMPLE" >}},
     Yahoo, Zephyr and the following third party protocols:
     [CoinCoin](https://symlink.me/projects/minbif/wiki/CoinCoin),
     [skype4pidgin
@@ -818,7 +807,7 @@ to remote Xmpp clients.
 
 -   <a name="spectrum2">[Spectrum2](http://spectrum.im/) (GPL)
     is a proxy allowing to connect from Xmpp or
-    [Slack](/node/social_networks#slack "internal reference") to IRC,
+    {{< iref "social_networks#slack" "Slack" >}} to IRC,
     Twitter, Skype, XMPP, Facebook, MSN, Telegram,Yahoo, Whatsapp.
     It supports all the [lipurple plugins
     ](pidgin_plugins "internal reference"), so all the protocols
@@ -831,7 +820,7 @@ to remote Xmpp clients.
         ](https://github.com/hanzz/spectrum2)
 
 # Xmpp servers software
--   Wikipedia: [w:Comparison of XMPP server software] compare
+-   Wikipedia: {{< wp "Comparison of XMPP server software" >}} compare
     RFC implementation and XEP implementation from each server software.
 -   [xmpp.org: Servers](http://xmpp.org/software/servers.html)
 -   [ArchWiki: xmpp servers
@@ -853,7 +842,7 @@ to remote Xmpp clients.
     written in Java, proposed by
     [ignite realtime](http://igniterealtime.org/).
     _Openfire_ provide a Debian package, the related client is
-    [Spark](#spark "internal reference").
+    {{< iref "#spark" "Spark" >}}.
     Openfire does not seem to be used by many public servers but
     the french [ForumAnalogue](http://www.forumanalogue.fr/).
     -   [Openfire Documentation
@@ -882,9 +871,8 @@ to remote Xmpp clients.
 
 # Xmpp Libraries
 ## C or C++
--   [Libpurple](#libpurple "internal reference")
-    is above with its main frontend [Pidgin
-    ](#pidgin "internal reference").
+-   {{< iref "#libpurple" "Libpurple" >}}
+    is above with its main frontend {{< iref "#pidgin" "Pidgin" >}}.
 -   <a name="telepathy"></a>[Telepathy
     ](http://telepathy.freedesktop.org/wiki/) is a framework
     that provide communication as a desktop service by using a unified
@@ -893,7 +881,7 @@ to remote Xmpp clients.
     link-local XMPP, SIP, Yahoo/AIM and IRC. It supports instant
     messaging, voice calls and video calls. The gnome messaging
     clients are
-    [Empathy](#empathy "internal reference") and _polari_.
+    {{< iref "#empathy" "Empathy" >}} and _polari_.
     Telepathy and it's plugins are in Debian.
 
     -   The _haze_ plugin is a Telepathy connection manager based on
@@ -928,14 +916,14 @@ to remote Xmpp clients.
 
 ## Javascript
 -   [Strophe](http://strophe.im/)
-    the library on which [Converse.js](#converse "internal reference")
+    the library on which {{< iref "#converse" "Converse.js" >}}
     is built
 -   [JSJaC - JavaScript Jabber Client Library
     ](https://github.com/sstrigler/JSJaC) (GPL + LGPL +Mozilla )
 
 
 # Xmpp Bots
--   Wikipedia: [w:Internet bot]
+-   Wikipedia: {{< wp "Internet bot" >}}
 -   [list of bots](http://xmppcomm.com/#!/page_jbots). _empty when
     last consulted_.
 -   [jabber.fr: Robots](http://wiki.jabberfr.org/Robot).
@@ -971,7 +959,7 @@ to remote Xmpp clients.
 # Google Talk and Hangouts
 
 In 2013 Google is in the process of closing Google Talk in favor of
-[w:Google+ Hangout] which is part of [w:Google+] an uses  a proprietary protocol.
+{{< wp "Google+ Hangout" >}} which is part of {{< wp "Google+" >}} an uses  a proprietary protocol.
 If you are switching to Hangout you loose the interoperability that XMMP provided.
 It is still possible to (for how long?)
 to keep Google Talk or to revert back to  Gtalk following the
@@ -986,8 +974,8 @@ successfully used googletalk with pidgin, gajim, jabber.el, ayttm, jitsi,
 psi, mcabber, bitlbee irc gateway. conversejs.
 
 
--   [w:Google Talk] use extensions to xmpp to allow it to carry voice
-    (and in the future video) [Jingle](#jingle "internal reference")
+-   {{< wp "Google Talk" >}} use extensions to xmpp to allow it to carry voice
+    (and in the future video) {{< iref "#jingle" "Jingle" >}}
     and
     [Jingle Audio via RTP](http://www.xmpp.org/extensions/xep-0167.html)
 -   [Google: Talk Help](https://support.google.com/talk/) annonce the
@@ -997,9 +985,9 @@ psi, mcabber, bitlbee irc gateway. conversejs.
 -   [Google Talk Conference Bot](http://sites.google.com/site/conferencebot/)
     runs as a normal google talk user that relays everything said to it
     to everyone on its contact list.
--   [w:Google Voice] a telephony service that provides call forwarding
+-   {{< wp "Google Voice" >}} a telephony service that provides call forwarding
     and voicemail services, couldforward call too Google Chat, it is
-    now integrated with [w:Google Hangouts]
+    now integrated with {{< wp "Google Hangouts" >}}
 -   [xmpp.org: No, it's not the end of XMPP for Google Talk
     ](https://xmpp.org/2015/03/no-its-not-the-end-of-xmpp-for-google-talk/)
 
@@ -1077,10 +1065,10 @@ Imagine you have to have the same brand of phone to call somebody, the
 same email software to read her emails....
 
 To ensure interoperability there is presently few protocols,
-[FiSH](#fish "internal reference") the older, obsolete security,
-[OpenPGP](#openpgp "internal reference"),
-[OMEMO](#omemo "internal reference") which has few clients,
-[OTR](#otr "internal reference"). The last one is supported by a fair
+{{< iref "#fish" "FiSH" >}} the older, obsolete security,
+{{< iref "#openpgp" "OpenPGP" >}},
+{{< iref "#omemo" "OMEMO" >}} which has few clients,
+{{< iref "#otr" "OTR" >}}. The last one is supported by a fair
 number of clients.
 
 I give here also some other open source systems, but even if the
@@ -1089,9 +1077,9 @@ protocol is open source, it is used only by one product.
 The first level of security is to use a
 x:[Transport_Layer_Security|TLS] connection, that avoid (if correctly
 authentified) that your data is stolen during transport. But to be
-secure it should provide [w:Forward secrecy], and avoid
-[w:Man-in-the-middle attack] by technics like
-[w:HTTP Public Key Pinning] (HPKP).
+secure it should provide {{< wp "Forward secrecy" >}}, and avoid
+{{< wp "Man-in-the-middle attack" >}} by technics like
+{{< wp "HTTP Public Key Pinning" >}} (HPKP).
 
 But if it can protect again an occasional hacker taht intercept your
 communication, it is of no use when the hacker is member or beak into
@@ -1100,10 +1088,10 @@ provider to give its data. And of course it is of no use whent the
 data is stolen at one end of the communication, which is so easy with
 mobile devices.
 
--   Wikipedia [w:Secure instant messaging], [w:Secure communication],
-    [w:Mobile security],
-    [w:Deniable authentication], [w:forward secrecy],
-    [w:Comparison_of_instant_messaging_clients#Secure_messengers|Secure messengers]
+-   Wikipedia {{< wp "Secure instant messaging" >}}, {{< wp "Secure communication" >}},
+    {{< wp "Mobile security" >}},
+    {{< wp "Deniable authentication" >}}, {{< wp "forward secrecy" >}},
+    {{< wp "Comparison_of_instant_messaging_clients#Secure_messengers"  "Secure messengers" >}}
 -   [End-to-End XMPP Cryptographic Protocol Desiderata
     ](https://developer.pidgin.im/wiki/EndToEndXMPPCrypto) from
     [Pidgin developer Wiki](https://developer.pidgin.im/wiki/).
@@ -1120,22 +1108,22 @@ For secure messaging we can expect the following features:
     to keys.
 -   authentication of correspondents e.g. by comparing key
     fingerprints.
--   [w:forward secrecy] i.e. having past communications secure if the
+-   {{< wp "forward secrecy" >}} i.e. having past communications secure if the
     encryption keys are stolen.
 -   open source with documented security design and
-    recent independent [w:security audit].
+    recent independent {{< wp "security audit" >}}.
 -   no log or store any information  regarding message contents,
     senders and destination, timestamps, sessions or events.
 -   Do not rely on a central authority for the relaying of messages
-    ([w:decentralized computing]).
+    ({{< wp "decentralized computing" >}}).
 
 
 
-## OTR or [w:Off-the-Record Messaging] {#otr}
-<a name="otr"></a>[w:Off-the-Record Messaging]
+## OTR or {{< wp "Off-the-Record Messaging" >}} {#otr}
+<a name="otr"></a>{{< wp "Off-the-Record Messaging" >}}
 (GPL) Off the Record (OTR) Messaging allows you to have private
 conversations over instant messaging by providing encryption,
-[w:Deniable authentication], perfect [w:forward secrecy].
+{{< wp "Deniable authentication" >}}, perfect {{< wp "forward secrecy" >}}.
 
 OTR allow instant messaging, secure file transfer,
 the plugin supports multiple OTR conversations with the same buddy
@@ -1178,11 +1166,11 @@ features.
 
 
 The main drawback of OTR compared to
-[OpenPGP](#openpgp "internal reference") and
-[OMEMO](#omemo "internal reference") is the lack of offline
-delivery. OTR and [OMEMO](#omemo "internal reference") have
-[w: forward secrecy] which lack to
-[OpenPGP](#openpgp "internal reference").
+{{< iref "#openpgp" "OpenPGP" >}} and
+{{< iref "#omemo" "OMEMO" >}} is the lack of offline
+delivery. OTR and {{< iref "#omemo" "OMEMO" >}} have
+{{< wp " forward secrecy" >}} which lack to
+{{< iref "#openpgp" "OpenPGP" >}}.
 
 For Linux use of OTR see also the
 [EFF - Surveillance Self-Defense](https://ssd.eff.org/) guide
@@ -1192,58 +1180,58 @@ For Linux use of OTR see also the
 OTR is supported by many messaging clients, either a native
 support or through plugin. For Linux native support we have:
 
--   [Bitlbee](#bitlbee "internal rference") since 3.0.
--   [Blink](/node/sip#blink "internal reference")
+-   {{< iref "#bitlbee" "Bitlbee" >}} since 3.0.
+-   {{< iref "sip#blink" "Blink" >}}
     a sip client with messaging.
--   [Converse.js](#converse "internal reference")
--   [Cryptocat](#cryptocat "internal reference") protocol _(not open
+-   {{< iref "#converse" "Converse.js" >}}
+-   {{< iref "#cryptocat" "Cryptocat" >}} protocol _(not open
     XMPP)_ uses OTR for webbrowsers.
--   [Jitsi](/node/sip#jitsi "internal reference") -  Video Calls
+-   {{< iref "sip#jitsi" "Jitsi" >}} -  Video Calls
     and Chat.
--   [w:Kopete]  multi-protocol messaging for KDE.
--   [Kadu](#kadu "internal reference")
--   [Mcabber](#mcabber "internal reference")
+-   {{< wp "Kopete" >}}  multi-protocol messaging for KDE.
+-   {{< iref "#kadu" "Kadu" >}}
+-   {{< iref "#mcabber" "Mcabber" >}}
 -   [LeechCraft](https://leechcraft.org/) _modular live
     environment_ for Linux, Windows, OSX.
--   [Profanity](#profanity "internal reference")
--   [PSI+](#psi "internal reference")
+-   {{< iref "#profanity" "Profanity" >}}
+-   {{< iref "#psi" "PSI+" >}}
 
 The following Linux clients have OTR support through a plugin:
 
 -   [bitlbee-otr](https://wiki.bitlbee.org/bitlbee-otr)
-    for [Bitlbee](#bitlbee "internal rference")
+    for {{< iref "#bitlbee" "Bitlbee" >}}
 -   [Off-the-Record Encryption plugin
     ](https://trac-plugins.gajim.org/wiki/OffTheRecordPlugin)
     through [gajim-otr](https://github.com/python-otr/gajim-otr)
-    for [Gajim](#gajim "internal reference") _alpha plugin_.
+    for {{< iref "#gajim" "Gajim" >}} _alpha plugin_.
 -   [HexChat-OTR](https://github.com/TingPing/hexchat-otr)
-    for [HexChat](/node/irc#hexchat  "internal rference").
+    for {{< iref "irc#hexchat" "HexChat" >}}.
 -   [Irsii-OTR](https://github.com/cryptodotis/irssi-otr/) for
-    [irsii](/node/irc#irssi  "internal rference").
+    {{< iref "irc#irssi" "irsii" >}}.
 -   [pidgin-OTR](https://bugs.otr.im/plugins/pidgin-otr)
-    for [Pidgin](#pidgin "internal reference").
--   [poezio](#poezio "internal reference").
--   [Tkabber](#tkabber "internal reference")
+    for {{< iref "#pidgin" "Pidgin" >}}.
+-   {{< iref "#poezio" "poezio" >}}.
+-   {{< iref "#tkabber" "Tkabber" >}}
 -   [Weechat-OTR](https://github.com/mmb/weechat-otr) for
-    [Weechat](/node/irc#weechat "internal reference").
+    {{< iref "irc#weechat" "Weechat" >}}.
 
 
 Windows and Mac OSX clients
 
 -   Adium  multiprotocol client for Mac OSX.
 -   Blink SIP  Mac OSX client
--   [w:climm] IRC for Windows, OSX, and unix.
--   [Kadu](#kadu "internal reference") Unix Windows and Mac OSX
+-   {{< wp "climm" >}} IRC for Windows, OSX, and unix.
+-   {{< iref "#kadu" "Kadu" >}} Unix Windows and Mac OSX
     gadu-gadu and Xmpp client.
 -   Textual 5 (OS X)
--   [Tkabber](#tkabber "internal reference")
+-   {{< iref "#tkabber" "Tkabber" >}}
 
 Android and IOS clients:
 
--   [Beem](#beem "internal reference")
--   [Chatsecure](#chatsecure "internal reference")
--   [Conversations](#conversations "internal reference")
--   [Xabber](#xabber "internal reference")  GPL Xmpp client for
+-   {{< iref "#beem" "Beem" >}}
+-   {{< iref "#chatsecure" "Chatsecure" >}}
+-   {{< iref "#conversations" "Conversations" >}}
+-   {{< iref "#xabber" "Xabber" >}}  GPL Xmpp client for
     Android.
 
 Although Gmail's Google Talk uses the term "off the record", the
@@ -1262,7 +1250,7 @@ allowing you to keep the benefits of [message synchronization and
 offline delivery](http://conversations.im/#xmpp).
 
 There is a comparison of features of OTR
-[OpenPGP](#openpgp "internal reference")
+{{< iref "#openpgp" "OpenPGP" >}}
 and OMEMO on the
 [OMEMO Home page](https://conversations.im/omemo/)
 
@@ -1272,56 +1260,56 @@ The main drawback of OMEMO is to be supported _as far as year
 ](https://omemo.top/).
 
 Beginin 2018 this list include for Linux
-an alpha support for [Gajim](#gajim "internal reference")
+an alpha support for {{< iref "#gajim" "Gajim" >}}
 through the plugin [gajim-omemo
 ](https://github.com/omemo/gajim-omemo),
-[pidgin](#pidgin"internal reference") and _Finch_
+{{< iref "#pidgin" "pidgin" >}} and _Finch_
 through the plugin _lurch_,
-[profanity](#profanity "internal reference"),
-[Dino](#dino  "internal reference"),
-[jsxc](#jsxc "internal reference").
+{{< iref "#profanity" "profanity" >}},
+{{< iref "#dino" "Dino" >}},
+{{< iref "#jsxc" "jsxc" >}}.
 
 
 On Mobile we have  the ios client
-[chatsecure](#chatsecure "internal reference")
+{{< iref "#chatsecure" "chatsecure" >}}
 and android client
-[Conversations](#conversations "internal reference") and
-[Zom](#zom  "internal reference")
+{{< iref "#conversations" "Conversations" >}} and
+{{< iref "#zom" "Zom" >}}
 
 On windows there is _Miranda_ and on OS X _Adium_.
 
 
 ## OpenPGP {#openpgp}
 
-[w:OpenPGP] for XMPP was first decribed by
+{{< wp "OpenPGP" >}} for XMPP was first decribed by
 [XEP-0027: Current Jabber OpenPGP Usage
 ](http://www.xmpp.org/extensions/xep-0027.html) which is now
 obsolete. There is a new experimental draft
 [XEP-0373: OpenPGP for XMPP
 ](https://xmpp.org/extensions/xep-0374.html).
 
-While [OpenPGP](#openpgp "internal reference")
-can be used for Xmpp, [OTR](#OTR "internal reference") or
-[OMEMO](#omemo "internal reference")
-are more secure as they provide [w:forward secrecy], and
-[w:deniability] that is missing to OpenPGP, OTR is also easier to
+While {{< iref "#openpgp" "OpenPGP" >}}
+can be used for Xmpp, {{< iref "#OTR" "OTR" >}} or
+{{< iref "#omemo" "OMEMO" >}}
+are more secure as they provide {{< wp "forward secrecy" >}}, and
+{{< wp "deniability" >}} that is missing to OpenPGP, OTR is also easier to
 use; on the other hand OpenPGP is a well known and simpler method
 of asymetric encryption, and it can be applied easily to offline
 messages.
 
 The IM clients supporting OpenPGP are
 
--   [Conversations](#conversations "internal reference")
+-   {{< iref "#conversations" "Conversations" >}}
     for Android,
-    [Mcabber](#mcabber "internal reference"),
-    [Pidgin](#pidgin "internal reference")
+    {{< iref "#mcabber" "Mcabber" >}},
+    {{< iref "#pidgin" "Pidgin" >}}
     with the [GPG/OpenPGP Plugin for Pidgin
     ](https://github.com/segler-alex/Pidgin-GPG/wiki),
-    [poesio](#poesio  "internal reference"),
-    [profanity](#profanity "internal reference"),
-    [PSI](#psi "internal reference"), Gabber, Miranda ICQ
+    {{< iref "#poesio" "poesio" >}},
+    {{< iref "#profanity" "profanity" >}},
+    {{< iref "#psi" "PSI" >}}, Gabber, Miranda ICQ
     (IRC/ICQ client for Windows),
-    [Tkabber](#tkabber "internal reference"),
+    {{< iref "#tkabber" "Tkabber" >}},
     [wija](http://www.media-art-online.org/wija/) _no more developed
     since 2007_. Most are referenced on the [GPG software list
     ](https://www.gnupg.org/related_software/swlist.html).
@@ -1334,17 +1322,17 @@ Jabber and GnuPG](https://box.matto.nl/gnupgjabber.html).
 
 ## Other secure protocols
 
--   <a name="fish"></a>FiSH is an IRC plugin providing [w:Blowfish].
+-   <a name="fish"></a>FiSH is an IRC plugin providing {{< wp "Blowfish" >}}.
     encryption to IRC chat. It is an old protocol aimed to IRC, which was
     [proposed in 2009
     ](http://blog.bjrn.se/2009/01/proposal-for-better-irc-encryption.html)
     and never adopted in a RFC.
     You can find it in
-    [irssi](/node/irc#irssi  "internal reference"), [FISHLIM
+    {{< iref "irc#irssi" "irssi" >}}, [FISHLIM
     ](http://fishlim.kodafritt.se/) for
-    [HexChat](/node/irc#hexchat  "internal reference") or
-    [XChat](/node/irc#xchat  "internal reference"),
-    [WeeChat](/node/irc#weechat  "internal reference"),
+    {{< iref "irc#hexchat" "HexChat" >}} or
+    {{< iref "irc#xchat" "XChat" >}},
+    {{< iref "irc#weechat" "WeeChat" >}},
     the python package [pyIRCFiSH
     ](https://pypi.python.org/pypi/pyIRCFiSH/),
     the android
@@ -1354,11 +1342,11 @@ Jabber and GnuPG](https://box.matto.nl/gnupgjabber.html).
 
 ## Tox Protocol {#tox}
 
-[w:Tox_(protocol)|Tox] (GPL)
+{{< wp "Tox_(protocol)"  "Tox" >}} (GPL)
 is a peer-to-peer instant messaging and video calling protocol
 that offers end-to-end encryption. All traffic over Tox is
-end-to-end encrypted, and provides  [w:authenticated encryption]
-and [w:forward secrecy]. Tox clients aim to provide support for
+end-to-end encrypted, and provides  {{< wp "authenticated encryption" >}}
+and {{< wp "forward secrecy" >}}. Tox clients aim to provide support for
 messaging, group messaging, voice and video calling, voice and
 video conferencing, typing indicators, message read-receipts, file
 sharing, profile encryption, and desktop sharing.
@@ -1407,8 +1395,8 @@ their features in Tox wiki](https://wiki.tox.chat/clients#features):
 
 ## Cryptocat {#cryptocat}
 
-[w:CryptocatCryptocat] (GPL) is a javascript encrypted online chatting
-application created by [w:Nadim Kobeissi].
+{{< wp "CryptocatCryptocat" >}} (GPL) is a javascript encrypted online chatting
+application created by {{< wp "Nadim Kobeissi" >}}.
 
 It uses end-to-end encrypted chat conversations, and allow to
 exchange one-to-one messages, encrypted files and audio/video
@@ -1416,18 +1404,17 @@ recordings. All devices linked to Cryptocat accounts will receive
 messages, even when offline.
 
 For the transport layer encryption _Cryptocat_ uses the
-[OMEMO Multi-End Message and Object Encryption
-](#omemo "internal reference"). _Cryptocat_'s network uses XMPP
+{{< iref "#omemo" "OMEMO Multi-End Message and Object Encryption" >}}. _Cryptocat_'s network uses XMPP
 over WebSockets and only relays encrypted messages and does not
 store any data. In addition to the Cryptocat client's end-to-end
 encryption protocol, client-server communication is protected by
-TLS. It provide [w:forward secrecy] of messages, that is protects
+TLS. It provide {{< wp "forward secrecy" >}} of messages, that is protects
 past sessions against future compromises of secret keys or
 passwords.
 
  _Cryptocat_ is available for Linux, windows, OSX.
 
- [w:Nadim Kobeissi]
+ {{< wp "Nadim Kobeissi" >}}
  [answering to a request declared on 2016-04-28
  ](https://github.com/cryptocat/cryptocat/issues/77)
  «Cryptocat is no longer offered on mobile devices and will not be
@@ -1447,8 +1434,8 @@ messages between Cryptocat users, and use Cryptocat server..
     ](https://nl.movim.eu/?blog/edhelas@movim.eu/ebc3a98e-3a37-440f-8cb4-8de1fa7eed3b).
 
 ## Retroshare {#retroshare}
-[w:RetroShare] (GPL) is a cross-platform decentralised
-[w:Friend-to-Friend] application that offers social networking and
+{{< wp "RetroShare" >}} (GPL) is a cross-platform decentralised
+{{< wp "Friend-to-Friend" >}} application that offers social networking and
 file sharing features. It uses Transport encryption with TLS, and
 authentication with PGP It offers secure chat, VoIP with video,
 multi-user chat, file search, file sharing file sharing, forums, link
@@ -1471,8 +1458,8 @@ Android. It is not in Debian but a Debian repository is provided.
     ](https://retroshareteam.wordpress.com/).
 
 ## Signal {#signal}
-[w:Signal] (GPL) is an encrypted voice calling and instant messaging
-application developed by [w:Open Whisper Systems] for Android and iOS
+{{< wp "Signal" >}} (GPL) is an encrypted voice calling and instant messaging
+application developed by {{< wp "Open Whisper Systems" >}} for Android and iOS
 taht uses end-to-end encryption to send instant messages, group
 messages, attachments and media messages. It uses a modified OTR
 protocol, however, without interopability with standard Xmpp networks.
@@ -1498,15 +1485,15 @@ metadata or any logs about who called who and when.
 __Signal Desktop__ is a chrome packaged app that links with the
 Signal-iOS or Signal-Android client.
 
-_Signal_ was previously called [w:TextSecure] in November 2015,
+_Signal_ was previously called {{< wp "TextSecure" >}} in November 2015,
 _TextSecure_ was merged with an encrypted voice calling application
 called _RedPhone_ and was renamed as _Signal_.  The authors of _Signal_
 and _TexSecure_ _Whisper Systems_ partnered with _WhatsApp_ in
 November 2014 to encrypt users’ messages by default using their
 _TextSecure/Signal_ protocol.
 
-Since WhatsApps was sold to Facebook, [w:Brian acton]
-who co-founded WhatsApps with [w:Jan Koum], gave $ 50,000,000 to launch
+Since WhatsApps was sold to Facebook, {{< wp "Brian acton" >}}
+who co-founded WhatsApps with {{< wp "Jan Koum" >}}, gave $ 50,000,000 to launch
 the new [Signal fundation](https://signal.org/blog/signal-foundation/).
 
 -   [Signal Home (whispersystems.org)
@@ -1523,7 +1510,7 @@ the new [Signal fundation](https://signal.org/blog/signal-foundation/).
     ](https://ssd.eff.org/en/module/how-use-signal-android).
 
 ## Telegram {#telegram}
-[w:Telegram (software)|Telegram] (GPL)
+{{< wp "Telegram (software)"  "Telegram" >}} (GPL)
 is a cloud-based instant messaging service on Android, iOS, Windows
 Phone, Ubuntu Touch and Windows, OS X, Linux. Users can send with
 optional end-to-end encryption messages, photos, videos, stickers
@@ -1556,7 +1543,7 @@ There are bridges to XMPP and IRC with
 [teleirc](https://github.com/FruitieX/teleirc)
 
 ## Whatsapp {#whatsapp}
-[w:WhatsApp] __proprietary__ cross-platform instant messaging
+{{< wp "WhatsApp" >}} __proprietary__ cross-platform instant messaging
 client for smartphones.  It uses the Internet to send text
 messages, documents, images, video, user location and audio media
 messages to other users using standard cellular mobile numbers.
@@ -1595,18 +1582,17 @@ notice for lack of legal basis
 _the CNIL is an independent administrative authority that exercises
 its functions with accordance to the French Data Protection Act_.
 
-if you have to use it read the [follwing guides of the Electronic
-Frontier Foundation](#eff_whatsapp "internal reference").
+if you have to use it read the {{< iref "#eff_whatsapp" "follwing guides of the Electronic Frontier Foundation" >}}.
 
 There are opensource secure alternatives to _WhatsApp_ like
-all the [OTR](#otr "internal reference") and
-[OMEMO](#omemo "internal reference")
+all the {{< iref "#otr" "OTR" >}} and
+{{< iref "#omemo" "OMEMO" >}}
 clients and if you want some mere extension, at the price of
 loosing the interoperability,
-[Cryptocat](#cryptocat "internal reference"),
-[Signal](#signal "internal reference"),
+{{< iref "#cryptocat" "Cryptocat" >}},
+{{< iref "#signal" "Signal" >}},
 and
-[Telegram](#telegram "internal reference").
+{{< iref "#telegram" "Telegram" >}}.
 
 -   <a name="eff_whatsapp"
     [Electronic Frontier Foundation (EFF)](https://www.eff.org/) guide
@@ -1627,14 +1613,14 @@ and
     purposes as to send message to phones, receive messages from
     network servers or appliances, notifying about issues, via direct
     command or by special agents. There is also a
-    [WeeChat](/node/irc#weechat "internal reference") plugin using
+    {{< iref "irc#weechat" "WeeChat" >}} plugin using
     Yowsup library. Yowsup-client is in Debian.
 -   [Whatsapp-Desktop](https://github.com/Enrico204/Whatsapp-Desktop)
     (GPL) Unofficial whatsapp web desktop client for OSX, Linux and
     Windows. Build with Electron.
--   [Franz5](#franz5 "internal reference") supports _Whatsapp_.
--   [libpurple](#libpurple "internal reference") has a
-    [plugin](#pidgin_plugins "internal reference") for WhatsApp.
+-   {{< iref "#franz5" "Franz5" >}} supports _Whatsapp_.
+-   {{< iref "#libpurple" "libpurple" >}} has a
+    {{< iref "#pidgin_plugins" "plugin" >}} for WhatsApp.
 
 ## Other secure messengers
 -   [surespot](https://www.surespot.me/)

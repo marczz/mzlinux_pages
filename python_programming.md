@@ -1,20 +1,13 @@
-<!--
-.. description:
-.. date: 2015-05-03
-.. slug: python_programming
-.. tags:
-.. link:
-..: book: mzlinux
-.. title: Python Programming
--->
+---
+title: Python Programming
+---
 
-[TOC]
+{{% toc /%}}
 
 -----
 
 # Python coding style
-The page [Structured text formatters
-](/node/structured_text "internal reference")
+The page {{< iref "structured_text" "Structured text formatters" >}}
 references many python formatters like the docutil restructured text,
 asciidoc, markdown, txt2tags ....
 
@@ -28,7 +21,7 @@ asciidoc, markdown, txt2tags ....
 -   [Google Python style guide](http://google-styleguide.googlecode.com/svn/trunk/pyguide.html)
 -   Barry Warsaw's [Python coding style guide](http://barry.warsaw.us/software/STYLEGUIDE.txt).
     Barry wrote also [Warsaw's Laws of Hackering](http://barry.warsaw.us/software/laws.html),
-    that can stand in the [w:Murphy%27s_law|category of murphy laws]
+    that can stand in the {{< wp "Murphy%27s_law"  "category of murphy laws" >}}
      _see [Murphy's laws and corollaries](http://roso.epfl.ch/dm/murphy.html)
      for a large sample of murphy's laws_
 -   [A Guide to NumPy/SciPy Documentation
@@ -44,11 +37,11 @@ asciidoc, markdown, txt2tags ....
 -   [Epydoc](http://epydoc.sourceforge.net/)
     <a name="Epydoc"></a> ( MIT open-source license) a documentation generator that
     renders its own lightweight markup language Epytext as well as
-    [reStructuredText](/node/structured_text#reStructuredText "internal reference")
+    {{< iref "structured_text#reStructuredText" "reStructuredText" >}}
     for Python documentation strings.
     Epytext supports linking between different pieces of documentation.</br>
     It has been the most popular api documentation generator, but is by now often replaced by
-    [sphinx-apidoc](#apidoc "internal reference"), and is now stalled.</br>
+    {{< iref "#apidoc" "sphinx-apidoc" >}}, and is now stalled.</br>
 -   [pdoc](http://pdoc.burntsushi.net/pdoc) is a new fork of epydoc,
      and intend to continue the development of the now inactive epydoc.
 -   [pydoc](http://docs.python.org/3/lib/module-pydoc.html)
@@ -72,16 +65,15 @@ asciidoc, markdown, txt2tags ....
     is a tool for automatic generation of Sphinx sources that,
     using the autodoc extension. It document a whole package in the
     style of
-    [epydoc](#epydoc internal reference")
+    {{< iref "#epydoc" "epydoc" >}}
     or related documentation tools.
 
 The documentation of python can be done using
-[Literate Programming](/node/literate_programming "internal reference")
+{{< iref "literate_programming" "Literate Programming" >}}
 , we can use a langage agnostic tool, or
 one of the manifold python literate tools.
 See the references to Cog, pyreport , pyWeb, PyLit in the
-[Literate Programming Section
-](/node/literate_programming "internal reference")
+{{< iref "literate_programming" "Literate Programming Section" >}}
 
 
 # Static Code Analyzers
@@ -96,7 +88,7 @@ See the references to Cog, pyreport , pyWeb, PyLit in the
     stay unused will keep gross mistakes, until we meet the causes of
     a program crash. PyChecker has a faster
     alternative
-    [Pyflakes](#pyflakes "internal reference").
+    {{< iref "#pyflakes" "Pyflakes" >}}.
     Pychecker is limited to Python 2.
 -   [PyLint](http://www.pylint.org/) (GPL)
     includes PyChecker checks, plus checking line-code's
@@ -210,24 +202,24 @@ b"au c\xc5\x93ur de l'\xc3\xa9t\xc3\xa9"
 
 # Data model {#data_model}
 
--   Wikipedia [w:Python_philosophy#Programming_philosophy|Python Programming philosophy]
--   Python support [w:Duck typing], that allow a behavioral rather than family approach to classes.
+-   Wikipedia {{< wp "Python_philosophy#Programming_philosophy"  "Python Programming philosophy" >}}
+-   Python support {{< wp "Duck typing" >}}, that allow a behavioral rather than family approach to classes.
     _You recognize a duck because it quarks rather to check if it's parents are duck too_.
 -   In Python Duck typing can be complemented by
     [Abstract Base Classes (abc)](http://docs.python.org/3/library/abc.html),
     it allows you to see your class as an instance of the (abstract) base class.
     They are defined in
     [PEP 3119 -- Introducing Abstract Base Classes](http://www.python.org/dev/peps/pep-3119/)
--   Abstract Base Classes is peculiar case of [Metaclass](#metaclasses)
+-   Abstract Base Classes is peculiar case of {{< iref "#metaclasses" "Metaclass" >}}
     that act as templates for producing classes.
 -   The Python data model unify types and classes, it used to be
-    called [New Style Classes](#newstyle_classes)
+    called {{< iref "#newstyle_classes" "New Style Classes" >}}
 -   Python allows higher type programming, the functions
-    transformation are clarified by [Decorators](#decorators).
+    transformation are clarified by {{< iref "#decorators" "Decorators" >}}.
 -   Python attributes of a class are not limited to data members
     but can be  an instance of a class that implements special methods
     to get and set the value of the attribute. Such class is called a
-    [Descriptor](#descriptors)
+    {{< iref "#descriptors" "Descriptor" >}}
 
 ## Python 2 New Style classes and Python 3 classes {#newstyle_classes}
 -   The data model for python 2.x first used _classic classes_ with two distincts concepts of
@@ -347,7 +339,7 @@ b"au c\xc5\x93ur de l'\xc3\xa9t\xc3\xa9"
 Metaclasses have changed in Python 3, so be careful of tweaking the syntax of the Python 2 recipes.
 I include only references on the python 3 metaclasses
 
--   Wikipedia: [w:Metaclass]
+-   Wikipedia: {{< wp "Metaclass" >}}
 -   [Metaclasses in Python 3000 (pep 3115)](
     http://www.python.org/dev/peps/pep-3115/) _2007_.
 -   [Metaclasses in Python 3.0 part I](http://www.artima.com/weblogs/viewpost.jsp?thread=236234)
@@ -361,16 +353,16 @@ I include only references on the python 3 metaclasses
 -   [Python 3 Patterns, Recipes and Idioms: Metaprogramming
     ](http://python-3-patterns-idioms-test.readthedocs.org/en/latest/Metaprogramming.html)
 
-## [w:Aspect-oriented programming]
-[w:Aspect-oriented programming] includes also [Metaprogramming](#metaclasses "internal reference")
+## {{< wp "Aspect-oriented programming" >}}
+{{< wp "Aspect-oriented programming" >}} includes also {{< iref "#metaclasses" "Metaprogramming" >}}
 
--   [w:Aspect-oriented programming] is available in Python3 with the library
+-   {{< wp "Aspect-oriented programming" >}} is available in Python3 with the library
     [pylities](http://pypi.python.org/pypi/pytilities/), read the [pylities Manual](http://pytilities.sourceforge.net/doc/1.2.0/)
 
 
-## [w:Design by contract]
+## {{< wp "Design by contract" >}}
 
-[w:Design by contract] define formal, precise and verifiable interface specifications for software components, which extend the ordinary definition of abstract data types with preconditions, postconditions and invariants. These specifications are referred to as "contracts".
+{{< wp "Design by contract" >}} define formal, precise and verifiable interface specifications for software components, which extend the ordinary definition of abstract data types with preconditions, postconditions and invariants. These specifications are referred to as "contracts".
 The concept of design by contract as been first deployed with the language _Eiffel_ and you will find introductions and material to use this paradigm in the [Eiffel: design by contract](lhttp://www.eiffel.com/developers/design_by_contract.html) page.
 
 The [PEP 316- Programming by Contract for Python
@@ -381,7 +373,7 @@ since 2007.
 The library [PyContracts](https://pypi.python.org/pypi/PyContracts)
 is a more recent attempt using decorators to implement contracts in Python.
 
-## [w:Design Patterns] in Python
+## {{< wp "Design Patterns" >}} in Python
 -   [Thinking in Python](http://www.mindview.net/Books/TIPython/)
     by Bruce Eckel is a book focused on design patterns in Python,
     available on-line at
@@ -484,8 +476,8 @@ see also Doug Hellmann tutorial
 # Network Programming
 
 See also [Network Libraries](python_libraries#network_libs "Internal reference")
-[WSGI](/node/python_web#wsgi "Internal reference")
-and [Web frameworks](/node/python_web "Internal reference")
+{{< iref "python_web#wsgi" "WSGI" >}}
+and {{< iref "python_web" "Web frameworks" >}}
 
 ## Net
 -   [Socket Programming HOWTO](http://docs.python.org/dev/howto/sockets.html)
@@ -502,7 +494,7 @@ and [Web frameworks](/node/python_web "Internal reference")
 # Unit Tests {#python_unit_tests}
 This is the __Python__ Unit Test section; an other page deals with
 the non language specific, software design idiom of
-[Unit Tests](/node/software_design#unit_tests "internal reference").
+{{< iref "software_design#unit_tests" "Unit Tests" >}}.
 
 -   [Python testing tools taxonomy](http://wiki.python.org/moin/PythonTestingToolsTaxonomy)
     is the python wiki index of  testing tools.
@@ -522,7 +514,7 @@ the non language specific, software design idiom of
 
 We  consider three ways of testing: _doctest_, _unit tests_ and _Mock objects_.
 There are packages for these three validations methods in the
-[standard library modules](/node/331 "internal reference")
+{{< iref "331" "standard library modules" >}}
 and in Pypi packages.
 
 A [doctest](http://en.wikipedia.org/wiki/Doctest "Wikipedia page")
@@ -531,16 +523,16 @@ standard Python interpreter shell, cut and pasted into docstrings.
 It searches for pieces of text that look like interactive Python
 sessions, and then executes those sessions to verify that they work
 exactly as shown. The library reference includes the
-[doctest module](/node/331#doctest "internal reference")
+{{< iref "331#doctest" "doctest module" >}}
 
-[w:Unit Test] are helped by the module
-[UnitTest](/node/python libraries#unittest "internal reference")
+{{< wp "Unit Test" >}} are helped by the module
+{{< iref "python" "UnitTest" >}}
 
-Since python 3.3 there is a new module for [w:Mock Objects]:
-[unittest.mock](/node/python_libraries#unittest.mock "internal Reference").
+Since python 3.3 there is a new module for {{< wp "Mock Objects" >}}:
+{{< iref "python_libraries#unittest" "unittest.mock" >}}.
 
 The other libraries are under the section
-[Test Libraries](/node/python_libraries#test_libs).
+{{< iref "python_libraries#test_libs" "Test Libraries" >}}.
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->

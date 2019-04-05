@@ -1,21 +1,14 @@
-<!--
-.. description:
-.. date: 2015-06-27
-.. slug: xorg
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Xorg
--->
+---
+title: Xorg
+---
 
-[TOC]
+{{% toc /%}}
 
 ---
 
-See also [input method](/node/input_methods "internal reference"),
-[Console section](/node/console "internal reference"), [desktop
-](/node/desktop "internal reference") where is found the
-[clipboard managers](/node/desktop#clipboard "internal reference").
+See also {{< iref "input_methods" "input method" >}},
+{{< iref "console" "Console section" >}}, {{< iref "desktop" "desktop" >}} where is found the
+{{< iref "desktop#clipboard" "clipboard managers" >}}.
 
 # References
 
@@ -46,7 +39,7 @@ See also [input method](/node/input_methods "internal reference"),
 
 # xrandr {#randr}
 
-[w:RandR] is an extension to the X11. With Randr you can set the
+{{< wp "RandR" >}} is an extension to the X11. With Randr you can set the
 screen refresh rate, choose a monitor output, resize, rotate and
 reflect the root window of a screen.
 
@@ -82,10 +75,10 @@ xrandr has some gui interfaces:
 # Wayland {#wayland}
 
 See also
-[Wayland Terminals](/node/xterminals#wayland_terminals "internal reference"),
-[Wayland Compositors](/node/desktop#wayland_compositors "internal reference").
+{{< iref "xterminals#wayland_terminals" "Wayland Terminals" >}},
+{{< iref "desktop#wayland_compositors" "Wayland Compositors" >}}.
 
-[w:Wayland_(display_server_protocol)|Wayland] is a protocol between a
+{{< wp "Wayland_(display_server_protocol)"  "Wayland" >}} is a protocol between a
 compositor and its clients. The compositor sends input events to the
 clients. The clients render locally and then communicate video memory
 buffers and information about updates to those buffers back to the
@@ -94,11 +87,11 @@ compositor.
 It can replace X as the native Linux graphics server or collaborate
 with X. Wayland is a graphics multiplexer for a number of X servers,
 
--   Wikipedia [w:Wayland_(display_server_protocol)|Wayland],
-    [w:List_of_display_servers#Wayland|List of Wayland compositors]
+-   Wikipedia {{< wp "Wayland_(display_server_protocol)"  "Wayland" >}},
+    {{< wp "List_of_display_servers#Wayland"  "List of Wayland compositors" >}}
 -   [Freedesktop Wayland Home](http://wayland.freedesktop.org/):
     [Wayland FAQ](http://wayland.freedesktop.org/faq.html)
--   <a name='weston"></a>[w:Wayland_(display_server_protocol)#Weston|weston]
+-   <a name='weston"></a>{{< wp "Wayland_(display_server_protocol)#Weston"  "weston" >}}
     is the reference C implementation of a Wayland compositor.
     It is in debian.
 -   [Xwayland](http://wayland.freedesktop.org/xserver.html)
@@ -110,10 +103,8 @@ with X. Wayland is a graphics multiplexer for a number of X servers,
     windows instead of KMS. xwayland is in debian.
 
 # Framebuffer
-See also [Framebuffer terminals
-](/node/xterminals#framebuffer_terminals "internal reference"),
-[Framebuffer Applications
-](/node/console_applications#framebuffer_applications "internal reference").
+See also {{< iref "xterminals#framebuffer_terminals" "Framebuffer terminals" >}},
+{{< iref "console_applications#framebuffer_applications" "Framebuffer Applications" >}}.
 
 X.org _xf86-video-fbdev_ driver module provides framebuffer under
 Xorg. It is in the package _xserver-xorg-video-fbdev_.
@@ -126,9 +117,9 @@ Xorg. It is in the package _xserver-xorg-video-fbdev_.
     ](https://wiki.archlinux.org/index.php/Touchpad_Synaptics)
 
 # Display Managers
-See also the [XDMCP section](#xdmcp "internal reference")
+See also the {{< iref "#xdmcp" "XDMCP section" >}}
 
--   Wikipedia: [w:X display manager]
+-   Wikipedia: {{< wp "X display manager" >}}
 -   [ArchWiki: Display Manager
     ](https://wiki.archlinux.org/index.php/display_manager)
     has a list of display managers for console and Xorg.
@@ -137,7 +128,7 @@ See also the [XDMCP section](#xdmcp "internal reference")
     -   [CDM - ArchWiki](https://wiki.archlinux.org/index.php/CDM).
 -   [Gnome Display Manager
     ](http://en.wikipedia.org/wiki/GNOME_Display_Manager)
-    (GPL) is an alternative to [XDM](#xdm "internal reference")
+    (GPL) is an alternative to {{< iref "#xdm" "XDM" >}}
     and newer implementation using gtk libraries.
     GDM has numerous added features, but is dependent of gtk. Despite
     his name, you can use it without a full gnome environment, and he is
@@ -162,7 +153,7 @@ See also the [XDMCP section](#xdmcp "internal reference")
         [How to customize guest session](https://help.ubuntu.com/community/CustomizeGuestSession)
 -   <a name="ldm"></a>[ldm
     ](http://wiki.ltsp.org/wiki/LTSPManual#The_LDM_display_manager)
-    is the [LTSP](#ltsp "internal reference") display manager, it is written in python
+    is the {{< iref "#ltsp" "LTSP" >}} display manager, it is written in python
     and connect through an ssh tunnelconnect through an ssh tunnel instead of XDMCP. _It
     is in Debian with two packages ldm and ldm-server_.
 -   [Qingy](http://qingy.sourceforge.net/) (GPL)
@@ -189,12 +180,12 @@ See also the [XDMCP section](#xdmcp "internal reference")
 
 
 # Remote Deskstop {#remote_desktop}
--   Wikipedia: [w:Remote desktop software],
-    [w:Comparison of remote desktop software],
-    [w:SPICE (protocol)|SPICE],
-    [w:RFB protocol],
-    [w:Xrdp],
-    [w:NX technology],
+-   Wikipedia: {{< wp "Remote desktop software" >}},
+    {{< wp "Comparison of remote desktop software" >}},
+    {{< wp "SPICE (protocol)"  "SPICE" >}},
+    {{< wp "RFB protocol" >}},
+    {{< wp "Xrdp" >}},
+    {{< wp "NX technology" >}},
     [XDMCP
     ](https://en.wikipedia.org/wiki/X_display_manager_(program_type)#X_Display_Manager_Control_Protocol)
 
@@ -222,14 +213,14 @@ See also the [XDMCP section](#xdmcp "internal reference")
     for Xorg _Xspice_.
     You find in Debian _xserver-xspice_, _spice-client_, _spice-client-gtk_,
     , _browser-plugin-spice_, _spice-html5_.
-    -   Wikipedia [w:SPICE (protocol)]
+    -   Wikipedia {{< wp "SPICE (protocol)" >}}
 -   [TeamViewer](http://www.teamviewer.com/) is a private source free
     software for remote control, desktop sharing, online meetings, web
     conferencing and file transfer between computers.
     TeamViewer is available for Microsoft Windows, Mac OS X,
     Linux, Chrome OS, iOS, Android, Windows RT, Windows Phone 8 and
     BlackBerry operating systems.
-    -   Wikipedia [w:Teamviewer]
+    -   Wikipedia {{< wp "Teamviewer" >}}
 
 ## XDMCP {xdmcp}
 [XDMCP
@@ -269,7 +260,7 @@ Xpra also allows forwarding of sound, clipboard and printing
 services.  Sessions can be accessed over SSH, or password
 protected over plain TCP sockets.
 
-Xpra can be used with  [winswitch](#winswitch "internal reference").
+Xpra can be used with  {{< iref "#winswitch" "winswitch" >}}.
 
 Xpra is in Debian, and also a Debian repository is also
 [available on the Xpra site](http://xpra.org/trac/wiki/Download#Linux).
@@ -278,8 +269,8 @@ Xpra is in Debian, and also a Debian repository is also
 -   [Xpra HTML5 Client](http://xpra.org/trac/wiki/Clients/HTML5)
 
 ## VNC {#vnc}
--   Wikipedia: [w:Virtual_Network_Computing] (VNC),
-    [w:Comparison of remote desktop software].
+-   Wikipedia: {{< wp "Virtual_Network_Computing" >}} (VNC),
+    {{< wp "Comparison of remote desktop software" >}}.
 -   [vnc susefaq how-to](http://susefaq.sourceforge.net/howto/vnc.html)
 
 ## VNC Servers/client software
@@ -339,7 +330,7 @@ _tightvncserver_ for version 1.3.9.
 The Linux version stopped at 1.3.10 in 2009; it is now only
 developped for windows with version 2.8.5 in 2016 with a private
 licence.
-You can replace it by the [TigerVnc](#tigervnc "internal reference") fork.
+You can replace it by the {{< iref "#tigervnc" "TigerVnc" >}} fork.
 
 -   Van Emery has
     [VNC over SSH2 - A TightVNC Tutorial
@@ -375,7 +366,7 @@ Debian has TigerVnc package since stretch, an [neurodebian provide
 packages](http://neuro.debian.net/pkgs/tigervnc-standalone-server.html)
 for wheezy and jessie.
 
-TigerVnc can be used with [VirtualGL](#virtualgl "internal refernce") to acelerate
+TigerVnc can be used with {{< iref "#virtualgl" "VirtualGL" >}} to acelerate
 OpenGl rendering.
 
 ### Vino
@@ -390,7 +381,7 @@ is a VNC server tuned to provide peak performance for 3D and video workloads. It
 fork of of TightVNC.  2D and 3D TurboVNC's encoding methods have been adopted by
 TigerVNC and libvncserver.  TurboVNC is compatible with other VNC distributions,
 particularly with those that also support Tight encoding (such as TigerVNC, TightVNC,
-and UltraVNC.)  TurboVnc can be used with [VirtualGL](#virtualgl "internal refernce") to
+and UltraVNC.)  TurboVnc can be used with {{< iref "#virtualgl" "VirtualGL" >}} to
 provides a highly performant display of 3D applications.
 
 -   [Sourceforge TurboVnc downloads](https://sourceforge.net/projects/turbovnc/files/)
@@ -411,7 +402,7 @@ by tigervnc.
 In 2017 RealVNC server download is 6.0.2, it proposes a .deb
 package.
 
--   Wikipedia [w:RealVNC],
+-   Wikipedia {{< wp "RealVNC" >}},
 -   [FAQ](http://www.realvnc.com/faq.html)
 
 ## Other clients and software
@@ -427,7 +418,7 @@ package.
     -   [vnc2flv GitHub repository](https://github.com/baijum/vnc2flv).
 -   [Remina](https://remmina.org) (GPL)
      is a Gnome remote desktop client written in GTK+, which supports multiple network
-     protocols, Currently RDP, VNC, [SPICE](#spice "internal reference"),
+     protocols, Currently RDP, VNC, {{< iref "#spice" "SPICE" >}},
      NX, XDMCP, SSH and EXEC. It is in Debian.
      -   [Remmina Wiki](https://gitlab.com/Remmina/Remmina/wikis/home)
      -   [Remmina - ArchWiki](https://wiki.archlinux.org/index.php/Remmina)
@@ -454,12 +445,12 @@ package.
     applications with full hardware acceleration.
 
     It can be used with X11 forwarding, or vnc,
-    [Turbovnc](#turbovnc "internal reference")
-    and [Tigervnc](#tigervnc  "internal reference") openGl rendering van benefit from
+    {{< iref "#turbovnc" "Turbovnc" >}}
+    and {{< iref "#tigervnc" "Tigervnc" >}} openGl rendering van benefit from
     VirtualGL
 
     -   [VirtualGL - ArchWiki](https://wiki.archlinux.org/index.php/VirtualGL).
--   VNC can be used with [winswitch](#winswitch "internal reference").
+-   VNC can be used with {{< iref "#winswitch" "winswitch" >}}.
 
 ## NX and X2Go {#x2go}
 
@@ -483,7 +474,7 @@ package.
 applications on other computers than the one you start them on.
 
 WinSwitch supports many different protocols for accessing remote applications and desktops:
-NX, [VNC](#vnc "internal reference"), [Xpra](#xpra "internal reference"), SSH, RDP,  and
+NX, {{< iref "#vnc" "VNC" >}}, {{< iref "#xpra" "Xpra" >}}, SSH, RDP,  and
 GStreamer ( read-only screencasting).
 
 It is in Debian,  a Debian repository is also
@@ -491,7 +482,7 @@ It is in Debian,  a Debian repository is also
 
 # Thin Clients
 ## References
--   Wikipedia [w:Thin client]
+-   Wikipedia {{< wp "Thin client" >}}
 
 ## LTSP {#ltsp}
 -   [Wikipedia: LTSP](http://en.wikipedia.org/wiki/Linux_Terminal_Server_Project)
@@ -502,12 +493,12 @@ It is in Debian,  a Debian repository is also
 -   [Gentoo Wiki - LTSP Guide
     ](https://wiki.gentoo.org/wiki/LTSP),
 -   [Edubuntu](http://www.edubuntu.org)  is a distribution based on
-    [Ubuntu](/node/distributions#distrib_ubuntu "internal reference")
+    {{< iref "distributions#distrib_ubuntu" "Ubuntu" >}}
     organized around LTSP servers running education customized Ubuntu
     and LTSP clients.  You find a collection of
     [LTSP documentation at help.ubuntu.com
     ](https://help.ubuntu.com/community/UbuntuLTSP/).
--   _LTSP_ use [ldm](#ldm "internal reference") window manager to connect to the display
+-   _LTSP_ use {{< iref "#ldm" "ldm" >}} window manager to connect to the display
     through an ssh tunnel.
 -   Linux Journal howtos: [Linux Terminal Servers for Any
     Business](http://www.linuxjournal.com/article/8822) by Mark Rais
@@ -517,7 +508,7 @@ It is in Debian,  a Debian repository is also
 
 ## Other thin clients
 
--   [w:Thinstation] (GPL)
+-   {{< wp "Thinstation" >}} (GPL)
     is a _thin client_ operating system.
     -   [Thinstation Home](http://thinstation.github.io/thinstation/)
     -   [Thinstation Wiki

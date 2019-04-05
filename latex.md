@@ -1,21 +1,15 @@
-<!--
-.. description:
-.. date: 2015-04-08
-.. slug: latex
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: TeX, LaTeX
--->
+---
+title: TeX, LaTeX
+---
 
-[TOC]
+{{% toc /%}}
 
 ------------------
 
 
 # TeX and LaTeX references
 
--   Wikipedia: [w:TeX] and [w:LaTeX] have many up to date
+-   Wikipedia: {{< wp "TeX" >}} and {{< wp "LaTeX" >}} have many up to date
     references to free LaTeX and TeX books.
 -   [CTAN]( http://www.ctan.org/):
     [mirror list](http://www.ctan.org/tex-archive/CTAN.sites). The
@@ -43,7 +37,7 @@
     ](http://cahiers.gutenberg.eu.org/).
 -   [TeX - LaTeX Stack Exchange](http://tex.stackexchange.com/)
     is a question and answer site for users of TeX, LaTeX, ConTeXt.
--   [w:TeX Live] <a name="texlive"></a> is the default TeX distribution on Linux.
+-   {{< wp "TeX Live" >}} <a name="texlive"></a> is the default TeX distribution on Linux.
      -   [ArchLinux: TeX Live
          ](https://wiki.archlinux.org/index.php/TeX_Live)
      -   [ArchLinux: TeX Live Faq
@@ -67,7 +61,7 @@
     to use pdfTeX, XeTeX, and LuaTeX.
 -   [pdfTeX](http://www.tug.org/applications/pdftex/)
     (GPL) is an extended version of eTeX that can create PDF
-    directly from TeX source files. See also Wikipedia: [w:PdfTeX] and the HowTo
+    directly from TeX source files. See also Wikipedia: {{< wp "PdfTeX" >}} and the HowTo
     [Hypertext capabilities with pdfTEX (pdf)
     ](http://www.tug.org/pracjourn/2006-4/garcia1/garcia1.pdf)
     by Federico Garcia in the PracTeX Journal.
@@ -130,7 +124,7 @@
     (Cambridge U) gives links to latex manuals including those on CTAN.
 -   [TeX StackExchange](http://tex.stackexchange.com/)
     is a stackoverflow like question/answer site.
--   [TexLive distribution](#texlive "internal reference)
+-   {{< iref "#texlive" "TexLive distribution" >}}
     is referenced above.
 -   [Nicola Talbot](http://theoval.cmp.uea.ac.uk/~nlct/)
     has written many
@@ -184,7 +178,7 @@
 
 # XeTeX LuaTeX and i18n {i18n}
 ## XeTeX {#xetex}
-[w:XeTeX] (MIT License) is a TeX  engine using Unicode and
+{{< wp "XeTeX" >}} (MIT License) is a TeX  engine using Unicode and
 supporting modern fonts  TTF,  OpenType,  Graphite and
 Apple Advanced Typography (AAT).
 -   [XeTeX home Page](http://xetex.sourceforge.net/)
@@ -198,7 +192,7 @@ Apple Advanced Typography (AAT).
     by Michel Goossens __main reference for XeTex__,
 
 ## LuaTeX {#luatex}
-[w: LuaTeX]
+{{< wp " LuaTeX" >}}
 (GPL) is a successor to pdfTeX with OpenType Support using Lua as
 an embedded scripting language. It supports OpenType fonts.
 -   [LuaTeX Home](http://www.luatex.org/)
@@ -358,7 +352,7 @@ with pdflatex, dvips and LyX.
 -   [Beamer development home](https://bitbucket.org/rivanvx/beamer/wiki/Home)
 -   You can [write Beamer presentations
     ](http://orgmode.org/worg/exporters/beamer/tutorial.html)
-    in [org-mode](/node/org-mode "internal reference")
+    in {{< iref "org" "org-mode" >}}
 
 
 <!-- Local Variables: -->

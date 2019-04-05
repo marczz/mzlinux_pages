@@ -1,24 +1,19 @@
-<!--
-.. description:
-.. date: 2016-12-15
-.. slug: epub
-.. tags:
-.. link:
-.. title: Epub
--->
+---
+title: Epub
+---
 
-[TOC]
+{{% toc /%}}
 
 ---
 
-See also the related [html section](/node/html  "internal reference")
-and the [css section](/node/html#css  "internal reference")
+See also the related {{< iref "html" "html section" >}}
+and the {{< iref "html#css" "css section" >}}
 since Epub uses css.
 
 # Epub Format
-The EPUB format Home is the [IPDF](#ipdf "internal reference).
+The EPUB format Home is the {{< iref "#ipdf" "IPDF" >}}.
 
--   Wikipedia [w:EPUB]
+-   Wikipedia {{< wp "EPUB" >}}
 -   [Epub Zone](http://epubzone.org/)
     all things EPUB.
 -   [Kobo ePub Guidelines on Github
@@ -92,7 +87,7 @@ The EPUB format Home is the [IPDF](#ipdf "internal reference).
     server.
     -   [Calibre Manual](http://manual.calibre-ebook.com/).
     -   Calibre support importing and exporting to
-        [Markdown](/node/markdown "internal reference")
+        {{< iref "markdown" "Markdown" >}}
         using python-markdown, you can use
         [markdown extensions
         ](http://pythonhosted.org/Markdown/extensions/index.html).
@@ -159,8 +154,7 @@ The EPUB format Home is the [IPDF](#ipdf "internal reference).
     files. It's capable of reading and writing EPUB files
     programmatically.
     There is a Debian package.
-    -   EbookLib is used in [Booktype 2.0
-        ](#booktype "internal reference")
+    -   EbookLib is used in {{< iref "#booktype" "Booktype 2.0" >}}
     -   [EBookLib Documentation
         ](http://ebooklib.readthedocs.org/en/latest/)
 -   [Exirel/Epub](https://bitbucket.org/exirel/epub)
@@ -193,9 +187,9 @@ The EPUB format Home is the [IPDF](#ipdf "internal reference).
     ](http://lucidor.org/lucifox/) (GPL).
 
 # Structured text to EPUB {#structured_to_epub}
-[Sphinx](/node/rest#sphinx "internal reference") can output to epub.
+{{< iref "rest#sphinx" "Sphinx" >}} can output to epub.
 
-[pandoc](/node/markdown#pandoc "internal reference") can convert
+{{< iref "markdown#pandoc" "pandoc" >}} can convert
 Markdown, CommonMark, Textile, reStructuredText, HTML, (subset of)
 LaTeX, MediaWiki, TWiki, Haddock , OPML, Org-mode, DocBook, txt2tags,
 Word docx To EPUB (v2 or v3) .
@@ -207,7 +201,7 @@ Haddock, EPUB (v2 or v3), FictionBook2, Textile, groff man pages,
 Emacs Org-Mode, AsciiDoc, InDesign ICML, and Slidy, Slideous,
 DZSlides, reveal.js or S5 HTML slide shows. It can also produce PDF .
 
-[asciidoc](/node/asciidoc "internal reference") has an
+{{< iref "asciidoc" "asciidoc" >}} has an
 [epub backend
 ](http://www.methods.co.nz/asciidoc/publishing-ebooks-with-asciidoc.html)
 

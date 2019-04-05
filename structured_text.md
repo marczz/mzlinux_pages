@@ -1,26 +1,20 @@
-<!--
-.. description:
-.. date: 2015-06-10
-.. slug: structured_text
-.. tags:
-.. link:
-.. title: Structured Text
--->
+---
+title: Structured Text
+---
 
-[TOC]
-
+{{% toc /%}}
 
 There are separate pages for
-[AsciiDoc](/node/asciidoc "internal reference"),
-[MarkDown](/node/makdown "internal reference"),
-[ReSt](/node/rest "internal reference").
+{{< iref "asciidoc" "AsciiDoc" >}},
+{{< iref "makdown" "MarkDown" >}},
+{{< iref "rest" "ReSt" >}}.
 
 # References
 
--   Wikipedia:  [w:Lightweight Markup Language],
-    [w:Lightweight_markup_language#Comparison_of_language_features|Comparaison of markup language features],
-    [w:List of document markup languages],
-    [w:List of markup languages],
+-   Wikipedia:  {{< wp "Lightweight Markup Language" >}},
+    {{< wp "Lightweight_markup_language#Comparison_of_language_features"  "Comparaison of markup language features" >}},
+    {{< wp "List of document markup languages" >}},
+    {{< wp "List of markup languages" >}},
 
 # [Creole](http://www.wikicreole.org/wiki/Home)
 To quote Wikipedia:
@@ -56,20 +50,20 @@ Dokuwiki, Mediawiki and Tikiwiki.
     [MoinMoin Wiki](http://moinmo.in/),
     [PmWiki](http://www.pmwiki.org/),
     Drupal thru the Pear package [Text Wiki](1http://pear.php.net/package/Text_Wiki/),
-    [w:Djiki], [w:Oddmuse], [w:PhpWiki], and [w:XWiki]
+    {{< wp "Djiki" >}}, {{< wp "Oddmuse" >}}, {{< wp "PhpWiki" >}}, and {{< wp "XWiki" >}}
 
 # Other formats
 
--   [w:BBCode]
+-   {{< wp "BBCode" >}}
     is a lightweight markup language used to format posts in many
     message boards. It is implemented as a
     [PHP Module](http://php.net/manual/en/book.bbcode.php).
-    The syntax is summarized in the [w:BBCode|Wikipedia BBCode page].
+    The syntax is summarized in the {{< wp "BBCode"  "Wikipedia BBCode page" >}}.
 -   [txt2tags](http://txt2tags.org/) (GPL)
     is a structured text (yet another custom format!) to HTML, XHTML,
     LaTeX, Lout, man, MoinMoin, MagicPoint, PageMaker documents The
     converter is written in python. _2010_.
--   Wikipedia [w:Txt2tags]
+-   Wikipedia {{< wp "Txt2tags" >}}
 -   [txt2man](http://mvertes.free.fr/) (GPL)
     is a light shell + gnu awk script to convert flat text
     to man page format. _2011_
@@ -78,7 +72,7 @@ Dokuwiki, Mediawiki and Tikiwiki.
     SiSU can produce plain text, HTML, XHTML, XML,
     OpenDocument, LaTeX or PDF files, and populate an SQL database.<br />
     The sisu converter is written in ruby.
-    -   Wikipedia: [w:Sisu]
+    -   Wikipedia: {{< wp "Sisu" >}}
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->

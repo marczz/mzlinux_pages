@@ -1,14 +1,8 @@
-<!--
-.. description:
-.. date: 2015-04-08
-.. slug: shell
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Shell
--->
+---
+title: Shell
+---
 
-[TOC]
+{{% toc /%}}
 
 ___
 
@@ -16,7 +10,7 @@ ___
 -   [Wikipedia: Unix shells](http://en.wikipedia.org/wiki/Unix_shell),
     [Wikipedia: Comparison of computer shells
     ](http://en.wikipedia.org/wiki/Comparison_of_computer_shells),
-    [w:POSIX]
+    {{< wp "POSIX" >}}
 -   [Shell Features](http://tldp.org/LDP/intro-linux/html/app3.html)
     in [Introduction to Linux](http://tldp.org/LDP/intro-linux/html/) _2008_
     gives rough common and differing features between shells
@@ -78,7 +72,7 @@ Main differences with SysV4 shell:
 
 The more common flavour of ash are the
 [netbsd ash](http://cvsweb.netbsd.org/bsdweb.cgi/src/bin/sh),
-[man:dash] used as **sh** in debian and ubuntu, the new **yash**
+{{< man "dash" >}} used as **sh** in debian and ubuntu, the new **yash**
 and the Busybox **ash**.
 
 The [dash git repository
@@ -101,7 +95,7 @@ It is also detailled in [Ubuntu - Dash as /bin/sh
 [checkbashism.pl
 ](https://anonscm.debian.org/cgit/collab-maint/devscripts.git/plain/scripts/checkbashisms.pl)
 is a script in debian devscripts, which comes with a manual
-[man:checkbashisms(1)] to check what in a script is not posix. It is
+{{< man "checkbashisms(1)" >}} to check what in a script is not posix. It is
 used to convert your bash script to dash.
 There is a [slightly modified release in Sourceforge
 ](https://sourceforge.net/projects/checkbaskisms).
@@ -151,8 +145,7 @@ Bash (without my big init) is 3.8M/3.2M; zsh (without user init)
     ](http://tiswww.case.edu/php/chet/bash/FAQ)
 -   [Greg's Wiki Bash FAQ
     ](http://mywiki.wooledge.org/BashFAQ)
-    _other material from Greg's Wiki are [below
-    ](#gregs_wiki "internal reference)
+    _other material from Greg's Wiki are {{< iref "#gregs_wiki" "below" >}}
 -   [Bash Reference Sheet
     ](http://mywiki.wooledge.org/BashSheet)
 -   [Bash Hackers Wiki](http://bash-hackers.org/wiki/doku.php/)
@@ -247,7 +240,7 @@ expansion, nor process substitution)
 
 # Zsh
 
--   Wikipedia [w:Z shell]
+-   Wikipedia {{< wp "Z shell" >}}
 -   [Zsh Home at sourceforge](http://zsh.sourceforge.net/)
 -   [Zsh Manual
     ](http://zsh.sourceforge.net/Doc/Release/index-frame.html), or
@@ -277,7 +270,7 @@ expansion, nor process substitution)
 
 # Awk
 
--   Wikipedia [w:Akw]
+-   Wikipedia {{< wp "Akw" >}}
 -   [Gawk: Effective AWK Programming
     ](http://www.gnu.org/software/gawk/manual/)
     (FDL) an online book by Arnold Robbins available in pdf and html.

@@ -1,14 +1,8 @@
-<!--
-.. description:
-.. date: 2014-08-26
-.. slug: performances
-.. tags:
-.. link:
-.. book:mzlinux
-.. title: Performance Tuning
--->
+---
+title: Performance Tuning
+---
 
-[TOC]
+{{% toc /%}}
 
 # References
 
@@ -31,7 +25,7 @@
     package blktrace: _blktrace_, _blkparse_ , _btt_.
 
 
-For io scheduling we can use the [w:CFQ|cfq scheduler].
+For io scheduling we can use the {{< wp "CFQ"  "cfq scheduler" >}}.
 
 -   The role of scheduler is explained in [Linux Kernel Development
     ]( http://www.makelinux.net/books/lkd2/)

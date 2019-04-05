@@ -1,23 +1,17 @@
-<!--
-.. description:
-.. date: 2016-04-27
-.. slug: vpn
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: VPN and Tunneling
--->
+---
+title: VPN and Tunneling
+---
 
-[TOC]
+{{% toc /%}}
 
 # References
--   Wikipedia: [w:IP tunnel], [w:Tunneling protocol], [w:HTTP tunnel]
-    [w:Point-to-Point Tunneling Protocol] (PPTP),
-    [w:Hole punching (networking)], [w:ICMP hole punching],
-    [w:TCP hole punching], [w:UDP hole punching], [w:Stunnel],
-    [w:OpenVPN], [w:SoftEther VPN], [w:IPsec],
-    [w:Layer 2 Tunneling Protocol], [w:OpenConnect],
-    [w:Secure Socket Tunneling Protocol] (SSTP),
+-   Wikipedia: {{< wp "IP tunnel" >}}, {{< wp "Tunneling protocol" >}}, {{< wp "HTTP tunnel" >}}
+    {{< wp "Point-to-Point Tunneling Protocol" >}} (PPTP),
+    {{< wp "Hole punching (networking)" >}}, {{< wp "ICMP hole punching" >}},
+    {{< wp "TCP hole punching" >}}, {{< wp "UDP hole punching" >}}, {{< wp "Stunnel" >}},
+    {{< wp "OpenVPN" >}}, {{< wp "SoftEther VPN" >}}, {{< wp "IPsec" >}},
+    {{< wp "Layer 2 Tunneling Protocol" >}}, {{< wp "OpenConnect" >}},
+    {{< wp "Secure Socket Tunneling Protocol" >}} (SSTP),
 -   [VPN HOWTO](http://www.tldp.org/HOWTO/VPN-HOWTO.html) _2002_
 -   [VPN Masquerading HOWTO
     ](http://www.tldp.org/HOWTO/VPN-Masquerade-HOWTO.html) _2000_.
@@ -40,7 +34,7 @@
     is a Netfilter powered UDP proxy.  udpproxy allows to tunnel UDP
     datagrams into a SSH tunnel with the help of NFQUEUE target from
     Netfilter. This enables easy selection of flow to be tunneled.
--   [ssh](/node/ssh "internal reference") allow socks and tun.
+-   {{< iref "ssh" "ssh" >}} allow socks and tun.
 -   [sshuttle](https://github.com/apenwarr/sshuttle) (GPL)
     from Avery Pennarun creates a transparent proxy server, using
     iptables, that will forward all the traffic through an SSH tunnel
@@ -57,7 +51,7 @@ There are clients for Linux and other Unixes, Windoze, Mac OS, IoS,
 and Android
 
 -   Wikipedia:
-    [w:OpenVPN]
+    {{< wp "OpenVPN" >}}
 -   [OpenVPN Home](http://openvpn.net/)
 -   [OPenVPN](http://openvpn.sourceforge.net/),
 -   [OpenVPN Documentation Page
@@ -254,8 +248,7 @@ key configuration.
 
 -   Configure your firewall to accept the traffic from the tunnel, look
     at the open VPN HOWTO to do so, if you use shorewall, I have
-    sketched the process in a [OpenVpn with Shorewall
-    section](/node/101)
+    sketched the process in a {{< iref "101" "OpenVpn with Shorewall     section" >}}
 -   Configure the right endpoint in the same way
 -   Test your file with launching by hand:
 
@@ -553,10 +546,10 @@ Step by step instructions for OpenVPN:
          $ sudo openvpn --config ~/.config/openvpn/tigervpn/US-Atlanta@tigervpn.com.ovpn
 
 # SoftEther VPN
-[w:SoftEther VPN] (GPL) is a cross-platform, multi-protocol VPN client
-and VPN server software. It supports  SSL VPN, [w:L2TP]/[w:IPsec],
-[OpenVPN](#openvpn "internal reference"),
-and Microsoft [w:Secure Socket Tunneling Protocol].
+{{< wp "SoftEther VPN" >}} (GPL) is a cross-platform, multi-protocol VPN client
+and VPN server software. It supports  SSL VPN, {{< wp "L2TP" >}}/{{< wp "IPsec" >}},
+{{< iref "#openvpn" "OpenVPN" >}},
+and Microsoft {{< wp "Secure Socket Tunneling Protocol" >}}.
 
 -   [SoftEther VPN Project](https://www.softether.org/).
 

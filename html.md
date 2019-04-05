@@ -1,34 +1,27 @@
-<!--
-.. description:
-.. date: 2015-06-12
-.. slug: html
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: HTML
--->
+---
+title: HTML
+---
 
-[TOC]
+{{% toc /%}}
 
-
-The Epub format is in its [own section](/node/epub  "internal reference").
+The Epub format is in its {{< iref "epub" "own section" >}}.
 
 ---
 
 # HTML References
 
-See also the section [Cascading Style Sheets](#css "internal reference").
+See also the section {{< iref "#css" "Cascading Style Sheets" >}}.
 
 The [html to pdf converter are in the pdf section
 ](node/ps_pdf_djvu#html_to_pdf "internal reference").
 
--   Wikipedia : [w:HTML],
-    [w:Dynamic HTML], [w:XHTML], [w:HTML element], [w:Framing (World Wide Web)|Framing],
-    [w:Cascading Style sheets],  [w:HTML scripting], [w:W3C],
+-   Wikipedia : {{< wp "HTML" >}},
+    {{< wp "Dynamic HTML" >}}, {{< wp "XHTML" >}}, {{< wp "HTML element" >}}, {{< wp "Framing (World Wide Web)"  "Framing" >}},
+    {{< wp "Cascading Style sheets" >}},  {{< wp "HTML scripting" >}}, {{< wp "W3C" >}},
     [W3C Markup Validation Service]
--   Wikipedia : [w:HTML5], [w:HTML5 in mobile devices],
-    [w:HTML5 video], [w:Comparison of layout engines (HTML5)],
-    [w:Cache manifest in HTML5], [w:WebGL]
+-   Wikipedia : {{< wp "HTML5" >}}, {{< wp "HTML5 in mobile devices" >}},
+    {{< wp "HTML5 video" >}}, {{< wp "Comparison of layout engines (HTML5)" >}},
+    {{< wp "Cache manifest in HTML5" >}}, {{< wp "WebGL" >}}
 -   [W3C HTML home page](http://www.w3.org/html/):
     -   [HTML and CSS](http://www.w3.org/standards/webdesign/htmlcss),
     -   [HTML Current Status (list of standards)
@@ -72,7 +65,7 @@ The [html to pdf converter are in the pdf section
         annd on [docs.webplatform.org
         ](http://docs.webplatform.org/) in the section
         [tutorials](https://docs.webplatform.org/wiki/tutorials).
--   Wikipedia [w:List of XML and HTML character entity references]
+-   Wikipedia {{< wp "List of XML and HTML character entity references" >}}
 -   [Zvon character reference](http://zvon.org/xxl/characterReference/Output/A.html),
 -   [HTML5 Named character references
     ](http://www.w3.org/TR/html5/syntax.html#named-character-references)
@@ -112,7 +105,7 @@ The [html to pdf converter are in the pdf section
     *URIs include URLs*
 
 ## Accessibility and validation
--   Wikipedia: [w:Web accessibility], [w:Web Content Accessibility Guidelines]
+-   Wikipedia: {{< wp "Web accessibility" >}}, {{< wp "Web Content Accessibility Guidelines" >}}
 -   [Dive Into Accessibility](http://diveintoaccessibility.info)
      explains why and how to make your site accessible.
 -   [ Html Tidy](http://www.w3.org/People/Raggett/tidy/)
@@ -123,7 +116,7 @@ The [html to pdf converter are in the pdf section
 -   [Can I Use (caniuse)](http://caniuse.com/) tables summarize the compatibility of desktop and mobile browsers with HTML5, CSS3, SVG.
 
 # html slideshow
--   Wikipedia: [w:Web-based slideshow] contains a list of
+-   Wikipedia: {{< wp "Web-based slideshow" >}} contains a list of
     alternatives.
 
 ## S5 {#s5_slideshow}
@@ -146,20 +139,20 @@ allow to export trac content to S5.
 -   [Diascope](https://github.com/minad/diascope) (public domain
     and MIT for jQuery)
     is a mostly-S5-compatible implementation using
-    [jQuery](/node/javascript#jquery  "internal reference")
+    {{< iref "javascript#jquery" "jQuery" >}}
     which sucks less. It is inspired by s5-reloaded. It has
     support for embedded SVG and MathML, theme switching. There is
     a presentation and demo
     [S5 Testbed](http://minad.gi07#jquerythub.com/diascope/index.html).
 -   [S6](https://github.com/geraldb/s6) (public domain)
     is a rewrite of Eric Meyer's S5 using
-    [jQuery](/node/javascript#jquery "internal reference").
+    {{< iref "javascript#jquery" "jQuery" >}}.
     - [S9](http://slideshow.rubyforge.org/) is a Ruby gem
       that lets you create S6 slide shows  in plain text using
       a wiki-style markup.
 -   [s5easy.com](http://www.s5easy.com) is a web site
     that offers on-line S5 slide show creation.
--   The section [Slides with Org Mode](/node/org-mode#org-mode_slides "internal reference")
+-   The section {{< iref "org" "Slides with Org Mode" >}}
     explain how you can produce with org-mode S5 html slides, or
     html5 presentation.
 -   You can also generate S5 from
@@ -205,7 +198,7 @@ Er  ik Wilde is a xslt 2.0 program to produce *Slidy* xhtml
 pr  esentations.
 
 ### Slidy from lightweight markup language
--   [Org Mode](/node/org-mode "internal reference") allow to produce Slidy Slides with
+-   {{< iref "org" "Org Mode" >}} allow to produce Slidy Slides with
      [org-slidy](https://github.com/dov/org-slidy) by Dov Grobgeld. There is
      an example of
      [Interactive slide shows with R, Org mode , and Slidy
@@ -219,7 +212,7 @@ pr  esentations.
 -   [markdown-slidy](https://github.com/sortega/markdown-slidy)
     is a slidy template  to create html presentations using markdown and pandoc.
     from markdown and (subsets of) reStructuredText, HTML, and LaTeX
--   [asciidoc](/node/asciidoc "internal reference")
+-   {{< iref "asciidoc" "asciidoc" >}}
     has a slidy backend included in the distribution.
 -   Jean-Michel Inglebert has written an alternate
     [slidy2 backend](http://code.google.com/p/asciidoc-slidy2-backend-plugin/)
@@ -304,23 +297,23 @@ pr  esentations.
 
 ### Html5 slideshows from lightweight markup language
 
--   [Deck.js](#deck_js "internal reference") has extensions to use
+-   {{< iref "#deck_js" "Deck.js" >}} has extensions to use
     markdown, or asciidoc.
     - [AsciiDoc-Deck.js](http://houqp.github.com/asciidoc-deckjs/) (GPL)
       by Qingping Hou is a Deck.js backend for
-      [asciidoc](/node/269#asciidoc "internal reference").
+      {{< iref "269#asciidoc" "asciidoc" >}}.
       [AsciiDoc-Deck.js GitHub repository](https://github.com/houqp/asciidoc-deckjs).
     - [markdown2deckjs](https://github.com/ulf/markdown2deckjs)
-      is a [markdown](/node/425 "internal reference") to Deck.js
+      is a {{< iref "425" "markdown" >}} to Deck.js
       python translator.
     - [Deck.rb](https://github.com/alexch/deck.rb) and
       [Keydown](https://github.com/infews/keydown) (BSD like license)
       are two ruby tools to produce Deck.js slides from
-      [markdown](/node/425 "internal reference").
+      {{< iref "425" "markdown" >}}.
 -   [asciidoc dzslides backend
     ](https://github.com/mojavelinux/asciidoc-dzslides-backend)
-    by Dan Allen _(mojavelinux)_ is a [dzslides](#dzslides "internal reference") backend for
-    [asciidoc](/node/269#asciidoc "internal reference").
+    by Dan Allen _(mojavelinux)_ is a {{< iref "#dzslides" "dzslides" >}} backend for
+    {{< iref "269#asciidoc" "asciidoc" >}}.
     Dan Allen give an extensive example in his slides
     [Asciidoc with pleasure
     ](http://mojavelinux.github.com/decks/asciidoc-with-pleasure/).
@@ -333,12 +326,12 @@ pr  esentations.
     -   [Hieroglyph GitHub repository
         ](https://github.com/nyergler/hieroglyph)
 -   [landslide](https://github.com/adamzap/landslide) generates
-    html5 slides from [MarkDown](/node/markdown "internal reference")
-    or [ReStructuredText](/node/rest "internal reference").
+    html5 slides from {{< iref "markdown" "MarkDown" >}}
+    or {{< iref "rest" "ReStructuredText" >}}.
 -   [pandoc](http://johnmacfarlane.net/pandoc/)
     can produce html5 and dzslides from markdown or restructured text.
     from markdown and (subsets of) reStructuredText, HTML, and LaTeX
--   [Slides with Org Mode](/node/org-mode#org-mode_slides "internal reference")
+-   {{< iref "org" "Slides with Org Mode" >}}
      explains how you can produce html5 or S5 slides with org-mode.
 -   [remark](https://github.com/gnab/remark) (MIT license)
     is a javascript, in-browser, markdown slideshow.
@@ -347,10 +340,10 @@ pr  esentations.
     generates html5 slides from rst source. It can be used with many
     themes like a basic clean theme or bootstrap and
     javascript libraries like
-    [reveal.js](#reveal_js "internal reference"),
-    [Deck.js](#deck_js "internal reference"),
-    [impress.js](#impress_js "internal reference"),
--   [reveal.js](#reveal_js "internal reference") can use markdown
+    {{< iref "#reveal_js" "reveal.js" >}},
+    {{< iref "#deck_js" "Deck.js" >}},
+    {{< iref "#impress_js" "impress.js" >}},
+-   {{< iref "#reveal_js" "reveal.js" >}} can use markdown
 -   [rst2slides](https://bitbucket.org/tin_nqn/rst2slides) (GPL)
     is a python program that generates an HTML5 slideshow document
     from standalone reStructuredText source. It is a fork of
@@ -407,8 +400,8 @@ Links for favicon:
     online tool to  generate .ico from png, gif, jpg, bmp
 
 # html editors
--   Wikipedia [w:HTML editor], [w:Comparison of HTML editors],
-    [w:List of HTML editors]
+-   Wikipedia {{< wp "HTML editor" >}}, {{< wp "Comparison of HTML editors" >}},
+    {{< wp "List of HTML editors" >}}
 -   [Bluefish html editor](http://bluefish.openoffice.nl) (GPL)
 -   [CKeditor](http://ckeditor.com/) <a name="ckeditor"</a>
     HTML text editor written in PHP;
@@ -420,7 +413,7 @@ Links for favicon:
     wyswig editor_. [EditArea documentation](http://www.cdolivet.com/editarea/editarea/docs/)
 -   [elRTE](https://github.com/Studio-42/elRTE) (BSD License) <a name="elrte"></a> is a
      WYSIWYG HTML-editor written in JavaScript using jQuery UI.
--   [w:Maqetta] (BSD License or AFL) is a  web-based WYSIWYG HTML
+-   {{< wp "Maqetta" >}} (BSD License or AFL) is a  web-based WYSIWYG HTML
     editor written in java designed to edit HTML5 documents. Maqetta was developed by
     IBM and later open-sourced. The goal was to provide  capabilities
     equivalent to those available in Adobe Flash and  Silverlight.
@@ -429,7 +422,7 @@ Links for favicon:
     [MCFileManager](http://www.tinymce.com/wiki.php/MCFileManager)
     is a online file management utility, available as PHP and
     .NET, that is integrated with TinyMCE or other similar editors.
--   [w:WYMeditor] (MIT and GPL licenses) is an other web-based
+-   {{< wp "WYMeditor" >}} (MIT and GPL licenses) is an other web-based
     jQuery-javascript XHTML editor, but aimed at a XHTML strict code
     uncluttered by visual informations like font styles and weights,
     borders, colors, ...<br />
@@ -438,8 +431,8 @@ Links for favicon:
 
 # Cascadind Style Sheets {#css}
 ## references
--   Wikipedia: [w:Cascading Style Sheets],
-    [w:Comparison of layout engines (Cascading Style Sheets)]
+-   Wikipedia: {{< wp "Cascading Style Sheets" >}},
+    {{< wp "Comparison of layout engines (Cascading Style Sheets)" >}}
 -   Dave Raggett
     [Adding a touch of style](http://www.w3.org/MarkUp/Guide/style.html)
     ( with color name ref.); and
@@ -464,7 +457,7 @@ Links for favicon:
     _convenient index_,
     [CSS Tutorial](https://developer.mozilla.org/en-US/docs/CSS/Getting_Started),
     [CSS3 Demos](https://developer.mozilla.org/en-US/demos/tag/tech:css3)
--   [w:SASS|SASS (Wikipedia)] (MIT License) is a preprocessor language for CSS3. the
+-   {{< wp "SASS"  "SASS (Wikipedia)" >}} (MIT License) is a preprocessor language for CSS3. the
      preprocessor implementation is written in ruby but there are
      alternative implementations in PHP and  Python.
      -   SASS has two syntaxes the  new _scss_ and _sass_.
@@ -476,7 +469,7 @@ Links for favicon:
          that can parse both the scss and the sass syntax.
     -    [pyScss](https://github.com/Kronuz/pyScss) (MIT License)
          is a _scss_ to _css_ Python translator for the _scss_ language.
--   [w:LESS|LESS (Wikipedia)] (Apache License 2) is a preprocessor language for CSS3
+-   {{< wp "LESS"  "LESS (Wikipedia)" >}} (Apache License 2) is a preprocessor language for CSS3
      written in javascript, either client-side or server-side, with
      Node.js or Rhino. It extends css3 with variables, mixins, operations and functions.
      -   [LESS Home](http://lesscss.org/)
@@ -509,7 +502,7 @@ Links for favicon:
 -   [Bootstrap](https://github.com/twitter/bootstrap/) is Twitter's toolkit
     for rapidly developing web applications. It is a collection of CSS and some HTML.
     Bootstrap uses Less css3 extension.
-    -   Wikipedia:  [w:Twitter Bootstrap]
+    -   Wikipedia:  {{< wp "Twitter Bootstrap" >}}
     -   [w3resource: Twitter Bootstrap tutorial
         ](http://www.w3resource.com/twitter-bootstrap/tutorial.php)
     -   [jetstrap](http://docs.jetstrap.com/) is a beginner kit for Bootstrap.
@@ -543,8 +536,8 @@ These options also [work on mobile
 ](http://quirksmode.org/css/columns/mobile.html).
 
 # Other HTML related markups
--   Wikipedia: [w:Multimedia Messaging Service (MMS)],
-    [w:Wireless Application Protocol] and [w:Wireless Markup Language].
+-   Wikipedia: {{< wp "Multimedia Messaging Service (MMS)" >}},
+    {{< wp "Wireless Application Protocol" >}} and {{< wp "Wireless Markup Language" >}}.
 
 
 <!--  Local Variables: -->

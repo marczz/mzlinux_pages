@@ -1,22 +1,16 @@
-<!--
-.. description:
-.. date: 2015-08-29
-.. slug: mail
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Mail
--->
+---
+title: Mail
+---
 
-[TOC]
+{{% toc /%}}
 
 ----
 
 # SMTP {#smtp}
 
--   Wikipedia: [w:Extended_SMTP|ESMTP],[w:SMTP Authentication],
-    [w:Simple Authentication and Security Layer] (SASL),
-    [w:STARTTLS]
+-   Wikipedia: {{< wp "Extended_SMTP"  "ESMTP" >}},{{< wp "SMTP Authentication" >}},
+    {{< wp "Simple Authentication and Security Layer" >}} (SASL),
+    {{< wp "STARTTLS" >}}
 -   The *smtp* protocol is fiven by two base RFCs:
     [RFC 821 - Simple Mail Transfer Protocol (SMTP)
     ](http://www.ietf.org/rfc/rfc0821)
@@ -37,12 +31,12 @@
 
 # Mail User Agents
 
-My [Mutt page](/node/mutt "internal reference")
+My {{< iref "mutt" "Mutt page" >}}
 
--   Wikipedia: [w:Comparison of e-mail clients] and [w:Webmail],
-    [w:Mixmaster anonymous remailer]
--   E-mail storage systems from Wikipedia: [w:maildir], [w:mbox],
-    [w:MH_Message_Handling_System|mh], [w:MIX_(Email)|mix]
+-   Wikipedia: {{< wp "Comparison of e-mail clients" >}} and {{< wp "Webmail" >}},
+    {{< wp "Mixmaster anonymous remailer" >}}
+-   E-mail storage systems from Wikipedia: {{< wp "maildir" >}}, {{< wp "mbox" >}},
+    {{< wp "MH_Message_Handling_System"  "mh" >}}, {{< wp "MIX_(Email)"  "mix" >}}
     _an hybrid between mbox and maildir used as imap backend_.
 -   [ArchWiki: List of email clients
     ](https://wiki.archlinux.org/index.php/List_of_applications#Email_clients)
@@ -135,7 +129,7 @@ My [Mutt page](/node/mutt "internal reference")
 ## Mail search tools {#mail_search}
 -   [mairix](http://www.rpcurnow.force9.co.uk/mairix/index.html) (GPL)
     is a program for indexing and searching email messages
-    stored in [w:maildir], [MH Message Handling System] or [w:mbox] folders.
+    stored in {{< wp "maildir" >}}, [MH Message Handling System] or {{< wp "mbox" >}} folders.
 -   [Notmuch](http://notmuchmail.org/) is an efficient mail indexer. It comes with an
     [emacs message reading client](http://notmuchmail.org/emacstips/)
     _notmuch.el_, but can be used with many imap email clients as
@@ -144,9 +138,9 @@ My [Mutt page](/node/mutt "internal reference")
     -   [ArchWiki: Notmuch
         ](https://wiki.archlinux.org/index.php/Notmuch)
 -   [mu](https://github.com/djcb/mu) (GPL)
-    is a [w:maildir] indexer/searcher, it also includes the emacs client
-    [mu4e](#mu4e "internal reference"), and can also be used with
-    [mutt](/node/126 "internal reference") or _WanderLust_.
+    is a {{< wp "maildir" >}} indexer/searcher, it also includes the emacs client
+    {{< iref "#mu4e" "mu4e" >}}, and can also be used with
+    {{< iref "126" "mutt" >}} or _WanderLust_.
     _mu_ is available in Debian/Ubuntu under the name _maildir-utils_.
 
 # Mail filtering
@@ -181,11 +175,11 @@ My [Mutt page](/node/mutt "internal reference")
 # Mail Notification
 We can use a system notification monitor to get mail notification,
 references are given in the
-[monitoring section](/node/417/ "internal reference") for
-[dzen](/node/417/#dzen "internal reference"),
-[i3bar](/node/417/#i3bar "internal reference"),
-[conky](/node/417/#conky "internal reference"),
-[gkrellm](/node/417/#gkrellm "internal reference").
+{{< iref "417" "monitoring section" >}} for
+{{< iref "417" "dzen" >}},
+{{< iref "417" "i3bar" >}},
+{{< iref "417" "conky" >}},
+{{< iref "417" "gkrellm" >}}.
 These tools can be a good choice if you want to have a light mail
 notification daemon as the are weighting only
 1.5M for dzen2, 4M for conky, 20M for gkrellm.
@@ -251,19 +245,19 @@ notification daemon as the are weighting only
 
 
 # MTA and Mail administration {#MTA}
--    Wikipedia: [w:Message transfer agent],
-    [w:MIME|Multipurpose Internet Mail Extensions (MIME)]
+-    Wikipedia: {{< wp "Message transfer agent" >}},
+    {{< wp "MIME"  "Multipurpose Internet Mail Extensions (MIME)" >}}
 -   [Debian Wiki: Default MTA discussion
     ](https://wiki.debian.org/Debate/DefaultMTA) compares postfix,
     exim4, sendmail, nullmailer, Dma, ssmtp.
 -   [Gentoo Wiki: Complete Virtual Mail Server
     ](https://wiki.gentoo.org/wiki/Complete_Virtual_Mail_Server)
     a full manual distributed in subpages.
--   [w:Qmail] ([w:public domain]) [Qmail Home](http://www.qmail.org/top.html) smtp server and replacement for sendmail by [w:Daniel J. Bernstein].
+-   {{< wp "Qmail" >}} ({{< wp "public domain" >}}) [Qmail Home](http://www.qmail.org/top.html) smtp server and replacement for sendmail by {{< wp "Daniel J. Bernstein" >}}.
 -   [Maildir format](http://cr.yp.to/proto/maildir.html) ,
     [maildir(5) man page from qmail](http://www.qmail.org/man/man5/maildir.html)
 -   [Bongo](http://bongo-project.org/)
-    (GPL) the continuation of previous Novell [w:Hula] is a
+    (GPL) the continuation of previous Novell {{< wp "Hula" >}} is a
     server-side e-mail and calendaring server, and a web GUI for
     accessing your e-mail and calendar.
 -   [OpenSMTPD](https://www.opensmtpd.org/)
@@ -276,7 +270,7 @@ notification daemon as the are weighting only
         ](https://www.opensmtpd.org/faq/index.html).
 
 ## Exim
-[w:Exim] (GPL) the default MTA on Debian.
+{{< wp "Exim" >}} (GPL) the default MTA on Debian.
 
 -   [Exim Home page](http://www.exim.org/index.html)
 -   [Exim Specification i.e exim Manual
@@ -335,7 +329,7 @@ Common postfix admininistration commands
 -   [RFC 1939 Post Office Protocol - Version 3
     ](http://tools.ietf.org/html/rfc1939),
     look at wikipedia page for other rfcs.
--   [w:Dovecot_(software)|Dovecot] (MIT and LGPL)
+-   {{< wp "Dovecot_(software)"  "Dovecot" >}} (MIT and LGPL)
     is an open source IMAP and POP3 server for Linux
     -   [Dovecot Home](http://dovecot.org/).
     -   [ArchWiki: Dovecot
@@ -472,7 +466,7 @@ how to deal with root mails sent by cron with the smtp relay agents.
     standard input with recipients specified on the command line and
     synchronously forwards the message to the mail transfer agent of
     a mailhub. It is abandoned since 2011, [ArchLinux Wiki][AW ssmtp]
-    propose to replace it by [mstmtp](#msmtp "internal reference").
+    propose to replace it by {{< iref "#msmtp" "mstmtp" >}}.
     -   [ArchLinux Wiki: Ssmtp][AW ssmtp]
         _gives the configuration to forward to gmail_,
     -   [The Quick-N-Dirty Guide to ssmtp

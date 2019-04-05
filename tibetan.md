@@ -1,30 +1,21 @@
-<!--
-.. description:
-.. date: 2015-03-19
-.. slug: tibetan
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Tibetan
--->
+---
+title: Tibetan
+---
 
-[TOC]
+{{% toc /%}}
 
-See also [Input Methods](/node/input_methods "internal reference"),
-[Localization](/node/i18n "internal reference")
-[ [Tibetan fonts](/node/i18n##tibetan_fonts "internal reference"),
-[Tibetan unicode encoding
-](/node/i18n##tibetan_encoding "internal reference")],
-[Input Methods](/node/input_methods "internal reference") [
-[Tibetan keyboard layout
-](/node/input_methods#tibetan_keyboard "internal reference")
+See also {{< iref "input_methods" "Input Methods" >}},
+{{< iref "i18n" "Localization" >}}
+{{< iref "i18n" "[Tibetan fonts" >}},
+{{< iref "i18n" "Tibetan unicode encoding" >}}],
+{{< iref "input_methods" "Input Methods" >}} {{< iref "input_methods#tibetan_keyboard" "[Tibetan keyboard layout" >}}
 ]
 
 # Language references
 -   [Wikipedia: Tibetan script](http://en.wikipedia.org/wiki/Tibetan_script)
     describes the history, description and unicode representation of
     the tibetan script,
-    [w:Umê script]
+    {{< wp "Umê script" >}}
     [WikiBook Research on Tibetan Languages _A bibliography_
     ](http://en.wikibooks.org/wiki/Research_on_Tibetan_Languages:_A_Bibliography)
 -   [omniglot.com: Tibetan](http://www.omniglot.com/writing/tibetan.htm)
@@ -196,7 +187,7 @@ See also [Input Methods](/node/input_methods "internal reference"),
     of Shantideva's work.
 
 # Tibetan Calendar
--   [w:Tibetan calendar|Wikipedia: Tibetan Calendar]
+-   {{< wp "Tibetan calendar"  "Wikipedia: Tibetan Calendar" >}}
     is a very comprehensive explanation of Tibetan calendar basics.
 -   At Nithartha :[History of the Tibetan Calendar
     ](http://www.nitartha.org/calendar_traditions.html)
@@ -324,8 +315,7 @@ See also [Input Methods](/node/input_methods "internal reference"),
     definitions.
 
 # Software
-See also the [Tibetan dictionaries section
-](#tibetan_dictionaries "internal reference")
+See also the {{< iref "#tibetan_dictionaries" "Tibetan dictionaries section" >}}
 
 -   [Rywiki ressources
     ](http://rywiki.tsadra.org/index.php/Resources)

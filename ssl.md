@@ -1,14 +1,8 @@
-<!--
-.. description:
-.. date: 2016-09-12
-.. slug: ssl
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: SSL/TLS
--->
+---
+title: SSL/TLS
+---
 
-[TOC]
+{{% toc /%}}
 
 ---
 
@@ -19,20 +13,20 @@ and communications privacy using cryptography. See also
 ](https://unix-memo.readthedocs.io/en/latest/gnupg.html) and the
 [SSH page](https://unix-memo.readthedocs.io/en/latest/ssh.html).
 
--   [w:Transport Layer Security],
-    [w:Symmetric-key cryptography],
-    [w:Public-key cryptography],
-    [w:Cipher],
-    [w:Block cipher modes of operation],
-    and the hundred of page in [w:Portal:Cryptography]
--   [w:GNU Privacy Guard|Wikipedia: GNU Privacy Guard],
+-   {{< wp "Transport Layer Security" >}},
+    {{< wp "Symmetric-key cryptography" >}},
+    {{< wp "Public-key cryptography" >}},
+    {{< wp "Cipher" >}},
+    {{< wp "Block cipher modes of operation" >}},
+    and the hundred of page in {{< wp "Portal:Cryptography" >}}
+-   {{< wp "GNU Privacy Guard"  "Wikipedia: GNU Privacy Guard" >}},
 -   Open source implementations of TLS are provided by
-    [w:OpenSSL]
-    and [w:GnuTLS],
+    {{< wp "OpenSSL" >}}
+    and {{< wp "GnuTLS" >}},
     OpenSSL has an apache like license that entail some
     [license incompabilities](http://en.wikipedia.org/wiki/OpenSSL#GPL_exception)
     with GPL software. GnuTLS has a LGPL license.
--   Wikipedia: [w:Comparison of TLS implementations]
+-   Wikipedia: {{< wp "Comparison of TLS implementations" >}}
 -   [OpenSSL Project](http://www.openssl.org/), The command line tool
     is [Openssl(1)](http://www.openssl.org/docs/apps/openssl.html).
 -   [Ubuntu OpenSSL HowTo](https://help.ubuntu.com/community/OpenSSL).

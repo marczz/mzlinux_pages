@@ -1,17 +1,11 @@
-<!--
-.. description:
-.. date: 2015-04-12
-.. slug: video_edit
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Video Encoders / Editors
--->
+---
+title: Video Encoders / Editors
+---
 
-[TOC]
+{{% toc /%}}
 
 The main utility
-[ffmpeg alias libav](/node/ffmpeg "internal reference")
+{{< iref "ffmpeg" "ffmpeg alias libav" >}}
 has its own page.
 
 # Guides
@@ -28,7 +22,7 @@ has its own page.
 # [Mencoder](http://www.mplayerhq.hu/) (GPL) {#mencoder}
 
 **mencoder** is a simple movie encoder, associated with
-[Mplayer](/node/media_players#mplayer "internal reference") and designed to encode
+{{< iref "media_players#mplayer" "Mplayer" >}} and designed to encode
 MPlayer-playable movies. It encodes to DivX4, XviD, one of the
 libavcodec codecs and PCM/:MP3/:VBRMP3 audio in 1, 2 or 3 passes.
 
@@ -46,7 +40,7 @@ libavcodec codecs and PCM/:MP3/:VBRMP3 audio in 1, 2 or 3 passes.
 -   [HOWTO Convert video files](http://en.linuxreviews.org/HOWTO_Convert_video_files)
     using mencoder.
 
-# [w:OggConvert]  {#oggconvert}
+# {{< wp "OggConvert" >}}  {#oggconvert}
 
 __0ggconvert__ (LGPL) convert audio and video files of various types
 into Ogg Vorbis audio format, and the Theora, VP8 and Dirac video
@@ -58,7 +52,7 @@ the GStreamer framework
 
 __PiTivi__ (LGPL) is an audio/video editing software written in python
 GTK+ that uses the gstreamer framework.
-Wikipedia: [w:PiTiVi].
+Wikipedia: {{< wp "PiTiVi" >}}.
 
 # Other tools
 _some of these are older_
@@ -115,7 +109,7 @@ _some of these are older_
 
 [dvd::rip](http://www.exit1.org/dvdrip/)
 :   _dvd::rip_ is a Perl Gtk+ based DVD copy program built on top of
-    [Transcode](#transcode)
+    {{< iref "#transcode" "Transcode" >}}
 
 [HandBrake](https://handbrake.fr/)
 :   is a tool for converting video from nearly any format to a
@@ -133,7 +127,7 @@ _some of these are older_
 
 [lxdvdrip](http://sourceforge.net/projects/lxdvdrip/) (GPL)
 :   _lxdvdrip_ is a command line tool to rip and burn a video DVD. It uses
-    [mencoder](#mencode), [transcode](#transcode),`dvdbackup`
+    {{< iref "#mencode" "mencoder" >}}, {{< iref "#transcode" "transcode" >}},`dvdbackup`
 
 [ogmrip](http://ogmrip.sourceforge.net/) (LGPL)
 :   _ogmrip_ is an application and a set of libraries for ripping
@@ -146,7 +140,7 @@ _some of these are older_
 [TEncoder](http://tencoder.sourceforge.net/)
 :   is a multithreaded video and audio converter that uses MEncoder,
     MPlayer and FFMpeg. It uses
-    [youtube-dl](#youtube-dl "internal reference") to download
+    {{< iref "#youtube" "youtube-dl" >}} to download
     video/audio from video sites like youtube.  It can also rip
     unprotected DVDs. It can convert video and audio type to each
     other.  Subtitles with same name as video can be hard-coded into
@@ -158,7 +152,7 @@ _some of these are older_
     resizing, cropping, language Selection for audio track.
     _No longer in debian_
 
-[VLC](/node/streaming#vlc)
+{{< iref "streaming#vlc" "VLC" >}}
 :   _VLC_ can be used for transcoding videos as explained in the
     [VLC wiki: Transcode](https://wiki.videolan.org/Transcode/).
 
@@ -169,7 +163,7 @@ _some of these are older_
     fonts to swf. It allows also to combine swf files and to extract
     sound, movies, data from swf. _active in 2013_
 
-[w:Google Swiffy]
+{{< wp "Google Swiffy" >}}
 :   is a web-based tool developed by Google that converts SWF files to
     HTML5. Its main goal is to display Flash contents on devices that
     do not support Flash. You can upload your swf to
@@ -188,8 +182,8 @@ _some of these are older_
     explains the subtitle stream
 
 # Screencasting {#screencast}
--   Wikipedia [w:Screencast] and
-    [w:Comparison of screencasting software]
+-   Wikipedia {{< wp "Screencast" >}} and
+    {{< wp "Comparison of screencasting software" >}}
 -   [ArchWiki: list of screencasting software
     ](https://wiki.archlinux.org/index.php/List_of_applications/Multimedia#Screencast)
 -   [xvidcap](http://xvidcap.sourceforge.net/)
@@ -207,17 +201,17 @@ _some of these are older_
     into an Ogg Theora .
 -   [vnc2swf](http://www.unixuser.org/~euske/python/vnc2flv/index.html)
     is a screen recorder either build in python
--   [ffmpeg](/node/ffmpeg "internal reference") or
-    [libav](/node/ffmpeg "internal reference")
+-   {{< iref "ffmpeg" "ffmpeg" >}} or
+    {{< iref "ffmpeg" "libav" >}}
     can be used for screencasting as described in
     [Screencasts in Ubuntu, part 2: FFmpeg
     ](http://polishlinux.org/linux/ubuntu/screencasts-in-ubuntu-part-2/)
     by Marcin Seredyński.
 
 # Video download helpers {#video_download_helpers}
--   Wikipedia [w:Comparison of YouTube downloaders],
+-   Wikipedia {{< wp "Comparison of YouTube downloaders" >}},
     they are also listed in
-    [w:Comparison of download managers]
+    {{< wp "Comparison of download managers" >}}
 
 ## scripts
 -   [telecharger-streaming - Documentation Ubuntu Francophone
@@ -270,7 +264,7 @@ _some of these are older_
 -   [video bookmarlets
     ](http://1024k.de/bookmarklets/video-bookmarklets.html)
     to integrate with a javascript able browser
--   [w:Video DownloadHelper]  is an extension for Firefox  to
+-   {{< wp "Video DownloadHelper" >}}  is an extension for Firefox  to
     download videos from sites that stream videos through HTTP, such as
     YouTube.   [Video DownloadHelper addon page
     ](https://addons.mozilla.org/fr/firefox/addon/video-downloadhelper/)

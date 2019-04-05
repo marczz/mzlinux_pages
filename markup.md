@@ -1,37 +1,30 @@
-<!--
-.. description:
-.. date: 2015-06-10
-.. slug: markup
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Markup Language
--->
+---
+title: Markup Language
+---
 
-[TOC]
+{{% toc /%}}
 
-[w: Markup Languages] are divided into
-[Structured Text](/node/structured_text "internal reference")
-also named [w:Lightweight Markup Language] thet add some formatting
-data to a text and [Data Exchange languages](/node/data_exchange "internal reference")
-or [w:serialization|data serialization formats]  that produce a human
+{{< wp " Markup Languages" >}} are divided into
+{{< iref "structured_text" "Structured Text" >}}
+also named {{< wp "Lightweight Markup Language" >}} thet add some formatting
+data to a text and {{< iref "data_exchange" "Data Exchange languages" >}}
+or {{< wp "serialization"  "data serialization formats" >}}  that produce a human
 readable text-based encoding of data.
 
-The [Structured Text Section
-](/node/structured_text "internal reference")
+The {{< iref "structured_text" "Structured Text Section" >}}
 has separate pages for
-[AsciiDoc](/node/asciidoc "internal reference"),
-[MarkDown](/node/makdown "internal reference"),
-[ReSt](/node/rest "internal reference").
+{{< iref "asciidoc" "AsciiDoc" >}},
+{{< iref "makdown" "MarkDown" >}},
+{{< iref "rest" "ReSt" >}}.
 
 The second category includes
-[json](/node/data_exchange#json "internal reference"),
-[Yaml](/node/data_exchange#yaml "internal reference"),
-[XML](/node/data_exchange#xml "internal reference").
+{{< iref "data_exchange#json" "json" >}},
+{{< iref "data_exchange#yaml" "Yaml" >}},
+{{< iref "data_exchange#xml" "XML" >}}.
 I also put there the xml processing language
-[xsl](/node/data_exchange#xsl "internal reference").
+{{< iref "data_exchange#xsl" "xsl" >}}.
 
-Wikipedia: [w: Markup Languages], [w:Category:Markup_languages], [w:Data exchange], [w:serialization],
+Wikipedia: {{< wp " Markup Languages" >}}, {{< wp "Category:Markup_languages" >}}, {{< wp "Data exchange" >}}, {{< wp "serialization" >}},
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->

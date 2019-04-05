@@ -1,13 +1,8 @@
-<!--
-.. description:
-.. date: 2015-06-10
-.. slug: asciidoc
-.. tags:
-.. link:
-.. title: Asciidoc
--->
+---
+title: Asciidoc
+---
 
-[TOC]
+{{% toc /%}}
 
 # References
 -   [Asciidoc](http://www.methods.co.nz/asciidoc/) (GPL)
@@ -17,7 +12,7 @@
     AsciiDoc files can be translated to latex, (X)HTML, HTML5,
     man-troff, epub, DocBook, and from DocBook to pdf, man, chunked
     html. Asciidoc is the documentation format used by the
-    [git source code management system](/node/scm "Internal reference").
+    {{< iref "scm" "git source code management system" >}}.
 -   [AsciiDoc cheatsheet](http://powerman.name/doc/asciidoc)
     by Alex Efros. He also provides a [compact theme for asciidoc
     ](http://powerman.name/download/asciidoc/).
@@ -107,7 +102,7 @@
 # Static site generators using asciidoc:
 -   [AsciiDoc Website Builder
     ](http://awb.sourceforge.net/).
--   [Hyde](/node/static_sites#hyde "internal link") written in python.
+-   {{< iref "static_sites#hyde" "Hyde" >}} written in python.
 -   [AsciiDocGen](http://dbixjcl.org/jcl/asciidocgen/asciidocgen.html)
     (Artistic License) written in perl.
 -   [Gollum](https://github.com/gollum/gollum/) (MIT License)
@@ -154,7 +149,7 @@
 -   [Graphviz filter for AsciiDoc
     ](http://asciidoc.org/asciidoc-graphviz-sample.html)
     allow to include graphs in _dot_ language via
-    [Graphviz](/node/20#graphviz "internal reference")
+    {{< iref "20#graphviz" "Graphviz" >}}
 -   [Publican](https://fedorahosted.org/publican/)
     is a DocBook XML publication system. Publican automates producing
     documentation in  plain text, HTML and PDF. A Publican package is
@@ -173,7 +168,7 @@
     is a xslt stylesheet for transforming DocBook 4.5 to AsciiDoc.
     A saxon jar is also provided to power the XSLT 2.0 processor.
 
-# Asciidoc  [html slideshows](/node/html#slideshow "internal reference")
+# Asciidoc  {{< iref "html#slideshow" "html slideshows" >}}
 -   Asciidoc includes a _slidy_ backend.
     Other slide backends are available through
     [plugins](http://www.methods.co.nz/asciidoc/plugins.html).

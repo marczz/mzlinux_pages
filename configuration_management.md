@@ -1,43 +1,32 @@
-<!--
-.. description:
-.. date: 2011-10-02
-.. slug: configuration_management
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: System configuration management
--->
+---
+title: System configuration management
+---
 
-
-[TOC]
-
-
+{{% toc /%}}
 
 See also
-[Monitoring](/node/monitoring "internal reference"),
-[Continuous Integration
-](/node/software_design#continuous_integration "internal reference").
+{{< iref "monitoring" "Monitoring" >}},
+{{< iref "software_design#continuous_integration" "Continuous Integration" >}}.
 
 
 # Introduction
 Configuration Management software allow to do
-[w:software configuration management] it includes two main aspects,
+{{< wp "software configuration management" >}} it includes two main aspects,
 first controling the coherence of system software and administering
 changes; then recording t(he changes with the ability to review them
 and to roll back them. The last part is dealed with in the
-[Source Configuration Management section
-](/node/scm "internal reference").
+{{< iref "scm" "Source Configuration Management section" >}}.
 but some tools combine the two aspects in an unified front-end.
 
 
--   Wikipedia has pages on [w:configuration management] _a general
-    panorama_, [w:software configuration management] _deal more with
-    source code management_, [w:Network management],
-    [w:Network management system].
+-   Wikipedia has pages on {{< wp "configuration management" >}} _a general
+    panorama_, {{< wp "software configuration management" >}} _deal more with
+    source code management_, {{< wp "Network management" >}},
+    {{< wp "Network management system" >}}.
 -   Wikipedia
-    [w:comparison of open source configuration management software]
+    {{< wp "comparison of open source configuration management software" >}}
     and
-    [w:comparison of web hosting control panels].
+    {{< wp "comparison of web hosting control panels" >}}.
 -   A [search in alternativeto
     ](http://alternativeto.net/software/webmin/?platform=linux)
     give also a fresh look on present web-based system configuration
@@ -45,7 +34,7 @@ but some tools combine the two aspects in an unified front-end.
 
 
 # Software
--   <a name="ansible"></a>[w:Ansible_(software)|Ansible] is a python
+-   <a name="ansible"></a>{{< wp "Ansible_(software)"  "Ansible" >}} is a python
     software that automates software provisioning, configuration
     management, and application deployment. It is  part of Fedora and
     availabe in Debian.
@@ -57,7 +46,7 @@ but some tools combine the two aspects in an unified front-end.
         ](https://github.com/jdauphant/awesome-ansible)
         list of ansible resources.
 
-    Ansible is close to [Salt](#salt "internal references")
+    Ansible is close to {{< iref "#salt" "Salt" >}}
     the following articles compare them:
 
     -   [Salt vs. Ansible
@@ -75,7 +64,7 @@ but some tools combine the two aspects in an unified front-end.
     is a configuration management systems, following KISS principle. It has shell
     scripting configuration language and no dependency except /bin/sh and ssh.
     It is in Debian.
--   [w:Froxlor] (GPL)  is a  server-management-panel
+-   {{< wp "Froxlor" >}} (GPL)  is a  server-management-panel
     for managing e-mail-addresses, domains, FTP, cron jobs.
     It is a fork of _SysCP_. _Froxlor_ offers packages for Debian and Ubuntu.
     [Froxlor Home](http://www.froxlor.org/).
@@ -94,13 +83,13 @@ but some tools combine the two aspects in an unified front-end.
 -   [pyinfra](https://github.com/Fizzadar/pyinfra) (MIT License)
     is an agentless remote server deployment tool and service
     provisioner comparable to
-    [Ansible](#ansible "internel reference"),
+    {{< iref "#ansible" "Ansible" >}},
     -   [pyinfra documentation
         ](https://pyinfra.readthedocs.io/en/latest/)
--   <a name="salt">[w:Salt_(software)|SALT] (Apache license)
+-   <a name="salt">{{< wp "Salt_(software)"  "SALT" >}} (Apache license)
     is a configuration management and remote execution application written in Python.<br />
     Salt packages are available in Debian. It is close to
-    [Ansible](#ansible "internal reference") see this entry for
+    {{< iref "#ansible" "Ansible" >}} see this entry for
     comparisons.
     -   [Salt Open Source Software Project Home](http://www.saltstack.com/community/)
     -   [Salt documentation Home](http://docs.saltstack.com/)
@@ -114,7 +103,7 @@ but some tools combine the two aspects in an unified front-end.
     -   Due to problems in package maintenance, it is no longer part of
         Debian, but a [Debian package](http://www.webmin.com/deb.html)
         is still available.
--   [w:Zentyal] (GPL and proprietary) _previously Ebox_
+-   {{< wp "Zentyal" >}} (GPL and proprietary) _previously Ebox_
     is a web interface intended to manage services in a computer network,
     it is based on apache and mod perl.
     Zentyal provide an

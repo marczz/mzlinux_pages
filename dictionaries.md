@@ -1,20 +1,13 @@
-<!--
-.. description:
-.. date: 2015-12-01
-.. slug: dictionaries
-.. tags:
-.. link:
-.. book:mzlinux
-.. title: Dictionary and Spell Checker Software
--->
+---
+title: Dictionary and Spell Checker Software
+---
 
-[TOC]
+{{% toc /%}}
 
-The [French and English Language Page
-](/node/français "internal reference") has grammar and dictonaries references
+The {{< iref "français" "French and English Language Page" >}} has grammar and dictonaries references
 related to these language.
 
-See also Wikipedia [w:Comparison of machine translation applications].
+See also Wikipedia {{< wp "Comparison of machine translation applications" >}}.
 
 ## Dict protocol software
 
@@ -33,12 +26,12 @@ See also Wikipedia [w:Comparison of machine translation applications].
         curl dict://dict.org/d:grow:web1913
 
     use `d` for define, `f` for find
--   Other Dict servers and clients are listed in the [w:Dict|Wikipedia Dict Page]
+-   Other Dict servers and clients are listed in the {{< wp "Dict"  "Wikipedia Dict Page" >}}
     and in the
     [_dict.org:_ wiki](http://www.dict.org/w/software/start).
 
 ## Spell checkers
--   [w:GNU Aspell] is the standard GNU spell checker designed to replace Ispell  adding
+-   {{< wp "GNU Aspell" >}} is the standard GNU spell checker designed to replace Ispell  adding
     utf-8 support.
 -   Emacs as numerous [spelling modes](http://www.emacswiki.org/emacs/CategorySpelling)
     including [Wcheck Mode](http://www.emacswiki.org/emacs/WcheckMode)
@@ -46,7 +39,7 @@ See also Wikipedia [w:Comparison of machine translation applications].
 -   [Grammalecte](https://dicollecte.org/)(GPL)
     est un correcteur grammatical open source dédié à la
     langue française, pour Writer (LibreOffice, OpenOffice), Firefox,
-    Thunderbird, [w:Pluma_(editor)|Pluma],VIM, Emacs and CLI.
+    Thunderbird, {{< wp "Pluma_(editor)"  "Pluma" >}},VIM, Emacs and CLI.
     -   [linux.fr: Grammalecte, correcteur grammatical
         ](http://linuxfr.org/news/grammalecte-correcteur-grammatical)
         updated in [Grammalecte, correcteur grammatical II
@@ -65,7 +58,7 @@ See also Wikipedia [w:Comparison of machine translation applications].
     -   [vim-Grammalecte](https://github.com/dpelle/vim-Grammalecte)
         A vim plugin for Grammalecte.
 
--   [w: Hunspell] (GPL) is the spell checker of LibreOffice,
+-   {{< wp " Hunspell" >}} (GPL) is the spell checker of LibreOffice,
     OpenOffice.org and Mozilla Firefox 3 & Thunderbird, Google
     Chrome. Hunspell is backward-compatible with MySpell dictionaries
     but can also use utf-8 encoded dictionaries.<br />
@@ -96,14 +89,14 @@ See also Wikipedia [w:Comparison of machine translation applications].
 ## Other desktop dictionary software
 -   [Babiloo](https://code.google.com/p/babiloo/) (GPL) written in python
     supports dictionaries in SDictionary, and
-    [StarDict](#stardict "internal reference").
+    {{< iref "#stardict" "StarDict" >}}.
     There are Debian and Ubuntu Packages.</br >
     Babiloo is now inactive and they recommend using
-    [GoldenDict](#goldendict "internal reference")
+    {{< iref "#goldendict" "GoldenDict" >}}
 -   [Fantasdic](http://projects.gnome.org/fantasdic/)
     is a gnome dictionary application writen in ruby/gtk it supports DICT
     dictionary server, edict or cedict, Google Translate, Dictd files,
-    [StarDict](#stardict "internal reference") files,
+    {{< iref "#stardict" "StarDict" >}} files,
     EPWING dictionaries (popular format in Japan).
 -   [GoldenDict](http://goldendict.org/) (GPL)
     <a name="goldendict"></a>
@@ -111,7 +104,7 @@ See also Wikipedia [w:Comparison of machine translation applications].
     support of formats (see
     [GoldenDict home page](http://goldendict.org/)).  It supports
     multiple dictionary file formats: Babylon (.bgl) files with images
-    and resources, [StarDict](#stardict "internal reference")
+    and resources, {{< iref "#stardict" "StarDict" >}}
     (.ifo / .dict / .idx / .syn) dictionaries,
     Dictd (.index / .dict / .dz) dictionary files, ABBYY Lingvo (.dsl)
     source files, together with abbreviation files, ABBYY Lingvo (.lsa
@@ -130,7 +123,7 @@ See also Wikipedia [w:Comparison of machine translation applications].
 -   [MDict](http://mdic.gnufolks.org/)
     (GPL) is a QT4 dictionary software. It has its own dictionary
     format but the dictionary formats
-    [StarDict](#stardict "internal reference") (.ifo) , Freedict
+    {{< iref "#stardict" "StarDict" >}} (.ifo) , Freedict
     (.tei) and Sdictionary (.dct) can be converted via MDicConv
     convertor or PyGlossary tool. MDic is no more developed since
     2010.
@@ -177,7 +170,7 @@ See also Wikipedia [w:Comparison of machine translation applications].
 -   [Sdictionary](http://swaj.net/sdict/index.html)
     is a Perl/TK dictionary project that uses own Sdict dictionary
     format.
--   [w:StarDict|Stardict _Wikipedia_] <a name="stardict"></a>
+-   {{< wp "StarDict"  "Stardict _Wikipedia_" >}} <a name="stardict"></a>
     developed by Hu Zheng (胡正) introduce a dictionary format that is much used, not only by the _Stardict_
     application but by numerous applications on all OS.
     Stardict has been removed from sourceforge and is now found on its
@@ -186,8 +179,7 @@ See also Wikipedia [w:Comparison of machine translation applications].
     _qstardict_ which use a QT4 interface; _stardict-plugin-spell_ is
     a spell plugin that give spelling suggestion when looking for a
     word in Stardict.
-    For dictionaries in stardict format look at the [following section
-    ](#stardict-dicts "internal rederence")
+    For dictionaries in stardict format look at the {{< iref "#stardict" "following section" >}}
     -   [Stardict Home](http://www.huzheng.org/stardict/).
     -   [Stardict Wiki](https://code.google.com/p/stardict-3/wiki/index)
         is still on google code.
@@ -215,16 +207,16 @@ See also Wikipedia [w:Comparison of machine translation applications].
     conversion ro dictd format. They are available in debian with a
     name _dict-freedict-la1-la2_ where  _la1_ and _la2_ are the 3-letter
     language codes from ISO 639-2.
--   [w:XDXF] is an  universal XML-based format, convertible from and
+-   {{< wp "XDXF" >}} is an  universal XML-based format, convertible from and
     to other popular formats like
-    [PtkDic](#ptkdic "internal reference"),
-    [StarDict](#stardict "internal reference").
+    {{< iref "#ptkdic" "PtkDic" >}},
+    {{< iref "#stardict" "StarDict" >}}.
     -   [xdxf-makedict](https://github.com/soshial/xdxf_makedict)
         is for converting dictionary files many-to-many:
         dictd/dsl/sdict/stardict/xdxf → dictd/stardict/xdxf
     -   [Fora](http://ng-comp.com/fora/index.html)
          an android/linux/windows/OSX/iOs dictionary understand XDXF
-         (and [StarDict](#stardict "internal reference"), DSL, and Dictd)
+         (and {{< iref "#stardict" "StarDict" >}}, DSL, and Dictd)
     -   [XDXF Format](https://github.com/soshial/xdxf_makedict/blob/master/format_standard/xdxf_description.md
     -   [XDXF sourceforge site
         ](http://sourceforge.net/projects/xdxf/files/)
@@ -237,7 +229,7 @@ See also Wikipedia [w:Comparison of machine translation applications].
     in `.bgl` format that is understood by numerous applications,
     or can be converted easily. Some dictionaries come with a `.exe`
     suffix it is a `7zip` compressed archive that contain the `.bgl` file.
--   [w:Lingvo] (private software) is a product of Russian software company ABBYY.
+-   {{< wp "Lingvo" >}} (private software) is a product of Russian software company ABBYY.
     It has a huge list of dictionnaries
     see [lingvo list of english monolingual dictionaries
     ](http://lingvodics.com/dics/view/English+Monolingual)
@@ -255,13 +247,13 @@ See also Wikipedia [w:Comparison of machine translation applications].
     ](http://abloz.com/huzheng/stardict-dic/)
     <a name="stardict-dicts"></a>
     -   Dictionaries converted to
-        [StarDict](#stardict "internal reference") from
+        {{< iref "#stardict" "StarDict" >}} from
         [dictd](http://abloz.com/huzheng/stardict-dic/dict.org/),
         [freedict](http://abloz.com/huzheng/stardict-dic/freedict.de/),
         [mova](http://abloz.com/huzheng/stardict-dic/mova.org/).
     -   [Babylon: Stardict dictionaries
         ](http://abloz.com/huzheng/stardict-dic/babylon/)
-        are in [StarDict](#stardict "internal reference") 3.0 format.
+        are in {{< iref "#stardict" "StarDict" >}} 3.0 format.
     -   [Babylon: Stardict English dictionaries
         ](http://abloz.com/huzheng/stardict-dic/babylon/english/)
     -   [Babylon: Stardict French dictionaries

@@ -1,14 +1,8 @@
-<!--
-.. description:
-.. date: 2011-09-04
-.. slug: browsers
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Web Browsers
--->
+---
+title: Web Browsers
+---
 
-[TOC]
+{{% toc /%}}
 
 # Firefox
 -   [firefox help
@@ -106,11 +100,11 @@
 
 ### Flash plugins {#flash_plugins}
 For playing swf you can use
-[Gnash](/node/media_players#gnash "internal reference"),
-[Adobe Flash plugin non free](#adobe_swf "internal reference"),
-[Lightspark](/node/media_players#lightspark "internal reference"),
-[Pepper Flash Player](#pepperflash "internal reference")
-or [Shumway](#shumway "internal reference").
+{{< iref "media_players#gnash" "Gnash" >}},
+{{< iref "#adobe_swf" "Adobe Flash plugin non free" >}},
+{{< iref "media_players#lightspark" "Lightspark" >}},
+{{< iref "#pepperflash" "Pepper Flash Player" >}}
+or {{< iref "#shumway" "Shumway" >}}.
 
 But you can replace Flash by other formats following recipes of
 [Triskell Wiki: Play Videos Without Using Flash
@@ -143,7 +137,7 @@ You can also install
     ](https://wiki.debian.org/Freshplayerplugin).
     The package is [browser-plugin-freshplayer-pepperflash
     ](https://packages.debian.org/sid/browser-plugin-freshplayer-pepperflash).
--   [w:Google Swiffy] is a web-based tool developed by Google that
+-   {{< wp "Google Swiffy" >}} is a web-based tool developed by Google that
     converts SWF files to HTML5. Its main goal is to display Flash
     contents on devices that do not support Flash.
     -   [Swiffy Home](https://developers.google.com/swiffy/)
@@ -183,10 +177,9 @@ The source is on
 ](https://github.com/fivefilters/block-ads).
 
 For network level adds blocking see the page
-[blocking advertisements](/node/ads_blocking), and for cleaning all
+{{< iref "ads_blocking" "blocking advertisements" >}}, and for cleaning all
 the ininteresting stuff _it is more politicaly correct that «junk»!_
-that is cluttering web pages see [Readability Software
-](/node/documents#readability_software "internal reference").
+that is cluttering web pages see {{< iref "documents#readability_software" "Readability Software" >}}.
 
 We can use css to avoid displaying advertisements it is described in
 the [floppymoose.com page](http://www.floppymoose.com/) and in
@@ -327,19 +320,19 @@ With one tab no js
     Editor/Browser.It supports XHTML 1.1, SVG, MathML 2.0, and many CSS
     2 features.
 -   [Arachne](http://browser.arachne.cz/) a SVGA browser for DOS.
--   [w:Google Chrome] is a freeware but not fully open source. The
+-   {{< wp "Google Chrome" >}} is a freeware but not fully open source. The
     open source browser behind chrome is
     [Chromium](http://www.chromium.org/)
     -   [Google Chrome Home](http://www.google.com/chrome)
     -   [Chrome Help](https://support.google.com/chrome)
--   [w:Dillo] [Dillo Home](http://www.dillo.org/) (GPL) a fast gtk+ (old release) or
+-   {{< wp "Dillo" >}} [Dillo Home](http://www.dillo.org/) (GPL) a fast gtk+ (old release) or
     fltk2 web browser written in C.  It does
     not support css nor javascript, A new release with fltk2 is available since 2008,
     but it has been removed from Debian in 2010.
 -   <a name="dvb"></a>[dwb](https://portix.bitbucket.org/dwb/y)
     is a lightweight webkit/gtk browser based.
 -   [Epiphany](https://wiki.gnome.org/Apps/Web) now named _Web_ is a web browser
-    based on Gtk+ and  [w:Webkit] engine as are Uzbl and Midori.
+    based on Gtk+ and  {{< wp "Webkit" >}} engine as are Uzbl and Midori.
     Previous releases of epiphany used gecko now replaced by webkit.
 
     Epiphany footprints are bigger than midori.
@@ -358,8 +351,8 @@ With one tab no js
     include mailcap support, tabbed browsing, gpm support, table and
     frames rendering, ssl, authentication, persistent cookies, xbel
     bookmarks and experimental css and javascript. _last release 2012_
-    -   Wikipedia: [w:Elinks]
--   [w:Links_(web_browser)|Links] (GPL), the ancestor of elinks
+    -   Wikipedia: {{< wp "Elinks" >}}
+-   {{< wp "Links_(web_browser)"  "Links" >}} (GPL), the ancestor of elinks
     and an other offspring:
     <a name="links2">[Twibright Labs: Links
     ](http://atrey.karlin.mff.cuni.cz/~clock/twibright/links/)(links-2)
@@ -368,8 +361,8 @@ With one tab no js
     sites.  Links2 is a minimal nice browser that can work in text
     mode, or graphic mode with X11, fb or framebuffer; with unmatched
     low footprints.
--   [w:Midori]  is a web browser
-    based on the [w:Webkit] engine as are Uzbl and Epiphany.
+-   {{< wp "Midori" >}}  is a web browser
+    based on the {{< wp "Webkit" >}} engine as are Uzbl and Epiphany.
 -   [NetSurf](http://www.netsurf-browser.org/)
     (GPL) is a fast small footprint web browser for RISC OS and UNIX
     platforms. Netsurf can handle CSS but not javascript. A NetSurf
@@ -385,7 +378,7 @@ With one tab no js
 -   [Qutebrowser](https://www.qutebrowser.org/) (GPL)
     is a keyboard-focused browser with a minimal GUI. It’s based on
     Python and PyQt5. It was inspired by other browsers/addons like
-    [dwb](#dwb "internal reference")  and Vimperator/Pentadactyl.
+    {{< iref "#dwb" "dwb" >}}  and Vimperator/Pentadactyl.
     -   [ArchWiki: Qutebrowser
         ](https://wiki.archlinux.org/index.php/Qutebrowser).
 -   Falkon previously  [QupZilla](http://www.qupzilla.com/) (GPL)
@@ -393,7 +386,7 @@ With one tab no js
     bookmarks, history, search in a page, screenshots, news
     feeds. Beginning of 2018 Qupzilla is renamed Falkon and becomes
     the KDE browser.
--   [w:W3m] (MIT License) is a console (and xterm) browser that can handle
+-   {{< wp "W3m" >}} (MIT License) is a console (and xterm) browser that can handle
     images, it is very small 3.6M.
     -   [W3m Home Page](http://w3m.sourceforge.net/),
     -   [w3m-mee](http://pub.ks-and-ks.ne.jp/prog/w3mmee/)
@@ -417,7 +410,7 @@ With one tab no js
     -   [Gentoo Wiki: Xombrero](https://wiki.gentoo.org/wiki/Xombrero)
 
 # Bookmarklet
-A [w:bookmarklet] is a bookmark stored in a web browser that contains
+A {{< wp "bookmarklet" >}} is a bookmark stored in a web browser that contains
 JavaScript commands stored as the URL of a bookmark in a web
 browser.
 

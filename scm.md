@@ -1,20 +1,14 @@
-<!--
-.. description:
-.. date: 2009-12-23
-.. slug: scm
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Git & alt. SCM
--->
+---
+title: Git & alt. SCM
+---
 
-[TOC]
+{{% toc /%}}
 
 ---
 
 # General References on Source Conf Management
--   [w:Revision_control|Wikipedia: Revision Control]
-    and [w:Comparison of revision control software]
+-   {{< wp "Revision_control"  "Wikipedia: Revision Control" >}}
+    and {{< wp "Comparison of revision control software" >}}
 -   [Better SCM Initiative](http://better-scm.shlomifish.org/)
     compares the SCMs: Aegis, Arch, Bazzaar, BitKeeper, Darcs, Git,
     Mercurial, Monotone, Perforce, Subversion, Vesta.
@@ -44,12 +38,12 @@ _Git is below!_
 -   [The CVS Book](http://cvsbook.red-bean.com/)
 -   [cvsup](http://www.cvsup.org/) general-purpose mirroring tool
     tailored to CVS repositories.
--   [w:GNU_arch|Arch] (GPL) is a distributed revision control system
+-   {{< wp "GNU_arch"  "Arch" >}} (GPL) is a distributed revision control system
     also known as __tla__ from the name of the main Arch command.
     Tla author Tom Lord seems  stopped developping tla in 2006 to
     start implementing revc (kind of arch 2.0) whose development is
     now discontinued.
--   [w:Bazaar_(software)|Bazaar] GPL is a distributed revision control
+-   {{< wp "Bazaar_(software)"  "Bazaar" >}} GPL is a distributed revision control
     system written in python. _Bazaar_ is was previously nammed
     _Bazaar-ng_ and is a fork from the previous _Bazaar_ also known as _Baz_
     itself a fork from _Arch_.
@@ -66,7 +60,7 @@ _Git is below!_
     [GitStats](http://gitstats.sourceforge.net/) (GPL) and
     [Pepper](http://scm-pepper.sourceforge.net/) (GPL)
     supports git, mercurial and Subversion.
--   [w:Darcs] is a revision control system written in Haskell,
+-   {{< wp "Darcs" >}} is a revision control system written in Haskell,
     along the lines of CVS or arch. Darcs has two distinctive
     features: 1) each copy of the source is a fully functional branch,
     and 2) underlying darcs is a powerful theory of patches.
@@ -511,8 +505,7 @@ provides a detailled description of the use of the following packages.
     emacs.
 -   [magit-wip
     ](https://github.com/magit/magit/blob/master/magit-wip.el)
-    is a magit plugin included in [magit distribution
-    ](#magit "local reference") which add two modes to emacs.
+    is a magit plugin included in {{< iref "#magit" "magit distribution" >}} which add two modes to emacs.
     The global mode _magit-wip-mode_ provides highlighting of wip refs in
     Magit buffers while the local mode _magit-wip-save-mode_
     commits to such a ref when saving a file-visiting buffer.
@@ -567,7 +560,7 @@ provides a detailled description of the use of the following packages.
     branches easier. It is designed for the case where
     you maintain a queue of third-party patches on top of another (perhaps
     Git-controlled) project. Topgit can be used from
-    [Magit](#magit "local reference").
+    {{< iref "#magit" "Magit" >}}.
 
 ## Graphic Interfaces
 
@@ -707,10 +700,10 @@ the Git Wiki [list also the Web interfaces
     using common diff tools.
 
 ## Visual diff utilities
-See [above for emacs frontends](#ediff "internal reference"):
-[ediff](#ediff "internal reference"),
-[emerge](#emerge "internal reference"),
-[vdiff](#vdiff "internal reference").
+See {{< iref "#ediff" "above for emacs frontends" >}}:
+{{< iref "#ediff" "ediff" >}},
+{{< iref "#emerge" "emerge" >}},
+{{< iref "#vdiff" "vdiff" >}}.
 
 -   [Diffoscope](https://diffoscope.org/) (GPLv3)
     is a files or directories python comparison tools, it can
@@ -825,7 +818,7 @@ varieties each one having multiple forms. To have a taste of if you
 can begin with the [Chapter 5 of Pro Git: Distributed Git
 ](http://git-scm.com/book/en/Distributed-Git).
 
-In the same way than the [w:Species problem] in biology git workflows
+In the same way than the {{< wp "Species problem" >}} in biology git workflows
 is a controversial subject, with his proponents of eugenics an genetic
 diversity defensors.
 
@@ -951,7 +944,7 @@ support: submodules, subtrees, and wrappers they are compared in
     -   [Git Subrepo
         Wiki](https://github.com/ingydotnet/git-subrepo/wiki/)
 -   an older alternative to subtree and submodule was
-    [GitSlave](#gitslave "internal reference")
+    {{< iref "#gitslave" "GitSlave" >}}
     but it is no longer developped since 2012.
 
 
@@ -1063,11 +1056,11 @@ Some other tools to act on a group of repositories
     repositories and perform actions like clone/pull/push on them.
 
 # Git repositories
-There are some git free or *adware* or *[w:Freeware|freemium]*
+There are some git free or *adware* or *{{< wp "Freeware"  "freemium" >}}*
 repositories they are [listed in the Git Wiki
 ](https://git.wiki.kernel.org/index.php/GitHosting)
 and in the Wikipedia
-[w:Comparison of open-source software hosting facilities].
+{{< wp "Comparison of open-source software hosting facilities" >}}.
 
 ## GitHub
 [GitHub](http://github.com/) gives you a free git
@@ -1107,7 +1100,7 @@ and [Bl.ocks rendering](https://bl.ocks.org/mbostock/1353700).
     there mirrors of numerous projects (\~250): cogito, dia, darcs2git,
     django, elinks, fast-export, findutils, gajim, git,
     git-\<something\>, guile, moodle, qemu, rox-filer,...
--   [w:Gitorious] (AGPL) was hosting
+-   {{< wp "Gitorious" >}} (AGPL) was hosting
     freely your open source git repository. t is now acquired by
     GitLab, and closed, an archive is at
     [Gitorous read-only mirror ](http://gitorious.org)

@@ -1,14 +1,8 @@
-<!--
-.. description:
-.. date: 2015-05-01
-.. slug: ntp
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Network Time Protocol
--->
+---
+title: Network Time Protocol
+---
 
-[TOC]
+{{% toc /%}}
 
 # References
 -   Ntp is defined in
@@ -28,8 +22,8 @@
     explains the basics of ntp, as does the tutorial by Mike Chirico
     [NTP, UTC, and Working with Time on Linux
     ](http://souptonuts.sourceforge.net/readme_working_with_time.html).
-    We have of course to understand [w:UTC], and look at the
-    [w:list of time zones by UTC offset].
+    We have of course to understand {{< wp "UTC" >}}, and look at the
+    {{< wp "list of time zones by UTC offset" >}}.
 -   [ArchWiki: Time](https://wiki.archlinux.org/index.php/Time)
 -   [Red Hat Entreprise (7) System Administrator's Guide
     ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/)
@@ -57,10 +51,10 @@
     -   [Red Hat Entreprise System Administrator's Guide - Chapter 14:
         Configuring NTP Using the chrony Suite
         ](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7-Beta/html/System_Administrators_Guide/ch-Configuring_NTP_Using_the_chrony_Suite.html)
-    -   [man:chrony]
+    -   {{< man "chrony" >}}
 -   [sntp](http://manpages.debian.org/cgi-bin/man.cgi?query=sntp)
     is the standard sntp query client.
--   [man:msntp] (GPL) is a simple and portable SNTP client/server.
+-   {{< man "msntp" >}} (GPL) is a simple and portable SNTP client/server.
 -   [Ntpclient](http://doolittle.icarus.com/ntpclient/)
     by Larry Doolittle, is a light client to ntpd servers, you can find
     on his page the downloads and a
@@ -150,7 +144,7 @@ clocks in a network. When used in conjunction with hardware support,
 PTP is capable of sub-microsecond accuracy, which is far better than
 is normally obtainable with NTP.
 
--   Wikipedia: [w:Precision Time Protocol]
+-   Wikipedia: {{< wp "Precision Time Protocol" >}}
 -   [RedHat System administrator guide -
     Chapter 19. Configuring PTP Using ptp4l
     ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/ch-configuring_ptp_using_ptp4l).

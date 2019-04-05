@@ -1,37 +1,31 @@
-<!--
-.. description:
-.. date: 2015-06-12
-.. slug: ps_pdf_djvu
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Postscript, PDF, djvu, scanner, OCR
--->
+---
+title: Postscript, PDF, djvu, scanner, OCR
+---
 
-[TOC]
+{{% toc /%}}
 
 You may also be interested by the
-[Image section](/node/images "Internal Reference")
+{{< iref "images" "Image section" >}}
 
 # Postscript {#postscript}
 
 The pieces of software that handle both SVG and postscript or PDF are
-in the [SVG section](/node/images#svg "Internal Reference") it
+in the {{< iref "images#svg" "SVG section" >}} it
 includes the PDF to SVG conversion programs as Autotrace, Potrace,
 pstoedit.  All SVG editors have a PDF and postscript export feature.
-See also the [Cups Page](/node/cups).
+See also the {{< iref "cups" "Cups Page" >}}.
 
 
--   [w:PostScript] is a [w:page description language],
-    [w:Encapsulated PostScript] or eps is a self contained graphics
+-   {{< wp "PostScript" >}} is a {{< wp "page description language" >}},
+    {{< wp "Encapsulated PostScript" >}} or eps is a self contained graphics
     file format based on postscript but that includes the
-    [w:Bounding Box].
+    {{< wp "Bounding Box" >}}.
 -   [Ghostscript (Home Page)](http://www.ghostscript.com/) (GPL)
     <a name="ghostscript"></a>
     _[Wikipedia page](http://en.wikipedia.org/wiki/Ghostscript)
     is an interpreter and converter for Postscript. As viewer it is
     used thru the __GV__ frontend or
-    [mupdf](#mupdf "internal reference").
+    {{< iref "#mupdf" "mupdf" >}}.
     It is also used by the linux printing software to produce
     raster files for the printer software.<br/>
 
@@ -59,8 +53,7 @@ See also the [Cups Page](/node/cups).
     (GPL) cannot convert UTF-8 encoded text to PostScript.
 -   [paps](http://paps.sourceforge.net/) (GPL) is a  Pango to PostScript converter
     it works with a UTF-8 encoded file.
--   Some [source code beautifiers
-    ](/node/source_code#code_beautifiers "internal reference")
+-   Some {{< iref "source_code#code_beautifiers" "source code beautifiers" >}}
     are able to generate beutified _latex_, it can be used for a two step
     géneration of pdf or ps.
 -   [Scribus](http://www.scribus.net/) <a name="scribus"></a>
@@ -76,7 +69,7 @@ See also the [Cups Page](/node/cups).
 -   Wikipedia: [DjVu]
 -   [djvulibre](http://djvu.sourceforge.net/) is the open source
      implementation of djvu.
--   [djvu.org](http://djvu.org/) is the home page of [w:DjVu] format.
+-   [djvu.org](http://djvu.org/) is the home page of {{< wp "DjVu" >}} format.
     [DjVu Tutorial](http://www.djvuzone.org/support/tutorial/index.html),
     [compression chapter
     ](www.djvuzone.org/support/tutorial/chapter-compress.html),
@@ -97,22 +90,22 @@ See also the [Cups Page](/node/cups).
     ](https://fr.wikisource.org/wiki/Aide:Cr%C3%A9er_un_fichier_DjVu/M%C3%A9thodes_compl%C3%A8tes),
     [Créer un fichier DjVu à partir d’un pdf de Google Books
     ](https://fr.wikisource.org/wiki/Aide:Cr%C3%A9er_un_fichier_DjVu/%C3%80_partir_d%E2%80%99un_pdf_de_Google_Books).
--   _Djview4_ is the standard reader for djvu, [w:Evince] _but not epdfview_ can also display djvu,
+-   _Djview4_ is the standard reader for djvu, {{< wp "Evince" >}} _but not epdfview_ can also display djvu,
     but I have experienced on the same big (10M) djvu book, evince taking 40M of resident memory
     while _djview4_ only taky 20M.
 -   [minidjvu](http://minidjvu.sourceforge.net/): _GPL_
     is a bitonal (black & white) DjVu encoder/decoder.
 
 # PDF {#pdf}
-[w:Pdf] or Portable Document Format is an open standard for document
+{{< wp "Pdf" >}} or Portable Document Format is an open standard for document
 exchange created by Adobe Systems.  It encapsulates a complete
 description of a fixed-layout flat document, including the text,
 fonts, graphics, and other information needed to display it.
 
--   [w:OpenXPS] is a page description format created by microsoft to
+-   {{< wp "OpenXPS" >}} is a page description format created by microsoft to
     compete with the widely used pdf format.  See the
-    [w:Comparison of OpenXPS and PDF] in Wikipedia.
-    [Mupdf](#mupdf "internal reference) and okular can read XPS files.
+    {{< wp "Comparison of OpenXPS and PDF" >}} in Wikipedia.
+    {{< iref "#mupdf" "Mupdf" >}} and okular can read XPS files.
 -   As Xps is often not available on non windows computers converting
     Xps to Pdf may be useful.  There are a lot of online services
     _google "xps pdf converter"_ you can also find a
@@ -145,19 +138,18 @@ fonts, graphics, and other information needed to display it.
     is an HTML to PostScript converter written in Perl
 -   [PDFKit](https://github.com/pdfkit/PDFKit) (MIT license)
     is a ruby program to create PDFs using plain old HTML+CSS.
-    It uses [wkhtmltopdf    ](#wkhtmltopdf "internal reference")
+    It uses {{< iref "#wkhtmltopdf" "wkhtmltopdf" >}}
     as  back-end.
 -   [pdfkit-clj](https://github.com/pdfkit/pdfkit-clj)
     is  Clojure library for generating PDFs from HTML that uses
-    [wkhtmltopdf
-    ](#wkhtmltopdf "internal reference").
--   [w:TCPDF]
+    {{< iref "#wkhtmltopdf" "wkhtmltopdf" >}}.
+-   {{< wp "TCPDF" >}}
     is a PHP class for generating PDF documents with full support of UTF-8.
     -   [TCPDF Home](http://www.tcpdf.org/) (LGPL)
 -   [xhtml2pdf](http://www.xhtml2pdf.com/) (Apache License) is a
     converter from HTML and CSS
     in pure Python using the ReportLab Toolkit, HTML5lib and
-    [pyPdf](#pypdf "internal reference").
+    {{< iref "#pypdf" "pyPdf" >}}.
     [GitHub xhtml2pdf repository](https://github.com/chrisglass/xhtml2pdf)
     _xhtml2pdf_ was named previously _Pisa_ and packaged in Debian as
     _python-pisa_.
@@ -171,8 +163,7 @@ fonts, graphics, and other information needed to display it.
 
          gm convert *.jpeg myoutput.pdf
 
--   Some [source code beautifiers
-    ](/node/source_code#code_beautifiers "internal reference")
+-   Some {{< iref "source_code#code_beautifiers" "source code beautifiers" >}}
     are able to generate beautified _latex_, it can be used for a two step
     géneration of pdf or ps.
 
@@ -189,17 +180,17 @@ Annotation are supported by evince, qpdfview and okular.
 
 Some viewers have support for _SyncTex_ the Tex source and pdf
 _live preview_ synchronization library. This include
-okular, [evince](#evince "internal reference"),
-[qpdfview](#qpdfview "internal reference"),
+okular, {{< iref "#evince" "evince" >}},
+{{< iref "#qpdfview" "qpdfview" >}},
 (zathura](#zathura "internal reference")
 
--   Wikipedia [w:List of PDF software]
+-   Wikipedia {{< wp "List of PDF software" >}}
 -   [ArchWiki: list of pdf and djvu software
     ](https://wiki.archlinux.org/index.php/List_of_applications/Documents#PDF_and_DjVu).
 -   <a name="fbpdf">[fbpdf](http://repo.or.cz/w/fbpdf.git) (BSD license) is a
     framebuffer pdf/djvu file viewer.  It can use either
-    [mupdf](#mupdf "internal reference") or
-    [poppler libraries](#poppler "internal reference") for rendering
+    {{< iref "#mupdf" "mupdf" >}} or
+    {{< iref "#poppler" "poppler libraries" >}} for rendering
     pdf files and it uses djvulibre library for rendering djvu files.
 -   The new [Firefox built-in PDF viewer
     ](https://support.mozilla.org/en-US/kb/view-pdf-files-firefox-without-downloading-them)
@@ -207,7 +198,7 @@ okular, [evince](#evince "internal reference"),
     ](https://support.mozilla.org/en-US/kb/disable-built-pdf-viewer-and-use-another-viewer).
     In the same way *Chrome* has a builtin PDF viewer.
 -   [Llpp](http://repo.or.cz/w/llpp.git/)<a name="lpp"></a>
-    is  a graphical PDF pager using [mupdf library](#mupdf "internal reference").
+    is  a graphical PDF pager using {{< iref "#mupdf" "mupdf library" >}}.
     lpp depends on *Ocaml*. It supports continuous page scrolling,
     bookmarking, and text search. It is not in Debian but in an
     unofficial repository [notesalexp.org](http://notesalexp.org/).
@@ -227,8 +218,8 @@ okular, [evince](#evince "internal reference"),
     and CBZ (Comic Book archive)
     but it does not include an outline browser as do most alternate browsers.
    _<br />
-    [llpp](#llpp  "internal reference") and
-    [zathura](#zathura "internal reference")
+    {{< iref "#llpp" "llpp" >}} and
+    {{< iref "#zathura" "zathura" >}}
     can use the mupdf library
     and provide some extra features compared to the plain mupdf frontend.
 -   To compare the pdf readers memory footprints I have tried some viewers with the
@@ -247,14 +238,13 @@ okular, [evince](#evince "internal reference"),
         its young brother _epdfview_, and _acrobat reader_ is a lot more slower.
     -   They all allow to follow pdf links but_mupdf_ and _gv_ don't have
         a pane showing the index, it's available in all other readers.
--   [w:Poppler_(software)|Poppler] <a name="poppler"> (GPL)
+-   {{< wp "Poppler_(software)"  "Poppler" >}} <a name="poppler"> (GPL)
     is a software library for viewing PDF documents, stemming from a fork of Xpdf.
-    There is a [set of utilities developped with Poppler
-    ](#popler-utils "internal reference") referenced below.
+    There is a {{< iref "#popler" "set of utilities developped with Poppler" >}} referenced below.
 
     *Poppler* is the base of many pdf viewers:
 
-    -   [w:Evince] (GPL) build with  GTK+ and *Gnome*.
+    -   {{< wp "Evince" >}} (GPL) build with  GTK+ and *Gnome*.
         -   [Evince Gnome Home](https://wiki.gnome.org/Apps/Evince/).
         -   [Evince supported documents formats
             ](https://wiki.gnome.org/Apps/Evince/SupportedDocumentFormats)
@@ -264,7 +254,7 @@ okular, [evince](#evince "internal reference"),
             OpenDocument Presentation (impress), Comics (CBR, CBZ,
             CB7).
         -   [Evince Manual](https://help.gnome.org/users/evince/stable/)
-    -   [w:Okular] (GPL) build with QT.
+    -   {{< wp "Okular" >}} (GPL) build with QT.
     -   [pdf-tools](https://github.com/politza/pdf-tool)
         is a pdfviewer for emacs that replace the builtin _Docview_.
     -   <a name="qpdfview"></a>
@@ -281,7 +271,7 @@ okular, [evince](#evince "internal reference"),
         viewer features Zathura can display and browse indexes and
         record bookmarks.  It is fully configurable, and optional
         plugins allow to display djvu, commic books, or to
-        use [mupdf](#mupdf "internal reference") instead of
+        use {{< iref "#mupdf" "mupdf" >}} instead of
         poppler. It is in Debian.
     -   [apvlv](https://github.com/naihe2010/apvlv/tree/master) (GPL)
         is a Popler/GTK+ based pdf viewer. Like zathura he is controled
@@ -291,12 +281,12 @@ okular, [evince](#evince "internal reference"),
     -   *Libreoffice*, *TeXworks* and *Inkscape* are also using
         *poppler library*.
 
--   [w:Xpdf] (GPL) an light pdf viewer with minimal dependencies,
+-   {{< wp "Xpdf" >}} (GPL) an light pdf viewer with minimal dependencies,
     at the opposite of _epdfview_, it is user configurable;
     you can even set unusal, but very usefull options like the paper color;
     and of course you can set all the key bindings.<br/>
     It is in Debian, the derived utilities are in the package
-    [popler-utils](#popler-utils "internal reference")
+    {{< iref "#popler" "popler-utils" >}}
     except [pdftosrc][#pdftosrc "internal reference").
 
 # PDF Editing
@@ -333,18 +323,18 @@ _Adobe PDF Reference_.
 
 Some tools thereafter allow to create Outlines _very often also
 referred as Bookmarks_
-[PdfLatex](#pdflatex_bookmarks "internal reference"),
-[JpdfBookmark](#jpdfbookmark "internal reference"),
-[jPDFtweak](#jpdftweak "internal reference"),
-[pdftk](#pdfk "internal reference"),
-[pdfWriteBookmarks](#pdfritebookmarks "internal reference"),
+{{< iref "#pdflatex_bookmarks" "PdfLatex" >}},
+{{< iref "#jpdfbookmark" "JpdfBookmark" >}},
+{{< iref "#jpdftweak" "jPDFtweak" >}},
+{{< iref "#pdfk" "pdftk" >}},
+{{< iref "#pdfritebookmarks" "pdfWriteBookmarks" >}},
 
 An other common task is to crop pages to changes margins, see the
-[subsection pdf crop](#pdf_crop "internal reference).
+{{< iref "#pdf_crop" "subsection pdf crop" >}}.
 -   <a name="fpdf"></a>[FPDF](http://www.fpdf.org/)
     is a PHP class which allows to generate PDF files with pure PHP,
     that is to say without using the PDFlib library.
-    It has a clone in python [pyfpdf](#pyfpdf "internal reference")
+    It has a clone in python {{< iref "#pyfpdf" "pyfpdf" >}}
 -   [bmconverter.py](https://github.com/goerz/bmconverter.py) (GPL)
     by [Michael Goerz](http://michaelgoerz.net/)
     is a python script that converts between the bookmark description
@@ -358,9 +348,9 @@ An other common task is to crop pages to changes margins, see the
 -   [ExactImage](http://exactcode.com/opensource/exactimage/)
     is a fast C++ image processing library. it contains some pdf
     processing tools:
-    -   [man: hocr2pdf] is an hOCR to PDF converter. It can use the
-        [hocr](#hocr "internal reference") output of
-        [Tesseract](#tesseract "internal reference").
+    -   {{< man " hocr2pdf" >}} is an hOCR to PDF converter. It can use the
+        {{< iref "#hocr" "hocr" >}} output of
+        {{< iref "#tesseract" "Tesseract" >}}.
 -   [gpdftext](https://github.com/codehelp/gpdftext) (GPL)
     by Neil Williams is a C/GTK+ program that
     loads a PDF file, extracts the text, reformats the paragraphs into
@@ -370,7 +360,7 @@ An other common task is to crop pages to changes margins, see the
     breaks and can be zoomed to whatever text size you prefer.</b>
     The manual is in docbook and provided in the package it can be
     opened with yelp. _gpdftext_ is in Debian.
--   [Ghostscript](#ghostscript "internal reference")
+-   {{< iref "#ghostscript" "Ghostscript" >}}
     The older way to edit pdf is to take advantage of the very good
     support of postscript by _Ghostscript_, and edit under postscript,
     then convert in pdf with
@@ -385,7 +375,7 @@ An other common task is to crop pages to changes margins, see the
     pdftk's `cat`. You can take advantage from an user script
     [to convert pdftk bookmarks to pdfmarks
     ](https://github.com/goerz/bmconverter.py/issues/1)
-    to use the output of [pdftk](#pdftk "internal reference").
+    to use the output of {{< iref "#pdftk" "pdftk" >}}.
 -   [flpsed](http://flpsed.org/flpsed.html)
     (GPL) a PostScript annotator that lets you add arbitrary text
     lines to existing PostScript 1 documents. Added lines can later be
@@ -394,7 +384,7 @@ An other common task is to crop pages to changes margins, see the
     them. flpsed is useful for filling in forms, adding notes
     etc. Flpsed uses the old _fltk_ toolkit. _last stable release 2015_,
     presently minimally maintened.
--   [Gimp](/node/212 "internal reference") can be used to convert pdf
+-   {{< iref "212" "Gimp" >}} can be used to convert pdf
     before editing as explained in
     [How to Edit PDF Files in Linux Using GIMP
     ](http://www.wikihow.com/Edit-PDF-Files-in-Linux-Using-GIMP)
@@ -407,13 +397,13 @@ An other common task is to crop pages to changes margins, see the
     breaks and can be zoomed to whatever text size you prefer.</b>
     The manual is in docbook and provided in the package it can be
     opened with yelp. _gpdftext_ is in Debian.
--   [w:jbig2] is a patent protected format from IBM and
+-   {{< wp "jbig2" >}} is a patent protected format from IBM and
     Mitsubishi. JBIG2 is designed for lossy or lossless encoding of
     'bilevel' (1-bit monochrome) images at moderately high resolution, and
     in particular scanned paper documents. In this domain it can be very
     efficient, offering compression ratios on the order of 100:1. JBIG2
     images can be included in PDF from version 1.4. It is very similar to
-    the JB2 compression scheme used in the [w:DjVu] file format, but JB2
+    the JB2 compression scheme used in the {{< wp "DjVu" >}} file format, but JB2
     is open source.
     -   [jbig2enc](https://github.com/agl/jbig2enc) (Apache License)
         is a _jbig2_ encoder. _Last commit April 2014_
@@ -437,7 +427,7 @@ An other common task is to crop pages to changes margins, see the
             ](http://www.fi.muni.cz/kd/events/cikhaj-2010-feb/slides/hatlapatka_recompression.pdf)
             by Radim Hatlapatka.
     -   [jbig2dec from ghostscript](http://www.ghostscript.com/jbig2dec.html)
-        (man [man:jbig2dec]),  can decode jbig2 to png or pbm.
+        (man {{< man "jbig2dec" >}}),  can decode jbig2 to png or pbm.
     -   [PDFs: JPEG vs PNG vs JBIG2
         ](http://ssdigit.nothingisreal.com/2010/03/pdfs-jpeg-vs-png-vs-jbig.html)
         by Tristan Miller.
@@ -474,7 +464,7 @@ An other common task is to crop pages to changes margins, see the
     by checking _Embed OpenDocument file_ in the export menu.  It
     allows you to export libreoofice writer documents and re-edit it
     in writer. For other pdf documents you can only open them in draw.
--   [Mupdf](#mupdf "internal reference")
+-   {{< iref "#mupdf" "Mupdf" >}}
     provides 2 commmand line tools.
 
     *mutool* is multipurpose tool which replace the previous *pdfshow*
@@ -523,7 +513,7 @@ An other common task is to crop pages to changes margins, see the
         ](http://blog.didierstevens.com/2008/04/29/pdf-let-me-count-the-ways/)
         Didier Stevens explains how basic features of the PDF language
         can be used to generate polymorphic variants of (malicious)
-        PDF documents. [w:polymorphic variants] are used by malicious
+        PDF documents. {{< wp "polymorphic variants" >}} are used by malicious
         programmers to produce polymorphic viruses that are not
         detected by their signature.
     -   [Malicious Documents – PDF Analysis in 5 steps
@@ -554,7 +544,7 @@ An other common task is to crop pages to changes margins, see the
     -   [pdfindexer](https://github.com/WolfgangFahl/pdfindexer) (Apache License)
         Index and search for keywords in PDF sources (files and URLs) using Apache
         Lucene and PDFBox, it ouputs an HTML result.
--   [w:pdfedit] (GPL) [pdfedit sourceforge project
+-   {{< wp "pdfedit" >}} (GPL) [pdfedit sourceforge project
     ](http://sourceforge.net/projects/pdfedit)
     is a low level tool that provides access to the internal structure
     of the PDF file. There si a [user documentation
@@ -564,7 +554,7 @@ An other common task is to crop pages to changes margins, see the
     but has been removed.
 -   [pdfjam](http://www2.warwick.ac.uk/fac/sci/statistics/staff/academic/firth/software/pdfjam)
     is a collection of shell scripts using
-    [pdfpages](#pdfpages "internal reference")
+    {{< iref "#pdfpages" "pdfpages" >}}
     they allow to rearrange and combine pages of a PDF document.
     A  drawback of pdfjam  is that any hyperlinks in the source PDF are lost.
     The provided script are:
@@ -641,7 +631,7 @@ An other common task is to crop pages to changes margins, see the
 -   [pdfsam _pdf split and merge_](http://www.pdfsam.org/pdfsam-basic/)
     (GPL) an open source java utility with a GUI to splt, merge, and
     rotate pdf files. It is in Debian, there is also a private source
-    commercial version. Like _pdftk_ it uses as backend [w:iText].
+    commercial version. Like _pdftk_ it uses as backend {{< wp "iText" >}}.
 -   [pdfsizeopt](https://github.com/pts/pdfsizeopt) is a python tool
     to optimize size of pdf files, aimed to pdf produced from TeX.
     [The installation instructions
@@ -696,7 +686,7 @@ An other common task is to crop pages to changes margins, see the
     easily.
 
 -   <a name="popler-utils>_poppler-utils_</a> from the
-    [Poppler library](#poppler "internal reference")
+    {{< iref "#poppler" "Poppler library" >}}
     contain the following command line utilities:
 
     -   pdfdetach -- lists or extracts embedded files (attachments)
@@ -717,10 +707,10 @@ An other common task is to crop pages to changes margins, see the
     It has a new fork   [pyPDF2](https://github.com/mstamy2/PyPDF2/)
     They allow working on a PDF document: extracting info, splitting, merging, cropping,
     encrypting and decrypting PDF files. _PyPDF_ and  _pyPDF2_ have
-    similar functionalities than [pdftk](#pdfk "internal reference")
+    similar functionalities than {{< iref "#pdfk" "pdftk" >}}
     but are pure python with no module dependency.<br/>
     _pyPDF_ is distinct from the nearly homophone
-    [pyfpdf](#pyfpdf "internal reference").
+    {{< iref "#pyfpdf" "pyfpdf" >}}.
     -   The [pyPDF Documentation](http://pybrary.net/pyPdf/pythondoc-pyPdf.pdf.html)
         is also usable for _pyPDF2_.
     -   [Pypi: pypdf2](https://pypi.python.org/pypi/PyPDF2).
@@ -760,35 +750,35 @@ An other common task is to crop pages to changes margins, see the
     which is part of ReportLab Toolkit transform a simple xml language
     for describing presentation slides, in pdf slides.
 -   Other graphic editors have pdf editing facilities, often after
-    conversion as [Scribus](#item_scribus "Internal reference"), or
-    [Inkscape](/node/20 "Internal reference").
+    conversion as {{< iref "#item_scribus" "Scribus" >}}, or
+    {{< iref "20" "Inkscape" >}}.
 -   [Search Pypi for pdf](http://pypi.python.org/pypi?%3Aaction=search&term=pdf&submit=search)
 
 ## PDF cropping tools {#pdf_crop}
 To crop margins on a pdf document you can use some all purposes tools as
-[pdfshuffler](#pdfshuffler "internal reference")  a graphical tool that
-uses [pypdf2](#pypdf "internal reference") and
-[k2pdfopt](#k2pdfopt "internal reference").
+{{< iref "#pdfshuffler" "pdfshuffler" >}}  a graphical tool that
+uses {{< iref "#pypdf" "pypdf2" >}} and
+{{< iref "#k2pdfopt" "k2pdfopt" >}}.
 
 Other crop specific tools are either standalone or works as user interfaces to
-[pdftk](#pdftk "internal reference"), or [pypdf2](#pypdf "internal reference"):
+{{< iref "#pdftk" "pdftk" >}}, or {{< iref "#pypdf" "pypdf2" >}}:
 
-[BRISS](#briss "internal reference") a java GUI,
-[pdfcrop python script](#pdfcrop-python  "internal reference") that
-uses [pypdf](#pypdf "internal reference") _2011_,
-[pdfcrop perl script](#pdfcrop-perl  "internal reference") that uses pdflatex,
-[pdfcrop2.sh](#pdfcrop-pdftk  "internal reference") using
-[pdftk](#pdftk "internal reference"), [pdfcropper](#pdfcropper "internal reference")
+{{< iref "#briss" "BRISS" >}} a java GUI,
+{{< iref "#pdfcrop" "pdfcrop python script" >}} that
+uses {{< iref "#pypdf" "pypdf" >}} _2011_,
+{{< iref "#pdfcrop" "pdfcrop perl script" >}} that uses pdflatex,
+{{< iref "#pdfcrop" "pdfcrop2.sh" >}} using
+{{< iref "#pdftk" "pdftk" >}}, {{< iref "#pdfcropper" "pdfcropper" >}}
 python script,
-[pdf-quench](#pdfquench "internal reference") a GUI that uses
-[pypdf2](#pypdf "internal reference").
+{{< iref "#pdfquench" "pdf-quench" >}} a GUI that uses
+{{< iref "#pypdf" "pypdf2" >}}.
 
 -   <a name="briss"></a>[BRISS](http://briss.sourceforge.net/) (GPL)
     is a a java cross-platform application with a GUI to crop pdf pages.
     -   |mobileread forum - BRISS thread
         ](https://www.mobileread.com/forums/showthread.php?t=83053)
 -   <a name="pdfcrop-python"></a>[pdfcrop (python)](https://github.com/pboehm/pdfcrop)
-        Is a python script that uses [pypdf](#pypdf "internal reference")
+        Is a python script that uses {{< iref "#pypdf" "pypdf" >}}
     to crop pdf pages. _last update 2011._
 -   <a name="pdfcrop-perl"></a>[pdfcrop (perl)](http://pdfcrop.sourceforge.net/)
     is a perl script from _texlive_
@@ -802,7 +792,7 @@ python script,
     from the
     [Torben Wiki](http://www.entorb.net/wickie/) page
     [Modifying PDFs](http://www.entorb.net/wickie/Modifying_PDFs)
-    uses [pdftk](#pdftk "internal reference") to crop pdf.
+    uses {{< iref "#pdftk" "pdftk" >}} to crop pdf.
     It should keep hyperlinks and not increase the size.
 -   <a name="pdfcropper"></a>[pdfcropper](https://github.com/edeposit/pdfcropper) (GPL)
     is a python script to crop pages. _last update 2014._
@@ -816,7 +806,7 @@ python script,
 
 
 # OCR
--   Wikipedia [w:Comparison of optical character recognition software]
+-   Wikipedia {{< wp "Comparison of optical character recognition software" >}}
 -   Andreas Gohr SplitBrain: [Linux OCR Software Comparison
     ](http://www.splitbrain.org/blog/2010-06/15-linux_ocr_software_comparison)
     compare abbyyocr, cuneiform, gocr, ocrad, tesseract in 2010.
@@ -829,7 +819,7 @@ python script,
 -   [Wikimedia Help: Scanning
     ](https://commons.wikimedia.org/wiki/Help:Scanning)
 
--   <a name="cuneiform"></a>[w:CuneiForm] (BSD)  (BSD License)
+-   <a name="cuneiform"></a>{{< wp "CuneiForm" >}} (BSD)  (BSD License)
     is an OCR program in C++ first developed by Cognitive Technologies then
     released as freeware in 2007.
     It recognizes any print font but not handwritten or decorative fonts .
@@ -837,7 +827,7 @@ python script,
     complicated tables.
     -   [Cuneiform is now hosted at launchpad](https://launchpad.net/cuneiform-linux/)
         and is in Debian non-free section.
--    <a name="gocr"></a>[w:GOCR] is an OCR
+-    <a name="gocr"></a>{{< wp "GOCR" >}} is an OCR
     program (GPL). It converts scanned images of text back to text
     files.Development go at at a slow pace since 2002.
     -   [GOCR Home](http://www-e.uni-magdeburg.de/jschulen/ocr/)
@@ -851,7 +841,7 @@ python script,
     The resulting document may be saved as a PDF, DjVu, multipage TIFF
     file, or single page image file.
 
-    [Tesseract OCR](#tesseract "internal reference")
+    {{< iref "#tesseract" "Tesseract OCR" >}}
     can be used to recognise text in the scans,
     and the output embedded in the PDF or DjVu.
 
@@ -867,9 +857,9 @@ python script,
     [The hOCR Embedded OCR Workflow and Output Format
     ](https://docs.google.com/document/d/1QQnIQtvdAC_8n92-LhwPcjtAUFwBlzE8EWnKAxlgVf0/preview#heading=h.77bd784474e5).
 
-    [Cuneiform](#cuneiform "internal reference"),
-    [OCRopus](#ocropus "internal reference"),
-    [Tesseract](#tesseract "internal reference")
+    {{< iref "#cuneiform" "Cuneiform" >}},
+    {{< iref "#ocropus" "OCRopus" >}},
+    {{< iref "#tesseract" "Tesseract" >}}
     can use the hOCR format.
 
     _hocr-tools_ is in Debian and includes the following command line
@@ -891,36 +881,36 @@ python script,
     with mild kde dependencies (kdelibs, libksane) which make it usable
     even if you don't have a full kde desktop.<br />
     Kooka is no longer present in KDE4, Kde now use kolourpaint and
-    KOffice applications also using _libksane_ or [Skanlite](#skanlite "internal reference").
--   [w:Ocrad]
+    KOffice applications also using _libksane_ or {{< iref "#skanlite" "Skanlite" >}}.
+-   {{< wp "Ocrad" >}}
     <a name="ocrad"></a>is an OCR
     program which read pbm (bitmap), pgm (greyscale) or ppm
     (color) image files and produces text in byte (8-bit) or UTF-8
     formats.
     Ocrad can be used as a stand-alone command-line application,
-    or as a back-end to  [OCRFeeder](#ocrfeeder "internal reference"),
-    [ocrdjvu](#ocrdjvu "internal reference"); it is also one backend
-    of [WeOCR server](#weocr "internal reference").
+    or as a back-end to  {{< iref "#ocrfeeder" "OCRFeeder" >}},
+    {{< iref "#ocrdjvu" "ocrdjvu" >}}; it is also one backend
+    of {{< iref "#weocr" "WeOCR server" >}}.
     -   [Ocrad Home](http://www.gnu.org/software/ocrad/ocrad.html) (GPL)
     -   [Ocrad Manual](http://www.gnu.org/software/ocrad/manual/ocrad_manual.html)
 -   <a name="ocrdjvu"></a>
     [ocrodjvu](http://jwilk.net/software/ocrodjvu) (GPL)
     is a wrapper for OCR systems, that allows you to perform OCR on
     DjVu files.
-    It can use [ocrad](#ocrad "internal reference"),
-    [gocr](#gocr "internal reference"),
-    [cuneiform](#cuneiform  "internal reference"),
-    or [tesseract](#tesseract  "internal reference").
+    It can use {{< iref "#ocrad" "ocrad" >}},
+    {{< iref "#gocr" "gocr" >}},
+    {{< iref "#cuneiform" "cuneiform" >}},
+    or {{< iref "#tesseract" "tesseract" >}}.
     It is in Debian.
 -   [Ocre](http://lem.eui.upm.es/ocre.html) (GPL) <a name="ocre"></a>
     OCR program that read PGM/PBM files. Ocre seems active (2013) but
     I have found very few documentation.
--   <a name="ocrfeeder"></a>[w:OCRFeeder] (GPL)
+-   <a name="ocrfeeder"></a>{{< wp "OCRFeeder" >}} (GPL)
     is the gnome GTK frontend to
-    [tesseract](#tesseract "internal reference"),
-    [ocrad](#ocrad "internal reference"),
-    [gocr](#gocr "internal reference"),
-    or [cuneiform](#cuneiform  "internal reference").
+    {{< iref "#tesseract" "tesseract" >}},
+    {{< iref "#ocrad" "ocrad" >}},
+    {{< iref "#gocr" "gocr" >}},
+    or {{< iref "#cuneiform" "cuneiform" >}}.
     It is a pyGTK program with heavy gnome dependencies.  It can
     import data from PDF or graphic files or grab images from the
     scanner device.  The results can be saved in HTML, OpenDocument,
@@ -935,9 +925,9 @@ python script,
     [Ocrivist](http://www.ocrivist.com/)
     is a front end to scan document and save them in DjVu or PDF
     formats. They can also be processed by
-    [Tesseract](#tesseract "internal reference") and saved in
-    [hOCR format](#hocr "internal reference").
--   <a name="ocropus"></a>[w:OCRopus] (Apache License 2)
+    {{< iref "#tesseract" "Tesseract" >}} and saved in
+    {{< iref "#hocr" "hOCR format" >}}.
+-   <a name="ocropus"></a>{{< wp "OCRopus" >}} (Apache License 2)
     is a document analysis and OCR system written previously in in
     C++, and now in Python with a [C++ text line recognizer clstm
     ](https://github.com/tmbdev/clstm). It is based on a
@@ -954,8 +944,8 @@ python script,
 -   <a name="pdfsandwich"></a>
     [pdfsandwich](http://www.tobias-elze.de/pdfsandwich/index.html)
     is a script which calls  convert _from ImageMagick_,
-    [unpaper](#unpaper "internal reference"), gs, and
-    [tesseract](#tesseract "internal reference")
+    {{< iref "#unpaper" "unpaper" >}}, gs, and
+    {{< iref "#tesseract" "tesseract" >}}
     to generates "sandwich" OCR pdf files, i.e. pdf files which
     contain  images and text from the OCR outpu added to each page
     invisibly _behind_ the images.
@@ -977,16 +967,16 @@ python script,
     ](https://github.com/tesseract-ocr/tesseract/wiki/3rdParty)
 
     Many frontends are referenced in this page:
-    [ocrfeeder](#ocrfeeder "internal reference"),
-    [gimagereader](#gimagereader "internal reference"),
-    [gocr](#gocr "internal reference"),
-    [gsscan2pdf](#gscan2pdf "internal reference"),
-    [PyPDFOCR](#pypdfocr "internal reference"),
-    [ocrdjvu](#ocrdjvu "internal reference"),
-    [OCRmyPDF](#ocrmypdf "internal reference"),
-    [OCRivist](#ocrivist "internal reference"),
-    [Tesseract-GUI](#tesseractgui "internal reference"),
-    [Yagf](#yagf "internal reference").
+    {{< iref "#ocrfeeder" "ocrfeeder" >}},
+    {{< iref "#gimagereader" "gimagereader" >}},
+    {{< iref "#gocr" "gocr" >}},
+    {{< iref "#gscan2pdf" "gsscan2pdf" >}},
+    {{< iref "#pypdfocr" "PyPDFOCR" >}},
+    {{< iref "#ocrdjvu" "ocrdjvu" >}},
+    {{< iref "#ocrmypdf" "OCRmyPDF" >}},
+    {{< iref "#ocrivist" "OCRivist" >}},
+    {{< iref "#tesseractgui" "Tesseract-GUI" >}},
+    {{< iref "#yagf" "Yagf" >}}.
 
     -   Tesseract documentation is available in the
         [Wiki](https://github.com/tesseract-ocr/tesseract/wiki).
@@ -1040,12 +1030,12 @@ python script,
 -  <a name="yagf"></a>
    [YAGF](http://symmetrica.net/cuneiform-linux/yagf-en.html)
    is a graphical interface for
-   [cuneiform](#cuneiform internalreference")and
-   [tesseract](#tesseract internalreference").  With YAGF you can scan
+   {{< iref "#cuneiform" "cuneiform" >}}and
+   {{< iref "#tesseract" "tesseract" >}}.  With YAGF you can scan
    images via XSane, import pages from PDF documents, perform images
    preprocessing and recognize texts using
-   [cuneiform](#cuneiform internalreference") or
-   [tesseract](#tesseract internalreference").
+   {{< iref "#cuneiform" "cuneiform" >}} or
+   {{< iref "#tesseract" "tesseract" >}}.
    Yagf is in Debian.
 
    -   [ArchWiki:Yagf](https://wiki.archlinux.org/index.php/YAGF).
@@ -1056,9 +1046,9 @@ python script,
     Reader/Recognition) systems that enables people to use character
     recognition over networks.
     -   The servers themselves use either
-        [gocr](#gocr "internal reference"),
-        [tesseract](#tesseract "internal reference"), or
-        [ocrad](#ocrad "internal reference")
+        {{< iref "#gocr" "gocr" >}},
+        {{< iref "#tesseract" "tesseract" >}}, or
+        {{< iref "#ocrad" "ocrad" >}}
     -   WeOCR servers can be found at
         [WeOCR Server List](http://weocr.ocrgrid.org/search.html).
     -   Other servers can be found at
@@ -1086,7 +1076,7 @@ python script,
 -   [VueScan](http://www.hamrick.com/) is a commercial scanning
     software with OCR for windows, MacOsX and Linux. There are free
     Linux download.
--   [w:ABBY] has an OCR server, with [ocr4linux: a linux client
+-   {{< wp "ABBY" >}} has an OCR server, with [ocr4linux: a linux client
     ](http://www.ocr4linux.com/)
     licences are a one time payment life license: 149€/12000 pages/year.
 

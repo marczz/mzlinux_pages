@@ -1,21 +1,15 @@
-<!--
-.. description:
-.. date: 2015-06-09
-.. slug: rss_readers
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: RSS Readers
--->
+---
+title: RSS Readers
+---
 
-[TOC]
+{{% toc /%}}
 
 # RSS Formats {#rss_formats}
 
 -   The main formats for syndication are
-    [w:RSS],
-    [w:OPML],
-    [w:Atom%28standard%29|Atom],
+    {{< wp "RSS" >}},
+    {{< wp "OPML" >}},
+    {{< wp "Atom%28standard%29"  "Atom" >}},
     the last article includes a comparison between RSS 2.0 and Atom.
 -   [RSS 2.0 Specification](http://blogs.law.harvard.edu/tech/rss)
 -   [RSS Tutorial](http://www.mnot.net/rss/tutorial/)
@@ -34,8 +28,8 @@
 
 
 # Rss readers
--   [w:News Aggregator] are  client software to read syndicated contents.
--   Wikipedia [w:News Aggregator], [w:Comparison of feed aggregators],
+-   {{< wp "News Aggregator" >}} are  client software to read syndicated contents.
+-   Wikipedia {{< wp "News Aggregator" >}}, {{< wp "Comparison of feed aggregators" >}},
     [w:List of feed aggregators.
 
 ## Online {#online_aggregator}
@@ -45,7 +39,7 @@ begining of July 2013. It can be replaced by  many other
 [free or open source online rss readers
 ](http://alternativeto.net/software/google-reader/?license=free&platform=online)
 
-[w:Firefox] can read RSS or atom flux with the [w:Live bookmarks] feature. It does not have all all
+{{< wp "Firefox" >}} can read RSS or atom flux with the {{< wp "Live bookmarks" >}} feature. It does not have all all
 the features of an aggregator, but  could be an easy way to always
 access your feeds.
 
@@ -60,7 +54,7 @@ access your feeds.
         ](https://play.google.com/store/apps/details?id=com.commafeed.newspluscommafeedreader)
         (697K) + [News+](https://play.google.com/store/apps/details?id=com.noinnion.android.newsplus).
 
--    <a name="feedly"></a>[w:Feedly]
+-    <a name="feedly"></a>{{< wp "Feedly" >}}
     is an online news aggregator. It is the most popular
     since Google close down Google Reader.
     [Feedly website](http://cloud.feedly.com/).
@@ -92,12 +86,12 @@ access your feeds.
     is an open source web newsreader,
     [GitHub: NewsBlur](https://github.com/samuelclay/NewsBlur)
     is a python/django application needing mysql/postgresql and
-    MongoDB.[w:NewsBlur|Wikipedia: NewsBlur].<br>
+    MongoDB.{{< wp "NewsBlur"  "Wikipedia: NewsBlur" >}}.<br>
     The [NewsBlur hosted newsreader](http://www.newsblur.com/) allow
     free access limited to 64 sites. There is a free android
     application for android > 3.0 and some unofficial ones.
     It can also be synchronized with
-    [NewsBeuter](#newsbeuter  "internal reference").
+    {{< iref "#newsbeuter" "NewsBeuter" >}}.
 -   [Tiny Tiny RSS](http://tt-rss.org/redmine/projects/tt-rss/wiki) (GPL)
     <a name="tinytinyrss"></a>
     is a web-based  PHP and Ajax news feed (RSS/Atom) reader and
@@ -137,20 +131,20 @@ _I mention only some light rss readers, a lot of desktop integrated
 readers are depending of a full kde or gnome installation,
 and I never had the opportunity to use them.
 
--   [w:Canto_(news_aggregator)|Canto] - [Canto Home](http://codezen.org/canto/) (GPL)
+-   {{< wp "Canto_(news_aggregator)"  "Canto" >}} - [Canto Home](http://codezen.org/canto/) (GPL)
     is a terminal based aggregator for online news written in python,
     it is packaged in all main distributions.<br />
     The new version is [Canto-ng](http://codezen.org/canto-ng/).
     _not yet packaged in Debian_
 -   [Liferea](http://liferea.sourceforge.net/) (GPL) an  aggregator written in C + GTK2.
-    It synchronizes with TheOldReader  and with [TinyTinyRSS](#tinytinyrss "internal reference"),
+    It synchronizes with TheOldReader  and with {{< iref "#tinytinyrss" "TinyTinyRSS" >}},
     [Inoreader](http://www.inoreader.com/), [Reedah](https://www.reedah.com/)
 -   [newsbeuter](http://www.newsbeuter.org/) (MIT) <a name="newsbeuter"></a>
     text mode rss feed reader with podcast support written in ncurses. packaged in Debian.
     -   [newsbeuter manual](http://www.newsbeuter.org/doc/newsbeuter.html).
     -   NewsBeuter can export opml and synchronize with OldReader,
-        [NewsBlur](#newsblur  "internal reference"),
-        and  [TinyTinyRss](#tinytinyrss  "internal reference").
+        {{< iref "#newsblur" "NewsBlur" >}},
+        and  {{< iref "#tinytinyrss" "TinyTinyRss" >}}.
 -   <a name="newsticker"></a>
     [NewsTicker](http://www.emacswiki.org/emacs/NewsTicker) (GPL)
     is an rss/atom reader for emacs.
@@ -207,18 +201,18 @@ and I never had the opportunity to use them.
 
 # Feed Parsers notes
 
-## [newsbeuter](#newsbeuter "local reference")
--   local [ldoc:newsbeuter/newsbeuter.html|newsbeuter manual]
+## {{< iref "#newsbeuter" "newsbeuter" >}}
+-   local {{< ldoc "newsbeuter/newsbeuter.html"  "newsbeuter manual" >}}
 -   my config is under `~/.config/newsbeuter/config`
 -   The loaded urls are under `~/.config/newsbeuter/urls`.
 
 ## online feed readers
--   I use [feedly](#feedly "local reference") and sign in with google
+-   I use {{< iref "#feedly" "feedly" >}} and sign in with google
     account.
--   Also [NewsBlur](#newsblur  "local reference")
--   tested also [commafeed](#commafeed "local reference").
+-   Also {{< iref "#newsblur" "NewsBlur" >}}
+-   tested also {{< iref "#commafeed" "commafeed" >}}.
 -   for emacs
-    [NewsTicker](#newsticker "local reference")
+    {{< iref "#newsticker" "NewsTicker" >}}
     archive of news are in `~.emacs.d/newsticker/feeds/`
     -   feeds are configured in variable `newsticker-url-list`
         that is set in my config `my-newsticker.el`.

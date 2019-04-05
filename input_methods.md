@@ -1,23 +1,17 @@
-<!--
-.. description:
-.. date: 2017-02-05
-.. slug: input_methods
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Input Methods
--->
+---
+title: Input Methods
+---
 
-[TOC]
+{{% toc /%}}
 
 See also
-[Localisation (I18N)](/node/i18n "internal reference")
+{{< iref "i18n" "Localisation (I18N)" >}}
 
 # References
--   Wikipedia: [w:Unicode input], [w:Input Method],
-    [w:List of input methods for Unix platforms],
-    [w:Intelligent Input Bus], [w:SCIM], [w:Uim],
-    [w:Help%3AMultilingual%5Fsupport%5F%28Indic%29#Linux|Linux Indic Languages support],
+-   Wikipedia: {{< wp "Unicode input" >}}, {{< wp "Input Method" >}},
+    {{< wp "List of input methods for Unix platforms" >}},
+    {{< wp "Intelligent Input Bus" >}}, {{< wp "SCIM" >}}, {{< wp "Uim" >}},
+    {{< wp "Help%3AMultilingual%5Fsupport%5F%28Indic%29#Linux"  "Linux Indic Languages support" >}},
 -   [Linux Internationalization HOWTO](http://01101001.net/i18n.php)
     by David Oftedal deals with input methods.
 -   [Debian Refernce: I18N and L10N
@@ -56,7 +50,7 @@ Among them:
     ](http://tibetonline.tv/tibetan/tcrckbd.pdf).
 -   bo-ewts Tibetan input method based on [EWTS version 2.0
     ](http://www.thlib.org/reference/transliteration/#!essay=/thl/ewts).
--   bo-wylie: Tibetan input method based on the [w:Wylie]
+-   bo-wylie: Tibetan input method based on the {{< wp "Wylie" >}}
     transliteration.
 -   fr-azerty: Simulating Azerty keyboard on English keyboard.
 -   latn-post: Latin script with postfix modifiers.
@@ -69,11 +63,11 @@ Among them:
 -   unicode: Unicode BMP characters using hexadigits.
     with `CTRL-U` + __hexadecimal sequence_, you can rather use the
     above mentioned
-    [ISO 14655 input method](#iso-14655 "internal reference")
+    {{< iref "#iso" "ISO 14655 input method" >}}
 
 # XKB {#xkb}
 
--   Wikipedia: [w:X keyboard extension]
+-   Wikipedia: {{< wp "X keyboard extension" >}}
 -   [Xorg - X Keyboard Extension](http://www.x.org/wiki/XKB/)
 -   [The XKB Configuration Guide
     ](http://www.x.org/releases/current/doc/xorg-docs/input/XKB-Config.html)
@@ -130,19 +124,19 @@ Among them:
     for Xorg and Wayland. With a section on using setxkbmap.
 
 ### Configuration notes
--   The setxkbmap [man:setxkbmap(1)] command configures the keyboard to
+-   The setxkbmap {{< man "setxkbmap(1)" >}} command configures the keyboard to
     use the layout determined by the parameters
 
         setxkbmap [...](option)  [[variant [xkboption ...](layout) ] ]
 
--   The xkbcomp [man:xkbcomp(1)] keymap compiler converts a description
+-   The xkbcomp {{< man "xkbcomp(1)" >}} keymap compiler converts a description
     of an XKB keymap into a compiled keymap file or C header files or
     XKB source files.
--   xkbsel - select keyboard layout [man:xkbsel(1)]
+-   xkbsel - select keyboard layout {{< man "xkbsel(1)" >}}
 
         xkbsel [-v] [--debug] [-s] MAP
 
--   xkbsel-aw [man:xkbsel-aw(1)] is a simple GUI for selecting the
+-   xkbsel-aw {{< man "xkbsel-aw(1)" >}} is a simple GUI for selecting the
     keyboards and indicating the current selection.
 
 ## Compose key
@@ -191,8 +185,7 @@ System. It predates IBus, SCIM, uim and IIIMF.
         -   [How to Create a Custom Input Method Editor in Linux
             ](http://www.studymongolian.net/technical/how-to-create-linux-input-method-editor/)
             creates a table method for Mongolian IPA.
-    -   See the page [ibus-table LaTeX
-        ](/node/ibus_table_latex "internal reference")
+    -   See the page {{< iref "ibus_table_latex" "ibus-table LaTeX" >}}
     -   An other multipurpose method is _table compose_ that input
         special letter by compose letter and diacritical mark.
     -   There is also Emoji and IPA-X-SAMPA.
@@ -233,9 +226,9 @@ input through _uim-fep_, Emacs with _uim.el_.
 
 
 # Keyboard Layout {#keyboard_layout}
--   Wikipedia [w:Keyboard layout], [w:QWERTY], [w:AZERTY],
-    [w:Dvorak_Simplified_Keyboard|DVORAK],
-    [w:Dvorak_Simplified_Keyboard#One-handed_versions|DVORAK One Handed]
+-   Wikipedia {{< wp "Keyboard layout" >}}, {{< wp "QWERTY" >}}, {{< wp "AZERTY" >}},
+    {{< wp "Dvorak_Simplified_Keyboard"  "DVORAK" >}},
+    {{< wp "Dvorak_Simplified_Keyboard#One-handed_versions"  "DVORAK One Handed" >}}
 -   Keyboard images: [QWERTY
     ](https://upload.wikimedia.org/wikipedia/commons/3/3a/Qwerty.svg),
     [AZERTY
@@ -265,7 +258,7 @@ input through _uim-fep_, Emacs with _uim.el_.
     ](http://www.maketecheasier.com/setup-virtual-keyboard-linux/)
 
 ##  Tibetan keyboard layout {#tibetan_keyboard}
--   Wikipedia: [w:Dzongkha_keyboard_layout].
+-   Wikipedia: {{< wp "Dzongkha_keyboard_layout" >}}.
     Images:
     -   [Dzongkha - regular
         ](https://upload.wikimedia.org/wikipedia/commons/c/c4/Dzongkha_Keyboard_layout_Main.svg),
@@ -326,7 +319,7 @@ input through _uim-fep_, Emacs with _uim.el_.
     is a tool to send characters to text applications by clicking
     various buttons. The command input-pad is a standalone application
     and ibus-input-pad provides input-pad on
-    [IBus input method](#ibus "internal reference").
+    {{< iref "#ibus" "IBus input method" >}}.
 -   [Florence](http://florence.sourceforge.net) is a virtual
     keyboard,
     [Florence documentation](http://florence.sourceforge.net/english/),

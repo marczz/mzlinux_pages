@@ -1,19 +1,14 @@
-<!--
-.. description:
-.. date: 2018-02-16
-.. slug: manpages
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Man Pages
--->
+---
+title: Man Pages
+---
+
 
 # Man pages format
 
--   [w:Man page] are written using [w:Troff] and [w:Troff macros]
-    or the Gnu [w:Groff_(software)|Groff] with macro packages.
+-   {{< wp "Man page" >}} are written using {{< wp "Troff" >}} and {{< wp "Troff macros" >}}
+    or the Gnu {{< wp "Groff_(software)"  "Groff" >}} with macro packages.
     Groff is used in Linux and FreeBSD, and OpenBSD replaced groff
-    with [w:mandoc].
+    with {{< wp "mandoc" >}}.
 -   [Linux Man Page Howto
     ](http://www.tldp.org/HOWTO/Man-Page/index.html) an old HOWTO
     _2002_, but still usefull, as man page format is very stable.
@@ -22,7 +17,7 @@
     is a good basic example of man page.
 -   [troff.org](http://www.troff.org/)
 -   [Gnu Groff](https://www.gnu.org/software/groff/groff.html)
-    is the gnu implementation of troff. [man:groff|groff(1) man page].
+    is the gnu implementation of troff. {{< man "groff"  "groff(1) man page" >}}.
 -   [Richard Stevens](http://www.kohala.com/start/)' [Troff Resources
     ](http://www.kohala.com/start/troff/troff.html).
 -   [mandoc](https://mdocml.bsd.lv/) (BSD License)
@@ -33,7 +28,7 @@
     with *mdoc* input and not with *man* input.
 -   [Guide for writing UNIX manuals in the mdoc language
     ](http://manpages.bsd.lv/mdoc.html)
--   Manual pages [man:man],
+-   Manual pages {{< man "man" >}},
     [mdoc(7)](https://mdocml.bsd.lv/man/mdoc.7.html),
     [mdoc extended documentation](https://mdocml.bsd.lv/mdoc/),
     [mandoc(1)](http://man.openbsd.org/mandoc.1)
@@ -43,7 +38,7 @@
     PolyglotMan is a *reverse man*. It takes man pages sources in
     [tn]roff source and produce  ASCII, section
     headers-only, HTML, LaTeX2e, RTF, Perl 5 POD. It is in Debian.
-    *See also above [mandoc](#mandoc "internal reference")
+    *See also above {{< iref "#mandoc" "mandoc" >}}
     which can output markdown from mdoc.*
     -   [rman manual](http://polyglotman.sourceforge.net/rman.html)
 -   [debiman](https://github.com/Debian/debiman)
@@ -69,7 +64,7 @@
 -   [Gnome help system
     ](https://help.gnome.org/admin/system-admin-guide/2.32/help-1.html.en)
     uses [Yelp](https://wiki.gnome.org/Apps/Yelp) with
-    [w:docbook] or [w:Mallard_(documentation)|Mallard].
+    {{< wp "docbook" >}} or {{< wp "Mallard_(documentation)"  "Mallard" >}}.
 -   QT use [QT Help](http://doc.qt.io/qt-4.8/qthelp-framework.html).
 
 
@@ -172,31 +167,31 @@ The sections are:
     generate *roff* input from POD source.
 -   DocBook XML can be processed to man pages with an xml
     processor. We can use the *xmlto* front-end. See the
-    [Xml Section](/node/data_exchange#xml "internal reference").
+    {{< iref "data_exchange#xml" "Xml Section" >}}.
 
 
 ## Markdown
--   [lowdown](/node/markdown#lowdown "internal reference")
+-   {{< iref "markdown#lowdown" "lowdown" >}}
     ISC Licence) is a C markdown processor that process markdown to
     troff.
 -   [go-md2man](https://github.com/cpuguy83/go-md2man)
     is a go language using *blackfriday* to process markdown into
     man pages. It is in Debian.
--   [lunamark](/node/markdown#lunamark) is a lua converter to many
+-   {{< iref "markdown#lunamark" "lunamark" >}} is a lua converter to many
     formats including groff.
 -   [marked-man](https://github.com/kapouer/ronnjs) (BSD License)
     uses the javascript converter
-    [marked](/node/markdown#marked "internal reference")
+    {{< iref "markdown#marked" "marked" >}}
     to convert markdown to roff.
     The Debian package is *node-marked-man*.
--   [pandoc](/node/markdown#pandoc "internal reference") allow to
+-   {{< iref "markdown#pandoc" "pandoc" >}} allow to
     convert fromall the input formats (Markdown, CommonMark, Textile,
     reStructuredText, HTML, (subset of) LaTeX, MediaWiki, TWiki,
     Haddock, OPML, Org-mode, DocBook, txt2tags, Word docx) to troff
     man format.
 -   [remark-man](https://github.com/remarkjs/remark-man)
     compile markdown to man using the javascript translator
-    [remark](/node/markdown#remark  "internal reference").
+    {{< iref "markdown#remark" "remark" >}}.
 -   [Ronn](https://github.com/rtomayko/ronn) (MIT License)
     is a ruby application that uses a markdown and
     [additional man pages constructs
@@ -205,20 +200,20 @@ The sections are:
 
 
 ## ReST
-See also the [ReST page](/node/rest "internal reference")
+See also the {{< iref "rest" "ReST page" >}}
 
 -   [rst2man
     ](http://docutils.sourceforge.net/sandbox/manpage-writer/rst2man.txt)
     is the standard [ReST tool
     ](ttp://svn.berlios.de/viewvc/docutils/trunk/docutils/tools/)
     to produce manpages.
--   [Sphinx](/node/rest#sphinx "internal reference")
+-   {{< iref "rest#sphinx" "Sphinx" >}}
     has a manual page builder.
 
 ## Asciidoc
-See also the [Asciidoc page](/node/asciidoc "internal reference")
+See also the {{< iref "asciidoc" "Asciidoc page" >}}
 
-[Asciidoc](/node/asciidoc "internal reference")
+{{< iref "asciidoc" "Asciidoc" >}}
 can generate man pages, there are
 [examples](http://www.methods.co.nz/asciidoc/#_overview_and_examples)
 in the documentation. The [asciidoc(1) manual page

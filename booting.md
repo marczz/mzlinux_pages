@@ -1,14 +1,8 @@
-<!--
-.. description:
-.. date: 2014-09-07
-.. slug: booting
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Booting
--->
+---
+title: Booting
+---
 
-[TOC]
+{{% toc /%}}
 
 # Boot Process
 -  [Debian reference: The system initialization
@@ -24,9 +18,9 @@
   -  [Debian Wiki: LSBInitScripts](http://wiki.debian.org/LSBInitScripts)
 
 # Hardware interface
--   [w:Unified Extensible Firmware Interface] (UEFI)
-    is a replacement for the [w:BIOS] firmware interface,
--   [w:Intelligent Platform Management Interface] or _IPMI_
+-   {{< wp "Unified Extensible Firmware Interface" >}} (UEFI)
+    is a replacement for the {{< wp "BIOS" >}} firmware interface,
+-   {{< wp "Intelligent Platform Management Interface" >}} or _IPMI_
     provides management and monitoring capabilities independent of the
     firmware (BIOS or UEFI).
     -   [comparison of ipmitool, ipmiutil, freeipmi, OpenIPMI
@@ -38,8 +32,8 @@
     ](https://wiki.archlinux.org/index.php/Unified_Extensible_Firmware_Interface)
 
 # Grub
-[w: GNU GRUB] is a Multiboot
-[w:Booting#Boot_loader|boot loader]
+{{< wp " GNU GRUB" >}} is a Multiboot
+{{< wp "Booting#Boot_loader"  "boot loader" >}}
 GRUB2 has support for LVM and RAID.
 
 The new generation of GRUB is _version 2_
@@ -59,14 +53,14 @@ Debian Lenny) _the switch to v2 began in 2007_.
     restore an unusable grub configuration.
 
 ## Other bootloaders
--   Wikipedia [w:Booting#Boot_loader|boot loader], [w:Comparison of boot loaders],
-    [w:Live USB]
--   [w:LILO_(boot_loader)|LILO] was a discontinued boot loader for Linux.
+-   Wikipedia {{< wp "Booting#Boot_loader"  "boot loader" >}}, {{< wp "Comparison of boot loaders" >}},
+    {{< wp "Live USB" >}}
+-   {{< wp "LILO_(boot_loader)"  "LILO" >}} was a discontinued boot loader for Linux.
 
 ### Syslinux
-[w:Syslinux] is used for booting from FAT,or
+{{< wp "Syslinux" >}} is used for booting from FAT,or
 as __isolinux__ from CD-ROM ISO 9660, or as __pxelinux__ from network using
-[Pre-boot eXecution Environment (PXE)](/node/network_boot "internal reference"),
+{{< iref "network_boot" "Pre-boot eXecution Environment (PXE)" >}},
 or as __extlinux__ from ext2/3fs _but not ext4_.
 
 -   [SysLinux Wiki](https://www.syslinux.org/wiki/)
@@ -74,7 +68,7 @@ or as __extlinux__ from ext2/3fs _but not ext4_.
 -   [Debian Wiki: Syslinux](https://wiki.debian.org/Syslinux)
 
 ## U-Boot
--   [w:Das_U-Boot|U-Boot or Das_U-Boot] is a boot loader for ARM, PowerPC, MIPS
+-   {{< wp "Das_U-Boot"  "U-Boot or Das_U-Boot" >}} is a boot loader for ARM, PowerPC, MIPS
 -   [DENX U-Boot Home Page](http://www.denx.de/wiki/U-Boot)
 -   [U-Boot Manual](http://www.denx.de/wiki/DULG/Manual)
 -   [Introduction to Das U-Boot, the universal open source bootloader
@@ -82,7 +76,7 @@ or as __extlinux__ from ext2/3fs _but not ext4_.
     by Curt Brune.
 
 # Booting from USB
--   Wikipedia : [w:Live USB]
+-   Wikipedia : {{< wp "Live USB" >}}
 -   [Debian Wiki: Boot Usb](https://wiki.debian.org/BootUsb)
 -   [pendrivelinux.com: Boot and run Linux from a USB flash memory stick
     ](https://www.pendrivelinux.com/)
@@ -101,7 +95,7 @@ or as __extlinux__ from ext2/3fs _but not ext4_.
     ](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Power_Management_Guide/)
 -   [Fedora 20 Power Management Guide
     ](https://docs.fedoraproject.org/en-US/Fedora/20/html/Power_Management_Guide/)
--   [man:rtcwake] allow to suspend and wake up at a specified time
+-   {{< man "rtcwake" >}} allow to suspend and wake up at a specified time
     you use it like this:
 
         $ rtcwake -m mem --date +30min
@@ -218,7 +212,7 @@ or as __extlinux__ from ext2/3fs _but not ext4_.
 
 ## /dev/console
 -   For post booting configuration of the linux console terminal go to
-    [Console configuration](/node/console "Internal reference")
+    {{< iref "console" "Console configuration" >}}
 -   At boot the console is set by default to `/dev/tty0` but can be
     changed by setting *optionally multiple* console device in a kernel
     boot option `console={device,options }*`.
@@ -228,7 +222,7 @@ or as __extlinux__ from ext2/3fs _but not ext4_.
     [Linux Serial Console HOWTO](http://www.vanemery.com/Linux/Serial/serial-console.html)
     by Van Emery, [Remote Serial Console HOWTO](http://www.faqs.org/docs/Linux-HOWTO/Remote-Serial-Console-HOWTO.html) by Glen Turner _very detailled_,
     [Ubuntu Help: Serial Console Howto](https://help.ubuntu.com/community/SerialConsoleHowto).
--   [w:VESA_BIOS_Extensions|Wikipedia: VESA BIOS Extensions]
+-   {{< wp "VESA_BIOS_Extensions"  "Wikipedia: VESA BIOS Extensions" >}}
     gives the defined vesa modes on a
     console. To change the boot ves mode append to the kernel command
     line `vga=xxx`, where  _&lt;xxxx&gt;_ is the linux mode number.
@@ -266,7 +260,7 @@ resolution without reinitializing the graphics card/driver.
     [Kernel mode setting, Forcing Modes - ArchWiki
     ](https://wiki.archlinux.org/index.php/Kernel_mode_setting#Forcing_modes).
 
-The [Kmscon terminal emulator](/node/console#kmscon "internal reference") is based on
+The {{< iref "console#kmscon" "Kmscon terminal emulator" >}} is based on
 KMS but don't require it.
 
 <!-- Local Variables: -->

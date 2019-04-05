@@ -1,14 +1,8 @@
-<!--
-.. description:
-.. date: 2015-06-12
-.. slug: rest
-.. tags:
-.. link:
-.. book: linux
-.. title: reStructuredText
--->
+---
+title: reStructuredText
+---
 
-[TOC]
+{{% toc /%}}
 
 # References
 -   <a name="docutils"></a>[Docutils
@@ -48,15 +42,15 @@
     xt, code, image, interative Python sessions and video.
 
 # Rest conversion
-Look at the [static sites generators](/node/static-site "internal reference")
+Look at the {{< iref "static" "static sites generators" >}}
 for static sites generators using ReSTructured text:
-[Gollum-Site](/node/static-site#gollum "internal reference"),
-[Handcrank](/node/static-site#handkrank "internal reference"),
-[Hyde](/node/static-site#hyde "internal reference"),
-[Jekyll](/node/static-site#jekyll "internal reference"),
-[Pelican](/node/static-site#pelican "internal reference"),
-[Soho](/node/static-site#soho "internal reference"),
-[Wok](/node/static-site#wok "internal reference"),
+{{< iref "static" "Gollum-Site" >}},
+{{< iref "static" "Handcrank" >}},
+{{< iref "static" "Hyde" >}},
+{{< iref "static" "Jekyll" >}},
+{{< iref "static" "Pelican" >}},
+{{< iref "static" "Soho" >}},
+{{< iref "static" "Wok" >}},
 
 -   [Docutils](http://docutils.sourceforge.net/index.html) contains
     a basic pack of converters from ReST  in the [tool section
@@ -108,7 +102,7 @@ for static sites generators using ReSTructured text:
 -   pandoc can be used also to
     [produce slide shows
     ](http://johnmacfarlane.net/pandoc/README.html#producing-html-slide-shows-with-pandoc)
-    with [S5 or Slidy](/node/html#slidy "internal reference").
+    with {{< iref "html#slidy" "S5 or Slidy" >}}.
     (available from markdown, reStructuredText, (subsets of) HTML, and LaTeX)
 -   [rst2s5](http://docutils.sourceforge.net/docs/user/slide-shows.html)
     generates S5 presentations from ReStructuredText.
@@ -138,7 +132,7 @@ formats, HtmlHelp, TexInfo, Epub, man page, LaTeX
     ](https://doughellmann.com/blog/2009/02/02/writing-technical-documentation-with-sphinx-paver-and-cog/),
     he also has done a tutorial for [defining custom roles in Sphinx
     ](https://doughellmann.com/blog/2010/05/09/defining-custom-roles-in-sphinx/)
--   [Epydoc](/node/324#Epydoc "internal link") can use restructured text, it adds
+-   {{< iref "324#Epydoc" "Epydoc" >}} can use restructured text, it adds
     [epydoc fields](http://epydoc.sourceforge.net/manual-fields.html) and some
     [extension to rst language](http://epydoc.sourceforge.net/manual-othermarkup.html#restructuredtext).
 -   [Read the Doc](http://read-the-docs.readthedocs.org/en/latest/index.html)

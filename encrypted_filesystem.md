@@ -1,28 +1,22 @@
-<!--
-.. description:
-.. date: 2015-08-29
-.. slug: encrypted_filesystems
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Encrypted File Systems
--->
+---
+title: Encrypted File Systems
+---
 
-[TOC]
+{{% toc /%}}
 
 See also the companion pages on
-[filesystems](/node/filesystems "internal reference"),
-[network filesystems](/node/network_filesystems "internal reference").
+{{< iref "filesystems" "filesystems" >}},
+{{< iref "network_filesystems" "network filesystems" >}}.
 
 And also other reference on encryption:
-[Encryption](/node/encrypt "internal reference"),
-[Authentication](/node/authentication "internal reference"),
-[Security](/node/security "internal reference").
+{{< iref "encrypt" "Encryption" >}},
+{{< iref "authentication" "Authentication" >}},
+{{< iref "security" "Security" >}}.
 
 ----
 
 # General References
--   Wikipedia [w:Comparison of disk encryption software].
+-   Wikipedia {{< wp "Comparison of disk encryption software" >}}.
 -   [ArchWiki: Disk Encryption
     ](https://wiki.archlinux.org/index.php/Disk_Encryption)
     includes a very good
@@ -69,7 +63,7 @@ And also other reference on encryption:
     [Cryptsetup and LUKS - open-source disk encryption
     ](https://gitlab.com/cryptsetup/cryptsetup)
     is the Luks Home page
--   Wikipedia  [w:dm-crypt]
+-   Wikipedia  {{< wp "dm-crypt" >}}
 -   [Luks FAQ
     ](https://gitlab.com/cryptsetup/cryptsetup/wikis/FrequentlyAskedQuestions)
 -   [dm-crypt git repository
@@ -107,7 +101,7 @@ And also other reference on encryption:
 # Encfs {#encfs}
 
 As encfs is built on the top of Fuse look also at the
-[Fuse section](/node/virtualFS "internal reeference")
+{{< iref "virtualFS" "Fuse section" >}}
 
 -   [EncFS Encrypted Filesystem](https://vgough.github.io/encfs/)(GPL) uses
     the FUSE library and Linux kernel module to provide the filesystem
@@ -118,11 +112,11 @@ As encfs is built on the top of Fuse look also at the
     ](https://sites.google.com/a/arg0.net/www/encfs)
 -   [EncFS Manpage
     ](https://github.com/vgough/encfs/blob/master/encfs/encfs.pod)
--   Wikipedia: [w:Encfs]
+-   Wikipedia: {{< wp "Encfs" >}}
 -   [ArchWiki: EncFS](https://wiki.archlinux.org/index.php/EncFS)
     is a detailled article that
     includes a comparison with
-    [Ecryptfs](#ecryptfs "internal reference"), which stand that
+    {{< iref "#ecryptfs" "Ecryptfs" >}}, which stand that
     _EncFS is definetely the simplest software
     if you want to try disk encryption on Linux_
 -   [Gentoo Wiki: encfs](https://wiki.gentoo.org/wiki/Encfs)
@@ -180,8 +174,8 @@ Development on TrueCrypt is discontinued since May 2014.
 Alternatives are dm-crypt or forks of Truecrypt like _tcplay_,
 _zuluplay_, _Veracrypt_  see the also alternatives in Archlinux Wiki.
 
--   Wikipedia: [w:TrueCrypt]
--   Wikipedia: [w:BitLocker] is the official replacement of Truecrypt
+-   Wikipedia: {{< wp "TrueCrypt" >}}
+-   Wikipedia: {{< wp "BitLocker" >}} is the official replacement of Truecrypt
     on windows developped by microsoft.
 -   [TrueCrypt Homepage](http://www.truecrypt.org/)
 -   [ArchWiki: TrueCrypt](https://wiki.archlinux.org/index.php/TrueCrypt)
@@ -191,14 +185,14 @@ _zuluplay_, _Veracrypt_  see the also alternatives in Archlinux Wiki.
 -   [zuluplay](https://github.com/mhogomchungu/zuluplay)
     is a fork of tcplay that support VeraCrypt volumes.
 -   [ArchLinux: tcplay](https://wiki.archlinux.org/index.php/Tcplay)
--   [w:VeraCrypt] is a fork and continuation of Truecrypt it supports
-    [w:VeraCrypt#Plausible_deniability|Plausible deniability].
+-   {{< wp "VeraCrypt" >}} is a fork and continuation of Truecrypt it supports
+    {{< wp "VeraCrypt#Plausible_deniability"  "Plausible deniability" >}}.
 
 Miscellaneous
 :
 
 -   [Elettra](http://www.winstonsmith.info/julia/elettra/)
-    provide a [w:deniable encryption] as introduced in
+    provide a {{< wp "deniable encryption" >}} as introduced in
     [phrack issue 65](http://www.phrack.org/issues.html?issue=65)
 
 # Cryfs

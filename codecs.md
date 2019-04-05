@@ -1,17 +1,10 @@
-<!--
-.. description:
-.. date: 2015-04-08
-.. slug: codecs
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Media Codecs
--->
+---
+title: Media Codecs
+---
 
-[TOC]
+{{% toc /%}}
 
-
-A [w:codec] allow to encode/decode some audio or video analog audio
+A {{< wp "codec" >}} allow to encode/decode some audio or video analog audio
 signals into digital signals for transmission and storage.
 
 # Digital Signal Processing (DSP)
@@ -48,10 +41,10 @@ signals into digital signals for transmission and storage.
     [Video and Audio Compression
     ](http://www.cs.cf.ac.uk/Dave/Multimedia/node200.html#SECTION04200000000000000000)
 -   Wikipedia pages:
-    [w:Audio file format],
+    {{< wp "Audio file format" >}},
     [Audio\_Codec](http://en.wikipedia.org/wiki/Audio_Codec),
     [List\_of\_odecs](http://en.wikipedia.org/wiki/List_of_codecs),
-    [w:List of open-source codecs],
+    {{< wp "List of open-source codecs" >}},
     [Audio\_data\_compression](http://en.wikipedia.org/wiki/Audio_data_compression),
     [x:Transcoding]
 -   [ArchWiki: Codecs](https://wiki.archlinux.org/index.php/Codecs) is
@@ -60,7 +53,7 @@ signals into digital signals for transmission and storage.
     provides a uniform API across UNIX architectures. It is used by the
     [Open Sound System Applications](http://www.opensound.com/ossapps.html)
 -   The coding use a _sample frequency_ to sample the sound, digital audio.
-    The [w:Nyquist–Shannon sampling theorem|Nyquist-Shannon theorem]
+    The {{< wp "Nyquist–Shannon sampling theorem"  "Nyquist-Shannon theorem" >}}
     stipulates that the sampling rate must be equal to or greater than
     twice the maximum frequency contained in the signal.
 
@@ -71,7 +64,7 @@ signals into digital signals for transmission and storage.
     * 44.100 kHz - compact disc
     * 48 kHz:  digital multitrack recording, DAT or MiniDisc  recording equipment
 
-    [w:Sample rate conversion] _resampling_ is used to move from one rate to another one.
+    {{< wp "Sample rate conversion" >}} _resampling_ is used to move from one rate to another one.
 -   The size of a computer sound file is
 
          sampling rate x number of bits per sample x number of seconds x number of channels
@@ -83,14 +76,14 @@ signals into digital signals for transmission and storage.
 # Lossless data compression codecs
 
 -   Wikipedia:
-    [w:List_of_codecs#Lossless_data_compression|List of codecs: Lossless data compression],
-    [w:Lossless data compression]
+    {{< wp "List_of_codecs#Lossless_data_compression"  "List of codecs: Lossless data compression" >}},
+    {{< wp "Lossless data compression" >}}
 
 # Lossy encoded general purpose Audio Formats (Mpeg-x)
 
 -   Wikipedia:
-    [w:List_of_codecs##Lossy_data_compression|Wikipedia List of codecs: Lossy data compression],
-    [w:Lossy compression]
+    {{< wp "List_of_codecs##Lossy_data_compression"  "Wikipedia List of codecs: Lossy data compression" >}},
+    {{< wp "Lossy compression" >}}
 -   [mpeg.org](http://www.mpeg.org/) is an extensive index of MPEG
     resources with a lot of [Video](http://www.mpeg.org/MPEG/video/),
     -   [Audio](http://www.mpeg.org/MPEG/audio/)
@@ -105,7 +98,7 @@ explaines the basics of lossy encoding.
     for coded representation of digital audio and video and related
     data.
 
-## [w:MPEG-1]
+## {{< wp "MPEG-1" >}}
 
 MPEG-1 audio standardizes three different coding schemes for
 digitized sound waves called Layers I, II, and III. The encoded
@@ -130,7 +123,7 @@ Refs:
 -   Mpeg-1 is decribed in
     [MPEG Audio FAQ](http://www.tnt.uni-hannover.de/project/mpeg/audio/faq/mpeg1.html)
 
-## [w:MPEG-2]
+## {{< wp "MPEG-2" >}}
 
 The first phase, MPEG-1, was dealing with mono and two-channel
 stereo sound coding, at sampling frequencies commonly used for high
@@ -159,19 +152,19 @@ supports three extensions:
     coding tools and improves on details. As a result, AAC is
     approximately 30% more bit rate efficient than MPEG-1 Layer 3.
 
-    The [w:High Efficiency Advanced Audio Coding] part of AAC is
-    included in [w:MPEG-4 Part 3].
+    The {{< wp "High Efficiency Advanced Audio Coding" >}} part of AAC is
+    included in {{< wp "MPEG-4 Part 3" >}}.
 
 Refs:
 
--   Wikipedia: [w:MPEG-2], [w:Advanced Audio Coding] (AAC)
+-   Wikipedia: {{< wp "MPEG-2" >}}, {{< wp "Advanced Audio Coding" >}} (AAC)
 -   A full description of MPEG-2 and AAC is in the
     [MPEG Audio FAQ
     ](http://www.tnt.uni-hannover.de/project/mpeg/audio/faq/mpeg2.html)
 
-## [w:MPEG-4]
+## {{< wp "MPEG-4" >}}
 
-[w:MPEG-4 Audio] or _MPEG-4 Part 3_ provides tools for coding of both natural and
+{{< wp "MPEG-4 Audio" >}} or _MPEG-4 Part 3_ provides tools for coding of both natural and
 synthetic audio objects. The representations provide compression
 and other functionalities, such as scalability or play-back at
 different speeds.
@@ -183,19 +176,19 @@ capability in MPEG-2 AAC, and a multilingual capability in the
 MPEG-2 BC audio coding standard.)
 
 
-[w::MPEG-4 Part 14] or MP4 is a container format most commonly
+{{< wp ":MPEG-4 Part 14" >}} or MP4 is a container format most commonly
 used to store video and audio, but can also be used to store other
 data such as subtitles and still images.
 
 Refs: [Wikipedia: MPEG-4](http://en.wikipedia.org/wiki/MPEG-4).
 
-### [w:H.264 or MPEG-4 Part 10] {#H264}
-[w:H.264 or MPEG-4 Part 10], Advanced Video Coding (MPEG-4 AVC) is a block-oriented
+### {{< wp "H.264 or MPEG-4 Part 10" >}} {#H264}
+{{< wp "H.264 or MPEG-4 Part 10" >}}, Advanced Video Coding (MPEG-4 AVC) is a block-oriented
 motion-compensation-based video compression standard. As of 2014, it is one of the most
 commonly used formats for the recording, compression, and distribution of video
 content.[1] It supports resolutions up to 8192×4320
 
--   [w:List of video services using H.264/MPEG-4 AVC]
+-   {{< wp "List of video services using H.264/MPEG-4 AVC" >}}
 
 ## MPEG-7
 
@@ -223,7 +216,7 @@ version), sampling rates from 16kHz? to 24kHz? (MPEG-2 Layer III)
 and 32kHz? to 48kHz? (MPEG-1 Layer III).
 
 MP3 has been enhanced by
-[w:MP3Pro]
+{{< wp "MP3Pro" >}}
 i.e. MPEG-1 Layer III combined with SBR
 
 Refs:
@@ -351,7 +344,7 @@ kb/s.
 Microsoft PCM, 16 bit, mono 8000 Hz"
 PCM 16 bits 8000 Hz is encoded at 1/40 in mp3 128 b/s
 
-## [w:Advanced Audio Coding] (AAC)
+## {{< wp "Advanced Audio Coding" >}} (AAC)
 
 Advanced Audio Coding, the format for general audio coding in
 both MPEG-2 and MPEG-4 standards is an advanced audio coding
@@ -363,8 +356,8 @@ provide free MPEG-4 audio codecs. Currently implemented are MPEG-2
 and MPEG-4 AAC. The supported AAC profiles are HE, Main, LC, LTP
 and LD.
 
-AAC can be encoded whith [FAAC](#item_faac) and decoded by
-[FAAD2](#item_faad2)
+AAC can be encoded whith {{< iref "#item_faac" "FAAC" >}} and decoded by
+{{< iref "#item_faad2" "FAAD2" >}}
 
 MPEG-4 AAC combined with Spectral Band Replication / SBR is
 refereed by AAC+.
@@ -374,7 +367,7 @@ Refs:
 -   [Wikipedia: Advanced Audio Coding (AAC)
     ](http://en.wikipedia.org/wiki/Advanced_Audio_Coding).
 
-## [w:ATRAC]
+## {{< wp "ATRAC" >}}
 
 Adaptive Transform Acoustic Coding, used in Sony's MiniDisc
 (MD) recorders, an RealAudio 8 compression format. They encode
@@ -414,7 +407,7 @@ Refs:
 -   [xiph.org: Ogg Vorbis](http://www.xiph.org/vorbis/)
 -   [vorbis.com](http://www.vorbis.com/)
 
-## [w:Opus_(audio_format)|Opus] {#opus_codec}
+## {{< wp "Opus_(audio_format)"  "Opus" >}} {#opus_codec}
 Opus is a lossy audio coding format developed by the Internet
 Engineering Task Force (IETF).
 
@@ -456,7 +449,7 @@ of codecs.
 
 Opus at 16Kb/s is equivalent to speex at 32kb/s.  Opus at
 32kb/s is equivalent to vorbis 48kb/s or mp3 64kb/s, the only other
-quality encoding is the proprietary [w:AMR-WB] used by QuickTime,
+quality encoding is the proprietary {{< wp "AMR-WB" >}} used by QuickTime,
 RealPlayer.
 
 Opus at 64kb/s is equivalent to vorbis 96 kb/s or mp3 128
@@ -477,11 +470,11 @@ stereo achieving a bandwidth of 12 kHz;
 and 96kbs to approach transparency, comming very close at 128kbps.
 
 Refs:
--   [w:Opus_(audio_format)|Wikipedia: Opus]
+-   {{< wp "Opus_(audio_format)"  "Wikipedia: Opus" >}}
 -   [Opus Home](https://opus-codec.org/)
 -   [Opus FAQ](https://wiki.xiph.org/OpusFAQ)
 
-## [w:Musepack] or MPC
+## {{< wp "Musepack" >}} or MPC
 MPC or Musepack, formerly known as MP+ or MPEGplus, is based on
 the MPEG-1 Layer-2 / MP2 algorithms. It contains heavily optimized
 and patentless code. MPC is an open encoder/decoder with very fast
@@ -490,13 +483,13 @@ transparency. MPC is single channel and not streamable.
 Refs:
 [Wikipedia Musepack](http://en.wikipedia.org/wiki/Musepack)
 
-## [w:Windows Media Audio] (WMA)
+## {{< wp "Windows Media Audio" >}} (WMA)
 proprietary audio data compression technology developed by Microsoft.
 
 ## Other lossy format
 
-From [w:Dolby] we have__AC-2__
-Audio Coding Version 2 from Dolby, [w:Dolby Digital] (AC-3 or AC3)
+From {{< wp "Dolby" >}} we have__AC-2__
+Audio Coding Version 2 from Dolby, {{< wp "Dolby Digital" >}} (AC-3 or AC3)
 Audio Coding Version 3 from Dolby, RA: RealAudio
 proprietary streamable multimedia format from RealNetworks, AMB
 Ambisonics, DTS: Digital Theatre System, ECM ECAM audio
@@ -517,8 +510,8 @@ Speech codecs are described in
 [Speech Coding](http://www-mobile.ecs.soton.ac.uk/speech_codecs/index.html) page
 of the University of Southampton
 
-Wikipedia has a [w:List_of_codecs#Voice|list of voice codecs] and a
-page on [w:Speech coding].
+Wikipedia has a {{< wp "List_of_codecs#Voice"  "list of voice codecs" >}} and a
+page on {{< wp "Speech coding" >}}.
 
 
 mu-law and a-law [PCM](http://www-mobile.ecs.soton.ac.uk/speech_codecs/standards/pcm.html)
@@ -558,17 +551,17 @@ mu-law and a-law [PCM](http://www-mobile.ecs.soton.ac.uk/speech_codecs/standards
 
 The formats are:
 
-[w:Resource Interchange File Format] RIFF
+{{< wp "Resource Interchange File Format" >}} RIFF
 :   better known as Microsoft WAVE file format. Actually it is a
     container format which can contain uncompressed linear PCM audio.
 :   refs: [WAVE PCM soundfile format
     ](http://ccrma.stanford.edu/courses/422/projects/WaveFormat/)
     course at ccrma
 
-[w:Audio Interchange File Format] (AIFF)
+{{< wp "Audio Interchange File Format" >}} (AIFF)
 :   Audio format introduced by Apple and Sun.
 
-[w:Pulse-code modulation] PCM
+{{< wp "Pulse-code modulation" >}} PCM
 
 :   (linear) PCM or Pulse-Code Modulation: Modulation in which a signal is
     sampled, and the magnitude (with respect to a fixed reference) of
@@ -607,13 +600,13 @@ Refs:
     ](http://www-mobile.ecs.soton.ac.uk/speech_codecs/standards/pcm.html)
 
 # Sound info
- <a name="ffprobe"></a>[ffprope](/node/ffmpeg "internal reference")
-:   _ffprobe_ is part of [ffmpeg](/node/ffmpeg "internal reference")
+ <a name="ffprobe"></a>{{< iref "ffmpeg" "ffprope" >}}
+:   _ffprobe_ is part of {{< iref "ffmpeg" "ffmpeg" >}}
 
        ffprobe -hide_banner "/path/to/input"
 
     If your distibution rather provide
-    [libav](/node/ffmpeg#libav "internal reference") use:
+    {{< iref "ffmpeg#libav" "libav" >}} use:
 
         avprobe /path/to/input
 
@@ -621,14 +614,14 @@ id3info
 :   [id3info(1)
     ](http://manpages.debian.org/cgi-bin/man.cgi?query=id3info(1))
     from the
-    [id3lib](/node/tag_management) library displays
+    {{< iref "tag_management" "id3lib" >}} library displays
     both the id3v1 and id3v2 tag information for a file, along with the
     sample rate, and bitrate. *id3info* is packaged in Debian/Ubuntu in
     the *libid3-x-dev* package.
 
 midentify
 :   To get info about a sound or video file using
-    [mplayer](/node/media_players#mplayer "internal reference") :
+    {{< iref "media_players#mplayer" "mplayer" >}} :
 
         mplayer -vo null -ao null -frames 0 -identify <file> 2>/dev/null
 
@@ -643,47 +636,46 @@ midentify
     , but is not incorporated in a lot of mplayer packages.
 
     _Now you can replace it with
-    [ffmpeg/libav](#avprobe "internal reference")_
+    {{< iref "#avprobe" "ffmpeg/libav" >}}_
 
 mp3info
 :   mp3info can display ID3 1.x tag information as well as various
     technical aspects of an MP3 file including playing time, bit-rate,
     sampling frequency
 ogginfo
-:   Ogginfo from the [VorbisTools](/node/sound_edit#vorbistools) package
+:   Ogginfo from the {{< iref "sound_edit#vorbistools" "VorbisTools" >}} package
     gives info from vorbis streams, including the sample rate and number
     of channels, the bitrate and playback length, and the contents of
     the comment header.
 
 sfinfo
-:   `sfinfo`  from [audiofile library
-    ](/node/sound_libs#audiofile "internal reference")
+:   `sfinfo`  from {{< iref "sound_libs#audiofile" "audiofile library" >}}
     gives informations on a supported sound file (format, rate,
     size, duration).
 
 sndfile-info
 :   The command [sndfile-info
     ](http://manpages.debian.org/cgi-bin/man.cgi?query=sndfile-info(1))
-    from [libsndfile](/node/sound_libs#libsndfile "internal reference")
+    from {{< iref "sound_libs#libsndfile" "libsndfile" >}}
     display basic information about a sound file such as its format,
     its sample rate, and the number of channels.
     This information is obtained using
-    [libsndfile](/node/sound_libs#libsndfile "internal reference")
+    {{< iref "sound_libs#libsndfile" "libsndfile" >}}
     for the supported formats
     *(mainly lossless encoding formats)*
 
 soxi
-:   is part of [sox](/node/sound_edit#sox "internal reference")
+:   is part of {{< iref "sound_edit#sox" "sox" >}}
     [soxi(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=soxi)
 
 sndinfo
-:   `sndinfo` wich comes with the [Snd](/node/sound_edit#snd) editor gives
+:   `sndinfo` wich comes with the {{< iref "sound_edit#snd" "Snd" >}} editor gives
     informations on a sound file (format, rate, size, duration).
 
 
 # Codecs support in multmedia libraries
 
-Seee also [FFmpeg & Libav section](/node/ffmpeg "internal reference").
+Seee also {{< iref "ffmpeg" "FFmpeg & Libav section" >}}.
 
 -   [ArchLinux Codecs](https://wiki.archlinux.org/index.php/Codecs)
     list codecs and application backends;

@@ -1,21 +1,14 @@
-<!--
-.. description:
-.. date: 2011-10-02
-.. slug: monitoring
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Monitoring
--->
+---
+title: Monitoring
+---
 
-
-[TOC]
+{{% toc /%}}
 
 # References
 
 -   [ArchWiki: Category Status monitoring and notification
     ](https://wiki.archlinux.org/index.php/Category:Status_monitoring_and_notification)
--   Wikipedia [w:System monitor]
+-   Wikipedia {{< wp "System monitor" >}}
 -   [Top 25 Best Linux Performance Monitoring and Debugging Tools
     ](http://www.thegeekstuff.com/2011/12/linux-performance-monitoring-tools/)
     by Ramesh Natarajan.
@@ -47,7 +40,7 @@ area
 
 Basic network monitoring tools like _netstat_, _nmap_, _iptraf_,
 _tracepath_, _traceroute_, _mtr_ are in the section
-[IP Tools](/node/ip_tools/ "Internal reference").
+{{< iref "ip_tools" "IP Tools" >}}.
 
 
 [conky](http://conky.sourceforge.net/) (GPL) <a name="conky"></a>
@@ -60,7 +53,7 @@ _tracepath_, _traceroute_, _mtr_ are in the section
     In Debian there is three packages:
 
     -   The basic _conky-cli_ useful in servers or piped with
-        [dzen2](/node/desktop#dzen "internal reference") it includes
+        {{< iref "desktop#dzen" "dzen2" >}} it includes
         _MPD_, _MOC_, _math_, _apcupsd_, _ncurses_ and _I/O stats_.
     -   _conky-std_ includes _X11_, _XDamage_, _XDBE_, _Xft_, _MPD_,
         _MOC_, _math_, _hddtemp_, _portmon_, _wireless_, _ncurses_,
@@ -162,11 +155,11 @@ _tracepath_, _traceroute_, _mtr_ are in the section
         _named python-statgrab in Debian_.
     -   _statgrab_ is a sysctl-style interface to the statistics
         gathered by libstatgrab.  Included with _statgrab_ is a
-        script to generate an [MRTG](#mtrg "internal reference")
+        script to generate an {{< iref "#mtrg" "MRTG" >}}
         configuration file to use _statgrab_.
     -   libstatgrab is used by
-        [saidar](#saidar "internal reference")
-        and [bwm-ng](/node/419/#bwm-ng "internal reference")
+        {{< iref "#saidar" "saidar" >}}
+        and {{< iref "419" "bwm-ng" >}}
 
 [linfo](http://linfo.sourceforge.net/)
 :   A PHP application that displays the system hardware and realtime
@@ -203,7 +196,7 @@ Is a fast, highly customizable system info bash script.
 
 <a name="saidar"></a>[saidar](http://www.i-scream.org/libstatgrab/) (GPL)
 :   provides a curses-based interface to
-    [libstatgrab](#libstatgrab "internal reference")
+    {{< iref "#libstatgrab" "libstatgrab" >}}
     to view the current state of the system.
 
 [systat](http://sebastien.godard.pagesperso-orange.fr/)
@@ -219,7 +212,7 @@ Is a fast, highly customizable system info bash script.
         is used to monitor processes and threads
         -   [Using pidstat tutorial
              ](http://sebastien.godard.pagesperso-orange.fr/tutorial.html#Section2)
-    -   [w:iostat] report Central Processing Unit (CPU) statistics and
+    -   {{< wp "iostat" >}} report Central Processing Unit (CPU) statistics and
         input/output statistics for devices, partitions and network
         filesystems.
         -   [iostat(1) manual](http://linux.die.net/man/1/iostat) and
@@ -230,7 +223,7 @@ Is a fast, highly customizable system info bash script.
         -   [Monitoring IO Performance with iostat
             ](http://www.igvita.com/2009/06/23/measuring-optimizing-io-performance/)
             by Ilya Grigorik.
-    -   [w:mpstat] report processors statistics.
+    -   {{< wp "mpstat" >}} report processors statistics.
         [mpstat(1)](http://linux.die.net/man/1/mpstat).
     -    [sar(1)](http://sebastien.godard.pagesperso-orange.fr/man_sar.html)
          Collect, report, or save system activity information.
@@ -243,35 +236,34 @@ Is a fast, highly customizable system info bash script.
 
 
 ## Misc Command line system monitoring tools
--   [man:top] - display Linux processes- [man:iostat] - Report CPU
+-   {{< man "top" >}} - display Linux processes- {{< man "iostat" >}} - Report CPU
     statistics and input/output statistics for devices and partitions.
--   [man:htop] - interactive process viewer
--   [man:atop] - AT Computing's System & Process Monitor
--   [man:free] - Display amount of free and used memory in the system
--   [man:lsof] output file information about files opened by processes.
--   [man:iotop] - simple top-like I/O monitor.
+-   {{< man "htop" >}} - interactive process viewer
+-   {{< man "atop" >}} - AT Computing's System & Process Monitor
+-   {{< man "free" >}} - Display amount of free and used memory in the system
+-   {{< man "lsof" >}} output file information about files opened by processes.
+-   {{< man "iotop" >}} - simple top-like I/O monitor.
 
 
 
 # Network Monitoring Tools {network_monitoring}
 I put here tools that are specifically aimed to network monitoring,
 the tools that monitor both system and network are in the section
-[System monitoring](#system_monitoring "Internal reference")
+{{< iref "#system_monitoring" "System monitoring" >}}
 you may also want to use
-[basic monitoring tools](#monitoring_tools "Internal reference").
+{{< iref "#monitoring_tools" "basic monitoring tools" >}}.
 
 Some basic tools like _netstat_, _nmap_, _iptraf_, _tracepath_,
 _traceroute_, _mtr_, _nethogs_ are in the section
-[IP Tools](/node/ip_tools "Internal reference").
+{{< iref "ip_tools" "IP Tools" >}}.
 
-See also the section [Traffic shaping
-](/node/nettools#traffic_shaping "Internal reference")
+See also the section {{< iref "nettools#traffic_shaping" "Traffic shaping" >}}
 
 -   <a name="bwm-ng"></a>[Bwm-ng
     ](http://www.gropp.org/?id=projects&sub=bwm-ng)
     Bandwidth Monitor NG is a small and simple console-based live
     network and disk io bandwidth monitor. It uses
-    [libstatgrab](#libstatgrab "Internal reference")
+    {{< iref "#libstatgrab" "libstatgrab" >}}
 -   [Cacti]( http://www.cacti.net/) (GPL)
     is a network graphing solution using
     [RRDTool's]( http://oss.oetiker.ch/rrdtool/), it is in Debian.
@@ -287,14 +279,13 @@ See also the section [Traffic shaping
     is a perl tool to monitor the network traffic load.  MRTG
     generates HTML pages which provide a live visual representation of
     this traffic.
-    -    [w:Mrtg|Wikipedia: Mrtg]
+    -    {{< wp "Mrtg"  "Wikipedia: Mrtg" >}}
 -   <a name="netdata"></a>[netdata
     ](https://github.com/firehol/netdata) (GPL)
     is a distributed real-time performance and health monitoring tool.
     It collects data in realtime (per second), and produce a real-time
     interactive web representation of them.
-    Netdata is part of the [FireHol project
-    ](/node/firewals#firehol  "internal reference") and is in Debian.
+    Netdata is part of the {{< iref "firewals#firehol" "FireHol project" >}} and is in Debian.
 -   [netperf](http://www.netperf.org/netperf/)
     is a benchmark that can be used to measure the performance of many
     different types of networking. It provides tests for both
@@ -303,7 +294,7 @@ See also the section [Traffic shaping
 -   [ntop](http://www.ntop.org/products/ntop/)
     is a network traffic probe that shows the network usage.
     Ntop can use a web interface. Ntop is in Debian.
--   [w:Snmp|SNMP - Simple Network Management Protocol]
+-   {{< wp "Snmp"  "SNMP - Simple Network Management Protocol" >}}
     SNMP is a set of standards from IETF used to monitor
     network-attached devices.
     -  [Linux Home Networking
@@ -311,7 +302,7 @@ See also the section [Traffic shaping
        in the
        [Chapter 22 Monitoring Server Performance
        ](http://www.linuxhomenetworking.com/wiki/index.php/Quick_HOWTO_:_Ch22_:_Monitoring_Server_Performance)
-       deal with SNMP and with [MTRG](#mtrg "internal reference")
+       deal with SNMP and with {{< iref "#mtrg" "MTRG" >}}
 
 -   [VnStat](http://humdi.net/vnstat/) is a console-based network
     traffic monitor. It has graphing capabilities and in included in
@@ -326,40 +317,38 @@ system combine network and system monitoring.
 
 In this page I focus on system and network monitoring,
 the related _distributed configuration management_ is in the
-[Configuration Management Software section](/node/143/ "internal
-reference"),
+{{< iref "143" "Configuration Management Software section" >}},
 tools aimed at only network are in the
-[Network Monitoring Tools section
-](#network_monitoring "internal reference"),
+{{< iref "#network_monitoring" "Network Monitoring Tools section" >}},
 while command line tools are in
-[Monitoring Tools](#monitoring_tools "internal reference").
+{{< iref "#monitoring_tools" "Monitoring Tools" >}}.
 
 -   Wikipedia:
-    [w:Category:Web server management software],
-    [w:Network monitoring],
-    [w:Network management system],
-    [w:Comparison of network monitoring systems],
-    [w:Web hosting control panel],
-    [w:Comparison of web hosting control panels],
+    {{< wp "Category:Web server management software" >}},
+    {{< wp "Network monitoring" >}},
+    {{< wp "Network management system" >}},
+    {{< wp "Comparison of network monitoring systems" >}},
+    {{< wp "Web hosting control panel" >}},
+    {{< wp "Comparison of web hosting control panels" >}},
     [Comparison of open-source configuration management software
     ](http://en.wikipedia.org/wiki/Comparison_of_open_source_configuration_management_software),
 -   [softpanorama](http://www.softpanorama.org/):
     [System Monitoring](http://www.softpanorama.org/Admin/system_monitoring.shtml)
 
 
-[w:Collectd] (GPL)
+{{< wp "Collectd" >}} (GPL)
 :   is a UNIX-daemon which collects, transfers and stores performance data
     and provides mechanisms to store the values for example in
-    [RRDTool](#rrdtool "Internal reference") files.
+    {{< iref "#rrdtool" "RRDTool" >}} files.
 
-[w:Ganglia_(software)|Ganglia] (BSD License)
+{{< wp "Ganglia_(software)"  "Ganglia" >}} (BSD License)
 :   is a scalable distributed system monitor tool for clusters and
     grids. It relies on a multicast protocol to monitor state within
     clusters
 
-[w:Icinga]
+{{< wp "Icinga" >}}
 :   Incinga (GPLv2) is a backward compatible fork of
-    [Nagios](#nagios "local reference")
+    {{< iref "#nagios" "Nagios" >}}
     written like Nagios in C and Perl.  It adds to
     Nagios a modern Web2 based user interface, and additional database
     connectors.
@@ -375,7 +364,7 @@ while command line tools are in
     Monit is tiny on my _bananapi_ the basic footprint is 1.1M/0.7 shared.
 
     A monit package is available
-    for [OpenWrt](/node/openwrt "internal reference").
+    for {{< iref "openwrt" "OpenWrt" >}}.
 
     -   [howtoforge: Server monitoring with munin and monit on debian
         ](https://www.howtoforge.com/tutorial/server-monitoring-with-munin-and-monit-on-debian/2/)
@@ -391,7 +380,7 @@ while command line tools are in
     server built in.
     -   [GitHub: monitorix](https://github.com/mikaku/Monitorix)
 
-<a name="nagios"></a>[w:Nagios] (GPLv2)
+<a name="nagios"></a>{{< wp "Nagios" >}} (GPLv2)
 :   is a popular open source computer system and network monitoring
     application software written in C. It can monitor network services
     as well as host resources.
@@ -399,9 +388,9 @@ while command line tools are in
    -   [Nagios Home](http://www.nagios.org).
    -   [NConf](http://www.nconf.org/dokuwiki/doku.php) (GPL) is a PHP
        based web-tool for configuring the Nagios monitoring software.
-   -   [w:Opsview] (GPL)  is a server and application monitoring tool
+   -   {{< wp "Opsview" >}} (GPL)  is a server and application monitoring tool
        written in Perl and C that uses Nagios as its monitoring 'engine'.
-   -   See also [Shinken](#shinken) a fork of Nagios
+   -   See also {{< iref "#shinken" "Shinken" >}} a fork of Nagios
 
 [OpenPanel](http://www.openpanel.com/) (GPL)
 :   Provide full control over all technical processes
@@ -412,13 +401,13 @@ while command line tools are in
     -   [Openpanel Documentation Wiki
         ](http://documentation.openpanel.com/index.php/Main_Page)
 
-[w:Pandora FMS] (GPL)
+{{< wp "Pandora FMS" >}} (GPL)
 :   Pandora Flexible Monitoring System watches your systems and
     applications, and allows you to know their status. Pandora is
     written in Perl and PHP and packages are offered for all main
     distributions, including Debian and Ubuntu.
 
-<a name="rrdtool"></a>[w:RRDTool] (GPL)
+<a name="rrdtool"></a>{{< wp "RRDTool" >}} (GPL)
 :   RRDTool's is a data logging and graphing system for time series data.
     -   _RRDTool_ by itself it is not a System monitoring tool but is
         the heart of the graphing capabilities of many monitoring
@@ -428,28 +417,28 @@ while command line tools are in
         ruby, lua or tcl
     -   [RRDTool's Home]( http://oss.oetiker.ch/rrdtool/)
 
-<a name="shinken"></a>[w:Shinken] (Affero General Public License) )
+<a name="shinken"></a>{{< wp "Shinken" >}} (Affero General Public License) )
 :   Shinken is a rewrite of the functionalities of
-    [Nagios](#nagios "local reference") in Python.
+    {{< iref "#nagios" "Nagios" >}} in Python.
     -   [Shinken Home](http://www.shinken-monitoring.org/)
     -   [Shiken GitHub Repository](https://github.com/naparuba/shinken)
     -   Shinken is available in Debian, with multiple packages for the
         desired modules.
 
-<a name="zabbix"></a>[w:Zabbix] (GPLv2)
+<a name="zabbix"></a>{{< wp "Zabbix" >}} (GPLv2)
 :   Zabbix is a GPL software written in C with a PHP web interface
     to monitor and track the status of various network services on
     local or remote servers. it can use agents on hosts or monitor via
     snmp. It uses MySQL, PostgreSQL, SQLite or Oracle to store data.
     Zabbix is available on main linux distributions including
-    [OpenWrt](/node/openwrt "internal reference").
+    {{< iref "openwrt" "OpenWrt" >}}.
 
     -   [Zabbix Home](http://www.zabbix.com/). It is
     -   [Zabbix documentation](http://www.zabbix.com/documentation.php)
 
 # Benchmarks
 ## References
--   Wikipedia: [w:Benchmark (computing)],
+-   Wikipedia: {{< wp "Benchmark (computing)" >}},
     [w:Category:Computer benchmarks
 
 ## Filesystem I/O Benchmark
@@ -512,14 +501,14 @@ while command line tools are in
     system kernel interfaces. It is in Debian.
 
 # Log Analyzers {#log_analyzers}
-[w:List_of_web_analytics_software#Free_.2F_Open_source_.28FLOSS.29|Wikipedia list of open source log analyzers],
+{{< wp "List_of_web_analytics_software#Free_.2F_Open_source_.28FLOSS.29"  "Wikipedia list of open source log analyzers" >}},
 [Dmoz Log Analysis Freeware and Open Source
 ](https://www.dmoz.org/Computers/Software/Internet/Site_Management/Log_Analysis/Freeware_and_Open_Source/) .
 
 [AWFFull](http://www.stedee.id.au/awffull/) (GPL)
 :   AWFFull (A Webalizer Fork, Full o' features!) is a Web server
     log analysis program, forked from
-    [Webalizer](#webalizer "internal reference").
+    {{< iref "#webalizer" "Webalizer" >}}.
     It is written in C like webalizer, it adds a number of
     new features and improvements, _AWFFull_ is in Debian.
 
@@ -581,7 +570,7 @@ while command line tools are in
     rewrite of [oak](http://www.ktools.org/oak) _written in C, no more developped_, it
     is in Debian.
 
-[w:Webalizer]  (GPL) <a name=webalizer">
+{{< wp "Webalizer" >}}  (GPL) <a name=webalizer">
 :   The Webalizer is a fast, free web server log file analysis
     program written in C wich produces reports in HTML.
     -   [Webalizer Home](http://www.mrunix.net/webalizer/)

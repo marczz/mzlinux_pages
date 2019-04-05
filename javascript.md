@@ -1,24 +1,18 @@
-<!--
-.. description:
-.. date: 2015-04-30
-.. slug: javascript
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Javascript
--->
+---
+title: Javascript
+---
 
-[TOC]
+{{% toc /%}}
 
 # References
 
--   See also [Yaml/Json](/node/yaml "internal reference")
+-   See also {{< iref "yaml" "Yaml/Json" >}}
 
--   Wikipedia: [w:Ecmascript],
-    [w:JavaScript],
-    [w:Client-side JavaScript],
-    [w:Server-side JavaScript],
-    [w:JavaScript syntax]
+-   Wikipedia: {{< wp "Ecmascript" >}},
+    {{< wp "JavaScript" >}},
+    {{< wp "Client-side JavaScript" >}},
+    {{< wp "Server-side JavaScript" >}},
+    {{< wp "JavaScript syntax" >}}
 -   [JavaScript](https://github.com/sorrycc/awesome-javascript)
     *awesome list* of resources
 -   Javascript libraries *awesome lists*:
@@ -33,17 +27,17 @@
     -   [Svelte](https://github.com/flagello/awesome-sveltejs)
     -   [VueJS](https://github.com/vuejs/awesome-vue)
 
-The [w:Ecmascript] specification evolved since the 3rd edition
+The {{< wp "Ecmascript" >}} specification evolved since the 3rd edition
 (December 1999) which is a widely adpted standard, just straightened
 in Emascript V5 _ES5_ which was published in 2009, and a new standard
 5.1 in 2011. The emacscript V 6
 in 2015, named _ES6_ or _ES2015_ is a strong improvement it was
 followed in 2016 by the V 7 and 2017 by the V 8. Presentely most modern [implementations
 ](https://en.wikipedia.org/wiki/ECMAScript#Implementations) follow at
-least V5.1, the [w:V8_(JavaScript_engine)|V8] engine which power up
+least V5.1, the {{< wp "V8_(JavaScript_engine)"  "V8" >}} engine which power up
 Chrome, Opera, Vivaldi, CouchBase, Electon and Node.js support ES6 and
-some part of V7 and V8; while [w:JavaScriptCore] that power up WebKit,
-Safari, Qt 5 support ES2017 and [w:SpiderMonkey] the engine of
+some part of V7 and V8; while {{< wp "JavaScriptCore" >}} that power up WebKit,
+Safari, Qt 5 support ES2017 and {{< wp "SpiderMonkey" >}} the engine of
 Firefox, Gecko, Adobe Acrobat support 5.1 and partially ES2015 ES2016,
 ES2017.
 
@@ -104,12 +98,12 @@ ES2017.
     reference book. but just contains important things  _O'Reilly 2008_.
     for learning Javascript he recommands _JavaScript: The Definitive
     Guide_ by   David Flanagan _6th edition 2011_.
-    and the [JSLint Home](#jslint "internal reference") (see below).
+    and the {{< iref "#jslint" "JSLint Home" >}} (see below).
 -   [State Of JavaScript](http://stateofjs.com/) a survey  of current
     state of  JavaScript Flavors, front-end frameworks, full-stack
     frameworks, testing frameworks, state management, CSS Tools, build
     tools, mobile frameworks.
--   [w:JSDoc] _(wikipedia)_ is a [w:Javadoc] simile for Javascript.
+-   {{< wp "JSDoc" >}} _(wikipedia)_ is a {{< wp "Javadoc" >}} simile for Javascript.
 -   [Editing JavaScript in Emacs
     ](http://edward.oconnor.cx/2005/09/editing-javascript-in-emacs)
     by [Edward 0'Connor](http://edward.oconnor.cx)
@@ -124,7 +118,7 @@ ES2017.
 
 ## Ajax
 
--   [w:Ajax_(programming)|Ajax *(Wikipedia)*]
+-   {{< wp "Ajax_(programming)"  "Ajax *(Wikipedia)*" >}}
     shorthand for _Asynchronous JavaScript and XML_, is a web
     development technique for creating interactive web applications.
     Ajax incorporates: standards-based presentation using XHTML and
@@ -134,14 +128,14 @@ ES2017.
     [XMLHttpRequest *(Wikipedia)*
     ](http://en.wikipedia.org/wiki/XMLHttpRequest)
     ; and JavaScript binding everything together.
--   An [w:Ajax framework] is a web application framework that  provide the
-    [w:Ajax (programming)|Ajax] engine and
+-   An {{< wp "Ajax framework" >}} is a web application framework that  provide the
+    {{< wp "Ajax (programming)"  "Ajax" >}} engine and
     associated server and client-side functions. It may be a
-    [w:Ajax framework#Direct_Ajax_frameworks|direct framework]
+    {{< wp "Ajax framework#Direct_Ajax_frameworks"  "direct framework" >}}
      when it only provides the basic Ajax components or an
-    [w:Ajax framework#Indirect_Ajax_frameworks|indirect framework] when the Ajax code
+    {{< wp "Ajax framework#Indirect_Ajax_frameworks"  "indirect framework" >}} when the Ajax code
     is generated from the translation of an high level language.
-    [w:List_of_Ajax_frameworks|Wikipedia list of Ajax frameworks].
+    {{< wp "List_of_Ajax_frameworks"  "Wikipedia list of Ajax frameworks" >}}.
 
 
 # Javascript tools
@@ -174,21 +168,21 @@ ES2017.
 
 ## Other web scripting languages
 
--   [w:CoffeeScript] is a programming language  inspired by Ruby, Python and Haskell
+-   {{< wp "CoffeeScript" >}} is a programming language  inspired by Ruby, Python and Haskell
    that compiles to JavaScript. It add features like list
    comprehension and pattern matching.
    -   [Coffeescript Home](http://coffeescript.org/).
    -   [Cofeescript GitHub repository
        ](https://github.com/jashkenas/coffeescript)
--   [w:Elm] is a purely functionnal language aimed at web user
+-   {{< wp "Elm" >}} is a purely functionnal language aimed at web user
     interfaces. It enforces  static type checking. Elm compiler
     generates HTML, CSS, and JavaScript
     -   [An Introduction to Elm](https://guide.elm-lang.org/)
     -   [Elm FAQ](http://faq.elm-community.org/)
--   [w:Dart] is a class-based, single inheritance, object-oriented language
+-   {{< wp "Dart" >}} is a class-based, single inheritance, object-oriented language
     with C-style syntax developed by Google. It supports interfaces,
     abstract classes, reified generics, and optional typing.
--   [w:Haxe] (GPL) is a programming language, for creating interactive
+-   {{< wp "Haxe" >}} (GPL) is a programming language, for creating interactive
     web applications it generates code in five targets: Adobe Flash,
     JavaScript, PHP, C++ and the Neko VM.
     [Haxe Home](http://haxe.org/)
@@ -196,10 +190,10 @@ ES2017.
 
 # Javascript frameworks.
 ## References
--   Wikipedia: [w:Comparison of JavaScript frameworks] with detailed list of features,
-    [w:List of JavaScript libraries], [w:Ajax framework], [w:Ajax_(programming)|Ajax_programming].
--   Wikipedia: [w: List of rich Internet application frameworks],
-    [w:Multiple phone web-based application framework],
+-   Wikipedia: {{< wp "Comparison of JavaScript frameworks" >}} with detailed list of features,
+    {{< wp "List of JavaScript libraries" >}}, {{< wp "Ajax framework" >}}, {{< wp "Ajax_(programming)"  "Ajax_programming" >}}.
+-   Wikipedia: {{< wp " List of rich Internet application frameworks" >}},
+    {{< wp "Multiple phone web-based application framework" >}},
 -   [ToDo MVC](http://todomvc.com/) is a comparison of JavaScript MVC frameworks
     with a single example application implemented on each of them. It help to
     *decide on which to use in a sea of so many options*.
@@ -207,45 +201,45 @@ ES2017.
 -   [speed/validity selectors test for framework](http://mootools.net/slickspeed/)
     compare MoTools, JQuery, Prototype, YUI, Dojo.
 
--   [w:AngularJS] (MIT License) is a javascript framework by Google
-    for developing [w:single-page applications]. It provides a
-    framework for client-side [w:model–view–controller] (MVC) and
-    [w:model–view–viewmodel] (MVVM) architectures.
+-   {{< wp "AngularJS" >}} (MIT License) is a javascript framework by Google
+    for developing {{< wp "single-page applications" >}}. It provides a
+    framework for client-side {{< wp "model–view–controller" >}} (MVC) and
+    {{< wp "model–view–viewmodel" >}} (MVVM) architectures.
     -   [AngularJS Home](https://angularjs.org/).
     -   [AngularJS 2.x Home](https://angular.io/).
     -   [W3school AngularJS Tutorial
         ](http://www.w3schools.com/angular/).
     -   [AngularJS vs. Backbone.js vs. Ember.js
         ](https://www.airpair.com/js/javascript-framework-comparison).
--   [w:Backbone.js] (MIT License) is a JavaScript library designed for
-    developing [w:single-page web applications]. It features a RESTful
-    JSON interface based on the [w:model–view–presenter]
+-   {{< wp "Backbone.js" >}} (MIT License) is a JavaScript library designed for
+    developing {{< wp "single-page web applications" >}}. It features a RESTful
+    JSON interface based on the {{< wp "model–view–presenter" >}}
     paradigm. Backbone is lightweight and depends only on
     [Underscore.js](http://underscorejs.org/).
     -   [Backbone.js Home](http://backbonejs.org/)
--   [w:Ext JS]  (GPL or commercial) by
+-   {{< wp "Ext JS" >}}  (GPL or commercial) by
     [Sencha](http://www.sencha.com/)
     is a pure JavaScript application framework interoperable with jQuery and Prototype.
     [Ext JS Home](http://www.sencha.com/products/extjs/)
--   [w:Google Web Toolkit] (GWT) (Apache License) allows to create and maintain
+-   {{< wp "Google Web Toolkit" >}} (GWT) (Apache License) allows to create and maintain
      complex JavaScript front-end applications in Java.
--   [w:Midori_Javascript_Framework|Midori] (MIT License)
--   [w:Moo Tools] (MIT License) is a Javascript framework using the OO model.
+-   {{< wp "Midori_Javascript_Framework"  "Midori" >}} (MIT License)
+-   {{< wp "Moo Tools" >}} (MIT License) is a Javascript framework using the OO model.
     [Mootol sHome](http://mootools.net/).
     -   [Mootools templated](https://github.com/darkwing/Templated)
         (MIT License) is a JavaScript template system for Mootols.
 
 ## Mobile development frameworks
--   [w:PhoneGap]  (Apache License) is a mobile development framework
--   [w:Sencha Touch] (GPLv3 or commercial)
+-   {{< wp "PhoneGap" >}}  (Apache License) is a mobile development framework
+-   {{< wp "Sencha Touch" >}} (GPLv3 or commercial)
     is a user interface JavaScript HTML5  framework, built for the Mobile Web.
     [Sencha Touch Home](http://www.sencha.com/products/touch)
 
 # Javascript all purpose Libraries
--   Wikipedia: [w:List of JavaScript libraries],
+-   Wikipedia: {{< wp "List of JavaScript libraries" >}},
 
 ## Dojo
-[w:Dojo_Toolkit|Dojo] (BSD License and Academic Free Licence)
+{{< wp "Dojo_Toolkit"  "Dojo" >}} (BSD License and Academic Free Licence)
  provides asynchronous communications, and client and server storage.
 
 -   [Dojo Toolkit Home](http://dojotoolkit.org/)
@@ -262,7 +256,7 @@ bye Joe Lennon.
 
 
 ## Node.js {#node_js}
-[w:Node.js] is a javascript library designed for writing scalable
+{{< wp "Node.js" >}} is a javascript library designed for writing scalable
 Internet applications, notably web servers.  Node is similar in design
 to Ruby's Event Machine or Python's Twisted.  Programs are written on
 the server side in JavaScript, using event-driven, asynchronous I/O.
@@ -276,9 +270,9 @@ the server side in JavaScript, using event-driven, asynchronous I/O.
 
 ## JQuery {#jquery}
 ### References
-[w:jQuery] (MIT license) is a cross-browser JavaScript library extensible through
-the use of [plugins](http://plugins.jquery.com/), [w:jQuery UI] provides widgets
-and effects on the top of jQuery, [w:jQuery Mobile] is a a mobile framework developed by the jQuery team.
+{{< wp "jQuery" >}} (MIT license) is a cross-browser JavaScript library extensible through
+the use of [plugins](http://plugins.jquery.com/), {{< wp "jQuery UI" >}} provides widgets
+and effects on the top of jQuery, {{< wp "jQuery Mobile" >}} is a a mobile framework developed by the jQuery team.
 
 -   [jQuery Documentation Index](http://docs.jquery.com/Main_Page)
 -   [Tutorials:How jQuery Works](http://docs.jquery.com/How_jQuery_Works)
@@ -325,14 +319,14 @@ and effects on the top of jQuery, [w:jQuery Mobile] is a a mobile framework deve
 is an index of GitHub repositories that contain jQuery plugins.
 
 I reference some JQuery plugins in the
-[Javascript Libraries section](#javascript_libraries "internal reference")
+{{< iref "#javascript_libraries" "Javascript Libraries section" >}}
 
 # React.js
 
 -   [React How To](https://github.com/petehunt/react-howto)
 
 ## Other Libraries
--   [w:MochiKit] was used in TurboGears and many python frameworks,
+-   {{< wp "MochiKit" >}} was used in TurboGears and many python frameworks,
     it is no more in active development.
     -   [Mochikit Home Page on GitHub](http://mochi.github.com/mochikit/).
 
@@ -386,7 +380,7 @@ Read first
     Licenses)
     a plug-in for jQuery, that add multiple filtering, and paginations
     options to tables.
--   [w:Dhtmlx] (GPL or commercial)
+-   {{< wp "Dhtmlx" >}} (GPL or commercial)
     a standalone library written in pure JavaScript and CSS
     including many UI components, data grids, spreadsheets, events calendar, or scheduler,
     navigation with treemenu or menu or tabs...
@@ -432,7 +426,7 @@ _Not Jquery_
     commercial)
 
 ### Images and Video
--   [w:Lightbox] (MIT License)
+-   {{< wp "Lightbox" >}} (MIT License)
     is a JavaScript library that displays images and
     videos by filling the screen, and dimming out the rest of the web
     page.
@@ -455,7 +449,7 @@ _Not Jquery_
         [django-markitup](https://pypi.python.org/pypi/django-markitup/)
 -   [e-math calculator](https://github.com/e-math/calculator) is a Jquery
     embedable calculator.
--   [w:Electron] Electron is a framework for creating native
+-   {{< wp "Electron" >}} Electron is a framework for creating native
     applications with web technologies like JavaScript, HTML, and CSS.
     -   [Electron Home](https://electron.atom.io/)
 

@@ -1,21 +1,14 @@
-<!--
-.. description:
-.. date: 2015-05-03
-.. slug: python_doc
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Python Documentation
--->
+---
+title: Python Documentation
+---
 
-
-[TOC]
+{{% toc /%}}
 
 # References
 
 ## General references
-See also [Tutorials, HowTo, Recipes](/node/437 "internal reference"),
-and [Design Patterns in Python](/node/446 "internal reference").
+See also {{< iref "437" "Tutorials, HowTo, Recipes" >}},
+and {{< iref "446" "Design Patterns in Python" >}}.
 
 -   Wikipedia:
     [Python](http://en.wikipedia.org/wiki/Python_%28programming_language%29),
@@ -145,8 +138,8 @@ and [Design Patterns in Python](/node/446 "internal reference").
     It is also translated in numerous languages
     _A Byte of Python_ is an introduction to python explaining basic concepts and structures.
     -   [A Byte of Python GitHub source repository](https://github.com/swaroopch/byte_of_python)
-        you can look at his [Fabric](/node/256#fabric "internal reference")
-        recipe for building the book with [pandoc](/node/425#pandoc "internal reference") in
+        you can look at his {{< iref "256#fabric" "Fabric" >}}
+        recipe for building the book with {{< iref "425#pandoc" "pandoc" >}} in
         [Byte of Python fabfile
         ](https://github.com/swaroopch/byte_of_python/blob/develop/fabfile.py).
 -   Mark Pilgrim has written
@@ -226,9 +219,9 @@ and [Design Patterns in Python](/node/446 "internal reference").
 # Python implementations
 [Python Wiki: Python Implementations](https://wiki.python.org/moin/PythonImplementations)
 
--   [w:CPython] is the default implementation of  Python. It is written in C.
+-   {{< wp "CPython" >}} is the default implementation of  Python. It is written in C.
      CPython is a bytecode interpreter. It has a foreign function interface with several languages including C.
--   [w:IronPython] (Apache License) is an implementation Python 2.7
+-   {{< wp "IronPython" >}} (Apache License) is an implementation Python 2.7
     targeting the .NET Framework and Mono.
 -   [Jython (Wikipedia)](http://en.wikipedia.org/wiki/Jython) (Python PSF derived licence)
     ([jython project](http://www.jython.org/)
@@ -242,7 +235,7 @@ and [Design Patterns in Python](/node/446 "internal reference").
     is a python translator to lower level languages
     such as C, [LLVM](http://llvm.org/), jvm, javascript, or CIL.
     It includes a Just-in-time Compiler. Pypy support both python 2 and 3.
-    -    Wikipedia [w:PyPy] page.
+    -    Wikipedia {{< wp "PyPy" >}} page.
 -   [Pyston](https://github.com/dropbox/pyston) (Apache License)
     Pyston takes parsed Python code and transforms it to the LLVM intermediate representation,
     which  is then run through the LLVM optimizer and passed off to the LLVM JIT engine.

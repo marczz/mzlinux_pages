@@ -1,39 +1,32 @@
-<!--
-.. description:
-.. date: 2015-01-05
-.. slug: network-security
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: Network Security
--->
+---
+title: Network Security
+---
 
-[TOC]
+{{% toc /%}}
 
 ---
 
 
 See also
-[Security](/node/security/  "internal reference"),
-[Firewall](/node/firewall/ "internal reference"),
-[Encryption](/node/encryption/ "internal reference"),
-[Authentication](/node/authentication/ "internal reference"),
-[SSL / TLS](/node/ssl.md  "internal reference"),
-[Vpn](/node/vpn/ "internal reference"),
-[Network Tools](/node/nettools/  "internal reference"),
-[Monitoring](/node/monitoring   "internal reference"),
-[mail section](/node/mail/  "internal reference") for securing the MTA
-such as [Postfix](/node/mail#postfix "internal reference").
+{{< iref "security" "Security" >}},
+{{< iref "firewall" "Firewall" >}},
+{{< iref "encryption" "Encryption" >}},
+{{< iref "authentication" "Authentication" >}},
+{{< iref "ssl" "SSL / TLS" >}},
+{{< iref "vpn" "Vpn" >}},
+{{< iref "nettools" "Network Tools" >}},
+{{< iref "monitoring" "Monitoring" >}},
+{{< iref "mail" "mail section" >}} for securing the MTA
+such as {{< iref "mail#postfix" "Postfix" >}}.
 
 # Network intrusion detection
 
 ## References
-Don't miss references in [Security references
-](/node/security#references  "internal reference").
+Don't miss references in {{< iref "security#references" "Security references" >}}.
 
--   Wikipedia: [w:Intrusion detection system],
-    [w:Intrusion detection system],
-    [w:Intrusion prevention system].
+-   Wikipedia: {{< wp "Intrusion detection system" >}},
+    {{< wp "Intrusion detection system" >}},
+    {{< wp "Intrusion prevention system" >}}.
 -   [OWASP testing Guide v4
     ](https://www.owasp.org/index.php/OWASP_Testing_Guide_v4_Table_of_Contents).
 -   [OWASP Testing Guide list of testing tools
@@ -42,19 +35,17 @@ Don't miss references in [Security references
     ](https://www.darknet.org.uk/category/hacking-tools/networking-hacking/).
 
 ## Intrusion Detection Systems (IDS)
-See also [Forensic Tools
-](/node/security#forensic_tools "internal reference")
-and [Forensic Distributions
-](/node/lightweight_distributions#forensic_distributions "internal reference").
+See also {{< iref "security#forensic_tools" "Forensic Tools" >}}
+and {{< iref "lightweight_distributions#forensic_distributions" "Forensic Distributions" >}}.
 
--   [w: Intrusion detection system], [w:Port scanner]
+-   {{< wp " Intrusion detection system" >}}, {{< wp "Port scanner" >}}
 
 -   Some sites offers to test the ports of
     __the system from which you connect__ :
     [Shields UP! Internet Vulnerability Profiling
     ](https://grc.com/x/ne.dll?bh0bkyd2),
     [Scan my ports with check.sdv.fr](http://check.sdv.fr:3658/cgi/scan)
--   [w:Nikto_Scanner] (GPL) is a Web server scanner that
+-   {{< wp "Nikto_Scanner" >}} (GPL) is a Web server scanner that
     tests Web servers for dangerous files/CGIs.
     [CIRT Nikto2 Home Page](http://www.cirt.net/nikto2)
 
@@ -65,11 +56,11 @@ and [Forensic Distributions
     duplicate system accounts, mounted filesystems nearing capacity,
     scan iptables logs to look for intrusion attempts. _Checksecurity_
     is a Debian package.
--   <a name="nmap"></a>[w:Nmap] (GPL)
+-   <a name="nmap"></a>{{< wp "Nmap" >}} (GPL)
     is a network exploration tool and security scanner.  There are GTK
     front ends `nmapfe` or `xnmap`.
     -   [nmap Home](http://nmap.org/)
-    -   [w:Nmap|Wikipedia Nmap page].
+    -   {{< wp "Nmap"  "Wikipedia Nmap page" >}}.
     -   [nmap Reference Guide](https://nmap.org/book/man.html).
     -   [nmap(1)
         ](https://manpages.debian.org/stretch/nmap/nmap.1.en.html).
@@ -81,9 +72,8 @@ and [Forensic Distributions
     Monitoring engine. It is in Debian.
 
 ## Brute forcers {brute_forcers}
-See also [Hash Cracking
-](/node/network-security#hash_cracking "local reference") in the
-[Network Security Section](/node/network-security#hash_cracking "local Reference").
+See also {{< iref "network" "Hash Cracking" >}} in the
+{{< iref "network" "Network Security Section" >}}.
 
 -   [THC-Hydra](https://github.com/vanhauser-thc/thc-hydra)
     is a parallelized login cracker which supports numerous protocols
@@ -105,7 +95,7 @@ See also [Hash Cracking
     -   [Comparison of Medusa, Hydra, Ncrack
         ](http://foofus.net/goons/jmk/medusa/medusa-compare.html))
 -   [ncrack](https://nmap.org/ncrack/man.html) from the
-    [Nmap tools suite](#nmap "internal reference")
+    {{< iref "#nmap" "Nmap tools suite" >}}
     is a high-speed network authentication cracking tool. _ncrack_ is
     a Debian package.
 -   [Patator](https://github.com/lanjelot/patator) (GPL)
@@ -119,7 +109,7 @@ See also [Hash Cracking
    a tutorial using either ncrack, hydra, or medusa.
 
 ## Penetration testing
--   Wikipedia [w:Penetration test], [w:Category:Computer security].
+-   Wikipedia {{< wp "Penetration test" >}}, {{< wp "Category:Computer security" >}}.
 -   [ArchWiki - List of applications/Security
     ](https://wiki.archlinux.org/index.php/List_of_applications/Security
 
@@ -132,7 +122,7 @@ See also [Hash Cracking
     detecting SSH brute-forcing, validating SSL certificate chains.
     _Bro_ is available in multiple Debian packages: _bro_, _broctl_,
     _bro-aux_, _bro-pkg_.
--   [w:Lynis]
+-   {{< wp "Lynis" >}}
     is a security auditing tool for Linux, it can perform
     Security auditing, Compliance testing (e.g. PCI, HIPAA, SOx),
     Penetration testing,  Vulnerability detection, System hardening.
@@ -140,7 +130,7 @@ See also [Hash Cracking
     -   [GitHub - Lynis](https://github.com/CISOfy/lynis)
     -   [Debian Admin - Lynis
         ](http://www.debianadmin.com/lynis-security-and-system-auditing-tool.html)
--   [w:Metasploit] (BSD License, private source commercail version)
+-   {{< wp "Metasploit" >}} (BSD License, private source commercail version)
     is a penetration testing framework.
     -   [Metasploit Home Page)(https://www.metasploit.com/)
     -   [GitHub - Metasploit Framework
@@ -151,10 +141,10 @@ See also [Hash Cracking
         ](https://wiki.archlinux.org/index.php/Metasploit_Framework).
     -   [WikiBook: Metasploit
         ](https://en.wikibooks.org/wiki/Metasploit).
--   [w:Nessus] (proprietary, free for personal use)
+-   {{< wp "Nessus" >}} (proprietary, free for personal use)
     Nessus is a vulnerability scanner, previously opensource, but
     which switched to private source in 2005.
--   [w:OpenVAS] (GPL)
+-   {{< wp "OpenVAS" >}} (GPL)
     is a remote security scanner It is a fork of Nessus when this
     later became private source in 2005.  It is in Debian.
     -   [OpenVas Home](http://www.openvas.org/)
@@ -163,12 +153,12 @@ See also [Hash Cracking
 
 # Web security exploits
 -   Wikipedia:
-    -   [w:Category:Web_security_exploits|Wikipedia category: Web security exploits],
-        [w:Internet security]
-    -   [w:Session_hijacking|Session hijacking]
+    -   {{< wp "Category:Web_security_exploits"  "Wikipedia category: Web security exploits" >}},
+        {{< wp "Internet security" >}}
+    -   {{< wp "Session_hijacking"  "Session hijacking" >}}
         is the hijacking of a session key to gain unauthorized access
         to  web information or services.
-    -   [w:Fuzzing]
+    -   {{< wp "Fuzzing" >}}
 -   [Fuzz Testing Tutorial: Fuzzing Strategy & Tools
     ](https://www.guru99.com/fuzz-testing.html).
 
@@ -187,7 +177,7 @@ See also [Hash Cracking
     is an application to audit the security of web applications. It
     performs "black-box" scans, i.e. it does not study the source code
     but will scan the web pages, looking for scripts and forms where it can inject
-    data. Once it gets this list, Wapiti do [w:Fuzzing] by injecting
+    data. Once it gets this list, Wapiti do {{< wp "Fuzzing" >}} by injecting
     payloads to see if a script is vulnerable. _Waipiti is in Debian_.
 
     Wapiti can detect the following vulnerabilities:
@@ -232,7 +222,7 @@ See also [Hash Cracking
     Galaxy Note 10.1 and SS808.<br/>
     It can be installed on live-iso, usb, pxe booted
     image, disk image or encrypted disk image.
-    -   Wikipedia [w:Kali Linux]
+    -   Wikipedia {{< wp "Kali Linux" >}}
     -   [Kali Linux Documentation](http://docs.kali.org/)
     -   [Kali list of tools
         ](http://tools.kali.org/tools-listing)

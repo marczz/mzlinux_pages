@@ -1,42 +1,36 @@
-<!--
-.. description:
-.. date: 2014-08-26
-.. slug: arm_sbc
-.. tags:
-.. link:
-.. book: mzlinux
-.. title: ARM Single Board Computers
--->
+---
+title: ARM Single Board Computers
+---
 
-[TOC]
+{{% toc /%}}
 
 # Arm Architectures
--   Wikipedia: [w:ARM architecture],
-    [w:List of single-board computers],
-    [w:Comparison of single-board computers],
-    [w:Open-source computing hardware]
--   Wikipedia [w:List of ARM microarchitectures],
-    [w:ARM architecture]
+-   Wikipedia: {{< wp "ARM architecture" >}},
+    {{< wp "List of single-board computers" >}},
+    {{< wp "Comparison of single-board computers" >}},
+    {{< wp "Open-source computing hardware" >}}
+-   Wikipedia {{< wp "List of ARM microarchitectures" >}},
+    {{< wp "ARM architecture" >}}
 
 Recent arm architectures includes
 
--   ARMv5: provided by [wARM7EJ], [w:ARM9E], [w:ARM10E]
-    The  [w:ARM9E] was produced between  1998 to 2006 and widely used
+-   ARMv5: provided by [wARM7EJ], {{< wp "ARM9E" >}}, {{< wp "ARM10E" >}}
+    The  {{< wp "ARM9E" >}} was produced between  1998 to 2006 and widely used
     in older SBC like the Plug computers (sheevaplug, todido,
     guruplug, dreamplug ...)
--   ARMv6: provided by [w:ARM11] and some [w:Cortex-M].
--   ARMv7: provided by [w:Cortex-M], [w:Cortex-R], and [w:Cortex-A] 5
+-   ARMv6: provided by {{< wp "ARM11" >}} and some {{< wp "Cortex-M" >}}.
+-   ARMv7: provided by {{< wp "Cortex-M" >}}, {{< wp "Cortex-R" >}}, and {{< wp "Cortex-A" >}} 5
     to 17.
-    -   Wikipedia: [w:Comparison of ARMv7-A cores]
-    -   [w:ARM_Cortex-A7] is a popular processor that has many
-        system-on-chips (SoC) by [w:Allwinner_Technology|Allwinner]
-        (A20, A31, A83T ,H3, H8), [w:Broadcom],
-        [w:Freescale_Semiconductor|Freescale],
-        [w:Marvell_Technology_Group|Marvell], Mediatek, Qualcomm,
+    -   Wikipedia: {{< wp "Comparison of ARMv7-A cores" >}}
+    -   {{< wp "ARM_Cortex-A7" >}} is a popular processor that has many
+        system-on-chips (SoC) by {{< wp "Allwinner_Technology"  "Allwinner" >}}
+        (A20, A31, A83T ,H3, H8), {{< wp "Broadcom" >}},
+        {{< wp "Freescale_Semiconductor"  "Freescale" >}},
+        {{< wp "Marvell_Technology_Group"  "Marvell" >}}, Mediatek, Qualcomm,
         Samsung.
-     -  [w:ARM Cortex-A9 MPCore] is a 32-bit multicore processor
+     -  {{< wp "ARM Cortex-A9 MPCore" >}} is a 32-bit multicore processor
         providing up to 4 cores, each implementing the ARM v7 instruction set.
-        [w:Cortex-A9] is provided by [Texas Instrument OMAP4
+        {{< wp "Cortex-A9" >}} is provided by [Texas Instrument OMAP4
         ](http://en.wikipedia.org/wiki/Texas_Instruments_OMAP#OMAP4),
         [Nvidia Tegra 2 series
         ](http://en.wikipedia.org/wiki/Nvidia_Tegra#Tegra_2_series)
@@ -50,17 +44,17 @@ Recent arm architectures includes
         is a family of ARMv7 multicore Socs with DDR3/DDR3L/DDR4 Ram
         (including ECC), PCI-e2.0, 2 or 3 Gigabits internets, 1 OSB
         3.0, 1 to 4 SATA, and a TDP of 3W to 4W.
--   ARMv8: provided by [w:Cortex-A32] _32 bits only_ and for
-    32bits/64bits [w:Cortex-A] > 35 among which the most used in SBC
-    is [w:Cortex-A53], and Qualcom [w:Snapdragon].
+-   ARMv8: provided by {{< wp "Cortex-A32" >}} _32 bits only_ and for
+    32bits/64bits {{< wp "Cortex-A" >}} > 35 among which the most used in SBC
+    is {{< wp "Cortex-A53" >}}, and Qualcom {{< wp "Snapdragon" >}}.
     -   ARMv8-A _2011_ also named ARMv8.0-A introduce 64 bits AArch64,
         ARMv8-A allows 32-bit applications to be executed in a 64-bit
         OS.
-    -   Then it was improved in ARMv8.1-A _2014_, [w:ARMv8.2-A]_2016_
-        supported by  [w:Cortex-A55] and [w:Cortex-A75] ,
+    -   Then it was improved in ARMv8.1-A _2014_, {{< wp "ARMv8.2-A" >}}_2016_
+        supported by  {{< wp "Cortex-A55" >}} and {{< wp "Cortex-A75" >}} ,
         ARMv8.3-A _2016_.
-    -   Wikipedia: [w:Comparison of ARMv8-A cores]
-    -   [w:Cortex-A53] is the architecture of
+    -   Wikipedia: {{< wp "Comparison of ARMv8-A cores" >}}
+    -   {{< wp "Cortex-A53" >}} is the architecture of
         [Marvell’s ARMADA 3700
         ](https://www.marvell.com/embedded-processors/armada-3700/)
         found in EspressoBin,  and
@@ -80,11 +74,11 @@ Recent arm architectures includes
         like the Thecus NAS,
     -   [Marvell's Kirkwood Debian Support
         ](http://www.cyrius.com/debian/kirkwood/)
-        like [w:SheevaPlug], [w:Guruplug], [D2Plug
+        like {{< wp "SheevaPlug" >}}, {{< wp "Guruplug" >}}, [D2Plug
         ](http://www.globalscaletechnologies.com/p-43-d2-plug.aspx)
     -   [Marvell's Orion Debian Support
         ](http://www.cyrius.com/debian/orion/) like
-        [Debian on QNAP](#qnap "internal link"),
+        {{< iref "#qnap" "Debian on QNAP" >}},
 -   [Debian Cheap ServerBox Hardware
     ](https://wiki.debian.org/CheapServerBoxHardware).
     is a list of arm small boxes that we can consider for open source
@@ -106,21 +100,21 @@ Recent arm architectures includes
     ](https://github.com/codehelp).
 -   [OmapPedia](http://www.omappedia.org/wiki/)
     reference the support across the miscellaneous distributions
-    of the [w:Omap] arm processors developed by Texas Instruments
+    of the {{< wp "Omap" >}} arm processors developed by Texas Instruments
 
 ## Allwinner Technology
 
-[w:Allwinner_Technology|Allwinner] is one of the more popular
+{{< wp "Allwinner_Technology"  "Allwinner" >}} is one of the more popular
 manufacturer of arm SoC.
 
-It produces the A1x serie of [w:Cortex-A8] ArmV7 SoC;
-the A2x and A3x serie of [w: Cortex-A7] ArmV7 SoC; the A8x family
-of  [w: Cortex-A7] and [w:Cortex-A15] ArmV7 SoC; The Hx family where
-H2, H3, H8 are [w: Cortex-A7] ArmV7 SoCs and  AllWinner
+It produces the A1x serie of {{< wp "Cortex-A8" >}} ArmV7 SoC;
+the A2x and A3x serie of {{< wp " Cortex-A7" >}} ArmV7 SoC; the A8x family
+of  {{< wp " Cortex-A7" >}} and {{< wp "Cortex-A15" >}} ArmV7 SoC; The Hx family where
+H2, H3, H8 are {{< wp " Cortex-A7" >}} ArmV7 SoCs and  AllWinner
 [H64](http://linux-sunxi.org/H64), [H5](http://linux-sunxi.org/H5),
-[H6](http://linux-sunxi.org/H6)are [w:Cortex-A53] armV8-A Socs.
+[H6](http://linux-sunxi.org/H6)are {{< wp "Cortex-A53" >}} armV8-A Socs.
 
--   Wikipedia: [w:Allwinner_Technology|Allwinner]
+-   Wikipedia: {{< wp "Allwinner_Technology"  "Allwinner" >}}
 -   [AllWinner - A series
     ](http://www.allwinnertech.com/index.php?c=product&a=index&pid=2)
 -   [AllWinner - H series
@@ -132,7 +126,7 @@ H2, H3, H8 are [w: Cortex-A7] ArmV7 SoCs and  AllWinner
     based devices.
 -   [ArchLinux AllWinner armv7 platform comparison
     ](http://archlinuxarm.org/platforms/armv7/allwinner)
--   [w:Allwinner A1X] can boot GNU/Linux distributions such as Debian,
+-   {{< wp "Allwinner A1X" >}} can boot GNU/Linux distributions such as Debian,
     Ubuntu, Fedora, from an SD card, in addition to the Android OS
     installed on the flash memory.
 -   [Allwinner A10 CPU](http://elinux.org/Allwinner_A1X)
@@ -151,7 +145,7 @@ H2, H3, H8 are [w: Cortex-A7] ArmV7 SoCs and  AllWinner
     bricked, and it can be securely
     [hacked](http://elinux.org/Hack_A10_devices).
 -   [Allwinner A20](http://elinux.org/Allwinner_A20)
-    contains an [w:Cortex-A7] dual core, GPU – ARM Mali400 MP2, DDR3
+    contains an {{< wp "Cortex-A7" >}} dual core, GPU – ARM Mali400 MP2, DDR3
     ram, 10/100 Ethernet, 4Gb Nand Flash, HDMI 1080p Output with
     3840×1080@30fps 3D decoding, 2 USB Host, 1 micro SD slot, 1 SATA,
     1 IR.
@@ -183,18 +177,18 @@ H2, H3, H8 are [w: Cortex-A7] ArmV7 SoCs and  AllWinner
 
 
 #  Raspberry
-[w:Raspberry Pi] is a single-board computer
+{{< wp "Raspberry Pi" >}} is a single-board computer
 
 -   version 1 had a  ArmV6 Broadcom BCM2835 ARM11 700Mhz cpu,
     512 Mb ram, SD Card Slot, USB 2.0, RCA video, HDMI socket,
     10/100 BaseT Ethernet socket
     power consumption of 3.5 W and a price of 45€.
 -   version 2 uses a ArmV7 Broadcom BCM2836 SoC with a 900 MHz 32-bit
-    quad-core ARM [w:Cortex-A7] processor, 1Gb RAM
+    quad-core ARM {{< wp "Cortex-A7" >}} processor, 1Gb RAM
 -   version 3 uses a ArmV8-A Broadcom BCM2837 SoC with a 1.2 GHz
-    64-bit quad-core ARMv8-A [w:Cortex-A53] processor, 1Gb RAM
+    64-bit quad-core ARMv8-A {{< wp "Cortex-A53" >}} processor, 1Gb RAM
 -   The B-3+ launched in march 2018 has a Broadcom BCM2837B0 SoC with
-    1.4 GHz 64-bit quad-core ARMv8-A [w:Cortex-A53], 1Gb RAM,
+    1.4 GHz 64-bit quad-core ARMv8-A {{< wp "Cortex-A53" >}}, 1Gb RAM,
     4xUSB-2.0, HDMI, analog audio I/O, MicroSDHC, 10/100/1000 Mbit/s
     Ethernet (real speed ~300 Mbit/s), 802.11ac dual band 2.4/5 GHz
     wireless, Bluetooth 4.2, 17× GPIO, power from 2.3W idle to 5.7w
@@ -262,7 +256,7 @@ H2, H3, H8 are [w: Cortex-A7] ArmV7 SoCs and  AllWinner
 
 ## Kodi on RaspBerry
 
-[Kodi](/node/mediaplayers#kodi "internal reference")
+{{< iref "mediaplayers#kodi" "Kodi" >}}
 [run on Raspberry](https://kodi.wiki/index.php?title=Raspberry_Pi)
 either with a choice of specific distributions, like the minimal
 [Xbian](http://wiki.xbmc.org/index.php?title=XBian),[osmc](https://osmc.tv/),
@@ -275,10 +269,10 @@ or on a modern Raspbian or following the
 -   [Raspberry Pi FAQ - Kodi Wiki](https://kodi.wiki/view/Raspberry_Pi_FAQ)
 
 # Banana Pi
-the information on the bananapi devices are on Wikipedia [w:Banana Pi]
+the information on the bananapi devices are on Wikipedia {{< wp "Banana Pi" >}}
 and on the [Banana Pi gitbook](https://www.gitbook.com/book/bananapi/).
 
--   Bananapi M1 has an ArmV7 [w:Allwinner A20] [w:ARM Cortex-A7]
+-   Bananapi M1 has an ArmV7 {{< wp "Allwinner A20" >}} {{< wp "ARM Cortex-A7" >}}
     Dual-Core 1GB DDR3, 10/100/1000 Ethernet, HDMI, CVBS, LVDS/RGB
     Video output, 3.5mm jack and HDMI Audio output, SATA 2.0 (quite
     slow 36MB/s) , 2 x USB
@@ -293,15 +287,15 @@ and on the [Banana Pi gitbook](https://www.gitbook.com/book/bananapi/).
     those listed in [This T. Kaiser post
     ](https://forum.armbian.com/topic/1351-h3-board-buyers-guide/?tab=comments#comment-28169).
 
--   Bananapi M2 improve CPU with an Allwinner A31S [w:ARM Cortex-A7]
+-   Bananapi M2 improve CPU with an Allwinner A31S {{< wp "ARM Cortex-A7" >}}
     Quad-Core 1GHz, 4 x USB 2, but drop SATA.
--   Bananapi M2+ CPU is H3 Quad-core [w:ARM Cortex-A7] Quad-Core, one
+-   Bananapi M2+ CPU is H3 Quad-core {{< wp "ARM Cortex-A7" >}} Quad-Core, one
     USB 2.0 HOST, NO SATA, Wifi,
 -   [Bananapi M2 Ultra
     ](https://www.gitbook.com/book/bananapi/bpi-m2-ultra-open-source-single-board-computer/details)
     _November 2016_ has an [Allwinner R40
     ](https://en.wikipedia.org/wiki/Allwinner_Technology#R-Series)
-    [w:ARM Cortex-A7] Quad-Core 2GHz, 2GB DDR3 SDRAM, 8G eMMC flash on
+    {{< wp "ARM Cortex-A7" >}} Quad-Core 2GHz, 2GB DDR3 SDRAM, 8G eMMC flash on
     board, bluetooth 4.0 and SATA interface. The Allwinner R40’s
     advantage over the H3 and A31 is the addition of eMMC flash and
     native SATA support.
@@ -309,7 +303,7 @@ and on the [Banana Pi gitbook](https://www.gitbook.com/book/bananapi/).
     ](https://www.gitbook.com/book/bananapi/bpi-m2-ultra-open-source-single-board-computer/details)
     has the same [Allwinner R40
     ](https://en.wikipedia.org/wiki/Allwinner_Technology#R-Series)
-    [w:ARM Cortex-A7] Quad-Core 2GHz, 2GB DDR3 SDRAM, bluetooth 4.0 and SATA interface.
+    {{< wp "ARM Cortex-A7" >}} Quad-Core 2GHz, 2GB DDR3 SDRAM, bluetooth 4.0 and SATA interface.
     WIFI+BT on board.  The main difference with M2 Ultra is the
     absence of eMMC and the support of Wifi onboard. Ultra has also a
     Built-in 3.7V Lithium Battery Charging Circuit, which is absent on
@@ -379,7 +373,7 @@ Specifications:
 
 -   [Marvell’s ARMADA 3700
     ](https://www.marvell.com/embedded-processors/armada-3700/)
-    [w:Cortex-A53] dual-core  up to 1.2 GHz.
+    {{< wp "Cortex-A53" >}} dual-core  up to 1.2 GHz.
 -   1x [Topaz Networking Switch
     ](http://wiki.espressobin.net/tiki-index.php?page=Topaz+Switch)
     _The Marvell® Link Street®-88E6341 device is single-chip, 6-Port
@@ -430,7 +424,7 @@ The ESPRESSObin is unbrickable you can always do
     ](https://wiki.debian.org/InstallingDebianOn/Marvell/ESPRESSOBin)
 
 
--   [ArmBian](#armbian "internal reference") supports the espressobin,
+-   {{< iref "#armbian" "ArmBian" >}} supports the espressobin,
     -   [armbian - Espressobin](https://www.armbian.com/espressobin/)
     -   [Espressobin support development efforts
         ](https://forum.armbian.com/topic/4089-espressobin-support-development-efforts/)
@@ -462,9 +456,9 @@ The ESPRESSObin is unbrickable you can always do
 
 
 # Plug Computers
-Wikipedia [w:Plug computer].
+Wikipedia {{< wp "Plug computer" >}}.
 
-The [w:SheevaPlug] is a plug computer with ARM-compatible CPU.
+The {{< wp "SheevaPlug" >}} is a plug computer with ARM-compatible CPU.
 It features
 
 -   a Marvell Kirkwood 6281 CPU (ARM-v5) at 1.2 GHz with 256 KB L2
@@ -497,7 +491,7 @@ It run Ubuntu to provide
 a nas and media streaming. It costs 78€ now discounted 32€ at
 [NewIT](https://www.newit.co.uk/shop/All-TonidoPlug/TonidoPlug2).
 
-[w:GuruPlug] is the successor of Sheevaplug.  with 1.2 GHz ARM Marvell
+{{< wp "GuruPlug" >}} is the successor of Sheevaplug.  with 1.2 GHz ARM Marvell
 Kirkwood 6281 (ARM9E i.e. ARM-v5), 512MB SDRAM, 512MB NAND, USB 2.0,
 Gigabit Ethernet, JTAG, Bluetooth 2.1, Wi-Fi 802.11 b/g
 
@@ -542,7 +536,7 @@ these boards.
 -    [Embedded Linux Wiki (elinux): BeagleBoard
     ](http://elinux.org/BeagleBoard)
      is related to BeagleBoard and BeagleBoard-xM that both use
-     [w:Texas instrument OMAP] Single-board computer (ARM
+     {{< wp "Texas instrument OMAP" >}} Single-board computer (ARM
      architecture). A distinct SoC is used for the following _BeagleBone]_.
 -    [Embedded Linux Wiki (elinux): BeagleBone
     ](http://elinux.org/BeagleBone)
@@ -567,16 +561,16 @@ these boards.
      ](http://circuitco.com/support/index.php?title=BeagleBone_Black_Accessories).
 
 # CubieBoard
-[w:Cubieboard] is a single-board computer manufacured by
+{{< wp "Cubieboard" >}} is a single-board computer manufacured by
 [cubietech.com](http://www.cubietech.com/).
 
-The processors goes from  AllWinner A10 [w:Cortex-A8] for cubieboard
-1,  AllWinner A20 2x[w:Cortex-A7] for CubieBoard 2 and 3, Allwinner A80
-4x Cortex-A15 and 4x[w:Cortex-A7] [w:ARM big.LITTLE] for CubieBoard 4,
-Allwinner H8 8x[w:Cortex-A7] CubieBoard 5, Actions SOC S500
-4x[w:Cortex-A9]
+The processors goes from  AllWinner A10 {{< wp "Cortex-A8" >}} for cubieboard
+1,  AllWinner A20 2x{{< wp "Cortex-A7" >}} for CubieBoard 2 and 3, Allwinner A80
+4x Cortex-A15 and 4x{{< wp "Cortex-A7" >}} {{< wp "ARM big.LITTLE" >}} for CubieBoard 4,
+Allwinner H8 8x{{< wp "Cortex-A7" >}} CubieBoard 5, Actions SOC S500
+4x{{< wp "Cortex-A9" >}}
 
-The [w:Cubieboard|Cubieboard Wikipedia Page] lists the specifications
+The {{< wp "Cubieboard"  "Cubieboard Wikipedia Page" >}} lists the specifications
 of the models. A lot of the actual platforms are on sell on
 [NewIt](https://www.newit.co.uk/shop/All_Cubieboard).
 
@@ -658,7 +652,7 @@ of the models. A lot of the actual platforms are on sell on
     ](http://www.cubietech.com/product-detail/cubieboard7/)
     Specifications: [Actions SOC S700
     ](http://www.actions-semi.com/en/productview.aspx?id=225)
-    [w:Cortex-A53] Quad-Core CPU, Mali450 MP4 GPU, 2GB LPDDR3, 8GB
+    {{< wp "Cortex-A53" >}} Quad-Core CPU, Mali450 MP4 GPU, 2GB LPDDR3, 8GB
     eMMC, micro SD card slot, up to 32GB, Support 2.5 inch HDD/SSD up
     to 4TB, USB HOST Port x2, and USB Device port x1, HDMI V1.4a,
     1080P@60Hz, 10M/100M RJ45, Wifi, Bluetooth, IR, audio jack in and
@@ -684,14 +678,14 @@ of the models. A lot of the actual platforms are on sell on
         for 80€ including shipping.
 
 # OLinuXino
-[w:OLinuXino] is an open hardware single-board computer capable of
+{{< wp "OLinuXino" >}} is an open hardware single-board computer capable of
 running Android or Linux designed by OLIMEX Ltd in Bulgaria.
 
 There are products based on i.MX233 ARM926J, Allwinner A13, A10S
 Cortex-A8, Allwinner A20, Allwinner A64 - 1.2 GHz Quad-Core ARM
 Cortex-A53.
 
-See [w:Wikipedia OLinuXino] for a list of all products
+See {{< wp "Wikipedia OLinuXino" >}} for a list of all products
 
 -   [OLimex OLinuxxino products
     ](https://www.olimex.com/Products/OLinuXino/)
@@ -745,10 +739,10 @@ Marvell's Armada, NXP i.MX6 & i.MX8, and Intel Braswell (atom not ARM)
         also the [Cex7-A8040
         ](https://www.solid-run.com/marvell-armada-family/com-express-7-a8040/cex7-a8040-%20specifications/)
 
--  [w:CuBox] is a fan-less cube-shaped at 2 × 2 × 2 inches arm
+-  {{< wp "CuBox" >}} is a fan-less cube-shaped at 2 × 2 × 2 inches arm
    computer. It is produced by [Solid Run](http://imx.solid-run.com/),
    it is powered by an Freescale
-   [w:https://en.wikipedia.org/wiki/I.MX#i.MX_6_series|I.MX6]
+   {{< wp "https://en.wikipedia.org/wiki/I.MX#i.MX_6_series"  "I.MX6" >}}
    Cortex A-9 processor.
    It is produced by [Solid Run](http://imx.solid-run.com/)
    where you find [Cubox-i Home page
@@ -808,7 +802,7 @@ Marvell's Armada, NXP i.MX6 & i.MX8, and Intel Braswell (atom not ARM)
 # Misc Socs
 
 -   [UDOO](http://www.udoo.org/) is a single-board computer with a dual or quad core
-    ARM Freescale [w:Cortex-A9]  and an [w:Arduino] board.
+    ARM Freescale {{< wp "Cortex-A9" >}}  and an {{< wp "Arduino" >}} board.
     The UDOO Quad
     features a Freescale i.MX 6 ARM Cortex-A9 Quad core 1GHz, GPU,
     Arduino compatible ARM Cortex-M3 CPU, RAM DDR3 1GB, HDMI and LVDS,
@@ -824,7 +818,7 @@ Marvell's Armada, NXP i.MX6 & i.MX8, and Intel Braswell (atom not ARM)
     -   [Utilite run either Ubuntu or Android](http://utilite-computer.com/web/utilite-software).
 -   [Trim-Slice](http://utilite-computer.com/web/models)
     is a fanless ARM desktop in an 0.6" thin metal
-    case. It is based on NVIDIA [w:Tegra] 2 a dual-core ARM Cortex A9 at 1 GHz,
+    case. It is based on NVIDIA {{< wp "Tegra" >}} 2 a dual-core ARM Cortex A9 at 1 GHz,
     it has 1 GB DDR2 RAM soldered on-board, either 32GB SSD
     or 2.5″ SATA hard disk, one Sd and one micro-SD both up to 32 GB.
     HDMI 1.3a 1080p and a DVI-D up to 1680 x 1050, stereo line-out and
@@ -944,17 +938,17 @@ and optional USB or cloud backup
     -   [my raspberry RPI Monitor](http://192.168.1.8:8888/)
     Rpimonitord uses 3 daemons processes in perl 7.6M/1.9M 6.8M/1.5M
     6.6M/1.2M ~ $7.6 + 6.8 - 1.5 + 6.6 - 1.2 => 18.3  $
--   [conky](/node/monitoring#conky) can be used with raspberry.
+-   {{< iref "monitoring#conky" "conky" >}} can be used with raspberry.
     [Conky for the Raspberry Pi
     ](http://jeffskinnerbox.me/posts/2012/Nov/02/conky-for-the-raspberry-pi/)
--   [w:Raspcontrol]
+-   {{< wp "Raspcontrol" >}}
     is a web control centre written in PHP for Raspberry Pi.
     It has numerous forks on GitHub.
--   [monitorix](/node/monitoring#monitorix "internal reference") can be used with
+-   {{< iref "monitoring#monitorix" "monitorix" >}} can be used with
     raspberry, as explained in
     [How to set up a web-based lightweight system monitor on Linux
     ](http://xmodulo.com/2014/05/web-based-lightweight-system-monitor-linux.html)
--   I use [monit](/node/monitoring#monit "internal reference") on bananapi.
+-   I use {{< iref "monitoring#monit" "monit" >}} on bananapi.
 -   [Banoffee Pi Server](http://banoffeepiserver.com/):
     [web based monitoring
     ](http://banoffeepiserver.com/server-monitoring/simple-web-based-monitoring-tools.html)
