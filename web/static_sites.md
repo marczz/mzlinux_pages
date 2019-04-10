@@ -475,6 +475,7 @@ most o them where primary aimed to blogging.
 generator written in go. It is in Debian. Hugo can be used for documentation.
 
 Themes aimed to Documentation:
+
 -   [DocDock](https://docdock.netlify.com/original/),
     [GitHub - docdock](https://github.com/vjeantet/hugo-theme-docdock)
 -   [Minimo](https://github.com/MunifTanjim/minimo)
@@ -486,6 +487,7 @@ Themes aimed to Documentation:
 
 
 Examples of Documentation build with Hugo:
+
 -   [Riak Docs](http://docs.basho.com/) is built with Hugo,
     [The source is on GitHub](https://github.com/basho/basho_docs).
 -   [Docs.balsamiq.com](https://blog.balsamiq.com/new-documentation-site/).
@@ -498,7 +500,16 @@ Building doc with Hugo:
     ](https://www.presslabs.com/how-to/documentation-hugo/)
 -   [hugo-academic](https://github.com/gcushen/hugo-academic)
     website builder for Hugo
--    [Better Hugo/AsciiDoc HTML](http://ratfactor.com/hugo-adoc-html5s/).
+-   [Better Hugo/AsciiDoc HTML](http://ratfactor.com/hugo-adoc-html5s/).
+
+Switching from Nikola to Hugo:
+
+-   [Moving from Nikola to Hugo · What I learnt this week
+    ](https://learnings.desipenguin.com/posts/migrating-to-hugo/)
+-   [Moving from Nikola to Hugo - serialized.net
+    ](https://serialized.net/2017/06/moving-from-nikola-to-hugo/)
+-   [Nikola to Hugo python script
+    ](https://gist.github.com/punchagan/025b0fbf032dc20d0b36d35ec7bf5339)
 
 ## generators mainly targeted to documentation
 
@@ -787,7 +798,7 @@ Building doc with Hugo:
      Use Google appengine to index the rss feed, and a javascript frontend.
 -   [Gabe Weatherhead uses Sphider on his Pelican site](http://www.macdrifter.com/2012/08/self-hosted-search.html), its sphider search is running at
     [Nerd Query](http://nerdquery.com/).
-     _{{< iref "111#sphider" "Sphider reference" >}}_
+     _{{< iref "content_management.md#sphider" "Sphider reference" >}}_
 
 
 
