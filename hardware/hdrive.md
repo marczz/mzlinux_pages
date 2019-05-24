@@ -294,6 +294,17 @@ utility when they don't know the file system.
 [smartmontools](http://www.smartmontools.org/)(GPL)
 :   contains two programs to report {{< wp "S.M.A.R.T." >}} able hard drives
 
+-   [Smartmontools Home](http://www.smartmontools.org/)
+    -   [Smartmontools Documentation
+        ](http://www.smartmontools.org/wiki/TocDoc)
+    -   [SMART attributes interpretation
+        ](http://www.smartmontools.org/wiki/TocDoc#SMARTAttributes)
+        which is more detailled in the
+        [_ATA S.M.A.R.T. attributes_ section of the Wikipedia page
+        ](http://en.wikipedia.org/wiki/S.M.A.R.T.#ATA_S.M.A.R.T._attributes)
+    -   [Bad block HOWTO for smartmontools
+        ](https://www.smartmontools.org/wiki/BadBlockHowto)
+    -   [Smartmontool FAQ](http://www.smartmontools.org/wiki/FAQ)
 -   [ArchWiki: S.M.A.R.T.](https://wiki.archlinux.org/index.php/S.M.A.R.T.)
 -   [Ubuntu Help: smartmontools
     ](https://help.ubuntu.com/community/Smartmontools)
@@ -307,22 +318,6 @@ utility when they don't know the file system.
     SMART system built into many ATA IDE and SCSI-3 hard drives.
 -   [smartd.conf manual page
     ](http://www.smartmontools.org/browser/trunk/smartmontools/smartd.conf.5.in)
--   [Smartmontools Home](http://www.smartmontools.org/)
-    contains in the
-    [Smartmontools Documentation
-    ](http://www.smartmontools.org/wiki/TocDoc)
-    further information including the [SMART attributes interpretation
-    ](http://www.smartmontools.org/wiki/TocDoc#SMARTAttributes)
-    which is more detailled in the
-    [_ATA S.M.A.R.T. attributes_ section of the Wikipedia page
-    ](http://en.wikipedia.org/wiki/S.M.A.R.T.#ATA_S.M.A.R.T._attributes)
--   [Bad block HOWTO for smartmontools
-    ](http://smartmontools.sourceforge.net/badblockhowto.html)
-    by Bruce Allen.
--   Gentoo Wiki has an [Smartmontools Howto
-    ](http://en.gentoo-wiki.com/wiki/Smartmontools)
--   [Smartmontool FAQ](http://www.smartmontools.org/wiki/FAQ)
--   [Ubuntu Help: Smartmontools](https://help.ubuntu.com/community/Smartmontools)
 -   Linux Journal:
     [Monitoring Hard Disks with SMART](http://www.linuxjournal.com/article/6983)
 -   [GSmartControl](https://gsmartcontrol.sourceforge.io/home/)
@@ -333,7 +328,7 @@ utility when they don't know the file system.
 -   disk smart capacities: `sudo smartctl -c /dev/hdc`
 -   Error log `sudo smartctl -l error /dev/hdc`
 -   short seltestt (1mn) `sudo smartctl -t short /dev/hdc`
--   Long selftest `sudo smartctl -t long /dev/hdc`}
+-   Long selftest `sudo smartctl -t long /dev/hdc`
 -   results of selftest `sudo smartctl -l selftest /dev/hdc`
 -   SMART Attributes `sudo smartctl -A /dev/hdc`
 -   smartd take 1.8M Vsz
