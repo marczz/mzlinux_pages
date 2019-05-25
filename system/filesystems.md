@@ -105,15 +105,16 @@ and {{< iref "hdrive#partitioning" "partitioning" >}}.
         ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html-single/performance_tuning_guide/index#sect-Red_Hat_Enterprise_Linux-Performance_Tuning_Guide-Configuring_file_systems_for_performance-Tuning_XFS)
 
 ## Btrfs
-{{< wp "Btrfs" >}} (GPL) is a copy-on-write file system
-which is an improvement of ext3/ext4 file system. It offers numerous
-{{< wp "Btrfs#Features"  "new features" >}} including copy-on-write snapshots of files and subvolumes,
-checksums, transparent compresssion.
+{{< wp "Btrfs" >}} (GPL) is a copy-on-write file system which is an improvement of
+ext3/ext4 file system. It offers numerous {{< wp "Btrfs#Features" "new features" >}}
+including copy-on-write snapshots of files and subvolumes, checksums, transparent
+compresssion.
 
 -   The main site is the
     [Kernel Brtfs Wiki](https://btrfs.wiki.kernel.org)
     it holds on the Home page a [list of Guides and articles
-    ](https://btrfs.wiki.kernel.org/index.php/Main_Page#Guides_and_usage_information).
+    ](https://btrfs.wiki.kernel.org/index.php/Main_Page#Guides_and_usage_information)
+    and the [Btrfs FAQ](https://btrfs.wiki.kernel.org/index.php/FAQ).
 -   [Debian Wiki: Btrfs](https://wiki.debian.org/Btrfs)
 -   [ArchWiki: Btrfs](https://wiki.archlinux.org/index.php/Btrfs),
     [Btrfs - Tips and tricks
@@ -138,6 +139,17 @@ checksums, transparent compresssion.
 -   [compsize](https://github.com/kilobyte/compsize) (GPL)
      takes a list of files (given as arguments) on a btrfs filesystem and measures used
      compression types and effective compression ratio.
+
+The use of subvolumes is explained in the
+[Btrfs FAQ](https://btrfs.wiki.kernel.org/index.php/FAQ) in the [Subvolume section
+](https://btrfs.wiki.kernel.org/index.php/FAQ#Subvolumes) the choice bteween using btrfs
+and subvolumes over a raw partition or over a LVM layer is discussed in
+[Interaction with partitions, device managers and logical volumes
+](https://btrfs.wiki.kernel.org/index.php/FAQ#Interaction_with_partitions.2C_device_managers_and_logical_volumes).
+To summarize: a raw partition has a light performance benefit, but you can no longer
+shrink or move online. Lvm allow to use pvmove.
+Using subvolumes instead of LV will increase performances and avoid dupliacate data
+storage, but a single subvolume can use all space.
 
 
 # Flash memory and ssd filesystems
