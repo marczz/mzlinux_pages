@@ -35,12 +35,12 @@ area
     ](http://www.ibm.com/developerworks/aix/library/au-satslowsys.html "ibm.com/developerworks/ au-satslowsys")
     by Martin Brown.
 
-# Monitoring Tools {monitoring_tools}
+# Monitoring Tools {#monitoring_tools}
 
 
 Basic network monitoring tools like _netstat_, _nmap_, _iptraf_,
 _tracepath_, _traceroute_, _mtr_ are in the section
-{{< iref "ip_tools" "IP Tools" >}}.
+{{< iref "nettool#ip_tools" "IP Tools" >}}.
 
 
 [conky](http://conky.sourceforge.net/) (GPL) <a name="conky"></a>
@@ -246,7 +246,7 @@ Is a fast, highly customizable system info bash script.
 
 
 
-# Network Monitoring Tools {network_monitoring}
+# Network Monitoring Tools {#network_monitoring}
 I put here tools that are specifically aimed to network monitoring,
 the tools that monitor both system and network are in the section
 {{< iref "#system_monitoring" "System monitoring" >}}
