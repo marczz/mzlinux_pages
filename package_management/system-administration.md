@@ -9,45 +9,45 @@ title: System Administration
     (chunked)](http://www.gnu.org/software/libc/manual/html_node/)
     or [(one page)
     ](http://www.gnu.org/software/libc/manual/html_mono/libc.html).
--   The [Red Hat administration guide
-    ](https://access.redhat.com/site/documentation/en-US/Red_Hat_Enterprise_Linux/7-Beta/html/System_Administrators_Guide/index.html)
+-   The [Red Hat 7 administrator's guide
+    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/)
     has many useful chapters:
     -   [networking Guide
-        ](https://access.redhat.com/site/documentation/en-US/Red_Hat_Enterprise_Linux/7-Beta/html/Networking_Guide/index.html)
+        ]( https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/Networking_Guide/index.html)
         also in
-        [Fedora: networking Guide
-        ](http://docs.fedoraproject.org/en-US/Fedora/21/html/Networking_Guide/index.html)
+        [Fedora 25: networking Guide
+        ](https://docs.fedoraproject.org/en-US/Fedora/25/html/Networking_Guide/index.html)
     -   [Resource Management and Linux Containers Guide
         ](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7-Beta/html/Resource_Management_and_Linux_Containers_Guide/index.html)
         deal with control groups, _cgroup_.
-    -  [Kernel Crash Dump Guide
-       ](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7-Beta/html/Kernel_Crash_Dump_Guide/index.html)
-       documents how to configure, test, and use the _kdump_ crash
-       recovery service. It uses tools provided in debian as packages
-       _kdump-tools_, _makedumpfile_, _crash-whitepaper_.
-       (see also _kexec-tools_)
+    -   [Kernel Crash Dump Guide
+        ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/Kernel_Crash_Dump_Guide/index.html)
+        documents how to configure, test, and use the _kdump_ crash
+        recovery service. It uses tools provided in debian as packages
+        _kdump-tools_, _makedumpfile_, _crash-whitepaper_.
+        (see also _kexec-tools_)
     -   [Performance Tuning Guide
-        ](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7-Beta/html/Performance_Tuning_Guide/index.html)
+        ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/Performance_Tuning_Guide/index.html)
         describe Performance Monitoring Tools, Cpu, Memory, File Sytem,
         Networking tuning .
     -   [Storage Administration Guide
-        ](https://access.redhat.com/site/documentation/en-US/Red_Hat_Enterprise_Linux/7-Beta/html/Storage_Administration_Guide/index.html)
+        ]( https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/Storage_Administration_Guide/index.html)
     -   [LVM Administrator Guide
-        ](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7-Beta/html/Logical_Volume_Manager_Administration/index.html)
+        ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/Logical_Volume_Manager_Administration/index.html)
     -   [DM Multipath Configuration and Administration
-    ](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7-Beta/html/DM_Multipath/index.html)
+        ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/DM_Multipath/index.html)
     -   [SELinux User's and Administrator's Guide
-        ](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7-Beta/html/SELinux_Users_and_Administrators_Guide/index.html)
+        ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/SELinux_Users_and_Administrators_Guide/index.html)
     -   [Security Guide
-        ](https://access.redhat.com/site/documentation/en-US/Red_Hat_Enterprise_Linux/7-Beta/html/Security_Guide/index.html)
+        ]( https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/Security_Guide/index.html)
     -   Guides related to KVM virtualization.
     -   Guides to pacemaker clusters. Debian packages _pacemaker_,
         _pacemaker-cli-utils_, _pacemaker-mgmt_, _hartbeat_.
     -   [Linux Domain Identity, Authentication, and Policy Guide
-        ](https://access.redhat.com/site/documentation/en-US/Red_Hat_Enterprise_Linux/7-Beta/html/Linux_Domain_Identity_Authentication_and_Policy_Guide/index.html)
+        ]( https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/Linux_Domain_Identity_Authentication_and_Policy_Guide/index.html)
         ldap, kerberos, ntp, CA, Id
-    -  [System-Level Authentication Guide
-       ](https://access.redhat.com/site/documentation/en-US/Red_Hat_Enterprise_Linux/7-Beta/html/System-Level_Authentication_Guide/index.html)
+    -   [System-Level Authentication Guide
+        ]( https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/System-Level_Authentication_Guide/index.html)
         using [FreeIpa](http://freeipa.org) _debian package
         freeipa-server_, _freeipa-admintools_ integrated solution to
         provide centrally managed Identity, Policy and Audit; ldap,
@@ -59,15 +59,18 @@ title: System Administration
         package _certmonger_ D-Bus-based service which  simplify
         interaction with certifying authorities (CAs) on networks which
         use public-key infrastructure (PKI).
--   some chapters are not yet in the last beta edition so you find
-    them in [Red Hat Enterprise Linux 6 System administration
-    ](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/)
-    -   [The Red Hat Enterprise Linux 6 Performance Tuning Guide - Input/output
-        ](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html-single/Performance_Tuning_Guide/index.html#main-io)
-    and others....
+-   The new [Red Hat 8
+    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/]
+    has also system administration documentation like
+    -   [Managing Storage Devices
+        ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/managing_storage_devices/)
+    -   [Managing Filesystems
+        ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/managing_file_systems/).
+    -   [Monitoring And Managing System Status And Performance
+        ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/monitoring_and_managing_system_status_and_performance/)
 -   [Fedora Documentation](http://docs.fedoraproject.org/en-US/index.html)
-    -   [Fedora System Administrator's Guide
-        ](http://docs.fedoraproject.org/en-US/Fedora/21/html/System_Administrators_Guide/index.html):
+    -   [Fedora 30 -  System Administrator's Guide
+        ](https://docs.fedoraproject.org/en-US/fedora/f30/system-administrators-guide/)
         locales, keyboard, date and time, Users and Groups, Services
         and Daemons, OpenSSH, [TigerVNC](http://tigervnc.org/)
         _available [here for Debian](http://vnc.devloop.org.uk/)_,
