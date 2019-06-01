@@ -25,38 +25,17 @@ title: GTK
 -   Official [GObbject Tutorial](http://developer.gnome.org/gobject/stable/pt02.html)
     _Part IV of the GObject Manual-
 
-# GTK+
+# GTK+ {#gtk+}
 -   [GTK+ Documentation](http://www.gtk.org/documentation.php)
 -   [GTK+ 3 Reference Manual](https://developer.gnome.org/gtk3/stable/)
 -   [GTK+ 2 Reference Manual](https://developer.gnome.org/gtk2/)
 -   [GDK 3 Reference Manual](https://developer.gnome.org/gdk3/stable/)
 -   [GTK+ FAQ](https://developer.gnome.org/gtk3/stable/gtk-question-index.html)
-
-##  GTK+ 3 Tutorials
-[GTK+ Documentation Home](http://www.gtk.org/documentation.php)
-has a list of tutorials.
-
 -   [Examples of GTK+ 3 programs](https://developer.gnome.org/gnome-devel-demos)
     from gnome.org, each demo is develloped in C, C++, Javascript, Python and Vala
 -   [Getting Started with GTK+
     ](https://developer.gnome.org/gtk3/stable/gtk-getting-started.html)
 
-## GTK+ 2 Tutorials
--   Official [GTK+ 2.0 Tutorial](http://library.gnome.org/devel/gtk-tutorial/stable/)
--   [a GTK+ programming tutorial](http://zetcode.com/tutorials/gtktutorial/).
--   [GTK+ 2.0 Tree View Tutorial](http://scentric.net/tutorial/) by
-    Tim-Philipp Müller
--   [Gtk+ 2.0 Text View tutorial](http://www.bravegnu.org/gtktext/)
-    by Vijay Kumar B.
--   Havoc Pennington's mini FAQ on
-    [Setting Colors in Gtk+](http://ometer.com/gtk-colors.html)
--   [Multiline Text Editing Widget](http://www.bravegnu.org/gtktext/)
-    a GtkText tutorial by Vijay Kumar B.
--   Tadej Borovšak articles and tutorials:
-    - [GtkDialog tutorial](http://tadeboro.blogspot.com/2009/04/gtkdialog-tutorial-part-1.html)
-    - [GtkComboBox widget](http://tadeboro.blogspot.com/2009/04/gtkcombobox-widget-part-1.html)
-    - [GtkTreeModel and filtering](http://tadeboro.blogspot.com/2009/05/gtktreemodel-and-filtering.html)
-    - [Wrapping and resizing GtkLabel dynamically](http://tadeboro.blogspot.com/search/label/Tips)
 
 # Glade
 -   [Glade](http://glade.gnome.org/) a User Interface Builder for
@@ -73,16 +52,9 @@ has a list of tutorials.
     Libglade is an alternative to using Glade's code generation
     that loads and parses the description at runtime.
 
-## Glade Tutorials
 -   [Glade Tutorials
     ](https://wiki.gnome.org/action/show/Apps/Glade/Tutorials).
--   Tadej Borovšak articles and tutorials:
-    - [Glade3 tutorial](http://tadeboro.blogspot.com/2009/09/glade3-tutorial-1-introduction.html),
-    - [Creating GtkTreeView with Glade-3](http://tadeboro.blogspot.com/2009/04/creatin-gtktreeview-with-glade-3.html)
-    - [GtkDialog tutorial](http://tadeboro.blogspot.com/2009/04/gtkdialog-tutorial-part-1.html)
-    - [GtkComboBox widget](http://tadeboro.blogspot.com/2009/04/gtkcombobox-widget-part-1.html)
-    - [GtkTreeModel and filtering](http://tadeboro.blogspot.com/2009/05/gtktreemodel-and-filtering.html)
-    - [Wrapping and resizing GtkLabel dynamically](http://tadeboro.blogspot.com/search/label/Tips)
+-   [Tadej Borovšak articles and tutorials](http://blog.borovsak.si/)
 
 # GTK+ Libraries and Bindings
 -   {{< wp "Pango" >}} is a library for laying out and rendering of text, with an emphasis on internationalization
@@ -105,62 +77,23 @@ has a list of tutorials.
 -   [gnome office](http://www.gnome.org/gnome-office/) (AbiWord,
     Gnumeric, and GNOME-DB)
 
-# PyGObject
+# PyGobject {#pygobject}
+[PyGobject](https://pygobject.readthedocs.io/en/latest/)
+provides bindings for GObject based libraries such as GTK, GStreamer, WebKitGTK,
+GLib, GIO
 
--   [PyGObject](https://wiki.gnome.org/action/show/Projects/PyGObject) -
-     GLib/GObject/GIO Python bindings which replace PyGTK in GTK+ 3.
-     It is provided by the debian packages _python-gi_ and _python3-gi_
--   ["Hello World" in Python with GTK+ 3](http://www.micahcarrick.com/gtk3-python-hello-world.html)
-    is an introductory example of use of the new Gtk.Application object.
--   [The Python GTK+ 3 Tutorial](http://python-gtk-3-tutorial.readthedocs.org/en/latest/)
-    by Sebastian Pölsterl.
--   [gazpacho](http://gazpacho.sicem.biz/) is a GUI builder for the
-    GTK+ toolkit inspired by the Glade project but written using
-    Python. The .glade files that Gazpacho generates should be fully
-    compatible with libglade. Gazpacho uses Kiwi.
--   [Kiwi Gui framework for python](http://www.async.com.br/projects/kiwi/),
-    is described in the
-    [Kiwi developper's guide](http://www.async.com.br/projects/kiwi/howto/).
-
-# PyGTK 2
-[PyGTK](http://www.pygtk.org/) is a Python wrapper for the GTK2
-library. GTK2 binding is deprecated but still much used.
-
--   [PyGTK 2.x Reference](http://www.pygtk.org/pygtk2reference/index.html)
--   {{< wp "PyGTK"  "Wikipedia: PyGTK" >}}
--   [PyGTK 2.0 Tutorial](http://www.pygtk.org/pygtk2tutorial/index.html),
--   [Articles and Tutorials about PyGTK](http://www.pygtk.org/articles.html) from pygtk.org.
-
-# Python - Glade
-Documentation on how to connect python with glade using libglade:
--   [gtk.glade Class Reference](http://www.pygtk.org/pygtk2reference/class-gladexml.html),
+-   [Python GTK 3 Tutorial](https://python-gtk-3-tutorial.readthedocs.io/en/latest/)
+-   [Python GI API Reference](ttps://lazka.github.io/pgi-docs/)
 -   [Glade User Interface Designer Reference Manual
     ](https://developer.gnome.org/gladeui/):
-    [Glade manual: Python Support](https://developer.gnome.org/gladeui/stable/pythonsupport.html).
--   Chapter 22 of the [PyGTK Faq](http://www.async.com.br/faq/pygtk/)
+-   [Glade Tutorials](https://wiki.gnome.org/action/show/Apps/Glade/Tutorials)
+-   [Glade and Gtk.Builder
+    ](https://python-gtk-3-tutorial.readthedocs.io/en/latest/builder.html)
+-   [GTK+ and Glade3 gui programming tutorials
+    ](http://www.micahcarrick.com/gtk-glade3-gui-programming.html)
 
-Tutorials:
+-   {{< wp "PyGTK"  "Wikipedia: PyGTK" >}}
 
--   [The Python GTK+ 3 Tutorial
-    ](http://python-gtk-3-tutorial.readthedocs.org/en/latest/):
-    [Chapter 20 - Glade and Gtk.Builder
-    ](http://python-gtk-3-tutorial.readthedocs.org/en/latest/builder.html?highlight=glade).
--   Dave Aitel tutorial:
-    [A Beginner's Guide to Using pyGTK and Glade
-    ](http://www.linuxjournal.com/article/6586) _2003_
--   [PyGTK FAQ entry 22.7: How do I create and use a custom Glade widget?
-    ](http://www.async.com.br/faq/pygtk/index.py?req=show&file=faq22.007.htp)
--   [GTK+ and Glade3 GUI Programming Tutorial
-    ](http://www.micahcarrick.com/12-24-2007/gtk-glade-tutorial-part-1.html) _2007_.
-    by Micah Carrick.
--   [Creating a GNOME Web Browser with Python](http://patrick.wagstrom.net/tutorials/pygtkmozembed/pygtkmozembed.html)
-    By Patrick Wagstrom, shows a very simple example _2004_.
--   [Rapid Application Development with GNOME and Python
-    ](http://www.ukuug.org/events/linux2001/papers/html/CEgli/Gnome-Talk.html)
-    by Christian Egli _2001_.
--   [Create User Interfaces with Glade](http://www.linuxjournal.com/article/4702)
-    by Mitch Chapman, an old tutorial, but that present an applicAtion
-    of the mvc model to libglade and a mvc support class `GladeBase`. _2001_
 
 # Other windowing Toolkits
 -   [GNOME Human Interface Guidelines
@@ -169,8 +102,6 @@ Tutorials:
 -   [fltk](http://www.fltk.org)
 -   [DirectFB](http://www.directfb.org)
 -   [Open Gl Home](http://www.opengl.org)
--   [Silicon Graphic](http://www.sgi.com)
-    [OpenGL](http://www.sgi.com/tech/OpenGL/)
 -   [Mesa official site](http://www.mesa3d.org/)
 -   [freetype](http://www.freetype.org/)
     is a freely available software library to render fonts.
