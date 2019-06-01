@@ -65,9 +65,9 @@ The source code of python modules is found in the
     ](http://docs.python.org/3/library/stdtypes.html#mapping-types-dict).
     It helps the creation and use of user defined collections. <br />
     [PyMOTW: Collections](https://pymotw.com/3/collections/index.html)
-     -   [namedtuple
+     -   The collection [namedtuple
          ](http://docs.python.org/3/library/collections.html#collections.namedtuple)
-         is used to parse CVS files by Michele Simionato in
+         is used to parse CSV files by Michele Simionato in
          [Managing Records in Python
          ](http://www.artima.com/weblogs/viewpost.jsp?thread=236637).
 -   [imp](http://docs.python.org/3/library/imp.html)
@@ -130,8 +130,8 @@ The source code of python modules is found in the
     is described in
     [Distributing Python Modules](http://docs.python.org/3/distutils/)
     and [Installing Python Modules](http://docs.python.org/3/install/)
-     see also {{< iref "#packaging" "Libraries: packaging" >}}
-     for alternatives and enhancements of _distutils_.
+    see also {{< iref "#packaging" "Libraries: packaging" >}}
+    for alternatives and enhancements of _distutils_.
 -   [doctest](http://docs.python.org/3/library/doctest.html) -
     [py2k](http://docs.python.org/2/library/doctest.html) -
     [PyMOTW page](https://pymotw.com/3/doctest/index.html)
@@ -199,7 +199,9 @@ The source code of python modules is found in the
     -   [introduction to TkInter](http://effbot.org/tkinterbook/)
         by Fredrik Lundh in
         [zone.effbot.org](http://effbot.org/zone/index.htm).
--   {{< iref "pygtk" "PyGtk" >}} Python wrapper for the GTK library
+-   The python wrappers for the GTK library  {{< iref "gtk#pygobject" "PyGtk" >}}
+    and {{< iref "gtk#pygobject" "PyGobject" >}} are in the
+    {{< iref "gtk" "Gtk section" >}}.
 
 ## Operating System services {#os_modules}
 -   [argparse](http://docs.python.org/3/library/argparse.html)
@@ -217,17 +219,17 @@ The source code of python modules is found in the
          ](http://docs.python.org/3/howto/logging.html#logging-advanced-tutorial)
      -   [Logging Cookbook
          ](http://docs.python.org/3/howto/logging-cookbook.html#logging-cookbook)
--   [os](http://docs.python.org/3/library/os.html) -
-    [py2k](http://docs.python.org/library/os.html) -
+-   [os](http://docs.python.org/3/library/os.html)
+    ([py2k](http://docs.python.org/library/os.html)) -
     Operating system interfaces. Note that legacy functions to manage processes like
     `system()`, `popen()`, `popen2()`, `popen3()`
     [must be replaced by the subprocess module
     ](http://docs.python.org/3/library/subprocess.html#subprocess-replacements).
 -   [os.path](http://docs.python.org/3/library/os.path.html) -
-     [py2k](http://docs.python.org/library/os.path.html) -
+    [py2k](http://docs.python.org/library/os.path.html) -
     Operations on pathnames.
--   [print](http://docs.python.org/3/library/pprint.html) -
-    [py2k](http://docs.python.org/library/pprint.html) -
+-   [pprint](http://docs.python.org/3/library/pprint.html) -
+    ([py2k](http://docs.python.org/library/pprint.html)) -
      Data pretty printer.
 -   [io](http://docs.python.org/3/library/stringio.html)
     tools for working with streams in py3k includes  the high-level
@@ -239,10 +241,10 @@ The source code of python modules is found in the
     ](http://docs.python.org/3/library/io.html#io.TextIOBase)
     for text streams. <br />
     There are two in memory buffer classes that provide a file-like api:
-    [io..BytesIO](http://docs.python.org/3/library/io.html#io.BytesIO)
+    [io.BytesIO](http://docs.python.org/3/library/io.html#io.BytesIO)
     for in-memory binary streams and
     [io.StringIO](http://docs.python.org/3/library/io.html#io.StringIO) -
-    [py2k: StringIO](http://docs.python.org/2/library/stringio.html) -
+    ([py2k](http://docs.python.org/2/library/stringio.html)) -
     for in-memory binary text streams.
     [PyMOTW: StringIO](https://pymotw.com/3/StringIO),
     [effbot: StringIO](http://effbot.org/librarybook/stringio.htm)
@@ -253,6 +255,19 @@ The source code of python modules is found in the
 ## Databases and Object Relational Mappers
 
 They are covered in the {{< iref "python_dbms" "databases programming section" >}}.
+
+## File Formats {#file_format_modules}
+[File formats modules](https://docs.python.org/3/library/fileformats.html)
+([py2k](https://docs.python.org/3/library/fileformats.html))
+group modules
+file for fileformats that aren’t markup languages and are not related to e-mail.
+
+-   [CVS](https://docs.python.org/3/library/csv.html)
+    ([py2k](https://docs.python.org/3/library/csv.html))
+    allow CSV file reading and writing.
+-   [configparser](https://docs.python.org/3/library/configparser.html)
+    ([py2k](https://docs.python.org/2/library/configparser.html))
+    INI config file parser.
 
 ## Processes {#process_modules}
 -   [subprocess](http://docs.python.org/3/library/subprocess.html) -
@@ -332,16 +347,16 @@ See also {{< iref "#serializing_libs" "Python Libraries - serializing" >}}
     ](https://pymotw.com/3/persistence.html)
     is a panorama of the various ways to achieve persistence in python.
 -   [json](http://docs.python.org/3/library/json.html)  -
-    [py2k](http://docs.python.org/library/json.html) -
+    ([py2k](http://docs.python.org/library/json.html)) -
     Encode and decode the
-    {{< iref "107" "JSON" >}} format..
+    {{< iref "data_exchange#json" "JSON" >}} format..
     [PyMOTW: json](https://pymotw.com/3/json/)</br >
     You can use the included script `json.mtool` to validate and pretty-print a
     json string. _jsonpickle_ (see
     {{< iref "#serializing_libs" "Python Libraries - serializing" >}})
     extend the standard Python module _json_.
--   [pickle](http://docs.python.org/3/library/pickle.html) -
-    [py2k](http://docs.python.org/3/library/pickle.html) -
+-   [pickle](http://docs.python.org/3/library/pickle.html)
+    ([py2k](http://docs.python.org/3/library/pickle.html)) -
     Convert Python objects to streams of bytes and back,.
 -   [shelve](http://docs.python.org/3/library/shelve.html) (
     [py2k](http://docs.python.org/2/library/shelve.html))
@@ -349,7 +364,10 @@ See also {{< iref "#serializing_libs" "Python Libraries - serializing" >}}
 
 ## Structured Markup {#markup_modules}
 See also {{< iref "#xml_parsers" "XML Parsers Libraries" >}}
+
+-   [Structured Markup Processing Tools](https://docs.python.org/3/library/markup.html)
     ([py2k](https://docs.python.org/2/library/markup.html))
+    regroup the xml related modules.
 -   [xml.etree.ElementTree](https://docs.python.org/3/library/xml.etree.elementtree.html)
     The ElementTree XML API.<br/>
     The Element type is a container object, designed to store
@@ -359,10 +377,11 @@ See also {{< iref "#xml_parsers" "XML Parsers Libraries" >}}
     -   [Process XML in Python with ElementTree
         ](http://www.opensourcetutorials.com/tutorials/Server-Side-Coding/Python/xml-matters/page1.html)
         is a tutorial by  David Mertz.
--
+
+
 <!---------------------------------------------------------->
 
-# Libraries
+# Libraries {#libraries}
 The standard Python modules are in the
 {{< iref "#modules" "Modules section" >}} and
 the [Python 3 full module index](http://docs.python.org/3/modindex.html) or
@@ -400,10 +419,18 @@ see also the {{< iref "python_web#wsgi" "xCGI stuff" >}}.
     with 85% of  *Perl Cookbook* recipes translated in a *quite old
     2.2 to 2.4* python.
 
-## Programming Utilities
+## File Formats
 -   [configobj](https://github.com/DiffSK/configobj)
     is a config file reader and writer.
     -   [configobj manual](http://configobj.readthedocs.org/en/latest/).
+-   [csvkit](https://github.com/wireservice/csvkit)
+    A suite of utilities for converting to and working with CSV.
+    [csvkit dicumentation](https://csvkit.readthedocs.io/en/latest/).
+-   [tablib](https://github.com/kennethreitz/tablib) -
+    A library for Tabular Datasets in XLS, CSV, JSON, YAML.
+    [tablib documentation](http://docs.python-tablib.org/en/master/).
+
+## Programming Utilities
 -   [Online python tutor](http://pythontutor.com/) (BSD-license)
     is an educational tool that allow to write Python program
     directly in the web browser, and step through its execution,
@@ -644,6 +671,9 @@ there is also the page on {{< iref "python_web" "Web Programming" >}}
 -   [Python Dialog](http://pythondialog.sourceforge.net/)
     is a Python module for making simple Text/Console-mode
     user interfaces on Unix/Linux systems.
+-   [PyGobject](https://pygobject.readthedocs.io/en/latest/)
+    provides bindings for GObject based libraries such as GTK, GStreamer, WebKitGTK,
+    GLib, GIO
 -   [PyZenity](http://brianramos.com/?page_id=38)
     is an interface to Zenity.
 -   {{< iref "python_web#pyjamasdesktop" "PyjamasDesktop" >}}
@@ -958,8 +988,11 @@ See also the {{< iref "static_sites" "Static Site section" >}}.
      by François Pinard is a python preprocessor that was written
      to help porting Pymacs to Python 3.
 
-We can also use {{< iref "literate_programming" "literate programming tools" >}} like
-{{< iref "literate_programming#cog" "cog" >}} or {{< iref "python_web#template_engines" "template engines" >}} like {{< iref "python_web#jinja2" "Jinja2" >}}
+We can also use
+{{< iref "source_code#literate_programming" "literate programming tools" >}} like
+{{< iref "source_code#cog" "cog" >}} or
+{{< iref "python_web#template_engines" "template engines" >}} like
+{{< iref "python_web#jinja2" "Jinja2" >}}
 
 ## Processes {#process}
 See also the
@@ -1055,22 +1088,22 @@ See also {{< iref "#serializing_module" "Modules:Serializing" >}}
 -   [simplejson](https://pypi.python.org/pypi/simplejson/)
     is a JSON  encoder and decoder for Python 2.5+ and Python 3.3+.
 -   [PyYAML](http://pyyaml.org/) (MIT license)
-    is a YAML parser and emitter for Python. _in Debian package python3-yaml_.
+    is a  {{< iref "data_exchange#yaml" >}} YAML parser and emitter for Python.
+    _in Debian package python3-yaml_.
     It includes a  complete  YAML 1.1 parser with unicode support.
     PyYAML  supports Python 3.
     -   [PyYAML Documentation](http://pyyaml.org/wiki/PyYAMLDocumentation)
     -   [pretty-yaml _or pyaml_](https://github.com/mk-fg/pretty-yaml)
         is a module to produce pretty and readable YAML-serialized
         data  that extend PyYAML.
--   [PySyck](http://pyyaml.org/wiki/PySyck) (BSD License)
-    is a python binding for the
-    [Syck](https://github.com/indeyets/syck) YAML library.
-    But Syck is minimally maintened since 2005, and stopped at YAML 1.0.
 -   [Ijson](https://github.com/isagalaev/ijson) (BSD License)
     is an iterative JSON parser with a standard Python iterator interface.
     Ijson provides several implementations of the actual parsing by using
     [YAJL](http://lloyd.github.io/yajl/) or a pure Python parser (to use under PyPy).
     -   [PyPi: ijson](https://pypi.python.org/pypi/ijson/).
+-   [tablib](https://github.com/kennethreitz/tablib) -
+    A library for Tabular Datasets in XLS, CSV, JSON, YAML.
+    [tablib documentation](http://docs.python-tablib.org/en/master/).
 
 ## Test Libraries {#test_libs}
 -   [awesome test automation - python
