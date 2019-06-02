@@ -43,7 +43,7 @@ See also the related {{< iref "javascript" "Javascript Page" >}}
     and a small validating JSON generator. It has binding in python,
     lua, node.js, perl, ...
 
-## Json Tools
+## Json online Tools
 -   [jsonviewer.stack.hu
     ](http://jsonviewer.stack.hu/) is an Online Json viewer.
 -   [online-toolz: Json Editor
@@ -53,6 +53,10 @@ See also the related {{< iref "javascript" "Javascript Page" >}}
 -   [Json Parser Online](http://json.parser.online.fr/)
 -   [JSON Formatter
     ](http://www.freeformatter.com/json-formatter.html)
+-   [convertjson.com](http://convertjson.com/) is a web service to convert
+     HTML Table, XML, YAML, and CSV and the reverse conversion. There are also JSON
+     viewer, lint, Formatter and a tool to display JSON Path Names or to query using
+     JSON paths.
 
 ## Yaml {#yaml}
 -   {{< wp "Yaml" >}} is a human-readable data serialization format designed
@@ -60,17 +64,61 @@ See also the related {{< iref "javascript" "Javascript Page" >}}
     It is a superset of JSON and is more easily human readable, but
     harder to parse.
 -   [Yaml Home](http://www.yaml.org/about.html)
--   [Yaml specifications](http://www.yaml.org/spec/)
+-   [Yaml specifications](http://www.yaml.org/spec/) (YAZML 1.2 2009)
     is a  comprehensive document with numerous examples.
 -   [Yaml Reference Card](http://www.yaml.org/refcard.html)
+-   [The use of aliases in YAML
+    ](https://github.com/cyklo/Bukkit-OtherBlocks/wiki/Aliases-(advanced-YAML-usage))
 -   [awesome-yaml (dreftymac)
     ](https://github.com/dreftymac/awesome-yaml) and
     [Awesome Yaml (datatxt)](https://github.com/datatxt/awseome-yaml)
     lists of YAML resources.
+-   [yamllint](https://github.com/adrienverge/yamllint) is a python yaml validator.
+    It is in Debian.
+       -   [yamllint documentation
+           ](https://yamllint.readthedocs.io/en/latest/index.html)
+-   Yaml online validators at [yamllint.com](http://www.yamllint.com/) and
+    [codebeautify.org](https://codebeautify.org/yaml-validator).
 -   Yaml has a [binding for all main programming languages
     ](http://en.wikipedia.org/wiki/Yaml#Bindings).
 -   {{< iref "python_libraries#serializing_libs" "Python Libraries for Yaml" >}}
 
+# ToML
+
+{{< wp "TOML" >}} is a minimal configuration file format that's easy to read, it maps
+unambiguously to a hash table.
+
+-   [GitHub - ToML](https://github.com/toml-lang/toml) the README cobtains the manual
+    and examples.
+-   [ToML Wiki](https://github.com/toml-lang/toml/wiki) with a [list of projrcts using
+    ToMl](https://github.com/toml-lang/toml/wiki#projects-using-toml), and a
+    [list of programming language implementations
+    ](/github.com/toml-lang/toml/wiki#implementations).
+-   [Comparison of TOML, JSON and YAML
+    ](https://gohugohq.com/howto/toml-json-yaml-comparison/).
+
+# CSV
+
+{{< wp "Comma-separated values" >}}  is a delimited text file that uses a comma to
+separate values.
+
+The name is used more widely for any delimiter separated values where the delimiter is
+any character usually non alpha-numeric.
+
+It is a very common data exchange format used by many spreadsheet and database software.
+
+There is a an attempt to normalize CSV in the
+[RFC 4180](https://tools.ietf.org/html/rfc4180)
+and also a set of documents produced by the  W3C’s CSV on the Web Working Group, that you
+find in [GitHub - w3c/csvw](https://github.com/w3c/csvw). It includes recommendations
+for generating  {{< wp "Resource Description Framework" "RDF" >}} and JSON from CSV.
+
+For examples of CSV and characters escape in fields look at the
+{{< wp "Comma-separated values#Basic_rules" "Wikipedia CSV basic rules" >}}.
+
+-   [convertcsv.com](http://convertcsv.com/)
+    is a web service to convert CSV/Excel to and JSON,YAML, XML,HTML,SQL,Flat File,KML,..
+    and the reverse back conversion.
 
 # XML {#xml}
 
@@ -174,7 +222,7 @@ is in {{< iref "emacs" "Emacs Section" >}}.xs
     herold are in Debian.
 
 
-# Office XML {#office_xml}
+## Office XML {#office_xml}
 
 There are two concurent formats for representing spreadsheets, charts,
 presentations and word processing documents in XML:
@@ -184,11 +232,11 @@ presentations and word processing documents in XML:
     2007, it has become the default file format of Microsoft Office.
 
     On Wikipedia here is a huge list of {{< wp "Office Open XML software" >}},
-    allowed by the {{< wp "Microsoft_Open_Specification_Promise"  "Covenant     Not to Sue of Microsoft" >}}.
+    allowed by the
+    {{< wp "Microsoft_Open_Specification_Promise"  "Covenant Not to Sue of Microsoft" >}}.
 
-    The ISO standard comprise 6546 pages to compare with the
-    OpenDocument specification wich aim at he same goals and is only
-    867 pages in length.
+    The ISO standard comprise 6546 pages to compare with the OpenDocument specification
+    wich aim at he same goals and is only 867 pages in length.
 
 -   {{< wp "OpenDocument" >}} (ODF) is an XML open OASIS standard. It has been
     developped by Sun Microsystems with IBM contributions.
