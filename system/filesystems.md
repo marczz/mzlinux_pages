@@ -115,6 +115,14 @@ compresssion.
     it holds on the Home page a [list of Guides and articles
     ](https://btrfs.wiki.kernel.org/index.php/Main_Page#Guides_and_usage_information)
     and the [Btrfs FAQ](https://btrfs.wiki.kernel.org/index.php/FAQ).
+-   [Red Hat Storage Administration Guide - Chapter 6. Btrfs
+    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/ch-btrfs)
+-   [Suse storage administration: Btrfs filesystem
+    ](https://www.suse.com/documentation/sles-12/stor_admin/data/sec_filesystems_major_btrfs.html),
+    [Btrfs Error: No space is left on device
+    ](https://www.suse.com/documentation/sles11/stor_admin/data/trbl_btrfs_volfull.html).
+-   [Oracle Linux -  The Btrfs File System
+    ](https://docs.oracle.com/cd/E37670_01/E37355/html/ol_btrfs.html)
 -   [Debian Wiki: Btrfs](https://wiki.debian.org/Btrfs)
 -   [ArchWiki: Btrfs](https://wiki.archlinux.org/index.php/Btrfs),
     [Btrfs - Tips and tricks
@@ -126,12 +134,6 @@ compresssion.
     {{< man "btrfs-show(8)" >}}, {{< man "mkfs.btrfs(8)" >}} and other in brtfs-tools.
 -   [Ubuntu Community Help: Btrfs
     ](https://help.ubuntu.com/community/btrfs).
--   [Suse storage administration: Btrfs filesystem
-    ](https://www.suse.com/documentation/sles-12/stor_admin/data/sec_filesystems_major_btrfs.html),
-    [Btrfs Error: No space is left on device
-    ](https://www.suse.com/documentation/sles11/stor_admin/data/trbl_btrfs_volfull.html).
--   [Oracle Linux -  The Btrfs File System
-    ](https://docs.oracle.com/cd/E37670_01/E37355/html/ol_btrfs.html)
 -   Marc Merlin [Btrfs overview, LinuxCon 2014
     ](http://marc.merlins.org/linux/talks/Btrfs-LC2014-JP/Btrfs.pdf)
     _(pdf)_
@@ -231,13 +233,62 @@ storage, but a single subvolume can use all space.
 # LVM {#lvm}
 
 -   Wikipedia: {{< wp "LVM" >}}
--   [LVM2](http://sources.redhat.com/lvm2) an
+-   [LVM2](http://sourceware.org/lvm2/) (previously at
+    [RedHat - LVM2](http://sources.redhat.com/lvm2)) is an
     userspace toolset that provide logical volume management, lvm is
     build on top of the kernel module
     [Device Mapper](http://sources.redhat.com/dm/). See
-    also the
-    [Device-mapper and LVM2 Wiki
+    also the old
+    [RedHat - Device-mapper and LVM2 Wiki
     ](http://sources.redhat.com/lvm2/wiki/).
+-   [RedHat: Logical Volume Manager Administration Guide
+    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/logical_volume_manager_administration/index)
+    ([PDF
+    ](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/pdf/Logical_Volume_Manager_Administration/Red_Hat_Enterprise_Linux-5-Logical_Volume_Manager_Administration-en-US.pdf)).
+    is a very detailled documentation on LVM, it has chapters:
+
+    -   1) LVM - presentation, news, Logical Volumes, LVM Architecture Overview, LVM in a
+        Red Hat High Availability Cluster
+    -   2) LVM Components - Physical Volumes, Volume Groups,  Logical Volumes
+    -   3) LVM Administration Overview -  Logical Volume Creation,  Growing a File
+            System on a Logical Volume, Logical Volume Backup, Logging, The Metadata
+            Daemon (lvmetad), Displaying LVM Information with the lvm Command
+    -   4) LVM Administration with CLI Commands -  Using CLI Commands, Physical Volume,
+            Volume Group,  Logical Volume, Controlling LVM Device Scans with Filters,
+             Online Data Relocation, . Activating Logical Volumes on Individual Nodes in
+            a Cluster, Customized Reporting for LVM,
+    -   5) LVM Configuration Examples - LVM Logical Volume on Three Disks,  Striped
+           Logical Volume, Splitting a Volume Group, Removing a Disk from a Logical
+           Volume, Creating a Mirrored LVM Logical Volume in a Cluster
+    -   6)  LVM Troubleshooting
+    -   A) The Device Mapper - Device Table Mappings,  The dmsetup Command, Device
+        Mapper Support for the udev Device Manager.
+    -   B) The LVM Configuration Files
+    -   C) LVM Selection Criteria
+    -   D) LVM Object Tags
+    -   E) LVM Volume Group Metadata
+
+    The RedHat LVM Guide has information on
+    [thinly provisionned volumes, snapshot volumes, thinly provisionned snapshots
+    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/logical_volume_manager_administration/lv_overview#thinprovisioned_volumes)
+    -   [Creating Thinly-Provisioned Logical Volumes
+        ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/logical_volume_manager_administration/LV#thinly_provisioned_volume_creation).
+    -   [Creating Snapshot Volumes
+        ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/logical_volume_manager_administration/lv#snapshot_command)
+    -   [Creating Thinly-Provisioned Snapshot Volumes
+        ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/logical_volume_manager_administration/lv#thinly_provisioned_snapshot_creation).
+
+-   [Suse Storage Administration Guide
+    ](https://www.suse.com/documentation/sles-15/book_storage/data/book_storage.html)
+    has an [LVM Section
+    ](https://www.suse.com/documentation/sles-15/book_storage/data/part_lvm.html).
+-   [Fedora Storage Administration Guide
+    ](https://docs.fedoraproject.org/en-US/Fedora/14/html/Storage_Administration_Guide/index.html)
+    has an [LVM Chapter
+    ](https://docs.fedoraproject.org/en-US/Fedora/14/html/Storage_Administration_Guide/ch-lvm.html)
+    that is mainly focused on the use of their tool
+    [system-config-lvm](https://fedoraproject.org/wiki/SystemConfig/lvm), a graphical
+    interface for lvm tools. _system-config-lvm_ is also available as a Debian package.
 -   [tldp: LVM HOWTO](http://www.tldp.org/HOWTO/LVM-HOWTO/index.html)
     _2006_
 -   [Debian Wiki: LVM](https://wiki.debian.org/LVM)
@@ -246,19 +297,6 @@ storage, but a single subvolume can use all space.
 -   [ArchWiki: LVM](https://wiki.archlinux.org/index.php/LVM),
     [ArchWiki: Software RAID and LVM
     ](https://wiki.archlinux.org/index.php/Software_RAID_and_LVM)
--   [RedHat: Logical Volume Manager Administration Guide
-    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/logical_volume_manager_administration/index)
-    ([PDF
-    ](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/5/pdf/Logical_Volume_Manager_Administration/Red_Hat_Enterprise_Linux-5-Logical_Volume_Manager_Administration-en-US.pdf)).
-    has information on [thinly provisionned volumes, snapshot volumes, thinly
-    provisionned snapshots
-    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/logical_volume_manager_administration/lv_overview#thinprovisioned_volumes)
-    -   [Creating Thinly-Provisioned Logical Volumes
-        ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/logical_volume_manager_administration/LV#thinly_provisioned_volume_creation).
-    -   [Creating Snapshot Volumes
-        ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/logical_volume_manager_administration/lv#snapshot_command)
-    -   [Creating Thinly-Provisioned Snapshot Volumes
-        ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/logical_volume_manager_administration/lv#thinly_provisioned_snapshot_creation).
 -   [lvmthin(7)](https://manpages.debian.org/testing/lvm2/lvmthin.7.en.html).
 
 # Fuse {#fuse}
