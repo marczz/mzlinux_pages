@@ -498,17 +498,22 @@ See also the {{< iref "ps_pdf_djvu" "postscript, pdf, djvu Page" >}}.
     creation program that save diagrams to a custom XML format and can
     export them to EPS, SVG, XFIG, WMF and PNG, ...
 -   [Ditaa](http://ditaa.sourceforge.net/)
+    ([Github](https://github.com/stathissideris/ditaa))
     is a java tool that convert ascii art to bitmap diagram (or EPS
     with a plugin), _no vector graphic presently_. It can be used
-    within DocuWiki, {{< iref "org" "Org Mode" >}}.
+    in DocuWiki, in Sphinx through the extension
+    [sphinxcontrib-ditaa](https://pypi.org/project/sphinxcontrib-ditaa/),
+    in Pandoc with the [imagine](https://github.com/hertogp/imagine) filter,
+    and in {{< iref "org-mode" "Org Mode" >}}
+    see the syntax in [Worg - Ditaa Source Code Blocks in Org Mode
+    ](https://www.orgmode.org/worg/org-contrib/babel/languages/ob-doc-ditaa.html)
+    and [this example](http://doc.norang.ca/org-mode.html#playingwithditaa).
 -   [Gnuplot](http://www.gnuplot.info/)
     [ad-hoc Open Source License
     ](http://gnuplot.cvs.sourceforge.net/gnuplot/gnuplot/Copyright)
-    is a
-    portable command-line driven interactive data and function plotting
-    utility Gnuplot supports plots in either 2D and 3D, Gnuplot can
-    output to many file formats (eps, fig, jpeg, LaTeX, metafont, pbm,
-    pdf, png, postscript, svg, ...).
+    is a portable command-line driven interactive data and function plotting utility
+    Gnuplot supports plots in either 2D and 3D, Gnuplot can output to many file formats
+    (eps, fig, jpeg, LaTeX, metafont, pbm, pdf, png, postscript, svg, ...).
     -   [gnuplot development at sourceforge](http://gnuplot.sourceforge.net/)
          best site to find recent documentation, tutorials, demo.
     -   [gnuplot documentation](http://www.gnuplot.info/documentation.html):
@@ -667,6 +672,10 @@ graphs, and _neato_ for drawing undirected graphs.
     ](http://asciidoc.org/asciidoc-graphviz-sample.html)
     allow to draw graphs via graphviz in
     {{< iref "asciidoc" "Asciidoc" >}}.
+-   [Worg Graphviz with Org Mode
+    ](http://doc.norang.ca/org-mode.html#Graphviz),
+    [Organize Your Life In Plain Text - Graphviz example
+    ](http://doc.norang.ca/org-mode.html#Graphviz).
 -   [gitit plugin Dot.hs
     ](https://github.com/jgm/gitit/blob/master/plugins/Dot.hs)
     allows you to include a graphviz dot diagram in a _gitit_ page.
@@ -680,7 +689,7 @@ graphs, and _neato_ for drawing undirected graphs.
 
 # Static Images gallery
 -   [Sigal](http://sigal.saimon.org/en/latest/)
-    a python static gallery generator taht uses the javascript libraries
+    a python static gallery generator that uses the javascript libraries
     [colorbox](http://www.jacklmoore.com/colorbox),
     [galleria](http://galleria.io/) and [photoswipe ](http://photoswipe.com/)
 -   [lazygal](https://sml.zincube.net/~niol/repositories.git/lazygal/about/) (GPL)
@@ -691,6 +700,11 @@ graphs, and _neato_ for drawing undirected graphs.
 -   [photon](https://www.saillard.org/programs/photon/) (GPL)
     A python 2 image gallery generator. It is in Debian, I have not found the source
     repository.
+-   __Pictor__ [github](https://github.com/dustinkirkland/pictor),
+    [launchpad](https://launchpad.net/pictor) is a web application for viewing and
+    sharing your pictures online. Pictures are organized hierarchically in folders and
+    sub-folders.
+
 <!-- Local Variables: -->
 <!-- mode: markdown -->
 <!-- ispell-local-dictionary: "english" -->
