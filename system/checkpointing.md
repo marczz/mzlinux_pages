@@ -74,9 +74,21 @@ is an alternative to screen. It uses a client-server model. Windows may be linke
 simultaneously to multiple sessions and moved freely between sessions; and a client
 may be switched between sessions.
 
+-   [Awesome tmux](https://github.com/rothgar/awesome-tmux)
+    a list of helpful tmux links for various tutorials, plugins, and configuration
+    settings.
 -   [ArchWiki: Tmux](https://wiki.archlinux.org/index.php/Tmux)
     is a good introduction with references to complementary articles.
 -   [Gentoo Wiki - Tmux](https://wiki.gentoo.org/wiki/Tmux).
+-   [Tmux cheatsheet](https://gist.github.com/MohamedAlaa/2961058).
+-   [Tmux Tutorial part I
+    ](http://blog.hawkhost.com/2010/06/28/tmux-the-terminal-multiplexer/),
+    [Part II
+    ](http://blog.hawkhost.com/2010/07/02/tmux-%E2%80%93-the-terminal-multiplexer-part-2/)
+-   [tmux in practice
+    ](https://medium.com/free-code-camp/tmux-in-practice-series-of-posts-ae34f16cfab0)
+    a series of tutorials by Alexey Samoshkin. He also give his
+    [tmux configuration](https://github.com/samoshkin/tmux-config).
 -   [Tmuxinator](https://github.com/aziz/tmuxinator) (BSD like
     Licence)
     [Teamocil](https://github.com/remiprev/teamocil) (MIT license)
@@ -87,10 +99,6 @@ may be switched between sessions.
     is a _tmux_ session manager written in python with JSON or
     YAML configuration. It is _in Debian_.
     -   [ArchWiki: tmuxp](https://wiki.archlinux.org/index.php/Tmuxp).
--   [Tmux Tutorial part I
-    ](http://blog.hawkhost.com/2010/06/28/tmux-the-terminal-multiplexer/),
-    [Part II
-    ](http://blog.hawkhost.com/2010/07/02/tmux-%E2%80%93-the-terminal-multiplexer-part-2/)
 -   [Powerline (GitHub)](https://github.com/powerline/powerline)
     is a statusline plugin for vim, zsh, bash, _tmux_, IPython,
     Awesome and Qtile.
@@ -102,18 +110,16 @@ may be switched between sessions.
     is a little bash script that uses
     [Spark](http://zachholman.com/spark/)
     to display the battery status on your tmux sessions or the terminal.
--   [Byobu](http://byobu.co)
-    is a wrapper script for launching either screen or tmux with an
-    improved configuration. Dustin Krkland the author of Byobu gives
-    a tutorial in his
-    [presentation of byobu release 5
-    ](http://blog.dustinkirkland.com/2011/12/byobu-5-released.html),
-    in his
-    [byobu blogs](http://blog.dustinkirkland.com/search/label/Byobu).
-    <br/> Wikipedia:
-    {{< wp "Byobu_(software)"  "Byobu" >}},
-    [byobu(1)
-    ](http://manpages.debian.org/cgi-bin/man.cgi?query=byobu&format=html&locale=en).
+-   [Byobu](http://byobu.co) is a wrapper script for launching either screen or tmux
+    with an improved configuration.
+    -   [GitHub - byobu](http://github.com/dustinkirkland/byobu)
+    -   Dustin Kirkland the author of Byobu *and ecryptfs*
+        gives a tutorial in his [presentation of byobu release 5
+        ](http://blog.dustinkirkland.com/2011/12/byobu-5-released.html),
+        in his [byobu blogs](http://blog.dustinkirkland.com/search/label/Byobu).
+    -   Wikipedia: {{< wp "Byobu_(software)" "Byobu" >}}
+    -   [byobu(1)
+        ](http://manpages.debian.org/cgi-bin/man.cgi?query=byobu&format=html&locale=en).
 
 
 
