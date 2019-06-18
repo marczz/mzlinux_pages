@@ -23,7 +23,7 @@ title: Booting
 -   {{< wp "Intelligent Platform Management Interface" >}} or _IPMI_
     provides management and monitoring capabilities independent of the
     firmware (BIOS or UEFI).
-    -   [comparison of ipmitool, ipmiutil, freeipmi, OpenIPMI
+    -   [Comparison of ipmitool, ipmiutil, freeipmi, OpenIPMI
         ](http://ipmiutil.sourceforge.net/docs/ipmisw-compare.htm)
     -   [ipmiutil](http://ipmiutil.sourceforge.net/)
     -   [FreeIPMI](http://www.gnu.org/software/freeipmi/)
@@ -60,7 +60,7 @@ Debian Lenny) _the switch to v2 began in 2007_.
 ### Syslinux
 {{< wp "Syslinux" >}} is used for booting from FAT,or
 as __isolinux__ from CD-ROM ISO 9660, or as __pxelinux__ from network using
-{{< iref "network_boot" "Pre-boot eXecution Environment (PXE)" >}},
+{{< iref "network#network_boot" "Pre-boot eXecution Environment (PXE)" >}},
 or as __extlinux__ from ext2/3fs _but not ext4_.
 
 -   [SysLinux Wiki](https://www.syslinux.org/wiki/)
@@ -68,7 +68,8 @@ or as __extlinux__ from ext2/3fs _but not ext4_.
 -   [Debian Wiki: Syslinux](https://wiki.debian.org/Syslinux)
 
 ## U-Boot
--   {{< wp "Das_U-Boot"  "U-Boot or Das_U-Boot" >}} is a boot loader for ARM, PowerPC, MIPS
+-   {{< wp "Das_U-Boot"  "U-Boot or Das_U-Boot" >}}
+    is a boot loader for ARM, PowerPC, MIPS
 -   [DENX U-Boot Home Page](http://www.denx.de/wiki/U-Boot)
 -   [U-Boot Manual](http://www.denx.de/wiki/DULG/Manual)
 -   [Introduction to Das U-Boot, the universal open source bootloader
@@ -220,8 +221,11 @@ or as __extlinux__ from ext2/3fs _but not ext4_.
     [kernel documentation :serial-console.txt
     ](https://www.kernel.org/doc/Documentation/serial-console.txt),
     [Linux Serial Console HOWTO](http://www.vanemery.com/Linux/Serial/serial-console.html)
-    by Van Emery, [Remote Serial Console HOWTO](http://www.faqs.org/docs/Linux-HOWTO/Remote-Serial-Console-HOWTO.html) by Glen Turner _very detailled_,
-    [Ubuntu Help: Serial Console Howto](https://help.ubuntu.com/community/SerialConsoleHowto).
+    by Van Emery, [Remote Serial Console HOWTO
+    ](http://www.faqs.org/docs/Linux-HOWTO/Remote-Serial-Console-HOWTO.html)
+    by Glen Turner _very detailled_,
+    [Ubuntu Help: Serial Console Howto
+    ](https://help.ubuntu.com/community/SerialConsoleHowto).
 -   {{< wp "VESA_BIOS_Extensions"  "Wikipedia: VESA BIOS Extensions" >}}
     gives the defined vesa modes on a
     console. To change the boot ves mode append to the kernel command
