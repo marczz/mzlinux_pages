@@ -125,7 +125,7 @@ domains which are targeted by many packages.
 ## References from other pages
 -   Look also at
     {{< iref "media_players#emacs_players" "Emacs sound players" >}},
-    {{< iref "org" "Org Mode" >}}.
+    {{< iref "org-mode" "Org Mode" >}}.
 -   Look at
     -   {{< iref "scm#emacs_git" "Git" >}}
         for emacs git interface, and diff frontends.
@@ -148,15 +148,16 @@ domains which are targeted by many packages.
     searching this site for <i>Emacs</i>.
 
 ## Emacs packaging, and configuration system.
--   Emacs packaging is done thru
-    [ELPA](http://www.emacswiki.org/emacs/ELPA):
+-   [Emacs Wiki - Packaging](https://www.emacswiki.org/emacs/CategoryPackaging)
+-   [ELPA](http://www.emacswiki.org/emacs/ELPA) is the main packaging system for Emacs
+    as it is included in emacs since emacs 24.
     [ELPA Home](http://tromey.com/elpa/),
-    ELPA is in emacs 24. The official repository is [elpa.gnu.org/](http://elpa.gnu.org/),
-    there is also the collaborative development
-    [Melpa](http://melpa.milkbox.net/) (
-    [Melpa source on GitHub](https://github.com/milkypostman/melpa)).<br />
-    MELPA, has a cron to pull from upstream sources.  MELPA thus presents the
-    _bleeding edge_ of packages.
+    -   [elpa.gnu.org/](http://elpa.gnu.org/) official repository.
+    -   [Melpa](http://melpa.milkbox.net/) (
+        [Melpa source on GitHub](https://github.com/milkypostman/melpa)) is a collaborative
+        development repository.<br />
+        MELPA, has a cron to pull from upstream sources.  MELPA thus presents the
+        _bleeding edge_ of packages.
 -   [El-Get](https://github.com/dimitri/el-get)
     ([WTFPL](http://sam.zoy.org/wtfpl/)
     License) from Dimitri Fontaine
@@ -172,6 +173,10 @@ domains which are targeted by many packages.
     _a minimal kick start init file for emacs_ by Dimitri.<br >
     [Sébastien Gross emacs configuration](https://github.com/renard/emacs-el)
     is also managed by el-get.
+-   [Borg](https://emacsmirror.net/manual/borg/index.html)
+    manage packages as git submodules. It uses the
+    [Emacsmirror](http://github.com/emacsmirror) which collects Emacs Lisp packages and
+    distributes them in form of Git repositories.
 -   [Cask](http://cask.readthedocs.io/en/latest/guide/) (GPL)
     is an Emacs Lisp project management tool, similar to Maven or
     Leiningen. It aims to control and automate the entire life cycle
@@ -216,6 +221,11 @@ domains which are targeted by many packages.
 
 ## Packages provided inside emacs distrib
 
+-   [Gnus](http://www.gnus.org/) and
+    [mu4e](http://www.djcbsoftware.nl/code/mu/mu4e/index.html) are in
+    the {{< iref "mail" "mail page" >}}
+    ({{< iref "mail#gnus" "Gnus" >}},
+    {{< iref "mail#mu4e" "mu4e" >}})
 -   [EasyPg](http://www.easypg.org/)
     [EmacsWiki: EasyPg
     ](http://www.emacswiki.org/emacs/EasyPG)
@@ -232,11 +242,8 @@ domains which are targeted by many packages.
     [RegularExpressionHelp
     ](http://www.emacswiki.org/emacs/RegularExpressionHelp),
     [ReplaceRegexp Examples](http://www.emacswiki.org/emacs/ReplaceRegexp).
--   [Gnus](http://www.gnus.org/) and
-    [mu4e](http://www.djcbsoftware.nl/code/mu/mu4e/index.html) are in
-    the {{< iref "mail" "mail page" >}}
-    ({{< iref "mail#gnus" "Gnus" >}},
-    {{< iref "mail#mu4e" "mu4e" >}})
+-   [reStructuredText mode](http://docutils.sourceforge.net/docs/user/emacs.html).
+    is used for {{< iref "rest" "reStructuredText" >}}.
 
 ## Other packages
 -   [Ag.el](https://github.com/Wilfred/ag.el) allows you to search
@@ -312,6 +319,9 @@ domains which are targeted by many packages.
     of buffers. In a perspective only its buffers are available by
     default. Perspective is in melpa as well with a
     perspective-projectile integration.
+-   [Polymode](https://polymode.github.io/) is a framework for multiple major modes
+    (MMM) inside a single Emacs buffer. It is in elpa.
+    -   [GitHub - Polymode](https://github.com/polymode/polymode)
 -   [Projectile](https://github.com/bbatsov/projectile)
     is a project interaction library for Emacs.
     It can manage git, mercurial, darcs, bazaar, lein, maven, sbt,
