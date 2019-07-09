@@ -48,7 +48,7 @@ In 2015 I made a new test on nano 2.2.6 finding on amd64 3.7M res /
     -   [vis(1) Manual](http://martanne.github.io/vis/man/vis.1.html)
 
 
-## vim
+## Vim {#vim}
 -   [Vim Home Page](http://www.vim.org/)
 -   [vim documentation
     ](http://vimdoc.sourceforge.net/)
@@ -98,9 +98,16 @@ In 2015 I made a new test on nano 2.2.6 finding on amd64 3.7M res /
     ](http://www.linux.com/learn/tutorials/262147-vim-301-getting-adept-at-vim),
     [vim-401-extending-vim-and-more
     ](http://www.linux.com/learn/tutorials/264315-vim-401-extending-vim-and-more).
+
+### vim plugins
+-   [Vim Awesome](https://vimawesome.com/) list of vim plugins.
+-   [awesome-vim](https://github.com/akrawchyk/awesome-vim)
+    a Vim plugin shortlist.
+-   See in {{< iref "rest" "ReStructured Text page" >}} the
+    {{< iref "rest#vim_rest" "list of ReSt support plugins" >}}.
 -   [vim-markdown](http://github.com/plasticboy/vim-markdown/)
 
-## neovim
+## Neovim {#neovim}
 [neovim](https://neovim.io/) (apache license)
 is an heavily refactored vim fork.
 
