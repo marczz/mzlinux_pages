@@ -304,6 +304,7 @@ be viewed by any body having or guessing the URL or magnet Link.
     Both browsers must remain open during the full transfer. A
     password protection is available.
     transfer from android with dolphin or chrome work but UC is rejected.
+-   [ShareDrop](https://www.sharedrop.io/) is a P2P WebRtc file transfer web application.
 -   <a name="sendanywhere"></a>
     [Send Anywhere](https://send-anywhere.com/) is mainly a P2P
     service, but also include cloud storage to free the sender from
@@ -326,34 +327,55 @@ be viewed by any body having or guessing the URL or magnet Link.
 
     Note that the web interface is unavailable with an android
     user-agent, we are supposed to download the android apk. When
-    setting the user-agent to desktop we acn use the classic web
+    setting the user-agent to desktop we can use the classic web
     interface, it is successful with chrome, but on Dolphin I always
     got the mobile site.
+-   [Tresorit Send](https://send.tresorit.com/)
+    web app to  send files with end-to-end encryption, free for use until a storage of
+    3G, with file max size of 500MB.
+-   [Feem](https://www.feem.io/index.html)
+    is an alternative to SendAnywhere but the free plan is quite limited and you have to
+    subscribe a plan of 5$/yr for up to 4 non ios device plus 5$/y for one Appleid on
+    ios.
+-   [Instashare](http://instashareapp.com/droid.html) an other alternative, but no
+    client for Linux.
+-   [Dukto R6](https://www.msec.it/blog/dukto/) (GPL)
+    application for transfer on lan between Android, Mac, Linux, Windows, and third
+    party ios app. Do not need an
+    internet connection. [Sourceforge project page
+    ](https://sourceforge.net/projects/dukto/) _Last update 2013_.
+-   See also {{< iref "sip#jami" "Jami">}} _previously Ring_ a communication software
+    with file sharing.
 
 -   They are many other WebTorrent clients in the browser, but for
     most of them your file are public and without protection.
-    You have also to use a port wich is not blocked by the firewall.
+    To use it in wan, you have also to use a port which is not blocked by the firewall.
+    You can also use it in lan on a port non available on wan, to mitigate the risk of
+    your data being spied.
 
     Among them:
-    The reference implementation [instant.io](https://instant.io/) (
-    [gitHub](https://github.com/feross/instant.io)) share by info hash
-    url or magnet link; [Lunik Instant Share](http://fs.lunik.xyz/)
-    ([GitHub](https://github.com/Lunik/Instant-Share) similar to
-    _instant.io_ but only with info hash url;
-    [file-pizza](https://file.pizza/) (
-    [GitHub](https://github.com/kern/filepizza)) can use the
-    [Twillo STUN-TURN nat traversal service
-    ](https://www.twilio.com/stun-turn) and generates info url human
-    readable, all WebRTC communications are automatically encrypted
-    using public-key cryptography; [Squidl.ink](http://Squidl.ink/)
-    ([GitHub](https://github.com/darkenvy/Squidl.ink));
-    [DropClickPaste](http://dropclickpaste.com/) (_source ?_);
-    [P2PDrop](http://app.p2pdrop.com/profile)
-    ([GitHub](https://github.com/ajainvivek/P2PDrop)) has support for
-    user registration, you select the peers with which you share your
-    file. Most of the previous applications have the ability to
-    directly preview a media in the browser. But many other
-    applications listed in the [WebTorrent FAQ
+    -   The reference implementation [instant.io](https://instant.io/) (
+        [gitHub](https://github.com/feross/instant.io)) share by info hash
+        url or magnet link;
+    -   [Lunik Instant Share](http://fs.lunik.xyz/)
+        ([GitHub](https://github.com/Lunik/Instant-Share) similar to
+        _instant.io_ but only with info hash url;
+    _   [file-pizza](https://file.pizza/) (
+        [GitHub](https://github.com/kern/filepizza)) can use the
+        [Twillo STUN-TURN nat traversal service
+        ](https://www.twilio.com/stun-turn) and generates info url human
+        readable, all WebRTC communications are automatically encrypted
+        using public-key cryptography;
+    -   [Squidl.ink](http://Squidl.ink/)
+        ([GitHub](https://github.com/darkenvy/Squidl.ink));
+    -   [DropClickPaste](http://dropclickpaste.com/) (_source ?_);
+    -   [P2PDrop](http://app.p2pdrop.com/profile)
+        ([GitHub](https://github.com/ajainvivek/P2PDrop)) has support for
+        user registration, you select the peers with which you share your
+        file.
+
+    Most of the previous applications have the ability to directly preview a media in
+    the browser. But many other applications listed in the[WebTorrent FAQ
     ](https://webtorrent.io/faq) are dedicated to music or video
     streaming.
 -   [sharefest](https://sharefest.me/) is a WebRTC file sharing
