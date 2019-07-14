@@ -172,8 +172,8 @@ See also {{< iref "irc" "IRC" >}},
     Python , Perl or Ruby. Ekg2 is the Debian package _ekg2-jabber_.
     -   [Ekg2 Wiki](http://bugs.ekg2.org/projects/ekg2/wiki)
 -   {{< iref "#finch" "Finch" >}} the libpurple based client
-    is in the {{< iref "pidgin" "pidgin entry" >}}
--   {{< iref "irssi" "Irssi" >}} support XMPP through a
+    is in the {{< iref "#pidgin" "pidgin entry" >}}
+-   {{< iref "irc#irssi" "Irssi" >}} support XMPP through a
     plugin, but if you want an Irssi like interface, and a more
     complete interface to XMPP you may prefer
     {{< iref "#profanity" "Profanity" >}}
