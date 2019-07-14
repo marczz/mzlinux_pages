@@ -222,15 +222,18 @@ _mainly sip clients_
     online. So I renounced to use this version 2.2 from 2010.
 -   [sflphone](http://www.sflphone.org/) (GPL) sip and IAX2  client for
     linux.
--   [Ring](https://ring.cx/) (GPL)
-    is a secure and distributed voice, video and chat communication
+-   <a name="jami"></a>[Jami (previously Gnu Ring)](https://jami.net/) (GPL)
+    is a secure and distributed voice, video, file sharing and chat communication
     platform that replaced _sflphone_. It supports SIP, IAX2, RTP,
     STUN, SRV and accept many codecs including {{< wp "Opus" >}}.  It features
     a daemon and desktop clients, and can output to pulseaudio.
-    Desktop clients for gnome, kde, and a python client are
-    available. The gnome version is in Debian and Ubuntu under the
-    name _sflphone-gnome_.
+    On Linux Desktop clients for gnome, and kde  are available. The
+    gnome version is in Debian and Ubuntu under the name _ring_ until stretch (debian 8)
+    and from buster (debian 9) the package is named _jami_.
+    There are also clients for  OS X, Windows, Android, iOS
     -   {{< wp "Ring_(software)"  "Wikipedia: Ring" >}}.
+    -   [Jami repository](https://git.jami.net/savoirfairelinux/ring-project/)
+    -   [Jami Wiki](https://git.jami.net/savoirfairelinux/ring-project/wikis/home)
 
 -   {{< iref "xmpp#tox" "Tox" >}} (GPL)
     is a Voice, video, instant messaging, file transfers client it is
