@@ -7,7 +7,7 @@ title: Social Networks
 See also the related page {{< iref "xmpp" "XMPP" >}},
 {{< iref "irc" "IRC" >}},
 {{< iref "sip" "SIP" >}} and
-{{< iref "p2P" "P2P" >}}.
+{{< iref "p2p" "P2P" >}}.
 
 -----------------
 
