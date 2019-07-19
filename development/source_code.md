@@ -31,14 +31,13 @@ There is a related
     is an inverse literate programming tool in the {{< iref "#noweb" "noweb" >}} family..
     In opposite to _web_ the documentation is weaved from syntactic correct source code.
     The result is a restructed text file, that can be used in the
-    {{< iref "405#sphinx" "sphinx document generator" >}}.
--   [Cog](http://nedbatchelder.com/code/cog/) (MIT license.)
-    <a name="cog" "Internal reference"></a>
-    is a code generation tool. It is a preprocessor with all power of
-    python. While __Cog__ is mainly aimed at *tangling* a source file with included python chunks,
-    it can be also combined  with {{< iref "405" "Sphinx" >}}
-    for documentation generation as described in
-    [Producing documentation for python code in a file with reST, docutils, cog and paver
+    {{< iref "rest#sphinx" "sphinx document generator" >}}.
+-   <a name="cog"></a> [Cog](http://nedbatchelder.com/code/cog/) (MIT license.)
+    is a code generation tool. It is a preprocessor with all power of python. While
+    __Cog__ is mainly aimed at _tangling_ a source file with included python chunks, it
+    can be also combined with {{< iref "rest#sphinx" "Sphinx" >}} for documentation
+    generation as described in
+    [Documentation for python code with reST, docutils, cog and paver
     ](http://oneau.wordpress.com/2010/05/24/documenting-python-code-with-rest-docutils-pygments-cog-and-paver/)
 -   [Docco](http://jashkenas.github.io/docco/) is a documentation
     generator, written in Literate CoffeeScript. It produces an HTML
@@ -52,17 +51,21 @@ There is a related
 -   [FunnelWeb](http://www.ross.net/funnelweb/) a language independant
     literate programming tool which use a common source file to *tangle*
     a program and weave a latex or html documentation. .
--   {{< iref "44#haskell" "Haskell" >}} has semi literate programming support.
-    It can extract the source code from a _LaTeX_ source.
--   The {{< wp "Leo_(text_editor)"  "Leo text editor" >}} is an outlining editor which supports
-    optional noweb and CWEB markup.
--   {{< wp "noweb" >}}<a name="noweb"></a> is a literate programming tool, created in 1989 by
-    Norman Ramsey. It has *tangle* and *weave* components as do
-    {{< wp "WEB" >}} or {{< wp "CWEB" >}} but is independent of the code language.
-    [noweb Home](http://www.cs.tufts.edu/~nr/noweb/).
+-   {{< iref "programming_languages#haskell" "Haskell" >}}
+    has semi literate programming support.  It can extract the source code from a
+    _LaTeX_ source.
+-   The {{< wp "Leo_(text_editor)" "Leo text editor" >}} is an outlining editor which
+    supports optional noweb and CWEB markup.
+-   {{< wp "noweb" >}}<a name="noweb"></a> is a literate programming tool, created in
+    1989 by Norman Ramsey. It has *tangle* and *weave* components as do {{< wp "WEB" >}}
+    or {{< wp "CWEB" >}} but is independent of the code language.
+    -   [noweb Home](http://www.cs.tufts.edu/~nr/noweb/).
     -   Noweb has a python clone
         [noweb.py](https://github.com/JonathanAquino/noweb.py)
         that uses the  noweb syntax.
+-   [Natural Docs](https://www.naturaldocs.org/) (AGPL)
+    is a code documentation  supporting numerous languages. It was first written in
+    Perl; then in .NET _or Mono for linux_.
 -   [Pnw](https://pypi.python.org/pypi/pnw/) (Apache license)
      is a text processing and literate programming tool inspired by
     {{< iref "#antiweb" "antiweb" >}} and {{< iref "#noweb" "noweb" >}}.
@@ -91,8 +94,8 @@ There is a related
     For a quick overview look at the
     [example from the documentation](http://mpastell.com/pweave/examples.html).
 -   {{< wp "Sweave" >}} is a function in  R that enables integration of R code into LaTeX.
--   {{< iref "404#babel" "org-babel" >}} is a literate programming extension for
-    {{< iref "404" "Org mode" >}}.
+-   {{< iref "org-mode#babel" "org-babel" >}} is a literate programming extension for
+    {{< iref "org-mode" "Org mode" >}}.
 
 #  Source code beautifiers {#code_beautifiers}
 -   [Wikipedia: Prettyprint](http://en.wikipedia.org/wiki/Pretty-printing)
@@ -132,7 +135,7 @@ There is a related
     [wide range of common languages and markup formats](http://pygments.org/languages/)
     and can output to HTML, RTF, LaTeX and ANSI sequences.
     It has a [Command Line Interface](http://pygments.org/docs/cmdline/)
-    and is often used by {{< iref "269" "Structured Text Formatters" >}}
+    and is often used by {{< iref "structured_text" "Structured Text Formatters" >}}
     like Rest, Sphinx, Markdown, MoinMoin... or webframeworks like Wordpress, Hyde ....
 -   [Ostermiller syntax package](http://ostermiller.org/syntax/features.html)(GPL)
     is a java program that add syntax coloring to web pages for source
