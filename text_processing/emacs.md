@@ -30,8 +30,11 @@ title: Emacs
 -   [Common Lisp HyperSpec
     ](http://www.lispworks.com/documentation/HyperSpec/Front/)
 -   [Xemacs WWW Page](http://www.xemacs.org/)
--   [Emacs Baazar Repository](http://savannah.gnu.org/bzr/?group=emacs),
-    [Emacs Git repository](http://git.savannah.gnu.org/cgit/emacs.git).
+-   [Emacs Git repository](http://git.savannah.gnu.org/cgit/emacs.git).
+-   [awesome-emacs](https://github.com/emacs-tw/awesome-emacs)
+    A list of useful Emacs packages, libraries and others.
+-   [Emacs Stack Exchange](https://emacs.stackexchange.com/)
+-   [r/emacs -reddit](https://www.reddit.com/r/emacs/)
 
 # Emacs tutorials, blogs ...
 -   [Emacs Wiki: EmacsNiftyTricks
@@ -121,6 +124,8 @@ references on packages, I only list in the followings subsections some
 package that I use, mainly to remember what choice I have made for
 domains which are targeted by many packages.
 
+You find also nice packages in the
+[awesome-emacs list](https://github.com/emacs-tw/awesome-emacs).
 
 ## References from other pages
 -   Look also at
@@ -147,7 +152,7 @@ domains which are targeted by many packages.
 -   Other applications are in their own section you can find them by
     searching this site for <i>Emacs</i>.
 
-## Emacs packaging, and configuration system.
+## Emacs packaging
 -   [Emacs Wiki - Packaging](https://www.emacswiki.org/emacs/CategoryPackaging)
 -   [ELPA](http://www.emacswiki.org/emacs/ELPA) is the main packaging system for Emacs
     as it is included in emacs since emacs 24.
@@ -183,6 +188,12 @@ domains which are targeted by many packages.
     of an Emacs Lisp package, including dependency management,
     packaging, distribution and testing. The [Cask Repository
     ](https://github.com/cask/cask) is on GitHub.
+
+## Emacs configuration
+-   [EmacsWiki: Dot Emacs Structuring
+    ](https://www.emacswiki.org/emacs/DotEmacsStructuring)
+-   [emacs.dz: Awesome emacs config files](https://github.com/caisah/emacs.dz)
+    is a list of people with nice emacs config files.
 
 
 ## Emacs configuration exemples
