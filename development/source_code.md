@@ -21,7 +21,9 @@ documentation.
 There is a related
 {{< iref "#code_beautifiers" "section on source code beautifiers" >}}.
 
--   {{< wp "Literate_programming"  "Wikipedia: Literate programming" >}}
+-   Wikipedia: {{< wp "Literate_programming"  "Literate programming" >}},
+    {{< wp "Comparison of documentation generators" >}}
+-
 -   [SGML/XML and Literate Programming](http://www.oasis-open.org/cover/xmlLitProg.html)
 -   [www.literateprogramming.com](http://www.literateprogramming.com/)
     is an _outdated_ index of literate programming links and book reviews.
@@ -39,11 +41,24 @@ There is a related
     generation as described in
     [Documentation for python code with reST, docutils, cog and paver
     ](http://oneau.wordpress.com/2010/05/24/documenting-python-code-with-rest-docutils-pygments-cog-and-paver/)
+    _2010_.
 -   [Docco](http://jashkenas.github.io/docco/) is a documentation
     generator, written in Literate CoffeeScript. It produces an HTML
-    document that displays your comments in Markdown intermingled with
+    document that displays your comments written in Markdown intermingled with
     your code with syntax highlighting with
     {{< iref "#highlight_js" "Highlight.js" >}}.
+
+    __Doco__ has many ports to various langages like
+    [Rocco](http://rtomayko.github.io/rocco/rocco.html) in Ruby,
+    [Shocco](http://rtomayko.github.io/shocco/) for Shell,
+    [Pycco](https://github.com/pycco-docs/pycco) in Python,
+    [Marginalia](http://fogus.me/fun/marginalia/) in Clojure,
+    [Gocco](http://nikhilm.github.io/gocco/) in Go,
+    [sourceMakeup](http://jquery-jkit.com/sourcemakeup/) in PHP,
+    [Locco](http://rgieseke.github.io/locco/) in Lua,
+    [Nocco](http://dontangg.github.io/nocco/) in .NET,
+    [Groc](http://nevir.github.io/groc/) is a **CoffeeScript** fork with supplementary
+    features.
 -   [Doxygen](http://www.stack.nl/~dimitri/doxygen) is a documentation
     system for C++, C, Java, Objective-C, Python, IDL.
     [Doxymacs](http://doxymacs.sourceforge.net/) make using Doxygen
@@ -93,9 +108,27 @@ There is a related
     and Pandoc markdown markups. <br />
     For a quick overview look at the
     [example from the documentation](http://mpastell.com/pweave/examples.html).
+-   {{< wp "ROBODoc" >}} (GPL)
+    is a documentation generator for with C, C++, Fortran, Perl, shell scripts,
+    Assembler, DCL, DB/C, Tcl/Tk, Forth, Lisp, COBOL, Occam, Basic, HTML, Clarion, and
+    any other language that supports comments. It is an old software, main part of the
+    code from 2010 and last release 2015, it is no longer packaged with Debian. You can
+    compile from source, there is also a Docker image.
+    -   [ROBODoc Home](https://rfsber.home.xs4all.nl/Robo/)
 -   {{< wp "Sweave" >}} is a function in  R that enables integration of R code into LaTeX.
 -   {{< iref "org-mode#babel" "org-babel" >}} is a literate programming extension for
     {{< iref "org-mode" "Org mode" >}}.
+-   [Literate](https://github.com/zyedidia/Literate) (MIT License)
+    is a langage agnostic Markdown based literate programming tool writen in D language.
+-   [mdsh](https://github.com/bashup/mdsh)
+    is a bash script compiler and interpreter for markdown files. It can make markdown
+    files executable, or generate bash scripts from markdown files.
+-   [zshelldoc](https://github.com/zdharma/zshelldoc) (MIT and GPL)
+    is a documentation generator written in zsh for Bash & Zsh, with call-trees, comment
+    extraction, etc.
+    It generates asciidoc documentation.
+-   [shelldoc](https://github.com/charlesdaniels/shelldoc)
+    A tool for generating ReST documentation from shell scripts
 
 #  Source code beautifiers {#code_beautifiers}
 -   [Wikipedia: Prettyprint](http://en.wikipedia.org/wiki/Pretty-printing)
