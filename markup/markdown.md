@@ -12,41 +12,12 @@ title: MarkDown
     haskell, lua. Markdown can be used in many CMS _often thru plugins_
     Instiki Wiki (ruby powered wiki), ikiwiki. dokuwiki,
     [Moinmoin](http://moinmo.in/), [WolfCms](http://www.wolfcms.org/),
-    {{< iref "116" "Gollum" >}}.
+    {{< iref  "static_sitess#gollum" "Gollum" >}}.
     It is widely used in Django
     powered applications _using the python implementation_.
 
     It is the most usual syntax for
-    [Static site generators](node/static_site/ "internal reference")
-    and used in
-    {{< iref "static_site" "Awestruct" >}},
-    {{< iref "static_site" "BlackSmith" >}},
-    {{< iref "static_site" "Bonsai" >}},
-    [Docpad](node/static_site/#docpad "internal reference")
-    {{< iref "static_site" "Chisel" >}},
-    {{< iref "static_site" "Codex" >}},
-    {{< iref "static_site" "elyse" >}},
-    {{< iref "static_site" "Growl" >}},
-    {{< iref "static_site" "Gollum-site" >}},
-    {{< iref "static_site" "Jekyll" >}},
-    {{< iref "static_site" "Hakyll" >}},
-    {{< iref "static_site#hyde" "Hyde" >}},
-    {{< iref "static_site" "liquidluck" >}},
-    [MarkDoc](node/static_site/#markdoc "internal reference"),
-    {{< iref "static_site" "MarkWiki" >}},
-    {{< iref "static_site" "Middleman" >}},
-    {{< iref "static_site" "Mynt" >}},
-    {{< iref "static_site" "nanoc" >}},
-    {{< iref "static_site" "Nib" >}},
-    {{< iref "static_site" "Nikola" >}},
-    {{< iref "static_site" "Pelican" >}},
-    {{< iref "static_site" "poole" >}},
-    {{< iref "static_site" "Ruho" >}},
-    {{< iref "static_site" "simple-static" >}},
-    {{< iref "static_site" "sw" >}},
-    {{< iref "static_site" "werc" >}}
-    {{< iref "static_site" "Wintersmith" >}},
-    {{< iref "static_site" "Wok" >}}.
+    {{< iref  "static_sites" "Static site generators" >}}
 
 -   [markdown mailing list at Gmame
     ](http://dir.gmane.org/gmane.text.markdown.general)
@@ -210,8 +181,8 @@ Using recommonmark you can [use Markdown in Sphinx
     (2009 version) or
     [md2html.awk](https://github.com/wlangstroth/simple-static/blob/master/md2html.awk).
     <a name="md2html_awk"></a>.
-    it is used in {{< iref "static_site" "simple-static" >}} and
-    {{< iref "static_site" "sw" >}}.
+    it is used in {{< iref "static_sites#simple_static" "simple-static" >}} and
+    {{< iref "static_sites#sw" "sw" >}}.
 
 ## Bash
 
@@ -466,7 +437,7 @@ Using recommonmark you can [use Markdown in Sphinx
     is available on the [html2text page](http://www.aaronsw.com/2002/html2text/.
 -   [Grip](https://github.com/joeyespo/grip) (MIT LIcense)
     by Joe Esposito
-    is a {{< iref "263#flask" "Flask" >}} application
+    is a {{< iref "python_web#flask" "Flask" >}} application
     to preview or output html of a Markdown file as it looks on GitHUb
     wikis. It has support for GitHub flavored Markdown.
 -   [Hoep](https://github.com/Anomareh/Hoep)
@@ -676,13 +647,14 @@ The reference to ebook generators are in a
 [section of Epub page
 ](node/epub##structured_to_epub "internal reference")
 
-Some few [Static site generators](node/static_site/ "internal reference") are
+Some few {{< iref "static_sites" "Static site generators" >}} are
 either targeted to documentation, or support it easily:
-   {{< iref "static_site" "elyse" >}},
-   {{< iref "static_site" "markdoc" >}},
-   {{< iref "static_site" "poole" >}},
-   {{< iref "static_site" "simple-static" >}},
-   {{< iref "static_site" "sw" >}}
+    {{< iref "static_sites#hugo" "Hugo" >}},
+    {{< iref "static_sites#elise" "elyse" >}},
+    {{< iref "static_sites#marcdoc" "markdoc" >}},
+    {{< iref "static_sites#poole" "poole" >}},
+    {{< iref "static_sites#simple_static" "simple-static" >}},
+    {{< iref "static_sites#sw" "sw" >}}
 
 -   [markdown to ebook](https://github.com/k2052/markdown-to-ebook)
     is an ebook that explain how creating ebooks using Markdown.
