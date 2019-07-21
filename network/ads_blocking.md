@@ -30,7 +30,7 @@ support these methods. There are two possibilities:
 -   You forbid to load images or frames from a list of ad servers.
 
 There are references to description of these two methods in my
-{{< iref "browser" "browser section" >}}.
+{{< iref "browsers" "browser section" >}}.
 
 If you want to block ad servers you will want to look at
 the {{< iref "#ads_site_lists" "lists of ads serving sites" >}}.
