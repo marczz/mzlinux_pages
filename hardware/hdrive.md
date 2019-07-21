@@ -12,14 +12,25 @@ See also {{< iref "filesystems" "File Systems" >}}.
     {{< wp "Automatic acoustic management" >}}, {{< wp "S.M.A.R.T." >}},
     {{< wp "GNOME Disks" >}} _debian package: gnome-disk-utility_, {{< wp "RAID" >}}
 -   [Red Hat Storage Administration Guide
-    ](https://access.redhat.com/site/documentation/en-US/Red_Hat_Enterprise_Linux/7-Beta/html/Storage_Administration_Guide/index.html)
+    ](https://access.redhat.com/site/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Storage_Administration_Guide/index.html)
 -   [Red Hat LVM Administrator Guide
-    ](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7-Beta/html/Logical_Volume_Manager_Administration/index.html)
+    ](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Logical_Volume_Manager_Administration/index.html)
 -   [Red Hat DM Multipath Configuration and Administration
-    ](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7-Beta/html/DM_Multipath/index.html)
+    ](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/DM_Multipath/index.html)
     the utilities in Debian are in the package _multipath-tools_.
+-   [Red Hat - Managing storage devices
+    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/managing_storage_devices/index)
+-   [Red Hat - Online Storage Reconfiguration Guide
+    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/5/html/online_storage_reconfiguration_guide/index)
+    : [1.4. Removing a Storage Device
+    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/5/html/online_storage_reconfiguration_guide/removing_devices).
+-   [Fedora - Storage Administration Guide
+    ](https://docs.fedoraproject.org/en-US/Fedora/14/html/Storage_Administration_Guide/index.html)
 -   [ArchWiki - Filesystems
     ](https://wiki.archlinux.org/index.php/File_systems).
+-   [linux-advanced-storage (pdf)
+    ](https://oss.oracle.com/~mkp/docs/linux-advanced-storage.pdf)
+    describes the low level disk driver access via ATA and SCSI commands.
 -   [Blackblaze: What is the Best Hard Drive?
     ](https://www.backblaze.com/blog/best-hard-drive/),
     [Hard Drive Reliability update
