@@ -38,25 +38,28 @@ title: Asciidoc
     ](http://www.methods.co.nz/asciidoc/latex-backend.html)
 -   [asciidoc google group
     ](https://groups.google.com/forum/#!forum/asciidoc)
--   [Asciidoctor](http://asciidoctor.org/) (MIT license)
-    is an implementation of AsciiDoc in Ruby that converts
-    AsciiDoc markup into HTML 5, DocBook 4.5.
-    -   [Asciidoctor user manual
-        ](http://asciidoctor.org/docs/user-manual).
-    -   [GitHub: asciidoctor / asciidoctor
-        ](https://github.com/asciidoctor/asciidoctor).
-    -   [asciidoctor-htmlbook
-        ](https://github.com/oreillymedia/asciidoctor-htmlbook)
-        is O'Reilly set of templates for the htmlbook backend for Asciidoctor.
-    -   [asciidoctor / asciidoctor.js
-        ](https://github.com/asciidoctor/asciidoctor.js) (MIT license)
-        uses [Opal](http://opalrb.org/) Ruby-to-JavaScript cross compiler
-        to translate Asciidoctor to JavaScript, and
-        bring AsciiDoc to the browser!
+
+## Asciidoctor
+[Asciidoctor](http://asciidoctor.org/) (MIT license)
+is an implementation of AsciiDoc in Ruby that converts
+AsciiDoc markup into HTML 5, DocBook 4.5.
+-   [Asciidoctor user manual
+    ](http://asciidoctor.org/docs/user-manual).
+-   [GitHub: asciidoctor / asciidoctor
+    ](https://github.com/asciidoctor/asciidoctor).
+-   [asciidoctor-htmlbook
+    ](https://github.com/oreillymedia/asciidoctor-htmlbook)
+    is O'Reilly set of templates for the htmlbook backend for Asciidoctor.
+-   [asciidoctor / asciidoctor.js
+    ](https://github.com/asciidoctor/asciidoctor.js) (MIT license)
+    uses [Opal](http://opalrb.org/) Ruby-to-JavaScript cross compiler
+    to translate Asciidoctor to JavaScript, and
+    bring AsciiDoc to the browser!
 -   [Asciidoc compared to Markdown
     ](http://asciidoctor.org/docs/user-manual/#compared-to-markdown)
     from Asciidoctor user manual.
-
+-   Tutorial [Using AsciiDoc and Asciidoctor to write documentation
+    ](https://www.vogella.com/tutorials/AsciiDoc/article.html)
 
 # Asciidoc editing.
 
@@ -66,10 +69,12 @@ title: Asciidoc
         it pretty much looks like the final output. What must be bold
         is bold, what must be italic is italic etc.  Meta characters
         are naturally still visible, but in a faint way, so they can
-        be easily ignored.
-    -   [doc-mode Emacs Mode for AsciiDoc Fontlocking
-        ](http://xpt.sourceforge.net/tools/doc-mode/) _2006_
-
+        be easily ignored. The package is in melpa.
+    -   [doc-mode](http://xpt.sourceforge.net/tools/doc-mode/) _2006_
+        is an emacs Mode for highlighting words in AsciiDoc with fontlocking.
+        Superseded by _adoc-mode_
+    -   [ox-asciidoc]( https://github.com/yashi/org-asciidoc)
+        generates asciidoc from org input. It is in melpa.
 
 -   AsciiDoctor [Editing AsciiDoc with Live Preview
     ](http://asciidoctor.org/docs/editing-asciidoc-with-live-preview/)
@@ -105,10 +110,15 @@ title: Asciidoc
 -   {{< iref "static_sites#hyde" "Hyde" >}} written in python.
 -   [AsciiDocGen](http://dbixjcl.org/jcl/asciidocgen/asciidocgen.html)
     (Artistic License) written in perl.
--   [Gollum](https://github.com/gollum/gollum/) (MIT License)
+-   {{< iref "content_management#gollum" "Gollum" >}}
     a ruby Wiki with git  backend  _not static!_
--   [Awestruct](http://awestruct.org/) is a ruby static website
+-   {{< iref "static_sites#awestruct" "Awestruct" >}} is a ruby static website
     generator, that uses Asciidoc an Markdown (+Haml) formats.
+-   {{< iref "static_sites#metalsmith" "Metalsmith" >}} a node.js plugable static site
+    generator which has an asciidoc plugin.
+-   {{< iref "static_sites#hugo" "Hugo" >}} a go language static site generator, by
+    using an external helper wich can be _asciidoctor_, the _asciidoc_ python utility or
+    _pandoc_.
 
 # Backends and reverse conversion
 ## Builtin backends
@@ -149,7 +159,7 @@ title: Asciidoc
 -   [Graphviz filter for AsciiDoc
     ](http://asciidoc.org/asciidoc-graphviz-sample.html)
     allow to include graphs in _dot_ language via
-    {{< iref "20#graphviz" "Graphviz" >}}
+    {{< iref "images#graphviz" "Graphviz" >}}
 -   [Publican](https://fedorahosted.org/publican/)
     is a DocBook XML publication system. Publican automates producing
     documentation in  plain text, HTML and PDF. A Publican package is
@@ -157,7 +167,7 @@ title: Asciidoc
     [Asciidoctor can convert AsciiDoc to DocBook for use with Publican
     ](https://github.com/asciidoctor/asciidoctor/wiki/Convert-Asciidoc-to-Docbook-for-use-with-Publican).<br />
     [Publican user Guide
-    ](https://jfearn.fedorapeople.org/en-US/Publican/4.1/html/Users_Guide/index.html).
+    ](https://jfearn.fedorapeople.org/en-US/Publican/4.3/html/Users_Guide/index.html).
 
 ## conversion to asciidoc
 -   [Codiicsa](https://github.com/elextr/codiicsa/) (GPL)
