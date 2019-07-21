@@ -9,7 +9,7 @@ title: MarkDown
 -   [Markdown](http://daringfireball.net/projects/markdown/)
     (BSD style license) is a text-to-HTML conversion tool originaly
     written in perl, but that has also implementations in C, python, php,
-    haskell, lua. Markdown can be used in many CMS _often thru plugins_
+    haskell, lua. Markdown can be used in many CMS _often through plugins_
     Instiki Wiki (ruby powered wiki), ikiwiki. dokuwiki,
     [Moinmoin](http://moinmo.in/), [WolfCms](http://www.wolfcms.org/),
     {{< iref  "static_sitess#gollum" "Gollum" >}}.
@@ -19,6 +19,11 @@ title: MarkDown
     It is the most usual syntax for
     {{< iref  "static_sites" "Static site generators" >}}
 
+-   There is two lists of _Awesome Markdown_ references:
+    [GitHub - mundimark/awesome-markdown](https://github.com/mundimark/awesome-markdown)
+    seems the more complete and up to date, and
+    [GitHub - BubuAnabelas/awesome-markdown
+    ](https://github.com/BubuAnabelas/awesome-markdown).
 -   [markdown mailing list at Gmame
     ](http://dir.gmane.org/gmane.text.markdown.general)
 -   A detailed references page [XBeta Wiki: Markdown
@@ -270,34 +275,6 @@ Using recommonmark you can [use Markdown in Sphinx
     is a Markdown parser in Clojure that compiles to both Clojure
     and ClojureScript.
 
-## Haskell
--   <a name="pandoc"></a> [Pandoc](http://pandoc.org/) (GPL v2)
-    is a Haskell library and a command-line tool for converting from
-    one markup format to another. It can convert many formats
-    (reStructuredText, textile, HTML, DocBook, LaTeX, MediaWiki
-    markup, TWiki markup, OPML, Emacs Org-Mode, Txt2Tags, Microsoft
-    Word docx, EPUB, or Haddock markup) to plain text, Markdown,
-    CommonMark, PHP Markdown Extra, GitHub-Flavored Markdown,
-    MultiMarkdown, reStructuredText, XHTML, HTML5, LaTeX
-    (including beamer slide shows), ConTeXt,  RTF,  OPML,  DocBook,
-    OpenDocument, ODT, Word docx, GNU Texinfo, MediaWiki markup,
-    DokuWiki markup, ZimWiki markup, Haddock markup,
-    EPUB (v2 or v3), FictionBook2, Textile, groff man pages,
-    Emacs Org mode,  AsciiDoc,  InDesign ICML,  TEI Simple, Slidy,
-    Slideous, DZSlides, reveal.js, S5 HTML slide shows.
-    -   The [Pandoc User’s Guide](http://pandoc.org/README.html),
-        and [Pandoc examples](http://pandoc.org/demos.html)
-    -   [Pandoc Markdown
-        ](http://pandoc.org/MANUAL.html#pandocs-markdown)
-        is a set of extensions of MarkDown, each extension can be enabled or disabled.
-    -   You can try an [online pandoc converter](http://pandoc.org/try/)
-    -   [Emacs pandoc mode](http://joostkremers.github.io/pandoc-mode/)
-        (BSD License) by Joost Kremers is an Emacs mode for interacting with Pandoc.
-    -   [panzer](https://github.com/msprev/panzer) (BSD License)
-        adds styles to pandoc. Styles are combinations of templates, metadata settings,
-        pandoc command line options, and instructions to run filters, scripts and
-        postprocessors.  Styles simplify makefiles, bundling everything related to the
-        look of the document in one place.
 
 ## Javascript
 -   [Let's Make a Framework: Writing Documentation
@@ -379,6 +356,9 @@ Using recommonmark you can [use Markdown in Sphinx
         formulas. Green colored texts should be readable for your target
         audience.
 
+## Haskell
+
+See {{< iref "pandoc" "Pandoc >}} below.
 
 
 ##  Lua
@@ -429,6 +409,8 @@ Using recommonmark you can [use Markdown in Sphinx
     support generation of HTML5 with support for figure and figcaption tags.
 
 ## Python {#markdown-python}
+
+
 -   [formd](https://github.com/drbunsen/formd) is a 100sloc python script
      to convert between markdown inline links and referenced links.
 -   [html2text](http://www.aaronsw.com/2002/html2text/)(GPL 2.0)
@@ -637,6 +619,50 @@ also [in PyPi](https://pypi.python.org/pypi/markdown2).
 
 ## Rust
 -   [Rust Markdown Module](http://doc.rust-lang.org/rustdoc/html/markdown/).
+
+## Pandoc {#pandoc}
+[Pandoc](http://pandoc.org/) (GPL v2)
+is a Haskell library and a command-line tool for converting from
+one markup format to another. It can convert many formats
+(reStructuredText, textile, HTML, DocBook, LaTeX, MediaWiki
+markup, TWiki markup, OPML, Emacs Org-Mode, Txt2Tags, Microsoft
+Word docx, EPUB, or Haddock markup) to plain text, Markdown,
+CommonMark, PHP Markdown Extra, GitHub-Flavored Markdown,
+MultiMarkdown, reStructuredText, XHTML, HTML5, LaTeX
+(including beamer slide shows), ConTeXt,  RTF,  OPML,  DocBook,
+OpenDocument, ODT, Word docx, GNU Texinfo, MediaWiki markup,
+DokuWiki markup, ZimWiki markup, Haddock markup,
+EPUB (v2 or v3), FictionBook2, Textile, groff man pages,
+Emacs Org mode,  AsciiDoc,  InDesign ICML,  TEI Simple, Slidy,
+Slideous, DZSlides, reveal.js, S5 HTML slide shows.
+
+-   The [Pandoc User’s Guide](http://pandoc.org/README.html),
+    and [Pandoc examples](http://pandoc.org/demos.html)
+-   [Pandoc Markdown
+    ](http://pandoc.org/MANUAL.html#pandocs-markdown)
+    is a set of extensions of MarkDown, each extension can be enabled or disabled.
+-   You can try an [online pandoc converter](http://pandoc.org/try/)
+-   [Emacs pandoc mode](http://joostkremers.github.io/pandoc-mode/)
+    (BSD License) by Joost Kremers is an Emacs mode for interacting with Pandoc.
+-   [panzer](https://github.com/msprev/panzer) (BSD License)
+    adds styles to pandoc. Styles are combinations of templates, metadata settings,
+    pandoc command line options, and instructions to run filters, scripts and
+    postprocessors.  Styles simplify makefiles, bundling everything related to the
+    look of the document in one place.
+-   [Customizing pandoc to generate beautiful pdfs from markdown
+    ](https://learnbyexample.github.io/tutorial/ebook-generation/customizing-pandoc/)
+-   [Élaboration et conversion de documents avec Markdown et Pandoc
+    ](https://enacit1.epfl.ch/markdown-pandoc/)
+
+Pandoc processing may use _filters_ that work on the intermediate abstract syntax
+tree (AST), the reference page is the
+[Pandoc Filters page on Pandoc Wiki
+](https://github.com/jgm/pandoc/wiki/Pandoc-Filters). The filters can bee written in
+LUA, python (with [Panflute](http://scorreia.com/software/panflute/)),
+PHP, node.js, perl, groovy and ruby.The
+[Filters page](https://github.com/jgm/pandoc/wiki/Pandoc-Filters)
+gives a list of wrappers for each programming language, and a list of known
+available filters.
 
 # Markdown documentation generators
 Some markdown to slideshow converters are given in the
