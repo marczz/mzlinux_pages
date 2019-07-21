@@ -204,11 +204,13 @@ The source code of python modules is found in the
     {{< iref "gtk" "Gtk section" >}}.
 
 ## Operating System services {#os_modules}
--   [argparse](http://docs.python.org/3/library/argparse.html)
+-   <a name="argparse"></a>[argparse](http://docs.python.org/3/library/argparse.html)
     command-line parsing library,
-    [PyMOTW: argparse](https://pymotw.com/3/argparse/).
-    Since python 2.7 replaces the deprecated
-    [optparse](http://docs.python.org/library/optparse.html) .
+    Since python 2.7 it replaces the deprecated
+    [optparse](http://docs.python.org/library/optparse.html).
+    There as also many
+    {{< iref "#command_line" "argument parsing alternatives" >}}.
+    -   [PyMOTW: argparse](https://pymotw.com/3/argparse/).
 -   [logging](http://docs.python.org/3/library/logging.html)
      standard API for reporting errors and status information
      from applications and libraries.
@@ -505,7 +507,7 @@ The continuous integration software is in the main
     It aims at being an improvement of Scons, providing higher-level functionality similar
     to that of Autotools. .
 
-## Command Line
+## Command Line {#command_line}
 
 -   [Python packaging](http://www.scotttorborg.com/python-packaging/)
     includes a [Command Line Scripts page
@@ -529,22 +531,25 @@ The continuous integration software is in the main
     testing; and profiling to your apps.
     -   [Cli documentation](http://pythonhosted.org/pyCLI/).
     -   [Cli GitHub repository](https://github.com/whilp/cli)
--   [Click](https://github.com/pallets/click)
-    is a Python package for creating command line interfaces. It
-    provides arbitrary nesting of commands, automatic help page
-    generation, lazy loading of subcommands at runtime.
-    It is in Debian as python(3)-click, and for multithreaded
-    development as  python(3)-click-threading.
--   [Clime](http://clime.mosky.tw/)
+-   [Click](https://click.palletsprojects.com/) (BSD License)
+    ( [GitHub - Click](https://github.com/pallets/click))
+    is a Python package for creating command line interfaces.  It provides arbitrary
+    nesting of commands, automatic help page generation, lazy loading of subcommands at
+    runtime.  It is an alternative to {{< iref "#docopt" Docopt >}} and
+    {{< iref "#argparse" "Argparse" >}}.  It is in Debian as many
+    _python(3)-click-*_ packages.
+-   [Clime](http://clime.mosky.tw/) (MIT License)
     converts any module into a multi-command CLI program without any
     configuration by a single `import`.
-    [GitHub: Clime](https://github.com/moskytw/clime).
--   [Docopt](http://docopt.org/) (MIT License)
+    [GitHub: Clime](https://github.com/moskytw/clime).  _last release 2015_.
+-   <a name="docopt"></a>[Docopt](http://docopt.org/) (MIT License)
     is a python command line arguments parser, that can be used with python scripts
     and  also bash, ruby, coffeescript, javascript; go, ...
-    [GitHub: docopt](https://github.com/docopt/docopt)
--   [Plac](http://micheles.googlecode.com/hg/plac/doc/plac.html) (BSD
-    License) By Michele Simionato.
+    -   [GitHub: docopt](https://github.com/docopt/docopt)
+    -   [docopt v argparse • Dimitri Merejkowsky
+        ](https://dmerej.info/blog/post/docopt-v-argparse/) a detailled comparaison.
+-   [Plac](https://micheles.github.io/plac/) (BSD License)
+    By Michele Simionato, is a command line parsing library.
 
 ## Cryptography
 
