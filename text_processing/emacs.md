@@ -197,6 +197,8 @@ You find also nice packages in the
 
 
 ## Emacs configuration exemples
+-   [EmacsWiki: Starter Kits](https://www.emacswiki.org/emacs/StarterKits)
+    is a list and activity comparison of the various starter kits.
 -   [Emacs Starter Kit](https://github.com/technomancy/emacs-starter-kit/tree/v3)
     help to manage an emacs configuration, version v3
     is a guide to various packages and settings. It consist mainly in
@@ -204,6 +206,10 @@ You find also nice packages in the
     [better-defaults](https://github.com/technomancy/better-defaults).
     It recommands also installing magit, smex, ido-ubiquitous, paredit,
     idle-highlight-mode, find-file-in-project, scpaste.
+-   Eric Shulte [Emacs Starter Kit](http://eschulte.github.io/emacs24-starter-kit)
+    ([GitHub - emacs24-starter-kit](https://github.com/eschulte/emacs24-starter-kit)),
+    was long time ago forked from the previous, but use
+    {{< iref "org-mode#babel" "Literate programming in Org Babel" >}}.
 -   [Prelude](https://github.com/bbatsov/prelude) is an emacs
     configuration systems. It use a [list of packages
     ](https://github.com/bbatsov/prelude/blob/master/core/prelude-packages.el)
