@@ -358,7 +358,7 @@ Using recommonmark you can [use Markdown in Sphinx
 
 ## Haskell
 
-See {{< iref "pandoc" "Pandoc >}} below.
+See {{< iref "pandoc" "Pandoc" >}} below.
 
 
 ##  Lua
@@ -684,6 +684,16 @@ either targeted to documentation, or support it easily:
 
 -   [markdown to ebook](https://github.com/k2052/markdown-to-ebook)
     is an ebook that explain how creating ebooks using Markdown.
+-   Markdown is used in 0'Reilly publications as an alternative to
+    {{< iref "asciidoc" >}} to produce
+    [htmlbook](http://oreillymedia.github.io/HTMLBook/).
+    the _Atlas environment_ hosted at _O'Reilly Media_ allow to transform markdown
+    to htmlbook, but they also provide a node.js program to do this translation
+    [htmlbook.js](https://github.com/oreillymedia/htmlbook.js).
+-   [oreillymedia/docbook2htmlbook](https://github.com/oreillymedia/docbook2htmlbook)
+    is an XSL Transform to convert Docbook XML to HTMLBook.
+-   [O'Reilly Atlas - writing in Markdown
+    ](http://docs.atlas.oreilly.com/writing_in_markdown.html)
 -   [Beautiful docs](http://beautifuldocs.com/)
     is a documentation viewer in node.js for markdown files.
 -   [d](http://pypi.python.org/pypi/d) (MIT/X11)
