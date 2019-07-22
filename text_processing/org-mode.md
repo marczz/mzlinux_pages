@@ -22,12 +22,6 @@ title: Org Mode
 -   [David O'Toole Org tutorial
     ](http://orgmode.org/worg/org-tutorials/orgtutorial_dto.html)
     appropriate for org-mode's beginners.
--   [Babel: Introduction](http://orgmode.org/worg/org-contrib/babel/intro.html)
-    -   [Index of babel/languages/
-        ](https://orgmode.org/worg/org-contrib/babel/languages/)
-    -   [GitHub - dfeich/org-babel-examples
-        ](https://github.com/dfeich/org-babel-examples)
-        with different backend languages.
 -   [LaTeX Export](http://orgmode.org/worg/org-tutorials/org-latex-export.html)
     ([Exporting in Org manual](http://orgmode.org/org.html#Exporting) )
 -   [Publishing Org-mode files to HTML
@@ -35,11 +29,18 @@ title: Org Mode
 -   [Putting Your org Files Under Version Control
     ](http://orgmode.org/worg/org-tutorials/org-vcs.html)
 -   Eric Neilsen's [Emacs org-mode examples and cookbook
-    ](http://home.fnal.gov/~neilsen/notebook/orgExamples/org-examples.html#sec-2-4)
+    ](http://home.fnal.gov/~neilsen/notebook/orgExamples/org-examples.html)
 -   Eric Schulte [collection of Org-mode snippets using code blocks
     ](https://eschulte.github.io/org-scraps/).
 -   [org2latex - a yasnippet
     ](http://www.sharons.org.uk/org2latex.html)
+-   [Org-mode Basics](http://www.star.bris.ac.uk/bjm/org-basics.html)
+-   [Emacs In a Box](http://caiorss.github.io/Emacs-Elisp-Programming/)
+    A tutorial about programming Elisp and Emacs text editor customization.
+    The source repository is [GitHub - Emacs-Elisp-Programming
+    ](https://github.com/caiorss/Emacs-Elisp-Programming)
+
+
 
 ## Articles and Blogs
 -   [Sacha Chua
@@ -56,6 +57,44 @@ title: Org Mode
         [Persistent highlighting in Emacs
         ](http://kitchingroup.cheme.cmu.edu/blog/2016/11/10/Persistent-highlighting-in-Emacs/).
 
+
+## Org Babel {#babel}
+
+-   [The Org Manual: Working with source code
+    ](https://orgmode.org/manual/Working-with-source-code.html#Working-with-source-code)
+-   [Babel: Introduction](http://orgmode.org/worg/org-contrib/babel/intro.html)
+-   [Index of babel/languages/
+    ](https://orgmode.org/worg/org-contrib/babel/languages/)
+-   [GitHub - dfeich/org-babel-examples
+    ](https://github.com/dfeich/org-babel-examples)
+    with different backend languages.
+
+### Org-Babel literate programming
+
+See also {{< iref "source_code#literate_programming" "Literate Programming" >}}
+-   [Introduction to Literate Programming
+    ](http://www.howardism.org/Technical/Emacs/literate-programming-tutorial.html)
+    _with Org Babel_.
+-   [Babel Introduction - Code Blocks
+    ](https://orgmode.org/worg/org-contrib/babel/intro.html#source-code-blocks)
+    and
+    [Babel Introduction - Literate Programming
+    ](https://orgmode.org/worg/org-contrib/babel/intro.html#literate-programming).
+    the same document show a
+    [simple literate emacs init file
+    ](https://orgmode.org/worg/org-contrib/babel/intro.html#literate-emacs-init)
+    and recommend for a complete example the literate programming version of starter kit
+    by Eric Schulte, they give an old version but you may prefer
+    [eschulte/emacs24-starter-kit](https://github.com/eschulte/emacs24-starter-kit).
+-   [Org-mode - Literate Programming Recipes
+    ](https://caiorss.github.io/Emacs-Elisp-Programming/Org-mode-recipes.html)
+-   [org-mode examples and cookbook -Writing literate python code
+    ](http://ehneilsen.net/notebook/orgExamples/org-examples.html#sec-25)
+-   [Org-mode - Literate Programming Recipes
+    ](https://caiorss.github.io/Emacs-Elisp-Programming/Org-mode-recipes.html)
+-   [Formatting tangled output in org-mode
+    ](https://jamesaimonetti.com/fr/posts/formatting-tangled-output-in-org-mode/)
+    explains _org-babel-post-tangle-hook_.
 
 ## Org mode parsing
 
@@ -157,11 +196,11 @@ There are many ways to produce slides with an org mode formatted text;
 -   There is also a Worg tutorial titled
     [Writing Non-Beamer presentations in org-mode](http://orgmode.org/worg/org-tutorials/non-beamer-presentations.html) by Eric Schulte,
     that introduces shortly Epresent and
-    {{< iref "346#s5" "S5 presentations" >}} .
+    {{< iref "html#s5" "S5 presentations" >}} .
 -   [Epresent](https://github.com/eschulte/epresent) is an Emacs minor mode
     for giving presentations inside the Emacs Window.
 -   [org-s5](https://github.com/sigma/org-s5) by Yann Hodique
-    provides a glue to produce {{< iref "346#s5" "S5 based presentations" >}}
+    provides a glue to produce {{< iref "html#s5" "S5 based presentations" >}}
     from Org-Mode files.
 -   An [altered version of Org-mode's existing html export to produce static S5](http://orgmode.org/worg/org-tutorials/non-beamer-presentations.html#sec-3-1)
     is described in
