@@ -16,13 +16,17 @@ title: Asciidoc
 -   [AsciiDoc cheatsheet](http://powerman.name/doc/asciidoc)
     by Alex Efros. He also provides a [compact theme for asciidoc
     ](http://powerman.name/download/asciidoc/).
--   [O'Reilly atlas asciidoc guide
-    ](http://chimera.labs.oreilly.com/books/1230000000065/ch04.html),
+-   [O'Reilly atlas - Writing in Asciidoc
+    ](http://docs.atlas.oreilly.com/writing_in_asciidoc.html)
     [O'Reilly AsciiDoc Indexing Guidelines
     ](http://chimera.labs.oreilly.com/books/1234000001578/ch02.html)
--   [oreillymedia/asciidoctor-htmlbook
-    ](https://github.com/oreillymedia/asciidoctor-htmlbook) is a set of
-    templates for asciidoctor.
+-   [GitHub: asciidoctor / asciidoctor
+    ](https://github.com/asciidoctor/asciidoctor).
+-   [asciidoctor-htmlbook
+    ](https://github.com/oreillymedia/asciidoctor-htmlbook)
+    is O'Reilly set of templates for the
+    [htmlbook](http://oreillymedia.github.io/HTMLBook/) backend for Asciidoctor.
+-   [GitHub - oreillymedia/HTMLBook](https://github.com/oreillymedia/HTMLBook)    .
 -   [opendevise/asciidoc-samples
     ](https://github.com/opendevise/asciidoc-samples/blob/master/article.adoc)
     repository contains asciidoc samples to test GitHub rendering, you
@@ -49,7 +53,8 @@ AsciiDoc markup into HTML 5, DocBook 4.5.
     ](https://github.com/asciidoctor/asciidoctor).
 -   [asciidoctor-htmlbook
     ](https://github.com/oreillymedia/asciidoctor-htmlbook)
-    is O'Reilly set of templates for the htmlbook backend for Asciidoctor.
+    is O'Reilly set of templates for the
+    [htmlbook](http://oreillymedia.github.io/HTMLBook/) backend for Asciidoctor.
 -   [asciidoctor / asciidoctor.js
     ](https://github.com/asciidoctor/asciidoctor.js) (MIT license)
     uses [Opal](http://opalrb.org/) Ruby-to-JavaScript cross compiler
