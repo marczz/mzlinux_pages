@@ -638,7 +638,7 @@ PHP, node.js, perl, groovy and ruby.The
 gives a list of wrappers for each programming language, and a list of known
 available filters.
 
-## Pandoc Markdown (#pandoc_markdown)
+## Pandoc Markdown {#pandoc_markdown}
 
 [Pandoc Markdown](http://pandoc.org/MANUAL.html#pandocs-markdown)
 include a set of extensions of MarkDown which are enabled by default, unless you use
@@ -683,8 +683,7 @@ Some markdown to slideshow converters are given in the
 landslide, markdown2deckjs, Deck.rb, keydown ...
 
 The reference to ebook generators are in a
-[section of Epub page
-](node/epub##structured_to_epub "internal reference")
+{{< iref "epub#structured_to_epub" "section of Epub page" >}}.
 
 Some few {{< iref "static_sites" "Static site generators" >}} are
 either targeted to documentation, or support it easily:
