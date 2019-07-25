@@ -12,7 +12,7 @@ title: MarkDown
     haskell, lua. Markdown can be used in many CMS _often through plugins_
     Instiki Wiki (ruby powered wiki), ikiwiki. dokuwiki,
     [Moinmoin](http://moinmo.in/), [WolfCms](http://www.wolfcms.org/),
-    {{< iref  "static_sitess#gollum" "Gollum" >}}.
+    {{< iref  "content-management#gollum" "Gollum" >}}.
     It is widely used in Django
     powered applications _using the python implementation_.
 
@@ -575,7 +575,7 @@ also [in PyPi](https://pypi.python.org/pypi/markdown2).
 
     -   The [CodeHilite extension](https://pythonhosted.org/Markdown/extensions/code_hilite.html)
         adds code/syntax highlighting to standard Python-Markdown code blocks using
-        [Pygments](node/311#pygments "Internal reference").
+        {{< iref "source_code#pygments" "Pygments" >}}
         It can be used with fenced blocks, or by using
         `:::<language>`
         as the first line of indented code blocks.
