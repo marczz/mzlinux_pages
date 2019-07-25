@@ -771,6 +771,8 @@ _implementation_ that fulfill a role similar to that of classes.
     ](https://github.com/rust-unofficial/awesome-rust)
     a list of Rust code and resources.
 -   [Rust Projects](http://www.rust-ci.org/projects/)
+-   [a very brief intro to rust
+    ](https://ashleygwilliams.github.io/a-very-brief-intro-to-rust/)
 -   [Rust by Example](http://rustbyexample.com/)
 -   [Category:Rust - Rosetta Code
     ](http://rosettacode.org/wiki/Category:Rust)
