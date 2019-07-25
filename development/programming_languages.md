@@ -318,12 +318,13 @@ and comparable to C cf. [The  benchmarks game](http://shootout.alioth.debian.org
 -   [Gnu Libc](http://www.gnu.org/software/libc/ "www.gnu.org libc")
     (GPL)
     *[Glibc manual](http://www.gnu.org/software/libc/manual/ "www.gnu.org libc/manual")*.
--   The Gnome library {{< wp "GLib" >}} is a cross-platform  library that began as part of
-    the {{< wp "GTK+" >}} project but contain now non-GUI-specific code.
-    _Glib_ provides the core object system used in Gnome {{< wp "GObject" >}}), the main loop
-    implementation, and a large set of utility functions for strings and
-    common data structures. It provides typedefs to ensure portability
-    and a large set of containers. Glib, GObject and other GTK+ components are in the {{< iref "193" "GTK+ section" >}}.
+-   The Gnome library {{< wp "GLib" >}} is a cross-platform library that began as part
+    of the {{< wp "GTK+" >}} project but contain now non-GUI-specific code.  _Glib_
+    provides the core object system used in Gnome {{< wp "GObject" >}}), the main loop
+    implementation, and a large set of utility functions for strings and common data
+    structures. It provides typedefs to ensure portability and a large set of
+    containers. Glib, GObject and other GTK+ components are in the
+    {{< iref "gtk#gtk+" "GTK+ section" >}}.
 -   [AT&T Open Source software tools (pdf)
     ](http://www2.research.att.com/~astopen/publications/open-2000-1.pdf)
     (Common Public License) ast, Graphviz, sfio, dytona ....
