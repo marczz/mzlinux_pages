@@ -77,7 +77,7 @@ The site generators are written in various languages:
     {{< iref "#awestruct" "Awestruct" >}},
     {{< iref "#bonsai" "Bonsai" >}},
     {{< iref "#jekyll" "Jekyll" >}},
-    {{< iref "#gollumsite" "Gollum-site" >}},
+    {{< iref "#gollum-site" "Gollum-site" >}},
     {{< iref "#middleman" "Middleman" >}},
     {{< iref "#nanoc" "Nanoc" >}},
     {{< iref "#ruhoh" "Ruho" >}},
@@ -118,7 +118,7 @@ The site generators are written in various languages:
     {{< iref "#codex" "Codex" >}},
     {{< iref "#elyse" "Elyse" >}},
     {{< iref "#gitbook" "GitBook" >}},
-    {{< iref "#gollum" "Gollum-Site" >}},
+    {{< iref "#gollum-site" "Gollum-Site" >}},
     {{< iref "#hakyll" "Hakyll" >}},
     {{< iref "#hexo" "Hexo" >}},
     {{< iref "#hugo" "Hugo" >}},
@@ -146,7 +146,7 @@ The site generators are written in various languages:
 -   _ReSTructured text_:
     {{< iref "#acrylamid" "Acrylamid" >}},
     {{< iref "#flask" "Flask-rst" >}},
-    {{< iref "#gollum" "Gollum-Site" >}},
+    {{< iref "#gollum-site" "Gollum-Site" >}},
     {{< iref "#hyde" "Hyde" >}},
     {{< iref "#jekyll" "Jekyll" >}},
     {{< iref "#liquidluck" "liquidluck" >}},
@@ -157,13 +157,13 @@ The site generators are written in various languages:
 -   _AsciiDoc_:
     {{< iref "#awestruct" "Awestruct" >}},
     {{< iref "#gitbook" "GitBook" >}},
-    {{< iref "#gollum" "Gollum-Site" >}},
+    {{< iref "#gollum-site" "Gollum-Site" >}},
     {{< iref "#hexo" "Hexo" >}} through a plugin,
     {{< iref "#hugo" "Hugo" >}} through a plugin,
     {{< iref "#hyde" "Hyde" >}},
     {{< iref "#pelican" "Pelican" >}},
 -   _Org-mode_:
-    {{< iref "#gollum" "Gollum-Site" >}},
+    {{< iref "#gollum-site" "Gollum-Site" >}},
     {{< iref "#hexo" "Hexo" >}} through a plugin,
     {{< iref "#hugo" "Hugo" >}} through a plugin,
     {{< iref "#hyde" "Hyde" >}} through a plugin,
@@ -219,20 +219,21 @@ The site generators are written in various languages:
         is also available.
 -   [Flask-rst](https://github.com/jarus/flask-rst) <a name="flask-rst">
     is a python tool to create a website from a source of
-    reStructuredText that uses {{< iref "263#flask" "Flask" >}}.
--   [Gollum-Site](https://github.com/dreverri/gollum-site)<a name="gollumsite">
-    is a static site generator for {{< iref "116" "Gollum" >}}
+    reStructuredText that uses  {{< iref "python_web#flask" "Flask" >}}
+-   <a name="gollum-site">[Gollum-Site](https://github.com/dreverri/gollum-site)
+    is a static site generator for  {{< iref "content_management#gollum" "Gollum" >}}
     like _Gollum_ it is  written in Ruby with a git backend and accept pages written in
     _Asciidoc_, _Creole_, _Markdown_, _Org Mode_, _Pod_, _RDoc_,
     _ReStructuredText_, _Textile_, _MediaWiki_.
-    -  Like _Gollum_ _Gollum-Site_ uses the [Liquid Templating System](https://github.com/tobi/liquid/wiki).
+    -  Like _Gollum_ _Gollum-Site_ uses the
+       [Liquid Templating System](https://github.com/tobi/liquid/wiki).
     -  [Riak](http://basho.com/) had previously its wiki written in Gollum and Gollum-site,
         you can still find the source of the
         [Riak-Wiki on GitHub](https://github.com/ghaskins/riak_wiki).
         But now Riak switched to {{< iref "#middleman" "middleman" >}}
-    -   _Gollum-Site_ has not followed the _Gollum_ new release and is still linked to _Gollum_ 1.4.
-        and many sites either changed of static generator or upgraded to _Gollum_ 2, but dropped
-        _Gollum-Site_
+    -   _Gollum-Site_ has not followed the _Gollum_ new release and is still linked to
+        _Gollum_ 1.4.  and many sites either changed of static generator or upgraded to
+        _Gollum_ 2, but dropped _Gollum-Site_
 -   <a name="growl"></a>[Growl](http://github.com/xfire/growl/tree) (GPL)
     an other  python static site generator inspired by
     {{< iref "#jekyll" "Jekyll" >}}.
@@ -310,9 +311,8 @@ The site generators are written in various languages:
     and export it to a static site.
     -   [GitHub: MarkWiki](https://github.com/mblayman/markwiki)
 -   <a name="metalsmith"></a>[Metalsmith](http://www.metalsmith.io/)
-    a node.js pluggable static site generator. It accept
-    documentationin Markdown and through plugin ReSTructured text,
-    asciidoc, org-mode.
+    a node.js plugable static site generator. It accepts documentation in Markdown and
+    through plugin ReSTructured text, asciidoc, org-mode.
     -   [GitHub Metalsmith
         ](https://github.com/segmentio/metalsmith).
     -   [TheNewDynamic - list of Metalsmith links
@@ -359,18 +359,19 @@ The site generators are written in various languages:
 -   <a name="o-blog"></a>[o-blog](http://renard.github.io/o-blog)
     (Licence: [WTFPL](http://sam.zoy.org/wtfpl/)) by Sébastien Gross _renard_,
     is a static site generator managed from emacs. The pages are written in
-    {{< iref "org" "org-mode" >}}. It allows blogs and static pages.
+    {{< iref "org-mode" "org-mode" >}}. It allows blogs and static pages.
     [GitHub: o-blog](https://github.com/renard/o-blog).
 -   <a name="org-page"></a>[org-page
     ](https://github.com/kelvinh/org-page) (GPL)
-     by Kelvin Hu is a static site generator based on Emacs org-mode.
-     the [Kevin's site](http://kelvinh.github.io/) (
+    by Kelvin Hu is a static site generator based on
+    {{< iref "org-mode" "Emacs org-mode" >}}.
+    the [Kevin's site](http://kelvinh.github.io/) (
     [source](https://github.com/kelvinh/kelvinh.github.com))
-     and the [site of Standino](http://standino.github.io/) (
-     [source](https://github.com/standino/standino.github.com))
-     are examples of *org-page* sites.
--    <a name="org-site"></a>[org-site](http://xiaohanyu.github.io/org-site/about.html) (GPL)
-    is a static site generator based on Emacs org-mode.
+    and the [site of Standino](http://standino.github.io/) (
+    [source](https://github.com/standino/standino.github.com))
+    are examples of *org-page* sites.
+-   <a name="org-site"></a>[org-site](http://xiaohanyu.github.io/org-site/about.html) (GPL)
+    is a static site generator based on {{< iref "org-mode" "Emacs org-mode" >}}
     It includes theme with *Bootstrap* default,  *mustache* templating,
     index page generation, commenting using *Disqus*.
     [GitHub:org-site](https://github.com/xiaohanyu/org-site/).
@@ -618,8 +619,7 @@ Switching from Nikola to Hugo:
 
     We can use blocks of text formatted in _Markdown_,
     _Textile_, _reStructuredText_, _AsciiDoc_ and use
-    {{< iref "311#pygments" "Pygments" >}} for source
-    code.
+    {{{< iref "source_code#pygments" "Pygments" >}} for source code.
 
     _Hyde has a very slow activity and no commit since beginning 2016._
 
