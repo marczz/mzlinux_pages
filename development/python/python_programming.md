@@ -35,7 +35,7 @@ asciidoc, markdown, txt2tags ....
     by Fred L. Drake describes the document classes
     and special markup used in the Python documentation.
 -   [Epydoc](http://epydoc.sourceforge.net/)
-    <a name="Epydoc"></a> ( MIT open-source license) a documentation generator that
+    <a name="epydoc"></a> ( MIT open-source license) a documentation generator that
     renders its own lightweight markup language Epytext as well as
     {{< iref "structured_text#reStructuredText" "reStructuredText" >}}
     for Python documentation strings.
@@ -69,11 +69,11 @@ asciidoc, markdown, txt2tags ....
     or related documentation tools.
 
 The documentation of python can be done using
-{{< iref "literate_programming" "Literate Programming" >}}
+{{< iref "source_code#literate_programming" "Literate Programming" >}}
 , we can use a langage agnostic tool, or
 one of the manifold python literate tools.
 See the references to Cog, pyreport , pyWeb, PyLit in the
-{{< iref "literate_programming" "Literate Programming Section" >}}
+{{< iref "source_code#literate_programming" "Literate Programming Section" >}}
 
 
 # Static Code Analyzers
@@ -514,7 +514,7 @@ the non language specific, software design idiom of
 
 We  consider three ways of testing: _doctest_, _unit tests_ and _Mock objects_.
 There are packages for these three validations methods in the
-{{< iref "331" "standard library modules" >}}
+{{< iref "python_libraries#modules" "standard library modules" >}}
 and in Pypi packages.
 
 A [doctest](http://en.wikipedia.org/wiki/Doctest "Wikipedia page")
@@ -523,10 +523,10 @@ standard Python interpreter shell, cut and pasted into docstrings.
 It searches for pieces of text that look like interactive Python
 sessions, and then executes those sessions to verify that they work
 exactly as shown. The library reference includes the
-{{< iref "331#doctest" "doctest module" >}}
+{{< iref  "python_libraries#doctest" "doctest module" >}}
 
 {{< wp "Unit Test" >}} are helped by the module
-{{< iref "python" "UnitTest" >}}
+{{< iref "python_libraries#unittest" "UnitTest" >}}
 
 Since python 3.3 there is a new module for {{< wp "Mock Objects" >}}:
 {{< iref "python_libraries#unittest" "unittest.mock" >}}.
