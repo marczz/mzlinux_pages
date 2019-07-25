@@ -17,13 +17,13 @@ title: Software Design
 # Design patterns
 -   [Wikipedia: Design Pattern](http://en.wikipedia.org/wiki/Design_pattern_(computer_science))
     contains definition, and links to this field as long as an
-    {{< wp "Design_pattern_(computer_science)#Classification_and_list"  "index     of patterns" >}}.
+    {{< wp "Design_pattern_(computer_science)#Classification_and_list"  "index of patterns" >}}.
 -   The Wikipedia Page
     [Design Pattern (gang of four)](http://en.wikipedia.org/wiki/Design_Patterns)
     detail with references to sub-pages each pattern of the book by
     Gamma et al.
 -   The use of design patterns in Python is described
-    {{< iref "34#python_design_patterns" "in the Python page" >}}
+    {{< iref "python_programming" "in the Python page" >}}
 
 ## Agile methods
 -   Wikipedia: {{< wp "Agile software development" >}},
@@ -45,7 +45,7 @@ title: Software Design
     TaskJuggler III is completely re-implemented  in ruby.<br />
     -   [Creating Gantt charts by Exporting to TaskJuggler
     ](http://orgmode.org/worg/org-tutorials/org-taskjuggler.html)
-        export from {{< iref "389#orgmode" "Org Mode" >}} to TaskJuggler.
+        export from {{< iref "org-mode" "Org Mode" >}} to TaskJuggler.
     -   [emacs taskjuggler-mode for editing taskjuggler tasks
     ](http://www.skamphausen.de/cgi-bin/ska/taskjuggler-mode)
 -   [Project Planning with org-mode
@@ -129,7 +129,7 @@ See also {{< iref "python_libraries#build_automation" "Build Automation" >}}.
     from text source similar to {{< iref "#graphviz" "graphviz" >}}’s `dot` format.
     It includes  block diagrams, sequence diagrams,  activity diagrams, and network diagrams.<br />
     In the [sphinx contribs](https://bitbucket.org/birkenfeld/sphinx-contrib)
-    there is a {{< iref "405#sphinx" "Sphinx" >}} extension for _Blockdiag_.
+    there is a {{< iref "rest#sphinx" "Sphinx" >}} extension for _Blockdiag_.
 -   [Bouml](http://www.bouml.fr/) previously GPL has now a private licence.
 -   [Dia](http://projects.gnome.org/dia/docs.html) supports UML Class and activity diagrams.
 -   [Dia Links](http://projects.gnome.org/dia/links.html) gives Dia extensions,
@@ -212,7 +212,7 @@ Python has its own page
     impossible to use directly.
     -   [Testing Framework wiki: Mock Object Page](http://c2.com/cgi/wiki?MockObject)
     -   For python look at the section
-        {{< iref "325#mock_objects" "Mock objects Libraries" >}}
+        {{< iref "python_libraries#mock_objects" "Mock objects Libraries" >}}
 -   [junit](http://www.junit.org/index.htm) java testing framework
 -   [cppunit](http://cppunit.sourceforge.net/)
 
