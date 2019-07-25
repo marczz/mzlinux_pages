@@ -109,33 +109,7 @@ implement them
         ](https://guides.github.com/features/mastering-markdown/)
         is an howto for
         [Github Flavored Markdown](https://github.github.com/gfm/).
--   [Pandoc Markdown](http://pandoc.org/MANUAL.html#pandocs-markdown)
-    include a set of extensions of MarkDown:
-
-    basic formatting
-    :   _escaped line breaks_ with backslash before a newline, _auto
-        identifiers_ and _implicit header references_ for headers,
-        _all symbols escapable_ extend the backslash mecanism of
-        standard markdown, to any punctuation or whitespace, and use
-        a backslash followed by a newline to introduce a paragraph
-        break, _intraword underscores_, _strikeout_, _superscript_,
-        _subsript_, _small caps_,
-    blocks
-    :   require _a blank line before a block quote_,
-        _fenced code blocks_,
-        _backtick code block_,
-        attach attributes to fenced, backtick and inline code block with
-        _fenced code attributes_ and _inline code attributes_,
-        _line block_ with a sequence of lines beginning with a vertical
-        bar, _table captions_,
-        _simple tables_, _multiline tables_,  _grid tables_ wich are alike
-        emacs tables, _pipe tables_ like PHP markdown axtra tables,
-        _pandoc title bloc_ to give bibliographic information, _yaml
-        metadata blocks_.
-    lists
-    :   _startnum_ for ordered lists, _fancy list_ can be marked with a
-        ``#``, _definition lists_,  _example lists_.
-
+-   {{< iref "#pandoc_markdown" >}} include a set of extensions for MarkDown.
 -   [Babelmark2](http://johnmacfarlane.net/babelmark2/) compare the rendering
     of various markdown formatters.
     -   [Babelmark2 FAQ](http://johnmacfarlane.net/babelmark2/faq.html)
@@ -664,10 +638,49 @@ PHP, node.js, perl, groovy and ruby.The
 gives a list of wrappers for each programming language, and a list of known
 available filters.
 
+## Pandoc Markdown (#pandoc_markdown)
+
+[Pandoc Markdown](http://pandoc.org/MANUAL.html#pandocs-markdown)
+include a set of extensions of MarkDown which are enabled by default, unless you use
+the *markdown-strict* format:
+
+basic formatting
+:   *blank_before_headers*, *header_attributes*, *implicit_header_references*,
+    *escaped_line_breaks* with backslash before a newline, *auto_identifiers* and
+    *implicit_header_references* for headers, *intraword_underscores*, _strikeout_,
+    _superscript_, _subsript_, *small_caps*.
+
+    *all_symbols_escapable* extend the backslash mecanism of standard markdown, to
+    any punctuation or whitespace, and use a backslash followed by a newline to
+    introduce a paragraph break.
+
+blocks
+:   *blank_before_blockquote* requires a blank line before a block quote ,
+    *fenced_code_blocks* , *backtick_code_block*, attach attributes to fenced,
+    backtick and inline code block with *fenced_code_attributes* and
+    *inline_code_attributes*, *footnotes*, *inline_notes*,
+    *line_block* with a sequence of lines beginning with a
+    vertical bar, *markdown_in_html_blocks*,
+    *pandoc_title_bloc* to give bibliographic information, *raw_html*,
+    *yaml_metadata_blocks*.
+
+tables
+:   *table_captions*, *simple_tables*, *multiline_tables*, *grid_tables* wich
+    are alike emacs tables, *pipe_tables* like PHP markdown axtra tables,
+
+lists
+:   _startnum_ for ordered lists, _fancy list_ can be marked with a `#` ,
+     *definition_lists*, *example_lists*.
+
+You can enable/disable individually each extension ou limit to some predefined set of
+extension by using the formats *markdown_phpextra*, *markdown_github* (old syntax, now
+use *gfm*), *markdown_mmd*, *markdown_strict*, *commonmark*, *gfm*.
+
+
 # Markdown documentation generators
 Some markdown to slideshow converters are given in the
 {{< iref "html#slideshow" "html slideshow page" >}}
- landslide, markdown2deckjs, Deck.rb, keydown ...
+landslide, markdown2deckjs, Deck.rb, keydown ...
 
 The reference to ebook generators are in a
 [section of Epub page
@@ -676,7 +689,7 @@ The reference to ebook generators are in a
 Some few {{< iref "static_sites" "Static site generators" >}} are
 either targeted to documentation, or support it easily:
     {{< iref "static_sites#hugo" "Hugo" >}},
-    {{< iref "static_sites#elise" "elyse" >}},
+    {{< iref "static_sites#elyse" "elyse" >}},
     {{< iref "static_sites#marcdoc" "markdoc" >}},
     {{< iref "static_sites#poole" "poole" >}},
     {{< iref "static_sites#simple_static" "simple-static" >}},
