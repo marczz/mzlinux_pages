@@ -40,7 +40,7 @@ title: reStructuredText
     the single-file personal wiki [rstwiki
     ](http://www.asynchronous.org/rstiki/).
 -   It is supported by many {{< iref "static_sites" "static sites generators" >}}:
-    {{< iref "static_sites#gollum" "Gollum-Site" >}},
+    {{< iref "static_sites#gollum-site" "Gollum-Site" >}},
     {{< iref "static_sites#handcrank" "Handcrank" >}},
     {{< iref "static_sites#hyde" "Hyde" >}},
     {{< iref "static_sites#jekyll" "Jekyll" >}},
