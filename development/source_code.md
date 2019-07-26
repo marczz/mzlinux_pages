@@ -62,7 +62,7 @@ There is a related
 -   [Doxygen](http://www.stack.nl/~dimitri/doxygen) is a documentation
     system for C++, C, Java, Objective-C, Python, IDL.
     [Doxymacs](http://doxymacs.sourceforge.net/) make using Doxygen
-    from within {X}Emacs easier.
+    from within {X}Emacs easier. _not updated since 2010_.
 -   [FunnelWeb](http://www.ross.net/funnelweb/) a language independant
     literate programming tool which use a common source file to *tangle*
     a program and weave a latex or html documentation. .
@@ -139,10 +139,6 @@ There is a related
     It works on a number of languages including C and friends, Java,
     Python, Bash, SQL, HTML, XML, CSS, Javascript, Makefiles, and
     Rust. Other languages are supported via extensions.
--   [Doxygen](http://www.stack.nl/~dimitri/doxygen) is a documentation
-    system for C++, C, Java, Objective-C, Python, IDL.
-    [Doxymacs](http://doxymacs.sourceforge.net/) make using Doxygen
-    from within {X}Emacs easier _not updated since 2010_.
 -   [highlight](http://www.andre-simon.de/doku/highlight/en/highlight.php)
     from André Simon is a C++ program _not to be confused with the
     javascript Highlight.js below_. It can prettify
@@ -163,7 +159,7 @@ There is a related
 -   [GNU indent](http://www.gnu.org/software/indent/manual/indent.html) (GPL)
     changes the appearance of a C program by inserting or deleting whitespace,
     It can also convert from one style of writing C to another.
--   [Pygments](http://pygments.org/) <a name="pygments"></a>
+-   <a name="pygments"></a>[Pygments](http://pygments.org/)
     is a generic syntax highlighter. It supports a
     [wide range of common languages and markup formats](http://pygments.org/languages/)
     and can output to HTML, RTF, LaTeX and ANSI sequences.
