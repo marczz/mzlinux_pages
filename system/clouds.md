@@ -956,8 +956,8 @@ There is a free Linux and
 
 # Temporary storage {#temporary_storage}
 See also {{< iref "p2p#p2p_file_sharing" "P2P File sharing" >}},
-{{< iref "tasks_management" "Task Management" >}},
-{{< iref "tasks_management#note_taking" "Notes Taking" >}}.
+{{< iref "task_management" "Task Management" >}},
+{{< iref "task_management#note_taking" "Notes Taking" >}}.
 
 _I list only services with a password protection and/or encryption._
 
@@ -975,9 +975,6 @@ but that works also.
 -   [15 Super Quick Ways to Share Files Without Cloud Storage
     ](http://www.makeuseof.com/tag/15-super-quick-ways-share-files-without-cloud-storage/)
 -   [Alternatives to Send Anywhere
-    ](http://alternativeto.net/software/send-anywhere/)-   [15 Super Quick Ways to Share Files Without Cloud Storage
-    ](http://www.makeuseof.com/tag/15-super-quick-ways-share-files-without-cloud-storage/)
--   [Alternatives to Send Anywhere
     ](http://alternativeto.net/software/send-anywhere/)
 -   [Alternative to Senduit
     ](http://alternativeto.net/software/senduit/)
@@ -990,6 +987,10 @@ but that works also.
     24h, password protection available. Transfers are encrypted.
     Worked to send from android with uc browser, (no file manager for
     chrome or dolphin)
+-   [mozilla/send](https://github.com/mozilla/send) (Mozilla Public Licence)
+    share file from firefox with encryption and a link that expires.
+    The main instance [Firefox Send](https://send.firefox.com/) allows  mx of 1GB
+    without registration and 2.5GB with registration.
 -   Service d'envoi de fichiers [dl.free.fr](http://dl.free.fr).  On
     peut aussi les envoyer par ftp sur <dl.free.fr> le login est
     l'adresse email ou on reçoit le nom pour le téléchargement.  Les
