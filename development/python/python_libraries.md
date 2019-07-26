@@ -598,15 +598,38 @@ The continuous integration software is in the main
     for 3.2 and 3.3, and the Debian package is only for python 2.x.
 -   <a name="ipython"> [IPython](http://ipython.org/)
     is an interactive development environment for python
-    which provides an enhanced interactive Python shell..
-    IPython is introduced in the article
-    [IPython: A System for Interactive Scientific Computing (pdf)
-    ](http://fperez.org/papers/ipython07_pe-gr_cise.pdf)
-    from Fernando Pérez &amp; Brian E. Granger.<br />
+    which provides an enhanced interactive Python shell and a
+    {{< iref "#jupyter" "Jupyter" >}} kernel to work with Python code in Jupyter notebooks
     The [documentation of IPython
     ](http://ipython.readthedocs.io/en/stable/)
     contains the Manual.</br>
-    It has now [support for py3k](http://wiki.ipython.org/Python_3).
+    Ipython support is compatible ith python >= 3.3. The Python 2 compatibility stopped
+    with ipython 6.0, but is still available in iPython 5.4 LTS.
+-   <a name="jupyter">[Jupyter](https://jupyter.org/)
+    Jupyter Notebook (formerly IPython Notebooks) is a web-based
+    interactive computational environment.
+
+    A Jupyter Notebook document is a versionned {{< iref "data_exchange#json" >}}
+    document, containing an ordered list of input/output cells which can contain code,
+    {{< iref "markdown" "Markdown" >}} text, mathematics, plots and rich media.
+
+    A Jupyter Notebook can be converted to HTML slides, LaTeX, Pdf,
+    {{< iref "rest" "ReStructuredText" >}},
+    {{< iref "markdown" "Markdown" >}}, Python.
+
+    A Jupyter kernel is a program responsible for handling various types of request
+    (code execution, code completions, inspection), and providing a reply.
+    Jupyter ships with IPython as a default kernel, and many kernels for various langage
+    are available and listed in
+    [Jupyter kernels](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels).
+
+    Look at the {{< iref "org-mode#babel" "Org-Babel section" >}} for comparisons with
+    org-babel, import/export to org-babel, org-babel interfaces ...
+
+    -   [Project Jupyter - Wikipedia](https://en.wikipedia.org/wiki/Jupyter_notebook)
+    -   [Jupyter Documentation](https://jupyter.readthedocs.io/en/latest/index.html)
+    -   [NbViewer](https://nbviewer.org) take a URL to anotebook document, convert it to
+        HTML on the fly and display it.
 -   [CodeMirror](http://codemirror.net/)
     is a JavaScript component that provides a code editor in the
     browser.
