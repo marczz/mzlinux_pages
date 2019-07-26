@@ -91,7 +91,7 @@ not connected with ifttt. The premium plan is 25€ a year.
 
 # Tasks on linux desktop
 
-See also the sections {{< iref "org" "Org Mode" >}} and
+See also the sections {{< iref "org-mode" "Org Mode" >}} and
 {{< iref "calendar" "Calendar and Address Book" >}}
 
 -   Wikipedia: [Comparison of note taking software
@@ -215,14 +215,59 @@ lisp.
     application using the API. There are client applications for
     Android, iPhone/iPad, and Desktop Browser. The service is one time
     payement of 5$ per device.
--   [Pushbullet](https://www.pushbullet.com/).
+-   <a name="pushbullet"></a>[Pushbullet](https://www.pushbullet.com/)
+    The [Web interface](https://www.pushbullet.com/), allows you to use pushbullet
+    anywhere a browser is available, official apps are available for Ios and Android,
+    plugins for Firefox, Chrome/ium, Opera. And third party apps for Linux.
+    In addition to pushing notifications from one device to the others, sending SMS  or
+    WhatsApps messages (up  to 100/month), it allows to send files up to 25MB.
+    A 5$/month plan is proposed to lift the restriction on SMS, and allow 1GB File
+    Transfer.
     -   [Pushbullet - Android Apps on Google Play
         ](https://play.google.com/store/apps/details?id=com.pushbullet.android)
         (5.7M)
+
     -   [GitHub - GustavoKatel/pushbullet-cli
         ](https://github.com/GustavoKatel/pushbullet-cli)
         (MIT License)
         is a Python Pushbullet CLI interface. It is in Pypi.
+
+        I reproduce the usage examples below.
+
+        Push stdin to all devices:
+
+            $ echo "hello" | pb push
+
+        Push text to all devices:
+
+            $ pb push "I love burritos"
+
+        Pick a device to push to:
+
+            $ pb list-devices
+            # Find the index of your desired device
+            $ pb push -d 0 "iPhones cannot eat burritos"
+
+        Push links:
+
+            $ pb push --link https://www.pushbullet.com/
+
+        Push files:
+
+            $ pb push --file /path/to/burrito_photo.jpg
+
+        Push to all subscribers of channel:
+
+            $ pb push -c "CHANNEL" "Why burritos are better than tacos"
+
+        Send an SMS:
+
+            $ pb sms -d 0 -n +123456789 "I sense a soul in search of answers"
+
+        List your pushes:
+
+            $ pb list -c 20
+
     -   [GitHub - randomchars/pushbullet.py
         ](https://github.com/randomchars/pushbullet.py)
         (MIT License)
@@ -233,9 +278,17 @@ lisp.
         asyncio-based communication with Pushbullet service. It is a
         fork of of the synchronous-only randomchars/pushbullet.py and
         is in Pypi.
--   [theanalyst/revolver](https://github.com/theanalyst/revolver)
-    is an emacs client for pushbullet. It is in elpa under the name
-    _pushbullet_.
+    -   [rbrcsk/pushbullet.py](https://github.com/rbrcsk/pushbullet.py)
+        is a python client for pushbullet.
+    -   [theanalyst/revolver](https://github.com/theanalyst/revolver)
+        is an emacs client for pushbullet. It is in elpa under the name
+        _pushbullet_.
+    -   [pb-for-desktop](https://github.com/sidneys/pb-for-desktop) (MIT License)
+        A Desktop node.js app for PushBullet. It receives native push notifications
+        It sends and receives SMS to Android devices, mirrors Android notifications.
+        You can use a google or facebook login, without need of an API key.
+        There are prebuilt packages for Debian/ubuntu, and appimage  and downloads for
+        OSX, windows
 -   <a name="IFTT">[IFTTT](https://ifttt.com/)
     is a service that lets you create
     connections between internet service providers.
