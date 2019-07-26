@@ -69,11 +69,16 @@ process, but from an Xorg session to another, they are put in the
     {{< iref "#dtach" "dtach" >}} to provide session management.
 
 ## Tmux {#tmux}
-[tmux](http://tmux.sourceforge.net/) (BSD License)
+[tmux](https://github.com/tmux/tmux) (BSD License)
 is an alternative to screen. It uses a client-server model. Windows may be linked
 simultaneously to multiple sessions and moved freely between sessions; and a client
 may be switched between sessions.
 
+-   [GitHub - tmux](https://github.com/tmux/tmux)
+-   [tmux FAQ](https://github.com/tmux/tmux/wiki/FAQ)
+-   [tmux crash course](https://robots.thoughtbot.com/a-tmux-crash-course)
+-   [Quick and easy guide to tmux](http://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/)) and a few books
+-   [The Tao of Tmux](https://leanpub.com/the-tao-of-tmux/read))
 -   [Awesome tmux](https://github.com/rothgar/awesome-tmux)
     a list of helpful tmux links for various tutorials, plugins, and configuration
     settings.
@@ -103,13 +108,6 @@ may be switched between sessions.
     is a statusline plugin for vim, zsh, bash, _tmux_, IPython,
     Awesome and Qtile.
     [Powerline manual](https://powerline.readthedocs.org/en/latest/).
--   [RainBarf](https://github.com/creaktive/rainbarf) (GPL)
-    by Stanislaw Pusep is a perl script that give a CPU/RAM/battery
-    stats chart bar for tmux (and GNU screen)
--   [Battery](https://github.com/Goles/Battery) by Nicolas Goles
-    is a little bash script that uses
-    [Spark](http://zachholman.com/spark/)
-    to display the battery status on your tmux sessions or the terminal.
 -   [Byobu](http://byobu.co) is a wrapper script for launching either screen or tmux
     with an improved configuration.
     -   [GitHub - byobu](http://github.com/dustinkirkland/byobu)
@@ -121,7 +119,30 @@ may be switched between sessions.
     -   [byobu(1)
         ](http://manpages.debian.org/cgi-bin/man.cgi?query=byobu&format=html&locale=en).
 
+### Tmux addons
+-   [Battery](https://github.com/Goles/Battery) by Nicolas Goles
+    is a little bash script that uses
+    [Spark](http://zachholman.com/spark/)
+    to display the battery status on your tmux sessions or the terminal.
+-   [RainBarf](https://github.com/creaktive/rainbarf) (GPL)
+    by Stanislaw Pusep is a perl script that give a CPU/RAM/battery
+    stats chart bar for tmux (and GNU screen)
+-   [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)
+    allow seamless navigation between tmux panes and vim splits.
 
+### Tmux and emacs
+-   [EmacsWiki: tmux for collaborative editing
+    ](https://www.emacswiki.org/emacs/tmux_for_collaborative_editing)
+-   [EmacsWiki: Collaborative Editing
+    ](https://www.emacswiki.org/emacs/CollaborativeEditing)
+    [EmacsWiki: Rudel](https://www.emacswiki.org/emacs/Rudel)
+    a collaborative editing environment for Emacs. Its purpose is to share buffers with
+    other users in order to edit the contents of those buffers collaboratively.
+-   [laishulu/emacs-tmux-pane](https://github.com/laishulu/emacs-tmux-pane)
+    is a port of vim-tmux-navigator. It provide integration between emacs
+    windows and tmux panes. _in elpa_
+-   [syohex/emacs-emamux](https://github.com/syohex/emacs-emamux/)
+    tmux manipulation from Emacs inspired by tslime.vim and vimux. _in elpa_.
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
