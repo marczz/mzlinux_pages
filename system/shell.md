@@ -8,7 +8,7 @@ ___
 
 # Shell references
 -   [Wikipedia: Unix shells](http://en.wikipedia.org/wiki/Unix_shell),
-    [Wikipedia: Comparison of computer shells
+    [Comparison of computer shells
     ](http://en.wikipedia.org/wiki/Comparison_of_computer_shells),
     {{< wp "POSIX" >}}
 -   [Shell Features](http://tldp.org/LDP/intro-linux/html/app3.html)
@@ -51,8 +51,22 @@ ___
     [his GitHub repository](https://github.com/pixelb) (LGPL).
 -   A [list of bash shell-scripting libraries
     ](http://dberkholz.com/2011/04/07/bash-shell-scripting-libraries/)
+    _2011_.
+-   Nathaniel Landau [Boilerplate Shell Script Template
+    ](https://natelandau.com/boilerplate-shell-script-template/)
+    is a template for writing shell scripts.
 -   [pluginhook](https://github.com/progrium/pluginhook) (MIT)
     A plugin system for Bash. In Debian.
+-   [bash-modules](https://github.com/vlisivka/bash-modules)
+    A module system for bash which provide a set of bash subroutines,
+-   [Argbash](https://argbash.readthedocs.io/en/latest/index.html)
+    is a bash code generator that can assist you in writing scripts that accept
+    arguments.
+    -   [argbash · GitHub](https://github.com/matejak/argbash)
+    -   [Argbash alternatives
+        ](https://argbash.readthedocs.io/en/latest/others.html)
+-   {{< iref "python_libraries#docopt" "Docopt" >}}
+    is a python utilities, that is also suited to parsing bash command line arguments.
 
 # Ash
 
@@ -238,7 +252,7 @@ tilde expansion, parameter expansion, command substitution,
 arithmetic expansion, and quote removal. (no pathname and brace
 expansion, nor process substitution)
 
-# Zsh
+# Zsh {#zsh}
 
 -   Wikipedia {{< wp "Z shell" >}}
 -   [Zsh Home at sourceforge](http://zsh.sourceforge.net/)
@@ -267,6 +281,8 @@ expansion, nor process substitution)
     ](http://www.linux-mag.com/id/1053/)
 -   [Bash to Zsh refcard (pdf)
     ](http://www.bash2zsh.com/zsh_refcard/refcard.pdf)
+-   [zplugin](https://github.com/zdharma/zplugin) (MIT License)
+    A flexible Zsh plugin manager.
 
 # Awk
 
@@ -339,16 +355,20 @@ expansion, nor process substitution)
 # Browse, bookmark and change directory {#dir_bookmarks}
 
 -   [apparix](http://micans.org/apparix/)
-     is a console-based bookmark tool for fast file system navigation inspired by _cdargs_.
-     It does not include a curse browser as cdargs does.
-     You can combine it with _goto_ from Sitaram Chamarty.
+    is a console-based bookmark tool for fast file system navigation inspired by
+    _cdargs_. There are bash and zsh versions.
+    It does not include a curse browser as cdargs does.
+    You can combine it with _goto_ from Sitaram Chamarty.
 -   [autojump](https://github.com/joelthelion/autojump) (GPL)
     is a directory tracker that _jump_ to the most used directory matching the argument.
     an alternative in pure shell is _z_.
 -   [cdargs](http://www.skamphausen.de/cgi-bin/ska/CDargs) (GPL)
-    _cdargd_ is a file system navigation tool;
+    _cdargs_ is a file system navigation tool;
     It plugs into the shell built-in cd-command and adds bookmarks and a browser to it.
+    It includes an elisp interface, which allow to use it in emacs to go to a direcory.
     It is packaged in Debian.
+    There is also elisp code for plugging cdargs in ido in
+    [ido-jb-misc-extras.el](https://www.emacswiki.org/emacs/ido-jb-misc-extras.el).
 -   [go2](http://savannah.nongnu.org/projects/go2/) (GPL)
      is a fast and simple directory finder for console and desktop
      on the style of the old Norton Change Directory for DOS, but designed specifically for bash.
@@ -365,9 +385,8 @@ expansion, nor process substitution)
     One needs to type only a part of a directory name and wcd will jump to it.
     _wcd_ is packaged in Debian. It is similar to _go2_
 -   [z](https://github.com/rupa/z) by [rupa](http://un.ix.io/)
-    Tracks your most used directories, and after  learning  phase,
-    z will take you to the most used    directory that matches all
-    of the regexes given on the command line.
+    Tracks your most used directories, and after learning phase, z will take you to the
+    most used directory that matches all of the regexes given on the command line.
     It is an [alternative to _autojump_](http://un.ix.io/bash%20directory%20jump)
     that avoids to launch python on every call.
 
