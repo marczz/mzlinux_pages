@@ -4,8 +4,8 @@ title: Calendar and Address Book
 
 {{% toc /%}}
 
-See also {{< iref "app_tasks" "Tasks Management" >}}
-and {{< iref "org" "Org Mode" >}}
+See also {{< iref "task_management" "Tasks Management" >}}
+and {{< iref "org-mode" "Org Mode" >}}
 
 # Icalendar references
 
