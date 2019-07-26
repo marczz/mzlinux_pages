@@ -132,7 +132,7 @@ with ``git help <concept>`` where concept is one of
 ](https://www.kernel.org/pub/software/scm/git/docs/gitignore.html)
 , [modules
 ](https://www.kernel.org/pub/software/scm/git/docs/gitmodules.html)
-, [revisons
+, [revisions
 ](https://www.kernel.org/pub/software/scm/git/docs/gitrevisions.html)
 , [tutorial
 ](https://www.kernel.org/pub/software/scm/git/docs/gittutorial.html)
@@ -179,6 +179,7 @@ with ``git help <concept>`` where concept is one of
 
 
 ## manuals
+
 -   [Git User Manual
     ](https://www.kernel.org/pub/software/scm/git/docs/user-manual.html)
 -   [Git manual page
@@ -211,10 +212,11 @@ with ``git help <concept>`` where concept is one of
 
 ## Tutorials, recipes, tips
 ### Official Tutorials
-    [git tutorial
+
+-   [git tutorial
     ](https://www.kernel.org/pub/software/scm/git/docs/gittutorial.html)
     covers the basics.
-    [Everyday Git
+-   [Everyday Git
     ](https://www.kernel.org/pub/software/scm/git/docs/everyday.html)
     handbook gives set of commands and the workflow for any developer.
 -   [A tutorial introduction to git: part two
@@ -247,9 +249,9 @@ with ``git help <concept>`` where concept is one of
 
 -   GitHub [Git reference](http://git.github.io/git-reference/)
     ([source](https://github.com/git/git-reference)).
--   [GitHub Help]
-        give many guides on either on Git topics or on the GitHub use.
-
+-   [GitHub Help](https://help.github.com/en)
+    give many guides on either Git topics _under the section using Git_ or the
+    GitHub use.
 -   [Ry’s Git Tutorial
     ](https://web.archive.org/web/20161121145226/http://rypress.com:80/tutorials/git/index)
     a detailed introduction to the entire Git porcelain _2012_.
@@ -297,8 +299,8 @@ with ``git help <concept>`` where concept is one of
         ](http://sethrobertson.github.io/GitFixUm/fixup.html) _2012_.
 
 ### Blogs and notes
--   [Junio C. Hamano old blog](http://gitster.livejournal.com/)
-    and [new blog](http://git-blame.blogspot.fr/).
+-   [Junio C. Hamano old blog](http://gitster.livejournal.com/) _until 2011_
+    and [new blog](http://git-blame.blogspot.fr/) _2011-2016_.
 -   [Git Notes](http://gitolite.com/index2.html)
     ( [GitHub repository](https://github.com/sitaramc/git-notes) )
     by Sitaram Chamarty, a set of various notes
@@ -309,12 +311,18 @@ with ``git help <concept>`` where concept is one of
     ](http://gitolite.com/deploy.html).
     He is also author of a version of
     [git for computer scientists](http://gitolite.com/gcs.html).
+-   [Git cookbook](https://git.seveas.net/) by Dennis Kaarsemaker is a collection of
+    recipes for using git.
 -   Martin f. Krafft *(madduck)* has written
     [Packaging with Git](http://madduck.net/blog/2007.10.03:packaging-with-git/)
     followed by
     [Converting a package to Git
     ](http://madduck.net/blog/2007.10.07:converting-a-package-to-git/)
-    _2007 not available when last contacted__.
+    _The madduck blog seems no longer available, while his
+    [git.madduck.net](https://git.madduck.net/) and
+    [GitHub Repository](https://github.com/madduck)_ are still active._
+-   [Packaging With Git - Debian Wiki](https://wiki.debian.org/PackagingWithGit)
+-   [Git Developer Pages](https://git.github.io/)
 
 ## Git cheatsheets
 -   [Git Cheat Sheet & Git Flow
