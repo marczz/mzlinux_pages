@@ -241,6 +241,8 @@ storage, but a single subvolume can use all space.
     also the old
     [RedHat - Device-mapper and LVM2 Wiki
     ](http://sources.redhat.com/lvm2/wiki/).
+-   [Red Hat - Configuring and managing logical volumes
+    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_logical_volumes/index)
 -   [RedHat: Logical Volume Manager Administration Guide
     ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/logical_volume_manager_administration/index)
     ([PDF
