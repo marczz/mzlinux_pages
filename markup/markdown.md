@@ -49,11 +49,18 @@ There are also packages to preview the saved buffer like
 [Markdown preview mode
 ](https://github.com/ancane/markdown-preview-mode) in melpa.
 
+Some browser extensions allow to capture markdown from a displayed page in the browser:
 
+-   [chitsaou/copy-as-markdown](https://github.com/chitsaou/copy-as-markdown)
+    is a firefox and Chromium extension to  make opying Link, Image and
+    Tab(s) as Markdown much easier. _in 2019 no longer referenced as a Firefox
+    extension_.
+-   [0x6b/copy-selection-as-markdown](https://github.com/0x6b/copy-selection-as-markdown)
+    is a firefox extension to copy selection as markdown, copy title and url as markdown
+    and copy link as markdown. The markdown style is configurable, and a shortcut key
+    can be assigned (default `Ctrl + Shift + E` but as it is yet used I prefer
+    `Alt + Shift + W`).
 
-[chitsaou/copy-as-markdown](https://github.com/chitsaou/copy-as-markdown)
-is a firefox and Chromium extension to  make opying Link, Image and
-Tab(s) as Markdown much easier.
 
 
 
@@ -597,23 +604,28 @@ also [in PyPi](https://pypi.python.org/pypi/markdown2).
 ## Pandoc {#pandoc}
 [Pandoc](http://pandoc.org/) (GPL v2)
 is a Haskell library and a command-line tool for converting from
-one markup format to another. It can convert many formats
-(reStructuredText, textile, HTML, DocBook, LaTeX, MediaWiki
-markup, TWiki markup, OPML, Emacs Org-Mode, Txt2Tags, Microsoft
-Word docx, EPUB, or Haddock markup) to plain text, Markdown,
-CommonMark, PHP Markdown Extra, GitHub-Flavored Markdown,
-MultiMarkdown, reStructuredText, XHTML, HTML5, LaTeX
-(including beamer slide shows), ConTeXt,  RTF,  OPML,  DocBook,
-OpenDocument, ODT, Word docx, GNU Texinfo, MediaWiki markup,
-DokuWiki markup, ZimWiki markup, Haddock markup,
-EPUB (v2 or v3), FictionBook2, Textile, groff man pages,
-Emacs Org mode,  AsciiDoc,  InDesign ICML,  TEI Simple, Slidy,
-Slideous, DZSlides, reveal.js, S5 HTML slide shows.
+one markup format to another.
+
+It can convert from many formats:<br/>
+commonmark, creole, docbook, docx, dokuwiki, epub, fb2, gfm, haddock (Haddock markup),
+html, ipynb (Jupyter notebook), jats (JATS XML), json, latex, markdown (Pandoc’s
+Markdown), markdown_mmd (MultiMarkdown), markdown_phpextra, markdown_strict, mediawiki,
+man (roff man), muse, native (native Haskell), odt, opml, org (Emacs Org mode), rst, t2t
+(txt2tags), textile, tikiwiki, twiki, vimwiki
+
+To many formats:<br/>
+asciidoc or asciidoctor, beamer, commonmark, context, docbook or docbook4, docbook5,
+docx, dokuwiki, epub or epub3, epub2, fb2, gfm, haddock (Haddock markup), html or html5,
+html4, icml (InDesign ICML), ipynb (Jupyter notebook), jats (JATS XML), jira (Jira wiki
+markup), json, latex, man (roff man), markdown, markdown_mmd (MultiMarkdown),
+markdown_phpextra, markdown_strict, mediawiki, ms (roff ms), muse, native (native
+Haskell),, odt, opml, opendocument, org (Emacs Org mode), plain (plain text),, pptx
+(PowerPoint slide show), rst, rtf, texinfo, textile, slideous, slidy, dzslides,
+revealjs, s5, tei, xwiki, zimwiki
 
 -   The [Pandoc User’s Guide](http://pandoc.org/README.html),
     and [Pandoc examples](http://pandoc.org/demos.html)
--   [Pandoc Markdown
-    ](http://pandoc.org/MANUAL.html#pandocs-markdown)
+-   {{< iref "#pandoc_markdown" "Pandoc Markdown" >}}
     is a set of extensions of MarkDown, each extension can be enabled or disabled.
 -   You can try an [online pandoc converter](http://pandoc.org/try/)
 -   [Emacs pandoc mode](http://joostkremers.github.io/pandoc-mode/)
@@ -638,7 +650,7 @@ PHP, node.js, perl, groovy and ruby.The
 gives a list of wrappers for each programming language, and a list of known
 available filters.
 
-## Pandoc Markdown {#pandoc_markdown}
+# Pandoc Markdown {#pandoc_markdown}
 
 [Pandoc Markdown](http://pandoc.org/MANUAL.html#pandocs-markdown)
 include a set of extensions of MarkDown which are enabled by default, unless you use
