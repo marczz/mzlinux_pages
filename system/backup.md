@@ -195,7 +195,7 @@ save only the changed data blobs.
     3rd-party storage: Amazon S3, Backblaze B2, Google Cloud Storage,
     Rackspace Cloud Files, Dreamhost DreamObjects and others.
 
-    Compared  to opensource deduplicating alternative exists like
+    Compared  to the opensource existing deduplicating alternative like
     {{< iref "#attic" "Attic" >}},
     {{< iref "#borg" "borg" >}},
     {{< iref "#zbackup" "zbackup" >}},
