@@ -35,7 +35,9 @@ title: Apache httpd
     ](http://httpd.apache.org/docs/current/ssl/ssl_howto.html),
     [Apache Module mod_ssl
     ](http://httpd.apache.org/docs/current/mod/mod_ssl.html),
-    [SSL FAQ](http://httpd.apache.org/docs/current/ssl/ssl_faq.html). See also the page {{< iref "159" "SSL/TLS" >}}.
+    [SSL FAQ](http://httpd.apache.org/docs/current/ssl/ssl_faq.html).
+
+    See also the page {{< iref "ssl" "SSL/TLS" >}}.
 -   [Apache XML Project](http://xml.apache.org/)
     (Xerces: XML parsers in Java and C++, Xalan: XSL stylesheet processors in Java & C+,
     Cocoon: XML-based web publishing, FOP: XSL Formatting Object
@@ -114,7 +116,7 @@ one.
 # Apache Authentication Authorization and Access Control
 
 General references on httpd authentication are in the section
-{{< iref "156" "Authentication" >}}
+{{< iref "authentication" "Authentication" >}}
 
 Each Apache security policy is handled by an
 [Apache modules](http://httpd.apache.org/docs/current/mod/) they
@@ -245,7 +247,7 @@ With apache2-mpm-prefork we need the modules:
 
 # php5 fcgi on apache 2.2
 We should prefer __php-fpm__ for configuration look at
-{{< iref "php#php" "php-fpm (section)" >}}.
+{{< iref "php#php-fpm" "php-fpm (section)" >}}.
 
 -   For apache2.2 we can use [mod_fcgid
     ](https://httpd.apache.org/mod_fcgid/mod/mod_fcgid.html#fcgidwrapper)
