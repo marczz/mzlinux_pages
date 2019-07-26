@@ -21,6 +21,8 @@ See also {{< iref "irc" "IRC" >}},
 -   [infoAnarchy](http://www.infoanarchy.org/) is a wiki on the
     subject of information retrieval, distribution and management.
     It contains numerous references to P2P.
+-   [awesome-peer-to-peer](https://github.com/kgryte/awesome-peer-to-peer)
+    A list of peer-to-peer resources.
 -   [Awesome decentralized](https://github.com/croqaz/awesome-decentralized)
     Awesome distributed, decentralized, p2p apps or tools.
 
@@ -298,7 +300,8 @@ be viewed by any body having or guessing the URL or magnet Link.
 -   [justbeamit](https://www.justbeamit.com/) is a P2P file transfer
     service. It has no encryption or password protection.
     transfer from and to android work.
--   [reep.io](https://reep.io/) is a P2P file transfer service, which
+-   [reep.io](https://reep.io/) _no longer available ?_
+    is a P2P file transfer service, which
     works with browsers supporting webrtc, namely chrome, firefox, or
     opera.  The file is encrypted and sent directly.
     Both browsers must remain open during the full transfer. A
@@ -344,6 +347,10 @@ be viewed by any body having or guessing the URL or magnet Link.
     party ios app. Do not need an
     internet connection. [Sourceforge project page
     ](https://sourceforge.net/projects/dukto/) _Last update 2013_.
+-   {{< iref "task_management#pushbullet" "Pushbullet" >}} allows to transfer small
+    files up to 25MB. The company produce also a dedicated free wifi file transfer app
+    for Android and ios,  [Portal  (Google Play)
+    ](https://play.google.com/store/apps/details?id=com.pushbullet.android.portal)
 -   See also {{< iref "sip#jami" "Jami">}} _previously Ring_ a communication software
     with file sharing.
 
@@ -357,10 +364,9 @@ be viewed by any body having or guessing the URL or magnet Link.
     -   The reference implementation [instant.io](https://instant.io/) (
         [gitHub](https://github.com/feross/instant.io)) share by info hash
         url or magnet link;
-    -   [Lunik Instant Share](http://fs.lunik.xyz/)
-        ([GitHub](https://github.com/Lunik/Instant-Share) similar to
-        _instant.io_ but only with info hash url;
-    _   [file-pizza](https://file.pizza/) (
+    -   [Lunik Instant Share](https://github.com/Lunik/Instant-Share) similar to
+        _instant.io_ but only with info hash url; _the demo site is down_
+    -   [file-pizza](https://file.pizza/) (
         [GitHub](https://github.com/kern/filepizza)) can use the
         [Twillo STUN-TURN nat traversal service
         ](https://www.twilio.com/stun-turn) and generates info url human
@@ -368,22 +374,27 @@ be viewed by any body having or guessing the URL or magnet Link.
         using public-key cryptography;
     -   [Squidl.ink](http://Squidl.ink/)
         ([GitHub](https://github.com/darkenvy/Squidl.ink));
-    -   [DropClickPaste](http://dropclickpaste.com/) (_source ?_);
     -   [P2PDrop](http://app.p2pdrop.com/profile)
         ([GitHub](https://github.com/ajainvivek/P2PDrop)) has support for
         user registration, you select the peers with which you share your
         file.
+    -   [peertransfer](https://github.com/perguth/peertransfer)
+        Send a file p2p and e2e encrypted in your browser using WebRTC.
+        A [hosted instance of Peertransfer](https://perguth.github.io/peertransfer/)
+        is available
+    -   [sharefest](https://sharefest.me/) _now  abandoned_ was a WebRTC file sharing
+        application with STUN NAT traversal. The [Sharefest source Repository
+        ](https://github.com/peer5/sharefest) is still on GitHub.
+
+    -   [awesome-webrtc](https://github.com/openrtc-io/awesome-webrtc)
+        gives a list of WebRTC resources, but it is no longer updated since 2017
+
+
 
     Most of the previous applications have the ability to directly preview a media in
     the browser. But many other applications listed in the[WebTorrent FAQ
     ](https://webtorrent.io/faq) are dedicated to music or video
     streaming.
--   [sharefest](https://sharefest.me/) is a WebRTC file sharing
-    application with STUN NAT traversal. The [Sharefest source
-    Repository](https://github.com/peer5/sharefest) is on GitHub.
-    Sharefest was written by the private company
-    [peer5](https://www.peer5.com/) which propose _expensive_
-    video CDN plan for big data (5TB to 500TB).
 
 
 
