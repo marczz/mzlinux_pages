@@ -95,6 +95,34 @@ See also {{< iref "source_code#literate_programming" "Literate Programming" >}}
 -   [Formatting tangled output in org-mode
     ](https://jamesaimonetti.com/fr/posts/formatting-tangled-output-in-org-mode/)
     explains _org-babel-post-tangle-hook_.
+-   [ob-ipython](https://github.com/gregsexton/ob-ipython)
+    org-babel integration with {{< iref "python_libraries#jupyter" "Jupyter" >}} for
+    evaluation of (Python by default) code blocks. It is also possible to use an other
+    jupyter kernel than the default.
+    -   [scimax-ipython.org
+        ](https://github.com/jkitchin/scimax/blob/master/scimax-ipython.org)
+        add to ob-ipython few function for use in
+        [scimax](https://github.com/jkitchin/scimax)
+        the emacs starterkit for scientists and engineers.
+    -   [Run code on remote ipython kernels with Emacs and orgmode
+        ](https://vxlabs.com/2017/11/30/run-code-on-remote-ipython-kernels-with-emacs-and-orgmode/)
+        by cpbotha.
+    -   [Getting ob-ipython to show documentation during company completion
+        ](https://vxlabs.com/2017/11/24/getting-ob-ipython-to-show-documentation-during-company-completion/)
+        by cpbotha
+-   [emacs-jupyter](https://github.com/dzop/emacs-jupyter)
+    An interface to communicate with Jupyter kernels. You find a comparison with
+    _ob-ipython_ in the README.
+-   Org-mode has many advantages compared to jupyter they are discussed in
+    [this thread](https://news.ycombinator.com/item?id=11296843) and sumarized in
+    [this post](https://news.ycombinator.com/item?id=16842786) and
+    [Cheap polyglot notebooks](https://lepisma.xyz/2016/11/02/org-babel/).
+-   [Jupyter notebooks to Org source + Tower of Babel
+    ](https://shrysr.github.io/post/0b63f316-6f6b-4ec2-84a4-5ff287ecf7a7/)
+    by  Shreyas Ragavan, uses pandoc to export a jupyter notebook to org-mode.
+-   [Exporting org-mode to Jupyter notebooks
+    ](https://kitchingroup.cheme.cmu.edu/blog/2017/01/21/Exporting-org-mode-to-Jupyter-notebooks/)
+    does the reverse operation than the preceding entry.
 
 ## Org mode parsing
 
