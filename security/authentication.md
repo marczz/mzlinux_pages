@@ -10,8 +10,8 @@ Apache authentication is in the
 {{< iref "apache" "Apache Page" >}},
 {{< iref "nginx" "Nginx Authentication" >}}.
 See also {{< iref "security" "Security" >}},
-{{< iref "passwords_managers" "Passwords Managers" >}},
-{{< iref "Network" "Network Security" >}}
+{{< iref "password-managers" "Passwords Managers" >}},
+{{< iref "network_security" "Network Security" >}}
 
 # Authentication references
 -   Wikipedia:
