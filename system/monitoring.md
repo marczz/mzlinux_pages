@@ -4,6 +4,10 @@ title: Monitoring
 
 {{% toc /%}}
 
+See also
+{{< iref "configuration_management" "Configuration Management" >}} and
+{{< iref "nettools#ip_tools" "Command line IP Tools" >}}.
+
 # References
 
 -   [ArchWiki: Category Status monitoring and notification
@@ -29,21 +33,14 @@ is waiting on I/O operations. Most of the time this occurs because
 of disk or network I/O operations including paging in the swap
 area
 
--   [Wikipedia: Load (computing)
-    ](http://immike.net/blog/2007/07/27/what-exactly-is-a-load-average/ "en.wikipedia.org Load_(computing)")
--   [Monitoring a slow system
-    ](http://www.ibm.com/developerworks/aix/library/au-satslowsys.html "ibm.com/developerworks/ au-satslowsys")
-    by Martin Brown.
+-   [Wikipedia: {{ "wp" "Load (computing)" >}}
+-   [Examining Load Average - Linux Journal](https://www.linuxjournal.com/article/9001).
+
 
 # Monitoring Tools {#monitoring_tools}
 
 
-Basic network monitoring tools like _netstat_, _nmap_, _iptraf_,
-_tracepath_, _traceroute_, _mtr_ are in the section
-{{< iref "nettool#ip_tools" "IP Tools" >}}.
-
-
-[conky](http://conky.sourceforge.net/) (GPL) <a name="conky"></a>
+<a name="conky"></a>[conky](http://conky.sourceforge.net/) (GPL)
 :   Conky is a light-weight system monitor which can display
     arbitrary information to the root window in X11 or in an xterm.  A
     lot of plugin exists that allow to view information not only from
@@ -70,7 +67,7 @@ _tracepath_, _traceroute_, _mtr_ are in the section
     X libraries that are yet loaded, so I see only an increase of 1.5M
     of used memory under my fluxbox desktop.Of course it depends on
     both the building configuration, and the instance configuration in
-    .conkyrc.
+    `.conkyrc`.
 
     But the more efficient way of running conky is to disable x and
     pipe to console, tmux, screen or dzen.  A no-X conky daemon uses only
@@ -159,7 +156,7 @@ _tracepath_, _traceroute_, _mtr_ are in the section
         configuration file to use _statgrab_.
     -   libstatgrab is used by
         {{< iref "#saidar" "saidar" >}}
-        and {{< iref "419" "bwm-ng" >}}
+        and {{< iref "#bwm-ng" "Bwm_ng" >}}
 
 [linfo](http://linfo.sourceforge.net/)
 :   A PHP application that displays the system hardware and realtime
@@ -236,13 +233,32 @@ Is a fast, highly customizable system info bash script.
 
 
 ## Misc Command line system monitoring tools
+### Processes
+-   {{< man "fuser(1)"  >}} identify processes using files or sockets
+-   {{< man "lsof(8)"  >}}  output file information about files opened by processes
+    {{< man "lsof#lbAW" "examples at the end of lsof(8)" >}}
+    and the QUICKSTART  and FAQ
 -   {{< man "top" >}} - display Linux processes- {{< man "iostat" >}} - Report CPU
     statistics and input/output statistics for devices and partitions.
--   {{< man "htop" >}} - interactive process viewer
+-   {{< man "htop" >}} - interactive process viewer a curses replacement of
+    _top_.
 -   {{< man "atop" >}} - AT Computing's System & Process Monitor
--   {{< man "free" >}} - Display amount of free and used memory in the system
--   {{< man "lsof" >}} output file information about files opened by processes.
+
+## I/O
 -   {{< man "iotop" >}} - simple top-like I/O monitor.
+
+## Network
+-   [slurm](https://github.com/mattthias/slurm) command line network load monitor.
+
+## Performance
+
+-   {{< man "dstat" >}} - monitor memory, process, network or disk space performance, it
+    is a  replacement of ifstat, iostat, dmstat.
+-   {{< man "free" >}} - Display amount of free and used memory in the system.
+-   {{< man "nmon(1)" >}} - Display performance information of the system: CPU, memory,
+    network, disks (mini graphs or numbers), file systems, NFS, top processes, Linux
+    version & processors.
+-   {{< man "slabtop(1)" >}} - Display kernel slab cache information in real time .
 
 
 
@@ -250,12 +266,12 @@ Is a fast, highly customizable system info bash script.
 I put here tools that are specifically aimed to network monitoring,
 the tools that monitor both system and network are in the section
 {{< iref "#system_monitoring" "System monitoring" >}}
-you may also want to use
-{{< iref "#monitoring_tools" "basic monitoring tools" >}}.
+while command line tools are in
+{{< iref "#monitoring_tools" "Monitoring Tools" >}}..
 
-Some basic tools like _netstat_, _nmap_, _iptraf_, _tracepath_,
-_traceroute_, _mtr_, _nethogs_ are in the section
-{{< iref "ip_tools" "IP Tools" >}}.
+Basic network monitoring tools like _netstat_, _ss_, _nmap_, _iptraf_,
+_tracepath_, _traceroute_, _mtr_ , _nethogs_ are in the section
+{{< iref "nettools#ip_tools" "IP Tools" >}}.
 
 See also the section {{< iref "nettools#traffic_shaping" "Traffic shaping" >}}
 
@@ -285,7 +301,8 @@ See also the section {{< iref "nettools#traffic_shaping" "Traffic shaping" >}}
     is a distributed real-time performance and health monitoring tool.
     It collects data in realtime (per second), and produce a real-time
     interactive web representation of them.
-    Netdata is part of the {{< iref "firewals#firehol" "FireHol project" >}} and is in Debian.
+    Netdata is part of the {{< iref "firewall#firehol" "FireHol project" >}}
+    and is in Debian.
 -   [netperf](http://www.netperf.org/netperf/)
     is a benchmark that can be used to measure the performance of many
     different types of networking. It provides tests for both
@@ -317,7 +334,7 @@ system combine network and system monitoring.
 
 In this page I focus on system and network monitoring,
 the related _distributed configuration management_ is in the
-{{< iref "143" "Configuration Management Software section" >}},
+{{< iref "configuration_management" "Configuration Management Software section" >}},
 tools aimed at only network are in the
 {{< iref "#network_monitoring" "Network Monitoring Tools section" >}},
 while command line tools are in
