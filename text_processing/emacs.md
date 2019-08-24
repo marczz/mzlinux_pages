@@ -31,6 +31,7 @@ title: Emacs
     ](http://www.lispworks.com/documentation/HyperSpec/Front/)
 -   [Xemacs WWW Page](http://www.xemacs.org/)
 -   [Emacs Git repository](http://git.savannah.gnu.org/cgit/emacs.git).
+-   [Emacs - ArchWiki](https://wiki.archlinux.org/index.php/Emacs)
 -   [awesome-emacs](https://github.com/emacs-tw/awesome-emacs)
     A list of useful Emacs packages, libraries and others.
 -   [Emacs Stack Exchange](https://emacs.stackexchange.com/)
@@ -66,6 +67,9 @@ title: Emacs
     to emacs by Mickey Petersen.
 -   [Sacha Chua's blog](http://sachachua.com/blog/) (
     [RSS feed](http://feeds.sachachua.com/sachac)
+-   [Howardism](http://www.howardism.org/) a blog with many emacs post:
+    [Index of /Technical/Emacs](http://www.howardism.org/Technical/Emacs/),
+-   [Emacs Rocks!](http://emacsrocks.com/) a serie of emacs videos.
 -   [reddit/r/emacs](
     ([reddit/r/emacs rss](http://www.reddit.com/r/emacs.rss))
 -   [Emacs Redux](http://emacsredux.com/)
