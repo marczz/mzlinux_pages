@@ -6,26 +6,29 @@ title: Xorg
 
 ---
 
-See also {{< iref "input_methods" "input method" >}},
-{{< iref "console" "Console section" >}}, {{< iref "desktop" "desktop" >}} where is found the
-{{< iref "desktop#clipboard" "clipboard managers" >}}.
+See also {{< iref "input_methods" "Input method" >}} where you find
+{{< iref "input_methods#xkb" "Xkb" >}},
+{{< iref "console" "Console section" >}}, {{< iref "desktop" "Desktop" >}} where is found the
+{{< iref "desktop#clipboard" "Clipboard managers" >}}.
 
 # References
 
 -   [Debian X Strike Force’s documentation](http://x.debian.net/)
--   [X Strike Force’s General FAQ
-    ](http://x.debian.net/faq/general.html)
--   The [obsolete XStrikeForce site
-    ](http://wiki.debian.org/XStrikeForce/)
-    and it's [Debian X Window System Frequently Asked Questions
-    ](http://wiki.debian.org/XStrikeForce/FAQ)  may have still more
-    _sometime obsolete_ content.
+    -   [X Strike Force’s General FAQ
+        ](http://x.debian.net/faq/general.html)
+    -   The [obsolete XStrikeForce site
+        ](http://wiki.debian.org/XStrikeForce/)
+        and it's [Debian X Window System Frequently Asked Questions
+        ](http://wiki.debian.org/XStrikeForce/FAQ)  may have still more
+        _sometime obsolete_ content.
 -   [Debian Reference Chapter 7. The X Window System
     ](https://www.debian.org/doc/manuals/debian-reference/ch07.en.html)
 -   [ArchWiki - Xorg](http://wiki.archlinux.org/index.php/Xorg)
 -   [Gentoo Xorg Guide](https://wiki.gentoo.org/wiki/Xorg/Guide),
     [Hardware 3D acceleration guide
     ](https://wiki.gentoo.org/wiki/Xorg/Hardware_3D_acceleration_guide)
+-   [FreeBSD Handbook -  Xorg Configuration
+    ](https://www.freebsd.org/doc/handbook/x-config.html)
 -   [Xephyr](http://freedesktop.org/wiki/Software/Xephyr)
     is a kdrive based X Server which targets a window on a host X
     Server as its framebuffer.
