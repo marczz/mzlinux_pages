@@ -44,7 +44,7 @@ with ibus, SCIM and uim.
 
 The different input method are [described in the m17n database
 ](http://www.nongnu.org/m17n/manual-en/m17nDBData.html#mim-list).
-Among them:
+Among them:<a name="tibetan_m17n"></a>
 
 -   bo-tcrc: Tibetan input method using the  [TCRC keyboard layout
     ](http://tibetonline.tv/tibetan/tcrckbd.pdf).
@@ -79,16 +79,23 @@ Among them:
         ](http://pascal.tsu.ru/en/xkb/internals.html) by Yvan Pascal.
 -   [Xorg - XKB protocol specification (pdf)
     ](http://www.x.org/releases/current/doc/kbproto/xkbproto.pdf)
--   [ArchWiki - X KeyBoard extension
-    ](https://wiki.archlinux.org/index.php/X_KeyBoard_extension)
--   [ArchWiki: Keyboard Configuration in Xorg
-    ](https://wiki.archlinux.org/index.php/Keyboard_Configuration_in_Xorg),
+-   ArchWiki pages:
+    -   [Xorg/Keyboard configuration - ArchWiki
+        ](https://wiki.archlinux.org/index.php/Xorg/Keyboard_configuration)
+        for Xorg and Wayland. With a section on using setxkbmap.
+    -   [X KeyBoard extension
+        ](https://wiki.archlinux.org/index.php/X_KeyBoard_extension)
+    -   [Xorg/Keyboard Configuration
+        ](https://wiki.archlinux.org/index.php/Xorg/Keyboard_configuration)
+        for Xorg and Wayland. With a section on using setxkbmap.
     -   [Extra Keyboard Keys (multimedia keys)
-        ](https://wiki.archlinux.org/index.php/Extra_Keyboard_Keys),
-    -   [Keyboard Configuration in Console
-        ](https://wiki.archlinux.org/index.php/Keyboard_Configuration_in_Console)
--   [ArchWiki: Xmodmap
-    ](https://wiki.archlinux.org/index.php/Xmodmap)
+        ](https://wiki.archlinux.org/index.php/Extra_keyboard_keys),
+    -   [Linux console/Keyboard configuration
+        ](https://wiki.archlinux.org/index.php/Linux_console/Keyboard_configuration)
+    -   [Xmodmap
+        ](https://wiki.archlinux.org/index.php/Xmodmap)
+    -   [Xbindkeys](https://wiki.archlinux.org/index.php/Xbindkeys)
+-   [MultimediaKeys - Ubuntu Help](https://help.ubuntu.com/community/MultimediaKeys)
 -   [RMLVO keyboard configuration
     ](http://who-t.blogspot.com/2008/09/rmlvo-keyboard-configuration.html)
     (rules, models, layouts, variants and options)
@@ -98,10 +105,6 @@ Among them:
     ](http://www.charvolant.org/~doug/xkb/html/index.html) _2004_.
 -   [XKB Layout Creation Notes
     ](http://www.x.org/wiki/XKBLayoutCreationNotes/)
--   [Debian XStrikeForce -  How to configure input
-    ](https://xorg-team.pages.debian.net/xorg/howto/configure-input.html)
--   [Debian XstrikeForce old FAQ: How does the keyboard work in the X Window System?
-    ](http://wiki.debian.org/XStrikeForce/FAQ#keyboard)
 -   [Extending the X keyboard map with xkb
     ](http://madduck.net/docs/extending-xkb/) by Martin F. Krafft is
     probably the best advanced tutorial on xkb.
@@ -112,16 +115,28 @@ Among them:
     ](http://blog.gmane.org/gmane.comp.handhelds.openembedded/month=20080901/page=9)
 
 ## Input configuration
--   [Debian Wiki - Keayboard](https://wiki.debian.org/Keyboard)
+_most entries target both console and Xorg_
+
+-   [Debian Wiki - Keyboard](https://wiki.debian.org/Keyboard)
     explains input configuration for the whole Debian system (X and console).
+-   [DebianWiki - Keyboard](https://wiki.debian.org/Keyboard)
+-   [Debian XStrikeForce -  How to configure input
+    ](https://xorg-team.pages.debian.net/xorg/howto/configure-input.html)
+-   [Debian XStrikeForce -  InputHotplugGuide
+    ](https://wiki.debian.org/XStrikeForce/InputHotplugGuide)
+-   [Debian XstrikeForce old FAQ: How does the keyboard work in the X Window System?
+    ](http://wiki.debian.org/XStrikeForce/FAQ#keyboard)
 -   [How to configure input
     ](https://xorg-team.pages.debian.net/xorg/howto/configure-input.html)
     for an X server, keyboard, mouse,
 -   [Keyboard input - ArchWiki
-    ](https://wiki.archlinux.org/index.php/Keyboard_input#Identifying_keycodes_in_Xorg)
--   [Xorg/Keyboard configuration - ArchWiki
-    ](https://wiki.archlinux.org/index.php/Xorg/Keyboard_configuration)
-    for Xorg and Wayland. With a section on using setxkbmap.
+    ](https://wiki.archlinux.org/index.php/Keyboard_input)
+-   [libinput documentation
+    ](https://wayland.freedesktop.org/libinput/doc/latest/index.html)
+    libinput is a library that provides a full input stack for display servers and other
+    applications that need to handle input devices provided by the kernel.
+-   [Peter Hutterer blog on libinput - Who-T](http://who-t.blogspot.com/)
+
 
 ### Configuration notes
 -   The setxkbmap {{< man "setxkbmap(1)" >}} command configures the keyboard to
@@ -258,8 +273,55 @@ input through _uim-fep_, Emacs with _uim.el_.
     ](http://www.maketecheasier.com/setup-virtual-keyboard-linux/)
 
 ##  Tibetan keyboard layout {#tibetan_keyboard}
--   Wikipedia: {{< wp "Dzongkha_keyboard_layout" >}}.
-    Images:
+See above in the {{< "#tibetan_m17n" "ibus-m17n section" >}}
+for ibus tibetan input methods.
+
+-   [Tibetan and Himalayan Library (THL) - Tibetan Input System Principles
+    ](http://www.thlib.org/tools/scripts/wiki/Tibetan%20Input%20System%20Principles.html)
+-   [Rich Felker - Tibetan Keyboards / བོད་ཡིག་མཐེབ་གཞོང་སྐོར༎
+    ](http://www.aerifal.cx/~dalias/bodyig/keyboards/)
+-    [Tibetan Input Method for Linux - Digital Tibetan
+    ](http://digitaltibetan.org/index.php/Tibetan_Input_Method_for_Linux).
+
+### CNS Keyboard {#cns_keyboard}
+Chinese National Standard of Tibetan Keyboard Layout named here CNS Keyboard was
+designed by Tibet University at Lhasa. It is the base of the Tibetan keyboard on Windows
+
+-   [CNS detailled description, and how to use it
+    ](http://www.yalasoo.com/English/docs/yalasoo_en_MStbKb.html).
+-   CNS Tibetan keyboard images, by level _the four image are ambedded in previous
+    page_:
+    -   [regular keyboard
+        ](http://www.yalasoo.com/images/MSTibKb/TibetanRegular.jpg),
+    -   [m keyboard
+        ](http://www.yalasoo.com/images/MSTibKb/Tibetan_m+.jpg),
+    -   [shift keyboard
+        ](http://www.yalasoo.com/images/MSTibKb/TibetanShift.jpg),
+    -   [Alt Ctrl Shift keyboard
+        ](http://www.yalasoo.com/images/MSTibKb/TibetanAltCtrlShift.jpg),
+    -   [M keyboard
+        ](http://www.yalasoo.com/images/MSTibKb/Tibetan_CapitalM+.jpg).
+-   CNS Tibetan keyboard images on Wikipedia showing the 4 levels on a single image:
+    -   [CNS Tibetan keyboard as supported by Windows Vista
+        ](https://upload.wikimedia.org/wikipedia/commons/5/5a/Tibetan_Keyboard.png),
+    -   [CNS Tibetan version 2
+        ](https://upload.wikimedia.org/wikipedia/commons/5/5a/Tibetan_Keyboard.png)
+-   In Xorg linux you can use the [XKB layout for CNS keyboard
+    ](http://www.aerifal.cx/~dalias/bodyig/keyboards/bo_xkb.txt)
+    by Rich Felker, which is included in Xorg with name `cn` or `cn(tib)`.
+    You find it in `/usr/share/X11/xkb/symbols/cn`
+-   In Linux console in an unicode able terminal you can use
+    [LoadKey layout for CNS Keyboard
+    ](http://www.aerifal.cx/~dalias/bodyig/keyboards/bo_linux.txt)
+    by Rich Felker; but if you use the recent `console-setup` as explained in
+    {{< iref "console#console_setup" "Console setup" >}} then =setupcon=  convert the
+    xkb description to a `loadkey` keymap; which is loaded by =loadkey=. So you can use
+    also your xkb rules in the console if the console or a console terminal has unicode
+    support.
+
+### Dzongkha Keyboard
+-   Wikipedia: {{< wp "Dzongkha_keyboard_layout" >}} gives detailled description of
+    Dzongkha keyboard, as images:
     -   [Dzongkha - regular
         ](https://upload.wikimedia.org/wikipedia/commons/c/c4/Dzongkha_Keyboard_layout_Main.svg),
     -   [Dzonkha shift
@@ -274,23 +336,19 @@ input through _uim-fep_, Emacs with _uim.el_.
         ](http://www.rigsum-it.com/research/projects/dztype2) is a
         Dzongkha Typing Tutor,
         that we can use online or download.
--   CNS Tibetan keyboard images:
-    -   [CNS Tibetan keyboard as supported by Windows Vista
-        ](https://upload.wikimedia.org/wikipedia/commons/5/5a/Tibetan_Keyboard.png),
-    -   [CNS Tibetan version 2
-        ](https://upload.wikimedia.org/wikipedia/commons/5/5a/Tibetan_Keyboard.png)
-    -   [How to Use CNS Keyboard
-        ](http://www.yalasoo.com/English/docs/yalasoo_en_MStbKb.html)
-    -   [regular keyboard
-        ](http://www.yalasoo.com/images/MSTibKb/TibetanRegular.jpg),
-    -   [m keyboard
-        ](http://www.yalasoo.com/images/MSTibKb/Tibetan_m+.jpg),
-    -   [shift keyboard
-        ](http://www.yalasoo.com/images/MSTibKb/TibetanShift.jpg),
-    -   [Alt Ctrl Shift keyboard
-        ](http://www.yalasoo.com/images/MSTibKb/TibetanAltCtrlShift.jpg),
-    -   [M keyboard
-        ](http://www.yalasoo.com/images/MSTibKb/Tibetan_CapitalM+.jpg).
+-   [XKB keyboard map for Dzongkha
+    ](https://collab.its.virginia.edu/access/content/group/26a34146-33a6-48ce-001e-f16ce7908a6a/Tibetan%20Input%20Tools/Dzongkha%20Keyboard%20Resources/dzkeymap.html)
+    can be used on Linux, it is included in xorg distribution.
+    You find it in `/usr/share/X11/xkb/symbols/bt`
+
+_In this keyboard U+0F0B (TSHEG) is located on the space bar at level 1 since it is the
+most frequent character in Tibetan._
+
+### Keyman Keyboards
+
+-   [Keyman](https://keyman.com/) is available in Windoze, Mac OS, android, IOS, and
+    [Linux](https://keyman.com/linux/)
+-   [Keyman - THL page](http://www.thlib.org/tools/scripts/wiki/Keyman.html)
 -   [keymanweb.com](https://keymanweb.com/) offer  javascript web
     keyboards [in tibetan
     ](https://keymanweb.com/#bod,Keyboard_tibetan_unicode_direct_input)
@@ -300,10 +358,38 @@ input through _uim-fep_, Emacs with _uim.el_.
     ](https://keymanweb.com/#bod,Keyboard_tibetan_ewts_to_unicode)
     ([help
     ](https://help.keyman.com/keyboard/tibetan_unicode_ewts/1.0/tibetan_unicode_ewts.php))
-    [Keyman](https://help.keyman.com/) has also keyboards for android,
-    ipad, Mac OS, Windows
--   [a script to install tcrc xkb keyboard and fonts on linux
-    ](https://github.com/scratch/Tibetan-keyboard)
+
+Keyman support many keyboards including for Tibetan:
+-   [Tibetan Unicode Direct Input Keyboard
+    ](https://help.keyman.com/keyboard/tibetan_unicode_direct_input/1.1/tibetan_unicode_direct_input.php)
+    _this keyboard is similar to the CNS keyboard in Windows but with some difference,
+    you can see that the second letter in the second row is ཅ in the keyman keyboard
+    while being ཆ in The CNS Keyboard, also the third and fourth levels of CNS are not
+    implemented here._
+-   [Tibetan Unicode EWTS Keyboard
+    ](https://help.keyman.com/keyboard/tibetan_unicode_ewts/1.1/tibetan_unicode_ewts.php)
+-   [Dzongkha (SIL)](https://help.keyman.com/keyboard/sil_dzongkha/1.1/sil_dzongkha.php).
+
+These three keyboard seems to be the [Tibetan Keyman Keyboards from Peter Hauer
+referenced in THL Page](http://www.thlib.org/tools/scripts/wiki/Keyman.html);
+this page gives also downloads for the Sambhota Keyboard from Chris Walker.
+
+
+## using ibus for tibetan
+There is a choice of input method for tibetan in ibus.
+
+Among the [methods provided by m17n
+](http://www.nongnu.org/m17n/manual-en/m17nDBData.html#mim-list) we find
+
+-   `bo-ewts.mim`: Tibetan input method based on [EWTS version 2.0
+    ](http://www.thlib.org/reference/transliteration/#!essay=/thl/ewts).
+-   `bo-wylie.mim` Tibetan input method using the Wylie input method. It
+    is a re-implementation of Emacs' tibetan-wylie input method, and is
+    slightly different from Extended Wylie Transliteration Scheme
+    (EWTS).
+-   `bo-tcrc`: Tibetan input method using the
+    [TCRC keyboard layout](http://tibetonline.tv/tibetan/tcrckbd.pdf).
+    _It is not the same than {{< iref "#cns_keyboard" >}}.
 
 # Virtual Keyboard
 -   [xvkbd](http://homepage3.nifty.com/tsato/xvkbd/)
