@@ -18,7 +18,8 @@ See also {{< iref "command_line" "Unix command Line" >}}
 See also {{< iref "file_managers#console" "console file managers" >}}
 {{< iref "text_editors#terminal_editors" "terminal text editors" >}}
 
-- The im clients are in the page {{< iref "86" "Internet Messaging" >}}.
+- The internet messaging clients are in the pages {{< iref "irc" "IRC" >}},
+  {{< iref "xmpp" "XMPP" >}},  {{< iref "social_networks" "Social Network" >}}.
 
 - [incosolation blog](http://inconsolation.wordpress.com) is devoted
   to console applications, it stopped in 2015.
