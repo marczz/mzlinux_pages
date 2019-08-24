@@ -605,9 +605,13 @@ the suckless-tools package in Debian.
 -   [ArchWiki: dmenu](https://wiki.archlinux.org/index.php/dmenu),
 -   [Archlinux dmnenu hacking thread
     ](https://bbs.archlinux.org/viewtopic.php?id=80145),
--   [orschiro/dmenu-scripts-collection
-    ](https://github.com/orschiro/dmenu-scripts-collection),
-    -   [tlvince/dmenu-tools](https://github.com/tlvince/dmenu-tools).
+-   [jukil/dmenu-scripts-collection
+    ](https://github.com/jukil/dmenu-scripts-collection)
+    collected from the hacking thread _until 2014, newer scripts are not here!_.
+-   [tlvince/dmenu-tools](https://github.com/tlvince/dmenu-tools).
+    A collection of scripts in the _dmenu_tools_ AUR package:
+    dmenu_edit, dmenu_menu, dmenu_mpc, dmenu_netctl, dmenu_raise, dmenu_raise_or_run,
+    dmenu_run_recent.
 
 ### dmenu alternatives
 -   [bemenu](https://github.com/Cloudef/bemenu) (GPLv3 and LGPLv3)
