@@ -6,10 +6,9 @@ title: Tibetan
 
 See also {{< iref "input_methods" "Input Methods" >}},
 {{< iref "i18n" "Localization" >}}
-{{< iref "i18n" "[Tibetan fonts" >}},
-{{< iref "i18n" "Tibetan unicode encoding" >}}],
-{{< iref "input_methods" "Input Methods" >}} {{< iref "input_methods#tibetan_keyboard" "[Tibetan keyboard layout" >}}
-]
+{{< iref "i18n#tibetan_fonts" "Tibetan fonts" >}},
+{{< iref "i18n#tibetan_encoding" "Tibetan unicode encoding" >}}],
+{{< iref "input_methods#tibetan_keyboard" "Tibetan input methods and keyboard layouts" >}}
 
 # Language references
 -   [Wikipedia: Tibetan script](http://en.wikipedia.org/wiki/Tibetan_script)
@@ -68,6 +67,15 @@ See also {{< iref "input_methods" "Input Methods" >}},
 # Audio/Video
 -   [Tibet TV Online](http://www.tibetonline.tv/) official TV of Central
     Tibetan Administration (dharamsala)
+    -   [His Holiness the Dalai Lama’s teaching
+        ](http://www.tibetonline.tv/his-holiness-the-dalai-lamas-teaching/)
+    -   [His Holiness’s Public Talk
+        ](http://www.tibetonline.tv/his-holinesss-public-talk/)
+    -   [Tibetan Language Tutorial
+        ](http://www.tibetonline.tv/tibetan-language-tutorial/)
+        and [Tibetan Video Teaching - འཛིན་རིམ་གཉིས་པའི་བོད་ཡིག་སློབ་ཁྲིད།
+        ](http://www.tibetonline.tv/%e0%bd%a0%e0%bd%9b%e0%bd%b2%e0%bd%93%e0%bc%8b%e0%bd%a2%e0%bd%b2%e0%bd%98%e0%bc%8b%e0%bd%82%e0%bd%89%e0%bd%b2%e0%bd%a6%e0%bc%8b%e0%bd%94%e0%bd%a0%e0%bd%b2%e0%bc%8b%e0%bd%96%e0%bd%bc%e0%bd%91%e0%bc%8b/)
+    -   [Tibetan Songs](http://www.tibetonline.tv/songs/)
 -   [Radio Free Asia]( http://www.rfa.org) is a radio which provides news
     and information to Asian countries whose governments prohibit access
     to a free press. It has [Tibetan](http://www.rfa.org/tibetan) and
@@ -165,8 +173,10 @@ See also {{< iref "input_methods" "Input Methods" >}},
     and
     [Treasures of mChog gyur gling pa
     ](http://www.thdl.org/collections/literature/chokling/)
--   [Tibetan Buddhist Resource Center (TBRC)](http://www.tbrc.org)
-    (digital archive of Tibetan literature)
+-   [Buddhist Digital Resource Center (BDRC)](http://www.tbrc.org)
+    previously _TBRC_ is a digital archive of Tibetan texts.
+    -   [Catalogs by topic](https://www.tbrc.org/#!specials)
+    -   [List of digitized texts](https://www.tbrc.org/#!etexts/input)
 -   [Vimala Treasures](http://vimalatreasures.org/pechas.aspx)
     the site of Gyatrul Rinpoche sells books and
     [pechas](http://vimalatreasures.org/pechas.aspx)
@@ -315,7 +325,10 @@ See also {{< iref "input_methods" "Input Methods" >}},
     definitions.
 
 # Software
-See also the {{< iref "#tibetan_dictionaries" "Tibetan dictionaries section" >}}
+See also the {{< iref "#tibetan_dictionaries" "Tibetan dictionaries section" >}},
+{{< iref "i18n#tibetan_font" "Tibetan fonts" >}},
+{{< iref "input_methods#tibetan_keyboard" "Tibetan input methods" >}},
+{{< iref "i18n#tibetan_encoding_conversion" "Tibetan encoding Conversion tools" >}}.
 
 -   [Rywiki ressources
     ](http://rywiki.tsadra.org/index.php/Resources)
@@ -330,32 +343,15 @@ See also the {{< iref "#tibetan_dictionaries" "Tibetan dictionaries section" >}}
     ](http://rywiki.tsadra.org/index.php/Configuring_OpenOffice_for_Tibetan_script).
 -   <a name="thl_software></a>
     [Software tools in the Tibetan and Himalayan Digital Library
-    ](http://www.thlib.org/tools/)
-    [
-    [Tibetan Scripts, Fonts & Related Issues
-    ](http://www.thlib.org/tools/scripts/wiki/home.html),
-    [Unicode Tibetan Fonts](http://www.thlib.org/tools/scripts/wiki/tibetan%20fonts.html),
-    [Dzongkha Keyboard Layout
-    ](http://www.thlib.org/tools/dzkeylayout.html),
-    [Conversion-Reversion For Tibetan Fonts
-    ](http://www.thlib.org/tools/scripts/wiki/conversion-reversion%20for%20tibetan%20fonts.html),
-    [list of converters
-    ](http://www.thlib.org/tools/scripts/wiki/tabular%20survey%20of%20converters%20|amp|%20reverters%20for%20tibetan.html),
+    ](http://www.thlib.org/tools/) :
     [Using Tibetan in Linux
-    ](http://www.thlib.org/tools/scripts/wiki/using%20tibetan%20in%20linux.html)
-    ]
+    ](http://www.thlib.org/tools/scripts/wiki/using%20tibetan%20in%20linux.html),
+    [Using Tibetan In Macintoshes
+    ](https://collab.its.virginia.edu/wiki/tibetan-script/Using%20Tibetan%20in%20Macintoshes.html)
 -   [Digital Tibetan](http://digitaltibetan.org/index.php/)
     is a platform for information on using Tibetan Unicode software
     and related technology on different platforms in order to
     facilitate the preservation and spread of digital dharma.
-    -   [Commented list of tibetan unicode fonts
-        ](http://digitaltibetan.org/index.php/Tibetan_Fonts)
-    -    [Tibetan Input Method for Linux
-        ](http://digitaltibetan.org/index.php/Tibetan_Input_Method_for_Linux_%28Gnome%29).
--   [TibetanGeeks བོད་ཡིག](http://bodyig.tibetangeeks.com/):
-    [font download](http://tibetangeeks.com/downloads/bodyig/)
-    including [Monlam Bod-Yig v3
-    ](http://www.tibetangeeks.com/geeks/lobsang_monlam/)
 -   [nitartha](http://www.nitartha.org/home.html)
 -   [Iron Rabbits](http://en.ironrabbit.org/)
     _How To Enable Tibetan On Android_.
@@ -370,11 +366,15 @@ See also the {{< iref "#tibetan_dictionaries" "Tibetan dictionaries section" >}}
     creating pechas,
     [PechaMaker Forum](http://www.pechamaker.com/forum)
 -   [Tibetan Software Digest](http://www.gy.com/www/ti.htm)
--   [Tibetan-English Dictionary of Buddhist Culture](http://www.rangjung.com/ry-dictionary2003/welcome.htm)
-    -   [Tibetan-English Dictionary & Software User Forum](http://lotsaware.proboards29.com/)
-    -   [eGroup homepage](http://groups.yahoo.com/group/Tibetan-English_Dictionary-User_group/)
+-   [Tibetan-English Dictionary of Buddhist Culture
+    ](http://www.rangjung.com/ry-dictionary2003/welcome.htm)
+    -   [Tibetan-English Dictionary & Software User Forum
+        ](http://lotsaware.proboards29.com/)
+    -   [eGroup homepage
+        ](http://groups.yahoo.com/group/Tibetan-English_Dictionary-User_group/)
     -   [Nitartha search form](http://www.nitartha.org/dictionary_searchback.html)
-    -   [University of Virginia Online Translation/Dictionary Tool](http://www.people.virginia.edu/~am2zb/tibetan/)
+    -   [University of Virginia Online Translation/Dictionary Tool
+        ](http://www.people.virginia.edu/~am2zb/tibetan/)
         from
         [Andrés Montano Pellegrini](http://www.people.virginia.edu/~am2zb/))
     -   [Tibetan Translation Tool](http://www.geocities.com/tibetanenglish/)
@@ -391,31 +391,6 @@ See also the {{< iref "#tibetan_dictionaries" "Tibetan dictionaries section" >}}
     _Dzongkha Converter for Computing in Dzongkha_ for windoze and the
     _Dzongkha Linux Version 2 downloads_.
 
-## Conversion tools
--   [THL Tools Home](http://www.thlib.org/tools/):
-    [THL’s Online Tibetan Transliteration Converter
-    ](http://www.thlib.org/reference/transliteration/wyconverter.php()
-    transliterate from/to Wylie to Unicode,
-    [Tibetan Scripts, Fonts & Related Issues
-    ](http://www.thlib.org/tools/scripts/wiki/home.html)
-    [Conversion-Reversion For Tibetan Fonts](http://www.thlib.org/tools/scripts/wiki/Conversion-Reversion%20for%20Tibetan%20Fonts.html),
-    [How to convert legacy Tibetan documents to Tibetan Unicode using Universal Tibetan Font Converter
-    ](http://www.thlib.org/tools/scripts/wiki/universal%20tibetan%20font%20converter.html).
--   The
-    [Tibetan Transliteration Server](http://cgi.sse-ag.ch/tib/tibform.pl)
-    convert transliterated material (wylie or acip) into Tibetan native
-    alphabet (graphical or unicode).
--   The [Universal Tibetan Font Converter](http://www.thlib.org/tools/scripts/wiki/universal%20tibetan%20font%20converter.html)
-    convert files between different Tibetan encoding schemes with different file formats.
-    The converter also can translate Tibetan script with different encodings to variant
-    Wylie transliterations, and vice versa.<br />
-    [UFTC java application](http://www.yalasoo.com/English/docs/yalasoo_en_utfc.html) can be installed on your computer,
-    it used also to be available  [on line at Trace Fondation](http://utfc.trace.org/UTFC/resources_tools_UTFC_tools.php);
-    but has not be ported to the new site.<br />
-    [RyWiki : How to install Universal Tibetan Font Converter](http://rywiki.tsadra.org/index.php/Universal_Tibetan_Font_Converter).
--   [UDP](http://udp.leighb.com/) can convert  legacy text encoding to unicode.
--   [colourcountry tibetan wylie input](http://www.colourcountry.net/tibetan/)
-    is done in javascript, you can import and use the page.
 
 ## People
 -   [Leigh Brasington's Home Page](http://home.alamedanet.net/~leighb/),
