@@ -41,15 +41,15 @@ See also {{< iref "xorg" "Xorg section" >}},
     -   We can also use in console a {{< iref "checkpointing#terminal_multiplexors" "Terminal multiplexor" >}}
         like screen or {{< iref "checkpointing#tmux" "tmux" >}}.
 
-# Setting console Keyboard and Font
+# Setting console Keyboard and Font {#console_setup}
 See also {{< iref "input_methods" "input method" >}},
 
--   The keyboard and font are set at startup with {{< man "setupcon" >}} from the package
+-   The keyboard and font are set at startup with {{< man "setupcon(1)" >}} from the package
     console-setup.
--   {{< man "setupcon" >}} default is to read the keyboard configuration from
+-   {{< man "setupcon(1)" >}} default is to read the keyboard configuration from
     `/etc/default/keyboard` which can be overrided by `~/.keyboard`. The syntax of these
     files is given in {{< man "keyboard(5)" >}}.
--   {{< man "setupcon" >}} read the font configuration from `/etc/default/console-setup`
+-   {{< man "setupcon(1)" >}} read the font configuration from `/etc/default/console-setup`
     overrided by ` ~/.console-setup` whose syntax is given in
     {{< man "console-setup(5)" >}}.
 -   You can change `/etc/default/keyboard` by editing it or by running:
@@ -60,19 +60,37 @@ See also {{< iref "input_methods" "input method" >}},
 
         # service keyboard-setup restart
 
+    But if you only want to temporarily change the console keyboard run
+
+        $ setupcon VARIANT
+
+    which read the configuration `/etc/default/keyboard.VARIANT`.
+
+-   The pkg `kbd` requires either the older `console-data` or the more recent
+    `console-setup`.
+
+    The `console-data` load keymaps in `/usr/share/keymaps` with `loadkeys`.
+    So there are a distinct description of the keymaps for X and for the console.
+
+    The package `console-setup` on the other hand, use {{< man "setupcon(1)" >}}
+    which call {{< man "ckbcomp(1)" >}}to compile the xkb description
+    in a temporary console keymap which is loaded by {{< man "loadkeys(1)" >}}.
+    No separate console keymap is necessary.
+
 -   The same file `/etc/default/keyboard` is also used by Xorg and Wayland to set the
     keyboard.
 -   Debian Wiki explains [How to set keyboard layout in initramfs
     ](https://wiki.debian.org/Keyboard#How_to_set_keyboard_layout_in_initramfs),
     and _How to enable USB keyboard in initramfs_.
--   A lower level utility to manipulate {{< man "keymaps(5)" >}} is {{< man "loadkeys" >}}.
+-   A lower level utility to manipulate {{< man "keymaps(5)" >}} is
+    {{< man "loadkeys(1)" >}}.
 -   A lower level utility to manipulate console fonts is {{< man "setfont(8)" >}}
--   The locale is seen by running {{< man "locale" >}} without arguments. The default are set in
-    `/etc/default/locale` and can be changed by editing this file or running
-    {{< man "update-locale(8)" >}}.
+-   The locale is seen by running {{< man "locale" >}} without arguments.
+    The default are set in `/etc/default/locale` and can be changed by editing this file
+    or running {{< man "update-locale(8)" >}}.
 -   You can see all locales by running `locale -a`, the available locale are configured
-    in `/etc/locale.gen` and can have to be regenerated with {{< man "locale-gen" >}} when you
-    change this file.
+    in `/etc/locale.gen` and can have to be regenerated with {{< man "locale-gen" >}}
+    when you change this file.
 
 -   [Linux Support for Funny/Functional Keys](http://rick.vanrein.org/linux/funkey).
 -   [Keyboard/MultimediaKeys - Debian Wiki
@@ -176,7 +194,8 @@ simultaneously on all seats.
     ](https://github.com/dvdhrm/kmscon)
 -   The [kmscon repository](https://github.com/dvdhrm/kmscon)contains also the source of
     [wlterm](https://www.freedesktop.org/wiki/Software/kmscon/wlterm/)
-    a native Wayland terminal build upon libstm. More explanations in this
+    a native {{< iref "xterminals#wayland_terminals" "Wayland terminal" >}}
+    build upon libstm. More explanations in this
     [post from David Herrmann](https://lwn.net/Articles/517818/).
 
 # Framebuffer terminals {#framebuffer_terminals}
