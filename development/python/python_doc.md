@@ -7,8 +7,8 @@ title: Python Documentation
 # References
 
 ## General references
-See also {{< iref "437" "Tutorials, HowTo, Recipes" >}},
-and {{< iref "446" "Design Patterns in Python" >}}.
+See also
+{{< iref "python_programming#python_design_patterns" "Design Patterns in Python" >}}.
 
 -   Wikipedia:
     [Python](http://en.wikipedia.org/wiki/Python_%28programming_language%29),
@@ -50,54 +50,34 @@ and {{< iref "446" "Design Patterns in Python" >}}.
     by Peter Norvig the author of
     [Artificial Intelligence: A Modern Approach](http://aima.cs.berkeley.edu/) who also commented the use of python for AI programming in [Python for Lisp Programmers](http://www.norvig.com/python-lisp.html).
 -   Guido van Rossum's
-    [What's new in python 3.0](http://docs.python.org/3/whatsnew/3.0.html),
-    [What’s New In Python 3.1](http://docs.python.org/3/whatsnew/3.1.html),
-    [What’s New In Python 3.2](http://docs.python.org/3/whatsnew/3.2.html),
     [What’s New In Python 3.3](http://docs.python.org/3/whatsnew/3.3.html),
     [What’s New In Python 3.4](http://docs.python.org/3/whatsnew/3.4.html).
--   [Fredrik Lundh's zone.effbot.org](http://www.effbot.org/zone/index.htm)
+    [What's new in python 3.5](http://docs.python.org/3/whatsnew/3.5.html),
+    [What’s New In Python 3.6](http://docs.python.org/3/whatsnew/3.6.html),
+    [What’s New In Python 3.7](http://docs.python.org/3/whatsnew/3.7.html),
+-   [Fredrik Lundh's zone.effbot.org](http://www.effbot.org/zone/index.htm),
     gives an important documentation on many python aspect. His
-    [guide to The Standard Python Library](http://www.effbot.org/librarybook/)
-    provides brief descriptions and sample scripts for all standard
-    modules in the Python 2.0 library.
--   [Richard Gruet's Home page](http://rgruet.free.fr/) references
-    many versions of his **Python Quick Reference** _(Creative Commons license)_ for
-    [Python 2.7](http://rgruet.free.fr/PQR27/PQR2.7.html)
--   [Text Processing in Python](http://www.gnosis.cx/TPiP/)
-    by David Mertz is an intermediate Python book available on-line,
-    the book is from 2006, so it is written in Python 2..
-    David Mertz is also the author of the serie of articles named
-    [Charming Python](http://gnosis.cx/publish/tech_index_cp.html)
 
 ## Blogs and python sites
--   [charming python serie](http://www.ibm.com/Search/?q=charming%2Bpython)
-    at [ibm developper works](http://www.ibm.com/developerworks/linux/)
 -   [ONLamp.com (0'Reilly) python](http://www.onlamp.com/python/)
     references many python articles.
 -   [Neopythonic](http://neopythonic.blogspot.com/) is the blog of
     [Guido van Rossum](https://www.python.org/~guido/).
 -   [A.M. Kuchling](http://www.amk.ca/)'s page.
 -   David Mertz:
-    [Charming Python](http://gnosis.cx/publish/tech_index_cp.html)
+    [Charming Python](http://gnosis.cx/publish/tech_index_cp.html),
+    [charming python serie](http://www.ibm.com/Search/?q=charming%2Bpython)
+    at [ibm developper works](https://developer.ibm.com/technologies/linux/)
 -   [Python Course](http://www.python-course.eu/) tutorials site.
--   [Dave Kuhlman's page](http://www.rexx.com/~dkuhlman/ "rexx.com/~dkuhlman")
-    propose introductory python courses, and many references mainly
-    related to python-xml.
--   [iBM developpers works](http://www-128.ibm.com/developerworks/)
+-   [iBM developpers works](https://developer.ibm.com/technologies/linux/)
     has a
-    [lot of python references
-    ](http://www-128.ibm.com/developerworks/views/webservices/libraryview.jsp?search_by=python)
-    among which the
-    [Charming Python serie
-    ](http://www.ibm.com/developerworks/views/linux/libraryview.jsp?topic_by=All+topics+and+related+products&search_by=charming+python "ibm.com developerworks search").
+    [numerous python references
+    ](https://developer.ibm.com/?s=python)
 -   Python news:
-    [Planet Python](http://planet.python.org/ "planet.python.org").
+    [Planet Python](http://planet.python.org/).
 -   Michael Foord
     [Voidspace  Python Articles and Other Scribblings
     ](http://www.voidspace.org.uk/python/articles.shtml)
--   [showmedo](http://showmedo.com/videos/python "showmedo.com Home")
-    collection of
-    [python programming videos](http://showmedo.com/videos/python "showmedo.com python videos").
 
 ## Development guides
 -   [The Hitchhiker’s Guide to Python!](http://docs.python-guide.org/en/latest/)
@@ -109,13 +89,10 @@ and {{< iref "446" "Design Patterns in Python" >}}.
 
 ## Beginners guides Tutorials
 -   [Beginner's Guide to Python](http://wiki.python.org/moin/BeginnersGuide) and
-     [Python for Programmers](http://wiki.python.org/moin/BeginnersGuide/Programmers),
-     [Moving To Python From Other Languages](http://wiki.python.org/moin/MovingToPythonFromOtherLanguages),
+    [Python for Programmers](http://wiki.python.org/moin/BeginnersGuide/Programmers),
+    [Moving To Python From Other Languages](http://wiki.python.org/moin/MovingToPythonFromOtherLanguages),
     from [The Python Wiki](http://wiki.python.org/)
--   [Python HOWTOs](http://docs.python.org/3/howto/) were started by
-[A.M. Kuchling](http://www.amk.ca/ "amk.ca Home"):
-    -   [Python Advocacy HOWTO](http://docs.python.org/3/howto/advocacy.html) by A.M. Kuchling: Discusses
-        reasons to use Python.
+-   [Python HOWTOs](http://docs.python.org/3/howto/):
     -   [Curses Programming with Python](http://docs.python.org/3/howto/curses.html) by A.M. Kuchling and Eric S. Raymond.
     -   [Functional Programming HOWTO](http://docs.python.org/3/howto/functional.html) by A.M. Kuchling
     -   [Logging HOWTO](http://docs.python.org/3/howto/logging.html)
@@ -126,10 +103,11 @@ and {{< iref "446" "Design Patterns in Python" >}}.
     -   [Sorting Mini-HOWTO](http://wiki.python.org/moin/HowTo/Sorting) by Andrew Dalke &amp; Raymond Hettinger.
     -   [Unicode HOWTO](http://docs.python.org/3/howto/unicode.html),
         [Py2k: Unicode HOWTO](http://docs.python.org/2/howto/unicode.html)
-    -   [HOWTO Use Python in the web](http://docs.python.org/3/howto/webservers.html) by Marek Kubica.
-    -   [How not to use Python](http://docs.python.org/3/howto/doanddont.html) by Moshe Zadka.
 -   [WikiBook Python Programming](http://en.wikibooks.org/wiki/Programming:Python),
-    [WikiBook Category Python Programming](http://en.wikibooks.org/wiki/Category:Python_Programming) contains pages belonging to the Python Programming book.
+    [WikiBook: Category Python Programming
+    ](https://en.wikibooks.org/wiki/Category:Book:Python_Programming)
+-   [Programmation Python — Wikilivres
+    ](https://fr.wikibooks.org/wiki/Programmation_Python),
 -   [A Byte of Python](http://swaroopch.com/notes/Python)
     is a book with an Object Oriented presentation of
     Python. It has been updated to Python 3.0.<br />
@@ -138,10 +116,6 @@ and {{< iref "446" "Design Patterns in Python" >}}.
     It is also translated in numerous languages
     _A Byte of Python_ is an introduction to python explaining basic concepts and structures.
     -   [A Byte of Python GitHub source repository](https://github.com/swaroopch/byte_of_python)
-        you can look at his {{< iref "256#fabric" "Fabric" >}}
-        recipe for building the book with {{< iref "425#pandoc" "pandoc" >}} in
-        [Byte of Python fabfile
-        ](https://github.com/swaroopch/byte_of_python/blob/develop/fabfile.py).
 -   Mark Pilgrim has written
     _Dive Into Python_
     and a new 2009 release for python 3
@@ -150,33 +124,21 @@ and {{< iref "446" "Design Patterns in Python" >}}.
     The site of _Mark Pilgrim_ and _Mark Pilgrim_ itself disappeared
     from the web screen at end 2011. There are some mirrors that
     you can still access
-    [Dive Into Python 3](http://www.diveintopython3.net/)
--   [Building Skills in Python](http://www.itmaybeahack.com/homepage/books/python.html)
-    by Steven F. Lott (Creative Commons License) is a python textbook
-    with numerous examples and exercises. _python 2.6 and 3.1_
 -   [Python 3 Course](http://www.python-course.eu/python3_course.php)
     in the [Python Course](http://www.python-course.eu/) tutorials site.
--   [Think Python: How to Think Like a Computer Scientist
-    ](http://greenteapress.com/thinkpython/thinkpython.html)
-    ([html version](http://greenteapress.com/thinkpython/html/))
-    by Allen B. Downey The version 2.x since February 2013 cover
+-   [Think Python 2e: How to Think Like a Computer Scientist
+    ](https://greenteapress.com/wp/think-python-2e/)
+    by Allen B. Downey.
     Python 3.
 -   [Runestone Interactive alias interactivepython.org
     ](http://interactivepython.org) has interactive learning material
     by Brad Miller and David Ranum.<br />
     They are built by using the in-browser implementation of Python
     [Skulpt](http://www.skulpt.org/), and a set of plugins to sphinx,
-    that allow to embed [active code
-    ](http://docs.runestoneinteractive.org/build/html/developer.html#activecode)
-    (using Skulpt), to give [asessments
-    ](http://docs.runestoneinteractive.org/build/html/developer.html#assessments)
-    using multiple choice questions with answers,
-    to [step through small code examples
-    ](http://docs.runestoneinteractive.org/build/html/developer.html#codelens),
-    using a module built upon the [Online Python Tutor
-    ](http://pythontutor.com/)
-    and to [embed video in sphinx
-    ](http://docs.runestoneinteractive.org/build/html/developer.html#video).
+    that allow to embed active code (using Skulpt), to give asessments using multiple
+    choice questions with answers, to step through small code examples using a module
+    built upon the [Online Python Tutor ](http://pythontutor.com/) and to embed video in
+    sphinx
     </br>
     All sphinx extensions, are available with the full source
     of the books in the
@@ -186,35 +148,31 @@ and {{< iref "446" "Design Patterns in Python" >}}.
     [developer documentation for Runestone interactive tools
     ](http://docs.runestoneinteractive.org/build/html/developer.html).
     -   [How to Think Like a Computer Scientist: Interactive Edition
-        ](http://interactivepython.org/courselib/static/thinkcspy/)
+        ](https://runestone.academy/runestone/books/published/httlads/index.html)
         by Brad Miller and David Ranum, is a great interactive course if
         you are new to Python. _Python 3_.
     -   [Problem Solving with Algorithms and Data Structures
-        ](http://interactivepython.org/courselib/static/pythonds/)
+        ](https://runestone.academy/runestone/books/published/pythonds/index.html)
         by Brad Miller and David Ranum, also a very comprehensive book
         on this subject.
-    -   [Everyday Python Blog
-        ](http://interactivepython.org/courselib/everyday/index)
-        is a growing set of lessons on solving in Python motivating
-        real world problems.
+    -   [Foundations of Python Programming
+        ](https://runestone.academy/runestone/books/published/fopp/index.html)
 -   Among numerous [tutorials at effbot zone](http://effbot.org/zone/)
     by Frederic Lundh:
     - [An Introduction to Python Lists](http://effbot.org/zone/python-list.htm)
     - [Understanding Python's "with" statement](http://effbot.org/zone/python-with-statement.htm)
     - [python for statement](http://effbot.org/zone/python-for-statement.htm)
 -   [Python Tips, Tricks, and Hacks](http://www.siafoo.net/article/52)
--   The [Python Cookbook](http://aspn.activestate.com/ASPN/Cookbook/Python/),
-    from [ActiveState](http://wiki.python.org/moin/ActiveState),
+-   The [Python Recipes](http://code.activestate.com/recipes/langs/python/),
+    from [ActiveState](https://www.activestate.com/),
     is a very large collection of code snippets, some elementary and
-    some advanced. It includes a
-    [collection of Python 3 recipes
-    ](http://code.activestate.com/recipes/langs/python/tags/meta:min_python_3/).
--   [AM Kuchling book: 50 Examples for Teaching Python)
+    some advanced.
+-   [AM Kuchling book: 50 Examples for Teaching Python
     ](https://fiftyexamples.readthedocs.org/en/latest/)
     (Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported)
     is an not yet completed book, that
     give Python 3 examples it's
-    [source is on GitHub](https://github.com/akuchling/50-examples).
+    [source is on GitHub](https://github.com/akuchling/50-examples). _2013_
 
 # Python implementations
 [Python Wiki: Python Implementations](https://wiki.python.org/moin/PythonImplementations)
@@ -230,8 +188,7 @@ and {{< iref "446" "Design Patterns in Python" >}}.
     programming language written in Java. Jython programs can
     seamlessly import and use any Java class. jythonc is a compiler
     that converts Python source code into Java bytecode. Jython is compatible with puthon 2.7.
--   [Pypy](http://pypy.org/)
-    <a name="pypy"></a>(MIT License)
+-   <a name="pypy"></a>[Pypy](http://pypy.org/) (MIT License)
     is a python translator to lower level languages
     such as C, [LLVM](http://llvm.org/), jvm, javascript, or CIL.
     It includes a Just-in-time Compiler. Pypy support both python 2 and 3.
