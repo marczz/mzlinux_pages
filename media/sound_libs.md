@@ -5,7 +5,7 @@ title: Sound and Video Processing Libraries
 {{% toc /%}}
 
 # Sound Libraries
-[audiofile](http://www.68k.org/~michael/audiofile/) <a name="audiofile"></a>
+<a name="audiofile"></a>[audiofile](http://www.68k.org/~michael/audiofile/)
 :   The Audio File library is an implementation of SGI's Audio File
     Library, which provides an API for accessing audio file formats
     like AIFF/AIFF-C, WAVE, and NeXT/Sun .snd/.au files. This library
@@ -19,7 +19,7 @@ title: Sound and Video Processing Libraries
     to prints information regarding files from this format.
 
 
-ladcca)<a name="ladcca"></a>
+<a name="ladcca"></a>ladcca
 :   LADCCA stands for Linux Audio Developer's Configuration and
     Connection API. It is a session management system for audio
     applications on GNU/Linux. It understands the
@@ -32,7 +32,7 @@ ladcca)<a name="ladcca"></a>
     {{< iref "streaming#jack" "Jack" >}} low latency audio API and the
     {{< iref "sound_edit#alsa" "Alsa" >}} MIDI sequencer interface.
 
-[Ladspa](http://www.ladspa.org/) (Linux Audio Developer's Simple Plugin API)<a name="ladspa"></a>
+<a name="ladspa"></a>[Ladspa](http://www.ladspa.org/) (Linux Audio Developer's Simple Plugin API)
 :   Ladspa plugins:
 :   [CMT](http://www.ladspa.org/cmt)
     :   The Computer Music Toolkit (CMT) is a collection of LADSPA
@@ -49,7 +49,7 @@ ladcca)<a name="ladcca"></a>
     {{< iref "sound_edit#snd" "Snd" >}},
     {{< iref "sound_edit#sweep" "Sweep" >}}
 
-[libao](http://www.xiph.org/ao/)<a name="libao"></a>
+<a name="libao"></a>[libao](http://www.xiph.org/ao/)
 :   Libao is a cross-platform audio library that allows programs to
     output audio using a simple API on a wide variety of platforms. It
     supports: null output, wav, au, oss (Open Sound System), alsa,
@@ -66,14 +66,14 @@ ladcca)<a name="ladcca"></a>
     libao is the possibility to send sound to networked computer by
     using the option `"host=hostname:port"`.
 
-libfishsound
+<a name="libfishsound</a>libfishsound
 :   FishSound (libfishsound) provides a simple programming
     interface for decoding and encoding audio data using the codecs
     {{< iref "#vorbis" "Vorbis" >}}and{{< iref "#speex" "Speex" >}}.
 
 :   Refs:[libfishsound api](http://www.annodex.net/software/libfishsound/html/)
 
-[libmad](http://www.underbit.com/products/mad/) <a name="libmad"></a>
+<a name="libmad"></a>[libmad](http://www.underbit.com/products/mad/)
 :   MAD (libmad) is a high-quality MPEG audio decoder available under GPL. It currently
     supports MPEG-1 and the MPEG-2 extension to Lower Sampling
     Frequencies, as well as the so-called MPEG 2.5 format. All three
@@ -86,12 +86,12 @@ libfishsound
     eighty applications using libmad. It is the most popular free mpeg
     decoding library.
 
-[liboggz](https://xiph.org/oggz/doc/)<a name="liboggz"></a>
+)<a name="liboggz"></a>[liboggz](https://xiph.org/oggz/doc/
 :   Oggz provides a simple programming interface for reading and
     writing Ogg (cf. {{< iref "#vorbis" "Vorbis" >}}, {{< iref "#libogg" "libogg" >}})
     files and streams.
 
-[Ogg Vorbis](node/codecs#ogg_vorbis "Internal reference")
+[Ogg Vorbis](codecs#ogg_vorbis "Internal reference")
 :   Ogg Vorbis is a GPLed compressed audio format for audio and
     music at fixed and variable bitrates from 16 to 128 kbps/channel.
     Look at [Technical Details in Wikipedia Vorbis page
@@ -109,7 +109,7 @@ libfishsound
    -  A list of ogg vorbis players is provided by the
     [PortablePlayers Wiki](http://wiki.xiph.org/index.php/PortablePlayers)
 
-[libsndfile](http://www.mega-nerd.com/libsndfile/) <a name="libsndfile"></a>
+<a name="libsndfile"></a>[libsndfile](http://www.mega-nerd.com/libsndfile/)
 :   Libsndfile is a C library for reading and writing files
     containing sampled sound (such as MS Windows WAV and the Apple/SGI
     AIFF format)
@@ -132,7 +132,7 @@ libfishsound
     {{< iref "#libsamplerate" "libsamplerate" >}} {{< iref "sound_edit#sweep" "sweep" >}}
     {{< iref "streaming#jack" "jack-audio-connection-kit-example-clients" >}}.
 
-[libsamplerate](http://www.mega-nerd.com/SRC/))<a name="libsamplerate"></a>
+<a name="libsamplerate"></a>[libsamplerate](http://www.mega-nerd.com/SRC/))
 :   Secret Rabbit Code (aka libsamplerate) is a Sample Rate
     Converter for audio.
 :   refs: [sndfile-resample(1)
