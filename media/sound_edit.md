@@ -65,7 +65,7 @@ Mp3Wrap
     ](http://manpages.debian.org/cgi-bin/man.cgi?query=mp3splt(1))
 
 
-Vorbis tools <a name="vorbistools"></a>
+<a name="vorbistools"></a>Vorbis tools
 :   The {{< iref "codecs#ogg_vorbis" "vorbis" >}} package contains
     runtime libraries for use in programs that support Ogg Vorbis, as
     well as an encoder `oggenc`, a decoder `oggdec`, a tool to split
@@ -91,7 +91,7 @@ Vorbis tools <a name="vorbistools"></a>
     ](http://manpages.debian.org/cgi-bin/man.cgi?query=vorbiscomment(1))
     .
 
-ogmtools  <a name="ogmtools"></a>
+<a name="ogmtools"></a>ogmtools
 :   These tools allow information about (ogminfo) or extraction
     from (ogmdemux) or creation of (ogmmerge) OGG media streams. Note
     that OGM is used for "OGG media streams" .They can be used for
@@ -110,7 +110,7 @@ ogmtools  <a name="ogmtools"></a>
     ](http://manpages.debian.org/cgi-bin/man.cgi?query=ogmsplit(1))
     .
 
-FLAC  <a name="flac"></a>
+ <a name="flac"></a>FLAC
 :   FLAC stands for Free Lossless Audio Codec. The FLAC project
     consists of the stream format, reference encoders and decoders in
     library form, flac, a command-line program to encode and decode
@@ -126,11 +126,11 @@ FLAC  <a name="flac"></a>
     ](http://manpages.debian.org/cgi-bin/man.cgi?query=metaflac(1))
 
 
-[Speex](http://www.speex.org/)  <a name="speex"></a>
+<a name="speex"></a>[Speex](http://www.speex.org/)
 :   Speex is a patent-free audio codec designed especially for
     voice.
 
-:   See also {{< iref "178#item_libfishsound" "libfishsound" >}} for a
+:   See also {{< iref "sound_libs#libfishsound" "libfishsound" >}} for a
     programming interface
 
 :   refs:[speex.org](http://www.speex.org/),
@@ -222,7 +222,7 @@ faad2
 
 # High Level sound editors
 ## Desktop editors
-[audacity](http://audacity.sourceforge.net/)<a name="audacity"></a>
+<a name="audacity"></a>[audacity](http://audacity.sourceforge.net/)
 :   {{< wp "Audacity" >}} (GPL) is a free audio editor. You can record sounds, play
     sounds, import and export wav, aiff, Vorbis, and MP3 files, mix
     tracks together, or apply effects to your recordings. It also has a
@@ -249,22 +249,22 @@ faad2
     [LibriVox Wiki](http://wiki.librivox.org/index.php/Main_Page)
     on [Noise Cleaning](http://wiki.librivox.org/index.php/Noise_Cleaning)
 
-[Ardour](http://ardour.org/)<a name="ardour">
+<a name="ardour">[Ardour](http://ardour.org/)
 :   {{< wp "Ardour" >}} (GPL) is a powerful multitrack Hard-Disk Recording system by
     Paul Davis and others. It supports
-    {{< iref "178" "LADSPA" >}} audio filter
+    {{< iref "sound_libs#ladspa" "LADSPA" >}} audio filter
     plugins.
 :   [Ardour sourceforge page](http://ardour.sourceforge.net),
     [LAU doc on ardour](http://www.djcj.org/LAU/ardour).
 
-__Ceres__ <a name="ceres"></a> (BSD like license)
+ <a name="ceres"></a> __Ceres__(BSD like license)
 :   _Ceres_  is a spectral domain editor for audio files.
     Ceres is originally developed by Oyvind Hammer, and later
     by Kjetil S. Matheussen ([Ceres3](http://www.music.lumbia.edu/%7Estanko/About_Ceres3.html)).
     [Ceres4](https://github.com/jeremysalwen/Ceres4) from Jeremy Salwen
     currently consists of Ceres ported to the gtk2 platform.
 
-[dir2ogg](http://jak-linux.org/projects/dir2ogg/) (GPL) <a name="dir2ogg">
+ <a name="dir2ogg">[dir2ogg](http://jak-linux.org/projects/dir2ogg/) (GPL)
 :   _dir2ogg_ is a python script which converts mp3, m4a, wma,
     and wav files into ogg-vorbis format. It uses _mplayer_, _mpg123_
     or _lame_, _faad_, _flac_, _mpcdec_, _cdparanoia_ or _cedax_ or
@@ -275,10 +275,10 @@ __Ceres__ <a name="ceres"></a> (BSD like license)
 :   [ecasound (__Home__)](http://nosignal.fi/ecasound/)
     (GPL) is a sound processing application designed for basic
     effect processing, mixing, multitrack recording and signal
-    recycling. It supports OSS and {{< iref "177" "ALSA" >}} sound drivers,
+    recycling. It supports OSS and {{< iref "sound_libs#alsa" "ALSA" >}} sound drivers,
     wav, mp3, aiff, cdda, au, snd, raw and standard file streams
 
-[gnac](http://gnac.sourceforge.net/) (GPL) <a name="gnac">
+<a name="gnac">[gnac](http://gnac.sourceforge.net/) (GPL)
 :   _Gnac_ is an audio conversion program for GTK3 using Gstreamer,
     like {{< iref "video_edit#oggconvert" "OggConvert" >}}
     and {{< iref "#soundconverter" "SoundConverter" >}}.
@@ -307,15 +307,15 @@ __Ceres__ <a name="ceres"></a> (BSD like license)
 :   __PiTivi__ (LGPL) is an audio/video editing software written
     in python CTK+ that uses the gstreamer framework.
 
-[Rezound](http://rezound.sourceforge.net)<a name="rezound"></a>
+<a name="rezound"></a>[Rezound](http://rezound.sourceforge.net)
 :   {{< wp "ReZound" >}} (GPL) is a graphical audio file editor. It supports
-    {{< iref "178" "LADSPA" >}} audio filter
+    {{< iref "sound_libs#ladspa" "LADSPA" >}} audio filter
     plugins. It can use the formats: wave, aiff/aiff/-c, next
     berkeley/ircam/carl, raw, ogg vorbis, mpeg layer 3,2,1, flac, midi
     sample dump. It interfaces with OSS, portaudio, JACK.
     The software has only maintenance releases since long time.
 
-[SoundConverter](http://soundconverter.org/) (GPL) <a name="soundconverter">
+<a name="soundconverter">[SoundConverter](http://soundconverter.org/) (GPL)
 :   SoundConverter is a sound converter to ogg/vorbis for Gnome
     using gstreamer, it is similar to
     {{< iref "#gnac" "gnac" >}} and {{< iref "video_edit#oggconvert" "OggConvert" >}},
@@ -330,7 +330,7 @@ __Ceres__ <a name="ceres"></a> (BSD like license)
     M4A, AC3, DTS, ALAC, MPC, Shorten, APE, SID, etc...), and writes
     WAV, FLAC, MP3, and Ogg Vorbis files.
 
-[Snd](https://ccrma.stanford.edu/software/snd/)<a name="snd"></a>
+<a name="snd"></a>[Snd](https://ccrma.stanford.edu/software/snd/)
 :   __Snd__  (Artistic License) is a sound editor. It can accommodate any number of sounds
     each with any number of channels, and can be customized and
     extended using either Guile or Ruby.
@@ -347,7 +347,7 @@ __Ceres__ <a name="ceres"></a> (BSD like license)
 
         SNDLIB_ALSA_DEVICE="usb-audio" snd
 
-[SoX](http://sox.sourceforge.net)<a name="sox"></a>
+<a name="sox"></a>[SoX](http://sox.sourceforge.net)
 :   {{< wp "SoX" >}} _Sound eXchange_ (GPL) is a sound file format converter SoX can
     convert between many different digitized sound formats and perform
     simple sound manipulation functions, including sound effects.
@@ -366,19 +366,19 @@ __Ceres__ <a name="ceres"></a> (BSD like license)
         ](http://sox.sourceforge.net/Docs/Scripts)
 
 
-[Sweep](http://www.metadecks.org/software/sweep/)<a name="sweep"></a>
+<a name="sweep"></a>[Sweep](http://www.metadecks.org/software/sweep/)
 :   {{< wp "Sweep_(software)"  "Sweep" >}} (GPL) is an editor for sound samples.
     It operates on `.wav`, `.aiff` and `.au` formats, and has
     multiple undo/redo levels and filters. It supports
-    {{< iref "178#ladspa" "LADSPA" >}} audio filter
+    {{< iref "sound_libs#ladspa" "LADSPA" >}} audio filter
     plugins.<br />
-    The last release was in 2008.
+   _The last release was in 2008, but it is still in Debian._
 :   refs: [sweep(1)
     ](http://manpages.debian.org/cgi-bin/man.cgi?query=sweep%281%29),
     [using sweep tutorial](http://www.metadecks.org/software/sweep/tutorials/using_sweep/)
 
-[X Convert File Audio - XCFA](http://www.xcfa.tuxfamily.org/static2/xcfa) (GPL)
-:   <a name="xcfa"></a> XCFA is a tool to extract the content of
+ <a name="xcfa"></a>[X Convert File Audio - XCFA](http://www.xcfa.tuxfamily.org/static2/xcfa) (GPL)
+:   XCFA is a tool to extract the content of
     Audio-CDs and convert musical audio files conversion to FLAC, WAV,
     OGG, M4A, MPC, MP3, WavPack, ... _Xcfa_ uses _libasound2_,
     _cdparanoia_, _icedax_ and a choice among many tools to perform
@@ -489,7 +489,8 @@ and [Mp3Wrap](http://mp3wrap.sourceforge.net/)
 [Espeak](http://espeak.sourceforge.net/) (GPL)
 :   Espeak is a compact open source software speech synthesizer written in C++.
 
-    -   Espeak can be used as a [front-end to Mbrola](http://espeak.sourceforge.net/mbrola.html)
+    -   Espeak can be used as a
+        [front-end to Mbrola](http://espeak.sourceforge.net/mbrola.html)
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
