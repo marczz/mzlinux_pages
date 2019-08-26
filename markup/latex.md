@@ -352,7 +352,7 @@ with pdflatex, dvips and LyX.
 -   [Beamer development home](https://bitbucket.org/rivanvx/beamer/wiki/Home)
 -   You can [write Beamer presentations
     ](http://orgmode.org/worg/exporters/beamer/tutorial.html)
-    in {{< iref "org" "org-mode" >}}
+    in {{< iref "org-mode" "org-mode" >}}
 
 
 <!-- Local Variables: -->
