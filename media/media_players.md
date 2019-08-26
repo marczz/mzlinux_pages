@@ -728,7 +728,7 @@ playing music  and managing playlists.
     with the flac plugin, .pls, .rss, playlist from SoundCloud,  XSPF
     playlists.
 -   Mpd can output to alsa, or Jack and can send
-    it's output thru network by using the {{< iref "sound_lib#item_libao" "libao" >}}
+    it's output thru network by using the {{< iref "sound_libs#libao" "libao" >}}
     and {{< iref "streaming#item_esound" "esound" >}} or
     {{< iref "streaming#pulseaudio" "use PulseAudio" >}}.
     The choice is down by setting
@@ -766,7 +766,7 @@ playing music  and managing playlists.
 -   xmms2 team has published a
     [comparison of xmms2 and mpd
     ](https://xmms2.org/wiki/XMMS2_vs_MPD),
-    may be slightly biased in favor of {{< iref "181#xmms2" "xmms2" >}},
+    may be slightly biased in favor of {{< iref "#xmms2" "xmms2" >}},
     it omits that _mpd_ is
     lighter in memory and cpu than xmms2, and also that if the client
     development effort of {{< iref "#xmms2" "xmms2" >}}
