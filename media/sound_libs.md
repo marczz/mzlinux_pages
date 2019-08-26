@@ -79,7 +79,7 @@ title: Sound and Video Processing Libraries
     Frequencies, as well as the so-called MPEG 2.5 format. All three
     audio layers (Layer I, Layer II, and Layer III a.k.a. MP3) are
     fully implemented.
-    {{< iref "sound_players#madplay" "madplay" >}}
+    {{< iref "media_players#madplay" "madplay" >}}
     is a command line front-end to libmad.
 
     The [Mad home page](http://www.underbit.com/products/mad/) cite
