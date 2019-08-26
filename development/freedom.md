@@ -6,9 +6,6 @@ title: Freedom of information
 
 -----------------
 
-
-
-
 # Freedom of Software
 
 -   Wikipedia: {{< wp "Internet privacy" >}}, {{< wp "Freedom of information" >}},
@@ -18,8 +15,6 @@ title: Freedom of information
     [Philosophy of the GNU Project](http://www.gnu.org/philosophy/philosophy.html)
     page is a good start point, to help us to choose between
     [freedom or power](http://www.gnu.org/philosophy/freedom-or-power.html)
--   You can also find some links in my french page
-    {{< iref "225" "Liberté, égalité, fraternité: Le logiciel" >}}
 -   A recent essay on this question is
     [Toward a new self-definition for open source
     ](http://blog.ianbicking.org/2009/09/10/a-new-self-definition-for-foss/)
