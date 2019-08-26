@@ -410,7 +410,7 @@ The gvfs section is now in my
 -   [ArchWiki: MTP](https://wiki.archlinux.org/index.php/MTP)
 
 #  Kernel filesystems
-## Procfs
+## Procfs {#procfs}
 
 -   [Procfs](http://en.wikipedia.org/wiki/Procfs) is a pseudo file
     system used to access process information from the kernel. Linux
@@ -433,7 +433,7 @@ The gvfs section is now in my
 -   The man page {{< man "proc(5)" >}}
     and {{< man "procinfo(8)" >}}
 
-### proc/sys
+### proc/sys {#sysctl}
 
 A very interesting part of /proc is
 [directory /proc/sys](http://www.linuxinsight.com/proc_sys_hierarchy.html)
