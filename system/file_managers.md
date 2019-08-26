@@ -158,7 +158,6 @@ title: File Managers
 
 # Web File managers
 
--   {{< iref "raspberry#shellinabox" "shellinbox section" >}}
 -   [elfinder](http://elfinder.org/) (BSD License)
     elFinder is a file manager for web, written in JavaScript using jQuery UI.
     It can create and extract archives. A QuickLook function allows to preview
