@@ -705,6 +705,12 @@ graphs, and _neato_ for drawing undirected graphs.
     sharing your pictures online. Pictures are organized hierarchically in folders and
     sub-folders.
 
+# Image Recovery
+
+-   [PhotoRec - Digital Picture and File Recovery
+    ](https://www.cgsecurity.org/wiki/PhotoRec),
+    [Digital Photos Recovery Using PhotoRec - CGSecurity
+    ](https://www.cgsecurity.org/wiki/Digital_Photos_Recovery_Using_PhotoRec)
 <!-- Local Variables: -->
 <!-- mode: markdown -->
 <!-- ispell-local-dictionary: "english" -->
