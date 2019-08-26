@@ -125,12 +125,11 @@ OpenVPN needs a configuration of the tunnel but it must come also with
 a configuration of the firewall
 
 
-## Configuring OpenVpn with shorewall
+## Configuring OpenVpn with shorewall {#openvpn_with_shorewall}
 
 The process of configuring ShoreWall for OpenVPN is very well described
-in the [OpenVPN page of shorewall
-documentation](http://www.shorewall.net/OPENVPN.html). I just extract
-some key points
+in the [OpenVPN page of shorewall documentation](http://www.shorewall.net/OPENVPN.html).
+I just extract some key points
 
 I just give configuration on the left side, supposed to be at internet
 address 206.162.148.9, with gateway local ip 192.168.1.1 serving local
@@ -248,7 +247,8 @@ key configuration.
 
 -   Configure your firewall to accept the traffic from the tunnel, look
     at the open VPN HOWTO to do so, if you use shorewall, I have
-    sketched the process in a {{< iref "101" "OpenVpn with Shorewall     section" >}}
+    sketched the process in an
+    {{< iref "#openvpn_with_shorewall" "OpenVpn with Shorewall section" >}}
 -   Configure the right endpoint in the same way
 -   Test your file with launching by hand:
 
