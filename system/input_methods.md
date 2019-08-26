@@ -273,7 +273,8 @@ input through _uim-fep_, Emacs with _uim.el_.
     ](http://www.maketecheasier.com/setup-virtual-keyboard-linux/)
 
 ##  Tibetan keyboard layout {#tibetan_keyboard}
-See above in the {{< "#tibetan_m17n" "ibus-m17n section" >}}
+
+See above in the {{< iref "#tibetan_m17n" "ibus-m17n section" >}}
 for ibus tibetan input methods.
 
 -   [Tibetan and Himalayan Library (THL) - Tibetan Input System Principles
