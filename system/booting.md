@@ -30,6 +30,9 @@ title: Booting
     -   [OpenIPMI](http://openipmi.sourceforge.net/)
 -    [Archwiki:Unified Extensible Firmware Interface
     ](https://wiki.archlinux.org/index.php/Unified_Extensible_Firmware_Interface)
+-   [CmosPwd](https://www.cgsecurity.org/wiki/CmosPwd) (GPL)
+    is a  password recovery tool, which decrypts password stored in cmos used to access
+    BIOS SETUP.
 
 # Grub
 {{< wp " GNU GRUB" >}} is a Multiboot
