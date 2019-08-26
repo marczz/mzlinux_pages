@@ -6,7 +6,7 @@ title: Structured Text
 
 There are separate pages for
 {{< iref "asciidoc" "AsciiDoc" >}},
-{{< iref "makdown" "MarkDown" >}},
+{{< iref "markdown" "MarkDown" >}},
 {{< iref "rest" "ReSt" >}}.
 
 # References
