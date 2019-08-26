@@ -103,6 +103,10 @@ The [html to pdf converter are in the pdf section
     [CSS2 Reference](http://xhtml.com/en/css/reference/).
 -   The **URIs** are defined in [RFC2396](http://tools.ietf.org/html/rfc2396)
     *URIs include URLs*
+-   [Fundamentals of Web Programming
+    ](https://runestone.academy/runestone/books/published/webfundamentals/index.html)
+    is an interactive course from [Runestone Interactive Books
+    ](https://runestone.academy/runestone/books/).
 
 ## Accessibility and validation
 -   Wikipedia: {{< wp "Web accessibility" >}}, {{< wp "Web Content Accessibility Guidelines" >}}
@@ -152,7 +156,7 @@ allow to export trac content to S5.
       a wiki-style markup.
 -   [s5easy.com](http://www.s5easy.com) is a web site
     that offers on-line S5 slide show creation.
--   The section {{< iref "org" "Slides with Org Mode" >}}
+-   The section {{< iref "org-mode#org-mode_slides" "Slides with Org Mode" >}}
     explain how you can produce with org-mode S5 html slides, or
     html5 presentation.
 -   You can also generate S5 from
@@ -198,7 +202,7 @@ Er  ik Wilde is a xslt 2.0 program to produce *Slidy* xhtml
 pr  esentations.
 
 ### Slidy from lightweight markup language
--   {{< iref "org" "Org Mode" >}} allow to produce Slidy Slides with
+-   {{< iref "org-mode#org-mode_slides" "Org Mode" >}} allow to produce Slidy Slides with
      [org-slidy](https://github.com/dov/org-slidy) by Dov Grobgeld. There is
      an example of
      [Interactive slide shows with R, Org mode , and Slidy
@@ -301,19 +305,19 @@ pr  esentations.
     markdown, or asciidoc.
     - [AsciiDoc-Deck.js](http://houqp.github.com/asciidoc-deckjs/) (GPL)
       by Qingping Hou is a Deck.js backend for
-      {{< iref "269#asciidoc" "asciidoc" >}}.
+      {{< iref "asciidoc" "asciidoc" >}}.
       [AsciiDoc-Deck.js GitHub repository](https://github.com/houqp/asciidoc-deckjs).
     - [markdown2deckjs](https://github.com/ulf/markdown2deckjs)
-      is a {{< iref "425" "markdown" >}} to Deck.js
+      is a {{< iref "markdown" "markdown" >}} to Deck.js
       python translator.
     - [Deck.rb](https://github.com/alexch/deck.rb) and
       [Keydown](https://github.com/infews/keydown) (BSD like license)
       are two ruby tools to produce Deck.js slides from
-      {{< iref "425" "markdown" >}}.
+      {{< iref "markdown" "markdown" >}}.
 -   [asciidoc dzslides backend
     ](https://github.com/mojavelinux/asciidoc-dzslides-backend)
     by Dan Allen _(mojavelinux)_ is a {{< iref "#dzslides" "dzslides" >}} backend for
-    {{< iref "269#asciidoc" "asciidoc" >}}.
+    {{< iref "asciidoc" "asciidoc" >}}.
     Dan Allen give an extensive example in his slides
     [Asciidoc with pleasure
     ](http://mojavelinux.github.com/decks/asciidoc-with-pleasure/).
@@ -331,7 +335,7 @@ pr  esentations.
 -   [pandoc](http://johnmacfarlane.net/pandoc/)
     can produce html5 and dzslides from markdown or restructured text.
     from markdown and (subsets of) reStructuredText, HTML, and LaTeX
--   {{< iref "org" "Slides with Org Mode" >}}
+-   {{< iref "org-mode#org-mode_slides" "Slides with Org Mode" >}}
      explains how you can produce html5 or S5 slides with org-mode.
 -   [remark](https://github.com/gnab/remark) (MIT license)
     is a javascript, in-browser, markdown slideshow.
