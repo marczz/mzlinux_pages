@@ -6,7 +6,7 @@ title: Console Applications
 
 Console applications are also called _terminal applications_
 
-See also {{< iref "command_line" "Unix command Line" >}}
+{{< noteref "command_line" "See also Unix command Line" >}}
 
 ------
 
