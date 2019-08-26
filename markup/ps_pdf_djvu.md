@@ -384,7 +384,7 @@ An other common task is to crop pages to changes margins, see the
     them. flpsed is useful for filling in forms, adding notes
     etc. Flpsed uses the old _fltk_ toolkit. _last stable release 2015_,
     presently minimally maintened.
--   {{< iref "212" "Gimp" >}} can be used to convert pdf
+-   {{< iref "images#gimp" "Gimp" >}} can be used to convert pdf
     before editing as explained in
     [How to Edit PDF Files in Linux Using GIMP
     ](http://www.wikihow.com/Edit-PDF-Files-in-Linux-Using-GIMP)
@@ -751,7 +751,7 @@ An other common task is to crop pages to changes margins, see the
     for describing presentation slides, in pdf slides.
 -   Other graphic editors have pdf editing facilities, often after
     conversion as {{< iref "#item_scribus" "Scribus" >}}, or
-    {{< iref "20" "Inkscape" >}}.
+    {{< iref "images#inkscape" "Inkscape" >}}.
 -   [Search Pypi for pdf](http://pypi.python.org/pypi?%3Aaction=search&term=pdf&submit=search)
 
 ## PDF cropping tools {#pdf_crop}
