@@ -591,7 +591,7 @@ Taken from the [Rygel Wiki - features
     -   [GRILO](https://wiki.gnome.org/Projects/Grilo)
         a framework focused on making media discovery and browsing
         easy, used with Rygel and
-        {{< iref "media_servers#totem" "Totem" >}}.
+        {{< iref "media_players#totem" "Totem" >}}.
 
 -   Export of GStreamer pipelines as media items on the network,
     specified through gst-launch syntax in the user configuration.
