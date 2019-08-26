@@ -426,31 +426,36 @@ The gvfs section is now in my
     proc filesystem.
 -   You find it also in the [Fedora 17 System Administrator's Guide
     ](https://docs.fedoraproject.org/en-US/Fedora/17/html/System_Administrators_Guide/index.html)
-    in html but also available in epaub or pdf
+    in html but also available in epub or pdf
     as
     [The /proc filesystem documentation
     ](https://docs.fedoraproject.org/en-US/Fedora/17/html/System_Administrators_Guide/ch-proc.html)
 -   The man page {{< man "proc(5)" >}}
     and {{< man "procinfo(8)" >}}
 
--   A very interesting part of /proc is
-    [directory /proc/sys](http://www.linuxinsight.com/proc_sys_hierarchy.html)
-    that allows you to see and to change parameters within the kernel.
-    It is also partially documented in the
-    [kernel syctl documentation
-    ](http://www.kernel.org/doc/Documentation/sysctl/).<br />
+### proc/sys
 
-    You find it also in the previous redhat or fedora guides as
-    [ /proc/sys/ section
-    ](https://docs.fedoraproject.org/en-US/Fedora/17/html/System_Administrators_Guide/s2-proc-dir-sys.html)
+A very interesting part of /proc is
+[directory /proc/sys](http://www.linuxinsight.com/proc_sys_hierarchy.html)
+that allows you to see and to change parameters within the kernel.
+It is also partially documented in the
+[kernel syctl documentation
+](http://www.kernel.org/doc/Documentation/sysctl/).<br />
 
-    You can use it directly as a
-    pseudo file system or thru the {{< man "sysctl(8)" >}} utility
-    and {{< man "sysctl.conf(5)" >}} .
+You find it also in the previous redhat or fedora guides as
+[ /proc/sys/ section
+](https://docs.fedoraproject.org/en-US/Fedora/17/html/System_Administrators_Guide/s2-proc-dir-sys.html)
+
+You can use it directly as a
+pseudo file system or thru the {{< man "sysctl(8)" >}} utility
+and {{< man "sysctl.conf(5)" >}} .
+
 -   [ArchWiki: Sysctl](https://wiki.archlinux.org/index.php/Sysctl)
--   `/proc/sys/net/ipv4` is for the network configuration it is documented
-    in the
-    [Kernel file ip-sysctl](https://www.kernel.org/doc/Documentation/networking/ip-sysctl.txt)
+-   `/proc/sys/net/ipv4` is for the network configuration it is documented in
+    [ip-sysctl.txt](https://www.kernel.org/doc/Documentation/networking/ip-sysctl.txt)
+-   [sysctl/vm.txt](https://www.kernel.org/doc/Documentation/sysctl/vm.txt)
+    /proc/sys/vm is used to tune the operation of the virtual memory (VM) subsystem of
+    the Linux kernel and the writeout of dirty data to disk.
 
 ## Sysfs
 
