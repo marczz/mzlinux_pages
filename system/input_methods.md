@@ -200,7 +200,6 @@ System. It predates IBus, SCIM, uim and IIIMF.
         -   [How to Create a Custom Input Method Editor in Linux
             ](http://www.studymongolian.net/technical/how-to-create-linux-input-method-editor/)
             creates a table method for Mongolian IPA.
-    -   See the page {{< iref "ibus_table_latex" "ibus-table LaTeX" >}}
     -   An other multipurpose method is _table compose_ that input
         special letter by compose letter and diacritical mark.
     -   There is also Emoji and IPA-X-SAMPA.
@@ -215,6 +214,8 @@ choose one with with left mouse click or using the left and right keys
 
  *Use system keyboard layout* remaps input methods to match (some)
 non-US-English keyboard layouts.
+
+{{< noteref "ibus_table_latex" "See also the memo ibus-table LaTeX" >}}
 
 # UIM
 UIM _universal input method_ is an input method framework that uses
