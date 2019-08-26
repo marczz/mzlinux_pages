@@ -31,7 +31,7 @@ title: Mail
 
 # Mail User Agents
 
-My {{< iref "mutt" "Mutt page" >}}
+My {{< noteref ref "mutt" "Mutt page" >}}
 
 -   Wikipedia: {{< wp "Comparison of e-mail clients" >}} and {{< wp "Webmail" >}},
     {{< wp "Mixmaster anonymous remailer" >}}
