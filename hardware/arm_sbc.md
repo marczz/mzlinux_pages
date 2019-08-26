@@ -256,7 +256,7 @@ H2, H3, H8 are {{< wp " Cortex-A7" >}} ArmV7 SoCs and  AllWinner
 
 ## Kodi on RaspBerry
 
-{{< iref "mediaplayers#kodi" "Kodi" >}}
+{{< iref "media_players#kodi" "Kodi" >}}
 [run on Raspberry](https://kodi.wiki/index.php?title=Raspberry_Pi)
 either with a choice of specific distributions, like the minimal
 [Xbian](http://wiki.xbmc.org/index.php?title=XBian),[osmc](https://osmc.tv/),
