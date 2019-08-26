@@ -14,7 +14,7 @@ readable text-based encoding of data.
 The {{< iref "structured_text" "Structured Text Section" >}}
 has separate pages for
 {{< iref "asciidoc" "AsciiDoc" >}},
-{{< iref "makdown" "MarkDown" >}},
+{{< iref "markdown" "MarkDown" >}},
 {{< iref "rest" "ReSt" >}}.
 
 The second category includes
