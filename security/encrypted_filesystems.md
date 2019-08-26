@@ -101,7 +101,7 @@ And also other reference on encryption:
 # Encfs {#encfs}
 
 As encfs is built on the top of Fuse look also at the
-{{< iref "virtualFS" "Fuse section" >}}
+{{< iref "filesystems#fuse" "Fuse section" >}}
 
 -   [EncFS Encrypted Filesystem](https://vgough.github.io/encfs/)(GPL) uses
     the FUSE library and Linux kernel module to provide the filesystem
