@@ -662,8 +662,6 @@ the Git Wiki [list also the Web interfaces
     is a bash script to provide transparent encryption of sensitive
     files stored in a git directory. Sensitive files are recognized by
     a  `.gitattributes` filter pattern.
-
-# a Git repository. It utilizes OpenSSL's symmetric cipher
 -   [Keyringer](https://keyringer.pw/) (GPL)
     lets you manage and share secrets using GnuPG and Git in
     a distributed fashion. It has custom commands to encrypt, decrypt
