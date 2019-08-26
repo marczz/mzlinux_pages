@@ -6,7 +6,7 @@ title: Javascript
 
 # References
 
--   See also {{< iref "yaml" "Yaml/Json" >}}
+-   See also {{< iref "data_exchange#yaml" "Yaml/Json" >}}
 
 -   Wikipedia: {{< wp "Ecmascript" >}},
     {{< wp "JavaScript" >}},
@@ -55,6 +55,7 @@ ES2017.
     ](https://tc39.github.io/ecma262/)
 -   [ECMAScript 6 — New Features: Overview & Comparison
     ](http://es6-features.org/)
+-   [w3schools.com JavaScript index](http://www.w3schools.com/js/default.asp)
 -   [developer.mozilla.org](http://developer.mozilla.org/):
     [About JavaScript](http://developer.mozilla.org/en/docs/About_JavaScript)
     includes JavaScript resources, complemented by
@@ -62,22 +63,36 @@ ES2017.
     ](http://developer.mozilla.org/en/docs/JavaScript_Language_Resources)
     and the
     [Javascript main page](https://developer.mozilla.org/En/JavaScript).
-    It hosts also the
     [Core JavaScript Reference](https://developer.mozilla.org/en/JavaScript/Reference),
     [Core JavaScript Guide](https://developer.mozilla.org/en/JavaScript/Guide),
     and a
     [re-introduction to JavaScript
     ](https://developer.mozilla.org/en/A_re-introduction_to_JavaScript).
+-   [State Of JavaScript](http://stateofjs.com/) a survey  of current
+    state of  JavaScript Flavors, front-end frameworks, full-stack
+    frameworks, testing frameworks, state management, CSS Tools, build
+    tools, mobile frameworks.
+
+#  Javascript Guides and Tutorials
 -   [Essential Javascript
     ](http://www.hunlock.com/blogs/Essential_Javascript_--_A_Javascript_Tutorial )
     is a javascript tutorial by Patrick Hunlock who offers many
     javascript howtos on his
     [blog](http://www.hunlock.com/blogs/).
--   [w3schools.com JavaScript index](http://www.w3schools.com/js/default.asp)
 -   [developper tutorials](http://www.developertutorials.com/):
     [Javascript tutorials](http://www.developertutorials.com/tutorials/javascript/)
 -   Opera [Javascript section of Web Standards Curriculum
     ](http://dev.opera.com/articles/view/programming-the-real-basics/)
+-   [Javascript References and Tutorials
+    ](http://www.hunlock.com/) by Patrick Hunlock.
+-   The [Javascript chapter
+    ](https://runestone.academy/runestone/books/published/webfundamentals/Javascript/toctree.html)
+    of [Fundamentals of Web Programming
+    ](https://runestone.academy/runestone/books/published/webfundamentals/index.html)
+    and [JavaScript for Python Programmers
+    ](https://runestone.academy/runestone/books/published/JS4Python/index.html)
+    are interactive courses from [Runestone Interactive Books
+    ](https://runestone.academy/runestone/books/).
 -   Douglas Crockford has written a couple of article very usefull to
     better understand the (lack of) design of javascript and its
     limitations:
@@ -99,22 +114,8 @@ ES2017.
     for learning Javascript he recommands _JavaScript: The Definitive
     Guide_ by   David Flanagan _6th edition 2011_.
     and the {{< iref "#jslint" "JSLint Home" >}} (see below).
--   [State Of JavaScript](http://stateofjs.com/) a survey  of current
-    state of  JavaScript Flavors, front-end frameworks, full-stack
-    frameworks, testing frameworks, state management, CSS Tools, build
-    tools, mobile frameworks.
 -   {{< wp "JSDoc" >}} _(wikipedia)_ is a {{< wp "Javadoc" >}} simile for Javascript.
--   [Editing JavaScript in Emacs
-    ](http://edward.oconnor.cx/2005/09/editing-javascript-in-emacs)
-    by [Edward 0'Connor](http://edward.oconnor.cx)
-    being written in 2005 it does not mention the new packages.
-    You find them in
-    [EmacsWiki: JavaScriptMode](http://www.emacswiki.org/emacs/JavaScriptMode).
-    The javascript mode from Karl Landstrom, enhanced by Daniel
-    Colascione, _also known as expresso_ is available in emacs > 23.2
-    as __js.el__.
--   [Javascript References and Tutorials
-    ](http://www.hunlock.com/) by Patrick Hunlock.
+
 
 ## Ajax
 
@@ -165,7 +166,15 @@ ES2017.
     ](https://github.com/bard/mozrepl/wiki/emacs-integration/)
 -   [CodeMirror](.https://github.com/marijnh/CodeMirror)
     is a  text editor implemented in JavaScript for the browser
-
+-   [Editing JavaScript in Emacs
+    ](http://edward.oconnor.cx/2005/09/editing-javascript-in-emacs)
+    by [Edward 0'Connor](http://edward.oconnor.cx)
+    being written in 2005 it does not mention the new packages.
+    You find them in
+    [EmacsWiki: JavaScriptMode](http://www.emacswiki.org/emacs/JavaScriptMode).
+    The javascript mode from Karl Landstrom, enhanced by Daniel
+    Colascione, _also known as expresso_ is available in emacs > 23.2
+    as __js.el__.
 ## Other web scripting languages
 
 -   {{< wp "CoffeeScript" >}} is a programming language  inspired by Ruby, Python and Haskell
