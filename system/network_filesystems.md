@@ -48,7 +48,7 @@ See also the companion pages on
 
 # NFS {#nfs}
 The references to use of a disc-less Linux workstation with root
-filesystems via NFS. are in the {{< iref "61" "Dhcp protocol section" >}}.
+filesystems via NFS. are in the {{< iref "IP#dhcp" "Dhcp protocol section" >}}.
 
 -   Wikipedia: {{< wp "Network File System" >}}
     gives the history of the different versions of NFS.
