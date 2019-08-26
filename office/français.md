@@ -27,7 +27,7 @@ title: Français
 
 # Grammaire, orthographe et conjugaison
 
-Pour la conjugaison on peut utiliser les {{< iref "299" "dictionnaires" >}}
+Pour la conjugaison on peut utiliser les {{< iref "#dictionnaires" "dictionnaires" >}}
 
 -   [Le Devoir conjugal](http://www.pomme.ualberta.ca/devoir/) de Martin Beaudoin
     permet d'obtenir la conjugaison de plus de 7400 verbes français.
@@ -59,7 +59,7 @@ Pour la conjugaison on peut utiliser les {{< iref "299" "dictionnaires" >}}
 -   Wikipédia: [Typographie](http://fr.wikipedia.org/wiki/Typographie), [Ponctuation](http://fr.wikipedia.org/wiki/Ponctuation)
 -   [CUY](http://www.cuy.be/): [Conseils de typographie ou d'orthotypographie](http://www.cuy.be/orthotypo/orthotypo0.htm)
 
-# Dictionnaires
+# Dictionnaires {#dictionnaires}
 
 
 ## Recherche depuis cette page
