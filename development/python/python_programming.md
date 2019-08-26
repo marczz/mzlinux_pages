@@ -373,7 +373,7 @@ since 2007.
 The library [PyContracts](https://pypi.python.org/pypi/PyContracts)
 is a more recent attempt using decorators to implement contracts in Python.
 
-## {{< wp "Design Patterns" >}} in Python
+## {{< wp "Design Patterns" >}} in Python {#python_design_patterns}
 -   [Thinking in Python](http://www.mindview.net/Books/TIPython/)
     by Bruce Eckel is a book focused on design patterns in Python,
     available on-line at
