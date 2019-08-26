@@ -52,10 +52,10 @@ Most Unix _dav_ clients (_cadaver_, _fusedav_,davfs2) and pieces of
 software that provide a direct _dav_ access, are based on the
 [neon library](http://www.webdav.org/neon/doc/html/) (GPL), including
 the
-{{< iref "filesystem#gvfs" "gvfs" >}} _webdav access_ is based on
-{{< iref "filesystem#fuse" "fuse" >}}, since _fusedav_ uses neon.
+{{< iref "filesystems#gvfs" "gvfs" >}} _webdav access_ is based on
+{{< iref "filesystems#fuse" "fuse" >}}, since _fusedav_ uses neon.
 
-{{< iref "filesystem#gvfs" "gvfs" >}} is used by all the _gnome_ stuff
+{{< iref "filesystems#gvfs" "gvfs" >}} is used by all the _gnome_ stuff
 such as _nautilus_, and the [Emacs tramp package
 ](http://www.gnu.org/software/tramp/#GVFS-based-methods)
 
