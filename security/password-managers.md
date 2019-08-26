@@ -8,7 +8,7 @@ title: Password Managers
 
 _See also  {{< iref "authentication" "Authentication" >}},
 {{< iref "security" "Security" >}},
-{{< iref "Network" "Network Security" >}}._
+{{< iref "network" "Network Security" >}}._
 
 A {{< wp "Password_manager"  "Password Manager" >}} holds your passwords in an
 encrypted local database. Some password managers comes under the form
