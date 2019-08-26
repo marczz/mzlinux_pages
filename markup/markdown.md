@@ -12,7 +12,7 @@ title: MarkDown
     haskell, lua. Markdown can be used in many CMS _often through plugins_
     Instiki Wiki (ruby powered wiki), ikiwiki. dokuwiki,
     [Moinmoin](http://moinmo.in/), [WolfCms](http://www.wolfcms.org/),
-    {{< iref  "content-management#gollum" "Gollum" >}}.
+    {{< iref  "content_management#gollum" "Gollum" >}}.
     It is widely used in Django
     powered applications _using the python implementation_.
 
@@ -339,7 +339,7 @@ Using recommonmark you can [use Markdown in Sphinx
 
 ## Haskell
 
-See {{< iref "pandoc" "Pandoc" >}} below.
+See {{< iref "#pandoc" "Pandoc" >}} below.
 
 
 ##  Lua
