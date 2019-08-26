@@ -42,8 +42,8 @@ title: Web Servers
     multiple connections. The events are queued and processed by an
     *event-loop* that multiplexes multiple connections to a single
     flow of execution. This is the model used by {{< iref "lighttpd" "lighttpd" >}}, {{< iref "#nginx" "nginx" >}},
-    the python web server {{< iref "web_frameworks#tornado" "Tornado" >}},
-    {{< iref "web_frameworks#cyclone" "cyclone" >}},
+    the python web server {{< iref "python_web#tornado" "Tornado" >}},
+    {{< iref "python_web#cyclone" "cyclone" >}},
     the emacs server {{< iref "emacs#elnode" "elnode" >}} and many
     new servers.
 
