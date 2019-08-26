@@ -140,7 +140,7 @@ My {{< iref "mutt" "Mutt page" >}}
 -   [mu](https://github.com/djcb/mu) (GPL)
     is a {{< wp "maildir" >}} indexer/searcher, it also includes the emacs client
     {{< iref "#mu4e" "mu4e" >}}, and can also be used with
-    {{< iref "126" "mutt" >}} or _WanderLust_.
+    {{< iref "mutt" "Mutt" >}} or _WanderLust_.
     _mu_ is available in Debian/Ubuntu under the name _maildir-utils_.
 
 # Mail filtering
@@ -175,11 +175,13 @@ My {{< iref "mutt" "Mutt page" >}}
 # Mail Notification
 We can use a system notification monitor to get mail notification,
 references are given in the
-{{< iref "417" "monitoring section" >}} for
-{{< iref "417" "dzen" >}},
-{{< iref "417" "i3bar" >}},
-{{< iref "417" "conky" >}},
-{{< iref "417" "gkrellm" >}}.
+{{< iref "monitoring" "Monitoring section" >}} for
+{{< iref "monitoring#conky" "conky" >}},
+{{< iref "monitoring#gkrellm" "gkrellm" >}};
+and in {{< iref "desktop" "Desktop section" >}} for
+{{< iref "desktop#i3_wm" "i3bar or i3blocks" >}},
+{{< iref "desktop#dzen" "dzen" >}}.
+
 These tools can be a good choice if you want to have a light mail
 notification daemon as the are weighting only
 1.5M for dzen2, 4M for conky, 20M for gkrellm.
