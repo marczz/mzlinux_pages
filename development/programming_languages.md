@@ -261,6 +261,9 @@ and comparable to C cf. [The  benchmarks game](http://shootout.alioth.debian.org
 -   [comp.lang.c Frequently Asked Questions](http://c-faq.com/)
     and Peter Seebach's
     [infrequently asked questions](http://www.seebs.net/faqs/c-iaq.html).
+-   [C cheatsheet — csheeet](http://www.csheeet.com/en/latest/)
+    built in Sphinx from the
+    [Source on GitHub](https://github.com/crazyguitar/csheeet).
 -   [Splint](http://splint.org/) (GPL) is a tool for
     statically checking C programs for security vulnerabilities and
     coding mistakes.
@@ -283,7 +286,6 @@ and comparable to C cf. [The  benchmarks game](http://shootout.alioth.debian.org
 ## C coding standards
 -   Chris Lott's [List of C and C++ Style Guides
     ](http://www.maultech.com/chrislott/resources/cstyle/)
-
 -   [GNU Coding Standards](http://www.gnu.org/prep/standards/standards.html)
 -   Original *Indian Hill C Style and Coding Standards* with
     annotations by H. Spencer:
