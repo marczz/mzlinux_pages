@@ -23,10 +23,22 @@ An important part of security is {{< iref "network_security" "Network security" 
     ](https://engineering.purdue.edu/kak/compsec/Lectures.html)
      a set of lectures by Avinash Kak with Python and Perl exercises.
 -   [Security Engineering](http://www.cl.cam.ac.uk/~rja14/book.html)
-    _2nd edition 2008_
-    an online book by Bruce Schneier.
+    _2nd edition 2008_ an online book by Bruce Schneier. The third edition is from 2020.
 -   [linuxsecurity.com](http://linuxsecurity.com/),
     [linuxsecurity ressources](http://www.linuxsecurity.com/content/view/101892/155/)
+-   The {{< wp "Security Content Automation Protocol" >}} (SCAP) is a method for using
+    specific standards to enable automated vulnerability management, measurement, and
+    policy compliance evaluation of systems deployed in an organization, including
+    e.g. for U.S. FISMA compliance.
+    -   [Security Content Automation Protocol HOME
+        ](https://csrc.nist.gov/projects/security-content-automation-protocol/)
+
+-   [The practical Linux hardening guide
+    ](https://github.com/trimstray/the-practical-linux-hardening-guide)
+    This guide on GitHub details creating a secure Linux production system.
+    It can be read [on the wiki
+    ](https://github.com/trimstray/the-practical-linux-hardening-guide/wiki).
+    It is part of the [OpenSCAP portal](https://www.open-scap.org/).
 
 
 ## References en Français
