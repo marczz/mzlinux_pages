@@ -25,6 +25,15 @@ this site for php-fpm and python.
 
 Each php-fpm pool process is from 16M/9M to  51M/30M.
 
+# References
+
+-   [Nginx Home](http://nginx.org/)
+-   [Nginx admins handbook](https://github.com/trimstray/nginx-admins-handbook)
+    is an handbook in a GitHub repository. It contains a
+    [list of resources
+    ](https://github.com/trimstray/nginx-admins-handbook#external-resources).
+
+
 # Debian packages
 ## _nginx-light_
 contains:
@@ -70,20 +79,26 @@ Third party modules
 # Configuration
 -   [nginx documentation](http://nginx.org/en/docs/)
     include documentaition on each module.
--   [Nginx Wiki]((https://www.nginx.com/resources/wiki/) -
+-   [Nginx Wiki](https://www.nginx.com/resources/wiki/) -
     [Configuration index
     ](ttps://www.nginx.com/resources/wiki/start/)
--   For Nginx configuration look at
-    [Nginx and php-fpm for performance
-    ](http://jeremymarc.github.io/2013/04/22/nginx-and-php-fpm-for-performance/)
+-   [nginxconfig.io](https://nginxconfig.io/) is an config generator for nginx.
+    The source is [GitHub - digitalocean/nginxconfig.io
+    ](https://github.com/digitalocean/nginxconfig.io).
+
+# Configuration for PHP-FPM
+-   [Optimizing PHP-FPM for High Performance
+    ](https://geekflare.com/php-fpm-optimization/).
+-   [Nginx and php-fpm for performance
+    ](https://jeremymarc.github.io/2013/04/22/nginx-and-php-fpm-for-performance)
     from which following items are extracted.
--   The global nginx configuration file is located to
-    /etc/nginx/nginx.conf
--   To find the number of worker_processes to allocate use
-    2 * numbers of CPUs if dedicated, else use 1 * numbers of CPU.
--   The worker_processes and worker_connections from the event sections
-    allows you to calculate maxclients value:
-    max_clients = worker_processes * worker_connections / keepalive_timeout.
+    -   The global nginx configuration file is located to
+            /etc/nginx/nginx.conf
+    -   To find the number of worker_processes to allocate use
+        2 * numbers of CPUs if dedicated, else use 1 * numbers of CPU.
+    -   The worker_processes and worker_connections from the event sections
+        allows you to calculate maxclients value:
+        max_clients = worker_processes * worker_connections / keepalive_timeout.
 
 # [Nginx Variables](http://nginx.org/en/docs/varindex.html)
 -   `$request_filename`
@@ -270,14 +285,6 @@ is also available. [SPDY (Wikipedia)
 ](http://en.wikipedia.org/wiki/SPDY) is a  networking protocol that
 reduce http latency by  compression, multiplexing, and prioritization
 so that only one connection per client is required.
-
-# Configuration examples
-The [Nginx Wiki](https://www.nginx.com/resources/wiki/start)
-list many examples for a lot of applications.
-
-Some other links:
--   [Kolab Groupware: HOWTO: Use NGINX as the Web Server
-    ](https://docs.kolab.org/howtos/nginx-webserver.html)
 
 # Webdav
 Webdav is provided with the [ngx_http_dav_module
