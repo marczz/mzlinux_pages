@@ -93,6 +93,7 @@ The site generators are written in various languages:
     {{< iref "#blacksmith" "BlackSmith" >}},
     {{< iref "#codex" "Codex" >}},
     {{< iref "#docsify" "Docsify" >}},
+    {{< iref "#flatdoc" "Flatdoc" >}},
     {{< iref "#hexo" "Hexo" >}},
     {{< iref "#gitbook" "GitBook" >}},
     {{< iref "#punch" "Punch" >}},
@@ -117,6 +118,7 @@ The site generators are written in various languages:
     {{< iref "#chisel" "Chisel" >}},
     {{< iref "#codex" "Codex" >}},
     {{< iref "#elyse" "Elyse" >}},
+    {{< iref "#flatdoc" "Flatdoc" >}},
     {{< iref "#gitbook" "GitBook" >}},
     {{< iref "#gollum-site" "Gollum-Site" >}},
     {{< iref "#hakyll" "Hakyll" >}},
@@ -537,6 +539,11 @@ Switching from Nikola to Hugo:
     -   [gitbook.com](https://www.gitbook.com) is a site offering
         free publication of free open source books, and paid service
         for private books.
+-   <a name="flatdoc>[Flatdoc](http://ricostacruz.com/flatdoc/)
+    by [Rico Sta. Cruz](https://github.com/rstacruz) is a JavaScript program to render
+    Markdown files.
+    -   [GitHub - Flatdoc](https://github.com/rstacruz/flatdoc) _last commit 2015,
+        numerous forks_.
 -   <a name="mkdocs"></a>[MkDocs](http://www.mkdocs.org/)
     is  static site generator in python aimed to project
     documentation. It is used for markdown documentation with Yaml
