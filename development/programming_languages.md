@@ -472,11 +472,13 @@ multithreaded programming.
 
 # {{< wp "Go_(programming_language)"  "Go" >}}
 -   {{< wp "Go_(programming_language)"  "Go" >}} is a compiled, garbage-collected,
-     concurrent programming language developed by Google.
+    concurrent programming language developed by Google.
 -   [Go Home Page](http://golang.org/)
--   [Go Documentation](https://golang.org/doc/)
--   [Awesome Go](https://github.com/avelino/awesome-go/)
+-   [Awesome Go](https://awesome-go.com/)
     list of awesome Go frameworks, libraries and software.
+    [GitHub repository](https://github.com/avelino/awesome-go/)
+-   [Awesome - Go Patterns](http://tmrts.com/go-patterns/)
+    [GitHub repository](https://github.com/tmrts/go-patterns).
 -   [Go for Python Programmers — Go for Python Programmers documentation
     ](https://golang-for-python-programmers.readthedocs.org/en/latest/).
 -   [Go Arm support](https://github.com/golang/go/wiki/GoArm) includes
@@ -498,8 +500,36 @@ multithreaded programming.
     [part II
     ](http://dave.cheney.net/2015/03/03/cross-compilation-just-got-a-whole-lot-better-in-go-1-5)
 -   [GoArm](https://github.com/golang/go/wiki/GoArm)
-    explain compilation of go on arm systems, it gives also a list of
-    linux nas, where go is usable.
+    explain compilation of go on arm systems, it gives also a list of linux nas, where
+    go is usable.
+
+## Go documentation
+-   [Go Home Page](http://golang.org/) has
+    [Go Documentation](https://golang.org/doc/)
+    -   [A Tour of Go](https://tour.golang.org/list) the official tutorial from
+        [The Golang Home](https://golang.org/).
+    -   [How to Write Go Code](https://golang.org/doc/code.html)
+        demonstrates the development of a simple Go package and introduces the go tool.
+    -   [The Go Programming Language Specification](https://golang.org/ref/spec).
+    -   [Effective Go](https://golang.org/doc/effective_go.html)
+        gives tips for writing clear, idiomatic Go code.
+-   [awesome-go: list of tutorials](https://github.com/avelino/awesome-go#tutorials)
+    and [Ebooks](https://github.com/avelino/awesome-go#e-books).
+-   [A list of Golang books](https://github.com/dariubs/GoBooks), some are free.
+-   [Go by Example](https://gobyexample.com/)  introduction to Go using annotated
+    example programs.
+-   [Golang cheat sheet](https://github.com/a8m/golang-cheat-sheet)
+    by  Ariel Mashraki is an overview of Go syntax and features with examples taken from
+    [A Tour of Go](https://tour.golang.org/list). The [GitHub repository
+        ](https://github.com/a8m/golang-cheat-sheet) also contains a reference card in
+    _odt_ and _pdf_.
+-   [Golang CheatSheet](https://cheatsheet.dennyzhang.com/cheatsheet-golang-a4)
+    from [GitHub - DennyZhang Cheat Sheets
+    ](https://github.com/dennyzhang/cheatsheet.dennyzhang.com).
+-   [Go cheatsheet](https://devhints.io/go) from
+    [devints.io](https://devhints.io/).
+-   [Golang Templates Cheatsheet
+    ](https://curtisvermeeren.github.io/2017/09/14/Golang-Templates-Cheatsheet).
 
 # {{< wp "Haskell_(programming_language)"  "Haskell" >}} {#haskell}
 -   [Haskell Home](http://www.haskell.org/)
@@ -510,7 +540,7 @@ multithreaded programming.
 -   [Haskell mode for emacs](http://www.haskell.org/haskellwiki/Emacs)
 -   [Go for Python Programmers](https://golang-for-python-programmers.readthedocs.org/en/latest/)
 -   [List of Go Projects](https://github.com/golang/go/wiki/Projects)
--   [[http://yager.io/programming/go.html][Why Go Is Not Good :: Will Yager]]
+-   [Why Go Is Not Good :: Will Yager](http://yager.io/programming/go.html)
 
 ## Haskell  Tutorials and Manuals:
 -    [Learning Haskell](http://www.haskell.org/haskellwiki/Learning_Haskell)
