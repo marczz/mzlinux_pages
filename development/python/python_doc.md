@@ -63,7 +63,6 @@ See also
     references many python articles.
 -   [Neopythonic](http://neopythonic.blogspot.com/) is the blog of
     [Guido van Rossum](https://www.python.org/~guido/).
--   [A.M. Kuchling](http://www.amk.ca/)'s page.
 -   David Mertz:
     [Charming Python](http://gnosis.cx/publish/tech_index_cp.html),
     [charming python serie](http://www.ibm.com/Search/?q=charming%2Bpython)
@@ -173,6 +172,11 @@ See also
     is an not yet completed book, that
     give Python 3 examples it's
     [source is on GitHub](https://github.com/akuchling/50-examples). _2013_
+
+# Python Cheat Sheets
+-   [Python Cheatsheet — pysheeet](https://www.pythonsheets.com/)
+    a python cheat sheet built with Sphinx from the
+    [source on GitHub](https://github.com/crazyguitar/pysheeet).
 
 # Python implementations
 [Python Wiki: Python Implementations](https://wiki.python.org/moin/PythonImplementations)
