@@ -98,7 +98,26 @@ See also the {{< iref "IP#http" "main HTTP section" >}}
     -   see also [Metalink client feature comparison
         ](https://en.wikipedia.org/wiki/Metalink#Metalink_client_feature_comparison)
 -   {{< iref "#wget" "wget" >}}
-    upports HTTP, HTTPS, and FTP protocols.
+    supports HTTP, HTTPS, and FTP protocols.
+
+# File sharing with android and ios
+
+{{< iref "p2p#p2p_file_sharing" "P2P file sharing software" >}} can be supported in the
+browser or with dedicated application,
+{{< iref "clouds#temporary_storage" "Temporary storage" >}} have usually a web interface
+and sometime an ftp access.
+
+If we want to share files with linux, we can use {{< iref "#ftp" >}}, or sftp with an
+ftp/sftp client on the mobile device.
+
+There are also clients for smb, and webdav.
+
+-   [shareviahttp](https://github.com/marcosdiez/shareviahttp) (BSD Licence)
+    is an application th share files from Android via http.
+    it is available on F-Droid
+
+
+
 
 <!--  Local Variables: -->
 <!--  mode: markdown -->
