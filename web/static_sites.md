@@ -477,17 +477,22 @@ most o them where primary aimed to blogging.
 [Hugo](https://gohugo.io/) is a static site
 generator written in go. It is in Debian. Hugo can be used for documentation.
 
-Themes aimed to Documentation:
+There are many themes aimed to Documentation, you can find many in
+[documentation | Hugo Themes](https://themes.gohugo.io/tags/documentation/).
 
--   [DocDock](https://docdock.netlify.com/original/),
-    [GitHub - docdock](https://github.com/vjeantet/hugo-theme-docdock)
--   [Minimo](https://github.com/MunifTanjim/minimo)
--   [bootie-docs](https://github.com/progrhyme/hugo-theme-bootie-docs).
+I list some of them with a side bar menu, to alow a hierarchical documentation organized
+as a book.
+
 -   [Casper for Hugo](https://github.com/vjeantet/hugo-theme-casper)
     is not aimed to documentation, but is adapted to documentation by
     [BookStackApp](https://github.com/BookStackApp/website).
+-   [hugo-theme-techdoc](https://github.com/thingsym/hugo-theme-techdoc)
 
-
+These also have also a search _usually with lunr_ integrated.
+-   [DocDock](https://docdock.netlify.com/original/),
+    [GitHub - docdock](https://github.com/vjeantet/hugo-theme-docdock)
+-   [hugo-book](https://github.com/alex-shpak/hugo-book)
+-   [docuapi](https://github.com/bep/docuapi) is targeted to API documentation.
 
 Examples of Documentation build with Hugo:
 
