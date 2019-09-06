@@ -230,6 +230,51 @@ the [git Repository
     produces simple manual pages from the ‘--help’ and ‘--version’
     output of a command.
 
+# Linux man pages
+-   [GitHub - mkerrisk/man-pages](https://github.com/mkerrisk/man-pages),
+    source of all linux man pages.
+
+# Cheat sheets
+
+-   <a name="tdlr"></a>The [TLDR pages](https://tldr.sh/) are a community effort to
+    simplify the man pages with practical examples.
+    -   [GitHub - tldr-pages/tldr](https://github.com/tldr-pages/tldr).
+    -   There are [many clients](https://github.com/tldr-pages/tldr/wiki/TLDR-clients)
+        in numerous programming languages, mainly console clients, but also web clients,
+        and android and ios clients.
+-   [bro pages](http://bropages.org/) is a web site with community driven
+    concise examples for command line programs. There is a ruby CLI
+    [bro](https://github.com/hubsmoke/bro).
+-   [GitHub - chubin/cheat.sh](https://github.com/chubin/cheat.sh)
+    is a repository of cheat sheets that can be queried on the command line with curl or
+    with a provided client. It covers 56 programming languages, several DBMSes, and more
+    than 1000 most important UNIX/Linux commands. It has integration with emacs and vim.
+    It can access many big style sheet repositories like {{< iref "#tdlr" "TDLR" >}},
+    chrisallenlane cheat,
+    [learnxinyminutes-docs](https://github.com/adambard/learnxinyminutes-docs),
+    stackoverflow.
+-   [Rico Sta. Cruz](https://github.com/rstacruz) has written
+    more than 380 cheat sheets that you can find on [devhints.io](https://devhints.io/).
+
+    They are written in markdown, with a
+    [complex css style](https://devhints.io/cheatsheet-styles) used in his
+    [sheet publishing system]
+    (https://github.com/rstacruz/cheatsheets/blob/master/CONTRIBUTING.md)
+
+    The [source is on GitHub](https://github.com/rstacruz/cheatsheets).
+-   [DennyZhang CheatSheets
+    ](https://github.com/dennyzhang/cheatsheet.dennyzhang.com)
+    is a collection of Cheat sheets. Some are very rudimentary, and don't give much
+    information.
+-  [GitHub - cheat/cheat](https://github.com/cheat/cheat) by Chris Allen Lane is
+   a python program to create and view interactive cheatsheets on the command-line.
+   -   [Related Projects](https://github.com/cheat/cheat/wiki/Related-Projects)
+       list implementatations in other languages:
+       [lucaswerkmeister/cheats](https://github.com/lucaswerkmeister/cheats) and
+       [jahendrie/cheat](https://github.com/jahendrie/cheat) in bash,
+       [weakish/cheat](https://github.com/weakish/cheat) in sh store the cheat sheets in
+       a git repo, [dufferzafar/cheat](https://github.com/dufferzafar/cheat) in go,
+
 <!--  Local Variables: -->
 <!--  mode: markdown -->
 <!--  ispell-local-dictionary: "english" -->
