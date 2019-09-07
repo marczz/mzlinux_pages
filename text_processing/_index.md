@@ -1,4 +1,7 @@
 ---
 title: Text Processing
 ---
-xs
+
+Text processing pages:
+
+{{< children >}}
