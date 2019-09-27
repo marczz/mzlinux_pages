@@ -454,7 +454,7 @@ with ``git help <concept>`` where concept is one of
     another one _not updated since 2009_.
 -   [FlashBake](https://github.com/commandline/flashbake/wiki)
     is a tool which watches files and automatically checks them in to a git repository.
--   [git-annex](http://git-annex.branchable.com/) by Joey Hess
+-   <a name="git-annex"></a>[git-annex](http://git-annex.branchable.com/) by Joey Hess
     manage files with git, without checking their contents into git.
     -   [GitHub: git-annex](https://github.com/joeyh/git-annex)
     -   [sharebox](https://github.com/chmduquesne/sharebox-fs)
@@ -466,12 +466,37 @@ with ``git help <concept>`` where concept is one of
         ](http://neuro.debian.net/pkgs/git-annex-standalone.html)
         package a very recent version of git-annex.
 -   [Git LFS (large file systems)](https://git-lfs.github.com/)
-    is an alternative to git-annex developped by GitHub and also
-    available on GitLab.
-    -   [Git-lfs repository](https://github.com/github/git-lfs)
-    -   [Storing large binary files in git repositories
-        ](http://blog.deveo.com/storing-large-binary-files-in-git-repositories/)
-        compare the different alternatives.
+    is a git extension for versioning large files developped by GitHub and also
+    available on Bitbucket and GitLab.
+    -   [GitHub Git-lfs repository](https://github.com/github/git-lfs)
+        Every account using Git Large File Storage receives 1 GB of free storage and 1
+        GB a month of free bandwidth.
+
+        You can purchase [additionnal data packs
+        ](https://help.github.com/en/articles/upgrading-git-large-file-storage#purchasing-additional-storage-and-bandwidth-for-a-personal-account)
+        for 5$/month for 50 GB of bandwidth and 50 GB for storage.
+
+-   [BitBucket Git-lfs
+    ](https://confluence.atlassian.com/bitbucket/git-large-file-storage-in-bitbucket-829078514.html)
+    is available with 1GB free for free personnal account, and 10$/month for 100 GB.
+-   [GitLab Git LFS
+    ](https://docs.gitlab.com/ee/workflow/lfs/manage_large_binaries_with_git_lfs.html),
+    [GitLab Git LFS Administration
+    ](https://docs.gitlab.com/ee/workflow/lfs/lfs_administration.html#storing-lfs-objects-in-remote-object-storage)
+    allow storing lfs objects on external resources. If you use the hosted Gitlab.com
+    the [global repository size limit
+    ](https://docs.gitlab.com/ee/user/gitlab_com/index.html#repository-size-limit)
+    includes lfs and is 10 GB.
+-   There is an official [list of git-lfs implementation
+    ](https://github.com/git-lfs/git-lfs/wiki/Implementations), but most of them are
+    unmaintained or speak the deprecated v1 protocol. Among recent servers
+    [The reference LFS Test Server](https://github.com/git-lfs/lfs-test-server) in go
+    language, and [rudolfs](https://github.com/jasonwhite/rudolfs) a high-performance,
+    caching Git LFS server with an AWS S3 back-end, with a tiny (<10MB) Docker image.
+-   Alternatives to git-lfs: {{< iref "git-annex" >}}, git-bigfiles _unmaintained_,
+        [git-fat](https://github.com/jedbrown/git-fat), git-media _unmaintained_,
+        [git-bigstore](https://github.com/lionheart/git-bigstore),
+        [git-sym](https://github.com/cdunn2001/git-sym).
 -   [zit](http://git.oblomov.eu/zit/blob/HEAD:/zit)
     is a bash script used to track single files within a directory
     like RCS does but using git.
@@ -608,7 +633,7 @@ the Git Wiki [list also the Web interfaces
     It can clone a repository and explore history, presently you cannot commit or push.
 -   [Git Extensions](http://gitextensions.github.io/)
     is a graphical user interface for Git that allows you control Git without using the commandline.
-    _what a big deal!_
+    _what a big Deal!_
 
 # Tools
 -   [Git Wiki - Tools
@@ -672,13 +697,21 @@ the Git Wiki [list also the Web interfaces
 
 
 ## File systems synchronization {#fs_synch}
--   [SparkleShare](http://www.sparkleshare.org/) is a collaboration and sharing tool that uses a git repository backend.
-    It is written in mono and uses libnotify (with python and dbus services) to monitor files so it has quite heavy dependencies.
-    [Source code](http://github.com/SparkleShare/), [SparkleShare Wiki](http://github.com/hbons/SparkleShare/wiki/)
--   [DVCS-Autosync](http://mayrhofer.eu.org/dvcs-autosync) is a lighter alternative to SparkleShare.
-    It watch files and folders in specified paths and sync them in a git or mercurial repository.
-    It needs pynotify (python), xmppy and a provided patched JabberBot.
--   [git-sync](https://github.com/ianb/git-sync) by Ian Bicking is a git deployement script.
+-   [SparkleShare](http://www.sparkleshare.org/) is a collaboration and sharing tool
+    that uses a git repository backend.  It is written in mono and uses libnotify (with
+    python and dbus services) to monitor files so it has quite heavy dependencies.
+    [Source code](http://github.com/SparkleShare/),
+    [SparkleShare Wiki](http://github.com/hbons/SparkleShare/wiki/).
+-   [DVCS-Autosync](http://mayrhofer.eu.org/dvcs-autosync)
+    is a lighter alternative to SparkleShare.  It watch files and folders in specified
+    paths and sync them in a git or mercurial repository.  It needs pynotify (python),
+    xmppy and a provided patched JabberBot. The project has a very low activity _seen in
+    october 2019_, nevertheless the maintainer indicates it can accept pull requests.
+-   [git-sync](https://github.com/ianb/git-sync)
+    by Ian Bicking is a git deployement script.
+-   Tychoish _Sam Kleinman_ uses [a script to synchronize git repositories
+    ](https://gist.github.com/tychoish/f73efe9825dd691369b9), he explained its
+    [use in his blog](https://tychoish.com/post/git-sync/).
 
 ## Diff
 -   The diffutils package provides the diff, diff3, sdiff, and cmp
@@ -1070,7 +1103,7 @@ and in the Wikipedia
 
 ## GitHub
 [GitHub](http://github.com/) gives you a free git
-repository for public projects.
+repository for public _and now private_ projects.
 
 -   [GitHub Full workflow inside the browser
     ](https://github.com/blog/1557-github-flow-in-the-browser)
@@ -1107,7 +1140,7 @@ and [Bl.ocks rendering](https://bl.ocks.org/mbostock/1353700).
     django, elinks, fast-export, findutils, gajim, git,
     git-\<something\>, guile, moodle, qemu, rox-filer,...
 -   {{< wp "Gitorious" >}} (AGPL) was hosting
-    freely your open source git repository. t is now acquired by
+    freely your open source git repository. It is now acquired by
     GitLab, and closed, an archive is at
     [Gitorous read-only mirror ](http://gitorious.org)
 
