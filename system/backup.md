@@ -117,7 +117,7 @@ save only the changed data blobs.
         ](http://changelog.complete.org/archives/9353-roundup-of-remote-encrypted-deduplicated-backups-in-linux)
         compare attic and obnam.
 
--   [Duplicacy](https://github.com/gilbertchen/duplicacy)
+-   <a name="duplicacy">[Duplicacy](https://github.com/gilbertchen/duplicacy)
     (Free for personal use, paid versions for commercial use)
     is a deduplicating incremental backup program written in go
     language.
@@ -183,7 +183,7 @@ save only the changed data blobs.
     yet a small but signifiant impact on performance (from 2mn15 to
     2mn) at the price of an impact on memory (267M to 324M).
 
- -  [HashBackup](http://www.hashbackup.com/) (free private license)
+ -  <a name="hashbackup"></a>[HashBackup](http://www.hashbackup.com/) (free private license)
     is a command line for deduplicated, encrypted, compressed,
     block-level incremental backup.
     It is a rolling incremental backup, there is no concept of
@@ -205,7 +205,7 @@ save only the changed data blobs.
     to do checksumming on the remote backup, because
     it would imply to reload all the files.
 
--   [Restic](https://restic.github.io/) (BSD License)
+-   <a name="restic"></a>[Restic](https://restic.github.io/) (BSD License)
     Is a go program that takes snapshots consisting of data blobs
     encrypted with AES-256.  You can mount an individual snapshot using
     a Fuse fs. Restic can use the following backends: local directory,
@@ -440,8 +440,7 @@ Many frontends and wrapper for duplicity are availables:
     {{< iref "#backupninja" "backupninja" >}}
 -   _Duplicity_ has a gnome2 GUI
     [deja-dup](https://launchpad.net/deja-dup).
-
--   [w:Duplicati](LGPL)
+-   <a name="duplicati"></a>[w:Duplicati](LGPL)
     is a backup client written in C# that securely stores encrypted
     (AES 256), incremental, data deduplicated, compressed backups on
     cloud storage services and remote file servers. It is based on the
