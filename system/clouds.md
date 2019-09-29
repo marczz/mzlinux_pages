@@ -39,24 +39,34 @@ title: Clouds
 -   {{< wp "Amazon S3" >}} (Wikipedia),
     [S3 Home Page](http://aws.amazon.com/s3).
 -   [AWS monthly calculator](http://calculator.s3.amazonaws.com/calc5.html)
+
+## S3 clients {#s3_clients}
+See also below the generic {{< iref "#cloud_frontends" "Cloud Frontends" >}}
+which include  {{< iref "#cloud_vfs" "Cloud  Virtual File systems" >}}.
+
 -   [AWS Command line interface
     ](https://aws.amazon.com/cli/)
     is a unified tool to manage AWS services. The [file commands
     ](http://docs.aws.amazon.com/cli/latest/reference/s3/)
-    are file and directory commands
-    ( cp, ls, mb, mv, presign, rb, rm, sync, website )
-    to manage your buckets.
+    are file and directory commands ( cp, ls, mb, mv, presign, rb, rm, sync, website )
+    to manage your buckets. It is packaged in Debian as _awscli_.
 -   [s3tool](http://s3tools.org/) provide  _s3cmd_ a command line
     tools for Amazon S3 to uploade, retrieve and manage data.
-    There are three howtos: [s3cmd HowTo](http://s3tools.org/s3cmd),
-    [s3cmd sync HowTo](http://s3tools.org/s3cmd-sync),
-    _the operation sync allow to transfer
-    only files that don’t exist at the destination_;
-    [s3cmd encryption HowTo](http://s3tools.org/s3cmd-encryption).
-    _s3cmd_ is built for S3 but it can also
-    [be used on an eucalyptus instance
-    ](http://www.eucalyptus.com/eucalyptus-cloud/tools/s3cmd)
-    with a proper configuration file.
+    -   There are three howtos: [s3cmd HowTo](http://s3tools.org/s3cmd),
+        [s3cmd sync HowTo](http://s3tools.org/s3cmd-sync),
+        _the operation sync allow to transfer
+        only files that don’t exist at the destination_;
+        [s3cmd encryption HowTo](http://s3tools.org/s3cmd-encryption).
+    -   _s3cmd_ is built for S3 but it can also
+        [be used on an eucalyptus instance
+        ](https://github.com/eucalyptus/eucalyptus/wiki/HowTo-use-s3cmd-with-Eucalyptus).
+        with a proper configuration file.
+    - _s3cmd_ is packaged in Debian.
+-   [s4cmd](https://github.com/bloomreach/s4cmd) (Apache Licence)
+    is a python alternative to _s3cmd_ tool, enhancing performance and support for large
+    files, and coming with a number of additional features and fixes.
+    It also supports S3 compatible storage services such as DreamHost and Cloudian.
+
 -   [boto: A Python interface to Amazon Web Services
     ](http://docs.pythonboto.org/en/latest/index.html),
     [Boto GitHub Repository](https://github.com/boto/boto).
@@ -66,39 +76,43 @@ title: Clouds
 -   [boto-utils](https://github.com/obeattie/boto_utils) is the
     command line interface of boto to access S3.
     It includes s3-put, s3-geturl, s3-copy
--   [s3curl (GitHub repos)](https://github.com/rtdp/s3curl) (Apache License)
-    is a perl wrapper around curl to work with s3 buckets. It
-    can also be [used on an eucalyptus instance
-    ](https://sites.google.com/site/mobilecloudresearch/how-to/eucalyptus/installing-s3curl)
-    as described in this [eucalyptus howto
-    ](https://sites.google.com/site/mobilecloudresearch/how-to/eucalyptus/).
 -   [amazon-glacier-cmd-interface
     ](https://github.com/uskudnik/amazon-glacier-cmd-interface)
     use boto. An example of use is
     [Creating Long-Term Backups with Amazon Glacier on Linux
     ](http://blog.tkassembled.com/326/creating-long-term-backups-with-amazon-glacier-on-linux/)
     by TK Kocheran.
--   [S3QL](http://code.google.com/p/s3ql/)
-    (GPL) is a file system that stores all its data online using storage
-    services  like  Google  Storage,   Amazon  S3  or  OpenStack.   S3QL
-    effectively provides a hard disk of dynamic, infinite capacity.
-    -   [S3QL User’s Guide](http://www.rath.org/s3ql-docs/index.html)
-    -   [Comparison of S3QL and other S3 file systems
-        ](http://code.google.com/p/s3ql/wiki/other_s3_filesystems)
--   [PyFilesystem](https://code.google.com/p/pyfilesystem/) (BSD License)
-    is a Python module that provides a simplified common
-    interface to many types of filesystem including S3.
-    [PyFilesystem’s documentation](http://packages.python.org/fs/)
-    [fs.s3fs section](http://packages.python.org/fs/s3fs.html)
--   [s3backer](http://code.google.com/p/s3backer/) (GPL)
-    is a filesystem that contains a single file backed by Amazon S3.
-    It provides a single normal file having a fixed size which is
-    used to mount a loopback device.
+-   [s3curl (GitHub repos)](https://github.com/rtdp/s3curl) (Apache License)
+    is a perl wrapper around curl to work with s3 buckets.
+    -   [Amazon S3 Authentication Tool for Curl - AWS Code
+        ](https://aws.amazon.com/code/amazon-s3-authentication-tool-for-curl/)
+    -   It can also be used on an eucalyptus instance.
+    -   s3curl is packaged in Debian.
+-   [JetS3t](https://github.com/mondain/jets3t) (Apache License)
+     (pronounced "jet-set") is a Java toolkit and application suite
+     for Amazon S3, Amazon CloudFront, and Google Storage.
+     _JetS3t_ is packaged in Debian.
 -   [DragonDisk](http://www.dragondisk.com/)
     (proprietary software, free linux client) is a file manager for Amazon
     S3, Google Cloud Storage, and  S3 compatibles cloud storage
     services.
 
+## Eucalyptus
+
+{{< wp "Eucalyptus_(software)" "Eucalyptus" >}} (MIT Like licence) is a software for
+building Amazon Web Services (AWS)-compatible private and hybrid cloud computing
+environments,
+
+-   [GitHub: eucalyptus](https://github.com/eucalyptus/eucalyptus)
+-   [AWS Tools compatibility · eucalyptus Wiki
+    ](https://github.com/eucalyptus/eucalyptus/wiki/AWS-Tools)
+-   [Euca2ools](https://github.com/eucalyptus/euca2ools)
+    are command line tools used to interact with Amazon Web Services (AWS) as well as
+    other services that are compatible with AWS, such as Eucalyptus.
+    _euca2ools_ is packaged in Debian.
+    -   [euca2ools - Debian Wiki](https://wiki.debian.org/euca2ools)
+
+# Cloud virtual filesystems
 # Blackblaze B2 {#b2}
 {{< wp "BlackBlaze" >}} has many products available at
 [Backblaze Home](http://www.backblaze.com/)
@@ -465,6 +479,12 @@ There are also some third party tools:
     ](https://github.com/Memset/sftpcloudfs
 -   [OpenStack Swift on Raspberry Pi
     ](http://programmerthoughts.com/openstack/swift-on-pi/)
+-   [Swift Virtual File System (svfs)](https://github.com/ovh/svfs/)
+    is a Virtual File System over Openstack Swift built upon fuse. It
+    is compatible with any Openstack Swift endpoint like OVH
+    Public Cloud Storage.
+-   [Swift Explorer](http://www.619.io/swift-explorer)
+    is a java software.
 
 ## Openstack storage providers
 -   Openstack is underlying technology for {{< wp "Rackspace" >}} Cloud
@@ -525,39 +545,10 @@ as well.
         ](http://nogues.pro/blog/backup-hubic-duplicity-rsync.html)
         by Pierre Noguès.
 -   HubiC  rely on  {{< iref "#openstack" "OpenStack" >}} / Swift
-    so we can use the OpenStack / Swift api, but with the new api we
-    need to use {{< wp "Oauth" >}} authentication. Some of the following linked
-    project have not yet been updated to new api _(October 2013)_.
--   [hubic2swiftgate](https://github.com/oderwat/hubic2swiftgate)
-    is a php gateway which supports OAuth2 with api.hubic.com. It has
-    to be installed on a webserver using a ssl-certificate.
-    It can be used with {{< iref "backup#duplicity" "duplicity" >}},
-    {{< iref "#openstack" "openstack swift client" >}},
-    {{< iref "#duck" "cyberduck" >}},
-    {{< iref "#openstack" "ftp-clouds" >}}.
-    It replace the now deprecated
-    [Toorop/HubicSwiftGateway](https://github.com/Toorop/HubicSwiftGateway).
+    so we can use the OpenStack / Swift api, with {{< wp "Oauth" >}} authentication.
 -   [Forum hubiC](https://forums.hubic.com/)
--   [hubiC API](https://api.hubic.com/)
 -   [HubicFuse](https://github.com/TurboGit/hubicfuse)
     is a Fuse interface to Hubic. It is in Debian.
--   [Swift Virtual File System (svfs)](https://github.com/ovh/svfs/)
-    is a Virtual File System over Openstack Swift built upon fuse. It
-    is compatible with any Openstack Swift endpoint like hubiC and OVH
-    Public Cloud Storage.
--   Toorop: [Utiliser un client Swift avec Hubic
-    ](http://blog.toorop.fr/hubic-swift-client-cyberduck/),
--   Gu1 provided plugins for python-cloudfiles, and python-pyrax
-    [GitHub: python-cloudfiles-hubic
-    ](https://github.com/Gu1/python-cloudfiles-hubic), but The
-    original python-cloudfiles bindings are no longer being maintained
-    and their use is deprecated in favor of pyrax.
-    There is now also
-    [GitHub: pyrax-identity-hubic
-    ](https://github.com/Gu1/pyrax-identity-hubic)
-    now used in the standard Hubic duplicity backend.
--   [Swift Explorer](http://www.619.io/swift-explorer)
-    is a java software that can be used with Hubic.
 
 # [Owncloud](http://owncloud.org/) {#owncloud}
 
@@ -757,8 +748,71 @@ windows, android, iphone clients.
     -   [ArchWiki: SugarSync](https://wiki.archlinux.org/index.php/SugarSync)
         explains how to use SugarSync with wine.
 
-# Cloud frontends
-## Rclone {#rclone}
+# Cloud frontends {#cloud_frontends}
+See also the  {{< iref "#s3_clients" "S3 specific clients" >}}, that can be used with S3
+compatible clouds or through a proxy like {{< iref "#s3proxy" "S3Proxy" >}}.
+
+## Virtual File systems {#cloud_vfs}
+-   [S3QL](https://github.com/s3ql/s3ql/) (GPL)
+    is a file system that stores all its data online using storage
+    services  like  Google  Storage,   Amazon  S3  or  OpenStack.   S3QL
+    effectively provides a hard disk of dynamic, infinite capacity.
+    _S3QL_ is packaged in Debian.
+    -   [S3QL User’s Guide](http://www.rath.org/s3ql-docs/index.html)
+    -   [s3ql Wiki](https://github.com/s3ql/s3ql/wiki) includes
+        a comparison of S3QL and other S3 file systems.
+-   [s3fs](https://github.com/s3fs-fuse/s3fs-fuse) (GPL)
+    is a C++ software which allows Linux and macOS to mount an S3 bucket via FUSE. s3fs
+    preserves the native object format for files. It is also compatible with Google
+    Cloud Storage, and other S3-based object stores. _S3Fs_ is packaged in Debian.
+    -   [PyFilesystem](https://docs.pyfilesystem.org/) (BSD License) is a Python module
+        that provides a simplified common interface to many types of filesystem, like
+        FTPfs, WebdavFs, tarFs, ZipFs,... including
+        [support for f3fs](https://www.pyfilesystem.org/page/s3fs/)
+-   [YAS3FS](https://github.com/danilop/yas3fs) (MIT Licence)
+     (Yet Another S3-backed File System) is a Filesystem in Userspace (FUSE) interface
+     to Amazon S3. It is a rewritting in python of s3fs which add a distributed cache
+     synchronized by Amazon SNS notifications. A web console is provided to easily
+     monitor the nodes of a cluster.
+-   [goofys](https://github.com/kahing/goofys) (Apache License)
+    similar to s3fs but written in go, better performance, and less POSIX compiliance.
+    it works with Ceph (ex: Digital Ocean Spaces, DreamObjects, gridscale), EMC Atmos
+    Google Cloud Storage, OpenStack Swift, {{< iref "#s3proxy" "S3Proxy" >}},
+    Minio (limited),  Wasabi, Azure.
+-   [s3backer](http://code.google.com/p/s3backer/) (GPL)
+    is a filesystem that contains a single file backed by Amazon S3.
+    The blocks of the file are stored as S3 objects.
+    It provides a single normal file having a fixed size which is
+    used to mount a loopback devic then s3backer acts a virtual hard disk device.
+    _S3backer_ is packaged in Debian.
+-   <a name="s3proxy"></a>[s3proxy](https://github.com/gaul/s3proxy) (Apache License)
+    is a Java software that provides S3 API and proxies requests, from S3 to Backblaze
+    B2, EMC Atmos, Google Cloud, Microsoft Azure, and OpenStack Swift, and on-disk
+    storage filesystem.  It can be used with the others S3 tools.
+    There is a Docker image, or it can be used directly with java.
+
+
+### OpenDedup – SDFS {#opendedup}
+[OpenDedup – SDFS](https://opendedup.org/odd/) (GPL)
+is a POSIX compliant filesystem hat performs inline deduplication to local disk or
+cloud object storage. It works natively with the applications such as backup, when
+you do copy data, it dedupes, compresses, encrypts, and saves your data on disk or
+in the cloud. It can perform file level snapshots, and replication; with
+replication, only unique blocks  that are not shared between the two SDFS volumes
+are replicated.
+
+-   SDFS works with AWS S3, AWS Glacier, Azure, Google, and most S3 compliant backends.
+-   SDFS uses strong AES-CBC 256 bit encrytion, either when using local block
+    storage _in this case metadata is not encrypted_, or when data is sent to the
+    cloud all data, metadata, and hash table entries are encrypted before the data
+    is sent.
+-   [SDFS works with Backblaze B2
+    ](https://opendedup.org/odd/2018/04/04/backblaze-b2-enabled/)
+-   [Administration Guide – OpenDedup
+    ](https://opendedup.org/odd/administration-guide/)
+
+
+### Rclone {#rclone}
 
 [Rclone](http://rclone.org/)
 is a command line program to sync files and directories to and from
@@ -778,7 +832,20 @@ It allows a FUSE mount of the providers.
 
 Rclone is in Debian.
 
-## sme {#sme}
+## Command Line, ftp, dav clients
+### Duck
+<a name="duck"></a>[Duck the Cyberduck command line tool
+](https://trac.cyberduck.io/wiki/help/en/howto/cli)
+is available for Mac, Windows & Linux. A Deb repository is
+available. It supports the following protocols:
+ftp, ftps, sftp, WebDAV (HTTP/SSL), Swift, Amazon S3, Backblaze B2,
+Google Cloud Storage, Windows Azure Storage, Rackspace Cloud Files,
+iPlant Data Store. The desktop UI CyberDuck, and the virtual fs MountainDuck are
+available only on windows and Mac OSX. But there are alternatives for Linux like
+{{< iref "#rclone" >}}
+
+
+### sme {#sme}
 
 [Sme alias Storage Made Easy](http://storagemadeeasy.com/)
 allow to use WebDav and ftp above clouds, inclusind S3, with their
@@ -823,6 +890,37 @@ There is a free Linux and
         footprint: 43M/17M shared
      - _smesynccenter_ The synchronization manager footprint: 38M/15M shared
 
+## Cloud abstract interface libraries
+-   [Apache libcloud](http://libcloud.apache.org/) (apache licence)
+    is a Python library for interacting with 30 cloud
+    service providers using a unified API. It supports AWS, Google
+    cloud, eucalyptus, rackspace, openstack, and many more.
+
+### pkgcloud
+[pkgcloud](https://github.com/pkgcloud/pkgcloud/)
+is a standard library for node.js that abstracts away differences among multiple cloud
+providers.  It support the following services: Compute, Storage, Database, DNS, Block
+Storage, Load Balancers, Network, Orchestration, CDN.
+
+The supported clouds storage APi are: Amazon, Azure, DigitalOcean, Google, HP,
+Openstack, Rackspace.
+
+The supported Databases are  Azure, Rackspace.
+
+
+-   [multer · GitHub](https://github.com/expressjs/multer/) (MIT License)
+    Multer is a node.js middleware for handling multipart/form-data, which is primarily
+    used for uploading files.
+-   [multer-storage-pkgcloud](https://github.com/dustin-H/multer-storage-pkgcloud)
+    (MIT License) is a multer storage plugin to upload files into a from pkgcloud
+    supported cloud object storage.
+-   [skipper](https://github.com/balderdashy/skipper) ) (MIT License)
+    makes it easy to implement streaming file uploads to disk, S3, gridfs, or any
+    supported file upload adapters, it is used in [Sails ](http://sailsjs.com/) MVC
+    framework for Node.js,
+-   [skipper-pkgcloud ](https://github.com/urielaero/skipper-pkgcloud)  (MIT License)
+    is a pkgCloud adapter for receiving object-mode Readable stream from skipper.
+
 ## Other frontends
 -   [Otixo](http://otixo.com/) allow access to 30 services including Dropbox,
     Box, OneDrive, Google Drive, SugarSync, Amazon S3, Mega, Yandex.
@@ -830,40 +928,6 @@ There is a free Linux and
     applications, 2GB monthly data transfer, 10$/year you have 5GB
     monthly data transfer and a __webdav access__, other plans for 25GB or
     50GB traffic. _2017_
--   <a name="duck"></a>[Duck the Cyberduck command line tool
-    ](https://trac.cyberduck.io/wiki/help/en/howto/cli)
-    is available for Mac, Windows & Linux. A Deb repository is
-    available. It supports the following protocols:
-    ftp, ftps, sftp, WebDAV (HTTP/SSL), Swift, Amazon S3,
-    Google Cloud Storage, Windows Azure Storage, Rackspace Cloud Files,
-    iPlant Data Store.
--   [Apache libcloud](http://libcloud.apache.org/) (apache licence)
-    is a Python library for interacting with 30 cloud
-    service providers using a unified API. It supports AWS, Google
-    cloud, eucalyptus, rackspace, openstack, and many more.
--   [pkgcloud](https://github.com/pkgcloud/pkgcloud/)
-    is a standard library for node.js that abstracts away differences
-    among multiple cloud providers.
-    It support the following services:
-    Compute, Storage, Database, DNS, Block Storage, Load Balancers,
-    Network, Orchestration, CDN. The supported clouds APi are: Amazon,
-    Azure, DigitalOcean, Google, HP, IrisCouch, MongoHQ, MongoLab,
-    Openstack, Rackspace, RedisToGo
-    -   [multer · GitHub](https://github.com/expressjs/multer/)Multer is a
-        node.js middleware for handling multipart/form-data, which is
-        primarily used for uploading files.
-    -   [multer-storage-pkgcloud
-        ](https://github.com/dustin-H/multer-storage-pkgcloud)
-        is a multer storage plugin to upload files into a from
-        pkgcloud supported cloud object storage.
-    -   [skipper](https://github.com/balderdashy/skipper) makes it
-        easy to implement streaming file uploads to disk, S3, or any
-        supported file upload adapters, it is used
-        in [Sails ](http://sailsjs.com/) MVC framework for Node.js,
-    -   [skipper-pkgcloud
-        ](https://github.com/urielaero/skipper-pkgcloud)
-        is a pkgCloud adapter for receiving object-mode Readable
-        stream from skipper.
 -   [MultiCloud](https://www.multcloud.com/)
     is a provider that offers to link many clouds, and allow transfer
     and synchronisation between clouds.
@@ -1284,7 +1348,7 @@ appropriate.
 [OVH openstack]: #ovh_openstack "internal reference"
 [Hubic]: #hubic "internal reference"
 [Mega]: #mega "internal reference"
-
+[Scaleway]: #scaleway_objects  "internal reference"
 The backblaze calculator which is more detailled but list only
 blackblaze, Azure and Google Cloud give for first case Blackblaze 1.40$
 , Azure 4.60$, S3 5.20$, Google clouds 5.6$; for the second
