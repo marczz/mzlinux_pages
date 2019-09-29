@@ -109,45 +109,55 @@ $60/Year by computer for unlimited data.  No linux client, and no
 open api.
 
 Backblaze _B2 Cloud Storage_ works similar to Amazon S3 or
-Microsoft Azure. Yt has a very appealing price of $0.005/GB a
-month with 10 GB storage free, uploads are free, Download cost
-0.05$/G free until 1G/day, 10,000 downloads cost O.O04$ with
-2500/day free, other transactions _API Calls_ O.O04$ for 1000
-transactions with 2500/day free. _2017 fees_
+Microsoft Azure.
 
-The more expansive seems to be the download price, compared to OVH
-openstack the storage is half the price, but downloads cost four
-time more. Of course if we can limit transactions and downloads to
-the free amount; it is still interesting. If we use it for backup
-I suppose that the amount of outbound trafic implied by a
-synchronization tool may fit, if the synchronization tool has not to
-do checksums that would involve downloading the files _rsync on b2
-fuse is like this_, but when you need to recover you
-files you have to pay. And for sharing files, operation wich can
-involve many download, it can be quite expansive.
+
+It has a very appealing price of $0.005/GB a
+month with 10 GB storage free, uploads are free, Download cost
+0.01$/G first G/day free,  _API Calls_ $0.004 per 10,000
+transactions with 2500/day free (some transactions free). _October 2019 fees_
+
+Previously blackblaze had a high download price, compared to some providers like OVH
+openstack the storage. But they have been cut off by two. Of course some provider offer
+free download until som e amount, and it should be considered, depending of your needs.
 
 The [pricing page
 ](https://www.backblaze.com/b2/cloud-storage-pricing.html)
 includes a cost calculator, for 1000G initial data upload, 100G/month
-upload, 5G/month delete, 10G/month download, it cost 103$/year four
-time less than S3. If you download 200G/month 217$/year still less
-than half S3. For 100G initial, 10G/month upload, 7G/month delete, 10G
-download/month 14$/year a third of S3.  For all these examples
+upload, 5G/month delete, 10G/month download, it cost 98$/year three
+time less than S3 or Google cloud. If you download 200G/month 121$/year still a third of
+S3. For 100G initial, 10G/month upload, 7G/month delete, 10G
+download/month 8.4$/year a third of S3.  For all these examples
 microsoft azure and google cloud are more expansive than S3.
 
-It would also be interesting to compare with OVH openstack that has
-the lower download fees.
+The {{< iref "#comparison_table" "Comparison table" >}} below also add other low costs
+providers like  OVH openstack, or scaleway.
+
+[B2 Documentation](https://www.backblaze.com/b2/docs/)
+
+The basics operation are done with the [command-line tool
+](https://github.com/Backblaze/B2_Command_Line_Tool) which is packaged in debian
+a _blackblaze-b2_, the python sdk is also packaged as _python3-b2sdk_.XS
 
 B2 is [integrated in many softwares
-](https://www.backblaze.com/b2/docs/integrations.html):
-[python command line tool
-](https://www.backblaze.com/b2/docs/quick_command_line.html),
-a _duplicity backend_ and an unofficial [duplicity backend
-](https://github.com/matthewbentley/duplicity_b2), a
-[B2 fuse backend](https://github.com/sondree/b2_fuse),
-it works with {{< iref "#rclone" "rclone" >}},
-CyberDuck and it's command line
-[duck](https://trac.cyberduck.io/wiki/help/en/howto/cli).
+](https://www.backblaze.com/b2/docs/integrations.html): [python command line tool
+](https://www.backblaze.com/b2/docs/quick_command_line.html), a [duplicity
+backend](https://github.com/matthewbentley/duplicity_b2), duplicati,
+{{< iref "backup#duplicacy"  "duplicacy" >}},
+{{< iref "backup#duplicati"  "duplicati" >}},
+{{< iref "backup#hashbackup"  "HashBackup" >}},
+{{< iref "backup#restic"  "Restic" >}}.
+
+There is a [B2 fuse backend](https://github.com/sondree/b2_fuse) written in python.
+
+It works with CyberDuck and it's command line {{< iref "#duck" "duck" >}}.
+
+{{< iref "#rclone" "rclone" >}} has [B2 support](https://rclone.org/b2/),
+{{< iref "#opendedup" "OpenDedup"  >}} also
+[supports B2](http://opendedup.org/odd/2018/04/04/backblaze-b2-enabled/).
+
+B2 Api is a web API like amazon S3, but it is not compatible with S3,
+a proxy like {{< iref "#s3proxy" >}} my be used to get an S3 compatible interface.
 
 # Box {#box}
 
@@ -466,11 +476,11 @@ There are also some third party tools:
 -   <a name="ovh_openstack">{{< wp "OVH" >}} provides
     [openstack/swift object storage
     ](https://www.ovh.com/fr/public-cloud/storage/object-storage/)
-    at the price of 0.012€ G/month inbound traffic free, outbound
-    traffic 0.012€ G so for 100G storage and outbound monthly
-    traffic 2.4 €/m, of course if you use for backup you have few
+    at the price of 0.01€ G/month inbound traffic free, outbound
+    traffic 0.01€ G so for 100G storage and outbound monthly
+    traffic 2 €/m, of course if you use for backup you have few
     outbound traffic, if you use it for distributing content you might
-    have an heavy outbound traffic. _11/2018_
+    have an heavy outbound traffic. _10/2019_
     Ovh has [documentation on object storage management
     ](https://www.ovh.com/fr/public-cloud/storage/object-storage/).
 
@@ -908,15 +918,17 @@ There is a free Linux and
         KVM OpenStack 1v core 2G ram, 25G SSD disk, CEPH, 10€/month; 2
         v cores 4GB RAM, 50GB SSD, CEPH, 20€/month _2017_
     -   [kimsufi](https://www.kimsufi.com/fr/serveurs.xml)
-        _in 2017 a lot of plans where not available, did they intend
-        to continue this offer?_;
-        en serveur dédié _2017_:
-        -   KS-1 atom 1 core 7.2€/month 2G ram 500G disk
+        _from 2017 and still in october 2019 the lower priced plans where not available,
+        did they intend to continue this offer?_;
+        en serveur dédié _in october 2019_:
+        -   KS-1 atom 1 core 4.80€/month 2G ram 500G disk
             illimité net.
-       -    KS-2 2cores 12€/month 4G ram 2TB disk 12€/month.
+       -    KS-2 2cores 6€/month 4G ram 1TB disk, with 2TB 9.60€/month, raid 2x2TB
+           16.80€/month.
     -   [Serveurs de stockages "So you Start"
         ](https://www.soyoustart.com/fr/serveurs-stockage).
-        -   ARM2T armv7 cortex A9 2G ram 2TB disk 17€/month, network 2.5Gbps
+        -   ARM2T armv7  cortex A9 2G ram 2TB disk,  network 2.5Gbps, 6€/month; with 4TB
+            10.80€/month; 6TB 16.80€
 -   [Linode](https://www.linode.com/)
     1CPU, 1GB ram, 20GB ssd, 1TB transfer, 5$/month, optional backup 2$/month;
     1CPU, 2GB ram, 30GB ssd, 2TB transfer, 10$/month, optional backup 3$/month
@@ -927,9 +939,9 @@ There is a free Linux and
 
 ## [Scaleway](https://www.scaleway.com/)
 -    __pricing__:
-    cloud hosting beginning at 3€/month for 2GB
-    Memory 50GB SSD Disk. Additional volumes 50G/month €1 max 150G
-    per volume, 15 volumes per server.  _2017 pricing_
+    cloud hosting starting at 3€/month for 2GB
+    Memory 50GB SSD Disk ArmV8 cpu. Additional volumes 50G/month €1 max 150G
+    per volume, 15 volumes per server.  _October 2019 pricing_
 
     Snapshots hourly rate €0.00004 per gigabyte-hour, or a monthly
     fixed price of €0.02 per gigabyte-month, so a 50GB snapshot is
@@ -952,6 +964,12 @@ There is a free Linux and
 -   [Docker Hub Arm64 V8 images](https://hub.docker.com/u/arm64v8/)
 -   [How to create an image from scratch
     ](https://www.scaleway.com/docs/create-an-image-from-scratch/)
+
+
+### Object storage {#scaleway_objects}
+
+Scaleway also provides object storage for €0.01/GB (min 500GB), first 500GB outgoing
+transfer free then €0.02/GB,
 
 
 # Temporary storage {#temporary_storage}
@@ -1224,14 +1242,15 @@ _They are self-hosted solutions._
    is an online service instance that offer encrypted pad to registered user, and
    temporary encrypted pads to anonymous users.
 
-# Comparison of storage plans
+# Comparison of storage plans {#comparison_table}
 
 I take two case studies for low storage need: 200G of storage, stable,
 first case you mainly store and want to download very rarely, except
 the downloads implied by the backup software. 20G download per month;
-the second case you download more, if you want to check your backup,
-you cannot compute hash remotely, you need to download the date; so
-200G download per month. All the price here _taken in 2017_ and computed by month are
+the second case you download more, for the case of you either share the data, and it is
+dowloaded multiple time, or you want to check your backup,
+as you cannot compute hash remotely, you need to download the data; I consider
+200G download per month. All the price here  and computed by month are
 approximatives, they vary depending on the region, and what is shown is
 the lower rate. I have not computed the API fees, because I don't know
 how to estimate the request numbers, and you have to add it when
@@ -1239,19 +1258,22 @@ appropriate.
 
 
 | provider        |        storage/GB | download&nbsp; |  API fees&nbsp; | 200/20&nbsp; | 200/200 | checked |
-|-----------------|------------------:|----------:|:---:|------:|-------:|------:|
-| [BlackBlaze B2] |            0.005$ |      0.02 | yes | 1.40$ |  5.00$ |       |
-| [OVH openstack] |            0.012$ |     0.012 | no  | 2.60$ |  4.80$ |       |
-| [Digital Ocean] | (mini 250G) 0.02$ |(>1T) 0.01 | no  | 5.00$ |  5.00$ |       |
-| Wasabi          |   (mini 1T)0.004$ |      0.04 |     | 4.80$ | 12.00$ |       |
-| [Amazon S3]     |            0.023$ |      0.09 | yes | 6.40$ | 22.60$ |       |
-| [Azure]         |           0.0184$ |      free | yes | 3.68$ |  3.68$ |       |
-| [OneDrive]      |     (<1T) 0.04  $ |      free | no  | 5.83$ |  5.83$ |       |
-|  -              |     (1T) 0.006 $  |      free | no  |       |        |       |
-| [Google Drive]  |     (<1T) 0.02  € |      free | no  | 4.00€ |  4.00€ | 11/18 |
-|  -              |      (1T) 0.01  $ |      free | no  |       |        |       |
-| [Mega]          |    (<1T)  0.025€  |(<1T) free | no  | 5.00€ |  5.00€ | 11/18 |
-|  -              | (1T<s<4T) 0.01€   |(<2T) free | no  |       |        |       |
+
+|-----------------|------------------:|-------------:|:---:|------:|-------:|------:|
+| [BlackBlaze B2] |            0.005$ |         0.01 | yes | 1.20$ |  3.00$ | 10/19 |
+| [OVH openstack] |            0.01 $ |         0.01 | no  | 2.20€ |  4.00€ | 10/19 |
+| [Digital Ocean] | (mini 250G) 0.02$ |   (>1T) 0.01 | no  | 5.00$ |  5.00$ |  3/17 |
+| Wasabi          |   (mini 1T)0.004$ |         0.04 |     | 4.80$ | 12.00$ |  3/17 |
+| [Amazon S3]     |            0.023$ |         0.09 | yes | 6.40$ | 22.60$ |  3/17 |
+| [Azure]         |           0.0184$ |         free | yes | 3.68$ |  3.68$ |  3/17 |
+| [OneDrive]      |     (<1T)  0.04 $ |         free | no  | 5.83$ |  5.83$ |  3/17 |
+| -               |      (1T)  0.006$ |         free | no  |       |        |       |
+| [Google Drive]  |     (<1T)  0.02 € |         free | no  | 4.00€ |  4.00€ | 11/18 |
+| -               |      (1T)  0.01 $ |         free | no  |       |        |       |
+| [Mega]          |     (<1T)  0.025€ |   (<1T) free | no  | 5.00€ |  5.00€ | 11/18 |
+| -               |  (1T<s<4T) 0.01 € |   (<2T) free | no  |       |        |       |
+| [Scaleway]      |     (0.5T) 0.01 € | (<0.5T) free | no  | 5.00€ |  5.00€ | 10/19 |
+|                 |                   |              |     |       |        |       |
 
 [Amazon S3]: #aws "internal reference"
 [Azure]: #azure_blob "internal reference"
