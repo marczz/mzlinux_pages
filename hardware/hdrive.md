@@ -338,7 +338,27 @@ utility when they don't know the file system.
     {{< iref "#partclone" "Partclone" >}}.
     -   [partimage Home](http://www.partimage.org/)
 
-# Rescue systems {#rescue_systems}
+# Disk and sectors rescue
+-   [badblocks - ArchWiki](https://wiki.archlinux.org/index.php/Badblocks)
+-   Lvm does not support badblock the only solution proposed by
+    [this answer to "Can LVM mark / avoid bad blocks?"
+    ](https://unix.stackexchange.com/a/362257/266187)
+    is to create a PV on the top of a device mapper device.
+-   [File recovery - ArchWiki](https://wiki.archlinux.org/index.php/File_recovery)
+-   [Disk Maintenance under Linux (Disk Recovery)
+    ](http://www.linuxjournal.com/article/193) explains dumpe2fs, badblocks, debugfs use
+    _1997_
+-   <a name=testdisk"></a>[TestDisk](http://www.cgsecurity.org/wiki/TestDisk)
+    TestDisk can find lost partitions for many file systems including
+    DOS/Windows FAT12, FAT16, FAT32, exFat, NTFS; linux  ext2, ext3, ext4,
+    btrfs, GFS2, GFS2, RAID 1/4/5/6, swap, lvm, lvm2; zfs, reiserfs
+    ...
+    Testdisk is included in {{< iref "#sysrescd" "System Rescue CD" >}}.
+    -   [TestDisk step by step
+        ](http://www.cgsecurity.org/wiki/TestDisk_Step_By_Step)
+
+
+## Rescue systems {#rescue_systems}
 
 -   [Finnix](http://www.finnix.org/)
     is a live cd of 300MiB based on debian testing. It is aimed at
@@ -382,15 +402,6 @@ utility when they don't know the file system.
         the chapter on Grub, lvm, partitioning are easy tutorials on
         these subjects.
     -   Wikipedia: {{< wp "SystemRescueCD" >}}
--   <a name=testdisk"></a>[TestDisk](http://www.cgsecurity.org/wiki/TestDisk)
-    TestDisk can find lost partitions for many file systems including
-    DOS/Windows FAT12, FAT16, FAT32, exFat, NTFS; linux  ext2, ext3, ext4,
-    btrfs, GFS2, GFS2, RAID 1/4/5/6, swap, lvm, lvm2; zfs, reiserfs
-    ...
-    Testdisk is included in {{< iref "#sysrescd" "System Rescue CD" >}}.
-    -   [TestDisk step by step
-        ](http://www.cgsecurity.org/wiki/TestDisk_Step_By_Step)
-
 
 # Hard Disk spindown {#hd_spindown}
 
@@ -510,6 +521,9 @@ of the Linux kernel and the writeout of dirty data to disk.
 
 
 # Disk performance
+-   [Benchmarking - ArchWiki](https://wiki.archlinux.org/index.php/Benchmarking)
+-   [Linux Benchmark Suite Homepage](http://lbs.sourceforge.net/)
+-   [Phoronix Test Suite](https://www.phoronix-test-suite.com/) (GPL)
 -   [Iozone Filesystem Benchmark](http://iozone.org/)
 -   [Iozone manual (pdf)](http://www.iozone.org/docs/IOzone_msword_98.pdf)
 -   [Rovanion/iozone-results-comparator](https://github.com/Rovanion/iozone-results-comparator)
