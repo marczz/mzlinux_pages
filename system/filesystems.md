@@ -610,80 +610,186 @@ a loop device is a good way to use some part of a dumb file system
         # mount /path/of/myfile -t ext2 -o loop,encryption=aes /mnt/loop0
 
 
-# Stacked file systems
+# Stackable file systems
 
--   [Unionfs](http://en.wikipedia.org/wiki/Unionfs)
-    builds a stackable unification file system, which can appear to
-    merge the contents of several directories (branches), while keeping
-    their physical content separate. UnionFs implement
-    [Copy on Write](http://en.wikipedia.org/wiki/Copy-on-write)
-    also known by the acronym **COW**. The
-    [unionfs project page](http://www.filesystems.org/project-unionfs.html)
-    list references and downloads. The version 2 is available as patch
-    for the kernel since 2.6.20.
-    [Unionfs: Bringing Filesystems Together](http://www.linuxjournal.com/article/7714)
-    by Charles P. Wright and Erez Zadok is a presentation of the use of
-    UnionFs and
-    [Unionfs: A Stackable Unification File System](http://fisheye5.cenqua.com/browse/~raw,r=1.1/lg3d/lg3d-livecd/src/documentation.html)
-    is a use case of unionfs.
--   [aufs](http://aufs.sourceforge.net) is an
-    alternative union file system implementation. It is used by
-    [Linux Live](http://www.linux-live.org/) which is
-    a set of shell scripts which allows you to create own Live Linux
-    from your installed Linux distribution.
+Stackable file systems implement {{< wp "union mount" >}}. They combine two file systems
+in an unique virtual fs. The more usual policy stack file systems such the upper one
+hide the lower one when there is a conflict. These file system require a special policy
+for some standard file operations: when deleting a stacked entry, deleting the upper one
+makes the lower one reappear; renaming a file or a directory should be an atomic
+operation but it need here multiple rename of the underlying files entries, so it is
+replaced by a slower copy and delete, lower level operation which involve inodes are
+also difficult to implement.
 
-    The basic use of aufs is
 
-        # mount -t aufs -o br=/tmp/rw=rw:${HOME}=ro none /tmp/aufs
+Many of these filesystems implement {{< wp "Copy-on-write" >}}, allowing to mount a
+writable filesystem upon a read-only one like a live CD, giving the illusion it can be
+modified. This mechanism is also used by Docker
 
-    you can see whole tree of your home dir through /tmp/aufs. If
-    you modify a file under /tmp/aufs, the one on your home directory is
-    not affected, instead the same named file will be newly created under
-    /tmp/rw. And all of your modification to a file will be applied to
-    the one under /tmp/rw.<br />
-    The man page  is
-    [aufs(5)](http://aufs.sourceforge.net/aufs2/man.html);
-    it is the reference for all _aufs-utils_ _(Debian package:
-    aufs-tools)_ i.e. `mount.aufs`, `umount.aufs`, `auplink` _(make
-    pseudo links permanent)_, `auchk` _(aufs fsck tool)_, `aubrsync`
-    _(synchronize files between two aufs branches)_.
+Wikipedia «The main mechanics of OverlayFS relate to the merging of directory access
+when both filesystems present a directory for the same name. Otherwise, OverlayFS
+presents the object, if any, yielded by one or the other, with the "upper" filesystem
+taking precedence.»
 
-    A slightly longer example that stack three file systems a
-    read_only and two read-write is:
 
-        # cd /tmp
-        # mkdir ro rw1 rw2
-        # for f in ro rw1 rw2; do echo "content of $f" > $f/file_$f; done
-        # mount -t aufs -o br=/tmp/rw1=rw:/tmp/rw2=rw:/tmp/ro=ro none /tmp/aufs
-        # for f in ro rw1 rw2 new; do echo "appended in file_$f">> /tmp/aufs/file_$f; done
-        # cat /tmp/ro/file_ro
-        content of file_ro
-        # cat /tmp/aufs/file_ro
-        content of file_ro
-        appended in file_ro
-        # cat /tmp/rw2/file_ro
-        cat: /tmp/rw2/file_ro: No such file or directory
-        # cat /tmp/rw1/file_ro
-        content of file_ro
-        appended in file_ro
-        # ls /tmp/{rw1,rw2,ro,aufs}/file_new
-        ls: cannot access /tmp/rw2/file_new: No such file or directory
-        ls: cannot access /tmp/ro/file_new: No such file or directory
-        /tmp/aufs/file_new  /tmp/rw1/file_new
+## UnionFs
+The older implementation was [Unionfs](http://en.wikipedia.org/wiki/Unionfs)
+builds a stackable unification file system, which can appear to
+merge the contents of several directories (branches), while keeping
+their physical content separate. UnionFs implement
+[Copy on Write](http://en.wikipedia.org/wiki/Copy-on-write)
+also known by the acronym **COW**. The
+[unionfs project page](http://www.filesystems.org/project-unionfs.html)
+is an old page unmaintained since unionfs is merged in the kernel
+[Unionfs: Bringing Filesystems Together](http://www.linuxjournal.com/article/7714)
+by Charles P. Wright and Erez Zadok is an _old 2004_  presentation of the use of
+UnionFs.
 
-    The default policy of create and copy up for aufs is _top-down-parent_ which means that
-    aufs selects the highest writable branch where the parent dir exists.
-    If the parent dir does not exist on a writable branch, then  the
-    internal  copyup  will  happen.  The  policy  for this copyup is
-    always _bottom-up_.
+[unionfs-fuse](https://github.com/rpodgorny/unionfs-fuse) is an
+implementation of unionfs in user space. It is available in Debian.
 
-    We can find more examples in the
-    [aufs-utils sample directory
-    ](http://git.c3sl.ufpr.br/gitweb?p=aufs/aufs2-util.git;a=tree;f=sample)
--   [unionfs-fuse](https://github.com/rpodgorny/unionfs-fuse) is an
-    implementation of unionfs in user space. It is availble in Debian.
--   [Funionfs](http://funionfs.apiou.org/) is a
-    fuse driver that implement a union file system in userspace.
+## AUFS
+
+
+[aufs](http://aufs.sourceforge.net) is an
+alternative union file system implementation. _Aufs5_ is used with kernel 5.x while
+_aufs4_ is used with kernel 4.x, _aufs3_ is used with kernel 3.8, and _aufs2_ with
+kernel > 2.6.16.
+
+_Aufs_ is used by [Linux Live](http://www.linux-live.org/) which is a set of shell
+scripts which allows you to create own Live Linux from your installed Linux
+distribution.
+
+Debian provides the packages _aufs-dkms_ and _aufs-tools_.
+[Gentoo kernels can be compiled with aufs
+](https://wiki.gentoo.org/wiki/Aufs).
+
+The basic use of aufs is
+
+    # mount -t aufs -o br=/tmp/rw=rw:${HOME}=ro none /tmp/aufs
+
+you can see whole tree of your home dir through /tmp/aufs. If
+you modify a file under /tmp/aufs, the one on your home directory is
+not affected, instead the same named file will be newly created under
+/tmp/rw. And all of your modification to a file will be applied to
+the one under /tmp/rw.<br />
+The man page  is
+[aufs(5)](http://aufs.sourceforge.net/aufs2/man.html);
+it is the reference for all _aufs-utils_ _(Debian package:
+aufs-tools)_ i.e. `mount.aufs`, `umount.aufs`, `auplink` _(make
+pseudo links permanent)_, `auchk` _(aufs fsck tool)_, `aubrsync`
+_(synchronize files between two aufs branches)_.
+
+A slightly longer example that stack three file systems a
+read_only and two read-write is:
+
+    # cd /tmp
+    # mkdir ro rw1 rw2
+    # for f in ro rw1 rw2; do echo "content of $f" > $f/file_$f; done
+    # mount -t aufs -o br=/tmp/rw1=rw:/tmp/rw2=rw:/tmp/ro=ro none /tmp/aufs
+    # for f in ro rw1 rw2 new; do echo "appended in file_$f">> /tmp/aufs/file_$f; done
+    # cat /tmp/ro/file_ro
+    content of file_ro
+    # cat /tmp/aufs/file_ro
+    content of file_ro
+    appended in file_ro
+    # cat /tmp/rw2/file_ro
+    cat: /tmp/rw2/file_ro: No such file or directory
+    # cat /tmp/rw1/file_ro
+    content of file_ro
+    appended in file_ro
+    # ls /tmp/{rw1,rw2,ro,aufs}/file_new
+    ls: cannot access /tmp/rw2/file_new: No such file or directory
+    ls: cannot access /tmp/ro/file_new: No such file or directory
+    /tmp/aufs/file_new  /tmp/rw1/file_new
+
+The default policy of create and copy up for aufs is _top-down-parent_ which means that
+aufs selects the highest writable branch where the parent dir exists.
+If the parent dir does not exist on a writable branch, then  the
+internal  copyup  will  happen.  The  policy  for this copyup is
+always _bottom-up_.
+
+We can find more examples in the
+[aufs-utils sample directory
+](http://git.c3sl.ufpr.br/gitweb?p=aufs/aufs2-util.git;a=tree;f=sample)
+
+[Docker can use aufs as storage driver
+](https://docs.docker.com/storage/storagedriver/aufs-driver/)
+
+## OverlayFS
+
+{{< wp "OverlayFS" >}} is a fork and improvement of UnionFS, since kernel version 3.18
+it is the standard stackable file system in Linux, obsoleting UnionFS, and gradually
+replacing aufs.
+
+OverlayFS supports whiteouts files and opaque directories in the upper filesystem to
+allow deletion in the lower read-only filesystem. For modification of files in a
+readonly lower layer, upadating occur on a copy created in the upper layer.
+
+OverlayFS is [implemented in the kernel since version 3.18
+](https://github.com/torvalds/linux/commit/e9be9d5e76e34872f0c37d72e25bc27fe9e2c54c)
+in a module named _overlay_, and since kernel 4 _overlay2_.
+
+You can mount overlayfs with:
+
+    mount -t overlayfs overlayfs -olowerdir=/lower,upperdir=/upper/upper,workdir=/upper/work /overlay
+
+You can find examples of use in the answers to [How do I use OverlayFS?
+}(https://askubuntu.com/questions/109413/how-do-i-use-overlayfs).
+and in [OverlayFS | Programster's Blog](https://blog.programster.org/overlayfs).
+
+
+The more extensive documentation on overlayfs is the [kernel overlayfs documentation
+](https://www.kernel.org/doc/Documentation/filesystems/overlayfs.txt)
+
+There is an HowTo in [Overlay filesystem - ArchWiki
+](https://wiki.archlinux.org/index.php/Overlay_filesystem).
+
+[fuse-overlayfs](https://github.com/containers/fuse-overlayfs) is a Fuse implementation
+of overlayfs+shiftfs for rootless containers. _Shiftfs is a virtual filesystem for
+mapping mountpoints across user namespaces._
+
+[Docker can use OverlayFS
+](https://docs.docker.com/storage/storagedriver/overlayfs-driver/) and this is the
+prefered Driver on recent Linux ( kernel > 4.0 to have the _overlay2_ driver.)
+
+
+## btrfs and thinly provisionned lvm
+
+Btrfs and thinly provisionned lvm, are not stackable filesystems, but snapshotting allow
+to use a pseudo file system stack.
+
+On btrfs when you create a snapshot of a subvolume, you use only metadata, the file data
+itself is shared between the source subvolume and the snapshots. With copy-on-write when
+you modify the snapshot only the modified data is duplicated, and your source subvolume
+stay untouched.
+
+Docker can [use btrfs](https://docs.docker.com/storage/storagedriver/btrfs-driver/) or
+[device mapper with thinly provisionned pool
+](https://docs.docker.com/storage/storagedriver/device-mapper-driver/) as device driver.
+
+## MergerFS
+
+[MergerFS](https://github.com/trapexit/mergerfs) is a FUSE union filesystem.
+
+In contrast to aufs and overlayfs, it does not support Copey-On-Write, so you can not
+use it to make a read only file sytem appear writable; so it is not truly _stackable_.
+
+Look at the [FAQ](https://github.com/trapexit/mergerfs#faq) for comparison with other
+unionfs tools.
+
+There are exemple of use in the
+[Backup and recovery howtos](https://github.com/trapexit/backup-and-recovery-howtos)
+from the _mergefs_ author _trapexit_.
+
+## Bilibop
+[Bilibop](https://un.poivron.org/~quidame/wiki/bilibop/)
+helps to maintain an OS installed on an external media (USB, FireWire, Flash memory, eSATA)
+
+When the lockfs feature is enabled filesystems in /etc/fstab are set read-only except
+for those that have been whitelisted, or for the encrypted swap devices.
+
+_Bibilop_ is packaged in Debian.
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
