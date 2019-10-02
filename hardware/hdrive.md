@@ -56,237 +56,6 @@ See also {{< iref "filesystems" "File Systems" >}}.
     6Gbits/s, 600MB/s
 -   SATA revision 3.2 and 3.3: 16 Gbit/s, 1969 MB/s.
 
-
-# GPT -  GUID Partition Table {#partition_table}
--   Wikipedia: {{< wp "Master boot record" >}}, {{< wp "GUID Partition Table" >}} (GPT):
-    a more modern partitioning scheme, replacing the purpose of the MBR,
-    {{< wp "Globally unique identifier" >}} (GID),
-    {{< wp "Universally unique identifier" >}} (UUID),
-    {{< wp "Unified Extensible Firmware Interface" >}} (UEFI)
-    is meant as a replacement for the BIOS firmware interface,
--   The {{< wp "GUID Partition Table" >}} (GPT) is part of
-    {{< wp "Unified Extensible Firmware Interface" >}} (UEFI).
-    It has numerous advantages over {{< wp "Master boot record"  "MBR" >}} it uses
-    {{< wp "Universally unique identifier"  "Universally unique identifier (UUID)" >}}
-    also named {{< wp "Globally_Unique_Identifier"  "GUID" >}} for
-    partition types, disk, and partitions. It allows a minimum of 128 partition table entries
-    so logical and extended partitions are no longer necessary.
-    It uses 64-bit LBA for storing Sector numbers  allowing up to 2 ZiB disks,
-    and  disks with sectors larger than 512b  which are now common.
-    It has backup and crc checksum for header and partition table.<br />
-    _fdisk_ does not work with GPT, you have to use *gdisk* or *parted*.
--   [ArchWiki: GUID Partition Table
-    ](https://wiki.archlinux.org/index.php/GUID_Partition_Table)
-    see also the references in this ArchWiki page.
--   You need to have `CONFIG_EFI_PARTITION=y` (**not** `m`)
-    in the kernel to support GPT,
-
-# partitions managers. {#partionning}
-See also {{< iref "filesystems" "File Systems" >}}
-where you find {{< iref "filesystems#lvm" "LVM" >}}.
-
--   [ArchWiki: partitionning
-    ](https://wiki.archlinux.org/index.php/Partitioning)
-    : [partitionning tools
-    ](https://wiki.archlinux.org/index.php/Partitioning#Partitioning_tools),
-    [fstab](https://wiki.archlinux.org/index.php/Fstab),
-    [swap](https://wiki.archlinux.org/index.php/Swap).
--   <a name="parted"></a>
-    [Gnu Parted](https://www.gnu.org/software/parted/)
-    is a program for creating and manipulating partition tables.
-    It support  ext2, ext3, ext4,  fat16, fat32, hfs, hfs+, hfsx, linux-swap, NTFS
-    reiserfs, ufs, btrfs
-    -   [manual
-        ](https://www.gnu.org/software/parted/manual/html_node/index.html)
-    -   [ArchWiki: Gnu Parted
-        ](https://wiki.archlinux.org/index.php/GNU_Parted)
-    -   [Parted Cheat-Sheet
-        ](http://www.troubleshooters.com/linux/parted_cheat.htm)
-        by Steve litt.
--   <a name="gparted"></a>{{< wp "Gparted" >}} is the gnome front end for libparted. It supports
-    btrfs, ext2 / ext3 / ext4, fat16 / fat32,  hfs / hfs+,  linux-swap, lvm2 pv, nilfs2,
-    ntfs, reiserfs / reiser4,  udf, ufs, xfs. The detailed suported operations for each
-    file system is summarized in the [feature page](https://gparted.org/features.php).
-    -   [gparted Home](https://gparted.org/);
-    -   [gparted manual](https://gparted.org/display-doc.php?name=help-manual)
-    -   [ArchWiki: GParted
-        ](https://wiki.archlinux.org/index.php/GParted)
-    -   {{< iref "#gparted_live" "GParted Live" >}}
-        is a small bootable GNU/Linux distribution for x86 based computers.
-
--   [ArchWiki: fdisk and gdisk
-    ](https://wiki.archlinux.org/index.php/Fdisk)
--   [GPT fdisk Tutorial](http://www.rodsbooks.com/gdisk/),
-    [An sgdisk Walkthrough
-    ](http://www.rodsbooks.com/gdisk/sgdisk-walkthrough.html)
-    by Rod Smith.
--   [Gnome Disk](https://wiki.gnome.org/Apps/Disks)
-    or _gnome-disk-utility_
-    is a tool to manage disk drives and media. It can format and
-    partition drives,  resize partitions, mount and unmount partitions, query
-    S.M.A.R.T. attributes. It uses _udisk2_.
-    It has support for LUKS encryption.
-    -   {{< iref "#dd" "gnome-disk-utility git repository         )(https://git.gnome.org/browse/gnome-disk-utility/)  # Disk Cloning There are many ways of cloning a disk. We can clone the disk sector by sector; by doing so the tool has no need to know about the underlying file system. It is nevertheless possible to skip empty blocks and compress an image. This is the way to clone with [dd" >}} and its variants, it can also be an alternative of some
-utility when they don't know the file system.
-
--   Wikipedia: {{< wp "Disk cloning" >}}, {{< wp "List of disk cloning software" >}}
--   [ArchWiki: Disk cloning
-    ](https://wiki.archlinux.org/index.php/Disk_cloning)
--   [Clone HOWTO](http://www.tldp.org/HOWTO/Clone-HOWTO/index.html)
-    Describes a setup that allows a machine to boot Linux from
-    BOOTP/TFTP, using the Grub boot loader, and save and restore disk
-    and partition images to and from a TFTP server. _2002_.
--   <a name="clonezilla">[Clonezilla](http://sourceforge.net/projects/clonezilla/) (GPL)
-    is a partition or disk clone tool with text interface, it is frontend to
-    {{< iref "#partclone" "Partclone" >}} but can use also
-    {{< iref "#dd" "dd" >}}, {{< iref "#partimage" "partimage" >}}
-    and _ntfsclone_.
-    Filesystem supported: ext2, ext3, ext4, reiserfs, xfs, jfs of
-    GNU/Linux, FAT, NTFS of MS Windows, HFS+ of Mac OS, UFS of BSD,
-    and VMFS of VMWare ESX, LVM2.
-    -   [Clonezilla Live](https://clonezilla.org/clonezilla-live.php)
-        is a small bootable GNU/Linux distribution for x86/amd64.
-        based on  Debian Live. n image-file or as a duplicated copy of the data. The
-        image of copy of the data  can be saved to locally attached storage device, or
-        vian NFS, Samba or on an SSH server.
-    -   [clonezilla Live documantation
-       ](https://clonezilla.org/clonezilla-usage/general-live-use.php).
--   <a name="dd"></a>{{< wp "Dd_(Unix)"  "dd" >}} (GPL)
-    is a unix command part of _coreutils_ used to copy partitions. the
-    {{< wp "Dd_(Unix)"  "Wikipedia dd Page" >}} and man page have many examples of use.
-    -   [coreutils manual: dd page
-        ](http://www.gnu.org/software/coreutils/manual/html_node/dd-invocation.html)
-    -   [ArchWiki: Cloning - using dd
-        ](https://wiki.archlinux.org/index.php/Disk_cloning#Using_dd)
-    I find sometime useful during a long *dd* to get progress information with:
-
-        $ dd if=/dev/zero of=/dev/null count=10MB
-        $ killall -s USR1 dd
-        5221621+0 records in
-        5221620+0 records out
-        2673469440 bytes (2.7 GB) copied, 2.70126 s, 990 MB/s
-
--   <a name="dcfldd"></a>[dcfldd](http://dcfldd.sourceforge.net/) (GPL)
-    is an enhanced version of GNU with hashing on-the-fly, progress report,
-    wipe disks with a pattern, bit-for-bit verify of the image,
-    multiple concurent outputs, split output to multiple files, piped output and logs.
-    _dcfldd_ is in Debian.
-    -   [dcfldd(1)](https://manpages.debian.org/testing/dcfldd/dcfldd.1.en.html)
--   <a name="dc3dd"></a>[dc3dd](https://sourceforge.net/projects/dc3dd/)
-    is a patched version of Coreutil dd, with added features similar to
-    {{< iref "#dcfldd" "dcfldd" >}} i.e on the fly hashing (md5, sha-1, sha-256,
-    and sha-512), progress report, pattern wiping, write errors to a file,  group
-    errors in the error log, split output.
-    -   [dc3dd(1)](https://manpages.debian.org/stretch/dc3dd/dc3dd.1.en.html)
--   <a name="ddrescue"></a>
-    [gnu ddrescue](http://www.gnu.org/software/ddrescue/ddrescue.html) (GPL)
-    (GPL) by Antonio Diaz copies data from one file or block device to
-    another, trying hard to rescue data in case of read errors.  The
-    Debian package is *gddrescue* don't forget the initial **g** or
-    you will get the Kurt Garloff *ddr_rescue*.<br /> I use _ddrescue_
-    to recover partitions in this way (look at manual for options and
-    many useful examples)
-
-         # grab error-free areas
-         ddrescue -f -n /dev/hda1 /dev/hdb1 logfile
-         # work with direct access, retrying 3 times bad blocks
-         ddrescue -d -f -r3 /dev/hda1 /dev/hdb1 logfile
-         #check and correct the image partition, show progress and at end fs status
-         e2fsck -v -f  -C 0 /dev/hdb1
-
-    -   [gnu ddrescue manual
-        ](http://www.gnu.org/software/ddrescue/manual/ddrescue_manual.html)
-    -    [Kurt Garloff ddr_rescue
-        ](http://www.garloff.de/kurt/linux/ddrescue/) (GPL)
-         predate the *gnu ddrescue*. It can be assisted by
-         [dd_rhelp
-         ](http://www.kalysto.org/utilities/dd_rhelp/index.en.html) (GPL)
-         the author explains in this last page, that in most case
-         *gnu ddrescue* must be preferred.
--   [e2image](https://manpages.debian.org/testing/e2fsprogs/e2image.8.en.html)
-    can be used to copy ext2, ext3, and ext4 partitions efficiently by only copying the
-    used blocks. Make shure to use the `-a` flag to include all data, without it e2image
-    only includes fs metadata.
-    {{< iref "#gparted" "gparted" >}} uses e2image to copy ext2/3/4 partitions.
--   <a name="fsarchiver"></a>[FSArchiver](http://www.fsarchiver.org/)
-    is a system tool that allows you to save the contents of a
-    file-system to a compressed and optionally encrypted archive
-    file. It works at the file level for FAT32, btrfs, ext2, ext3,
-    ext4, ReiserFS-4, HPFS, JFS, XFS and preserve all the standard
-    file attributes (permissions, timestamps, symbolic-links,
-    hard-links, extended-attributes, …). It checksum everything and so
-    you can restore the sane part of a corrupted archive.
-    _FSArchiver_ is in Debian and included in {{< iref "#sysrescd" "SystemRescueCd" >}}.
--   <a name="partclone">[Partclone](https://partclone.org/) (GPL)
-    provides utilities to save and restore used blocks on a partition. It is similar to
-    {{< iref "#partimage" "PartImage" >}} but has a wider file system support
-    ext2, ext3, ext4, hfs+, reiserfs, reiser4, btrfs, vmfs3, vmfs5, xfs, jfs, ufs, ntfs,
-    fat(12/16/32), exfat, f2fs, nilfs.
-    -   [partclone utilities man pages](https://partclone.org/usage/).
-    -   [partclone GitHub repository](https://github.com/Thomas-Tsai/partclone).
-    -   [partclone wiki](https://github.com/Thomas-Tsai/partclone/wiki)
--   <a name="partimage"></a>{{< wp "Partimage" >}}
-    is an ncurses disk cloning utility. It does not support ext4 or btrfs
-    filesystems. and is now replaced by
-    {{< iref "#fsarchiver" "FSArchiver" >}}. You can also consider
-    {{< iref "#partclone" "Partclone" >}}.
-    -   [partimage Home](http://www.partimage.org/)
--   <a name=testdisk"></a>[TestDisk](http://www.cgsecurity.org/wiki/TestDisk)
-    TestDisk can find lost partitions for many file systems including
-    DOS/Windows FAT12, FAT16, FAT32, exFat, NTFS; linux  ext2, ext3, ext4,
-    btrfs, GFS2, GFS2, RAID 1/4/5/6, swap, lvm, lvm2; zfs, reiserfs
-    ...
-    Testdisk is included in {{< iref "#sysrescd" "System Rescue CD" >}}.
-    -   [TestDisk step by step
-        ](http://www.cgsecurity.org/wiki/TestDisk_Step_By_Step)
-
-
-
-# Rescue systems {#rescue_systems}
-
--   [Finnix](http://www.finnix.org/)
-    is a live cd of 300MiB based on debian testing. It is aimed at
-    system administrators and does not include a desktop or
-    productivity toolkit. It has support for lvm2, encrypted partitions,
-    etc. There is x386, amd64, PPC, an ARM V7 version.
--   <a name="gparted_live"></a>[GParted Live](https://gparted.org/livecd.php)
-    is a small bootable GNU/Linux distribution for x86/amd64 based computers.
-    In addition to {{< iref "#gparted" "GParted" >}} and
-    {{< iref "#parted" "Gnu Parted" >}} it contains
-    {{< iref "#clonezilla" "Clonezilla" >}},   doClone,
-    {{< iref "#fsarchiver" "FSArchiver" >}},   G4L,   g4u,
-    {{< iref "#partimage" "PartImage" >}},
-    {{< iref "#partclone" "Partclone" >}},
-    {{< iref "#testdisk" "TestDisk" >}}.
-    -   [Gparted Live manual
-        ](https://gparted.org/display-doc.php?name=gparted-live-manual)
--   [Super Grub2 Disk](http://www.supergrubdisk.org/wiki/SuperGRUB2Disk)
-    is an image to be burned on a cdrom, or installed on an usb key.
-    It is used to boot a filesystem with damaged boot loader, and
-    restore an unusable grub configuration.
--   <a name="sysrescd"></a>
-    [SystemRescueCd](http://www.sysresccd.org/)
-    is a rescue system for x86 and amd64 on CD or USB stick. It is based on Gentoo and
-    provides many tools: fdisk, GRUB, Syslinux
-    {{< iref "#parted" "Gnu Parted" >}},
-    {{< iref "#gparted" "GParted" >}},
-    {{< iref "#partimage" "PartImage" >}},
-    {{< iref "#fsarchiver" "FSArchiver" >}},
-    {{< iref "#ddrescue" "ddrescue" >}},
-    {{< iref "#testdisk" "TestDisk" >}},
-    borgbackup, rsnapshot, iozone,
-    lvm2, Ntfs3g, samba,
-    fstools, grub2, lilo, rsync, rdiff-backup,  Xorg or
-    Xvesa with an xfce4 desktop, network tools .....<br />
-    _SystemRescueCd_ has kernel images for 32 bits and 64 bits
-    architecture, it allow to setup a PXE boot server, which allow you
-    to rescue systems without CD drive, but with PXE boot option.
-    -   [SystemRescueCD Documentation
-        ](http://www.sysresccd.org/Online-Manual-EN)
-        the chapter on Grub, lvm, partitioning are easy tutorials on
-        these subjects.
-    -   Wikipedia: {{< wp "SystemRescueCD" >}}
-
 # hdparm
 -   [ArchWiki: hdparm](https://wiki.archlinux.org/index.php/hdparm)
 -   [Gentoo wiki: hdparm](http://wiki.gentoo.org/wiki/Hdparm)
@@ -300,7 +69,7 @@ utility when they don't know the file system.
 -   put in stanby ` sudo hdparm -y dev/hdc`
 -   put in sleep mode ` sudo hdparm -Y dev/hdc`
 
-# smartmontool
+# smartmontool {#smartmontools}
 
 [smartmontools](http://www.smartmontools.org/)(GPL)
 :   contains two programs to report {{< wp "S.M.A.R.T." >}} able hard drives
@@ -381,6 +150,246 @@ the accuracy of data passing through it.
 The raw value of Hardware ECC Recovered as a decimal number represents
 a sector count, not an error count. This value rolls over to 0 once
 the count reaches about 250 million or low level disk format.
+
+# GPT -  GUID Partition Table {#partition_table}
+-   Wikipedia: {{< wp "Master boot record" >}}, {{< wp "GUID Partition Table" >}} (GPT):
+    a more modern partitioning scheme, replacing the purpose of the MBR,
+    {{< wp "Globally unique identifier" >}} (GID),
+    {{< wp "Universally unique identifier" >}} (UUID),
+    {{< wp "Unified Extensible Firmware Interface" >}} (UEFI)
+    is meant as a replacement for the BIOS firmware interface,
+-   The {{< wp "GUID Partition Table" >}} (GPT) is part of
+    {{< wp "Unified Extensible Firmware Interface" >}} (UEFI).
+    It has numerous advantages over {{< wp "Master boot record"  "MBR" >}} it uses
+    {{< wp "Universally unique identifier"  "Universally unique identifier (UUID)" >}}
+    also named {{< wp "Globally_Unique_Identifier"  "GUID" >}} for
+    partition types, disk, and partitions. It allows a minimum of 128 partition table entries
+    so logical and extended partitions are no longer necessary.
+    It uses 64-bit LBA for storing Sector numbers  allowing up to 2 ZiB disks,
+    and  disks with sectors larger than 512b  which are now common.
+    It has backup and crc checksum for header and partition table.<br />
+    _fdisk_ does not work with GPT, you have to use *gdisk* or *parted*.
+-   [ArchWiki: GUID Partition Table
+    ](https://wiki.archlinux.org/index.php/GUID_Partition_Table)
+    see also the references in this ArchWiki page.
+-   You need to have `CONFIG_EFI_PARTITION=y` (**not** `m`)
+    in the kernel to support GPT,
+
+# partitions managers. {#partionning}
+See also {{< iref "filesystems" "File Systems" >}}
+where you find {{< iref "filesystems#lvm" "LVM" >}}.
+
+-   [ArchWiki: partitionning
+    ](https://wiki.archlinux.org/index.php/Partitioning)
+    : [partitionning tools
+    ](https://wiki.archlinux.org/index.php/Partitioning#Partitioning_tools),
+    [fstab](https://wiki.archlinux.org/index.php/Fstab),
+    [swap](https://wiki.archlinux.org/index.php/Swap).
+-   <a name="parted"></a>
+    [Gnu Parted](https://www.gnu.org/software/parted/)
+    is a program for creating and manipulating partition tables.
+    It support  ext2, ext3, ext4,  fat16, fat32, hfs, hfs+, hfsx, linux-swap, NTFS
+    reiserfs, ufs, btrfs
+    -   [manual
+        ](https://www.gnu.org/software/parted/manual/html_node/index.html)
+    -   [ArchWiki: Gnu Parted
+        ](https://wiki.archlinux.org/index.php/GNU_Parted)
+    -   [Parted Cheat-Sheet
+        ](http://www.troubleshooters.com/linux/parted_cheat.htm)
+        by Steve litt.
+-   <a name="gparted"></a>{{< wp "Gparted" >}} is the gnome front end for libparted. It supports
+    btrfs, ext2 / ext3 / ext4, fat16 / fat32,  hfs / hfs+,  linux-swap, lvm2 pv, nilfs2,
+    ntfs, reiserfs / reiser4,  udf, ufs, xfs. The detailed suported operations for each
+    file system is summarized in the [feature page](https://gparted.org/features.php).
+    -   [gparted Home](https://gparted.org/);
+    -   [gparted manual](https://gparted.org/display-doc.php?name=help-manual)
+    -   [ArchWiki: GParted
+        ](https://wiki.archlinux.org/index.php/GParted)
+    -   {{< iref "#gparted_live" "GParted Live" >}}
+        is a small bootable GNU/Linux distribution for x86 based computers.
+
+-   [ArchWiki: fdisk and gdisk
+    ](https://wiki.archlinux.org/index.php/Fdisk)
+-   [GPT fdisk Tutorial](http://www.rodsbooks.com/gdisk/),
+    [An sgdisk Walkthrough
+    ](http://www.rodsbooks.com/gdisk/sgdisk-walkthrough.html)
+    by Rod Smith.
+-   [Gnome Disk](https://wiki.gnome.org/Apps/Disks)
+    or _gnome-disk-utility_
+    is a tool to manage disk drives and media. It can format and
+    partition drives,  resize partitions, mount and unmount partitions, query
+    S.M.A.R.T. attributes. It uses _udisk2_.
+    It has support for LUKS encryption.
+    -   [gnome-disk-utility git repository
+        )(https://git.gnome.org/browse/gnome-disk-utility/)
+
+# Disk Cloning {#disk_cloning}
+There are many ways of cloning a disk. We can clone the disk sector by sector; by doing
+so the tool has no need to know about the underlying file system. It is nevertheless
+possible to skip empty blocks and compress an image. This is the way to clone with
+{{< iref "#dd" "dd" >}} and its variants, it can also be an alternative of some
+utility when they don't know the file system.
+
+-   Wikipedia: {{< wp "Disk cloning" >}}, {{< wp "List of disk cloning software" >}}
+-   [ArchWiki: Disk cloning
+    ](https://wiki.archlinux.org/index.php/Disk_cloning)
+-   [Clone HOWTO](http://www.tldp.org/HOWTO/Clone-HOWTO/index.html)
+    Describes a setup that allows a machine to boot Linux from
+    BOOTP/TFTP, using the Grub boot loader, and save and restore disk
+    and partition images to and from a TFTP server. _2002_.
+
+## Low level disk copy
+-   <a name="dd"></a>{{< wp "Dd_(Unix)"  "dd" >}} (GPL)
+    is a unix command part of _coreutils_ used to copy partitions. the
+    {{< wp "Dd_(Unix)"  "Wikipedia dd Page" >}} and man page have many examples of use.
+    -   [coreutils manual: dd page
+        ](http://www.gnu.org/software/coreutils/manual/html_node/dd-invocation.html)
+    -   [ArchWiki: Cloning - using dd
+        ](https://wiki.archlinux.org/index.php/Disk_cloning#Using_dd)
+    I find sometime useful during a long *dd* to get progress information with:
+
+        $ dd if=/dev/zero of=/dev/null count=10MB
+        $ killall -s USR1 dd
+        5221621+0 records in
+        5221620+0 records out
+        2673469440 bytes (2.7 GB) copied, 2.70126 s, 990 MB/s
+
+-   <a name="dcfldd"></a>[dcfldd](http://dcfldd.sourceforge.net/) (GPL)
+    is an enhanced version of GNU with hashing on-the-fly, progress report,
+    wipe disks with a pattern, bit-for-bit verify of the image,
+    multiple concurent outputs, split output to multiple files, piped output and logs.
+    _dcfldd_ is in Debian.
+    -   [dcfldd(1)](https://manpages.debian.org/testing/dcfldd/dcfldd.1.en.html)
+-   <a name="dc3dd"></a>[dc3dd](https://sourceforge.net/projects/dc3dd/)
+    is a patched version of Coreutil dd, with added features similar to
+    {{< iref "#dcfldd" "dcfldd" >}} i.e on the fly hashing (md5, sha-1, sha-256,
+    and sha-512), progress report, pattern wiping, write errors to a file,  group
+    errors in the error log, split output.
+    -   [dc3dd(1)](https://manpages.debian.org/stretch/dc3dd/dc3dd.1.en.html)
+-   <a name="ddrescue"></a>
+    [gnu ddrescue](http://www.gnu.org/software/ddrescue/ddrescue.html) (GPL)
+    (GPL) by Antonio Diaz copies data from one file or block device to
+    another, trying hard to rescue data in case of read errors.  The
+    Debian package is *gddrescue* don't forget the initial **g** or
+    you will get the Kurt Garloff *ddr_rescue*.<br /> I use _ddrescue_
+    to recover partitions in this way (look at manual for options and
+    many useful examples)
+
+         # grab error-free areas
+         ddrescue -f -n /dev/hda1 /dev/hdb1 logfile
+         # work with direct access, retrying 3 times bad blocks
+         ddrescue -d -f -r3 /dev/hda1 /dev/hdb1 logfile
+         #check and correct the image partition, show progress and at end fs status
+         e2fsck -v -f  -C 0 /dev/hdb1
+
+    -   [gnu ddrescue manual
+        ](http://www.gnu.org/software/ddrescue/manual/ddrescue_manual.html)
+    -    [Kurt Garloff ddr_rescue
+        ](http://www.garloff.de/kurt/linux/ddrescue/) (GPL)
+         predate the *gnu ddrescue*. It can be assisted by
+         [dd_rhelp
+         ](http://www.kalysto.org/utilities/dd_rhelp/index.en.html) (GPL)
+         the author explains in this last page, that in most case
+         *gnu ddrescue* must be preferred.
+
+## partition cloning
+
+-   <a name="clonezilla">[Clonezilla](http://sourceforge.net/projects/clonezilla/) (GPL)
+    is a partition or disk clone tool with text interface, it is frontend to
+    {{< iref "#partclone" "Partclone" >}} but can use also
+    {{< iref "#dd" "dd" >}}, {{< iref "#partimage" "partimage" >}}
+    and _ntfsclone_.
+    Filesystem supported: ext2, ext3, ext4, reiserfs, xfs, jfs of
+    GNU/Linux, FAT, NTFS of MS Windows, HFS+ of Mac OS, UFS of BSD,
+    and VMFS of VMWare ESX, LVM2.
+    -   [Clonezilla Live](https://clonezilla.org/clonezilla-live.php)
+        is a small bootable GNU/Linux distribution for x86/amd64.
+        based on  Debian Live. n image-file or as a duplicated copy of the data. The
+        image of copy of the data  can be saved to locally attached storage device, or
+        vian NFS, Samba or on an SSH server.
+    -   [clonezilla Live documantation
+       ](https://clonezilla.org/clonezilla-usage/general-live-use.php).
+-   [e2image](https://manpages.debian.org/testing/e2fsprogs/e2image.8.en.html)
+    can be used to copy ext2, ext3, and ext4 partitions efficiently by only copying the
+    used blocks. Make shure to use the `-a` flag to include all data, without it e2image
+    only includes fs metadata.
+    {{< iref "#gparted" "gparted" >}} uses e2image to copy ext2/3/4 partitions.
+-   <a name="fsarchiver"></a>[FSArchiver](http://www.fsarchiver.org/)
+    is a system tool that allows you to save the contents of a
+    file-system to a compressed and optionally encrypted archive
+    file. It works at the file level for FAT32, btrfs, ext2, ext3,
+    ext4, ReiserFS-4, HPFS, JFS, XFS and preserve all the standard
+    file attributes (permissions, timestamps, symbolic-links,
+    hard-links, extended-attributes, …). It checksum everything and so
+    you can restore the sane part of a corrupted archive.
+    _FSArchiver_ is in Debian and included in {{< iref "#sysrescd" "SystemRescueCd" >}}.
+-   <a name="partclone">[Partclone](https://partclone.org/) (GPL)
+    provides utilities to save and restore used blocks on a partition. It is similar to
+    {{< iref "#partimage" "PartImage" >}} but has a wider file system support
+    ext2, ext3, ext4, hfs+, reiserfs, reiser4, btrfs, vmfs3, vmfs5, xfs, jfs, ufs, ntfs,
+    fat(12/16/32), exfat, f2fs, nilfs.
+    -   [partclone utilities man pages](https://partclone.org/usage/).
+    -   [partclone GitHub repository](https://github.com/Thomas-Tsai/partclone).
+    -   [partclone wiki](https://github.com/Thomas-Tsai/partclone/wiki)
+-   <a name="partimage"></a>{{< wp "Partimage" >}}
+    is an ncurses disk cloning utility. It does not support ext4 or btrfs
+    filesystems. and is now replaced by
+    {{< iref "#fsarchiver" "FSArchiver" >}}. You can also consider
+    {{< iref "#partclone" "Partclone" >}}.
+    -   [partimage Home](http://www.partimage.org/)
+
+# Rescue systems {#rescue_systems}
+
+-   [Finnix](http://www.finnix.org/)
+    is a live cd of 300MiB based on debian testing. It is aimed at
+    system administrators and does not include a desktop or
+    productivity toolkit. It has support for lvm2, encrypted partitions,
+    etc. There is x386, amd64, PPC, an ARM V7 version.
+-   <a name="gparted_live"></a>[GParted Live](https://gparted.org/livecd.php)
+    is a small bootable GNU/Linux distribution for x86/amd64 based computers.
+    In addition to {{< iref "#gparted" "GParted" >}} and
+    {{< iref "#parted" "Gnu Parted" >}} it contains
+    {{< iref "#clonezilla" "Clonezilla" >}},   doClone,
+    {{< iref "#fsarchiver" "FSArchiver" >}},   G4L,   g4u,
+    {{< iref "#partimage" "PartImage" >}},
+    {{< iref "#partclone" "Partclone" >}},
+    {{< iref "#testdisk" "TestDisk" >}}.
+    -   [Gparted Live manual
+        ](https://gparted.org/display-doc.php?name=gparted-live-manual)
+-   [Super Grub2 Disk](http://www.supergrubdisk.org/wiki/SuperGRUB2Disk)
+    is an image to be burned on a cdrom, or installed on an usb key.
+    It is used to boot a filesystem with damaged boot loader, and
+    restore an unusable grub configuration.
+-   <a name="sysrescd"></a>
+    [SystemRescueCd](http://www.sysresccd.org/)
+    is a rescue system for x86 and amd64 on CD or USB stick. It is based on Gentoo and
+    provides many tools: fdisk, GRUB, Syslinux
+    {{< iref "#parted" "Gnu Parted" >}},
+    {{< iref "#gparted" "GParted" >}},
+    {{< iref "#partimage" "PartImage" >}},
+    {{< iref "#fsarchiver" "FSArchiver" >}},
+    {{< iref "#ddrescue" "ddrescue" >}},
+    {{< iref "#testdisk" "TestDisk" >}},
+    borgbackup, rsnapshot, iozone,
+    lvm2, Ntfs3g, samba,
+    fstools, grub2, lilo, rsync, rdiff-backup,  Xorg or
+    Xvesa with an xfce4 desktop, network tools .....<br />
+    _SystemRescueCd_ has kernel images for 32 bits and 64 bits
+    architecture, it allow to setup a PXE boot server, which allow you
+    to rescue systems without CD drive, but with PXE boot option.
+    -   [SystemRescueCD Documentation
+        ](http://www.sysresccd.org/Online-Manual-EN)
+        the chapter on Grub, lvm, partitioning are easy tutorials on
+        these subjects.
+    -   Wikipedia: {{< wp "SystemRescueCD" >}}
+-   <a name=testdisk"></a>[TestDisk](http://www.cgsecurity.org/wiki/TestDisk)
+    TestDisk can find lost partitions for many file systems including
+    DOS/Windows FAT12, FAT16, FAT32, exFat, NTFS; linux  ext2, ext3, ext4,
+    btrfs, GFS2, GFS2, RAID 1/4/5/6, swap, lvm, lvm2; zfs, reiserfs
+    ...
+    Testdisk is included in {{< iref "#sysrescd" "System Rescue CD" >}}.
+    -   [TestDisk step by step
+        ](http://www.cgsecurity.org/wiki/TestDisk_Step_By_Step)
 
 
 # Hard Disk spindown {#hd_spindown}
