@@ -2,7 +2,6 @@
 title: Hard Drive
 ---
 
-{{% toc /%}}
 
 See also {{< iref "filesystems" "File Systems" >}}.
 
@@ -292,7 +291,7 @@ utility when they don't know the file system.
          the author explains in this last page, that in most case
          *gnu ddrescue* must be preferred.
 
-## partition cloning
+## Partition cloning
 
 -   <a name="clonezilla">[Clonezilla](http://sourceforge.net/projects/clonezilla/) (GPL)
     is a partition or disk clone tool with text interface, it is frontend to
@@ -339,12 +338,22 @@ utility when they don't know the file system.
     -   [partimage Home](http://www.partimage.org/)
 
 # Disk and sectors rescue
+-   {{< wp "Disc Rot" >}}  is the tendency of CD or DVD or other optical discs to become
+    unreadable because of physical or chemical deterioration.
+-   [Storage device Setup HOWTO
+    ](https://github.com/trapexit/backup-and-recovery-howtos/blob/master/docs/setup_(storage_device).md)
+    by _trapexit_, explains inititial checking of a new disk.
 -   [badblocks - ArchWiki](https://wiki.archlinux.org/index.php/Badblocks)
 -   Lvm does not support badblock the only solution proposed by
     [this answer to "Can LVM mark / avoid bad blocks?"
     ](https://unix.stackexchange.com/a/362257/266187)
     is to create a PV on the top of a device mapper device.
--   [File recovery - ArchWiki](https://wiki.archlinux.org/index.php/File_recovery)
+-   [File recovery - ArchWiki](https://wiki.archlinux.org/index.php/File_recovery).
+-   {{< wp "Parchive" >}} is an erasure code system that produces par files for checksum
+    verification of data integrity, with the capability to perform data recovery
+    operations that can repair or regenerate corrupted or missing data.
+    -   [par2cmdline](https://github.com/Parchive/par2cmdline/) (GPL)
+        is a PAR 2.0 compatible file verification and repair tool.
 -   [Disk Maintenance under Linux (Disk Recovery)
     ](http://www.linuxjournal.com/article/193) explains dumpe2fs, badblocks, debugfs use
     _1997_
