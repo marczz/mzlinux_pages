@@ -24,6 +24,9 @@ And also other reference on encryption:
     ](https://wiki.archlinux.org/index.php/Disk_Encryption#Comparison_table).
 -   [RSA Laboratories' Crypto FAQ
     ](http://www.rsasecurity.com/rsalabs/node.asp?id=2152)
+-   [Securely wipe disk - ArchWiki
+    ](https://wiki.archlinux.org/index.php/Securely_wipe_disk)
+
 -   [Sirikali](https://mhogomchungu.github.io/sirikali/)
     provides a Qt/C++ GUI front end to cryfs,gocryptfs,securefs and
     encfs, allowing the user to create, mount, and unmount encrypted
