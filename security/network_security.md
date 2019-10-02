@@ -19,21 +19,25 @@ See also
 {{< iref "mail" "mail section" >}} for securing the MTA
 such as {{< iref "mail#postfix" "Postfix" >}}.
 
-# Network intrusion detection
+# References
 
-## References
-Don't miss references in {{< iref "security#references" "Security references" >}}.
+Don't miss references in
+{{< iref "security#references" "Security references" >}}.
 
+-   [Securing networks - Red Hat Enterprise Linux 8
+    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/securing_networks/index)
 -   Wikipedia: {{< wp "Intrusion detection system" >}},
-    {{< wp "Intrusion detection system" >}},
     {{< wp "Intrusion prevention system" >}}.
 -   [OWASP testing Guide v4
     ](https://www.owasp.org/index.php/OWASP_Testing_Guide_v4_Table_of_Contents).
+    provide a complete testing framework delivered a complete testing framework
+    for web applications.
 -   [OWASP Testing Guide list of testing tools
     ](https://www.owasp.org/index.php/Appendix_A:_Testing_Tools)
 -   [Darknet Networking Hacking resources
     ](https://www.darknet.org.uk/category/hacking-tools/networking-hacking/).
 
+# Network intrusion detection
 ## Intrusion Detection Systems (IDS)
 See also {{< iref "security#forensic_tools" "Forensic Tools" >}}
 and {{< iref "lightweight_distributions#forensic_distributions" "Forensic Distributions" >}}.
