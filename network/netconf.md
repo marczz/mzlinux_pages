@@ -4,7 +4,7 @@ title: Network Configuration
 
 {{% toc /%}}
 
-See also at readthedocs _not yet_
+See also at readthedocs
 [Unix Memo](http://unix-memo.readthedocs.org/en/latest/):
 [Network Commands Memo
 ](http://unix-memo.readthedocs.org/en/latest/net_commands.html)
@@ -13,6 +13,9 @@ See also at readthedocs _not yet_
 [Network Manager Memo
 ](http://unix-memo.readthedocs.org/en/latest/commands.html#network-manager)
 
+
+The network configuration guides are in the page
+ {{< iref "network" "Network references"  >}}.
 See also {{< iref "vpn" "VPN" >}}.
 
 # How to manage your network
@@ -171,20 +174,18 @@ to _systemd-networkd_:
 
 # Network Manager {#network-manager}
 
-See at readthedocs _not yet_
+See my memo at readthedocs
 [nm memo
 ](http://unix-memo.readthedocs.org/en/latest/commands.html#network-manager)
 
-{{< wp "NetworkManager" >}} ( GPL) is a networking configuration daemon
-which try to provide a painless and automatic network setup. It is
-part of the gnome project but communicate thru dbus and has no gnome
-dependencies by itself. The gnome front-end add some more dependencies.
-In Debian you can install `gnome-network-manager` with few package
-dependencies if you disable all _recommended_ packages.
-Otherwise you will pull all the gnome desktop.<br />
-NetworkManager by itself is a small daemon 6M/4M shared, nm-applet add
-16M/12M shared and can fit in any systray, like the built-in systray
-in fluxbox.
+{{< wp "NetworkManager" >}} ( GPL) is a networking configuration daemon which try to
+provide a painless and automatic network setup. It is part of the gnome project but
+communicate thru dbus and has no gnome dependencies by itself. The gnome front-end add
+some more dependencies.  In Debian you can install `gnome-network-manager` with few
+package dependencies if you disable all _recommended_ packages.  Otherwise you will pull
+all the gnome desktop.<br /> NetworkManager by itself is a small daemon 13M/10M shared,
+nm-applet add 37M/30M shared _(vers 1.8.20 2019, and only ~10M added mem)_ and can fit
+in any systray, like the built-in systray in fluxbox, or i3.
 
 -   [NetworkManager Home](http://projects.gnome.org/NetworkManager/)
 -   [Network Manager Wiki
@@ -194,7 +195,8 @@ in fluxbox.
     -   [Network Manager Configuration plugins
         ](https://wiki.gnome.org/Projects/NetworkManager/SystemSettings)
     -   [Network Manager System Setting
-        ](https://wiki.gnome.org/Projects/NetworkManager/SystemSettings/jessie)
+        ](https://wiki.gnome.org/Projects/NetworkManager/SystemSettings).
+-   [NetworkManager FAQ](https://wiki.gnome.org/DarrenAlbers/NetworkManagerFAQ)
 -   [ArchWiki: Network Manager
     ](https://wiki.archlinux.org/index.php/Network_manager)
     is the most complete page on _nm_ settings.
@@ -202,28 +204,47 @@ in fluxbox.
     ](https://wiki.archlinux.org/index.php/NetworkManager#Command_line)
     with _nmcli_, _nmtui_, _nmcli-dmenu_.
 -   [Debian Wiki: Network Configuration
-    ](https://wiki.debian.org/NetworkConfiguration)
--   [Debian Wiki: Network Manager
-    ](http://wiki.debian.org/NetworkManager)
+    ](https://wiki.debian.org/NetworkConfiguration),
+    [Network Manager](http://wiki.debian.org/NetworkManager)
 -   [Ubuntu community help: NetworkManager
     ](https://help.ubuntu.com/community/NetworkManager),
     [Roaming Profiles With NetworkManager
     ](https://help.ubuntu.com/community/RoamingProfilesWithNetworkManager).
--   [Fedora: Network Manager
-    ](https://fedoraproject.org/wiki/Tools/NetworkManager)
 -   [Gentoo: Network Manager
     ](https://wiki.gentoo.org/wiki/NetworkManager)
 -   [nmcli
     ](http://fedoraproject.org/wiki/Features/NetworkManagerCmdline)
     is a command line client included in Network Manager since
     version 0.8.0
--   [Red Hat Networking Guide: Using nmcli
-    ](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Networking_Guide/sec-Using_the_NetworkManager_Command_Line_Tool_nmcli.html)
+-   [Configuring and managing networking - Red Hat Enterprise Linux 8
+    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_networking/index)
+    :
+    -   [Chapter 3. managing networking with NetworkManager Red Hat
+        ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_networking/getting-started-with-managing-networking-with-networkmanager_configuring-and-managing-networking)
+    -   [Chapter 5. Configuring IP networking with nmtui
+        ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_networking/configuring-ip-networking-with-nmtui_configuring-and-managing-networking)
+    -   [Chapter 6. Configuring networking with nmcli
+        ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_networking/configuring-networking-with-nmcli_configuring-and-managing-networking)
+-   [Networking Guide Fedora 25
+    ](https://docs.fedoraproject.org/en-US/Fedora/25/html/Networking_Guide/index.html)
+    :
+    -   [2.4. Using nmcli
+        ](https://docs.fedoraproject.org/en-US/Fedora/25/html/Networking_Guide/sec-Using_the_NetworkManager_Command_Line_Tool_nmcli.html)
+    -   [4.5. Channel bonding using nmcli
+        ](https://docs.fedoraproject.org/en-US/Fedora/25/html/Networking_Guide/sec-Network_Bonding_Using_the_NetworkManager_Command_Line_Tool_nmcli.html)
+-   [Fedora Wiki: Network Manager
+    ](https://fedoraproject.org/wiki/Tools/NetworkManager),
+    [Networking/CLI](https://fedoraproject.org/wiki/Networking/CLI),
+    [Networking/Bridging Using NetworkManager
+    ](https://fedoraproject.org/wiki/Networking/Bridging#Using_NetworkManager_.28permanent.29)
+    [IPv6 tunnel via Hurricane Electric
+    ](https://fedoraproject.org/wiki/IPv6_tunnel_via_Hurricane_Electric)
+
 -   In recent releases _greater than 0.9.10_ you find also a ncurses
     client _nmtui_ wich allows to connect/disconnect, choose
     connections and edit them.
 -   [cnetworkmanager](http://vidner.net/martin/software/cnetworkmanager/)
-    (GPL) is a Python command line client for network manager, it
+    (GPL) was a Python command line client for network manager, it
     is no more developed since 2009 and no more in Debian. The
     author Martin Vidner
     [does not intend to develop it any more
@@ -234,8 +255,8 @@ in fluxbox.
 -   [networkmanager-dmenu
     ](https://github.com/firecat53/networkmanager-dmenu)
     is a python script to control network manager with
-    {{< iref "#dmenu" "dmenu" >}}, it can
-    also be used with {{< iref "#rofi" "rofi" >}}.
+    {{< iref "desktop#dmenu" "dmenu" >}}, it can
+    also be used with {{< iref "desktop#rofi" "rofi" >}}.
 
 # Low level Wireless Tools
 
