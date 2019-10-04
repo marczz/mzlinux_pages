@@ -31,7 +31,7 @@ in the {{< iref "security" "Security chapter" >}}.
 -   [Linux Advanced Routing & Traffic Control HOWTO](http://lartc.org/howto/)
     by Bert Hubert deals with iproute2, GRE, ipv6 tunneleing, IPSEC, multicast,
     queueing disciplines, netfilter packet marking/classifying,
-    Kernel network parameters, proxyarp, OSPF and BGP.
+    Kernel network parameters, proxyarp, OSPF and BGP. _2012_
 -   [Ethernet HOWTO](http://www.tldp.org/HOWTO/Ethernet-HOWTO.html) is
     a compilation of information about which ethernet devices can be
     used for Linux, and how to set them up. It is focused on the
@@ -99,3 +99,14 @@ in the {{< iref "security" "Security chapter" >}}.
 -   [Multicast Technology links](http://www.infres.enst.fr/~dax/multicast.html)
     from [Philippe Dax's Home Page](http://www.infres.enst.fr/~dax/)
     (see also lectures on IP, IPv6, ...)
+-   [Configuring and managing networking - Red Hat Enterprise Linux 8
+    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_networking/index)
+    update most of content of the
+    [Red Hat Networking Guide -- Red Hat Enterprise Linux 7
+    ](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Networking_Guide)
+    but some chapter like configuration of DNS and DHCP servers, Squid, InfiniBand and
+    RDMA are still only in this guide.
+-   [Securing networks - Red Hat Enterprise Linux 8
+    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/securing_networks/index)
+-   [Networking Guide Fedora 25
+    ](https://docs.fedoraproject.org/en-US/Fedora/25/html/Networking_Guide/index.html)
