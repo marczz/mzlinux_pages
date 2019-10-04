@@ -348,6 +348,9 @@ utility when they don't know the file system.
     [this answer to "Can LVM mark / avoid bad blocks?"
     ](https://unix.stackexchange.com/a/362257/266187)
     is to create a PV on the top of a device mapper device.
+-   [bbf](https://github.com/trapexit/bbf) (ISC License)
+    is an enhancement of badblocks which scan hard drives for badblocks and attempt the
+    reallocation of blocks.
 -   [File recovery - ArchWiki](https://wiki.archlinux.org/index.php/File_recovery).
 -   {{< wp "Parchive" >}} is an erasure code system that produces par files for checksum
     verification of data integrity, with the capability to perform data recovery
