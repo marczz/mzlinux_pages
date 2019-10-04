@@ -2,10 +2,6 @@
 title: Authentication
 ---
 
-{{% toc /%}}
-
----
-
 Apache authentication is in the
 {{< iref "apache" "Apache Page" >}},
 {{< iref "nginx" "Nginx Authentication" >}}.
@@ -24,13 +20,10 @@ See also {{< iref "security" "Security" >}},
     -   [OWASP principles
         ](https://www.owasp.org/index.php/Category:Principle)
     -   [list of How To](https://www.owasp.org/index.php/Category:How_To)
-    -   [Guide to Building Secure Web Applications and Web Services
-        ](https://www.owasp.org/index.php/Category:OWASP_Guide_Project)
-    -   [Guide to Authentication
-        ](https://www.owasp.org/index.php/Guide_to_Authentication).
-        _page deleted?_
-    -   [Authentication Cheat Sheet
-        ](https://www.owasp.org/index.php/Authentication_Cheat_Sheet)
+        _obsolete_.
+    -   [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/)
+    -   [Authentication Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html)
+    -   [Password Storage Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)
     -   [OWASP Testing Guide
         ](https://www.owasp.org/index.php/OWASP_Testing_Guide_v4_Table_of_Contents)
         ([pdf
@@ -245,11 +238,10 @@ hosting services. It has
 -   [owasp-password-strength-test
     ](https://github.com/viaforensics/owasp-password-strength-test)
     is a password-strength tester, written in javascript,  based off of the
-    [OWASP Guidelines for enforcing secure passwords
-    ](https://www.owasp.org/index.php/Authentication_Cheat_Sheet#Implement_Proper_Password_Strength_Controls).
+    OWASP Guidelines for enforcing secure passwords.
     It can be used on the server (nodejs) or in-browser.
     <!--script src='/js/owasp-password-strength-test.js'></script-->
--   [OWASP Passfault](https://passfault.appspot.com/)
+-   [OWASP Passfault](http://www.passfault.com/)
     is another strength evaluator.
 -   [Yet Another Password Meter](http://www.yetanotherpasswordmeter.com/).
 -   [owasp-password-strength-test
