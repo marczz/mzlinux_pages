@@ -2,9 +2,8 @@
 title: Security
 ---
 
-{{% toc /%}}
-
 See also the {{< iref "authentication" "Authentication section" >}},
+{{< iref "password-managers" "Passwords Managers" >}}.
 
 An important part of security is {{< iref "network_security" "Network security" >}}.
 
@@ -32,14 +31,16 @@ An important part of security is {{< iref "network_security" "Network security" 
     e.g. for U.S. FISMA compliance.
     -   [Security Content Automation Protocol HOME
         ](https://csrc.nist.gov/projects/security-content-automation-protocol/)
-
+-   [Security hardening - Red Hat Enterprise Linux 8
+    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/security_hardening/index)
 -   [The practical Linux hardening guide
     ](https://github.com/trimstray/the-practical-linux-hardening-guide)
     This guide on GitHub details creating a secure Linux production system.
     It can be read [on the wiki
     ](https://github.com/trimstray/the-practical-linux-hardening-guide/wiki).
     It is part of the [OpenSCAP portal](https://www.open-scap.org/).
-
+-   [Security hardening - Red Hat Enterprise Linux 8
+    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/security_hardening/index)
 
 ## References en Français
 -   [Agence Nationale de la Sécurité des Systemes d'Information
@@ -70,7 +71,7 @@ An important part of security is {{< iref "network_security" "Network security" 
     technique de l'utilisation des certificats électroniques.
 -   [Anne Canteaut](https://www.rocq.inria.fr/secret/Anne.Canteaut/)
     directrice de l'[Équipe Secret de l'INRIA
-    ](https://www.inria.fr/equipes/secret) a quelqes articles de
+    ](https://www.inria.fr/equipes/secret) a quelques articles de
     vulgarisation:
     -   [La cryptographie ou les mathématiques au service de la protection
         de l'information (pdf)
