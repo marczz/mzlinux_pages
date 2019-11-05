@@ -215,10 +215,9 @@ faad2
 [Serpentine](http://irrepupavel.com/projects/serpentine/)
 :   *Serpentine* (
     [Serpentine project page](http://developer.berlios.de/projects/serpentine/)
-    is a light cd audio recording
-    application for Gnome. that is written in python and uses
-    gstreamer. It supports the same codecs than gstreamer such as WAV,
-    MP3, OGG, FLAC. Serpentine requires gnome2.
+    is a light cd audio recording application for Gnome. that is written in python and
+    uses {{< iref "streaming#gstreamer" "GStreamer" >}}. It supports the same codecs
+    than gstreamer such as WAV, MP3, OGG, FLAC. Serpentine requires gnome2.
 
 # High Level sound editors
 ## Desktop editors
@@ -257,14 +256,7 @@ faad2
 :   [Ardour sourceforge page](http://ardour.sourceforge.net),
     [LAU doc on ardour](http://www.djcj.org/LAU/ardour).
 
- <a name="ceres"></a> __Ceres__(BSD like license)
-:   _Ceres_  is a spectral domain editor for audio files.
-    Ceres is originally developed by Oyvind Hammer, and later
-    by Kjetil S. Matheussen ([Ceres3](http://www.music.lumbia.edu/%7Estanko/About_Ceres3.html)).
-    [Ceres4](https://github.com/jeremysalwen/Ceres4) from Jeremy Salwen
-    currently consists of Ceres ported to the gtk2 platform.
-
- <a name="dir2ogg">[dir2ogg](http://jak-linux.org/projects/dir2ogg/) (GPL)
+<a name="dir2ogg">[dir2ogg](http://jak-linux.org/projects/dir2ogg/) (GPL)
 :   _dir2ogg_ is a python script which converts mp3, m4a, wma,
     and wav files into ogg-vorbis format. It uses _mplayer_, _mpg123_
     or _lame_, _faad_, _flac_, _mpcdec_, _cdparanoia_ or _cedax_ or
@@ -279,7 +271,8 @@ faad2
     wav, mp3, aiff, cdda, au, snd, raw and standard file streams
 
 <a name="gnac">[gnac](http://gnac.sourceforge.net/) (GPL)
-:   _Gnac_ is an audio conversion program for GTK3 using Gstreamer,
+:   _Gnac_ is an audio conversion program for GTK3 using
+    {{< iref "Streaming#Gstreamer" "GStreamer" >}},
     like {{< iref "video_edit#oggconvert" "OggConvert" >}}
     and {{< iref "#soundconverter" "SoundConverter" >}}.
     But _gnac_ and _oggconvert_ have less gnome dependencies than
@@ -291,11 +284,13 @@ faad2
 {{< wp "Jokosher" >}}
 :   __Jokosher__ (GPL) is a non-linear multi-track digital audio
     editor,it is being developed in Python,
-    using the GTK+ interface and GStreamer as an audio back-end.
+    using the GTK+ interface and {{< iref "Streaming#Gstreamer" "GStreamer" >}}
+    as an audio back-end.
 
 {{< iref "video_edit#oggconvert" "OggConvert" >}}
 :   __0ggconvert__ (LGPL) convert audio and video files of various
-    types into  Ogg Vorbis audio format, and video formats. It uses _GStreamer_<br />
+    types into  Ogg Vorbis audio format, and video formats.
+    It uses _{{< iref "Streaming#Gstreamer" "GStreamer" >}}_<br />
     {{< iref "#soundconverter" "SoundConverter" >}},
     and {{< iref "#gnac" "gnac" >}},
     {{< iref "video_edit#pitivi" "PiTiVi" >}}
@@ -305,7 +300,8 @@ faad2
 
 {{< iref "video_edit#pitivi" "PiTiVi" >}}
 :   __PiTivi__ (LGPL) is an audio/video editing software written
-    in python CTK+ that uses the gstreamer framework.
+    in python CTK+ that uses the {{< iref "streaming#gstreamer" "GStreamer" >}}
+    framework.
 
 <a name="rezound"></a>[Rezound](http://rezound.sourceforge.net)
 :   {{< wp "ReZound" >}} (GPL) is a graphical audio file editor. It supports
@@ -317,7 +313,7 @@ faad2
 
 <a name="soundconverter">[SoundConverter](http://soundconverter.org/) (GPL)
 :   SoundConverter is a sound converter to ogg/vorbis for Gnome
-    using gstreamer, it is similar to
+    using {{< iref "streaming#gstreamer" "GStreamer" >}}, it is similar to
     {{< iref "#gnac" "gnac" >}} and {{< iref "video_edit#oggconvert" "OggConvert" >}},
     but while _oggconvert_ deal both with video and sound formats,
     _soundconverter_ and _gnac_ focus only on sounds.<br />
@@ -331,9 +327,9 @@ faad2
     WAV, FLAC, MP3, and Ogg Vorbis files.
 
 <a name="snd"></a>[Snd](https://ccrma.stanford.edu/software/snd/)
-:   __Snd__  (Artistic License) is a sound editor. It can accommodate any number of sounds
-    each with any number of channels, and can be customized and
-    extended using either Guile or Ruby.
+:   __Snd__ (Artistic License) is a sound editor. It can accommodate any number of
+    sounds each with any number of channels, and can be customized and extended using
+    either Guile or Ruby.
 
     __Snd__ is a
     [Center for Computer Research in Music and Acoustics (CCRMA) Software
@@ -402,11 +398,11 @@ faad2
     is a simple script that uses the cdda2wav and ogg123
     to encode audio tracks.
 :   cddawav and cdda2ogg are part of the
-    {{< iref "189#item_cdrecord" "cdrecord" >}} package
+    {{< iref "dvd_cd_recording.md#cdrkit" "cdrkit" >}} package
 
 gst-tools
 :   This is the basic command-line tools used for
-    {{< iref "188#item_gstreamer" "GStreamer" >}}
+    {{< iref "streaming#gstreamer" "GStreamer" >}}
 
 [mp3diags](http://mp3diags.sourceforge.net/)
 :   _mp3diags_ is a program to diagnostic and repair mp3 files.
@@ -460,7 +456,8 @@ and [Mp3Wrap](http://mp3wrap.sourceforge.net/)
 :   calculate the replay gain for Ogg Vorbis files. _in Debian_.
 
 # Speech synthesis and recognition
-{{< wp "Speech_synthesis"  "Wikipedia: Speech synthesis" >}}, {{< wp "Comparison of speech synthesizers" >}},
+{{< wp "Speech_synthesis"  "Wikipedia: Speech synthesis" >}},
+{{< wp "Comparison of speech synthesizers" >}},
 {{< wp "Speech recognition" >}}, {{< wp "List of speech recognition software" >}},
 {{< wp "Speech recognition in Linux" >}}.
 
