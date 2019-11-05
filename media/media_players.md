@@ -88,7 +88,8 @@ Wikipedia: {{< wp "Comparison of audio player software" >}},
         dependency, if your desktop is not KDE.
     -   {{< iref "#clementine" "Clementine" >}}
         is a fork of the version 1.4
-        wich uses Qt and gstreamer, and so is less deeply immersed in KDE.
+        wich uses Qt and {{< iref "streaming#gstreamer" "GStreamer" >}},
+        and so is less deeply immersed in KDE.
     -   {{< iref "#exaile" "Exaile" >}} is a GTK+ clone of amarok.
     -   _Amarok_ is the primary client for
         {{< iref "streaming#ampache" "Ampache" >}}
@@ -178,22 +179,21 @@ Wikipedia: {{< wp "Comparison of audio player software" >}},
         ](https://wiki.archlinux.org/index.php/Audacious)
 
 <a name="banshee"></a>{{< wp "Banshee_(music_player)"  "Banshee" >}}
-:   An other music player using Gstreamer framework, but built
+:   An other music player using {{< iref "Streaming#Gstreamer" "GStreamer" >}} framework, but built
     upon Mono and Gtk#.
 
 <a name="bmpx"></a>[Bmpx](http://bmpx.backtrace.info/site/BMPx_Homepage)
-:   Bmpx (GPL) is based on gstreamer, and can be considered as a
-    gstreamer gui. The old *Bmp* was based on xmms, but the present
-    *Bmpx* was rewritten from scratch in C++ and no longer share code
-    with xmms. Bmpx can play every format for which you have a gst
-    plugin. It supports also MusicBrainz, Last.fm radio/scrobbling,
-    HAL, DBus.
+:   Bmpx (GPL) is based on {{< iref "streaming#gstreamer" "GStreamer" >}},
+    and can be considered as a gstreamer gui. The old *Bmp* was based on xmms, but the
+    present *Bmpx* was rewritten from scratch in C++ and no longer share code with
+    xmms. Bmpx can play every format for which you have a gst plugin. It supports also
+    MusicBrainz, Last.fm radio/scrobbling, HAL, DBus.
 
 <a name="clementine"></a>[Clementine](http://www.clementine-player.org/)
 :   Clementine is a QT fork of amarok 1.4, with which it shares main features.
     {{< wp "Clementine_(software)"  "Wikipedia: Clementine" >}}.
-    Clementine can play internet streams, transcode music into MP3, Ogg Vorbis, speex, FLAC or AAC,
-    manage tags, use CUE sheets, be controlled from android phone, and many
+    Clementine can play internet streams, transcode music into MP3, Ogg Vorbis, speex,
+    FLAC or AAC, manage tags, use CUE sheets, be controlled from android phone, and many
     [features](http://www.clementine-player.org/about), playing main
     formats included opus, and can read all playlists including cue sheets but has no
     bookmark nor access to chapters. With one ogg file loaded it uses
@@ -205,17 +205,17 @@ Wikipedia: {{< wp "Comparison of audio player software" >}},
 <a name="exaile"></a>[Exaile](http://www.exaile.org/)
 :   [Exaile](http://en.wikipedia.org/wiki/Exaile)
     (GPL) is an audio player written in python using pygtk and using
-    gstreamer aiming to be similar to KDE's AmaroK, but for GTK+. It
-    has a plugin system that allow: MPRIS control
+    {{< iref "streaming#gstreamer" "GStreamer" >}}
+    aiming to be similar to KDE's AmaroK, but for GTK+. It has a plugin system that
+    allow: MPRIS control
     ([mpris plugin
     ](https://github.com/exaile/exaile/tree/master/plugins/mpris)),
     bidirectional last.fm support, a shoutcast directory browser, tag
     editing thru an
     {{< iref "tag_management#mutagen" "ExFalso" >}}
     plugin, {{< iref "streaming#daap" "DAAP protocol" >}}
-    _client and server_ support.  As a PyGTK player you
-    can expect a memory footprint of 81M/39M shared (one ogg file
-    loaded). Exaile is no longer in Debian since _jessie_.
+    _client and server_ support.  As a PyGTK player you can expect a memory footprint of
+    81M/39M shared (one ogg file loaded). Exaile is no longer in Debian since _jessie_.
 
     -   [GitHub - Exaile](https://github.com/exaile/exaile)
     -   [Exaile Documentation](http://exaile.readthedocs.io/en/stable/)
@@ -224,30 +224,27 @@ Wikipedia: {{< wp "Comparison of audio player software" >}},
 
 
 [Gradio](https://github.com/haecker-felix/gradio)
-:   Gradio is a GTK3 app for finding and listening to internet radio
-    stations.
+:   Gradio is a GTK3 app for finding and listening to internet radio stations.
     [ArchWiki - Gradio](https://wiki.archlinux.org/index.php/Gradio)
 
 
 [Goggles Music Manager](https://gogglesmm.github.io/)
-:   is a music collection manager and player. It is written in C++,
-    and uses a sqlite database, the xine library for playback and the
+:   is a music collection manager and player. It is written in C++, and uses a sqlite
+    database, the xine library for playback and the
     [FOX Toolkit](http://www.fox-toolkit.org/) for the interface.
     </br />
-    It categorizes your music files
-    based on genre, artist, album, and song.
-    It supports gapless playback and tag editing.
-    It supports Ogg Vorbis , FLAC, MP3 , MP4 , ASF and Musepack music
-    files.<br />
+    It categorizes your music files based on genre, artist, album, and song.  It
+    supports gapless playback and tag editing.  It supports Ogg Vorbis , FLAC, MP3 ,
+    MP4, ASF and Musepack music files.<br />
     As it uses a desktop agnostic UI it has limited dependencies.
 
     -   [GitHub: goglesmm](https://github.com/gogglesmm/gogglesmm)
 
 <a name="guayadeque"></a>[Guayadeque](http://guayadeque.org/) (GPL)
 :   Guayadeque is an audio player with database written in C++. It uses
-    gstreamer and _wxWidgets_ for the UI. It can play Ogg Vorbis, FLAC,
-    MP3 or anything supported by _gstreamer_.
-    It can be interfaced through MPRIS D-Bus interface.  _in Debian_.
+    {{< iref "streaming#gstreamer" "GStreamer" >}}
+    and _wxWidgets_ for the UI. It can play Ogg Vorbis, FLAC, MP3 or anything supported
+    by _gstreamer_.  It can be interfaced through MPRIS D-Bus interface.  _in Debian_.
 
     -   Wikipedia: {{< wp "Guayadeque Music Player" >}}.
 
@@ -264,8 +261,8 @@ Wikipedia: {{< wp "Comparison of audio player software" >}},
 :   has a subsection.
 
 {{< wp "Muine" >}}
-:   An other music player using Gstreamer framework, but built
-    upon Mono and Gtk#  (like _Banshee_), not used on my systems.
+:   An other music player using {{< iref "streaming#Gstreamer" "GStreamer" >}}
+    framework, but built upon Mono and Gtk# (like _Banshee_), not used on my systems.
 
 <a name="qmmp"></a>[Qmmp](http://qmmp.ylsoftware.com/) (GPL)
 :   _Qmmp_ is a C++/QT audio player. Qmmp is in Debian.
@@ -297,21 +294,18 @@ Wikipedia: {{< wp "Comparison of audio player software" >}},
     MOD, MP4, TrueAudio, WMA.<br /> _QuodLibet_ uses playlists based
     on regular expressions and can display and edit tags.
 
-    As other PyGTK players _like {{< iref "#exaile" "Exaile" >}}_ __QuodLibet__ is quite memory hungry (52M resident
-    when playing mp3) as is ExFalso and if you are not using a full
-    gnome desktop, you need to avoid _python-gnome2_ otherwise you
-    pull all the libraries and daemons..
+    As other PyGTK players _like {{< iref "#exaile" "Exaile" >}}
+    __QuodLibet__ is quite memory hungry (52M resident when playing mp3) as is ExFalso
+    and if you are not using a full gnome desktop, you need to avoid _python-gnome2_
+    otherwise you pull all the libraries and daemons.
 
-    Even if we can find _QuodLibet_ too big as a background player, it
-    is a nice tool for the _listen then tag_ game _like its brother
-    _{{< iref "#exaile" "Exaile" >}}_.
+    Even if we can find _QuodLibet_ too big as a background player, it is a nice tool
+    for the _listen then tag_ game _like its brother _{{< iref "#exaile" "Exaile" >}}_.
 
-    __Quodlibet__ use the python library
-   {{< iref "tag_management#mutagen" "mutagen" >}} and
-   share code with the {{< iref "tag_management#exfalso" "ExFalso" >}} tag editor.
+    __Quodlibet__ use the python library {{< iref "tag_management#mutagen" "mutagen" >}}
+    and share code with the {{< iref "tag_management#exfalso" "ExFalso" >}} tag editor.
 
-    -   [ExFalso/Quodlibet manual
-        ](https://quodlibet.readthedocs.org/en/latest/)
+    -   [ExFalso/Quodlibet manual](https://quodlibet.readthedocs.org/en/latest/)
 
 
 [RealPlayer](http://www.real.com/linux) and [Helix Player](https://helixcommunity.org/)
@@ -326,7 +320,7 @@ Wikipedia: {{< wp "Comparison of audio player software" >}},
 <a name="rhythmnbox"></a>[Rhythmbox](http://en.wikipedia.org/wiki/Rhythmbox)
 :   [Rhythmbox]((https://wiki.gnome.org/Apps/Rhythmbox)
     (GPL) is a gnome audio player using the
-    {{< iref "#gstreamer" "GStreamer" >}} media framework.
+    {{< iref "streaming#gstreamer" "GStreamer" >}} media framework.
 
     Main features:
     -   play streamed Internet radio and podcasts
@@ -407,7 +401,7 @@ Wikipedia: {{< wp "Comparison of audio player software" >}},
 
 auditive
 :   [auditive](http://www.rillion.net/auditive/)
-    is a ncurses gstreamer player written in vala.
+    is a ncurses {{< iref "streaming#gstreamer" "GStreamer" >}} player written in vala.
     _last release 2013_.
 
 cdtool
@@ -656,9 +650,9 @@ See also [EmacsWiki: MusicPlayers](http://www.emacswiki.org/emacs/MusicPlayers)
     [emacswiki page](http://www.emacswiki.org/emacs/Bongo).
 
 [Emacs' AlsaPlayer](http://home.gna.org/eap/eap.html)
-:   Is a music player for emacs that focus on the smooth transitions between
-    songs. It is an emacs interface to <a href="#alsaplayer">AlsaPlayer</a> which allows to control it
-    from anywhere in Emacs. It can play, everything AsaPlayer can play.
+:   Is a music player for emacs that focus on the smooth transitions between songs. It
+    is an emacs interface to <a href="#alsaplayer">AlsaPlayer</a> which allows to
+    control it from anywhere in Emacs. It can play, everything AsaPlayer can play.
 
 [EMMS](http://www.emacswiki.org/cgi-bin/emacs.pl/EMMS)
 :   EMMS (GPLv3) is the Emacs Multi-Media System, a small
@@ -949,7 +943,7 @@ anything from real-time sound processing to playing videos.it is
 
 Gnash (GPLv3) is the GNU Flash movie player which can be run
 standalone, as well as as a plugin for several browsers. Gnash can use
-either gstreamer or ffmpeg as codec support library.
+either {{< iref "streaming#gstreamer" "GStreamer" >}} or ffmpeg as codec support library.
 
 ## [Lightspark](https://github.com/lightspark/lightspark) {#lightspark}
 __Lightspark__ (GPL) is a Flash player implementation that run as a
@@ -965,8 +959,8 @@ _LightSpark_ is in Debian.
 
 ## MPlayer  {#mplayer}
 
-[Mplayer](http://www.mplayerhq.hu/) (GPL) is a movie player. It plays most video formats as well as DVDs.
-Its big feature is the wide range of supported output drivers.
+[Mplayer](http://www.mplayerhq.hu/) (GPL) is a movie player. It plays most video formats
+as well as DVDs.  Its big feature is the wide range of supported output drivers.
 
 The supported codecs are:
 
@@ -1070,7 +1064,7 @@ On amd64 _Sayonara_ consume 68M res / 51M shr for _Sayonara
 
 [Totem](http://en.wikipedia.org/wiki/Totem_(media_player)) (GPL)
 is a media player (audio and video) for GNOME based on xine-lib or
-{{< iref "#gstreamer" "GStreamer" >}}. Totem is able to play
+{{< iref "streaming#gstreamer" "GStreamer" >}}. Totem is able to play
 all mainstream media formats supported by one of the two backends. It
 also understands numerous playlist formats, including SHOUTcast, M3U,
 XML Shareable Playlist Format (XSPF), SMIL, Windows Media Player
