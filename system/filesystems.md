@@ -218,17 +218,28 @@ storage, but a single subvolume can use all space.
     ](https://sosfakeflash.wordpress.com/2008/09/02/h2testw-14-gold-standard-in-detecting-usb-counterfeit-drives/)
     (see also [Fighting flash fraud on Ebay
     ](https://fightflashfraud.wordpress.com/2008/11/24/h2testw-gold-standard-in-detecting-fake-capacity-flash/).
+
+    [Armbian recommend to verify SD cards with F3
+    ](https://docs.armbian.com/User-Guide_Getting-Started/#how-to-prepare-a-sd-card).
+    F3 is packaged in Debian.
     -   [F3 Documentation
         ](https://fight-flash-fraud.readthedocs.io/en/latest/).
     -   [F3 github repository](https://github.com/AltraMayor/f3).
 -   [Etcher](https://github.com/resin-io/etche) (Apache2 License)
-    is an OS image flasher built on electron.
-    It checks tha every byte of data was written correctly.
-    It provides a Debian repository. This is the tool that is
-    recommended by [armbian](https://docs.armbian.com/).
-    There is also a [CLI version of Etcher
-    ](https://github.com/resin-io/etcher/blob/master/docs/CLI.md)
-    that don't require the electron stuff.
+    is an OS image flasher built on electron which run on any platform supported by
+    Electron includinx linux, windoze, mac OS.
+    It checks that every byte of data was written correctly.
+
+    The software is provided as an app image, It also provides a Debian repository to
+    install the node application.
+
+    This tool is [recommended by armbian
+    ](https://docs.armbian.com/User-Guide_Getting-Started/#how-to-prepare-a-sd-card)
+    for writing images.
+
+    There was previously a CLI version which did not
+    require the electron stuff, but it was removed _without explanation_ at version
+    1.5.0 - 2019-02-16.
 
 # LVM {#lvm}
 
