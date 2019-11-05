@@ -319,89 +319,101 @@ See also {{< iref "clouds" "Cloud Storage" >}}.
         ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/logical_volume_manager_administration/LVM_administration#cluster_setup),
         [Creating a Mirrored LVM Logical Volume in a Cluster
         ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/logical_volume_manager_administration/mirvol_create_ex).
--   {{< wp "DRBD" >}} (Distributed Replicated Block Device) (GPLv2) is a distributed
-    storage system normally used on high availability (HA) clusters.
-    It implements a network RAID1 storage.
-    [DRBD Home](http://www.drbd.org/home/) is hosted by LINBIT.<br />
-    There are packages for main distributions,
-    including a kernel module and a user space software.
-    Since Lenny DRDB is part of Debian.
-    -   [Linbit Docs – DRDB User Guide 9.0
-        ](https://docs.linbit.com/docs/users-guide-9.0/),
-        [DRDB User Guide 8.4](https://docs.linbit.com/docs/users-guide-8.4/)
-    -   [Suse High Availability Guide: DRDB
-        ](https://www.suse.com/documentation/sle_ha/singlehtml/book_sleha/book_sleha.html#sec.ha.drbd)
-        also available in [Suse Administration Guide - DRDB
-        ](https://www.suse.com/documentation/sle-ha-12/book_sleha/data/cha_ha_drbd.html).
-    -   [Suse SLE: Highly Available NFS Storage with DRBD and Pacemaker
-        ](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha_techguides/book_sleha_techguides.html).
-    -   [Debian Wiki - DrBd](https://wiki.debian.org/DrBd)
-    -   [Ubuntu Help - DRBD](https://help.ubuntu.com/lts/serverguide/drbd.html)
-    -   [Thomas Krenn - HA Cluster with Heartbeat, Pacemaker, DRBD and LXC
-        ](https://www.thomas-krenn.com/en/wiki/HA_Cluster_with_Linux_Containers_based_on_Heartbeat,_Pacemaker,_DRBD_and_LXC).
-    -   [HowToForge - High Availability NFS With DRBD + Heartbeat
-        ](https://www.howtoforge.com/high-availability-nfs-with-drbd-plus-heartbeat)
-    -   [Manual HA Cluster with Linux Containers, DRBD and Btrfs
-        ](https://petrovs.info/2014/11/28/ha-cluster-with-linux-containers/)
-        by Blagovest Petrov.
-    -   [How to Setup MariaDB High Availability with Heartbeat and DRBD on Ubuntu
-        ](https://www.howtoforge.com/tutorial/ubuntu-drbd-heartbeat-high-availability/)
-    -   [Gentoo Wiki - DRBD with OCFS2](https://wiki.gentoo.org/wiki/DRBD_with_OCFS2)
-    -   [Atlantic.Net - How to: DRBD Replication and Configuration
-        ](https://www.atlantic.net/cloud-hosting/how-to-drbd-replication-configuration/)
-    -   [SUPINFO - Installation et configuration de DRBD
-        ](https://www.supinfo.com/articles/single/2140-installation-configuration-drbd),
-        [Mise en place d'un SAN ISCSI sous linux avec DRBD
-        ](https://www.supinfo.com/articles/single/3921-mise-place-san-iscsi-linux-avec-drbd)
--   {{< wp "GlusterFS" >}} (GPL and LGPL)
-    is a clustered file-system. It aggregates various storage bricks
-    over Infiniband RDMA or TCP/IP.
-    -   [GlusterFS Documentation](https://docs.gluster.org/en/latest/)
-    -   [Red Hat Gluster Storage: Overview, Use cases, Resources,
-        Get started
-        ](https://www.redhat.com/en/technologies/storage/gluster)
-    -   [GlusterFS Storage Cluster on CentOS 7
-        ](https://wiki.centos.org/HowTos/GlusterFSonCentOS)
-    -   [BTRFS as a GlusterFS storage back-end
-        ](https://www.spinics.net/lists/linux-btrfs/msg64541.html).
-    -   [GlusterFS Tips
-        ](https://tipstricks.itmatrix.eu/category/glusterfs/)
-        from Michel Bisson.
-    -   [Espace de stockage hautement disponible Partie 1
-        ](https://www.supinfo.com/articles/single/1184-espace-stockage-hautement-disponible-partie-1)
-        et [Partie 2
-        ](https://www.supinfo.com/articles/single/1185-espace-stockage-hautement-disponible-partie-2)
-        a tutorial on GlusterFs.
-    -   [GlusterFS sur Ubuntu/Debian
-        ](https://linuxfr.org/wiki/glusterfs-sur-ubuntu-debian).
--   {{< wp "Global File System 2" >}} (GFS2)  (GPL)
-    is a  is a {{< wp "shared-disk file system" >}} available for Linux computer
-    clusters. It requires all nodes to have direct concurrent access to
-    the same shared block storage and has no disconnected operating
-    mode like other {{< wp "shared-disk file systems" >}} like {{< wp "OCFS2" >}}, {{< wp "Lustre" >}},
-    {{< wp "Lizardfs" >}}.
+## DRBD {#drbd}
+{{< wp "DRBD" >}} (Distributed Replicated Block Device) (GPLv2) is a distributed
+storage system normally used on high availability (HA) clusters.
+It implements a network RAID1 storage.
+[DRBD Home](http://www.drbd.org/home/) is hosted by LINBIT.<br />
+There are packages for main distributions,
+including a kernel module and a user space software.
+Since Lenny DRDB is part of Debian.
+-   [Linbit Docs – DRDB User Guide 9.0
+    ](https://docs.linbit.com/docs/users-guide-9.0/),
+    [DRDB User Guide 8.4](https://docs.linbit.com/docs/users-guide-8.4/)
+-   [Suse High Availability Guide: DRDB
+    ](https://www.suse.com/documentation/sle_ha/singlehtml/book_sleha/book_sleha.html#sec.ha.drbd)
+    also available in [Suse Administration Guide - DRDB
+    ](https://www.suse.com/documentation/sle-ha-12/book_sleha/data/cha_ha_drbd.html).
+-   [Suse SLE: Highly Available NFS Storage with DRBD and Pacemaker
+    ](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha_techguides/book_sleha_techguides.html).
+-   [Debian Wiki - DrBd](https://wiki.debian.org/DrBd)
+-   [Ubuntu Help - DRBD](https://help.ubuntu.com/lts/serverguide/drbd.html)
+-   [Thomas Krenn - HA Cluster with Heartbeat, Pacemaker, DRBD and LXC
+    ](https://www.thomas-krenn.com/en/wiki/HA_Cluster_with_Linux_Containers_based_on_Heartbeat,_Pacemaker,_DRBD_and_LXC).
+-   [HowToForge - High Availability NFS With DRBD + Heartbeat
+    ](https://www.howtoforge.com/high-availability-nfs-with-drbd-plus-heartbeat)
+-   [Manual HA Cluster with Linux Containers, DRBD and Btrfs
+    ](https://petrovs.info/2014/11/28/ha-cluster-with-linux-containers/)
+    by Blagovest Petrov.
+-   [How to Setup MariaDB High Availability with Heartbeat and DRBD on Ubuntu
+    ](https://www.howtoforge.com/tutorial/ubuntu-drbd-heartbeat-high-availability/)
+-   [Gentoo Wiki - DRBD with OCFS2](https://wiki.gentoo.org/wiki/DRBD_with_OCFS2)
+-   [Atlantic.Net - How to: DRBD Replication and Configuration
+    ](https://www.atlantic.net/cloud-hosting/how-to-drbd-replication-configuration/)
+-   [SUPINFO - Installation et configuration de DRBD
+    ](https://www.supinfo.com/articles/single/2140-installation-configuration-drbd),
+    [Mise en place d'un SAN ISCSI sous linux avec DRBD
+    ](https://www.supinfo.com/articles/single/3921-mise-place-san-iscsi-linux-avec-drbd)
+-
+## Glusterfs {#glusterfs}
+{{< wp "GlusterFS" >}} (GPL and LGPL)
+is a clustered file-system. It aggregates various storage bricks
+over Infiniband RDMA or TCP/IP.
 
-    In contrast  {{< wp "distributed file systems" >}} like GlusterFS, Ceph, BeeGFS  do not share
-    block level access to the same storage but use a network protocol
-    and can have a disconnected operating mode.
-    It uses Fibre Channel, iSCSI, AoE or DRDB in primary/primary mode devices as
-    storage.
+-   [GlusterFS Documentation](https://docs.gluster.org/en/latest/)
+-   [Red Hat Gluster Storage: Overview, Use cases, Resources,
+    Get started
+    ](https://www.redhat.com/en/technologies/storage/gluster)
+-   [GlusterFS Storage Cluster on CentOS 7
+    ](https://wiki.centos.org/HowTos/GlusterFSonCentOS)
+-   [BTRFS as a GlusterFS storage back-end
+    ](https://www.spinics.net/lists/linux-btrfs/msg64541.html).
+-   [GlusterFS Tips
+    ](https://tipstricks.itmatrix.eu/category/glusterfs/)
+    from Michel Bisson.
+-   [Espace de stockage hautement disponible Partie 1
+    ](https://www.supinfo.com/articles/single/1184-espace-stockage-hautement-disponible-partie-1)
+    et [Partie 2
+    ](https://www.supinfo.com/articles/single/1185-espace-stockage-hautement-disponible-partie-2)
+    a tutorial on GlusterFs.
+-   [GlusterFS sur Ubuntu/Debian
+    ](https://linuxfr.org/wiki/glusterfs-sur-ubuntu-debian).
 
-    _Not to be confused with {{< wp "Google File System" >}} a proprietary distributed
-    fs also known by the acronym GFS or GoogleFS._
--   {{< wp "Network_block_device"  "NBD (Network block device)" >}}
-    ([nbd home](http://nbd.sourceforge.net/) )
-    kernel module, allows remote servers to be used as local block
-    devices
--   {{< wp "Tahoe-LAFS" >}}
-    _the Least Authority File System_ is a distributed filesystem
-    written in python over Fuse, that features high reliability,
-    strong security properties, and a fine-grained sharing model.
-    Files are encrypted, signed, erasure-coded, then distributed over
-    multiple servers, such that any (configurable) subset of the
-    servers will be sufficient to recover the data.<br /> There is a
-    Tahoe-LAFS Debian Package.
-    -   [Tahoe-LAFS Home](https://tahoe-lafs.org/trac/tahoe-lafs)
+## GFS2 {#gfs2}
+{{< wp "Global File System 2" >}} (GFS2)  (GPL)
+is a  is a {{< wp "shared-disk file system" >}} available for Linux computer
+clusters. It requires all nodes to have direct concurrent access to
+the same shared block storage and has no disconnected operating
+mode like other {{< wp "shared-disk file systems" >}} like {{< wp "OCFS2" >}}, {{< wp "Lustre" >}},
+{{< wp "Lizardfs" >}}.
+
+In contrast  {{< wp "distributed file systems" >}} like GlusterFS, Ceph, BeeGFS  do not share
+block level access to the same storage but use a network protocol
+and can have a disconnected operating mode.
+It uses Fibre Channel, iSCSI, AoE or DRDB in primary/primary mode devices as
+storage.
+
+_Not to be confused with {{< wp "Google File System" >}} a proprietary distributed
+fs also known by the acronym GFS or GoogleFS._
+
+## NBD {#nbd}
+{{< wp "Network_block_device"  "NBD (Network block device)" >}}
+([nbd home](http://nbd.sourceforge.net/) )
+kernel module, allows remote servers to be used as local block
+devices
+
+## Tahoe-LAFS
+{{< wp "Tahoe-LAFS" >}}
+_the Least Authority File System_ is a distributed filesystem
+written in python over Fuse, that features high reliability,
+strong security properties, and a fine-grained sharing model.
+Files are encrypted, signed, erasure-coded, then distributed over
+multiple servers, such that any (configurable) subset of the
+servers will be sufficient to recover the data.
+
+There is a Tahoe-LAFS Debian Package.
+
+-   [Tahoe-LAFS Home](https://tahoe-lafs.org/trac/tahoe-lafs)
 
 
 # Cluster Management
