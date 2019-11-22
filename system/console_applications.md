@@ -78,6 +78,9 @@ in this site, you can make a search to find the appropriate page.
 {{< wp "elinks" >}}
 : web browser.See {{< iref "browsers" "Browsers" >}}.
 
+[fd](https://github.com/sharkdp/fd)
+: installed as _fdfind_ fast and user-friendly alternative to find.
+
 
 [iftop]( http://www.ex-parrot.com/~pdw/iftop/)
 : displays bandwidth usage information on an network interface
@@ -99,7 +102,7 @@ in this site, you can make a search to find the appropriate page.
 
 [p3blaster](http://manpages.debian.org/cgi-bin/man.cgi?query=mp3blaster%281%29)
 : an interactive text-console based mp3 player. See
-{{< iref "media_players#mp3blaster" "Media Players" >}}.
+  {{< iref "media_players#mp3blaster" "Media Players" >}}.
 
 {{< wp "Mutt" >}}
 : e-mail client
@@ -116,13 +119,18 @@ in this site, you can make a search to find the appropriate page.
 {{< wp "Ranger_(file_manager)"  "ranger" >}}
 : file manager
 
+[ripgrep](https://github.com/BurntSushi/ripgrep)
+: installed as _rggrep_, a line-oriented search tool that recursively searches the
+  current directory for a regex pattern. An alternative to _ack_ and _ag_.
+
+
 [Surfraw](http://surfraw.alioth.debian.org/)
 : fast unix command line interface to  WWW search engines.
 
 {{< wp "w3m" >}}
 : web browser
 
-# Framebuffer applications {framebuffer_applications}
+# Framebuffer applications {#framebuffer_applications}
 See also {{< iref "xterminals#framebuffer_terminals" "Framebuffers Terminals" >}}
 
 {{< iref "xorg#directvnc" "directvnc" >}}
