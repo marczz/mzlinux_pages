@@ -493,7 +493,7 @@ with ``git help <concept>`` where concept is one of
     [The reference LFS Test Server](https://github.com/git-lfs/lfs-test-server) in go
     language, and [rudolfs](https://github.com/jasonwhite/rudolfs) a high-performance,
     caching Git LFS server with an AWS S3 back-end, with a tiny (<10MB) Docker image.
--   Alternatives to git-lfs: {{< iref "git-annex" >}}, git-bigfiles _unmaintained_,
+-   Alternatives to git-lfs: {{< iref "#git-annex" >}}, git-bigfiles _unmaintained_,
         [git-fat](https://github.com/jedbrown/git-fat), git-media _unmaintained_,
         [git-bigstore](https://github.com/lionheart/git-bigstore),
         [git-sym](https://github.com/cdunn2001/git-sym).
