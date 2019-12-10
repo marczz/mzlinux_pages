@@ -420,7 +420,7 @@ The gvfs section is now in my
 
 -   [ArchWiki: MTP](https://wiki.archlinux.org/index.php/MTP)
 
-#  Kernel filesystems
+#  Kernel filesystems {#kernel_fs}
 ## Procfs {#procfs}
 
 -   [Procfs](http://en.wikipedia.org/wiki/Procfs) is a pseudo file
@@ -468,7 +468,7 @@ and {{< man "sysctl.conf(5)" >}} .
     /proc/sys/vm is used to tune the operation of the virtual memory (VM) subsystem of
     the Linux kernel and the writeout of dirty data to disk.
 
-## Sysfs
+## Sysfs {#sysfs}
 
 -   [Sysfs](http://en.wikipedia.org/wiki/Sysfs)
     exports information about devices and drivers from the kernel to
