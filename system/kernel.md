@@ -2,6 +2,11 @@
 title: Linux Kernel
 ---
 
+See also the sections on {{< iref "filesystems#kernel_fs" "kernel filesystems" >}},
+{{< iref "filesystems#procfs" "procfs" >}},
+{{< iref "filesystems#sysfs" "sysfs" >}},
+{{< iref "filesystems#sysctl" "proc/sys" >}}.
+
 # Kernel references
 
 -   [The Linux Kernel documentation](https://www.kernel.org/doc/html/latest/)
@@ -26,6 +31,7 @@ title: Linux Kernel
     [Kernel/Configuration
     ](https://wiki.gentoo.org/wiki/Kernel/Configuration),
     [Kernel modules](https://wiki.gentoo.org/wiki/Kernel_Modules)
+-   [Kernel module - ArchWiki](https://wiki.archlinux.org/index.php/Kernel_module)
 
 # Kernel Build
 
@@ -46,7 +52,7 @@ title: Linux Kernel
 
 
 
-## naming the kernel with a version
+## Naming the kernel with a version
 
 When compiling the kernel, the kernel built is identified by the
 variables:
@@ -98,14 +104,11 @@ Default value for `CROSS_COMPILE` is not to prefix executables
 Note: Some architectures assign `CROSS_COMPILE` in their `arch/\*/Makefile`.
 
 
-# compiling a single kernel module
+# Compiling a single kernel module
 
 -   [Kernel.org : Building External Modules
     ](https://www.kernel.org/doc/Documentation/kbuild/modules.txt)
     is the base documentation
--   [Rebuilding a single kernel module - Debian Administration
-    ](https://debian-administration.org/article/640/Rebuilding_a_single_kernel_module)
-    is an exemple of using the previous recipe.
 -   [Compile kernel module - ArchWiki
     ](https://wiki.archlinux.org/index.php/Compile_kernel_module)
     is an other tutorial on the same recipe
