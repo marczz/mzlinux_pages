@@ -2,11 +2,9 @@
 title: Network File Systems
 ---
 
-{{% toc /%}}
-
 See also the companion pages on
-{{< iref "filesystems" "filesystems" >}},
-{{< iref "encrypted_filesystems" "encrypted filesystems" >}}.
+{{< iref "filesystems" "Filesystems" >}},
+{{< iref "encrypted_filesystems" "Encrypted Filesystems" >}}.
 
 ----
 
@@ -297,6 +295,7 @@ See also {{< iref "clouds" "Cloud Storage" >}}.
 # Distributed filesystems {#distributed_filesystems}
 
 See also {{< iref "clouds" "Cloud Storage" >}}.
+
 -   [Linux-HA](http://linux-ha.org/wiki/Main_Page).
 -   [ Red Hat - Configuring and managing high availability clusters
     ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8-beta/html/configuring_and_managing_high_availability_clusters/)
@@ -319,6 +318,7 @@ See also {{< iref "clouds" "Cloud Storage" >}}.
         ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/logical_volume_manager_administration/LVM_administration#cluster_setup),
         [Creating a Mirrored LVM Logical Volume in a Cluster
         ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/logical_volume_manager_administration/mirvol_create_ex).
+
 ## DRBD {#drbd}
 {{< wp "DRBD" >}} (Distributed Replicated Block Device) (GPLv2) is a distributed
 storage system normally used on high availability (HA) clusters.
@@ -327,6 +327,7 @@ It implements a network RAID1 storage.
 There are packages for main distributions,
 including a kernel module and a user space software.
 Since Lenny DRDB is part of Debian.
+
 -   [Linbit Docs – DRDB User Guide 9.0
     ](https://docs.linbit.com/docs/users-guide-9.0/),
     [DRDB User Guide 8.4](https://docs.linbit.com/docs/users-guide-8.4/)
@@ -354,7 +355,7 @@ Since Lenny DRDB is part of Debian.
     ](https://www.supinfo.com/articles/single/2140-installation-configuration-drbd),
     [Mise en place d'un SAN ISCSI sous linux avec DRBD
     ](https://www.supinfo.com/articles/single/3921-mise-place-san-iscsi-linux-avec-drbd)
--
+
 ## Glusterfs {#glusterfs}
 {{< wp "GlusterFS" >}} (GPL and LGPL)
 is a clustered file-system. It aggregates various storage bricks
@@ -419,7 +420,7 @@ There is a Tahoe-LAFS Debian Package.
 # Cluster Management
 
 ## Heartbeat and Pacemaker
-__Heartbeat__ i;e; {{< wp "Linux-HA" >}} is  a high-availability clustering
+__Heartbeat__ i.e. {{< wp "Linux-HA" >}} is  a high-availability clustering
 solution for Linux, FreeBSD, OpenBSD, Solaris and Mac OS X.
 
 -   [The Linux-HA User’s Guide
