@@ -40,7 +40,7 @@ Recent arm architectures includes
         [Freescale i.MX6x Home Page
         ](http://www.freescale.com/webapp/sps/site/taxonomy.jsp?code=IMX6X_SERIES).
     -   <a name=armada38x"></a>[Marvell ARMADA 38X
-        ](https://www.marvell.com/embedded-processors/armada-38x/)
+        ](https://www.marvell.com/embedded-processors/armada/armada-38x)
         is a family of ARMv7 multicore Socs with DDR3/DDR3L/DDR4 Ram
         (including ECC), PCI-e2.0, 2 or 3 Gigabits internets, 1 OSB
         3.0, 1 to 4 SATA, and a TDP of 3W to 4W.
@@ -453,6 +453,32 @@ The ESPRESSObin is unbrickable you can always do
 -   [Amazon.com: ESPRESSObin
     ](https://www.amazon.com/ESPRESSObin-SBUD102-Single-Computer-Network/dp/B06Y3V2FBK)
 
+
+# Helios4
+
+[Helios4](https://kobol.io/helios4/) 200€
+
+-   Helios4 Datasheet
+    -   {{< iref "#armada38x" "Marvell Armada 388" >}} (88F6828), Dual-core ARMv7 32b
+        Cortex A9 CPU clocked at 1.6 Ghz with Cryptographic and XOR DMA engines,
+    -   Gigabit ethernet, 2 x USB 3.0, microSD (SDIO 3.0)
+    -   2GB DDR3L ECC RAM,
+    -   4× SATA 3.0 ports maximum 12 TB drive x 4,
+    -   Boot Mode Selector  - SPI, SD Card, UART, SATA
+    -   board 100mm x 100mm, Color Casing 182 mm x 107 mm x 210 mm,
+        2× 70mm PWM ball bearing FAN,
+-   [Kobol Wiki](https://wiki.kobol.io/)
+-   [Kobol Blog](https://blog.kobol.io/)
+-   [Install - Helios4 Wiki](https://wiki.kobol.io/install/)
+-   [Hardware - Helios4 Wiki](https://wiki.kobol.io/hardware/)
+-   On  [Armbian forum](https://forum.armbian.com/)
+    -   [Support of Helios4 - Intro - Armbian forum
+        ](https://forum.armbian.com/topic/3045-support-of-helios4-intro/)
+    -   [Helios4 Support](https://forum.armbian.com/topic/6033-helios4-support/)
+    -   [Helios4 ECC - CPU freq info - air flow
+        ](https://forum.armbian.com/topic/11536-helios4-ecc-cpu-freq-info-air-flow)
+    -   [Helios4 disk benchmarks  - Armbian forum
+        ](https://forum.armbian.com/topic/3045-support-of-helios4-intro/?page=2&tab=comments#comment-39582)
 
 
 # Plug Computers
