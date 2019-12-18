@@ -105,13 +105,13 @@ fonts, graphics, and other information needed to display it.
 -   {{< wp "OpenXPS" >}} is a page description format created by microsoft to
     compete with the widely used pdf format.  See the
     {{< wp "Comparison of OpenXPS and PDF" >}} in Wikipedia.
-    {{< iref "#mupdf" "Mupdf" >}} and okular can read XPS files.
+    {{< iref "#mupdf" "Mupdf" >}} and {{< iref "#okular" "Okular" >}} can read XPS files.
 -   As Xps is often not available on non windows computers converting
     Xps to Pdf may be useful.  There are a lot of online services
     _google "xps pdf converter"_ you can also find a
     [tutorial to Convert XPS to PDF
     ](http://bootpolish.net/home_howto_convertxpstopdf)
-    using _ghostpdl_ on linux.  Kde users can also use okular.
+    using _ghostpdl_ on linux.  Kde users can also use {{< iref "#okular" "Okular" >}}.
 -   Michael Wiedmann has written a
     [Screen Presentation Tools
     ](http://me.in-berlin.de/~miwie/presentations/html/index.html)
@@ -176,13 +176,12 @@ evince with the command:
 
     gvfs-info -a "metadata::evince::bookmarks"  <path-of -pdf-file>
 
-Annotation are supported by evince, qpdfview and okular.
+Annotation are supported by evince, qpdfview and {{< iref "#okular" "Okular" >}}.
 
 Some viewers have support for _SyncTex_ the Tex source and pdf
 _live preview_ synchronization library. This include
-okular, {{< iref "#evince" "evince" >}},
-{{< iref "#qpdfview" "qpdfview" >}},
-(zathura](#zathura "internal reference")
+{{< iref "#okular" "Okular" >}}, {{< iref "#evince" "evince" >}},
+{{< iref "#qpdfview" "qpdfview" >}}, {{< iref "#zathura" "zathura"  >}}.
 
 -   Wikipedia {{< wp "List of PDF software" >}}
 -   [ArchWiki: list of pdf and djvu software
@@ -197,7 +196,7 @@ okular, {{< iref "#evince" "evince" >}},
     can be [enabled/disabled in preferences
     ](https://support.mozilla.org/en-US/kb/disable-built-pdf-viewer-and-use-another-viewer).
     In the same way *Chrome* has a builtin PDF viewer.
--   [Llpp](http://repo.or.cz/w/llpp.git/)<a name="lpp"></a>
+-   <a name="lpp"></a>[Llpp](http://repo.or.cz/w/llpp.git/)
     is  a graphical PDF pager using {{< iref "#mupdf" "mupdf library" >}}.
     lpp depends on *Ocaml*. It supports continuous page scrolling,
     bookmarking, and text search. It is not in Debian but in an
@@ -229,18 +228,18 @@ okular, {{< iref "#evince" "evince" >}},
 -   An other test in 2015 first with  a 6M pdf doc. with embedded
     fonts, no bookmark; then (insides parentheses) with
     _lualatex-doc.pdf_ a 14p luatex  generated pdf, 160K without image, but an index.
-    -   evince 99.1M/35.6M (98M/41M), llpp 59M/12M (57M/47M the
-        difference of shared memory is strange, but checked many
-        times!), qpdfview 55.6M/41.5M (93.7M/42.3M), acroread 55.2M/39.9M (58M/40M), zathura 41M/26M
-        (37.9M/25.6M), gv (gs) 28.4M/11M (30.5M/10.7M),
-        xpdf 19.4M/11.5M (19.9M/10M), mupdf 9.1M/5.6M (11.1M/5.6M).
-    -   All start very quickly, but _evince_ that is a little slower even than
-        its young brother _epdfview_, and _acrobat reader_ is a lot more slower.
+    -   evince 99.1M/35.6M (98M/41M), llpp 59M/12M (57M/47M the difference of shared
+        memory is strange, but checked many times!), qpdfview 55.6M/41.5M (93.7M/42.3M),
+        acroread 55.2M/39.9M (58M/40M), zathura 41M/26M (37.9M/25.6M), gv (gs) 28.4M/11M
+        (30.5M/10.7M), xpdf 19.4M/11.5M (19.9M/10M), mupdf 9.1M/5.6M (11.1M/5.6M).
+    -   All start very quickly, but _evince_ is a lot more slower, even a little slower
+        than its young brother _epdfview_. _Acrobat reader_ is also a lot more slower.
     -   They all allow to follow pdf links but_mupdf_ and _gv_ don't have
-        a pane showing the index, it's available in all other readers.
--   {{< wp "Poppler_(software)"  "Poppler" >}} <a name="poppler"> (GPL)
+        a pane showing the index,which is available in all other readers.
+-   <a name="poppler"> {{< wp "Poppler_(software)"  "Poppler" >}} (GPL)
     is a software library for viewing PDF documents, stemming from a fork of Xpdf.
-    There is a {{< iref "#popler" "set of utilities developped with Poppler" >}} referenced below.
+    There is a {{< iref "#popler-utils" "set of utilities developped with Poppler" >}}
+    referenced below.
 
     *Poppler* is the base of many pdf viewers:
 
@@ -254,7 +253,7 @@ okular, {{< iref "#evince" "evince" >}},
             OpenDocument Presentation (impress), Comics (CBR, CBZ,
             CB7).
         -   [Evince Manual](https://help.gnome.org/users/evince/stable/)
-    -   {{< wp "Okular" >}} (GPL) build with QT.
+    -   <a name= "okular"></a>{{< wp "Okular" >}} (GPL) build with QT.
     -   [pdf-tools](https://github.com/politza/pdf-tool)
         is a pdfviewer for emacs that replace the builtin _Docview_.
     -   <a name="qpdfview"></a>
@@ -286,12 +285,11 @@ okular, {{< iref "#evince" "evince" >}},
     you can even set unusal, but very usefull options like the paper color;
     and of course you can set all the key bindings.<br/>
     It is in Debian, the derived utilities are in the package
-    {{< iref "#popler" "popler-utils" >}}
-    except [pdftosrc][#pdftosrc "internal reference").
+    {{< iref "#popler-utils" "popler-utils" >}} except
+    {{< iref "#pdftosrc" "pdftosrc"  >}}.
 
 # PDF Editing
-One usual aim of editing pdf is to add outlines _also called
-bookmarks_.
+One usual aim of editing pdf is to add outlines _also called bookmarks_.
 
 The _pdfmark_ operator is a PostScript extension, using this operator,
 many non layout-related features of a PDF file can be defined in the
@@ -331,6 +329,7 @@ referred as Bookmarks_
 
 An other common task is to crop pages to changes margins, see the
 {{< iref "#pdf_crop" "subsection pdf crop" >}}.
+
 -   <a name="fpdf"></a>[FPDF](http://www.fpdf.org/)
     is a PHP class which allows to generate PDF files with pure PHP,
     that is to say without using the PDFlib library.
@@ -406,7 +405,7 @@ An other common task is to crop pages to changes margins, see the
     the JB2 compression scheme used in the {{< wp "DjVu" >}} file format, but JB2
     is open source.
     -   [jbig2enc](https://github.com/agl/jbig2enc) (Apache License)
-        is a _jbig2_ encoder. _Last commit April 2014_
+        is a _jbig2_ encoder. _Since April 2014, only maintenance fixes_
     -   [Radim Hatlapatka fork of jbig2enc
         ](https://github.com/rhatlapa/jbig2enc)
         _last commit Jul 2012_, the author has also
@@ -764,10 +763,10 @@ Other crop specific tools are either standalone or works as user interfaces to
 {{< iref "#pdftk" "pdftk" >}}, or {{< iref "#pypdf" "pypdf2" >}}:
 
 {{< iref "#briss" "BRISS" >}} a java GUI,
-{{< iref "#pdfcrop" "pdfcrop python script" >}} that
-uses {{< iref "#pypdf" "pypdf" >}} _2011_,
-{{< iref "#pdfcrop" "pdfcrop perl script" >}} that uses pdflatex,
-{{< iref "#pdfcrop" "pdfcrop2.sh" >}} using
+{{< iref "#pdfcrop-python" "pdfcrop python script" >}} that
+uses {{< iref "#pypdf" "pypdf" >}},
+{{< iref "#pdfcrop-perl" "pdfcrop perl script" >}} that uses pdflatex,
+{{< iref "#pdfcrop-pdftk" "pdfcrop2.sh" >}} using
 {{< iref "#pdftk" "pdftk" >}}, {{< iref "#pdfcropper" "pdfcropper" >}}
 python script,
 {{< iref "#pdfquench" "pdf-quench" >}} a GUI that uses
@@ -798,8 +797,9 @@ python script,
     is a python script to crop pages. _last update 2014._
 -   <a name="pdfquench"></a>[pdf-quench](https://code.google.com/p/pdf-quench/)
     is a visual python/gtk tool for cropping pdf files. It uses
-    [PyPdf2]((#pypdf "internal reference"), goocanvas, and python-poppler. It is
-    reported that _pdfquench_ don't preserve hyperlinks.
+    {{< iref "#pypdf" "PyPdf2" >}}, goocanvas, and
+    {{< iref "#poppler" "python-poppler" >}}.
+    It is reported that _pdfquench_ don't preserve hyperlinks.
     -    [GitHub - pdf-quench](https://github.com/linuxerwang/pdf-quench).
 
 
