@@ -5,8 +5,8 @@ title: Images
 {{% toc /%}}
 
 Among {{< wp " image file formats" >}}.
-this section deals with _raster_ or _bitmap_ file format, the _vector_
-file format are in the
+this section deals with _raster_ or _bitmap_ file formats, the _vector_
+file formats are in the
 {{< iref "#svg" "SVG section" >}},
 and the {{< iref "ps_pdf_djvu" "PDF and Postscript section" >}}. They are
 compared in the Wikipedia page {{< wp "Comparison of graphics file formats" >}}.
@@ -14,16 +14,31 @@ compared in the Wikipedia page {{< wp "Comparison of graphics file formats" >}}.
 
 # Image formats
 
+Wikipedia: {{< wp "Image_file_formats#Raster_formats" "Raster File Formats" >}},
+{{< wp "Raster graphics" >}}.
+
 The most popular formats for bitmap are:
 
 Uncompressed lossless formats
-:   [BMP](http://en.wikipedia.org/wiki/BMP_file_format),
-    [PPM, PGM, PBM, PNM](http://en.wikipedia.org/wiki/Netpbm_format).
+:
+
+-   [BMP](http://en.wikipedia.org/wiki/BMP_file_format), [BMP format file structure
+    ](http://www.fileformat.info/format/bmp/egff.htm). 1, 4, 8, 16, 24, and 32-bits
+    bitmaps format from microsoft
+-   [PPM, PGM, PBM, PNM](http://en.wikipedia.org/wiki/Netpbm_format),
+    [netpbm: PPM](http://netpbm.sourceforge.net/doc/ppm.html) pixmap,
+    [PGM](http://netpbm.sourceforge.net/doc/pgm.html) graymap,
+    [PBM](http://netpbm.sourceforge.net/doc/pbm.html) bitmap,
+    [PAM](http://netpbm.sourceforge.net/doc/pam.html) _Portable Arbitrary Map_ can
+    replace  PBM,  PPM, PGM, PPM.
+    [PNM](http://netpbm.sourceforge.net/doc/pam.html) anymap, not a true format but any
+    of PBM,  PPM, PGM, PPM.
 
 Compressed lossless formats
 :
 
 -   [GIF](http://en.wikipedia.org/wiki/Graphics_Interchange_Format),
+-   {{< iref "#openexr" "openEXR" >}}  can do lossless or lossy compression.
 -   [PNG](http://en.wikipedia.org/wiki/Portable_Network_Graphics),
     [Portable Network Graphics Home Site](http://www.libpng.org/pub/png/)
 -   [TIFF](http://en.wikipedia.org/wiki/TIFF "en.wikipedia.org TIFF")
@@ -42,13 +57,23 @@ Lossy Formats
 -   [JPEG](http://en.wikipedia.org/wiki/JPEG ),
     {{< wp "JPEG" >}} is a method of compression for images, __jpeg/exif__ is
     the most common image format used by digital cameras.
+-   {{< "wp" "JPEG 2000" >}} an enhancement of JPEG with the same level of compression
+    but a greater flexibility allowing to lower the resolution without transcoding; at
+    the price of additional computing complexity.
+    -   [OpenJPEG](http://www.openjpeg.org/) is a BSD licence JPEG 2000 codec written in
+        C.
+        _ libopenjp2-tools_ is in Debian.
+-   <a name="openEXR">{{< wp "OpenEXR" >}} a BSD licenced high dynamic range raster file
+    format. It can do lossless or lossy compression.
+    -   [OpenEXR Home](https://www.openexr.com/)
+    -   Debian provides _openexr_ tools.
 -   [TIFF](http://en.wikipedia.org/wiki/TIFF) a lossy or losseless
     image format widely used for scanning, faxing, word processing, optical character recognition.
     It supports multiple images in one file, even if fiew viewers can display them
     _(but {{< iref "#imview" "imview" >}} does)_.
     Multiple  images tiff files can be splited or combined with
     {{< iref "#libtiff" "libtiff-tools" >}}, or even by
-    {{< iref "#graphicsmagick" "GraphicsMagick" >}}/ImageMagick
+    {{< iref "#graphicsmagick" "GraphicsMagick" >}}/{{< Iref "#Imagemagick" "ImageMagic" >}}
     but these two last will use a lot of memory by loading all pages.
 -   {{< wp "WebP" >}} is an open image format developped by Google
     both with lossless and lossy compression. Google tests show an
@@ -59,7 +84,7 @@ Lossy Formats
         browsers as _Chromium_, _Opera_, and an implementation is going on for
         _WebKit_ and _Mozilla_ based browsers.
     -   Image editors as _Gimp_ and
-        _ImageMagick_, _but not yet GraphicsMagick_ have also support for
+        _{{< Iref "#Imagemagick" "ImageMagic" >}}_, _but not yet GraphicsMagick_ have also support for
         _WebP_
     -   Among viewers _Gthumb_ supports _WebP_. There is a
         [WebP plugin for imlib2](https://github.com/gawen947/imlib2-webp)
@@ -67,6 +92,7 @@ Lossy Formats
         like {{< iref "#feh" "feh" >}} or
         {{< iref "#sxiv" "sxiv" >}}
         should display the _WebP_ format.
+
 
 # Image metadata
 
@@ -173,7 +199,7 @@ exif, gexif,  exiv2, and exiftools.
     its concurrent gtk browsers like **eog**. It is
     suited for photo collection maintenance: raw format, Exif/IPTC/XMP
     metadata (info from jpeg files), and integration with programs
-    like UFraw, ImageMagick, Gimp, gPhoto or ExifTool.<br /> Geeqie
+    like UFraw, {{< Iref "#Imagemagick" "ImageMagic" >}}, Gimp, gPhoto or ExifTool.<br /> Geeqie
     has a medium footprint less than
     {{< iref "#gthumb" "Gthumb" >}} and above the lighter
     {{< iref "#feh" "feh" >}} or
@@ -307,10 +333,10 @@ _Notes_
     _Ditaa_ can be used with _asciidoc_, _dokuwiki_, _org mode_.
 -   <a name="exactimage"></a>
     [ExactImage](https://exactcode.com/opensource/exactimage/)
-    is a fork of ImageMagick, coded for speed in C++.
+    is a fork of {{< Iref "#Imagemagick" "ImageMagic" >}}, coded for speed in C++.
     It supports BMP, Digital Camera RAW, GIF, JPEG, JPEG2000, OpenEXR,
     PNG, PBM, RAW, TIFF, XPM, SVG PDF, PS, EPS, PCX, Targa, TGA. More
-    formats are planed. It has utilities similar to ImageMagick ones
+    formats are planed. It has utilities similar to {{< Iref "#Imagemagick" "ImageMagic" >}} ones
     `econvert`, `edisplay`, `edentify`,
 
     It has also {{< man "hocr2pdf" >}} to create a searchable PDF from hOCR input.
@@ -366,11 +392,13 @@ _Notes_
     is an image display and manipulation tool for the
     X Window System.
 
-    ImageMagick can read and write JPEG, TIFF, PNM,
-    GIF, and Photo CD image formats. It can resize, rotate, sharpen,
-    color reduce, add special effects, convert an image, and creates
-    animated or transparent .gifs, composite images, or thumbnail
-    images.
+    ImageMagick can read and write many format among which:
+    BPM, EPS, EXR, FAX (G3, G4), GIF, JBIG, JPEG, JPEG-2000 (PGX), MPEG (M2V, M4V, MKV,
+    MOV, MPG, WMV), Photo CD (PCD), PDF, PNG, PNM (PBM, PPM, PGM, PAM), PS (level II and
+    III), RGB, SVG, TIFF, XPM, WEBP, YUV image formats.
+
+    It can resize, rotate, sharpen, color reduce, add special effects, convert an image,
+    and creates animated or transparent .gifs, composite images, or thumbnail images.
 
     _ImageMagick_ includes the following command line tools:
     [animate](http://www.imagemagick.org/script/animate.php)
@@ -411,6 +439,11 @@ _Notes_
         at a time making `stream` desirable when working with large
         images or when you require raw pixel components.
 
+    -   _ImageMagick_ API is [available for numerous languages
+        ](https://imagemagick.org/script/develop.php) C, C++, GO, Java, javascript,
+        lisp, node, lua, perl, PHP, Python, R, Ruby, Rust, TCL/TK .....
+        The C++, node, php, perl, java, ruby, the python  _PythonMagick_ are availables
+        in Debian.
     -   [ImageMagick Common Image Formats
         ](http://www.imagemagick.org/Usage/formats/)
         describe how ImageMagick works with different image formats,
