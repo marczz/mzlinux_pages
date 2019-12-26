@@ -1482,13 +1482,14 @@ disclosed, allow to know the time and recipient of call. Open
 Whisper Systems have asserted that their servers do not keep this
 metadata or any logs about who called who and when.
 
-__Signal Desktop__ is a chrome packaged app that links with the
+__Signal Desktop__ is an  Electron  packaged app that links with the
 Signal-iOS or Signal-Android client.
 
 _Signal_ was previously called {{< wp "TextSecure" >}} in November 2015,
 _TextSecure_ was merged with an encrypted voice calling application
 called _RedPhone_ and was renamed as _Signal_.  The authors of _Signal_
 and _TexSecure_ _Whisper Systems_ partnered with _WhatsApp_ in
+
 November 2014 to encrypt users’ messages by default using their
 _TextSecure/Signal_ protocol.
 
@@ -1496,18 +1497,32 @@ Since WhatsApps was sold to Facebook, {{< wp "Brian acton" >}}
 who co-founded WhatsApps with {{< wp "Jan Koum" >}}, gave $ 50,000,000 to launch
 the new [Signal fundation](https://signal.org/blog/signal-foundation/).
 
--   [Signal Home (whispersystems.org)
-    ](https://whispersystems.org/)
--   [Signal support](http://support.whispersystems.org/hc/en-us)
--   [Signal-Android GitHub repo
-    ](https://github.com/WhisperSystems/Signal-Android)
+-   [Signal Home](https://signal.org/)
+-   [Signal support](https://support.signal.org/hc/en-us):
+    [Getting Started on Android, iOS, and Desktop
+    ](https://support.signal.org/hc/en-us/categories/360000674771-Getting-Started),
+    [Signal Messenger Features
+    ](https://support.signal.org/hc/en-us/sections/360001602792-Signal-Messenger-Features),
+    [Security
+    ](https://support.signal.org/hc/en-us/categories/360000674811-Security),
+    [Troubleshooting FAQ
+    ](https://support.signal.org/hc/en-us/sections/360001602812-Troubleshooting-FAQ),
+    [General FAQ](https://support.signal.org/hc/en-us/sections/360001602832-General-FAQ).
 -   [Signal-Desktop GitHub repo
-    ](https://github.com/WhisperSystems/Signal-Desktop)
+    ](https://github.com/signalapp/Signal-Desktop)
 -   [EFF - Surveillance Self-Defense](https://ssd.eff.org/) :
     [How to: Use Signal on iOS
     ](https://ssd.eff.org/en/module/how-use-signal-ios),
     [How to: Use Signal on Android
     ](https://ssd.eff.org/en/module/how-use-signal-android).
+
+The is an an alternate CLI
+[GitHub - AsamK/signal-cli](https://github.com/AsamK/signal-cli).
+This CLI can also be used with the netcurses interface
+[GitHub - jwoglom/signal-curses](https://github.com/jwoglom/signal-curses)
+or through weechat with
+[GitHub - thefinn93/signal-weechat](https://github.com/thefinn93/signal-weechat).
+
 
 ## Telegram {#telegram}
 {{< wp "Telegram (software)"  "Telegram" >}} (GPL)
