@@ -15,7 +15,9 @@ compared in the Wikipedia page {{< wp "Comparison of graphics file formats" >}}.
 # Image formats
 
 Wikipedia: {{< wp "Image_file_formats#Raster_formats" "Raster File Formats" >}},
-{{< wp "Raster graphics" >}}.
+{{< wp "Raster graphics" >}}, {{< wp "Comparison of graphics file formats" >}}
+which includes
+{{< wp "Comparison_of_graphics_file_formats#Technical_details" "technical details" >}}.
 
 The most popular formats for bitmap are:
 
@@ -25,7 +27,7 @@ Uncompressed lossless formats
 -   [BMP](http://en.wikipedia.org/wiki/BMP_file_format), [BMP format file structure
     ](http://www.fileformat.info/format/bmp/egff.htm). 1, 4, 8, 16, 24, and 32-bits
     bitmaps format from microsoft
--   [PPM, PGM, PBM, PNM](http://en.wikipedia.org/wiki/Netpbm_format),
+-   <a name="pnm"></a>[PPM, PGM, PBM, PNM](http://en.wikipedia.org/wiki/Netpbm_format),
     [netpbm: PPM](http://netpbm.sourceforge.net/doc/ppm.html) pixmap,
     [PGM](http://netpbm.sourceforge.net/doc/pgm.html) graymap,
     [PBM](http://netpbm.sourceforge.net/doc/pbm.html) bitmap,
@@ -38,18 +40,33 @@ Compressed lossless formats
 :
 
 -   [GIF](http://en.wikipedia.org/wiki/Graphics_Interchange_Format),
+-   {{< iref "#jxr" "JPEG XR" >}}  can do lossless or lossy compression.
 -   {{< iref "#openexr" "openEXR" >}}  can do lossless or lossy compression.
 -   [PNG](http://en.wikipedia.org/wiki/Portable_Network_Graphics),
-    [Portable Network Graphics Home Site](http://www.libpng.org/pub/png/)
--   [TIFF](http://en.wikipedia.org/wiki/TIFF "en.wikipedia.org TIFF")
-    The TIFF format can save multi-page documents to a single TIFF file,
-    it is user on scanner, and for fax servers
+    [Portable Network Graphics (PNG) Specification
+    ](https://www.w3.org/TR/2003/REC-PNG-20031110),
+    [Portable Network Graphics Home Page](http://www.libpng.org/pub/png/)
+-   <a name="tiff"></a>[TIFF](http://en.wikipedia.org/wiki/TIFF)
+    The TIFF image format is widely used for scanning, faxing, word processing, optical
+    character recognition.  It can save multi-page documents to a single TIFF file.
+
+    Tiff allows different [compression schemes
+    ](https://en.wikipedia.org/wiki/TIFF#TIFF_Compression_Tag)
+    CCITT T.4 (i.e group3) and T.6 (i.e group4), JBIG, JBIG2 bi-level encodings; LZW,
+    {{< wp "Deflate" >}} (i.e. Zip), JPEG2000 . JPEG is also allowed making in this case
+    a lossy format.
+
+    Multiple  images tiff files can be splited or combined with
+    {{< iref "#libtiff" "libtiff-tools" >}}, or even by
+    {{< iref "#graphicsmagick" "GraphicsMagick" >}}/{{< iref "#Imagemagick" "ImageMagic" >}}
+    but these two last will use a lot of memory by loading all pages.
+
+    Multiple  images tiff can be displayed only by some viewers like
+    {{< iref "#imview" "imview" >}}.
+
 -   [Multiple-image Network Graphics (MNG)
     ](http://www.libmng.com/pub/mng/index.html)
     A PNG-like Image Format Supporting Animation and Transparent JPEG
--   {{< wp "Exchangeable_image_file_format"  "EXIF" >}}
-    or _Exchangeable image file format_ is a specification for the
-    image file format used by digital cameras.
 
 Lossy Formats
 :
@@ -57,24 +74,22 @@ Lossy Formats
 -   [JPEG](http://en.wikipedia.org/wiki/JPEG ),
     {{< wp "JPEG" >}} is a method of compression for images, __jpeg/exif__ is
     the most common image format used by digital cameras.
--   {{< "wp" "JPEG 2000" >}} an enhancement of JPEG with the same level of compression
+-   {{< wp "JPEG 2000" >}} an enhancement of JPEG with the same level of compression
     but a greater flexibility allowing to lower the resolution without transcoding; at
     the price of additional computing complexity.
     -   [OpenJPEG](http://www.openjpeg.org/) is a BSD licence JPEG 2000 codec written in
         C.
         _ libopenjp2-tools_ is in Debian.
+-   <a name="jxr"> {{< wp "JPEG XR" >}} (BSD License) a lossy or lossless format for
+    photographic images. Computation can be done using only integer computations.
+    The Compression is better than JPEG, and lossless compression is available. There is
+    also a better color support, and the container is TIFF compatible.
+    _libjxr-tools_ is packaged in Debian.
 -   <a name="openEXR">{{< wp "OpenEXR" >}} a BSD licenced high dynamic range raster file
     format. It can do lossless or lossy compression.
     -   [OpenEXR Home](https://www.openexr.com/)
     -   Debian provides _openexr_ tools.
--   [TIFF](http://en.wikipedia.org/wiki/TIFF) a lossy or losseless
-    image format widely used for scanning, faxing, word processing, optical character recognition.
-    It supports multiple images in one file, even if fiew viewers can display them
-    _(but {{< iref "#imview" "imview" >}} does)_.
-    Multiple  images tiff files can be splited or combined with
-    {{< iref "#libtiff" "libtiff-tools" >}}, or even by
-    {{< iref "#graphicsmagick" "GraphicsMagick" >}}/{{< Iref "#Imagemagick" "ImageMagic" >}}
-    but these two last will use a lot of memory by loading all pages.
+-   {{< iref "#tiff" "TIFF"  >}} when used with jpeg compression is a lossy format.
 -   {{< wp "WebP" >}} is an open image format developped by Google
     both with lossless and lossy compression. Google tests show an
     improvement in size of roughly 25% both in lossless format tested
@@ -84,8 +99,8 @@ Lossy Formats
         browsers as _Chromium_, _Opera_, and an implementation is going on for
         _WebKit_ and _Mozilla_ based browsers.
     -   Image editors as _Gimp_ and
-        _{{< Iref "#Imagemagick" "ImageMagic" >}}_, _but not yet GraphicsMagick_ have also support for
-        _WebP_
+        _{{< iref "#Imagemagick" "ImageMagic" >}}_, _but not yet GraphicsMagick_
+        have also support for _WebP_
     -   Among viewers _Gthumb_ supports _WebP_. There is a
         [WebP plugin for imlib2](https://github.com/gawen947/imlib2-webp)
         so _imlib2_ based software
@@ -93,16 +108,31 @@ Lossy Formats
         {{< iref "#sxiv" "sxiv" >}}
         should display the _WebP_ format.
 
+Bi-levels Formats
+:
+
+    These are formats to encode binary images, or Black and White images. These are
+    efficients algorithms which are allowed to embed images in pdf or djvu.
+
+    -   {{< wp "Group_4_compression" "CCITT Group 4 compression" >}} or G4
+        is a lossless compression used in Group 4 fax machines, or for PDF image
+        embedding.  {{< iref "#imagemagick" "ImageMagick" >}} or
+         {{< iref "#graphicmagick" "GraphicMagick" >}} can produce G4 images.
+    -   {{< wp "JBIG2"  >}} is a lossless or lossy compression used for PDF embedding.
+        It allows a lossless compression  3–5 times smaller than Group 4.
+        It is similar to the JB2 compression used in
+        {{< iref "ps_pdf_djvu#djvu" "DjVu" >}}.
+        More {{< iref "ps_pdf_djvu#jbig2" "references on JBig2 in the PDF section" >}}.
+
 
 # Image metadata
 
-{{< wp "Exchangeable_image_file_format"  "EXIF" >}}
-or _Exchangeable image file format_
+{{< wp "Exchangeable_image_file_format"  "EXIF" >}} or _Exchangeable image file format_
 is a specification for the image file format used by digital cameras.
 The unofficial site of EXIF is [EXIF.org](http://www.exif.org/).
 
-{{< wp "EXtensible Metadata Platform" >}} (XMP) is a standard, created by Adobe
-Systems Inc., for processing and storing standardized and proprietary
+{{< wp "EXtensible Metadata Platform" >}} (XMP) is a standard, created by Adobe,
+for processing and storing standardized and proprietary
 information relating to the contents of a file.  XMP can be used in
 several file formats such as PDF, JPEG, JPEG 2000, JPEG XR, GIF, PNG,
 HTML, TIFF, Adobe Illustrator, PSD, MP3, MP4, Audio Video Interleave,
@@ -130,7 +160,7 @@ exif, gexif,  exiv2, and exiftools.
 
 -   [Exiftags](http://johnst.org/sw/exiftags/) (BSD Licence)
 -   [exiftran](http://linux.bytesex.org/fbida/)
-    is aN utility to rotate jpeg images without re-encoding and
+    is an utility to rotate jpeg images without re-encoding and
     without losing exif information.
 -   [Exiftool](http://www.sno.phy.queensu.ca/~phil/exiftool/)
     is a perl library plus a command-line application for reading,
@@ -198,8 +228,6 @@ exif, gexif,  exiv2, and exiftools.
     is a gtk (2 or 3) based image viewer, it does not requires gnome as many of
     its concurrent gtk browsers like **eog**. It is
     suited for photo collection maintenance: raw format, Exif/IPTC/XMP
-    metadata (info from jpeg files), and integration with programs
-    like UFraw, {{< Iref "#Imagemagick" "ImageMagic" >}}, Gimp, gPhoto or ExifTool.<br /> Geeqie
     has a medium footprint less than
     {{< iref "#gthumb" "Gthumb" >}} and above the lighter
     {{< iref "#feh" "feh" >}} or
@@ -307,8 +335,15 @@ _Notes_
 
 ## Image Libraries
 
+
 -   [libmng](http://gjuyn.xs4all.nl/libmng/) The MNG reference
     library
+-   [netpbm](http://netpbm.sourceforge.net/)
+    Netpbm is a package of graphics programs and a programming library, for the
+    Netpbm {{< iref "#pnm" "PNM format family" >}} including for tools for transforming and
+    converting to other formats.
+    The _huge_ list of Netpbm programs is on the manpage
+    {{< man "netpbm(1)" >}}
 -   [SDL image](http://www.libsdl.org/projects/SDL_image/docs/index.html) (GPL),
     also named _libsdl-image_ is a library used with the command
     __showimage__ for displaying image via the SDL library. It is used
@@ -331,16 +366,16 @@ _Notes_
     is a command-line utility written in Java, that convert diagrams
     drawn using ascii art into bitmap graphics in _png_ format.
     _Ditaa_ can be used with _asciidoc_, _dokuwiki_, _org mode_.
--   <a name="exactimage"></a>
-    [ExactImage](https://exactcode.com/opensource/exactimage/)
-    is a fork of {{< Iref "#Imagemagick" "ImageMagic" >}}, coded for speed in C++.
+-   <a name="exactimage"></a>[ExactImage](https://exactcode.com/opensource/exactimage/)
+    is a fork of {{< iref "#Imagemagick" "ImageMagic" >}}, coded for speed in C++.
     It supports BMP, Digital Camera RAW, GIF, JPEG, JPEG2000, OpenEXR,
     PNG, PBM, RAW, TIFF, XPM, SVG PDF, PS, EPS, PCX, Targa, TGA. More
-    formats are planed. It has utilities similar to {{< Iref "#Imagemagick" "ImageMagic" >}} ones
-    `econvert`, `edisplay`, `edentify`,
+    formats are planed. It has utilities similar to those of
+    {{< iref "#Imagemagick" "ImageMagic" >}}
+    `econvert`, `edisplay`, `edentify`.
 
     It has also {{< man "hocr2pdf" >}} to create a searchable PDF from hOCR input.
-    and barcode recognition with {{< man "bardecode" >}}
+    and barcode recognition with {{< man "bardecode" >}}.
 
 -   <a name="gimp"></a>[Gimp](http://www.gimp.org)
     is an image manipulation and paint program.
@@ -392,15 +427,17 @@ _Notes_
     is an image display and manipulation tool for the
     X Window System.
 
-    ImageMagick can read and write many format among which:
-    BPM, EPS, EXR, FAX (G3, G4), GIF, JBIG, JPEG, JPEG-2000 (PGX), MPEG (M2V, M4V, MKV,
-    MOV, MPG, WMV), Photo CD (PCD), PDF, PNG, PNM (PBM, PPM, PGM, PAM), PS (level II and
-    III), RGB, SVG, TIFF, XPM, WEBP, YUV image formats.
+    ImageMagick can read and write
+    [many format](https://imagemagick.org/script/formats.php#supported) among which:
+    BPM, EPS, EXR, FAX (G3, G4), GIF, JBIG, JPEG, JPEG-2000 (PGX), JXR i.e. _JPEG-XR_,
+    MPEG (M2V, M4V, MKV, MOV, MPG, WMV), Photo CD (PCD), PDF, PNG, PNM (PBM, PPM, PGM,
+    PAM), PS (level II and III), RGB, SVG, TIFF, XPM, WEBP, YUV image formats.
 
     It can resize, rotate, sharpen, color reduce, add special effects, convert an image,
     and creates animated or transparent .gifs, composite images, or thumbnail images.
 
     _ImageMagick_ includes the following command line tools:
+
     [animate](http://www.imagemagick.org/script/animate.php)
     :   animate an image sequence on an X server.
     [compare](http://www.imagemagick.org/script/compare.php)
@@ -440,7 +477,8 @@ _Notes_
         images or when you require raw pixel components.
 
     -   _ImageMagick_ API is [available for numerous languages
-        ](https://imagemagick.org/script/develop.php) C, C++, GO, Java, javascript,
+        ](https://imagemagick.org/script/develop.php) C, C++, [GO
+        ](https://github.com/gographics/imagick), Java, javascript,
         lisp, node, lua, perl, PHP, Python, R, Ruby, Rust, TCL/TK .....
         The C++, node, php, perl, java, ruby, the python  _PythonMagick_ are availables
         in Debian.
