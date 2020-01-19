@@ -66,7 +66,7 @@ See also the {{< iref "cups" "Cups Page" >}}.
       the new Scribus 1.4
 
 # DjVu {#djvu}
--   Wikipedia: [DjVu]
+-   Wikipedia: {{< wp "DjVu" >}}
 -   [djvulibre](http://djvu.sourceforge.net/) is the open source
      implementation of djvu.
 -   [djvu.org](http://djvu.org/) is the home page of {{< wp "DjVu" >}} format.
@@ -330,10 +330,6 @@ referred as Bookmarks_
 An other common task is to crop pages to changes margins, see the
 {{< iref "#pdf_crop" "subsection pdf crop" >}}.
 
--   <a name="fpdf"></a>[FPDF](http://www.fpdf.org/)
-    is a PHP class which allows to generate PDF files with pure PHP,
-    that is to say without using the PDFlib library.
-    It has a clone in python {{< iref "#pyfpdf" "pyfpdf" >}}
 -   [bmconverter.py](https://github.com/goerz/bmconverter.py) (GPL)
     by [Michael Goerz](http://michaelgoerz.net/)
     is a python script that converts between the bookmark description
@@ -343,13 +339,30 @@ An other common task is to crop pages to changes margins, see the
     -   [BmConverter Manual](http://goerz.github.io/bmconverter.py/)
     -   [User script to convert pdftk bookmarks to pdfmarks
         ](https://github.com/goerz/bmconverter.py/issues/1)
-        This script add support for pdfmarksK but there is an
+-   [CPDF](https://community.coherentpdf.com/) ([Non-Commercial Use License
+    ](https://github.com/coherentgraphics/cpdf-binaries/blob/master/LICENSE)
+    _Coherent PDF Command Line Tools Community Release_
+    allow you to manipulate existing PDF files in a variety of ways.
+    merge, or split, encrypt and decrypt, scale, crop, rotate pages,
+    read and set document info and metadata, losslessly compress PDF files.
+
+    It can also copy, add or remove: bookmarks, stamp logos, text, dates, page numbers,
+    attachments.
+    - [CPDF Manual](https://www.coherentpdf.com/cpdfmanual/cpdfmanual.html)
+      ([pdf](http://www.coherentpdf.com/cpdfmanual.pdf))
+    -   [CPDF Examples](http://www.coherentpdf.com/usage-examples.html)
+    -   [Binaries for Linux, OSX, Windows (Github)
+        ](https://github.com/coherentgraphics/cpdf-binaries)
 -   [ExactImage](http://exactcode.com/opensource/exactimage/)
     is a fast C++ image processing library. it contains some pdf
     processing tools:
     -   {{< man " hocr2pdf" >}} is an hOCR to PDF converter. It can use the
         {{< iref "#hocr" "hocr" >}} output of
         {{< iref "#tesseract" "Tesseract" >}}.
+-   <a name="fpdf"></a>[FPDF](http://www.fpdf.org/)
+    is a PHP class which allows to generate PDF files with pure PHP,
+    that is to say without using the PDFlib library.
+    It has a clone in python {{< iref "#pyfpdf" "pyfpdf" >}}
 -   [gpdftext](https://github.com/codehelp/gpdftext) (GPL)
     by Neil Williams is a C/GTK+ program that
     loads a PDF file, extracts the text, reformats the paragraphs into
@@ -396,7 +409,7 @@ An other common task is to crop pages to changes margins, see the
     breaks and can be zoomed to whatever text size you prefer.</b>
     The manual is in docbook and provided in the package it can be
     opened with yelp. _gpdftext_ is in Debian.
--   {{< wp "jbig2" >}} is a patent protected format from IBM and
+-   <a name="jbig2"></a>{{< wp "jbig2" >}} is a patent protected format from IBM and
     Mitsubishi. JBIG2 is designed for lossy or lossless encoding of
     'bilevel' (1-bit monochrome) images at moderately high resolution, and
     in particular scanned paper documents. In this domain it can be very
@@ -430,6 +443,7 @@ An other common task is to crop pages to changes margins, see the
     -   [PDFs: JPEG vs PNG vs JBIG2
         ](http://ssdigit.nothingisreal.com/2010/03/pdfs-jpeg-vs-png-vs-jbig.html)
         by Tristan Miller.
+    -   {{< iref "images#imagemagick" "ImageMagick" >}} can read and write jbig2 images.
 -   [JpdfBookmark (author page)](http://flavianopetrocchi.blogspot.com/) (GPL)
     <a name="jpdfbookmark"></a>
     and [JpdfBookmark sourceforge project](http://sourceforge.net/projects/jpdfbookmarks/)
@@ -785,7 +799,7 @@ python script,
     PDFCrop should preserve the input file's fonts, bookmarks and
     hyperlinks when generating the output file, but it may increase
     the file size during the pdf to postscript decoding/reencoding
-    process.
+    process.  _last update 2011._
 -   <a name="pdfcrop-pdftk"></a>The script
     [pdfcrop2.sh](https://www.entorb.net/wickie/Modifying_PDFs#pdfcrop2.sh)
     from the
@@ -802,10 +816,8 @@ python script,
     It is reported that _pdfquench_ don't preserve hyperlinks.
     -    [GitHub - pdf-quench](https://github.com/linuxerwang/pdf-quench).
 
+# OCR {#ocr}
 
-
-
-# OCR
 -   Wikipedia {{< wp "Comparison of optical character recognition software" >}}
 -   Andreas Gohr SplitBrain: [Linux OCR Software Comparison
     ](http://www.splitbrain.org/blog/2010-06/15-linux_ocr_software_comparison)
@@ -953,17 +965,15 @@ python script,
     It is able to recognize the page layout even for multicolumn text.
     pdfsandwich is in debian.
 
--   <a name="tesseract"></a>
-    [Tesseract](https://github.com/tesseract-ocr/tesseract)
-    (Apache 2.0 License) OCR engine
-    was originally developed at HP between 1985 and 1995.
-    It was open-sourced by HP and UNLV in 2005 and Google has lead
-    further development. It is probably one of the most accurate open
-    source OCR engines available. The source code will read a binary,
-    grey or color image and output text. It has no output formatting.
-    Tesseract can detect fixed pitch vs proportional text.
+-   <a name="tesseract"></a>[Tesseract](https://github.com/tesseract-ocr/tesseract)
+    (Apache 2.0 License) OCR engine was originally developed at HP between 1985
+    and 1995.  It was open-sourced by HP and UNLV in 2005 and Google has lead further
+    development. It is probably one of the most accurate open source OCR engines
+    available. The source code will read a binary, grey or color image and output
+    text. It has no output formatting.  Tesseract can detect fixed pitch vs proportional
+    text.
 
-    The ui are provided by [numerous third party clients
+    The UI are provided by [numerous third party clients
     ](https://github.com/tesseract-ocr/tesseract/wiki/3rdParty)
 
     Many frontends are referenced in this page:
@@ -983,7 +993,7 @@ python script,
     -   There is a wide collection of [language data
         ](https://github.com/tesseract-ocr/langdata) many _but not
         all_ are provided as an individual packages in Debian.
-    -   The Debian package _tesseract-ocr_ include tesseract comman line tool, the
+    -   The Debian package _tesseract-ocr_ include tesseract command line tool, the
         engine is in _libtesseract3_.
     -   <a name="gimagereader"></a>
         [gimagereader](https://github.com/manisandro/gImageReader)
