@@ -62,7 +62,7 @@ Compressed lossless formats
     but these two last will use a lot of memory by loading all pages.
 
     Multiple  images tiff can be displayed only by some viewers like
-    {{< iref "#imview" "imview" >}}.
+    {{< iref "#imview" "imview" >}} and  {{< iref "ps_pdf_djvu#evince" "evince"  >}} .
 
 -   [Multiple-image Network Graphics (MNG)
     ](http://www.libmng.com/pub/mng/index.html)
