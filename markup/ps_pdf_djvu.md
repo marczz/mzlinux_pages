@@ -32,7 +32,8 @@ See also the {{< iref "cups" "Cups Page" >}}.
     Ghostscript provides the following utilities:
 
     -   [ps2pdf](http://www.ghostscript.com/doc/current/Ps2pdf.htm) :
-        convert postscript to pdf.
+        convert postscript to pdf. It is a wrapper around `gs` using the device
+        `pdfwrite`.
     -   [ps2ps2](http://www.ghostscript.com/doc/current/Ps2ps2.htm):
         Converts Postscript Level 3 or PDF into Postscript Level 2
 
@@ -97,10 +98,33 @@ See also the {{< iref "cups" "Cups Page" >}}.
     is a bitonal (black & white) DjVu encoder/decoder.
 
 # PDF {#pdf}
-{{< wp "Pdf" >}} or Portable Document Format is an open standard for document
-exchange created by Adobe Systems.  It encapsulates a complete
-description of a fixed-layout flat document, including the text,
-fonts, graphics, and other information needed to display it.
+{{< wp "PDF" >}} or Portable Document Format is an open standard for document exchange
+created by Adobe Systems.  It encapsulates a complete description of a fixed-layout flat
+document, including the text, fonts, graphics, and other information needed to display
+it.
+
+{{< wp "PDF/A" >}}, an ISO-standardized version of the PDF specialized for use in the
+archiving and long-term preservation of electronic documents. There are many versions
+PDF/A-1 (2005) based on PDF 1.4, PDF/A-2 (2011) and PDF/A-3 (2012) based on PDF 1.7,
+PDF-A4 (2020) based on PDF 2.0.
+
+Openoffice and libreoffice can export to PDF/A-1a, in the File Menu when selecting
+_export as PDF_ you are offered an option choice with the  PDF/A-1a format.
+
+The other specialized  ISO  versions of PDF are
+{{< wp "PDF/X" >}} used to facilitate graphics exchange. There are also many versions
+from PDF/X-1 (2001) based on PDF 1.3 to PDF/X-1.5 (2008) based on PDF1.6, and PDF/X-6
+(2020) based on PDF 2.0.
+{{< wp "PDF/E" >}} specialized in the creation of documents used in geospatial,
+construction and manufacturing workflows,
+{{< wp "PDF/UA" >}} is focused on accessibility in PDF documents and applications,
+{{< wp "PDF/VT" >}}  is optimized for variable and transactional printing.
+
+The [PDF Association](https://www.pdfa.org/) has published introductions to these
+formats in
+[PDF/A in a Nutshell 2.0](https://www.pdfa.org/resource/pdfa-in-a-nutshell-2-0/),
+[PDF/X in a Nutshell](https://www.pdfa.org/resource/pdfx-in-a-nutshell/),
+[PDF/UA in a Nutshell](https://www.pdfa.org/resource/pdfua-in-a-nutshell/).
 
 -   {{< wp "OpenXPS" >}} is a page description format created by microsoft to
     compete with the widely used pdf format.  See the
@@ -243,7 +267,7 @@ _live preview_ synchronization library. This include
 
     *Poppler* is the base of many pdf viewers:
 
-    -   {{< wp "Evince" >}} (GPL) build with  GTK+ and *Gnome*.
+    -   <a name="evince"></a>{{< wp "Evince" >}} (GPL) build with  GTK+ and *Gnome*.
         -   [Evince Gnome Home](https://wiki.gnome.org/Apps/Evince/).
         -   [Evince supported documents formats
             ](https://wiki.gnome.org/Apps/Evince/SupportedDocumentFormats)
