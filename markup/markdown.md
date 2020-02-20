@@ -593,6 +593,20 @@ also [in PyPi](https://pypi.python.org/pypi/markdown2).
     is an extension to python-markdown to support LaTeX
     (rather than html) output _not updated since 2009_.
 
+## Go
+
+-   <a name="goldmark">[Goldmark](https://github.com/yuin/goldmark/) (MIT License)
+    Goldmark is compatible with commonmark and has many built-in extensions like
+
+    -   [GFM extensions](https://github.github.com/gfm): Strikethrough, Autolinks,
+        Task list items,
+        [GFM table](https://github.github.com/gfm/#tables-extension-),
+    -   PHP Markdown Extra:
+        [Definitions Lists](https://michelf.ca/projects/php-markdown/extra/#def-list),
+        [Footnotes](https://michelf.ca/projects/php-markdown/extra/#footnotes)
+
+    It is the default formatter for {{< iref "static_sites#hugo" >}}.
+
 ## Ruby
 -   [kramdown](http://kramdown.gettalong.org/)
     a pure-Ruby Markdown-superset converter.
