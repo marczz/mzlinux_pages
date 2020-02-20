@@ -477,9 +477,7 @@ most o them where primary aimed to blogging.
 [Hugo](https://gohugo.io/) is a static site
 generator written in go. It is in Debian. Hugo can be used for documentation.
 
-It uses since v 0.60 [Goldmark](https://github.com/yuin/goldmark/) for markdown.
-Goldmark is compatible with commonmark and has extensions amon which
-[GFM table extension](https://github.github.com/gfm/#tables-extension-).
+It uses since v 0.60 {{< iref "markdown#goldmark" Goldmark >}} for markdown formatting.
 
 There are many themes aimed to Documentation, you can find many in
 [documentation | Hugo Themes](https://themes.gohugo.io/tags/documentation/).
