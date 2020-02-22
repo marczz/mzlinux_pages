@@ -555,15 +555,15 @@ Tables aren't part of the core Markdown spec, but are one of
 
 {{< iref "php-markdown-extra" "PHP Markdown Extra" >}}
 has a [table extension](https://michelf.ca/projects/php-markdown/extra/#table) similar
-to the GFM one, but which does not allow column alignement. this syntax is used in
-numerous formatters like {{< iref "markdown#hoedown" "Hoedown" >}},
-{{< iref "markdown#lowdown" "lowdown" >}},
-{{< iref "markdown#redcarpet" "Redcarpet" >}},
-{{< iref "markdown#blackfriday" "BlackFriday"  >}}.
+to the GFM one. This syntax is used in numerous formatters like
+{{< iref "markdown#hoedown" "Hoedown" >}}  _(C)_,
+{{< iref "markdown#lowdown" "lowdown" >}} _(C)_,
+{{< iref "markdown#redcarpet" "Redcarpet" >}}  _(Ruby)_ ,
+{{< iref "markdown#blackfriday" "BlackFriday" >}} _(GO)_ .
 .
 
-[Markdown Here](https://markdown-here.com/) a browser extension to
-help you to write email supports them. They are an easy way of adding
+[Markdown Here](https://markdown-here.com/), a browser extension to
+help you to write email, supports them. It provides an easy way of adding
 tables to your email -- a task that would otherwise require
 copy-pasting from another application.
 
@@ -571,9 +571,13 @@ In {{< iref "markdown#pandoc" "Pandoc" >}} there are many
 [table extensions](https://pandoc.org/MANUAL.html#tables)
 including these GFM tables under the extension name `pipe_table`.
 
-Other GFM fully compatible formatters include
-{{< iref "markdown#goldmark" "GoldMark" >}} _(GO)_ {{< iref "markdown#gfms" "gfms" >}}
-_(Node.js)_.
+Other {{< iref "markdown#gfm" "GFM" >}}  fully compatible formatters include
+{{< iref "markdown#goldmark" "GoldMark" >}} _(GO)_; {{< iref "markdown#gfms" "gfms" >}},
+{{< iref "markdown#gitdown" "Gitdown" >}}, {{< iref " node_gfm" "node gfm" >}},
+{{< iref "markdown#marked" "Marked" >}}
+_(Node.js)_; {{< iref "markdown#hoedown" "Hoedown" >}} _(C)_;,
+{{< iref "markdown#kramdown" "#kramdown" >}} _(Ruby)_
+. _and many others._
 
 
 ```text
