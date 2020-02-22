@@ -550,10 +550,31 @@ print s
 
 ## Tables {#tables}
 
-Tables aren't part of the core Markdown spec, but they are part of GFM
-and *Markdown Here* supports them. They are an easy way of adding
+Tables aren't part of the core Markdown spec, but are one of
+[GFM table](https://github.github.com/gfm/#tables-extension-).
+
+{{< iref "php-markdown-extra" "PHP Markdown Extra" >}}
+has a [table extension](https://michelf.ca/projects/php-markdown/extra/#table) similar
+to the GFM one, but which does not allow column alignement. this syntax is used in
+numerous formatters like {{< iref "markdown#hoedown" "Hoedown" >}},
+{{< iref "markdown#lowdown" "lowdown" >}},
+{{< iref "markdown#redcarpet" "Redcarpet" >}},
+{{< iref "markdown#blackfriday" "BlackFriday"  >}}.
+.
+
+[Markdown Here](https://markdown-here.com/) a browser extension to
+help you to write email supports them. They are an easy way of adding
 tables to your email -- a task that would otherwise require
 copy-pasting from another application.
+
+In {{< iref "markdown#pandoc" "Pandoc" >}} there are many
+[table extensions](https://pandoc.org/MANUAL.html#tables)
+including these GFM tables under the extension name `pipe_table`.
+
+Other GFM fully compatible formatters include
+{{< iref "markdown#goldmark" "GoldMark" >}} _(GO)_ {{< iref "markdown#gfms" "gfms" >}}
+_(Node.js)_.
+
 
 ```text
 Colons can be used to align columns.
