@@ -400,7 +400,7 @@ _Notes_
 -   <a name="graphicsmagick"></a>
     [Graphics Magick](http://www.graphicsmagick.org/)
     ([bunch of MIT like licenses](http://www.graphicsmagick.org/Copyright.html))
-    is a fork of {{< iref "#imagamagick" "ImageMagick" >}}
+    is a fork of {{< iref "#imagemagick" "ImageMagick" >}}
     with roughly the same capabilities. GraphicsMagick provides a
     [command line utility
     ](http://www.graphicsmagick.org/utilities.html)
@@ -510,6 +510,10 @@ _Notes_
     -   [ImageJ Wiki](http://imagej.net/)
     -   [ImageJ repository on GitHub](https://github.com/imagej/imagej)
 
+-   [mermaid](https://github.com/mermaid-js/mermaid) (MIT License)
+    A _node.js_ tool for generation of sequence diagrams, class diagrams,
+    state diagrams, Gantt diagrams, pie charts, and flowchart from text in a similar
+    manner as markdown.
 -   [sam2p](https://code.google.com/archive/p/sam2p/) (GPL)
     is a command line utility that converts many raster (bitmap)
     image formats like GIF, JPG/JPEG, and PNG into PostScript or PDF
