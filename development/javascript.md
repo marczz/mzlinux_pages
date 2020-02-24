@@ -175,6 +175,7 @@ ES2017.
     The javascript mode from Karl Landstrom, enhanced by Daniel
     Colascione, _also known as expresso_ is available in emacs > 23.2
     as __js.el__.
+
 ## Other web scripting languages
 
 -   {{< wp "CoffeeScript" >}} is a programming language  inspired by Ruby, Python and Haskell
@@ -330,9 +331,18 @@ is an index of GitHub repositories that contain jQuery plugins.
 I reference some JQuery plugins in the
 {{< iref "#javascript_libraries" "Javascript Libraries section" >}}
 
-# React.js
+# React.js {#reactjs}
 
+{{< wp "React.js" >}}  is a JavaScript library for building user interfaces. It is
+maintained by Facebook.
+React can be used as a base in the development of single-page or mobile applications.
+
+-   [React Home](https://reactjs.org/)
+-   [Awesome React](https://github.com/enaqx/awesome-react)
 -   [React How To](https://github.com/petehunt/react-howto)
+-   <a name="jsx"></a>{{< wp "React_(web_framework)#JSX" "JSX" >}}, or JavaScript XML ,
+    is an extension to the JavaScript language syntax
+-   [Introducing JSX – React](https://reactjs.org/docs/introducing-jsx.html)
 
 ## Other Libraries
 -   {{< wp "MochiKit" >}} was used in TurboGears and many python frameworks,
