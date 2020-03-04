@@ -104,10 +104,13 @@ may be switched between sessions.
     is a _tmux_ session manager written in python with JSON or
     YAML configuration. It is _in Debian_.
     -   [ArchWiki: tmuxp](https://wiki.archlinux.org/index.php/Tmuxp).
--   [Powerline (GitHub)](https://github.com/powerline/powerline)
+-   <a name="powerline"></a>[Powerline (GitHub)](https://github.com/powerline/powerline)
     is a statusline plugin for vim, zsh, bash, _tmux_, IPython,
     Awesome and Qtile.
     [Powerline manual](https://powerline.readthedocs.org/en/latest/).
+    -   Emacs has a powerline compatible package
+        [telephone line](https://github.com/dbordak/telephone-line).
+
 -   [Byobu](http://byobu.co) is a wrapper script for launching either screen or tmux
     with an improved configuration.
     -   [GitHub - byobu](http://github.com/dustinkirkland/byobu)
