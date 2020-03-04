@@ -283,6 +283,8 @@ floating, on an individual window base.
     -   [i3blocks wiki](https://github.com/vivien/i3blocks/wiki)
         give example of _i3blocks_ scripts, and explain how to write
         your own.
+-   [i3 doc](https://github.com/i3/i3/tree/next/docs) contain tools,
+    the userguide, the refcard &#x2026;
 
 The window manager alone uses 5.9M/4.8M, the i3bar 5M/4.2M, i3status
 1.6M/1.3M.
@@ -509,14 +511,21 @@ See also the {{< iref "xorg#wayland" "Wayland Section" >}},
 
 
 # Desktop components {#desktop_components}
-## Colour Themes
+## Color Themes {#color_themes}
+
+See also {{< iref "emacs#emacs_themes" "Emacs Themes" >}}.
 -   [base16](https://github.com/chriskempson/base16)
     by Chris Kempson is the improvement of
     [tomorrow-theme](https://github.com/chriskempson/tomorrow-theme)
     it is very actively maintained
-    It has colour schemes for:
+    It has color schemes for:
     _vim_, _shell_ (_bash_, _zsh_), _Xressources_, _XFCE4 Terminal_, _gimp_,
     _mate terminal_, _gnome terminal_, _emacs_, _zathura_ and _mac os_ apps.
+-   [nord](https://github.com/arcticicestudio/nord) is an arctic, north-bluish color
+    palette.
+    -   [Nord Home](https://www.nordtheme.com)
+    -   [nord vim](https://github.com/arcticicestudio/nord-vim)
+    -   [nord tmux](https://github.com/arcticicestudio/nord-tmux)
 -   [Solarized](http://ethanschoonover.com/solarized)
     is a sixteen color palette for vim, Xresources, emacs,  mutt,
     GIMP Palette; and some Mac OS apps. It is also
@@ -526,14 +535,14 @@ See also the {{< iref "xorg#wayland" "Wayland Section" >}},
 -   [Smyck](https://github.com/hukl/Smyck-Color-Scheme),
     [Smyck Home](http://color.smyck.org/)
     is no longer updated since 2012, but has many forks.
-    The ariejan fork has a [colour scheme for roxterm
+    The ariejan fork has a [color scheme for roxterm
     ](https://github.com/ariejan/Smyck-Color-Scheme/tree/roxterm)
 -   [Zenburn](http://sysphere.org/~anrxc/j/articles/zenburn/index.html)
     by [anrxc](http://sysphere.org/~anrxc/)
     has scheme for [awsome](http://awesome.naquadah.org/wiki/Zenburn_Theme),
     console, _Gajim_, _pidgin_, _emacs_, X apps thru
     _.Xdefaults _, [roxterm theme
-    ](http://git.sysphere.org/dotfiles/tree/config/roxterm.sourceforge.net/Colours/Zenburn).
+    ](http://git.sysphere.org/dotfiles/tree/config/roxtnerm.sourceforge.net/Colours/Zenburn).
 
 -   There are many web applications to help to configure color themes
     [256 colors - cheat sheet](https://jonasjacek.github.io/colors/),
