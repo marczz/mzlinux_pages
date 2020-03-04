@@ -2,8 +2,6 @@
 title: Emacs
 ---
 
-{{% toc /%}}
-
 # Emacs references
 -   [gnu.emacs.sources
     ](https://groups.google.com/forum/?hl=en#!forum/gnu.emacs.sources)
@@ -266,6 +264,117 @@ You find also nice packages in the
 -   [reStructuredText mode](http://docutils.sourceforge.net/docs/user/emacs.html).
     is used for {{< iref "rest" "reStructuredText" >}}.
 
+
+## Emacs color themes {#emacs_themes}
+See also {{< iref "desktop#color_themes" "Desktop Color themes" >}}.
+
+There are a lot of color themes provided with emacs in elpa you find more than 260
+packages with themes, and in github there are around 70 packages with
+[emacs-theme topic](https://github.com/topics/emacs-theme).
+
+Emacs Wiki describe the
+[use of color themes](https://www.emacswiki.org/emacs/ColorThemes), and additionals
+[color theme questions](https://www.emacswiki.org/emacs/ColorThemeQuestions).
+
+One of the more popular set of themes, not only in emacs but on the desktop is
+base16. In base16 for emacs you find support for
+auctex, centaur-tabs, circe, avy, clojure, diff-hl, diff, dired+, doom, ediff, erc,
+eshell, flycheck, flymake, flyspell, git-gutter, gnus, helm, ido, idris-mode, imenu,
+ivy, jabber, js2, js3, magit, org-mode, rainbow-delimiters, erb,
+[telephone-line](https://github.com/dbordak/telephone-line), w3m, whitespace-mode.
+
+[Gruvbox](https://github.com/Greduan/emacs-theme-gruvbox) is a port of the
+[vim theme Gruvbox](https://github.com/morhetz/gruvbox) there are three light and three
+dark versions.
+
+It support the following packages:
+[Ag.el](https://github.com/Wilfred/ag.el), Ace jump, Ace window,
+[Anzu](https://github.com/syohex/emacs-anzu#customization),
+[Auto-dim-other-buffers](https://github.com/mina86/auto-dim-other-buffers.el),
+[Circe](https://github.com/jorgenschaefer/circe), Comint (and the like), Company,
+[diff-hl](https://github.com/dgutov/diff-hl), Diffs, Dired+, Elfeed,
+[ElScreen](https://github.com/knu/elscreen), [ERC](https://www.emacswiki.org/emacs/ERC),
+Eshell, [Flycheck](https://www.flycheck.org/en/latest/), [Gnus](http://gnus.org), Helm,
+Highlight Indent, Hydra, Ivy, [Js2-mode](https://github.com/mooz/js2-mode), LaTeX,
+[Linum-relative](https://github.com/emacsmirror/linum-relative), Magit, Markdown,
+Message, [Neotree](https://github.com/jaypei/emacs-neotree), Org, Popup,
+[RainbowDelimiters](http://www.emacswiki.org/emacs/RainbowDelimiters), Shell script,
+Smart modeline, [Smartparens](https://github.com/Fuco1/smartparens), Term, Tool Tips,
+Undo Tree, Whitespace-mode, Widget Faces.
+
+
+### Colorless Themes
+"Colorless themes" are designed to reduce the visual impact of syntax highlighting
+some are themes based on the plan9 editor acme, like the vim themes
+[vacme](https://github.com/olivertaylor/vacme),
+[nofrils](https://github.com/robertmeta/nofrils).
+The theme
+[parchment](https://github.com/ajgrf/parchment) is also available for both vim and emacs.
+
+In emacs there is
+[nofrils](https://gitlab.com/esessoms/nofrils-theme), with
+Minimal syntax highlighting to reduce distractions. Some coloring is still available, to
+attenuate comments and enhance errors.  with dark, light, and sepia variations. Similar
+themes are
+[emacs acme theme](https://github.com/tarrsalah/emacs-acme-theme)
+[eink](https://github.com/maio/eink-emacs),
+[nordless](https://github.com/lthms/nordless-theme.el),
+[plan9](https://github.com/john2x/plan9-theme.el),
+[punpun](https://github.com/wasamasa/punpun-theme).
+
+[tao](https://github.com/11111000000/tao-theme-emacs) is a
+a two uncoloured color themes for Emacs: tao-yin and tao-yang (dark and sepia).
+
+[leuven](https://github.com/fniessen/emacs-leuven-theme) is a theme in an color theme on
+white background, with also a dark variant. It has been conceived also for org-mode
+highlighting. It has support for markdown, gnus, message, diff, smerge, ediff, flyspell,
+semantic, [anzu](https://github.com/syohex/emacs-anzu), bbdb, calendar, calfw,
+change-log, circe, company, compilation, diff-hl, dircolors, dired, dired+, flycheck,
+google-translate, helm, info, js2-mode, magit, nxml,
+[rainbow-delimiters](https://github.com/Fanael/rainbow-delimiters),
+showparen, svn, vc-annotate, w3m,
+[ztree](https://github.com/manateelazycat/lazycat-emacs/tree/master/site-lisp/extensions/ztree).
+
+_leuven_ also instigates [eziam](https://github.com/thblt/eziam-theme-emacs)
+which also draw from [tao](https://github.com/11111000000/tao-theme-emacs) and provide
+_light_,_dusk_, and _dark_ variants, and
+[parchment](https://github.com/ajgrf/parchment) wich is also derived from [nofrils
+](https://gitlab.com/esessoms/nofrils-theme) and avoid the agressive white background of
+[leuven](https://github.com/fniessen/emacs-leuven-theme). _parchment_ features support
+for org-mode, markdown, rst, company, dired, [diredfl](https://github.com/purcell/diredfl),
+emms,flycheck,  helm,ido, ivy, swiper, magit, mu4e,
+[rainbow-delimiters](https://github.com/Fanael/rainbow-delimiters),
+
+[eink](https://github.com/maio/eink-emacs) is a  minimalistic color theme for Emacs
+emulating reading on E Ink devices.
+
+
+The repository [colorless themes](https://git.sr.ht/~lthms/colorless-themes.el) also
+propose
+
+- `nordless`, dark and blue, inspired by
+  [nord](https://github.com/arcticicestudio/nord)
+- `hydrangealess`, dark and magenta, inspired by
+  [hydrangea](https://github.com/yuttie/hydrangea-emacs)
+- `seagreenless`, light and seagreen
+- `lavenderless`, purple and mint, inspired by
+  [Lavender](https://github.com/emacsfodder/emacs-lavender-theme/)
+- `nofrils-darkless`, a clone of
+  [nofrils-dark](https://github.com/robertmeta/nofrils)
+- `darkless`, dark and white, inspired by nofrils, but with less colours
+- `chocolateless`, chocolate taste, inspired by
+  [chocolate](https://github.com/SavchenkoValeriy/emacs-chocolate-theme)
+- `einkless`, light theme, inspired by
+  [eink](https://github.com/maio/eink-emacs)
+- `broceliande`, green and cyan
+
+### Org aware color themes
+
+Worg has a page on [org color themes](https://orgmode.org/worg/org-color-themes.html)
+which contain a list of color themes that are aware of Org. There is also a page of
+[screenshots of some of these themes
+](https://orgmode.org/worg/color-themes-screenshot.html).
+
 ## Other packages
 -   [Ag.el](https://github.com/Wilfred/ag.el) allows you to search
     using ag from inside Emacs.
@@ -367,6 +476,8 @@ You find also nice packages in the
     is a M-x enhancement for Emacs. Built on top of Ido, it proposes
     your most frequently used commands. A more recent fork is
     {{< iref "#amx" "amx" >}}. _in elpa_
+-  [telephone line](https://github.com/dbordak/telephone-line)
+   is an implementation of {{< iref "checkpointing#powerline" "Powerline" >}} for emacs.
 -   [use-package](https://github.com/jwiegley/use-package) add a
     macro which allows you to isolate each emacs package
     configuration.  I'm reluctant to use it because, if it is missing
