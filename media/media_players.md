@@ -2,8 +2,6 @@
 title: Sound and Video Players
 ---
 
-{{% toc /%}}
-
 See also {{< iref "streaming" "Streaming" >}},
 {{< iref "ffmpeg" "FFmpeg section" >}},
 {{< iref "video_edit" "Video Edit" >}},
@@ -643,35 +641,32 @@ __ogg123__, __oggdec__
 
 See also [EmacsWiki: MusicPlayers](http://www.emacswiki.org/emacs/MusicPlayers)
 
-[Bongo](https://github.com/dbrock/bongo/)
+[Bongo](https://github.com/dbrock/bongo/) (GPL)
 :   Bongo is a music player for emacs that was developped in parallel
     with EMMS. Bongo it can use VLC,
     mpg321, ogg123, speexdec. Bongo has an
     [emacswiki page](http://www.emacswiki.org/emacs/Bongo).
 
-[Emacs' AlsaPlayer](http://home.gna.org/eap/eap.html)
-:   Is a music player for emacs that focus on the smooth transitions between songs. It
-    is an emacs interface to <a href="#alsaplayer">AlsaPlayer</a> which allows to
-    control it from anywhere in Emacs. It can play, everything AsaPlayer can play.
 
-[EMMS](http://www.emacswiki.org/cgi-bin/emacs.pl/EMMS)
+[EMMS](http://www.emacswiki.org/cgi-bin/emacs.pl/EMMS) (GPL)
 :   EMMS (GPLv3) is the Emacs Multi-Media System, a small
     application to play multimedia files from Emacs using external
     players. It can use mpg321, ogg123, mplayer, xine or
     {{< iref "#mpd" "mpd" >}}, or any simple player available as unix command
     line client.
 
-[libmpdee](https://svn.musicpd.org/libmpdee/trunk/libmpdee.el)
-:   LMibmpdee <a name="libmpdee"></a>
-    is a client library for  {{< iref "#mpd" "mpd" >}}
-    in emacslisp.
+<a name="libmpdee"></a>[libmpdee](https://github.com/andyetitmoves/libmpdee) (GPL)
+:   LMibmpdee    is a client library for  {{< iref "#mpd" "mpd" >}}
+    in emacslisp, packaged in MELPA.
 
-[Mingus](http://github.com/pft/mingus).
-:   Mingus is an extension of
-    {{< iref "#libmpdee" "LMibmpdee" >}}
-    by Niels Giesen.  The interface resembles that of
-    ncmpc, and it provides extensive playlist editing facilities. It
-    can be interfaced from emacs-w3m an dired.  _mingus stays home_ is
+[simple-mpc](https://github.com/jorenvo/simple-mpc) (GPL)
+:   A GNU Emacs frontend to mpc, packaged in MELPA.
+
+[Mingus](http://github.com/pft/mingus) (GPL).
+:   Mingus is an extension of {{< iref "#libmpdee" "LMibmpdee" >}}
+    by Niels Giesen, packaged in MELPA.  The interface resembles that of
+    {{< iref "#ncmpc" "ncmpc"  >}}, and it provides extensive playlist editing
+    facilities. It can be interfaced from emacs-w3m an dired.  _mingus stays home_ is
     used to play any local sound files, it provides a cd-burning tool
     and tag editing with [taggit]( https://github.com/ft/taggit).
 
@@ -683,7 +678,10 @@ __MPC__
 :   is major mode providing an interface to MPD bundled with
     Emacs >= 23.2 .
 
-[simple-mpc](https://github.com/jorenvo/simple-mpc)
+[mpdel](https://gitea.petton.fr/mpdel/mpdel) (GPL)
+:   Emacs user interface for Music Player Daemon, Available from melpa.
+
+[simple-mpc](https://github.com/jorenvo/simple-mpc) (GPL)
 :   A GNU Emacs major mode that acts as a front end to mpc.
     it is in Elpa.
 
@@ -822,10 +820,6 @@ A selection of clients:
     added on my sys. ).
 -   {{< iref "streaming#jinzora" "Jinzora" >}}
     A web based streaming and media management system.
--   [libmpdee](http://git.musicpd.org/cgit/master/libmpd.git/)
-    <a name="libmpdee"></a>
-    is a client library for mpd in emacs _unmaintained_. It is extended by
-    [Mingus](http://github.com/pft/mingus).
 -   _mpc_ the reference (Scriptable) command
     line client provided with _mpd_.
     Refs: [mpc(1)
