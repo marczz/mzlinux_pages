@@ -307,66 +307,97 @@ Undo Tree, Whitespace-mode, Widget Faces.
 "Colorless themes" are designed to reduce the visual impact of syntax highlighting
 some are themes based on the plan9 editor acme, like the vim themes
 [vacme](https://github.com/olivertaylor/vacme),
-[nofrils](https://github.com/robertmeta/nofrils).
-The theme
+[nofrils](https://github.com/robertmeta/nofrils),
 [parchment](https://github.com/ajgrf/parchment) is also available for both vim and emacs.
 
-In emacs there is
-[nofrils](https://gitlab.com/esessoms/nofrils-theme), with
-Minimal syntax highlighting to reduce distractions. Some coloring is still available, to
-attenuate comments and enhance errors.  with dark, light, and sepia variations. Similar
-themes are
-[emacs acme theme](https://github.com/tarrsalah/emacs-acme-theme)
-[eink](https://github.com/maio/eink-emacs),
-[nordless](https://github.com/lthms/nordless-theme.el),
-[plan9](https://github.com/john2x/plan9-theme.el),
-[punpun](https://github.com/wasamasa/punpun-theme).
+In emacs we have:
 
-[tao](https://github.com/11111000000/tao-theme-emacs) is a
-a two uncoloured color themes for Emacs: tao-yin and tao-yang (dark and sepia).
+-   [parchment](https://github.com/ajgrf/parchment)
+    is derived from _nofrils and
+    _leuven_ but avoid the agressive white background of _leuven_.
+    It has support for  markdown, org mode, show-paren, whitespace, diff, rainbow-delimiters,
+    rst, calendar, company, dired, [diredfl](https://github.com/purcell/diredfl), elfeed, emms, eshell, evil,
+    [geiser]( http://www.nongnu.org/geiser/), gnus,
+    [guix]( https://emacs-guix.gitlab.io/website/), helm,
+    [hi-lock](https://github.com/emacs-mirror/emacs/blob/master/lisp/hi-lock.el),
+    ido, info, ivy, git-gutter, magit, mu4e,
+    [rainbow-delimiters](https://github.com/Fanael/rainbow-delimiters), swiper, term,
+    [undo-tree](https://github.com/apchamberlain/undo-tree.el), transient, which-key.
+-   [nofrils](https://gitlab.com/esessoms/nofrils-theme), with
+    Minimal syntax highlighting to reduce distractions. Some coloring is still available, to
+    attenuate comments and enhance errors.  with dark, light, and sepia variations.
+    _nofrils_ has no support for packages font locking.
+-   [emacs acme theme](https://github.com/tarrsalah/emacs-acme-theme)
+    _no support for packages._
+-   [eink](https://github.com/maio/eink-emacs)  support for gnus, helm, ido, js2, org
+    mode, magit, dired, evil.
+-   The members of the set of
+    [colorless-themes.el](https://git.sr.ht/~lthms/colorless-themes.el)
 
-[leuven](https://github.com/fniessen/emacs-leuven-theme) is a theme in an color theme on
-white background, with also a dark variant. It has been conceived also for org-mode
-highlighting. It has support for markdown, gnus, message, diff, smerge, ediff, flyspell,
-semantic, [anzu](https://github.com/syohex/emacs-anzu), bbdb, calendar, calfw,
-change-log, circe, company, compilation, diff-hl, dircolors, dired, dired+, flycheck,
-google-translate, helm, info, js2-mode, magit, nxml,
-[rainbow-delimiters](https://github.com/Fanael/rainbow-delimiters),
-showparen, svn, vc-annotate, w3m,
-[ztree](https://github.com/manateelazycat/lazycat-emacs/tree/master/site-lisp/extensions/ztree).
+    -   `nordless`, dark and blue, inspired by
+        [nord](https://github.com/arcticicestudio/nord)
+    -   `hydrangealess`, dark and magenta, inspired by
+        [hydrangea](https://github.com/yuttie/hydrangea-emacs)
+    -   `seagreenless`, light and seagreen
+    -   `lavenderless`, purple and mint, inspired by
+        [Lavender](https://github.com/emacsfodder/emacs-lavender-theme/)
+    -   `nofrils-darkless`, a clone of
+        [nofrils-dark](https://github.com/robertmeta/nofrils)
+    -   `darkless`, dark and white, inspired by nofrils, but with less colours
+    -   `chocolateless`, chocolate taste, inspired by
+        [chocolate](https://github.com/SavchenkoValeriy/emacs-chocolate-theme)
+    -   `einkless`, light theme, inspired by
+        [eink](https://github.com/maio/eink-emacs)
+    -   `broceliande`, green and cyan
 
-_leuven_ also instigates [eziam](https://github.com/thblt/eziam-theme-emacs)
-which also draw from [tao](https://github.com/11111000000/tao-theme-emacs) and provide
-_light_,_dusk_, and _dark_ variants, and
-[parchment](https://github.com/ajgrf/parchment) wich is also derived from [nofrils
-](https://gitlab.com/esessoms/nofrils-theme) and avoid the agressive white background of
-[leuven](https://github.com/fniessen/emacs-leuven-theme). _parchment_ features support
-for org-mode, markdown, rst, company, dired, [diredfl](https://github.com/purcell/diredfl),
-emms,flycheck,  helm,ido, ivy, swiper, magit, mu4e,
-[rainbow-delimiters](https://github.com/Fanael/rainbow-delimiters),
+    They support powerline, whitespace, compilation, rst, org mode, magit, markdown, helm,
+    company, tuareg.
+-   [plan9](https://github.com/john2x/plan9-theme.el) which support compilation, grep,
+    ag, isearch, table, [ledger](https://www.ledger-cli.org/), clojure, diff, diff-hl,
+    dired/dired+/dired-subtree, elfeed, erc, company, flycheck, git-gutter,
+    hl-line/hl-sexp, ido, ivy, js2, lsp-mode, magit, sml-mode-line, web-mode, org mode,
+    mue4, message
 
-[eink](https://github.com/maio/eink-emacs) is a  minimalistic color theme for Emacs
-emulating reading on E Ink devices.
+-   [punpun](https://github.com/wasamasa/punpun-theme) .
 
+-   [tao](https://github.com/11111000000/tao-theme-emacs) is a
+    a two uncoloured color themes for Emacs: tao-yin and tao-yang (dark and sepia). It
+    support compilation, grep, make, isearch, newsticker, ace, ack, auctex,
+    [auto-complete](https://www.emacswiki.org/emacs/AutoComplete), android mode,
+    [bm (visual bookmarks)](https://github.com/joodland/bm), clojure-test-mode, diff,
+    dired+, ediff, elfeed, ert, eshell, flycheck, flymake, flyspell, erc, git-gutter,
+    gnus, guide-key, helm, hl-line-mode, ido, js2, jsx, jabber, ledger,
+    [macrostep](https://github.com/joddie/macrostep), magit, egg, message, mew,
+    mic-paren, mingus, nav, mu4e, [mumamo](https://www.emacswiki.org/emacs/MuMaMo),
+    org mode, outline,  p4, proofgeneral, rainbow delimiters, rcirc, rpm mode, rst-mode,
+    sh-mode, show-paren, [slime](https://www.emacswiki.org/emacs/SlimeMode), speedbar,
+    [tabbar](https://www.emacswiki.org/emacs/TabBarMode), term,
+    [undo-tree](https://github.com/apchamberlain/undo-tree.el), w3m, web mode,
+    whitespace, wanderlust, markdown, [swoop](https://github.com/emacsorphanage/swoop),
+    company, neotree, geiser, tuareg, avy, ace-window, ivy, hideshow, circe, lui,
+    racket.
+-   [leuven](https://github.com/fniessen/emacs-leuven-theme)
+    is a theme in an color theme on white background, with also a dark variant. It has
+    been conceived also for org-mode highlighting. It has support for markdown, gnus,
+    message, diff, smerge, ediff, flyspell, semantic,
+    [anzu](https://github.com/syohex/emacs-anzu), bbdb, calendar, calfw,
+    change-log, circe, company, compilation, diff-hl, dircolors, dired, dired+, flycheck,
+    google-translate, helm, info, js2-mode, magit, nxml,
+    [rainbow-delimiters](https://github.com/Fanael/rainbow-delimiters),
+    showparen, svn, vc-annotate, w3m, [ztree
+    ](https://github.com/manateelazycat/lazycat-emacs/tree/master/site-lisp/extensions/ztree).
 
-The repository [colorless themes](https://git.sr.ht/~lthms/colorless-themes.el) also
-propose
+    _leuven_ also instigates _eziam_ and _parcment_.
 
-- `nordless`, dark and blue, inspired by
-  [nord](https://github.com/arcticicestudio/nord)
-- `hydrangealess`, dark and magenta, inspired by
-  [hydrangea](https://github.com/yuttie/hydrangea-emacs)
-- `seagreenless`, light and seagreen
-- `lavenderless`, purple and mint, inspired by
-  [Lavender](https://github.com/emacsfodder/emacs-lavender-theme/)
-- `nofrils-darkless`, a clone of
-  [nofrils-dark](https://github.com/robertmeta/nofrils)
-- `darkless`, dark and white, inspired by nofrils, but with less colours
-- `chocolateless`, chocolate taste, inspired by
-  [chocolate](https://github.com/SavchenkoValeriy/emacs-chocolate-theme)
-- `einkless`, light theme, inspired by
-  [eink](https://github.com/maio/eink-emacs)
-- `broceliande`, green and cyan
+-   [eziam](https://github.com/thblt/eziam-theme-emacs) is
+    draw from _leuven_ and _tao_. It provides
+    _light_,_dusk_, and _dark_ variants. Unlike Tao, keeps some very minimal color
+    indications, while remaining mainly grayscale, with no color for syntax.
+    The package support is nearly same than _tao_.
+
+-   [eink](https://github.com/maio/eink-emacs) is a  minimalistic color theme for Emacs
+    emulating reading on E Ink devices.
+
 
 ### Org aware color themes
 
@@ -382,7 +413,7 @@ which contain a list of color themes that are aware of Org. There is also a page
     {{< iref "#smex" "smex" >}} that provide an alternative
     interface for M-x in Emacs.it can use ido and ivy completion.
     _in elpa._
--   <a name=define-word"</a>[define-word
+-   <a name=define-word"></a>[define-word
     ](https://github.com/abo-abo/define-word/blob/master/define-word.el)
     show the definition of a word inside emacs by parsing the result
     of the search in [wordnick](http://wordnik.com/).
@@ -567,9 +598,10 @@ be carreful to disable backups, or force them to be done as root as
 explained in [manual - Auto save and Backup
 ](https://www.gnu.org/software/tramp/#Auto_002dsave-and-Backup).
 
-EmacsWiki has example on how to [Using Tramp to open files sudo'd to
-root](https://www.emacswiki.org/emacs/TrampMode#toc20) and
-[Using tramp to quickly edit files as root
+EmacsWiki has example on how to
+[Using Tramp to open files sudo'd to root
+](https://www.emacswiki.org/emacs/TrampMode#toc20)
+and [Using tramp to quickly edit files as root
 ](https://www.emacswiki.org/emacs/TrampMode#toc29).
 
 <!--
