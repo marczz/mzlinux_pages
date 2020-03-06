@@ -3,6 +3,7 @@ title: Emacs
 ---
 
 # Emacs references
+
 -   [gnu.emacs.sources
     ](https://groups.google.com/forum/?hl=en#!forum/gnu.emacs.sources)
     thru Google,
@@ -118,6 +119,304 @@ title: Emacs
 -   Nic Ferrier's [Tips on Emacs Lisp programming
     ](http://nic.ferrier.me.uk/blog/2012_07/tips-and-tricks-for-emacslisp)
 -   [Xah Emacs Lisp Tutorial](http://ergoemacs.org/emacs/elisp.html)
+
+
+# Emacs color themes {#emacs_themes}
+See also {{< iref "desktop#color_themes" "Desktop Color themes" >}}.
+
+There are a lot of color themes provided with emacs, in the
+`/usr/share/emacs/<version>/etc/themes` you find _as far of emacs 26_:
+adwaita, deeper-blue, dichromacy, leuven, light-blue, manoj-dark, misterioso,
+tango-dark, tango, tsdh-dark, tsdh-light, wheatgrass, whiteboard.
+
+
+in elpa you find more than 260
+packages with themes, and in github there are around 70 packages with
+[emacs-theme topic](https://github.com/topics/emacs-theme).
+
+In emacs version ≥ 24 you use [custom themes
+](https://www.gnu.org/software/emacs/manual/html_node/emacs/Custom-Themes.html#Custom-Themes).
+
+To use a theme you use `customize theme` or `load-theme` you have there the possibility
+to enable a theme, that was not previously enabled. All the enabled themes are in the
+list `custom-enabled-themes`.
+
+You can disable a theme with `disable-theme`.
+
+All the themes shoul be in a directory from the list `custom-theme-load-path`, for which
+you can define a custom value. Note that themes installed from MELPA use to add
+themselves to `custom-theme-load-path` in their autoloads
+
+The legacy way of setting a color theme was with the package `color-thes.el`, it was
+providing many themes that are now moved in the package [replace-colorthemes
+](https://github.com/emacs-jp/replace-colorthemes).
+
+
+The [use of legacy color themes](https://www.emacswiki.org/emacs/ColorThemes) is
+described in EmacsWiki along additionals
+[color theme questions](https://www.emacswiki.org/emacs/ColorThemeQuestions).
+
+One of the more popular set of themes, not only in emacs but on the desktop is
+base16. In base16 for emacs you find support for
+auctex, centaur-tabs, circe, avy, clojure, diff-hl, diff, dired+, doom, ediff, erc,
+eshell, flycheck, flymake, flyspell, git-gutter, gnus, helm, ido, idris-mode, imenu,
+ivy, jabber, js2, js3, magit, org-mode, rainbow-delimiters, erb,
+[telephone-line](https://github.com/dbordak/telephone-line), w3m, whitespace-mode.
+
+[Gruvbox](https://github.com/Greduan/emacs-theme-gruvbox) is a port of the
+[vim theme Gruvbox](https://github.com/morhetz/gruvbox) there are three light and three
+dark versions.
+
+It support the following packages:
+[Ag.el](https://github.com/Wilfred/ag.el), Ace jump, Ace window,
+[Anzu](https://github.com/syohex/emacs-anzu#customization),
+[Auto-dim-other-buffers](https://github.com/mina86/auto-dim-other-buffers.el),
+[Circe](https://github.com/jorgenschaefer/circe), Comint (and the like), Company,
+[diff-hl](https://github.com/dgutov/diff-hl), Diffs, Dired+, Elfeed,
+[ElScreen](https://github.com/knu/elscreen), [ERC](https://www.emacswiki.org/emacs/ERC),
+Eshell, [Flycheck](https://www.flycheck.org/en/latest/), [Gnus](http://gnus.org), Helm,
+Highlight Indent, Hydra, Ivy, [Js2-mode](https://github.com/mooz/js2-mode), LaTeX,
+[Linum-relative](https://github.com/emacsmirror/linum-relative), Magit, Markdown,
+Message, [Neotree](https://github.com/jaypei/emacs-neotree), Org, Popup,
+[RainbowDelimiters](http://www.emacswiki.org/emacs/RainbowDelimiters), Shell script,
+Smart modeline, [Smartparens](https://github.com/Fuco1/smartparens), Term, Tool Tips,
+Undo Tree, Whitespace-mode, Widget Faces.
+
+
+## Colorless Themes
+"Colorless themes" are designed to reduce the visual impact of syntax highlighting
+some are themes based on the plan9 editor acme, like the vim themes
+[vacme](https://github.com/olivertaylor/vacme),
+[nofrils](https://github.com/robertmeta/nofrils),
+[parchment](https://github.com/ajgrf/parchment) is also available for both vim and emacs.
+
+In emacs we have:
+
+-   [parchment](https://github.com/ajgrf/parchment)
+    is derived from _nofrils and
+    _leuven_ but avoid the agressive white background of _leuven_.
+    It has support for  markdown, org mode, show-paren, whitespace, diff, rainbow-delimiters,
+    rst, calendar, company, dired, [diredfl](https://github.com/purcell/diredfl), elfeed, emms, eshell, evil,
+    [geiser]( http://www.nongnu.org/geiser/), gnus,
+    [guix]( https://emacs-guix.gitlab.io/website/), helm,
+    [hi-lock](https://github.com/emacs-mirror/emacs/blob/master/lisp/hi-lock.el),
+    ido, info, ivy, git-gutter, magit, mu4e,
+    [rainbow-delimiters](https://github.com/Fanael/rainbow-delimiters), swiper, term,
+    [undo-tree](https://github.com/apchamberlain/undo-tree.el), transient, which-key.
+-   [nofrils](https://gitlab.com/esessoms/nofrils-theme), with
+    Minimal syntax highlighting to reduce distractions. Some coloring is still available, to
+    attenuate comments and enhance errors.  with dark, light, and sepia variations.
+    _nofrils_ has no support for packages font locking.
+-   [emacs acme theme](https://github.com/tarrsalah/emacs-acme-theme)
+    _no support for packages._
+-   [eink](https://github.com/maio/eink-emacs)  support for gnus, helm, ido, js2, org
+    mode, magit, dired, evil.
+-   The members of the set of
+    [colorless-themes.el](https://git.sr.ht/~lthms/colorless-themes.el)
+
+    -   `nordless`, dark and blue, inspired by
+        [nord](https://github.com/arcticicestudio/nord)
+    -   `hydrangealess`, dark and magenta, inspired by
+        [hydrangea](https://github.com/yuttie/hydrangea-emacs)
+    -   `seagreenless`, light and seagreen
+    -   `lavenderless`, purple and mint, inspired by
+        [Lavender](https://github.com/emacsfodder/emacs-lavender-theme/)
+    -   `nofrils-darkless`, a clone of
+        [nofrils-dark](https://github.com/robertmeta/nofrils)
+    -   `darkless`, dark and white, inspired by nofrils, but with less colours
+    -   `chocolateless`, chocolate taste, inspired by
+        [chocolate](https://github.com/SavchenkoValeriy/emacs-chocolate-theme)
+    -   `einkless`, light theme, inspired by
+        [eink](https://github.com/maio/eink-emacs)
+    -   `broceliande`, green and cyan
+
+    They support powerline, whitespace, compilation, rst, org mode, magit, markdown, helm,
+    company, tuareg.
+-   [plan9](https://github.com/john2x/plan9-theme.el) which support compilation, grep,
+    ag, isearch, table, [ledger](https://www.ledger-cli.org/), clojure, diff, diff-hl,
+    dired/dired+/dired-subtree, elfeed, erc, company, flycheck, git-gutter,
+    hl-line/hl-sexp, ido, ivy, js2, lsp-mode, magit, sml-mode-line, web-mode, org mode,
+    mue4, message
+
+-   [punpun](https://github.com/wasamasa/punpun-theme) .
+
+-   [tao](https://github.com/11111000000/tao-theme-emacs) is a
+    a two uncoloured color themes for Emacs: tao-yin and tao-yang (dark and sepia). It
+    support compilation, grep, make, isearch, newsticker, ace, ack, auctex,
+    [auto-complete](https://www.emacswiki.org/emacs/AutoComplete), android mode,
+    [bm (visual bookmarks)](https://github.com/joodland/bm), clojure-test-mode, diff,
+    dired+, ediff, elfeed, ert, eshell, flycheck, flymake, flyspell, erc, git-gutter,
+    gnus, guide-key, helm, hl-line-mode, ido, js2, jsx, jabber, ledger,
+    [macrostep](https://github.com/joddie/macrostep), magit, egg, message, mew,
+    mic-paren, mingus, nav, mu4e, [mumamo](https://www.emacswiki.org/emacs/MuMaMo),
+    org mode, outline,  p4, proofgeneral, rainbow delimiters, rcirc, rpm mode, rst-mode,
+    sh-mode, show-paren, [slime](https://www.emacswiki.org/emacs/SlimeMode), speedbar,
+    [tabbar](https://www.emacswiki.org/emacs/TabBarMode), term,
+    [undo-tree](https://github.com/apchamberlain/undo-tree.el), w3m, web mode,
+    whitespace, wanderlust, markdown, [swoop](https://github.com/emacsorphanage/swoop),
+    company, neotree, geiser, tuareg, avy, ace-window, ivy, hideshow, circe, lui,
+    racket.
+-   [leuven](https://github.com/fniessen/emacs-leuven-theme)
+    is a theme in an color theme on white background, with also a dark variant. It has
+    been conceived also for org-mode highlighting. It has support for markdown, gnus,
+    message, diff, smerge, ediff, flyspell, semantic,
+    [anzu](https://github.com/syohex/emacs-anzu), bbdb, calendar, calfw,
+    change-log, circe, company, compilation, diff-hl, dircolors, dired, dired+, flycheck,
+    google-translate, helm, info, js2-mode, magit, nxml,
+    [rainbow-delimiters](https://github.com/Fanael/rainbow-delimiters),
+    showparen, svn, vc-annotate, w3m, [ztree
+    ](https://github.com/manateelazycat/lazycat-emacs/tree/master/site-lisp/extensions/ztree).
+
+    _leuven_ also instigates _eziam_ and _parcment_.
+
+-   [eziam](https://github.com/thblt/eziam-theme-emacs) is
+    draw from _leuven_ and _tao_. It provides
+    _light_,_dusk_, and _dark_ variants. Unlike Tao, keeps some very minimal color
+    indications, while remaining mainly grayscale, with no color for syntax.
+    The package support is nearly same than _tao_.
+
+-   [eink](https://github.com/maio/eink-emacs) is a  minimalistic color theme for Emacs
+    emulating reading on E Ink devices.
+
+
+## Package support
+I list here the package support for some few themes
+
+First some theme with minimal support, only for some emacs built-in packages
+
+| package              | adwaita | deeper-blue | dichromacy |
+|----------------------|---------|-------------|------------|
+| calendar             |         |             |            |
+| change-log           |         |             |            |
+| compilation          |         | X           |            |
+| diff                 | X       | X           |            |
+| dired                |         |             |            |
+| ediff                |         | X           |            |
+| erc                  | X       |             |            |
+| eww                  |         |             |            |
+| flyspell             |         |             |            |
+| font-lock            | X       |             | X          |
+| info                 |         | X           |            |
+| isearch              |         | X           |            |
+| gnus                 | X       |             | X          |
+| magit                | X       |             |            |
+| markdown             |         |             |            |
+| message              |         |             | X          |
+| org mode             |         |             |            |
+| outline              |         | X           |            |
+| show-paren           |         | X           |            |
+| speedbar             |         |             |            |
+| vc-annotate          |         |             |            |
+| widget               |         |             |            |
+| woman                |         |             |            |
+| w3m                  |         |             |            |
+| yasnippet            |         |             |            |
+
+
+Themes with a wider support for external packages.
+
+
+| package              | adwaita | deeper-blue | dichromacy | [leuven] | manoj |   |   |   |   |   |   |
+|----------------------|---------|-------------|------------|----------|-------|---|---|---|---|---|---|
+| [ahs]                |         |             |            | X        |       |   |   |   |   |   |   |
+| antlr                |         |             |            |          | X     |   |   |   |   |   |   |
+| anzu                 |         |             |            | X        |       |   |   |   |   |   |   |
+| [auto-complete]      |         |             |            | X        |       |   |   |   |   |   |   |
+| avy                  |         |             |            | X        |       |   |   |   |   |   |   |
+| bbdb                 |         |             |            | X        | X     |   |   |   |   |   |   |
+| [bookmark+]          |         |             |            | X        |       |   |   |   |   |   |   |
+| calendar             |         |             |            | X        |       |   |   |   |   |   |   |
+| [calfw]              |         |             |            | X        |       |   |   |   |   |   |   |
+| change-log           |         |             |            | X        | X     |   |   |   |   |   |   |
+| circe                |         |             |            | X        |       |   |   |   |   |   |   |
+| company              |         |             |            | X        |       |   |   |   |   |   |   |
+| compilation          |         | X           |            | X        | X     |   |   |   |   |   |   |
+| custom               |         |             |            | X        | X     |   |   |   |   |   |   |
+| diary                |         |             |            | X        | X     |   |   |   |   |   |   |
+| diff                 | X       | X           |            | X        | X     |   |   |   |   |   |   |
+| diff-hl              |         |             |            | X        |       |   |   |   |   |   |   |
+| dircolors            |         |             |            | X        |       |   |   |   |   |   |   |
+| dired                |         |             |            | X        |       |   |   |   |   |   |   |
+| dired+               |         |             |            | X        |       |   |   |   |   |   |   |
+| ediff                |         | X           |            | X        | X     |   |   |   |   |   |   |
+| [easy-pg]            |         |             |            |          | X     |   |   |   |   |   |   |
+| erc                  | X       |             |            | X        | X     |   |   |   |   |   |   |
+| eshell               |         |             |            |          | X     |   |   |   |   |   |   |
+| eww                  |         |             |            | X        |       |   |   |   |   |   |   |
+| font-latex           |         |             |            | X        |       |   |   |   |   |   |   |
+| flycheck             |         |             |            | X        |       |   |   |   |   |   |   |
+| flymake              |         | X           |            |          |       |   |   |   |   |   |   |
+| flyspell             |         |             |            | X        | X     |   |   |   |   |   |   |
+| font-lock            | X       |             | X          | X        |       |   |   |   |   |   |   |
+| highlight            |         |             |            | X        |       |   |   |   |   |   |   |
+| ibuffer              |         |             |            |          | X     |   |   |   |   |   |   |
+| ido                  |         |             |            |          | X     |   |   |   |   |   |   |
+| info                 |         | X           |            | X        | X     |   |   |   |   |   |   |
+| isearch              |         | X           |            | X        | X     |   |   |   |   |   |   |
+| ispell               |         |             |            |          | X     |   |   |   |   |   |   |
+| js2                  |         |             |            | X        | X     |   |   |   |   |   |   |
+| [git-commit]         |         |             |            | X        |       |   |   |   |   |   |   |
+| git-timemachine      |         |             |            | X        |       |   |   |   |   |   |   |
+| google-translate     |         |             |            | X        |       |   |   |   |   |   |   |
+| gnus                 | X       |             | X          | X        | X     |   |   |   |   |   |   |
+| helm                 |         |             |            | X        |       |   |   |   |   |   |   |
+| highlight            |         |             |            | X        |       |   |   |   |   |   |   |
+| [interaction-log]    |         |             |            | X        |       |   |   |   |   |   |   |
+| magit                | X       |             |            | X        |       |   |   |   |   |   |   |
+| markdown             |         |             |            | X        | X     |   |   |   |   |   |   |
+| message              |         |             | X          | X        |       |   |   |   |   |   |   |
+| [mu4e]               |         |             |            | X        |       |   |   |   |   |   |   |
+| nxml                 |         |             |            | X        |       |   |   |   |   |   |   |
+| org mode             |         |             |            | X        | X     |   |   |   |   |   |   |
+| outline              |         | X           |            | X        | X     |   |   |   |   |   |   |
+| powerline            |         |             |            | X        |       |   |   |   |   |   |   |
+| pabbrev              |         |             |            | X        |       |   |   |   |   |   |   |
+| [rainbow-delimiters] |         |             |            | X        |       |   |   |   |   |   |   |
+| semantic             |         |             |            | X        | X     |   |   |   |   |   |   |
+| show-paren           |         | X           |            | X        | X     |   |   |   |   |   |   |
+| [shm]                |         |             |            | X        |       |   |   |   |   |   |   |
+| smerge               |         |             |            |          | X     |   |   |   |   |   |   |
+| [sml]                |         |             |            | X        |       |   |   |   |   |   |   |
+| [realgud]            |         |             |            |          | X     |   |   |   |   |   |   |
+| sgml                 |         |             |            |          | X     |   |   |   |   |   |   |
+| speedbar             |         |             |            | X        | X     |   |   |   |   |   |   |
+| svn                  |         |             |            | X        |       |   |   |   |   |   |   |
+| vc-annotate          |         |             |            | X        |       |   |   |   |   |   |   |
+| [vhdl]               |         |             |            |          | X     |   |   |   |   |   |   |
+| viper                |         |             |            |          | X     |   |   |   |   |   |   |
+| [vm]                 |         |             |            |          | X     |   |   |   |   |   |   |
+| widget               |         |             |            | X        | X     |   |   |   |   |   |   |
+| woman                |         |             |            | X        | X     |   |   |   |   |   |   |
+| w3m                  |         |             |            | X        |       |   |   |   |   |   |   |
+| yasnippet            |         |             |            | X        |       |   |   |   |   |   |   |
+| [ztree]              |         |             |            | X        |       |   |   |   |   |   |   |
+|                      |         |             |            |          |       |   |   |   |   |   |   |
+|                      |         |             |            |          |       |   |   |   |   |   |   |
+
+[leuven]:(https://github.com/fniessen/emacs-leuven-theme)
+[mue4]:(https://github.com/djcb/mu/blob/master/mu4e/)
+[ahs]:(https://github.com/gennad/auto-highlight-symbol/blob/master/auto-highlight-symbol.el)
+[bookmark+]:(https://www.emacswiki.org/emacs/BookmarkPlus)
+[calfw]:(https://www.emacswiki.org/emacs/Calfw)
+[auto-complete]:(https://github.com/auto-complete/auto-complete)
+[git-commit]:(https://github.com/rafl/git-commit-mode)
+[interaction-log]:(https://github.com/michael-heerdegen/interaction-log.el)
+[rainbow-delimiters]:(http://www.emacswiki.org/emacs/RainbowDelimiters)
+[shm]:(https://github.com/projectional-haskell/structured-haskell-mode)
+[sml]:(http://elpa.gnu.org/packages/sml-mode.html)
+[ztree]:(https://github.com/manateelazycat/lazycat-emacs/tree/master/site-lisp/extensions/ztree)
+[easy-pg](https://www.emacswiki.org/emacs/EasyPG)
+[realgud](https://github.com/realgud/realgud)
+[vhdl](https://www.gnu.org/software/emacs/manual/html_mono/vhdl-mode.html)
+[vm](https://www.emacswiki.org/emacs/CategoryViewMail)
+
+## Org aware color themes
+
+
+Worg has a page on [org color themes](https://orgmode.org/worg/org-color-themes.html)
+which contain a list of color themes that are aware of Org. There is also a page of
+[screenshots of some of these themes
+](https://orgmode.org/worg/color-themes-screenshot.html).
 
 # Emacs Packages
 
@@ -264,147 +563,6 @@ You find also nice packages in the
 -   [reStructuredText mode](http://docutils.sourceforge.net/docs/user/emacs.html).
     is used for {{< iref "rest" "reStructuredText" >}}.
 
-
-## Emacs color themes {#emacs_themes}
-See also {{< iref "desktop#color_themes" "Desktop Color themes" >}}.
-
-There are a lot of color themes provided with emacs in elpa you find more than 260
-packages with themes, and in github there are around 70 packages with
-[emacs-theme topic](https://github.com/topics/emacs-theme).
-
-Emacs Wiki describe the
-[use of color themes](https://www.emacswiki.org/emacs/ColorThemes), and additionals
-[color theme questions](https://www.emacswiki.org/emacs/ColorThemeQuestions).
-
-One of the more popular set of themes, not only in emacs but on the desktop is
-base16. In base16 for emacs you find support for
-auctex, centaur-tabs, circe, avy, clojure, diff-hl, diff, dired+, doom, ediff, erc,
-eshell, flycheck, flymake, flyspell, git-gutter, gnus, helm, ido, idris-mode, imenu,
-ivy, jabber, js2, js3, magit, org-mode, rainbow-delimiters, erb,
-[telephone-line](https://github.com/dbordak/telephone-line), w3m, whitespace-mode.
-
-[Gruvbox](https://github.com/Greduan/emacs-theme-gruvbox) is a port of the
-[vim theme Gruvbox](https://github.com/morhetz/gruvbox) there are three light and three
-dark versions.
-
-It support the following packages:
-[Ag.el](https://github.com/Wilfred/ag.el), Ace jump, Ace window,
-[Anzu](https://github.com/syohex/emacs-anzu#customization),
-[Auto-dim-other-buffers](https://github.com/mina86/auto-dim-other-buffers.el),
-[Circe](https://github.com/jorgenschaefer/circe), Comint (and the like), Company,
-[diff-hl](https://github.com/dgutov/diff-hl), Diffs, Dired+, Elfeed,
-[ElScreen](https://github.com/knu/elscreen), [ERC](https://www.emacswiki.org/emacs/ERC),
-Eshell, [Flycheck](https://www.flycheck.org/en/latest/), [Gnus](http://gnus.org), Helm,
-Highlight Indent, Hydra, Ivy, [Js2-mode](https://github.com/mooz/js2-mode), LaTeX,
-[Linum-relative](https://github.com/emacsmirror/linum-relative), Magit, Markdown,
-Message, [Neotree](https://github.com/jaypei/emacs-neotree), Org, Popup,
-[RainbowDelimiters](http://www.emacswiki.org/emacs/RainbowDelimiters), Shell script,
-Smart modeline, [Smartparens](https://github.com/Fuco1/smartparens), Term, Tool Tips,
-Undo Tree, Whitespace-mode, Widget Faces.
-
-
-### Colorless Themes
-"Colorless themes" are designed to reduce the visual impact of syntax highlighting
-some are themes based on the plan9 editor acme, like the vim themes
-[vacme](https://github.com/olivertaylor/vacme),
-[nofrils](https://github.com/robertmeta/nofrils),
-[parchment](https://github.com/ajgrf/parchment) is also available for both vim and emacs.
-
-In emacs we have:
-
--   [parchment](https://github.com/ajgrf/parchment)
-    is derived from _nofrils and
-    _leuven_ but avoid the agressive white background of _leuven_.
-    It has support for  markdown, org mode, show-paren, whitespace, diff, rainbow-delimiters,
-    rst, calendar, company, dired, [diredfl](https://github.com/purcell/diredfl), elfeed, emms, eshell, evil,
-    [geiser]( http://www.nongnu.org/geiser/), gnus,
-    [guix]( https://emacs-guix.gitlab.io/website/), helm,
-    [hi-lock](https://github.com/emacs-mirror/emacs/blob/master/lisp/hi-lock.el),
-    ido, info, ivy, git-gutter, magit, mu4e,
-    [rainbow-delimiters](https://github.com/Fanael/rainbow-delimiters), swiper, term,
-    [undo-tree](https://github.com/apchamberlain/undo-tree.el), transient, which-key.
--   [nofrils](https://gitlab.com/esessoms/nofrils-theme), with
-    Minimal syntax highlighting to reduce distractions. Some coloring is still available, to
-    attenuate comments and enhance errors.  with dark, light, and sepia variations.
-    _nofrils_ has no support for packages font locking.
--   [emacs acme theme](https://github.com/tarrsalah/emacs-acme-theme)
-    _no support for packages._
--   [eink](https://github.com/maio/eink-emacs)  support for gnus, helm, ido, js2, org
-    mode, magit, dired, evil.
--   The members of the set of
-    [colorless-themes.el](https://git.sr.ht/~lthms/colorless-themes.el)
-
-    -   `nordless`, dark and blue, inspired by
-        [nord](https://github.com/arcticicestudio/nord)
-    -   `hydrangealess`, dark and magenta, inspired by
-        [hydrangea](https://github.com/yuttie/hydrangea-emacs)
-    -   `seagreenless`, light and seagreen
-    -   `lavenderless`, purple and mint, inspired by
-        [Lavender](https://github.com/emacsfodder/emacs-lavender-theme/)
-    -   `nofrils-darkless`, a clone of
-        [nofrils-dark](https://github.com/robertmeta/nofrils)
-    -   `darkless`, dark and white, inspired by nofrils, but with less colours
-    -   `chocolateless`, chocolate taste, inspired by
-        [chocolate](https://github.com/SavchenkoValeriy/emacs-chocolate-theme)
-    -   `einkless`, light theme, inspired by
-        [eink](https://github.com/maio/eink-emacs)
-    -   `broceliande`, green and cyan
-
-    They support powerline, whitespace, compilation, rst, org mode, magit, markdown, helm,
-    company, tuareg.
--   [plan9](https://github.com/john2x/plan9-theme.el) which support compilation, grep,
-    ag, isearch, table, [ledger](https://www.ledger-cli.org/), clojure, diff, diff-hl,
-    dired/dired+/dired-subtree, elfeed, erc, company, flycheck, git-gutter,
-    hl-line/hl-sexp, ido, ivy, js2, lsp-mode, magit, sml-mode-line, web-mode, org mode,
-    mue4, message
-
--   [punpun](https://github.com/wasamasa/punpun-theme) .
-
--   [tao](https://github.com/11111000000/tao-theme-emacs) is a
-    a two uncoloured color themes for Emacs: tao-yin and tao-yang (dark and sepia). It
-    support compilation, grep, make, isearch, newsticker, ace, ack, auctex,
-    [auto-complete](https://www.emacswiki.org/emacs/AutoComplete), android mode,
-    [bm (visual bookmarks)](https://github.com/joodland/bm), clojure-test-mode, diff,
-    dired+, ediff, elfeed, ert, eshell, flycheck, flymake, flyspell, erc, git-gutter,
-    gnus, guide-key, helm, hl-line-mode, ido, js2, jsx, jabber, ledger,
-    [macrostep](https://github.com/joddie/macrostep), magit, egg, message, mew,
-    mic-paren, mingus, nav, mu4e, [mumamo](https://www.emacswiki.org/emacs/MuMaMo),
-    org mode, outline,  p4, proofgeneral, rainbow delimiters, rcirc, rpm mode, rst-mode,
-    sh-mode, show-paren, [slime](https://www.emacswiki.org/emacs/SlimeMode), speedbar,
-    [tabbar](https://www.emacswiki.org/emacs/TabBarMode), term,
-    [undo-tree](https://github.com/apchamberlain/undo-tree.el), w3m, web mode,
-    whitespace, wanderlust, markdown, [swoop](https://github.com/emacsorphanage/swoop),
-    company, neotree, geiser, tuareg, avy, ace-window, ivy, hideshow, circe, lui,
-    racket.
--   [leuven](https://github.com/fniessen/emacs-leuven-theme)
-    is a theme in an color theme on white background, with also a dark variant. It has
-    been conceived also for org-mode highlighting. It has support for markdown, gnus,
-    message, diff, smerge, ediff, flyspell, semantic,
-    [anzu](https://github.com/syohex/emacs-anzu), bbdb, calendar, calfw,
-    change-log, circe, company, compilation, diff-hl, dircolors, dired, dired+, flycheck,
-    google-translate, helm, info, js2-mode, magit, nxml,
-    [rainbow-delimiters](https://github.com/Fanael/rainbow-delimiters),
-    showparen, svn, vc-annotate, w3m, [ztree
-    ](https://github.com/manateelazycat/lazycat-emacs/tree/master/site-lisp/extensions/ztree).
-
-    _leuven_ also instigates _eziam_ and _parcment_.
-
--   [eziam](https://github.com/thblt/eziam-theme-emacs) is
-    draw from _leuven_ and _tao_. It provides
-    _light_,_dusk_, and _dark_ variants. Unlike Tao, keeps some very minimal color
-    indications, while remaining mainly grayscale, with no color for syntax.
-    The package support is nearly same than _tao_.
-
--   [eink](https://github.com/maio/eink-emacs) is a  minimalistic color theme for Emacs
-    emulating reading on E Ink devices.
-
-
-### Org aware color themes
-
-Worg has a page on [org color themes](https://orgmode.org/worg/org-color-themes.html)
-which contain a list of color themes that are aware of Org. There is also a page of
-[screenshots of some of these themes
-](https://orgmode.org/worg/color-themes-screenshot.html).
 
 ## Other packages
 -   [Ag.el](https://github.com/Wilfred/ag.el) allows you to search
