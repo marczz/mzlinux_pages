@@ -37,51 +37,56 @@ title: Emacs
 -   [r/emacs - reddit](https://www.reddit.com/r/emacs/) (
     ([rss](http://www.reddit.com/r/emacs.rss))
 
-# Emacs tutorials, blogs ...
+# Emacs tutorials
 -   [Emacs Wiki: EmacsNiftyTricks
     ](http://www.emacswiki.org/emacs/EmacsNiftyTricks)
 -   [WikEmacs](http://wikemacs.org/wiki/Main_Page)
 -   [comp.emacs at rtfm.mit.edu
     ](ftp://rtfm.mit.edu/pub/usenet/comp.emacs/)
--   [Planet Emacsen](http://planet.emacsen.org/) is an aggregation of
-    emacs blogs.
--   [emacs-fu](http://emacs-fu.blogspot.fr/) is an emacs blog
-    by Dirk-Jan Binnema (djcb)
 -   [Emacs Mini Manual
     ](https://boruch-baum.github.io/emacs_mini_manual/)
     contains a short emacs manual and an helm and projectile tutorial.
     The [org-mode source reository
     ](https://github.com/Boruch-Baum/emacs_mini_manual/)
     is on GitHub.
--   Artur Malabarba's [Endless Parentheses
-    ](http://endlessparentheses.com/)
-    a blog about Emacs. He has also a
-    [github repository](https://github.com/Malabarba).
--   Sebastian Wiesner
-    [Emacs posts](http://www.lunaryorn.com/pages/emacs.html) and
-    [Emacs Spotlight
-    ](http://www.lunaryorn.com/series/emacs-spotlight.html)
-    a series of concise posts that cast a spotlight on notable Emacs
-    features and packages.
--   [Mastering Emacs](http://www.masteringemacs.org/) a blog dedicated
-    to emacs by Mickey Petersen.
--   [Sacha Chua's blog](http://sachachua.com/blog/) (
-    [RSS feed](http://feeds.sachachua.com/sachac)
--   [Howardism](http://www.howardism.org/) a blog with many emacs post:
-    [Index of /Technical/Emacs](http://www.howardism.org/Technical/Emacs/),
 -   [Emacs Rocks!](http://emacsrocks.com/) a serie of emacs videos.
 -   [Emacs Redux](http://emacsredux.com/)
     ([Emacs Redux rss](http://emacsredux.com/atom.xml)
 -   [Master Emacs in one year
     ](https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-en.org)
     by 陈斌 Chen bin.
--   [oremacs](http://oremacs.com/) blog of Oleh Krehel the author
+-   [Ergo Emacs tutorials](http://ergoemacs.org/emacs/emacs.html)
+
+# Emacs Blogs
+
+-   [Planet Emacsen](http://planet.emacsen.org/) is an aggregation of
+    emacs blogs.
+
+-   Artur Malabarba's [Endless Parentheses
+    ](http://endlessparentheses.com/)
+    a blog about Emacs. He has also a
+    [github repository](https://github.com/Malabarba).
+-   Dirk-Jan Binnema (djcb) [emacs-fu](http://emacs-fu.blogspot.fr/).
+-   Howard Abrams [Howardism](http://www.howardism.org/) a blog with many emacs post:
+    [Index of /Technical/Emacs](http://www.howardism.org/Technical/Emacs/),
+-   Mickey Petersen blog [Mastering Emacs](http://www.masteringemacs.org/)
+-   Oleh Krehel  blog  [oremacs](http://oremacs.com/). Oleh Krehel is the author
     of {{< iref "#ivy" "ivy" >}},
     {{< iref "#hydra" "Hydra" >}}, _ace-link_, _ace-window_,
     _avy_, _define-word_, _lispy_, _org-download_, _worf_,
     and many packages in his [GitHub repository
     ](https://github.com/abo-abo/).
--   [Ergo Emacs tutorials](http://ergoemacs.org/emacs/emacs.html)
+-   [Sacha Chua's blog](http://sachachua.com/blog/) (
+    [RSS feed](http://feeds.sachachua.com/sachac)
+-   Sebastian Wiesner
+    [Emacs posts](http://www.lunaryorn.com/pages/emacs.html) and
+    [Emacs Spotlight
+    ](http://www.lunaryorn.com/series/emacs-spotlight.html)
+    a series of concise posts that cast a spotlight on notable Emacs
+    features and packages.
+-   [Toby 'qubit' Cubitt - Blog](http://www.dr-qubit.org/tags/all.html), he is the
+    author of [many packages](http://www.dr-qubit.org/tags/computing-code-emacs.html).
+
 
 # Emacs compatibles terminal editors {#terminal_editors_emacslike}
 -   [John E. Davis (JED)](http://space.mit.edu/home/davis/)
@@ -125,7 +130,7 @@ See also {{< iref "desktop#color_themes" "Desktop Color themes" >}}.
 
 There are a lot of color themes provided with emacs, in the
 `/usr/share/emacs/<version>/etc/themes` you find _as far of emacs 26_:
-adwaita, deeper-blue, dichromacy, leuven, light-blue, manoj-dark, misterioso,
+adwaita, deeper-blue, dichromacy, [leuven], light-blue, manoj-dark, misterioso,
 tango-dark, tango, tsdh-dark, tsdh-light, wheatgrass, whiteboard.
 
 
@@ -172,8 +177,24 @@ very usefull. _palette_ provides a general color palette that you can use to exa
 color properties or choose colors and and _faceMenu+_ gives point-and-click access to
 faces and their colors, including access to the color palette.
 
+On GitHub the theme first by numbers of stars is the _dark_ theme [zenburn]. It is also
+the first by [popularity on MELPA](https://emacsthemes.com/popular/index.html).
+[zenburn] is a low contrast color themes port of the popular
+[zenburn for vim](http://kippura.org/zenburnpage/). Some [zenburn screen shots
+](https://emacsthemes.com/themes/zenburn-theme.html) are available here and also in
+[emacs theme gallery].
+
+The author of [zenburn], Bozhidar Batsov who authored and maintain also
+{{< iref "#prelude" "Emacs distribution Prelude" >}}; also maintain an other theme
+second by popularity, and first _light_ theme, [solarized]. [solarized] a port of  [solarized for vim].
+Some screenshots are
+[available here](https://emacsthemes.com/themes/solarized-themes.html).
+
 One of the more popular set of themes, not only in emacs but on the desktop is
-base16. In [base16 collection of themes for emacs][base16] you find support for
+base16. In [base16 collection of themes for emacs][base16].
+Screenshots of different variants of base16 are
+[in emacsthemes](https://emacsthemes.com/pages/search.html?search=base16) and also
+in [base16 theme previews](https://belak.github.io/base16-emacs/).  you find support for
 auctex, centaur-tabs, circe, avy, clojure, diff-hl, diff, dired+, doom, ediff, erc,
 eshell, flycheck, flymake, flyspell, git-gutter, gnus, helm, ido, idris-mode, imenu,
 ivy, jabber, js2, js3, magit, org-mode, rainbow-delimiters, erb,
@@ -181,38 +202,22 @@ ivy, jabber, js2, js3, magit, org-mode, rainbow-delimiters, erb,
 
 [Gruvbox is a port to emacs of the
 [vim theme Gruvbox](https://github.com/morhetz/gruvbox) there are three light and three
-dark versions. It has a lage support for packages, see below the
+dark versions. It has a large support for packages, see below the
 [support table](#package_support2)
 
-<!--
-It support the following packages:
-[Ag.el](https://github.com/Wilfred/ag.el), Ace jump, Ace window,
-[Anzu](https://github.com/syohex/emacs-anzu#customization),
-[Auto-dim-other-buffers](https://github.com/mina86/auto-dim-other-buffers.el),
-[Circe](https://github.com/jorgenschaefer/circe), Comint (and the like), Company,
-[diff-hl](https://github.com/dgutov/diff-hl), Diffs, Dired+, Elfeed,
-[ElScreen](https://github.com/knu/elscreen), [ERC](https://www.emacswiki.org/emacs/ERC),
-Eshell, [Flycheck](https://www.flycheck.org/en/latest/), [Gnus](http://gnus.org), Helm,
-Highlight Indent, Hydra, Ivy, [Js2-mode](https://github.com/mooz/js2-mode), LaTeX,
-[Linum-relative](https://github.com/emacsmirror/linum-relative), Magit, Markdown,
-Message, [Neotree](https://github.com/jaypei/emacs-neotree), Org, Popup,
-[rainbow-delimiters], Shell script,
-Smart modeline, [Smartparens](https://github.com/Fuco1/smartparens), Term, Tool Tips,
-Undo Tree, Whitespace-mode, Widget Faces.
--->
 
 ## Colorless Themes
 "Colorless themes" are designed to reduce the visual impact of syntax highlighting
 some are themes based on the plan9 editor acme, like the vim themes
 [vacme](https://github.com/olivertaylor/vacme),
-[nofrils](https://github.com/robertmeta/nofrils),
+[nofrils][nofrils for vim]
 [parchment] is also available for both vim and emacs.
 
 In emacs we have:
 
 -   [parchment](https://github.com/ajgrf/parchment)
-    is derived from _nofrils and
-    _leuven_ but avoid the agressive white background of _leuven_.
+    is derived from [nofrils] and
+    [leuven] but avoid the agressive white background of [leuven].
     It has support for  markdown, org mode, show-paren, whitespace, diff, [rainbow-delimiters],
     rst, calendar, company, dired, [diredfl](https://github.com/purcell/diredfl), elfeed, emms, eshell, evil,
     [geiser]( http://www.nongnu.org/geiser/), gnus,
@@ -221,10 +226,11 @@ In emacs we have:
     ido, info, ivy, git-gutter, magit, mu4e,
     [rainbow-delimiters], swiper, term,
     [undo-tree](https://github.com/apchamberlain/undo-tree.el), transient, which-key.
--   [nofrils](https://gitlab.com/esessoms/nofrils-theme), with
+-   [nofrils](https://gitlab.com/esessoms/nofrils-theme), a port to emacs from
+    [nofril for vim] with
     Minimal syntax highlighting to reduce distractions. Some coloring is still available, to
     attenuate comments and enhance errors.  with dark, light, and sepia variations.
-    _nofrils_ has no support for packages font locking.
+    [nofrils] has no support for packages font locking.
 -   [emacs acme theme](https://github.com/tarrsalah/emacs-acme-theme)
     _no support for packages._
 -   [eink](https://github.com/maio/eink-emacs)  support for gnus, helm, ido, js2, org
@@ -268,7 +274,11 @@ In emacs we have:
     company, neotree, geiser, tuareg, avy, ace-window, ivy, hideshow, circe, lui,
     racket.
 -   [leuven] is a theme in an color theme on white background, with also a dark variant. It has
-    been conceived also for org-mode highlighting. It has support for markdown, gnus,
+    been conceived also for org-mode highlighting. Some [screenshots are in emacsthemes
+    ](https://emacsthemes.com/themes/leuven-theme.html) some others in
+    [emacs-theme-gallery] and also in [leuven] readme page.
+
+    It has support for markdown, gnus,
     message, diff, smerge, ediff, flyspell, semantic,
     [anzu](https://github.com/syohex/emacs-anzu), bbdb, calendar, calfw,
     change-log, circe, company, compilation, diff-hl, dircolors, dired, dired+, flycheck,
@@ -341,37 +351,44 @@ Themes with a wider support for external packages.
 | calendar                  |           | X        |       |   |   |   |   |   |   |
 | [calfw]                   |           | X        |       |   |   |   |   |   |   |
 | change-log                |           | X        | X     |   |   |   |   |   |   |
+| [cider]                   | X         |          |       |   |   |   |   |   |   |
 | [circe]                   | X         | X        |       |   |   |   |   |   |   |
-| company                   |           | X        |       |   |   |   |   |   |   |
+| company                   | X         | X        |       |   |   |   |   |   |   |
 | compilation               |           | X        | X     |   |   |   |   |   |   |
-| custom                    |           | X        | X     |   |   |   |   |   |   |
+| custom                    | X         | X        | X     |   |   |   |   |   |   |
 | diary                     |           | X        | X     |   |   |   |   |   |   |
 | diff                      | X         | X        | X     |   |   |   |   |   |   |
 | [diff-hl]                 | X         | X        |       |   |   |   |   |   |   |
 | dircolors                 |           | X        |       |   |   |   |   |   |   |
 | dired                     | X         | X        |       |   |   |   |   |   |   |
+| [diredfl]                 |           |          |       |   |   |   |   |   |   |
 | dired+                    | X         | X        |       |   |   |   |   |   |   |
 | ediff                     |           | X        | X     |   |   |   |   |   |   |
 | [easy-pg]                 |           |          | X     |   |   |   |   |   |   |
 | elfeed                    | X         |          |       |   |   |   |   |   |   |
 | [elscreen]                | X         |          |       |   |   |   |   |   |   |
+| emms                      |           | X        |       |   |   |   |   |   |   |
 | [ERC]                     | X         | X        | X     |   |   |   |   |   |   |
 | eshell                    | X         |          | X     |   |   |   |   |   |   |
 | eww                       |           | X        |       |   |   |   |   |   |   |
-| font-latex                |           | X        |       |   |   |   |   |   |   |
 | [flycheck]                | X         | X        |       |   |   |   |   |   |   |
 | flymake                   |           |          |       |   |   |   |   |   |   |
-| flyspell                  |           | X        | X     |   |   |   |   |   |   |
-| font-lock                 |           | X        |       |   |   |   |   |   |   |
+| flyspell                  | X         | X        | X     |   |   |   |   |   |   |
+| font-lock                 | X         | X        |       |   |   |   |   |   |   |
+| [geiser]                  |           |          |       |   |   |   |   |   |   |
 | [git-commit]              |           | X        |       |   |   |   |   |   |   |
+| git-gutter                | X         |          |       |   |   |   |   |   |   |
+| git-gutter+               | X         |          |       |   |   |   |   |   |   |
+| git-gutter-fringe         | X         |          |       |   |   |   |   |   |   |
 | git-timemachine           |           | X        |       |   |   |   |   |   |   |
 | [gnus]                    | X         | X        | X     |   |   |   |   |   |   |
 | google-translate          |           | X        |       |   |   |   |   |   |   |
 | helm                      | X         | X        |       |   |   |   |   |   |   |
 | highlight                 | X         | X        |       |   |   |   |   |   |   |
+| [hi-lock]                 | X         |          |       |   |   |   |   |   |   |
 | hydra                     | X         |          |       |   |   |   |   |   |   |
 | ibuffer                   |           |          | X     |   |   |   |   |   |   |
-| ido                       |           |          | X     |   |   |   |   |   |   |
+| ido                       | X         |          | X     |   |   |   |   |   |   |
 | indent                    | X         |          |       |   |   |   |   |   |   |
 | info                      |           | X        | X     |   |   |   |   |   |   |
 | isearch                   |           | X        | X     |   |   |   |   |   |   |
@@ -379,32 +396,36 @@ Themes with a wider support for external packages.
 | [interaction-log]         |           | X        |       |   |   |   |   |   |   |
 | {{< iref "#ivy" "Ivy" >}} | X         |          |       |   |   |   |   |   |   |
 | [js2]                     | X         | X        | X     |   |   |   |   |   |   |
-| latex                     | X         |          |       |   |   |   |   |   |   |
+| latex                     | X         | X        |       |   |   |   |   |   |   |
+| [langtool]                | X         |          |       |   |   |   |   |   |   |
 | [linum-relative]          | X         |          |       |   |   |   |   |   |   |
 | magit                     | X         | X        |       |   |   |   |   |   |   |
 | markdown                  | X         | X        | X     |   |   |   |   |   |   |
 | message                   | X         | X        |       |   |   |   |   |   |   |
-| [mu4e]                    |           | X        |       |   |   |   |   |   |   |
+| [mu4e]                    | X         | X        |       |   |   |   |   |   |   |
 | [neotree]                 | X         |          |       |   |   |   |   |   |   |
 | nxml                      |           | X        |       |   |   |   |   |   |   |
 | org mode                  | X         | X        | X     |   |   |   |   |   |   |
+| org-habit                 | X         |          |       |   |   |   |   |   |   |
 | outline                   |           | X        | X     |   |   |   |   |   |   |
 | popup                     | X         |          |       |   |   |   |   |   |   |
-| powerline                 |           | X        |       |   |   |   |   |   |   |
+| powerline                 | X         | X        |       |   |   |   |   |   |   |
 | pabbrev                   |           | X        |       |   |   |   |   |   |   |
 | [rainbow-delimiters]      | X         | X        |       |   |   |   |   |   |   |
+| rst                       |           |          |       |   |   |   |   |   |   |
 | semantic                  |           | X        | X     |   |   |   |   |   |   |
 | shell script              | X         |          |       |   |   |   |   |   |   |
-| show-paren                |           | X        | X     |   |   |   |   |   |   |
+| show-paren                | X         | X        | X     |   |   |   |   |   |   |
 | [shm]                     |           | X        |       |   |   |   |   |   |   |
 | smerge                    |           |          | X     |   |   |   |   |   |   |
 | smart modeline            | X         |          |       |   |   |   |   |   |   |
 | [smartparens]             | X         |          |       |   |   |   |   |   |   |
-| [sml]                     |           | X        |       |   |   |   |   |   |   |
+| [sml]                     | X         | X        |       |   |   |   |   |   |   |
 | [realgud]                 |           |          | X     |   |   |   |   |   |   |
 | sgml                      |           |          | X     |   |   |   |   |   |   |
 | speedbar                  |           | X        | X     |   |   |   |   |   |   |
 | svn                       |           | X        |       |   |   |   |   |   |   |
+| tabbar                    |           |          |       |   |   |   |   |   |   |
 | term                      | X         |          |       |   |   |   |   |   |   |
 | tool tips                 | X         |          |       |   |   |   |   |   |   |
 | undo-tree                 |           |          |       |   |   |   |   |   |   |
@@ -412,7 +433,8 @@ Themes with a wider support for external packages.
 | [vhdl]                    |           |          | X     |   |   |   |   |   |   |
 | viper                     |           |          | X     |   |   |   |   |   |   |
 | [vm]                      |           |          | X     |   |   |   |   |   |   |
-| widget                    |           | X        | X     |   |   |   |   |   |   |
+| wgrep                     | X         |          |       |   |   |   |   |   |   |
+| widget                    | X         | X        | X     |   |   |   |   |   |   |
 | whitespace                | X         |          |       |   |   |   |   |   |   |
 | woman                     |           | X        | X     |   |   |   |   |   |   |
 | w3m                       |           | X        |       |   |   |   |   |   |   |
@@ -462,17 +484,24 @@ Among the havocs of this theme support, I noticed
     _shadow_ face don't catch the eye.
 
 <!---------------------------- Themes ---------------------------------->
+[emacs theme gallery]: https://pawelbx.github.io/emacs-theme-gallery/
 [base16]:  https://github.com/belak/base16-emacs
 [chocolate]: https://github.com/SavchenkoValeriy/emacs-chocolate-theme
 [eink]: https://github.com/maio/eink-emacs
+[emacs theme gallery]: https://pawelbx.github.io/emacs-theme-gallery/
 [eziam]: https://github.com/thblt/eziam-theme-emacs
 [gruvbox]: https://github.com/Greduan/emacs-theme-gruvbox
+[hi-lock]: https://github.com/emacs-mirror/emacs/blob/master/lisp/hi-lock.el
 [hydrangea]: https://github.com/yuttie/hydrangea-emacs
 [leuven]:https://github.com/fniessen/emacs-leuven-theme
 [nord]: https://github.com/arcticicestudio/nord
 [Lavender]: https://github.com/emacsfodder/emacs-lavender-theme/
-[nofrils](https://github.com/robertmeta/nofrils)
+[nofrils]: https://gitlab.com/esessoms/nofrils-theme
+[nofrils for vim]: https://github.com/robertmeta/nofrils
 [tao]: https://github.com/11111000000/tao-theme-emacs
+[zenburn]: https://github.com/bbatsov/zenburn-emacs
+[Zenburn for vim]: http://kippura.org/zenburnpage/
+
 
 # Emacs Packages
 
@@ -567,18 +596,21 @@ You find also nice packages in the
     ([GitHub - emacs24-starter-kit](https://github.com/eschulte/emacs24-starter-kit)),
     was long time ago forked from the previous, but use
     {{< iref "org-mode#babel" "Literate programming in Org Babel" >}}.
--   [Prelude](https://github.com/bbatsov/prelude) is an emacs
-    configuration systems. It use a [list of packages
-    ](https://github.com/bbatsov/prelude/blob/master/core/prelude-packages.el)
-    in beginning 2016 it was
+-   <a name="prelude"></a>[Prelude](https://github.com/bbatsov/prelude)
+    is an emacs distribution configuration systems.
+    -   [Prelude Manual](https://prelude.emacsredux.com/en/latest/).
 
-        '(ace-window, avy, anzu, beacon, browse-kill-ring, dash,
-        discover-my-major, diff-hl, diminish, easy-kill, epl,
-        expand-region, flycheck, gist git-timemachine, gitconfig-mode,
-        gitignore-mode, god-mode, grizzl guru-mode, ov, projectile,
-        magit, move-text, operate-on-number, smart-mode-line,
-        smartparens, smartrep, undo-tree, volatile-highlights,
-        zenburn-theme, zop-to-char)
+    It use a [list of packages
+    ](https://github.com/bbatsov/prelude/blob/master/core/prelude-packages.el)
+    in beginning 2016 it was:
+
+    >    ace-window, avy, [anzu], beacon, browse-kill-ring, crux,
+    >    discover-my-major, [diff-hl], diminish, easy-kill, editorconfig, epl,
+    >    expand-region, flycheck, gist git-timemachine, gitconfig-mode,
+    >    gitignore-mode,  guru-mode, imenu-everywhere, hl-todo, projectile,
+    >    magit, move-text, operate-on-number, smart-mode-line,
+    >    [smartparens], smartrep, supersave, undo-tree, volatile-highlights, which-key
+    >    [zenburn-theme][zenburn], zop-to-char)
 
 -   [Sebastian Wiesner emacs.d](https://github.com/lunaryorn/.emacs.d)
     using [use-package](https://github.com/jwiegley/use-package).
@@ -840,6 +872,7 @@ https://emacs.stackexchange.com/questions/12235/edit-file-as-root-over-when-alre
 [auto-dim-other-buffers]: https://github.com/mina86/auto-dim-other-buffers.el
 [bookmark+]: https://www.emacswiki.org/emacs/BookmarkPlus
 [calfw]: https://www.emacswiki.org/emacs/Calfw
+[cider]:  http://www.github.com/clojure-emacs/cider "clojure interactive development environment"
 [circe]: https://github.com/jorgenschaefer/circe
 [diff-hl]: https://github.com/dgutov/diff-hl
 [easy-pg]: https://www.emacswiki.org/emacs/EasyPG
@@ -850,7 +883,8 @@ https://emacs.stackexchange.com/questions/12235/edit-file-as-root-over-when-alre
 [gnus](http://gnus.org)
 [js2]: https://github.com/mooz/js2-mode
 [interaction-log]: https://github.com/michael-heerdegen/interaction-log.el
-[linum-relative](https://github.com/emacsmirror/linum-relative)
+[langtool]: https://github.com/mhayashi1120/Emacs-langtool
+[linum-relative]: https://github.com/emacsmirror/linum-relative
 [mue4]: https://github.com/djcb/mu/blob/master/mu4e/
 [neotree]: https://github.com/jaypei/emacs-neotree
 [rainbow-delimiters]: http://www.emacswiki.org/emacs/RainbowDelimiters
@@ -858,7 +892,9 @@ https://emacs.stackexchange.com/questions/12235/edit-file-as-root-over-when-alre
 [shm]: https://github.com/projectional-haskell/structured-haskell-mode "structured-haskell-mode"
 [smartparens]: https://github.com/Fuco1/smartparens
 [smex]: https://github.com/nonsequitur/smex
-[sml]: http://elpa.gnu.org/packages/sml-mode.html
+[sml]: http://elpa.gnu.org/packages/sml-mode.html "smart mode line"
+[tabbar]: https://www.emacswiki.org/emacs/TabBarMode "EmacsWiki TabBarMode"
+[undo-tree]: http://www.dr-qubit.org/undo-tree/undo-tree.el
 [vhdl]: https://www.gnu.org/software/emacs/manual/html_mono/vhdl-mode.html
 [vm]: https://www.emacswiki.org/emacs/CategoryViewMail "View Mail"
 [ztree]: https://github.com/manateelazycat/lazycat-emacs/tree/master/site-lisp/extensions/ztree
