@@ -219,7 +219,10 @@ table of content, you can control its depth with `--toc-depth`.
 -   If you use vim you can use the plugin
     [mzlogin/vim-markdown-toc](https://github.com/mzlogin/vim-markdown-toc)
     to generate table of contents n GFM link style, Redcarpet link style or
-     GitLab link style for Markdown files.
+    GitLab link style for Markdown files.
+-   For _Emacs_ the _elpa_ package
+    [markdown-toc](https://github.com/ardumont/markdown-toc)
+    generate a TOC in markdown file.
 
 # Markdown formatters and extensions
 
@@ -463,7 +466,7 @@ table of content, you can control its depth with `--toc-depth`.
     -   [blackfriday-latex](https://gitlab.com/ambrevar/blackfriday-latex) (MIT License)
         is a LaTeX renderer for the Blackfriday Markdown processor (v2).
 
--   <a name="goldmark">[Goldmark](https://github.com/yuin/goldmark/) (MIT License)
+-   <a name="goldmark"></a>[Goldmark](https://github.com/yuin/goldmark/) (MIT License)
     Goldmark is compatible with {{< iref "#commonmark" "CommonMark" >}}
     and has many built-in extensions like
 
@@ -476,6 +479,24 @@ table of content, you can control its depth with `--toc-depth`.
 
     It is the default formatter for {{< iref "static_sites#hugo" "Hugo" >}}.
 
+-   <a name="zmarkdown"></a>[Zmarkdown](https://github.com/zestedesavoir/zmarkdown)
+    (MIT Licence)
+    a javascript replacement of {{< iref "#python-zmarkdown" "Python-Zmarkdown" >}}
+    the Markdown engine that was powering [Zeste de Savoir](https://zestedesavoir.com).
+
+    It uses {{< iref "#remark" "remark" >}} and its
+    [__MDAST__](https://github.com/wooorm/mdast) syntax tree,
+    [__rehype__](https://github.com/rehypejs/rehype) (for HTML processing) and
+    [__textr__](https://github.com/A/textr) (text transformation framework). It also
+    provides LaTeX output via
+    [__rebber__](https://github.com/zestedesavoir/zmarkdown/tree/master/packages/rebber#rebber--)
+
+    [zestedesavoir/zmarkdown: Live demo](https://zestedesavoir.github.io/zmarkdown/)
+
+-   [vmd](https://github.com/yoshuawuyts/vmd) (MIT Licence)
+    Preview GFM markdown files in a separate window.
+    It can be used in Emacs with
+    [vmd-mode](https://github.com/blak3mill3r/vmd-mode) (MIT Licence)
 
 ## Haskell
 
@@ -571,6 +592,11 @@ See {{< iref "#pandoc" "Pandoc" >}} below.
     It includes also a rst to markdown converter.
     -   [GiThub Par](https://github.com/limodou/par).
     -   [GiThub Parm](https://github.com/limodou/parm).
+-   <a name="python-zmarkdown"></a>
+    [Python-ZMarkdown](https://github.com/zestedesavoir/Python-ZMarkdown)
+    fork of Python-Markdown including somes improvements suitables for
+    [Zeste de savoir](https://zestedesavoir.com/). It is now replaced by the Javascript
+    package {{< iref "#zmarkdown" >}}.
 
 ### Python-Markdown {#python-markdown}
 [Python-Markdown](https://pythonhosted.org/Markdown/) (BSD+GPL)
