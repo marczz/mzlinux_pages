@@ -54,11 +54,12 @@ title: TeX, LaTeX
      -   [DebianWiki: LaTeX
          ](https://wiki.debian.org/Latex) describe the TeX Live
          install in debian.
--   [conTeXt](http://wiki.contextgarden.net/Main_Page)
+-   <a name="context"></a>[conTeXt](http://www.pragma-ade.nl/)
     (GPL) is an alternative to LaTeX that focus on handling
     typography, including extensive support for colors, backgrounds, hyperlinks,
     presentations, figure-text integration, and conditional compilation. It allows
     to use pdfTeX, XeTeX, and LuaTeX.
+    -   [Context Garden](http://wiki.contextgarden.net/Main_Page) is the Context Wiki.
 -   [pdfTeX](http://www.tug.org/applications/pdftex/)
     (GPL) is an extended version of eTeX that can create PDF
     directly from TeX source files. See also Wikipedia: {{< wp "PdfTeX" >}} and the HowTo
@@ -127,16 +128,20 @@ title: TeX, LaTeX
 -   {{< iref "#texlive" "TexLive distribution" >}}
     is referenced above.
 -   [Nicola Talbot](http://theoval.cmp.uea.ac.uk/~nlct/)
-    has written many
-    [tutorials](http://www.dickimaw-books.com/latexresources.html)
-    on technicals aspects of latex, she has also a
-    [list of LaTeX resources](http://www.dickimaw-books.com/latexresources.html).
+    has written many tutorials on technicals aspects of latex, that you find in her
+    [list of LaTeX resources](http://www.dickimaw-books.com/latexresources.html)).
 
 ## TeX, LaTeX IDE
--   [Auctex](http://theoval.cmp.uea.ac.uk/~nlct/latex/)
+-   <a name="auctex"></a>[Auctex](https://www.gnu.org/software/auctex/)
     an extensible package for writing and formatting TeX files in
-    GNU Emacs and XEmacs. AUCTeX includes [preview-latex
-    ](http://www.gnu.org/software/auctex/preview-latex.html)
+    GNU Emacs and XEmacs. It supports many different TeX macro packages,
+    including [AMS-TeX](http://www.ams.org/tex/amstex.html),
+    [LaTeX](http://www.latex-project.org),
+    [Texinfo](http://www.gnu.org/software/texinfo),
+    {{< iref "#context" "ConTeXt" >}}, and docTeX.
+
+    AUCTeX includes
+    [preview-latex](https://www.gnu.org/software/auctex/preview-latex.html)
     a WYSIWYG previewing for latex.
 -   [Kile](http://kile.sourceforge.net/) (GPL)
     is a user friendly TeX/LaTeX editor for the KDE desktop.
