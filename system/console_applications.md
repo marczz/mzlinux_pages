@@ -53,7 +53,8 @@ in this site, you can make a search to find the appropriate page.
 
 [ag](https://geoff.greer.fm/ag/)
 : _The silver searcher_ like grep and ack but written in C and a lot
-  quicker.
+  quicker. It is available inside Emacs with the [ag](https://github.com/Wilfred/ag.el)
+  package.
 
 {{< wp "alpine" >}}
 : A mail user agent.
@@ -122,6 +123,8 @@ in this site, you can make a search to find the appropriate page.
 [ripgrep](https://github.com/BurntSushi/ripgrep)
 : installed as _rggrep_, a line-oriented search tool that recursively searches the
   current directory for a regex pattern. An alternative to _ack_ and _ag_.
+  Emacs has a _ripgrep_ interface with the package
+  [deadgrep](https://github.com/Wilfred/deadgrep).
 
 
 [Surfraw](http://surfraw.alioth.debian.org/)
