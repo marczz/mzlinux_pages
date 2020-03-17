@@ -303,33 +303,33 @@ I list here the package support for some few themes
 
 First some theme with minimal support, only for some emacs built-in packages
 
-| package              | adwaita | deeper-blue | dichromacy |
-|----------------------|---------|-------------|------------|
-| calendar             |         |             |            |
-| change-log           |         |             |            |
-| compilation          |         | X           |            |
-| diff                 | X       | X           |            |
-| dired                |         |             |            |
-| ediff                |         | X           |            |
-| erc                  | X       |             |            |
-| eww                  |         |             |            |
-| flyspell             |         |             |            |
-| font-lock            | X       |             | X          |
-| info                 |         | X           |            |
-| isearch              |         | X           |            |
-| gnus                 | X       |             | X          |
-| magit                | X       |             |            |
-| markdown             |         |             |            |
-| message              |         |             | X          |
-| org mode             |         |             |            |
-| outline              |         | X           |            |
-| show-paren           |         | X           |            |
-| speedbar             |         |             |            |
-| vc-annotate          |         |             |            |
-| widget               |         |             |            |
-| woman                |         |             |            |
-| w3m                  |         |             |            |
-| yasnippet            |         |             |            |
+| package     | adwaita | deeper-blue | dichromacy |
+|-------------|---------|-------------|------------|
+| calendar    |         |             |            |
+| change-log  |         |             |            |
+| compilation |         | X           |            |
+| diff        | X       | X           |            |
+| [dired][]   |         |             |            |
+| ediff       |         | X           |            |
+| erc         | X       |             |            |
+| eww         |         |             |            |
+| flyspell    |         |             |            |
+| font-lock   | X       |             | X          |
+| info        |         | X           |            |
+| isearch     |         | X           |            |
+| gnus        | X       |             | X          |
+| magit       | X       |             |            |
+| markdown    |         |             |            |
+| message     |         |             | X          |
+| org mode    |         |             |            |
+| outline     |         | X           |            |
+| show-paren  |         | X           |            |
+| speedbar    |         |             |            |
+| vc-annotate |         |             |            |
+| widget      |         |             |            |
+| woman       |         |             |            |
+| w3m         |         |             |            |
+| yasnippet   |         |             |            |
 
 
 Themes with a wider support for external packages.
@@ -364,67 +364,83 @@ Themes with a wider support for external packages.
 | company                             | X         | X        |         | X           |   |   |   |   |   |
 | compilation                         |           | X        | X       | X           |   |   |   |   |   |
 | cperl                               |           |          |         | X           |   |   |   |   |   |
+| [cscope]                            |           |          |         | X           |   |   |   |   |   |
 | custom                              | X         | X        | X       | X           |   |   |   |   |   |
-| [deadgrep]                          |           |          |         | X            |   |   |   |   |   |
+| [deadgrep]                          |           |          |         | X           |   |   |   |   |   |
 | diary                               |           | X        | X       | X           |   |   |   |   |   |
-| diff                                | X         | X        | X       |             |   |   |   |   |   |
-| [diff-hl]                           | X         | X        |         |             |   |   |   |   |   |
+| diff                                | X         | X        | X       | X           |   |   |   |   |   |
+| [diff-hl]                           | X         | X        |         | X           |   |   |   |   |   |
 | dircolors                           |           | X        |         |             |   |   |   |   |   |
-| dired                               | X         | X        |         | X           |   |   |   |   |   |
+| [dired][]                           | X         | X        |         | X           |   |   |   |   |   |
 | [diredfl]                           |           |          |         |             |   |   |   |   |   |
-| dired+                              | X         | X        |         |             |   |   |   |   |   |
-| [easy-pg]                           |           |          | X       |             |   |   |   |   |   |
+| [dired+][]                          | X         | X        |         |             |   |   |   |   |   |
+| [display-line-number]               |           |          |         | X           |   |   |   |   |   |
+| [EasyPG]                            |           |          | X       | X           |   |   |   |   |   |
 | [ecb]                               |           |          |         | X           |   |   |   |   |   |
 | ediff                               |           | X        | X       |             |   |   |   |   |   |
+| [edts]                              |           |          |         | X           |   |   |   |   |   |
 | [ee]                                |           |          |         | X           |   |   |   |   |   |
 | elfeed                              | X         | X        |         |             |   |   |   |   |   |
 | [elscreen]                          | X         |          |         |             |   |   |   |   |   |
 | [enh-ruby]                          |           |          |         | X           |   |   |   |   |   |
 | emms                                |           | X        |         |             |   |   |   |   |   |
-| [ERC]                               | X         | X        | X       |             |   |   |   |   |   |
-| eshell                              | X         |          | X       |             |   |   |   |   |   |
+| [ERC]                               | X         | X        | X       | X           |   |   |   |   |   |
+| eshell                              | X         |          | X       | X           |   |   |   |   |   |
 | eww                                 |           | X        |         |             |   |   |   |   |   |
-| [flycheck]                          | X         | X        |         |             |   |   |   |   |   |
-| flymake                             |           |          |         |             |   |   |   |   |   |
-| flyspell                            | X         | X        | X       |             |   |   |   |   |   |
+| [fixme]                             |           |          |         | X           |   |   |   |   |   |
+| [flycheck]                          | X         | X        |         | X           |   |   |   |   |   |
+| flymake                             |           |          |         | X           |   |   |   |   |   |
+| flyspell                            | X         | X        | X       | X           |   |   |   |   |   |
 | font-lock                           | X         | X        | X       |             |   |   |   |   |   |
 | [geiser]                            |           |          |         |             |   |   |   |   |   |
-| [git-commit]                        |           | X        |         |             |   |   |   |   |   |
-| git-gutter                          | X         |          |         |             |   |   |   |   |   |
-| git-gutter+                         | X         |          |         |             |   |   |   |   |   |
-| git-gutter-fringe                   | X         |          |         |             |   |   |   |   |   |
+| [git-commit]                        |           | X        |         | X           |   |   |   |   |   |
+| git-gutter                          | X         |          |         | X           |   |   |   |   |   |
+| git-gutter+                         | X         |          |         | X           |   |   |   |   |   |
+| git-gutter-fringe                   | X         |          |         | X           |   |   |   |   |   |
 | git-timemachine                     |           | X        |         |             |   |   |   |   |   |
-| [gnus]                              | X         | X        | X       |             |   |   |   |   |   |
+| [gnus]                              | X         | X        | X       | X           |   |   |   |   |   |
 | google-translate                    |           | X        |         |             |   |   |   |   |   |
+| [go-mode]                           |           |          |         | X           |   |   |   |   |   |
 | grep                                |           |          |         | X           |   |   |   |   |   |
-| helm                                | X         | X        |         |             |   |   |   |   |   |
-| highlight                           | X         |          |         |             |   |   |   |   |   |
+| guide-key                           |           |          |         | X           |   |   |   |   |   |
+| helm                                | X         | X        |         | X           |   |   |   |   |   |
+| highlight                           | X         |          |         | X           |   |   |   |   |   |
+| hilit-chg                           |           | X        | X       | X           |   |   |   |   |   |
 | [hi-lock]                           | X         | X        |         |             |   |   |   |   |   |
-| hilit-chg                           |           | X        | X       |             |   |   |   |   |   |
-| hl-line                             |           | X        |         |             |   |   |   |   |   |
-| {{< iref "#hydra" "hydra" >}}       | X         |          |         |             |   |   |   |   |   |
+| hl-line                             |           | X        |         | X           |   |   |   |   |   |
+| {{< iref "#hydra" "hydra" >}}       | X         |          |         | X           |   |   |   |   |   |
 | ibuffer                             |           |          | X       |             |   |   |   |   |   |
-| ido                                 | X         |          | X       |             |   |   |   |   |   |
+| ido                                 | X         |          | X       | X           |   |   |   |   |   |
+| [imenu]                             |           |          |         | X           |   |   |   |   |   |
 | indent                              | X         |          |         |             |   |   |   |   |   |
-| info                                |           | X        | X       |             |   |   |   |   |   |
+| info                                |           | X        | X       | X           |   |   |   |   |   |
+| [info+]                             |           |          |         | X           |   |   |   |   |   |
 | [interaction-log]                   |           |          |         |             |   |   |   |   |   |
 | isearch                             |           | X        | X       | X           |   |   |   |   |   |
 | ispell                              |           |          | X       |             |   |   |   |   |   |
 | [interaction-log]                   |           | X        |         |             |   |   |   |   |   |
-| {{< iref "#ivy" "Ivy" >}}           | X         |          |         |             |   |   |   |   |   |
-| [js2]                               | X         | X        | X       |             |   |   |   |   |   |
+| {{< iref "#ivy" "Ivy" >}}           | X         |          |         | X           |   |   |   |   |   |
+| jabber                              |           |          |         | X           |   |   |   |   |   |
+| [js2]                               | X         | X        | X       | X           |   |   |   |   |   |
+| [js3]                               |           |          |         | X           |   |   |   |   |   |
 | latex                               | X         | X        |         |             |   |   |   |   |   |
-| [langtool]                          | X         |          |         |             |   |   |   |   |   |
-| [linum-relative]                    | X         |          |         |             |   |   |   |   |   |
+| [langtool]                          | X         |          |         | X           |   |   |   |   |   |
+| [ledger]                            |           |          |         | X           |   |   |   |   |   |
+| [linum-relative]                    | X         |          |         | X           |   |   |   |   |   |
 | log-view                            |           | X        |         |             |   |   |   |   |   |
 | [lui]                               |           | X        |         |             |   |   |   |   |   |
-| magit                               | X         | X        |         |             |   |   |   |   |   |
+| [lsp-ui]                            |           |          |         | X           |   |   |   |   |   |
+| [lusty-explorer]                    |           |          |         |             |   |   |   |   |   |
+| magit                               | X         | X        |         | X           |   |   |   |   |   |
 | man                                 |           |          | X       |             |   |   |   |   |   |
-| markdown                            | X         | X        | X       |             |   |   |   |   |   |
-| message                             | X         | X        | X       |             |   |   |   |   |   |
-| [mic-paren]                         |           | X        |         |             |   |   |   |   |   |
-| [multipe-cursors]                   |           | X        |         |             |   |   |   |   |   |
-| [mu4e]                              | X         | X        |         |             |   |   |   |   |   |
+| markdown                            | X         | X        | X       | X           |   |   |   |   |   |
+| message                             | X         | X        | X       | X           |   |   |   |   |   |
+| mew                                 |           |          |         | X           |   |   |   |   |   |
+| [mic-paren]                         |           | X        |         | X           |   |   |   |   |   |
+| mingus                              |           |          |         | X           |   |   |   |   |   |
+| moccur                              |           |          |         | X           |   |   |   |   |   |
+| [multipe-cursors]                   |           | X        |         | X           |   |   |   |   |   |
+| [mu4e]                              | X         | X        |         | X           |   |   |   |   |   |
 | [neotree]                           | X         |          |         |             |   |   |   |   |   |
 | [nxml]                              |           | X        |         |             |   |   |   |   |   |
 | org mode                            | X         | X        | X       |             |   |   |   |   |   |
@@ -439,7 +455,7 @@ Themes with a wider support for external packages.
 | shell script                        | X         |          |         |             |   |   |   |   |   |
 | show-paren                          | X         | X        | X       |             |   |   |   |   |   |
 | [shm]                               |           | X        |         |             |   |   |   |   |   |
-| smerge                              |           |          | X       |             |   |   |   |   |   |
+| [smerge]                            |           |          | X       |             |   |   |   |   |   |
 | smart modeline                      | X         |          |         |             |   |   |   |   |   |
 | [smartparens]                       | X         |          |         |             |   |   |   |   |   |
 | [sml]                               | X         | X        |         |             |   |   |   |   |   |
@@ -676,6 +692,22 @@ You find also nice packages in the
 -   [reStructuredText mode](http://docutils.sourceforge.net/docs/user/emacs.html).
     is used for {{< iref "rest" "reStructuredText" >}}.
 
+## File explorers
+The Integrated Emacs file explorer is [dired], it has some extensions packages.
+The [Emacswiki: Dired Mode](https://www.emacswiki.org/emacs/DiredMode) page list them.
+   -   [dired+][] add many functionalities to Dired, it is compatible with Sunrise
+       Commander.
+   -   [diredfl][] is a fork of the font rules of [dired+]
+   -   [dired-hacks][] is a collection of dired extensions
+
+
+-  [Lusty Explorer][lusty-explorer] includes both a filesystem explorer and a buffer
+   switcher through a common interface. It is based on
+   [lusty explorer for vim](https://www.vim.org/scripts/script.php?script_id=1890).
+-  [Neo Tree][neotree] is a tree file explorer, it is an emacs clone of the
+   [NerdTree vim plugin](https://www.vim.org/scripts/script.php?script_id=1658°
+   -   [EmacsWiki: NeoTree](https://www.emacswiki.org/emacs/NeoTree)
+-
 
 ## Other packages
 -   [Ag.el](https://github.com/Wilfred/ag.el) allows you to search
@@ -909,30 +941,45 @@ https://emacs.stackexchange.com/questions/12235/edit-file-as-root-over-when-alre
 [calfw]: https://www.emacswiki.org/emacs/Calfw
 [cider]:  http://www.github.com/clojure-emacs/cider "clojure interactive development environment"
 [circe]: https://github.com/jorgenschaefer/circe
+[cscope]: https://www.emacswiki.org/emacs/CScopeAndEmacs
 [cua]: https://www.emacswiki.org/emacs/CuaMode "Cua Mode"
 [color-moccur]: https://www.emacswiki.org/emacs/color-moccur.el
 [comint]: https://www.emacswiki.org/emacs/ComintMode
 [deadgrep]: https://github.com/Wilfred/deadgrep
 [debbugs]:  http://elpa.gnu.org/packages/debbugs.html
 [diff-hl]: https://github.com/dgutov/diff-hl
+[dired]: https://www.gnu.org/software/emacs/manual/html_node/emacs/Dired.html
+[dired+]: https://www.emacswiki.org/emacs/Dired%2b
 [diredfl]: https://github.com/purcell/diredfl "colourful dired"
-[easy-pg]: https://www.emacswiki.org/emacs/EasyPG
+[dired-hacks]: https://github.com/Fuco1/dired-hacks
+[display-line-number]: https://www.gnu.org/software/emacs/manual/html_node/emacs/Display-Custom.htm
+[Easypg]: https://www.emacswiki.org/emacs/EasyPG
 [ecb]: https://www.emacswiki.org/emacs/EmacsCodeBrowser "Emacs code browser"
+[edts]: https://github.com/sebastiw/edts "Erlang Development Tool Suite"
 [ee]: https://www.emacswiki.org/emacs/CategorizingInformationManager "Categorizing information manager"
 [elscreen]: https://github.com/knu/elscreen
 [enh-ruby]:  http://github.com/zenspider/Enhanced-Ruby-Mode "Enhanced ruby mode"
 [ERC]: https://www.emacswiki.org/emacs/ERC
+[font-lock]: https://www.gnu.org/software/emacs/manual/html_node/emacs/Font-Lock.html
+[fixme]: https://www.emacswiki.org/emacs/FixmeMode
 [flycheck]: https://www.flycheck.org/en/latest/
 [git-commit]: https://github.com/rafl/git-commit-mode
+[go-mode]: https://github.com/dominikh/go-mode.el
 [gnus](http://gnus.org)
 [hi-lock]: https://github.com/emacs-mirror/emacs/blob/master/lisp/hi-lock.el
 [hydra]: https://github.com/abo-abo/hydra
+[imenu]: https://www.emacswiki.org/emacs/ImenuMode
+[info+]: https://www.emacswiki.org/emacs/InfoPlus
 [ivy]: https://github.com/abo-abo/swiper
 [js2]: https://github.com/mooz/js2-mode
+[js3]: https://github.com/tamzinblake/js3-mode
 [interaction-log]: https://github.com/michael-heerdegen/interaction-log.el
 [langtool]: https://github.com/mhayashi1120/Emacs-langtool
+[ledger]: https://github.com/ledger/ledger-mode
 [lui]: https://www.emacswiki.org/emacs/lui.el "Linewise User Interface"
 [linum-relative]: https://github.com/emacsmirror/linum-relative
+[lsp-ui]: https://github.com/emacs-lsp/lsp-ui
+[lusty-explorer]: https://www.emacswiki.org/emacs/LustyExplorer
 [mic-paren]: https://melpa.org/#/mic-paren
 [mue4]: https://github.com/djcb/mu/blob/master/mu4e/
 [multipe-cursors]: https://github.com/magnars/multiple-cursors.el
@@ -944,6 +991,7 @@ https://emacs.stackexchange.com/questions/12235/edit-file-as-root-over-when-alre
 [realgud]: https://github.com/realgud/realgud
 [shm]: https://github.com/projectional-haskell/structured-haskell-mode "structured-haskell-mode"
 [smartparens]: https://github.com/Fuco1/smartparens
+[smerge]: https://www.gnu.org/software/emacs/manual/html_node/emacs/Comparing-Files.html
 [smex]: https://github.com/nonsequitur/smex
 [sml]: http://elpa.gnu.org/packages/sml-mode.html "smart mode line"
 [swiper]: https://github.com/abo-abo/swiper
