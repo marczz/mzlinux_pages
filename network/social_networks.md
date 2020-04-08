@@ -2,7 +2,6 @@
 title: Social Networks
 ---
 
-{{% toc /%}}
 
 See also the related page {{< iref "xmpp" "XMPP" >}},
 {{< iref "irc" "IRC" >}},
@@ -23,11 +22,9 @@ See also the related page {{< iref "xmpp" "XMPP" >}},
     applications and services.
     -   [Activity Streams Protocol Home](http://activitystrea.ms/)
 
-Most opensource microblogging frameworks now use the {{< wp "Ostatus" >}}
-open standard for distributed status updates. The [W3c Ostatus
-Home Page](https://www.w3.org/community/ostatus/)
-seems quite outdated but the
-[Wiki](https://www.w3.org/community/ostatus/wiki/Main_Page)
+Many opensource microblogging frameworks now use the {{< wp "Ostatus" >}}
+open standard for distributed status updates. The
+[Ostatus Wiki](https://www.w3.org/community/ostatus/wiki/Main_Page)
 contains the Ostatus documentation.
 
 Ostatus allows federation of distinct services implementing the
@@ -55,6 +52,21 @@ to communicate using at best a status protocol or at least a messaging
 one like the open source IRC and XMPP, or the closed source Slack,
 twitter or Facebook messenger.
 
+<a name="fediverse"></a>[Fediverse](https://fediverse.party/) is a common name for
+federated social networks running on free open software which can intercommunicate with
+each other. User known by an identity are able to post text and other media, or to
+follow posts by other identities.
+
+Fediverse includes [many applications](https://fediverse.party/en/miscellaneous) among
+which
+{{< iref "#friendica" "Friendica" >}},
+{{< iref "#gnusocial" "Gnu Social" >}},
+{{< iref "#mastodon" "Mastodon" >}},
+{{< iref "#pleroma" "Pleroma" >}},
+{{< iref "#diaspora" "Diaspora" >}}.
+
+The {{< wp "Fediverse" "Fediverse Wikipedia page"  >}} has a
+{{< wp "Fediverse#Fediverse_software_platforms" "table of Fediverse software platforms" >}}.
 
 # Microblogging and social networks
 Some microblogging servers are refered to in the
@@ -71,7 +83,9 @@ Some microblogging servers are refered to in the
 
 -   <a name="diaspora"></a>[Diaspora](https://diasporafoundation.org/)
     is an open source social network, _à la Facebook_ which enforce
-    decentralization, freedom and privacy.
+    decentralization, freedom and privacy. Diaspora is part of
+    {{< iref "#fediverse" "Fediverse" >}}
+
     -   [Getting started in Diaspora tutorial
         ](https://diasporafoundation.org/tutorials).
     -   [Diaspora Wiki](https://wiki.diasporafoundation.org/).
@@ -99,9 +113,12 @@ Some microblogging servers are refered to in the
 -   <a name="friendica"></a>{{< wp "Friendica" >}} (AGPL)
     is a decentralised communications platform written in PHP/MySQL
     that integrates social communication. It support many
-    communication protocols like Ostatus (Gnu Social, Mastodon) ,
-    Diaspora and connectors allow also to join Facebook, Pump.io,
-    Libertree, Twitter, Google+, Wordpress and Tumblr and others.
+    communication protocols like Ostatus ({{< iref "#gnusocial" "Gnu Social" >}},
+    {{< iref "#mastodon" "Mastodon" >}}),
+    {{< iref "#diaspora" "Diaspora" >}}. As a member of
+    {{< iref "#fediverse" "Fediverse" >}} you can connect with other
+    {{< iref "#fediverse" "Fediverse" >}} software and connectors allow also to join
+    Facebook, Pump.io, Libertree, Twitter, Google+, Wordpress and Tumblr and others.
 
     -   [Friendica Home Page](https://friendi.ca/)
     -   [Friendica public servers
@@ -116,7 +133,8 @@ Some microblogging servers are refered to in the
     previously known as StatusNet is a microblogging server written
     in PHP that implements the {{< wp "OStatus" >}} standard for
     interoperation. It publish updates via an XMPP/Jabber client,
-    and provide a Twitter-compatible API.
+    and provide a Twitter-compatible API. GnuSocial is part of
+    {{< iref "#fediverse" "Fediverse" >}} network.
     -   [Gnu Social Home](https://gnu.io/social)
     -   Wikipedia {{< wp "GNU social" >}}
     -   {{< iref "#bitlbee" "BitlBee" >}} has support for
@@ -165,20 +183,25 @@ Some microblogging servers are refered to in the
     shared on the timelines of the user's followers, or can be direct
     between users.
 
+    Mastodon is part of {{< iref "#fediverse" "Fediverse" >}} network.
+
     -   [Mastodon Home](https://joinmastodon.org/)
         contains the list of public servers.
     -   [GitHub - Mastodon](https://github.com/tootsuite/mastodon).
-    -   [Mastodon Documentation
-        ](https://github.com/tootsuite/documentation)
+    -   [Mastodon documentation](https://docs.joinmastodon.org/)
         including the [FAQ
         ](https://github.com/tootsuite/documentation/blob/master/Using-Mastodon/FAQ.md)
         and the [List of apps
         ](https://github.com/tootsuite/documentation/blob/master/Using-Mastodon/Apps.md)
-        [Awesome Mastodon](https://github.com/tleb/awesome-mastodon)
+        -   [Mastodon Documentation Source
+            ](https://github.com/tootsuite/documentation)
+    -   [Mastodon Blog](https://blog.joinmastodon.org/)
+        -   [Guides](https://blog.joinmastodon.org/categories/guides/)
+    -   [Awesome Mastodon](https://github.com/tleb/awesome-mastodon)
         Curated list of Mastodon-related stuff!
     -   [Framapiaf](https://framapiaf.org) is the Mastodon instance of
         [Framasoft](https://framasoft.org/).
-    -   [umr]((https://github.com/Ulrar/umrc)
+    -   [umr](https://github.com/Ulrar/umrc)
         is a bot to allow using a Mastodon account from IRC
     -   {{< iref "xmpp#bitlbee" "BitlBee" >}}
         [plugin for Mastodon
@@ -190,6 +213,14 @@ Some microblogging servers are refered to in the
         with the package.
     -   [tootstream](https://github.com/magicalraccoon/tootstream)
         another  python  Mastodon CLI client.
+-   <a name="pleroma"></a>[Pleroma](https://pleroma.social/) (AGPL)
+    is a federated social networking server,
+    based on {{< wp "ActivityPub" >}} protocol it is part of
+    {{< iref "#fediverse" "Fediverse" >}} network and compatible with
+    {{< iref "#gnusocial" "Gnu Social" >}},
+    {{< iref "#mastodon" "Mastodon" >}} and other {{< iref "#fediverse" "Fediverse" >}}
+    software.
+    -   [Introduction to Pleroma](https://blog.soykaf.com/post/what-is-pleroma/)
 -   {{< iref "xmpp#tox" "Tox" >}} provides
     messaging, group messaging, voice and video calling, voice and
     video conferencing, typing indicators, message read-receipts, file
@@ -200,7 +231,7 @@ Some microblogging servers are refered to in the
     encrypted and anonymized and decentralized alternative to
     Twitter. _Dead project last commit 2014_.
 -   [twister](http://twister.net.co/) (MIT License)
-    an Encrypted P2P microblogging platform. _active in 2018_
+    an Encrypted P2P microblogging platform.
     -   [Twister – An Open Source, Encrypted, Peer-to-Peer
         Alternative to Twitter - Infosecurity Magazine
         ](http://www.infosecurity-magazine.com/news/twister-an-open-source-encrypted-peer-to-peer/)
@@ -240,7 +271,7 @@ read as Atom or RSS streams.
 -   [pumpio-el](https://github.com/cnngimenez/pumpio-el)
     is an emacs client for Pump.io. [Emacs Wiki : PumpioEl
     ](https://www.emacswiki.org/emacs/PumpioEl)
--   [Pump.io command line utility p
+-   [Pump.io command line utility "p"
     ](https://github.com/xray7224/p) is the version for Pump.io
     of the [Twitter commande line utility t
     ](https://github.com/sferik/t) the author
@@ -346,17 +377,17 @@ I group here _Slack like_ software. IRC-like features:
     There are many solutions of [Mattermost Integration
     ](https://docs.mattermost.com/overview/integrations.html)
 
-    It [integrates to a huge list of Apps and Clouds]
+    It [integrates to a huge list of Apps and Clouds
     ](https://about.mattermost.com/community-applications/), though
     [Zappier](https://zapier.com/).
 
     For XMPP/IRC access we there is:  a {{< iref "xmpp#pidgin_plugins" "purple plugin" >}},
     {{< iref "xmpp#matterbridge" "matterbrige" >}},
 
-    -   [GitHub Mattermost Server
+    -   [Mattermost Server - GitHub
         ](https://github.com/mattermost/mattermost-server)
     -   [Framateam](https://framateam.org) is the mattermost instance
-        of [Framasoft](https://framasoft.org/)
+        of [Framasoft](https://framasoft.org/).
 
 
 <!-- Local Variables: -->
