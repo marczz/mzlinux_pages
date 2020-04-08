@@ -744,6 +744,21 @@ or a
     position in Emacs, by giving the sequence of characters at that position. Avy is an
     alternative to [ace-jump][]. It is in Melpa.
 
+## Frames
+-   [Frames - Emacs Manual
+    ](https://www.gnu.org/software/emacs/manual/html_node/emacs/Frames.html)
+_   [EmacsWiki: Category Frames](https://www.emacswiki.org/emacs/CategoryFrames),
+    [Frame Modes](https://www.emacswiki.org/emacs/FrameModes)
+-   [posframes][] pop a frame at point. It is used in [ivy-posframes][] and
+    [which-key-posframes][].
+
+## Desktop integration
+-   [ewmctrl][] uses {{< man "wmctrl" >}} to manage desktop windows. It creates a buffer
+    with a list of window, and _wmctrl_ actions are available through key shortcuts.
+-   [i3-emacs][] is an emacs package for i3-emacs integration. It includes access to the
+    i3 RPC calls.
+-   [i3wm][] _alias emacs-i3_ is an emacs package for i3-emacs integration. It does not
+    access directly the RPC interface but use _i3-msg_ command.
 
 ## Other packages
 -   [ag][] allows you to search
