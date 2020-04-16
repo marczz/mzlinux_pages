@@ -22,6 +22,40 @@ See also the related page {{< iref "xmpp" "XMPP" >}},
     applications and services.
     -   [Activity Streams Protocol Home](http://activitystrea.ms/)
 
+For messaging applications, {{< iref "irc" "IRC" >}} came first using a de-facto
+communication protocol, but without any standard, but soon many RFC appeared following
+the evolution of IRC, but their support is irregular among clients.
+
+{< iref "xmpp" "XMPP" >}} enhanced the IRC protocol with an open standard, in XMPP the
+diverse clients can communicate together, ven if all clients don't implement the same
+RFC for some features like encryption. XMPP also allow to speak with other protocols
+through Gateways.
+
+The socials networks add to messaging, groups and privacy _yet available in XMPP_ and
+services such as channels, blogging or micro-bloging, status mesage, media sharing, and
+more.
+
+Some private source social networks like Twitter or {{< iref "Facebook" >}} don't care
+about communicating with software from an other source, and even try to forbid it.
+
+But open source software may communicate, but to do so they need either a common
+protocol or a bridge.
+
+For the older platforms they use their own protocol it is the case of
+{{< iref "#diaspora" "Diaspora" >}} and {{< iref "#pumpio" "Pump.io" >}}.
+
+The newer platforms use an open source protocol like
+{{< iref "#ostatus" "Ostatus"  >}} and {{< iref "#activitypub" "ActivityPub" >}}.
+
+
+When no common protocol exist, very often connectors or bridges allow
+to communicate using at best a status protocol or at least a messaging
+one like the open source IRC and XMPP, or the closed source
+{{< iref "#slack" "Slack" >}},
+twitter or {{< iref "facebook" "Facebook messenger" >}}.
+
+
+## Ostatus {#ostatus}
 Many opensource microblogging frameworks now use the {{< wp "Ostatus" >}}
 open standard for distributed status updates. The
 [Ostatus Wiki](https://www.w3.org/community/ostatus/wiki/Main_Page)
@@ -34,23 +68,23 @@ the following services in this section:
 {{< iref "#gnusocial" "Gnu Social" >}},
 {{< iref "#mastodon" "Mastodon" >}}.
 
-The Ostatus protocol is enhanced by the {{< wp "ActivityPub" >}} protocol which
-allow more security for private messages. {{< wp "ActivityPub" >}} is an
-extension of the Pump.io protocol.
+## ActivityPub {#activitypub}
 
-W3C has a [W3C Recommendation for ActivityPub] and on GithUb the
-[AcivityPub Home Page](http://w3c.github.io/activitypub/) and
-[repository](https://github.com/w3c/activitypub).
+The {{< iref "#ostatus" Ostatus >}} protocol is enhanced by the {{< wp "ActivityPub" >}}
+protocol which allow more security for private messages. {{< wp "ActivityPub" >}} is an
+extension of the {{< iref "#pumpio" "Pump.io" >}} protocol.
 
-The XMPP based software can communicate together by the XMPP protocol.
+W3C publish
+[W3C Recommendation for ActivityPub
+](https://www.w3.org/TR/2018/REC-activitypub-20180123/)
+which constitutes also the
+[AcivityPub Home Page](http://w3c.github.io/activitypub/)
+in the [W3C Github pages](https://w3c.github.io/).
 
-{{< iref "#diaspora" "Diaspora" >}} uses it's own protocol as
-{{< iref "#pumpio" "Pump.io" >}}.
+The [AcivityPub repository](https://github.com/w3c/activitypub) is also in
+[GithUb W3C repository](https://github.com/w3c/).
 
-When no common protocol exist, very often connectors or bridges allow
-to communicate using at best a status protocol or at least a messaging
-one like the open source IRC and XMPP, or the closed source Slack,
-twitter or Facebook messenger.
+
 
 <a name="fediverse"></a>[Fediverse](https://fediverse.party/) is a common name for
 federated social networks running on free open software which can intercommunicate with
@@ -71,13 +105,12 @@ The {{< wp "Fediverse" "Fediverse Wikipedia page"  >}} has a
 # Microblogging and social networks
 Some microblogging servers are refered to in the
 {{< iref "xmpp" "Xmpp Section" >}} as
-{{< iref "xmpp#jappix" "Jappix" >}},
 {{< iref "xmpp#retroshare" "Retroshare" >}}
 
 
 -   The most known closed private license services are
-    {{< wp "Facebook" >}}, {{< wp "Google+" >}}, {{< wp "Twitter" >}} this gang of three are
-    making you swallow ads.
+    {{< iref "#facebook" "Facebook" >}}, {{< wp "Twitter" >}} which track you and
+    make you swallow ads.
 -   [Open Source Twitter Alternatives - AlternativeTo.net
     ](http://alternativeto.net/software/twitter/?license%3Dopensource)
 
@@ -101,6 +134,7 @@ Some microblogging servers are refered to in the
     -   [Diaspora : Le guide du parfait débutant
         ](https://fr.wikibooks.org/wiki/Diaspora_:_Le_guide_du_parfait_d%C3%A9butant)
         un WikiBook.
+    -   [diaspora federation protocol](https://diaspora.github.io/diaspora_federation/)
 -   [dweet.io](http://dweet.io/) messaging (and alerts) for the
     Internet of Things.
     -   [dweet.io - FAQ](http://dweet.io/faq),
@@ -108,19 +142,24 @@ Some microblogging servers are refered to in the
         ](http://www.artandlogic.com/blog/2014/08/dweet-io-twitter-for-social-machines/),
     -   [Why tweet when you can dweet??
         ](http://www.element14.com/community/community/design-challenges/forget-me-not/blog/2014/08/29/fmn05-why-tweet-when-you-can-dweet),
-    -   [dweet.io (@dweet<sub>io</sub>) | Twitter
+    -   [dweet.io (@dweet_io) | Twitter
         ](https://twitter.com/dweet_io)
 -   <a name="friendica"></a>{{< wp "Friendica" >}} (AGPL)
     is a decentralised communications platform written in PHP/MySQL
     that integrates social communication. It support many
-    communication protocols like Ostatus ({{< iref "#gnusocial" "Gnu Social" >}},
-    {{< iref "#mastodon" "Mastodon" >}}),
+    communication protocols like  {{< iref "#ostatus" Ostatus >}}
     {{< iref "#diaspora" "Diaspora" >}}. As a member of
     {{< iref "#fediverse" "Fediverse" >}} you can connect with other
-    {{< iref "#fediverse" "Fediverse" >}} software and connectors allow also to join
-    Facebook, Pump.io, Libertree, Twitter, Google+, Wordpress and Tumblr and others.
+    {{< iref "#fediverse" "Fediverse" >}} software like
+    {{< iref "#gnusocial" "Gnu Social" >}},
+    {{< iref "#mastodon" "Mastodon" >}} {{< iref "#hubzilla" "Hubzilla" >}}
+    and connectors allow also to join
+    Facebook, Twitter, {{< iref "#pumpio" "Pump.io" >}}.
 
-    -   [Friendica Home Page](https://friendi.ca/)
+    In addition to these two way connections, users can also use Friendica as a
+    publishing platform to post content to  WordPress, Tumblr and Libertree.
+
+-   [Friendica Home Page](https://friendi.ca/)
     -   [Friendica public servers
         ](https://dir.friendica.social/servers)
     -   [GitHub - Friendica](https://github.com/friendica/friendica)
@@ -128,10 +167,34 @@ Some microblogging servers are refered to in the
         ](https://github.com/friendica/friendica-addons)
         where you find the available connectors.
 
+-   <a name="hubzilla"></a>[Hubzilla
+    ](https://zotlabs.org/page/hubzilla/hubzilla-project)
+    is an Open source platform for creating interconnected websites featuring a
+    decentralized identity, communications, and permissions framework.
+
+    It provides discussion threads, cloud file storage, CalDAV and CardDAV, CMS, wiki.
+    See the  [table of Hubzilla features
+    ](https://zotlabs.org/page/zotlabs/comparison+hubzilla+zap).
+
+    It is based on the [Zot Protocol](https://start.hubzilla.org/page/admin/zot_intro).
+    a JSON-based web framework for implementing secure decentralised communications and
+    services. It differs from many other communication protocols by building
+    communications on top of a decentralised identity and authentication framework.
+    and belongs to  {{< iref "#fediverse" "Fediverse" >}} network.
+
+    It supports many protocols {{< iref "#ostatus" "Ostatus" >}},
+    {{< iref "#activitypub" "ActivityPub"  >}}, {{< iref "#diaspora" "Diaspora" >}},
+    {{< iref "#pumpio" "Pump.io" >}}, Dreamwith, InsaneJournal, Libertree, LiveJournal,
+    Twitter, WordPress.
+
+    -   [Hubzilla Public Hubs](https://hubzilla.rocks/pubsites)
+    -   [list of all nodes](https://the-federation.info/hubzilla)
+    -   [Hubzilla source repository](https://framagit.org/hubzilla/core)
+    -   [Hubzilla documentation](https://zotlabs.org/help/en/about/about)
 
 -   <a name="gnusocial"></a>{{< wp "GNU social" >}} (GPL)
     previously known as StatusNet is a microblogging server written
-    in PHP that implements the {{< wp "OStatus" >}} standard for
+    in PHP that implements the {{< iref "#ostatus"  "OStatus" >}} standard for
     interoperation. It publish updates via an XMPP/Jabber client,
     and provide a Twitter-compatible API. GnuSocial is part of
     {{< iref "#fediverse" "Fediverse" >}} network.
@@ -172,13 +235,29 @@ Some microblogging servers are refered to in the
         communication tool with the broader support.
     -   [weechat-matrix-protocol-script
         ](https://github.com/torhve/weechat-matrix-protocol-script)
-        is a WeeChat script in Lua that implements the matrix.org chat
-        protocol.
+        is a {{< iref "irc#weechat" "WeeChat" >}} script in Lua that implements
+        the matrix.org chat protocol.
+    -   [Unofficial selection of public Matrix servers
+        ](https://www.hello-matrix.net/public_servers.php)
+    -   [Matrix Public Homeservers](https://www.anchel.nl/matrix-publiclist/)
+    -   [Matrix bridges](https://matrix.org/bridges/) the irc bridge is builtin,
+        some public servers provide a bridge like [Telegram at utwente.io
+        ](https://syscom.utwente.io/info/matrix/telegram/) or [t2bot.io
+        ](https://t2bot.io/telegram/). The server [t2bot.io
+        ](https://t2bot.io/) provides many bridges and bot: tlegram, discord,
+        [Slack compatible webhooks
+        ](https://github.com/turt2live/matrix-appservice-webhooks),
+        and many bots. Other bridges must be self-installed, some have light
+        dependencies, some are quite heavy needing even yo have your own home server
+        like the WhatsApp bridge.
+    -   [mxtoot](https://github.com/ma1uta/mxtoot)    (Apache License)
+        is a Matrix <=> Mastodon bot written on java.
 
--   {{< wp "Mastodon_(software)"  "Mastodon" >}} (AGPL)
+-   <a name="mastodon"></a>{{< wp "Mastodon_(software)"  "Mastodon" >}} (AGPL)
     is a federated social network written in Ruby with front end in
     JavaScript, with similar microblogging features to Twitter.
-    It support the Ostatus and  ActivityPub protocols.
+    It support the {{< iref "#ostatus" "Ostatus" >}} and
+    {{< iref "#activitypub" "ActivityPub" >}} protocols.
     Each message has a privacy option,  private messages are only
     shared on the timelines of the user's followers, or can be direct
     between users.
@@ -213,9 +292,14 @@ Some microblogging servers are refered to in the
         with the package.
     -   [tootstream](https://github.com/magicalraccoon/tootstream)
         another  python  Mastodon CLI client.
+    -   [Mastodon Twitter Crossposter](https://crossposter.masto.donte.com.br/) is a
+        service which allows you to connect a Mastodon account and a Twitter account and
+        enable cross-posting between them.
+    -   [Moa](https://moa.party/)
+        Link your Mastodon account to Twitter and Instagram. the code is on GitHub.
 -   <a name="pleroma"></a>[Pleroma](https://pleroma.social/) (AGPL)
     is a federated social networking server,
-    based on {{< wp "ActivityPub" >}} protocol it is part of
+    based on "{{< iref "#activitypub" "ActivityPub" >}} protocol it is part of
     {{< iref "#fediverse" "Fediverse" >}} network and compatible with
     {{< iref "#gnusocial" "Gnu Social" >}},
     {{< iref "#mastodon" "Mastodon" >}} and other {{< iref "#fediverse" "Fediverse" >}}
@@ -277,7 +361,8 @@ read as Atom or RSS streams.
     ](https://github.com/sferik/t) the author
     Jessica _xray7224_ also develop the python library
     [PyPump](https://github.com/xray7224/PyPump).
-
+-   [Pump.io protocol and API](https://github.com/pump-io/pump.io/blob/master/API.md)
+Ug
 
 -   [MediaGoblin](http://mediagoblin.org/) (GPL)
     is a media publishing platform that anyone can run.
@@ -322,9 +407,9 @@ I group here _Slack like_ software. IRC-like features:
     and messaging system for teams, there are now many open sources
     alternatives, see below.
 
-    The official [IRC and XMPP gateway
+    Many gateways bridge slack with IRC and XMPP
+    after closing of old  official [IRC and XMPP gateway
     ](https://get.slack.help/hc/en-us/articles/201727913-Connect-to-Slack-over-IRC-and-XMPP)
-    has stopped, but there are alternatives.
     -   {{< iref "xmpp#weechat" "WeeChat" >}} has a
         plugin using native Slack api.
     -   {{< iref "xmpp#matterbridge" "matterbrige" >}}
@@ -335,6 +420,7 @@ I group here _Slack like_ software. IRC-like features:
         {{< iref "xmpp#spectrum2" "Spectrum2" >}}.
     -   [slack-irc](https://github.com/ekmartin/slack-irc)
         is a slack irc bridge.
+    -   {{< iref "xmpp#matterbridge" "matterbrige" >}} support Matrix.
 
 -   <a name="gitter"></a>{{< wp "Gitter" >}} (MIT License)
     is an instant messaging and chat room system for developers and
@@ -356,6 +442,7 @@ I group here _Slack like_ software. IRC-like features:
             is an Emacs Gitter client, with a partial support of the
             protocol. It is in melpa. You can also use an emacs IRC
             client with the gitter bridge.
+        -   {{< iref "xmpp#matterbridge" "matterbrige" >}} support Gitter.
 -   {{< iref "#riotim" "Riot.im" >}} is above with the
     {{< iref "#matrix" "Matrix protocol" >}}.
 -   <a name="rocketchat"></a>{{< wp "Rocket.Chat" >}} (MIT License)
