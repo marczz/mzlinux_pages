@@ -65,17 +65,19 @@ See also the {{< iref "IP#http" "main HTTP section" >}}
 -   [pavuk](http://www.pavuk.org/) (GPL) is a web grabber to do
     recursive HTTP, HTTPS, FTP, SFTP and Gopher document retrieving.
 -   <a name="curl"></a>[cURL and libcurl](http://curl.haxx.se/) (MIT license)
-    _cURL_ is a command line tool for transferring data, supporting
-    DICT, FILE, FTP, FTPS, Gopher, HTTP, HTTPS, IMAP, IMAPS, LDAP,
-    LDAPS, POP3, POP3S, RTMP, RTSP, SCP, SFTP, SMTP, SMTPS, Telnet and
-    TFTP.  curl supports SSL certificates, HTTP POST, HTTP PUT, FTP
-    uploading, HTTP form based upload, proxies, cookies, user+password
-    authentication (Basic, Digest, NTLM, Negotiate, kerberos...),
-    {{< wp "Metalink" >}}, file transfer resume, proxy tunneling, socks, IPV6.
+    _cURL_ is a command line tool for transferring data, supporting DICT, FILE, FTP,
+    FTPS, Gopher, HTTP, HTTPS (including {{< iref "webdav" >}}, IMAP, IMAPS, LDAP,
+    LDAPS, POP3, POP3S, RTMP, RTSP, SCP, SFTP, SMTP, SMTPS, Telnet and TFTP.  curl
+    supports SSL certificates, HTTP POST, HTTP PUT, FTP uploading, HTTP form based
+    upload, proxies, cookies, user+password authentication (Basic, Digest, NTLM,
+    Negotiate, kerberos...), {{< wp "Metalink" >}}, file transfer resume, proxy
+    tunneling, socks, IPV6.
     -   Wikipedia {{< wp "cURL" >}}
     -   [cURL Documentation](http://curl.haxx.se/docs/):
         [cURL Manual](http://curl.haxx.se/docs/manual.html),
         [cURL FAQ](http://curl.haxx.se/docs/faq.html)
+    -   See the
+        {{< iref "webdav#dav_with_curl" "use for WebDav in the WebDav page" >}}.
     -   [Using cURL to interact with Google Data services
         ](https://developers.google.com/gdata/articles/using_cURL)
         article in the [Google Data APIs pages (gdata)
