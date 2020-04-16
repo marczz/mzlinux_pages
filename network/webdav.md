@@ -2,7 +2,8 @@
 title: WebDAV
 ---
 
-{{% toc /%}}
+See also {{< iref "file_transfer" "File Transfer" >}}.
+
 
 # References
 -   [WebDAV *(Wikipedia)*](http://en.wikipedia.org/wiki/WebDAV)
@@ -29,6 +30,7 @@ title: WebDAV
     You find them also __nicely formattted__ on
     [webdav.org: WebDAV Specifications](http://webdav.org/specs/)
 
+<a name="dav_protocol"></a>
 The protocol consists of a set of new methods and headers for use in
 HTTP. The  methods include HTTP methods HEAD, GET, PUT, DELETE:
 
@@ -80,17 +82,31 @@ The kde stuff as _konqueror_  use the _libkio_ library.
     operations (move/copy), collection creation and deletion, property
     manipulation, and resource locking.<br /> The cadaver interface is
     vey similar to _ftp_, _sftp_. and it supports https connections.
+-   <a name="dav_with_curl"></a>{{< iref "file_transfer#curl" "cURL" >}}
+    support webdav as a subset of its HTTP support. You can download a file with basic
+    curl command, and do other operations by using `-X`, `--request <command>` with any
+    command of the  {{< iref "#dav_protocol" "WebDav protocol" >}}.
+
+    To upload a file use `-T`, `--upload-file <file>`.
+
+    Authentication basic or digest is also available,
+
+    See the [curl Manpage](https://curl.haxx.se/docs/manpage.html) for options details,
+    some exemples are also in the tutorial
+    [Using Curl commands with Webdav
+    ](https://www.qed42.com/blog/using-curl-commands-webdav).
+
 -   [nd](http://gohome.org/nd/) (MPL/GPL/LGPL) a tiny  command line
-    WebDAV interface.  It is smaller than the alternative tool
-    _cadaver_. However, nd has neither an interactive mode, nor has it
-    support for SSL or TLS encrypted transmissions.<br /> It is also
-    used by the _emacs_ library [eldav](http://www.gohome.org/eldav/)
-    that provides transparent _dav_ access from _emacs_.<br />  _nd_
-    is in Debian but _nd and  eldav have not changed since 2003_
+    WebDAV interface.  It is smaller than the alternative tool _cadaver_. However, nd
+    has neither an interactive mode, nor has it support for SSL or TLS encrypted
+    transmissions.<br /> It was also used by the _emacs_ library
+    [eldav](http://www.gohome.org/eldav/) that provides transparent _dav_ access from
+    _emacs_.<br /> _nd_ is still in Debian buster but _nd and eldav have not changed
+    since 2003_ and can be considered as obsolete.
 -   There are some WebDAV clients and servers for Android
     but not yet an open source one.
 -   [easywebdav](https://github.com/amnong/easywebdav) (ISC licence =
-    BSD or MIT) is a webdav clien in python. It is
+    BSD or MIT) is a webdav client in python. It is
     [in pipy](http://pypi.python.org/pypi/easywebdav/).
 
 # Emacs dav access
@@ -102,8 +118,8 @@ The kde stuff as _konqueror_  use the _libkio_ library.
     [url-dav.el _in emacs.git_
     ](http://repo.or.cz/w/emacs.git/blob/HEAD:/lisp/url/url-dav.el)
 -   [eldav](http://www.gohome.org/eldav/)
-    is an older client which has no ssl support.
-    [EmacsWiki: /ElDav](http://www.emacswiki.org/emacs/ElDav).
+    was an older client which has no ssl support. It is no longer in emacs.
+
 
 # server libraries
 -   [pywebdav](http://code.google.com/p/pywebdav/) (GPL) features a
