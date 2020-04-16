@@ -2,8 +2,6 @@
 title: XMPP
 ---
 
-{{% toc /%}}
-
 See also {{< iref "irc" "IRC" >}},
 {{< iref "social_networks" "Social Networks" >}},
 {{< iref "sip" "SIP" >}} and
@@ -43,7 +41,7 @@ See also {{< iref "irc" "IRC" >}},
     over IP (VoIP) or videoconferencing communications, or also for
     p2p file transfer.  Jingle is supported by Xmpp software based on
     telepathy like empathy, minirc; software base on it like pidgin,
-    Coccinella, Gajim, Google Talk, Macabber (file transfer only),
+    Coccinella, Gajim, Macabber (file transfer only),
     Pidgin, Psi, Jabbin, Tapioca. It is also supported by telephony
     software like {{< wp "Yate_(telephony_engine)"  "Yate" >}} or
     {{< wp "Asterisk_(PBX)"  "Asterisk" >}}.
@@ -130,8 +128,8 @@ See also {{< iref "irc" "IRC" >}},
     -   [jabber.org FAQ](http://www.jabber.org/faq.html)
 -   [jabber.apinc.org](http://jabber.apinc.org/) run the server
     {{< iref "#jabberfr" "jabber.fr" >}}
--   {{< wp "Movim" >}} run a jabber server, the domain
-    jappix.com is now handled by movim.
+-   {{< wp "Movim" >}} run a jabber server, the domain of the obsolete xmpp client
+    _jappix_ jappix.com is now handled by movim.
     -   [movim.eu](http://movim.eu)
 -   [OTR.im](https://www.otr.im/chat.htm)
     offers a free and secure Jabber service nammed __jabber.otr.im__
@@ -152,10 +150,11 @@ See also {{< iref "irc" "IRC" >}},
 -   [ArchWiki: multiprotocol console clients
     ](https://wiki.archlinux.org/index.php/List_of_applications/Internet#Console_7)
 
--   [BarnOwl](http://barnowl.mit.edu/)
+-   [BarnOwl](https://github.com/barnowl/barnowl)
     Ncurses-based chat client with support for the Zephyr, Jabber,
     IRC, and Twitter protocols; forked and extended from the old Owl
-    irc client.
+    irc client. Seems to be no more maintained since 2019.
+    -   [BarnOwl Wiki](https://barnowl.mit.edu/wiki)
 -   [Cjc](https://github.com/Jajcus/cjc) (GPL)
     is a jabber console client written by Jacek Konieczny
     and using the
@@ -488,7 +487,7 @@ support many protocols, ensure privacy.
 
 The [Additional protocols plugins
 ](https://developer.pidgin.im/wiki/ThirdPartyPlugins#AdditionalProtocols)
-support includes
+list plugins, _some of them are obsolete_, this list includes:
 -   [Tox protocol plugin](http://tox.dhs.org/) (GPL) for
     {{< iref "#tox" "Tox protocol" >}}.
 -   [telegram-purle plugin
@@ -504,8 +503,13 @@ support includes
     ](https://bitbucket.org/EionRobb/purple-rocketchat)
     for {{< iref "social_networks#rocketchat" "Rocket.Chat" >}}.
 -   [whatsapp-purple](https://github.com/davidgfnet/whatsapp-purple/)
-    for {{< iref "#whatsapp" "WhatsApp" >}}.
--   [puprle-facebook](https://github.com/dequis/purple-facebook).
+    is obsolete, don't use.
+-   [purple-facebook](https://github.com/dequis/purple-facebook).
+-   [purple-matrix](https://github.com/matrix-org/purple-matrix)
+    for {{< iref "social_networks#matrix" "Matrix" >}}.
+-   [purple-hangouts](https://bitbucket.org/EionRobb/purple-hangouts/wiki/Home)
+-   [libpurple-signald](https://github.com/hoehermann/libpurple-signald)
+    for the {{< iref "#signald" "Signal Daemon - signald" >}}.
 
 {{< iref "#pidgin" "Pidgin" >}} has many
 [Security and privacy plugins
@@ -706,7 +710,7 @@ to remote Xmpp clients.
 
 -   <a name="bitlbee"></a> {{< wp "bitlbee" >}} (GPL) is an IRC to other chat
     networks gateway, such as AIM, ICQ, Microsoft Messenger, Yahoo!,
-    Jabber, Google Talk, and Facebook Messenger, Twitter, Identi.ca,
+    Jabber, Facebook Messenger, Twitter, Identi.ca,
     and status.net.  It allows you to browse other chat protocols with
     your irc client. Bitlbee can be usefull if you want to use only a
     light irc client to take part in chats from many protocols
@@ -746,7 +750,8 @@ to remote Xmpp clients.
         ](https://wiki.bitlbee.org/Packages) may be fresher then the
         Debian standard one.
     -   [BitlBee native support to Twitter
-        ](https://wiki.bitlbee.org/HowtoTwitter).
+        ](https://wiki.bitlbee.org/HowtoTwitter) partly [deprecated
+        ](https://wiki.bitlbee.org/HowtoTwitter/StreamDeprecation).
     -   [BitlBee native support for Gnu Social
         ](https://wiki.bitlbee.org/HowtoStatusNet).
     -   [BitlBee support for Facebook
@@ -764,7 +769,8 @@ to remote Xmpp clients.
     runtime.
 
     But _bitlbee-libpurple_ allow to use some more protocols
-    like Skype with skypeweb, GaduGadu, SIPE, Microsoft's OCS,
+    like [Skype with skypeweb](https://wiki.bitlbee.org/HowtoSkypeWeb),
+    GaduGadu, SIPE, Microsoft's OCS,
     Lync (on Office 365 as well), Skype for Business,
     Telegram through [telegram-purle plugin
     ](https://github.com/majn/telegram-purple),
@@ -778,41 +784,27 @@ to remote Xmpp clients.
 
     -   [Using BitlBee with the libpurple IM backend
         ](https://wiki.bitlbee.org/HowtoPurple)
-
+-   [jatter](https://github.com/binfalse/jatter) (GPL)
+    is a java bot providing a  a Jabber-Twitter-bridge.
 -   <a name="matterbridge"></a>[Matterbridge
     ](https://github.com/42wim/matterbridge) (Apache License)
-    is a bridge writteen in go between Mattermost, IRC, Gitter, xmpp,
-    Slack, Discord, Telegram, Rocket.Chat, Hipchat (via xmpp), Steam,
-    Twitch, ssh-chat and Matrix with REST API.
--   <a name="minbif"></a>
-    [minbif](https://symlink.me/projects/minbif/wiki)
-    is an IRC to other IM gateway using
-    {{< iref "#libpurple" "libpurple" >}}
-    it support many protocols: aim, bonjour, Gadu-Gadu, ICQ, IRC,
-    XMPP (includes Google Talk and Facebook Chat),
-    Sametime (meanwhile), MSN, MySpaceIM, novell GroupWise, QQ, SILC,
-    {{< wp "SIMPLE_(instant_messaging_protocol)"  "SIMPLE" >}},
-    Yahoo, Zephyr and the following third party protocols:
-    [CoinCoin](https://symlink.me/projects/minbif/wiki/CoinCoin),
-    [skype4pidgin
-    ](https://symlink.me/projects/minbif/wiki/Skype4Minbif),
-    [msn-pecan](http://code.google.com/p/msn-pecan/)
-    (an alternative WLM plug-in for libpurple),
-    [Skype web plugin for Pidgin/libpurple/Adium
-    ](http://eion.robbmob.com/),
-    [twitter through prpltwr](https://github.com/mikeage/prpltwtr),
-    microblog (Twitter, Identica, Laconica)
-    thru the unmaintained microblog-purple.
-    It is controled with IRC commands.
+    is a bridge written in go between Mattermost, IRC, Gitter, xmpp,
+    {{< iref "social_networks#slack" "Slack" >}},
+    {{< iref "social_networks#gitter" "Gitter"  >}},
+    Discord,  {{< iref "#telegram" "Telegram" >}},
+    {{< iref "social_networks#keybase" "Keybase" >}},
+    Rocket.Chat, Hipchat (via xmpp), Steam,
+    Twitch, ssh-chat and  {{< iref "social_networks#matrix" "Matrix" >}} with REST API.
+
 
 -   <a name="spectrum2">[Spectrum2](http://spectrum.im/) (GPL)
     is a proxy allowing to connect from Xmpp or
     {{< iref "social_networks#slack" "Slack" >}} to IRC,
-    Twitter, Skype, XMPP, Facebook, MSN, Telegram,Yahoo, Whatsapp.
+    Twitter, Skype, XMPP, Facebook, MSN, Telegram,Yahoo.
     It supports all the [lipurple plugins
     ](pidgin_plugins "internal reference"), so all the protocols
     supported by libpurple are available. Some extra protocols are
-    provided by some aother backends (like Telegram,  Whatsapp ...)
+    provided by some other backends (like Telegram ...)
 
     The repository offer an apt repo with source deb packages,
     and a Docker image.
@@ -1119,9 +1111,9 @@ For secure messaging we can expect the following features:
 
 
 
-## OTR or {{< wp "Off-the-Record Messaging" >}} {#otr}
-<a name="otr"></a>{{< wp "Off-the-Record Messaging" >}}
-(GPL) Off the Record (OTR) Messaging allows you to have private
+## OTR or _Off-the-Record Messaging_ {#otr}
+{{< wp "Off-the-Record Messaging" >}}
+(GPL) Off the Record _(OTR)_ Messaging allows you to have private
 conversations over instant messaging by providing encryption,
 {{< wp "Deniable authentication" >}}, perfect {{< wp "forward secrecy" >}}.
 
@@ -1129,8 +1121,7 @@ OTR allow instant messaging, secure file transfer,
 the plugin supports multiple OTR conversations with the same buddy
 who is logged in at multiple locations. MUC is not yet supported.
 
--   [otr.cypherpunks: Off-the-Record Messaging (OTR) Protocol
-    Home](https://otr.cypherpunks.ca/)
+-   [otr.cypherpunks: OTR Protocol Home](https://otr.cypherpunks.ca/)
 -   [OTR.im: OTR user Home](https://www.otr.im/).
 -   [XEP-0364: Current Off-the-Record Messaging Usage
     ](https://xmpp.org/extensions/xep-0364.html)
@@ -1489,7 +1480,6 @@ _Signal_ was previously called {{< wp "TextSecure" >}} in November 2015,
 _TextSecure_ was merged with an encrypted voice calling application
 called _RedPhone_ and was renamed as _Signal_.  The authors of _Signal_
 and _TexSecure_ _Whisper Systems_ partnered with _WhatsApp_ in
-
 November 2014 to encrypt users’ messages by default using their
 _TextSecure/Signal_ protocol.
 
@@ -1523,6 +1513,12 @@ This CLI can also be used with the netcurses interface
 or through weechat with
 [GitHub - thefinn93/signal-weechat](https://github.com/thefinn93/signal-weechat).
 
+<a name=signald></a>[signald](https://git.callpipe.com/finn/signald) (GPL)
+is a daemon that facilitates communication over Signal bu sending messages in the signald
+protocol.
+
+Some libraries are available to encapsulate the protocol, there is also a
+{{< iref "#libpurple" "libpurple" >}} plugin.
 
 ## Telegram {#telegram}
 {{< wp "Telegram (software)"  "Telegram" >}} (GPL)
@@ -1548,14 +1544,28 @@ self-destruct.
 There are some critisisms to the [Telegram security
 ](https://en.wikipedia.org/wiki/Telegram_(software)#Security)
 
-Beside the IOS, Android, and other mobile applications you find a
-windows and Linux Desktop client, and a javascript application for
-Firefox and one for Chrome. Users can also access Telegram's
-cloud-based messages via an official web browser interface called
-Telegram Web (aka Webogram).
+Official Telegram applications are provided for IOS, Android, and other mobile
+applications, and a [Desktop client
+](https://desktop.telegram.org/) for windows and Linux and OSX  ,  a
+[plugin for Chrome](https://chrome.google.com/webstore/detail/telegram),
+and [tg: telegram-cli](https://github.com/vysheng/tg) a CLI
+for linux.
 
-There are bridges to XMPP and IRC with
-[teleirc](https://github.com/FruitieX/teleirc)
+A third party [firefox extension
+](https://addons.mozilla.org/en-US/firefox/addon/telegram-web/)
+is also available.
+
+Users can also access Telegram's
+cloud-based messages via an official web browser interface called
+[Telegram Web](https://web.telegram.org/), the source are in the
+[GiyHub repository Webogram](https://github.com/zhukov/webogram).
+
+
+
+There are bridges to IRC with [teleirc](https://github.com/FruitieX/teleirc)
+an also to IRC,XMPP, and numerous protocols using
+{{< iref "#matterbridge" "Matterbrige" >}} or {{< iref "#libpurple"  "libpurple" >}}.
+
 
 ## Whatsapp {#whatsapp}
 {{< wp "WhatsApp" >}} __proprietary__ cross-platform instant messaging
@@ -1597,9 +1607,10 @@ notice for lack of legal basis
 _the CNIL is an independent administrative authority that exercises
 its functions with accordance to the French Data Protection Act_.
 
-if you have to use it read the {{< iref "#eff_whatsapp" "follwing guides of the Electronic Frontier Foundation" >}}.
+if you have to use it read the
+{{< iref "#eff_whatsapp" "following guides of the Electronic Frontier Foundation" >}}.
 
-There are opensource secure alternatives to _WhatsApp_ like
+There are many opensource secure alternatives to _WhatsApp_ like
 all the {{< iref "#otr" "OTR" >}} and
 {{< iref "#omemo" "OMEMO" >}}
 clients and if you want some mere extension, at the price of
@@ -1623,13 +1634,17 @@ and
     (GPL) a python library that enables you build application which
     use WhatsApp service. It includes a client application
     [yowsupcli](https://github.com/tgalal/yowsup/wiki/yowsup-cli-2.0)
-    that allows you to login and use the WhatsApp service, providing
+
+    _It seems that WhatsApp now detect Yowsup and  ban  your number, so don't use it
+    until they find a workaround_.
+
+    Yowsup allows you to login and use the WhatsApp service, providing
     encryption of messages. This program can be used for multiple
     purposes as to send message to phones, receive messages from
     network servers or appliances, notifying about issues, via direct
     command or by special agents. There is also a
     {{< iref "irc#weechat" "WeeChat" >}} plugin using
-    Yowsup library. Yowsup-client is in Debian.
+    Yowsup library.
 -   [Whatsapp-Desktop](https://github.com/Enrico204/Whatsapp-Desktop)
     (GPL) Unofficial whatsapp web desktop client for OSX, Linux and
     Windows. Build with Electron.
