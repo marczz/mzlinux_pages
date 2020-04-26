@@ -2,8 +2,6 @@
 title: Video Encoders / Editors
 ---
 
-{{% toc /%}}
-
 The main utility
 {{< iref "ffmpeg" "ffmpeg alias libav" >}}
 has its own page.
@@ -40,19 +38,13 @@ libavcodec codecs and PCM/:MP3/:VBRMP3 audio in 1, 2 or 3 passes.
 -   [HOWTO Convert video files](http://en.linuxreviews.org/HOWTO_Convert_video_files)
     using mencoder.
 
-# {{< wp "OggConvert" >}}  {#oggconvert}
-
-__0ggconvert__ (LGPL) convert audio and video files of various types
-into Ogg Vorbis audio format, and the Theora, VP8 and Dirac video
-formats. It supports Ogg, Matroska and WebM containers for
-output. __0ggconvert__ is written in Python - GTK+ and depends only on
-the GStreamer framework
 
 # [PiTiVi](http://www.pitivi.org/) {#pitivi}
 
 __PiTivi__ (LGPL) is an audio/video editing software written in python
-GTK+ that uses the gstreamer framework.
-Wikipedia: {{< wp "PiTiVi" >}}.
+GTK+ that uses the gstreamer framework and integrates with _Gnome_.
+-   Wikipedia: {{< wp "PiTiVi" >}}.
+-   [PiTiVi Home](http://www.pitivi.org/)
 
 # Other tools
 _some of these are older_
@@ -82,13 +74,16 @@ _some of these are older_
 
     [GitHub: dvdauthor](https://github.com/ldo/dvdauthor)
 
-[Transcode](https://bitbucket.org/france/transcode-tcforge)
-:   _Transcode_ is a  text-console utility for video stream processing.
-    It can import of MPEG-1/2, Digital Video, and other formats
-    and write to AVI files with DivX, OpenDivX, XviD, Digital Video or other codecs.
+{{< wp "OggConvert" >}}
+:   __Oggconvert__ (LGPL) _discontinued_ convert audio and video files of various types
+    into Ogg Vorbis audio format, and the Theora, VP8 and Dirac video
+    formats. It supports Ogg, Matroska and WebM containers for
+    output. __0ggconvert__ is written in Python - GTK+ and depends only on
+    the GStreamer framework. _Oggconvert is no more packaged in Debian since jessie._
 
-    Except some minor maintenance the development stopped in 2008. It
-    is packaged in Debian.
+[Transcode](https://bitbucket.org/france/transcode-tcforge)
+:   _Transcode_ is an _ obsolete  text-console utility for video stream processing.
+    It is discontinued and no more packaged in Debian since jessie.
 
 [vcdimager](http://www.gnu.org/software/vcdimager/) (GPL)
 :   VCDImager is a full-featured mastering suite for Video CD's and
@@ -111,31 +106,41 @@ _some of these are older_
 :   _dvd::rip_ is a Perl Gtk+ based DVD copy program built on top of
     {{< iref "#transcode" "Transcode" >}}
 
-[HandBrake](https://handbrake.fr/)
-:   is a tool for converting video from nearly any format to a
-    selection of modern, widely supported codecs.
-    _In Debian and deb-multimedia_
+[HandBrake](https://handbrake.fr/) (GPL)
+:   is a tool for converting video from nearly any format to videos in H.265 (x265 and
+    QuickSync), H.264(x264 and QuickSync), H.265 MPEG-4 and MPEG-2, VP8, VP9 and Theora;
+    and audio in AAC / HE-AAC, MP3, Flac, AC3, Opus, or Vorbis._In Debian and
+    deb-multimedia_
+
+    -   [HandBrake Documentation](https://handbrake.fr/docs/en/latest/)
+    -   [HandBrake - GitHub](https://github.com/HandBrake/HandBrake)
 
 [iso2mkv](http://5ko.free.fr/en/iso2mkv.html) (MIT license)
 :   _iso2mkv_ is a bash script based on mplayer, mencoder, oggenc
     or lame, and mkvmerge for automated DVD to XviD/vorbis MKV video
     conversion.
 
-[lives](http://lives.sourceforge.net/)  (GPL)
-:   _LiVES_ is a Video Editing System that use mplayer, imagemagick,
-    perl and gtk+
+[LiVES](http://lives-video.com)  (GPL)
+:   _LiVES_ is a Video Editing System that use mplayer2 or mpv, ffmpeg, imagemagick,
+    perl and gtk+. _packaged in Debian_.
+    -   [LiVES - GitHub](https://github.com/salsaman/LiVES)
 
 [lxdvdrip](http://sourceforge.net/projects/lxdvdrip/) (GPL)
 :   _lxdvdrip_ is a command line tool to rip and burn a video DVD. It uses
     {{< iref "#mencode" "mencoder" >}}, {{< iref "#transcode" "transcode" >}},`dvdbackup`
 
 [ogmrip](http://ogmrip.sourceforge.net/) (LGPL)
-:   _ogmrip_ is an application and a set of libraries for ripping
-    and encoding DVD into AVI, OGM MP4 or Matroska files using a wide
-    variety of codecs (vorbis, mp3, pcm, ac3, dts, aac, xvid, lavc,
-    x264, theora). OgmRip relies on mplayer, mencoder, ogmtools,
-    mkvtoolnix, mp4box, oggenc, lame, and faac to perform its tasks.
-    There is a CLI client, it's called shRip. _In Debian and deb-multimedia._
+:   _ogmrip_ is an application and a set of libraries for ripping and encoding DVD into
+    AVI, OGM MP4 or Matroska files using a wide variety of codecs (vorbis, mp3, pcm,
+    ac3, dts, aac, xvid, lavc, x264, theora). OgmRip relies on mplayer, mencoder,
+    ogmtools, mkvtoolnix, mp4box, oggenc, lame, and faac to perform its tasks.  There is
+    a CLI client, it's called shRip. _Latest release 2015.  In Debian and
+    deb-multimedia._
+
+[Shotcut](https://www.shotcut.org/) (GPL)
+:   QT video editor, based on ffmpeg, with features like 4k resolution support, network
+    stream playback, audio/webcam captures ... _Packaged in Debian._
+    -   [Shotcut - GitHub](https://github.com/mltframework/shotcut)
 
 [TEncoder](http://tencoder.sourceforge.net/)
 :   is a multithreaded video and audio converter that uses MEncoder,
@@ -152,8 +157,8 @@ _some of these are older_
     resizing, cropping, language Selection for audio track.
     _No longer in debian_
 
-{{< iref "streaming#vlc" "VLC" >}}
-:   _VLC_ can be used for transcoding videos as explained in the
+{{< iref "media_players#vlc" "VLC" >}}
+:   _VLC_ plays and  transcode videos as explained in the
     [VLC wiki: Transcode](https://wiki.videolan.org/Transcode/).
 
 # SWF tools
@@ -230,6 +235,11 @@ _some of these are older_
     avconv, axel, curl, ffmpeg, httpie, wget
     It is in debian.
     -   [GitHub: youtube-dl](https://github.com/rg3/youtube-dl)
+    -   [youtube-dl/README
+        ](https://github.com/ytdl-org/youtube-dl/blob/master/README.md)
+        is the manual.
+    -   [Youtube-dl Tutorial With Examples
+        ](https://www.ostechnix.com/youtube-dl-tutorial-with-examples-for-beginners/)
 -   [Pafy](http://pythonhosted.org/pafy/)
     is a Python library and cli to download YouTube content and
     retrieve metadata.  It is in the debian package _python-pafy_.
