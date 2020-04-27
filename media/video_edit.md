@@ -2,6 +2,9 @@
 title: Video Encoders / Editors
 ---
 
+See also {{< iref "sound_edit" "Sound Edit" >}},  {{< iref "media_players" >}},
+{{< iref "streaming" >}}.
+
 The main utility
 {{< iref "ffmpeg" "ffmpeg alias libav" >}}
 has its own page.
@@ -17,37 +20,7 @@ has its own page.
 -   [ArchWiki: Convert any Movie to DVD Video
     ](https://wiki.archlinux.org/index.php/Convert_any_Movie_to_DVD_Video)
 
-# [Mencoder](http://www.mplayerhq.hu/) (GPL) {#mencoder}
-
-**mencoder** is a simple movie encoder, associated with
-{{< iref "media_players#mplayer" "Mplayer" >}} and designed to encode
-MPlayer-playable movies. It encodes to DivX4, XviD, one of the
-libavcodec codecs and PCM/:MP3/:VBRMP3 audio in 1, 2 or 3 passes.
-
-**Refs:**
-
--   [Mplayer Home Page](http://www.mplayerhq.hu/design7/info.html),
--   [Basic usage of MEncoder
-    ](http://www.mplayerhq.hu/DOCS/HTML/en/mencoder.html)
--   [Encoding with MEncoder
-    ](http://www.mplayerhq.hu/DOCS/HTML/en/encoding-guide.html)
-    from
-    [Mplayer Documentation](http://www.mplayerhq.hu/DOCS/HTML/en/).
--   [MEncoder - ArchWiki
-    ](https://wiki.archlinux.org/index.php/MEncoder)
--   [HOWTO Convert video files](http://en.linuxreviews.org/HOWTO_Convert_video_files)
-    using mencoder.
-
-
-# [PiTiVi](http://www.pitivi.org/) {#pitivi}
-
-__PiTivi__ (LGPL) is an audio/video editing software written in python
-GTK+ that uses the gstreamer framework and integrates with _Gnome_.
--   Wikipedia: {{< wp "PiTiVi" >}}.
--   [PiTiVi Home](http://www.pitivi.org/)
-
-# Other tools
-_some of these are older_
+# Video Encoding
 
 [Avidemux](http://avidemux.sourceforge.net/) (GPL)
 :   [Avidemux](http://avidemux.sourceforge.net/)
@@ -74,38 +47,6 @@ _some of these are older_
 
     [GitHub: dvdauthor](https://github.com/ldo/dvdauthor)
 
-{{< wp "OggConvert" >}}
-:   __Oggconvert__ (LGPL) _discontinued_ convert audio and video files of various types
-    into Ogg Vorbis audio format, and the Theora, VP8 and Dirac video
-    formats. It supports Ogg, Matroska and WebM containers for
-    output. __0ggconvert__ is written in Python - GTK+ and depends only on
-    the GStreamer framework. _Oggconvert is no more packaged in Debian since jessie._
-
-[Transcode](https://bitbucket.org/france/transcode-tcforge)
-:   _Transcode_ is an _ obsolete  text-console utility for video stream processing.
-    It is discontinued and no more packaged in Debian since jessie.
-
-[vcdimager](http://www.gnu.org/software/vcdimager/) (GPL)
-:   VCDImager is a full-featured mastering suite for Video CD's and
-    Super Video CD's. _Old tool main developement from years 200O-2005
-    but still packaged in Debian_
-
-[vobcopy](http://vobcopy.org/) (LGPL)
-:   _vobcopy_ copy (and decrypt) vob files. The development stopped in 2008.
-
-
-# Encoding Frontends
-
-[acidrip](http://untrepid.com/acidrip/ "untrepid.com acidrip") (GPL)
-:   _aciprip_ is a Gtk2::Perl frontend for mencoder and mplayer. It
-    has an introductory
-    [article in linux
-    journal](http://www.linuxjournal.com/article/9124)
-
-[dvd::rip](http://www.exit1.org/dvdrip/)
-:   _dvd::rip_ is a Perl Gtk+ based DVD copy program built on top of
-    {{< iref "#transcode" "Transcode" >}}
-
 [HandBrake](https://handbrake.fr/) (GPL)
 :   is a tool for converting video from nearly any format to videos in H.265 (x265 and
     QuickSync), H.264(x264 and QuickSync), H.265 MPEG-4 and MPEG-2, VP8, VP9 and Theora;
@@ -115,19 +56,10 @@ _some of these are older_
     -   [HandBrake Documentation](https://handbrake.fr/docs/en/latest/)
     -   [HandBrake - GitHub](https://github.com/HandBrake/HandBrake)
 
-[iso2mkv](http://5ko.free.fr/en/iso2mkv.html) (MIT license)
-:   _iso2mkv_ is a bash script based on mplayer, mencoder, oggenc
-    or lame, and mkvmerge for automated DVD to XviD/vorbis MKV video
-    conversion.
-
 [LiVES](http://lives-video.com)  (GPL)
 :   _LiVES_ is a Video Editing System that use mplayer2 or mpv, ffmpeg, imagemagick,
     perl and gtk+. _packaged in Debian_.
     -   [LiVES - GitHub](https://github.com/salsaman/LiVES)
-
-[lxdvdrip](http://sourceforge.net/projects/lxdvdrip/) (GPL)
-:   _lxdvdrip_ is a command line tool to rip and burn a video DVD. It uses
-    {{< iref "#mencode" "mencoder" >}}, {{< iref "#transcode" "transcode" >}},`dvdbackup`
 
 [ogmrip](http://ogmrip.sourceforge.net/) (LGPL)
 :   _ogmrip_ is an application and a set of libraries for ripping and encoding DVD into
@@ -136,6 +68,33 @@ _some of these are older_
     ogmtools, mkvtoolnix, mp4box, oggenc, lame, and faac to perform its tasks.  There is
     a CLI client, it's called shRip. _Latest release 2015.  In Debian and
     deb-multimedia._
+
+
+<a name="mencoder"></a>[Mencoder](http://www.mplayerhq.hu/) (GPL)
+:   [Mencoder](http://www.mplayerhq.hu/) is a simple movie encoder, associated with
+    {{< iref "media_players#mplayer" "Mplayer" >}} and designed to encode
+    MPlayer-playable movies. It encodes to DivX4, XviD, one of the
+    libavcodec codecs and PCM/:MP3/:VBRMP3 audio in 1, 2 or 3 passes.
+
+    -   [Mplayer Home Page](http://www.mplayerhq.hu/design7/info.html),
+    -   [Basic usage of MEncoder
+        ](http://www.mplayerhq.hu/DOCS/HTML/en/mencoder.html)
+    -   [Encoding with MEncoder
+        ](http://www.mplayerhq.hu/DOCS/HTML/en/encoding-guide.html)
+        from
+        [Mplayer Documentation](http://www.mplayerhq.hu/DOCS/HTML/en/).
+    -   [MEncoder - ArchWiki
+        ](https://wiki.archlinux.org/index.php/MEncoder)
+    -   [HOWTO Convert video files](http://en.linuxreviews.org/HOWTO_Convert_video_files)
+        using mencoder.
+
+
+<a name="pitivi"></a>[PiTiVi](http://www.pitivi.org/)
+
+:   __PiTivi__ (LGPL) is an audio/video editing software written in python
+    GTK+ that uses the gstreamer framework and integrates with _Gnome_.
+    -   Wikipedia: {{< wp "PiTiVi" >}}.
+    -   [PiTiVi Home](http://www.pitivi.org/)
 
 [Shotcut](https://www.shotcut.org/) (GPL)
 :   QT video editor, based on ffmpeg, with features like 4k resolution support, network
@@ -151,7 +110,7 @@ _some of these are older_
     other.  Subtitles with same name as video can be hard-coded into
     video.
 
-[Thoggen](http://thoggen.net/) (GPL) <a name="thoggen"></a>
+<a name="thoggen"></a>[Thoggen](http://thoggen.net/) (GPL)
 :   _Thoggen_ is a DVD backup utility for Linux, based on GStreamer
     and Gtk+ which encodes into Ogg/Theora video. features: GUI,
     resizing, cropping, language Selection for audio track.
@@ -160,6 +119,55 @@ _some of these are older_
 {{< iref "media_players#vlc" "VLC" >}}
 :   _VLC_ plays and  transcode videos as explained in the
     [VLC wiki: Transcode](https://wiki.videolan.org/Transcode/).
+
+
+## Obsolete software
+_low activity or obsolete projects._
+
+[acidrip](https://sourceforge.net/projects/acidrip/) (GPL)
+:   _aciprip_ is a Gtk2::Perl frontend for mencoder and mplayer. It
+    has an introductory
+    [article in linux journal](http://www.linuxjournal.com/article/9124)
+    _last release 2004_.
+
+[dvd::rip](http://www.exit1.org/dvdrip/)
+:   _dvd::rip_ is a Perl Gtk+ based DVD copy program built on top of
+    {{< iref "#transcode" "Transcode" >}}. _Last release 2010._
+
+[iso2mkv](http://5ko.free.fr/en/iso2mkv.html) (MIT license)
+:   _iso2mkv_ is a bash script based on mplayer, mencoder, oggenc
+    or lame, and mkvmerge for automated DVD to XviD/vorbis MKV video
+    conversion. _Last release 2011._
+
+[lxdvdrip](http://sourceforge.net/projects/lxdvdrip/) (GPL)
+:   _lxdvdrip_ is a command line tool to rip and burn a video DVD. It uses
+    {{< iref "#mencode" "mencoder" >}}, {{< iref "#transcode" "transcode" >}},`dvdbackup`
+    _Last release 2011_
+
+
+<a name="oggconvert"></a>{{< wp "OggConvert" >}}<
+:   __Oggconvert__ (LGPL) _discontinued_ convert audio and video files of various types
+    into Ogg Vorbis audio format, and the Theora, VP8 and Dirac video
+    formats. It supports Ogg, Matroska and WebM containers for
+    output. __0ggconvert__ is written in Python - GTK+ and depends only on
+    the {{< iref "Streaming#Gstreamer" "GStreamer framework" >}}.
+
+    {{< iref "sound_edit#soundconverter" "SoundConverter" >}} for audio,
+    {{< iref "#pitivi" "PiTiVi" >}} for video are  alternatives to
+    _OggConvert_.
+    _Oggconvert is no more packaged in Debian since jessie._
+
+[Transcode](https://bitbucket.org/france/transcode-tcforge)
+:   _Transcode_ is an _ obsolete  text-console utility for video stream processing.
+    It is discontinued and no more packaged in Debian since jessie.
+
+[vcdimager](http://www.gnu.org/software/vcdimager/) (GPL)
+:   VCDImager is a full-featured mastering suite for Video CD's and
+    Super Video CD's. _Old tool main developement from years 200O-2005
+    but still packaged in Debian_
+
+[vobcopy](http://vobcopy.org/) (LGPL)
+:   _vobcopy_ copy (and decrypt) vob files. The development stopped in 2008.
 
 # SWF tools
 [swftools (GPL)](http://www.swftools.org/)
