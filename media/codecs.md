@@ -1,19 +1,22 @@
 ---
 title: Media Codecs
 ---
+See also {{< iref "sound_edit" "Sound Edit" >}},
+{{< iref "media_players" "Media Players">}},
+{{< iref "streaming" "Streaming" >}},
+{{< iref "video_edit" "Video Edit" >}}.
 
-{{% toc /%}}
 
 A {{< wp "codec" >}} allow to encode/decode some audio or video analog audio
 signals into digital signals for transmission and storage.
 
 # Digital Signal Processing (DSP)
 
--   [Comp.dsp Frequently Asked Questions
-    (FAQs)](http://www.bdti.com/faq/dsp_faq.htm) _2007_
--   [Introduction to DSP](http://www.bores.com/courses/intro/)The BORES
-    Signal Processing DSP course: basics, time domain processing,
-    frequency analysis, filtering, IIR filters, DSP processors
+-   [Comp.dsp Frequently Asked Questions (FAQs)](http://www.bdti.com/faq/dsp_faq.htm)
+    _2007_.
+-   [Introduction to DSP](http://www.bores.com/courses/intro/)
+    The BORES Signal Processing DSP course: basics, time domain processing,
+    frequency analysis, filtering, IIR filters, DSP processors.
 -   [The Scientist and Engineer's Guide to Digital Signal Processing
     ](http://www.dspguide.com/) a free online book.
 -   [Rudiments d'acoustique et de traitement du signal
@@ -73,50 +76,55 @@ signals into digital signals for transmission and storage.
 
          bit rate  x number of seconds x number of channels
 
-# Lossless data compression codecs
+# Other Codecs references
 
 -   Wikipedia:
     {{< wp "List_of_codecs#Lossless_data_compression"  "List of codecs: Lossless data compression" >}},
     {{< wp "Lossless data compression" >}}
-
-# Lossy encoded general purpose Audio Formats (Mpeg-x)
-
 -   Wikipedia:
     {{< wp "List_of_codecs##Lossy_data_compression"  "Wikipedia List of codecs: Lossy data compression" >}},
     {{< wp "Lossy compression" >}}
+-   [Codecs and containers - ArchWiki
+    ](https://wiki.archlinux.org/index.php/Codecs_and_containers)
 -   [mpeg.org](http://www.mpeg.org/) is an extensive index of MPEG
     resources with a lot of [Video](http://www.mpeg.org/MPEG/video/),
     -   [Audio](http://www.mpeg.org/MPEG/audio/)
     -   [Systems](http://www.mpeg.org/MPEG/systems/) technical resources.
 -   [How audio codecs work - Psychoacoustics
     ](http://www.audiodesignline.com/showArticle.jhtml?articleID=175800470)
-explaines the basics of lossy encoding.
+    explains the basics of lossy encoding.
 -   [VLC: MPEG page](https://wiki.videolan.org/MPEG/)
 -   [Home page of the Moving Picture Experts Group (MPEG)
     ](http://mpeg.chiariglione.org/),
-    a working group of ISO/IEC with the mission to develop standards
-    for coded representation of digital audio and video and related
-    data.
+    a working group of ISO/IEC with the mission to develop standards for coded
+    representation of digital audio and video and related data.
+-   [Wyohknott - Image Format Comparison
+    ](https://wyohknott.github.io/image-formats-comparison/)
+    generated from
+    [a set of scripts](https://github.com/WyohKnott/video-comparison-sources)
+
+
+
+
+# Lossy encoded general purpose Audio Formats (Mpeg-x)
+
 
 ## {{< wp "MPEG-1" >}}
 
-MPEG-1 audio standardizes three different coding schemes for
-digitized sound waves called Layers I, II, and III. The encoded
-sound bitstream can be stored together with an encoded video
-bitstream and other data streams in a so-called MPEG-1 systems
-stream.
+MPEG-1 audio standardizes three different coding schemes for digitized sound waves
+called Layers I, II, and III. The encoded sound bitstream can be stored together with an
+encoded video bitstream and other data streams in a so-called MPEG-1 systems stream.
 
-The three layers are of increasing coding/decoding complexity,
-and of decreasing bit rates
+The three layers are of increasing coding/decoding complexity, and of decreasing bit
+rates
 
-Originally, the file extension ".mp3" was used for MPEG-1 Layer
-III encoded sound files,and later on used also for MPEG-2 lower
-sampling rate extension of Layer III.
+Originally, the file extension ".mp3" was used for MPEG-1 Layer III encoded sound
+files,and later on used also for MPEG-2 lower sampling rate extension of Layer III.
 
 MPEG-1 support bit rates from 32 kbit/s to 320 kbit/s.
 
-Variable bitrate is part of the standards of layer-III and also
-supported by most of the encoders/decoders of layers I and II
+Variable bitrate is part of the standards of layer-III and also supported by most of the
+encoders/decoders of layers I and II
 
 Refs:
 -   [Wikipedia: MPEG-1](http://en.wikipedia.org/wiki/MPEG-1)
@@ -141,7 +149,7 @@ supports three extensions:
     the first two workitems of MPEG-2 have the three layer structure,
     the original MPEG-2 audio standard contained only the first
     workitems was finalized in 1994.
--   A new coding scheme called "Advanced Audio Coding" (AAC) not
+-   A new coding scheme called {{< iref "#AAC" "Advanced Audio Coding (AAC)" >}} not
     backward compatible with MPEG-1.It improve coding efficiency for
     the 5-channel case and was finalized in 1997. It provides very high
     audio quality at a rate of 64 kb/s/channel for multichannel
@@ -164,60 +172,52 @@ Refs:
 
 ## {{< wp "MPEG-4" >}}
 
-{{< wp "MPEG-4 Audio" >}} or _MPEG-4 Part 3_ provides tools for coding of both natural and
-synthetic audio objects. The representations provide compression
-and other functionalities, such as scalability or play-back at
-different speeds.
+{{< wp "MPEG-4 Audio" >}} or _MPEG-4 Part 3_ provides tools for coding of both natural
+and synthetic audio objects. The representations provide compression and other
+functionalities, such as scalability or play-back at different speeds.
 
-MPEG-4 is used for playing multiple audio objects like the
-instruments of an orchestra, the multilingual language streams,or
-movie applications.( there is also a multilingual/ multiprogramme
-capability in MPEG-2 AAC, and a multilingual capability in the
-MPEG-2 BC audio coding standard.)
+MPEG-4 is used for playing multiple audio objects like the instruments of an orchestra,
+the multilingual language streams,or movie applications.( there is also a multilingual/
+multiprogramme capability in MPEG-2 AAC, and a multilingual capability in the MPEG-2 BC
+audio coding standard.)
 
 
-{{< wp ":MPEG-4 Part 14" >}} or MP4 is a container format most commonly
-used to store video and audio, but can also be used to store other
-data such as subtitles and still images.
+{{< wp ":MPEG-4 Part 14" >}} or MP4 is a container format most commonly used to store
+video and audio, but can also be used to store other data such as subtitles and still
+images.
 
 Refs: [Wikipedia: MPEG-4](http://en.wikipedia.org/wiki/MPEG-4).
 
-### {{< wp "H.264 or MPEG-4 Part 10" >}} {#H264}
-{{< wp "H.264 or MPEG-4 Part 10" >}}, Advanced Video Coding (MPEG-4 AVC) is a block-oriented
-motion-compensation-based video compression standard. As of 2014, it is one of the most
-commonly used formats for the recording, compression, and distribution of video
-content.[1] It supports resolutions up to 8192×4320
+### H264 {#H264}
+{{< wp "H.264 or MPEG-4 Part 10" >}}, Advanced Video Coding (MPEG-4 AVC) is a
+block-oriented motion-compensation-based video compression standard. As of 2014, it is
+one of the most commonly used formats for the recording, compression, and distribution
+of video content. It supports resolutions up to 8192×4320
 
 -   {{< wp "List of video services using H.264/MPEG-4 AVC" >}}
 
 ## MPEG-7
 
-Where MPEG-1 and -2 concentrated almost entirely on
-compression, MPEG-4 moved to a higher level of abstraction in
-coding objects, MPEG-7 moves to description of meta-information on
-sound. example application areas of MPEG-7 audio are: setting-up
-audio archives (radio, movies, tv), retrieving audio files from the
-Internet/from an archive, filtering audio broadcasts, music
-education, surveillance.
+Where MPEG-1 and -2 concentrated almost entirely on compression, MPEG-4 moved to a
+higher level of abstraction in coding objects, MPEG-7 moves to description of
+meta-information on sound. example application areas of MPEG-7 audio are: setting-up
+audio archives (radio, movies, tv), retrieving audio files from the Internet/from an
+archive, filtering audio broadcasts, music education, surveillance.
 
 -   [MPEG-7](http://www.tnt.uni-hannover.de/project/mpeg/audio/faq/mpeg7.html)
 
 
 ## MP3
 
-MPEG-1/2 Layer III, became the de-facto standard for lossy
-audio encoding, due to the high compression rates (1/12 of the
-original size, still retaining considerable quality), the high
-availability of decoders and the low CPU requirements for playback
-(a 486 DX2-66 is enough for real-time decoding). It supports
-multichannel files with the MPEG-2 "BC" standard (although there's
-no publicly available implementation of this backward-compatible
-version), sampling rates from 16kHz? to 24kHz? (MPEG-2 Layer III)
+MPEG-1/2 Layer III, became the de-facto standard for lossy audio encoding, due to the
+high compression rates (1/12 of the original size, still retaining considerable
+quality), the high availability of decoders and the low CPU requirements for playback (a
+486 DX2-66 is enough for real-time decoding). It supports multichannel files with the
+MPEG-2 "BC" standard (although there's no publicly available implementation of this
+backward-compatible version), sampling rates from 16kHz? to 24kHz? (MPEG-2 Layer III)
 and 32kHz? to 48kHz? (MPEG-1 Layer III).
 
-MP3 has been enhanced by
-{{< wp "MP3Pro" >}}
-i.e. MPEG-1 Layer III combined with SBR
+MP3 has been enhanced by {{< wp "MP3Pro" >}} i.e. MPEG-1 Layer III combined with SBR.
 
 Refs:
 
@@ -344,7 +344,7 @@ kb/s.
 Microsoft PCM, 16 bit, mono 8000 Hz"
 PCM 16 bits 8000 Hz is encoded at 1/40 in mp3 128 b/s
 
-## {{< wp "Advanced Audio Coding" >}} (AAC)
+## Advanced Audio Coding (AAC){#aac}
 
 Advanced Audio Coding, the format for general audio coding in
 both MPEG-2 and MPEG-4 standards is an advanced audio coding
@@ -356,8 +356,7 @@ provide free MPEG-4 audio codecs. Currently implemented are MPEG-2
 and MPEG-4 AAC. The supported AAC profiles are HE, Main, LC, LTP
 and LD.
 
-AAC can be encoded whith {{< iref "#item_faac" "FAAC" >}} and decoded by
-{{< iref "#item_faad2" "FAAD2" >}}
+AAC can be encoded whith {{< iref "sound_edit#faac" "FAAC" >}} and decoded by FAAD2.
 
 MPEG-4 AAC combined with Spectral Band Replication / SBR is
 refereed by AAC+.
@@ -407,9 +406,9 @@ Refs:
 -   [xiph.org: Ogg Vorbis](http://www.xiph.org/vorbis/)
 -   [vorbis.com](http://www.vorbis.com/)
 
-## {{< wp "Opus_(audio_format)"  "Opus" >}} {#opus_codec}
-Opus is a lossy audio coding format developed by the Internet
-Engineering Task Force (IETF).
+## Opus {#opus_codec}
+{{< wp "Opus_(audio_format)" "Opus" >}} is a lossy audio coding format developed by the
+Internet Engineering Task Force (IETF).
 
 Opus has a very low algorithmic delay or latency, 26.5 ms by default,
 and even by trading-off quality or bitrate it achieves very low delay,
@@ -420,17 +419,24 @@ applications required by telephony, Voice over IP and
 videoconferencing.
 
 Opus codec support is implemented in the reference implementation
-_opus-tools_ and in GStreamer, FFmpeg and Libav libraries.
+_opus-tools_ and in  {{< iref "streaming#gstreamer" "GStreamer" >}},
+FFmpeg and Libav libraries.
 
 Through these libraries many players support opus:
-Amarok, clementine, exaile, cmus, moc, mpd, SMplayer, VLC media player...
+{{< iref "media_players#amarok" "Amarok" >}},
+{{< iref "media_players#clementine" "Clementine" >}},
+{{< iref "media_players#exaile" "Exaile" >}},
+{{< iref "media_players#cmus" "Cmus" >}}, {{< iref "media_players#moc" "moc" >}},
+{{< iref "#mpd" "MPD" >}}, {{< iref "media_players#smplayer" "SMPlayer" >}},
+{{< iref "media_players#vlc" "VideoLan Client (VLC)" >}},
+{{< iref "media_players#mpv" "mpv" >}}
+...
 
 Opus is supported in HTML5 browsers like Mozilla Firefox, Chromium and
 Google Chrome, Blink-based Opera.
 
-Devices based on Google's Android platform, as of version 5.0
-"Lollipop", support the Opus codecs. Chromecast supports Opus
-decoding.
+Devices based on Google's Android platform, since version 5.0, support the Opus
+codecs. Chromecast supports Opus decoding.
 
 Opus data can be encapsulated in Ogg, Matroska, WebM
 (which is a subset of Matroska), and MP4 containers.
@@ -443,31 +449,37 @@ gives the [comment header packet
 ](https://tools.ietf.org/id/draft-ietf-codec-oggopus-08.html#rfc.section.5.2)
 it is the same as Ogg/Vorbis.
 
-The [ Opus Codec - Comparison
-](https://opus-codec.org/comparison/) page give a comparison
-of codecs.
+[Opus Recommended Settings](https://wiki.xiph.org/Opus_Recommended_Settings)
+gives the recommended settings and the
+[ Opus Codec - Comparison](https://opus-codec.org/comparison/)
+page gives a comparison of codecs like the
+[Opus page of Hydrogenaudio](http://wiki.hydrogenaud.io/index.php?title=Opus).
 
-Opus at 16Kb/s is equivalent to speex at 32kb/s.  Opus at
-32kb/s is equivalent to vorbis 48kb/s or mp3 64kb/s, the only other
-quality encoding is the proprietary {{< wp "AMR-WB" >}} used by QuickTime,
-RealPlayer.
 
-Opus at 64kb/s is equivalent to vorbis 96 kb/s or mp3 128
-kb/s.  There is no much difference between opus, aac, and vorbis at
+Summarizing these two tables we have:
+
+| use             | channels | kB/s      |                                               |
+|:---------------:|:--------:|:---------:|:---------------------------------------------:|
+| voip            | 1        | 10-24     | 16kB opus ~ 32kB speex ~ 24kB AMR-WB          |
+| podcast         | 1        | 24        | 24kB opus ~ 32 kB G719 ~ 48kB G722.1          |
+| podcast         | 2        | 32        | 32kB Opus ~ 64kB G719                         |
+| Music Streaming | 2        | 64-96     | 64kB Opus ~ 64kB AAC ~ 96kB Vorbis ~128kB MP3 |
+| Music Storage   | 2        | 96 - 128  | Opus vbr ~ transparent  ~ AAC ~ Vorbis ~ MP3  |
+| Music Storage   | 6        | 128-256   |                                               |
+| Music Storage   | 8        | 256 - 450 |                                               |
+
+
+{{< wp "AMR-WB" >}} is a proprietary codec used by QuickTime RealPlayer.
+
+{{< wp "G.719"  >}} and {{< wp "G.722"  >}} are codecs used in VoIP, G719 is private and
+licenced, the G722 License is expired.
+
+There is no much difference between opus, aac, and vorbis for frequencies greater than
 128kb/s and they are only slightly better than mp3 128 kb/s.
 
-At all frequencies above 32kb/s the proprietary AAC and opus are very
-close.
+At all frequencies above 64kb/s the proprietary
+{{< iref "#AAC" "AAC" >}} and opus are very close.
 
-The [Opus page of Hydrogenaudio
-](http://wiki.hydrogenaud.io/index.php?title=Opus) and
-the [Opus Recommended Settings from Xiph.org
-](https://wiki.xiph.org/Opus_Recommended_Settings)
-recommend for VoIP 10 to 24 kbs with a bandwidth of 6kHz to 8 kHz, for
-podcasts or audiobooks 32kps mono or 36kbs to 40 kbs
-stereo achieving a bandwidth of 12 kHz;
-64kbs for stereo music storage & streaming with 20 kHz bandwidth,
-and 96kbs to approach transparency, comming very close at 128kbps.
 
 Refs:
 -   {{< wp "Opus_(audio_format)"  "Wikipedia: Opus" >}}
@@ -490,11 +502,9 @@ proprietary audio data compression technology developed by Microsoft.
 
 From {{< wp "Dolby" >}} we have__AC-2__
 Audio Coding Version 2 from Dolby, {{< wp "Dolby Digital" >}} (AC-3 or AC3)
-Audio Coding Version 3 from Dolby, RA: RealAudio
-proprietary streamable multimedia format from RealNetworks, AMB
-Ambisonics, DTS: Digital Theatre System, ECM ECAM audio
-compression, SDDS Sony Dynamic Digital Sound, VQF also known as
-TwinVQ
+Audio Coding Version 3 from Dolby, RA: RealAudio proprietary streamable multimedia
+format from RealNetworks, AMB Ambisonics, DTS: Digital Theatre System, ECM ECAM audio
+compression, SDDS Sony Dynamic Digital Sound, VQF also known as Twin.
 
 # Lossy encoded voice Audio Formats - Vocodecs
 
@@ -546,6 +556,9 @@ mu-law and a-law [PCM](http://www-mobile.ecs.soton.ac.uk/speech_codecs/standards
 :   Speex is a codec designed for compressing voice at low bitrates. It
     is not suitable for music-content. Speex uses Ogg as
     transport-layer, just like Ogg Vorbis.
+
+{{<  iref "#opsus" "Opus" >}}
+:   referenced above can replace most older voip format.
 
 # Uncompressed Sound formats
 
@@ -599,7 +612,7 @@ Refs:
 -   [PCM
     ](http://www-mobile.ecs.soton.ac.uk/speech_codecs/standards/pcm.html)
 
-# Sound info
+# Media info{#media_info}
  <a name="ffprobe"></a>{{< iref "ffmpeg" "ffprope" >}}
 :   _ffprobe_ is part of {{< iref "ffmpeg" "ffmpeg" >}}
 
@@ -618,6 +631,11 @@ id3info
     both the id3v1 and id3v2 tag information for a file, along with the
     sample rate, and bitrate. *id3info* is packaged in Debian/Ubuntu in
     the *libid3-x-dev* package.
+
+[MediaInfo](https://mediaarea.net/en/MediaInfo) (BSD Licence)
+:   is a command line to isplay of the most relevant technical and tag data for video
+    and audio files. There is alo a gui _MediaInfo Gui_ both packages are in Debian.
+
 
 midentify
 :   To get info about a sound or video file using
