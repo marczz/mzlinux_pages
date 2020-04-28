@@ -2,7 +2,10 @@
 title: FFmpeg and Libav
 ---
 
-{{% toc /%}}
+See also {{< iref "codecs" "Codecs" >}} and it's subsection
+{{< iref "codecs#media_info" "Media Info" >}},
+{{< iref "sound_edit" "Sound Edit" >}},  {{< iref "media_players" "Media Players">}},
+{{< iref "streaming" "Streaming" >}}.
 
 ------
 
@@ -18,7 +21,7 @@ _Gentoo_ offer both and _Archlinux_ never adopted _libav_ and stick to _FFmpeg_.
 
 -   Official
     [FFmpeg documentation](http://www.ffmpeg.org/documentation.html):
-    [FFmpeg general documentatio](http://ffmpeg.org/general.html)
+    [FFmpeg general documentation](http://ffmpeg.org/general.html)
     including [list of supported File Formats, Codecs or Features
     ](http://ffmpeg.org/general.html#Supported-File-Formats_002c-Codecs-or-Features),
     [FFMPEG FAQ](http://ffmpeg.org/faq.html),
@@ -27,10 +30,23 @@ _Gentoo_ offer both and _Archlinux_ never adopted _libav_ and stick to _FFmpeg_.
     [ffprobe](http://www.ffmpeg.org/ffprobe.html),
     [ffserver](http://www.ffmpeg.org/ffserver.html)
 -   [ffmpeg wiki](http://trac.ffmpeg.org/wiki)
-    -   [Guidelines for high quality lossy audio encoding
-         ](http://trac.ffmpeg.org/wiki/Encode/HighQualityAudio)
+    -   [Encoding pages](https://trac.ffmpeg.org/wiki#Encoding)
+    -   [Encode/YouTube](https://trac.ffmpeg.org/wiki/Encode/YouTube)
+    -   [Encode/H.264](https://trac.ffmpeg.org/wiki/Encode/H.264)
+    -   [Encode/H.265](https://trac.ffmpeg.org/wiki/Encode/H.265)
+    -   [Encode/VP8](https://trac.ffmpeg.org/wiki/Encode/VP8)
+    -   [Encode/VP9](https://trac.ffmpeg.org/wiki/Encode/VP9)
+    -   [Encode/AV1](https://trac.ffmpeg.org/wiki/Encode/AV1)
+        {{< wp "AV1" >}} can save about 30% bitrate compared to VP9 and H.265 / HEVC,
+        and about 50% over H.264, while retaining the same visual quality.
     -   [compilation guide for  FFmpeg on Ubuntu, Debian, or Mint
         ](https://trac.ffmpeg.org/wiki/CompilationGuide/Ubuntu)
+    -   [Guidelines for high quality lossy audio encoding
+        ](http://trac.ffmpeg.org/wiki/Encode/HighQualityAudio)
+    -   [AudioChannelManipulation
+        ](https://trac.ffmpeg.org/wiki/AudioChannelManipulation)
+        gives the options for downmixing audio.
+
 
 [libav](http://libav.org/) documentation:
 
@@ -46,19 +62,13 @@ _Gentoo_ offer both and _Archlinux_ never adopted _libav_ and stick to _FFmpeg_.
 
 The following references can be used for both projects.
 
--   [Debian Wiki: FFMPEG](https://wiki.debian.org/ffmpeg/) uses avconf.
--   [Archlinux: FFmpeg](https://wiki.archlinux.org/index.php/FFmpeg)
+-   [Debian Wiki: FFMPEG](https://wiki.debian.org/ffmpeg/).
+-   [ArchWiki: FFmpeg](https://wiki.archlinux.org/index.php/FFmpeg)
 -   [Ubuntu Help: FFmpeg](https://help.ubuntu.com/community/FFmpeg)
 -   [Using FFmpeg to manipulate audio and video files
     ](http://howto-pages.org/ffmpeg/) by Howard Pritchett _2012_.
--   [Jetson/H264 Codec - eLinux.org](https://elinux.org/Jetson/H264_Codec)
-    gives examples of playing and recording
-    {{< iref "codecs#H264" "H264" >}} from ffmpeg.
--   [Convert videos to MP4 format using ffmpeg
-    ](https://www.bugcodemaster.com/article/convert-videos-mp4-format-using-ffmpeg) and
-    [Convert videos to MP4 format using ffmpeg
-    ](https://www.bugcodemaster.com/article/convert-videos-mp4-format-using-ffmpeg)
-    USE FFMPEG.
+-   [HOWTO Convert video files](http://en.linuxreviews.org/HOWTO_Convert_video_files)
+    using ffmpeg.
 
 # Debian packages
 
@@ -69,26 +79,28 @@ The _libavcodecs56-extras_ __replace__  _libavcodecs56_ by adding AMR
 encoders/decoders and AAC encoder. There is an alternative version in debian-multimedia
 
 It seems support more encoders like for _aac_: _libfdk-aac1_ and
-_libfaac0_  adde to _ibvo-aacenc0_ _aac_ android encoder also present
+_libfaac0_  add to _ibvo-aacenc0_ _aac_ android encoder also present
 in Debian.
 
 This is dealed with in the Debian Wiki page:
 [MultimediaCodecs](https://wiki.debian.org/MultimediaCodecs).
 
-# Related tools
+# ffmpeg Memo
 
--   [WinFF](http://winff.org/)
-    is a GUI for _FFmpeg_ or _avconv_ to convert video and audio files.
-    It is in debian and need the dependency package
-    _libavcodec-extra_. (The one found in deb-multimedia repository
-    for more codecs.)
+## ffmpeg informations
 
-# Libav use
+To know available formats and codecs
+~~~
+$ ffmpeg  -hide_banner -formats
+$ ffmpeg  -hide_banner -codecs
+~~~
 
--   To identify a stream:
+## Identify a stream:
 
-        ffprobe -hide_banner "/path/to/input"
-        avprobe /path/to/input
+    $ ffprobe -hide_banner "/path/to/input"
+    $ avprobe /path/to/input
+
+## Transcode audio
 
 -   to transcode from mp3 to ogg, and resample to 32k Hz
 
@@ -125,6 +137,34 @@ This is dealed with in the Debian Wiki page:
 
     Note that `opusenc` default for >=44.1kHz mono input is 64kbps, so
     you can also omit the bitrate parameter.
+
+## lower quality of audio
+
+`input.webm` is a 1h21 speech,stereo opus encoded stream at at 105 kb/s, giving a file
+of 62M, we downmix to mono, reencode in vbr at 32kb/s, and change container to ogg with:
+
+    $ ffmpeg -i input.webm -c:a libopus -vbr on -ac 1 -b:a 32k ouput.ogg
+
+-   `-c:a libopus` give the audio codec encoder.
+-   `-ac 1` number of channel, here in output.
+-   `-b:a 32k` bitrate
+
+The result is a 19M file.
+
+## change container
+
+To change container  without transcoding an opus file from a webm container to an ogg
+one.
+
+~~~
+ffmpeg -i input.webm -acodec copy output.ogg
+~~~
+
+In the same way to change a video from a webm container to a mkv one without transcoding
+
+~~~
+ffmpeg -i  input.webm -acodec copy -vcodec copy output.mkv
+~~~
 
 # screencasting with ffmpeg
  * Distribution version does not support many format
