@@ -2,12 +2,16 @@
 title: Video Encoders / Editors
 ---
 
-See also {{< iref "sound_edit" "Sound Edit" >}},  {{< iref "media_players" >}},
-{{< iref "streaming" >}}.
+See also {{< iref "codecs" "Codecs" >}} and it's subsection
+{{< iref "codecs#media_info" "Media Info" >}},
+{{< iref "sound_edit" "Sound Edit" >}},  {{< iref "media_players" "Media Players">}},
+{{< iref "streaming" "Streaming" >}}.
 
 The main utility
 {{< iref "ffmpeg" "ffmpeg alias libav" >}}
 has its own page.
+
+----------------------------
 
 # Guides
 
@@ -19,6 +23,13 @@ has its own page.
 -   [DVD Frequently Asked Questions](http://dvddemystified.com/dvdfaq.html) _(uptodate 2013)_
 -   [ArchWiki: Convert any Movie to DVD Video
     ](https://wiki.archlinux.org/index.php/Convert_any_Movie_to_DVD_Video)
+-   [Optical disc drive - ArchWiki
+    ](https://wiki.archlinux.org/index.php/Optical_disc_drive)
+    contains also a [list of ripping tools
+    ](https://wiki.archlinux.org/index.php/Optical_disc_drive#Ripping).
+-   [Convert any Movie to DVD Video - ArchWiki
+    ](https://wiki.archlinux.org/index.php/Convert_any_Movie_to_DVD_Video#Video2dvdiso).
+
 
 # Video Encoding
 
@@ -47,6 +58,13 @@ has its own page.
 
     [GitHub: dvdauthor](https://github.com/ldo/dvdauthor)
 
+[Flowblade](https://github.com/jliljebl/flowblade) (GPL)
+:   is a multitrack non-linear video editor to compose movies from video clips, audio
+    clips and graphics files. Clips can be cut at the desired frames, filters can be
+    added to clips, and you can create multilayer composite images using compositor
+    objects. _Flowblade is packaged in Debian._
+
+
 [HandBrake](https://handbrake.fr/) (GPL)
 :   is a tool for converting video from nearly any format to videos in H.265 (x265 and
     QuickSync), H.264(x264 and QuickSync), H.265 MPEG-4 and MPEG-2, VP8, VP9 and Theora;
@@ -69,12 +87,19 @@ has its own page.
     a CLI client, it's called shRip. _Latest release 2015.  In Debian and
     deb-multimedia._
 
+[OpenShot](https://www.openshot.org/) (GPL)
+:   a video editor using _ffmpeg_ and supporting all it's codecs. It allows
+    clip resizing, scaling, trimming, snapping, rotation, and cutting,
+    video transitions with real-time previews, compositing, title creation, speed up and
+    slow down clips, audio editing, ...
+    _Openshot-qt is packaged in Debian._
+    -   [Openshot-qt - GitHub](https://github.com/OpenShot/openshot-qt)
 
 <a name="mencoder"></a>[Mencoder](http://www.mplayerhq.hu/) (GPL)
 :   [Mencoder](http://www.mplayerhq.hu/) is a simple movie encoder, associated with
     {{< iref "media_players#mplayer" "Mplayer" >}} and designed to encode
     MPlayer-playable movies. It encodes to DivX4, XviD, one of the
-    libavcodec codecs and PCM/:MP3/:VBRMP3 audio in 1, 2 or 3 passes.
+    libavcodec codecs and pcm/mp3/vbrmp3 audio in 1, 2 or 3 passes.
 
     -   [Mplayer Home Page](http://www.mplayerhq.hu/design7/info.html),
     -   [Basic usage of MEncoder
@@ -120,6 +145,13 @@ has its own page.
 :   _VLC_ plays and  transcode videos as explained in the
     [VLC wiki: Transcode](https://wiki.videolan.org/Transcode/).
 
+[x264 H.264/MPEG-4 AVC encoder](http://www.videolan.org/developers/x264.html)
+:   commandline encoder for creating H.264 (MPEG-4 AVC) video streams.
+    _X264_ is in Debian.
+
+[x265 HEVC Encoder](http://x265.org/)
+:   is a commandline encoder for creating H.265/High Efficiency Video Coding (HEVC)
+    video streams. _X265_ is in Debian.
 
 ## Obsolete software
 _low activity or obsolete projects._
@@ -145,7 +177,7 @@ _low activity or obsolete projects._
     _Last release 2011_
 
 
-<a name="oggconvert"></a>{{< wp "OggConvert" >}}<
+<a name="oggconvert"></a>{{< wp "OggConvert" >}}
 :   __Oggconvert__ (LGPL) _discontinued_ convert audio and video files of various types
     into Ogg Vorbis audio format, and the Theora, VP8 and Dirac video
     formats. It supports Ogg, Matroska and WebM containers for
@@ -169,6 +201,25 @@ _low activity or obsolete projects._
 [vobcopy](http://vobcopy.org/) (LGPL)
 :   _vobcopy_ copy (and decrypt) vob files. The development stopped in 2008.
 
+[WinFF](http://winff.org/)
+:   is a GUI for _FFmpeg_ or _avconv_ to convert video and audio files.
+    It is packaged in DEbian as _winff-gtk2_ and _winff-qt_.
+
+# Slide show video
+
+[Imagination](http://imagination.sourceforge.net/) (GPL)
+:   is a  slide show maker, which only requires the ffmpeg encoder and libsox.
+    _Imagination_ is packaged in Debian.
+
+[PhotoFilmStrip](http://www.photofilmstrip.org/en/) (GPL)
+:   is a Python software to creates movies out of your pictures. It is packaged in
+    Debian.
+    -   [Photo Film Strip GitHub repository](https://github.com/PhotoFilmStrip/PFS).
+
+[ffDiaporama](http://ffdiaporama.tuxfamily.org/ffdiaporama/) (GPL)
+:   is a movie creator from photos and video clips. It is packaged in Debian._Last
+    version 2014._
+
 # SWF tools
 [swftools (GPL)](http://www.swftools.org/)
 :   SWF Tools is a collection of SWF manipulation and creation
@@ -187,12 +238,27 @@ _low activity or obsolete projects._
 
 # Subtitles editors
 
--   [gaupol](https://github.com/otsaloma/gaupol) (GPL) is a gtk
-    subtitle editor. Gaupol is in Debian.
--   [gnome-subtitle](http://gnome-subtitles.sourceforge.net/) is a
-    subtitle editor for gnome, written in mono. It is in Debian.
 -   [Sam Hocevar: DVD Subtitles](http://sam.zoy.org/doc/dvd/subtitles/)
-    explains the subtitle stream
+    explains the subtitle stream.
+-   [Aegisub](http://www.aegisub.org/)
+    _Aegisub - Advanced Subtitle Editor_ is a tool for creating and modifying
+    subtitles. It allows to time subtitles to audio, styling them, typesetting, editing
+    and translating subtitles, as well as a powerful scripting environment. It includes
+    a built-in real-time video preview. _Aegisub is packaged in Debian_.
+-   [gaupol](https://github.com/otsaloma/gaupol) (GPL)
+    is a gtk subtitle editor for text based files. _Gaupol is in Debian._
+-   [gnome-subtitle](http://gnomesubtitles.org/about/) (GPL)
+    is a subtitle editor for gnome, written in mono. It supports the most common
+    text-based subtitle formats, video previewing, timings synchronization and subtitle
+    translation, _and is in Debian._
+    -   [Gnome Subtitle Gitlab repository
+        ](https://gitlab.gnome.org/GNOME/gnome-subtitles/)
+-   [Subtitle Editor](https://kitone.github.io/subtitleeditor/) (GPL)
+    is a C++-GTK+3 tool to edit subtitles. It can be used for new subtitles or to transform,
+    edit, correct and refine existing subtitle.
+    It  also shows sound waves, which makes it easier to synchronise subtitles to
+    voices._It is in Debian._
+    -   [Subtitle Editor - GitHub](https://github.com/kitone/subtitleeditor).
 
 # Screencasting {#screencast}
 -   Wikipedia {{< wp "Screencast" >}} and
