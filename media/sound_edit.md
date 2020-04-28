@@ -2,19 +2,13 @@
 title: Sound encoders and editors
 ---
 
-{{% toc /%}}
-
 # Low level encoders
-The {{< iref "video_edit" "Video Encoders" >}}
-are often also audio encoders. In the
-{{< iref "video_edit" "Video Encoders" >}}
-page you find
-{{< iref "video_edit#libav" "libav" >}},
-{{< iref "video_edit#ffmpeg" "ffmpeg" >}},
-{{< iref "video_edit#mencoder" "Mencoder" >}},
-which are also audio  audio encoders.
+The {{< iref "video_edit" "Video Encoders" >}} are often also audio encoders. In the
+{{< iref "video_edit" "Video Encoders" >}} page you find
+{{< iref "video_edit#libav" "libav" >}}, {{< iref "video_edit#ffmpeg" "ffmpeg" >}},
+{{< iref "video_edit#mencoder" "Mencoder" >}} which are also audio  audio encoders.
 
-## encoder list
+## Encoder list
 lame
 :   LAME create mp3 compressed audio files.
 
@@ -39,7 +33,7 @@ lame
     200-240kbps range, according to music complexity.
 
 :   refs: [lame(1)
-](http://manpages.debian.org/cgi-bin/man.cgi?query=lame(1))
+    ](http://manpages.debian.org/cgi-bin/man.cgi?query=lame(1))
 
 
 bladeenc
@@ -48,21 +42,21 @@ bladeenc
     faster, and it works with several popular front-end graphical user
     interfaces .
 
-Mp3Wrap
-:   is a command-line utility that wraps quickly two or more mp3
+[Mp3Wrap](http://mp3wrap.sourceforge.net/)
+:   is a command-line utility that wraps  two or more mp3
     files in one single large playable mp3, without losing filenames
-    and ID3 informations (and without need of decoding/encoding). Also
-    with the possibility of including other non mp3 files inside the
-    mp3.
-:   Refs: [Mp3Wrap Homepage](http://mp3wrap.sourceforge.net/),
-    [mp3wrap(1)
-    ](http://manpages.debian.org/cgi-bin/man.cgi?query=mp3wrap(1))
+    and ID3 informations (and without need of decoding/encoding). It can also add mp3
+    files to an Mp3Wrap archive, and add in the comments how you can again split the
+    archive with _mp3splt_.
+    -   [mp3wrap(1)
+        ](http://manpages.debian.org/cgi-bin/man.cgi?query=mp3wrap(1))
 
-:   __Mp3Splt__ is a command line utility to split mp3 and ogg files
+[Mp3Splt](http://mp3splt.sourceforge.net/mp3splt_page/home.php)
+:   is a command line utility to split mp3 and ogg files,
     selecting a begin and an end time position, without decoding.
-:   Refs: [mp3splt Home Page](http://mp3splt.sourceforge.net),
-    [mp3splt(1)
-    ](http://manpages.debian.org/cgi-bin/man.cgi?query=mp3splt(1))
+    It now comes with a gui **Mp3splt-gtk**.
+    -   [mp3splt(1)
+        ](http://manpages.debian.org/cgi-bin/man.cgi?query=mp3splt(1))
 
 
 <a name="vorbistools"></a>Vorbis tools
@@ -141,19 +135,79 @@ Mp3Wrap
     [speexdec(1)
     ](http://manpages.debian.org/cgi-bin/man.cgi?query=speexdec(1))
 
-faac
-:   is the abbreviation for "Freeware Advanced Audio Coder" the
+<a name="faac"></a>faac
+:   {{< wp "FAAC" >}} is the abbreviation for _Freeware Advanced Audio Coder_ the
     program and options is described in the
     [Faac page of the AudioCoding.com knowledge base
-    ](http://www.audiocoding.com/modules/wiki/?page=FAAC)
+    ](http://www.audiocoding.com/modules/wiki/?page=FAAC).
 
-faad2
-:   FAAD 2 is a GPL AAC audio encoder.
+    FAAD2 from the FAAC project is a GPL AAC audio encoder.
 
 :   Refs [audiocoding.com](http://www.audiocoding.com/)
 
 
-## encoders frontends
+# CD Rippers
+[abcde](https://abcde.einval.com/wiki/) (GPL)
+:   is a frontend to cdparanoia, wget, cd-discid, id3, and any one of Ogg/Vorbis, MP3,
+    FLAC, Ogg/Speex, M4A, Opus, WavPack, Monkey's Audio (ape), MPP/MP+(Musepack) and/or
+    AIFF format encoder
+
+    It Grabs an entire CD and converts each track to the specified formats and then
+    comments or tags each file, with one command.
+
+    -   [abcde git repository
+        ](https://git.einval.com/cgi-bin/gitweb.cgi?p=abcde.git;a=summary)
+
+[Asunder](http://littlesvr.ca/asunder/index.php) (GPL)
+:   Asunder (GPL) is a graphical Audio CD ripper and
+    encoder for Linux. It can encode tracks from an Audio CD as WAV,
+    MP3, OGG Opus, FLAC and/or WavPack. _packaged in Debian._
+
+<a name="grip"></a>[Grip](https://sourceforge.net/projects/grip/) (GPL)
+:   Grip is a GTK+ based front-end for CD rippers
+    {{< iref "#cdparanoia" "cdparanoia" >}} or {{< iref "#cdda2wav" "cdda2wav" >}}) and
+    encoders oggenc, bladeenc, lame, l3enc, xingmp3enc, mp3encode, gogo, flac, faac and opusenc.
+    Grip allows you to rip entire tracks or just a section of a track. Grip supports the
+    CDDB protocol for accessing track information on disc database servers. Gcd is the
+    included cd player.
+
+    -   {{< wp "Grip_(software)" "Wikipedia: Grip" >}}
+
+[ripit](https://en.wikipedia.org/wiki/Ripit)
+:  RipIT is a console based front-end written in Perl to create
+   mp3, flac, Ogg Vorbis, or Faac (m4a) from wav audio files extracted
+   from an audio CD.
+   It uses the following backends:
+
+   -   icedax, cdparanoia or cdda2wav for ripping the audio CD tracks.
+   -   lame, vorbis-tools, bladeenc, wavpack, ffmpeg, flac or faac for encoding the wav files to mp3,
+       ogg/vorbis, flac or m4a
+   -    Perl module CDDB\_get for CDDB retrieval
+
+   It can add id3tags, create a m3u playlist, and generate a toc (cue)
+   sheet for DAO burning. _It is packaged in Debian. The home site is unavailable as far
+   as 2020.__
+
+[RipperX](http://sourceforge.net/projects/ripperx/) (GPL)
+:   A GTK-based audio CD ripper/encoder that can encoding
+    into the OGG, FLAC, or MP2/3 formats using the vorbis tools, FLAC,
+    toolame, mpg123. _only maintenance since 2011_. _Packaged in Debian._
+
+
+[Sound Juicer](https://wiki.gnome.org/Apps/SoundJuicer) (GPL)
+:   is a CD ripper for GNOME using  {{< iref "streaming#gstreamer" "GStreamer" >}}
+    it encodes to flac and vorbis, or with the gstreamer-lame plugin to mp3.
+    _Opus don't seem supported as far as 2020_. _Packaged in Debian._
+
+<a name="xcfa"></a>[X Convert File Audio - XCFA](http://www.xcfa.tuxfamily.org/static2/xcfa) (GPL)
+:   XCFA is a tool to extract the content of
+    Audio-CDs and convert musical audio files conversion to FLAC, WAV,
+    OGG, M4A, MPC, MP3, WavPack, ... _Xcfa_ uses _libasound2_,
+    _cdparanoia_, _icedax_ and a choice among many tools to perform
+    the re-encoding: _mplayer_, _vorbis-tools_, _lame_, _mppen_c,
+    _sox_, etc. _xcfa is no more developed since 2015, it is packaged in Debian._
+
+# Audio converter frontends
 [audio convert](https://savannah.nongnu.org/projects/audio-convert/)
 :   audio convert is a a script to convert wav, ogg, mp3, mpc, flac, ape
     or wma format. It uses MPlayer to decode WMA files, musepack-tools
@@ -162,86 +216,29 @@ faad2
     in ubuntu as *nautilus-script-audio-convert*.*audio convert is
     unchanged since 2005*
 
-[Asunder](http://littlesvr.ca/asunder/index.php)
-:   Asunder (GPL) is a graphical Audio CD ripper and
-    encoder for Linux. It can encode tracks from an Audio CD as WAV,
-    MP3, OGG, FLAC and/or WavPack. Precompiled packages for Asunder are
-    available for main distributions including Debian and Ubuntu.
+<a name="dir2ogg">[dir2ogg](http://jak-linux.org/projects/dir2ogg/) (GPL)
+:   _dir2ogg_ is a python script which converts mp3, m4a, wma,
+    and wav files into ogg-vorbis format. It uses _mpg123_ or _mplayer_, _lame_
+    _mpg321_ for mp3, _faad_ or  _mplayer_ for mp4/m4a/aac, _flac_ for flac, _mpcdec_
+    for musepack, _cdparanoia_ or _cedax_ or
+    _cdda2wav_ for audio-cd. _dirr2ogg_ is still maintained but no more developed.
+    _It is packaged in Debian._
 
-[dir2ogg](http://jak-linux.org/projects/dir2ogg/)
-:   dir2ogg (GPL) is a python script which converts mp3, m4a, wma, and
-    wav files into ogg-vorbis format.
+<a name="gnac">[gnac](http://gnac.sourceforge.net/) (GPL)
+:   _Gnac_ was an audio conversion program for GTK3 using
+    {{< iref "Streaming#Gstreamer" "GStreamer" >}},
+    like  {{< iref "#soundconverter" "SoundConverter" >}}.
+    _Gnac_ is no more developed since 2012.
 
-[Grip](http://nostatic.org/grip/) <a name="grip"></a>
-:   Grip is a GTK+ based front-end for CD rippers (such as
-    {{< iref "#cdparanoia" "cdparanoia" >}} and {{< iref "#cdda2wav" "cdda2wav" >}}) and
-    MP3 encoders as {{< iref "#bladeenc" "bladeenc" >}}, {{< iref "#vorbisyools" "oggenc" >}}
-    , lame , ... Grip allows you to rip entire tracks or just a section
-    of a track. Grip supports the CDDB protocol for accessing track
-    information on disc database servers. Gcd is the included cd
-    player.
-
-:   refs:[Grip Home Page](http://nostatic.org/grip/),
-    [grip(1)
-    ](http://manpages.debian.org/cgi-bin/man.cgi?query=grip(1))
-    ,
-    [Grip sourceforge project](http://sourceforge.net/projects/grip/Grip),
-    [Grip User's Guide](http://nostatic.org/grip/doc/index.html)
-
-[ripit](http://www.suwald.com/ripit/ripit.html)
-:  RipIT can create
-   mp3, flac, Ogg Vorbis, or Faac (m4a) from wav audio files extracted
-   from an audio CD. It is a console based front-end written in Perl.
-   It uses the following backends:
-
-   * dagrab, cdparanoia or cdda2wav for ripping the audio CD tracks.
-   * Lame, OggVorbis, Flac or Faac for encoding the wav files to mp3,
-   ogg, flac or m4a
-   * Perl module CDDB\_get >= 2.25 for CDDB retrieval
-
-   It can add id3tags, create a m3u playlist, and generate a toc (cue)
-   sheet for DAO burning.
-
-[RipperX](http://sourceforge.net/projects/ripperx/)
-:   A GTK-based audio CD ripper/encoder that can encoding
-    into the OGG, FLAC, or MP2/3 formats using the vorbis tools, FLAC,
-    toolame, mpg123.
-
-[RippOff](http://ripoffc.sourceforge.net)
-:   RippOff is a GTK+ based CD Ripper for
-    Linux it can rip to ogg-vorbis, flac, and mp3 (with an extra mp3
-    plugin)
-
-[Serpentine](http://irrepupavel.com/projects/serpentine/)
-:   *Serpentine* (
-    [Serpentine project page](http://developer.berlios.de/projects/serpentine/)
-    is a light cd audio recording application for Gnome. that is written in python and
-    uses {{< iref "streaming#gstreamer" "GStreamer" >}}. It supports the same codecs
-    than gstreamer such as WAV, MP3, OGG, FLAC. Serpentine requires gnome2.
-
-# High Level sound editors
-## Desktop editors
-<a name="audacity"></a>[audacity](http://audacity.sourceforge.net/)
-:   {{< wp "Audacity" >}} (GPL) is a free audio editor. You can record sounds, play
-    sounds, import and export wav, aiff, Vorbis, and MP3 files, mix
-    tracks together, or apply effects to your recordings. It also has a
-    built-in amplitude envelope editor, a customizable spectrogram mode
-    and a frequency analysis window for audio analysis applications.
-
-    [Audacity manual, Quick Reference Guide and FAQ
-    ](http://audacity.sourceforge.net/help/documentation) are available on the main site
-    [Audacity Wiki](http://wiki.audacityteam.org/)
-    propose many [Tutorials
-    ](http://wiki.audacityteam.org/index.php?title=Tutorials) and
-    [Tips](http://wiki.audacityteam.org/index.php?title=Tips),
-    mainly recording tips.
-
+OggConvert
+:   discontinued
     [LibriVox Wiki](http://wiki.librivox.org/index.php/Main_Page) has many
     [Audacity Tutorials](http://wiki.librivox.org/index.php/Audacity_Tutorials)
 
     Audacity allow to do noise removal also called
-    {{< wp "Audio_restoration" >}}, it is explained in
-    [Audacity Documentation: Noise Reduction](http://wiki.audacityteam.org/wiki/Noise_Reduction)
+    {{< wp "Audio restoration" >}}, it is explained in
+    [Audacity Documentation: Noise Reduction
+    ](http://wiki.audacityteam.org/wiki/Noise_Reduction)
     and further detailled in [Detailed Audacity Noise Removal
     ](http://wiki.librivox.org/index.php/Detailed_Audacity_Noise_Removal)
     in the pages of
@@ -250,52 +247,24 @@ faad2
 
 <a name="ardour">[Ardour](http://ardour.org/)
 :   {{< wp "Ardour" >}} (GPL) is a powerful multitrack Hard-Disk Recording system by
-    Paul Davis and others. It supports
-    {{< iref "sound_libs#ladspa" "LADSPA" >}} audio filter
-    plugins.
-:   [Ardour sourceforge page](http://ardour.sourceforge.net),
-    [LAU doc on ardour](http://www.djcj.org/LAU/ardour).
+    Paul Davis and others. It supports {{< iref "sound_libs#ladspa" "LADSPA" >}}
+    audio filter plugins. _Packaged in Debian._
 
-<a name="dir2ogg">[dir2ogg](http://jak-linux.org/projects/dir2ogg/) (GPL)
-:   _dir2ogg_ is a python script which converts mp3, m4a, wma,
-    and wav files into ogg-vorbis format. It uses _mplayer_, _mpg123_
-    or _lame_, _faad_, _flac_, _mpcdec_, _cdparanoia_ or _cedax_ or
-    _cdda2wav_.<br /> {{< iref "#xcfa" "XCJA" >}} is an
-    alternative to _dir2ogg_.
-
-{{< wp "Ecasound" >}}<a name="ecasound"></a>
-:   [ecasound (__Home__)](http://nosignal.fi/ecasound/)
-    (GPL) is a sound processing application designed for basic
+<a name="ecasound"></a>Ecasound
+:   {{< wp "Ecasound" >}} (GPL) is a sound processing application designed for basic
     effect processing, mixing, multitrack recording and signal
     recycling. It supports OSS and {{< iref "sound_libs#alsa" "ALSA" >}} sound drivers,
-    wav, mp3, aiff, cdda, au, snd, raw and standard file streams
+    wav, vorbis, aac, mp3, aiff, cdda, au, snd, raw and standard file streams. There are python, perl
+    and ruby bindings. _active in 2020, packaged in Debian, with a distinct ecatools
+    package._
+    -   [ecasound Home](http://nosignal.fi/ecasound/).
 
-<a name="gnac">[gnac](http://gnac.sourceforge.net/) (GPL)
-:   _Gnac_ is an audio conversion program for GTK3 using
-    {{< iref "Streaming#Gstreamer" "GStreamer" >}},
-    like {{< iref "video_edit#oggconvert" "OggConvert" >}}
-    and {{< iref "#soundconverter" "SoundConverter" >}}.
-    But _gnac_ and _oggconvert_ have less gnome dependencies than
-    SoundConverter.
-
-[GNU Sound](http://www.gnu.org/software/gnusound/)
-:   __Gnu sound__ (GPL) is a multitrack sound editor for Gnome.
 
 {{< wp "Jokosher" >}}
 :   __Jokosher__ (GPL) is a non-linear multi-track digital audio
     editor,it is being developed in Python,
     using the GTK+ interface and {{< iref "Streaming#Gstreamer" "GStreamer" >}}
-    as an audio back-end.
-
-{{< iref "video_edit#oggconvert" "OggConvert" >}}
-:   __0ggconvert__ (LGPL) convert audio and video files of various
-    types into  Ogg Vorbis audio format, and video formats.
-    It uses _{{< iref "Streaming#Gstreamer" "GStreamer" >}}_<br />
-    {{< iref "#soundconverter" "SoundConverter" >}},
-    and {{< iref "#gnac" "gnac" >}},
-    {{< iref "video_edit#pitivi" "PiTiVi" >}}
-    are  alternatives to
-    _OggConvert_.
+    as an audio back-end. _last release 2012_
 
 
 {{< iref "video_edit#pitivi" "PiTiVi" >}}
@@ -303,37 +272,17 @@ faad2
     in python CTK+ that uses the {{< iref "streaming#gstreamer" "GStreamer" >}}
     framework.
 
-<a name="rezound"></a>[Rezound](http://rezound.sourceforge.net)
-:   {{< wp "ReZound" >}} (GPL) is a graphical audio file editor. It supports
-    {{< iref "sound_libs#ladspa" "LADSPA" >}} audio filter
-    plugins. It can use the formats: wave, aiff/aiff/-c, next
-    berkeley/ircam/carl, raw, ogg vorbis, mpeg layer 3,2,1, flac, midi
-    sample dump. It interfaces with OSS, portaudio, JACK.
-    The software has only maintenance releases since long time.
-
-<a name="soundconverter">[SoundConverter](http://soundconverter.org/) (GPL)
-:   SoundConverter is a sound converter to ogg/vorbis for Gnome
-    using {{< iref "streaming#gstreamer" "GStreamer" >}}, it is similar to
-    {{< iref "#gnac" "gnac" >}} and {{< iref "video_edit#oggconvert" "OggConvert" >}},
-    but while _oggconvert_ deal both with video and sound formats,
-    _soundconverter_ and _gnac_ focus only on sounds.<br />
-    _soundconverter_ as more gnome dependencies than _oggconvert_
-    or _gnac_, that make it an heavy package if you don't run a
-    full gnome desktop.
-
-    SoundConverter reads anything the GStreamer
-    library can read (Ogg Vorbis, AAC, MP3, FLAC, WAV, AVI, MPEG, MOV,
-    M4A, AC3, DTS, ALAC, MPC, Shorten, APE, SID, etc...), and writes
-    WAV, FLAC, MP3, and Ogg Vorbis files.
-
-<a name="snd"></a>[Snd](https://ccrma.stanford.edu/software/snd/)
-:   __Snd__ (Artistic License) is a sound editor. It can accommodate any number of
+<a name="snd"></a>[Snd](https://ccrma.stanford.edu/software/snd/) (Artistic License)
+:   __Snd__ is a sound editor. It can accommodate any number of
     sounds each with any number of channels, and can be customized and extended using
     either Guile or Ruby.
 
     __Snd__ is a
     [Center for Computer Research in Music and Acoustics (CCRMA) Software
     ](https://ccrma.stanford.edu/software)
+
+    __Snd__ is packaged in the Debian packages _snd_, _snd-gtk-pulse_, _snd-gtk-jack_,
+    _snd-nox_.
 
 :   Notes:
     For using an other soundcard than `hw:0,0` we have to use the
@@ -373,15 +322,6 @@ faad2
     ](http://manpages.debian.org/cgi-bin/man.cgi?query=sweep%281%29),
     [using sweep tutorial](http://www.metadecks.org/software/sweep/tutorials/using_sweep/)
 
- <a name="xcfa"></a>[X Convert File Audio - XCFA](http://www.xcfa.tuxfamily.org/static2/xcfa) (GPL)
-:   XCFA is a tool to extract the content of
-    Audio-CDs and convert musical audio files conversion to FLAC, WAV,
-    OGG, M4A, MPC, MP3, WavPack, ... _Xcfa_ uses _libasound2_,
-    _cdparanoia_, _icedax_ and a choice among many tools to perform
-    the re-encoding: _mplayer_, _vorbis-tools_, _lame_, _mppen_c,
-    _sox_, etc.<br />
-    {{< iref "#dir2org" "dir2org" >}} is
-    similar to _Xcfa_ , but has ogg-vorbis as only target format.
 
 ## Command line tools
 
@@ -408,17 +348,6 @@ gst-tools
 :   _mp3diags_ is a program to diagnostic and repair mp3 files.
     It comes with a QT GUI.
 
-[mp3splt
-](http://mp3splt.sourceforge.net/mp3splt_page/home.php)
-and [Mp3Wrap](http://mp3wrap.sourceforge.net/)
-:   mp3splt (Gpl) is an utility for mp3/ogg splitting without
-    decoding refs:[mp3splt(1)
-    ](http://manpages.debian.org/cgi-bin/man.cgi?query=mp3splt%281%29)
-    , it now comes with a gui **Mp3splt-gtk**.
-
-:   Mp3Wrap (Gpl) wraps two or more mp3 files in one single large
-    playable mp3, without decoding/encoding and without losing
-    filenames and ID3 informations.
 
 ## Replay gain
 
