@@ -2,8 +2,10 @@
 title: Sound and Video Players
 ---
 
-See also {{< iref "streaming" "Streaming" >}},
-{{< iref "ffmpeg" "FFmpeg section" >}},
+See also  {{< iref "codecs" "Codecs" >}} and it's subsection
+{{< iref "codecs#media_info" "Media Info" >}},
+{{< iref "streaming" "Streaming" >}}, {{< iref "ffmpeg" "FFmpeg section" >}},
+{{< iref "sound_edit" "Sound Edit" >}},
 {{< iref "video_edit" "Video Edit" >}},
 
 -----
