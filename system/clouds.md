@@ -261,7 +261,7 @@ free android, iphone,  ipad application.
 -   [box-linux-sync](https://github.com/noiselabs/box-linux-sync) is a sync client for linux  using the WebDAV interface
     _alpha and last commit 2013_.
 
-# [Dropbox](http://www.dropboxwiki.com/) {#dropbox}
+# Dropbox {#dropbox}
 2GB storage free, 100$/year for 100GB
 Dropbox is packaged for main linux distributions, and mobiles.
 
@@ -269,32 +269,10 @@ The dropbox daemon footprint is 50M res/16M shr
 
 -   Wikipedia: {{< wp "Dropbox" >}}
 -   [ArchLinux: Dropbox](https://wiki.archlinux.org/index.php/Dropbox)
--   [Dropbox wiki](http://www.dropboxwiki.com/)
-    -   [Dropbox Forums FAQ](http://www.dropboxwiki.com/Forums_FAQ/)
-    -   [Dropbox wiki: Dropbox  Text Based Linux Install
-        ](http://dropboxwiki.com/Text_Based_Linux_Install)
-    -   [Dropbox wiki: Using Dropbox CLI
-        ](http://www.dropboxwiki.com/Using_Dropbox_CLI)
-    -   [Dropbox wiki: Dropbox Addons
-        ](http://www.dropboxwiki.com/Dropbox_Addons),
-        [Dropbox Addons for Linux
-        ](http://www.dropboxwiki.com/dropbox-addons/addons-linux)
-    -   [FAQ/Running Multiple Instances Of Dropbox
-        ](http://www.dropboxwiki.com/Forums_FAQ/Running_Multiple_Instances_Of_Dropbox#Unix),
-        [Multiple Instances On Unix
-        ](http://www.dropboxwiki.com/Multiple_Instances_On_Unix)
-    -   [Install Dropbox In An Entirely Text-Based Linux Environment
-        ](http://www.dropboxwiki.com/tips-and-tricks/install-dropbox-in-an-entirely-text-based-linux-environment)
-    -   [Using Dropbox as a Free and Automatic Web Publishing Solution
-        ](http://www.dropboxwiki.com/tips-and-tricks/using-dropbox-as-a-free-and-automatic-web-publishing-solution)
 -   [(Dropbox) secure remote storage using sshfs and encfs
     ](http://balau82.wordpress.com/2009/08/23/secure-remote-storage-using-sshfs-and-encfs/)
 -   The dropbox daemon footprint is 50M res/16M shr
--   You can symlink outer folders with
-
-        :::console
-        $ ln -s  /path/to/folder/that/you/want/to/sync/ ~/Dropbox/folder/name
-
+-   {{< iref "#rclone" "rclone" >}} support Dropbox.
 
 
 ## Dropbox API
