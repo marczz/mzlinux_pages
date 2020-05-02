@@ -2,13 +2,15 @@
 title: Sound encoders and editors
 ---
 
-# Low level encoders
 The {{< iref "video_edit" "Video Encoders" >}} are often also audio encoders. In the
 {{< iref "video_edit" "Video Encoders" >}} page you find
 {{< iref "video_edit#libav" "libav" >}}, {{< iref "video_edit#ffmpeg" "ffmpeg" >}},
 {{< iref "video_edit#mencoder" "Mencoder" >}} which are also audio  audio encoders.
 
-## Encoder list
+--------------
+
+# Low level encoders
+
 lame
 :   LAME create mp3 compressed audio files.
 
@@ -207,6 +209,24 @@ bladeenc
     the re-encoding: _mplayer_, _vorbis-tools_, _lame_, _mppen_c,
     _sox_, etc. _xcfa is no more developed since 2015, it is packaged in Debian._
 
+## CD ripping basic tools
+
+:   [cdda2wav(1)
+    ](http://manpages.debian.org/cgi-bin/man.cgi?query=cdda2wav%281%29)
+    is a sampling
+    utility for CD-ROM drives that are capable of providing a CD's
+    audio data in digital form to your host. Audio data read from the
+    CD can be saved as .wav or .sun format sound files. Recording
+    formats include stereo/mono, 8/12/16 bits and different rates.
+    Cdda2wav can also be used as a CD player.
+:   [cdda2ogg(1)
+    ](http://manpages.debian.org/cgi-bin/man.cgi?query=cdda2ogg%281%29)
+    is a simple script that uses the cdda2wav and ogg123
+    to encode audio tracks.
+:   cddawav and cdda2ogg are part of the
+    {{< iref "dvd_cd_recording.md#cdrkit" "cdrkit" >}} package
+
+
 # Audio converter frontends
 [audio convert](https://savannah.nongnu.org/projects/audio-convert/)
 :   audio convert is a a script to convert wav, ogg, mp3, mpc, flac, ape
@@ -231,35 +251,78 @@ bladeenc
     _Gnac_ is no more developed since 2012.
 
 OggConvert
-:   discontinued
-    [LibriVox Wiki](http://wiki.librivox.org/index.php/Main_Page) has many
-    [Audacity Tutorials](http://wiki.librivox.org/index.php/Audacity_Tutorials)
+:   a discontinued converter see
+    {{< iref "video_edit#oggconvert" "Video Edit: OggConvert" >}}.
+    {{< iref "#soundconverter" "SoundConverter" >}} or
+    {{< iref "#gnac" "gnac" >}} are an audio replacements.
+
+<a name="soundconverter">[SoundConverter](http://soundconverter.org/) (GPL)
+:   SoundConverter is a sound converter to ogg/vorbis for Gnome
+    using {{< iref "streaming#gstreamer" "GStreamer" >}}, it is similar to
+    {{< iref "#gnac" "gnac" >}} and {{< iref "video_edit#oggconvert" "OggConvert" >}},
+    but while _oggconvert_ deal both with video and sound formats,
+    _soundconverter_ and _gnac_ focus only on sounds.<br />
+    _soundconverter_ as more gnome dependencies than _oggconvert_
+    or _gnac_, that make it an heavy package if you don't run a
+    full gnome desktop.
+
+    SoundConverter reads anything the GStreamer
+    library can read (Ogg Vorbis, AAC, MP3, FLAC, WAV, AVI, MPEG, MOV,
+    M4A, AC3, DTS, ALAC, MPC, Shorten, APE, SID, etc...), and writes
+    WAV, FLAC, MP3, and Ogg Vorbis files.
+
+<a name="sox"></a>[SoX](http://sox.sourceforge.net)
+:   {{< wp "SoX" >}} _Sound eXchange_ (GPL) is a sound file format converter SoX can
+    convert between many different digitized sound formats and perform
+    simple sound manipulation functions, including sound effects.
+
+    -   [SoX Home](http://sox.sourceforge.net/),
+        [sox features](http://sox.sourceforge.net/Docs/Features).
+    -   Wikipedia: {{< wp "SoX" >}}
+    -   [SoX Documentation](http://sox.sourceforge.net/Docs/Documentation)
+    -   manpages: [sox(1)
+        ](http://sox.sourceforge.net/sox.html)
+        _sox_, can also used with the name _play_ or _rec_ ,
+        [soxi(1)
+        ](http://sox.sourceforge.net/soxi.html),
+    -   [SoX supported formats and devices](http://sox.sourceforge.net/soxformat.html)
+    -   [examples scripts
+        ](http://sox.sourceforge.net/Docs/Scripts)
+
+# High Level sound editors
+<a name="audacity"></a>[audacity](http://audacity.sourceforge.net/)
+:   {{< wp "Audacity" >}} (GPL) is a free audio editor. You can record sounds, play
+    sounds, import and export wav, aiff, Vorbis, and MP3 files, mix
+    tracks together, or apply effects to your recordings. It also has a
+    built-in amplitude envelope editor, a customizable spectrogram mode
+    and a frequency analysis window for audio analysis applications.
+
+    -   [Audacity manual, Quick Reference Guide and FAQ
+        ](http://audacity.sourceforge.net/help/documentation) are available on the main site
+    -   [Audacity Wiki](http://wiki.audacityteam.org/)
+        propose many [Tutorials
+        ](http://wiki.audacityteam.org/index.php?title=Tutorials) and
+        [Tips](http://wiki.audacityteam.org/index.php?title=Tips),
+        mainly recording tips.
+    -   [LibriVox Wiki](http://wiki.librivox.org/index.php/Main_Page) has many
+        [Audacity Tutorials](http://wiki.librivox.org/index.php/Audacity_Tutorials)
 
     Audacity allow to do noise removal also called
-    {{< wp "Audio restoration" >}}, it is explained in
-    [Audacity Documentation: Noise Reduction
-    ](http://wiki.audacityteam.org/wiki/Noise_Reduction)
+    {{< wp "Audio_restoration" >}}, it is explained in
+    [Audacity Documentation: Noise Reduction](http://wiki.audacityteam.org/wiki/Noise_Reduction)
     and further detailled in [Detailed Audacity Noise Removal
     ](http://wiki.librivox.org/index.php/Detailed_Audacity_Noise_Removal)
     in the pages of
     [LibriVox Wiki](http://wiki.librivox.org/index.php/Main_Page)
     on [Noise Cleaning](http://wiki.librivox.org/index.php/Noise_Cleaning)
 
+
 <a name="ardour">[Ardour](http://ardour.org/)
 :   {{< wp "Ardour" >}} (GPL) is a powerful multitrack Hard-Disk Recording system by
     Paul Davis and others. It supports {{< iref "sound_libs#ladspa" "LADSPA" >}}
     audio filter plugins. _Packaged in Debian._
 
-<a name="ecasound"></a>Ecasound
-:   {{< wp "Ecasound" >}} (GPL) is a sound processing application designed for basic
-    effect processing, mixing, multitrack recording and signal
-    recycling. It supports OSS and {{< iref "sound_libs#alsa" "ALSA" >}} sound drivers,
-    wav, vorbis, aac, mp3, aiff, cdda, au, snd, raw and standard file streams. There are python, perl
-    and ruby bindings. _active in 2020, packaged in Debian, with a distinct ecatools
-    package._
-    -   [ecasound Home](http://nosignal.fi/ecasound/).
-
-
+<a name="ecasound"></a>
 {{< wp "Jokosher" >}}
 :   __Jokosher__ (GPL) is a non-linear multi-track digital audio
     editor,it is being developed in Python,
@@ -292,25 +355,6 @@ OggConvert
 
         SNDLIB_ALSA_DEVICE="usb-audio" snd
 
-<a name="sox"></a>[SoX](http://sox.sourceforge.net)
-:   {{< wp "SoX" >}} _Sound eXchange_ (GPL) is a sound file format converter SoX can
-    convert between many different digitized sound formats and perform
-    simple sound manipulation functions, including sound effects.
-    :   refs:
-    -   [SoX Home]((http://sox.sourceforge.net/),
-        [sox features](http://sox.sourceforge.net/Docs/Features).
-    -   Wikipedia: {{< wp "SoX" >}}
-    -   [SoX Documentation](http://sox.sourceforge.net/Docs/Documentation)
-    -   manpages: [sox(1)
-        ](http://sox.sourceforge.net/sox.html)
-        _sox_, can also used with the name _play_ or _rec_ ,
-        [soxi(1)
-        ](http://sox.sourceforge.net/soxi.html),
-    -   [SoX supported formats and devices](http://sox.sourceforge.net/soxformat.html)
-    -   [examples scripts
-        ](http://sox.sourceforge.net/Docs/Scripts)
-
-
 <a name="sweep"></a>[Sweep](http://www.metadecks.org/software/sweep/)
 :   {{< wp "Sweep_(software)"  "Sweep" >}} (GPL) is an editor for sound samples.
     It operates on `.wav`, `.aiff` and `.au` formats, and has
@@ -324,21 +368,6 @@ OggConvert
 
 
 ## Command line tools
-
-:   [cdda2wav(1)
-    ](http://manpages.debian.org/cgi-bin/man.cgi?query=cdda2wav%281%29)
-    is a sampling
-    utility for CD-ROM drives that are capable of providing a CD's
-    audio data in digital form to your host. Audio data read from the
-    CD can be saved as .wav or .sun format sound files. Recording
-    formats include stereo/mono, 8/12/16 bits and different rates.
-    Cdda2wav can also be used as a CD player.
-:   [cdda2ogg(1)
-    ](http://manpages.debian.org/cgi-bin/man.cgi?query=cdda2ogg%281%29)
-    is a simple script that uses the cdda2wav and ogg123
-    to encode audio tracks.
-:   cddawav and cdda2ogg are part of the
-    {{< iref "dvd_cd_recording.md#cdrkit" "cdrkit" >}} package
 
 gst-tools
 :   This is the basic command-line tools used for
