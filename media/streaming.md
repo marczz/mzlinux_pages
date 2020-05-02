@@ -2,12 +2,10 @@
 title: Streaming
 ---
 
-{{% toc /%}}
-
-See also
-{{< iref "ffmpeg" "FFmpeg section" >}},
-and {{< iref "media_players" "Media Players" >}}
-for the clients.
+See also {{< iref "ffmpeg" "FFmpeg section" >}},
+{{< iref "media_players" "Media Players" >}} for the clients,
+{{< iref "codecs" "Codecs" >}}, {{< iref "sound_edit" "Sound Edit" >}},
+{{< iref "video_edit" "Video Encoders" >}}.
 
 ---
 
@@ -812,7 +810,7 @@ Chrome.
 
 ## Casting an audio or video file or url {#casting_apps}
 -   [Mkchromecast](http://mkchromecast.com/)
-    is a python application to cast a file.
+    is a python application to cast a file to  Google Cast devices or Sonos speakers.
     It can play any sound that you can send to pulseaudio using
     _parec_, it can also use
     _ffmpeg_ or _avconv_ to play a file or an url.
