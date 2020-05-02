@@ -29,6 +29,24 @@ has its own page.
     ](https://wiki.archlinux.org/index.php/Optical_disc_drive#Ripping).
 -   [Convert any Movie to DVD Video - ArchWiki
     ](https://wiki.archlinux.org/index.php/Convert_any_Movie_to_DVD_Video#Video2dvdiso).
+-   [Debian Multimedia Video packages
+    ](https://blends.debian.org/multimedia/tasks/video).
+-   [ArchWiki: list of video editors
+    ](https://wiki.archlinux.org/index.php/List_of_applications#Video_editors),
+    [video converters
+    ](https://wiki.archlinux.org/index.php/List_of_applications#Video_converters),
+    [subtitles
+    ](https://wiki.archlinux.org/index.php/List_of_applications#Subtitles),
+    [subtitles editors
+    ](https://wiki.archlinux.org/index.php/List_of_applications#Subtitle_editors),
+    [screecast
+    ](https://wiki.archlinux.org/index.php/List_of_applications#Screencast),
+    [webcam
+    ](https://wiki.archlinux.org/index.php/List_of_applications#Webcam),
+    [DVD authoring
+    ](https://wiki.archlinux.org/index.php/List_of_applications#DVD_authoring),
+    [DVD ripping
+    ](https://wiki.archlinux.org/index.php/List_of_applications#DVD_ripping).
 
 
 # Video Encoding
@@ -177,8 +195,8 @@ _low activity or obsolete projects._
     _Last release 2011_
 
 
-<a name="oggconvert"></a>{{< wp "OggConvert" >}}
-:   __Oggconvert__ (LGPL) _discontinued_ convert audio and video files of various types
+<a name="oggconvert"></a>{{< wp "OggConvert" >}} (LGPL)
+:   __Oggconvert__  _discontinued_ convert audio and video files of various types
     into Ogg Vorbis audio format, and the Theora, VP8 and Dirac video
     formats. It supports Ogg, Matroska and WebM containers for
     output. __0ggconvert__ is written in Python - GTK+ and depends only on
@@ -292,7 +310,7 @@ _low activity or obsolete projects._
     they are also listed in
     {{< wp "Comparison of download managers" >}}
 
-## scripts
+## Command line
 -   [telecharger-streaming - Documentation Ubuntu Francophone
     ](http://doc.ubuntu-fr.org/telecharger_streaming)
 -   [clive](http://clive.sourceforge.net/)
@@ -334,15 +352,10 @@ _low activity or obsolete projects._
     provides access to functionality and data through an API, and does
     not enable or require the use of the flash technology. Quvi is in
     Debian.
-    -   [ArchWiki - Quvi](https://wiki.archlinux.org/index.php/Quvi)
--   [StreamStudio](https://www.streamstudio.me/) (GPL)
-    previously _Ht5streamer_ is an  application streaming, based on
-    node-webkit and developed using web technologies such as HTML5,
-    JavaScript and CSS. It allows you to view, download and transcode
-    videos from Youtube, Dailymotion and supports plugins for other
-    services like  t411, Cpasbien, Twitch, Kickass, OMG Torrent.
-    -   [StreamStudio Forum](https://forum.streamstudio.me/)
-        _en français_.
+-   [Streamlink](https://streamlink.github.io/index.html)
+    Streamlink is a command-line utility which pipes video streams from [various services
+    ](https://streamlink.github.io/plugin_matrix.html) into a video player, such as VLC.
+    -   [Streamlink - GitHub](https://github.com/streamlink/streamlink).
 
 ## browser extensions
 -   [video bookmarlets
