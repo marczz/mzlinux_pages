@@ -2,8 +2,6 @@
 title: Virtualization
 ---
 
-{{% toc /%}}
-
 # Emulators and virtualization References
 
 -   This section deals with virtualization platforms or
@@ -347,7 +345,28 @@ systems and networks to communicate and interact.
 
 
 # Sandboxing
+A a {{< wp "Sandbox_(computer_security)" "sandbox" >}} is a security mechanism for
+separating running programs, usually in an effort to mitigate system failures or
+software vulnerabilities from spreading.
 
+## Security jails
+
+-   [Security, sandboxing - ArchWiki
+    ](https://wiki.archlinux.org/index.php/Security#Sandboxing_applications).
+-   [Firejail](https://firejail.wordpress.com/) (GPL)
+    is a SUID program that reduces the risk of security breaches by restricting
+    the running environment of untrusted applications using Linux namespaces and
+    {{< wp  "Secomp"  >}} filter [seccomp-bpf
+    ](https://www.kernel.org/doc/html/latest/userspace-api/seccomp_filter.html).
+    It is used for browsers and internet facing applications, as well as
+    any servers.
+    -   [Firejail - ArchWiki](https://wiki.archlinux.org/index.php/Firejail).
+    -   [Firejail - GitHub](https://github.com/netblue30/firejail).
+-   [Bubblewrap](https://github.com/containers/bubblewrap) (LGPL)
+    is a lightweight sandbox application developed from Flatpak.
+    -   [Bubblewrap - ArchWiki](https://wiki.archlinux.org/index.php/Bubblewrap).
+
+## distribution independent application image
 -   {{< wp "Flatpak" >}}
     is a package management system, and application virtualization for
     Linux , it provides a sandbox environment.
