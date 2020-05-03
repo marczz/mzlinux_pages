@@ -383,6 +383,8 @@ Ug
 -   [IEE: How To Opt Out of Receiving Facebook Ads Based on Your
     Real-Life Shopping Activity
     ](https://www.eff.org/deeplinks/2013/02/howto-opt-out-databrokers-showing-your-targeted-advertisements-facebook)
+-   [Maskbook](https://maskbook.com/) encrypt your post on Facebook, you can choose who
+    can decrypt.
 
 If you truly need to use FaceBook messenger you can do it via an xmpp
 client with Facebook support like
