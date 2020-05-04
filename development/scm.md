@@ -246,12 +246,11 @@ with ``git help <concept>`` where concept is one of
 ### Other tutorials
 -   Some other resources are in the the
     [Git documentation](http://git-scm.com/documentation).
-
 -   GitHub [Git reference](http://git.github.io/git-reference/)
     ([source](https://github.com/git/git-reference)).
 -   [GitHub Help](https://help.github.com/en)
-    give many guides on either Git topics _under the section using Git_ or the
-    GitHub use.
+    give many guides on either Git topics under the section
+    [using Git](https://help.github.com/en/github/using-git) or the GitHub use.
 -   [Ry’s Git Tutorial
     ](https://web.archive.org/web/20161121145226/http://rypress.com:80/tutorials/git/index)
     a detailed introduction to the entire Git porcelain _2012_.
@@ -342,20 +341,28 @@ with ``git help <concept>`` where concept is one of
     ](http://byte.kde.org/~zrusin/git/git-cheat-sheet-large.png)
     ([saved copy
     ](http://www.cheat-sheets.org/saved-copy/git-cheat-sheet-large.png));
--   Zack Rusin Git Cheat Sheet [expanded version by Pierre-Alexandre St-Jean
-    (svg)](https://rawgit.com/pastjean/git-cheat-sheet/master/git-cheat-sheet.svg)
-    ([source](https://github.com/pastjean/git-cheat-sheet))
--   Zack Rusin Git Cheat Sheet [extended edition by Jan Krueger
-    ](http://jan-krueger.net/development/git-cheat-sheet-extended-edition).
--   [GitHub : Git cheat sheets
-    ](http://help.github.com/git-cheat-sheets/),
+    -   Zack Rusin Git Cheat Sheet
+        [expanded version by Pierre-Alexandre St-Jean (svg)
+        ](https://rawgit.com/pastjean/git-cheat-sheet/master/git-cheat-sheet.svg)
+        ([source](https://github.com/pastjean/git-cheat-sheet))
+    -   Zack Rusin Git Cheat Sheet [extended edition by Jan Krueger
+        ](http://jan-krueger.net/development/git-cheat-sheet-extended-edition).
+-   [GitHub : Git cheat sheet
+    ](https://github.github.com/training-kit/downloads/github-git-cheat-sheet/),
     [Github : git cheat sheet (pdf)
-    ](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf)
+    ](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf)
     reference some other cheat sheets and give a git memo.
 -   [Magit Cheatsheet](http://daemianmack.com/magit-cheatsheet.html)
     has its'
     [org source in GitHub
     ](https://github.com/daemianmack/magit-cheatsheet).
+-   [Alvin  Alexander: A Git cheat sheet
+    ](http://alvinalexander.com/git/git-cheat-sheet-git-reference-commands)
+    elementary cheatsheet
+-   [Bilal Arslan -  git and git flow cheat sheet
+    ](https://github.com/arslanbilal/git-cheat-sheet)  written in Markdown.
+-   [git-tips - Most commonly used git tips and tricks
+    ](https://github.com/git-tips/tips)
 
 # Language bindings
 -   [Git Wiki - Interfaces to other programming languages
@@ -396,6 +403,8 @@ with ``git help <concept>`` where concept is one of
     subject of
     [Pro Git: Git on the server
     ](https://git-scm.com/book/en/v2/Git-on-the-Server-The-Protocols)
+-   [gitdir](https://github.com/belak/gitdir) (MIT Licence)
+    by Kaleb Elwert _belak_, a secure git server written in Go.
 -   [Gitosis](http://eagain.net/gitweb/?p=gitosis.git)
     by Tommi 'Tv' Virtanen is a Python tool to manage git repositories,
     provide access to them over SSH, with tight access control and not
