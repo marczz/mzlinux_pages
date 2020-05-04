@@ -2,11 +2,10 @@
 title: IRC
 ---
 
-{{% toc /%}}
-
------------------
-
 See also {{< iref "xmpp" "XMPP" >}}
+{< iref "social_networks" "Social Networks" >}},
+{{< iref "sip" "SIP" >}} and
+{{< iref "p2p" "P2P" >}}.
 
 # common Internet Messaging refs
 -   Wikipedia: {{< wp "Instant messaging" >}},
