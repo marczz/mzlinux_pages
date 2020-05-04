@@ -233,9 +233,13 @@ the [git Repository
 # Linux man pages
 -   [GitHub - mkerrisk/man-pages](https://github.com/mkerrisk/man-pages),
     source of all linux man pages.
+-   [Debian Manpages](https://manpages.debian.org/) processed by
+    [DebiMan](https://github.com/Debian/debiman/).
 
 # Cheat sheets
 
+-   [awesome cheatsheet](https://github.com/detailyang/awesome-cheatsheet)
+    list of cheatsheet resources.
 -   <a name="tdlr"></a>The [TLDR pages](https://tldr.sh/) are a community effort to
     simplify the man pages with practical examples.
     -   [GitHub - tldr-pages/tldr](https://github.com/tldr-pages/tldr).
@@ -258,22 +262,36 @@ the [git Repository
 
     They are written in markdown, with a
     [complex css style](https://devhints.io/cheatsheet-styles) used in his
-    [sheet publishing system]
-    (https://github.com/rstacruz/cheatsheets/blob/master/CONTRIBUTING.md)
+    [sheet publishing system
+    ](https://github.com/rstacruz/cheatsheets/blob/master/CONTRIBUTING.md)
 
     The [source is on GitHub](https://github.com/rstacruz/cheatsheets).
 -   [DennyZhang CheatSheets
     ](https://github.com/dennyzhang/cheatsheet.dennyzhang.com)
-    is a collection of Cheat sheets. Some are very rudimentary, and don't give much
-    information.
--  [GitHub - cheat/cheat](https://github.com/cheat/cheat) by Chris Allen Lane is
-   a python program to create and view interactive cheatsheets on the command-line.
-   -   [Related Projects](https://github.com/cheat/cheat/wiki/Related-Projects)
-       list implementatations in other languages:
-       [lucaswerkmeister/cheats](https://github.com/lucaswerkmeister/cheats) and
-       [jahendrie/cheat](https://github.com/jahendrie/cheat) in bash,
-       [weakish/cheat](https://github.com/weakish/cheat) in sh store the cheat sheets in
-       a git repo, [dufferzafar/cheat](https://github.com/dufferzafar/cheat) in go,
+    is a collection of Cheat sheets. They are written in org with export to PDF.
+    Some are very rudimentary, and don't give much information, other more complete.
+-   [Commande line Fu API](https://www.commandlinefu.com/site/api)
+    allow to download the text of the command pages.
+-   [Dan’s Cheat Sheets](https://cheat.readthedocs.io/en/latest/index.html)
+    is a collection of Cheatsheets published as a Sphinx document from Dan Poirier.
+    the RST source is in [poirier/cheat](https://github.com/poirier/cheat) GitHub
+    repository.
+
+## CheatSheet software
+-   [alhassy/CheatSheet](https://github.com/alhassy/CheatSheet)
+    is an org mode library for creating cheat sheets in pdf, they can be multicolumn.
+    They support source code colouring, equational support, unicode characters support.
+-   [pbellon/cheat](https://github.com/pbellon/cheat) (GPL)
+    is an Emacs package to register and open cheatsheets.
+-   [GitHub - cheat/cheat](https://github.com/cheat/cheat) by Chris Allen Lane is
+    a python program to create and view interactive cheatsheets on the command-line.
+    -   [Related Projects](https://github.com/cheat/cheat/wiki/Related-Projects)
+        list implementatations in other languages:
+        [lucaswerkmeister/cheats](https://github.com/lucaswerkmeister/cheats) and
+        [jahendrie/cheat](https://github.com/jahendrie/cheat) in bash,
+        [weakish/cheat](https://github.com/weakish/cheat) in sh store the cheat sheets
+        in a git repo, [dufferzafar/cheat](https://github.com/dufferzafar/cheat) in go.
+
 
 <!--  Local Variables: -->
 <!--  mode: markdown -->
