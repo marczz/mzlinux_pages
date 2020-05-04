@@ -502,6 +502,10 @@ table of content, you can control its depth with `--toc-depth`.
 
 See {{< iref "#pandoc" "Pandoc" >}} below.
 
+-   [MMark](https://github.com/mmark-md/mmark) (BSD Licence)
+    is an haskell markdown processor. It has a _strict_ behavior, i.e. it tries to
+    detect and report errors. It is mostly compatibe with common mark, and allows GFM
+    extensions. It exibhit nonetheless many differences, explained on the Home Page.
 
 ##  Lua
 -   [lua-discount](http://asbradbury.org/projects/lua-discount)
