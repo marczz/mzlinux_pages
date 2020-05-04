@@ -44,17 +44,11 @@ See also Wikipedia {{< wp "Comparison of machine translation applications" >}}.
         ](http://linuxfr.org/news/grammalecte-correcteur-grammatical)
         updated in [Grammalecte, correcteur grammatical II
         ](https://linuxfr.org/news/grammalecte-correcteur-grammatical-2).
-        [Améliorer la correction orthographique et grammaticale sous
-        Emacs
+        [Améliorer la correction orthographique et grammaticale sous Emacs
         ](http://linuxfr.org/users/jn/journaux/ameliorer-la-correction-orthographique-et-grammaticale-sous-emacs)
         is written before grammalecte was available.
-    -   [flycheck-grammalecte
-        ](https://gitlab.com/geeklhem/flycheck-grammalecte) and
-        <!-- also minor fork for nix packages
-        https://github.com/apeyroux/flycheck-grammalecte -->
-        [yet-an-other-flycheck-grammalecte-fork
-        ](https://github.com/thomasluquet/yet-an-other-flycheck-grammalecte-fork)
-        are wrappers for Grammalecte with emacs flycheck emacs.
+    -   [flycheck-grammalecte](https://github.com/milouse/flycheck-grammalecte)
+        is a wrappers for Grammalecte with emacs flycheck.
     -   [vim-Grammalecte](https://github.com/dpelle/vim-Grammalecte)
         A vim plugin for Grammalecte.
 
@@ -76,7 +70,22 @@ See also Wikipedia {{< wp "Comparison of machine translation applications" >}}.
     -   [Les dictionnaires Français sous Hunspell
         ](https://www.dicollecte.org/documentation.php?prj=fr).
 
+-   [LangageTool](https://languagetool.org/) (private license)
+    LanguageTool offers spell and grammar checking. It is Free for 20,000 characters per
+    check. a premium license cost 60€/year.
 
+    It support [numerous languages](https://languagetool.org/languages)
+    like English, German, Italian, Portuguese, Esperanto, Breton, Japanese, Russian, and
+    many other; see the [language table](https://languagetool.org/languages) for the
+    level of support of each language.
+
+    There are addons for Firefox, Chromium,
+    Libre Office, Google docs, [Emacs](https://github.com/mhayashi1120/Emacs-langtool),
+    [vim](http://www.vim.org/scripts/script.php?script_id=3223),
+    [vim-grammarous](https://github.com/rhysd/vim-grammarous), Atom,
+    [android](https://play.google.com/store/apps/details?id=org.softcatala.corrector)
+    and [other software
+    ](http://wiki.languagetool.org/software-that-supports-languagetool-as-a-plug-in-or-add-on).
 -   [LibreOffice Dictionaries extensions
     ](http://extensions.libreoffice.org/extension-center?getCategories=Dictionary)
 -   [OpenOffice spell checkers
