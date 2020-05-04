@@ -107,10 +107,13 @@ may be switched between sessions.
 -   <a name="powerline"></a>[Powerline (GitHub)](https://github.com/powerline/powerline)
     is a statusline plugin for vim, zsh, bash, _tmux_, IPython,
     Awesome and Qtile.
-    [Powerline manual](https://powerline.readthedocs.org/en/latest/).
-    -   Emacs has a powerline compatible package
-        [telephone line](https://github.com/dbordak/telephone-line).
-
+    -   [Powerline manual](https://powerline.readthedocs.org/en/latest/).
+    -   Emacs has some powerline compatible packages
+        [milkypostman/powerline](https://github.com/milkypostman/powerline)
+        is the more cent fork of [many forks of vim powerline
+        ](https://www.emacswiki.org/emacs/PowerLine).
+        [telephone line](https://github.com/dbordak/telephone-line) was a new
+        implementation.
 -   [Byobu](http://byobu.co) is a wrapper script for launching either screen or tmux
     with an improved configuration.
     -   [GitHub - byobu](http://github.com/dustinkirkland/byobu)
