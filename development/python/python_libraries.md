@@ -2,10 +2,6 @@
 title: Python Libraries
 ---
 
-{{% toc /%}}
-
------
-
 # Modules {#modules}
 Subset of the
 [Python full module index](http://docs.python.org/3/py-modindex.html)
@@ -861,7 +857,7 @@ See also the {{< iref "#ip_address_module" "ipaddress module" >}}
     {{< iref "#pypa" "Python Packaging Guide" >}}
 -   The {{< iref "#distutils" "module distutils" >}}
     is part of the standard library.
--   [PIP](http://www.pip-installer.org/en/latest/)<a name="pip"></a>
+-   <a name="pip"></a>[PIP](http://www.pip-installer.org/en/latest/)
     is an enhancement of setuptool and a replacement for easy_install,
     it is complementary with
     {{< iref "#virtualenv" "virtualenv" >}} and can be used
