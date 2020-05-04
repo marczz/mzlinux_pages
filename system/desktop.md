@@ -2,8 +2,6 @@
 title: Linux Desktops
 ---
 
-{{% toc /%}}
-
 ----------------
 
 The lower level is {{< iref "xorg" "Xorg" >}}
@@ -306,12 +304,10 @@ which are temporarily added the called programs to update status.
 -   {{< iref "#j4status" "j4status" >}} below is an alternative
     to _i3-status_;
 -   [GitHub: i3-py](https://github.com/ziberna/i3-py)
-    contains python tools for i3. No new commit since 2012 (checked
-    april 2016) but there are many forks.<br />
-    The script _winmenu.py_
-    launches {{< iref "#dmenu" "dmenu" >}} (with vertical
-    patch) with a list of clients, sorted after workspaces. Selecting
-    a client jumps to that window.
+    contains python tools for i3. No new commit since 2012 there are many forks, but
+    nobody seems to maintain the repository.<br /> The script _winmenu.py_ launches
+    {{< iref "#dmenu" "dmenu" >}} (with vertical patch) with a list of clients, sorted
+    after workspaces. Selecting a client jumps to that window.
 -   [GitHub: quickswitch-for-i3
     ](https://github.com/proxypoke/quickswitch-for-i3)
     ( [WFPT Licence](http://sam.zoy.org/wtfpl/COPYING))
