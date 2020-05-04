@@ -119,6 +119,14 @@ The [html to pdf converter are in the pdf section
     [W3C validator](http://validator.w3.org).
 -   [Can I Use (caniuse)](http://caniuse.com/) tables summarize the compatibility of desktop and mobile browsers with HTML5, CSS3, SVG.
 
+## HTML transform
+
+-   [rehype](https://github.com/rehypejs/rehype)
+    HTML processor powered by plugins part of the
+    {{< iref "markdown#unified" "unifiedjs" >}} collective.
+    It is used to format HTML, minify it, or wrap it programmatically into a document.
+-   [awesome-rehype](https://github.com/rehypejs/awesome-rehype)
+
 # html slideshow
 -   Wikipedia: {{< wp "Web-based slideshow" >}} contains a list of
     alternatives.
