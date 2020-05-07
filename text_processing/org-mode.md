@@ -206,6 +206,10 @@ See also {{< iref "source_code#literate_programming" "Literate Programming" >}}
         [Org Mode - Organize Your Life In Plain Text
         ](http://doc.norang.ca/org-mode.html)
         by Bernt Hansen
+-   Most often we reference external materials in org-mode with [hyperlinks
+    ](https://orgmode.org/manual/Hyperlinks.html#Hyperlinks). Another method is
+    [attachments](https://orgmode.org/manual/Attachments.html), which are files located
+    in a directory belonging to an outline node.
 -   [Org Noter](https://github.com/weirdNox/org-noter) (GPL)
     is a synchronized pdf/epub/odt/docx document annotator.
     It let you create notes that are kept in sync when you scroll through the document,
@@ -221,9 +225,10 @@ See also {{< iref "source_code#literate_programming" "Literate Programming" >}}
     [Philip Jackson](http://emacswiki.org/emacs/org-annotate-file.el),
     [Nick Daly
     ](https://bitbucket.org/nickdaly/org-annotate-file/src/tip/org-annotate-file.el)
-    _2011_,
+    _2011 no longer available_,
     and [Diego Sevilla
-    ](https://bitbucket.org/dsevilla/org-annotate-file/src/tip/org-annotate-file.el) _2011_
+    ](https://bitbucket.org/dsevilla/org-annotate-file/src/default/org-annotate-file.el)
+    _2011_
     after he wrote [this comment
     ](http://stackoverflow.com/questions/7295708/how-to-use-org-annotate-file).
 
