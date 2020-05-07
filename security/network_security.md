@@ -2,13 +2,8 @@
 title: Network Security
 ---
 
-{{% toc /%}}
-
----
-
-
 See also
-{{< iref "security" "Security" >}},
+{{< iref "./security" "Security" >}},
 {{< iref "firewall" "Firewall" >}},
 {{< iref "encryption" "Encryption" >}},
 {{< iref "authentication" "Authentication" >}},
@@ -18,6 +13,8 @@ See also
 {{< iref "monitoring" "Monitoring" >}},
 {{< iref "mail" "mail section" >}} for securing the MTA
 such as {{< iref "mail#postfix" "Postfix" >}}.
+
+-----
 
 # References
 
@@ -75,9 +72,9 @@ and {{< iref "lightweight_distributions#forensic_distributions" "Forensic Distri
     is a high performance Network IDS, IPS and Network Security
     Monitoring engine. It is in Debian.
 
-## Brute forcers {brute_forcers}
-See also {{< iref "network" "Hash Cracking" >}} in the
-{{< iref "network" "Network Security Section" >}}.
+## Brute forcers {#brute_forcers}
+See also {{< iref "authentication#hash_cracking" "Hash Cracking" >}} in the
+{{< iref "authentication" "Authentication Section" >}}.
 
 -   [THC-Hydra](https://github.com/vanhauser-thc/thc-hydra)
     is a parallelized login cracker which supports numerous protocols
