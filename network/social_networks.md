@@ -35,8 +35,9 @@ The socials networks add to messaging, groups and privacy _yet available in XMPP
 services such as channels, blogging or micro-bloging, status mesage, media sharing, and
 more.
 
-Some private source social networks like Twitter or {{< iref "Facebook" >}} don't care
-about communicating with software from an other source, and even try to forbid it.
+Some private source social networks like Twitter or {{< iref "#facebook" "Facebook" >}}
+don't care about communicating with software from an other source, and even try to
+forbid it.
 
 But open source software may communicate, but to do so they need either a common
 protocol or a bridge.
@@ -52,7 +53,7 @@ When no common protocol exist, very often connectors or bridges allow
 to communicate using at best a status protocol or at least a messaging
 one like the open source IRC and XMPP, or the closed source
 {{< iref "#slack" "Slack" >}},
-twitter or {{< iref "facebook" "Facebook messenger" >}}.
+twitter or {{< iref "#facebook" "Facebook messenger" >}}.
 
 
 ## Ostatus {#ostatus}
