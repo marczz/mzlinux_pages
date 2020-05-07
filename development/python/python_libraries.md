@@ -476,10 +476,13 @@ The continuous integration software is in the main
     parts. Wikipedia: {{< wp "Buildout" >}}.
 -   [Paver](http://paver.github.com/paver/)(BSD license) is a
     Python-based software project scripting tool
--   [Doit](http://pydoit.org/) <a name="pydoit"></a>
+-   [PyBuilder](https://pybuilder.io/)
+    is  a build automation tool for Python
+-    <a name="pydoit"></a>[Doit](http://pydoit.org/)
     alias *pydoit* alias *python-doit* is a tool that brings
     the power of build-tools to execute any kind of task. It integrates
     {{< iref "schedulers#inotify" "inotify" >}}.
+    -   [doit - GitHub](https://github.com/pydoit/doit)
 -   [Redo](https://github.com/apenwarr/redo) (GPL) from Avery Pennarun
     is a Gnu Make replacement in python allowing recursive build.
 -   [Scons](http://www.scons.org/wiki/AboutSCons) (MIT license) is a Gnu
