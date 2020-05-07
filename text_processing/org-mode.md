@@ -2,9 +2,7 @@
 title: Org Mode
 ---
 
-{{% toc /%}}
-
-# Org Mode
+# Org Mode Manuals
 
 -   [OrgMode Home](http://orgmode.org/),
     [Emacs org manual](http://orgmode.org/org.html),
@@ -12,7 +10,7 @@ title: Org Mode
 -   [Emacswiki: OrgMode](http://www.emacswiki.org/emacs/OrgMode)
 
 
-## Tutorials:
+# Tutorials:
 -   [Worg List of Org tutorials
     ](http://orgmode.org/worg/org-tutorials/index.html)
 -   [Org Mode - Organize Your Life In Plain Text
@@ -42,7 +40,7 @@ title: Org Mode
 
 
 
-## Articles and Blogs
+# Articles and Blogs
 -   [Sacha Chua
     ](http://sachachua.com):
     [last posts category org](http://sachachua.com/blog/category/org/)
@@ -56,9 +54,10 @@ title: Org Mode
         ](http://kitchingroup.cheme.cmu.edu/blog/2016/11/08/New-color-link-in-org-9-0-using-font-lock-to-color-the-text/),
         [Persistent highlighting in Emacs
         ](http://kitchingroup.cheme.cmu.edu/blog/2016/11/10/Persistent-highlighting-in-Emacs/).
+-   [Karl Voit blog series: Using Org Mode Features (UOMF)
+    ](https://karl-voit.at/2019/09/25/using-orgmode/).
 
-
-## Org Babel {#babel}
+# Org Babel {#babel}
 
 -   [The Org Manual: Working with source code
     ](https://orgmode.org/manual/Working-with-source-code.html#Working-with-source-code)
@@ -69,7 +68,7 @@ title: Org Mode
     ](https://github.com/dfeich/org-babel-examples)
     with different backend languages.
 
-### Org-Babel literate programming
+## Org-Babel literate programming
 
 See also {{< iref "source_code#literate_programming" "Literate Programming" >}}
 -   [Introduction to Literate Programming
@@ -124,7 +123,7 @@ See also {{< iref "source_code#literate_programming" "Literate Programming" >}}
     ](https://kitchingroup.cheme.cmu.edu/blog/2017/01/21/Exporting-org-mode-to-Jupyter-notebooks/)
     does the reverse operation than the preceding entry.
 
-## Org mode parsing
+# Org mode parsing
 
 [Org Mode tools: Org-mode parsers](http://orgmode.org/worg/org-tools/#sec-1)
 
@@ -148,7 +147,10 @@ See also {{< iref "source_code#literate_programming" "Literate Programming" >}}
 -  [org.js](http://mooz.github.io/org-js/)
     JavaScript Parser and converter for org-mode. _updated in 2014_
 
-## Utilities
+# Org mode libraries
+-   [alhassy/CheatSheet](https://github.com/alhassy/CheatSheet)
+    is an org mode library for creating cheat sheets in pdf, they can be multicolumn.
+    They support source code colouring, equational support, unicode characters support.
 -   [Deft](http://jblevins.org/projects/deft/) by Jason Blevin
     is an emacs mode for quickly browsing, filtering, and editing
     directories of plain text notes, inspired by Notational Velocity.
@@ -172,18 +174,6 @@ See also {{< iref "source_code#literate_programming" "Literate Programming" >}}
     extracts metadata from many different existing data sources
     (file names, emails, tweets, bookmarks, …)
     on your computer and generates org-mode files.
--   [org-annotate-file](http://emacswiki.org/wiki/OrgAnnotateFile)
-    allows the annotation of a file in org-mode without modification
-    of the file itself.  There is at least three versions of
-    _org-annotate-file_ that was successively forked by
-    [Philip Jackson](http://emacswiki.org/emacs/org-annotate-file.el),
-    [Nick Daly
-    ](https://bitbucket.org/nickdaly/org-annotate-file/src/tip/org-annotate-file.el)
-    _2011_,
-    and [Diego Sevilla
-    ](https://bitbucket.org/dsevilla/org-annotate-file/src/tip/org-annotate-file.el) _2011_
-    after he wrote [this comment
-    ](http://stackoverflow.com/questions/7295708/how-to-use-org-annotate-file).
 -   [org-contacts](http://julien.danjou.info/software/org-contacts.el)
     by Julien Danjou allows to manage your contacts using Org-mode
     without BBDB. He has also written
@@ -206,7 +196,40 @@ See also {{< iref "source_code#literate_programming" "Literate Programming" >}}
     is a front end for
     {{< iref "latex#tufte" "Tufte Latex" >}}
 
-## Slides with Org Mode {#org-mode_slides}
+# Document capture, refs and annotation
+-   [org-capture](https://orgmode.org/manual/Capture.html)
+    in the org distribution,  lets you quickly store notes.
+    It becomes more usefull if you define [capture templates
+    ](https://orgmode.org/manual/Capture-templates.html)
+    -   [Adding New Tasks Quickly with Org Capture
+        ](http://doc.norang.ca/org-mode.html#Capture) in
+        [Org Mode - Organize Your Life In Plain Text
+        ](http://doc.norang.ca/org-mode.html)
+        by Bernt Hansen
+-   [Org Noter](https://github.com/weirdNox/org-noter) (GPL)
+    is a synchronized pdf/epub/odt/docx document annotator.
+    It let you create notes that are kept in sync when you scroll through the document,
+    but the notes themselves live in external an Org-mode file.
+    -   [Notes on Org-noter — Dani](https://write.as/dani/notes-on-org-noter)
+-   [Annotate](https://github.com/bastibe/annotate.el) (MIT License)
+    provides a minor mode annotate-mode, which can add annotations to arbitrary files
+    without changing the files themselves. It is in Melpa.
+-   [org-annotate-file](http://emacswiki.org/wiki/OrgAnnotateFile)
+    allows the annotation of a file in org-mode without modification
+    of the file itself.  There is at least three versions of
+    _org-annotate-file_ that was successively forked by
+    [Philip Jackson](http://emacswiki.org/emacs/org-annotate-file.el),
+    [Nick Daly
+    ](https://bitbucket.org/nickdaly/org-annotate-file/src/tip/org-annotate-file.el)
+    _2011_,
+    and [Diego Sevilla
+    ](https://bitbucket.org/dsevilla/org-annotate-file/src/tip/org-annotate-file.el) _2011_
+    after he wrote [this comment
+    ](http://stackoverflow.com/questions/7295708/how-to-use-org-annotate-file).
+
+    _org-annotate-file_ is provided in the org contrib package.
+
+# Slides with Org Mode {#org-mode_slides}
 There are many ways to produce slides with an org mode formatted text;
 
 -   [Beamer presentations in org-mode
@@ -250,7 +273,7 @@ There are many ways to produce slides with an org mode formatted text;
     It is a very light way of producing a presentation without
     adding anything to your source code.
 
-## Org Mobile
+# Org Mobile
 
 -   [Mobile.org](http://mobileorg.ncogni.to/),
     [Mobile.org documentation](http://mobileorg.ncogni.to/),
