@@ -261,8 +261,8 @@ hosting services. It has
         ](https://www.cygnius.net/snippets/passtest.html)
 
 ## Hash cracking {#hash_cracking}
-See also {{< iref "network" "Brute forcers" >}}
-in the {{< iref "network" "network security section" >}}.
+See also {{< iref "network_security#brute_forcer" "Brute forcers" >}}
+in the {{< iref "network_security" "network security section" >}}.
 
 {{< wp "Password Cracking" >}} is now mainly done by {{< wp "Rainbow tables" >}} and
 {{< wp "Brute-force attack" >}} There are many programs to apply these methods.
