@@ -5,7 +5,7 @@ title: Network References
 
 # References
 More specific documentation is available under each subsection, and
-in the {{< iref "security" "Security chapter" >}}.
+in the {{< iref "../security/security" "Security chapter" >}}.
 
 -   The source of all doc is the rfc
     ([rfc.net the repository of RFC](http://rfc.net),
