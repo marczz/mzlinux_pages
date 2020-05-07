@@ -2,8 +2,6 @@
 title: Software Design
 ---
 
-{{% toc /%}}
-
 # General References
 
 -   [The Architecture of Open Source Applications (aosabook)
@@ -23,7 +21,7 @@ title: Software Design
     detail with references to sub-pages each pattern of the book by
     Gamma et al.
 -   The use of design patterns in Python is described
-    {{< iref "python_programming" "in the Python page" >}}
+    {{< iref "python/python_programming" "in the Python page" >}}
 
 ## Agile methods
 -   Wikipedia: {{< wp "Agile software development" >}},
@@ -44,8 +42,8 @@ title: Software Design
     Version 2 is programmed in C++ using the Qt toolkit and KDE libraries.
     TaskJuggler III is completely re-implemented  in ruby.<br />
     -   [Creating Gantt charts by Exporting to TaskJuggler
-    ](http://orgmode.org/worg/org-tutorials/org-taskjuggler.html)
-        export from {{< iref "org-mode" "Org Mode" >}} to TaskJuggler.
+        ](http://orgmode.org/worg/org-tutorials/org-taskjuggler.html)
+        export from {{< iref "org-mode" "Org Mode" >}} to _TaskJuggler_.
     -   [emacs taskjuggler-mode for editing taskjuggler tasks
     ](http://www.skamphausen.de/cgi-bin/ska/taskjuggler-mode)
 -   [Project Planning with org-mode
@@ -58,7 +56,8 @@ _(DEVelopement & OPerationS)_ they both prone automation and monitoring
 at all steps of software construction, from building, integration,
 testing, releasing, deployment and infrastructure management.
 
-See also {{< iref "python_libraries#build_automation" "Build Automation" >}}.
+See also {{< iref "python/python_libraries#build_automation" "Build Automation" >}}
+in  {{< iref "python/python_libraries" Python Libraries section >}}.
 
 -   Wikipedia  {{< wp "Continuous integration" >}},
     {{< wp "Category:Continuous integration" >}}
@@ -69,6 +68,9 @@ See also {{< iref "python_libraries#build_automation" "Build Automation" >}}.
 -   [Stackify: list of Continuous integration tools
     ](https://stackify.com/top-continuous-integration-tools/)
     _mars 2017_.
+-   [CI/CD Tools Comparison - DigitalOcean
+    ](https://www.digitalocean.com/community/tutorials/ci-cd-tools-comparison-jenkins-gitlab-ci-buildbot-drone-and-concourse),
+    compare  GitLab CI, Buildbot, Drone, and Concourse.
 -   {{< wp "Buddy_(software)"  "Buddy" >}} (private license)
     is a web-based and self-hosted
     continuous integration and delivery software for Git.
@@ -181,7 +183,7 @@ See also {{< iref "python_libraries#build_automation" "Build Automation" >}}.
 # Unit Tests
 
 Python has its own page
-{{< iref "python_programming#python_unit_tests" "Unit tests in python" >}}
+{{< iref "python/python_programming#python_unit_tests" "Unit tests in python" >}}
 
 -   [Kent Beck seminal paper on unit testing](http://www.xprogramming.com/testfram.htm)
 -   {{< wp "Unit_testing"  "Unit testing" >}} is is an essential step of
@@ -204,23 +206,24 @@ Python has its own page
     [Agile Methods](http://ronjeffries.com/categories/agile-related/),
     [XProgramming](http://ronjeffries.com/categories/xprogramming/).
 -   [Testing Framework wiki](http://c2.com/cgi/wiki?TestingFramework)
--   {{< wp "Test double" >}} is a term coined to reference differents technics to use objects or procedures
-    that look and behave like their release-intended counterparts. It is used in the popular paper of
-    Martin Fowler: [Mocks Aren't Stubs](http://martinfowler.com/articles/mocksArentStubs.html)
--   {{< wp "Mock object" >}}  are simulated objects that mimic the behavior of real objects in controlled ways.
-    They allow to incorporate into a unit test complex, a fake object when real  objects would be
-    impossible to use directly.
+-   {{< wp "Test double" >}} is a term coined to reference differents technics to use
+    objects or procedures that look and behave like their release-intended
+    counterparts. It is used in the popular paper of Martin Fowler:
+    [Mocks Aren't Stubs](http://martinfowler.com/articles/mocksArentStubs.html).
+-   {{< wp "Mock object" >}} are simulated objects that mimic the behavior of real
+    objects in controlled ways.  They allow to incorporate into a unit test complex, a
+    fake object when real objects would beimpossible to use directly.
     -   [Testing Framework wiki: Mock Object Page](http://c2.com/cgi/wiki?MockObject)
     -   For python look at the section
-        {{< iref "python_libraries#mock_objects" "Mock objects Libraries" >}}
--   [junit](http://www.junit.org/index.htm) java testing framework
+        {{< iref "python/python_libraries#mock_objects" "Mock objects Libraries" >}}.
+-   [junit](http://www.junit.org/index.htm) java testing framework.
 -   [cppunit](http://cppunit.sourceforge.net/)
 
 # Miscellaneous graphing tools
 
 -   [Railroad Diagram Generator](http://railroad.my28msec.com/rr/ui)
-    is an online tool for creating SVG {{< wp "syntax diagrams" >}}, also known as railroad
-    diagrams, from context-free grammars specified in EBNF.
+    is an online tool for creating SVG {{< wp "syntax diagrams" >}}, also known as
+    railroad diagrams, from context-free grammars specified in EBNF.
 
 # Websocket
 -   {{< wp "WebSocket" >}} is a protocol providing full-duplex communication
@@ -231,8 +234,7 @@ Python has its own page
     be. Similarly, subscribers subscribe to one or more classes
     without knowledge of publishers.
 -   {{< wp "Web Application Messaging Protocol" >}} WAMP is a WebSocket
-    subprotocol registered at IANA, specified[2] to offer routed RPC
-    and PubSub.
+    subprotocol registered at IANA, to offer routed RPC and PubSub.
 -   [Wamp Proto Home](http://wamp-proto.org/),
     [Wamp Proto comparison](http://wamp-proto.org/compared/).
 -   {{< wp "Web_Application_Messaging_Protocol#Comparison"  "Wikipedia Wamp Comparison" >}}
