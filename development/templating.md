@@ -2,7 +2,9 @@
 title: Templating engines
 ---
 
-{{% toc /%}}
+See also {{< iref "python/python_web" "Python Web" >}}.
+
+----
 
 # General references
 
@@ -106,7 +108,7 @@ You find more explanation in [Flask: Template Inheritance
     standard [go templates](https://golang.org/pkg/html/template/)
 -   <a name="jinja2"></a>[Jinja2](http://jinja.pocoo.org)
     (BSD license) is a Python template engine similar to the
-    {{< iref "python_web#django" "Django" >}}
+    {{< iref "python/python_web#django" "Django" >}}
     template engine.  It can be used to generate any markup as well as
     sourcecode.
     -   The web framework [Django](http://www.djangoproject.com/) (BSD
@@ -190,30 +192,28 @@ sipported backends.
     output.
 
 # Python _only_ templating
-See also {{< iref "python_web" "Python Web" >}}.
+See also {{< iref "python/python_web" "Python Web" >}}.
 
 -   [Templating in Python](http://wiki.python.org/moin/Templating)
     in the python wiki gives a list of python templating engines and
     web frameworks.
 
--   [Cheetah 3](http://www.cheetahtemplate.org/)
-    (MIT License) is a template engine that uses Python It is used for
-    server-side scripting and to generate source code.
+-   [Cheetah 3](http://www.cheetahtemplate.org/)  (MIT License)
+    is a template engine that uses Python It is used for server-side scripting and to
+    generate source code.
 -   [empy](http://www.alcyone.com/software/empy/)
     (LGPL) is a templating system for Python. It is quite different
     from the more usual template syntax. EmPy can expand arbitrary
     Python expressions and statements enclosed by some special
     delimiter like `@`.
--   [Genshi](http://genshi.edgewall.org/) (BSD
-    like license) defines itself as a Python toolkit for stream-based
-    generation of output for the web. It has replaced the older
-    {{< wp "Kid_(templating_language)"  "Kid" >}}
-
--   [Mako](http://www.makotemplates.org/)<a name="mako"></a>
-    (MIT License) is a template library written in Python. Mako is used as a
-    Python Server Page language. _Mako_ was previously named _Mighty_.
-    Mako is used by reddit.com and is the default template language f
-    or the {{< iref "python_web#pylon" "Pylons and Pyramid web frameworks" >}}.
+-   [Genshi](http://genshi.edgewall.org/) (BSD  like license)
+    defines itself as a Python toolkit for stream-based generation of output for the
+    web. It has replaced the older  {{< wp "Kid_(templating_language)"  "Kid" >}}
+-   <a name="mako"></a>[Mako](http://www.makotemplates.org/) (MIT License)
+    is a template library written in Python. Mako is used as a Python Server Page
+    language. _Mako_ was previously named _Mighty_.  Mako is used by reddit.com and is
+    the default template language for the
+    {{< iref "python/python_web#pylon" "Pylons and Pyramid web frameworks" >}}.
 
 
 <!-- Local Variables: -->
