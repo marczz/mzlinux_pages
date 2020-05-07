@@ -2,9 +2,6 @@
 title: Git & alt. SCM
 ---
 
-{{% toc /%}}
-
----
 
 # General References on Source Conf Management
 -   {{< wp "Revision_control"  "Wikipedia: Revision Control" >}}
@@ -541,7 +538,7 @@ provides a detailled description of the use of the following packages.
         [org source in GitHub](https://github.com/daemianmack/magit-cheatsheet).
 -   [Egg](http://github.com/byplayer/egg) is a fork of magit. An
     [introduction to Egg](http://bogolisk.blogspot.com/2009/01/introduction-to-egg.html)
--   [git-wip](https://github.com/bartman/git-wip) (GPL)
+-   <a name="git-wip"></a>[git-wip](https://github.com/bartman/git-wip) (GPL)
     by Bart Trojanowski  is a script that will manage Work
     In Progress (or WIP) branches. It includes hooks for vim and
     emacs.
@@ -564,8 +561,8 @@ provides a detailled description of the use of the following packages.
 -   <a name="vdiff"></a>[vdiff](https://github.com/justbur/emacs-vdiff)
     by Justin Burkett, is a diff tool that display diff information in
     buffers as you edit them, like vimdiff does.
-    It has also amagit interface which replace ediff by vdiff in
-    magit: m[vdiff-magit](https://github.com/justbur/emacs-vdiff-magit).
+    It has also a magit interface which replace ediff by vdiff in
+    magit: [vdiff-magit](https://github.com/justbur/emacs-vdiff-magit).
     vdiff and vdiff-magit are in melpa.
 
 ## Git Fuse filesystems
@@ -648,7 +645,11 @@ the Git Wiki [list also the Web interfaces
 -   [Git Wiki - Tools
     ](https://git.wiki.kernel.org/index.php/Interfaces,_frontends,_and_tools#Tools)
 
-
+## Commit
+-   See {{< iref "#git-wip" "git-wip" >}} above.
+-   [gitwatch](https://github.com/gitwatch/gitwatch) (GPL)
+    A bash script to watch a file or folder and commit changes to a git repo.
+    I uses _inotify_ to watch for changes.
 
 ## Sensitive information
 -   [git-remote-gcrypt
