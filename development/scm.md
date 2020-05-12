@@ -707,6 +707,9 @@ the Git Wiki [list also the Web interfaces
 
 
 ## File systems synchronization {#fs_synch}
+See also {{< iref "backup#synchronization" "Synchronization" >}} in the
+{{< iref "backup" "Backup Section" >}}.
+
 -   [SparkleShare](http://www.sparkleshare.org/) is a collaboration and sharing tool
     that uses a git repository backend.  It is written in mono and uses libnotify (with
     python and dbus services) to monitor files so it has quite heavy dependencies.
@@ -715,8 +718,10 @@ the Git Wiki [list also the Web interfaces
 -   [DVCS-Autosync](http://mayrhofer.eu.org/dvcs-autosync)
     is a lighter alternative to SparkleShare.  It watch files and folders in specified
     paths and sync them in a git or mercurial repository.  It needs pynotify (python),
-    xmppy and a provided patched JabberBot. The project has a very low activity _seen in
-    october 2019_, nevertheless the maintainer indicates it can accept pull requests.
+    xmppy and a provided patched JabberBot. The project has a very low activity _last
+    release november 2019_, nevertheless the maintainer indicates it can accept pull
+    requests.
+    -   [dvdautosync - GitHub](https://github.com/rmayr/dvcs-autosync).
 -   [git-sync](https://github.com/ianb/git-sync)
     by Ian Bicking is a git deployement script.
 -   Tychoish _Sam Kleinman_ uses [a script to synchronize git repositories
