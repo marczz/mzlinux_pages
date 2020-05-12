@@ -2,7 +2,9 @@
 title: Backup
 ---
 
-{{% toc /%}}
+see also {{< "clouds" "Clouds" >}},
+{{< iref "network_filesystems#distributed_filesystems" "Distributed File Systems" >}},
+{{< iref "scm#fs_sync" "File systems synchronization" >}}.
 
 # General References
 
@@ -637,6 +639,9 @@ among other backends and have recent release like
 
 
 # Synchronization {#synchronization}
+See also {{< iref "network_filesystems#distributed_filesystems" "Distributed File Systems" >}},
+{{< iref "scm#fs_sync" "File systems synchronization" >}}.
+
 ## rsync {#rsync}
 See also the {{< iref "#rsync_backup" "Section on rsync backup" >}}
 
@@ -740,7 +745,7 @@ See also the {{< iref "#rsync_backup" "Section on rsync backup" >}}
     folders, network share, or through SFTP. It is available for Linux
     _debian package_, windoze and Mac OS X. Although beeing open
     source and free, it shows an advertisement during installation,
-    and there are also a payed _donation edition_.
+    and there are also a payed _donation edition_. _active in 2020_.
 -   [ftpsync.pl](https://savannah.gnu.org/projects/ftpsync/) (GPL)
     is a perl program for one way sync to FTP.
     following the [readme
