@@ -196,7 +196,7 @@ See also {{< iref "source_code#literate_programming" "Literate Programming" >}}
     is a front end for
     {{< iref "latex#tufte" "Tufte Latex" >}}
 
-# Document capture, refs and annotation
+# Document capture, refs and annotation {#annotations}
 -   [org-capture](https://orgmode.org/manual/Capture.html)
     in the org distribution,  lets you quickly store notes.
     It becomes more usefull if you define [capture templates
@@ -210,29 +210,49 @@ See also {{< iref "source_code#literate_programming" "Literate Programming" >}}
     ](https://orgmode.org/manual/Hyperlinks.html#Hyperlinks). Another method is
     [attachments](https://orgmode.org/manual/Attachments.html), which are files located
     in a directory belonging to an outline node.
+-   [org-download](https://github.com/abo-abo/org-download) (GPL)
+    from [Oleh Krehel _abo-abo_](https://github.com/abo-abo)
+    drag and drop images from your browser or flesystem
+    to Emacs org-mode either using attachment org-mode build-in method, or in a directory.
 -   [Org Noter](https://github.com/weirdNox/org-noter) (GPL)
     is a synchronized pdf/epub/odt/docx document annotator.
     It let you create notes that are kept in sync when you scroll through the document,
     but the notes themselves live in external an Org-mode file.
     -   [Notes on Org-noter — Dani](https://write.as/dani/notes-on-org-noter)
+-   [Annot](https://github.com/ghoshi/annot/)
+    allow to add/edit/remove annotations, highlights, or even annotated images on any
+    file and manages them for you. All annotations are stored separately for each
+    annotated file and get reproduced when the file is opened again.  It is a poject by
+    _tkykhs_ on google code in 2010, further amended by _Hoshi_ in 2015/2016.
+    [zbelial/annot](https://github.com/zbelial/annot) fork, add integration for
+    _counsel_ and _helm_.
 -   [Annotate](https://github.com/bastibe/annotate.el) (MIT License)
     provides a minor mode annotate-mode, which can add annotations to arbitrary files
     without changing the files themselves. It is in Melpa.
 -   [org-annotate-file](http://emacswiki.org/wiki/OrgAnnotateFile)
     allows the annotation of a file in org-mode without modification
     of the file itself.  There is at least three versions of
-    _org-annotate-file_ that was successively forked by
-    [Philip Jackson](http://emacswiki.org/emacs/org-annotate-file.el),
+    _org-annotate-file_ that was successively forked from
+    [Philip Jackson](http://emacswiki.org/emacs/org-annotate-file.el) by
     [Nick Daly
     ](https://bitbucket.org/nickdaly/org-annotate-file/src/tip/org-annotate-file.el)
     _2011 no longer available_,
     and [Diego Sevilla
     ](https://bitbucket.org/dsevilla/org-annotate-file/src/default/org-annotate-file.el)
     _2011_
+    who added the possibility to annotate a file without previously open it,
     after he wrote [this comment
     ](http://stackoverflow.com/questions/7295708/how-to-use-org-annotate-file).
 
     _org-annotate-file_ is provided in the org contrib package.
+
+-   [In Place Annotation](https://www.emacswiki.org/emacs/InPlaceAnnotations)
+    alias _ipa_ is also a package for managing external annotations.
+    [GitHub - thanhvg/ipa.el](https://github.com/thanhvg/ipa.el) is forked from
+    [IdoMagal/ipa.el](https://github.com/IdoMagal/ipa.el) itself forked from the
+    [EmacsWiki - ipa.el](https://www.emacswiki.org/emacs/ipa.el).
+-   The [pdf-tools](https://github.com/politza/pdf-tools) package contains a pdf
+    annotation tool.
 
 # Slides with Org Mode {#org-mode_slides}
 There are many ways to produce slides with an org mode formatted text;
