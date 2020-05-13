@@ -615,6 +615,20 @@ You find also nice packages in the
     of an Emacs Lisp package, including dependency management,
     packaging, distribution and testing. The [Cask Repository
     ](https://github.com/cask/cask) is on GitHub.
+-   [Quelpa](https://github.com/quelpa/quelpa) (GPL)
+    is a tool to compile and install packages locally from local or remote source code.
+    quelpa gets the package source code, builds an ELPA compatible package and installs
+    that locally with package.el. It allows to build the bleeding edge of MELPA
+    packages, and also packages from other sources, like github repositories. As example
+    we install the package _cheat_ with:
+    ``` elisp
+    (quelpa '(cheat :fetcher github :repo "pbellon/cheat"))
+    ```
+    -   [quelpa-use-package](https://github.com/quelpa/quelpa-use-package)
+        allow to use _use-package_ with _Quelpa_.
+-   <a name="straignt"></a>[Straight](https://github.com/raxod502/straight.el)
+    -   [straight comparison with other package managers
+        ](https://github.com/raxod502/straight.el#tldr-1)
 
 ## Emacs configuration
 -   [EmacsWiki: Dot Emacs Structuring
