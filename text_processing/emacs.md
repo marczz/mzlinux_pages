@@ -37,7 +37,7 @@ title: Emacs
 -   [r/emacs - reddit](https://www.reddit.com/r/emacs/) (
     ([rss](http://www.reddit.com/r/emacs.rss))
 
-n# Emacs tutorials
+# Emacs tutorials
 -   [Emacs Wiki: EmacsNiftyTricks
     ](http://www.emacswiki.org/emacs/EmacsNiftyTricks)
 -   [WikEmacs](http://wikemacs.org/wiki/Main_Page)
@@ -49,19 +49,20 @@ n# Emacs tutorials
     The [org-mode source reository
     ](https://github.com/Boruch-Baum/emacs_mini_manual/)
     is on GitHub.
-n-   [Emacs Rocks!](http://emacsrocks.com/) a serie of emacs videos.
--   [Emacs Redux](http://emacsredux.com/)
-    ([Emacs Redux rss](http://emacsredux.com/atom.xml)
+-   [Emacs Rocks!](http://emacsrocks.com/) a serie of emacs videos.
 -   [Master Emacs in one year
     ](https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-en.org)
     by 陈斌 Chen bin.
-n-   [Ergo Emacs tutorials](http://ergoemacs.org/emacs/emacs.html)
+-   [Ergo Emacs tutorials](http://ergoemacs.org/emacs/emacs.html)
 
 # Emacs Blogs
 
 -   [Planet Emacsen](http://planet.emacsen.org/) is an aggregation of
     emacs blogs.
 
+-   [Bozhidar Batsov: Emacs Redux](http://emacsredux.com/)
+    ([Emacs Redux rss](http://emacsredux.com/atom.xml) by the authorof _projectile_,
+    _emacs prelude_, _solarized-emacs_, _zenburn_ and numerous packages.
 -   Artur Malabarba's [Endless Parentheses
     ](http://endlessparentheses.com/)
     a blog about Emacs. He has also a
@@ -71,11 +72,10 @@ n-   [Ergo Emacs tutorials](http://ergoemacs.org/emacs/emacs.html)
     [Index of /Technical/Emacs](http://www.howardism.org/Technical/Emacs/),
 -   Mickey Petersen blog [Mastering Emacs](http://www.masteringemacs.org/)
 -   Oleh Krehel  blog  [oremacs](http://oremacs.com/). Oleh Krehel is the author
-    of {{< iref "#ivy" "ivy" >}},
-    {{< iref "#hydra" "Hydra" >}}, _ace-link_, _ace-window_,
-    _avy_, _define-word_, _lispy_, _org-download_, _worf_,
-    and many packages in his [GitHub repository
-    ](https://github.com/abo-abo/).
+    of {{< iref "#ivy" "ivy" >}}, {{< iref "#hydra" "Hydra" >}}, _ace-link_,
+    [ace-window][], {{< iref "#avy" "avy">}}, {{< iref "#define-word" "define-word" >}},
+    _lispy_, _org-download_, _worf_, {{< iref "#pamparam" "pamparam" >}}
+    and many packages in his [GitHub repository](https://github.com/abo-abo/).
 -   [Sacha Chua's blog](http://sachachua.com/blog/) (
     [RSS feed](http://feeds.sachachua.com/sachac)
 -   Sebastian Wiesner
@@ -86,7 +86,7 @@ n-   [Ergo Emacs tutorials](http://ergoemacs.org/emacs/emacs.html)
     features and packages.
 -   [Toby 'qubit' Cubitt - Blog](http://www.dr-qubit.org/tags/all.html), he is the
     author of [many packages](http://www.dr-qubit.org/tags/computing-code-emacs.html).
-
+-   [Jonas Bernoulli: EmacsAir](https://emacsair.me/).
 
 # Emacs compatibles terminal editors {#terminal_editors_emacslike}
 -   [John E. Davis (JED)](http://space.mit.edu/home/davis/)
@@ -114,9 +114,8 @@ n-   [Ergo Emacs tutorials](http://ergoemacs.org/emacs/emacs.html)
 -   [gnu: Emacs Lisp Manual](http://www.gnu.org/software/emacs/manual/html_node/elisp/)
 -   [EmacsWiki](http://www.emacswiki.org/):
     The [code category](http://www.emacswiki.org/cgi-bin/emacs-en?CategoryCode)
-    includes
-    [Learning Emacs Lisp
-    ](http://www.emacswiki.org/cgi-bin/emacs-en?CategoryCode#toc1);
+    includes a list of resources:
+    [Learn Emacs Lisp](https://www.emacswiki.org/emacs/LearnEmacsLisp);
     it also provides an
     [ElispCookbook](http://www.emacswiki.org/emacs/ElispCookbook)
 -   [GNU Emacs Common Lisp Emulation](http://www.gnu.org/software/emacs/manual/html_mono/cl.html)
