@@ -2,8 +2,6 @@
 title: Postscript, PDF, djvu, scanner, OCR
 ---
 
-{{% toc /%}}
-
 You may also be interested by the
 {{< iref "images" "Image section" >}}
 
@@ -68,7 +66,7 @@ See also the {{< iref "cups" "Cups Page" >}}.
 
 # DjVu {#djvu}
 -   Wikipedia: {{< wp "DjVu" >}}
--   [djvulibre](http://djvu.sourceforge.net/) is the open source
+-   <a name="djvulibre"></a>[djvulibre](http://djvu.sourceforge.net/) is the open source
      implementation of djvu.
 -   [djvu.org](http://djvu.org/) is the home page of {{< wp "DjVu" >}} format.
     [DjVu Tutorial](http://www.djvuzone.org/support/tutorial/index.html),
@@ -91,9 +89,14 @@ See also the {{< iref "cups" "Cups Page" >}}.
     ](https://fr.wikisource.org/wiki/Aide:Cr%C3%A9er_un_fichier_DjVu/M%C3%A9thodes_compl%C3%A8tes),
     [Créer un fichier DjVu à partir d’un pdf de Google Books
     ](https://fr.wikisource.org/wiki/Aide:Cr%C3%A9er_un_fichier_DjVu/%C3%80_partir_d%E2%80%99un_pdf_de_Google_Books).
--   _Djview4_ is the standard reader for djvu, {{< wp "Evince" >}} _but not epdfview_ can also display djvu,
-    but I have experienced on the same big (10M) djvu book, evince taking 40M of resident memory
-    while _djview4_ only taky 20M.
+-   [PDF, PS and DjVu - ArchWiki
+    ](https://wiki.archlinux.org/index.php/PDF,_PS_and_DjVu#Create_a_PDF_from_images)
+-   _Djview4_ is the standard reader for djvu, {{< iref "#evince" "Evince" >}},
+    {{< iref "#atril" "Atril"  >}},  {{< iref "#okular" "Okular" >}}
+    _but not epdfview_ can also display djvu.
+    _Djview4_is lighter than these multipurpose viewers. I have experienced on the same
+    big (10M) djvu book, {{< iref "#evince" "Evince" >}} taking 40M of resident memory
+    against 20M for  _Djview4.
 -   [minidjvu](http://minidjvu.sourceforge.net/): _GPL_
     is a bitonal (black & white) DjVu encoder/decoder.
 
@@ -126,6 +129,8 @@ formats in
 [PDF/X in a Nutshell](https://www.pdfa.org/resource/pdfx-in-a-nutshell/),
 [PDF/UA in a Nutshell](https://www.pdfa.org/resource/pdfua-in-a-nutshell/).
 
+-   [PDF, PS and DjVu - ArchWiki
+    ](https://wiki.archlinux.org/index.php/PDF,_PS_and_DjVu#Create_a_PDF_from_images)
 -   {{< wp "OpenXPS" >}} is a page description format created by microsoft to
     compete with the widely used pdf format.  See the
     {{< wp "Comparison of OpenXPS and PDF" >}} in Wikipedia.
@@ -192,20 +197,13 @@ formats in
     géneration of pdf or ps.
 
 # Pdf viewers
-Some viewers have support for bookmarking, we need to distinguish the
-_oulines_ that are included in the document by _pdfmarks_ syntax. And
-some viewer bookmarks that are proper to the editor and leave the pdf
-file untouched. As an exemple you can retrieve the bookmarks put with
-evince with the command:
-
-    gvfs-info -a "metadata::evince::bookmarks"  <path-of -pdf-file>
-
-Annotation are supported by evince, qpdfview and {{< iref "#okular" "Okular" >}}.
+Annotation are supported by  {{< iref "#evince" "Evince" >}},
+{{< iref "#qpdfview" "Qpdfview" >}} and {{< iref "#okular" "Okular" >}}.
 
 Some viewers have support for _SyncTex_ the Tex source and pdf
 _live preview_ synchronization library. This include
-{{< iref "#okular" "Okular" >}}, {{< iref "#evince" "evince" >}},
-{{< iref "#qpdfview" "qpdfview" >}}, {{< iref "#zathura" "zathura"  >}}.
+{{< iref "#okular" "Okular" >}}, {{< iref "#evince" "Evince" >}},
+{{< iref "#qpdfview" "Qpdfview" >}}, {{< iref "#zathura" "Zathura"  >}}.
 
 -   Wikipedia {{< wp "List of PDF software" >}}
 -   [ArchWiki: list of pdf and djvu software
@@ -227,12 +225,13 @@ _live preview_ synchronization library. This include
     unofficial repository [notesalexp.org](http://notesalexp.org/).
     -   [ArchWiki: Llpp](https://wiki.archlinux.org/index.php/Llpp)
 -   [Mupdf](http://mupdf.com/) <a name="mupdf"></a> (GPL)
-    is a new C-based PDF parsing library. MuPDF has a small footprint and
+    is a C-based PDF parsing library. MuPDF has a small footprint and
     has support for all non-interactive PDF 1.7 features.
-    The toolkit provides a simple API for accessing the internal structures of the PDF document.<br />
+    The toolkit provides a simple API for accessing the internal structures of the
+    PDF document.<br />
     Mupdf seems to be the smallest and fastest reader available on Unix,
-    see below the size size comparison and in Johnny Huang's
-    [Poppler vs MuPDF](http://hzqtc.github.io/2012/04/poppler-vs-mupdf.html) for the speed test.
+    see below the size size comparison and the speed test in Johnny Huang's
+    [Poppler vs MuPDF](http://hzqtc.github.io/2012/04/poppler-vs-mupdf.html).
     _Mupdf_ sources and binary downloads are available in the
     [Mupdf Site](http://mupdf.com/). Debian provide two packages:
     [Mupdf](http://packages.debian.org/search?keywords=mupdf) and
@@ -267,28 +266,33 @@ _live preview_ synchronization library. This include
 
     *Poppler* is the base of many pdf viewers:
 
+    -   [Atril](https://github.com/mate-desktop/atril) (GPL)
+        is the PDF/ps/eps/djvu/XPS/ viewer of the Mat Desktop. It is a fork of
+        {{< iref "#evince" "Evince" >}} and use the same libraries _poppler_ for PDF,
+        _libspectre_ for ps/eps, {{< iref "#djvulibre" "DjVuLibre"  >}} for djvu,
+        _libxgps_ for XPS.
     -   <a name="evince"></a>{{< wp "Evince" >}} (GPL) build with  GTK+ and *Gnome*.
         -   [Evince Gnome Home](https://wiki.gnome.org/Apps/Evince/).
         -   [Evince supported documents formats
             ](https://wiki.gnome.org/Apps/Evince/SupportedDocumentFormats)
-            includes PDF using Poppler, PostScript using the
-            [libspectre](http://www.freedesktop.org/wiki/Software/libspectre/)
-            backend, multi-Page TIFF, DVI, DjVu using DjVuLibre,
+            includes PDF using _Poppler_, PostScript using the
+            [libspectre][]  backend, multi-Page TIFF, DVI, DjVu using
+             {{< iref "#djvulibre" "DjVuLibre"  >}}, XPS using _libxgps_,
             OpenDocument Presentation (impress), Comics (CBR, CBZ,
             CB7).
         -   [Evince Manual](https://help.gnome.org/users/evince/stable/)
     -   <a name= "okular"></a>{{< wp "Okular" >}} (GPL) build with QT.
-    -   [pdf-tools](https://github.com/politza/pdf-tool)
-        is a pdfviewer for emacs that replace the builtin _Docview_.
+    -   {{< iref "org-mode#pdf-tools" "pdf-tools" >}}
+        is a pdfviewer and annotation tool for emacs that replace the builtin _Docview_.
     -   <a name="qpdfview"></a>
-        [qpdfview](https://launchpad.net/qpdfview) (GPL) is a tabbed
-        PDF viewer relying on QT toolkit, It is in Debian.  A GTK
-        version [epdfview](http://trac.emma-soft.com/epdfview/) (GPL)
-        is now unmaintained and no longer in Debian.  Qpdfview has a
+        [Qpdfview](https://launchpad.net/qpdfview) (GPL) is a tabbed
+        PDF viewer relying on QT toolkit, It is in Debian.  The GTK
+        version [Epdfview](http://trac.emma-soft.com/epdfview/) (GPL)
+        is now unmaintained and no longer in Debian.  _Qpdfview_ has a
         partial support for annotation and forms. Plugins are
         available for postscript and djvu.
     -   <a name="zathura"></a>
-        [zathura](http://zathura.pwmt.org/projects/zathura) (GPL)
+        [Zathura](http://zathura.pwmt.org/projects/zathura) (GPL)
         is a pdf viewer with minimal memory footprints and focus on
         control thru keyboard interaction.  In addition of common
         viewer features Zathura can display and browse indexes and
@@ -297,7 +301,8 @@ _live preview_ synchronization library. This include
         use {{< iref "#mupdf" "mupdf" >}} instead of
         poppler. It is in Debian.
     -   [apvlv](https://github.com/naihe2010/apvlv/tree/master) (GPL)
-        is a Popler/GTK+ based pdf viewer. Like zathura he is controled
+        is a Popler/GTK+ based pdf viewer, which can also display epub documents.
+        Like {{< iref "#zathura" "Zatura" >}} he is controled
         with vim like keybindings. It allows multiple tabs.
         It present himself as *minimal* but it has huge memory
         footprints, that put it in the same category than evince.
@@ -343,27 +348,8 @@ For a wider specification look in the
 ](http://www.adobe.com/devnet/pdf.html) where you find the latest
 _Adobe PDF Reference_.
 
-Some tools thereafter allow to create Outlines _very often also
-referred as Bookmarks_
-{{< iref "#pdflatex_bookmarks" "PdfLatex" >}},
-{{< iref "#jpdfbookmark" "JpdfBookmark" >}},
-{{< iref "#jpdftweak" "jPDFtweak" >}},
-{{< iref "#pdfk" "pdftk" >}},
-{{< iref "#pdfritebookmarks" "pdfWriteBookmarks" >}},
-
-An other common task is to crop pages to changes margins, see the
-{{< iref "#pdf_crop" "subsection pdf crop" >}}.
-
--   [bmconverter.py](https://github.com/goerz/bmconverter.py) (GPL)
-    by [Michael Goerz](http://michaelgoerz.net/)
-    is a python script that converts between the bookmark description
-    formats used by different pdf and djvu bookmarking tools such as
-    pdftk, the iText toolbox, pdfLaTeX pdfWriteBookmarks, jpdftweak,
-    djvused, and the DJVU Bookmark Tool _2010_.
-    -   [BmConverter Manual](http://goerz.github.io/bmconverter.py/)
-    -   [User script to convert pdftk bookmarks to pdfmarks
-        ](https://github.com/goerz/bmconverter.py/issues/1)
--   [CPDF](https://community.coherentpdf.com/) ([Non-Commercial Use License
+-   <a name="cpdf"></a>[CPDF](https://community.coherentpdf.com/)
+    ([Non-Commercial Use License
     ](https://github.com/coherentgraphics/cpdf-binaries/blob/master/LICENSE)
     _Coherent PDF Command Line Tools Community Release_
     allow you to manipulate existing PDF files in a variety of ways.
@@ -402,16 +388,7 @@ An other common task is to crop pages to changes margins, see the
     then convert in pdf with
     [ps2pdf](http://www.ghostscript.com/doc/current/Ps2pdf.htm)
     There is a python frontend _last update 2012, unmaintained_
-    [Moonshiner](http://moonshiner.sourceforge.net/).<br />
-    It can also be used to manage bookmarks as outlined in
-    [PDF bookmarks with Ghostscript
-    ](http://blog.tremily.us/posts/PDF_bookmarks_with_Ghostscript/)
-    where you can also find the script `pdf-merge.py` that uses `pdftk`
-    and `ghostscript` to provide a bookmark-preserving version of
-    pdftk's `cat`. You can take advantage from an user script
-    [to convert pdftk bookmarks to pdfmarks
-    ](https://github.com/goerz/bmconverter.py/issues/1)
-    to use the output of {{< iref "#pdftk" "pdftk" >}}.
+    [Moonshiner](http://moonshiner.sourceforge.net/).
 -   [flpsed](http://flpsed.org/flpsed.html)
     (GPL) a PostScript annotator that lets you add arbitrary text
     lines to existing PostScript 1 documents. Added lines can later be
@@ -468,12 +445,7 @@ An other common task is to crop pages to changes margins, see the
         ](http://ssdigit.nothingisreal.com/2010/03/pdfs-jpeg-vs-png-vs-jbig.html)
         by Tristan Miller.
     -   {{< iref "images#imagemagick" "ImageMagick" >}} can read and write jbig2 images.
--   [JpdfBookmark (author page)](http://flavianopetrocchi.blogspot.com/) (GPL)
-    <a name="jpdfbookmark"></a>
-    and [JpdfBookmark sourceforge project](http://sourceforge.net/projects/jpdfbookmarks/)
-    is a java application that allows you to create and edit bookmarks on existing PDF files.
--   [jPDF Tweak](http://jpdftweak.sourceforge.net/) (AGPL)
-    <a name="jpdftweak"></a>
+-   <a name="jpdftweak"></a>[jPDF Tweak](http://jpdftweak.sourceforge.net/) (AGPL)
     is a Java Swing application that can combine, split, rotate, reorder, watermark,
     encrypt, sign, add PDF bookmarks, add page transitions,  attach files to your PDF.
 -   <a name="k2pdfopt"></a>[k2pdfopt](http://willus.org/k2pdfopt/) (open source)
@@ -679,9 +651,9 @@ An other common task is to crop pages to changes margins, see the
     ](http://pdfsizeopt.googlecode.com/files/pts_pdfsizeopt2009.psom.pdf)
     by Péter Szabó the author of _pdfsizeopt_, explain what can be
     optimized, and how to use _pdfsizeopt_.
--   [pdftk - The PDF Toolkit](https://www.pdflabs.com/tools/pdftk-server/)
-    <a name="pdftk"></a> (GPL) is a java *compiled (with gcj)*
-    application which uses the
+-   <a name="pdftk"></a>[pdftk - The PDF Toolkit
+    ](https://www.pdflabs.com/tools/pdftk-server/) (GPL)
+    is a java *compiled (with gcj)* application which uses the
     [iText library](http://en.wikipedia.org/wiki/IText)
     (LGPL). It can merge, split, rotate, encryt, decrypt, attach
     files, unpack, repair pdf documents. It allows also to fill
@@ -691,11 +663,21 @@ An other common task is to crop pages to changes margins, see the
         written in GTKmm, a C++ library for GTK+.
         It can merge, split, rotate, shuffle, add backgrounds
         or stamps and add attachments.
--   [pdfWriteBookmarks](http://github.com/goerz/pdfWriteBookmarks)
-    <a name="pdfritebookmarks"></a> is a
-    Java program by [Michael Goerz](https://github.com/goerz)
-    that reads bookmarks from a text file in a simple format and adds
-    them to an exisiting PDF. _2006_
+    -   [PDFTK example](https://www.pdflabs.com/docs/pdftk-cli-examples/),
+        [How to Collate Even and Odd Scanned PDF Pages
+        ](https://www.pdflabs.com/blog/how-to-collate-even-odd-scanned-pages/)
+        and [How to Export and Import PDF Bookmarks
+        ](https://www.pdflabs.com/blog/export-and-import-pdf-bookmarks/)
+        from _pdflabs_.
+    -   [PDFTK tutorial (fr) - Ubuntu-fr](https://doc.ubuntu-fr.org/pdftk).
+    -   There are also examples in the  [PDF, PS and DjVu - ArchWiki page
+        ](https://wiki.archlinux.org/index.php/PDF,_PS_and_DjVu#Create_a_PDF_from_images).
+-   <a name="pdfwritebookmarks"></a>[pdfWriteBookmarks
+    ](http://github.com/goerz/pdfWriteBookmarks) (GPL)
+    is a Java program by [Michael Goerz](https://github.com/goerz) and
+    [Stefan Birkner](https://www.stefan-birkner.de/se/) using the
+    [PDFBox](http://www.pdfbox.org/) library that reads bookmarks from a text file in a
+    simple format and adds them to an exisiting PDF.
 -   [PoDoFo library](http://podofo.sourceforge.net/about.html)
     (LGPL) is a portable C++ library to parse PDF files and modify
     their contents into memory.
@@ -799,7 +781,6 @@ uses {{< iref "#pypdf" "pypdf2" >}} and
 
 Other crop specific tools are either standalone or works as user interfaces to
 {{< iref "#pdftk" "pdftk" >}}, or {{< iref "#pypdf" "pypdf2" >}}:
-
 {{< iref "#briss" "BRISS" >}} a java GUI,
 {{< iref "#pdfcrop-python" "pdfcrop python script" >}} that
 uses {{< iref "#pypdf" "pypdf" >}},
@@ -839,6 +820,52 @@ python script,
     {{< iref "#poppler" "python-poppler" >}}.
     It is reported that _pdfquench_ don't preserve hyperlinks.
     -    [GitHub - pdf-quench](https://github.com/linuxerwang/pdf-quench).
+
+## PDF Outline
+Some tools allow to create Outlines _very often also referred as Bookmarks_
+{{< iref "#pdflatex_bookmarks" "PdfLatex" >}},
+{{< iref "#jpdfbookmark" "JpdfBookmark" >}},
+{{< iref "#jpdftweak" "jPDFtweak" >}},
+{{< iref "#pdfk" "pdftk" >}},
+{{< iref "#pdfritebookmarks" "pdfWriteBookmarks" >}},
+{{< iref "#cpdf" "CPDF" >}}.
+
+-   [bmconverter.py](https://github.com/goerz/bmconverter.py) (GPL)
+    by [Michael Goerz](http://michaelgoerz.net/) _2011_
+    is a python script that converts between the bookmark description
+    formats used by different pdf and djvu bookmarking tools such as
+    pdftk, the iText toolbox, pdfLaTeX pdfWriteBookmarks, jpdftweak,
+    djvused, and the DJVU Bookmark Tool _2010_.
+    -   [BmConverter Manual](http://goerz.github.io/bmconverter.py/)
+    -   [User script to convert pdftk bookmarks to pdfmarks
+        ](https://github.com/goerz/bmconverter.py/issues/1)
+-   {{< iref "#ghostscript" "Ghostscript" >}}
+    can a be used to manage bookmarks as outlined in
+    [PDF bookmarks with Ghostscript
+    ](http://blog.tremily.us/posts/PDF_bookmarks_with_Ghostscript/)
+    where you can also find the script `pdf-merge.py` that uses `pdftk`
+    and `ghostscript` to provide a bookmark-preserving version of
+    pdftk's `cat`. You can take advantage from an user script
+    [to convert pdftk bookmarks to pdfmarks
+    ](https://github.com/goerz/bmconverter.py/issues/1)
+    to use the output of {{< iref "#pdftk" "pdftk" >}}.
+-   <a name="jpdfbookmark"></a>[JpdfBookmark (author page)
+    ](http://flavianopetrocchi.blogspot.com/) (GPL)
+    and [JpdfBookmark sourceforge project](http://sourceforge.net/projects/jpdfbookmarks/)
+    is a java application that allows you to create and edit bookmarks on existing PDF files.
+
+## PDF Bookmarking and Annotations
+Some viewers have support for bookmarking, we need to distinguish the
+_oulines_ that are included in the document by _pdfmarks_ syntax. And
+some viewer bookmarks that are proper to the editor and leave the pdf
+file untouched. As an exemple you can retrieve the bookmarks put with
+{{< iref "#evince" "Evince" >}} with the command:
+
+    gvfs-info -a "metadata::evince::bookmarks"  <path-of -pdf-file>
+
+Many software have bookmarking support {{< iref "#lpp" "lpp" >}},
+{{iref "#zathura" "Zathura" }},  {{< iref "#evince" "Evince" >}},
+{{< iref "#atril" "Atril"  >}},  {{< iref "#okular" "Okular" >}} ...
 
 # OCR {#ocr}
 
@@ -1113,6 +1140,10 @@ python script,
 -   {{< wp "ABBY" >}} has an OCR server, with [ocr4linux: a linux client
     ](http://www.ocr4linux.com/)
     licences are a one time payment life license: 149€/12000 pages/year.
+
+
+<!--------------- refs -------------------------->
+[libspectre]: http://www.freedesktop.org/wiki/Software/libspectre/
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
