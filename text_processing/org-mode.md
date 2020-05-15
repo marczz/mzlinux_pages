@@ -251,8 +251,68 @@ See also {{< iref "source_code#literate_programming" "Literate Programming" >}}
     [GitHub - thanhvg/ipa.el](https://github.com/thanhvg/ipa.el) is forked from
     [IdoMagal/ipa.el](https://github.com/IdoMagal/ipa.el) itself forked from the
     [EmacsWiki - ipa.el](https://www.emacswiki.org/emacs/ipa.el).
--   The [pdf-tools](https://github.com/politza/pdf-tools) package contains a pdf
-    annotation tool.
+
+## pdfmark annotations.
+
+The pdf specification includes bookmarks and annotations, these  bookmarks and annotations are saved inside the pdf
+file, but are independent of the main content. These annotation software are listed in
+the section
+{{< iref "ps_pdf_djvu#pdf_annotations" "PDF Bookmarking and Annotations" >}}.
+
+For emacs users the {{< iref "ps_pdf_djvu#pdf-tools" "pdf-tools"  >}} package
+{{< iref "ps_pdf_djvu#pdf-tools_annotation" "allows annotations" >}}
+{{< iref "ps_pdf_djvu#pdf-tools" "pdf-tools"  >}} replace _Docview_ in emacs, it is
+in Melpa.
+
+
+# Zettelkasten note-taking
+
+-   [The Zettelkasten Method
+    ](https://www.lesswrong.com/posts/NfdHG6oHBJ8Qxc26s/the-zettelkasten-method-1).
+-   [Overview of the Zettelkasten Method](https://zettelkasten.de/posts/overview/).
+-   [Comparison of software
+    ](https://www.reddit.com/r/Zettelkasten/wiki/softwarecomparison)
+    in april 2020, _not only org-mode_.
+-   [Deft](https://jblevins.org/projects/deft/) (BSD license)
+    is an Emacs mode for quickly browsing, filtering, and editing directories of plain
+    text notes.
+    Deft is not by itself a Zettelkasten software, but it is the base of most emacs
+    Zettelkasten packages. Deft is in Melpa.
+-   [Zetteldeft](https://www.eliasstorms.net/zetteldeft/) (GPL)
+    is an extension of the Deft package for Emacs. Building on Deft’s search
+    functionality, Zetteldeft provides a way to create and manage links between short
+    notes. Zetteldeft maintains a flat hierarchy of org Mode files, structured  via
+    links and tags.
+    -   [Zetteldeft - GitHub](https://github.com/EFLS/zetteldeft)
+-   [org-zettelkasten](ttps://github.com/l3kn/org-zettelkasten) (GPL)
+    is aimed to the management of a large collection of org files (> 1000), it implement
+    a persistent cache to speed operations on this large file base.
+-   [org-roam](https://github.com/org-roam/org-roam) (GPL)
+    is a [Roam](https://roamresearch.com/) replica built over Org-Mode, it uses Deft and
+    [Org-journal](https://github.com/bastibe/org-journal).
+    -   [org-roam documentation](https://org-roam.readthedocs.io/en/latest/).
+    -   [How To Take Smart Notes With Org-mode
+        ](https://blog.jethro.dev/posts/how_to_take_smart_notes_org/)
+        by [Jethro Kuan](https://www.jethro.dev/) the author of Org Roam.
+-   [notdeft](https://tero.hasu.is/notdeft/)
+    is a manager and local search engine for directories of plain text notes using a
+    Xapian search engine. NotDeft is derived from Deft.
+    -   [notdeft - GitHub](https://github.com/hasu/notdeft) (BSD license).
+
+# Org-Mode Spaced Repetition {#spaced_repetition}
+
+Spaced Repetition has its {{< iref "spaced_repetition" "own page" >}}.
+
+-   [Org-drill](http://orgmode.org/worg/org-contrib/org-drill.html)
+    is an extension for Org mode. Org-Drill uses a spaced repetition
+    is uses the [sm5 algorithm from SuperMemo](http://supermemo.com/english/ol/sm5.htm)
+    implemented in [org-learn
+    ](https://code.orgmode.org/bzg/org-mode/raw/master/contrib/lisp/org-learn.el).
+-   [org-fc](https://github.com/l3kn/org-fc/) (GPL)
+    by Leon Rische _i3kn_ the author of _org-zettelkasten_,
+    is a spaced Repetition System for org-mode.
+-   <a name="pamparam"></a>[pamparam](https://github.com/abo-abo/pamparam) (GPL)
+    by Oleh Krehel  is a spaced repetition package for emacs org-mode.
 
 # Slides with Org Mode {#org-mode_slides}
 There are many ways to produce slides with an org mode formatted text;
