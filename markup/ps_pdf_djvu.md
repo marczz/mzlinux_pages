@@ -197,8 +197,6 @@ formats in
     géneration of pdf or ps.
 
 # Pdf viewers
-Annotation are supported by  {{< iref "#evince" "Evince" >}},
-{{< iref "#qpdfview" "Qpdfview" >}} and {{< iref "#okular" "Okular" >}}.
 
 Some viewers have support for _SyncTex_ the Tex source and pdf
 _live preview_ synchronization library. This include
@@ -282,8 +280,11 @@ _live preview_ synchronization library. This include
             CB7).
         -   [Evince Manual](https://help.gnome.org/users/evince/stable/)
     -   <a name= "okular"></a>{{< wp "Okular" >}} (GPL) build with QT.
-    -   {{< iref "org-mode#pdf-tools" "pdf-tools" >}}
+    -   <a name= "pdf-tools"></a>[pdf-tools](https://github.com/politza/pdf-tools) (GPL)
         is a pdfviewer and annotation tool for emacs that replace the builtin _Docview_.
+        It runs in background a {{< iref "#poppler" "poppler" >}}
+        program _epdfinfo_ which does all the hard work. See below for
+         {{< iref "#pdf-tools_annotations" "annotations with pdf-tools" >}}.
     -   <a name="qpdfview"></a>
         [Qpdfview](https://launchpad.net/qpdfview) (GPL) is a tabbed
         PDF viewer relying on QT toolkit, It is in Debian.  The GTK
@@ -309,39 +310,35 @@ _live preview_ synchronization library. This include
     -   *Libreoffice*, *TeXworks* and *Inkscape* are also using
         *poppler library*.
 
--   {{< wp "Xpdf" >}} (GPL) an light pdf viewer with minimal dependencies,
-    at the opposite of _epdfview_, it is user configurable;
-    you can even set unusal, but very usefull options like the paper color;
-    and of course you can set all the key bindings.<br/>
-    It is in Debian, the derived utilities are in the package
-    {{< iref "#popler-utils" "popler-utils" >}} except
-    {{< iref "#pdftosrc" "pdftosrc"  >}}.
+-   <a name="xpdf"></a>{{< wp "Xpdf" >}} (GPL)
+    is a light pdf viewer with minimal dependencies, {{< iref "#poppler" "Poppler" >}}
+    was forked from _Xpdf_. _Xpdf_ is user configurable; you can even set unusal, but
+    very usefull options like the paper color; and of course you can set all the key
+    bindings.
+
+    _xpdf_ is in Debian, the derived {{< iref "#popler-utils" "popler-utils" >}}
+    utilities are in the package _popler-utils_  except
+    {{< iref "#pdftosrc" "pdftosrc"  >}} which is in the package _texlive-binaries_.
 
 # PDF Editing
-One usual aim of editing pdf is to add outlines _also called bookmarks_.
 
 The _pdfmark_ operator is a PostScript extension, using this operator,
 many non layout-related features of a PDF file can be defined in the
 original document or in the corresponding PostScript code. PdfMark is
 introduced in the
-[pdfmark primer](http://www.pdflib.com/fileadmin/pdflib/pdf/pdfmark_primer.pdf)
+[pdfmark primer](http://extras.springer.com/1998/978-3-642-72032-1/PDF/PRIMER.PDF)
 which is a chapter of the book _Web publishing with Acrobat/PDF_ by
-Thomas Merz.  It is also available
-[in the springer extra materials
-](http://extras.springer.com/1998/978-3-642-72032-1/PDF/PRIMER.PDF).
+Thomas Merz is available in the springer extra materials.
+
 You can also refer to the tutorial
 [Enhancing the Text in Text Fields using Pdfmarks
 ](http://www.math.uakron.edu/~dpstory/tutorial/pdfmarks/txtfield.pdf)
 by D. P. Story, and his page
 [Pdfmarks: Links and Forms
-](http://www.math.uakron.edu/~dpstory/lnk_forms.html)
+](http://math.uakron.edu/~dpstory/lnk_forms.html).
 and to the full
 [Acrobat Pdfmark Reference (pdf)
-](http://www.adobe.com/devnet/acrobat/pdfs/pdfmark_reference.pdf)
-available also in the [Acrobate SDK Help
-](http://help.adobe.com/livedocs/acrobat_sdk/9/Acrobat9_HTMLHelp/wwhelp/wwhimpl/js/html/wwhelp.htm)
-as an [html pdfmark reference
-](http://help.adobe.com/livedocs/acrobat_sdk/9/Acrobat9_HTMLHelp/wwhelp/wwhimpl/js/html/wwhelp.htm).
+](http://www.adobe.com/devnet/acrobat/pdfs/pdfmark_reference.pdf).
 
 For a wider specification look in the
 [Adobe Developer Connection / PDF Technology Center
@@ -854,7 +851,7 @@ Some tools allow to create Outlines _very often also referred as Bookmarks_
     and [JpdfBookmark sourceforge project](http://sourceforge.net/projects/jpdfbookmarks/)
     is a java application that allows you to create and edit bookmarks on existing PDF files.
 
-## PDF Bookmarking and Annotations
+## PDF Bookmarking and Annotations {#pdf_annotations}
 Some viewers have support for bookmarking, we need to distinguish the
 _oulines_ that are included in the document by _pdfmarks_ syntax. And
 some viewer bookmarks that are proper to the editor and leave the pdf
@@ -864,8 +861,26 @@ file untouched. As an exemple you can retrieve the bookmarks put with
     gvfs-info -a "metadata::evince::bookmarks"  <path-of -pdf-file>
 
 Many software have bookmarking support {{< iref "#lpp" "lpp" >}},
-{{iref "#zathura" "Zathura" }},  {{< iref "#evince" "Evince" >}},
-{{< iref "#atril" "Atril"  >}},  {{< iref "#okular" "Okular" >}} ...
+{{iref "#zathura" "Zathura" >}},  {{< iref "#evince" "Evince" >}},
+{{< iref "#qpdfview" "Qpdfview" >}}, {{< iref "#atril" "Atril"  >}},
+{{< iref "#okular" "Okular" >}} ...
+
+Annotation are supported by  {{< iref "#evince" "Evince" >}},
+{{< iref "#qpdfview" "Qpdfview" >}} and {{< iref "#okular" "Okular" >}}.
+
+<a name="pdf-tools_annotation"></a>The  {{< iref "#pdf-tools" "pdf-tools" >}}
+package contains a pdf annotation tool. It allows to had notes at a point that appear as
+a small icon, to highlight or underline a region and attach a textual annotation to it.
+It runs in background a {{< iref "ps_pdf_djvu#poppler" "poppler" >}} program _epdfinfo_
+which does all the hard work.
+
+As _pdf-tools_ uses {{< iref "ps_pdf_djvu#poppler" "poppler" >}}, the annotations
+are saved by _poppler_ according to the PDF specification. They can can be also
+viewed or modified from {{< iref "ps_pdf_djvu#evince" "evince" >}}, other _poppler_
+based viewers that have annotation support, and also any other reader following the
+pdf annotation specification, like _adobe reader_.
+
+The main drawback of pdf-tools is the lack of documentation.
 
 # OCR {#ocr}
 
