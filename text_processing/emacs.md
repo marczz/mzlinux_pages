@@ -700,25 +700,37 @@ pn    using [use-package].
     [RegularExpressionHelp
     ](http://www.emacswiki.org/emacs/RegularExpressionHelp),
     [ReplaceRegexp Examples](http://www.emacswiki.org/emacs/ReplaceRegexp).
--   [reStructuredText mode][]
+-   [reStructuredText mode][rst]
     is used for {{< iref "rest" "reStructuredText" >}}.
 
 ## File explorers
-The Integrated Emacs file explorer is [dired], it has some extensions packages.
-The [Emacswiki: Dired Mode](https://www.emacswiki.org/emacs/DiredMode) page list them.
-   -   [dired+][] add many functionalities to Dired, it is compatible with Sunrise
-       Commander.
+The Integrated Emacs file explorer is [Dired][dired]
+-   [Emacswiki: Dired Mode](https://www.emacswiki.org/emacs/DiredMode)
+-   [EmacsWiki: Dired Power](https://www.emacswiki.org/emacs/DiredPower)
+    gives Dired tips.
+
+
+[Dired][dired] has some extensions packages the
+[Emacswiki: Dired Mode](https://www.emacswiki.org/emacs/DiredMode) page list them.
+   -   [dired+][] add many functionalities to Dired, it is compatible with
+       [Sunrise Commander][] and [Bookmark Plus][bookmark+].
    -   [diredfl][] is a fork of the font rules of [dired+]
    -   [dired-hacks][] is a collection of dired extensions
-
 
 -  [Lusty Explorer][lusty-explorer] includes both a filesystem explorer and a buffer
    switcher through a common interface. It is based on
    [lusty explorer for vim](https://www.vim.org/scripts/script.php?script_id=1890).
 -  [Neo Tree][neotree] is a tree file explorer, it is an emacs clone of the
-   [NerdTree vim plugin](https://www.vim.org/scripts/script.php?script_id=1658°
+   [NerdTree vim plugin](https://www.vim.org/scripts/script.php?script_id=1658)
    -   [EmacsWiki: NeoTree](https://www.emacswiki.org/emacs/NeoTree)
--
+-  [Sunrise Commander][]
+   is a two-pane file manager for Emacs based on Dired.
+   -   [Sunrise Commander Tips](https://www.emacswiki.org/emacs/Sunrise_Commander_Tips)
+   -   [EmacsWiki: Sunrise Commander Tips](https://www.emacswiki.org/emacs/Sunrise_Commander_Tips)
+   -   [Buttons Extension](https://www.emacswiki.org/emacs/sunrise-x-buttons.el)
+       provide a third pane at the bottom with buttons you can click to perform many
+       basic operations.
+
 ## Emacs Bookmarks
 
 [Emacs Bookmarks
