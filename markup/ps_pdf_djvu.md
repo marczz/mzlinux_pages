@@ -18,14 +18,12 @@ See also the {{< iref "cups" "Cups Page" >}}.
     {{< wp "Encapsulated PostScript" >}} or eps is a self contained graphics
     file format based on postscript but that includes the
     {{< wp "Bounding Box" >}}.
--   [Ghostscript (Home Page)](http://www.ghostscript.com/) (GPL)
-    <a name="ghostscript"></a>
-    _[Wikipedia page](http://en.wikipedia.org/wiki/Ghostscript)
+-   <a name="ghostscript"></a>[Ghostscript (Home Page)](http://www.ghostscript.com/)
+    (GPL)  _[Wikipedia page](http://en.wikipedia.org/wiki/Ghostscript)_
     is an interpreter and converter for Postscript. As viewer it is
-    used thru the __GV__ frontend or
-    {{< iref "#mupdf" "mupdf" >}}.
+    used thru the __GV__ frontend or  {{< iref "#mupdf" "mupdf" >}}.
     It is also used by the linux printing software to produce
-    raster files for the printer software.<br/>
+    raster files for the printer software.
 
     Ghostscript provides the following utilities:
 
@@ -55,14 +53,14 @@ See also the {{< iref "cups" "Cups Page" >}}.
 -   Some {{< iref "source_code#code_beautifiers" "source code beautifiers" >}}
     are able to generate beutified _latex_, it can be used for a two step
     géneration of pdf or ps.
--   [Scribus](http://www.scribus.net/) <a name="scribus"></a>
-    (GPL) is a Page Layout program for GNU/Linux, similar to PageMaker,
-    QuarkXPress or InDesign.
+-    <a name="scribus"></a>[Scribus](http://www.scribus.net/) (GPL)
+    is a Page Layout program for GNU/Linux, similar to PageMaker, QuarkXPress or
+    InDesign.
     - The old stable 1.3 from 2003 is outdated, be careful to get
-      the new generation 1.4.
+      the new generation >= 1.4.
     - The [Official online documentation](http://wiki.scribus.net/canvas/Help:TOC)
       in the [Scribus Wiki](http://wiki.scribus.net/index.php) refer to
-      the new Scribus 1.4
+      the new Scribus >= 1.4
 
 # DjVu {#djvu}
 -   Wikipedia: {{< wp "DjVu" >}}
@@ -178,7 +176,7 @@ formats in
 -   [xhtml2pdf](http://www.xhtml2pdf.com/) (Apache License) is a
     converter from HTML and CSS
     in pure Python using the ReportLab Toolkit, HTML5lib and
-    {{< iref "#pypdf" "pyPdf" >}}.
+    {{< iref "#pypdf2" "pyPdf2" >}}.
     [GitHub xhtml2pdf repository](https://github.com/chrisglass/xhtml2pdf)
     _xhtml2pdf_ was named previously _Pisa_ and packaged in Debian as
     _python-pisa_.
@@ -207,41 +205,75 @@ _live preview_ synchronization library. This include
 -   [ArchWiki: list of pdf and djvu software
     ](https://wiki.archlinux.org/index.php/List_of_applications/Documents#PDF_and_DjVu).
 -   <a name="fbpdf">[fbpdf](http://repo.or.cz/w/fbpdf.git) (BSD license) is a
-    framebuffer pdf/djvu file viewer.  It can use either
+q    framebuffer pdf/djvu file viewer.  It can use either
     {{< iref "#mupdf" "mupdf" >}} or
     {{< iref "#poppler" "poppler libraries" >}} for rendering
     pdf files and it uses djvulibre library for rendering djvu files.
--   The new [Firefox built-in PDF viewer
+-   [PDF.js](https://github.com/mozilla/pdf.js)  (Apache License)
+    is a javascript PDF Viewer for html5 browsers, it is embedded in Firefox to provide
+    the new [Firefox built-in PDF viewer
     ](https://support.mozilla.org/en-US/kb/view-pdf-files-firefox-without-downloading-them)
-    can be [enabled/disabled in preferences
+    It can be [enabled/disabled in preferences
     ](https://support.mozilla.org/en-US/kb/disable-built-pdf-viewer-and-use-another-viewer).
-    In the same way *Chrome* has a builtin PDF viewer.
+    It is available also [in chrome web store
+    ](https://chrome.google.com/webstore/detail/pdf-viewer/oemmndcbldboiebfnladdacbdfmadadm)
+    and can replace *Chrome*  a built-in PDF viewer. It can also work with Opera, Edge,
+    and Safari >=  9.
 -   <a name="lpp"></a>[Llpp](http://repo.or.cz/w/llpp.git/)
     is  a graphical PDF pager using {{< iref "#mupdf" "mupdf library" >}}.
     lpp depends on *Ocaml*. It supports continuous page scrolling,
     bookmarking, and text search. It is not in Debian but in an
     unofficial repository [notesalexp.org](http://notesalexp.org/).
     -   [ArchWiki: Llpp](https://wiki.archlinux.org/index.php/Llpp)
--   [Mupdf](http://mupdf.com/) <a name="mupdf"></a> (GPL)
+-    <a name="mupdf"></a>[Mupdf](http://mupdf.com/) (GPL)
     is a C-based PDF parsing library. MuPDF has a small footprint and
     has support for all non-interactive PDF 1.7 features.
     The toolkit provides a simple API for accessing the internal structures of the
-    PDF document.<br />
-    Mupdf seems to be the smallest and fastest reader available on Unix,
+    PDF document.
+
+    Mupdfviewer  seems to be the smallest and fastest reader available on Unix,
     see below the size size comparison and the speed test in Johnny Huang's
     [Poppler vs MuPDF](http://hzqtc.github.io/2012/04/poppler-vs-mupdf.html).
     _Mupdf_ sources and binary downloads are available in the
     [Mupdf Site](http://mupdf.com/). Debian provide two packages:
     [Mupdf](http://packages.debian.org/search?keywords=mupdf) and
     [Mupdf Tools](http://packages.debian.org/search?keywords=mupdf-tools).
-    The standard _mupdf_ viewer is quick and small, it allows also reading XPS
-    and CBZ (Comic Book archive)
-    but it does not include an outline browser as do most alternate browsers.
-   _<br />
-    {{< iref "#llpp" "llpp" >}} and
-    {{< iref "#zathura" "zathura" >}}
-    can use the mupdf library
-    and provide some extra features compared to the plain mupdf frontend.
+    The standard _mupdf_ viewer is quick and small, it allows also reading PDF, XPS
+    EPUB, XHTML and CBZ (Comic Book archive) and image formats
+    such as PNG, JPEG, GIF, and TIFF.
+
+    It does not include an outline browser as do most alternate browsers, even if the
+    _mupdf_ library can read the outline, and it is rendered by the _mutool_ utility and
+    other viewers using the same _mupdf_ toolkit.
+
+    {{< iref "#llpp" "llpp" >}}  use the _mupdf_ library and
+    {{< iref "#zathura" "zathura" >}} can use {{< iref "#poppler" "poppler" >}}, it is
+    named in Debian _zathura-pdf-poppler_, itcan also use the _mupdf_ library, it is
+    then named _zathura-pdf-mupdf_, which is not packaged in Debian but available in the
+    [ppa zathura-mupdf](https://launchpad.net/~spvkgn/+archive/ubuntu/zathura-mupdf).
+
+    These alternate viewer provide some extra features compared to the plain _mupdf_
+    frontend.
+
+    -   [PyMuPDF](https://github.com/pymupdf/PyMuPDF) (GPL)
+        is a Python binding for _MuPDF_,
+
+        For all supported document types (i.e. including images) you can decrypt the
+        document,  access meta information, links and bookmarks,  render pages in raster
+        formats (PNG and some others), or the vector format SVG, search for text,
+        extract text and images, convert to other formats: PDF, (X)HTML, XML, JSON,
+        text.
+
+        PDF files can be created, joined or split up. Pages can be inserted, deleted,
+        re-arranged, images and fonts can be extracted or inserted, PDFs can be
+        reformatted to support double-sided printing, posterizing, applying logos or
+        watermarks, it allows decryption and encryption.
+
+        It can also used for PDF, as a module, from the command line.
+
+        -   [PyMuPDF documentation](https://pymupdf.readthedocs.io/en/latest/).
+
+
 -   To compare the pdf readers memory footprints I have tried some viewers with the
     same document, a 6M pdf doc. with embedded fonts. I found:
     -   acroread 53M/23M,  evince 45M/21M, apvlv 45M/13M, epdfview 36M/14M, zathura
@@ -292,26 +324,24 @@ _live preview_ synchronization library. This include
         is now unmaintained and no longer in Debian.  _Qpdfview_ has a
         partial support for annotation and forms. Plugins are
         available for postscript and djvu.
-    -   <a name="zathura"></a>
-        [Zathura](http://zathura.pwmt.org/projects/zathura) (GPL)
-        is a pdf viewer with minimal memory footprints and focus on
-        control thru keyboard interaction.  In addition of common
-        viewer features Zathura can display and browse indexes and
-        record bookmarks.  It is fully configurable, and optional
-        plugins allow to display djvu, commic books, or to
-        use {{< iref "#mupdf" "mupdf" >}} instead of
-        poppler. It is in Debian.
+    -   <a name="zathura"></a> [Zathura](http://zathura.pwmt.org/projects/zathura) (GPL)
+        is a pdf viewer with minimal memory footprints and focus on control thru
+        keyboard interaction.  In addition of common viewer features Zathura can display
+        and browse outlines and record bookmarks.  It is fully configurable, and optional
+        plugins allow to display djvu, commic books, or to use
+        {{< iref "#mupdf" "mupdf" >}} instead of {{< iref "#poppler" "poppler" >}}.
+        It is in Debian.
     -   [apvlv](https://github.com/naihe2010/apvlv/tree/master) (GPL)
-        is a Popler/GTK+ based pdf viewer, which can also display epub documents.
-        Like {{< iref "#zathura" "Zatura" >}} he is controled
-        with vim like keybindings. It allows multiple tabs.
-        It present himself as *minimal* but it has huge memory
-        footprints, that put it in the same category than evince.
+        is a {{< iref "#poppler" "poppler" >}}/GTK+ based pdf viewer, which can also
+        display epub documents.  Like {{< iref "#zathura" "Zatura" >}} he is controled
+        with vim like keybindings. It allows multiple tabs.  It present himself as
+        *minimal* but it has huge memory footprints, that put it in the same category
+        than evince.
     -   *Libreoffice*, *TeXworks* and *Inkscape* are also using
-        *poppler library*.
+        {{< iref "#poppler" "poppler" >}} library.
 
 -   <a name="xpdf"></a>{{< wp "Xpdf" >}} (GPL)
-    is a light pdf viewer with minimal dependencies, {{< iref "#poppler" "Poppler" >}}
+    is a light pdf viewer with minimal dependencies. {{< iref "#poppler" "Poppler" >}}
     was forked from _Xpdf_. _Xpdf_ is user configurable; you can even set unusal, but
     very usefull options like the paper color; and of course you can set all the key
     bindings.
@@ -343,7 +373,7 @@ and to the full
 For a wider specification look in the
 [Adobe Developer Connection / PDF Technology Center
 ](http://www.adobe.com/devnet/pdf.html) where you find the latest
-_Adobe PDF Reference_.
+[Adobe PDF Reference](https://www.adobe.com/devnet/pdf/pdf_reference.html).
 
 -   <a name="cpdf"></a>[CPDF](https://community.coherentpdf.com/)
     ([Non-Commercial Use License
@@ -717,9 +747,9 @@ _Adobe PDF Reference_.
     -   pdftotext -- convert pdf to txt
     -   pdfunite --  merges several PDF
 
--   <a name="pypdf"></a>[pyPDF](http://pybrary.net/pyPdf/) (BSD License)
-    is a python librarie by Mathieu Fenniak
-    whose development has stopped in 2010
+-   <a name="pypdf"></a>[pyPDF2](https://github.com/mstamy2/PyPDF2/) (BSD License)
+    is the continuation of the  python librariy [pyPDF](http://pybrary.net/pyPdf/)
+    by Mathieu Fenniak,  whose development stopped in 2010.
     It has a new fork   [pyPDF2](https://github.com/mstamy2/PyPDF2/)
     They allow working on a PDF document: extracting info, splitting, merging, cropping,
     encrypting and decrypting PDF files. _PyPDF_ and  _pyPDF2_ have
@@ -773,28 +803,27 @@ _Adobe PDF Reference_.
 ## PDF cropping tools {#pdf_crop}
 To crop margins on a pdf document you can use some all purposes tools as
 {{< iref "#pdfshuffler" "pdfshuffler" >}}  a graphical tool that
-uses {{< iref "#pypdf" "pypdf2" >}} and
+uses {{< iref "#pypdf2" "pypdf2" >}} and
 {{< iref "#k2pdfopt" "k2pdfopt" >}}.
 
 Other crop specific tools are either standalone or works as user interfaces to
-{{< iref "#pdftk" "pdftk" >}}, or {{< iref "#pypdf" "pypdf2" >}}:
+{{< iref "#pdftk" "pdftk" >}}, or {{< iref "#pypdf2" "pypdf2" >}}:
 {{< iref "#briss" "BRISS" >}} a java GUI,
 {{< iref "#pdfcrop-python" "pdfcrop python script" >}} that
-uses {{< iref "#pypdf" "pypdf" >}},
+uses {{< iref "#pypdf2" "pypdf2" >}},
 {{< iref "#pdfcrop-perl" "pdfcrop perl script" >}} that uses pdflatex,
 {{< iref "#pdfcrop-pdftk" "pdfcrop2.sh" >}} using
 {{< iref "#pdftk" "pdftk" >}}, {{< iref "#pdfcropper" "pdfcropper" >}}
 python script,
 {{< iref "#pdfquench" "pdf-quench" >}} a GUI that uses
-{{< iref "#pypdf" "pypdf2" >}}.
+{{< iref "#pypdf2" "pypdf2" >}}.
 
 -   <a name="briss"></a>[BRISS](http://briss.sourceforge.net/) (GPL)
     is a a java cross-platform application with a GUI to crop pdf pages.
     -   |mobileread forum - BRISS thread
         ](https://www.mobileread.com/forums/showthread.php?t=83053)
 -   <a name="pdfcrop-python"></a>[pdfcrop (python)](https://github.com/pboehm/pdfcrop)
-        Is a python script that uses {{< iref "#pypdf" "pypdf" >}}
-    to crop pdf pages. _last update 2011._
+    is a python script that uses _pypdf_  to crop pdf pages. _last update 2011._
 -   <a name="pdfcrop-perl"></a>[pdfcrop (perl)](http://pdfcrop.sourceforge.net/)
     is a perl script from _texlive_
     utilities that uses _ghostscript_ and _pdftex_ to crop pdf pages.
@@ -813,7 +842,7 @@ python script,
     is a python script to crop pages. _last update 2014._
 -   <a name="pdfquench"></a>[pdf-quench](https://code.google.com/p/pdf-quench/)
     is a visual python/gtk tool for cropping pdf files. It uses
-    {{< iref "#pypdf" "PyPdf2" >}}, goocanvas, and
+    {{< iref "#pypdf2" "PyPdf2" >}}, goocanvas, and
     {{< iref "#poppler" "python-poppler" >}}.
     It is reported that _pdfquench_ don't preserve hyperlinks.
     -    [GitHub - pdf-quench](https://github.com/linuxerwang/pdf-quench).
@@ -1065,23 +1094,21 @@ The main drawback of pdf-tools is the lack of documentation.
         [gimagereader](https://github.com/manisandro/gImageReader)
         is a graphical GTK+ front end for tesseract, it
         is free from gnome overloading and is in Debian.
-    -    <a name="pypdfocr"></a>
-        [PyPDFOCR](https://github.com/virantha/pypdfocr)
-        is a python program that Take a scanned PDF file and run
+    -    <a name="pypdfocr"></a>[PyPDFOCR](https://github.com/virantha/pypdfocr)
+        (Apache License) is a python program that Take a scanned PDF file and run
         Tesseract OCR on it, generating a searchable PDF.
-    -   <a name="ocrmypdf"></a>
-        [OCRmyPDF](https://github.com/jbarlow83/OCRmyPDF)
+    -   <a name="ocrmypdf"></a>[OCRmyPDF](https://github.com/jbarlow83/OCRmyPDF) (GPL)
         is a python program that adds an OCR text layer to scanned PDF
         files, and generates a searchable PDF/A file from a regular
         PDF, producing a searchable pdf. It uses Tesseract OCR engine,
         all the tesseract languages are availables. It can deskews
         and/or cleans the image before performing OCR.
     -   <a name="tesseractgui"></a>
-        [Tesseract-GUI](http://tesseract-gui.sourceforge.net/)
+        [Tesseract-GUI](http://tesseract-gui.sourceforge.net/) (GPL)
         is a GUI to prepare raster files with Imagemagick for use
-        with Tesseract
+        with Tesseract. It provides a Debian package. _last release 2013_.
 
--   [Scan Tailor](https://github.com/scantailor/scantailor)
+-   [Scan Tailor](https://github.com/scantailor/scantailor) (GPL)
     is an interactive post-processing tool for scanned pages. It
     performs operations such as page splitting, deskewing,
     adding/removing borders, and others. It is used for raw scans,
@@ -1103,8 +1130,7 @@ The main drawback of pdf-tools is the lack of documentation.
     pgm2tiff, tiffcp and tiff2pdf.  Unpaper is in debian
     -   [unpaper GitHub repository
         ](https://github.com/Flameeyes/unpaper)
--  <a name="yagf"></a>
-   [YAGF](http://symmetrica.net/cuneiform-linux/yagf-en.html)
+-  <a name="yagf"></a>[YAGF](http://symmetrica.net/cuneiform-linux/yagf-en.html)
    is a graphical interface for
    {{< iref "#cuneiform" "cuneiform" >}}and
    {{< iref "#tesseract" "tesseract" >}}.  With YAGF you can scan
