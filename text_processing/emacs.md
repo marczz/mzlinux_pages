@@ -522,6 +522,16 @@ Among the havocs of this theme support, I noticed
     _shadow_ face don't catch the eye.
 
 
+## Asciidoc Aware Themes
+
+[Asciidoc Mode][adoc] don't define faces, but rely on [Markup Faces][markup-faces] which
+is a face package tailored for markup languages, as [font-lock][] is used for programming
+language.
+
+
+It seems that only few themes support [Markup Faces][markup-faces], among them you find
+[zenburn][].
+
 <!---------------------------- Themes ---------------------------------->
 [emacs theme gallery]: https://pawelbx.github.io/emacs-theme-gallery/
 [base16]:  https://github.com/belak/base16-emacs
