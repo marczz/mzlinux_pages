@@ -2,7 +2,6 @@
 title: Documents management.
 ---
 
-{{% toc /%}}
 
 # References
 -   [ArchWiki: list of applications - Documents
@@ -15,8 +14,9 @@ title: Documents management.
     papers more than books, so it uses
     {{< wp "Digital object identifier"  "DOI (Digital object identifier)" >}} rather than
     {{< wp "ISBN" >}}. It is in Debian.
--   [cb2Bib](http://www.molspaces.com/cb2bib/) is a open source application for extracting unformatted,
-    or unstandardized bibliographic references from email alerts,
+-   [cb2Bib](http://www.molspaces.com/cb2bib/)
+    is a open source application for extracting unformatted, or unstandardized
+    bibliographic references from email alerts,
     journal Web pages, and PDF files.
 -   [bibutils](http://sourceforge.net/p/bibutils/home/Bibutils/)
     is a set of script to convert between bibliographic data formats:
@@ -172,11 +172,11 @@ to perform
 ](http://www.keyvan.net/2011/03/content-extraction/)
 they later produced a new tool <a name="full-text_rss"></a>
 [Full-Text RSS
-](http://fivefilters.org/content-only/) which is [introduced in this
-help article
+](http://fivefilters.org/content-only/) which is
+[introduced in this help article
 ](http://help.fivefilters.org/customer/en/portal/articles/225363-introduction).
 
-You can use the [form at the Head of the [Full-Text RSS page
+You can use the form at the Head of the [Full-Text RSS page
 ](http://fivefilters.org/content-only/) it gives a limited use of
 Full-text RSS with 1-3 items per feed, no json output , and an extra
 Link to FiveFilters.org. The self hosted app cost (one time payement)
@@ -210,37 +210,30 @@ which can produce a 2-column A4/Letter PDF, a single-column A5 PDF, or
 an editable HTML output with a print stylesheet from web articles and
 news feeds. A alimited use with a max of 10 pages per feed and 4
 full-text fetches per feed is available with the form at the top of
-the [pdf-newspaper Home Page
-](http://fivefilters.org/pdf-newspaper/)
+the [pdf-newspaper Home Page](http://fivefilters.org/pdf-newspaper/)
 you can remove these limitation for 24€ / year or self-host it for
 20€ one-shot .
 
-An other application to grab the texts of feeds and make it readable
-is [f43.me](https://f43.me/) (MIT License) it can use for uncluttering
-pages either a fork of {{< iref "#full" "Full-Text RSS" >}} named [j0k3r/graby](https://github.com/j0k3r/graby) or the
-[Mercury Web Parser API]()
+An other application to grab the texts of feeds and make it readable is
+[f43.me](https://f43.me/) (MIT License) it can use for uncluttering pages either a fork
+of {{< iref "#full-text_rss" "Full-Text RSS" >}} named
+[j0k3r/graby](https://github.com/j0k3r/graby) (MIT License) or the
+[Mercury Web Parser API](https://github.com/postlight/mercury-parser).
 
-As the author [Jérémy Benoist](https://github.com/j0k3r) is also a
-developper of _Wallabag_ the parsing of articles is similar in the two
-products.
+As the author [Jérémy Benoist](https://github.com/j0k3r) is also a developper of
+_Wallabag_ the parsing of articles is similar in the two products.
 
 -   [GitHub - https://github.com/j0k3r/f43.me).
 
 
-
-
-
-[croqaz/clean-mark https://github.co](m/croqaz/clean-mark)
-(MIT License) is a Node package to convert a blog article into a
-clean Markdown text file.
+[croqaz/clean-mark https://github.co](m/croqaz/clean-mark) (MIT License)
+is a Node package to convert a blog article into a clean Markdown text file.
 -   [npm clean-mark](https://www.npmjs.com/package/clean-mark).
 
 
-[Newspaper3k](http://newspaper.readthedocs.io/en/latest/)
-(MIT License)
+[Newspaper3k](http://newspaper.readthedocs.io/en/latest/) (MIT License)
 is a python 3k module for article scraping & curation.
--   [GitHub - codelucas/newspaper
-    ](https://github.com/codelucas/newspaper)
+-   [GitHub - codelucas/newspaper](https://github.com/codelucas/newspaper)
 
 <!-- mode: markdown -->
 <!-- ispell-local-dictionary: "english" -->
