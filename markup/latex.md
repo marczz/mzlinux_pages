@@ -2,7 +2,7 @@
 title: TeX, LaTeX
 ---
 
-{{% toc /%}}
+See also {{< iref "ps_pdf_djvu" "Ps, PDF, DjVu" >}}.
 
 ------------------
 
@@ -181,7 +181,7 @@ title: TeX, LaTeX
     metafont, postscript,and ttf but not the newer opentype.
 
 
-# XeTeX LuaTeX and i18n {i18n}
+# XeTeX LuaTeX and i18n {#i18n}
 ## XeTeX {#xetex}
 {{< wp "XeTeX" >}} (MIT License) is a TeX  engine using Unicode and
 supporting modern fonts  TTF,  OpenType,  Graphite and
