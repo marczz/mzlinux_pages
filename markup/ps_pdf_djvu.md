@@ -1,5 +1,5 @@
 ---
-title: Postscript, PDF, djvu, scanner, OCR
+title: PDF, djvu, OCR, Postscript
 ---
 
 You may also be interested by the
@@ -145,7 +145,8 @@ formats in
     review that has a section on pdf representation _updated 2014_.
 -   Font extraction is dealed with a detailled tutorial in the answer
     of the StackOverflow question
-    [How can I extract embedded fonts from a PDF as valid font files?  ](http://stackoverflow.com/questions/3488042/how-can-i-extract-embedded-fonts-from-a-pdf-as-valid-font-files)
+    [How can I extract embedded fonts from a PDF as valid font files?
+    ](http://stackoverflow.com/questions/3488042/how-can-i-extract-embedded-fonts-from-a-pdf-as-valid-font-files)
     there is also a web service
     [ExtractPDF.com ](http://www.extractpdf.com/) but we have to know
     that in PDFs there are never font metric files (.pfm or .afm
@@ -205,11 +206,11 @@ _live preview_ synchronization library. This include
 -   [ArchWiki: list of pdf and djvu software
     ](https://wiki.archlinux.org/index.php/List_of_applications/Documents#PDF_and_DjVu).
 -   <a name="fbpdf">[fbpdf](http://repo.or.cz/w/fbpdf.git) (BSD license) is a
-q    framebuffer pdf/djvu file viewer.  It can use either
+    framebuffer pdf/djvu file viewer.  It can use either
     {{< iref "#mupdf" "mupdf" >}} or
     {{< iref "#poppler" "poppler libraries" >}} for rendering
     pdf files and it uses djvulibre library for rendering djvu files.
--   [PDF.js](https://github.com/mozilla/pdf.js)  (Apache License)
+-   <a name="pdf_js"></a>[PDF.js](https://github.com/mozilla/pdf.js)  (Apache License)
     is a javascript PDF Viewer for html5 browsers, it is embedded in Firefox to provide
     the new [Firefox built-in PDF viewer
     ](https://support.mozilla.org/en-US/kb/view-pdf-files-firefox-without-downloading-them)
@@ -219,7 +220,7 @@ q    framebuffer pdf/djvu file viewer.  It can use either
     ](https://chrome.google.com/webstore/detail/pdf-viewer/oemmndcbldboiebfnladdacbdfmadadm)
     and can replace *Chrome*  a built-in PDF viewer. It can also work with Opera, Edge,
     and Safari >=  9.
--   <a name="lpp"></a>[Llpp](http://repo.or.cz/w/llpp.git/)
+-   <a name="llpp"></a>[Llpp](http://repo.or.cz/w/llpp.git/)
     is  a graphical PDF pager using {{< iref "#mupdf" "mupdf library" >}}.
     lpp depends on *Ocaml*. It supports continuous page scrolling,
     bookmarking, and text search. It is not in Debian but in an
@@ -357,8 +358,9 @@ many non layout-related features of a PDF file can be defined in the
 original document or in the corresponding PostScript code. PdfMark is
 introduced in the
 [pdfmark primer](http://extras.springer.com/1998/978-3-642-72032-1/PDF/PRIMER.PDF)
-which is a chapter of the book _Web publishing with Acrobat/PDF_ by
-Thomas Merz is available in the springer extra materials.
+available in the springer extra materials,
+it is a chapter of the book _Web publishing with Acrobat/PDF_ by
+Thomas Merz.
 
 You can also refer to the tutorial
 [Enhancing the Text in Text Fields using Pdfmarks
@@ -366,14 +368,13 @@ You can also refer to the tutorial
 by D. P. Story, and his page
 [Pdfmarks: Links and Forms
 ](http://math.uakron.edu/~dpstory/lnk_forms.html).
-and to the full
-[Acrobat Pdfmark Reference (pdf)
-](http://www.adobe.com/devnet/acrobat/pdfs/pdfmark_reference.pdf).
+and to the full [Acrobat Pdfmark Reference (pdf)][pdfmark reference].
 
 For a wider specification look in the
 [Adobe Developer Connection / PDF Technology Center
-](http://www.adobe.com/devnet/pdf.html) where you find the latest
-[Adobe PDF Reference](https://www.adobe.com/devnet/pdf/pdf_reference.html).
+](http://www.adobe.com/devnet/pdf.html), the last _ISO 32000-1:2008_  is not free
+but you can get [Adobe PDF Reference, Sixth Edition, version 1.7][pdf 1.7 reference]
+_November 2006 - 31M_.
 
 -   <a name="cpdf"></a>[CPDF](https://community.coherentpdf.com/)
     ([Non-Commercial Use License
@@ -848,12 +849,23 @@ python script,
     -    [GitHub - pdf-quench](https://github.com/linuxerwang/pdf-quench).
 
 ## PDF Outline
-Some tools allow to create Outlines _very often also referred as Bookmarks_
+The PDF outline, sometime also called _Bookmarks_ is a a visual table of contents which
+display the document’s structure. The Outline is defined in
+[pdf 1.7 reference - section 8.2][].
+
+You find also a description and several examples in
+[pdfmark reference - bookmark(out)][].
+
+We distinguish these Outlines with the operation of
+{{< iref "#bookmarking" "bookmarking" >}} that many viewers offer, which is the object
+of  {{< iref "#bookmarking" "next section" >}}.
+
+Many software allow to modify outline, among them:
 {{< iref "#pdflatex_bookmarks" "PdfLatex" >}},
 {{< iref "#jpdfbookmark" "JpdfBookmark" >}},
 {{< iref "#jpdftweak" "jPDFtweak" >}},
 {{< iref "#pdfk" "pdftk" >}},
-{{< iref "#pdfritebookmarks" "pdfWriteBookmarks" >}},
+{{< iref "#pdfwritebookmarks" "pdfWriteBookmarks" >}},
 {{< iref "#cpdf" "CPDF" >}}.
 
 -   [bmconverter.py](https://github.com/goerz/bmconverter.py) (GPL)
@@ -880,34 +892,105 @@ Some tools allow to create Outlines _very often also referred as Bookmarks_
     and [JpdfBookmark sourceforge project](http://sourceforge.net/projects/jpdfbookmarks/)
     is a java application that allows you to create and edit bookmarks on existing PDF files.
 
-## PDF Bookmarking and Annotations {#pdf_annotations}
+## PDF Bookmarking {#bookmarking}
 Some viewers have support for bookmarking, we need to distinguish the
 _oulines_ that are included in the document by _pdfmarks_ syntax. And
-some viewer bookmarks that are proper to the editor and leave the pdf
-file untouched. As an exemple you can retrieve the bookmarks put with
-{{< iref "#evince" "Evince" >}} with the command:
+some viewer bookmarks that are proper to the editor and leave the core pdf
+untouched, and store the annotations as metadata in the file.
+A third bookmark type is bookmarking in an external file such method is referred in the
+section {{< iref "org-mode#annotations" "Document annotation" >}}.
 
-    gvfs-info -a "metadata::evince::bookmarks"  <path-of -pdf-file>
+The bookmarks are not compatible from an application to an other one. Some application
+allow to export them.
 
-Many software have bookmarking support {{< iref "#lpp" "lpp" >}},
+With {{< iref "#evince" "Evince" >}} you can list the bookmarks with the command:
+
+    $ gio info -a "metadata::evince::bookmarks"  <path-of -pdf-file>
+
+Many software have bookmarking support {{< iref "#llpp" "llpp" >}},
 {{iref "#zathura" "Zathura" >}},  {{< iref "#evince" "Evince" >}},
 {{< iref "#qpdfview" "Qpdfview" >}}, {{< iref "#atril" "Atril"  >}},
 {{< iref "#okular" "Okular" >}} ...
 
-Annotation are supported by  {{< iref "#evince" "Evince" >}},
-{{< iref "#qpdfview" "Qpdfview" >}} and {{< iref "#okular" "Okular" >}}.
 
-<a name="pdf-tools_annotation"></a>The  {{< iref "#pdf-tools" "pdf-tools" >}}
-package contains a pdf annotation tool. It allows to had notes at a point that appear as
-a small icon, to highlight or underline a region and attach a textual annotation to it.
-It runs in background a {{< iref "ps_pdf_djvu#poppler" "poppler" >}} program _epdfinfo_
-which does all the hard work.
+
+## PDF Annotations {#pdf_annotations}
+PDF annotations are in
+[Annotation section of pdfmark reference][pdfmark reference - annotations]
+
+There are seventeen type of annotations in PDF 1.3 and cutom annotations can be added.
+The most used annotations are annotations that add an ornamentation to the pdf as the
+type _square_, _circle_, _highlight_, ink_, _strikeout_, _underline_, _stamp_;
+and the _Text annotations_ also known as _notes_.
+
+All annotations appear in the pdf source as:
+```
+Rect [xll yll xur yur]
+/Subtypename
+...Optional key–value pairs...
+/ANN pdfmark
+```
+
+for examples of pdf codes for annotations look at the
+[pdfmark reference - annotation][pdfmark reference - annotations].
+
+Annotations are also described in the
+[8th chapter of the pdf 1.7 reference][pdf 1.7 reference - chapter 8].
+
+Some type of annotations,like _circle_, _square_, _polygone_, _caret_, _watermark_ or
+_free text_ are only visual and don't popup a text.
+
+The most used _text annotation_ is used to associate a popup note at some document
+location which appears as an icon when closed. Others types like _lines_, _rubber
+stamp_, _ink_, or the text markup annotations _highlights_, _underlines_, _strikeouts_,
+or _squiggly_ (jagged underlines) may have an associated note.
+
+Other anotation can link to some other part of the document _link_, or reference an
+embedded content _FileAttachment_. There is also annotations to play some media _sound_,
+_movie_, _screen_.
+
+Annotation are supported by several {{< iref "#poppler" "Poppler" >}} based software
+{{< iref "#evince" "Evince" >}}, {{< iref "#qpdfview" "Qpdfview" >}} and
+{{< iref "#okular" "Okular" >}}.
+
+{{< iref "#evince" "Evince" >}} allows markup annotations of type _highlight_,
+_underline_, _strikeouts_ and _squiggly_, you can choose the color and add a note.
+The same hold for _text annotation_, you can also choose the icon. Unsupported
+annotations type let by a software with a larger annotation support like
+{{< iref "#okular" "Okular" >}} have their visual effect displayed, but cannot be
+changed, you cannot display the associated note and they are not listed in the list of
+annotations. It is a point where _Evince_ des not perform as well as other software in
+this section.
+
+{{< iref "#okular" "Okular" >}} allows many types of annotations _highlight_,
+_underline_, _strikeouts_ and _squiggly_, _text annotation_, _ellipse_, _polygon_,
+_freehand_, _highlight_, _typewriter_ and an experimental _rubber stamp_ only visible in
+_Okular_.  As in  As I don't run KDE, I used Okular 1.10.1 from _flatpak_; with this
+version the display of _inline_ and _typewriter_ is defective.
+
+{{< iref "#qpdfview" "QpdfView" >}} allows only _text annotation_, and  _highlight_
+but it can display allannotations set with an other tool and chage the associated note.
+I has no support for displaying a list of bookmark. Other unsupported
+{{< iref "#okular" "Okular" >}}
+annotations can be seen, and the associated popup note displayed and changed.
+
+<a name="pdf-tools_annotation"></a>The {{< iref "#pdf-tools" "pdf-tools" >}} package
+contains a pdf annotation tool. It allows to have popup _text annotations_ at a point
+that appear as a small icon, to _highlight_ or _underline_ a region and attach a textual
+annotation to it.  It runs in background a {{< iref "ps_pdf_djvu#poppler" "poppler" >}}
+program _epdfinfo_ which does all the hard work.
+
 
 As _pdf-tools_ uses {{< iref "ps_pdf_djvu#poppler" "poppler" >}}, the annotations
 are saved by _poppler_ according to the PDF specification. They can can be also
-viewed or modified from {{< iref "ps_pdf_djvu#evince" "evince" >}}, other _poppler_
-based viewers that have annotation support, and also any other reader following the
-pdf annotation specification, like _adobe reader_.
+viewed or modified by other viewers following the pdf annotation specification,
+like the other {{< iref "ps_pdf_djvu#poppler" "poppler" >}} based viewer and _adobe
+reader_.
+
+When an annotation type is not supported, like some annotations set with
+{{< iref "#okular" "Okular" >}} they appear as visual effect and show also the note. The
+note and the colour can be modified from _pdf-tool_ even if, _of course_, the shape
+cannot be changed, but they don't appear in the list of annotation.
 
 The main drawback of pdf-tools is the lack of documentation.
 
@@ -1185,6 +1268,12 @@ The main drawback of pdf-tools is the lack of documentation.
 
 <!--------------- refs -------------------------->
 [libspectre]: http://www.freedesktop.org/wiki/Software/libspectre/
+[pdfmark reference]: https://www.adobe.com/content/dam/acom/en/devnet/acrobat/pdfs/pdfmark_reference.pdf
+[pdfmark reference - annotations]: https://www.adobe.com/content/dam/acom/en/devnet/acrobat/pdfs/pdfmark_reference.pdf#G6.1500496
+[pdfmark reference - bookmark(out)]: https://www.adobe.com/content/dam/acom/en/devnet/acrobat/pdfs/pdfmark_reference.pdf#G6.1500812
+[pdf 1.7 reference]: https://www.adobe.com/content/dam/acom/en/devnet/acrobat/pdfs/pdf_reference_1-7.pdf
+[pdf 1.7 reference - chapter 8]: https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdf_reference_archive/pdf_reference_1-7.pdf#G13.2023455
+[pdf 1.7 reference - section 8.2]: https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdf_reference_archive/pdf_reference_1-7.pdf#G13.1970991
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
