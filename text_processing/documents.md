@@ -36,8 +36,7 @@ title: Documents management.
     generation of in-text citations, footnotes and bibliographies,
     as well as integration with word processors.
     -   [Zotero Home](https://www.zotero.org/)
-    -   [Zotero Bookmarklets
-        ](https://www.zotero.org/downloadbookmarklet)
+    -   [Zotero Bookmarklets](https://www.zotero.org/downloadbookmarklet)
         for desktop and mobile browsers.
 
 # Read List {#read_list}
@@ -103,8 +102,8 @@ offline on any device computer, smartphone or ebook readers.
     -   [Framabag](https://framabag.org) is a free instance
         _with limited page number_ of wallabag proposed by
         [Framasoft](https://framasoft.org/).
-    -   [Wallabag sur votre Kobo en un clic]
-        (https://chabotsi.fr/blog/wallabag-sur-votre-kobo-en-un-clic.html).
+    -   [Wallabag sur votre Kobo en un clic
+        ](https://chabotsi.fr/blog/wallabag-sur-votre-kobo-en-un-clic.html).
         to use with this [script update
         ](https://san.heraut.eu/2016/09/29/wallabag-solution-libre-lecture-differee-web/).
 
@@ -137,17 +136,16 @@ There are also many open source libraries for cleaning feeds, or web
 pages.
 
 _Arc90 Labs_ produced the _Readability_ bookmarklet to remove the clutter around what
-you're reading. They replaced it later with a whole
-web service at http://www.readability.com, and five years latter
-abandoned it. They propose to switch to _Mercury_ and the
-[Chrome plugin Mercury Reader
-e.](https://mercury.postlight.com/reader/).
+you're reading. They replaced it later with a whole web service at
+http://www.readability.com, and five years latter abandoned it. They propose to switch
+to _Mercury_ and the
+[Mercury Reader Chrome plugin](https://mercury.postlight.com/reader/).
 
 <a name="readability"></a>There are many forks of the _Readability_ bookmarklet.
 
 -   [The original source of readability
     ](https://code.google.com/archive/p/arc90labs-readability/source/default/source)
-    is still available on Google Code archove.
+    is still available on Google Code archive.
 -   [ejucovy readability
     ](https://github.com/ejucovy/readability/tree/gh-pages)
     is a copy of the Readability bookmarklet from _Arc90 Labs_.
@@ -156,31 +154,28 @@ e.](https://mercury.postlight.com/reader/).
 
 -   [bndr/node-read  npm](https://github.com/bndr/node-read)
     Based on Arc90's readability project using cheerio engine.
--   [luin/readability npm](https://github.com/luin/readability)
-    (Apache Licence)
-    a Node library to turn any web page into a clean view.
-    using jsdom to parse HTML instead of cheerio.
+-   [luin/readability npm](https://github.com/luin/readability) (Apache Licence)
+    a Node library to turn any web page into a clean view.  using jsdom to parse HTML
+    instead of cheerio.
     There is an active fork
     [ruguoapp/readability - dev branch
     ](https://github.com/ruguoapp/readability/tree/dev).
 
-FiveFilters
-first used a [PHP Port of Arc90’s Readability
-](http://www.keyvan.net/2010/08/php-readability/)
+FiveFilters first used a
+[PHP Port of Arc90’s Readability](http://www.keyvan.net/2010/08/php-readability/)
 to perform
-[Content Extraction
-](http://www.keyvan.net/2011/03/content-extraction/)
-they later produced a new tool <a name="full-text_rss"></a>
-[Full-Text RSS
-](http://fivefilters.org/content-only/) which is
+[Content Extraction](http://www.keyvan.net/2011/03/content-extraction/)
+they later produced a new tool
+<a name="full-text_rss"></a>[Full-Text RSS](http://fivefilters.org/content-only/)
+which is
 [introduced in this help article
 ](http://help.fivefilters.org/customer/en/portal/articles/225363-introduction).
 
-You can use the form at the Head of the [Full-Text RSS page
-](http://fivefilters.org/content-only/) it gives a limited use of
-Full-text RSS with 1-3 items per feed, no json output , and an extra
-Link to FiveFilters.org. The self hosted app cost (one time payement)
-35€ there are also an FiveFilters hosted version from 4€ / month.
+You can use the form at the Head of the
+[Full-Text RSS page](http://fivefilters.org/content-only/),
+it gives a limited use of Full-text RSS with 1-3 items per feed, no json output , and an
+extra Link to FiveFilters.org. The self hosted app cost (one time payement) 35€ there
+are also an FiveFilters hosted version from 4€ / month.
 See also the [request parameters
 ](http://help.fivefilters.org/customer/en/portal/articles/226660-usage-and-request-parameters).
 
@@ -221,12 +216,13 @@ of {{< iref "#full-text_rss" "Full-Text RSS" >}} named
 [Mercury Web Parser API](https://github.com/postlight/mercury-parser).
 
 As the author [Jérémy Benoist](https://github.com/j0k3r) is also a developper of
-_Wallabag_ the parsing of articles is similar in the two products.
+[Wallabag](https://github.com/wallabag/wallabag) the parsing of articles is similar in
+the two products.
 
--   [GitHub - https://github.com/j0k3r/f43.me).
+-   [GitHub - f43.me](https://github.com/j0k3r/f43.me).
 
 
-[croqaz/clean-mark https://github.co](m/croqaz/clean-mark) (MIT License)
+[croqaz/clean-mark](https://github.com/croqaz/clean-mark) (MIT License)
 is a Node package to convert a blog article into a clean Markdown text file.
 -   [npm clean-mark](https://www.npmjs.com/package/clean-mark).
 
