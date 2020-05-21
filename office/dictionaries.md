@@ -2,14 +2,12 @@
 title: Dictionary and Spell Checker Software
 ---
 
-{{% toc /%}}
-
-The {{< iref "français" "French and English Language Page" >}} has grammar and dictonaries references
-related to these language.
+The {{< iref "français" "French and English Language Page" >}} has grammar and
+dictonaries references related to these language.
 
 See also Wikipedia {{< wp "Comparison of machine translation applications" >}}.
 
-## Dict protocol software
+# Dict protocol software
 
 -   The dict protocol is defined in the
     [RFC 2229](http://tools.ietf.org/html/rfc2229).
@@ -30,9 +28,9 @@ See also Wikipedia {{< wp "Comparison of machine translation applications" >}}.
     and in the
     [_dict.org:_ wiki](http://www.dict.org/w/software/start).
 
-## Spell checkers
--   {{< wp "GNU Aspell" >}} is the standard GNU spell checker designed to replace Ispell  adding
-    utf-8 support.
+# Spell checkers
+-   {{< wp "GNU Aspell" >}} is the standard GNU spell checker designed to replace Ispell
+    adding utf-8 support.
 -   Emacs as numerous [spelling modes](http://www.emacswiki.org/emacs/CategorySpelling)
     including [Wcheck Mode](http://www.emacswiki.org/emacs/WcheckMode)
     that can use most of spelling software.
@@ -95,7 +93,7 @@ See also Wikipedia {{< wp "Comparison of machine translation applications" >}}.
 -   [verbiste]( http://sarrazip.com/dev/verbiste.html) (GPL)
     is a french conjugation system, it has an emacs interface.
 
-## Other desktop dictionary software
+# Other desktop dictionary software
 -   [Babiloo](https://code.google.com/p/babiloo/) (GPL) written in python
     supports dictionaries in SDictionary, and
     {{< iref "#stardict" "StarDict" >}}.
@@ -206,7 +204,7 @@ See also Wikipedia {{< wp "Comparison of machine translation applications" >}}.
     -   [Verify and Repair broken StarDict dictionaries
         ](https://code.google.com/p/stardict-3/wiki/RepairStarDictDicts).
 
-## e-dicts
+# e-dicts
 
 -   [English Wiktionary in StarDict format
     ](http://www.dictinfo.com/)
@@ -295,6 +293,16 @@ and originally in project Gutenberg are:
     ](http://www.gutenberg.org/ebooks/29765) or
     [an alternate download](http://www.gutenberg.org/ebooks/667)
     of the same book but with  distincts files.
+
+# Translation
+
+-   [Translate Shell](https://www.soimort.org/translate-shell)
+    is a command-line translator powered by
+    _[Google Translate](https://translate.google.com/)_,
+    _[Bing Translator](https://www.bing.com/translator)_,
+    _[Yandex.Translate](https://translate.yandex.com/)_, and
+    _[Apertium](https://www.apertium.org/)_. It is in Debian.
+-   [Google Translate](http://translate.google.com/)
 
 
 <!-- Local Variables: -->
