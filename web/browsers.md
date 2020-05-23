@@ -2,7 +2,6 @@
 title: Web Browsers
 ---
 
-{{% toc /%}}
 
 # Firefox
 -   [firefox help
@@ -421,6 +420,41 @@ browser.
 -   [Jesse's bookmarklets site](http://www.squarefree.com/bookmarklets/),
 -   [Mozillalinks bookmarklets
     ](http://mozillalinks.org/wp/resources/bookmarklets-collection/),
+
+
+# Search engines {#search_engines}
+## Searx {#searx}
+[Searx](https://asciimoo.github.io/searx/)
+internet metasearch engine which aggregates results from more than
+70 search services. Users are neither tracked nor
+profiled. Additionally, searx can be used over Tor for online
+anonymity.
+
+-   [list of Searx public instances
+    ](https://github.com/asciimoo/searx/wiki/Searx-instances)
+-   [Framabee search](https://framabee.org/)
+-   [Searx Wiki](https://github.com/asciimoo/searx/wiki)
+
+Searx allows you to modify the default categories, engines and search
+language via the search query in the
+[Preference page](https://searx.me/preferences)
+
+You can also use prefixes
+-   Category/engine prefix: `!`
+-   Language prefix: `:`
+-   Prefix to add engines and categories to the currently selected
+    categories: `?`
+
+Examples:
+-   Search in wikipedia for qwer: `!wp qwer` or `!wikipedia qwer`
+-   Image search: `!images Cthulhu`
+-   Custom language in wikipedia: `:hu !wp hackerspace`
+-   Search in IT category and duckduckgo and wikipedia for qwer:
+    `!it !ddg !wp qwer`.
+
+Some Engines codes: archive  (ai), bing (bi), currency (cc), ddg
+definitions (ddd), google (go), qwant (qw), reddit (re), wikipedia
+(wp), yahoo (yh), yandex (yn), dictzone (dc).
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
