@@ -2,8 +2,6 @@
 title: Console Applications
 ---
 
-{{% toc /%}}
-
 Console applications are also called _terminal applications_
 
 {{< noteref "command_line" "See also Unix command Line" >}}
@@ -39,7 +37,6 @@ See also {{< iref "file_managers#console" "console file managers" >}}
         ](https://wiki.archlinux.org/index.php/Surfraw)
     -   [list of Surfraw search scripts (elvi)
         ](http://surfraw.alioth.debian.org/#elvilist)
--   [Sugarcode](http://www.sugarcodes.com/) looks like a YubNub clone.
 
 # List of applications
 The applications below are not cross-referenced with their main entry
