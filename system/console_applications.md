@@ -16,16 +16,17 @@ Console applications are also called _terminal applications_
 See also {{< iref "file_managers#console" "console file managers" >}}
 {{< iref "text_editors#terminal_editors" "terminal text editors" >}}
 
-- The internet messaging clients are in the pages {{< iref "irc" "IRC" >}},
-  {{< iref "xmpp" "XMPP" >}},  {{< iref "social_networks" "Social Network" >}}.
+-   The internet messaging clients are in the pages {{< iref "irc" "IRC" >}},
+    {{< iref "xmpp" "XMPP" >}},  {{< iref "social_networks" "Social Network" >}}.
 
-- [incosolation blog](http://inconsolation.wordpress.com) is devoted
-  to console applications, it stopped in 2015.
+-   [incosolation blog](http://inconsolation.wordpress.com) is devoted
+    to console applications, it stopped in 2015.
+-   [cli.fan — Showcasing the best command-line tools](https://cli.fan/posts/).
 
 # Command line WEB search
 
 -   [YubNub](http://yubnub.org/) allows to query numerous sites
-    {{< wp "YubNub"  "Wikipedia: YubNub" >}}.
+    -   [Yubnub - Wikibooks](https://en.wikibooks.org/wiki/Yubnub).
 -   [Goosh](http://goosh.org/) is a google command line in your
     browser.  Goosh is written in javascript and the package is
     available in [Google Code](http://code.google.com/p/goosh/) under
@@ -76,9 +77,15 @@ in this site, you can make a search to find the appropriate page.
 {{< wp "elinks" >}}
 : web browser.See {{< iref "browsers" "Browsers" >}}.
 
+[exa](https://github.com/ogham/exa)
+: is a replacement for ls written in Rust.
+
 [fd](https://github.com/sharkdp/fd)
 : installed as _fdfind_ fast and user-friendly alternative to find.
 
+[hyperfine](https://github.com/sharkdp/hyperfine)
+:   A command-line benchmarking tool
+    -   [hyperfine - cli.fan](https://cli.fan/posts/hyperfine/)    .
 
 [iftop]( http://www.ex-parrot.com/~pdw/iftop/)
 : displays bandwidth usage information on an network interface
@@ -117,6 +124,11 @@ in this site, you can make a search to find the appropriate page.
 {{< wp "Ranger_(file_manager)"  "ranger" >}}
 : file manager
 
+[progress](https://github.com/Xfennec/progress)
+:   reports the progress of file read/write operations for processes that have entries
+    in `/proc`.
+    -   [progress - cli.fan](https://cli.fan/posts/progress/).
+
 [ripgrep](https://github.com/BurntSushi/ripgrep)
 : installed as _rggrep_, a line-oriented search tool that recursively searches the
   current directory for a regex pattern. An alternative to _ack_ and _ag_.
@@ -124,8 +136,12 @@ in this site, you can make a search to find the appropriate page.
   [deadgrep](https://github.com/Wilfred/deadgrep).
 
 
-[Surfraw](http://surfraw.alioth.debian.org/)
+{{< iref "browsers#surfraw" "Surfraw" >}}
 : fast unix command line interface to  WWW search engines.
+
+[yank](https://github.com/mptre/yank) (MIT License)
+:   Select a field from a command output, and copy it to the clipboard.
+    _Yank_ is in Debian.
 
 {{< wp "w3m" >}}
 : web browser
