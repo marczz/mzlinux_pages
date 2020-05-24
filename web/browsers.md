@@ -423,6 +423,11 @@ browser.
 
 
 # Search engines {#search_engines}
+
+-   Wikipedia {{< wp "Comparison of web search engines" >}},
+    {{< wp "List of search engines" >}},
+     {{< wp "Search engine privacy" >}}.
+
 ## Searx {#searx}
 [Searx](https://asciimoo.github.io/searx/)
 internet metasearch engine which aggregates results from more than
@@ -455,6 +460,18 @@ Examples:
 Some Engines codes: archive  (ai), bing (bi), currency (cc), ddg
 definitions (ddd), google (go), qwant (qw), reddit (re), wikipedia
 (wp), yahoo (yh), yandex (yn), dictzone (dc).
+
+## Search from command line
+-   [hrs/engine-mode](https://github.com/hrs/engine-mode)
+    is a minor mode for defining and querying search engines through Emacs.
+-   <a name="surfraw"></a>[Surfraw](http://surfraw.org/) (public domain)
+    is an unix command line interface to  WWW search engines.
+    -   [surfraw -GitLab](https://gitlab.com/surfraw/Surfraw)
+    -   [surfraw Wiki - GitLab](https://gitlab.com/surfraw/Surfraw)
+    -   [Surfraw - ArchWiki](https://wiki.archlinux.org/index.php/Surfraw)
+-   [zquestz/s](https://github.com/zquestz/s) (MIT License)
+    a golanguage program to open a web search from terminal,
+    I provides a Docker file and a snap package.
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
