@@ -812,6 +812,16 @@ _implementation_ that fulfill a role similar to that of classes.
     ](https://github.com/Hoverbear/rust-rosetta)
 -   [Rust vs Go
     ](http://jaredly.github.io/2014/03/22/rust-vs-go/)
+-   Matt Butcher series [The Go Developer's Quickstart Guide to Rust
+    ](http://technosophos.com/2018/05/27/the-go-developers-quickstart-guide-to-rust.html)    ,
+    [From Go to Rust with an HTTP Server
+    ](http://technosophos.com/2018/06/04/from-go-to-rust-with-an-http-server.html),
+    [From Go to Rust - JSON and YAML
+    ](http://technosophos.com/2018/06/12/from-go-to-rust-json-and-yaml.html),
+    [From Go to Rust - Unit Testing
+    ](http://technosophos.com/2018/07/07/from-go-to-rust-testing.html),
+    [From Go To Rust - Advanced Testing
+    ](http://technosophos.com/2018/07/25/from-go-to-rust-advanced-testing.html).
 -   an Interview with Steve Klabnik:
     [How Rust Compares to Other Languages
     ](https://www.codementor.io/rust/tutorial/steve-klabnik-rust-vs-c-go-ocaml-erlang)
