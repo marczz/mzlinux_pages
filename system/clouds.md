@@ -1010,9 +1010,21 @@ The supported Databases are  Azure, Rackspace.
 
 ### Object storage {#scaleway_objects}
 
-Scaleway also provides object storage for €0.01/GB (min 500GB), first 500GB outgoing
-transfer free then €0.02/GB,
+Scaleway also provides object storage.
+-   [S3-Compatible Object Storage](https://www.scaleway.com/en/object-storage/)
+    is free for first 75GB and 0,01 € per GB up to 500GB.
 
+    Incomming trafic as Internal outgoing traffic to other Elements products in the same
+    region is free, outgoing trafic is free for first 75GB from 75GB to 500GB 0.01 € per
+    GB/month.
+-   [C14 Cold Storage](https://www.scaleway.com/en/c14-cold-storage/)
+    75 GB is free then €0.002/GB/month.
+
+Most [S3 operations are supported
+](https://www.scaleway.com/en/faq/object-storage/#-Which-S3-operations-are-supported)
+and most tools usable with S3 like _s3cmd_, _aws-cli_, _s3fs_, _cyberduck_ ... are also
+usable with Scaleway object storage. The are referenced in the
+[object storage page](https://www.scaleway.com/en/object-storage/).
 
 # Temporary storage {#temporary_storage}
 See also {{< iref "p2p#p2p_file_sharing" "P2P File sharing" >}},
