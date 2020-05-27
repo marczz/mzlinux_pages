@@ -152,13 +152,13 @@ See also {{< iref "ffmpeg" "FFmpeg section" >}},
 -   [streeme](http://code.google.com/p/streeme/) (MIT License)
     is a php web music server that uses FFMPEG. _last commit 2012_.
 
-### [Ampache](http://en.wikipedia.org/wiki/Ampache) (LGPL/GPL) {#ampache}
-is a PHP-based tool for managing, updating and playing
-MP3/OGG/RM/FLAC/WMA/M4A files via a web interface. It is implemented
-with Apache (or any web server), MySQL, and PHP. It includes a HTML5
-Web Player, shoutcast streams; subsonic (since 3.7), plex (since 3.7),
-daap(since 3.8), UPnP (since 3.8), webdav (since 3.8) backends. Ampache can transcode music on the fly.  It can
-also stream music through a shoutcast server.
+### Ampache (LGPL/GPL) {#ampache}
+{{< wp "Ampache" >}} is a PHP-based tool for managing, updating and playing
+MP3/OGG/RM/FLAC/WMA/M4A files via a web interface. It is implemented with Apache (or any
+web server), MySQL, and PHP. It includes a HTML5 Web Player, shoutcast streams; subsonic
+(since 3.7), plex (since 3.7), daap(since 3.8), UPnP (since 3.8), webdav (since 3.8)
+backends. Ampache can transcode music on the fly.  It can also stream music through a
+shoutcast server.
 
 -   [Ampache GitHub Wiki](https://github.com/ampache/ampache/wiki)
 -   [Ampache page on wikipedia](http://en.wikipedia.org/wiki/Ampache).
@@ -167,8 +167,13 @@ also stream music through a shoutcast server.
     This plugin is
     to play mp3 encoded sounds at 44 khz sample rate, other formats (ogg, or even mp3 48khz)
 need transcoding.
--   Ampache can  [control multiple mpd instances on the network
+-   _Ampache_ can  [control multiple mpd instances on the network
     ](http://mpd.wikia.com/wiki/Client:Ampache)
+-   John Goerzen has written two Docker images for _Ampache_,
+    [docker-ampache](https://github.com/jgoerzen/docker-ampache) which need an external
+    mysql/mariadb server and
+    [docker-ampache-mysql](https://github.com/jgoerzen/docker-ampache-mysql)
+    which provides an internal an embedded MariaDB server.
 -   Some players can interface to ampache through the XML api, like:
     [viridian](http://viridian.daveeddy.com/),
     {{< iref "media_players#mpd" "mpd" >}},
