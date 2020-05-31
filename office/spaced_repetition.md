@@ -2,11 +2,11 @@
 title: Spaced Repetition
 ---
 
-{{% toc /%}}
 
 # References
--   Wikipedia: {{< wp "Memory" >}}, {{< wp "Memory improvement" >}}, {{< wp "Memorization" >}},  {{< wp "Rote learning" >}},
-    {{< wp "Mnemonic" >}},{{< wp "Mnemonic major system" >}}
+-   Wikipedia: {{< wp "Memory" >}}, {{< wp "Memory improvement" >}},
+    {{< wp "Memorization" >}},  {{< wp "Rote learning" >}},
+    {{< wp "Mnemonic" >}},{{< wp "Mnemonic major system" >}}.
 -   The {{< wp "Art of memory" >}} is the use of mnemotechnics, this
     Wikipedia article summarize the differents techniques like the
     {{< wp "Method of loci" >}} which is a general designation for mnemonic
@@ -21,7 +21,8 @@ title: Spaced Repetition
     SuperMemo and Org-drill _and in alpha state in an Anki plugin_.
 
 # Flashcard principles.
--   [SuperMemo Twenty rules of formulating knowledge](http://www.supermemo.com/articles/20rules.htm)
+-   [SuperMemo Twenty rules of formulating knowledge
+    ](http://www.supermemo.com/articles/20rules.htm)
 
 # Main stream software.
 
@@ -103,10 +104,9 @@ plugins for Anki. Many of them are in [GitHub](https://github.com).
     A script for generating Anki cards out of lyrics and poetry.
 
 ## Other software
--   [Org-drill](http://orgmode.org/worg/org-contrib/org-drill.html)
-    is an extension for Org mode. Org-Drill uses a spaced repetition
-    is uses the [sm5 algorithm from SuperMemo](http://supermemo.com/english/ol/sm5.htm)
-    implemented in
-    [org-learn](http://orgmode.org/w/?p=org-mode.git;a=blob_plain;f=contrib/lisp/org-learn.el;hb=HEAD)
+Org Mode provide several
+{{ iref "org-mode#spaced_repetition" "spaced repetition packages" >}}.
+
+
 -   [Learning with Texts (LWT)](http://lwt.sourceforge.net/) (Public Domain)
     is a spaced repetition software aimed at language learning.
