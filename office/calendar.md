@@ -175,7 +175,10 @@ and {{< iref "org-mode" "Org Mode" >}}
 -   [ical2org.py
     ](https://github.com/asoroa/ical2org.py) converts an ical calendar (for instance, as exported
     from google calendar) into an org-mode
-    It is a replacement of the awk script
+    It is a replacement of the awk script `ical2org.awk`.
+-   [org-gcal](https://github.com/kidd/org-gcal.el)
+    allow to  Fetch google calendar event,  Post/edit org element,  Sync between Org
+    and Gcal.
 -   the script [vCard2org.rb
     ](https://gist.github.com/simonthum/4145201)
     creates org-contacts entries from vCard input.
@@ -185,8 +188,6 @@ and {{< iref "org-mode" "Org Mode" >}}
     Google), it is in elpa.
 -   [org-vcard](https://github.com/flexibeast/org-vcard)
     export and import vcards to org-mode.
-
-
 
 ## Asynk {#asynk}
 -   [ASynK: Awesome Sync (by Karra): ASynK User Manual
