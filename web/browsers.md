@@ -16,6 +16,10 @@ title: Web Browsers
     ](https://developer.mozilla.org/en-US/docs/Mozilla/Command_Line_Options),
     [geolocation
     ](https://www.mozilla.org/en-US/firefox/geolocation/).
+-   ArchWiki pages: [Firefox](https://wiki.archlinux.org/index.php/Firefox),
+    [Firefox/Privacy](https://wiki.archlinux.org/index.php/Firefox/Privacy),
+    [Firefox/Profile on RAM](https://wiki.archlinux.org/index.php/Firefox/Profile_on_RAM),
+    [Firefox/Tweaks](https://wiki.archlinux.org/index.php/Firefox/Tweaks)
 -   [Mozilla developers tools](https://developer.mozilla.org/en-US/docs/Tools):
     -   [Web Console](https://developer.mozilla.org/en-US/docs/Tools/Web_Console),
     -   [Command Line Interpreter
@@ -33,14 +37,13 @@ title: Web Browsers
         protocols:
         [mozillaZine: Register protocol
         ](http://kb.mozillazine.org/Register_protocol)
--   There are many [
-    ](about:addons) the list
+-   There are many [about:addons](about:addons) the list
     of installed plugins is at [about:plugins](about:plugins) an in the
     `Tools/Add-on` menu entry.
 -   Config options can be modified by opening
     [about:config](about:config) in your browser.
-    -   The edition of preferences is described in [Customizing
-        Mozilla](http://www.mozilla.org/unix/customizing.html), and
+    -   The edition of preferences is described in
+        [Customizing Mozilla](http://www.mozilla.org/unix/customizing.html), and
         [mozillazine: Editing configuration
         ](http://kb.mozillazine.org/Editing_configuration).
     -   The options are explained in
@@ -85,17 +88,20 @@ title: Web Browsers
     clicking on an element in the page find its place in the DOM tree.
     It is very usefull to find how to set your CSS for an effect.
 -   [Conkeror](http://conkeror.org/) is a keyboard-driven, Mozilla-based
-    web browser. It is packaged in Debian since lenny and Ubuntu since
-    jaunty
+    web browser. It is no longer packaged in Debian.
+    _Not to be confused with the KDE browser Konqueror._
+    -   Wikipedia {{< wp "Conkeror" >}}.
 -   The [compatibility of desktop and mobile browsers with HTML5, CSS3, SVG
     ](http://caniuse.com/)
     is summarized in these tables.
 
 ## Firefox addons {#firefox_addons}
 
--   [ArchWiki: Browser plugins
+-   [Browser extensions - ArchWiki](https://wiki.archlinux.org/index.php/Browser_extensions)
+-   [Browser plugins - ArchWiki
     ](https://wiki.archlinux.org/index.php/browser_plugins)
     has informations about flash players.
+-   Wikipedia: {{< wp "List of Firefox extensions" >}}
 
 ### Flash plugins {#flash_plugins}
 For playing swf you can use
@@ -314,25 +320,87 @@ With one tab no js
 -   [Wikipedia: Comparaison of web browsers
     ](http://en.wikipedia.org/wiki/Comparison_of_web_browsers)n
     gives a complete comparison of web browsers features, but not of
-    their performances (speed, memory and cpu consumption) .
--   [Amaya](http://www.w3.org/Amaya/) (w3c opensource license) W3C's
-    Editor/Browser.It supports XHTML 1.1, SVG, MathML 2.0, and many CSS
-    2 features.
--   [Arachne](http://browser.arachne.cz/) a SVGA browser for DOS.
+    their performances (speed, memory and cpu consumption)
+-   [List of applications Web Browsers - ArchWiki
+    ](https://wiki.archlinux.org/index.php/List_of_applications/Internet#Web_browsers)
 -   {{< wp "Google Chrome" >}} is a freeware but not fully open source. The
     open source browser behind chrome is
     [Chromium](http://www.chromium.org/)
     -   [Google Chrome Home](http://www.google.com/chrome)
     -   [Chrome Help](https://support.google.com/chrome)
--   {{< wp "Dillo" >}} [Dillo Home](http://www.dillo.org/) (GPL) a fast gtk+ (old release) or
-    fltk2 web browser written in C.  It does
-    not support css nor javascript, A new release with fltk2 is available since 2008,
-    but it has been removed from Debian in 2010.
--   <a name="dvb"></a>[dwb](https://portix.bitbucket.org/dwb/y)
-    is a lightweight webkit/gtk browser based.
--   [Epiphany](https://wiki.gnome.org/Apps/Web) now named _Web_ is a web browser
-    based on Gtk+ and  {{< wp "Webkit" >}} engine as are Uzbl and Midori.
-    Previous releases of epiphany used gecko now replaced by webkit.
+    -   [Chromium - ArchWiki](https://wiki.archlinux.org/index.php/Chromium),
+        [Chromium/Tips and tricks - ArchWiki
+        ](https://wiki.archlinux.org/index.php/Chromium/Tips_and_tricks).
+-   <a name="dwb"></a>[dwb](https://portix.bitbucket.io/dwb/)
+    is a lightweight webkit/gtk browser based. The page
+    [dwb - ArchWiki](https://wiki.archlinux.org/index.php/Dwb), flag it as
+    insecure and outdated. _dwb_ is in Debian.
+-   {{< wp "Lynx (web browser)" "Lynx" >}} (GPL) is a text browser.
+-   [elinks](http://elinks.or.cz/) (GPL) Enhanced Links is a web browser
+    in text mode with lua, guile, perl scripting; others features
+    include mailcap support, tabbed browsing, gpm support, table and
+    frames rendering, ssl, authentication, persistent cookies, xbel
+    bookmarks and experimental css and javascript. _last release 2012_
+    -   Wikipedia: {{< wp "Elinks" >}}
+    -   [ELinks - ArchWiki](https://wiki.archlinux.org/index.php/ELinks)
+-   [Falkon](https://www.falkon.org/) previously  _QupZilla_ (GPL)
+    is based on WebKit and Qt Framework. It supports tabbed browsing,
+    bookmarks, history, search in a page, screenshots, news
+    feeds. Beginning of 2018 Qupzilla is renamed Falkon and becomes
+    the KDE browser.
+-   {{< wp "Links_(web_browser)"  "Links" >}} (GPL), the ancestor of elinks
+    and an other offspring:
+    <a name="links2">[Twibright Labs: Links
+    ](http://atrey.karlin.mff.cuni.cz/~clock/twibright/links/)(links-2)
+    offers both graphic and text browsing, it has no CSS, it do have
+    some javascript but is not very usable for javascript driven
+    sites.  Links is a minimal nice browser that can work in text
+    mode, or graphic mode with X11, fb or framebuffer; with unmatched
+    low footprints.
+-   [Lariza](https://www.uninformativ.de/git/lariza/file/README.html) (MIT License)
+    ia a simple web browser using GTK+ 3, GLib and WebKit2GTK+.
+    It is considered to be one of the lightest front-end GUI interfaces to webkit2gtk.
+    -   [lariza - ArchWiki](https://wiki.archlinux.org/index.php/Lariza).
+-   [Luakit](https://luakit.github.io/) (GPL)
+    Luakit is a highly-configurable browser framework based on WebKitGTK+. It is very
+    fast and extensible by Lua. Luakit is packaged in Debian.
+    -   [luakit - GitHub](https://github.com/luakit/luakit)
+    -   [Luakit - ArchWiki](https://wiki.archlinux.org/index.php/Luakit)
+-   {{< wp "Midori (web browser)" "Midori" >}}  is a web browser
+    based on the {{< wp "Webkit" >}} engine as are Uzbl and Epiphany.
+    It the default browser for Xfce, and many small distributions like Slitaz, Bodhi
+    Linux, and other.
+    -   [Midori Home](https://astian.org/midori/)
+    -   [Midori - ArchWiki](https://wiki.archlinux.org/index.php/Midori).
+-   [NetSurf](http://www.netsurf-browser.org/)
+    (GPL) is a fast small footprint web browser for RISC OS and UNIX
+    platforms. Netsurf can handle CSS but not javascript. A NetSurf
+    package is in Debian _named: netsurf-gtk_.
+    Netsurf is small but its main limitation is that it does not
+    provide Javascript.
+
+    There is a frame buffer version of netsurf, it has no shortcuts, menu, tabs, but has
+    minimal memory footprint.
+-   [Qutebrowser](https://www.qutebrowser.org/) (GPL)
+    is a keyboard-focused browser with a minimal GUI. It’s based on
+    Python and PyQt5. It was inspired by other browsers/addons like
+    {{< iref "#dwb" "dwb" >}}  and Vimperator/Pentadactyl. QuteBrowser is in Debian.
+    -   [ArchWiki: Qutebrowser
+        ](https://wiki.archlinux.org/index.php/Qutebrowser).
+-   [servo](https://servo.org/) (Mozilla public License)
+    is a new browser written in Rust.
+    -   [servo - GitHub](https://github.com/servo/servo)
+-   [Surf](http://surf.suckless.org/) (GPL)
+    from suckless tools is a simple web browser based on
+    WebKit/GTK+. It supports the XEmbed protocol
+    -   [ArchWiki: Surf](https://wiki.archlinux.org/index.php/Surf)
+    -   [surf extension scripts](http://surf.suckless.org/files/)
+-   [Web](https://wiki.gnome.org/Apps/Web)
+    previously named _Epiphany_ is a web browser based on Gtk+ and {{< wp "Webkit" >}}
+    engine as are Uzbl and Midori.  Previous releases of epiphany used gecko now
+    replaced by webkit.
+    -   [GNOME/Web - ArchWiki](https://wiki.archlinux.org/index.php/GNOME/Web).
+
 
     Epiphany footprints are bigger than midori.
     Epiphany 2.30 - 3.28 allow to display the javascript page of gmail while
@@ -340,51 +408,8 @@ With one tab no js
 
     Displaying only one tab with gmail with epiphany open 1 epiphany
     process 94M res / 62M shr, 1 Webkit storage 31M / 24M, 1 Webkit
-    networ 60M / 34M, 1 Webkit Web 502M / 100M.
+    network 60M / 34M, 1 Webkit Web 502M / 100M.
 
--   [lynx](http://lynx.isc.org/) (GPL) is a text browser,
-    there are many [Lynx links](http://www.subir.com/lynx.html)
-    [Wikipedia: Lynx](http://en.wikipedia.org/wiki/Lynx_(web_browser)).
--   [elinks](http://elinks.or.cz/) (GPL) Enhanced Links is a web browser
-    in text mode with lua, guile, perl scripting; others features
-    include mailcap support, tabbed browsing, gpm support, table and
-    frames rendering, ssl, authentication, persistent cookies, xbel
-    bookmarks and experimental css and javascript. _last release 2012_
-    -   Wikipedia: {{< wp "Elinks" >}}
--   {{< wp "Links_(web_browser)"  "Links" >}} (GPL), the ancestor of elinks
-    and an other offspring:
-    <a name="links2">[Twibright Labs: Links
-    ](http://atrey.karlin.mff.cuni.cz/~clock/twibright/links/)(links-2)
-    offers both graphic and text browsing, it has no CSS, it do have
-    some javascript but is not very usable for javascript driven
-    sites.  Links2 is a minimal nice browser that can work in text
-    mode, or graphic mode with X11, fb or framebuffer; with unmatched
-    low footprints.
--   {{< wp "Midori" >}}  is a web browser
-    based on the {{< wp "Webkit" >}} engine as are Uzbl and Epiphany.
--   [NetSurf](http://www.netsurf-browser.org/)
-    (GPL) is a fast small footprint web browser for RISC OS and UNIX
-    platforms. Netsurf can handle CSS but not javascript. A NetSurf
-    package is in Debian _named: netsurf-gtk_.
-    Netsurf is small but its main limitation is that it does not
-    provide Javascript.<br /> There is a frame buffer version of
-    netsurf, it has no shortcuts, menu, tabs, but has minimal memory
-    footprint.
--   [poseidon](https://github.com/sidus-dev/poseidon)
-    is a minimal browser built with python3, GTK3 and the WebKit library.
-    It supports adblock and noscript. Packages are provided for main
-    distributions including Debian.
--   [Qutebrowser](https://www.qutebrowser.org/) (GPL)
-    is a keyboard-focused browser with a minimal GUI. It’s based on
-    Python and PyQt5. It was inspired by other browsers/addons like
-    {{< iref "#dwb" "dwb" >}}  and Vimperator/Pentadactyl.
-    -   [ArchWiki: Qutebrowser
-        ](https://wiki.archlinux.org/index.php/Qutebrowser).
--   Falkon previously  [QupZilla](http://www.qupzilla.com/) (GPL)
-    is based on WebKit and Qt Framework. It supports tabbed browsing,
-    bookmarks, history, search in a page, screenshots, news
-    feeds. Beginning of 2018 Qupzilla is renamed Falkon and becomes
-    the KDE browser.
 -   {{< wp "W3m" >}} (MIT License) is a console (and xterm) browser that can handle
     images, it is very small 3.6M.
     -   [W3m Home Page](http://w3m.sourceforge.net/),
@@ -397,16 +422,6 @@ With one tab no js
     -   [emacs Wiki: Emacs-w3m
         ](https://www.emacswiki.org/emacs/emacs-w3m),
         [w3m](ttps://www.emacswiki.org/emacs/w3m).
--   [servo](https://servo.org/)
-    is a new browser written in Rust. In beginning 2018 it is still in
-    alpha.
--   [surf](http://surf.suckless.org/) (GPL)
-    from suckless tools is a simple web browser based on
-    WebKit/GTK+. It supports the XEmbed protocol
-    -   [ArchWiki: Surf](https://wiki.archlinux.org/index.php/Surf)
-    -   [surf extension scripts](http://surf.suckless.org/files/)
--   [Xombrero](https://opensource.conformal.com/wiki/xombrero)
-    -   [Gentoo Wiki: Xombrero](https://wiki.gentoo.org/wiki/Xombrero)
 
 # Bookmarklet
 A {{< wp "bookmarklet" >}} is a bookmark stored in a web browser that contains
@@ -436,7 +451,7 @@ profiled. Additionally, searx can be used over Tor for online
 anonymity.
 
 -   [list of Searx public instances
-    ](https://github.com/asciimoo/searx/wiki/Searx-instances)
+    ](https://searx.space/)
 -   [Framabee search](https://framabee.org/)
 -   [Searx Wiki](https://github.com/asciimoo/searx/wiki)
 
