@@ -2,8 +2,6 @@
 title: Data exchange formats
 ---
 
-{{% toc /%}}
-
 -   Wikipedia: {{< wp "Data exchange" >}}, {{< wp "serialization" >}},
     {{< wp "Comparison of data serialization formats" >}} (json, yaml, xml,
     property-lists, Comma-separated values, ...), {{< wp "Binary-to-text encoding" >}}
@@ -57,6 +55,21 @@ See also the related {{< iref "javascript" "Javascript Page" >}}
      HTML Table, XML, YAML, and CSV and the reverse conversion. There are also JSON
      viewer, lint, Formatter and a tool to display JSON Path Names or to query using
      JSON paths.
+
+## json cli
+-   [jq](https://stedolan.github.io/jq/) (MIT license)
+    is a lightweight and flexible command-line JSON processor, it is like sed for JSON
+    data.
+-   [fx](https://github.com/antonmedv/fx) (MIT license)
+    _fx_ is a command-line tool and terminal JSON viewer. Written in node js.
+-   [jo](https://github.com/jpmens/jo) (GPL)
+    _jo_ is a C utility to create JSON objects, It
+    is in Debian (but the version may be old!), and a snap package is also available.
+    -   There are rewrite of jo with other programming languages:
+        [jjo in Node.js](https://github.com/memoryhole/jjo),
+        [rjo in Rust](https://github.com/dskkato/rjo),
+        [gjo in go](https://github.com/skanehira/gjo).
+    -   [jo - cli.fan](https://cli.fan/posts/jo/)    .
 
 ## Yaml {#yaml}
 -   {{< wp "Yaml" >}} is a human-readable data serialization format designed
@@ -261,8 +274,7 @@ presentations and word processing documents in XML:
 -   [Jeni Tennison's XSLT Pages](http://www.jenitennison.com/xslt/)
 -   [The XSLT C library](http://xmlsoft.org/XSLT/):
     [xsltproc user manual](http://xmlsoft.org/XSLT/xsltproc.html),
-    [libxslt
-    Tutorial](http://xmlsoft.org/XSLT/tutorial/libxslttutorial.html) by
+    [libxslt Tutorial](http://xmlsoft.org/XSLT/tutorial/libxslttutorial.html) by
     John Fleck.
 -   [XML resources publication guidelines
     ](http://xmlsoft.org/guidelines.html)
