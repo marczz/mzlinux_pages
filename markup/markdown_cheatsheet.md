@@ -152,56 +152,65 @@ python-markdown . ~~Scratch this.~~
 +   Or pluses
 
 
-To have a line break without a paragraph, you will need to use two
-trailing spaces, or html &lt;br/&gt; in GFM or with
-[python markdown nl2b
-](https://pythonhosted.org/Markdown/extensions/nl2br.html)
-trailing spaces are not required, ordinary newline break paragraphs,
-and with pandoc you can also use a backslash followed by a newline.
+To have a line break without beginning a new paragraph, you will need to use two
+trailing spaces in the [original Markdown specification][JG Markdown]. But a trailing
+space is hardly visible _except if your editor highlight them_, is easily discarded
+by editors, and are a nuisance in _Git_ or other code versionning.
 
+[Common Mark][] add the use of a trailing backslash to generate hard line
+breaks, this convention is also part of [GFM][] and followed by many Markdown processors
+like [Pandoc][] with the extension *escaped_line_breaks*.
 
-If two lists are subsequent the second is considered as the
-continuation of the first. To avoid it you can use a &lt;br/&gt;
-&lt;-- comment--&gt; or &amp;nbsp;
+If your processor accept raw html you can also use &lt;br/&gt;.
+
+Some other processors give additional line break syntax. With
+[python markdown nl2b](https://python-markdown.github.io/extensions/nl2br/) or the
+[Pandoc][] extension *hard_line_breaks* an ordinary newline break paragraphs.
+
+If two lists are subsequent the second is considered as the continuation of the first,
+except if you change the list marker like swithing from `-` to `*` or `1.` to `1)`. To
+break a list in two lists without changing marker can use a &lt;br/&gt;
+&lt;!-- comment--&gt; or &amp;nbsp;
 
 ### Definition Lists
-The definitions lists are not part of
-[Common Mark](http://spec.commonmark.org/), nor
+The definitions lists are not part of [Common Mark](http://spec.commonmark.org/), nor
 [GFM](https://github.github.com/gfm/).
 
 But we find
 [Definition Lists extension
 ](https://pythonhosted.org/Markdown/extensions/definition_lists.html)
-in the standard Python Markdown library, and also
+in the standard [Python Markdown][] library,
 [PHP markdown extra
-](http://michelf.com/projects/php-markdown/extra/#def-list)
-and numerous other formatters.
+](http://michelf.com/projects/php-markdown/extra/#def-list),
+[Pandoc](https://pandoc.org/MANUAL.html#definition-lists), [MultiMarkDown][],
+[Goldmark][], _Discount_, _Markdown-it_, etc.
+
+When no specific syntax is available for definition list, you can fallback to raw html.
 
 ```text
-
 Apple
 :   Pomaceous fruit of plants of the genus Malus in
     the family Rosaceae.
 
-Orange <a name="orange">
+ <a name="orange"></a>Orange
 :   The fruit of an evergreen tree of the genus Citrus.
 
 <dt id="distraction">Distraction</dt>
-:   The fruit of lack of concentration.
+    <dd>The fruit of lack of concentration.</dd>
 ```
 
 Apple
 :   Pomaceous fruit of plants of the genus Malus in
     the family Rosaceae.
 
-Orange <a name="orange">
+<a name="orange"></a>Orange
 :   The fruit of an evergreen tree of the genus Citrus.
 
 <dt id="distraction">Distraction</dt>
-:   The fruit of lack of concentration.
+    <dd>The fruit of lack of concentration.</dd>
 
-As you see above we can add a {{< iref "#orange" "name" >}} or {{< iref "#distraction" "id" >}}
-to have references to list items.
+As you see above we can add a {{< iref "#orange" "name" >}} or
+{{< iref "#distraction" "id" >}} to have references to list items.
 
 ## Links {#links}
 
