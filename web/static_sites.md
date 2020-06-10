@@ -2,8 +2,6 @@
 title: Static Sites Generators
 ---
 
-{{% toc /%}}
-
 # References
 
 -   GitLab [1. Static vs Dynamic Websites
@@ -265,45 +263,31 @@ The site generators are written in various languages:
 -   [Jekyll](http://wiki.github.com/mojombo/jekyll/wiki/)<a name="jekyll"></a> (MIT License)
     is a static site generator written in ruby that
     uses _Textile_, _Markdown_ or _HTML_ as markup.
-    - Jekyll is the engine behind
-      [GitHub Pages](http://pages.github.com/)
-      - [GitHub Pages Help](https://help.github.com/categories/20/articles).
-      - [Using Jekyll with Pages](https://help.github.com/articles/using-jekyll-with-pages)
-    - [Jekyll Wiki pages](https://github.com/mojombo/jekyll/wiki)
-    - There is a huge [list of jekyll plugins](https://github.com/mojombo/jekyll/wiki/Plugins)
-    - [Jekyll Introduction](http://jekyllbootstrap.com/lessons/jekyll-introduction.html)
-     from [Jekyll-Bootstrap](http://jekyllbootstrap.com/) has itself
-     its [source on GitHub](http://github.com/plusjade/jekyll-bootstrap)
-    - There are many examples sites to help you to boostrap your
-      Jekyll powered site:
-      [Jekyll-Bootstrap](http://github.com/plusjade/jekyll-bootstrap),
-      [Lukasz Grzegorz Maciak: Sample-Jekyll-Site
-      ](https://github.com/maciakl/Sample-Jekyll-Site),
-      [Hendrik Kleinwaechter - jekyll-quickstart
-      ](https://github.com/hendricius/jekyll-quickstart) use
-      [Slim template](http://rdoc.info/github/slim-template/slim)
-    - [Automated deployment for Jekyll with Git](http://tatey.com/2009/04/29/jekyll-meets-dreamhost-automated-deployment-for-jekyll-with-git/) illustrate
-      [jekyll Deployment](https://github.com/mojombo/jekyll/wiki/Deployment)
-    - [Building a Docs Site with Jekyll + GitHub Pages
-      ](http://blog.jetstrap.com/2013/03/building-a-docs-site-with-jekyll-github-pages/)
-      Bog in [Jestrap](https://jetstrap.com/) the bootstrap 3 builder,
-      by Max Lynch.
-    - [Org-jekyll](http://juanreyero.com/open/org-jekyll/)
-       by Juan Reyero export jekyll blog posts from org-mode.
-   - There are number of
-     [Jekyll powered sites](https://github.com/mojombo/jekyll/wiki/Sites)
-     whose sources are available.
-     The site [git-ready](http://gitready.com/) is built with Jekyll and the
-     [source is available on GitHub](https://github.com/gitready/gitready).
-     It is a good example of a simple Jekyll layout, .
--   <a name="markdoc"></a>[Markdoc](http://markdoc.org/) (public license)
-    is a wiki written in python and using the _Markdown_ format that can
-    export a static site.
-    _MarkDoc_ source is in
-    [zacharyvoase / markdoc  GitHub repository](http://github.com/zacharyvoase/markdoc).
-    MarkDoc is abandoned the home site of the author
-    [Zachary Voase](http://zacharyvoase.com/)
-    previously powered by Markdoc is now a blog using Nanodoc.
+    -   Jekyll is the engine behind
+        [GitHub Pages](http://pages.github.com/)
+        -   [GitHub Pages Help](https://help.github.com/categories/20/articles).
+        -   [Using Jekyll with Pages](https://help.github.com/articles/using-jekyll-with-pages)
+    -   [Jekyll Wiki pages](https://github.com/mojombo/jekyll/wiki)
+    -   There is a huge [list of jekyll plugins](https://github.com/mojombo/jekyll/wiki/Plugins)
+    -   [Jekyll-Bootstrap](http://jekyllbootstrap.com/)
+        -   [Jekyll Introduction](http://jekyllbootstrap.com/lessons/jekyll-introduction.html)
+        -   [Jekyll-Bootstrap - GitHub](http://github.com/plusjade/jekyll-bootstrap)
+    -   There are many examples sites to help you to boostrap your
+        Jekyll powered site:
+        [Lukasz Grzegorz Maciak: Sample-Jekyll-Site
+        ](https://github.com/maciakl/Sample-Jekyll-Site),
+        [Hendrik Kleinwaechter - jekyll-quickstart
+        ](https://github.com/hendricius/jekyll-quickstart) use
+        [Slim template](http://rdoc.info/github/slim-template/slim)
+    -   [jekyll Deployment](https://github.com/mojombo/jekyll/wiki/Deployment)
+    -   [Org-jekyll](http://juanreyero.com/open/org-jekyll/)
+         by Juan Reyero export jekyll blog posts from org-mode.
+    -   There are number of
+        [Jekyll powered sites](https://github.com/mojombo/jekyll/wiki/Sites)
+        whose sources are available.
+        The site [git-ready](http://gitready.com/) is built with Jekyll and the
+        [source is available on GitHub](https://github.com/gitready/gitready).
+        It is a good example of a simple Jekyll layout, .
 -   <a name="markwiki"></a>[MarkWiki
     ](http://pythonhosted.org/MarkWiki/) (BSD License)
     is a _Python_ + {{< iref "python_web#flask" "Flask" >}} wiki _not static_
@@ -420,7 +404,6 @@ The site generators are written in various languages:
     good documentation, both for the user and the developer. Alas, It
     is targeted to blogs and the support for pages is quite rudimentary.
 
-
 -   <a name="punch"></a> [Punch
     ](http://laktek.github.io/punch/) (MIT License)
     is a node.js static site generator that uses
@@ -523,30 +506,27 @@ Switching from Nikola to Hugo:
 
 ## generators mainly targeted to documentation
 
--   <a name="couscous">[Couscous](http://couscous.io/)
+-   <a name="couscous"></a>[Couscous](http://couscous.io/)
     PHP documentation generator for Markdown _Extra_.
     -   [GitHub Couscous](https://github.com/CouscousPHP/Couscous)
 -   <a name="crowbook">[CrowBook](https://github.com/lise-henry/crowbook)
     a ruby program yp convert books written in Markdown to html,
-    latex/pdf and epub?
-    -   [CrowBook introduction
-        ](http://crowdagger.fr/blog/index.php?post/Crowbook%2C-logiciel-libre-pour-convertir-vos-livres-%C3%A9crits-en-Markdown-vers-PDF%2C-HTML-et-EPUB%2C-maintenant-en-version-0.13.0).
--   <a name="dauxio">[Daux.io](https://dauxio.github.io/)
+    latex/pdf and epub.
+    -   [Mot-clé crowbook - Le blog de Lizzie Crowdagger
+        ](https://crowdagger.fr/blog/index.php?tag/crowbook)
+-   <a name="dauxio"></a>[Daux.io](https://dauxio.github.io/)
     (MIT License)is a static documentation generator written in PHP.
     I accept documentation in Markdown.
     -   [GitHubDaux.io](https://github.com/dauxio/daux.io).
 -   <a name="docsify">[Docsify](https://github.com/QingWei-Li/docsify/)
     (MIT License) is a javascript dynamic _(not static site)_
     documentation generator for markdown.
--   <a name="gitbook"></a>[GitBook
-    ](https://github.com/GitbookIO/gitbook)
-    is a javascript toolchain for documentation
-    using Git and Markdown or AsciiDoc.
+-   <a name="gitbook"></a>[GitBook](https://github.com/GitbookIO/gitbook)
+    is a javascript toolchain for documentation using Git and Markdown or AsciiDoc.
     -   [GitBook Toolchain](https://toolchain.gitbook.com/)
-    -   [gitbook.com](https://www.gitbook.com) is a site offering
-        free publication of free open source books, and paid service
-        for private books.
--   <a name="flatdoc>[Flatdoc](http://ricostacruz.com/flatdoc/)
+    -   [gitbook.com](https://www.gitbook.com) is a site offering free publication of
+        free open source books, and paid service for private books.
+-   <a name="flatdoc"></a>[Flatdoc](http://ricostacruz.com/flatdoc/)
     by [Rico Sta. Cruz](https://github.com/rstacruz) is a JavaScript program to render
     Markdown files.
     -   [GitHub - Flatdoc](https://github.com/rstacruz/flatdoc) _last commit 2015,
