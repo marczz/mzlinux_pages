@@ -361,7 +361,7 @@ The site generators are written in various languages:
     It includes theme with *Bootstrap* default,  *mustache* templating,
     index page generation, commenting using *Disqus*.
     [GitHub:org-site](https://github.com/xiaohanyu/org-site/).
--    <a name="pelican"></a>[Pelican](http://pelican.notmyidea.org/)
+-   <a name="pelican"></a>[Pelican](http://pelican.notmyidea.org/)
     (GNU Affero General Public License)
     is a static blog generator in python, that uses
     _ReSTructured text_, _Asciidoc_ or _Markdown_.
@@ -460,7 +460,7 @@ most o them where primary aimed to blogging.
 [Hugo](https://gohugo.io/) is a static site
 generator written in go. It is in Debian. Hugo can be used for documentation.
 
-It uses since v 0.60 {{< iref "markdown#goldmark" Goldmark >}} for markdown formatting.
+It uses since v 0.60 {{< iref "markdown#goldmark" "Goldmark" >}} for markdown formatting.
 
 There are many themes aimed to Documentation, you can find many in
 [documentation | Hugo Themes](https://themes.gohugo.io/tags/documentation/).
@@ -481,6 +481,9 @@ These also have also a search _usually with lunr_ integrated.
 
 Examples of Documentation build with Hugo:
 
+-   [GetBoostrap](https://getbootstrap.com/) the documentation of
+    {{< iref "html#bootstrap" "BootStrap" >}}: [Get bootstap source
+    ](https://github.com/twbs/bootstrap/tree/master/site).
 -   [Riak Docs](http://docs.basho.com/) is built with Hugo,
     [The source is on GitHub](https://github.com/basho/basho_docs).
 -   [Docs.balsamiq.com](https://blog.balsamiq.com/new-documentation-site/).
