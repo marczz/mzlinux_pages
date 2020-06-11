@@ -33,6 +33,8 @@ extensions are mentioned in their
 ## Headers
 
 ```text
+
+```markdown
 # H1
 ## H2
 ### H3
@@ -48,6 +50,7 @@ Alt-H1
 Alt-H2
 ------
 ```
+<div class="example">
 
 # H1
 ## H2
@@ -108,6 +111,8 @@ python-markdown . ~~Scratch this.~~
 ## Lists
 
 ```text
+
+```markdown
 1.  First ordered list item
 2.  Another item
     *   Unordered sub-list.
@@ -187,7 +192,7 @@ in the standard [Python Markdown][] library,
 
 When no specific syntax is available for definition list, you can fallback to raw html.
 
-```text
+```markdown
 Apple
 :   Pomaceous fruit of plants of the genus Malus in
     the family Rosaceae.
@@ -319,6 +324,7 @@ This work at least in python-markdown, maruku, and [kramdown
 
 For pandoc you should use *native spans*.
 ```text
+```markdown
 <span id=otherid>We are here inside the <span id=id1>**second**</span>
 paragraph</span>
 ```
@@ -327,7 +333,7 @@ paragraph</span>
 We take  a small example to show how attributes are handled
 in diverse ways by the different parsers.
 
-```text
+```markdown
 Simple test
 ===========
 
@@ -393,7 +399,7 @@ but *native div*, in the same way there are *native span*.
 This is quite important when converting to an other text format,
 because if we use pandoc to convert this text to _asciidoc_ we get:
 
-```text
+```markdown
 Simple test
 -----------
 
@@ -421,9 +427,10 @@ We are here inside the *second* paragraph.
 The references in `<div>`, `<span>`, `{ }` are translated, the html
 is not translated and appear as raw html.
 
-## Images {#images}
+<a name="H_image"></a>
+## Image {#image}
 
-```text
+```markdown
 Here's our logo (hover to see the title text):
 
 Inline-style:
@@ -434,6 +441,8 @@ Reference-style:
 
 [logo]: http://www.mzlinux.org/files/images/moon1.png "Logo Title Text 2"
 ```
+
+<div class="example">
 
 Here's our logo (hover to see the title text):
 
@@ -449,7 +458,7 @@ Reference-style:
 
 Inline `code` has `back-ticks around` it.
 
-```text
+```markdown
 Inline `code` has `back-ticks around` it.
 ```
 
@@ -640,6 +649,7 @@ Quote break.
 
 > This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.
 ```
+<div class="example">
 
 > Blockquotes are very handy in email to emulate reply text.
 > This line is part of the same quote.
@@ -648,6 +658,7 @@ Quote break.
 
 > This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.
 
+</div>
 
 ## Inline HTML {#html}
 
@@ -673,12 +684,7 @@ You can also use raw HTML in your Markdown, and it'll mostly work pretty well.
 
 ## Horizontal Rule {#hr}
 
-```
-Three or more...
 
----
-
-Hyphens
 
 ***
 
@@ -689,46 +695,28 @@ ___
 Underscores
 ```
 
+
+
+
+
+
+You can use Three or more hyphens or asterisks or underscore.
+
+```markdown
 Three or more...
 
 ---
 
-Hyphens
-
-***
-
-Asterisks
-
-___
-
-Underscores
-
-## Line Breaks {#lines}
-
-A new paragraph is started by to consecutive new-lines.
-
-To force a line return in the same paragraph, place two empty spaces
-at the end of a line, as the line at end of file are often deleted by
-the editor, or by _git_, it is more secure to use the html `<br/>`
-
-```text
-Here's a line for us to start with.
-
-This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
-
-This a separate paragraph,
-and a continuation of the same line.<br>
-This line is only separated by a single newline, so it's a separate line in the *same paragraph*.
+Hyphens  or asterisks or underscore.
 ```
 
-Here's a line for us to start with.
+<div class="example">
+Three or more...
 
-This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
+---
 
-This a separate paragraph,
-and a continuation of the same line.<br>
-This line is only separated by a single newline, so it's a separate
-line in the *same paragraph*.
+Hyphens or asterisks or underscore.
+</div>
 
 ## Youtube videos {#videos}
 
