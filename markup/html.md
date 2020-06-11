@@ -2,8 +2,6 @@
 title: HTML
 ---
 
-{{% toc /%}}
-
 The Epub format is in its {{< iref "epub" "own section" >}}.
 
 ---
@@ -26,8 +24,6 @@ The [html to pdf converter are in the pdf section
     -   [HTML and CSS](http://www.w3.org/standards/webdesign/htmlcss),
     -   [HTML Current Status (list of standards)
         ](http://www.w3.org/standards/techs/html),
-    -   [Cascading Style Sheets home page](http://www.w3.org/Style/CSS/)
-        include a list of Standards & drafts
     -   [W3C Open Source Software](http://www.w3.org/Status.html)
     -   [HTML5](http://www.w3.org/TR/html5/)
     -   [HTML5 Differences from HTML4](http://www.w3.org/TR/html5-diff/)
@@ -39,45 +35,50 @@ The [html to pdf converter are in the pdf section
         [HTML5 xhtml syntax](http://www.w3.org/TR/html5/the-xhtml-syntax.Web)
         they are parsed as XML when requested with an Internet media
         type _MIME type_ such as `application/xhtml+xml` or `application/xml`.
-    -   [HTML5 Forms](http://www.w3.org/TR/html5/forms.html)
-    -   [HTML 4 Forms](http://www.w3.org/TR/html4/interact/forms.html)
-        are extended in
-        [XForms](http://www.w3.org/MarkUp/Forms/).
-        See the references in the previous page
-        and [XForms-Tiny](http://www.w3.org/2006/11/XForms-Tiny/) and
-        [Xforms Transitional](http://www.w3.org/2007/03/XForms-Transitional/)
-        _with numerous examples_.
-    -   [html Standards Curriculum]http://www.w3.org/community/webed/wiki/Main_Page)
-        previously
-        _Opera’s Web Standards Curriculum_
-        is a complete course to teach you standards-based web
-        development, including Web Design Concepts, HTML,
-        Accessibility, CSS, design principles and background theory,
-        and JavaScript basics.<br />
--       The _Web Standards Curriculum_  previously
-        _Opera’s Web Standards Curriculum_
-        is a complete course to teach you standards-based web
-        development, including Web Design Concepts, HTML,
-        Accessibility, CSS, design principles and background theory,
-        and JavaScript basics.<br />
-        You find it in is also in  [w3.org html Standards Curriculum
-        ](http://www.w3.org/community/webed/wiki/Main_Page)
-        annd on [docs.webplatform.org
-        ](http://docs.webplatform.org/) in the section
-        [tutorials](https://docs.webplatform.org/wiki/tutorials).
+-   [Whatwg: HTML Standard](https://html.spec.whatwg.org/multipage/)
+
+-   The **URIs** are defined in [RFC2396](http://tools.ietf.org/html/rfc2396)
+    *URIs include URLs*
+
+## HTML compability of Browsers
+
+-   [Can I Use (caniuse)](http://caniuse.com/)
+    tables summarize the compatibility of desktop and mobile browsers with HTML5, CSS3,
+    SVG.
+-   [HTML5 compatibility - QuirksMode](https://quirksmode.org/html5/index.html).
+
+## HTML Forms
+-   [HTML Forms](https://html.spec.whatwg.org/multipage/forms.html)
+-   Wikipedia: {{< wp "Xforms" >}}.
+-  _W3C_: [XForms](http://www.w3.org/MarkUp/Forms/),
+   [XForms 1.1](https://www.w3.org/TR/xforms/),
+   [XForms 2.0](https://www.w3.org/community/xformsusers/wiki/XForms_2.0).
+-  [XForms - Wikibooks](https://en.wikibooks.org/wiki/XForms).
+
+## Character references
 -   Wikipedia {{< wp "List of XML and HTML character entity references" >}}
 -   [Zvon character reference](http://zvon.org/xxl/characterReference/Output/A.html),
 -   [HTML5 Named character references
     ](http://www.w3.org/TR/html5/syntax.html#named-character-references)
 -   [Character entity references in HTML 4](http://www.w3.org/TR/html401/sgml/entities.html)
+
+## HTML Tutorials
+
+-   [w3.org html Standards Curriculum
+    ](http://www.w3.org/community/webed/wiki/Main_Page)
+    previously _Opera’s Web Standards Curriculum_
+    is a complete course to teach you standards-based web
+    development, including Web Design Concepts, HTML,
+    Accessibility, CSS, design principles and background theory,
+    and JavaScript basics.<br />
+    You find it  also on [docs.webplatform.org](http://docs.webplatform.org/)
+    in the section [tutorials](https://docs.webplatform.org/wiki/tutorials).
 -   [w3schools.com HTML (5) Tutorial and Index](http://www.w3schools.com/html/)
-    ( [html colors](http://www.w3schools.com/html/html_colors.asp) and
-    [colors names](http://www.w3schools.com/html/html_colornames.asp)
-    are also
-    [css colors](http://www.w3schools.com/cssref/css_colors.asp))
+    -   [HTML Reference by category](https://www.w3schools.com/tags/ref_byfunc.asp).
+    -   [HTML Forms](https://www.w3schools.com/html/html_forms.asp)
+    -   [css colors](http://www.w3schools.com/cssref/css_colors.asp))
 -   [Mozilla Developer Network: HTML5](https://developer.mozilla.org/en/HTML/HTML5)
-    references, introduction, Web application features, HTML5 Demos
-    ...
+    references, introduction, Web application features, HTML5 Demos ...
 -   [HTML5 Rocks](http://www.html5rocks.com/en/) is a Google project
     a lot of article on any html5 feature, an
     [html5 resources page](http://www.html5rocks.com/en/resources),
@@ -85,13 +86,16 @@ The [html to pdf converter are in the pdf section
 -   [Html5Code](http://www.html5code.com/): an easy
     [cross reference of tags](http://www.html5code.com/html5tags/),
     guides, tutorials
--   [net tuts+ html and css tutorials](http://net.tutsplus.com/category/tutorials/html-css-techniques/)
+-   [net tuts+ html and css tutorials
+    ](https://webdesign.tutsplus.com/categories/html-css).
 -   _Dive Into HTML5_ by Mark Pilgrim.
     has  disappeared from the web, like did his author, but is still available
     [here as HTML](http://diveintohtml5.appspot.com/),
     there is also an
-    [updated version of Dive Into HTML5 with contributions from the community](http://diveintohtml5.info/)
+    [updated version of Dive Into HTML5 with contributions from the community
+    ](http://diveintohtml5.info/)
     with a [GitHub repository](https://github.com/diveintomark/diveintohtml5).
+    _last update 2017_.
 -   [The HTML5 test](http://www.html5test.com/) is an indication of how
     well your browser supports the HTML5 standard.
 -   [HTMLBook](http://oreillymedia.github.io/HTMLBook/)
@@ -101,15 +105,14 @@ The [html to pdf converter are in the pdf section
 -   [xhtml.com](http://xhtml.com/): [XHTML Reference](http://xhtml.com/en/xhtml/reference/)
     based on XHTML 1.0 Strict / XHTML 1.1;
     [CSS2 Reference](http://xhtml.com/en/css/reference/).
--   The **URIs** are defined in [RFC2396](http://tools.ietf.org/html/rfc2396)
-    *URIs include URLs*
 -   [Fundamentals of Web Programming
     ](https://runestone.academy/runestone/books/published/webfundamentals/index.html)
     is an interactive course from [Runestone Interactive Books
     ](https://runestone.academy/runestone/books/).
 
 ## Accessibility and validation
--   Wikipedia: {{< wp "Web accessibility" >}}, {{< wp "Web Content Accessibility Guidelines" >}}
+-   Wikipedia: {{< wp "Web accessibility" >}},
+    {{< wp "Web Content Accessibility Guidelines" >}}.
 -   [Dive Into Accessibility](http://diveintoaccessibility.info)
      explains why and how to make your site accessible.
 -   [ Html Tidy](http://www.w3.org/People/Raggett/tidy/)
@@ -117,7 +120,6 @@ The [html to pdf converter are in the pdf section
     is now [extended for html5](http://w3c.github.io/tidy-html5/)
 -   **Validate** with: [WAVE](http://wave.webaim.org/),
     [W3C validator](http://validator.w3.org).
--   [Can I Use (caniuse)](http://caniuse.com/) tables summarize the compatibility of desktop and mobile browsers with HTML5, CSS3, SVG.
 
 ## HTML transform
 
@@ -350,7 +352,7 @@ pr  esentations.
 -   [rst2html5](https://github.com/marianoguerra/rst2html5/)
     (public domain)
     generates html5 slides from rst source. It can be used with many
-    themes like a basic clean theme or bootstrap and
+    themes like a basic clean theme or {{< iref "#bootstrap" "Bootstrap" >}} and
     javascript libraries like
     {{< iref "#reveal_js" "reveal.js" >}},
     {{< iref "#deck_js" "Deck.js" >}},
@@ -376,25 +378,26 @@ pr  esentations.
     browsers.
 
 # Favicons
-Shortcut icons (favicon.ico files) in  browsers are a
+Shortcut icons (`favicon.ico` files) in  browsers are a
 feature that you can use to display your own logo in bookmarks menus.
 
 They are 16x16 pixel graphic.Favicon.ico file is generally saved on the
 root of your website, but can also be given by
+``` html
+<head>
+  <link rel="shortcut icon" href="http://www.yourdomain.com/iconname.ico"/>
+</head>
+```
 
-    <head>
-      <link rel="shortcut icon" href="http://www.yourdomain.com/iconname.ico"/>
-    </head>
-
-IE only accept he windoze proprietary ico format that you can generates
-from open source formats with utilities like
-[pngtoico](http://www.winterdrache.de/freeware/png2ico/), or with the
-Gimp. Except for the most tyrannic browser you can use other formats
+IE was only accepting he windoze proprietary ico format.
+Except for the most tyrannic browser you can use other formats
 like png, gif, jpeg, xbm so you will put in your page:
 
-    <head>
-      <link rel="icon" type="image/png" href="/favicon.png" />
-    </head>
+``` html
+<head>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+</head>
+```
 
 If you put both in your page you will get an icon for IE (please choose
 a frightening one) and one for true browsers.
@@ -403,43 +406,47 @@ Links for favicon:
 
 -   [favicon cheat sheet](https://github.com/audreyr/favicon-cheat-sheet)
     a very complet guide to favicons with references to other articles.
--   [How To Create And Install A favicon.ico
-    ](http://www.winterdrache.de/freeware/png2ico/favicon.html)
 -   [png2ico](https://github.com/bebraw/png2ico) (MIT License)
     Converts given pngs to icos using ImageMagick.
--   [converticon](http://converticon.com/) online converter.
--   [dynamicdrive.com/favicon](http://tools.dynamicdrive.com/favicon/)
-    online tool to  generate .ico from png, gif, jpg, bmp
+-   ImageMagick has a recipe in the page
+    [Thumbnails](https://www.imagemagick.org/Usage/thumbnails/#favicon)
 
-# html editors
+    In
+    [Converting GIF's, PNG's and JPG's to .ICO files using Imagemagick - Stack Overflow
+    ](https://stackoverflow.com/questions/3185677/converting-gifs-pngs-and-jpgs-to-ico-files-using-imagemagick)
+    There is an other ImageMagick scripts to make only the 16x16 favicon:
+    ``` sh
+    $ convert -resize x16 -gravity center -background transparent -crop 16x16+0+0 \
+        input.png -flatten -colors 256 output/favicon.ico
+    ```
+-   [dynamicdrive.com online favicon generator](http://tools.dynamicdrive.com/favicon/)
+    generate .ico from png, gif, jpg, bmp
+
+# HTML editors
 -   Wikipedia {{< wp "HTML editor" >}}, {{< wp "Comparison of HTML editors" >}},
     {{< wp "List of HTML editors" >}}
 -   [Bluefish html editor](http://bluefish.openoffice.nl) (GPL)
--   [CKeditor](http://ckeditor.com/) <a name="ckeditor"</a>
+-   <a name="ckeditor"></a>[CKeditor](http://ckeditor.com/)
     HTML text editor written in PHP;
-    The documentation is hosted at the
-    [The Official Documentation Site: CKsource](http://docs.cksource.com/).
-    It is integrated in a [Drupal Module](http://drupal.ckeditor.com/)
--   [EditArea](http://www.cdolivet.com/index.php?page=editArea)(LGPL,
-    BSD, or Apache license) javascript editor for source code _not a
-    wyswig editor_. [EditArea documentation](http://www.cdolivet.com/editarea/editarea/docs/)
--   [elRTE](https://github.com/Studio-42/elRTE) (BSD License) <a name="elrte"></a> is a
-     WYSIWYG HTML-editor written in JavaScript using jQuery UI.
+    -   [CKEditor Documentation Website](https://ckeditor.com/docs/).
+-   [EditArea](https://www.cdolivet.com/editarea/)(LGPL, BSD, or Apache license)
+    javascript editor for source code _not a wyswig editor_.
+    -   [EditArea documentation](http://www.cdolivet.com/editarea/editarea/docs/)
 -   {{< wp "Maqetta" >}} (BSD License or AFL) is a  web-based WYSIWYG HTML
     editor written in java designed to edit HTML5 documents. Maqetta was developed by
     IBM and later open-sourced. The goal was to provide  capabilities
-    equivalent to those available in Adobe Flash and  Silverlight.
--   [TinyMCE]( http://tinymce.moxiecode.com/) (LGPL) <a name="tinymce"></a>
+    equivalent to those available in Adobe Flash and  Silverlight. _last update 2013_.
+-   <a name="tinymce"></a>[TinyMCE](https://www.tiny.cloud/features) (LGPL)
     is a web based Javascript HTML WYSIWYG editor.
-    [MCFileManager](http://www.tinymce.com/wiki.php/MCFileManager)
-    is a online file management utility, available as PHP and
-    .NET, that is integrated with TinyMCE or other similar editors.
+    [MoxieManager](https://www.tiny.cloud/docs/plugins/moxiemanager/)
+    is a paid addition to TinyMCE.
 -   {{< wp "WYMeditor" >}} (MIT and GPL licenses) is an other web-based
     jQuery-javascript XHTML editor, but aimed at a XHTML strict code
     uncluttered by visual informations like font styles and weights,
     borders, colors, ...<br />
+
     It integrates with numerous Frameworks and CMS.
-    - [WYMeditor Home](http://wymeditor.github.io/wymeditor/)
+    -   [WYMeditor Home](http://wymeditor.github.io/wymeditor/)
 
 # Cascadind Style Sheets {#css}
 ## references
@@ -451,6 +458,7 @@ Links for favicon:
     [advanced features](http://www.w3.org/MarkUp/Guide/Advanced.html)
     (with sgml entities ref.) _oldy but goody_
 -   [W3C CCS Home Page](http://www.w3.org/Style/CSS/)
+    include a list of Standards & drafts.
 -   [WikiBook: Cascading Style Sheets](http://en.wikibooks.org/wiki/Cascading_Style_Sheets)
 -   [w3.org](http://www.w3.org/):
     -   [CSS2 Specification](http://www.w3.org/TR/REC-CSS2)
@@ -462,34 +470,71 @@ Links for favicon:
 -   veign.com: [CSS3 Quick reference guide (pdf)](http://www.veign.com/downloads/guides/qrg0008.pdf)
 -   richstyle.org [CSS3 Quick reference (html)](http://web-standards.richstyle.org/css3.php) and
     [pdf](http://www.richstyle.org/download/CSS3_Quick_Reference_1.0.pdf)
--   [w3schools.com css tutorial and index](http://www.w3schools.com/css/),
-    [color picker](http://www.w3schools.com/tags/ref_colorpicker.asp)
+-   [Cascading Style Sheets - Wikiboook
+    ](https://en.wikibooks.org/wiki/Cascading_Style_Sheets).
 -   [Mozilla Developer Network: CSS](https://developer.mozilla.org/en-US/docs/CSS):
     [CSS(3) reference](https://developer.mozilla.org/en-US/docs/CSS/CSS_Reference)
     _convenient index_,
-    [CSS Tutorial](https://developer.mozilla.org/en-US/docs/CSS/Getting_Started),
-    [CSS3 Demos](https://developer.mozilla.org/en-US/demos/tag/tech:css3)
--   {{< wp "SASS"  "SASS (Wikipedia)" >}} (MIT License) is a preprocessor language for CSS3. the
-     preprocessor implementation is written in ruby but there are
-     alternative implementations in PHP and  Python.
-     -   SASS has two syntaxes the  new _scss_ and _sass_.
-     -   [SASS Home](http://sass-lang.com/) has a
-         [SASS tutorial](http://sass-lang.com/tutorial.html) and the
-         [SASS Reference](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html).
-     -   [Phamlp](http://code.google.com/p/phamlp/) (BSD License)
-         is a PHP port of Haml and Sass,
-         that can parse both the scss and the sass syntax.
-    -    [pyScss](https://github.com/Kronuz/pyScss) (MIT License)
-         is a _scss_ to _css_ Python translator for the _scss_ language.
--   {{< wp "LESS"  "LESS (Wikipedia)" >}} (Apache License 2) is a preprocessor language for CSS3
-     written in javascript, either client-side or server-side, with
-     Node.js or Rhino. It extends css3 with variables, mixins, operations and functions.
-     -   [LESS Home](http://lesscss.org/)
-     -   [GitHub less repository](https://github.com/cloudhead/less.js)
-     -   [Sass vs. LESS](http://css-tricks.com/sass-vs-less/)
-         by Chris Coyier  has links to alternate comparisons.
 
-## Tutorials
+## CSS Multicolumn
+[CSS Multi-column Layout Module](http://www.w3.org/TR/css3-multicol/)
+allow to output in multiple columns. Most of them work either in
+webkit or mozilla _firefox_ by prepending either `-moz-` or
+`-webkit-` to the css option. You can apply it to any container
+including the full `body`.
+
+The rendering of the different options are tested in
+[CSS columns - desktop](https://quirksmode.org/css/columns/), the
+different working options are `column-count`, `column-gap`,
+`column-rule`, `column-width`. The options for break, fill, span don't
+yet work except opera that has the best support.
+
+These options also [work on mobile](http://quirksmode.org/css/columns/mobile.html).
+
+## CSS browsers compability
+-   [Quirks Mode Standard - Whatwg](https://quirks.spec.whatwg.org/).
+-   [Compatibility overview - QuirksMode.org](https://quirksmode.org/compatibility.html),
+    [CSS Tests](https://quirksmode.org/css/).
+-   [Can I Use (caniuse)](http://caniuse.com/)
+    tables summarize the compatibility of desktop and mobile browsers with HTML5, CSS3,
+    SVG.
+
+## SASS {#sass}
+{{< wp "SASS"  "SASS (Wikipedia)" >}} (MIT License) is a preprocessor language for CSS3.
+the preprocessor implementation is written in ruby but there are alternative
+implementations in PHP and Python.
+-   SASS has two syntaxes the  new _scss_ and _sass_.
+-   [SASS Home](http://sass-lang.com/) has a
+    [SASS tutorial](http://sass-lang.com/tutorial.html) and the
+    [SASS Reference](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html).
+-   [Phamlp](http://code.google.com/p/phamlp/) (BSD License)
+    is a PHP port of Haml and Sass, that can parse both the scss and the sass syntax.
+-   [pyScss](https://github.com/Kronuz/pyScss) (MIT License)
+    is a _scss_ to _css_ Python translator for the _scss_ language.
+
+## LESS {#less}
+{{< wp "LESS"  "LESS (Wikipedia)" >}} (Apache License 2) is a preprocessor language for CSS3
+written in javascript, either client-side or server-side, with
+Node.js or Rhino. It extends css3 with variables, mixins, operations and functions.
+-   [LESS Home](http://lesscss.org/)
+-   [GitHub less repository](https://github.com/cloudhead/less.js)
+-   [Sass vs. LESS](http://css-tricks.com/sass-vs-less/)
+    by Chris Coyier  has links to alternate comparisons.
+
+## CSS Tutorials
+
+-   [w3schools.com css tutorial and index](http://www.w3schools.com/css/),
+    [Colors Tutorial](https://www.w3schools.com/colors/default.asp),
+    [HTML Color Picker](https://www.w3schools.com/colors/colors_picker.asp) allows you
+    to select a color and get it's hewadecimal or RGB value.
+    there is also a table of
+    [HTML Color Names](https://www.w3schools.com/colors/colors_names.asp).
+    These color namings are used as
+    [CSS Colors](https://www.w3schools.com/css/css_colors.asp).
+-   [Mozilla Developer Network: Learn CSS
+    ](https://developer.mozilla.org/en-US/docs/Learn/CSS),
+    [CSS Tutorial](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps),
+    [CSS3 Demos](https://developer.mozilla.org/en-US/demos/tag/tech:css3)
 -   [Maxdesign](http://www.maxdesign.com.au/) gives
     tutorials on web design including:
     [listamatic 1](http://www.maxdesign.com.au/presentation/listamatic/)
@@ -502,50 +547,50 @@ Links for favicon:
      [css snippets](http://css-tricks.com/snippets/).
 -   [Eric Meyer css page](http://www.meyerweb.com/eric/css/).
 
-## Tools
+## CSS Tools
 -   [css validator](http://jigsaw.w3.org/css-validator/)
--   [westciv: Tools](http://westciv.com/tools/)
-    has
-    -   two usefull bookmarklets to help you to debug css
-    [Xray](http://www.westciv.com/xray/) allows to see the box model
-    for any element on a web page and [MRI](http://www.westciv.com/mri/)
-    explore selectors.
-    -   Generators for CSS3 gradients, shadows, and transforms.
--   [Bootstrap](https://github.com/twitter/bootstrap/) is Twitter's toolkit
-    for rapidly developing web applications. It is a collection of CSS and some HTML.
-    Bootstrap uses Less css3 extension.
-    -   Wikipedia:  {{< wp "Twitter Bootstrap" >}}
-    -   [w3resource: Twitter Bootstrap tutorial
-        ](http://www.w3resource.com/twitter-bootstrap/tutorial.php)
-    -   [jetstrap](http://docs.jetstrap.com/) is a beginner kit for Bootstrap.
-    -   [Getting Started with Bootstrap 3
-        ](http://www.realpython.com/blog/design/getting-started-with-bootstrap-3/)
+-   [westciv: Tools](http://westciv.com/tools/):
+    has a sandbox for  CSS3 gradients, shadows, and transforms and
+    -   [Xray](http://www.westciv.com/xray/) bookmarklet allows to see the box model
+        for any element on a web page.
+    -   [MRI](http://www.westciv.com/mri/) a bookmarklet to explore selectors.
+-   Web [CSS3 Generator](http://css3generator.com/)
+-   [Css3 online test at _CSS3, Please!_](http://css3please.com/)
+-   [Dabblet](http://dabblet.com/) (Non-Profit Open Software License) by Lea Verou
+    is an interactive playground for quickly testing snippets of CSS and HTML code.
+    It uses [-prefix-free](http://leaverou.github.com/prefixfree/)
+    for adding a vendor prefix where needed.
+
+## CSS frameworks
 -   [Skeleton]( http://www.getskeleton.com/)
     is a small collection of CSS files that can help you rapidly develop sites
     that look beautiful at any size
 -   Free collection of [Subtle Patterns](http://subtlepatterns.com/)
--   Web [CSS3 Generator](http://css3generator.com/)
--   [Css3 online test at _CSS3, Please!_](http://css3please.com/)
--   [Dabblet](http://dabblet.com/) (Non-Profit Open Software License) by Lea Verou
-     is an interactive playground for quickly testing snippets of CSS and HTML code.
-     It uses [-prefix-free](http://leaverou.github.com/prefixfree/)
-     for adding a vendor prefix where needed.
+-   [W3.CSS](https://www.w3schools.com/w3css/default.asp)
+    is a CSS framework with support for desktop, tablet, and mobile design by default,
+    It was designed to be a lean and fast alternative to _Bootstrap_, independent of
+    jQuery or any other JavaScript library.
 
-## Multicolumn
-[CSS Multi-column Layout Module](http://www.w3.org/TR/css3-multicol/)
-allow to output in multiple columns. Most of them work either in
-webkit or mozilla _firefox_ by prepending either `-moz-` or
-`-webkit-` to the css option. You can apply it to any container
-including the full `body`.
+### Bootstrap {#bootstrap}
+[Bootstrap](https://getbootstrap.com/) (MIT) is Twitter's toolkit
+for rapidly developing web applications. It is a collection of CSS and some HTML.
+Bootstrap uses {{< iref "#less" "Less" >}} css3 extension.
 
-The rendering of the different options are tested in
-[[http://quirksmode.org/css/columns/][Quirksmode - CSS columns]], the
-different working options are `column-count`, `column-gap`,
-`column-rule`, `column-width`. The options for break, fill, span don't
-yet work except opera that has the best support.
-
-These options also [work on mobile
-](http://quirksmode.org/css/columns/mobile.html).
+-   Wikipedia:  {{< wp "Twitter Bootstrap" >}}
+-   [Bootstrap - GitHub](https://github.com/twitter/bootstrap/)
+-   [GetBoostrap](https://getbootstrap.com/) is the Bootstrap Home and contains the
+    documentation. It is an {{< ref "static_sites#hugo" "Hugo" >}} site. The source is
+    in the [Site directory of the GitHub repository
+    ](https://github.com/twbs/bootstrap/tree/master/site).
+-   [w3resource: Twitter Bootstrap tutorial
+    ](http://www.w3resource.com/twitter-bootstrap/tutorial.php)
+-   [jetstrap](http://docs.jetstrap.com/) is a beginner kit for Bootstrap.
+-   [Getting Started with Bootstrap 3
+    ](http://www.realpython.com/blog/design/getting-started-with-bootstrap-3/)
+-   [Bootstrap 3 Tutorial - w3school](https://www.w3schools.com/bootstrap/default.asp),
+    [Bootstrap 4 Tutorial](https://www.w3schools.com/bootstrap4/default.asp).xs
+-   [Bootstrap 3 Grids Explained - Jetstrap Blog
+    ](https://www.jetstrap.com/blog_subdomain/2013/08/bootstrap-3-grids-explained/).
 
 # Other HTML related markups
 -   Wikipedia: {{< wp "Multimedia Messaging Service (MMS)" >}},
