@@ -148,10 +148,10 @@ Some other processors give additional line break syntax. With
 
 
 
-<a name="lists"/>
-## Lists
+<a name="H_list"></a>
+## List
 
-```text
+### Ordered List
 
 ```markdown
 1.  First ordered list item
@@ -162,19 +162,14 @@ Some other processors give additional line break syntax. With
 4.  And another item.
 
     You can have properly indented paragraphs within list
-    items. Notice the blank line above, and the leading spaces, for
-    python-markdown you need to indent 4 spaces.
+    items. Notice the blank line above, and the leading spaces.
+    [Python Markdown][] require to indent 4 spaces.
 
-    This is a new paragraph.<br>
-    Note that this line is separate, but within the same paragraph.
-
-<br>
-
-*   Unordered list can use asterisks
-    *    sublist
--   Or minuses
-+   Or pluses
+    This is a new paragraph.\
+    This last line is [separate, but within the same paragraph](#break).
 ```
+
+<div class="example">
 
 1.  First ordered list item
 2.  Another item
@@ -184,26 +179,40 @@ Some other processors give additional line break syntax. With
 4.  And another item.
 
     You can have properly indented paragraphs within list
-    items. Notice the blank line above, and the leading spaces, for
-    python-markdown you need to indent 4 spaces.
+    items. Notice the blank line above, and the leading spaces.
+    [Python Markdown][] require to indent 4 spaces.
 
-    This is a new paragraph.<br>
-    Note that this line is separate, but within the same paragraph.
+    This is a new paragraph.\
+    This last line is [separate, but within the same paragraph](#break).
 
-<br>
+</div>
 
+<a id="breaking_lists"></a>If two lists are subsequent the second is considered as the
+continuation of the first, except if you change the list marker like swithing from `-`
+to `*` or `1.` to `1)`. To break a list in two lists without changing marker can use a
+`<br/>` `<!--` _comment_ `-->` or `&nbsp;`
+
+### Unordered Lists
+```markdown
 *   Unordered list can use asterisks
     *    sublist
--   Or minuses
+*   Second item in the list.
+-   Or first item with minus,
+-   second with minus.
++   Or pluses
+```
+<div class="example">
+
+*  Unordered list can use asterisks
+    *    sublist
+*   Second item in the list.
+-   Or first item with minus,
+-   second with minus.
 +   Or pluses
 
+</div>
 
-
-
-If two lists are subsequent the second is considered as the continuation of the first,
-except if you change the list marker like swithing from `-` to `*` or `1.` to `1)`. To
-break a list in two lists without changing marker can use a &lt;br/&gt;
-&lt;!-- comment--&gt; or &amp;nbsp;
+_Note how applies the [breaking list rules](#breaking_lists), in the previous example._
 
 ### Definition Lists
 The definitions lists are not part of [Common Mark](http://spec.commonmark.org/), nor
@@ -218,56 +227,76 @@ in the standard [Python Markdown][] library,
 [Pandoc](https://pandoc.org/MANUAL.html#definition-lists), [MultiMarkDown][],
 [Goldmark][], _Discount_, _Markdown-it_, etc.
 
-When no specific syntax is available for definition list, you can fallback to raw html.
-
 ```markdown
 Apple
-:   Pomaceous fruit of plants of the genus Malus in
-    the family Rosaceae.
+:   Pomaceous fruit of plants of the genus _Malus_ in
+    the family _Rosaceae_.
 
  <a name="orange"></a>Orange
-:   The fruit of an evergreen tree of the genus Citrus.
+:   The fruit of an evergreen tree of the genus _Citrus_.
 
-<dt id="distraction">Distraction</dt>
-    <dd>The fruit of lack of concentration.</dd>
+<a id="distraction"></a>Distraction
+:   The fruit of lack of concentration.
 ```
 
+<div id="example">
+
 Apple
-:   Pomaceous fruit of plants of the genus Malus in
-    the family Rosaceae.
+:   Pomaceous fruit of plants of the genus _Malus_ in
+    the family _Rosaceae_.
 
-<a name="orange"></a>Orange
-:   The fruit of an evergreen tree of the genus Citrus.
+ <a name="orange"></a>Orange
+:   The fruit of an evergreen tree of the genus _Citrus_.
 
-<dt id="distraction">Distraction</dt>
-    <dd>The fruit of lack of concentration.</dd>
+<a id="distraction"></a>Distraction
+:   The fruit of lack of concentration.
+
+</id>
 
 As you see above we can add a {{< iref "#orange" "name" >}} or
 {{< iref "#distraction" "id" >}} to have references to list items.
 
-## Links {#links}
+```markdown
+Wen a _Markdown_ syntax for definition list is unvalailable we use [raw HTML
+](#raw_html)
 
-There are two ways to create links *inline* or *reference-style*.
+<dl>
+<dt>Apple</dt>
+   <dd>Pomaceous fruit of plants of the genus _Malus_ in
+    the family _Rosaceae_.</dd>
 
-```text
-[I'm an inline-style link](https://www.google.com)
+<dt name="orange"></a>Orange</dt>
+    <dd>The fruit of an evergreen tree of the genus _Citrus_.</dd>
 
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+<dt id="distraction">Distraction</dt>
+    <dd>The fruit of lack of concentration.</dd>
+</dl>
+```
 
-[I'm a reference-style link][Arbitrary case-insensitive reference text]
+<div id="example">
 
-[I'm a link to a  relative path of a file](../blob/master/LICENSE)
+Wen a _Markdown_ syntax for definition list is unvalailable we use [raw HTML
+](#raw_html)
 
-[You can use numbers for reference-style link definitions][1]
+<dl>
+<dt>Apple</dt>
+   <dd>Pomaceous fruit of plants of the genus _Malus_ in
+    the family _Rosaceae_.</dd>
 
 Or leave it empty and use the [link text itself]
+<dt name="orange"></a>Orange</dt>
+    <dd>The fruit of an evergreen tree of the genus _Citrus_.</dd>
 
 Some text to show that the reference links can follow later.
+    <dd>The fruit of lack of concentration.</dd>
+</dl>
+</dd>
 
 [arbitrary case-insensitive reference text]: https://www.mozilla.org
 [1]: http://slashdot.org  "The title is Slashdot!"
 [link text itself]: http://www.reddit.com
 ```
+</div>
 
 [I'm an inline-style link](https://www.google.com)
 
