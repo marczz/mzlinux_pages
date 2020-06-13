@@ -106,6 +106,47 @@ Combined emphasis with **asterisks and _underscores_**.
 Some implementation uses two tildes for Strikethrough but not
 python-markdown . ~~Scratch this.~~
 
+<a name="H_break"></a>
+## Line Break {#break}
+
+A new paragraph is started by to consecutive new-lines.
+
+To force a line return in the same paragraph, you will need to use two
+trailing spaces in the [original Markdown specification][JG Markdown]. But a trailing
+space is hardly visible _except if your editor highlight them_, is easily discarded
+by editors, and are a nuisance in _Git_ or other code versionning.
+
+[Common Mark][] add the use of a trailing backslash to generate hard line
+breaks, this convention is also part of [GFM][] and followed by many Markdown processors.
+<!-- like [Pandoc][] with the extension *escaped_line_breaks*. -->
+
+```markdown
+These two lines form a single paragraph, which will fill the available space,
+the single newlines in the source have no influence on the formatted text.
+
+This a separate paragraph as it is separated from the previous by two newlines.\
+This line is a separate line in the same paragraph, due to to the trailing backslash,<br>
+or by using an html `<br>`.
+```
+
+<div class="example">
+
+These two lines form a single paragraph, which will fill the available space,
+the single newlines in the source have no influence on the formatted text.
+
+This a separate paragraph as it is separated from the previous by two newlines.\
+This line is a separate line in the same paragraph, due to to the trailing backslash,<br>
+or by using an html `<br>`.
+
+</div>
+
+If your processor accept raw html you can also use `<br>`.
+
+Some other processors give additional line break syntax. With
+[python markdown nl2b](https://python-markdown.github.io/extensions/nl2br/) or the
+[Pandoc][] extension *hard_line_breaks* an ordinary newline break paragraphs.
+
+
 
 <a name="lists"/>
 ## Lists
@@ -157,20 +198,7 @@ python-markdown . ~~Scratch this.~~
 +   Or pluses
 
 
-To have a line break without beginning a new paragraph, you will need to use two
-trailing spaces in the [original Markdown specification][JG Markdown]. But a trailing
-space is hardly visible _except if your editor highlight them_, is easily discarded
-by editors, and are a nuisance in _Git_ or other code versionning.
 
-[Common Mark][] add the use of a trailing backslash to generate hard line
-breaks, this convention is also part of [GFM][] and followed by many Markdown processors
-like [Pandoc][] with the extension *escaped_line_breaks*.
-
-If your processor accept raw html you can also use &lt;br/&gt;.
-
-Some other processors give additional line break syntax. With
-[python markdown nl2b](https://python-markdown.github.io/extensions/nl2br/) or the
-[Pandoc][] extension *hard_line_breaks* an ordinary newline break paragraphs.
 
 If two lists are subsequent the second is considered as the continuation of the first,
 except if you change the list marker like swithing from `-` to `*` or `1.` to `1)`. To
