@@ -511,14 +511,14 @@ Reference-style:
 
 [logo]:  http://www.mzlinux.org/files/images/moon1.png "Logo Title Text 2"
 
-## Code and Syntax Highlighting {#code}
+</div>
 
-Inline `code` has `back-ticks around` it.
+<a name="H_code"></a>
+## Code and Syntax Highlighting {#code}
 
 ```markdown
 Inline `code` has `back-ticks around` it.
 ```
-
 
 Blocks of code are indented with four spaces.
 In code blocks markup is uninterpreted.
@@ -527,103 +527,189 @@ In code blocks markup is uninterpreted.
     uninterpreted _markup_
 
 
-With the
-[Fenced Code Blocks extension
-](https://pythonhosted.org/Markdown/extensions/fenced_code_blocks.html)
+With the [GFM fenced code block](https://github.github.com/gfm/#fenced-code-blocks)
 code blocks can be fenced by lines with three
-back-ticks <code>```</code>, or  three tilda <codde>~~~</code>.
+back-ticks <code>```</code>, or  three tilda <code>~~~</code>.
 
-Fenced Code Blocks are only supported at the document root level.
+The fenced code blocks are also supported by [Markdown Extras
+](https://michelf.ca/projects/php-markdown/extra/#fenced-code-blocks)
+_only with tilda_,
+[Python Markdown](https://python-markdown.github.io/extensions/fenced_code_blocks/),
+
+In _Python Markdown_ Fenced Code Blocks are only supported at the document root level.
 Therefore, they cannot be nested inside lists or blockquotes.
 
-    ~~~~~~~~~~~~~~~~~~~~~~
-    Fenced Code block with
-    uninterpreted _markup_
-    ~~~~~~~~~~~~~~~~~~~~~~
 
-~~~~~~~~~~~~~~~~~~~~~~
-Fenced Code block with
-uninterpreted _markup_
-~~~~~~~~~~~~~~~~~~~~~~
+Code blocks are part of the Markdown spec either the older [John Gruber Markdown][],
+[Common Mark][] or [GFM][], but syntax highlighting is not part of these specification
+and rely on libraries called by renderers.
 
-
-Code blocks are part of the Markdown spec, but syntax highlighting
-isn't. However, many renderers -- like Github's, _Stack Overflow_,
-_Python-Markdown_, _Pandoc_, ...  -- support syntax
+Many renderers -- like Github's GFM, _Stack Overflow_,
+_Python-Markdown_, _[Pandoc][]_, ...  -- support syntax
 highlighting.
 
-Which languages are supported and how those language
-names should be written will vary from renderer to renderer. *Python
-Markdown* uses [Pygments](http://pygments.org) supports highlighting
-for dozens of language and markup; to see the complete list, see the
-[Pygments language list](http://pygments.org/languages/) and
-[Pygments lexers](http://pygments.org/docs/lexers/).
+Which languages are supported and how those language names should be written will vary
+from renderer to renderer.
 
-The name of the used lexer is either put at the end of the _fence
-line_, or for an indented block in a header introduced by `:::`,
-or inferred from the content of the block. Examples are given below.
+List of libraries used by some few markdown formatters:
 
-    :::text
-    ```javascript
-    var s = "JavaScript syntax highlighting";
-    alert(s);
-    ```
+-   The reference [GFM][] parser [cmark-gfm]() don't provide any syntax highlighting.
+    _but somme wrappers can also delegate highlighting to an other library_.
+-   GitHub own [GFM][] uses [Linguist](https://github.com/github/linguist) to detect languages,
+    it uses a
+    [list of grammar libraries](https://github.com/github/linguist/blob/master/vendor/README.md)
+    The list of supported languages is in the
+    [language.yml](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml)
+    file.
+-   [GitLab GFM][] and [KramDown][] use [Rouge](http://rouge.jneen.net/) to highlight code with this
+    [list of supported languages
+    ](https://github.com/rouge-ruby/rouge/wiki/List-of-supported-languages-and-lexers).
+-   Most Node.js parsers including [Markdown Here][], [Markdown-it][], [Marked][];
+    use [highlight.js](https://highlightjs.org/) with this
+    [list of language and higlighting demo](https://github.com/highlightjs/highlight.js).
+-   *Python Markdown* uses [Pygments](http://pygments.org) supports highlighting for
+    dozens of language and markup; to see the complete list, see the
+    [Pygments language list](http://pygments.org/languages/) and
+    [Pygments lexers](http://pygments.org/docs/lexers/).
+-   [Pandoc](https://pandoc.org/MANUAL.html#syntax-highlighting) uses the library
+    [skylighting](https://github.com/jgm/skylighting/)
+    with accept these
+    [languages](https://github.com/jgm/skylighting/tree/master/skylighting-core/xml).
+-   [Hugo][] use [GoldMark][] as formatter which does not bind itself to a syntax
+    highlighter, but add syntax highlighting with
+    [Chroma](https://github.com/alecthomas/chroma) which is mostly compatible with
+    [Pygment][] and support these
+    [languages](https://github.com/alecthomas/chroma#supported-languages).
 
-        for (i=1; i<10; i++){
-          print("The language is guessed by Pygment")
-        }
+The name of the used lexer is put at the end of the _fence
+line_.
 
-    ~~~python
-    s = "Python syntax highlighting"
-    print s
-    ~~~
-
-        #!/bin/bash
-        line="Bash syntax highlighting"
-        echo ${line}
-
-
-    ~~~console
-    # echo "no more a comment"
-    # line="sh script syntax highlighting"
-    # echo ${line}
-    ~~~
-
-        :::text
-        No syntax highlighting.
-        But let's throw in a  <b>tag</b>.
-
-
-```javascript
+``` markdown
+~~~ javascript
 var s = "JavaScript syntax highlighting";
 alert(s);
-```
-
-    for (i=1; i<10; i++){
-      print("The language is guessed by Pygment")
-    }
-
-~~~python
-s = "Python syntax highlighting"
-print s
 ~~~
 
-    #!/bin/bash
-    # echo "just a comment"
-    line="Bash syntax highlighting"
-    echo ${line}
+~~~ C
+for (i=1; i<10; i++){
+  print("a string in a loop")
+}
+~~~
 
-~~~console
+~~~ python
+s = "Python syntax highlighting"
+print (s)
+~~~
+
+~~~ bash
+#!/bin/bash
+line="Bash syntax highlighting"
+echo ${line}
+~~~
+
+~~~ bash-session
 # echo "no more a comment"
 # line="sh script syntax highlighting"
+# echo "bash-session don't yet work with Chroma"
 # echo ${line}
 ~~~
 
-    :::text
-    No syntax highlighting.
-    But let's throw in a  <b>tag</b>.
 
+~~~ text
+No syntax highlighting.
+A bold html <b>tag</b> or a **Mardown one**,
+is uninterpreted.
+~~~
 
+~~~ json
+{
+  "Name": "Σωκρᾰ́της"
+  "EnglishName": "Socrates"
+  "Birth Date": "470 BC"
+}
+~~~
+```
+
+<div class="example">
+
+~~~ javascript
+var s = "JavaScript syntax highlighting";
+alert(s);
+~~~
+
+~~~ C
+for (i=1; i<10; i++){
+  print("a string in a loop")
+}
+~~~
+
+~~~ python
+s = "Python syntax highlighting"
+print (s)
+~~~
+
+~~~ bash
+#!/bin/bash
+line="Bash syntax highlighting"
+echo ${line}
+~~~
+
+~~~ bash-session
+# echo "no more a comment"
+# line="sh script syntax highlighting"
+# echo "bash-session don't yet work with Chroma"
+# echo ${line}
+~~~
+
+~~~ text
+No syntax highlighting.
+A bold html <b>tag</b> or a **Mardown one**,
+is uninterpreted.
+~~~
+
+~~~ json
+{
+  "Name": "Σωκρᾰ́της"
+  "EnglishName": "Socrates"
+  "Birth Date": "470 BC"
+}
+~~~
+
+</div>
+
+Some parser _and the associated highlighter_ may also infer the language from the
+content of the block.
+
+[Python Markdown][] allow also to define a highlight language not only for fenced code
+blocks but also for an indented code block in a header introduced by `:::`, or inferred
+from the content of the block. Examples are given below.
+
+Some parsers like [Python Markdown][] [Kramdown][] or [Pandoc]() can use an
+[Attribute List](#attributes "local reference").
+
+[Hugo][] uses [Highlight Shortcode
+](https://gohugo.io/content-management/syntax-highlighting/)
+wich can take some options. Example:
+
+~~~ text
+``` yaml {linenos=table,hl_lines=[2]}
+Philosopher:
+  "Name": "Σωκρᾰ́της"
+  "EnglishName": "Socrates"
+  "Birth Date": "470 BC"
+```
+~~~
+
+<div class="example">
+
+``` yaml {linenos=table,hl_lines=[2]}
+Philosopher:
+  "Name": "Σωκρᾰ́της"
+  "EnglishName": "Socrates"
+  "Birth Date": "470 BC"
+```
+
+</div>
 
 ## Tables {#tables}
 
