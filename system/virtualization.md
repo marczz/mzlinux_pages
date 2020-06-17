@@ -5,12 +5,17 @@ title: Virtualization
 # Emulators and virtualization References
 
 -   This section deals with virtualization platforms or
-    {{< wp "Hypervisors" }}
+    {{< wp "Hypervisors" >}}
     that allow multiple operating systems to run on a host computer at
     the same time.
--   Wikipedia {{< wp "Comparison of virtual machines" >}}.
+-   Wikipedia {{< wp "Comparison of platform virtualization software" >}},
+    {{< wp "List of computer system emulators" >}}  lists software and
+    hardware that emulates computing platforms,
+    {{< wp "x86 virtualization" >}}.
 -   [Ubuntu Server](https://ubuntu.com/server/):
     [Virtualization](https://ubuntu.com/server/docs/virtualization-introduction)
+-   [System Virtualization - Debian Wiki](https://wiki.debian.org/SystemVirtualization)
+    compare the virtualization software availables on a Debian Server.
 
 # Chroot {#chroot}
 _not a true virtualization_
@@ -65,15 +70,14 @@ _not a true virtualization_
     -   Notes:
         :   Toggle between windowed and fullscreen mode using Ctrl-Alt-F
 
-# KVM (for Kernel-based Virtual Machine)
--   [KVM](http://en.wikipedia.org/wiki/Kernel-based_Virtual_Machine)
-    (some part GPL, some part LGPL) is a virtualization solution for
-    Linux on x86 hardware containing virtualization extensions (Intel
-    VT or AMD-V). It consists of a loadable kernel module, kvm.ko, and
-    a processor specific module, kvm-intel.ko or kvm-amd.ko. KVM also
-    requires a modified {{< iref "#qemu" "QEMU" >}} although work is
-    underway to get the required changes upstream. The kernel component
-    of KVM is included in mainline Linux, as of 2.6.20 and later.
+# KVM _Kernel-based Virtual Machine_ {#KVM}
+-   [KVM](http://en.wikipedia.org/wiki/Kernel-based_Virtual_Machine) (some part GPL,
+    some part LGPL) is a virtualization solution for Linux on x86 hardware containing
+    virtualization extensions (Intel VT or AMD-V). It consists of a loadable kernel
+    module, _kvm.ko_, and a processor specific module, _kvm-intel.ko_ or _kvm-amd.ko_
+    providing {{< wp "Hardware-assisted virtualization (HVM)" >}} used to run
+    {{< iref "#qemu" "QEMU" >}} _Unlike native Qemu that uses emulation_. The kernel
+    component of KVM is included in mainline Linux.
 
     Using KVM, one can run multiple virtual machines running unmodified
     Linux or Windows images. Each virtual machine has private
@@ -81,42 +85,67 @@ _not a true virtualization_
 
     KVM is the default virtualization technology in Ubuntu.
 
+    The difference with {{< iref "#xen" "Xen" >}} is [explained in the KVM FAQ
+    ](http://www.linux-kvm.org/page/FAQ#General_KVM_information). Xen is an external
+    hypervisor that divides resources among guests, and can run on non-hvm x86
+    processors using {{< wp "paravirtualization" >}}; On the other hand, KVM uses the
+    regular Linux scheduler and memory management; it is much smaller
+    and simpler and featureful. But _KVM_  does not support paravirtualization which
+    limit it's use to hvm x86 processors.
+
+    KVM can be managed via {{< iref "#libvirt" "libvirt" >}} using _virsh_ as described
+    in [KVM/Virsh - Ubuntu Community Wiki](https://help.ubuntu.com/community/KVM/Virsh).
+
 -   [KVM Home Page](https://www.linux-kvm.org/page/Main_Page)
+-   [HOWTO - KVM](http://www.linux-kvm.org/page/HOWTO).
 -   [Using KVM virtualization – IBM Developer
     ](https://developer.ibm.com/technologies/linux/articles/l-using-kvm)
--   [Ubuntu Help: The Kernel Virtual Machine](https://help.ubuntu.com/community/KVM).
+-   [Ubuntu Help: The Kernel Virtual Machine](https://help.ubuntu.com/community/KVM)
+    is an index of several pages dealing with _installation_, _networking_, _guest
+    creation_, _guest management_, _guest console access_, _FAQ_.
+-   [KVM - Debian Wiki](https://wiki.debian.org/KVM),
+    [DebianKVMGuests - Debian Wiki](https://wiki.debian.org/DebianKVMGuests),
 
-# Linux-VServer / OpenVZ
+
+
+# Linux-VServer / OpenVZ {#openvz}
 -   Os level virtualization is provided by
    [Linux-VServer](http://en.wikipedia.org/wiki/Linux-VServer)
-   (GPL v.2) or its fork
-   [FreeVPS](http://en.wikipedia.org/wiki/FreeVPS)
-   (GPL) and [OpenVZ](http://en.wikipedia.org/wiki/OpenVZ) (GPL v.2).
+   (GPL v.2) or it's fork'
+   [OpenVZ](http://en.wikipedia.org/wiki/OpenVZ) (GPL v.2).
+   The proprietary fork of OpenVZ is named {{< wp "Virtuozzo" >}}.
 -   The [Home of the vserver project linux-vserver.org](http://linux-vserver.org/)
    host the documentation and the
    [Vserver Faq](http://linux-vserver.org/Frequently_Asked_Questions).
 -  [Wikipedia: OpenVz](http://en.wikipedia.org/wiki/OpenVZ),
-   [Official OpenVz site](http://openvz.org/ "openvz.org"),
-   [OpenVz wiki](http://wiki.openvz.org/ "wiki.openvz.org")
+   [Official OpenVz site](http://openvz.org/),
+   [OpenVz wiki](http://wiki.openvz.org/)
 -  [Markus Gattol: OpenVz](http://www.markus-gattol.name/ws/openvz.html)
 
-# LibVirt
+# LibVirt {#libvirt}
 [Libvirt](http://libvirt.org) is used to interface
-with different virtualization technologies KVM, Xen, qemu, OpenVz, LXC
-LXC. Libvirt is used by the virtual machine manager
-[Ovirt](http://www.ovirt.org/) (GPL).
+with different virtualization technologies {{< iref "#KVM" "KVM" >}},
+{{< iref "#xen" "Xen" >}}, {{< iref "#qemu" "Qemu" >}}, {{< iref "#openvz" "OpenVz" >}}
+or Virtuozzo, {{< iref "#vmware" "VMWare ESX" >}}
+{{< iref "#LXC"  "LXC" >}}, {{< iref "#virtualbox"  "VirtualBox" >}}, _BHyve_
 
 -   [ArchWiki - LibVirt](https://wiki.archlinux.org/index.php/Libvirt).
 -   [Ubuntu Server](https://ubuntu.com/server/):
     [Virtualization](https://ubuntu.com/server/docs/virtualization-introduction),
     [LibVirt](https://ubuntu.com/server/docs/virtualization-libvirt).
+-   [libvirt - Debian Wiki](https://wiki.debian.org/libvirt)
 -   [LibVirt LXC container driver](http://libvirt.org/drvlxc.html)
--   [An introduction to libvirt's LXC support](http://openvz.org/pipermail/devel/2008-September/014314.html) by Daniel P. Berrange.
+-   [An introduction to libvirt's LXC support
+    ](http://openvz.org/pipermail/devel/2008-September/014314.html) by Daniel P. Berrange.
+-   <a name="virsh"></a>[virsh](https://www.libvirt.org/manpages/virsh.html) (GPL) is the
+    main command line tool for managing libvirt guest domains. It can be used to to list current
+    domains. create, pause, and shutdown domains.
+    -   [Virsh Command Reference](https://libvirt.org/virshcmdref.html).
 -   <a name="virt-manager"></a>[virt-manager](https://virt-manager.org/)
     (GPL) is a front end to libvirt written in Python, while the UI is
     constructed with Glade and GTK+.
 
-# LXC
+# LXC {#LXC}
 
 {{< wp "LXC" "Linux container tools (LXC)" >}} is a virtualization method for running
 multiple isolated server on a single control host. It provides a virtual environment
@@ -130,6 +159,7 @@ but LXC support was dropped in Docker v1.10.
 -   [Ubuntu serverguide - cgroups
     ](https://help.ubuntu.com/lts/serverguide/cgroups.html).
 -   [LXC - Ubuntu server](https://ubuntu.com/server/docs/containers-lxc)
+_   [LXC - Debian Wiki](https://wiki.debian.org/LXC).
 -   [LXC HOWTO](http://lxc.teegra.net) by Dwight Schauer.
 -   Kernel [cgroups doc directory
     ](http://www.mjmwired.net/kernel/Documentation/cgroups/)
@@ -144,14 +174,14 @@ but LXC support was dropped in Docker v1.10.
 -   [Linux Containers - LXD Home](https://linuxcontainers.org/lxd/)
 -   [LXD documentation](https://lxd.readthedocs.io/en/latest/)
 
-# Qemu
+# Qemu {#qemu}
 [Qemu](http://wiki.qemu.org/) (GPL)is a generic  emulator and virtualizer.
 
 As an emulator, QEMU can run guest OSes on an architecture different from the host.
 
-When guest and host architecture is identical QEMU van be used as virtualizer
-and achieve near  native performances by executing the guest code directly
-on the host CPU. When using KVM, QEMU can virtualize x86, server and embedded
+When guest and host architecture is identical QEMU can be used as virtualizer and
+achieve near native performances by executing the guest code directly on the host
+CPU. When using {{< iref "#KVM" "KVM" >}}, QEMU can virtualize x86, server and embedded
 PowerPC, and S390 guests.
 
 
@@ -171,11 +201,13 @@ PowerPC, and S390 guests.
 -   [QEMU - ArchWiki](https://wiki.archlinux.org/index.php/QEMU)
     is a tutorial with a chapter
     on _using any real partition as the single primary partition of a hard disk image_
+-   [QEMU - Debian Wiki](https://wiki.debian.org/QEMU),
+    [VGA Passthrough - Debian Wiki](https://wiki.debian.org/VGAPassthrough).
 -   [Virtual Networking](http://people.gnome.org/~markmc/virtual-networking.html)
     by Mark McLoughlin.
 
 
-# VirtualBox
+# VirtualBox {#virtualbox}
 -   [VirtualBox](http://www.virtualbox.org/) is another virtualization
     system, that runs on Windows, Linux and Macintosh hosts and
     supports as guests Windows,
@@ -222,13 +254,13 @@ PowerPC, and S390 guests.
     ( Frank's corner)
 -   [CodeWeavers](http://www.codeweavers.com/) sell a customized wine.
 
-# Xen
+# Xen {#xen}
 -   {{< wp "Xen" >}} is a GPL paravirtualization layer. Intermediate between
     hardware virtualization and os level virtualization,
     paravirtualization involves making the virtual server OS aware of
     the fact that it is being virtualized.
 
-    Citrix has forked a private source _citrix server_ from Xen.
+    Citrix has forked a proprietary source _citrix server_ from Xen.
 
 -   {{< wp "Xen" "Wikipedia: Xen" >}} is a detailled page with an extensive description
     of Xen History.
@@ -246,29 +278,59 @@ PowerPC, and S390 guests.
     [this other page](https://wiki.xenproject.org/wiki/DomU_Install_with_Virt-Install).
 
 # Other Virtualization systems
--   {{< wp "User-mode Linux" >}}
-    gives avirtual linux machine under a linux system.
+-   {{< wp "User-mode Linux" >}} (GPL)
+    gives a virtual linux machine under a linux system.
 -   [Virtual Square](http://wiki.virtualsquare.org/)
     create an unified environment that allows virtual machines,
     systems and networks to communicate and interact.
     -   The virtual networking is handled by _VDE_. A _vde2_ package is in Debian.
     -   _View-OS_ is an approach to the process/kernel interface.
         UMView is a user-mode implementation of View-OS. It is packaged in Debian.
--   {{< wp "Cooperative Linux" >}}, abbreviated as coLinuxxs allows Microsoft
+-   {{< wp "Cooperative Linux" >}}, abbreviated as coLinux allows Microsoft
     Windows and the Linux kernel to run simultaneously in parallel on the same machine.
-    -   [Cooperative Linux Home](http://colinux.org/).
--   The harware emulation virtual machine
-    [VMware](http://en.wikipedia.org/wiki/VMware)
+    -   [Cooperative Linux Home](http://colinux.org/) (GPL).
+-   <a name="vmware"></a>The harware emulation virtual machine
+    [VMware](http://en.wikipedia.org/wiki/VMware) (Proprietary)
     provides a completely virtualized set of hardware to the guest
     operating system.
+-   {{< wp "oVirt" >}} (Apache Licence) is a  virtualization management platform. It
+    consists of two components, oVirt engine written in Java and oVirt node the frontend
+    which uses Google Web Toolkit -GWT_. oVirt is built upon
+    {{< iref "#libvirt" "libvirt" >}}, Gluster, PatternFly, and Ansible.
+    -   [oVirt Home](http://www.ovirt.org/)
+    -   [oVirt - GitHub](https://github.com/oVirt).
 
 
-# Docker
+# Docker {#docker}
 
--   [Archwiki - Docker
-    ](https://wiki.archlinux.org/index.php/Docker).
 -   [Awesome Docker](https://github.com/veggiemonk/awesome-docker)
     list of Docker resources.
+-   [Archwiki - Docker
+    ](https://wiki.archlinux.org/index.php/Docker).
+-   [Docker - Debian Wiki](https://wiki.debian.org/Docker).
+-   [Create Docker Image - Debian Wiki](https://wiki.debian.org/Cloud/CreateDockerImage)
+    look also to the two following items, to secure your image.
+-   John Goerzen has a [GitHub repository of Debian images
+    ](https://github.com/jgoerzen/docker-debian-base),
+
+    He explains his [guideline in his blog
+    ](https://changelog.complete.org/archives/9794-fixing-the-problems-with-docker-images)
+    these images have  only 11MB RAM overhead and provide:
+    -   A real init system, capable of running standard startup scripts,
+    -   Working syslog, which can either export all logs to Docker’s logging
+        infrastructure, or keep them within the container,
+    -   Working real schedulers (cron, anacron, and at) and logrotate.
+
+    and optional features:
+    -   A real SMTP agent (exim4-daemon-light).
+    -   SSH client and server (optionally exposed to the Internet).
+    -   Automatic security patching via unattended-upgrades and needsrestart.
+
+-   _Phusion_ has a  [GitHub repository of Ubuntu Images
+    ](https://github.com/phusion/baseimage-docker). They are described in the Readme of
+    the repository, and [Your Docker image might be broken
+    ](http://phusion.github.io/baseimage-docker/) which teach right way to build your
+    Dockerfile.
 
 
 # Sandboxing
