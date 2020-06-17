@@ -254,9 +254,9 @@ See also {{< iref "source_code#literate_programming" "Literate Programming" >}}
 
 ## pdfmark annotations.
 
-The pdf specification includes bookmarks and annotations, these  bookmarks and annotations are saved inside the pdf
-file, but are independent of the main content. These annotation software are listed in
-the section
+The pdf specification includes bookmarks and annotations, these bookmarks and
+annotations are saved inside the metadata of the pdf file, but are independent of the
+main content. These annotation software are listed in the section
 {{< iref "ps_pdf_djvu#pdf_annotations" "PDF Bookmarking and Annotations" >}}.
 
 For emacs users the {{< iref "ps_pdf_djvu#pdf-tools" "pdf-tools"  >}} package
@@ -294,6 +294,8 @@ in Melpa.
     -   [How To Take Smart Notes With Org-mode
         ](https://blog.jethro.dev/posts/how_to_take_smart_notes_org/)
         by [Jethro Kuan](https://www.jethro.dev/) the author of Org Roam.
+    -   Karl Voit is not convinced and wrote [Zettelkasten/Org-roam/Org-brain Is Crap
+        ](https://karl-voit.at/2020/06/14/Zettelkasten-concerns/)
 -   [notdeft](https://tero.hasu.is/notdeft/)
     is a manager and local search engine for directories of plain text notes using a
     Xapian search engine. NotDeft is derived from Deft.
@@ -412,4 +414,5 @@ There are many ways to produce slides with an org mode formatted text;
 <!-- Local Variables: -->
 <!-- mode: markdown -->
 <!-- ispell-local-dictionary: "english" -->
+<!-- org-annotate-file-storage-file: "../../notes/text_processing_notes/org-mode_notes.org" -->
 <!-- End: -->
