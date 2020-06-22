@@ -202,7 +202,7 @@ The source code of python modules is found in the
 ## Operating System services {#os_modules}
 -   <a name="argparse"></a>[argparse](http://docs.python.org/3/library/argparse.html)
     command-line parsing library,
-    Since python 2.7 it replaces the deprecated
+    Since python 3.2 it replaces the deprecated
     [optparse](http://docs.python.org/library/optparse.html).
     There as also many
     {{< iref "#command_line" "argument parsing alternatives" >}}.
@@ -257,11 +257,11 @@ They are covered in the {{< iref "python_dbms" "databases programming section" >
 ## File Formats {#file_format_modules}
 [File formats modules](https://docs.python.org/3/library/fileformats.html)
 ([py2k](https://docs.python.org/3/library/fileformats.html))
-group modules
-file for fileformats that aren’t markup languages and are not related to e-mail.
+group modules file for fileformats that aren’t markup languages and are not related to
+e-mail.
 
--   [CVS](https://docs.python.org/3/library/csv.html)
-    ([py2k](https://docs.python.org/3/library/csv.html))
+-   [CSV](https://docs.python.org/3/library/csv.html)
+    ([py2k](https://docs.python.org/2/library/csv.html))
     allow CSV file reading and writing.
 -   [configparser](https://docs.python.org/3/library/configparser.html)
     ([py2k](https://docs.python.org/2/library/configparser.html))
@@ -340,6 +340,8 @@ See also the {{< iref "python_web#wsgi" "xCGI stuff" >}} and
 
 ## Serializing {#serializing_modules}
 See also {{< iref "#serializing_libs" "Python Libraries - serializing" >}}
+and above {{< iref "#file_format_module" "File Format Module" >}}
+for csv and config files.
 
 -   Doug Hellmann PyMOTW[Data Persistence and Exchange
     ](https://pymotw.com/3/persistence.html)
@@ -382,8 +384,7 @@ See also {{< iref "#xml_parsers" "XML Parsers Libraries" >}}
 # Libraries {#libraries}
 The standard Python modules are in the
 {{< iref "#modules" "Modules section" >}} and
-the [Python 3 full module index](http://docs.python.org/3/modindex.html) or
-[Python 2.7 full module index](http://docs.python.org/2/py-modindex.html).
+the [Python full module index](https://docs.python.org/3/py-modindex.html).
 
 There is a wider list of
 [Useful Modules, Packages and Libraries](http://wiki.python.org/moin/UsefulModules).
@@ -412,21 +413,10 @@ see also the {{< iref "python_web#wsgi" "xCGI stuff" >}}.
 -   [Python Cookbook](http://aspn.activestate.com/ASPN/Python/Cookbook)
     is a huge collection of recipes and tips.
 -   The  [PLEAC project](http://pleac.sourceforge.net/)
-    is an (*old*) project to translate the *Perl Cookbook* in various language
-    It has a [python section](http://pleac.sourceforge.net/pleac_python/)
+    is an obsolete _2011_ project to translate the *Perl Cookbook* in various language
+    It had a [python section](http://pleac.sourceforge.net/pleac_python/)
     with 85% of  *Perl Cookbook* recipes translated in a *quite old
     2.2 to 2.4* python.
-
-## File Formats
--   [configobj](https://github.com/DiffSK/configobj)
-    is a config file reader and writer.
-    -   [configobj manual](http://configobj.readthedocs.org/en/latest/).
--   [csvkit](https://github.com/wireservice/csvkit)
-    A suite of utilities for converting to and working with CSV.
-    [csvkit dicumentation](https://csvkit.readthedocs.io/en/latest/).
--   [tablib](https://github.com/kennethreitz/tablib) -
-    A library for Tabular Datasets in XLS, CSV, JSON, YAML.
-    [tablib documentation](http://docs.python-tablib.org/en/master/).
 
 ## Programming Utilities
 -   [Online python tutor](http://pythontutor.com/) (BSD-license)
@@ -508,30 +498,19 @@ The continuous integration software is in the main
 
 ## Command Line {#command_line}
 
--   [Python packaging](http://www.scotttorborg.com/python-packaging/)
+-   [Python packaging](https://python-packaging.readthedocs.io/en/latest/)
     includes a [Command Line Scripts page
-    ](http://www.scotttorborg.com/python-packaging/command-line-scripts.html)
+    ](https://python-packaging.readthedocs.io/en/latest/command-line-scripts.html).
     which introduce to the use of setup tools _entry points_.
--   [CommandLineApp](https://doughellmann.com/blog/2007/08/12/commandlineapp/)
-    by Doug Hellmann is a base class for command line applications. It
-    is described in his article
-    [Command line programs are classes, too!
-    ](http://www.doughellmann.com/articles/pythonmagazine/features/commandlineapp/)
--   [Cliff](https://github.com/dhellmann/cliff)  (Apache License)
+-   [Command-line Interface Development and Command-line Tools - Awesome Python
+    ](https://awesome-python.com/#command-line-interface-development)
+-   [Cliff](https://docs.openstack.org/cliff/)  (Apache License)
+    part of {{< iref "clouds#openstack" "openStack" >}}
     by Doug Hellmann is a framework for building command line
     programs. It uses setuptools entry points to provide subcommands,
     output formatters, and other extensions.
--   [Clint](https://github.com/kennethreitz/clint) (BSD? / MIT?)
-    by Kenneth Reiz is a module grouping tools for developing
-    commandline applications.
--   _Cli_ or [Pypi: pyCLI](https://pypi.python.org/pypi/pyCLI/)
-    is a framework for  command line applications it helps to
-    add standard command line parsing; logging; unit and functional
-    testing; and profiling to your apps.
-    -   [Cli documentation](http://pythonhosted.org/pyCLI/).
-    -   [Cli GitHub repository](https://github.com/whilp/cli)
 -   [Click](https://click.palletsprojects.com/) (BSD License)
-    ( [GitHub - Click](https://github.com/pallets/click))
+    ([GitHub - Click](https://github.com/pallets/click))
     is a Python package for creating command line interfaces.  It provides arbitrary
     nesting of commands, automatic help page generation, lazy loading of subcommands at
     runtime.  It is an alternative to {{< iref "#docopt" Docopt >}} and
@@ -1084,8 +1063,9 @@ They are compared in two threads from 2014 and 2015 of _HackerNews_:
 [here](https://news.ycombinator.com/item?id=8847141),
 [and here](https://news.ycombinator.com/item?id=8158976)
 
--   [_pyp_ - The Pyed Piper](http://code.google.com/p/pyp/) (BSD License)
-    In pypi _2012_.
+-   [Pyp](https://github.com/hauntsaninja/pyp) (BSD License)
+    _active ib 2020_.
+    based on the old _Pyed Piper_ no more developped since 2012.
 -   [Pyped](http://github.com/ksamuel/Pyped)
     works in python2 and python3. In _pypi_, _2014_.
 -   [pythonpy](https://github.com/Russell91/pythonpy) (MIT License)
@@ -1095,18 +1075,32 @@ They are compared in two threads from 2014 and 2015 of _HackerNews_:
     give some evaluation / criticisms to the concepts of
     *pythonpy*, the end of the thread compare it with _spy_.
 -   [pyin](https://github.com/geowurster/pyin) (BSD License)
-    aimed at replacing sed.  In _pypi_, _active in 2016_.
--   [spy](https://github.com/edk0/spy)
+    aimed at replacing sed.  In _pypi_, _active in 2019_.
+-   [spy](https://github.com/edk0/spy) (WFTPL)
     derived from pythonpy and pyp. Only python3, In _pypi_ with
-    name _spy-cli_, _2015_.
+    name _spy-cli_,_active in 2020_.
 -   [pit](https://github.com/samzhang111/pit)
     Or Python as a stream filter, python3 _2015_.
 -   [pype](https://github.com/ircflagship2/pype)
     Python 2 or 3, in _pypi_ under the name _pypecli_, _2015_.
+-   [mario](https://github.com/python-mario/mario) (GPL)
+    Powerful Python pipelines for the shell. Mario can read and write csv, json, and
+    yaml; traverse trees, and even do xpath queries, it supports async commands.
+    _active in 2020_.
+    -   [Mario Documentation](https://python-mario.readthedocs.io).
+    -   [Mario Add-Ons](https://mario-addons.readthedocs.io)
 
 ## Serializing {#serializing_libs}
-See also {{< iref "#serializing_module" "Modules:Serializing" >}}
+See also {{< iref "#serializing_module" "Modules: Serializing" >}}
+We include also here CSV and config files. The corresponding modules are classified as
+{{< iref "#file_format_module" "Module: File Format" >}}.
 
+-   [configobj](https://github.com/DiffSK/configobj)
+    is a config file reader and writer.
+    -   [configobj manual](http://configobj.readthedocs.org/en/latest/).
+-   [csvkit](https://github.com/wireservice/csvkit)
+    A suite of utilities for converting to and working with CSV.
+    [csvkit documentation](https://csvkit.readthedocs.io/en/latest/).
 -   [jsonpickle](http://jsonpickle.github.com/)
     is a Python library for serialization and deserialization of
     complex Python objects to and from JSON. It extend the standard
@@ -1131,6 +1125,11 @@ See also {{< iref "#serializing_module" "Modules:Serializing" >}}
 -   [tablib](https://github.com/kennethreitz/tablib) -
     A library for Tabular Datasets in XLS, CSV, JSON, YAML.
     [tablib documentation](http://docs.python-tablib.org/en/master/).
+-   [mario](https://github.com/python-mario/mario) (GPL)
+    Powerful Python pipelines for the shell. Mario can read and write csv, json, and
+    yaml; traverse trees, and even do xpath queries, it supports async commands.
+    -   [Mario Documentation](https://python-mario.readthedocs.io).
+    -   [Mario Add-Ons](https://mario-addons.readthedocs.io)
 
 ## Test Libraries {#test_libs}
 -   [awesome test automation - python
