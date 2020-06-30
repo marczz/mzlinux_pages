@@ -458,43 +458,53 @@ The continuous integration software is in the main
 {{< iref "software_design#continuous_integration" "Continuous Integration" >}}
 
 
--   see also the Wikipedia {{< wp "Category:Compiling tools" >}},
-    {{< wp "Category:Build automation" >}},  {{< wp "Continuous integration" >}}
+See also the Wikipedia {{< wp "Category:Compiling tools" >}},
+{{< wp "Category:Build automation" >}},  {{< wp "Continuous integration" >}}
+
+Some comparison of build tools are in:
+
+-   [Scons Versus Other Build Tools](http://www.scons.org/wiki/SconsVsOtherBuildTools)
+    from scons Wiki.
+-   [Alternatives to Make, Part II
+    ](http://quirkygba.blogspot.fr/2008/10/alternatives-to-make-part-ii.html)
+    by Richard Quirk _2008_,
+-   [Empirical Comparison of SCons and GNU Make
+    ](http://www.genode-labs.com/publications/scons-vs-make-2008.pdf) _pdf 2008_
+    by Ludwig Hähne.
+-   [Make alternatives](http://freecode.com/articles/make-alternatives)
+    by Adrian Neagu compare Scons with Gnu Make and many other tools _(but not Redo)_
+
+List of build tools:
+
 -   [Buildout](http://www.buildout.org/) (Zope Public License)
-    is a Python-based build system for creating,
-    assembling and deploying applications from multiple
-    parts. Wikipedia: {{< wp "Buildout" >}}.
--   [Paver](http://paver.github.com/paver/)(BSD license) is a
-    Python-based software project scripting tool
+    is a Python-based build system for creating, assembling and deploying applications
+    from multiple parts. Wikipedia: {{< wp "Buildout" >}}.
+-   [Paver](http://paver.github.com/paver/)(BSD license)
+    is a Python-based software project scripting tool.
 -   [PyBuilder](https://pybuilder.io/)
     is  a build automation tool for Python
--    <a name="pydoit"></a>[Doit](http://pydoit.org/)
-    alias *pydoit* alias *python-doit* is a tool that brings
-    the power of build-tools to execute any kind of task. It integrates
-    {{< iref "schedulers#inotify" "inotify" >}}.
+-   <a name="pydoit"></a>[Doit](http://pydoit.org/)
+    alias *pydoit* alias *python-doit* is a tool that brings the power of build-tools to
+    execute any kind of task. It integrates {{< iref "schedulers#inotify" "Inotify" >}}.
     -   [doit - GitHub](https://github.com/pydoit/doit)
--   [Redo](https://github.com/apenwarr/redo) (GPL) from Avery Pennarun
-    is a Gnu Make replacement in python allowing recursive build.
--   [Scons](http://www.scons.org/wiki/AboutSCons) (MIT license) is a Gnu
-    Make replacement in python. Wikipedia: {{< wp "Scons" >}} _Scons is in
+-   [Redo](https://github.com/apenwarr/redo) (GPL)
+    from Avery Pennarun is a Gnu Make replacement in python allowing recursive build.
+-   [Scons](http://www.scons.org/wiki/AboutSCons) (MIT license)
+    is a Gnu Make replacement in python. Wikipedia: {{< wp "Scons" >}} _Scons is in
     Debian._
-    [Scons Versus Other Build Tools
-    ](http://www.scons.org/wiki/SconsVsOtherBuildTools)
-    from scons Wiki,
-    [Alternatives to Make, Part II
-    ](http://quirkygba.blogspot.fr/2008/10/alternatives-to-make-part-ii.html)
-    by Richard Quirk,
-    [Empirical Comparison of SCons and GNU Make
-    ](http://www.genode-labs.com/publications/scons-vs-make-2008.pdf)
-    by Ludwig Hähne and
-    [Make alternatives](http://freecode.com/articles/make-alternatives)
-    by Adrian Neagu compare Scons with Gnu Make and many other tools
-    _(but not Redo)_
--   [w:Waf](BSD License) is a Python-based framework for configuring,
-    compiling and installing applications.
-    [Waf Home](http://code.google.com/p/waf/).
-    It aims at being an improvement of Scons, providing higher-level functionality similar
-    to that of Autotools. .
+-   {{< wp "Waf" >}} (BSD License)
+    is a Python-based framework for configuring, compiling and installing applications.
+
+    It aims at being an improvement of Scons, providing higher-level functionality
+    similar to that of Autotools.
+    It is compared with Scons and other build tool in
+    [Scons Versus Other Build Tools](http://www.scons.org/wiki/SconsVsOtherBuildTools).
+
+    -   [Waf Home](https://waf.io/) and [documentation](https://waf.io/book/).
+    -   [Waf Gitlab Repo](https://gitlab.com/ita1024/waf/).
+    -   [Waf: An excellent build automation tool
+        ](https://opensourceforu.com/2017/02/waf-excellent-build-automation-tool/)
+        is an introduction to _Waf_.
 
 ## Command Line {#command_line}
 
