@@ -72,20 +72,6 @@ implementated in the linux kernel.
 -   [Doit](http://pydoit.org/)
     is a python build tool that integrates
     inotify
--   [Pyinotify](https://github.com/seb-m/pyinotify)
-    is a Python package used for monitoring filesystems events
-    with [inotify](http://inotify.aiken.cz/).
-    The [pynotify documentation](https://github.com/seb-m/pyinotify/wiki)
-    includes a tutorial and some examples.
-    - Pynotify is used in
-      [pirsyncd - Python Inotify Rsync Daemon
-      ](http://ebalaskas.gr./blog/?page=pirsyncd)
-      see the [pirsyncd repository](https://bitbucket.org/ebal/pirsyncd)
-    - [spotter](https://github.com/borntyping/spotter) is a
-      command line tool for watching files and running shell
-      commands when they change. It uses pynotify.
--   [watchdog](https://pypi.python.org/pypi/watchdog)
-    is a python API and shell utilities to monitor file system events.sudo
 -   `tail --follow` uses inotify if available
 
 ## Knowing who consume instances

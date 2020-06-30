@@ -1008,18 +1008,6 @@ See also the
     Freedesktop has a [Dbus Python Tutorial](http://dbus.freedesktop.org/doc/dbus-python/doc/tutorial.html).  There are also some
     [Dbus Examples on the Python Wiki](http://wiki.python.org/moin/DbusExamples) and you can refer to the
     [Dbus Python API](http://dbus.freedesktop.org/doc/dbus-python/api/).
--   [Pyinotify](https://github.com/seb-m/pyinotify)
-    is a Python package used for monitoring filesystems events
-    with [inotify](http://inotify.aiken.cz/) _Wikipedia: {{< wp "inotify" >}}_.
-    The [pynotify documentation](https://github.com/seb-m/pyinotify/wiki)
-    includes a tutorial and some examples.
-    -   Pynotify is used in
-        [pirsyncd - Python Inotify Rsync Daemon
-        ](http://ebalaskas.gr./blog/?page=pirsyncd)
-        see the [pirsyncd repository](https://bitbucket.org/ebal/pirsyncd)
-    -   You may be interrested also in
-        [incron](http://inotify.aiken.cz/?section=incron&page=doc)
-        _a C compiled daemon_.
 
 The following tools implement a subprocess management; similar to the
 shells process combinators like the pipe.
@@ -1089,6 +1077,21 @@ They are compared in two threads from 2014 and 2015 of _HackerNews_:
     _active in 2020_.
     -   [Mario Documentation](https://python-mario.readthedocs.io).
     -   [Mario Add-Ons](https://mario-addons.readthedocs.io)
+
+-   [Pyinotify](https://github.com/seb-m/pyinotify)
+    is a Python package used for monitoring filesystems events
+    with [inotify](http://inotify.aiken.cz/) _Wikipedia: {{< wp "inotify" >}}_.
+    The [pynotify documentation](https://github.com/seb-m/pyinotify/wiki)
+    includes a tutorial and some examples.
+    -   Pynotify is used in
+        [pirsyncd - Python Inotify Rsync Daemon
+        ](http://ebalaskas.gr./blog/?page=pirsyncd)
+        see the [pirsyncd repository](https://bitbucket.org/ebal/pirsyncd)
+       - [spotter](https://github.com/borntyping/spotter) is a
+      command line tool for watching files and running shell
+      commands when they change. It uses pyinotify.
+-   [watchdog](https://pypi.python.org/pypi/watchdog)
+    is a python API and shell utilities to monitor file system events.
 
 ## Serializing {#serializing_libs}
 See also {{< iref "#serializing_module" "Modules: Serializing" >}}
