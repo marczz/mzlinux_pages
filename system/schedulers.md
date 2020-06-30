@@ -2,8 +2,6 @@
 title: System Schedulers
 ---
 
-{{% toc /%}}
-
 # References
 
 -   Wikipedia {{< wp "cron" >}}, {{< wp "anacron" >}}, {{< wp "inotify" >}}
@@ -27,24 +25,23 @@ title: System Schedulers
 
 # Inotify {#inotify}
 
-[inotify home page
-](http://inotify.aiken.cz/?section=common&page=home&lang=en) (GPL)
-Inotify is an inode-base file system notification mechanism
-implementated in the linux kernel.
+[inotify](http://inotify.aiken.cz/) (GPL)
+is an inode-base file system notification mechanism implementated in the linux kernel.
 
--   Wikipedia {{< wp "inotify" >}}
+-   Wikipedia: {{< wp "inotify" >}}
 -   Michael Kerrisk in [lwn.net](https://lwn.net) has written an
     introduction to inotify structure:
-    [Filesystem notification, part 1: An overview of dnotify and
-    inotify][https://lwn.net/Articles/604686/),
-    [part 2: A deeper investigation of inotify
-    ](https://lwn.net/Articles/605128/).
--   [inotify(7) man page
-    ](http://manpages.debian.org/cgi-bin/man.cgi?query=inotify)
--   [inotify tools
-    ](https://github.com/rvoicilas/inotify-tools/wiki#info)
-    are tools to allow inotify's features to be used
-    from within shell scripts. _inotyfy-tools is a debian package_.
+    [Filesystem notification, part 1: An overview of dnotify and inotify
+    ][https://lwn.net/Articles/604686/),
+    [part 2: A deeper investigation of inotify](https://lwn.net/Articles/605128/).
+-   [inotify(7) man page](http://manpages.debian.org/cgi-bin/man.cgi?query=inotify)
+
+## Inotify tools
+Tools and Programming languages API. The python tools are in the Python chapter in
+the {{< iref "libraries#inotify" "Libraries - Inotify" >}} section.
+-   [inotify tools](https://github.com/rvoicilas/inotify-tools/wiki#info)
+    are tools to allow inotify's features to be used from within shell
+    scripts. _inotify-tools is a debian package_.
 
     -   {{< man "inotifywatch(1)" >}} listens for filesystem events using
         Linux's {{< man "inotify(7)" >}} interface, then outputs a summary
@@ -56,23 +53,18 @@ implementated in the linux kernel.
         they occur.
 
     For these two tools there are examples in the
-    [inotify tools home page
-    ](https://github.com/rvoicilas/inotify-tools/wiki#info)
+    [inotify tools home page](https://github.com/rvoicilas/inotify-tools/wiki#info)
 
--   [incron documentation
-    ](http://inotify.aiken.cz/?section=incron&page=doc)
-    incron is an "inotify cron" system.
-    It consists of a daemon and a table manipulator.
-    Inotify cron handles filesystem events rather than time
-    periods.
+-   [incron](http://inotify.aiken.cz/?section=incron&page=doc)
+    is an _inotify cron_ C compiled daemon and a table manipulator.
+    Inotify cron handles filesystem events rather than time periods.
 -   [fsniper](https://github.com/l3ib/fsniper) (GPL)
-    by Dave Foster
-    is a utility that waits for a file to be changed or created,
-    and then executes a command on that file.
+    by Dave Foster is a C utility that waits for a file to be changed or created, and
+    then executes a command on that file.
 -   [Doit](http://pydoit.org/)
     is a python build tool that integrates
     inotify
--   `tail --follow` uses inotify if available
+-   {{< man "tail" >}} when using  `tail --follow` uses inotify if it is available.
 
 ## Knowing who consume instances
 
