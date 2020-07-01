@@ -174,9 +174,33 @@ The source code of python modules is found in the
     environments
     ](https://packaging.python.org/tutorials/installing-packages/#creating-virtual-environments).
 
+## FileSystem
+
+-   [The File System - PyMOTW](https://pymotw.com/3/file_access.html)
+-   [io](https://docs.python.org/3/library/io.html)
+    tools for working with streams.
+
+    It includes  the high-level IO class
+    [io.BufferedIOBase
+    ](http://docs.python.org/3/library/io.html#io.BufferedIOBase)
+    for binary streams and
+    [io.TextIOBase
+    ](http://docs.python.org/3/library/io.html#io.TextIOBase)
+    for text streams.
+
+    There are two in memory buffer classes that provide a file-like api:
+    [io.BytesIO](http://docs.python.org/3/library/io.html#io.BytesIO)
+    for in-memory binary streams and
+    [io.StringIO](http://docs.python.org/3/library/io.html#io.StringIO) -
+    for in-memory binary text streams.
+
+    -   [PyMOTW: IO](https://pymotw.com/3/StringIO),
+-   [os.path](http://docs.python.org/3/library/os.path.html)
+    OS independant operations on pathnames.
+    -   [os.path — PyMOTW](https://pymotw.com/3/os.path/index.html).
+
 ## Interfaces {#interface_modules}
--   [curses](http://docs.python.org/3/library/curses.html) -
-    [py2k](http://docs.python.org/2/library/curses.html) -
+-   [curses](http://docs.python.org/3/library/curses.html)
     interface to the curses library.
     -   A tutorial: [Curses programming
         ](http://www.ibm.com/developerworks/linux/library/l-python6.html)
@@ -218,34 +242,13 @@ The source code of python modules is found in the
      -   [Logging Cookbook
          ](http://docs.python.org/3/howto/logging-cookbook.html#logging-cookbook)
 -   [os](http://docs.python.org/3/library/os.html)
-    ([py2k](http://docs.python.org/library/os.html)) -
-    Operating system interfaces. Note that legacy functions to manage processes like
+        Operating system interfaces. Note that legacy functions to manage processes like
     `system()`, `popen()`, `popen2()`, `popen3()`
     [must be replaced by the subprocess module
     ](http://docs.python.org/3/library/subprocess.html#subprocess-replacements).
--   [os.path](http://docs.python.org/3/library/os.path.html) -
-    [py2k](http://docs.python.org/library/os.path.html) -
-    Operations on pathnames.
 -   [pprint](http://docs.python.org/3/library/pprint.html) -
-    ([py2k](http://docs.python.org/library/pprint.html)) -
-     Data pretty printer.
--   [io](http://docs.python.org/3/library/stringio.html)
-    tools for working with streams in py3k includes  the high-level
-    IO class
-    [io.BufferedIOBase
-    ](http://docs.python.org/3/library/io.html#io.BufferedIOBase)
-    for binary streams and
-    [io.TextIOBase
-    ](http://docs.python.org/3/library/io.html#io.TextIOBase)
-    for text streams. <br />
-    There are two in memory buffer classes that provide a file-like api:
-    [io.BytesIO](http://docs.python.org/3/library/io.html#io.BytesIO)
-    for in-memory binary streams and
-    [io.StringIO](http://docs.python.org/3/library/io.html#io.StringIO) -
-    ([py2k](http://docs.python.org/2/library/stringio.html)) -
-    for in-memory binary text streams.
-    [PyMOTW: StringIO](https://pymotw.com/3/StringIO),
-    [effbot: StringIO](http://effbot.org/librarybook/stringio.htm)
+         Data pretty printer.
+
 -   [traceback](http://docs.python.org/3/library/traceback.html)
      provides a standard interface to extract, format and print stack
      traces of Python programs.
