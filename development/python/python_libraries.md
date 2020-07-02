@@ -1091,20 +1091,68 @@ They are compared in two threads from 2014 and 2015 of _HackerNews_:
     -   [Mario Documentation](https://python-mario.readthedocs.io).
     -   [Mario Add-Ons](https://mario-addons.readthedocs.io)
 
--   [Pyinotify](https://github.com/seb-m/pyinotify)
+### Dbus from Python {#dbus_python_api}
+
+See also the {{< iref "dbus" "Dbus Page" >}}.
+
+-   [FreeDesktop: Software/DBusBindings
+    ](http://www.freedesktop.org/wiki/Software/DBusBindings)
+    give the bindings available in many languages.
+-   [Dbus Examples on the Python Wiki](http://wiki.python.org/moin/DbusExamples)
+
+
+-   [Dbus-Python](http://dbus.freedesktop.org/doc/dbus-python/)
+    is a python Dbus bindings library, the python wiki affirm it is obsolete because
+    using the deprecated _python-glib_, which is now replaced by use GDBus.
+    But _dbus-python_ dropped  _python-glib_ since 2018.
+
+    _dbus-python_ is hosted by Freedesktop _but not mentioned in the binding list._
+
+    -   [Dbus Python Tutorial
+        ](http://dbus.freedesktop.org/doc/dbus-python/doc/tutorial.html).
+    -   [Dbus Examples on the Python Wiki](http://wiki.python.org/moin/DbusExamples)
+    -   [Dbus Python API](http://dbus.freedesktop.org/doc/dbus-python/api/).
+    -   [dbus-python · GitLab](https://gitlab.freedesktop.org/dbus/dbus-python).
+
+-   [pydbus](https://github.com/LEW21/pydbus) (LGPL)
+    is a pythonic DBus library.
+    -   [pydbus tutorial](https://github.com/LEW21/pydbus/blob/master/doc/tutorial.rst).
+-   [GDBus](https://developer.gnome.org/gio/stable/gdbus.html), the D-Bus implementation
+    in GLib, can be used from Python via
+    [PyGobject](https://pygobject.readthedocs.io/en/latest/).
+
+### Inotify
+see also {{< iref "schedulers#inotify" "Inotify main Section" >}}.
+
+-   [Pyinotify _(seb_m)_](https://github.com/seb-m/pyinotify)
     is a Python package used for monitoring filesystems events
-    with [inotify](http://inotify.aiken.cz/) _Wikipedia: {{< wp "inotify" >}}_.
+    with  {{< iref "schedulers#inotify" "Inotify"  >}}. _last update 2015, more commits
+      in forks._
+
     The [pynotify documentation](https://github.com/seb-m/pyinotify/wiki)
     includes a tutorial and some examples.
+
+    It is in the Debian package _python3-pyinotify_.
+
     -   Pynotify is used in
         [pirsyncd - Python Inotify Rsync Daemon
-        ](http://ebalaskas.gr./blog/?page=pirsyncd)
-        see the [pirsyncd repository](https://bitbucket.org/ebal/pirsyncd)
-       - [spotter](https://github.com/borntyping/spotter) is a
-      command line tool for watching files and running shell
-      commands when they change. It uses pyinotify.
--   [watchdog](https://pypi.python.org/pypi/watchdog)
-    is a python API and shell utilities to monitor file system events.
+        ](http://ebalaskas.gr./blog/?page=pirsyncd) is old _2009_ and _pirsyncd_
+        developpement stopped in _2011_.
+        see the [pirsyncd repository](https://bitbucket.org/ebal/pirsyncd).
+-   [PyInotify _(dsoprea)_](https://github.com/dsoprea/PyInotify)  (GPL)
+    is unrelated to *seb_m* Pyinotify.
+-   [pynotify2](https://bitbucket.org/takluyver/pynotify2/)  (BSD License)
+    is a replacement for pynotify which can be used from different GUI toolkits and from
+    programs without a GUI. The API is largely the same as that of pynotify.
+    -   [pynotify2 documentation](https://notify2.readthedocs.io/en/latest/).
+-   [spotter](https://github.com/borntyping/spotter)
+    is a command line tool for watching files and running shell commands when they
+    change. It is in _pypi_.
+-   [watchdog](https://github.com/gorakhargosh/watchdog) (Apache License)
+    is a python API and shell utilities to monitor file system events.It is in _pypi_.
+
+    _watchdog_ depend {{< iref "#argh" "argh" >}} and {{< iref "#pyYAML" "pyYAML" >}}.
+    -   [watchdog Documentation](https://python-watchdog.readthedocs.io/en/latest/).
 
 ## Serializing {#serializing_libs}
 See also {{< iref "#serializing_module" "Modules: Serializing" >}}
