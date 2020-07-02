@@ -382,6 +382,15 @@ See also {{< iref "#xml_parsers" "XML Parsers Libraries" >}}
         is a tutorial by  David Mertz.
 
 
+## Unix Services {#unix_modules}
+[Unix Specific Services](https://docs.python.org/3/library/unix.html)
+ provide interfaces to features that are unique to  Unix.
+
+-   [pipe](http://docs.python.org/3/library/pipes.html)
+    A class to create  Unix command pipelines.
+    -   [PyMOTW:pipe](https://pymotw.com/3/pipes/)
+
+
 <!---------------------------------------------------------->
 
 # Libraries {#libraries}
@@ -680,6 +689,12 @@ Read first the
 - {{< wp "Cython" >}} (Apache License)
   is a derivative of the Pyrex language, and supports more features
   and optimizations than Pyrex.
+
+## Filesystem.
+
+-   <a name="pathtool"></a>[pathtools](https://github.com/gorakhargosh/pathtools) (MIT)
+    Path utilities for Python, it allows pattern matching on paths.
+    It is in pypi.
 
 ## Graphic User Interfaces
 The standard modules are in the {{< iref "#modules" "Modules Section" >}}
