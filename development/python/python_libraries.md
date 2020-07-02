@@ -3,15 +3,15 @@ title: Python Libraries
 ---
 
 # Modules {#modules}
-Subset of the
-[Python full module index](http://docs.python.org/3/py-modindex.html)
-([py2k](http://docs.python.org/2/modindex.html)),
+Subset of the [Python full module index](http://docs.python.org/3/py-modindex.html)
+from the [Python Standard Library](https://docs.python.org/3/library/index.html).
+
 The modules not included in the standard library are in the section:
 {{< iref "#libraries" "Libraries" >}}.
 
 Some modules are commented in the
-[Python Module of the Week - PyMOTW](https://pymotw.com/3/) from
-Doug Hellmann.
+[Python Module of the Week - PyMOTW](https://pymotw.com/3/)
+from Doug Hellmann.
 
 Frederik Lunch in his
 [eff-bot guide to The Standard Python Library
@@ -20,7 +20,7 @@ provides brief descriptions and sample scripts for all standard modules
 in the Python 2.0 library, while being outdated, it can still be useful.
 
 The source code of python modules is found in the
-[cpython mercurial repository](http://hg.python.org/cpython).
+[cpython repository](https://github.com/python/cpython).
 
 
 ## Data Model {#base_types_modules}
@@ -44,13 +44,11 @@ The source code of python modules is found in the
     is in the
     [String Module](http://docs.python.org/3/library/string.html)
 -   [Built-in Functions
-    ](http://docs.python.org/3/library/functions.html) -
-    [py2k](http://docs.python.org/2/library/functions.html) -
+    ](http://docs.python.org/3/library/functions.html)
     _not strictly a module_.
--    [abstract base classes](http://docs.python.org/3/library/abc.html),
+-   [abstract base classes](http://docs.python.org/3/library/abc.html),
     [PyMotw: abstract base classes](http://pymotw.com/2/abc/)
--   [Collections](http://docs.python.org/3/library/collections.html) -
-    [py2k](http://docs.python.org/2/library/collections.html) -
+-   [Collections](http://docs.python.org/3/library/collections.html)
     are
     _abstract base classes_
     that extend the
@@ -66,12 +64,13 @@ The source code of python modules is found in the
          is used to parse CSV files by Michele Simionato in
          [Managing Records in Python
          ](http://www.artima.com/weblogs/viewpost.jsp?thread=236637).
--   [imp](http://docs.python.org/3/library/imp.html)
-    the import internals provides the functions:
-    `reload`, find_module`, `load_module`, `acquire_lock`, `release_lock`.
-    [PyMOTW imp](https://pymotw.com/3/imp/index.html).
--   [functools](http://docs.python.org/3/library/functools.html) -
-    [py2k](http://docs.python.org/3/library/functools.html) -
+-   [Importing Modules](https://docs.python.org/3/library/modules.html) contains
+    [importlib](https://docs.python.org/3/library/importlib.html)
+    which provide the implementation of the import statement it replaces the deprecated
+    module [imp](http://docs.python.org/3/library/imp.html) and provides the functions:
+    `reload`, `import_module`, `find_module`, `exec_module` ...
+    -   [PyMOTW importlib](https://pymotw.com/3/importlib/).
+-   [functools](http://docs.python.org/3/library/functools.html)
     <a name="functools"></a>decorators for second-order programming,
     mainly the [partials decorator
     ](http://docs.python.org/3/library/functools.html#functools.partial)
@@ -89,8 +88,7 @@ The source code of python modules is found in the
 -   [inspect](http://docs.python.org/3/library/inspect.html)
     functions for introspecting on live objects and their source code.
     [PyMOTW: inspect](https://pymotw.com/3/inspect/index.html)
--   [itertool](http://docs.python.org/3/library/itertools.html) -
-    [py2k](http://docs.python.org/3/library/itertools.html) -
+-   [itertool](http://docs.python.org/3/library/itertools.html)
     iterator building blocks inspired by constructs from APL, Haskell, and SML.
     [PyMOTW: itertools](https://pymotw.com/3/itertools/index.html).<br />
     The [Functional Programming HOWTO
@@ -99,7 +97,6 @@ The source code of python modules is found in the
     ](http://docs.python.org/3/howto/functional.html#the-itertools-module).
 -   <a name="python_re"></a>
     [re](http://docs.python.org/3/library/re.html)
-    [py2k](http://docs.python.org/2/library/re.html)
     Regular expression operations _string or bytearrays_.
     -   [Regular Expression HOWTO (py3k)
         ](http://docs.python.org/3/howto/regex.html)
@@ -121,15 +118,13 @@ The source code of python modules is found in the
 
 ## Development tools
 -   The <a name="distutils"></a>
-    [module distutils](http://docs.python.org/3/library/distutils.html) -
-    [py2k](http://docs.python.org/2/library/distutils.html) -
+    [module distutils](http://docs.python.org/3/library/distutils.html)
     is described in
     [Distributing Python Modules](http://docs.python.org/3/distutils/)
     and [Installing Python Modules](http://docs.python.org/3/install/)
     see also {{< iref "#packaging" "Libraries: packaging" >}}
     for alternatives and enhancements of _distutils_.
--   [doctest](http://docs.python.org/3/library/doctest.html) -
-    [py2k](http://docs.python.org/2/library/doctest.html) -
+-   [doctest](http://docs.python.org/3/library/doctest.html)
     [PyMOTW page](https://pymotw.com/3/doctest/index.html)
     allows the generation of tests based on output from the
     standard Python interpreter shell, cut and pasted into docstrings.
@@ -137,8 +132,7 @@ The source code of python modules is found in the
     sessions, and then executes those sessions to verify that they work
     exactly as shown.<br />
     [Doctest2](http://packages.python.org/doctest2/) extend _doctest_.
--   <a name="unittest"></a>[unittest](http://docs.python.org/3/library/unittest.html) -
-    [py2k](http://docs.python.org/library/unittest.html) -
+-   <a name="unittest"></a>[unittest](http://docs.python.org/3/library/unittest.html)
     [PyMOTW page](https://pymotw.com/3/unittest/index.html)
     is a unit testing framework.The new
     [python 3k unittest
@@ -212,8 +206,7 @@ The source code of python modules is found in the
         [Writing Programs with NCURSES
         ](http://invisible-island.net/ncurses/ncurses-intro.html)
         by Eric S. Raymond, Zeyd M. Ben-Halim, Thomas Dickey.
--   [tkinter](http://docs.python.org/3/library/tkinter.html) -
-    [py2k](http://docs.python.org/2/library/tkinter.html) -
+-   [tkinter](http://docs.python.org/3/library/tkinter.html)
     Python interface to the Tk GUI toolkit. *See at the beginning of
     the previous page for introductory materials.*
     -   [introduction to TkInter](http://effbot.org/tkinterbook/)
@@ -259,42 +252,40 @@ They are covered in the {{< iref "python_dbms" "databases programming section" >
 
 ## File Formats {#file_format_modules}
 [File formats modules](https://docs.python.org/3/library/fileformats.html)
-([py2k](https://docs.python.org/3/library/fileformats.html))
 group modules file for fileformats that aren’t markup languages and are not related to
 e-mail.
 
 -   [CSV](https://docs.python.org/3/library/csv.html)
-    ([py2k](https://docs.python.org/2/library/csv.html))
-    allow CSV file reading and writing.
+        allow CSV file reading and writing.
 -   [configparser](https://docs.python.org/3/library/configparser.html)
-    ([py2k](https://docs.python.org/2/library/configparser.html))
-    INI config file parser.
+        INI config file parser.
 
-## Processes {#process_modules}
--   [subprocess](http://docs.python.org/3/library/subprocess.html) -
-    [py2k](http://docs.python.org/2/library/subprocess.html) -
+## Concurent execution (Processes) {#process_modules}
+[Concurrent Execution](https://docs.python.org/3/library/concurrency.html)
+provide support for concurrent execution of code.
+See also {{< iref "#unix_modules" "Unix Services"}}.
+
+-   [subprocess](http://docs.python.org/3/library/subprocess.html)
     spawn new processes, connect to their input/output/error pipes,
     and obtain their return codes.
     The main class is
     [subprocess.Popen
     ](http://docs.python.org/3/library/subprocess.html#subprocess.Popen)
-    [PyMOTW: subprocess](https://pymotw.com/3/subprocess/).
+    -   [PyMOTW: subprocess](https://pymotw.com/3/subprocess/).
 -   [multiprocessing
     ](http://docs.python.org/3/library/multiprocessing.html)
-    offers both local and remote concurrency.
-    It's API is similar to the _threading module_ one.<br />
-    [PyMOTW multiprocesing](https://pymotw.com/3/multiprocessing/)
+    offers both local and remote concurrency. It's API is similar to the
+    _threading module_. It  provide a _Queue_ class and _Pipe_ class to exchange
+     objects between processes.
+    -   [PyMOTW multiprocesing](https://pymotw.com/3/multiprocessing/)
 -   [threading](http://docs.python.org/3/library/threading.html)
     higher-level threading interfaces.
-    [PyMOTW threading](https://pymotw.com/3/threading/)
--   [queue](http://docs.python.org/3/library/queue.html),
-    [PyMOTW queue](https://pymotw.com/3/Queue/)
+    -   [PyMOTW threading](https://pymotw.com/3/threading/)
+-   [queue](http://docs.python.org/3/library/queue.html)
     module implements multi-producer, multi-consumer queues.
     It is especially useful in threaded programming.
--   [pipe](http://docs.python.org/3/library/pipes.html) -
-    [py2k](http://docs.python.org/2/library/pipes.html) -
-    A class to create  Unix command pipelines.
-    [PyMOTW:pipe](https://pymotw.com/3/pipes/)
+    -   [PyMOTW queue](https://pymotw.com/3/Queue/)
+
 
 ## Network {#network_modules}
 
@@ -317,8 +308,7 @@ See also the {{< iref "python_web#wsgi" "xCGI stuff" >}} and
 -   [email](http://docs.python.org/3/library/email.html) Parsing,
     manipulating, and generating email messages, including MIME
     documents.
--   [imaplib](http://docs.python.org/3/library/imaplib.html) -
-    [py2k](http://docs.python.org/2/library/imaplib.html) -
+-   [imaplib](http://docs.python.org/3/library/imaplib.html)
     IMAP4 protocol client.
     You find examples in [PyMOTW: imaplib](https://pymotw.com/3/imaplib/)
 -   [smtplib](http://docs.python.org/3/library/smtplib.html)
@@ -350,8 +340,7 @@ for csv and config files.
     ](https://pymotw.com/3/persistence.html)
     is a panorama of the various ways to achieve persistence in python.
 -   [json](http://docs.python.org/3/library/json.html)  -
-    ([py2k](http://docs.python.org/library/json.html)) -
-    Encode and decode the
+        Encode and decode the
     {{< iref "data_exchange#json" "JSON" >}} format..
     [PyMOTW: json](https://pymotw.com/3/json/)</br >
     You can use the included script `json.mtool` to validate and pretty-print a
@@ -359,18 +348,15 @@ for csv and config files.
     {{< iref "#serializing_libs" "Python Libraries - serializing" >}})
     extend the standard Python module _json_.
 -   [pickle](http://docs.python.org/3/library/pickle.html)
-    ([py2k](http://docs.python.org/3/library/pickle.html)) -
-    Convert Python objects to streams of bytes and back,.
--   [shelve](http://docs.python.org/3/library/shelve.html) (
-    [py2k](http://docs.python.org/2/library/shelve.html))
+        Convert Python objects to streams of bytes and back.
+-   [shelve](http://docs.python.org/3/library/shelve.html)
     Python object persistence.
 
 ## Structured Markup {#markup_modules}
 See also {{< iref "#xml_parsers" "XML Parsers Libraries" >}}
 
 -   [Structured Markup Processing Tools](https://docs.python.org/3/library/markup.html)
-    ([py2k](https://docs.python.org/2/library/markup.html))
-    regroup the xml related modules.
+        regroup the xml related modules.
 -   [xml.etree.ElementTree](https://docs.python.org/3/library/xml.etree.elementtree.html)
     The ElementTree XML API.<br/>
     The Element type is a container object, designed to store
@@ -526,6 +512,12 @@ List of build tools:
     which introduce to the use of setup tools _entry points_.
 -   [Command-line Interface Development and Command-line Tools - Awesome Python
     ](https://awesome-python.com/#command-line-interface-development)
+-   [argh - similar projects](https://argh.readthedocs.io/en/latest/similar.html)
+    list many CLI libraries.
+
+-   <a name="argh"</a>[argh](https://github.com/neithere/argh/) (GPL)
+    is a wrapper for {{< iref "#argparse" "argparse" >}}. Argh is fully compatible with
+    {{< iref "#argparse" "argparse" >}}.
 -   [Cliff](https://docs.openstack.org/cliff/)  (Apache License)
     part of {{< iref "clouds#openstack" "openStack" >}}
     by Doug Hellmann is a framework for building command line
@@ -666,8 +658,7 @@ List of build tools:
 ## Embedding Extending
 Read first the
 [Extending and Embedding the Python Interpreter Tutorial
-](http://docs.python.org/3/extending/index.html) (
-[py2k](http://docs.python.org/extending/index.html)).
+](http://docs.python.org/3/extending/index.html).
 
 - [Extending Vs. Embedding](http://www.twistedmatrix.com/users/glyph/rant/extendit.html)
   explains why you should favor extending upon embedding.
@@ -735,14 +726,13 @@ You may also want to look at the {{< iref "calendar" "Icalendar Section" >}}
     and [Python Imaging Library Handbook
     ](http://www.pythonware.com/library/pil/handbook/).
 -   [PythonMagick](http://wiki.python.org/moin/ImageMagick)
-    is the Python binding of the ImageMagick library. (py2k and py3k)
+    is the Python binding of the ImageMagick library.
     but [does not seems to install on linux](http://wiki.wxpython.org/PythonMagick).
 -   [pgmacick](http://pypi.python.org/pypi/pgmagick/) (BSD style license)
      is a boost.python based wrapper for GraphicsMagick.
     It is packaged in Debian/Ubuntu.
 -   [PyCairo](http://www.cairographics.org/pycairo/)
-    is a python binding (py2k and py3k) for the
-    [Cairo Librairy](http://cairographics.org/).
+    is a python binding for the [Cairo Librairy](http://cairographics.org/).
 -   [PyLibTiff](http://code.google.com/p/pylibtiff/) (BSD License)
      is a package that provides a wrapper to the libtiff library.
 -   [SciPy](http://www.scipy.org/) has a package dedicated to image processing:
@@ -792,8 +782,7 @@ See also the {{< iref "#ip_address_module" "ipaddress module" >}}
     [Configuration options
     ](http://code.google.com/p/googlecl/wiki/ConfigurationOptions).
 -   [imaplib](http://docs.python.org/3/library/imaplib.html),
-    ([py2k](http://docs.python.org/2/library/imaplib.html))
-    IMAP4 protocol client from the standard library.
+        IMAP4 protocol client from the standard library.
     You find examples in [PyMOTW: imaplib](https://pymotw.com/3/imaplib/)
 -   [IMAPClient](http://imapclient.freshfoo.com/) (BSD License)
     Pythonic and complete IMAP client library with no dependencies
@@ -980,6 +969,7 @@ is found on the web): lxml.html, BeautifulSoup, and html5lib.
     is a collection of Python tools for XML processing and object database management.
     It is no longer maintained since 2006.
 
+
 ### RSS Parsing
 
 -   [feedvalidator](https://github.com/rubys/feedvalidator)
@@ -1032,17 +1022,16 @@ We can also use
 See also the
 {{< iref "#process_modules" "python modules in the process section" >}}
 
--   [Dbus-Python](http://dbus.freedesktop.org/doc/dbus-python/) is the python Dbus bindings.
-    Freedesktop has a [Dbus Python Tutorial](http://dbus.freedesktop.org/doc/dbus-python/doc/tutorial.html).  There are also some
-    [Dbus Examples on the Python Wiki](http://wiki.python.org/moin/DbusExamples) and you can refer to the
-    [Dbus Python API](http://dbus.freedesktop.org/doc/dbus-python/api/).
+### Process wrappers
 
 The following tools implement a subprocess management; similar to the
 shells process combinators like the pipe.
 
--   [envoy](https://github.com/kennethreitz/envoy)
-    is a wrapper around the subprocess module. It is in pypi and
-    similar to _sh_; but the project seems less active _2014_.
+-   [delegator](https://github.com/amitt001/delegator.py) (MIT License)
+    by Kenneth Reitz  _author of requests “urllib2/3 for humans”_, is the
+    continuation of his previous library
+    [envoy](https://github.com/kennethreitz/envoy).
+    It is a wrapper around the subprocess module.
 -   {{< iref "#ipython" "ipython" >}} referenced
     {{< iref "#ipython" "above" >}} can be
     [used as a system interactive shell
@@ -1071,6 +1060,7 @@ shells process combinators like the pipe.
     language and command prompt. The language is a superset of Python
     3.4+.
 
+### Python Command Line
 
 There are many tools to implement in python command line text
 manipulation tool similar to awk or sed which uses standard python
@@ -1180,35 +1170,43 @@ We include also here CSV and config files. The corresponding modules are classif
 -   [csvkit](https://github.com/wireservice/csvkit)
     A suite of utilities for converting to and working with CSV.
     [csvkit documentation](https://csvkit.readthedocs.io/en/latest/).
+-   [Ijson](https://github.com/ICRAR/ijson) (BSD License)
+    is an iterative JSON parser with a standard Python iterator interface.
+    Ijson provides several implementations of the actual parsing by using
+    [YAJL](http://lloyd.github.io/yajl/) or a pure Python parser.
+    -   [PyPi: ijson](https://pypi.python.org/pypi/ijson/).
 -   [jsonpickle](http://jsonpickle.github.com/)
     is a Python library for serialization and deserialization of
     complex Python objects to and from JSON. It extend the standard
-    Python module
-    [json](http://docs.python.org/3/library/json.html).
--   [simplejson](https://pypi.python.org/pypi/simplejson/)
-    is a JSON  encoder and decoder for Python 2.5+ and Python 3.3+.
--   [PyYAML](http://pyyaml.org/) (MIT license)
-    is a  {{< iref "data_exchange#yaml" >}} YAML parser and emitter for Python.
-    _in Debian package python3-yaml_.
-    It includes a  complete  YAML 1.1 parser with unicode support.
-    PyYAML  supports Python 3.
-    -   [PyYAML Documentation](http://pyyaml.org/wiki/PyYAMLDocumentation)
-    -   [pretty-yaml _or pyaml_](https://github.com/mk-fg/pretty-yaml)
-        is a module to produce pretty and readable YAML-serialized
-        data  that extend PyYAML.
--   [Ijson](https://github.com/isagalaev/ijson) (BSD License)
-    is an iterative JSON parser with a standard Python iterator interface.
-    Ijson provides several implementations of the actual parsing by using
-    [YAJL](http://lloyd.github.io/yajl/) or a pure Python parser (to use under PyPy).
-    -   [PyPi: ijson](https://pypi.python.org/pypi/ijson/).
--   [tablib](https://github.com/kennethreitz/tablib) -
-    A library for Tabular Datasets in XLS, CSV, JSON, YAML.
-    [tablib documentation](http://docs.python-tablib.org/en/master/).
+    Python module [json](http://docs.python.org/3/library/json.html).
 -   [mario](https://github.com/python-mario/mario) (GPL)
     Powerful Python pipelines for the shell. Mario can read and write csv, json, and
     yaml; traverse trees, and even do xpath queries, it supports async commands.
     -   [Mario Documentation](https://python-mario.readthedocs.io).
     -   [Mario Add-Ons](https://mario-addons.readthedocs.io)
+-   [simplejson](https://github.com/simplejson/simplejson)
+    is a JSON  encoder and decoder for Python.
+    -   [simplejson Documentation](https://simplejson.readthedocs.io/)
+-   <a name="pyYAML"></a>[PyYAML](http://pyyaml.org/) (MIT license)
+    is a  {{< iref "data_exchange#yaml" "YAML" >}} parser and emitter for Python.
+    _in Debian package python3-yaml_.
+    -   [PyYAML Documentation](http://pyyaml.org/wiki/PyYAMLDocumentation)
+    -   [pretty-yaml _or pyaml_](https://github.com/mk-fg/pretty-yaml)
+        is a module to produce pretty and readable YAML-serialized
+        data  that extend PyYAML.
+-   [ruamel](https://yaml.readthedocs.io/en/latest/)
+    is a YAML 1.2 loader/dumper package for Python. It is a derivative of PyYAML.
+    -   [Ruamel Repository
+        ](https://sourceforge.net/p/ruamel-yaml/code/ci/default/tree/)
+-   [StrictYAML](https://hitchdev.com/strictyaml)
+    is a type-safe YAML parser that parses and validates the restricted subset of YAML
+    also called _StrictYAML_.
+-   [tablib](https://github.com/kennethreitz/tablib) -
+    A library for Tabular Datasets in XLS, CSV, JSON, YAML.
+    [tablib documentation](http://docs.python-tablib.org/en/master/).
+-   [Yq](https://github.com/kislyuk/yq) (Apache License)
+    is a  command-line YAML/XML processor. It is a
+    [jq](https://stedolan.github.io/jq/) wrapper for YAML and XML documents.
 
 ## Test Libraries {#test_libs}
 -   [awesome test automation - python
