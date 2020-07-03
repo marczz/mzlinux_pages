@@ -246,24 +246,15 @@ The source code of python modules is found in the
      provides a standard interface to extract, format and print stack
      traces of Python programs.
 
-## Databases and Object Relational Mappers
-
-They are covered in the {{< iref "python_dbms" "databases programming section" >}}.
 
 ## File Formats {#file_format_modules}
-[File formats modules](https://docs.python.org/3/library/fileformats.html)
-group modules file for fileformats that aren’t markup languages and are not related to
-e-mail.
 
--   [CSV](https://docs.python.org/3/library/csv.html)
-        allow CSV file reading and writing.
--   [configparser](https://docs.python.org/3/library/configparser.html)
-        INI config file parser.
+
 
 ## Concurent execution (Processes) {#process_modules}
 [Concurrent Execution](https://docs.python.org/3/library/concurrency.html)
 provide support for concurrent execution of code.
-See also {{< iref "#unix_modules" "Unix Services"}}.
+See also {{< iref "#unix_modules" "Unix Services" >}}.
 
 -   [subprocess](http://docs.python.org/3/library/subprocess.html)
     spawn new processes, connect to their input/output/error pipes,
@@ -331,26 +322,46 @@ See also the {{< iref "python_web#wsgi" "xCGI stuff" >}} and
     is a collection of cryptographic algorithms and protocols,
     implemented for use from Python.
 
-## Serializing {#serializing_modules}
-See also {{< iref "#serializing_libs" "Python Libraries - serializing" >}}
-and above {{< iref "#file_format_module" "File Format Module" >}}
-for csv and config files.
+## Persistence and exchange {#persistence_modules}
+We include here
+[Data Persistence modules](https://docs.python.org/3/library/persistence.html)
+to support storing Python data in a persistent form and
+[File formats modules](https://docs.python.org/3/library/fileformats.html)
+group modules file for fileformats that aren’t markup languages and are not related to
+e-mail, but Databases and Object Relational Mappers are in
+{{< iref "python_dbms" "databases programming section" >}}.
+
+Both are meant to _serialize_ data, in order to store or exchange it.
+
+There is a section for {{< iref "data_exchange" "Data Exchange Formats" >}}.
+
+See also {{< iref "#persistence_libs" "Python Libraries - Persistence" >}}.
 
 -   Doug Hellmann PyMOTW[Data Persistence and Exchange
     ](https://pymotw.com/3/persistence.html)
     is a panorama of the various ways to achieve persistence in python.
+-   [configparser](https://docs.python.org/3/library/configparser.html)
+    INI config file parser.
+    -   [PyMOTW: configparser](https://pymotw.com/3/configparser/).
+-   [CSV](https://docs.python.org/3/library/csv.html)
+    allow CSV file reading and writing.
+    -   [PyMOTW: csv](https://pymotw.com/3/csv/).
 -   [json](http://docs.python.org/3/library/json.html)  -
-        Encode and decode the
-    {{< iref "data_exchange#json" "JSON" >}} format..
-    [PyMOTW: json](https://pymotw.com/3/json/)</br >
+    Encode and decode the
+    {{< iref "data_exchange#json" "JSON" >}} format.
+    -   [PyMOTW: json](https://pymotw.com/3/json/)
+
     You can use the included script `json.mtool` to validate and pretty-print a
-    json string. _jsonpickle_ (see
-    {{< iref "#serializing_libs" "Python Libraries - serializing" >}})
-    extend the standard Python module _json_.
+    _json_ string.
+
+    The library {{< iref "#jsonpickle" "jsonpickle" >}} (see extend the standard Python
+    module _json_.
 -   [pickle](http://docs.python.org/3/library/pickle.html)
-        Convert Python objects to streams of bytes and back.
+    Convert Python objects to streams of bytes and back.
+    -   [PyMOTW: pickle](https://pymotw.com/3/pickle/index.html)
 -   [shelve](http://docs.python.org/3/library/shelve.html)
     Python object persistence.
+    -   [PyMOTW: shelve](https://pymotw.com/3/shelve/).
 
 ## Structured Markup {#markup_modules}
 See also {{< iref "#xml_parsers" "XML Parsers Libraries" >}}
@@ -661,7 +672,8 @@ Read first the
 ](http://docs.python.org/3/extending/index.html).
 
 - [Extending Vs. Embedding](http://www.twistedmatrix.com/users/glyph/rant/extendit.html)
-  explains why you should favor extending upon embedding.
+  is a post of {{< iref "#twisted" "Twisted" >}} which explains why you should favor
+  extending upon embedding.
 - [swig](http://www.swig.org/) is a multi language binding generator.
   It takes a definition file consisting of a mixture of C code and
   specialised declarations, and produces an extension module.
@@ -794,7 +806,7 @@ See also the {{< iref "#ip_address_module" "ipaddress module" >}}
     [on line python-ldap documentation
     ](http://python-ldap.sourceforge.net/doc/python-ldap/index.html).
 -   [Ldaptor](https://github.com/twisted/ldaptor)
-    is a LDAP server, client and utilities, using Twisted Python.
+    is a LDAP server, client and utilities, using {{< iref "#twisted" "Twisted" >}}.
     [Ldaptor’s documentation](https://ldaptor.readthedocs.org/en/latest/)
     Slides of a talk by Tommi Virtanen
     [Creating a simple LDAP application](http://tv.debian.net/talks/ldaptor/).
@@ -804,20 +816,22 @@ See also the {{< iref "#ip_address_module" "ipaddress module" >}}
 -    <a name="paramiko"></a>[Paramiko](http://www.lag.net/paramiko/)
     (LGPL) is a module that implements the SSH2 protocol.
     - [SSH Programming with Paramiko | Completely Different
-      ](http://jessenoller.com/2009/02/05/ssh-programming-with-paramiko-completely-different/) by Jesse Noller.
+      ](http://jessenoller.com/2009/02/05/ssh-programming-with-paramiko-completely-different/)
+      by Jesse Noller _2009_.
     - [Using SSH in Python with Paramiko
-      ](http://sujitpal.blogspot.com/2010/11/using-ssh-in-python-with-paramiko.html) by Sujit Pal
+      ](http://sujitpal.blogspot.com/2010/11/using-ssh-in-python-with-paramiko.html)
+      by Sujit Pal _2010_.
 
 -   [A list of open-source HTTP proxies written in python
     ](http://xhaus.com/alan/python/proxies.html).
--   [Twisted](https://twistedmatrix.com/trac/) is an
-    asynchronous networking framework written in Python, supporting
-    TCP, UDP, multicast, SSL/TLS, serial communication.
+-   <a name="twisted"></a>[Twisted](https://twistedmatrix.com/) (Public Domain)
+    is an asynchronous networking framework written in Python, supporting TCP, UDP,
+    multicast, SSL/TLS, serial communication.
     -   [Twisted Documentation
         ](https://twistedmatrix.com/trac/wiki/Documentation)
     -   [projects using twisted
         ](http://twistedmatrix.com/trac/wiki/ProjectsUsingTwisted)
-
+    -   [Twisted - GitHub](https://github.com/twisted/twisted)
 
 
 ## Packaging - Installing {#packaging}
@@ -1159,10 +1173,11 @@ see also {{< iref "schedulers#inotify" "Inotify main Section" >}}.
     _watchdog_ depend {{< iref "#argh" "argh" >}} and {{< iref "#pyYAML" "pyYAML" >}}.
     -   [watchdog Documentation](https://python-watchdog.readthedocs.io/en/latest/).
 
-## Serializing {#serializing_libs}
-See also {{< iref "#serializing_module" "Modules: Serializing" >}}
-We include also here CSV and config files. The corresponding modules are classified as
-{{< iref "#file_format_module" "Module: File Format" >}}.
+## Persistence and Data exchange {#persistence_libs}
+
+See also {{< iref "#persistence_module" "Modules: Persistence" >}},
+{{< iref "data_exchange" "Data Exchange Formats" >}}
+and {{< iref "python_dbms" "databases programming" >}}.
 
 -   [configobj](https://github.com/DiffSK/configobj)
     is a config file reader and writer.
@@ -1172,13 +1187,15 @@ We include also here CSV and config files. The corresponding modules are classif
     [csvkit documentation](https://csvkit.readthedocs.io/en/latest/).
 -   [Ijson](https://github.com/ICRAR/ijson) (BSD License)
     is an iterative JSON parser with a standard Python iterator interface.
-    Ijson provides several implementations of the actual parsing by using
+    _Ijson_ provides several implementations of the actual parsing by using
     [YAJL](http://lloyd.github.io/yajl/) or a pure Python parser.
     -   [PyPi: ijson](https://pypi.python.org/pypi/ijson/).
--   [jsonpickle](http://jsonpickle.github.com/)
-    is a Python library for serialization and deserialization of
-    complex Python objects to and from JSON. It extend the standard
-    Python module [json](http://docs.python.org/3/library/json.html).
+-   <a name="jsonpickle"></a>[jsonpickle](https://github.com/jsonpickle/jsonpickle)
+    (MIT like license)
+    is a Python library for serialization and deserialization of complex Python objects
+    to and from JSON. It extend the standard Python module
+    [json](http://docs.python.org/3/library/json.html).
+    -   [jsonpickle documentation](http://jsonpickle.github.io)
 -   [mario](https://github.com/python-mario/mario) (GPL)
     Powerful Python pipelines for the shell. Mario can read and write csv, json, and
     yaml; traverse trees, and even do xpath queries, it supports async commands.
