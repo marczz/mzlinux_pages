@@ -117,6 +117,37 @@ The standard library provides the following modules:
     compresion. It works with python2 and python3. An upper layer is
     provided by the {{< iref "#request" "request library" >}}.
     [urllib3 documentation](http://urllib3.readthedocs.org/en/latest/).
+# CGI
+See also the [CGI protocol references
+](internet_application#web_protocols "internal reference")
+
+See also the {{< iref "#http_libraries" "http libraries section" >}},
+{{< iref "#urllib_request" "urllib.request" >}},
+{{< iref "#http_cookies" "http.cookies" >}},
+{{< iref "#http_cookiesjar" "http.cookiesjar" >}},
+and the third party modules {{< iref "#urllib3" "urllib3" >}},
+{{< iref "#request" "request" >}}.
+
+-   [CGI scripts references](http://wiki.python.org/moin/CgiScripts)
+-   [cgitb module](http://docs.python.org/3/library/cgitb.html)
+    or
+    [python 2 cgitb module](http://docs.python.org/2/library/cgitb.html)
+    is a configurable traceback handler for CGI scripts. Doug Hellmann
+    [cgitb tutorial](https://pymotw.com/3/cgitb/).
+-   [cgi](http://docs.python.org/3/library/cgi.html)
+    Helpers for running Python scripts via the Common Gateway Interface.
+    [python 2 cgi module](http://docs.python.org/2/library/cgi.html).
+-   [CGIHTTPServer](http://docs.python.org/3/library/cgihttpserver.html)
+    HTTP servers which can run CGI scripts.
+    [python 2 CGIHTTPServer
+    ](http://docs.python.org/2/library/cgihttpserver.html)
+-   [Using Python for CGI programming*
+    ](http://www.python.org/doc/essays/ppt/sd99east/index.htm)
+    a 1999 tutorial to python and cgi programming by Guido van Rossum.
+-   [CGI Web Applications with Python, Part Two
+    ](http://www.voidspace.org.uk/python/articles/cgi_web_applications_two.shtml)
+
+
 
 # WSGI {#wsgi}
 
@@ -129,14 +160,12 @@ Numerous Web application frameworks are
 [supporting WSGI](http://wsgi.readthedocs.org/en/latest/frameworks.html):
 see the {{< iref "#web_frameworks" "framework section" >}}
 
-
 -   The   [new wsgi specification PEP 3333](https://www.python.org/dev/peps/pep-3333/)
     for python 3 updates
     [PEP333](https://www.python.org/dev/peps/pep-0333/ "python.org pep-0333")
     the reference implementation for python 2 that is standard since python 2.5,
--   The python module is
-    [wsgiref for python 3](https://docs.python.org/3/library/wsgiref.html) that replace
-    [module wsgiref for python 2.7](https://docs.python.org/2/library/wsgiref.html). <br>
+-   The python module is [wsgiref](https://docs.python.org/3/library/wsgiref.html).
+
     Quoting the module introduction:
     _wsgiref can be used to add WSGI support to a web server or
     framework. It provides utilities for manipulating WSGI environment
@@ -144,6 +173,31 @@ see the {{< iref "#web_frameworks" "framework section" >}}
     servers, a demo HTTP server that serves WSGI applications, and a
     validation tool that checks WSGI servers and applications for
     conformance to the WSGI specification_.
+
+## WSGI Documentation and Tutorials
+-   Wsgi specification for python 3 is the
+    [PEP 3333](http://www.python.org/dev/peps/pep-3333/) that replaces the
+    [PEP 333](http://www.python.org/dev/peps/pep-0333/) which is the python 2 implementation.
+-   [HOWTO Use Python in the web](https://docs.python.org/3/howto/webservers.html)
+    by Marek Kubica introduces cgi fastcgi and wscgi.
+-   [wsgi.org](http://wsgi.readthedocs.org/en/latest/) includes
+    lists of
+    [wsgi specifications](http://wsgi.readthedocs.org/en/latest/specifications.html),
+    [tutorials](http://wsgi.readthedocs.org/en/latest/learn.html), and
+    [presentations](http://wsgi.readthedocs.org/en/latest/presentations.html).
+-   [Web Python Tutorial](http://webpython.codepoint.net/)
+    is an elementary tutorial covering WSGI, CGI and mod_python.
+-   Paul Bonser's
+    [Building a Python Web Application, Part 1
+    ](http://blog.paulbonser.com/2008/06/26/building-a-python-web-application-part-1/)
+    is a tutorial on wsgiref.
+-   [Introducing WSGI: Python's Secret Web Weapon part I
+    ](http://www.xml.com/lpt/a/1674)
+    and [part II](http://www.xml.com/lpt/a/1675) By
+    James Gardner gives a very clear introduction to  wsgi _2008_.
+-   [WSGI tutorial from Chris Rossi](http://archimedeanco.com/wsgi-tutorial/)
+    introduces wsgi and webob and pastedeploy _2009_.
+
 
 ## Wsgi Servers {#wsgi_servers}
 [wsgi.org](http://www.wsgi.org/) has a list of
@@ -255,215 +309,6 @@ that may be more up-to-date than the
     the development is hosted in the
     [werkzeug gitHub Repository](http://github.com/mitsuhiko/werkzeug/).
 
-##  WSGI Middlewares.
-
--   [Middleware and libraries for WSGI](http://www.wsgi.org/en/latest/libraries.html)
-    at [wsgi.org](http://www.wsgi.org/).
--   Luke Arno's [WSGI utilities and middlewares](http://lukearno.com/projects/) offer
-    [yaro](http://lukearno.com/projects/yaro/) (LGPL) _Yet Another Request Object_
--   [repoze.who](https://github.com/repoze/repoze.who) (BSD License)
-    is a WSGI Authentication Middleware
-    -   [Repoze.who Documentation](https://github.com/repoze/repoze.who)
-    -   [Understanding Repoze.who with BottlePy](http://blog.nturn.net/?tag=bottle)
-        in Hailstone3 blog.
-
-## WSGI Documentation and Tutorials
--   Wsgi specification for python 3 is the
-    [PEP 3333](http://www.python.org/dev/peps/pep-3333/) that replaces the
-    [PEP 333](http://www.python.org/dev/peps/pep-0333/ "python.org pep-0333") which is the python 2 implementation.
--   [HOWTO Use Python in the web](http://docs.python.org/3/howto/webservers.html "docs.python.org howto/webservers.html")
-    by Marek Kubica introduces cgi fastcgi and wscgi.
--   [WSGI.org](http://www.wsgi.org/en/latest/ "wsgi.org") includes
-    lists of
-    [wsgi specifications](http://www.wsgi.org/en/latest/specifications.html),
-    [tutorials](http://www.wsgi.org/en/latest/learn.html), and
-    [presentations](http://www.wsgi.org/en/latest/presentations.html).
--   [Web Python Tutorial](http://webpython.codepoint.net/)
-    is an elementary tutorial covering WSGI, CGI and mod_python.
--   Paul Bonser's
-    [Building a Python Web Application, Part 1](http://blog.paulbonser.com/2008/06/26/building-a-python-web-application-part-1/ "paulbonser.com building-a-python-web-application-part-1")
-    is a tutorial on wsgiref.
--   [Introducing WSGI: Python's Secret Web Weapon part I](http://www.xml.com/lpt/a/1674 "xml.com article")
-    and [part II](http://www.xml.com/lpt/a/1675 "xml.com article") By
-    James Gardner gives a very clear introduction to  wsgi.
--   [WSGI tutorial from Chris Rossi](http://archimedeanco.com/wsgi-tutorial/)
-    introduces wsgi and webob and pastedeploy.
-
-## CGI
-See also the [CGI protocol references
-](internet_application#web_protocols "internal reference")
-
-See also the {{< iref "#http_libraries" "http libraries section" >}},
-{{< iref "#urllib_request" "urllib.request" >}},
-{{< iref "#http_cookies" "http.cookies" >}},
-{{< iref "#http_cookiesjar" "http.cookiesjar" >}},
-and the third party modules {{< iref "#urllib3" "urllib3" >}},
-{{< iref "#request" "request" >}}.
-
--   [CGI scripts references](http://wiki.python.org/moin/CgiScripts)
--   [cgitb module](http://docs.python.org/3/library/cgitb.html)
-    or
-    [python 2 cgitb module](http://docs.python.org/2/library/cgitb.html)
-    is a configurable traceback handler for CGI scripts. Doug Hellmann
-    [cgitb tutorial](https://pymotw.com/3/cgitb/).
--   [cgi](http://docs.python.org/3/library/cgi.html)
-    Helpers for running Python scripts via the Common Gateway Interface.
-    [python 2 cgi module](http://docs.python.org/2/library/cgi.html).
--   [CGIHTTPServer](http://docs.python.org/3/library/cgihttpserver.html)
-    HTTP servers which can run CGI scripts.
-    [python 2 CGIHTTPServer
-    ](http://docs.python.org/2/library/cgihttpserver.html)
--   [Using Python for CGI programming*
-    ](http://www.python.org/doc/essays/ppt/sd99east/index.htm)
-    a 1999 tutorial to python and cgi programming by Guido van Rossum.
--   [CGI Web Applications with Python, Part Two
-    ](http://www.voidspace.org.uk/python/articles/cgi_web_applications_two.shtml)
-
-
--   The   [new wsgi specification PEP 3333](https://www.python.org/dev/peps/pep-3333/)
-    for python 3 updates
-    [PEP333](https://www.python.org/dev/peps/pep-0333/)
-    the reference implementation for python 2 that is standard since python 2.5,
--   The python module is
-    [wsgiref for python 3](https://docs.python.org/3/library/wsgiref.html) that replace
-    [module wsgiref for python 2.7](https://docs.python.org/2.7/library/wsgiref.html). <br>
-    Quoting the module introduction:
-    _wsgiref can be used to add WSGI support to a web server or
-    framework. It provides utilities for manipulating WSGI environment
-    variables and response headers, base classes for implementing WSGI
-    servers, a demo HTTP server that serves WSGI applications, and a
-    validation tool that checks WSGI servers and applications for
-    conformance to the WSGI specification_.
-
-## Wsgi Servers {#wsgi_servers}
-[wsgi.org](http://wsgi.readthedocs.org/en/latest/)
-([source on GitHub](https://github.com/GrahamDumpleton/wsgiorg))
-has a list of
-[Servers which support WSGI](http://wsgi.readthedocs.org/en/latest/servers.html).
-
--   To test wsgi applications one needs a simple wsgi server. You can play with
-    servers:
-    [wsgiref.simple_server
-    ](https://docs.python.org/3/library/wsgiref.html#module-wsgiref.simple_server)
-    from  [wsgiref](https://docs.python.org/3/library/wsgiref.html)
-    or the older  [WsgiUtils](http://www.owlfish.com/software/wsgiutils/)
-    from Colin Stewart that provides multi-threads, basic user
-    authentication, signed cookies, and persistent sessions.
-    There is also a  multi-threaded
-    [James WSGI Server](http://wsgiarea.pocoo.org/james/).
--   [Gunicorn](http://gunicorn.org/) <a name="gunicorn"></a>(MIT License)
-    is a Python WSGI HTTP Server for UNIX built on pre-fork worker
-    model. It is usually deployed behind {{< iref "nginx" "nginx" >}}.
-    -   [Gunicorn documentation](http://docs.gunicorn.org/)
-    -   [uWSGI](http://uwsgi-docs.readthedocs.org/en/latest/)
-    is a fast application container server coded in pure C.
-    It can work stand-alone or behind apache/nginx/lighttpd/cherokee.
-    [django can be used with uWSGI
-    ](https://docs.djangoproject.com/en/dev/howto/deployment/wsgi/uwsgi/).
--   Applications can also be tested with
-    [WebTest](http://pythonpaste.org/webtest/)
-    that provides an interface to run WSGI applications
-    and verify the output without starting
-    an HTTP server.<br />
-    Ian Bicking has a
-    [WebTest Howto](http://blog.ianbicking.org/2010/04/02/webtest-http-testing/)
-    in his blog.
--   [flup](http://www.saddi.com/software/flup/)
-    (BSD license) _dev. stopped since 2011_ is a collection of WSGI modules.
-    It provides three set of
-    WSGI servers/gateways
-    which speak AJP, FastCGI, and SCGI.
-    [flup on pypi](https://pypi.python.org/pypi/flup/)
--   {{< iref "apache" "Apache" >}}
-    provides a wsgi [mod_wsgi](http://code.google.com/p/modwsgi/) module.
-    It allows also to run uwsgi with [Apache2 mod_uwsgi or mod_proxy_uwsgi
-    ](http://uwsgi-docs.readthedocs.org/en/latest/Apache.htm).
--   {{< iref "nginx" "nginx" >}}.
-    has also its [wsgi module](http://wiki.nginx.org/NginxNgxWSGIModule)
-    that
-    [supports uwsgi](http://uwsgi-docs.readthedocs.org/en/latest/Nginx.html)
-    It can also act as a reverse proxy in front of {{< iref "#gunicorn" "Gunicorn" >}}
--   {{< iref "lighttpd" "Lighttpd" >}}
-    used to run wsgi via FastCGI in its
-    [HOW-TO WSGI](http://redmine.lighttpd.net/projects/4/wiki/Howto_WSGI).
-    There is an now an experimental
-    [uwsgi module]http://uwsgi-docs.readthedocs.org/en/latest/Lighttpd.html).
--   [Cherokee](http://www.cherokee-project.com) has
-    [support for uwsgi
-    ](http://uwsgi-docs.readthedocs.org/en/latest/Cherokee.html)
-    and details [uwsgi deployement in its cookbook
-    ](http://www.cherokee-project.com/doc/cookbook_uwsgi.html).
--   [joern](https://github.com/jonashaag/bjoern) (BSD License)
-    by Jonas Haag, a Python WSGI server written in C.
-
-##  WSGI Libraries
-As a WSGI Library is the heart of a Web framework you may want to look
-also at the
-{{< iref "#web_frameworks" "Web Frameworks section" >}}.
-The {{< iref "#httpl_libraries" "http libraries" >}}
-can also be used for wsgi programming, but are mainly used
-on the client side.
-
-[wsgi.org](http://wsgi.readthedocs.org/en/latest/)
-has lists of
-[Middleware and libraries for WSGI
-](http://wsgi.readthedocs.org/en/latest/libraries.html),
-[Frameworks that run on WSGI
-](http://wsgi.readthedocs.org/en/latest/frameworks.html),
-[Testing tools for WSGI
-](http://wsgi.readthedocs.org/en/latest/testing.html)
-that is more recent than the
-[Python Wiki: Implementations of WSGI
-](http://wiki.python.org/moin/WSGIImplementations).
-
--   [Pesto](http://www.ollycope.com/software/pesto/)
-    is a small library for Python wsgi applications.
--   [WebOb](http://pythonpaste.org/webob/) <a name="webob"></a>
-    (MIT-style license), a refinement of Paste, is a WSGI library.
-    Since version 1.2 it is compatible with python 3.
-
-    Ian Bicking has written numerous examples of use of WebOb:
-
-    -   [What Does A WebOb App Look Like?
-        ](http://blog.ianbicking.org/2010/03/12/a-webob-app-example/)
-        an example explaining the use of _dispatcher_ and _controller_.
-    -   [WebOb File-Serving Example
-        ](http://pythonpaste.org/webob/file-example.html)
-        shows how you can make a static-file-serving application using WebOb.
-    -   [Comment Example
-        ](http://pythonpaste.org/webob/comment-example.html)
-        shows how to write with WebOb a WSGI middleware which adds a
-        simple comment form to HTML web pages.
-    -   [Wiki Example](http://pythonpaste.org/webob/wiki-example.html)
-        is an example of how to write a WSGI application using WebOb.
-        This example application implements a very simple wiki.
-    -   [JSON-RPC Example](http://pythonpaste.org/webob/jsonrpc-example.html)
-        is an example of how to write a web service using WebOb.
-    -   [Another Do-It-Yourself Framework](http://pythonpaste.org/webob/do-it-yourself.html)
-        shows you how to create a web framework of your own using
-        WSGI and WebOb.
-    -   [Ian Bicking blog: Decorators and Descriptors
-        ](http://blog.ianbicking.org/2008/10/24/decorators-and-descriptors/)
-    -   [webob descriptors
-        ](https://github.com/Pylons/webob/blob/master/webob/descriptors.py)
-        and [webob decorators
-        ](https://github.com/Pylons/webob/blob/master/webob/dec.py)
-        in the
-        [Pylon webob  repository](https://github.com/Pylons/webob)
-    -   [WebOb static](http://webob.readthedocs.org/en/latest/modules/static.html)
-        is a tiny module to serve from WSGI your files/directories.
-    -   {{< wp "Python_Paste"  "Paste" >}}:
-        [Python Paste](http://pythonpaste.org/) (MIT License) is not
-        properly a web framework but rather _a framework for web
-        frameworks_ that use the wsgi standard to provide python
-        modules to act as middleware.  Paste is used in the Pylons web
-        application framework.<br/>
-        Paste is now replaced by {{< iref "#webob" "WebOb" >}}.
--   [werkzeug](http://werkzeug.pocoo.org/) (BSD License) <a name="werkzeug"></a>
-    is a wsgi framework for python 2.x/3.x. It is the base of
-    {{< iref "#flask" "Flask" >}}
-    the development is hosted in the
-    [werkzeug gitHub Repository](http://github.com/mitsuhiko/werkzeug/).
 
 ##  WSGI Middlewares.
 
@@ -479,59 +324,7 @@ that is more recent than the
     -   [Understanding Repoze.who with BottlePy](http://blog.nturn.net/?tag=bottle)
         in Hailstone3 blog.
 
-## WSGI Documentation and Tutorials
--   Wsgi specification for python 3 is the
-    [PEP 3333](http://www.python.org/dev/peps/pep-3333/) that replaces the
-    [PEP 333](http://www.python.org/dev/peps/pep-0333/) which is the python 2 implementation.
--   [HOWTO Use Python in the web](https://docs.python.org/3/howto/webservers.html)
-    by Marek Kubica introduces cgi fastcgi and wscgi.
--   [wsgi.org](http://wsgi.readthedocs.org/en/latest/) includes
-    lists of
-    [wsgi specifications](http://wsgi.readthedocs.org/en/latest/specifications.html),
-    [tutorials](http://wsgi.readthedocs.org/en/latest/learn.html), and
-    [presentations](http://wsgi.readthedocs.org/en/latest/presentations.html).
--   [Web Python Tutorial](http://webpython.codepoint.net/)
-    is an elementary tutorial covering WSGI, CGI and mod_python.
--   Paul Bonser's
-    [Building a Python Web Application, Part 1
-    ](http://blog.paulbonser.com/2008/06/26/building-a-python-web-application-part-1/)
-    is a tutorial on wsgiref.
--   [Introducing WSGI: Python's Secret Web Weapon part I
-    ](http://www.xml.com/lpt/a/1674)
-    and [part II](http://www.xml.com/lpt/a/1675) By
-    James Gardner gives a very clear introduction to  wsgi _2008_.
--   [WSGI tutorial from Chris Rossi](http://archimedeanco.com/wsgi-tutorial/)
-    introduces wsgi and webob and pastedeploy _2009_.
 
-## CGI
-See also the The
-{{< iref "#httpl_libraries" "http libraries section" >}},
-{{< iref "#urllib_request" "urllib.request" >}},
-{{< iref "#http_cookies" "http.cookies" >}},
-{{< iref "#http_cookiesjar" "http.cookiesjar" >}},
-and the third party modules {{< iref "#urllib3" "urllib3" >}},
-{{< iref "#request" "request" >}}.
-
--   [python.org CGI scripts references](http://wiki.python.org/moin/CgiScripts)
--   [cgitb module](http://docs.python.org/3/library/cgitb.html)
-    or
-    [python 2 cgitb module](http://docs.python.org/2/library/cgitb.html)
-    is a configurable traceback handler for CGI scripts. Doug Hellmann
-    [cgitb tutorial](https://pymotw.com/3/cgitb/).
--   [cgi](http://docs.python.org/3/library/cgi.html)
-    Helpers for running Python scripts via the Common Gateway Interface.
-    [python 2 cgi module](http://docs.python.org/2/library/cgi.html).
--   [CGIHTTPServer](http://docs.python.org/3/library/cgihttpserver.html)
-    HTTP servers which can run CGI scripts.
-    [python 2 CGIHTTPServer
-    ](http://docs.python.org/2/library/cgihttpserver.html)
--   [Using Python for CGI programming
-    ](http://www.python.org/doc/essays/ppt/sd99east/index.htm)
-    a 1999 tutorial to python and cgi programming by Guido van Rossum.
--   Michael Foord [CGI Web Applications with Python, Part Two
-    ](http://www.voidspace.org.uk/python/articles/cgi_web_applications_two.shtml)
-
-#
 # Web application framework {#web_frameworks}
 A [web application framework
 ](http://en.wikipedia.org/wiki/Web_application_framework)
@@ -548,16 +341,14 @@ The {{< iref "static_sites" "static site generators" >}} have their own section.
 -   [Choosing a WSGI Framework for API Services
     ](https://doughellmann.com/blog/2012/10/15/ods-grizzly-choosing-a-wsgi-framework-for-api-services/)
     by Doug Hellmann  look how frameworks may, or may not, be suitable
-    for use when building new API servers for OpenStack projects.
+    for use when building new API servers for OpenStack projects. _2012_
 
 ## Bottle {#bottle}
 [Bottle](http://bottlepy.org/docs/dev/index.html)
-is a single-file, lightweight WSGI Python (2.7 or 3.x)
-web-framework. It has no dependencies other than the Python Standard
-Library. It is built around a powerfull routing scheme, supports a
-custom template system and mako, cheetah, jinja2. It provides the
-usual development server, and can be served by any compatible WSGI
-server.
+is a single-file, lightweight WSGI Python web-framework. It has no dependencies other
+than the Python Standard Library. It is built around a powerfull routing scheme,
+supports a custom template system and mako, cheetah, jinja2. It provides the usual
+development server, and can be served by any compatible WSGI server.
 
 -   [GitHub: Bottle dev](https://github.com/defnull/bottle)
 -   [ArchWiki: Bottle](https://wiki.archlinux.org/index.php/Bottle)
