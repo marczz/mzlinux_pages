@@ -2,12 +2,11 @@
 title: Python Web Programming
 ---
 
-{{% toc /%}}
+This is part of {{< iref "python_libraries" "Python Libraries" >}}.
+The {{< iref "templating" "Templating libraries" >}} are in their own section.
 
 ----
 
-The {{< iref "templating" "Templating libraries" >}}
-are in their own section.
 
 # General references
 
@@ -25,76 +24,47 @@ are in their own section.
 
 # HTTP Libraries {#http_libraries}
 ## standard library modules
-The standard library provides the following modules:
+The standard library provides libraries for working with the web protocol.
+
+There are examples of use of these libraries in
+[The Internet — PyMOTW](https://pymotw.com/3/internet_protocols.html).
 
 -   [http.client](http://docs.python.org/3/library/http.client.html)
     implement the client side of the HTTP and HTTPS protocols.
     It is normally  used though the
     {{< iref "#urllib" "utllib module" >}}.
-    in python 2 it is called [httplib
-    ](http://docs.python.org/2/library/httplib.html)
--   [http.cookies](http://docs.python.org/3/library/http.cookies.html)
-    <a name="http_cookies"></a>
-    abstract the concept of cookies, an HTTP state management mechanism.
-    It supports both simple string-only cookies, and also any
-    serializable data-type as cookie value, it is principally useful
-    for server-side code see following
-    [http.cookiesjar]{{< iref "#urllib" "#http_cookiesjar "internal reference") for     client side processing. [urllib.request" >}}
-    also handle cookies with the class _HTTPCookieProcessor_.
-    -   In python 2 this module was named [cookie
-        ](http://docs.python.org/2/library/cookie.html).Doug Hellmann
-    -   [PyMOTW: Cookie](https://pymotw.com/3/Cookie/).
--   [http.cookiesjar](http://docs.python.org/3/library/http.cookiejar.html)
-    <a name="http_cookiesjar"></a>
-    handle reading of HTTP cookies.
-    -  In python2 it was named
-       [cookielib](http://docs.python.org/2/library/cookielib.html).
-    -  [cookielib and ClientCookie
-       ](http://www.voidspace.org.uk/python/articles/cookielib.shtml)
-       tutorial by Michael Foord .
--   [urllib module](http://docs.python.org/3/library/urllib.html)
-    <a name="urllib"></a> provides
-    a simple interface for network resource access. In python 3 it is
-    split in several submodules:
-    -   [urllib.request
+-   <a name="http_cookies"></a>[http.cookies
+    ](http://docs.python.org/3/library/http.cookies.html)
+    abstract the concept of cookies, an HTTP state management mechanism.  It supports
+    both simple string-only cookies, and also any serializable data-type as cookie
+    value, it is principally useful for server-side code; see following
+    {{< iref  "#http_cookiesjar" "http_cookiesjar"  >}}  for  client side
+    processing.
+    -   [PyMOTW: HTTP Cookie](https://pymotw.com/3/http.cookies/).
+-   <a name="http_cookiesjar"></a>[http.cookiesjar
+    ](http://docs.python.org/3/library/http.cookiejar.html)
+    handle reading of HTTP cookies for a web client.
+    {{< iref  "#urllib_request" "urllib.request" >}}
+    also returns a _http.cookiesjar_ as attribute of the class _HTTPCookieProcessor_.
+
+    The {{< iref "#request" "Requests package" >}} offer an enhancement of
+    _http.cookiejar_ which exposes a dict interface. in the class [RequestsCookieJar
+    ](https://requests.readthedocs.io/en/master/api/#requests.cookies.RequestsCookieJar).
+-   <a name="urllib"></a>[urllib module](http://docs.python.org/3/library/urllib.html)
+    provides a simple interface for network resource access. It is split in several
+    submodules:
+    -   <a name="urllib_request"></a>[urllib.request
         ](https://docs.python.org/3/library/urllib.request.html)
-        <a name="urllib_request"></a>for opening and reading URLs
-        using basic and digest  authentication, redirections, cookies,
-        etc.,
-        _The {{< iref "#request" "Requests package" >}}
-        is recommended for a higher-level http client interface._
+        is the main _urllib_ module, it is for opening URLs (mostly HTTP) using basic
+        and digest authentication, redirections, cookies, etc.
+
+        _The {{< iref "#request" "Requests package" >}} is
+        recommended for a higher-level http client interface._
+
     -   _urllib.error_ containing the exceptions raised by urllib.request,
-    -   [urllib.parse]
-        ](https://docs.python.org/3/library/urllib.parse.html)
+    -   [urllib.parse](https://docs.python.org/3/library/urllib.parse.html)
         for parsing URLs,
     -   _urllib.robotparser_ for parsing robots.txt files.
-
-    -   [HOWTO Fetch Internet Resources Using The urllib Package
-        ](http://docs.python.org/3/howto/urllib2.html)
-        by Michael Foord.
--   In python 2 the [urllib module
-    ](http://docs.python.org/2/library/urllib.html#module-urllib)
-    helped by [urlparse module
-    ](http://docs.python.org/2/library/urlparse.html#module-urlparse)
-    provided the interface for fetching data across the Web.
-    It has been improved in [urllib2
-    ](http://docs.python.org/2/library/urllib2.html)
-    which help in opening URLs (mostly HTTP) using basic and digest
-    authentication, redirections, cookies to
-    provide facilities close to the new
-    {{< iref "#urllib" "python3 urlllib module" >}}.
-    -   [urllib/urllib2 porting from Python2 to Python3
-        ](http://docs.pythonsprints.com/python3_porting/py-porting.html#url-related-modules).
-    -   [HOWTO Fetch Internet Resources Using The urllib2 Package
-        ](http://docs.python.org/2/howto/urllib2.html)
-        by Michael Foord. Previously named: *urllib2 - The Missing Manual*
-    -   Doug Hellmann PyMOW examples: [urllib
-        ](https://pymotw.com/3/urllib/) ),
-    -   [urllib2](https://pymotw.com/3/urllib2/),
-    -   [urlparse](http://pymotw.com/2/urlparse/index.html#module-urlparse).
-    -   [urllib2 - The Missing Manual
-        ](http://www.voidspace.org.uk/python/articles/urllib2.shtml)
-
 
 ## Third party modules
 
