@@ -1082,49 +1082,6 @@ shells process combinators like the pipe.
     language and command prompt. The language is a superset of Python
     3.4+.
 
-### Pipeline Python
-
-There are many tools to implement in python command line text
-manipulation tool similar to awk or sed which uses standard python
-string and list methods as well as custom functions.
-
-They are compared in two threads from 2014 and 2015 of _HackerNews_:
-[here](https://news.ycombinator.com/item?id=8847141),
-[and here](https://news.ycombinator.com/item?id=8158976)
-
--   [Pyp](https://github.com/hauntsaninja/pyp) (BSD License)
-    _active ib 2020_.
-    based on the old _Pyed Piper_ no more developped since 2012.
--   [Pyped](http://github.com/ksamuel/Pyped)
-    command that pipes data from bash to Python, and vice-versa  In _pypi_, _2014_.
--   [pythonpy](https://github.com/Russell91/pythonpy) (MIT License)
-    In _pypi_ and _Debian_, _active in 2016, but no longer
-    available in GitHub in 2020_.
-
-    This [thread in _python-ideas_
-    ](https://mail.python.org/pipermail/python-ideas/2015-January/030837.html)
-    give some evaluation / criticisms to the concepts of
-    *pythonpy*, the end of the thread compare it with _spy_.
-
-    -   [pythonpy-clone](https://github.com/iomintz/pythonpy-clone)
-        ([blueoakcouncil Licence](https://blueoakcouncil.org/license/1.0.0))
-        is a rewrite of pythonpy using AST manipulations instead of regex.
-        _This project had commit only during one 2019 month, as far as jully 2020_.
--   [pyin](https://github.com/geowurster/pyin) (BSD License)
-    aimed at replacing sed.  In _pypi_, _active in 2019_.
--   [spy](https://github.com/edk0/spy) (WFTPL)
-    derived from pythonpy and pyp. Only python3, In _pypi_ with
-    name _spy-cli_,_active in 2020_.
--   [pit](https://github.com/samzhang111/pit)
-    Or Python as a stream filter, python3 _2015_.
--   [pype](https://github.com/ircflagship2/pype)
-    Python 2 or 3, in _pypi_ under the name _pypecli_, _2015_.
--   [mario](https://github.com/python-mario/mario) (GPL)
-    Powerful Python pipelines for the shell. Mario can read and write csv, json, and
-    yaml; traverse trees, and even do xpath queries, it supports async commands.
-    _active in 2020_.
-    -   [Mario Documentation](https://python-mario.readthedocs.io).
-    -   [Mario Add-Ons](https://mario-addons.readthedocs.io)
 
 ### Dbus from Python {#dbus_python_api}
 
@@ -1240,6 +1197,50 @@ and {{< iref "python_dbms" "databases programming" >}}.
 -   [Yq](https://github.com/kislyuk/yq) (Apache License)
     is a  command-line YAML/XML processor. It is a
     [jq](https://stedolan.github.io/jq/) wrapper for YAML and XML documents.
+
+## Pipeline Python
+
+There are many tools to implement in python command line text
+manipulation tool similar to awk or sed which uses standard python
+string and list methods as well as custom functions.
+
+They are compared in two threads from 2014 and 2015 of _HackerNews_:
+[here](https://news.ycombinator.com/item?id=8847141),
+[and here](https://news.ycombinator.com/item?id=8158976)
+
+-   [Pyp](https://github.com/hauntsaninja/pyp) (BSD License)
+    _active ib 2020_.
+    based on the old _Pyed Piper_ no more developped since 2012.
+-   [Pyped](http://github.com/ksamuel/Pyped)
+    command that pipes data from bash to Python, and vice-versa  In _pypi_, _2014_.
+-   [pythonpy](https://github.com/Russell91/pythonpy) (MIT License)
+    In _pypi_ and _Debian_, _active in 2016, but no longer
+    available in GitHub in 2020_.
+
+    This [thread in _python-ideas_
+    ](https://mail.python.org/pipermail/python-ideas/2015-January/030837.html)
+    give some evaluation / criticisms to the concepts of
+    *pythonpy*, the end of the thread compare it with _spy_.
+
+    -   [pythonpy-clone](https://github.com/iomintz/pythonpy-clone)
+        ([blueoakcouncil Licence](https://blueoakcouncil.org/license/1.0.0))
+        is a rewrite of pythonpy using AST manipulations instead of regex.
+        _This project had commit only during one 2019 month, as far as jully 2020_.
+-   [pyin](https://github.com/geowurster/pyin) (BSD License)
+    aimed at replacing sed.  In _pypi_, _active in 2019_.
+-   [spy](https://github.com/edk0/spy) (WFTPL)
+    derived from pythonpy and pyp. Only python3, In _pypi_ with
+    name _spy-cli_,_active in 2020_.
+-   [pit](https://github.com/samzhang111/pit)
+    Or Python as a stream filter, python3 _2015_.
+-   [pype](https://github.com/ircflagship2/pype)
+    Python 2 or 3, in _pypi_ under the name _pypecli_, _2015_.
+-   [mario](https://github.com/python-mario/mario) (GPL)
+    Powerful Python pipelines for the shell. Mario can read and write csv, json, and
+    yaml; traverse trees, and even do xpath queries, it supports async commands.
+    _active in 2020_.
+    -   [Mario Documentation](https://python-mario.readthedocs.io).
+    -   [Mario Add-Ons](https://mario-addons.readthedocs.io)
 
 ## Test Libraries {#test_libs}
 -   [awesome test automation - python
