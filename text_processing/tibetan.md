@@ -196,9 +196,11 @@ See also {{< iref "input_methods" "Input Methods" >}},
     Drops of Nectar by Khenpo Kunpal is an important Tibetan commentary
     of Shantideva's work.
 
-# Tibetan Calendar
+# Tibetan Calendar {#tibetan_calendar"}
+
 -   {{< wp "Tibetan calendar"  "Wikipedia: Tibetan Calendar" >}}
     is a very comprehensive explanation of Tibetan calendar basics.
+-   {{< wp "Tibetan_Astrology"  "Wikipedia: Tibetan Astrology" >}}
 -   At Nithartha :[History of the Tibetan Calendar
     ](http://www.nitartha.org/calendar_traditions.html)
     explains the traditions of Phukluk and Tsurluk. then an explanation of
@@ -208,28 +210,39 @@ See also {{< iref "input_methods" "Input Methods" >}},
     ](http://www.nitartha.org/calendar_elements.html)
 -   [An explanation of practice days
     ](http://www.fpmt.org/media/resources/dharma-dates/dates-explained.html)
--   [The conversion between Tibetan and Western Years
-    ](http://www.hermetic.ch/cal_stud/tib_year.htm)
-    has been implemented as an online calculator at
-    [Tibetan Calendar Converter
-    ](http://www.phlonx.com/resources/tibetan_calendar/).
--   The Swedish mathematician Svante Janson has published a note on
-    [Tibetan Calendar Mathematics (pdf)
-    ](http://www.math.uu.se/~svante/papers/calendars/tibet.pdf)
+-   [Kālacakra Calendar](http://kalacakra.org/calendar/kcal.htm)
+    explains  the different system used in Tibet, with references to related pages.
 -   [Kalachakra.org: Tibetan calendar
     ](http://kalacakra.org/calendar/tibcal.htm),
-    [Kalachakra calendar](http://kalacakra.org/calendar/kcal.htm),
-     Phugpa and
-    [Tsurphu Tibetan calendar list
-    ](http://kalacakra.org/calendar/tiblist2.htm).
-    See also [Calendar at /kalachakranet
-    ](http://kalachakranet.org/ta_tibetan_calendar.html)
+    -   [ཕུག་པ་ or ཕུག་ལུགས་ Calendars py year](http://www.kalacakra.org/calendar/tiblist.htm)
+    -   [ཚུཕུ་ calendar list](http://kalacakra.org/calendar/tiblist2.htm).
+    -   [Kalachakra calendar](http://kalacakra.org/calendar/kcal.htm),
+    -   See also [Calendar at /kalachakranet
+        ](http://kalachakranet.org/ta_tibetan_calendar.html)
 -   [tibetan astrology by Taina Kumpulainen](http://www.tactus.dk/tacom/)
     [Table of Years 1567-2046](http://www.tactus.dk/tacom/calendar5.htm)
 -   [Tibetan Astrology Site
     ](http://www.xs4all.nl/~loekjehe/website_loek/astro/index.html)
     from [Loek Jehee](http://www.xs4all.nl/~loekjehe/) (
     [alt page](http://www.xs4all.nl/~loekjehe/index_old.htm))
+
+## Calendar software
+-   The Swedish mathematician Svante Janson has published a note on
+    [Tibetan Calendar Mathematics (pdf)
+    ](http://www.math.uu.se/~svante/papers/calendars/tibet.pdf)
+-   [The conversion between Tibetan and Western Years
+    ](http://www.hermetic.ch/cal_stud/tib_year.htm)
+    has been implemented as an online calculator at
+    [Tibetan Calendar Converter
+    ](http://www.phlonx.com/resources/tibetan_calendar/).
+-   [Tibetan calendar software at kalacakra.org
+    ](http://www.kalacakra.org/calendar/os_tib.htm)
+    a C++ program for windows.
+-   [software from Sherab Ling](http://www.kalacakra.org/calendar/os_slc.htm)
+    an other C++ software for windows.
+-   [Tibetan Phugpa online Calendar Calculator
+    ](http://www.digitaltibetan.org/cgi-bin/phugpa.pl)
+    at digitaltibetan.org is open source and the Perl module is available.
 
 # Dictionaries {#tibetan_dictionaries}
 ## printed dictionaries
