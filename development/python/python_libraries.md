@@ -127,6 +127,10 @@ provide support for concurrent execution of code. It groups processes and thread
 
 See also {{< iref "#unix_modules" "Unix Services" >}}.
 
+A limit of concurent execution in Python is the
+{{< wp "Global interpreter lock" >}}, more [information on the "Global interpreter lock
+in wiki.python.org](https://wiki.python.org/moin/GlobalInterpreterLock).
+
 -   [subprocess](http://docs.python.org/3/library/subprocess.html)
     spawn new processes, connect to their input/output/error pipes,
     and obtain their return codes.
