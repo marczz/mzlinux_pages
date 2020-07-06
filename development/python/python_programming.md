@@ -2,10 +2,6 @@
 title: Python Programming
 ---
 
-{{% toc /%}}
-
------
-
 # Python coding style
 The page {{< iref "structured_text" "Structured text formatters" >}}
 references many python formatters like the docutil restructured text,
@@ -54,10 +50,10 @@ asciidoc, markdown, txt2tags ....
     twisted project. Pydoctor depends on twisted and Nevow.
 -   [Pylookup](http://taesoo.org/Opensource/Pylookup) by Taesoo Kim
     is a mode to search python documents especially within emacs.
--   [Sphinx](http://sphinx.pocoo.org/) is a tool originally to build HTML and PDF documentation
-    using reStructuredText. It has support for highlighting source
-    with Pygment and autogenerating documentation from source code
-    with the [autodoc extension](http://sphinx-doc.org/ext/autodoc.html).
+-   {{ iref "web#sphinx" "Sphinx" >}} is a tool originally to build HTML and PDF
+    documentation using reStructuredText. It has support for highlighting source with
+    Pygment and autogenerating documentation from source code with the
+    [autodoc extension](http://sphinx-doc.org/ext/autodoc.html).
     The [extension autosummary] generates function/method/attribute summary lists,
     similar to those output e.g. by Epydoc and other API doc generation tools.
 -   <a name=apidoc></a>[sphinx-apidoc
@@ -69,9 +65,8 @@ asciidoc, markdown, txt2tags ....
     or related documentation tools.
 
 The documentation of python can be done using
-{{< iref "source_code#literate_programming" "Literate Programming" >}}
-, we can use a langage agnostic tool, or
-one of the manifold python literate tools.
+{{< iref "source_code#literate_programming" "Literate Programming" >}},
+we can use a langage agnostic tool, or one of the manifold python literate tools.
 See the references to Cog, pyreport , pyWeb, PyLit in the
 {{< iref "source_code#literate_programming" "Literate Programming Section" >}}
 
