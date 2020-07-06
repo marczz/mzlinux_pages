@@ -2,6 +2,11 @@
 title: Python Libraries
 ---
 
+Some domains have their own section: {{< iref "python_web" "Internet libraries" >}},
+{{< iref "templating" "Templating libraries" >}}.
+
+___
+
 # Modules {#modules}
 Subset of the [Python full module index](http://docs.python.org/3/py-modindex.html)
 from the [Python Standard Library](https://docs.python.org/3/library/index.html).
@@ -192,6 +197,9 @@ The source code of python modules is found in the
 -   [os.path](http://docs.python.org/3/library/os.path.html)
     OS independant operations on pathnames.
     -   [os.path — PyMOTW](https://pymotw.com/3/os.path/index.html).
+-   [pathlib](https://docs.python.org/3/library/pathlib.html)
+    use filesystem paths as class objects.
+    -   [PyMOTW: pathlib](https://pymotw.com/3/pathlib/index.html)
 
 ## Interfaces {#interface_modules}
 -   [curses](http://docs.python.org/3/library/curses.html)
@@ -247,13 +255,11 @@ The source code of python modules is found in the
      traces of Python programs.
 
 
-## File Formats {#file_format_modules}
 
-
-
-## Concurent execution (Processes) {#process_modules}
+## Concurent execution  {#process_modules}
 [Concurrent Execution](https://docs.python.org/3/library/concurrency.html)
-provide support for concurrent execution of code.
+provide support for concurrent execution of code. It groups processes and threads.
+
 See also {{< iref "#unix_modules" "Unix Services" >}}.
 
 -   [subprocess](http://docs.python.org/3/library/subprocess.html)
@@ -897,7 +903,7 @@ See also the {{< iref "#ip_address_module" "ipaddress module" >}}
     -   [Using Fabric for SSH](http://advanced-python.readthedocs.org/en/latest/fabric.html)
         in [Curriculum for Advanced Python](http://advanced-python.readthedocs.org/en/latest/).
     -   An example of use is  the [Flask site deployment with Fabric
-        ](http://flask.pocoo.org/docs/patterns/fabric/) or also the
+        ](https://flask.palletsprojects.com/en/1.1.x/patterns/fabric/) or also the
         [Byte of python fabfile
         ](https://github.com/swaroopch/byte_of_python/blob/develop/fabfile.py)
 
