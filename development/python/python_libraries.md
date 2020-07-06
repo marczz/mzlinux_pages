@@ -121,6 +121,33 @@ The source code of python modules is found in the
         safari,....
     -   See also the {{< iref "programming_languages#pcre" "pcre references" >}}
 
+## Concurent execution  {#process_modules}
+[Concurrent Execution](https://docs.python.org/3/library/concurrency.html)
+provide support for concurrent execution of code. It groups processes and threads.
+
+See also {{< iref "#unix_modules" "Unix Services" >}}.
+
+-   [subprocess](http://docs.python.org/3/library/subprocess.html)
+    spawn new processes, connect to their input/output/error pipes,
+    and obtain their return codes.
+    The main class is
+    [subprocess.Popen
+    ](http://docs.python.org/3/library/subprocess.html#subprocess.Popen)
+    -   [PyMOTW: subprocess](https://pymotw.com/3/subprocess/).
+-   [multiprocessing
+    ](http://docs.python.org/3/library/multiprocessing.html)
+    offers both local and remote concurrency. It's API is similar to the
+    _threading module_. It  provide a _Queue_ class and _Pipe_ class to exchange
+     objects between processes.
+    -   [PyMOTW multiprocesing](https://pymotw.com/3/multiprocessing/)
+-   [threading](http://docs.python.org/3/library/threading.html)
+    higher-level threading interfaces.
+    -   [PyMOTW threading](https://pymotw.com/3/threading/)
+-   [queue](http://docs.python.org/3/library/queue.html)
+    module implements multi-producer, multi-consumer queues.
+    It is especially useful in threaded programming.
+    -   [PyMOTW queue](https://pymotw.com/3/Queue/)
+
 ## Development tools
 -   The <a name="distutils"></a>
     [module distutils](http://docs.python.org/3/library/distutils.html)
@@ -253,35 +280,6 @@ The source code of python modules is found in the
 -   [traceback](http://docs.python.org/3/library/traceback.html)
      provides a standard interface to extract, format and print stack
      traces of Python programs.
-
-
-
-## Concurent execution  {#process_modules}
-[Concurrent Execution](https://docs.python.org/3/library/concurrency.html)
-provide support for concurrent execution of code. It groups processes and threads.
-
-See also {{< iref "#unix_modules" "Unix Services" >}}.
-
--   [subprocess](http://docs.python.org/3/library/subprocess.html)
-    spawn new processes, connect to their input/output/error pipes,
-    and obtain their return codes.
-    The main class is
-    [subprocess.Popen
-    ](http://docs.python.org/3/library/subprocess.html#subprocess.Popen)
-    -   [PyMOTW: subprocess](https://pymotw.com/3/subprocess/).
--   [multiprocessing
-    ](http://docs.python.org/3/library/multiprocessing.html)
-    offers both local and remote concurrency. It's API is similar to the
-    _threading module_. It  provide a _Queue_ class and _Pipe_ class to exchange
-     objects between processes.
-    -   [PyMOTW multiprocesing](https://pymotw.com/3/multiprocessing/)
--   [threading](http://docs.python.org/3/library/threading.html)
-    higher-level threading interfaces.
-    -   [PyMOTW threading](https://pymotw.com/3/threading/)
--   [queue](http://docs.python.org/3/library/queue.html)
-    module implements multi-producer, multi-consumer queues.
-    It is especially useful in threaded programming.
-    -   [PyMOTW queue](https://pymotw.com/3/Queue/)
 
 
 ## Network {#network_modules}
