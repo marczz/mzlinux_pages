@@ -1258,97 +1258,68 @@ They are compared in two threads from 2014 and 2015 of _HackerNews_:
     ](https://github.com/svaksha/pythonidae/blob/master/QA.md)
 -   [pycrumbs - Testing](https://github.com/kirang89/pycrumbs#testing)
 
-### Program Testing packages
+### Program Testing
 
--   [coverage](http://nedbatchelder.com/code/coverage/) by Ned Batchelder
-    is a tool for measuring code coverage of Python programs.
-    It monitors your program, noting which parts of the code have been
-    executed, then  analyzes the  source to  identify code  that could
-    have been executed but was not.<br />
-    Coverage works with python 3.x.
--   [nose](http://readthedocs.org/docs/nose/)
-    is a unit test discovery and execution package. described in
-    [An Extended Introduction to the nose Unit Testing Framework
-    ](http://ivory.idyll.org/articles/nose-intro.html).
-    Nose works with python 2.x and 3.x.
-    - [Nose GitHub Repository](https://github.com/nose-devs/nose)
-    - nose allow use of [test generators
-    ](http://readthedocs.org/docs/nose/en/latest/writing_tests.html#test-generators)
--   [py.test](http://pytest.org/) is
+-   [coverage](https://github.com/nedbat/coveragepy/) (Apache-2.0 License)
+    by Ned Batchelder is a tool for measuring code coverage of Python programs.  It
+    monitors your program, noting which parts of the code have been executed, then
+    analyzes the source to identify code that could have been executed but was not.
+-   [nose2](https://github.com/nose-devs/nose2) (BSD License)
+    is a unit test discovery and execution package.
+    -   [nose2 documentation](https://docs.nose2.io/en/latest/)
+    -   [An Extended Introduction to the nose Unit Testing Framework
+        ](http://ivory.idyll.org/articles/nose-intro.html).
+    -   nose allow use of [test generators
+        ](http://readthedocs.org/docs/nose/en/latest/writing_tests.html#test-generators)
+-   [py.test](https://github.com/pytest-dev/pytest/)
     a rest runner, that can integrate unittest, doctest, and nose.
-    It works  with python 2.x and 3.x.
--   [ScriptTest](http://pythonpaste.org/scripttest/) (MIT license)
+    -   [pytest documentation](https://docs.pytest.org/). (MIT License)
+-   [ScriptTest](https://github.com/pypa/scripttest) (MIT license)
      test command-line scripts. It runs a script and watches the output,
      looks for non-zero exit codes, output on stderr, and any files created,
      deleted, or modified.
--   [TestOOB](http://testoob.sourceforge.net/) (Apache license) is an
-    extension of unittest. It add the possibility to run the tests in
-    different processes or multiple threads
 
 ### Mock objects {#mock_objects}
 Gary Bernhardt gives a
 [Python Mock Library Comparison](http://garybernhardt.github.com/python-mock-comparison/)
 which compare _mock_, _flexmock_, _mox_, _Mocker_, _Dingus_, and _fudge_.
 
-All the following libraries can be used in Python 3.
+In the standard library you find {{< iref "#unittest.mock" "unittest.mock" >}}
 
--   [MiniMock](http://pypi.python.org/pypi/MiniMock)
-    is a simple library for doing {{< wp "Mock_object"  "Mock objects" >}} with doctest.
--   [Mock](http://www.voidspace.org.uk/python/mock/)  is a  library for
-    {{< wp "Mock objects" >}} in python including py3k. It is designed for use with unittest.
-    It has a very
-    [good quality and detailed documentation](http://www.voidspace.org.uk/python/mock/).<br />
-    It is integrated in the standard library as
-    [unittest.mock](http://docs.python.org/3/library/unittest.mock.html)
-    since Python 3.3.
--   [Mox](https://code.google.com/p/pymox/)(Apache License)
-    is a mock object framework for Python based on the
-    [java library EasyMock](http://www.easymock.org).
-     Mox allow to mock the
-    public/protected interfaces of Python objects.
--   [Fudge](http://farmdev.com/projects/fudge/) (MIT license)
-    is a  module for using fake objects (mocks and stubs).
--   [dingus](https://github.com/garybernhardt/dingus)
-    define mock-like objects.  You run your code, using a _dingus_ in
-    place of another object or class, and it will record what happens
-    to it. Then you can make assertions about what it did to the
-    dingus.
--   [flexmock](http://has207.github.com/flexmock/index.html) (BSD License)
+
+-   [chai](https://github.com/agoragames/chai) (BSD-3 License)
+    is a mock library patterned after the
+    [Mocha](http://mocha.rubyforge.org/) library for Ruby.
+-   [flexmock](https://github.com/bkabrda/flexmock) (BSD License)
     is a mock objects library inspired by the
     [ruby library also named flexmock](https://github.com/jimweirich/flexmock).
--   [chai](https://pypi.python.org/pypi/chai) is a mock library
-    patterned after the [Mocha](http://mocha.rubyforge.org/) library for Ruby.
+    -   [flexmock documentation](https://flexmock.readthedocs.io/en/latest/)
+-   [MiniMock](https://github.com/lowks/minimock) (MIT License)
+    is a simple library for doing {{< wp "Mock_object"  "Mock objects" >}} with doctest.
+    _ Last commit 2016._
+-   [pymox](https://github.com/ivancrneto/pymox)(Apache License)
+    is a mock object framework for Python based on the
+    [java library EasyMock](http://www.easymock.org).
+     Mox allow to mock the public/protected interfaces of Python objects.
+     _last commit 2018_.
 
 ### Web application testing {#webunittest}
--   [Funcload](http://funkload.nuxeo.org/) (GPL) is an extension of unittest
-     that allows the functional and load testing of a web application.
--   [twill](http://twill.idyll.org/) is a simple
+-   [Funcload](https://github.com/nuxeo/FunkLoad) (GPL)
+    is an extension of unittest that allows the functional and load testing of a web
+    application. _last commit 2016_.
+-   [twill](https://github.com/twill-tools/twill) (MIT Licence)
+    is a simple
     scripting language intended for programmatic or automated browsing
     of Web sites.
-    [Mechanoid](http://pypi.python.org/pypi/mechanoid) (GPL)
-    is also a python console browser based on the same project
+    It is based on the same project
     [Mechanize](http://wwwsearch.sourceforge.net/mechanize/)
-    (BSD License).
-    Both projects are now abandoned since 2007 and stuck to python
-    2.3. There was a fork in 2012 [
-    retwill](http://bitbucket.org/brandizzi/retwill/);
-    it is not yet clear if the project will be maintained.
-    -   [Testing Python Web applications using twill and wsgi\_intercept
-        ](http://www.advogato.org/article/874.html)
-      by Titus Brown.
--   [webunit](http://pypi.python.org/pypi/webunit)
-    is a framework for unit testing websites still useful, and used in
-    other frameworks like _Funcload_ or _wsgi-intercept_; but badly
-    documented and not updated since 2004.
--   [wsgi-intercept](http://code.google.com/p/wsgi-intercept/)
+    (BSD License) as was [Mechanoid](http://pypi.python.org/pypi/mechanoid) (GPL)
+    which is now abandoned.
+-   [wsgi-intercept](https://github.com/cdent/wsgi-intercept)
     lets you intercept calls to any specific host/port combination
     and redirect them into a WSGI application importable by your test program.
     wsgi-intercept allows to do functional _or integration_ tests.
--   [webtest](http://pythonpaste.org/webtest/)
 
-    wrap a WSGI application to allow to test it without starting a
-    web server. Since version 1.3.1 WebTest is compatible with py3k.
-    [WebTest Repository](https://bitbucket.org/ianb/webtest/)
 
 ## Virtualenv {#virtualenv}
 
