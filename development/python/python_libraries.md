@@ -596,26 +596,17 @@ List of build tools:
 
 ## Development environment
 
--   [PyPI: Integrated Development Environments](http://wiki.python.org/moin/IntegratedDevelopmentEnvironments) gives a full list of python IDEs.
--   [Pydbgr](http://code.google.com/p/pydbgr/)
-    is an extended python debugger replacing the previous
-    [Pydb](http://bashdb.sourceforge.net/pydb/), but it is not _yet_
-    ported to Py3k.
--   [WinPdb](http://winpdb.org/) (GPL) is a platform independent GPL Python debugger said to be up to 20 times faster than pdb.
-    It is
-    [packaged in Debian](http://packages.debian.org/unstable/python/winpdb);
-    _Winpdb_ development seems to have slow down, and the last release
-    at the time of this writting is 1.4.8 with support of python 3.0. Nothing
-    for 3.2 and 3.3, and the Debian package is only for python 2.x.
--   <a name="ipython"> [IPython](http://ipython.org/)
+-   [PyPI: Integrated Development Environments
+    ](http://wiki.python.org/moin/IntegratedDevelopmentEnvironments)
+    gives a full list of python IDEs.
+-   [python3-trepan](https://github.com/rocky/python3-trepan/) (GPL)
+    is an extended python debugger replacing the previous _pdb_.
+    -   [pytho3-trepan documentation](http://python3-trepan.readthedocs.org/).
+   <a name="ipython"> [IPython](http://ipython.org/)
     is an interactive development environment for python
     which provides an enhanced interactive Python shell and a
     {{< iref "#jupyter" "Jupyter" >}} kernel to work with Python code in Jupyter notebooks
-    The [documentation of IPython
-    ](http://ipython.readthedocs.io/en/stable/)
-    contains the Manual.</br>
-    Ipython support is compatible ith python >= 3.3. The Python 2 compatibility stopped
-    with ipython 6.0, but is still available in iPython 5.4 LTS.
+    -    [documentation of IPython](http://ipython.readthedocs.io/en/stable/).
 -   <a name="jupyter">[Jupyter](https://jupyter.org/)
     Jupyter Notebook (formerly IPython Notebooks) is a web-based
     interactive computational environment.
@@ -645,9 +636,9 @@ List of build tools:
     is a JavaScript component that provides a code editor in the
     browser.
     [CodeMirror GitHub repository](https://github.com/marijnh/CodeMirror).
--   __Emacs__:
-    -    EmacsWiki gives many configuration recipes for editing python in
-        emacs in the page [Python Programming In Emacs
+-   <a name="emacs-python"</a>__python in Emacs__:
+    -    EmacsWiki gives many configuration recipes for editing python in emacs in the
+        page [Python Programming In Emacs
         ](http://www.emacswiki.org/emacs/PythonProgrammingInEmacs).
     -   [emacs-for-python](http://gabrielelanaro.github.io/emacs-for-python/)
         by Gabriele Lanaro is a collection of emacs extensions.
@@ -657,22 +648,26 @@ List of build tools:
         is an Emacs package to bring Python editing to Emacs.
 -   [Eric](http://eric-ide.python-projects.org/) (GPL) is a Python and
     Ruby editor and IDE, written in python/QT on the top of Scintilla.
+    It is in Debian.
 -   [Leo](http://webpages.charter.net/edreamleo/front.html) (MIT License)
-    is a Python programmer's editor, scriptable in Python  which requires either the Tkinter or PyQt.
-    Leo provides an outline-oriented browser and project manager.
+    is a Python programmer's editor, scriptable in Python which requires either the
+    Tkinter or PyQt._Leo_ provides an outline-oriented browser and project manager.
 -   [Medit](https://bitbucket.org/medit/medit/) is a PyGTK programming editor,
     with python source support and pluginss in C, LUA, Python, shell.
+    _development stop in 2017_.
 -   [Pida](https://bitbucket.org/aafshar/pida-main) (GPL)
     is an integrated development environment written in PyGTK, that can be used
     from an external editor like vim or the embedded Medit widget. Ali Afshar
     the author of Pida has stopped contributing in 2010, some other contributors
-    have continued the development until begining 2012, and since the project seems stalled.
+    have continued the development until begining 2012, and the project seems now dead.
 -   [SPE](http://pythonide.blogspot.com/) (said GPL!)
-    is an Integrated Development Environment for python.Even if _spe_
-    is GPL, there is no help, and the manual is not open-source nor
-    free. Of course it is not said you have to _pay_ for it, no you
-    just _donate_ money, and it is sent back to thank you.
+    is an Integrated Development Environment for python.
 
+    Even if _spe_ is GPL, there is no help, and the manual is not open-source nor
+    free. Of course it is not said you have to _pay_ for it, no you just _donate_ money,
+    and it is sent back to thank you.
+
+    The project seem dead since 2010.
 
 ## Embedding Extending
 Read first the
@@ -706,6 +701,15 @@ Read first the
 -   <a name="pathtool"></a>[pathtools](https://github.com/gorakhargosh/pathtools) (MIT)
     Path utilities for Python, it allows pattern matching on paths.
     It is in pypi.
+-   [pyfilesystem2](https://github.com/PyFilesystem/pyfilesystem2)  (MIT License)
+    Python's Filesystem abstraction which provides a common interface to any filesystem.
+
+    It supports
+    [many filesystems](https://www.pyfilesystem.org/page/index-of-filesystems/)
+    like FTPFS, TarFS, ZIPFS, DropBoxFS, S3FS, WebDavFS, fs.dlna, fs.googledrivefs,
+    fs.onedrivefs, fs.smbfs, fs.sshfs ....
+
+    -   [pyfilesystem2 documentation](https://docs.pyfilesystem.org/en/latest/).
 
 ## Graphic User Interfaces
 The standard modules are in the {{< iref "#modules" "Modules Section" >}}
@@ -1116,6 +1120,9 @@ See also the {{< iref "dbus" "Dbus Page" >}}.
 ### Inotify
 see also {{< iref "schedulers#inotify" "Inotify main Section" >}}.
 
+-   [inotify_simple ](https://github.com/chrisjbillington/inotify_simple) (BSD License)
+    is just a literal wrapper around {{< iref "schedulers#inotify" "Inotify" >}}.
+    -   [inotify-simple documentation](https://inotify-simple.readthedocs.io/en/latest/).
 -   [Pyinotify _(seb_m)_](https://github.com/seb-m/pyinotify)
     is a Python package used for monitoring filesystems events
     with  {{< iref "schedulers#inotify" "Inotify"  >}}. _last update 2015, more commits
