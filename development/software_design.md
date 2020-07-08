@@ -56,11 +56,21 @@ _(DEVelopement & OPerationS)_ they both prone automation and monitoring
 at all steps of software construction, from building, integration,
 testing, releasing, deployment and infrastructure management.
 
+
+{{< wp "Build automation" >}} refer to the process of compiling, testing and packaging.
+This term was coined to refer to the process traditionally handled by _Make_ and
+_Autotools_ for programs in language C. _Continuous Integration_ _(CI)_ is a more recent
+concept which came with the development of source control. We can see _Build automation_
+as a lower level part of _CI_, we hold this view in these pages, but some people
+classify _CI_ as a _build automation_ category!
+
 See also {{< iref "python/python_libraries#build_automation" "Build Automation" >}}
-in  {{< iref "python/python_libraries" Python Libraries section >}}.
+in  {{< iref "python/python_libraries" "Python Libraries section" >}}.
 
 -   Wikipedia  {{< wp "Continuous integration" >}},
-    {{< wp "Category:Continuous integration" >}}
+    {{< wp "Category:Continuous integration" >}}.
+-   Wikipedia {{< wp "List of build automation software" >}},
+    {{< wp "Category:Build automation" >}}
 -   [Awesome DevOps](https://github.com/joubertredrat/awesome-devops)
     listov DevOps Resources.
 -   [Awesome Continuous Integration and Continuous Delivery
