@@ -918,46 +918,44 @@ See also the {{< iref "#ip_address_module" "ipaddress module" >}}
     ](https://wiki.python.org/moin/LanguageParsing)
 
 ### PEG Parsers
-They use {{< wp "Parsing expression grammar" >}} you can look at the
-[slides of the presentation
+They use {{< wp "Parsing expression grammar" >}}. They are introduced in the
+[slides of the PEG presentation
 ](http://www.brynosaurus.com/pub/lang/peg-slides.pdf) by Bryan Ford
 the author of PEG grammars (2004).
 
--   [PyPeg](http://fdik.org/pyPEG/)  for Python version 2.7 and 3.x.
-    [BitBucket: PyPeg](https://bitbucket.org/fdik/pypeg/).
--   [Parcimonious](https://github.com/erikrose/parsimonious) for
-    Python version 2.7 and 3.x. [Pypi: parsimonious
-    ](https://pypi.python.org/pypi/parsimonious).
--   [Grako](http://pythonhosted.org//grako/) work with  Python 2.7,
-    3.4, or PyPy 2.3
-    . [BitBucket: Grako](https://bitbucket.org/apalala/grako).
+-   [Parcimonious](https://github.com/erikrose/parsimonious)  (MIT License)
+    A fast PEG Parser.
+    It is  [in Pypi](https://pypi.python.org/pypi/parsimonious).
+-   [Pyparsing]() (MIT License)
+    is an alternative approach to creating and executing simple
+    grammars, vs. the traditional lex/yacc approach, or the use of regular
+    expressions. It is [in PyPi](https://pypi.python.org/pypi/pyparsing)
+    and _Debian_.
+
 
 ### MISC Parsers
 
--   [mxTextTools
-    ](http://www.egenix.com/products/python/mxBase/mxTextTools/)
-    from eGenix (Open source license derived from python cnri
-    license) is a high performance text processing library, it is described in the
+-   [mxTextTools](http://www.egenix.com/products/python/mxBase/mxTextTools/)
+    (Open source license derived from python cnri license)
+    from eGenix  is a high performance text processing library, it is described in the
     chapter 4 of the David Mertz's book _Text Processing in Python_,
     ([on-line text version
     ](http://gnosis.cx/TPiP/chap4.txt)).
     SimpleParse is an EBNF parser library written on the top of
     mxTextTools, it is descibed in the same chapter 4 of the book of David Mertz
-    and in his article in the _Charming Python_ serie
+    and in his _2002_ article in the _Charming Python_ serie
     [Parsing with the SimpleParse module
     ](http://www.ibm.com/developerworks/library/l-simple.html).
--   [pyexcelerator](http://sourceforge.net/projects/pyexcelerator/)
-    and [pyxlwriter](http://sourceforge.net/projects/pyxlwriter/)
-    are packages for excel generation in Python.
--   [Pyparsing](http://pyparsing.wikispaces.com/)
-    is an alternative approach to creating and executing simple
-    grammars, vs. the traditional lex/yacc approach, or the use of regular
-    expressions.<br/>
-    [PyPi: PyParsing](https://pypi.python.org/pypi/pyparsing).
--   [xlrd](https://pypi.python.org/pypi/xlrd)
-    is a library for developers to use to extract information from
-    Microsoft Excel (tm) spreadsheet
-
+-   [parso](https://github.com/davidhalter/parso) (MIT license)
+    is a parser for different versions of Python language that supports error recovery
+    and round-trip parsing. _Parso_ was pulled out of jedi. It is in Debian.
+-   [ply](https://github.com/dabeaz/ply) (BSD Licence)
+    100% Python implementation of the common parsing tools lex and yacc.
+    -   [ply Home page](http://www.dabeaz.com/ply/).
+-   [openpyxl](https://foss.heptapod.net/openpyxl/openpyxl) (MIT Licence)
+     Python library to read/write Excel 2010 xlsx/xlsm/xltx/xltm files.
+     -   [openpyxl documentation](https://openpyxl.readthedocs.io/en/stable/).
+     -   See also [Working with Excel Files in Python](http://www.python-excel.org/).
 
 ### XML Parsers {#xml_parsers}
 Along an
