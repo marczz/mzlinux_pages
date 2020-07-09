@@ -2,15 +2,15 @@
 title: Backup
 ---
 
-see also {{< "clouds" "Clouds" >}},
-{{< iref "network_filesystems#distributed_filesystems" "Distributed File Systems" >}},
-{{< iref "scm#fs_sync" "File systems synchronization" >}}.
+see also {{< iref "clouds" "Clouds" >}},
+{{< iref "network_filesystems#distributed_filesystems" "Distributed File Systems" >}}.
 
 # General References
 
 -   Wikipedia: {{< wp "Comparison of backup software" >}},
     {{< wp "List of backup software" >}},
-    {{< wp "Comparison of online backup services" >}}
+    {{< wp "Comparison of online backup services" >}},
+    {{< wp "Synchronization and backup programs" >}}
 -   [Debian Wiki: Backup And Recovery
     ](https://wiki.debian.org/BackupAndRecovery)
     gives a list of backup related Debian Packages.
@@ -466,16 +466,11 @@ Many frontends and wrapper for duplicity are availables:
     (GPL) is a python program that uses git is used in
     [Flyback – Snapshot-based backup tool based on rsync
     ](http://www.ubuntugeek.com/flyback-snapshot-based-backup-tool-based-on-rsync.html) and
-    [Creating Snapshot-Backups with FlyBack On Ubuntu 7.10](http://howtoforge.com/creating-snapshot-backups-with-flyback-ubuntu-7.10).
+    [Creating Snapshot-Backups with FlyBack On Ubuntu 7.10
+    ](http://howtoforge.com/creating-snapshot-backups-with-flyback-ubuntu-7.10).
     The documentation seems very scarse and the source is stalled
     since 2010.
--   Gibak is a backup tool written in ocaml. It is  based on Git and
-    uses Git's hook system to save and
-    restore the information Git doesn't track itself such as permissions,
-    empty directories and optionally mtime fields.<br />
-    The original gibak from Mauricio Fernandez is no more under active development,
-    there are many dead forks.
--   [bup](https://github.com/apenwarr/bup#readme) (LGPL)
+-   [bup](https://github.com/bup/bup) (LGPL)
     is an incremental backup tool based on git. It is in debian.
 
 # rsync based snapshots {#rsync_backup}
@@ -496,14 +491,16 @@ See also the {{< iref "#rsync" "rsync section" >}}
     This is an active project in 2018 that is packaged in Debian.
     -   [[Back In Time Documentation
         ](http://backintime.readthedocs.io/en/latest/).
+-   [casync](https://github.com/systemd/casync) (LGPL)
+    A combination of the rsync algorithm and content-addressable storage.
+    The difference with rsync is that it remove file boundaries before chunking things
+    up; which permits us to recognize similarities in files and directories beyond file
+    boundaries _In Debian._
 -   [Dirvish](http://www.dirvish.org/) (Open Software License)
     written in Perl.
     [Configuring and Using Dirvish for Snapshot  Backups
     ](http://wiki.edseek.com/howto:dirvish).
     _No longer an active project since 2008_
--   [Hourly Snapshot Style Backup
-    ](http://wiki.excito.org/wiki/index.php/Hourly_Snapshot_Style_Backup)
-    a Perl script which gives an alternative to rsnapshot.
 -   [luckyBackup](http://luckybackup.sourceforge.net/) (GPL)
     is an rsync-based GUI data backup utility that uses snapshots.
     It comes with a QT gui and is available as Debian package.
@@ -519,22 +516,23 @@ See also the {{< iref "#rsync" "rsync section" >}}
 -   [rsync-backup](http://code.google.com/p/rsync-backup/) and
     [snapback2](http://www.perusion.com/misc/Snapback2) are
     perl scripts for rsync backup,
--   [RsyncIncr](http://colas.nahaboo.net/Software/RsyncIncr) (GPL)
-    by Colas Nahaboo is a bash script that implement the maximilien Rubel
-    idea with rsync.
-    [RsyncIncr mercurial repository](http://hg.colas.nahaboo.net/rsync-incr/).
 -   [Rsnap](http://web.chad.org/projects/rsnap/)
     is a backup and snapshot python utility based on rsync.
     _last release 2008_
--   <a name="rsnapshot"></a>[Rsnapshot](https://rsnapshot.org/)
-    (GPL) written in Perl can take incremental snapshots of local and
+-   <a name="rsnapshot"></a>[Rsnapshot](https://rsnapshot.org/) (GPL)
+    written in Perl can take incremental snapshots of local and
     remote filesystems using of hard links following M Rubel
-    idea. _Last release 2015, maintenance commits in 2017_.
+    idea.
      _Rsnapshot is packaged in Debian_
+     -  [rsnapshot - GitHub](https://github.com/rsnapshot/rsnapshot)
     -   [Using Rsnapshot and SSH](http://troy.jdmz.net/rsnapshot/)
         teach how to secure ssh for use with rsnapshot.
     -   [Comparing rsnapshot and obnam for scheduled large backups
         ](https://blog.karssen.org/2013/01/04/comparing-rsnapshot-and-obnam-for-scheduled-large-backups/)
+-   [RsyncIncr](http://colas.nahaboo.net/Software/RsyncIncr) (GPL)
+    by Colas Nahaboo is a bash script that implement the maximilien Rubel
+    idea with rsync. _last release 2018_.
+    [RsyncIncr mercurial repository](http://hg.colas.nahaboo.net/rsync-incr/).
 -   [Rybackup](http://git.sysphere.org/rybackup/tree/)
     (git repository) from Adrian C. (anrxc) is a small (200 LOCs)
     python script based on rsync and rotating backup-snapshots.  It
@@ -558,8 +556,7 @@ See also the {{< iref "#rsync" "rsync section" >}}
     settings .o backup user data we should use
     {{< iref "#backintime" "BackInTime" >}}. It comes with a
     GTK GUI frontend.
-    TimeShift is an active project _in 2018_, it is available in an
-    Ubuntu ppa and in Debian since buster;
+    TimeShift is an active project _in 2020_, it is available in Debian.
     -   [TimeShift source repository
         ](https://github.com/teejee2008/timeshift)
 
@@ -653,6 +650,7 @@ See also the {{< iref "#rsync_backup" "Section on rsync backup" >}}
     -   [How Rsync Works: A Practical Overview
         ](http://www.samba.org/rsync/how-rsync-works.html)
 
+-   [rsync - ArchWiki](https://wiki.archlinux.org/index.php/Rsync)
 -   [rsync Tips & Tricks](http://72.14.189.113/howto/rsync/)
 -   [Using Rsync and SSH](http://troy.jdmz.net/rsync/index.html)
     teach you how to set up a  secure rsync backup through ssh.
@@ -703,7 +701,11 @@ See also the {{< iref "#rsync_backup" "Section on rsync backup" >}}
     -   [DigitalOcean: How To Mirror Local and Remote Directories
         on a VPS with lsyncd
         ](https://www.digitalocean.com/community/tutorials/how-to-mirror-local-and-remote-directories-on-a-vps-with-lsyncd)
--   [Rsyncrypto](http://rsyncrypto.lingnu.com/index.php/Home_Page)
+-   [Osync](https://github.com/deajan/osync) (BSD)
+    A two way bash rsync wrapper,  can be run manually, as scheduled task, or
+    triggered on file changes in daemon mode.
+    -   [Osync Home](http://www.netpower.fr/osync) where you find the documentation.
+-   [Rsyncrypto](https://rsyncrypto.lingnu.com/)
     (GPL) allows you to encrypt a file or a directory structure.  It
     preserve locality such that the encrypted file can be synchronized
     by using rsync.  A Debian package is available.
@@ -740,6 +742,8 @@ See also the {{< iref "#rsync_backup" "Section on rsync backup" >}}
     -   [csync2 git repository](http://git.linbit.com/csync2.git/)
     -   [csync2 paper](http://oss.linbit.com/csync2/paper.pdf)
         is the official information page, and configuration manual.
+-   [dirsync](https://github.com/tkhyn/dirsync) (MIT License)
+    a python directory tree synchronisation tool.
 -   [FreeFileSync](http://freefilesync.sourceforge.net/) (GPLv3)
     is a synchronization tool written in C++. It can synchronize local
     folders, network share, or through SFTP. It is available for Linux
@@ -765,15 +769,17 @@ See also the {{< iref "#rsync_backup" "Section on rsync backup" >}}
         is a python wrapper around _lftp_ that extend the synchronization
         features.
 -   [node-ftpsync](https://github.com/evanplaice/node-ftpsync/) (MIT
-    License) is a ftp synchronizing application written in node.js, it
-    seems _in 2017_ still in alpha stage with no detection of changed
-    files through checksum or even timestamp.
+    License) is a ftp synchronizing application written in node.js, it seems _in 2020_
+    still in alpha stage, last commit _2017_, with no detection of changed files through
+    checksum or even timestamp.
 -   [pyftpsync](https://github.com/mar10/pyftpsync/)
     is a bidirectional synchronization tool over FTP. It allows even
     FTP to FTP synchronization. pyftpsync uses file size and
     modification dates to detect file changes. This is not as robust
     as CRC checksums.
     -   [ftpsync documentation](http://pyftpsync.readthedocs.io/).
+-   {{< iref "clouds#Rclone" "Rclone" >}} in {{< iref "clouds" "Clouds Section" >}}
+    support _one way_ synchronization.
 -   [syrep](http://0pointer.de/lennart/projects/syrep/)
     by Lennart Poettering   is a repository synchronization tool used to synchronize
     large file hierarchies bidirectionally by exchanging patch
@@ -781,15 +787,10 @@ See also the {{< iref "#rsync_backup" "Section on rsync backup" >}}
     The patch files may be transferred via offline media,
     e.g. removable hard disks or compact discs. The last release is
     from 2006. The package is in debian.
--   [Sucsynct](https://launchpad.net/sucsynct) (GNU Affero GPL)
-    is a bash distributed backup and syncing, triggered whenever a file in
-    a watched replica changes. It requires unison at all  hosts,
-    ssh-client on all initiating hosts, and ssh-server on all
-    hosts to sync with from remote. _The project seems dead, nothing
-    since 2012._
 -   [Synkron](http://synkron.sourceforge.net/) (GPL)
     is a  C++-Qt application  for synchronising two or more folders.
-    [Synkron manual](http://sites.google.com/site/synkrondocumentation/)
+    This project seems dead no commit since 2014.
+    -   [Synkron manual](http://sites.google.com/site/synkrondocumentation/)
 -   [Unison](http://www.cis.upenn.edu/~bcpierce/unison/) (GPL):
     an Ocaml file-synchronization tool that uses the rsync algorithm.
     -   [Manual for the stable version of Unison
@@ -807,6 +808,7 @@ See also the {{< iref "#rsync_backup" "Section on rsync backup" >}}
     has special handling for gzipped files, which enables update
     transfers of gzip compressed files.  A Debian package is provided.
     Zsync has no dependency but libc.
+    -   [zsync - GitHub](https://github.com/cph6/zsync).
 
 
 <!-- Local Variables: -->
