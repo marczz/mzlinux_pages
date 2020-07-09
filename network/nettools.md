@@ -2,7 +2,6 @@
 title: Network Tools
 ---
 
-{{% toc /%}}
 
 See also {{< iref "IP" "IP protocols" >}},
 {{< iref "network" "Network Security" >}}.
@@ -36,7 +35,7 @@ network packets.
     ](https://help.ubuntu.com/community/WakeOnLan)
 -   [Ubuntu-fr: Wake on lan](https://doc.ubuntu-fr.org/wakeonlan)
 
-## Wake on lan tools
+### Wake on lan tools
 
 -   {{< man "etherwake" >}} or _ether-wake_ is a small c program written by David
     Becker, it is available as Debian package. There is a busybox version
