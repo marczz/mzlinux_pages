@@ -38,7 +38,8 @@ is an inode-base file system notification mechanism implementated in the linux k
 
 ## Inotify tools
 Tools and Programming languages API. The python tools are in the Python chapter in
-the {{< iref "libraries#inotify" "Libraries - Inotify" >}} section.
+the {{< iref "python_libraries#inotify" "Python Libraries - Inotify" >}} section.
+
 -   [inotify tools](https://github.com/rvoicilas/inotify-tools/wiki#info)
     are tools to allow inotify's features to be used from within shell
     scripts. _inotify-tools is a debian package_.
@@ -55,15 +56,21 @@ the {{< iref "libraries#inotify" "Libraries - Inotify" >}} section.
     For these two tools there are examples in the
     [inotify tools home page](https://github.com/rvoicilas/inotify-tools/wiki#info)
 
--   [incron](http://inotify.aiken.cz/?section=incron&page=doc)
-    is an _inotify cron_ C compiled daemon and a table manipulator.
-    Inotify cron handles filesystem events rather than time periods.
+-   {{< iref "python_libraries#pydoit" "Doit" >}}
+    is a python build tool that integrates inotify
 -   [fsniper](https://github.com/l3ib/fsniper) (GPL)
     by Dave Foster is a C utility that waits for a file to be changed or created, and
     then executes a command on that file.
--   [Doit](http://pydoit.org/)
-    is a python build tool that integrates
-    inotify
+-   [incron](http://inotify.aiken.cz/?section=incron&page=doc)
+    is an _inotify cron_ C compiled daemon and a table manipulator.
+    Inotify cron handles filesystem events rather than time periods.
+-   [fswatch](https://github.com/emcrisostomo/fswatch/) (GPL)
+    A cross-platform file change monitor with multiple backends, works on Linux with
+    inotify, and also OS/X, BSD, Windows. _In Debian._
+    -   [fswatch Home](http://emcrisostomo.github.io/fswatch/).
+-   [IWatch](http://iwatch.sourceforge.net/)
+    simple Perl script using inotify to watch files and directories,
+    sending notifications of file changes by e-mail. _In Debian, last commit 2009_.
 -   {{< man "tail" >}} when using  `tail --follow` uses inotify if it is available.
 
 ## Knowing who consume instances
