@@ -2,9 +2,9 @@
 title: Dbus
 ---
 
-{{% toc /%}}
 
 # Dbus References
+-   Wikipedia: {{< wp "D-Bus" >}}
 -   [freedesktop.org - Software - dbus
     ](http://www.freedesktop.org/wiki/Software/dbus/):
     [dbus documentation
@@ -30,56 +30,55 @@ title: Dbus
     {{< man "mdbus2+1" >}}, {{< man "dfeet+1" >}}
 
 # Dbus API
--   [Dbus Python API](http://dbus.freedesktop.org/doc/dbus-python/api/)
--   [Dbus Python Tutorial](http://dbus.freedesktop.org/doc/dbus-python/doc/tutorial.html)
-    is a tutorial to Dbus python bindings.
--   [Python DBus Examples](https://wiki.python.org/moin/DbusExamples).
+In the {{< iref "python_libraries" "Python Libraries Page" >}} you find the
+{{< iref "python_libraries#dbus_python_api" "Dbus Python API" >}}.
+
+
 -   [FreeDesktop: Software/DBusBindings](http://www.freedesktop.org/wiki/Software/DBusBindings)
     give the bindings available in many languages.
--   Glib has [D-Bus GLib bindings
-    ](http://dbus.freedesktop.org/doc/dbus-glib/index.html).
--   Ross Burton has written
-    [Connect desktop apps using D-BUS](http://www-128.ibm.com/developerworks/linux/library/l-dbus.html)
-    at [ibm developper works](http://www.ibm.com/developerworks/linux/)
+-   [gdbus](https://developer.gnome.org/gio/stable/gdbus.html)
+    is an implementation of D-Bus based on GIO streams included in GLib.
 
 # Dbus use from shell
 
 -   To suspend:
 
-        :::sh
-        dbus-send --print-reply  --system  \
-        --dest=org.freedesktop.login1 /org/freedesktop/login1 \
-        org.freedesktop.login1.Manager.Suspend boolean:true
+    ```sh
+    dbus-send --print-reply  --system  \
+    --dest=org.freedesktop.login1 /org/freedesktop/login1 \
+    org.freedesktop.login1.Manager.Suspend boolean:true
+    ```
 
     Instead of `Suspend` you can use `Reboot`, `PowerOff`, `Hibernate`.
 
 
 -   To  list the services available on the system bus:
 
-        :::sh
-        dbus-send --print-reply  --system  \
-        --dest=org.freedesktop.DBus --type=method_call --print-reply \
-        /org/freedesktop/DBus org.freedesktop.DBus.ListNames
+    ```sh
+    dbus-send --print-reply  --system  \
+    --dest=org.freedesktop.DBus --type=method_call --print-reply \
+    /org/freedesktop/DBus org.freedesktop.DBus.ListNames
+    ```
 
-       Replace `--system` by `--session` to get the answer for the
-       session bus.
+    Replace `--system` by `--session` to get the answer for the session bus.
 
 -   To find the methods:
 
-        :::sh
-        dbus-send --print-reply  --system \
-        --dest=org.freedesktop.login1 \
-        /org/freedesktop/login1 \
-        org.freedesktop.DBus.Introspectable.Introspect
+    ```sh
+    dbus-send --print-reply  --system \
+    --dest=org.freedesktop.login1 \
+    /org/freedesktop/login1 \
+    org.freedesktop.DBus.Introspectable.Introspect
+    ```
 
 Now using {{< man "gdbus+1"  "gdbus" >}}:
 
 -   list methods, signal and properties:
 
-        :::sh
-        gdbus introspect --system --dest=org.freedesktop.login1 \
-        --object-path="/org/freedesktop/login1" --recurse
-
+    ```sh
+    gdbus introspect --system --dest=org.freedesktop.login1 \
+    --object-path="/org/freedesktop/login1" --recurse
+    ```
 
 With {{< man "qdbus+1"  "qdbus" >}}
 
