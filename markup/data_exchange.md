@@ -2,11 +2,20 @@
 title: Data exchange formats
 ---
 
+RSS and Atom formats are
+{{< iref "rss_readers#rss_formats" "in the rss readers section" >}}.
+
+See also {{< iref "shell#awk" "Awk" >}} in the {{< iref "shell" "Shell Page" >}}.
+
+----
+
+# General references
+
 -   Wikipedia: {{< wp "Data exchange" >}}, {{< wp "serialization" >}},
     {{< wp "Comparison of data serialization formats" >}} (json, yaml, xml,
     property-lists, Comma-separated values, ...), {{< wp "Binary-to-text encoding" >}}
--   RSS and Atom formats are {{< iref "rss_readers#rss_formats" "in the rss readers section" >}}.
-
+-   [dbohdan/structured-text-tools](https://github.com/dbohdan/structured-text-tools)
+    An _awesome like_ list of command line tools for manipulating structured text data.
 
 # Json/ Yaml
 
@@ -30,8 +39,8 @@ See also the related {{< iref "javascript" "Javascript Page" >}}
     available.
 
 ## Json libraries and bindings
--   {{< iref "python_libraries#serializing_modules" "Python modules for Json" >}},
-    and {{< iref "python_libraries#serializing_libs" "libraries" >}},
+-   {{< iref "python_libraries#persistence_modules" "Python modules for Json" >}},
+    and {{< iref "python_libraries#persistence_libs" "Json libraries" >}},
 -   [Json in javascript](http://www.json.org/js.html)
 -   [libjson](http://sourceforge.net/projects/libjson/)
     (FreeBSD License)is a fast, lightweight JSON parser written in C++.
@@ -40,6 +49,7 @@ See also the related {{< iref "javascript" "Javascript Page" >}}
     is a small event-driven (SAX-style) JSON parser written in ANSI C,
     and a small validating JSON generator. It has binding in python,
     lua, node.js, perl, ...
+
 
 ## Json online Tools
 -   [jsonviewer.stack.hu
@@ -58,8 +68,8 @@ See also the related {{< iref "javascript" "Javascript Page" >}}
 
 ## json cli
 -   [jq](https://stedolan.github.io/jq/) (MIT license)
-    is a lightweight and flexible command-line JSON processor, it is like sed for JSON
-    data.
+    is a lightweight and flexible command-line JSON processor, written in C it is like
+    sed for JSON data.
 -   [fx](https://github.com/antonmedv/fx) (MIT license)
     _fx_ is a command-line tool and terminal JSON viewer. Written in node js.
 -   [jo](https://github.com/jpmens/jo) (GPL)
@@ -71,21 +81,33 @@ See also the related {{< iref "javascript" "Javascript Page" >}}
         [gjo in go](https://github.com/skanehira/gjo).
     -   [jo - cli.fan](https://cli.fan/posts/jo/)    .
 
-## Yaml {#yaml}
+## YAML {#yaml}
 -   {{< wp "Yaml" >}} is a human-readable data serialization format designed
      to be easily mapped to  list, associative array, and scalar.<br />
     It is a superset of JSON and is more easily human readable, but
     harder to parse.
--   [Yaml Home](http://www.yaml.org/about.html)
--   [Yaml specifications](http://www.yaml.org/spec/) (YAZML 1.2 2009)
+-   [YAML Home](http://www.yaml.org/about.html)
+    contains a list of binding for programming languages.
+-   [YAML specifications](http://www.yaml.org/spec/) (YAZML 1.2 2009)
     is a  comprehensive document with numerous examples.
--   [Yaml Reference Card](http://www.yaml.org/refcard.html)
+-   [YAML Reference Card](http://www.yaml.org/refcard.html)
 -   [The use of aliases in YAML
     ](https://github.com/cyklo/Bukkit-OtherBlocks/wiki/Aliases-(advanced-YAML-usage))
+-   [StrictYAML](https://hitchdev.com/strictyaml/features-removed/)
+    is a secure subset of _YAML_. It is also the name of the python parser for this
+    subset.
+    Colm O'Connor [compare _strict_ YAML with other formats
+    ](https://hitchdev.com/strictyaml/#why-strictyaml)
+    and explains why not use JSON/init/TOML/XML/python code, ... for configuration.
 -   [awesome-yaml (dreftymac)
     ](https://github.com/dreftymac/awesome-yaml) and
     [Awesome Yaml (datatxt)](https://github.com/datatxt/awseome-yaml)
     lists of YAML resources.
+
+### Yaml tools
+See the _Yaml.org_ list of [YAML projects](https://yaml.org/).
+and {{< iref "python_libraries#persistence_libs" "Python Libraries for Yaml" >}}
+
 -   [yamllint](https://github.com/adrienverge/yamllint) is a python yaml validator.
     It is in Debian.
        -   [yamllint documentation
@@ -94,7 +116,6 @@ See also the related {{< iref "javascript" "Javascript Page" >}}
     [codebeautify.org](https://codebeautify.org/yaml-validator).
 -   Yaml has a [binding for all main programming languages
     ](http://en.wikipedia.org/wiki/Yaml#Bindings).
--   {{< iref "python_libraries#serializing_libs" "Python Libraries for Yaml" >}}
 
 # ToML
 
@@ -109,6 +130,27 @@ unambiguously to a hash table.
     ](/github.com/toml-lang/toml/wiki#implementations).
 -   [Comparison of TOML, JSON and YAML
     ](https://gohugohq.com/howto/toml-json-yaml-comparison/).
+
+## Recutils
+{{< wp "Recfiles" "Recutils" >}} is a file format for human-editable, plain text
+databases.  recfiles allow for basic relational database operations, typing,
+auto-incrementing, as well as a simple join operation.
+
+A basic set of command lines is provided for manipulating them: `csv2rec`, `rec2csv`,
+`recdel`, `recfix`, `recfmt`, `recinf`, `recins`, `recsel`, `recset`.
+
+-   [GNU Recutils Manual](https://www.gnu.org/software/recutils/manual/index.html)
+-   [Relational pipes](https://relational-pipes.globalcode.info/)
+    are an open data format designed for streaming structured data between two processes.
+    -   [Integrating Relational pipes with GNU Recutils
+        ](https://relational-pipes.globalcode.info/v_0/examples-recfile.xhtml)
+    -   [Reading an Atom feed using XQuery
+        ](https://relational-pipes.globalcode.info/v_0/examples-xquery-atom.xhtml)
+        and convert to the recfile format.
+-   [python-recutils: Python bindings for librec
+    ](https://github.com/maninya/python-recutils/)
+-   [aisamanra/rrecutils](https://github.com/aisamanra/rrecutils/)
+    A pure Rust implementation of the GNU Recutils format
 
 # CSV
 
