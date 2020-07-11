@@ -23,11 +23,19 @@ see also {{< iref "clouds" "Clouds" >}},
 -   [Arch Wiki: Synchronization and backup programs
     ](https://wiki.archlinux.org/index.php/Synchronization_and_backup_programs)
     gives a complete up-to-date list of programs.
--   <a name="cachedir"></a>
-    [Cache Directory Tagging Standard _cachedir_
+-   <a name="cachedir"></a> [Cache Directory Tagging Standard _cachedir_
     ](http://www.brynosaurus.com/cachedir/spec.html)
-    allow to identify cache directories. Usually yo won't backup
-    them, {{< iref "#obnam" "obnam" >}} can exclude cachedir.
+    allows to identify cache directories that you may want to exclude from backup.
+
+    _Tar_, {{< iref "#borg" "Borg" >}} and {{< iref "#restic" "Restic" >}} can exclude
+    _cachedir_s with the same option `--exclude-caches`. Most new backup program should
+    also offer an option.
+
+    With programs like {{< iref "clouds#Rclone" "Rclone" >}}
+    there is no specific option to exclude cache directories, but you can nevertheless
+    exclude all directories containing a `CACHEDIR.TAG` file with
+    `--exclude-if-present CACHEDIR.TAG`, but it will not verify that the signature is
+    present.
 
     A _cachedir_ is a directory containing a file named `CACHEDIR.TAG`
     containing as first 43 octets the string:
@@ -83,7 +91,7 @@ save only the changed data blobs.
 -    <a name="borg"></a>[Borg](https://github.com/borgbackup/borg/)
     is a fork of <a name="attic"></a>[Attic](https://github.com/jborg/attic/)
     which has no commit since 2015.
-    Borg is a deduplicating backup program, written in Python > 3.2.
+    Borg is a deduplicating backup program, written in Python.
     The main features of Borg _and previously Attic_ are:
     -   __Space efficient storage__: Each file is split into a number of
         variable length chunks and only chunks that have never been
@@ -94,6 +102,7 @@ save only the changed data blobs.
     -   __Backup over ssh__: if possible with Attic also installed
         on the remote host.
     -   __Backups mountable as filesystems__
+
     BorgBackup is in Debian.
 
     -   [Borg documentation
@@ -101,23 +110,30 @@ save only the changed data blobs.
     -   [Borg Community resources
         ](https://github.com/borgbackup/community/)
 
-    The backup programs closer to Borg bnam by its features was
-    {{< iref "#obnam" "Obnam" >}}. Note that obnam can backup
-    over SFTP without any software on the remote side, while Attic
-    backup over ssh, by running attic /borg on the remote side.
+    The backup programs closer to Borg  by its features was [Obnam](http://obnam.org/)
+    a snapshot backup program written in C and python 2, _obnam_ was closed In August
+    2017 and dropped from Debian.
 
-    One advantage of Borg is that it uses an rsync-like
-    rolling checksum method. This means that if you add 1 byte at the
-    beginning of a 100MB file, Attic will upload a 1-byte chunk and
-    then reference the other chunks after that, while Obnam will have
-    to re-upload the entire file, since its chunks start at the
-    beginning of the file in fixed sizes.
+    One feature of _Obnam_ missing in Borg is that _obnam_ could backup over SFTP
+    without any software on the remote side, while _Borg_ backup over ssh, by running
+    _Borg_ on the remote side. If you need to backup on a remote filesystem you need
+    either to mount the filesystem on the local machine, which is not always efficient
+    for transfer and calculating checksums on the remote backup, is very inefficient
+    because it implies to reload the files. You avoid it by opting for a backup tool
+    like {{< iref "#restic" "Restic" >}}.
+
+
+    One advantage of _Borg_ is that it uses an rsync-like rolling checksum method. This
+    means that if you add 1 byte at the beginning of a 100MB file, while _Obnam_ upload
+    a 1-byte chunk and then reference the other chunks after that, while _Obnam_ had to
+    re-upload the entire file, since its chunks start at the beginning of the file in
+    fixed sizes.
 
     -   [Comparison of Attic vs Bup vs Obnam
         ](http://librelist.com/browser/attic/2015/3/31/comparison-of-attic-vs-bup-vs-obnam/)
     -   [Roundup of remote encrypted deduplicated backups in Linux
         ](http://changelog.complete.org/archives/9353-roundup-of-remote-encrypted-deduplicated-backups-in-linux)
-        compare attic and obnam.
+        compare _attic_ and _obnam_.
 
 -   <a name="duplicacy">[Duplicacy](https://github.com/gilbertchen/duplicacy)
     (Free for personal use, paid versions for commercial use)
@@ -149,42 +165,6 @@ save only the changed data blobs.
         used to benchmark the different backup software and the
         different backends.
 
--   <a name="obnam"></a>[Obnam](http://obnam.org/)
-    is a snapshot local or remote through SSH SFTP backup program,
-    that does data de-duplication, across files, and backup
-    generations. It has a lot of configurable options, including chunk
-    size, caching information, ect.  It is written in C and python
-    (2.x) and is in Debian. _In August 2017 the author and maintainer
-    of obnam announced, he is closing obnam and that it will be droped
-    from Debian._
-
-    -   [obnam manual
-        ](http://code.liw.fi/obnam/manual/obnam-manual.en.html)
-    -   [obnam FAQ](http://obnam.org/faq/)
-    -   [Joey Hess about obnam
-        ](http://joeyh.name/blog/entry/trying_obnam/)
-
-
-    Obnam can be slow with a default improper config, some post
-    compare it to other backup solutions, or explain how to configure
-    it for speed:
-
-    -   [Comparing rsnapshot and obnam for scheduled large backups
-        ](https://blog.karssen.org/2013/01/04/comparing-rsnapshot-and-obnam-for-scheduled-large-backups/)
-    -   [Understanding obnam performance
-        ](https://listmaster.pepperfish.net/pipermail/obnam-support-obnam.org/2014-June/003086.html)
-        very interesting paper on obnam performance tweaking also
-        included in the [Obnam FAQ performance tuning
-        ](http://obnam.org/faq/tuning/)
-
-    From the last reference the settings for `lru-size` and
-    `upload-queue-size` are critical, the default are 256 and 128 the
-    most important is to increment `upload-queue-size` to 512
-    _abridged option_ `-q=512`.  It has a very low impact on memory
-    used. Increasing `lru-size` to 512 _abridged option_ `-l=512` as
-    yet a small but signifiant impact on performance (from 2mn15 to
-    2mn) at the price of an impact on memory (267M to 324M).
-
  -  <a name="hashbackup"></a>[HashBackup](http://www.hashbackup.com/) (free private license)
     is a command line for deduplicated, encrypted, compressed,
     block-level incremental backup.
@@ -198,14 +178,14 @@ save only the changed data blobs.
     Rackspace Cloud Files, Dreamhost DreamObjects and others.
 
     Compared  to the opensource existing deduplicating alternative like
-    {{< iref "#attic" "Attic" >}},
-    {{< iref "#borg" "borg" >}},
-    {{< iref "#zbackup" "zbackup" >}},
-    bup, {{< iref "#obnam" "obnaml" >}} it can
+    {{< iref "#borg" "borg" >}}, {{< iref "#zbackup" "zbackup" >}}, bup,  it can
     access natively some 3rd-party storage while the rest can only
     mount them with fuse; and it invalidates programs that want
     to do checksumming on the remote backup, because
     it would imply to reload all the files.
+
+    But other open source program like {{< "#restic" "Restic" >}} can also backup to
+    clouds.
 
 -   <a name="restic"></a>[Restic](https://restic.github.io/) (BSD License)
     Is a go program that takes snapshots consisting of data blobs
@@ -214,8 +194,8 @@ save only the changed data blobs.
     sftp server (via SSH), HTTP REST server (protocol rest-server),
     AWS S3 (Amazon or Minio), OpenStack Swift, BackBlaze B2,
     Microsoft Azure, Google Cloud Storage
+    Restic is in Debian.
 
-    Restic is in Debian and is active in 2017.
     -   [Restic documentation
         ](https://restic.readthedocs.io/en/stable/).
     -   [Restic GitHub repository
@@ -223,7 +203,7 @@ save only the changed data blobs.
     -   [Analysis of borgbackup, restic, and zbackup
         ](http://www.sharons.org.uk/demise-of-obnam.html)
 
-    There are some helpers to organize rastic backups:
+    There are some helpers to organize restic backups:
     -   Sharon Kimble's
         [restic script](http://www.sharons.org.uk/restic4.html),
         [restic - integrity checking
