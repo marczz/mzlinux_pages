@@ -26,7 +26,7 @@ some mustache implementations implementing the
 Template inheritance allows you to build a base “skeleton” template
 that contains some blocks that child templates can override.
 You find more explanation in [Flask: Template Inheritance
-](http://flask.pocoo.org/docs/dev/patterns/templateinheritance/).
+](https://flask.palletsprojects.com/en/1.1.x/patterns/templateinheritance/).
 
 -   The {{< wp "Template_engine_(web)"  "Wikipedia template engines page" >}}
     includes a comparison of templates engines, it is accompanied by a
@@ -106,7 +106,7 @@ You find more explanation in [Flask: Template Inheritance
     [GitHub: eknc/pug](https://github.com/eknkc/pug)
     is a port of Pug template engine, it compiles templates to
     standard [go templates](https://golang.org/pkg/html/template/)
--   <a name="jinja2"></a>[Jinja2](http://jinja.pocoo.org)
+-   <a name="jinja2"></a>[Jinja2](https://www.palletsprojects.com/p/jinja/)
     (BSD license) is a Python template engine similar to the
     {{< iref "python/python_web#django" "Django" >}}
     template engine.  It can be used to generate any markup as well as
