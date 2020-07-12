@@ -1,16 +1,20 @@
 ---
-title: RSS Readers
+title: Web Feed
 ---
 
-{{% toc /%}}
 
-# RSS Formats {#rss_formats}
+# Feed Formats {#rss_formats}
+A {{< wp "Web feed" >}}, or _News Feed_  is a document (often XML-based) which include
+web links to Web content.
 
--   The main formats for syndication are
+-   The main formats for syndication, used to exchange lists of feeds between feed
+    aggregators, are
     {{< wp "RSS" >}},
-    {{< wp "OPML" >}},
-    {{< wp "Atom%28standard%29"  "Atom" >}},
-    the last article includes a comparison between RSS 2.0 and Atom.
+    {{< wp "JSON Feed" >}},
+    {{< wp "OPML" >}}  is an XML format for outlines,
+    {{< wp "Atom_(Web_standard)"  "Atom" >}},
+    the last article includes a [comparison between RSS 2.0 and Atom
+    ](https://en.wikipedia.org/wiki/Atom_(Web_standard)#Atom_compared_to_RSS_2.0).
 -   [RSS 2.0 Specification](http://blogs.law.harvard.edu/tech/rss)
 -   [RSS Tutorial](http://www.mnot.net/rss/tutorial/)
     by Mark Nottingham.
@@ -27,7 +31,7 @@ title: RSS Readers
     (MIT license) is a rss-2.0 and atom-1.0 online validator.
 
 
-# Rss readers
+# Feed readers
 -   {{< wp "News Aggregator" >}} are  client software to read syndicated contents.
 -   Wikipedia {{< wp "News Aggregator" >}}, {{< wp "Comparison of feed aggregators" >}},
     [w:List of feed aggregators.
@@ -39,9 +43,9 @@ begining of July 2013. It can be replaced by  many other
 [free or open source online rss readers
 ](http://alternativeto.net/software/google-reader/?license=free&platform=online)
 
-{{< wp "Firefox" >}} can read RSS or atom flux with the {{< wp "Live bookmarks" >}} feature. It does not have all all
-the features of an aggregator, but  could be an easy way to always
-access your feeds.
+{{< wp "Firefox" >}} can read RSS or atom flux with the {{< wp "Live bookmarks" >}}
+feature. It does not have all all the features of an aggregator, but could be an easy
+way to always access your feeds.
 
 -   [CommaFeed](https://github.com/Athou/commafeed)
     <a name="commafeed"></a> (Apache License)
@@ -57,23 +61,30 @@ access your feeds.
 -    <a name="feedly"></a>{{< wp "Feedly" >}}
     is an online news aggregator. It is the most popular
     since Google close down Google Reader.
-    [Feedly website](http://cloud.feedly.com/).
-    -   [feedly public API](http://developer.feedly.com/)
-    -   You can export your feeds by accessing
-        [#opml](http://cloud.feedly.com/#opml)
+    [Feedly website](https://feedly.com/).
+    -   [feedly public API](https://developer.feedly.com/)
+    -   Feedly has {{< wp "OPML" >}} support as explained in the
+        [feedlyBlog page: New OPML Import](https://blog.feedly.com/opml/).
+        You can export your feeds as OPML by accessing <https://feedly.com/i/opml>,
+        and import them with the +Add Content button at the bottom left of the Feedly
+        app or by visiting <https://feedly.com/i/cortex>.
+
+        There is also an [OPML API](https://developer.feedly.com/v3/opml/).
     -   There is an [official android application
         ](https://play.google.com/store/apps/details?id=com.devhd.feedly)
-        quite big ~10MB,
-        and for some reason, feedly redirect you to the
-        application download page as soon it detect an android client,
+        quite big ~10MB.
+
+        If you try to access internet from android for some reason, feedly redirect your
+        browser to the application download page as soon it detect an android client,
         rendering impossible to access to the site without changing the user-agent.
+
     -   The unofficial android application [FeedMe
         ](https://play.google.com/store/apps/details?id=com.seazon.feedme)
         allows also to access Feedly, It is a light 1.7M application.
-    -   Feedly allow to [save articles on may reading apps
+    -   Feedly allow to [save articles on reading apps
         ](https://blog.feedly.com/seven-ways-to-save-articles-that-you-read-in-feedly/)
         Instapaper, Evernote, OneNote, Pocket, and Dropbox.
-    -   We can use IFTTT to automatically send saved stories.
+    -   We can use {{< wp "IFTTT" >}} to automatically send saved stories.
 -   [Leed](http://leed.idleman.fr/) (License Creative common by nc-sa),
     [GitHub repository](https://github.com/ldleman/Leed)
       is a web-based news reader, it needs PHP with MySQL, and has an android application.
@@ -91,7 +102,7 @@ access your feeds.
     free access limited to 64 sites. There is a free android
     application for android > 3.0 and some unofficial ones.
     It can also be synchronized with
-    {{< iref "#newsbeuter" "NewsBeuter" >}}.
+    {{< iref "#newsboat" "NewsBoat" >}}.
 -   [Tiny Tiny RSS](http://tt-rss.org/redmine/projects/tt-rss/wiki) (GPL)
     <a name="tinytinyrss"></a>
     is a web-based  PHP and Ajax news feed (RSS/Atom) reader and
@@ -139,12 +150,21 @@ and I never had the opportunity to use them.
 -   [Liferea](http://liferea.sourceforge.net/) (GPL) an  aggregator written in C + GTK2.
     It synchronizes with TheOldReader  and with {{< iref "#tinytinyrss" "TinyTinyRSS" >}},
     [Inoreader](http://www.inoreader.com/), [Reedah](https://www.reedah.com/)
--   [newsbeuter](http://www.newsbeuter.org/) (MIT) <a name="newsbeuter"></a>
-    text mode rss feed reader with podcast support written in ncurses. packaged in Debian.
-    -   [newsbeuter manual](http://www.newsbeuter.org/doc/newsbeuter.html).
-    -   NewsBeuter can export opml and synchronize with OldReader,
-        {{< iref "#newsblur" "NewsBlur" >}},
-        and  {{< iref "#tinytinyrss" "TinyTinyRss" >}}.
+-    <a name="newsboat"></a>[newsboat](https://github.com/newsboat/newsboat) (MIT)
+    is an actively maintained fork of [newsbeuter](http://www.newsbeuter.org/) which was
+    abandonned in 2017.
+    <a name="newsbeuter"></a>.
+    It is a text mode rss feed reader with podcast support written in Rust (newsbeuter
+    was written in C++) with ncurses UI. _packaged in Debian._
+    -   [NewsBoat Home](https://newsboat.org/) with link to the latest documentation.
+    -   _NewsBoat_ can synchronize with _The Old Reader_,
+        {{< iref "#newsblur" "NewsBlur" >}},  {{< iref "#tinytinyrss" "TinyTinyRss" >}},
+        _FeedHQ_, _Bazqux_, _ownCloud News_ and _nextCloud News_,
+        _Inoreader_
+    -   _NewsBoat_ can export and import OPML, and have a one way synchronisation
+        with any service that publishes your subscriptions in OPML format.
+        _NewsBoat knows what what you have read on the remote, but the remote ignore
+        what you have read on NewsBoat_
 -   <a name="newsticker"></a>
     [NewsTicker](http://www.emacswiki.org/emacs/NewsTicker) (GPL)
     is an rss/atom reader for emacs.
