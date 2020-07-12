@@ -199,25 +199,6 @@ and I never had the opportunity to use them.
     [hosted on Google App Engine](http://talkfeed.appspot.com)
 
 
-# Feed Parsers notes
-
-## {{< iref "#newsbeuter" "newsbeuter" >}}
--   local {{< ldoc "newsbeuter/newsbeuter.html"  "newsbeuter manual" >}}
--   my config is under `~/.config/newsbeuter/config`
--   The loaded urls are under `~/.config/newsbeuter/urls`.
-
-## online feed readers
--   I use {{< iref "#feedly" "feedly" >}} and sign in with google
-    account.
--   Also {{< iref "#newsblur" "NewsBlur" >}}
--   tested also {{< iref "#commafeed" "commafeed" >}}.
--   for emacs
-    {{< iref "#newsticker" "NewsTicker" >}}
-    archive of news are in `~.emacs.d/newsticker/feeds/`
-    -   feeds are configured in variable `newsticker-url-list`
-        that is set in my config `my-newsticker.el`.
-
-
 <!-- Local Variables: -->
 <!-- mode: markdown -->
 <!-- ispell-local-dictionary: "english" -->
