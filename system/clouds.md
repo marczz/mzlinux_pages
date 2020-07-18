@@ -2,11 +2,9 @@
 title: Clouds
 ---
 
-{{% toc /%}}
-
 -   See also {{< iref "network_filesystems#distributed_filesystems" "Distributed File Systems" >}},
     {{< iref "scm#fs_sync" "File systems synchronization" >}},
-    {{< iref "backup" "backup" >}}.
+    {{< iref "backup" "Backup" >}}.
 
 ------
 
@@ -35,10 +33,13 @@ title: Clouds
 -   [Amazon Web Service Home](http://aws.amazon.com)
 -   [AWS Free Usage Tier](http://aws.amazon.com/free/) allow some free
     use during one year.
-    -   [Hidden Charges when using Amazon AWS' Free Tier](http://mhlakhani.com/blog/2011/01/hidden-charges-aws-free-tier/)
+    -   [Hidden Charges when using Amazon AWS' Free Tier
+        ](http://mhlakhani.com/blog/2011/01/hidden-charges-aws-free-tier/)
+-   [AWS monthly calculator](http://calculator.s3.amazonaws.com/calc5.html)
+  - [TurnKey Hub](https://hub.turnkeylinux.org/) allow to deploy server
+    apps on [Amazon EC2](http://en.wikipedia.org/wiki/Amazon_Elastic_Compute_Cloud).
 -   {{< wp "Amazon S3" >}} (Wikipedia),
     [S3 Home Page](http://aws.amazon.com/s3).
--   [AWS monthly calculator](http://calculator.s3.amazonaws.com/calc5.html)
 
 ## S3 clients {#s3_clients}
 See also below the generic {{< iref "#cloud_frontends" "Cloud Frontends" >}}
@@ -46,64 +47,65 @@ which include  {{< iref "#cloud_vfs" "Cloud  Virtual File systems" >}}.
 
 -   [AWS Command line interface
     ](https://aws.amazon.com/cli/)
-    is a unified tool to manage AWS services. The [file commands
-    ](http://docs.aws.amazon.com/cli/latest/reference/s3/)
+    is a unified tool to manage AWS and  {{< iref "#eucalyptus" "Eucalyptus" >}}
+    services. The [file commands](http://docs.aws.amazon.com/cli/latest/reference/s3/)
     are file and directory commands ( cp, ls, mb, mv, presign, rb, rm, sync, website )
     to manage your buckets. It is packaged in Debian as _awscli_.
--   [s3tool](http://s3tools.org/) provide  _s3cmd_ a command line
-    tools for Amazon S3 to uploade, retrieve and manage data.
+-   [s3tool](http://s3tools.org/) (GPL)
+    provide _s3cmd_ a command line tools for Amazon S3 to uploade, retrieve and manage
+    data. It .
+    -   [s3tool - GitHub](https://github.com/s3tools/s3cmd).
     -   There are three howtos: [s3cmd HowTo](http://s3tools.org/s3cmd),
         [s3cmd sync HowTo](http://s3tools.org/s3cmd-sync),
         _the operation sync allow to transfer
         only files that don’t exist at the destination_;
         [s3cmd encryption HowTo](http://s3tools.org/s3cmd-encryption).
-    -   _s3cmd_ is built for S3 but it can also
-        [be used on an eucalyptus instance
+    -   _s3cmd_ is built for S3 but it is also usable with s3 compatible object storage
+        with a proper configuration file, like _scaleway object storage_, _{{< iref "#minio" "Minio" >}}_ or
+         {{< iref "#eucalyptus" "Eucalyptus" >}} like explained in
+        [how to use s3cmd with an eucalyptus instance
         ](https://github.com/eucalyptus/eucalyptus/wiki/HowTo-use-s3cmd-with-Eucalyptus).
-        with a proper configuration file.
     - _s3cmd_ is packaged in Debian.
 -   [s4cmd](https://github.com/bloomreach/s4cmd) (Apache Licence)
     is a python alternative to _s3cmd_ tool, enhancing performance and support for large
     files, and coming with a number of additional features and fixes.
     It also supports S3 compatible storage services such as DreamHost and Cloudian.
 
--   [boto: A Python interface to Amazon Web Services
-    ](http://docs.pythonboto.org/en/latest/index.html),
-    [Boto GitHub Repository](https://github.com/boto/boto).
-    Boto has
-    [many frontends in Pypi
-    ](http://pypi.python.org/pypi?%3Aaction=search&term=boto&submit=search)
--   [boto-utils](https://github.com/obeattie/boto_utils) is the
-    command line interface of boto to access S3.
-    It includes s3-put, s3-geturl, s3-copy
+-   [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)
+    is the Amazon Web Services (AWS) SDK for Python.
+    -   [Boto3 GitHub Repository](https://github.com/boto/boto3).
+    -   _Boto3_ has [many frontends in Pypi
+        ](http://pypi.python.org/pypi?%3Aaction=search&term=boto3&submit=search)
+        but some are not compatible with the new _Boto3_.
 -   [amazon-glacier-cmd-interface
     ](https://github.com/uskudnik/amazon-glacier-cmd-interface)
-    use boto. An example of use is
+    (MIT Licence) use boto _last update 2016_. An example of use is
     [Creating Long-Term Backups with Amazon Glacier on Linux
     ](http://blog.tkassembled.com/326/creating-long-term-backups-with-amazon-glacier-on-linux/)
     by TK Kocheran.
--   [s3curl (GitHub repos)](https://github.com/rtdp/s3curl) (Apache License)
+-   [s3curl](https://github.com/rtdp/s3curl) (Apache License)
     is a perl wrapper around curl to work with s3 buckets.
     -   [Amazon S3 Authentication Tool for Curl - AWS Code
         ](https://aws.amazon.com/code/amazon-s3-authentication-tool-for-curl/)
-    -   It can also be used on an eucalyptus instance.
+    -   It can also be used on an {{< iref "#eucalyptus" "Eucalyptus" >}} instance.
     -   s3curl is packaged in Debian.
 -   [JetS3t](https://github.com/mondain/jets3t) (Apache License)
      (pronounced "jet-set") is a Java toolkit and application suite
      for Amazon S3, Amazon CloudFront, and Google Storage.
      _JetS3t_ is packaged in Debian.
--   [DragonDisk](http://www.dragondisk.com/)
-    (proprietary software, free linux client) is a file manager for Amazon
-    S3, Google Cloud Storage, and  S3 compatibles cloud storage
-    services.
+-   [DragonDisk](http://www.dragondisk.com/) (proprietary software, free linux client)
+    is a file manager for Amazon S3, Google Cloud Storage, and S3 compatibles cloud
+    storage services. Debian packages are provided.
 
-## Eucalyptus
+## Eucalyptus {#eucalyptus}
 
 {{< wp "Eucalyptus_(software)" "Eucalyptus" >}} (MIT Like licence) is a software for
 building Amazon Web Services (AWS)-compatible private and hybrid cloud computing
 environments,
 
 -   [GitHub: eucalyptus](https://github.com/eucalyptus/eucalyptus)
+-   [Eucalyptus Wiki](https://github.com/eucalyptus/eucalyptus/wiki)
+    is the Home of Eucalyptus.
 -   [AWS Tools compatibility · eucalyptus Wiki
     ](https://github.com/eucalyptus/eucalyptus/wiki/AWS-Tools)
 -   [Euca2ools](https://github.com/eucalyptus/euca2ools)
@@ -111,6 +113,22 @@ environments,
     other services that are compatible with AWS, such as Eucalyptus.
     _euca2ools_ is packaged in Debian.
     -   [euca2ools - Debian Wiki](https://wiki.debian.org/euca2ools)
+
+## Minio {#minio}
+{{< wp "Minio" >}} (Apache Licence) is a cloud storage server written in golang
+compatible with Amazon S3. A docker image is provided.
+
+-   [Minio Home](https://min.io/).
+-   [Minio - GitHub](https://github.com/minio/minio).
+-   [Minio Documentation](https://docs.min.io/).
+-   [MinIO Client (mc)](https://github.com/minio/mc)  (Apache Licence)
+    provides a modern alternative to UNIX commands like ls, cat, cp, mirror, diff, find
+    etc. It supports filesystems and Amazon S3 compatible cloud storage service.  There
+    is a snapcraft package for minio client, a go binary is also available on Minio
+    Home.
+    -   [MinIO Client Complete Guide](https://docs.min.io/docs/minio-client-complete-guide).
+        and [QuickStart Guide](https://docs.min.io/docs/minio-quickstart-guide).
+
 
 # Cloud virtual filesystems
 # Blackblaze B2 {#b2}
@@ -349,6 +367,7 @@ The new Google One prices are 200G 36€/year 2TB 120€/year.
      allow free WebDAV access to Google Drive
 
          $ mount -t davfs https://dav-pocket.appspot.com/docso/ /media/gdrive/
+-   {{< iref "#rclone" "rclone" >}} support Google Drive.
 
 # [Mega](https://mega.co.nz/) {#mega}
 
@@ -418,6 +437,7 @@ There are also some third party tools:
     -   [Offsite Linux backup to Mega with duplicity
         ](http://itnerd.space/2016/10/26/offsite-backup-with-duplicity-and-mega/),
         use a docker image to install duplicity and mega_fuse.
+-   {{< iref "#rclone" "rclone" >}} support Mega.
 
 # Openstack {#openstack}
 
@@ -706,7 +726,9 @@ windows, android, iphone clients.
         Debian as _onedrive_ since _stretch_.
     -   {{< iref "#sme" "SME" >}} allows access to one drive.
 
--   [SpiderOak](https://spideroak.com/) 2GB free, 100GB for 120$/year
+-   [SpiderOak](https://spideroak.com/):
+    [SpiderOak One](https://spideroak.com/one/) 150GB 69$/year, 400GB 115/year, 2TB
+    149$/year _2020_
     [SpiderOak Android](http://www.appbrain.com/app/spideroak/com.spideroak.android)
     SpiderOak deamon _headless_ is 33M/5M shr, and with panel even
     minimized you add 66M/19M
@@ -756,7 +778,7 @@ compatible clouds or through a proxy like {{< iref "#s3proxy" "S3Proxy" >}}.
     similar to s3fs but written in go, better performance, and less POSIX compiliance.
     it works with Ceph (ex: Digital Ocean Spaces, DreamObjects, gridscale), EMC Atmos
     Google Cloud Storage, OpenStack Swift, {{< iref "#s3proxy" "S3Proxy" >}},
-    Minio (limited),  Wasabi, Azure.
+    {{< iref "#Minio" "Minio" >}} (limited),  Wasabi, Azure.
 -   [s3backer](http://code.google.com/p/s3backer/) (GPL)
     is a filesystem that contains a single file backed by Amazon S3.
     The blocks of the file are stored as S3 objects.
@@ -794,21 +816,38 @@ are replicated.
 
 [Rclone](http://rclone.org/)
 is a command line program to sync files and directories to and from
-Amazon S3, Amazon Cloud Drive, Backblaze B2, Ceph, Dreamhost, Dropbox,
-Google Drive, Google Cloud Storage, Hubic, Minio, Openstack Swift,
-QingStor, Rackspace cloud files, Memset Memstore, Microsoft One Drive,
-Wasabi, Yandex Disk, HTTP (read only), FTP, SFTP, the local
-filesystem.
+Amazon Drive, Amazon S3, Backblaze B2, Box, Ceph, Citrix share files, DigitalOcean
+Spaces, Dreamhost, Dropbox, GetSky, Google Drive, Google Cloud Storage, Google Photos,
+Hubic, Jottacloud, IBM COS S3, Kiifr, Mail.ru cloud, Memset Memstore, Mega, Memory,
+Microsoft Azure, Microsoft OneDrive, {{< iref "#Minio" "Minio" >}}, NextCloud, OVH, OpenDrive, Openstack Swift,
+Oracle Cloud Storage, ownCloud, pCloud, premiumize.me, put.io, QingStor, Rackspace cloud
+files, Scaleway, StackPath, SugarSync Wasabi, Yandex Disk, HTTP (read only), FTP, SFTP,
+WebDav, the local filesystem.
 
 Features:  MD5SUMs checking, preserve timestamps, partial syncs,
 Copy mode to just copy new/changed files, full sync including beetween
-two cloud instances.
+two cloud instances. See the
+[Overview of cloud storage systems](https://rclone.org/overview/)
+for features supported by each storage provider.
 
-It allows a FUSE mount of the providers.
+It allows to encrypts and decrypts a remote with the [Crypt backend
+](https://rclone.org/crypt/), we should check that the corresponding config file is
+encrypted as the password is stored in config.
 
-[GitHub Rclone](https://github.com/ncw/rclone).
+It allows all files operation, smb, webdav, http, ftp, sftp servers and FUSE mount of
+the providers. Rclone is in Debian.
 
-Rclone is in Debian.
+-   The documentation is available inline at the [Rclone Home](https://rclone.org/).
+-   [GitHub Rclone](https://github.com/ncw/rclone).
+-   [Rclone Wiki](https://github.com/rclone/rclone/wiki)
+-   [Third Party Integrations with rclone
+    ](https://github.com/rclone/rclone/wiki/Third-Party-Integrations-with-rclone)
+-   _Rclone_ itself allow only one way synchronization, there are several python
+    applications that provide bidirectional synchronisation with _Rclone_:
+    [rclonesync-V2](https://github.com/cjnaz/rclonesync-V2),
+    [rsinc](https://github.com/ConorWilliams/rsinc),
+    [PyFiSync](https://github.com/Jwink3101/PyFiSync).
+-   _Rclone_ is supported by _emacs tramp_ since version 2.4.1.
 
 ## Command Line, ftp, dav clients
 ### Duck
@@ -846,7 +885,7 @@ There is a free Linux and
     HostingSolutions.it, Gmail-as-a-Cloud, HP Cloud, HP Elion, HPSS,
     Hudle,IBM Bluemix,IBM cloud object storage,IBM File Clouds, iCloud
     Drive, Igneous, iKeepinCloud, IBM Connections Files, Jive,
-    Leonovus, Memset Memstore, Mezeo, Minio, Mirantis, Microsoft
+    Leonovus, Memset Memstore, Mezeo, {{< iref "#Minio" "Minio" >}}, Mirantis, Microsoft
     OneDrive, Microsoft Office365, Microsoft Sharepoint, OpenIO, Open
     S3, OpenStack Swift, Oracle, PogoPlug, RackSpace Cloud Files,
     Salesforce, Scality, Softlayer, SugarSync, Swiftstack,
@@ -872,7 +911,7 @@ There is a free Linux and
 -   [Apache libcloud](http://libcloud.apache.org/) (apache licence)
     is a Python library for interacting with 30 cloud
     service providers using a unified API. It supports AWS, Google
-    cloud, eucalyptus, rackspace, openstack, and many more.
+    cloud,  {{< iref "#eucalyptus" "Eucalyptus" >}}, rackspace, openstack, and many more.
 
 ### pkgcloud
 [pkgcloud](https://github.com/pkgcloud/pkgcloud/)
