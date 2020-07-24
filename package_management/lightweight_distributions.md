@@ -28,12 +28,15 @@ Debian Live and GRML are in the main {{< iref "distributions" "Distributions sec
 
 -   {{< wp "Alpine Linux" >}},
     [Alpine Linux Home](https://www.alpinelinux.org/)
+-   [BunsenLabs Linux](https://www.bunsenlabs.org/) is the continuation of
+    {{< wp "Crunchbang_Linux" "CrunchBang" >}} which stopped in 2015. It is a derivative
+    of Debian with Openbox window manager, tint2 panel and conky system monitor.
 -   [Damn Small Linux](http://www.damnsmalllinux.org/) was a
     business card size (50MB) distribution, stopped since 2012.
 -   [Devil Linux](http://www.devil-linux.org/) Linux on a CD that
     can be used as Firewalls / Routers or as a mail / dns / http / ftp
     server. The project was abandonned in 2018.
--   [Knoppix](http://knoppix.net/) is a Live DVD based on Debian
+-   <a name="knoppix"></a>[Knoppix](http://knoppix.net/) is a Live DVD based on Debian
     [Knoppix Wiki](http://knoppix.net/wiki/Main_Page),
     [Knoppix Remastering Howto
     ](http://knoppix.net/wiki/Knoppix_Remastering_Howto)
@@ -45,9 +48,17 @@ Debian Live and GRML are in the main {{< iref "distributions" "Distributions sec
     [Lxde Home](http://lxde.org/lxde)
     for details on how to install in your favorite distribution, and
     of included components.
--   [puppy linux](http://puppylinux.org/) is a
-    small distribution that can boot from usb,  or cd, flash card,
-    internal hard drive. Puppy boots into a ramdisk and loads into RAM.
+-   [Puppy Linux](http://puppylinux.com/)
+    is a collection of multiple Linux distributions using the same set of tools, built
+    on top of a unique set of puppy specific applications and configurations. It can
+    boot from usb, or cd, flash card, internal hard drive. Puppy boots into a ramdisk
+    and loads into RAM.
+
+    The Official dstributions are based on Raspian, Ubuntu, or Slackware, but you can
+    build a _Puppy Linux_ image from many distributions.
+
+    -   [puppy linux Wiki](http://wikka.puppylinux.com/HomePage)
+
 -   [SME Server](http://wiki.contribs.org/) is a GPL derivative of
     red-hat enterprise that comes pre-configured and install a server
     with a Apache web server, firewall, Qmail SMTP, IMAP4 and POP3
@@ -55,7 +66,8 @@ Debian Live and GRML are in the main {{< iref "distributions" "Distributions sec
     server with an easy configuration user interface. There is also a
     [Sme server french site](http://smeserver.fr/)
 -   [Vector Linux](http://vectorlinux.com/) small, fast, Linux derived from
-    Slackware. Many versions based on KDE, or LXDE, or Fluxbox and JWM,
+    Slackware. Many versions based on KDE, or LXDE, or Fluxbox and JWM. _last release
+    2015_.
 
 
 
