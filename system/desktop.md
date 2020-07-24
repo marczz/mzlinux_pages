@@ -2,8 +2,6 @@
 title: Linux Desktops
 ---
 
-----------------
-
 The lower level is {{< iref "xorg" "Xorg" >}}
 
 See also the section {{< iref "file_managers" "File Managers" >}},
@@ -79,25 +77,33 @@ on my computer. xfce4 is not so small than it aims to be.
 Unix. It uses  the GTK+ toolkit. The components of lxde are not
 strongly bound with a common library set as in KDE, Gnome or Xfce.
 The standard component include the  window manager
-{{< iref "#openbox" "Openbox" >}}, and the file
-manager {{< iref "file_managers#pcmanfm" "PCManFM" >}})
-but you are free to use an other one.
+{{< iref "#openbox" "Openbox" >}}, the session manager
+{{< iref "#lxsession" "lxsession" >}}, the panel {{< iref "#lxpanel" "lxpanel"<}}
+and the file manager {{< iref "file_managers#pcmanfm" "PCManFM" >}})
+_but you are free to use an other one_.
 
-
--   [LXDE Home](http://wiki.lxde.org/en/Main_Page)
+-   [LXDE Home](https://lxde.github.io/)
+-   [LXDE Wiki](http://wiki.lxde.org/en/Main_Page)
+-   [LXDE - GitHub](https://github.com/lxde)
 -   [ArchLinux: LXDE](https://wiki.archlinux.org/index.php/LXDE)
 -   [LXDE on Debian](http://wiki.lxde.org/en/Debian)
--   [Gentoo:  LXDE Configuration HOWTO
-    ](http://www.gentoo.org/doc/en/lxde-howto.xml)
--   [LXDE in Ubuntu](http://wiki.lxde.org/en/Ubuntu),
-    [Lubuntu](https://wiki.ubuntu.com/Lubuntu) (distribution for LXDE in Ubuntu)
+-   [Gentoo: XDE](https://wiki.gentoo.org/wiki/LXDE)
+-   [LXDE in Ubuntu](http://wiki.lxde.org/en/Ubuntu) is available on
+    -   [Lubuntu](http://lubuntu.me) - Ubuntu with LXDE.
+    -   [LXLE](http://lxle.net) - Lubuntu customized for aging computers.
+    -   [WattOS](http://www.planetwatt.com/) \- Designed for older and low power
+        computers. _site not available in July 2020_
+    -   [Knoppix](http://knoppix.net/) - live CD with LXDE
 -   [Lxde-Openbox Guide](http://lxlinux.com/index.html)has a lot
     information on configuration of all components of lxde.
--   [lxsession](http://wiki.lxde.org/en/LXSession) is the standard
-    session manager for LXDE, it has minimal footprints 1.7M
-    resident/1.4M shared. But if you want to manage yourself the
-    session you can dispense with it and use a simple launcher as
-    _fbautostart_.
+-   <a name= "lxsession"></a>[lxsession](http://wiki.lxde.org/en/LXSession) is the
+    standard session manager for LXDE, it has minimal footprints 1.7M resident/1.4M
+    shared. But if you want to manage yourself the session you can dispense with it and
+    use a simple launcher as _fbautostart_.
+-   <a name= "lxpanel"></a>[LXPanel](https://wiki.lxde.org/en/LXPanel)
+    is the standard panel of LXDE, it can generate a menu from _.desktop_ files. It can
+    be configured from a GUI preferences dialog, and has theming support via custom
+    gtkrc file.
 
 # Window managers
 
