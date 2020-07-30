@@ -48,8 +48,6 @@ _Git is below!_
     [Version Control with Subversion](http://svnbook.red-bean.com/)
     (subversion reference manual), and
     [Subversion FAQ](http://subversion.apache.org/faq.html).
--   [cvs2svn](http://cvs2svn.tigris.org) help to move your CVS history
-    over to Subversion.
 -   [Rapidsvn](http://rapidsvn.org/) is a gui for Subversion.
 -   Tools for statistical reports:
     [mpy-svn-stats](http://mpy-svn-stats.berlios.de/),
@@ -444,13 +442,12 @@ with ``git help <concept>`` where concept is one of
 
 # front-end layers
 ## Git extensions
--   [bup](https://github.com/apenwarr/bup#readme) (LGPL) from Avery Pennarun
-    is an incremental backup tool based on git.
-    Avery [explains the options in his blog](http://apenwarr.ca/log/?m=201111).
--   [EtcKeeper](http://kitenet.net/~joey/code/etckeeper/ "kitenet.net/~joey etckeeper")
-    (GPL) is a collection of tools to let /etc be stored in a git
-    repository. It hooks into apt to automatically commit changes made
-    to /etc during package upgrades.
+The {{< iref "backup#git_backup" "git backup tools" >}} are in the
+{{< iref "backup" "Backup Page" >}}.
+
+-   [EtcKeeper](http://etckeeper.branchable.com/) (GPL)
+    is a collection of tools to let /etc be stored in a git repository. It hooks into
+    apt to automatically commit changes made to /etc during package upgrades.
 -   [IsiSetup](http://sourceforge.net/projects/isisetup/) is an
     utility for managing configuration files using git as backend
     _last activity 2006_.
@@ -458,29 +455,30 @@ with ``git help <concept>`` where concept is one of
     from Jörg Sommer is an alternative to etckeeper that records the
     original package configuration in one branch and your changes in
     another one _not updated since 2009_.
--   [FlashBake](https://github.com/commandline/flashbake/wiki)
-    is a tool which watches files and automatically checks them in to a git repository.
--   <a name="git-annex"></a>[git-annex](http://git-annex.branchable.com/) by Joey Hess
-    manage files with git, without checking their contents into git.
-    -   [GitHub: git-annex](https://github.com/joeyh/git-annex)
-    -   [sharebox](https://github.com/chmduquesne/sharebox-fs)
-        is a distributed FUSE filesystem for sharing
-        files across several machines based on git-annex.
-    -   [git annex walkthrough
-        ](http://git-annex.branchable.com/walkthrough/)
-    -   [NeuroDebian git-annex standalone packages
-        ](http://neuro.debian.net/pkgs/git-annex-standalone.html)
-        package a very recent version of git-annex.
--   [Git LFS (large file systems)](https://git-lfs.github.com/)
-    is a git extension for versioning large files developped by GitHub and also
-    available on Bitbucket and GitLab.
-    -   [GitHub Git-lfs repository](https://github.com/github/git-lfs)
-        Every account using Git Large File Storage receives 1 GB of free storage and 1
-        GB a month of free bandwidth.
+-   _Git_cache_meta_ is a shell script to register the file mode that is not handled by
+    Git _except the execution bit_. There is many version of this script like
+    [arno01 git_cache_meta.sh
+    ](https://gist.github.com/andris9/1978266#gistcomment-1599650)
+    or [danny0838 git_cache_meta.sh
+    ](https://gist.github.com/danny0838/fb475658c73be6fe51a2) and a perl version
+    [danny0838/git-store-meta](https://github.com/danny0838/git-store-meta)
+    (MIT License).
+-   [przemoc/metastore](https://github.com/przemoc/metastore) (GPL)
+    Store and restore metadata from a filesystem.
+-   [zit](http://git.oblomov.eu/zit/blob/HEAD:/zit)
+    is a bash script used to track single files within a directory
+    like RCS does but using git.
 
-        You can purchase [additionnal data packs
-        ](https://help.github.com/en/articles/upgrading-git-large-file-storage#purchasing-additional-storage-and-bandwidth-for-a-personal-account)
-        for 5$/month for 50 GB of bandwidth and 50 GB for storage.
+## Git LFS {#git_lfs}
+[Git LFS (large file systems)](https://git-lfs.github.com/) Is a git extension for
+versioning large files developped by GitHub and also Available on Bitbucket and GitLab.
+-   [GitHub Git-lfs repository](https://github.com/github/git-lfs)
+    Every account using Git Large File Storage receives 1 GB of free storage and 1 GB a
+    month of free bandwidth.
+
+    You can purchase [additionnal data packs
+    ](https://help.github.com/en/articles/upgrading-git-large-file-storage#purchasing-additional-storage-and-bandwidth-for-a-personal-account)
+    for 5$/month for 50 GB of bandwidth and 50 GB for storage.
 
 -   [BitBucket Git-lfs
     ](https://confluence.atlassian.com/bitbucket/git-large-file-storage-in-bitbucket-829078514.html)
@@ -503,11 +501,19 @@ with ``git help <concept>`` where concept is one of
         [git-fat](https://github.com/jedbrown/git-fat), git-media _unmaintained_,
         [git-bigstore](https://github.com/lionheart/git-bigstore),
         [git-sym](https://github.com/cdunn2001/git-sym).
--   [zit](http://git.oblomov.eu/zit/blob/HEAD:/zit)
-    is a bash script used to track single files within a directory
-    like RCS does but using git.
+-   <a name="git-annex"></a>[git-annex](http://git-annex.branchable.com/) by Joey Hess
+    manage files with git, without checking their contents into git.
+    -   [GitHub: git-annex](https://github.com/joeyh/git-annex)
+    -   [sharebox](https://github.com/chmduquesne/sharebox-fs)
+        is a distributed FUSE filesystem for sharing
+        files across several machines based on git-annex.
+    -   [git annex walkthrough
+        ](http://git-annex.branchable.com/walkthrough/)
+    -   [NeuroDebian git-annex standalone packages
+        ](http://neuro.debian.net/pkgs/git-annex-standalone.html)
+        package a very recent version of git-annex.
 
-# Emacs Interfaces {#emacs_git}
+## Emacs Interfaces {#emacs_git}
 Many Emacs modes are available for Git; For a detailed review of the
 emacs front ends, look at
 [Work with Git from Emacs](http://alexott.net/en/writings/emacs-vcs/EmacsGit.html)
