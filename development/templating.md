@@ -1,4 +1,4 @@
----
+g---
 title: Templating engines
 ---
 
@@ -126,24 +126,22 @@ You find more explanation in [Flask: Template Inheritance
         ](http://mozilla.github.io/nunjucks/templating.html)
     -   [Nunjuck GitHub](https://github.com/mozilla/nunjucks)
 -   <a name="slim"></a>[Slim](http://slim-lang.com/) (MIT license)
-     is a _tag-free_ Ruby templating language, derived
-    from _HAML_. There are
-    also port to _Python_, _javascript_ with  _Coffee script_,
-    _Clojure_. _Slim_ is similar to {{< iref "#pug" "Pug" >}}.
-    It allows to embed other  generators like Markdown.
-    A plugin implement also a [logic-less mode
-    ](http://www.rubydoc.info/gems/slim/file/doc/logic_less.md)
+    is a _tag-free_ Ruby templating language, derived from _HAML_. There are also port
+    to _Python_, _javascript_ with _Coffee script_, _Clojure_. _Slim_ is similar to
+    {{< iref "#pug" "Pug" >}}.  It allows to embed other generators like Markdown.  A
+    plugin implement also a
+    [logic-less mode](http://www.rubydoc.info/gems/slim/file/doc/logic_less.md)
     inspired by Mustache.
-    -   [Skim (GitHub)](https://github.com/jfirebaugh/skim) (MIT License)
-        is a partial python port of _Slim_.
+    -   [Skim (GitHub)](https://github.com/appjudo/skim) (MIT License)
+        is the Slim templating engine with embedded CoffeeScript. It compiles to
+        JavaScript templates (.jst), which can then be served by Rails
     -   [Plim (GitHub)](https://github.com/avanov/Plim) is a Python port Slim
         built on top of {{< iref "#mako" "Mako Templates" >}}
         It uses Mako's preprocessor feature to translate its syntax
         into a valid HTML/Mako markup.
     -   [Slm (GitHub)](https://github.com/slm-lang/slm) (MIT License)
-        is a Node javascript implementation of _Slim_
-        it is among the quicker node templating system, with a
-        comparable speed to ECT and Hogan.
+        is a Node javascript implementation of _Slim_ it is among the quicker node
+        templating system, with a comparable speed to ECT and Hogan.
 -   <a name="twig"></a>[Twig](https://twig.symfony.com/) (BSD License)
     is a PHP template engine similar to
     {{< iref "#jinja2" "Jinja2" >}}
@@ -171,7 +169,7 @@ different API, [jstransformer
 is a middleware that unifies them into one standardized API.
 The [list of jtransformer packages
 ](https://www.npmjs.com/browse/keyword/jstransformer) give the list of
-sipported backends.
+supported backends.
 
 -   [doT](https://github.com/olado/doT) - The fastest + concise
     javascript template engine for nodejs and browsers.
