@@ -2,7 +2,6 @@
 title: Data Name Server
 ---
 
-{{% toc /%}}
 
 # References
 -   [Domain Name System from Wikipedia
@@ -23,6 +22,8 @@ title: Data Name Server
     ](https://fedoraproject.org/wiki/Networking/NameResolution),
     [DNSSEC
     ](https://fedoraproject.org/wiki/Networking/NameResolution/DNSSEC).
+-   [Archwiki: Domain name resolution
+    ](https://wiki.archlinux.org/index.php/Domain_name_resolution).
 -   [ZoneEdit Web DNS lookup](http://www.zoneedit.com/lookup.html).
 -   {{< wp "OpenDNS" >}} is a free DNS  resolution service that offers phishing
     protection. [OpenDNS Home](http://www.opendns.com/)
@@ -127,6 +128,13 @@ and
     `/etc/hosts`, so we have to disable polypo for the domains where we
     want to use `/etc/hosts` or use the dns cache itself.
 
+# Systemd-resolved
+systemd-resolved is a system service that provides network name resolution to local
+applications via a D-Bus interface. It implements a caching and validating DNS/DNSSEC
+stub resolver, as well as an LLMNR and MulticastDNS resolver and responder.
+-   [systemd-resolved.service - Freedesktop Manual
+    ](https://www.freedesktop.org/software/systemd/man/systemd-resolved.service.html)
+-   [systemd-resolved - ArchWiki](https://wiki.archlinux.org/index.php/Systemd-resolved)
 
 # Unbound
 [unbound](https://unbound.net/) (BSD license) is a validating,
@@ -170,10 +178,12 @@ RFC3011 subnet specifiers.
 -   [Dnsmasq FAQ](http://thekelleys.org.uk/dnsmasq/docs/FAQ)
 -   [Dnsmasq french tutorial](http://www.drazzib.com/docs-dnsmasq.html)
 -   [ArchWiki: Dnsmasq](https://wiki.archlinux.org/index.php/Dnsmasq)
--   [extensive example of configuration file for dnsmasq.](http://thekelleys.org.uk/dnsmasq/docs/dnsmasq.conf.example)
+-   [extensive example of configuration file for dnsmasq
+    ](http://thekelleys.org.uk/dnsmasq/docs/dnsmasq.conf.example)
     You find there some otherwise *secret options* as how to configure
     your server for a bootp relay.
--   Man pages: [dnsmasq.8](http://thekelleys.org.uk/dnsmasq/docs/dnsmasq-man.html), and [dnsmasq setup](http://thekelleys.org.uk/dnsmasq/docs/setup.html), from
+-   Man pages: [dnsmasq.8](http://thekelleys.org.uk/dnsmasq/docs/dnsmasq-man.html),
+    and [dnsmasq setup](http://thekelleys.org.uk/dnsmasq/docs/setup.html), from
     the dnsmasq distribution.
 
 
