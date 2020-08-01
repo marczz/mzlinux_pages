@@ -324,12 +324,14 @@ The dropbox daemon footprint is 50M res/16M shr
     provides a WSGI interface into the Dropbox API.
     [pypi: dropboxwsgi](http://pypi.python.org/pypi/dropboxwsgi/)
 
-# [Google Drive](https://drive.google.com/) {#gdrive}
-Google gives 15 GB shared between Google Drive, Google+ Photos and
-Gmail.  Gmail message can have attachments as big as 10G.
+#  [Google One](https://one.google.com/) {#google_one}
 
-You can updgrade to _11/2018 prices_ 100GB 20€/year and 1TB 100€/year.
-The new Google One prices are 200G 36€/year 2TB 120€/year.
+Google One is the storage shared beetwen
+<a name="gdrive"></a>[Google Drive](https://drive.google.com/), Google Mail, and Google
+Photos.  Gmail message can have attachments as big as 10G. The free plan is of 15G.
+
+The [Google one storages plans](https://one.google.com/storage) are _ 100GB 2€/month or
+20€/year, 200G 3€/month or 30€/year, and 2TB 10€/month 100€/year. _August 2020 Pricing_
 
 -   [Google developers: Publish Website Content
     ](https://developers.google.com/drive/publish-site)
@@ -380,8 +382,9 @@ The new Google One prices are 200G 36€/year 2TB 120€/year.
 
 This new-zealand company offer 50GB
 free, linux desktop sync client, android and iphone apps, a chrome and
-firefox extension. The paid plans are from 5€/month 200GB transfer 1TB  , 10€/month
-1TB transfer 2TB, 20€/month 4TB transfer 8TB, 30€/month 8TB transfer 16TB.
+firefox extension. The paid plans are from 5€/month 400GB data, transfer 1TB  , 10€/month
+2TB data, transfer 2TB, 20€/month data 8TB transfer 8TB, 30€/month 16TB data transfer 16TB.
+_August 2020 pricing_
 
 There is an official SDK and clients built upon the SDK:
 
@@ -600,6 +603,11 @@ is an open source replacement for Dropbox.
 It provides a server that build on Linux, and clients for many OS.
 
 -   [Seafile.com Home Page](http://seafile.com/en/home/).
+
+# Wasabi {#wasabi}
+Is a cloud block storage S3 compatible. The minimum plan is 1TB. And it applies an
+uniform cost of 5.90$/TB/Month -August 2020 Pricing_, with free in and out trafic, and
+free api calls.
 
 # [Yandex.Disk](http://disk.yandex.com/)
 
@@ -1313,33 +1321,39 @@ the lower rate. I have not computed the API fees, because I don't know
 how to estimate the request numbers, and you have to add it when
 appropriate.
 
+_This listing is unfair for providers thet only have plans at fixed levels, as it use
+only a fraction of what you paid, for Mega for 200G, I take a price that is valid until
+400G, for Wasabi aprice allowing 1T.
 
-| provider        |            storage/GB | download&nbsp; |  API fees&nbsp; | 200/20&nbsp; | 200/200 | checked |
-|-----------------|----------------------:|---------------:|:---------------:|-------------:|--------:|--------:|
-| [BlackBlaze B2] |       (>10G)  0.005 $ |   (>~20G) 0.01 | yes             |        0.95$ |   2.75$ |   08/20 |
-| [OVH openstack] |               0.0112$ |          0.011 | no              |        2.46€ |   4.44€ |   08/20 |
-| [Digital Ocean] |   (mini 250G) 0.02  $ |     (>1T) 0.01 | no              |        5.00$ |   5.00$ |    3/17 |
-| Wasabi          |      (mini 1T)0.004 $ |           0.04 |                 |        4.80$ |  12.00$ |    3/17 |
-| [Amazon S3]     |               0.023 $ |           0.09 | yes             |        6.40$ |  22.60$ |    3/17 |
-| [Azure]         |               0.0184$ |           free | yes             |        3.68$ |   3.68$ |    3/17 |
-| [OneDrive]      |        (<1T)  0.04  $ |           free | no              |        5.83$ |   5.83$ |    3/17 |
-| -               |         (1T)  0.006 $ |           free | no              |              |         |         |
-| [Google Drive]  |        (<1T)  0.02  € |           free | no              |        4.00€ |   4.00€ |   11/18 |
-| -               |         (1T)  0.01  $ |           free | no              |              |         |         |
-| [Mega]          |        (<1T)  0.025 € |     (<1T) free | no              |        5.00€ |   5.00€ |   11/18 |
-| -               |     (1T<s<4T) 0.01  € |     (<2T) free | no              |              |         |         |
-| [Scaleway]      | (75GB<s<0.5T) 0.01  € |   (>75GB) 0.01 | no              |        1.25€ |   2.50€ |   08/20 |
-|                 |                       |                |                 |              |         |         |
+
+| provider        |            storage/GB | download&nbsp; |  API fees&nbsp; |     200/20&nbsp; | 200/200 | checked |
+|-----------------|----------------------:|---------------:|:---------------:|-----------------:|--------:|--------:|
+| [BlackBlaze B2] |       (>10G)  0.005 $ |   (>~20G) 0.01 | yes             |            0.95$ |   2.75$ |   08/20 |
+| [OVH openstack] |               0.0112$ |          0.011 | no              |            2.46€ |   4.44€ |   08/20 |
+| [Digital Ocean] |   (mini 250G) 0.02  $ |     (>1T) 0.01 | no              |            5.00$ |   5.00$ |    3/17 |
+| [Wasabi]        |     (mini 1T) $.0059$ |           free | no              |  (1T mini) 6.00$ |   6.00$ |   08/20 |
+| [Amazon S3]     |               0.023 $ |           0.09 | yes             |            6.40$ |  22.60$ |    3/17 |
+| [Azure]         |               0.0184$ |           free | yes             |            3.68$ |   3.68$ |    3/17 |
+| [OneDrive]      |        (<1T)  0.04  $ |           free | no              |            5.83$ |   5.83$ |    3/17 |
+| -               |         (1T)  0.006 $ |           free | no              |                  |         |         |
+| [Google One]    |       (200G)  0.015 € |           free | no              |            3.00€ |   3.00€ |   08/20 |
+| -               |         (2T)  0.005 € |           free | no              |                  |         |         |
+| [Mega]          |       (400G)  0.0125€ |     (<2T) free | no              | (400 mini) 5.00€ |   5.00€ |   08/20 |
+| -               |          (2T) 0.005 € |     (<2T) free | no              |                  |         |         |
+| [Scaleway]      | (75GB<s<0.5T) 0.01  € |   (>75GB) 0.01 | no              |            1.25€ |   2.50€ |   08/20 |
+|                 |                       |                |                 |                  |         |         |
 
 [Amazon S3]: #aws "internal reference"
 [Azure]: #azure_blob "internal reference"
 [BlackBlaze B2]: #b2  "internal reference"
 [Digital Ocean]: #digital_ocean "internal reference"
-[Google Drive]: #gdrive "internal reference"
+[Google One]: #google_one "internal reference"
 [OneDrive]: #onedrive "internal reference"
 [OVH openstack]: #ovh_openstack "internal reference"
 [Mega]: #mega "internal reference"
 [Scaleway]: #scaleway_object  "internal reference"
+[Wasabi]: #wasabi  "internal reference"
+
 The backblaze calculator which is more detailled but list only
 blackblaze, Azure and Google Cloud give for first case Blackblaze 1.40$
 , Azure 4.60$, S3 5.20$, Google clouds 5.6$; for the second
@@ -1350,7 +1364,8 @@ depending of the location of the cloud service.
 
 You find a comparison of pricing and speed in
 [Gilbert Chen Cloud Storage Comparison
-](https://github.com/gilbertchen/cloud-storage-comparison).
+](https://github.com/gilbertchen/cloud-storage-comparison). _not updated between 2018
+and 2020_.
 
 Note that Google Drive is slow, Onedrive and Dropbox very slow.
 
