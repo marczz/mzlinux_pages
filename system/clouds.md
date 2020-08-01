@@ -2,9 +2,10 @@
 title: Clouds
 ---
 
--   See also {{< iref "network_filesystems#distributed_filesystems" "Distributed File Systems" >}},
-    {{< iref "scm#fs_sync" "File systems synchronization" >}},
-    {{< iref "backup" "Backup" >}}.
+See also
+{{< iref "network_filesystems#distributed_filesystems" "Distributed File Systems" >}},
+{{< iref "scm#fs_sync" "File systems synchronization" >}},
+{{< iref "backup" "Backup" >}}.
 
 ------
 
@@ -61,8 +62,10 @@ which include  {{< iref "#cloud_vfs" "Cloud  Virtual File systems" >}}.
         only files that don’t exist at the destination_;
         [s3cmd encryption HowTo](http://s3tools.org/s3cmd-encryption).
     -   _s3cmd_ is built for S3 but it is also usable with s3 compatible object storage
-        with a proper configuration file, like _scaleway object storage_, _{{< iref "#minio" "Minio" >}}_ or
-         {{< iref "#eucalyptus" "Eucalyptus" >}} like explained in
+        with a proper configuration file, like
+        {{< iref "#scaleway_object" "scaleway object storage" >}},
+        {{< iref "#minio" "Minio" >}} or
+        {{< iref "#eucalyptus" "Eucalyptus" >}} like explained in
         [how to use s3cmd with an eucalyptus instance
         ](https://github.com/eucalyptus/eucalyptus/wiki/HowTo-use-s3cmd-with-Eucalyptus).
     - _s3cmd_ is packaged in Debian.
@@ -144,26 +147,29 @@ Backblaze _B2 Cloud Storage_ works similar to Amazon S3 or
 Microsoft Azure.
 
 
-It has a very appealing price of $0.005/GB a
-month with 10 GB storage free, uploads are free, Download cost
-0.01$/G first G/day free,  _API Calls_ $0.004 per 10,000
-transactions with 2500/day free (some transactions free). _October 2019 fees_
+It has a very appealing price of $0.005/GB a month with 10 GB storage free, uploads are
+free, Download cost 0.01$/G first G/day free, _API Calls_ $0.004 per 10,000 transactions
+with 2500/day free (some transactions free). _August 2020 pricing_
 
 Previously blackblaze had a high download price, compared to some providers like OVH
 openstack the storage. But they have been cut off by two. Of course some provider offer
-free download until som e amount, and it should be considered, depending of your needs.
+free download until some amount, and it should be considered, depending of your needs.
 
 The [pricing page
 ](https://www.backblaze.com/b2/cloud-storage-pricing.html)
 includes a cost calculator, for 1000G initial data upload, 100G/month
 upload, 5G/month delete, 10G/month download, it cost 98$/year three
 time less than S3 or Google cloud. If you download 200G/month 121$/year still a third of
-S3. For 100G initial, 10G/month upload, 7G/month delete, 10G
-download/month 8.4$/year a third of S3.  For all these examples
+S3. For all these examples
 microsoft azure and google cloud are more expansive than S3.
 
+For 200G initial, 10G/month upload, 7G/month delete, 10G download/month 14$/year a third
+of S3, Azure, or Google cloud these Three are in the same range here 57$-67$.  _August 2020 pricing_
+
 The {{< iref "#comparison_table" "Comparison table" >}} below also add other low costs
-providers like  OVH openstack, or scaleway.
+providers like  OVH openstack, or scaleway, compared to scaleway, under 140G scaleway is
+less expensive, above 140G B2 win, but scaleway has also free internal trafic, that
+could give an advantage if you have a Scaleway server.
 
 [B2 Documentation](https://www.backblaze.com/b2/docs/)
 
@@ -173,23 +179,24 @@ a _blackblaze-b2_, the python sdk is also packaged as _python3-b2sdk_.XS
 
 B2 is [integrated in many softwares
 ](https://www.backblaze.com/b2/docs/integrations.html): [python command line tool
-](https://www.backblaze.com/b2/docs/quick_command_line.html), a [duplicity
-backend](https://github.com/matthewbentley/duplicity_b2), duplicati,
+](https://www.backblaze.com/b2/docs/quick_command_line.html), a
+[duplicity backend](https://github.com/matthewbentley/duplicity_b2), duplicati,
 {{< iref "backup#duplicacy"  "duplicacy" >}},
 {{< iref "backup#duplicati"  "duplicati" >}},
 {{< iref "backup#hashbackup"  "HashBackup" >}},
-{{< iref "backup#restic"  "Restic" >}}.
+{{< iref "backup#restic"  "Restic" >}},
+{{< iref "#rclone" "Rclone" >}} ([B2 support](https://rclone.org/b2/)),
+{{< iref "#opendedup" "opendedup" >}}
+([B2 support](http://opendedup.org/odd/2018/04/04/backblaze-b2-enabled/)).
 
 There is a [B2 fuse backend](https://github.com/sondree/b2_fuse) written in python.
 
 It works with CyberDuck and it's command line {{< iref "#duck" "duck" >}}.
 
-{{< iref "#rclone" "rclone" >}} has [B2 support](https://rclone.org/b2/),
-{{< iref "#opendedup" "OpenDedup"  >}} also
-[supports B2](http://opendedup.org/odd/2018/04/04/backblaze-b2-enabled/).
 
-B2 Api is a web API like amazon S3, but it is not compatible with S3,
-a proxy like {{< iref "#s3proxy" >}} my be used to get an S3 compatible interface.
+B2 Api is a web API like amazon S3. It was previously not compatible with S3,
+but now B2 offer an
+[S3 compatible API](https://www.backblaze.com/b2/docs/s3_compatible_api.htm)
 
 # Box {#box}
 
@@ -524,7 +531,7 @@ There are also some third party tools:
 
         cadaver http://nas/owncloud/files/webdav.php
 
-## nextcloud
+## Nextcloud
 Nextcloud is a fork of owncloud
 
 -   [Nextcloud](https://nextcloud.com/)
@@ -566,6 +573,26 @@ There is also an offer for [Attic or Borg backup
 ](http://www.rsync.net/products/attic.html). It is without snapshots
 since history is handled by Attic / Borg and the cost is 3$ G x month
 begining at 25G. So our example 100G plan is 36$/year. _2017 prices_
+
+### Scaleway Object storage {#scaleway_object}
+
+{{< iref "#scaleway" "Scaleway" >}} provides S3 compatible object storage.
+-   [S3-Compatible Object Storage](https://www.scaleway.com/en/object-storage/)
+    is free for first 75GB and 0,01 € per GB up to 500GB.
+
+    Incomming trafic _internal and external_ as Internal outgoing traffic to other
+    Elements products in the same region is free, external outgoing trafic is free for
+    first 75GB from 75GB to 500GB 0.01 € per GB/month.
+-   [C14 Cold Storage](https://www.scaleway.com/en/c14-cold-storage/)
+    75 GB is free then €0.002/GB/month. Archiving and recovering from C14 Cold
+    Storage’s Glacier class to Object Storage’s Standard class is free of charge.
+
+
+Most [S3 operations are supported
+](https://www.scaleway.com/en/faq/object-storage/#-Which-S3-operations-are-supported)
+and most tools usable with S3 like _s3cmd_, _aws-cli_, _s3fs_, _cyberduck_ ... are also
+usable with Scaleway object storage. The are referenced in the
+[object storage page](https://www.scaleway.com/en/object-storage/).
 
 # Seafile
 [Seafile (GitHub)](https://github.com/haiwen/seafile) (GPL)
@@ -725,10 +752,10 @@ compatible clouds or through a proxy like {{< iref "#s3proxy" "S3Proxy" >}}.
         FTPfs, WebdavFs, tarFs, ZipFs,... including
         [support for f3fs](https://www.pyfilesystem.org/page/s3fs/)
 -   [YAS3FS](https://github.com/danilop/yas3fs) (MIT Licence)
-     (Yet Another S3-backed File System) is a Filesystem in Userspace (FUSE) interface
-     to Amazon S3. It is a rewritting in python of s3fs which add a distributed cache
-     synchronized by Amazon SNS notifications. A web console is provided to easily
-     monitor the nodes of a cluster.
+    (Yet Another S3-backed File System) is a Filesystem in Userspace (FUSE) interface
+    to Amazon S3. It is a rewritting in python of s3fs which add a distributed cache
+    synchronized by Amazon SNS notifications. A web console is provided to easily
+    monitor the nodes of a cluster.
 -   [goofys](https://github.com/kahing/goofys) (Apache License)
     similar to s3fs but written in go, better performance, and less POSIX compiliance.
     it works with Ceph (ex: Digital Ocean Spaces, DreamObjects, gridscale), EMC Atmos
@@ -738,7 +765,7 @@ compatible clouds or through a proxy like {{< iref "#s3proxy" "S3Proxy" >}}.
     is a filesystem that contains a single file backed by Amazon S3.
     The blocks of the file are stored as S3 objects.
     It provides a single normal file having a fixed size which is
-    used to mount a loopback devic then s3backer acts a virtual hard disk device.
+    used to mount a loopback device then s3backer acts a virtual hard disk device.
     _S3backer_ is packaged in Debian.
 -   <a name="s3proxy"></a>[s3proxy](https://github.com/gaul/s3proxy) (Apache License)
     is a Java software that provides S3 API and proxies requests, from S3 to Backblaze
@@ -973,17 +1000,18 @@ The supported Databases are  Azure, Rackspace.
     768M + 1Terra bandwith + 15G SSD or 160G sata 60$/year. _2017_
     You can add SSD block storage: 10G for 1$/month.
 
-## [Scaleway](https://www.scaleway.com/)
--    __pricing__:
-    cloud hosting starting at 3€/month for 2GB
-    Memory 50GB SSD Disk ArmV8 cpu. Additional volumes 50G/month €1 max 150G
-    per volume, 15 volumes per server.  _October 2019 pricing_
+## [Scaleway](https://www.scaleway.com/) {#scaleway}
+-    __pricing__: cloud hosting _DEV1-S_ 200 Mbit/s starting at 5€/month for 2GB, 2
+    vCPUs, 20 GB 200 Mbit/s. Additional block storage 5,000 IOPS: 0.08€/GB-month (i.e
+    50GB €/GB month).
+    A snapshot is €0.00004 /GB-hour or  €0.02 per GB--month, so a 20GB snapshot is
+    0.4€/month.
 
-    Snapshots hourly rate €0.00004 per gigabyte-hour, or a monthly
-    fixed price of €0.02 per gigabyte-month, so a 50GB snapshot is
-    1€/month.
+    _August 2020 pricing_
 
     Reserved IP will be billed €0.002/hr per IP.
+
+    See {{< iref "#scaleway_object" "above for object storage" >}}.
 
 -   [Tutorials and documentations
     ](https://www.scaleway.com/docs/)
@@ -993,32 +1021,13 @@ The supported Databases are  Azure, Rackspace.
         ](https://blog.online.net/2016/03/31/introducing-native-ipv6-connectivity-on-scaleway/).
 -   [Image Hub](https://www.scaleway.com/imagehub/)
 -   [GitHub - Scaleway](https://github.com/scaleway)
-    -   [Debian Image](https://github.com/scaleway/image-debian)
-    -   [image-tools](https://github.com/scaleway/image-tools)
-        Scripts used to create Images on Scaleway
--   [GitHub - Scaleway community](https://github.com/scaleway-community)
--   [Docker Hub Arm64 V8 images](https://hub.docker.com/u/arm64v8/)
+    -   [scaleway-cli](https://github.com/scaleway/scaleway-cli)
+         a tool to pilot your Scaleway infrastructure from your terminal.
+    -   [python-scaleway](https://github.com/scaleway/python-scaleway)
 -   [How to create an image from scratch
     ](https://www.scaleway.com/docs/create-an-image-from-scratch/)
 
 
-### Object storage {#scaleway_objects}
-
-Scaleway also provides object storage.
--   [S3-Compatible Object Storage](https://www.scaleway.com/en/object-storage/)
-    is free for first 75GB and 0,01 € per GB up to 500GB.
-
-    Incomming trafic as Internal outgoing traffic to other Elements products in the same
-    region is free, outgoing trafic is free for first 75GB from 75GB to 500GB 0.01 € per
-    GB/month.
--   [C14 Cold Storage](https://www.scaleway.com/en/c14-cold-storage/)
-    75 GB is free then €0.002/GB/month.
-
-Most [S3 operations are supported
-](https://www.scaleway.com/en/faq/object-storage/#-Which-S3-operations-are-supported)
-and most tools usable with S3 like _s3cmd_, _aws-cli_, _s3fs_, _cyberduck_ ... are also
-usable with Scaleway object storage. The are referenced in the
-[object storage page](https://www.scaleway.com/en/object-storage/).
 
 # Temporary storage {#temporary_storage}
 See also {{< iref "p2p#p2p_file_sharing" "P2P File sharing" >}},
@@ -1305,23 +1314,22 @@ how to estimate the request numbers, and you have to add it when
 appropriate.
 
 
-| provider        |        storage/GB | download&nbsp; |  API fees&nbsp; | 200/20&nbsp; | 200/200 | checked |
-
-|-----------------|------------------:|-------------:|:---:|------:|-------:|------:|
-| [BlackBlaze B2] |            0.005$ |         0.01 | yes | 1.20$ |  3.00$ | 10/19 |
-| [OVH openstack] |            0.01 $ |         0.01 | no  | 2.20€ |  4.00€ | 10/19 |
-| [Digital Ocean] | (mini 250G) 0.02$ |   (>1T) 0.01 | no  | 5.00$ |  5.00$ |  3/17 |
-| Wasabi          |   (mini 1T)0.004$ |         0.04 |     | 4.80$ | 12.00$ |  3/17 |
-| [Amazon S3]     |            0.023$ |         0.09 | yes | 6.40$ | 22.60$ |  3/17 |
-| [Azure]         |           0.0184$ |         free | yes | 3.68$ |  3.68$ |  3/17 |
-| [OneDrive]      |     (<1T)  0.04 $ |         free | no  | 5.83$ |  5.83$ |  3/17 |
-| -               |      (1T)  0.006$ |         free | no  |       |        |       |
-| [Google Drive]  |     (<1T)  0.02 € |         free | no  | 4.00€ |  4.00€ | 11/18 |
-| -               |      (1T)  0.01 $ |         free | no  |       |        |       |
-| [Mega]          |     (<1T)  0.025€ |   (<1T) free | no  | 5.00€ |  5.00€ | 11/18 |
-| -               |  (1T<s<4T) 0.01 € |   (<2T) free | no  |       |        |       |
-| [Scaleway]      |     (0.5T) 0.01 € | (<0.5T) free | no  | 5.00€ |  5.00€ | 10/19 |
-|                 |                   |              |     |       |        |       |
+| provider        |            storage/GB | download&nbsp; |  API fees&nbsp; | 200/20&nbsp; | 200/200 | checked |
+|-----------------|----------------------:|---------------:|:---------------:|-------------:|--------:|--------:|
+| [BlackBlaze B2] |       (>10G)  0.005 $ |   (>~20G) 0.01 | yes             |        0.95$ |   2.75$ |   08/20 |
+| [OVH openstack] |               0.0112$ |          0.011 | no              |        2.46€ |   4.44€ |   08/20 |
+| [Digital Ocean] |   (mini 250G) 0.02  $ |     (>1T) 0.01 | no              |        5.00$ |   5.00$ |    3/17 |
+| Wasabi          |      (mini 1T)0.004 $ |           0.04 |                 |        4.80$ |  12.00$ |    3/17 |
+| [Amazon S3]     |               0.023 $ |           0.09 | yes             |        6.40$ |  22.60$ |    3/17 |
+| [Azure]         |               0.0184$ |           free | yes             |        3.68$ |   3.68$ |    3/17 |
+| [OneDrive]      |        (<1T)  0.04  $ |           free | no              |        5.83$ |   5.83$ |    3/17 |
+| -               |         (1T)  0.006 $ |           free | no              |              |         |         |
+| [Google Drive]  |        (<1T)  0.02  € |           free | no              |        4.00€ |   4.00€ |   11/18 |
+| -               |         (1T)  0.01  $ |           free | no              |              |         |         |
+| [Mega]          |        (<1T)  0.025 € |     (<1T) free | no              |        5.00€ |   5.00€ |   11/18 |
+| -               |     (1T<s<4T) 0.01  € |     (<2T) free | no              |              |         |         |
+| [Scaleway]      | (75GB<s<0.5T) 0.01  € |   (>75GB) 0.01 | no              |        1.25€ |   2.50€ |   08/20 |
+|                 |                       |                |                 |              |         |         |
 
 [Amazon S3]: #aws "internal reference"
 [Azure]: #azure_blob "internal reference"
@@ -1330,9 +1338,8 @@ appropriate.
 [Google Drive]: #gdrive "internal reference"
 [OneDrive]: #onedrive "internal reference"
 [OVH openstack]: #ovh_openstack "internal reference"
-[Hubic]: #hubic "internal reference"
 [Mega]: #mega "internal reference"
-[Scaleway]: #scaleway_objects  "internal reference"
+[Scaleway]: #scaleway_object  "internal reference"
 The backblaze calculator which is more detailled but list only
 blackblaze, Azure and Google Cloud give for first case Blackblaze 1.40$
 , Azure 4.60$, S3 5.20$, Google clouds 5.6$; for the second
@@ -1345,9 +1352,7 @@ You find a comparison of pricing and speed in
 [Gilbert Chen Cloud Storage Comparison
 ](https://github.com/gilbertchen/cloud-storage-comparison).
 
-Note that Google Drive is slow, Onedrive and Dropbox very slow, and
-Hubic even more slow and a with a limited access protocol caused by
-the oauth authentication.
+Note that Google Drive is slow, Onedrive and Dropbox very slow.
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
