@@ -473,80 +473,35 @@ There are also some third party tools:
     upload/download or create containers.
     It is in Debian.
 
-    It is also used for [Sftp Cloudfs
-    ](https://github.com/Memset/sftpcloudfs
+    It is also used for [Sftp Cloudfs](https://github.com/Memset/sftpcloudfs).
 -   [OpenStack Swift on Raspberry Pi
     ](http://programmerthoughts.com/openstack/swift-on-pi/)
--   [Swift Virtual File System (svfs)](https://github.com/ovh/svfs/)
-    is a Virtual File System over Openstack Swift built upon fuse. It
-    is compatible with any Openstack Swift endpoint like OVH
-    Public Cloud Storage.
--   [Swift Explorer](http://www.619.io/swift-explorer)
+-   [Swift Explorer](http://www.619.io/swift-explorer) (Apache License)
     is a java software.
+    -   [swift explorer - GitHub](https://github.com/roikku/swift-explorer).
 
 ## Openstack storage providers
--   Openstack is underlying technology for {{< wp "Rackspace" >}} Cloud
-    Servers. They provide  [openstack object storage
-    ](https://www.rackspace.com/cloud/files) at the price of
-    0.095€/G x month with trafic at 0.10€/GB  _2017 first TB storage and 10T
-    traffic_ so for 100G storage and 100G traffic ~ 20€/month.
-    _seems very expensive compared to OVH_.
--   <a name="ovh_openstack">{{< wp "OVH" >}} provides
-    [openstack/swift object storage
+-   Openstack is underlying technology for {{< wp "Rackspace" >}} Cloud Servers. They
+    provide [openstack object storage](https://www.rackspace.com/cloud/files)
+    at the price of 0.095€/G x month with trafic at 0.10€/GB _2017 first TB storage and
+    10T traffic_ so for 100G storage and 100G traffic ~ 20€/month.  _seems very
+    expensive compared to OVH_.
+-   <a name="ovh_openstack">{{< wp "OVH" >}} provides [openstack/swift object storage
     ](https://www.ovh.com/fr/public-cloud/storage/object-storage/)
-    at the price of 0.01€ G/month inbound traffic free, outbound
-    traffic 0.01€ G so for 100G storage and outbound monthly
-    traffic 2 €/m, of course if you use for backup you have few
+    at the price of 0.0112€ G/month inbound traffic free, outbound
+    traffic 0.011€/G _08/2020_ _If you use for backup you have few
     outbound traffic, if you use it for distributing content you might
-    have an heavy outbound traffic. _10/2019_
+    have an heavy outbound traffic_
     Ovh has [documentation on object storage management
     ](https://www.ovh.com/fr/public-cloud/storage/object-storage/).
 
     OVH provides also cold storage for archiving, retrieving you data
     can take up to few hours.  The price of cold storage is
-    0.0024€/month, with inbound and outbound traffic at 0.012€ G that
-    makes storing 100G at 0.240/month + traffic _11/2018_.  In addition to
+    0.0023€/ GB-month, with inbound and outbound traffic at 0.011€ G that
+    makes storing 100G at 0.230/month + traffic _08/2020_.  In addition to
     openstack/swift API OVH offers SFTP, Rsync, SCP, HTTPS access to
     the storage.
 
-    See below the abandoned {{< iref "#hubic" "Hubic offer" >}}, and
-    their {{< iref "#ovh_vps" "cloud vps" >}}.
-
-
-# [OVH hubiC](http://www.ovh.fr/hubiC/) {#hubic}
-
-[OVH hubiC](http://www.ovh.fr/hubiC/) the offer was 25Go free, 100Go 10€/an,
-10 To 50€/an. _2017_ but it is now closed, you can still use your storage plan but no
-new development will be down.
-
-A [public API](https://api.hubic.com/) is available.
-
-
-The desktop application is available for Windows, Mac, Linux, iOS
-(iPhone/iPad), android. It allows to synchronize a folder, and also to
-backup data.  The Web application allow also to share files and
-folders by sharing links.
-
-The bandwidth seems limited to 10Mb/s ~ 1MB/s, in upload and download
-as well.
-
--   The official Hubic client is in mono and is old; so there can be
-    some library incompatibilities. See
-    [Le client HubiC sous Debian - Inios
-    ](https://inios.fr/hubic-sur-debian).
--   We can also use {{< iref "#rclone" "rclone" >}} which has
-    [Hubic support](https://rclone.org/hubic/). As rclone allow among
-    its [commands](https://rclone.org/docs/#subcommands) copy and
-    synchronize, it can be a more usable tool to access Hubic from
-    linux CLI.
-    -   [Backups dans le cloud hubic avec duplicity et rclone(rsync)
-        ](http://nogues.pro/blog/backup-hubic-duplicity-rsync.html)
-        by Pierre Noguès.
--   HubiC  rely on  {{< iref "#openstack" "OpenStack" >}} / Swift
-    so we can use the OpenStack / Swift api, with {{< wp "Oauth" >}} authentication.
--   [Forum hubiC](https://forums.hubic.com/)
--   [HubicFuse](https://github.com/TurboGit/hubicfuse)
-    is a Fuse interface to Hubic. It is in Debian.
 
 # [Owncloud](http://owncloud.org/) {#owncloud}
 
