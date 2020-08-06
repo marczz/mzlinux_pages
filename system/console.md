@@ -2,8 +2,6 @@
 title: Console configuration
 ---
 
-{{% toc /%}}
-
 ---
 
 See also {{< iref "xorg" "Xorg section" >}},
@@ -40,6 +38,65 @@ See also {{< iref "xorg" "Xorg section" >}},
     -   _Dtvm_ can also be used in an X virtual console.
     -   We can also use in console a {{< iref "checkpointing#terminal_multiplexors" "Terminal multiplexor" >}}
         like screen or {{< iref "checkpointing#tmux" "tmux" >}}.
+
+# Console message log
+
+The Linux kernel log levels are integers from 0 to 7.
+
+| level | name         |
+|-------|--------------|
+| 0     | KERN_EMERG   |
+| 1     | KERN_ALERT   |
+| 2     | KERN_CRIT    |
+| 3     | KERN_ERR     |
+| 4     | KERN_WARNING |
+| 5     | KERN_NOTICE  |
+| 6     | KERN_INFO    |
+| 7     | KERN_DEBUG   |
+
+You can know the loglevel with
+~~~
+$ cat /proc/sys/kernel/printk
+4	4	1	7
+~~~
+
+or
+~~~
+$ sysctl kernel.printk
+kernel.printk = 4	4	1	7
+~~~
+
+The four numbers are values of _console_loglevel_, _default_message_loglevel_,
+_minimum_console_loglevel_, _default_console_loglevel_.
+
+In the previous example the current level is _KERN_WARNING_ meaning that only messages
+with a severity of at least _warning_ are written to the console.
+
+You can change the console level until newt boot with:
+~~~
+# echo "3" > /proc/sys/kernel/printk
+~~~
+or
+~~~
+# sysctl -w kernel.printk=3
+~~~
+
+-   {{< man "printk(2)" >}}
+-   {{< man "syslog(2)" >}}
+-   Wikipedia: {{< wp "syslog" >}}, {{< wp "printk" >}}
+-   [Introduction to the Linux kernel log levels - LinuxConfig.org
+    ](https://linuxconfig.org/introduction-to-the-linux-kernel-log-levels)
+
+
+The the magic SysRq key is a key combo you can hit which the kernel will respond to
+regardless of whatever else it is doing, unless it is completely locked up.
+
+You send it by pressing `ALT-SysRq-<command key>`, or `ALT-SysRq` followed by
+`ALT-<command key>`.
+
+-   [Linux Magic System Request Key Hacks — The Linux Kernel documentation
+    ](https://www.kernel.org/doc/html/latest/admin-guide/sysrq.html)
+-   Wikipedia: {{< wp "Magic SysRq key" >}}
 
 # Setting console Keyboard and Font {#console_setup}
 See also {{< iref "input_methods" "input method" >}},
@@ -191,7 +248,7 @@ simultaneously on all seats.
     GTK+ bindings, it allows mainly to interpret terminal escape sequences in a Xterm
     compatible way.
 -   [kmscon GitHub repository
-    ](https://github.com/dvdhrm/kmscon)
+    ](https://github.com/dvdhrm/kmscon) _2014_.
 -   The [kmscon repository](https://github.com/dvdhrm/kmscon)contains also the source of
     [wlterm](https://www.freedesktop.org/wiki/Software/kmscon/wlterm/)
     a native {{< iref "xterminals#wayland_terminals" "Wayland terminal" >}}
