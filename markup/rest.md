@@ -2,15 +2,12 @@
 title: reStructuredText
 ---
 
-{{% toc /%}}
 
 # ReStructured Text References
--   <a name="docutils"></a>[Docutils
-    ](http://docutils.sourceforge.net/index.html)
-    is a a set of tools for processing plaintext
-    documentation into useful formats, such as HTML, XML, and LaTeX,
-    or S5 slides. It uses [reStructuredText][rest] markup syntax. It
-    is a
+-   <a name="docutils"></a>[Docutils](http://docutils.sourceforge.net/index.html)
+    is a a set of tools for processing plaintext documentation into useful formats, such
+    as HTML, XML, and LaTeX, or S5 slides. It uses reStructuredText _rest_ markup
+    syntax. It is a
     [public domain software with few exceptions
     ](http://svn.berlios.de/viewvc/docutils/trunk/docutils/COPYING.txt?view=markup)
 -   [reStructuredText][rest] syntax is detailed in the official
@@ -23,7 +20,7 @@ title: reStructuredText
 -   [Docutils Configuration](http://docutils.sourceforge.net/docs/user/config.html).
 -   There are also useful unofficial doc:
     [Sphinx: reStructuredText Primer
-    ](http://sphinx.pocoo.org/rest.html)
+    ](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html),
     [Restructured Text (reST) and Sphinx CheatSheet
     ](http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html),
     [rules, tips, and tricks for using Sphinx and reStructuredText
@@ -52,7 +49,7 @@ title: reStructuredText
      is a web site builder from one or many
      template and content in ReStructured Text.
 -   [flask-rst](https://github.com/jarus/flask-rst) create a site from rst content with
-    [flask](http://flask.pocoo.org/docs/).
+    {{< iref "python_web#flask" "Flask" >}}.
 
 
 # ReSt tools.
@@ -149,11 +146,11 @@ title: reStructuredText
 
 # Sphinx {#sphinx}
 
-[Sphinx][sphinx] (BSD license) is a documentation generator that
-[uses ReST](http://sphinx.pocoo.org/rest.html) to generate all the
-python official documentation. It allows generation of HTML in many
+[Sphinx][sphinx] (BSD license) is a documentation generator that [uses ReST
+](http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html)
+to generate all the python official documentation. It allows generation of HTML in many
 formats, HtmlHelp, TexInfo, Epub, man page, LaTeX
-[and more](http://sphinx.pocoo.org/latest/builders.html).
+[and more](https://www.sphinx-doc.org/en/master/usage/builders/).
 
 -   Documentation at [Sphinx Home][sphinx],
     [Documenting Your Project Using Sphinx
@@ -176,7 +173,7 @@ formats, HtmlHelp, TexInfo, Epub, man page, LaTeX
 
 ## Sphinx extensions
 -   The [manual describe Sphinx extensions and list built-in extensions
-    ](http://sphinx.pocoo.org/extensions.html)
+    ](https://www.sphinx-doc.org/en/master/usage/extensions/)
 -   The [Sphinx extension contrib repository
     ](https://bitbucket.org/birkenfeld/sphinx-contrib)
     contains many Sphinx extension.
@@ -232,7 +229,7 @@ and a collection of [builtin themes
     other places. It is a mobile-friendly sphinx theme.
 
 [rest]: http://docutils.sourceforge.net/rst.html
-[sphinx]: http://sphinx.pocoo.org
+[sphinx]: https://www.sphinx-doc.org/en/master/
 
 <!--  Local Variables: -->
 <!--  mode: markdown -->
