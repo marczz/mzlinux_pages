@@ -299,53 +299,70 @@ Some text to show that the reference links can follow later.
 </div>
 
 [I'm an inline-style link](https://www.google.com)
+<a id="H_link"></a>
+## Link
 
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+### Writing link reference.
 
-[I'm a reference-style link][Arbitrary case-insensitive reference text]
+There are two ways to create a link _inline_ or _reference-style_. With _reference-style_
+links you put anywhere in the same file _usually at end of section or page_ the
+reference text.
 
-[I'm a link to a  relative path of a file](../blob/master/LICENSE)
+```markdown
+-   [inline-style link](https://www.fsf.org/)
+-   [inline-style link with title](https://www.gnu.org/ "GNU's Homepage")
+-   [reference-style link][Arbitrary case-insensitive reference text]
+-   [link to a  relative path](../../network/social_networks/)
+-   [number reference-style link][1]
+-   Use the [link text itself as reference]
 
-[You can use numbers for reference-style link definitions][1]
-
-Or leave it empty and use the [link text itself]
-
-Some text to show that the reference links can follow later.
+<!-- the references follow -->
 
 [arbitrary case-insensitive reference text]: https://www.mozilla.org
 [1]: http://slashdot.org  "The title is Slashdot!"
-[link text itself]: http://www.reddit.com
-
-
-Link targets i.e *id* or *name* can be defined either by giving the
-html code:
-```html
-<a name="link-target">
-{{< iref "#link" "Reference to the link target in the present page" >}}
+[link text itself as reference]: https://www.laquadrature.net/en/personnal-data/
 ```
+<div class="example">
 
-<a name="link-target">
-{{< iref "#link" "Reference to the link target in the present page" >}}
+-   [inline-style link](https://www.fsf.org/)
+-   [inline-style link with title](https://www.gnu.org/ "GNU's Homepage")
+-   [reference-style link][Arbitrary case-insensitive reference text]
+-   [link to a  relative path](../../network/social_networks/)
+-   [number reference-style link][1]
+-   Use the [link text itself as reference]
 
-You can also use the title of sections *in lowercase, accent removed,  spaces
-replaced by minus, and omitting special characters*.
-```text
-{{< iref "#inline" "link to the "Inline HTML" section" >}}
+<!-- the references follow -->
+
+[arbitrary case-insensitive reference text]: https://www.mozilla.org
+[1]: http://slashdot.org  "The title is Slashdot!"
+[link text itself as reference]: https://www.laquadrature.net/en/personnal-data/
+
+</div>
+
+### Defining the link target.
+
+A link target i.e *id* or *name* can be defined  by giving the
+html code with any formatter that allow raw HTML (most of them):
+
+```markdown
+<a name="link-target"></a> Target Text\
+...\
+[Reference to the link target in the present page"](#link-target)
 ```
+<div class="example">
 
-{{< iref "#inline" "link to the "Inline HTML" section" >}}
+<a name="link-target"></a> Target Text\
+...\
+[Reference to the link target in the present page"](#link-target)
 
-```text
-You can also define id in attributes.
-{: #attr-example .css-class }
-```
+</div>
 
-You can also define id in attributes.
-{: #attr-example .css-class }
+Some formatter allow the use of automatic link targets for sections.
+You can then use the title of sections _in lowercase, accent removed,  spaces
+replaced by minus, and omitting special characters_.
 
-It generates:
-```html
-<p class="css-class" id="attr-example">You can also define id in attributes.</p>
+```markdown
+[link to the "Writing links references" Subsection](#writing-links-references)
 ```
 
 ## Markdown parsers and attributes {#attributes}
