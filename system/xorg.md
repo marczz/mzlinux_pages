@@ -2,14 +2,12 @@
 title: Xorg
 ---
 
-{{% toc /%}}
-
----
-
 See also {{< iref "input_methods" "Input method" >}} where you find
 {{< iref "input_methods#xkb" "Xkb" >}},
 {{< iref "console" "Console section" >}}, {{< iref "desktop" "Desktop" >}} where is found the
 {{< iref "desktop#clipboard" "Clipboard managers" >}}.
+
+---
 
 # References
 
@@ -59,6 +57,10 @@ It supports Multi-monitor panning, and output border adjustment.
     The RandR 1.2 extension provides automatic discovery of modes
     (resolutions, refresh rates, ...) together with the ability to
     configure outputs dynamically (resize, rotate, move, ...).
+
+    This page is partially obsolete _2012_ but still contains useful information like
+    [Use xrandr to enable/disable/move/resize multiple outputs
+    ](https://wiki.debian.org/XStrikeForce/HowToRandR12#II._Use_xrandr_to_enable.2Fdisable.2Fmove.2Fresize_multiple_outputs).
 -   [X Strike Force - How to use xrandr
     ](https://xorg-team.pages.debian.net/xorg/howto/use-xrandr.html)
 -   [Ubuntu Wiki: resolution](https://wiki.ubuntu.com/X/Config/Resolution)
@@ -173,8 +175,8 @@ See also the {{< iref "#xdmcp" "XDMCP section" >}}
 -   [Xdm (Wikipedia)
     ](http://en.wikipedia.org/wiki/XDM_(display_manager)) (MIT License)
     manages a collection of X displays, which may be on the local host
-    or remote servers. It implements XDMCP, the X Display Manager
-    Control Protocol.
+    or remote servers. It implements
+    {{< iref "#xdmcp" "XDMCP, the X Display Manager Control Protocol" >}}.
     -   The configuration and options are described in the man page:
         [xdm(1)](https://www.x.org/releases/X11R7.6/doc/man/man1/xdm.1.xhtml)
     -   [ArchWiki: XDM](https://wiki.archlinux.org/index.php/XDM)
@@ -209,13 +211,12 @@ See also the {{< iref "#xdmcp" "XDMCP section" >}}
     -   [Xrdp - ArchWiki](https://wiki.archlinux.org/index.php/Xrdp).
 
 -   <a name="spice"></a>[Spice](http://www.spice-space.org/) (GPL)
-    is a solution for interaction with virtualized desktop devices.
-    It provides remote access to QEMU virtual machine.
-    There are clients for linux, windows, android, a plugin for
-    browsers like Firefox or Chromium; a Server for Qemu and a server
-    for Xorg _Xspice_.
+    is a solution for interaction with virtualized desktop devices.  It provides remote
+    access to {{< iref "virtualization#qemu" "Qemu" >}} virtual machine.  There are
+    clients for linux, windows, android, a plugin for browsers like Firefox or Chromium;
+    a Server for Qemu and a server for Xorg _Xspice_.
     You find in Debian _xserver-xspice_, _spice-client_, _spice-client-gtk_,
-    , _browser-plugin-spice_, _spice-html5_.
+    _browser-plugin-spice_, _spice-html5_.
     -   Wikipedia {{< wp "SPICE (protocol)" >}}
 -   [TeamViewer](http://www.teamviewer.com/) is a private source free
     software for remote control, desktop sharing, online meetings, web
@@ -225,7 +226,7 @@ See also the {{< iref "#xdmcp" "XDMCP section" >}}
     BlackBerry operating systems.
     -   Wikipedia {{< wp "Teamviewer" >}}
 
-## XDMCP {xdmcp}
+## XDMCP {#xdmcp}
 [XDMCP
 ](https://en.wikipedia.org/wiki/X_display_manager_(program_type)#X_Display_Manager_Control_Protocol)
 In X Window System a server can connect, using the XDMCP protocol, to a display
@@ -275,6 +276,9 @@ Xpra is in Debian, and also a Debian repository is also
 -   Wikipedia: {{< wp "Virtual_Network_Computing" >}} (VNC),
     {{< wp "Comparison of remote desktop software" >}}.
 -   [vnc susefaq how-to](http://susefaq.sourceforge.net/howto/vnc.html)
+-   Ubuntu Help: [VNC](https://help.ubuntu.com/community/VNC),
+    [VNC/Servers](https://help.ubuntu.com/community/VNC/Servers).
+
 
 ## VNC Servers/client software
 
@@ -296,8 +300,11 @@ VNC, mDNS service advertising, and TightVNC and UltraVNC
 file-transfer.
 
 This is an old project, the core of the project comes from 0.9.13
-year 2010, but the code is minimaly maintened since then. 0.9.13
-is packaged in Debian.
+year 2010 which is is packaged in Debian for version up to _buster_.
+
+LibVNC and the GitHub community have taken over the development since 0.9.14.  on Jan 5,
+2019 0.9.16 was released and is available in Debian _bullseye_. You can find
+[the latest release on GitHub](https://github.com/LibVNC/x11vnc/releases/latest).
 
 It can use as X display either the virtual framebuffer X server
 [Xvfb](https://manpages.debian.org/unstable/xvfb/Xvfb.1.en.html)
@@ -306,13 +313,12 @@ Xdummy a wrapper script which until 9.13 was
 [part of the x11vnc source code
 ](https://github.com/LibVNC/x11vnc/blob/187cb9f70d71353827ff2c01f9e0d65b767be071/misc/Xdummy) and
 since 9.14 is a C program. An advantage of Xdummy over Xvfb is that
-Xdummy supports RANDR dynamic screen resizing.
+Xdummy supports {{< iref "#xrandr" "RANDR" >}} dynamic screen resizing.
 
 -   [x11vnc documentation
     ](http://www.karlrunge.com/x11vnc/index.html)
     the documentation for the old project, but still actual.
--   [ArchWiki: X11vnc
-    ](https://wiki.archlinux.org/index.php/X11vnc)
+-   [X11vnc - ArchWiki](https://wiki.archlinux.org/index.php/X11vnc)
 -   [VNCpp](https://github.com/ocrespo/VNCpp) (GPL)
     is a VNC viewer to Android powered by LibVNCServer.
 -   [vncterm](https://github.com/LibVNC/vncterm) (GPL)
@@ -355,19 +361,25 @@ You can replace it by the {{< iref "#tigervnc" "TigerVnc" >}} fork.
 
 -   [TigerVnc GitHub Repository](https://github.com/TigerVNC/tigervnc)
 -   [TigerVnc Wiki](https://github.com/TigerVNC/tigervnc/wiki)
--   [ArchWiki: TigerVNC](https://wiki.archlinux.org/index.php/TigerVNC)
+-   [ TigerVNC - ArchWiki](https://wiki.archlinux.org/index.php/TigerVNC)
+-   [TigerVNC - Gentoo Wiki](https://wiki.gentoo.org/wiki/TigerVNC)
 -   Manuals:
-    -   [vncconfig](http://tigervnc.org/vncconfig.html)
-    -   [vncpasswd](http://tigervnc.org/vncpasswd.html)
-    -   [vncserver](http://tigervnc.org/vncserver.html)
-    -   [vncviewer](http://tigervnc.org/vncviewer.html)
-    -   [x0vncserver](http://tigervnc.org/x0vncserver.html)
-    -   [Xvnc](http://tigervnc.org/Xvnc.html)
+    -   [vncconfig](http://tigervnc.org/doc/vncconfig.html)
+    -   [vncpasswd](http://tigervnc.org/doc/vncpasswd.html)
+    -   [vncserver](http://tigervnc.org/doc/vncserver.html)
+    -   [vncviewer](http://tigervnc.org/doc/vncviewer.html)
+    -   [x0vncserver](http://tigervnc.org/doc/x0vncserver.html)
+    -   [Xvnc](http://tigervnc.org/doc/Xvnc.html)
 
 
-Debian has TigerVnc package since stretch, an [neurodebian provide
-packages](http://neuro.debian.net/pkgs/tigervnc-standalone-server.html)
-for wheezy and jessie.
+Debian has TigerVnc package since _stretch_.
+
+_TigerVnc_ can expose directly the X server like does {{< iref "#x11vnc" "X11VNC" >}}
+through an Xorg extension _libvnc.so_, which is in Debian in a separate package
+_tigervnc-xorg-extension_. You will use
+[x0vncserver](http://tigervnc.org/doc/x0vncserver.html) to share the X display connected
+to the physical screen remotely. Unlike [Xvnc](http://tigervnc.org/doc/Xvnc.html)  it
+does not create a virtual display.
 
 TigerVnc can be used with {{< iref "#virtualgl" "VirtualGL" >}} to acelerate
 OpenGl rendering.
@@ -421,8 +433,10 @@ package.
     -   [vnc2flv GitHub repository](https://github.com/baijum/vnc2flv).
 -   [Remina](https://remmina.org) (GPL)
      is a Gnome remote desktop client written in GTK+, which supports multiple network
-     protocols, Currently RDP, VNC, {{< iref "#spice" "SPICE" >}},
-     NX, XDMCP, SSH and EXEC. It is in Debian.
+     protocols, Currently RDP, {{< iref "#vnc" "VNC" >}}, {{< iref "#spice" "SPICE" >}},
+     {{< iref "x2go" "NX" >}}, {{< iref "#xdmcp" "XDMCP" >}},  {{< iref "ssh" "SSH" >}}
+     and EXEC. It is in Debian and also provided as _Flatpak_ or _Snap_ package.
+     -   [Remmina GitLab repository](https://gitlab.com/Remmina/Remmina)
      -   [Remmina Wiki](https://gitlab.com/Remmina/Remmina/wikis/home)
      -   [Remmina - ArchWiki](https://wiki.archlinux.org/index.php/Remmina)
 -   [Veyon](https://veyon.io/) (GPL) previously _ITALC_
@@ -434,15 +448,25 @@ package.
 -   [Gitso](http://code.google.com/p/gitso/) (GPL)
     is a frontend to reverse VNC connections. It connects one person which need support
     to another's screen of a person that offer support. It is
-    available in windows, linux, OSX. The project is no longer active. Gitso is in Debian.
--   [noVNC](https://kanaka.github.io/noVNC/) (Mozilla Public License)
+    available in windows, linux, OSX. The project is no longer active since _2010_ but it
+    is still in Debian.
+-   [noVNC](https://novnc.com/info.html) (Mozilla Public License)
     is a HTML5 VNC client that runs well in any modern browser
     including mobile browsers (iOS and Android).
-    It supports WebSocket SSL/TLS encryption (i.e. "wss://") .
-    noVNC should work on any [browser with reasonable HTML5 support
-    ](browser with reasonable HTML5 support):
-    Chrome 8, Firefox 4, Safari 6, iOS Safari 5.1, Opera 12, IE 11,
-    Edge 12
+    It supports WebSocket SSL/TLS encryption (i.e. "wss://").
+
+    _noVNC_ should work on any browser with reasonable HTML5 support:
+    Chrome 49, Firefox 44, Safari 11, Opera 36, IE 11, Edge 12
+
+    _noVNC_ does require WebSockets support, which is included in servers like
+    {{< iref "#x11vnc" "X11vnc" >}} or in {{< iref "virtualization#qemu" "Qemu" >}},
+    and [MobileVNC](http://www.smartlab.at/mobilevnc/). For others servers you need to
+    use a WebSockets to TCP socket proxy like
+    [websockify](https://github.com/novnc/websockify).
+
+
+    -   [noVNC GitHub](https://github.com/novnc/noVNC).
+
 -   <a name="virtualgl">[VirtualGL](https://virtualgl.org/Main/HomePage) (GPL)
     gives any Linux or Unix remote display software the ability to run OpenGL
     applications with full hardware acceleration.
