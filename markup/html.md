@@ -459,17 +459,14 @@ Links for favicon:
     (with sgml entities ref.) _oldy but goody_
 -   [W3C CCS Home Page](http://www.w3.org/Style/CSS/)
     include a list of Standards & drafts.
--   [WikiBook: Cascading Style Sheets](http://en.wikibooks.org/wiki/Cascading_Style_Sheets)
 -   [w3.org](http://www.w3.org/):
     -   [CSS2 Specification](http://www.w3.org/TR/REC-CSS2)
-    -   CSS3: [CSS3 Basic User Interface Module](http://www.w3.org/TR/2004/CR-css3-ui-20040511/),
-        [CSS Color Module Level 3](http://www.w3.org/TR/2011/REC-css3-color-20110607/),
-        [Selectors Level 3](http://www.w3.org/TR/2011/REC-css3-selectors-20110929/),
-        [CSS Namespaces Module](http://www.w3.org/TR/2011/REC-css3-namespace-20110929/)
-    -   [List of CSS drafts and recommendations](http://www.w3.org/standards/techs/css#w3c_all)
--   veign.com: [CSS3 Quick reference guide (pdf)](http://www.veign.com/downloads/guides/qrg0008.pdf)
--   richstyle.org [CSS3 Quick reference (html)](http://web-standards.richstyle.org/css3.php) and
-    [pdf](http://www.richstyle.org/download/CSS3_Quick_Reference_1.0.pdf)
+    -   CSS3: [CSS3 Basic User Interface Module](https://www.w3.org/TR/css-ui-3/)
+        [CSS Color Module Level 3](https://www.w3.org/TR/css-color-3/),
+        [Selectors Level 3](https://www.w3.org/TR/selectors-3/),
+        [CSS Namespaces Module](https://www.w3.org/TR/css3-namespace/)
+    -   [HTML & CSS](https://www.w3.org/standards/webdesign/htmlcss)
+    -   [List of CSS drafts and recommendations](https://www.w3.org/Style/CSS/current-work)
 -   [Cascading Style Sheets - Wikiboook
     ](https://en.wikibooks.org/wiki/Cascading_Style_Sheets).
 -   [Mozilla Developer Network: CSS](https://developer.mozilla.org/en-US/docs/CSS):
@@ -504,11 +501,11 @@ These options also [work on mobile](http://quirksmode.org/css/columns/mobile.htm
 the preprocessor implementation is written in ruby but there are alternative
 implementations in PHP and Python.
 -   SASS has two syntaxes the  new _scss_ and _sass_.
--   [SASS Home](http://sass-lang.com/) has a
+-   [SASS Home](http://sass-lang.com/)
+-   [Sass: Documentation](https://sass-lang.com/documentation)
+    is an index to Sass syntax and
     [SASS tutorial](http://sass-lang.com/tutorial.html) and the
     [SASS Reference](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html).
--   [Phamlp](http://code.google.com/p/phamlp/) (BSD License)
-    is a PHP port of Haml and Sass, that can parse both the scss and the sass syntax.
 -   [pyScss](https://github.com/Kronuz/pyScss) (MIT License)
     is a _scss_ to _css_ Python translator for the _scss_ language.
 
@@ -579,7 +576,7 @@ Bootstrap uses {{< iref "#less" "Less" >}} css3 extension.
 -   Wikipedia:  {{< wp "Twitter Bootstrap" >}}
 -   [Bootstrap - GitHub](https://github.com/twitter/bootstrap/)
 -   [GetBoostrap](https://getbootstrap.com/) is the Bootstrap Home and contains the
-    documentation. It is an {{< ref "static_sites#hugo" "Hugo" >}} site. The source is
+    documentation. It is an {{< iref "static_sites#hugo" "Hugo" >}} site. The source is
     in the [Site directory of the GitHub repository
     ](https://github.com/twbs/bootstrap/tree/master/site).
 -   [w3resource: Twitter Bootstrap tutorial
