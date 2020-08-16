@@ -145,17 +145,30 @@ See also the {{< iref "#xdmcp" "XDMCP section" >}}
     -   [GDM Reference Manual
         ](https://help.gnome.org/admin/gdm/stable/)
     -   [ArchWiki: GDM](https://wiki.archlinux.org/index.php/GDM).
--   [LightDM](http://en.wikipedia.org/wiki/LightDM) (GPL)
-    is a window manager with same functionalities than _GDM_ but
-    without Gnome dependencies.
-    LightDM is the default display manager for Ubuntu and LXDE
-    the memory footprint of lightdm are 3.6M resident / 3M shared
-    for each session mother and children (3 on my desktop). 14M / 10M for the gtk greater
-    that vanishes once connected. It is truly light since we can think that shared
-    memory is actually shared among the session children.
+-   <a name="lightdm"></a>[LightDM](http://en.wikipedia.org/wiki/LightDM) (GPL)
+    is a window manager with same functionalities than _GDM_ but without Gnome
+    dependencies.  LightDM is the default display manager for LXDE including lxubuntu,
+    and many minimal distributions. The memory footprint of lightdm are 3.6M resident /
+    3M shared for each session mother and children (3 on my desktop).  It is truly light
+    since we can think that shared memory is actually shared among the session children.
+    The lightdm GTK+ greeter is 14M / 10M for the gtk greater but it vanishes once
+    connected.
+    -   [Lightdm - GitHub](https://github.com/canonical/lightdm)
     -   [ArchWiki Lightdm](https://wiki.archlinux.org/index.php/LightDM)
+    -   [LightDM - Debian Wiki](https://wiki.debian.org/LightDM)
     -   [Ubuntu Lightdm](https://wiki.ubuntu.com/LightDM),
-        [How to customize guest session](https://help.ubuntu.com/community/CustomizeGuestSession)
+
+    The guest account is setup by a script, the
+    [guest-account provided in the distribution
+    ](https://github.com/canonical/lightdm/blob/master/debian/guest-account.sh),
+    that may be [patched to provide autologin
+    ](https://aur.archlinux.org/cgit/aur.git/tree/0002-guest-account-Enable-autologin-guest-account-command.patch)
+    or [ArchWiki simpler script
+    ](https://aur.archlinux.org/cgit/aur.git/tree/guest-account.sh).
+
+    -   [How to customize guest session - Ubuntu Help
+        ](https://help.ubuntu.com/community/CustomizeGuestSession)
+
 -   <a name="ldm"></a>[ldm
     ](http://wiki.ltsp.org/wiki/LTSPManual#The_LDM_display_manager)
     is the {{< iref "#ltsp" "LTSP" >}} display manager, it is written in python
