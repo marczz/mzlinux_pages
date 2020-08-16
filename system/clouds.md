@@ -745,8 +745,15 @@ compatible clouds or through a proxy like {{< iref "#s3proxy" "S3Proxy" >}}.
 ## Virtual File systems {#cloud_vfs}
 -   [S3QL](https://github.com/s3ql/s3ql/) (GPL)
     is a file system that stores all its data online using storage
-    services  like  Google  Storage,   Amazon  S3  or  OpenStack.   S3QL
-    effectively provides a hard disk of dynamic, infinite capacity.
+    services  like  Google  Storage,   Amazon  S3 and S3 compatible,  OpenStack,
+    Blackblaze B2, local filesystem.
+
+    S3QL offers all posix features of a local file system, it supports hardlinks,
+    symlinks, standard unix permissions, extended attributes.
+
+    _S3QL_ deduplicate and compress data, it allows an optional AES encryption,
+    It allows Copy-on-Write/Snapshotting.
+
     _S3QL_ is packaged in Debian.
     -   [S3QL User’s Guide](http://www.rath.org/s3ql-docs/index.html)
     -   [s3ql Wiki](https://github.com/s3ql/s3ql/wiki) includes
