@@ -89,21 +89,19 @@ even when only few bites have changed, chunk based increments will
 save only the changed data blobs.
 
 -    <a name="borg"></a>[Borg](https://github.com/borgbackup/borg/)
-    is a fork of <a name="attic"></a>[Attic](https://github.com/jborg/attic/)
-    which has no commit since 2015.
-    Borg is a deduplicating backup program, written in Python.
+    is a fork of <a name="attic"></a>[Attic](https://github.com/jborg/attic/) which has
+    no commit since 2015.  Borg is a deduplicating backup program, written in Python.
     The main features of Borg _and previously Attic_ are:
-    -   __Space efficient storage__: Each file is split into a number of
-        variable length chunks and only chunks that have never been
-        seen before are compressed and added to the repository.
-    -   __Optional data encryption__: All data can be protected using
-        256-bit AES encryption and data integrity and authenticity is
-        verified using HMAC-SHA256.
-    -   __Backup over ssh__: if possible with Attic also installed
-        on the remote host.
+
+    -   __Space efficient storage__: Each file is split into a number of variable length
+        chunks and only chunks that have never been seen before are compressed and added
+        to the repository.
+    -   __Optional data encryption__: All data can be protected using 256-bit AES
+        encryption and data integrity and authenticity is verified using HMAC-SHA256.
+    -   __Backup over ssh__: if possible with Attic also installed on the remote host.
     -   __Backups mountable as filesystems__
 
-    BorgBackup is in Debian.
+    _BorgBackup is in Debian._
 
     -   [Borg documentation
         ](http://borgbackup.readthedocs.io/en/stable/).
@@ -122,12 +120,11 @@ save only the changed data blobs.
     because it implies to reload the files. You avoid it by opting for a backup tool
     like {{< iref "#restic" "Restic" >}}.
 
-
-    One advantage of _Borg_ is that it uses an rsync-like rolling checksum method. This
-    means that if you add 1 byte at the beginning of a 100MB file, while _Obnam_ upload
-    a 1-byte chunk and then reference the other chunks after that, while _Obnam_ had to
-    re-upload the entire file, since its chunks start at the beginning of the file in
-    fixed sizes.
+    One advantage of _Borg_ over software like _Obnam_ is that it uses an rsync-like
+    rolling checksum method. This means that if you add 1 byte at the beginning of a
+    100MB file, while _Obnam_ upload a 1-byte chunk and then reference the other chunks
+    after that, while _Obnam_ had to re-upload the entire file, since its chunks start
+    at the beginning of the file in fixed sizes.
 
     -   [Comparison of Attic vs Bup vs Obnam
         ](http://librelist.com/browser/attic/2015/3/31/comparison-of-attic-vs-bup-vs-obnam/)
@@ -165,36 +162,31 @@ save only the changed data blobs.
         used to benchmark the different backup software and the
         different backends.
 
- -  <a name="hashbackup"></a>[HashBackup](http://www.hashbackup.com/) (free private license)
-    is a command line for deduplicated, encrypted, compressed,
-    block-level incremental backup.
-    It is a rolling incremental backup, there is no concept of
-    _full backup_.
+ -  <a name="hashbackup"></a>[HashBackup](http://www.hashbackup.com/)
+    (free private license)
+    is a command line for deduplicated, encrypted, compressed, block-level incremental
+    backup.  It is a rolling incremental backup, there is no concept of _full backup_.
 
-    It can push backup on local storage, or remote offsite backup using:
-    rsync, ssh, sftp, ftp, ftps, imap (email)
-    WebDAV, Dropbox, Google Drive, NFS, and other mounted remote storage
-    3rd-party storage: Amazon S3, Backblaze B2, Google Cloud Storage,
+    It can push backup on local storage, or remote offsite backup using: rsync, ssh,
+    sftp, ftp, ftps, imap (email) WebDAV, Dropbox, Google Drive, NFS, and other mounted
+    remote storage 3rd-party storage: Amazon S3, Backblaze B2, Google Cloud Storage,
     Rackspace Cloud Files, Dreamhost DreamObjects and others.
 
     Compared  to the opensource existing deduplicating alternative like
-    {{< iref "#borg" "borg" >}}, {{< iref "#zbackup" "zbackup" >}}, bup,  it can
-    access natively some 3rd-party storage while the rest can only
-    mount them with fuse; and it invalidates programs that want
-    to do checksumming on the remote backup, because
-    it would imply to reload all the files.
+    {{< iref "#borg" "borg" >}}, {{< iref "#zbackup" "zbackup" >}},
+    {< iref "#bup" "bup" >}}, it can access natively some 3rd-party storage while the
+    rest can only mount them with fuse; and it invalidates programs that want to do
+    checksumming on the remote backup, because it would imply to reload all the files.
 
-    But other open source program like {{< "#restic" "Restic" >}} can also backup to
-    clouds.
+    But some other software which are open source like {{< iref "#restic" "Restic" >}}
+    can also backup to clouds.
 
 -   <a name="restic"></a>[Restic](https://restic.github.io/) (BSD License)
-    Is a go program that takes snapshots consisting of data blobs
-    encrypted with AES-256.  You can mount an individual snapshot using
-    a Fuse fs. Restic can use the following backends: local directory,
-    sftp server (via SSH), HTTP REST server (protocol rest-server),
-    AWS S3 (Amazon or Minio), OpenStack Swift, BackBlaze B2,
-    Microsoft Azure, Google Cloud Storage
-    Restic is in Debian.
+    Is a go program that takes snapshots consisting of data blobs encrypted with
+    AES-256.  You can mount an individual snapshot using a Fuse fs. Restic can use the
+    following backends: local directory, sftp server (via SSH), HTTP REST server
+    (protocol rest-server), AWS S3 (Amazon or Minio), OpenStack Swift, BackBlaze B2,
+    Microsoft Azure, Google Cloud Storage. _Restic is in Debian._
 
     -   [Restic documentation
         ](https://restic.readthedocs.io/en/stable/).
@@ -216,16 +208,15 @@ save only the changed data blobs.
         a bash script to organize restic backups.
 
 -   <a name="zbackup">[zbackup](http://zbackup.org/) (GPL)
-    is a globally-deduplicating C++ backup tool based on its own
-    sliding window rolling hash for data deduplication, and SHA256 for
-    backup integrity.  It allows LZMA compression & AES encryption.
+    is a globally-deduplicating C++ backup tool based on its own sliding window rolling
+    hash for data deduplication, and SHA256 for backup integrity.  It allows LZMA
+    compression & AES encryption.
 
-    To backup set of directories, you tar them and pipe the result to
-    zbackup. The data should be uncompressed and unencrypted
-    otherwise no deduplication could be performed on it, and it would
-    duplicate the zbackup compression and encryption. It is a drawback
-    if you want to backup a directory containing a lot of compressed
-    files _like odt files_ or encrypted like a git repository.
+    To backup set of directories, you tar them and pipe the result to zbackup. The data
+    should be uncompressed and unencrypted otherwise no deduplication could be performed
+    on it, and it would duplicate the zbackup compression and encryption. It is a
+    drawback if you want to backup a directory containing a lot of compressed files
+    _like odt files_ or encrypted like a git repository.
 
 # btrfs snapshots
 
@@ -235,17 +226,15 @@ save only the changed data blobs.
     [Incremental Backup
     ](https://btrfs.wiki.kernel.org/index.php/Incremental_Backup)
 -   [Snapper](http://snapper.io/)
-    manage snapshots of Btrfs subvolumes and LVM volumes.
-    It can create and compare snapshots, revert between snapshots,
-    and supports automatic snapshots timelines.
+    manage snapshots of Btrfs subvolumes and LVM volumes.  It can create and compare
+    snapshots, revert between snapshots, and supports automatic snapshots timelines.
     -   [ArchWiki: Snapper
         ](https://wiki.archlinux.org/index.php/Snapper)
     -   [Suse Administration Guide - Snapshots/Rollback with Snapper
         ](https://www.suse.com/documentation/sles11/book_sle_admin/data/cha_snapper.html).
 -   [btrbk](http://www.digint.ch/index.html)
-    is a backup tool for btrfs subvolumes, to create atomic snapshots
-    and transfer them incrementally to a backup locations. It is
-    written in Perl and is in Debian.
+    is a backup tool for btrfs subvolumes, to create atomic snapshots and transfer them
+    incrementally to a backup locations. It is written in Perl and is in Debian.
 
     Key Features:
 
@@ -440,18 +429,13 @@ Many frontends and wrapper for duplicity are availables:
     -   [Duplicati Guides](https://www.duplicati.com/articles/)
     -   [GitHub Duplicati](https://github.com/duplicati/duplicati)
 
-# Git based
--   {{< wp "FlyBack"  "Wikipedia: FlyBack" >}},
-    [FlyBack](http://flyback-project.org/)
-    (GPL) is a python program that uses git is used in
-    [Flyback – Snapshot-based backup tool based on rsync
-    ](http://www.ubuntugeek.com/flyback-snapshot-based-backup-tool-based-on-rsync.html) and
-    [Creating Snapshot-Backups with FlyBack On Ubuntu 7.10
-    ](http://howtoforge.com/creating-snapshot-backups-with-flyback-ubuntu-7.10).
-    The documentation seems very scarse and the source is stalled
-    since 2010.
--   [bup](https://github.com/bup/bup) (LGPL)
-    is an incremental backup tool based on git. It is in debian.
+# Git based {#git_backup}
+-   <a name="bup"></a>[bup](https://github.com/bup/bup) (LGPL) from Avery Pennarun
+    is an incremental backup tool based on git. _It is in debian._
+    Avery [explains the options in his blog](http://apenwarr.ca/log/?m=201111).
+-   [FlashBake](https://github.com/commandline/flashbake/wiki)
+    is a tool which watches files and automatically checks them in to a git repository.
+
 
 # rsync based snapshots {#rsync_backup}
 
@@ -758,7 +742,7 @@ See also the {{< iref "#rsync_backup" "Section on rsync backup" >}}
     modification dates to detect file changes. This is not as robust
     as CRC checksums.
     -   [ftpsync documentation](http://pyftpsync.readthedocs.io/).
--   {{< iref "clouds#Rclone" "Rclone" >}} in {{< iref "clouds" "Clouds Section" >}}
+-   {{< iref "clouds#rclone" "Rclone" >}} in {{< iref "clouds" "Clouds Section" >}}
     support _one way_ synchronization.
 -   [syrep](http://0pointer.de/lennart/projects/syrep/)
     by Lennart Poettering   is a repository synchronization tool used to synchronize
