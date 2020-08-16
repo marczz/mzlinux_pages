@@ -5,7 +5,7 @@ title: Network Security
 See also
 {{< iref "./security" "Security" >}},
 {{< iref "firewall" "Firewall" >}},
-{{< iref "encryption" "Encryption" >}},
+{{< iref "encrypt" "Encryption" >}},
 {{< iref "authentication" "Authentication" >}},
 {{< iref "ssl" "SSL / TLS" >}},
 {{< iref "vpn" "Vpn" >}},
