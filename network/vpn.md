@@ -35,13 +35,14 @@ title: VPN and Tunneling
     datagrams into a SSH tunnel with the help of NFQUEUE target from
     Netfilter. This enables easy selection of flow to be tunneled.
 -   {{< iref "ssh" "ssh" >}} allow socks and tun.
--   [sshuttle](https://github.com/apenwarr/sshuttle) (GPL)
+-   [sshuttle](https://github.com/sshuttle/sshuttle) (GPL)
     from Avery Pennarun creates a transparent proxy server, using
     iptables, that will forward all the traffic through an SSH tunnel
     to a remote copy of sshuttle.  It does not require installation on
     the remote server, which just needs to have python installed.
-    -   [sshuttle documentation
-        ](http://sshuttle.readthedocs.io/en/stable/)
+    _sshuttle is in Debian._
+    -   [sshuttle documentation](https://sshuttle.readthedocs.org/).
+
 
 # Openvpn {#openvpn}
 [OpenVPN](http://openvpn.net/) (GPL) is a SSL VPN. It uses SSL/TLS
@@ -50,34 +51,27 @@ certificates, smart cards, and/or 2-factor authentication.
 There are clients for Linux and other Unixes, Windoze, Mac OS, IoS,
 and Android
 
--   Wikipedia:
-    {{< wp "OpenVPN" >}}
+-   Wikipedia: {{< wp "OpenVPN" >}}.
 -   [OpenVPN Home](http://openvpn.net/)
 -   [OPenVPN](http://openvpn.sourceforge.net/),
 -   [OpenVPN Documentation Page
     ](https://openvpn.net/index.php/open-source/documentation.html)
     has an extensive documentation.
 -   [OpenVpn Wiki](https://community.openvpn.net/openvpn/wiki)
--   [OpenVPN HOW-TO
-    ](http://openvpn.net/index.php/documentation/howto.html)
+-   [OpenVPN HOW-TO](http://openvpn.net/index.php/documentation/howto.html)
     and [OpenVPN 2.3 man page
     ](https://community.openvpn.net/openvpn/wiki/Openvpn23ManPage)
     are the most usefull in admin tasks once you have understood the
     general principles of operations.
 -   [OpenVPN sample configuration files
     ](https://openvpn.net/index.php/open-source/documentation/howto.html#examples)
-    is the best starting point for your own configuration.
-    after installing openvpn in Linux. You can also find them in the
-    directory `/usr/share/doc/openvpn/examples`.
--   [ArchWiki - OpenVPN
-    ](https://wiki.archlinux.org/index.php/OpenVPN).
--   [Debian Wiki - OpenVPN
-    ](http://wiki.debian.org/OpenVPN)
+    is the best starting point for your own configuration.  after installing openvpn in
+    Linux. You can also find them in the directory `/usr/share/doc/openvpn/examples`.
+-   [ArchWiki - OpenVPN](https://wiki.archlinux.org/index.php/OpenVPN).
+-   [Debian Wiki - OpenVPN](http://wiki.debian.org/OpenVPN)
 -   [Fedora Wiki - OpenVPN](http://fedoraproject/wiki/Openvpn).
--   [Gentoo Wiki - OpenVPN
-    ](https://wiki.gentoo.org/wiki/OpenVPN)
--   [configuring shorewall for OpenVPN
-    ](http://www.shorewall.net/OPENVPN.html)
+-   [Gentoo Wiki - OpenVPN](https://wiki.gentoo.org/wiki/OpenVPN)
+-   [configuring shorewall for OpenVPN](http://www.shorewall.net/OPENVPN.html)
     [Private Tunnel VPN for Android
     ](https://play.google.com/store/apps/details?id=net.openvpn.privatetunnel).
     is an Android client.
