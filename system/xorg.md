@@ -153,10 +153,37 @@ See also the {{< iref "#xdmcp" "XDMCP section" >}}
     since we can think that shared memory is actually shared among the session children.
     The lightdm GTK+ greeter is 14M / 10M for the gtk greater but it vanishes once
     connected.
-    -   [Lightdm - GitHub](https://github.com/canonical/lightdm)
-    -   [ArchWiki Lightdm](https://wiki.archlinux.org/index.php/LightDM)
-    -   [LightDM - Debian Wiki](https://wiki.debian.org/LightDM)
-    -   [Ubuntu Lightdm](https://wiki.ubuntu.com/LightDM),
+    -   [Lightdm - GitHub](https://github.com/canonical/lightdm).
+    -   [ArchWiki Lightdm](https://wiki.archlinux.org/index.php/LightDM).
+    -   [LightDM - Debian Wiki](https://wiki.debian.org/LightDM).
+    -   [Ubuntu Lightdm](https://wiki.ubuntu.com/LightDM).
+
+    There are several greeters available.
+    -   [Lightdm GTK+ Greeter](https://github.com/Xubuntu/lightdm-gtk-greeter)  (GPL)
+        a greeter that has moderate requirements (GTK+), it is the default greeter in
+        Debian and Xubuntu.
+    -   [arctica-greeter](https://github.com/ArcticaProject/arctica-greeter/) (GPL)
+        A greeter by [Artica Project](https://arctica-project.org/) forked from Ubuntu's
+        Unity Greeter that keep remote logon support and provide a user interface based
+        on [Ayatana Indicators](https://github.com/AyatanaIndicators).
+
+        Arctica Greeter can be used as local display manager as well as thin client
+        login manager.It supports remotes session from:  Arctica Remote Desktop,
+        X2Go,  FreeRDP, Citrix.  _Debian package_
+    -   [Slick greeter](https://github.com/linuxmint/slick-greeter) (GPL)
+        a fork of Unity Greeter for _LinuxMint_, bypassing the indicators and the
+        unity-setting-daemon.  _Debian Package_.
+    -   [Lightdm autologin greeter
+        ](https://github.com/spanezz/lightdm-autologin-greeter)  (MIT License)
+        for use in a kiosk-like setup. _Debian Package_.
+    -   [ukui greeter](https://github.com/ukui/ukui-greeter) (GPL)
+        a QT greeter for Ukui desktop. _Debian Package_
+    -   Not packaged in Debian, but available.
+    -   [Unity Greeter](https://launchpad.net/unity-greeter) (GPL)
+        the default for ubuntu unity desktop. ArchLinux has also a package.
+        It is not packaged in Debian, but there are the forks _Arcrica greeter_ and
+        _slick Greeter_ that avoid Unity dependencies.
+
 
     The guest account is setup by a script, the
     [guest-account provided in the distribution
