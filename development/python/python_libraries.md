@@ -544,13 +544,16 @@ List of build tools:
     by Doug Hellmann is a framework for building command line
     programs. It uses setuptools entry points to provide subcommands,
     output formatters, and other extensions.
--   [Click](https://click.palletsprojects.com/) (BSD License)
+-   -<a name="click"></a[Click](https://click.palletsprojects.com/) (BSD License)
     ([GitHub - Click](https://github.com/pallets/click))
     is a Python package for creating command line interfaces.  It provides arbitrary
     nesting of commands, automatic help page generation, lazy loading of subcommands at
     runtime.  It is an alternative to {{< iref "#docopt" Docopt >}} and
     {{< iref "#argparse" "Argparse" >}}.  It is in Debian as many
     _python(3)-click-*_ packages.
+
+    {{< iref "#typer" "Typer" >}} adds a layer on top of Click.
+
 -   [Clime](http://clime.mosky.tw/) (MIT License)
     converts any module into a multi-command CLI program without any
     configuration by a single `import`.
@@ -563,6 +566,15 @@ List of build tools:
         ](https://dmerej.info/blog/post/docopt-v-argparse/) a detailled comparaison.
 -   [Plac](https://micheles.github.io/plac/) (BSD License)
     By Michele Simionato, is a command line parsing library.
+-   <a name="typer"></a>[Typer](https://typer.tiangolo.com/) (MIT license)
+    is a library for building CLI applications based on Python type hints.
+    It has the same design and usage than it's web framework sibbling
+    {{< iref "python_web#fastapi" "FastApi" >}}.
+    -   [Typer - GitHub](https://github.com/tiangolo/typer)
+    -   [Typer Alternatives, Inspiration and Comparisons
+        ](https://typer.tiangolo.com/alternatives/)
+        compare typer with _argparse_, _Hug_, _Plac_, and {{< iref "#click" "Click" >}}
+        on which Typer is built.
 
 ## Cryptography
 
@@ -712,6 +724,45 @@ Read first the
     fs.onedrivefs, fs.smbfs, fs.sshfs ....
 
     -   [pyfilesystem2 documentation](https://docs.pyfilesystem.org/en/latest/).
+
+### Filesystem Monitor
+
+-   [spotter](https://github.com/borntyping/spotter)
+    is a command line tool for watching files and running shell commands when they
+    change. It is in _pypi_.
+-   [watchdog](https://github.com/gorakhargosh/watchdog) (Apache License)
+    is a python API and shell utilities to monitor file system events.It is in _pypi_.
+
+    _watchdog_ depend {{< iref "#argh" "argh" >}} and {{< iref "#pyYAML" "pyYAML" >}}.
+    -   [watchdog Documentation](https://python-watchdog.readthedocs.io/en/latest/).
+
+#### Inotify
+see also {{< iref "schedulers#inotify" "Inotify main Section" >}}.
+
+-   [inotify_simple ](https://github.com/chrisjbillington/inotify_simple) (BSD License)
+    is just a literal wrapper around {{< iref "schedulers#inotify" "Inotify" >}}.
+    -   [inotify-simple documentation](https://inotify-simple.readthedocs.io/en/latest/).
+-   [Pyinotify _(seb_m)_](https://github.com/seb-m/pyinotify)
+    is a Python package used for monitoring filesystems events
+    with  {{< iref "schedulers#inotify" "Inotify"  >}}. _last update 2015, more commits
+      in forks._
+
+    The [pynotify documentation](https://github.com/seb-m/pyinotify/wiki)
+    includes a tutorial and some examples.
+
+    It is in the Debian package _python3-pyinotify_.
+
+    -   Pynotify is used in
+        [pirsyncd - Python Inotify Rsync Daemon
+        ](http://ebalaskas.gr./blog/?page=pirsyncd) is old _2009_ and _pirsyncd_
+        developpement stopped in _2011_.
+        see the [pirsyncd repository](https://bitbucket.org/ebal/pirsyncd).
+-   [PyInotify _(dsoprea)_](https://github.com/dsoprea/PyInotify)  (GPL)
+    is unrelated to *seb_m* Pyinotify.
+-   [pynotify2](https://bitbucket.org/takluyver/pynotify2/)  (BSD License)
+    is a replacement for pynotify which can be used from different GUI toolkits and from
+    programs without a GUI. The API is largely the same as that of pynotify.
+    -   [pynotify2 documentation](https://notify2.readthedocs.io/en/latest/).
 
 ## Graphic User Interfaces
 The standard modules are in the {{< iref "#modules" "Modules Section" >}}
@@ -996,7 +1047,8 @@ is found on the web): lxml.html, BeautifulSoup, and html5lib.
     It is no longer maintained since 2006.
 
 
-### RSS Parsing
+### Feed Parsing
+See also the {{< iref "feed" "Web Feed Section" >}}.
 
 -   [feedvalidator](https://github.com/rubys/feedvalidator)
     (MIT license)
@@ -1117,41 +1169,6 @@ See also the {{< iref "dbus" "Dbus Page" >}}.
     in GLib, can be used from Python via
     [PyGobject](https://pygobject.readthedocs.io/en/latest/).
 
-### Inotify
-see also {{< iref "schedulers#inotify" "Inotify main Section" >}}.
-
--   [inotify_simple ](https://github.com/chrisjbillington/inotify_simple) (BSD License)
-    is just a literal wrapper around {{< iref "schedulers#inotify" "Inotify" >}}.
-    -   [inotify-simple documentation](https://inotify-simple.readthedocs.io/en/latest/).
--   [Pyinotify _(seb_m)_](https://github.com/seb-m/pyinotify)
-    is a Python package used for monitoring filesystems events
-    with  {{< iref "schedulers#inotify" "Inotify"  >}}. _last update 2015, more commits
-      in forks._
-
-    The [pynotify documentation](https://github.com/seb-m/pyinotify/wiki)
-    includes a tutorial and some examples.
-
-    It is in the Debian package _python3-pyinotify_.
-
-    -   Pynotify is used in
-        [pirsyncd - Python Inotify Rsync Daemon
-        ](http://ebalaskas.gr./blog/?page=pirsyncd) is old _2009_ and _pirsyncd_
-        developpement stopped in _2011_.
-        see the [pirsyncd repository](https://bitbucket.org/ebal/pirsyncd).
--   [PyInotify _(dsoprea)_](https://github.com/dsoprea/PyInotify)  (GPL)
-    is unrelated to *seb_m* Pyinotify.
--   [pynotify2](https://bitbucket.org/takluyver/pynotify2/)  (BSD License)
-    is a replacement for pynotify which can be used from different GUI toolkits and from
-    programs without a GUI. The API is largely the same as that of pynotify.
-    -   [pynotify2 documentation](https://notify2.readthedocs.io/en/latest/).
--   [spotter](https://github.com/borntyping/spotter)
-    is a command line tool for watching files and running shell commands when they
-    change. It is in _pypi_.
--   [watchdog](https://github.com/gorakhargosh/watchdog) (Apache License)
-    is a python API and shell utilities to monitor file system events.It is in _pypi_.
-
-    _watchdog_ depend {{< iref "#argh" "argh" >}} and {{< iref "#pyYAML" "pyYAML" >}}.
-    -   [watchdog Documentation](https://python-watchdog.readthedocs.io/en/latest/).
 
 ## Persistence and Data exchange {#persistence_libs}
 
