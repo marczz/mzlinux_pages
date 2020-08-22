@@ -292,6 +292,93 @@ the [git Repository
         [weakish/cheat](https://github.com/weakish/cheat) in sh store the cheat sheets
         in a git repo, [dufferzafar/cheat](https://github.com/dufferzafar/cheat) in go.
 
+# Dash Docsets {#dash_docsets}
+[Dash](https://kapeli.com/dash) is an offline documentation browser created and maintained by
+[Kapeli (Bogdan Popescu)](https://github.com/Kapeli). _Dash_ use
+documentation in the _Docset format_ which is  just a folder containing the HTML
+documentation and a SQLite database that indexes the files.
+More information in the [Docset Generation Guide
+](https://kapeli.com/docsets), the _docset_ format is specified in [this section
+](https://kapeli.com/docsets#dashDocset), you find there also how to generate them, and
+improve them to conform to the policy of _Dash_, and other compatible readers.
+
+Dash is a software available only on Mac. But there is some docset readers for Linux.
+
+-   [Zeal](https://zealdocs.org/) is a Qt docset browser. It can be shown with a
+    customisable Hotkey, and it
+    [integrates with emacs and vim](https://zealdocs.org/usage.html).
+-   the github repository [dash-docs-el](https://github.com/dash-docs-el), group emacs
+    packages that allow access to the dash docsets from emacs. The two fronends are
+    _helm-dash_ and _counsel-dash_, both are available in _Melpa_.
+-   [dash.vim](https://github.com/rizzatti/dash.vim) search dash from vim.
+-   [zeavim.vim](https://github.com/KabbAmine/zeavim.vim) (Public domain License)
+    allows to use the offline documentation browser Zeal from Vim
+-   [atom-dash](https://github.com/blakeembrey/atom-dash) (MIT License)
+    is a _Dash_ documentation integration with _Atom_.
+-   [bracket-zeal](https://github.com/anephew/brackets-zeal)
+    is a Zeal integration for the open source code editor for the web
+    [Bracket](http://brackets.io).
+
+
+There is a set of official docset, and a set of
+[contributed docset](https://github.com/Kapeli/Dash-User-Contributions). The user
+contribution repository don't contain the docset itself, only metadata. The
+`<docset>tar.gz` file itself is pushed to Kapeli CDN. You can browse the
+[json index of the CDN
+](http://sanfrancisco.kapeli.com/feeds/zzz/user_contributed/build/index.json)
+Once you have that, you can get to the docset archives at the URL:
+```
+http://<mirror>.kapeli.com/feeds/zzz/user_contributed/build/<key name inside json>/<archive name>
+```
+The two icons and the json description is in the [contributed docset repository
+](https://github.com/Kapeli/Dash-User-Contributions).
+
+The _mirrors_ are the same than those in the [regular dash docset feeds
+](https://github.com/Kapeli/feeds).
+
+To facilitate the download for Zeal a prebuild repository of xml feeds is
+[hashhar/dash-contrib-docset-feeds](https://github.com/hashhar/dash-contrib-docset-feeds),
+
+The Heroku site[Zeal Contribution site](https://zealusercontributions.now.sh/)
+give the url of the xml feed, and the two icons for each contributed docset,
+and the site [Zeal Cheat Sheet](https://zeal-cheatsheets.herokuapp.com/)
+is used for the cheat sheets.
+
+To install a docset in Zeal after opening the _ Add feed_ dialog, paste the URL. You can
+then add the two icons inside docset folder next to Contents folder and meta.json file.
+
+Some scripts are available to automate this process, I have not tested them.
+[this python script](https://gist.github.com/crmne/3fe84c05013fa87d74a8), and the node
+appli [jmerle/zeal-user-contrib](https://github.com/jmerle/zeal-user-contrib).
+
+
+Kapeli the dash author also propose a set of
+[Dash Cheat Sheets](https://kapeli.com/cheatsheets)
+the source is in the GitHub repository
+[Kapeli/cheatsheet]( https://github.com/Kapeli/cheatsheets).
+[cheatset](https://github.com/Kapeli/cheatset) is a ruby program to generate these
+cheets.
+
+To generate your own docset, follow the
+[Docset Generation Guide](https://kapeli.com/docsets),
+this guide mention many sources of docset and programs to do the generation.
+
+-   [doc2dash](https://doc2dash.readthedocs.io/en/stable/)
+    Create docsets from Sphinx, or pydoctor.
+    -    [doc2dash - GitHub](https://github.com/hynek/doc2dash).
+-   [html2Dash](https://github.com/selfboot/html2Dash)
+    a python program to generate a docset from any HTML documentations.
+-   [dashing](https://github.com/technosophos/dashing) (MIT License)
+    is a Dash generator script for any HTML.
+-   [mandocset](https://github.com/Yanpas/mandocset)
+    is python script that generates Dash docset from man pages.
+-   [cargo-docset](https://github.com/Robzz/cargo-docset) (Apache License)
+    Cargo subcommand to generate a Dash/Zeal docset for your Rust packages.
+-   [william8th/javadocset](https://github.com/william8th/javadocset)
+    is a golang program to generate a Dash/Zeal docset from javadoc.
+    It is a port of
+    [Kapeli's javadocset](https://github.com/Kapeli/javadocset) in Golang.
+
 
 <!--  Local Variables: -->
 <!--  mode: markdown -->
