@@ -68,25 +68,31 @@ There are examples of use of these libraries in
 
 ## Third party modules
 
--   [httplib2](https://github.com/jcgregorio/httplib2)(MIT License)
+-   [httplib2](https://github.com/httplib2/httplib2)(MIT License)
      is an HTTP/HTTPS client library with support for authentication
      basic digest or [WS-Security](http://en.wikipedia.org/wiki/WS-Security),
      redirects, compression.
-     It has a python2 and python3 version.
--   [Requests](http://docs.python-requests.org/en/latest/) (Apache2 License)
-    <a name="request"></a>
-    is an improvement of _urllib2_ powered by  httplib and
-    {{< iref "#urllib3" "urllib3" >}}.
-    allow you to send HTTP/1.1 requests. You can add headers,
-    form data, multipart files,
-    and parameters with simple Python dictionaries, and access the response data
-    in the same way.
--   [urllib3](https://pypi.python.org/pypi/urllib3) (MIT License)
-    <a name="urllib3"></a>
-    is an HTTP library with thread-safe connection pooling, file post,
-    compresion. It works with python2 and python3. An upper layer is
-    provided by the {{< iref "#request" "request library" >}}.
-    [urllib3 documentation](http://urllib3.readthedocs.org/en/latest/).
+     -   [httplib2 Documentation](http://httplib2.readthedocs.io/)
+-   <a name="request"></a>[Requests](https://github.com/psf/requests) (Apache2 License)
+    or _HTTP for humans_ by [Kenneth Reitz](https://kennethreitz.org/)
+    is an improvement of _urllib_ powered by _httplib_ and
+    {{< iref "#urllib3" "urllib3" >}}. _request_ allow you to send HTTP/1.1
+    requests. You can add headers, form data, multipart files, and parameters with
+    simple Python dictionaries, and access the response data in the same way.
+    _Request is in Pypi an Debian._
+    -   [Requests documentation](https://requests.readthedocs.io/en/master/).
+-   <a name="urllib3"></a>[urllib3](https://github.com/urllib3/urllib3) (MIT License)
+    is an HTTP library with thread-safe connection pooling, file post, compresion.  An
+    upper layer is provided by the {{< iref "#request" "request library" >}}.
+    _urllib3 is in Pypi an Debian._
+    -   [urllib3 documentation](http://urllib3.readthedocs.org/en/latest/).
+-   [httpx](https://github.com/encode/httpx)
+    is a client for Python 3, which provides sync and async APIs, and support for both
+    HTTP/1.1 and HTTP/2, and can make requests directly to {{< iref "#wsgi" "WSGI" >}}
+    applications or {{< iref "#asgi" "ASGI" >}}  applications.
+    _httpx is in Pypi and Debian_.
+    -   [httpx Documentation](https://www.python-httpx.org/)
+
 # CGI
 See also the [CGI protocol references
 ](internet_application#web_protocols "internal reference")
@@ -181,11 +187,9 @@ see the {{< iref "#web_frameworks" "framework section" >}}
     or the older  [WsgiUtils](http://www.owlfish.com/software/wsgiutils/)
     from Colin Stewart that provides multi-threads, basic user
     authentication, signed cookies, and persistent sessions.
-    There is also a  multi-threaded
-    [James WSGI Server](http://wsgiarea.pocoo.org/james/).
--   [Gunicorn](http://gunicorn.org/) <a name="gunicorn"></a>(MIT License)
-     is a Python WSGI HTTP Server for UNIX built on pre-fork worker
-     model. It is usually deployed behind {{< iref "nginx" "nginx" >}}.
+-   <a name="gunicorn"></a>[Gunicorn](http://gunicorn.org/) (MIT License)
+    is a Python WSGI HTTP Server for UNIX built on pre-fork worker
+    model. It is usually deployed behind {{< iref "nginx" "nginx" >}}.
      -   [Gunicorn documentation](http://docs.gunicorn.org/)
 -   [uWSGI](http://projects.unbit.it/uwsgi/wiki)
     is a fast application container server coded in pure C.
@@ -246,7 +250,6 @@ that may be more up-to-date than the
     is a small library for Python wsgi applications.
 -   [WebOb](http://pythonpaste.org/webob/) <a name="webob"></a>
     (MIT-style license), a refinement of Paste, is a WSGI library.
-    Since version 1.2 it is compatible with python 3.
 
     Ian Bicking has written numerous examples of use of WebOb:
 
@@ -262,7 +265,7 @@ that may be more up-to-date than the
         This example application implements a very simple wiki.
     -   [JSON-RPC Example](http://pythonpaste.org/webob/jsonrpc-example.html)
         is an example of how to write a web service using WebOb.
-    -   [Another Do-It-Yourself Framework](http://pythonpaste.org/webob/do-it-yourself.html "pythonpaste.org webob/do-it-yourself.html")
+    -   [Another Do-It-Yourself Framework](http://pythonpaste.org/webob/do-it-yourself.html)
         shows you how to create a web framework of your own using
         WSGI and WebOb.
     -   [Ian Bicking blog: Decorators and Descriptors](http://blog.ianbicking.org/2008/10/24/decorators-and-descriptors/)
@@ -273,11 +276,11 @@ that may be more up-to-date than the
     -   [WebOb static]()
         is a tiny module to serve from WSGI your files/directories.
     -   [GitHub: Sergey Schetinin (Maluke) ]()
--   [werkzeug](http://werkzeug.pocoo.org/) (BSD License) <a name="werkzeug"></a>
-    is a wsgi framework for python 2.x/3.x. It is the base of
-    {{< iref "#flask" "Flask" >}}
-    the development is hosted in the
-    [werkzeug gitHub Repository](http://github.com/mitsuhiko/werkzeug/).
+-   <a name="werkzeug"></a>[werkzeug](https://www.palletsprojects.com/p/werkzeug/)
+    (BSD License)
+    is a wsgi framework for python. It is the base of {{< iref "#flask" "Flask" >}} the
+    development is hosted in the
+    [werkzeug gitHub Repository](https://github.com/pallets/werkzeug).
 
 
 ##  WSGI Middlewares.
@@ -291,8 +294,21 @@ that may be more up-to-date than the
 -   [repoze.who](https://github.com/repoze/repoze.who) (BSD License)
     is a WSGI Authentication Middleware
     -   [Repoze.who Documentation](http://repozewho.readthedocs.org/en/latest/)
-    -   [Understanding Repoze.who with BottlePy](http://blog.nturn.net/?tag=bottle)
-        in Hailstone3 blog.
+
+## ASGI {#asgi}
+
+ASGI (Asynchronous Server Gateway Interface) is a successor to WSGI,
+intended to provide a standard interface between async-capable Python web servers,
+frameworks, and applications.
+
+It is conceived to overcome WSGI limitations which make it unable to handle
+long-lived connections, like you get with long-poll HTTP or WebSocket connections.
+
+-   [ASGI Documentation](https://asgi.readthedocs.io/en/latest/index.html)
+    contains Introduction, Specifications,  Extensions, Implementations.
+
+
+
 
 
 # Web application framework {#web_frameworks}
@@ -321,23 +337,15 @@ supports a custom template system and mako, cheetah, jinja2. It provides the usu
 development server, and can be served by any compatible WSGI server.
 
 -   [GitHub: Bottle dev](https://github.com/defnull/bottle)
--   [ArchWiki: Bottle](https://wiki.archlinux.org/index.php/Bottle)
 -   A minimal 60 slocs [Bottle Example](https://gist.github.com/Arthraim/994641)
--   [Kiss Bottle Wiki](https://github.com/Matael/kiss-bottle-wiki/)
-    is a trivial 170 slocs _Bottle_ wiki _2012_.
--   [Yaki-tng](https://github.com/rcarmo/yaki-tng) is a rewrite of the
-    [Yaki](https://github.com/rcarmo/Yaki) Python wiki, using _Bottle_.
-    The [Yaki web Page](https://the.taoofmac.com/space/projects/Yaki).
--   [Understanding Repoze.who with BottlePy
-    ](http://blog.nturn.net/?tag=bottle)
-    in Hailstone3 blog.
+-   [sushy](https://github.com/rcarmo/sushy)
+     A wiki/blogging engine with a static file back-end, built on the top of Bottle.
 
-## CherryPy
-[CherryPy](http://www.cherrypy.org/) (Bsd license)
- <a name="cherrypy"></a>
+## CherryPy {#cherrypy}
+[CherryPy](http://cherrypy.org/) (Bsd license)
  is a python, object-oriented Web framework. The
  templating system is  released as a separate standalone module.
--   [CherryPY Bitbucket repo.](https://bitbucket.org/cherrypy/cherrypy)
+-   [CherryPY - GitHub](https://github.com/cherrypy/cherrypy)
 -   [CherryPy Documentation](http://cherrypy.readthedocs.org/en/latest/)
 
 
@@ -347,23 +355,33 @@ development server, and can be served by any compatible WSGI server.
     language. Django sites can be served by wsgi,
     apache+modpython,  or fastcgi.
 
--   List of [Django ressources
-    ](http://code.djangoproject.com/wiki/DjangoResources).
 -   [List of Django tutorials
     ](http://code.djangoproject.com/wiki/Tutorials).
--   [Documentation en français de Django](http://docs.django-fr.org/).
--   [The Django Book version 2](http://djangobook.com/en/2.0/)
+-   [The Django Book](http://djangobook.com/)
+-   [wsvincent/awesome-django](https://github.com/wsvincent/awesome-django)
+-   [Django vs Flask](https://devel.tech/features/django-vs-flask/).
+
 -   [Pinax](http://pinaxproject.com/)
     is a collection of reusable apps for Django.
 -   Some CMS built on the top of Django:
     [Django-cms](https://www.django-cms.org/en/) (BSD Licence),
     [Mezzanine](http://mezzanine.jupo.org/) (BSD Licence)
 
-## Flask {#flask}
-[Flask](http://flask.pocoo.org) (BSD License)
-is a microframework for Python based on
-[Werkzeug](http://werzeug.pocoo.org) and Jinja 2.
+## FastApi {#fastapi}
+[FastApi](https://fastapi.tiangolo.com/) (MIT License)
+is a  high-performance web framework for building APIs with Python based on standard
+Python type hints. It has a CLI sibbling {{< iref "python_libraries#typer" "Typer" >}}.
 
+-   [FastApi - GitHub](https://github.com/tiangolo/fastapi).
+
+## Flask {#flask}
+[Flask](https://www.palletsprojects.com/p/flask/) (BSD License)
+is a microframework for Python based on
+[Werkzeug](https://www.palletsprojects.com/p/werzeug/) and Jinja 2.
+
+-   [Flask Documentation](https://flask.palletsprojects.com/)
+-   [flask - GitHub](https://github.com/pallets/flask)
+-   [humiaozuzu/awesome-flask](https://github.com/humiaozuzu/awesome-flask).
 -   [OpenTechSchool - Websites with Python Flask
     ](http://opentechschool.github.io/python-flask/)
 -   [Python Web Applications With Flask
@@ -383,95 +401,68 @@ is a microframework for Python based on
 
 
 There are many extensions for Flask some in the
-[list of approved Flask extensions
-](http://flask.pocoo.org/extensions/),
-you can find many others by
-[searching pypi for Flask
+[list of approved Flask extensions](https://flask.palletsprojects.com/en/1.1.x/extensions/)
+you can find many others by [searching pypi for Flask
 ](https://pypi.python.org/pypi?%3Aaction=search&term=flask&submit=search).
 
--   [Frozen-Flask](https://github.com/SimonSapin/Frozen-Flask)
-    (BSD License) by Simon Sapin; allow to froze a flask
-    application into a set of static files.
-    -   [Hosting static Flask sites for free on Github Pages
-        ](http://www.stevenloria.com/hosting-static-flask-sites-for-free-on-github-pages/)
-        is a tutorial by Steven Loria accompanied by an
-        [example of  static Flask app on Github pages
-        ](https://github.com/sloria/flask-ghpages-example),
-        [_killtheyak_ - a larger example
-        ](https://github.com/killtheyak/)
-        the source of [killtheyak.com](http://killtheyak.com/)
-        is also available.
-    -   [Creating Plume: A static site generator with Flask - Part 1
-        ](http://obsoleter.com/2012/12/12/creating-plume-a-static-site-generator-with-flask-part-1/)
-        by Jeremy Axmacher.
--   [Flask-mustache](https://github.com/ahri/flask-mustache)
-     allow use of mustache with Flask, using *pystache*.
--   [flask-mustachejs](https://github.com/bradleywright/flask-mustachejs)
-     is  a *Mustache* templating tools for integration with Flask, written in
-     javascript with *jQuery*.
--   [Flask-rst](https://github.com/jarus/flask-rst)
-    is a python tool to create a website from a source of
-    reStructuredText that uses Flask.
--   <a name="markwiki"></a>[MarkWiki
-    ](http://pythonhosted.org/MarkWiki/) (BSD License)
-    is a _Python_ + Flask wiki _not static_ that uses Markdown to create pages.
-    Markwiki has an option to _freeze_ the wiki with
-    {{< iref "#frozen" "Frozen-Flask" >}} and export it to a
-    static site.
-    -   [GitHub: MarkWiki](https://github.com/mblayman/markwiki)
+-   [Frozen-Flask](https://github.com/Frozen-Flask/Frozen-Flask) (BSD License)
+    by Simon Sapin; allow to froze a flask application into a set of static files.
+-   [Flask-FlatPages](https://github.com/Flask-FlatPages/Flask-FlatPages) (BSD License)
+    Provides flat static pages to a Flask application.
+    -   [Flask-FlatPages documentation](https://flask-flatpages.readthedocs.io/).
+-  [killtheyak](https://github.com/killtheyak/killtheyak.github.io)
+   is a small Flask app that uses Flask-FlatPages and Frozen-Flask to build the
+   static content. The app itself lives in the [app/killtheyaak directory
+   ](https://github.com/killtheyak/killtheyak.github.io/tree/app/killtheyak).
+   The source of [killtheyak.com](http://killtheyak.com/)   is also available.
 -   <a name="simple-docs"></a>[simple-docs
     ](https://github.com/chrislaskey/simple-docs)
     (MIT license) is a Python Flask website for
     viewing _Markdown_ documentation files online. It is not a static
     site generator, but can be used for this task with
-    {{< iref "#frozen" "Frozen-Flask" >}}.
+    {{< iref "#frozen" "Frozen-Flask" >}}. _last release 2014_.
 
 ## Nevow
-[Nevow](https://launchpad.net/nevow)
-(MIT License) a [divmod.org project](http://divmod.org)
-is a Python web application framework. It includes a
-pure Python XML expression syntax to express the view logic in
-Python, it uses a small XML attribute language to provide
-templates. Nevow also includes a two-way bridge between Javascript
-in a browser and Python on the server.
-
-_Nevow development seem quite slow since 2011 and the last release is
-in 2009_.
+[Nevow](https://github.com/twisted/nevow) (MIT like License)
+is a Python web application framework. It includes a pure
+Python XML expression syntax to express the view logic in Python, it uses a small XML
+attribute language to provide templates. Nevow also includes a two-way bridge between
+Javascript in a browser and Python on the server. .
 
 
 
 ## Pyramid and Pylons {#pylon}
 
-[Pylons](http://www.pylonsproject.org/projects/pylons-framework/)
+[Pylons](https://pylonsproject.org/)
 (BSD License) is a lightweight
 web framework that uses a common api to templating engines like
 Cheetah, Cherry Templates, Kid, Myghty, Breve, Genshi, Mako
 and {{< iref "#webob" "WebOb" >}} as wsgi framework.
-[Wikipedia:Pylons](http://en.wikipedia.org/wiki/Pylons_%28web_framework%29)
-
-[Pyramid](http://www.pylonsproject.org/projects/pylons-framework/)
-is a minimalistic web framework inspired by Zope, Pylons and Django.
+-   [Wikipedia: Pylons](http://en.wikipedia.org/wiki/Pylons_%28web_framework%29)
+-   [Pyramid](https://trypyramid.com/)
+    is a minimalistic web framework inspired by Zope, Pylons and Django.
+    -   [pyramid - GitHub](https://github.com/Pylons/pyramid)
 
 ## Tornado {#tornado}
 [Tornado](http://www.tornadoweb.org/) (Apache License)
 is a Python web framework and asynchronous networking library.
 
--   {{< wp "Tornado_(web_server"  "Wikipedia: Tornado" >}}
--   [cyclone](http://cyclone.io/) (Apache License) <a name="cyclone"></a>
-    is a web server framework
-    for Python that implements the Tornado API as a Twisted protocol.
+-   [Tornado - Github](https://github.com/tornadoweb/tornado)
+-   {{< wp "Tornado_(web_server)"  "Wikipedia: Tornado" >}}
+-   <a name="cyclone"></a>[cyclone](http://cyclone.io/) (Apache License)
+    is a web server framework for Python that implements the Tornado API as a
+    Twisted protocol.
 
 ## Turbogears
-[Turbogears](http://www.turbogears.org/)
-(MIT License, LGPL) is a web framework designed around the
-model-view-controller architecture, it uses a python written
-infrastructure composed of SQLObject as backend to interface with
-the database, one of Kid, Genshi, Cheetah, Django templates, Jinja
-as templating engine, Cherrypy to wrap the http protocol and
-optionaly MochiKit to wrap javascript in a pythonic way.
-[Wikipedia: Turbogears](http://en.wikipedia.org/wiki/Turbogears)
+[Turbogears](http://www.turbogears.org/) (MIT License, LGPL)
+is a web framework designed around the model-view-controller architecture, it uses a
+python written infrastructure composed of SQLObject as backend to interface with the
+database, one of Kid, Genshi, Cheetah, Django templates, Jinja as templating engine,
+Cherrypy to wrap the http protocol and optionaly MochiKit to wrap javascript in a
+pythonic way.
+- [Wikipedia: Turbogears](http://en.wikipedia.org/wiki/Turbogears)
 
-Turbogears uses {{< iref "#webob" "Pylons and WebOb" >}}.
+Turbogears uses {{< iref "#webob" "WebOb" >}}.
 
 ## web2py
 [web2py](http://mdp.cti.depaul.edu/examples/default/index)
@@ -483,13 +474,11 @@ framework, web2py is **NOT** web.py.
 lightweight web framework. web.py offers a custom templating
 language *Templetor*, but allows also Mako or Cheetah. It relies on
 *flup* for wsgi, and postgresql+psycopg2 or mysql+MySQLdb for the
-databases.*
+databases.
 
--   [webpy list at google groups](http://groups.google.com/group/webpy).
--   A recipe to
-    [Use SQLObject and SQLite with web.py](http://schwarzwald.infogami.com/blog/webpysqlobject).
--   The [Infogami](http://infogami.org/) wiki is powered
-    up by web.py.
+-   [webpy - GitHub](https://github.com/webpy/webpy)
+-   [webpy list at google groups](https://groups.google.com/forum/#!forum/webpy).
+
 
 ## Zope
 [Zope](http://www.zope.org) an open source (Zope Public License
@@ -594,7 +583,12 @@ programming seems to be {{< iref "#mechanize" "mechanize" >}} and
     a fork of mechanize, is a simple scripting language intended for
     programmatic or automated browsing of Web sites. _Last release
     2007_
--   The modules of the {{< iref "python_libraries#structured_markup_libs" "Structured markup section" >}}
+-   [vcrpy](https://github.com/kevin1024/vcrpy/).
+    automatically mock your HTTP interactions to simplify and speed up testing.
+    _It is in PyPi and Debian._
+    -   [vcrpy documentation](https://vcrpy.readthedocs.io/).
+-   The modules of the
+    {{< iref "python_libraries#structured_markup_libs" "Structured markup section" >}}
     are also relevant, mainly {{< iref "python_libraries#xml_parsers" "XML Parsers" >}}
     [HTML5lib](http://code.google.com/p/html5lib/),
     [ElementTree](http://www.effbot.org/zone/element-index.htm),
