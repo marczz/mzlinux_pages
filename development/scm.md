@@ -1,85 +1,10 @@
 ---
-title: Git & alt. SCM
+title: Git
 ---
 
 
-# General References on Source Conf Management
--   {{< wp "Revision_control"  "Wikipedia: Revision Control" >}}
-    and {{< wp "Comparison of revision control software" >}}
--   [Better SCM Initiative](http://better-scm.shlomifish.org/)
-    compares the SCMs: Aegis, Arch, Bazzaar, BitKeeper, Darcs, Git,
-    Mercurial, Monotone, Perforce, Subversion, Vesta.
--   [Version Control System Comparison
-    ](http://better-scm.shlomifish.org/comparison/comparison.html)
--   [Happenings in the VCS world
-    ](http://blogs.gnome.org/newren/2008/03/01/happenings-in-the-vcs-world/)
-    paper by David A. Wheeler
--   [Making Sense of Revision-control Systems
-    ](http://queue.acm.org/detail.cfm?id=1595636) by Bryan O'Sullivan
--   comparison of vcs:  [Why Choose Mercurial?
-    ](http://hgbook.red-bean.com/read/how-did-we-get-here.html),
-    [Why Git is Better Than X
-    ](http://whygitisbetterthanx.com/),
-    [Why Switch to Bazaar?
-    ](http://doc.bazaar.canonical.com/migration/en/why-switch-to-bazaar.html)
--   [Semantic Versioning](http://semver.org/)
-    is a simple set of rules and requirements that dictate how version
-    numbers are assigned and incremented.  Under this scheme, version
-    numbers and the way they change convey meaning about the
-    underlying code and what has been modified from one version to the
-    next.
-
-# Information by system
-_Git is below!_
-
--   [The CVS Book](http://cvsbook.red-bean.com/)
--   [cvsup](http://www.cvsup.org/) general-purpose mirroring tool
-    tailored to CVS repositories.
--   {{< wp "GNU_arch"  "Arch" >}} (GPL) is a distributed revision control system
-    also known as __tla__ from the name of the main Arch command.
-    Tla author Tom Lord seems  stopped developping tla in 2006 to
-    start implementing revc (kind of arch 2.0) whose development is
-    now discontinued.
--   {{< wp "Bazaar_(software)"  "Bazaar" >}} GPL is a distributed revision control
-    system written in python. _Bazaar_ is was previously nammed
-    _Bazaar-ng_ and is a fork from the previous _Bazaar_ also known as _Baz_
-    itself a fork from _Arch_.
--   [Subversion](http://subversion.tigris.org/),
-    [Version Control with Subversion](http://svnbook.red-bean.com/)
-    (subversion reference manual), and
-    [Subversion FAQ](http://subversion.apache.org/faq.html).
--   [Rapidsvn](http://rapidsvn.org/) is a gui for Subversion.
--   Tools for statistical reports:
-    [mpy-svn-stats](http://mpy-svn-stats.berlios.de/),
-    [CVSAnalY](http://tools.libresoft.es/cvsanaly) (GPL). For git there is
-    [GitStats](http://gitstats.sourceforge.net/) (GPL) and
-    [Pepper](http://scm-pepper.sourceforge.net/) (GPL)
-    supports git, mercurial and Subversion.
--   {{< wp "Darcs" >}} is a revision control system written in Haskell,
-    along the lines of CVS or arch. Darcs has two distinctive
-    features: 1) each copy of the source is a fully functional branch,
-    and 2) underlying darcs is a powerful theory of patches.
-    [Darcs Home](http://darcs.net/)
-    [Darcs Manual](http://darcs.net/manual/)
--   [Mercurial (hg)](http://mercurial.selenic.com/)
-    (GPL) is a fast lightweight distributed Source Control Management
-    system written in python. Mercurial is used for some big open
-    source projects like alsa, xine, e2fsprogs, mutt, xen, moinmoin
-    ....
-    -   [Mercurial: The Definitive Guide](http://hgbook.red-bean.com/read/)
-    -   [Mercurial for Git users](http://mercurial.selenic.com/wiki/GitConcepts)
--   [src](https://gitlab.com/esr/src)
-    from Eric Raymond is a *RCS reloaded* with a modern UI, designed
-    to manage single-file solo projects. It features sequential
-    revision numbers, lockless operation, embedded command help, and a
-    command set that familiar to users of Subversion, Mercurial, and
-    Git.
-
-
-
-# Git
-I have also set a [git-memo](http://git-memo.mzlinux.org/)
-which gives some reminders and explanations on git use.
+_I have also set a [git-memo](http://git-memo.mzlinux.org/)
+which gives some reminders and explanations on git use._
 
 -   [Git](http://git-scm.com) is a
     GPL distributed source code management tool.
@@ -100,23 +25,21 @@ which gives some reminders and explanations on git use.
         ](https://git.wiki.kernel.org/index.php/Interfaces,_frontends,_and_tools)
     -   [Git Links
         ](https://git.wiki.kernel.org/index.php/GitLinks);
-    -   [
 -   [Awesome Git](https://github.com/dictcp/awesome-git)
     list of Git resources
     -   [Git Add-ons](https://github.com/stevemao/awesome-git-addons)
         to enhance the `git` CLI.
     -   [Awesome GitHub](https://github.com/Kikobeats/awesome-github)
         -   [Browser extensions for GitHub
-            xs](https://github.com/stefanbuck/awesome-browser-extensions-for-github)
+            ](https://github.com/stefanbuck/awesome-browser-extensions-for-github)
         -   [Toolkits for Github
             ](https://github.com/xohozu/awesome-toolkit)
 
 # Git Documentation
-Git includes a live version of it's documentation. You can access each
-manual with ``git <command> --help`` or ``git help <command>`` the
-list of available command by  ``git help -a``
-you can also get the guides
-with ``git help <concept>`` where concept is one of
+Git includes a live version of the documentation. You can access the manual for any
+command with ``git <command> --help`` or ``git help <command>``, to list the available
+commands do ``git help -a`` you can also get the guides with ``git help <concept>``
+where concept is one of:
 [attributes
 ](https://www.kernel.org/pub/software/scm/git/docs/gitattributes)
 , [everyday
@@ -134,7 +57,7 @@ with ``git help <concept>`` where concept is one of
 , [workflows
 ](https://www.kernel.org/pub/software/scm/git/docs/gitworflows.html).
 
-## Documentation references
+# Documentation references
 -   [git wiki - Git Documentation
     ](https://git.wiki.kernel.org/index.php/GitDocumentation)
     is a complete source of documentation but is not always up-to-date
@@ -143,7 +66,7 @@ with ``git help <concept>`` where concept is one of
     ](https://git.wiki.kernel.org/index.php/GitLinks)
     references articles, blogs, mailing lists, talks, git
     comparisons...
--   [git-scm - External Links](https://git-scm.com/doc/ext)
+-   [git-scm - Links to other material](https://git-scm.com/doc/ext)
 -   [Git FAQ](https://git.wiki.kernel.org/index.php/GitFaq)
 -   And to get a fresh view of what is coming up, you can search
     the web for Git
@@ -173,7 +96,7 @@ with ``git help <concept>`` where concept is one of
     ](http://git.kernel.org/?p=git/git.git;a=tree;f=Documentation;hb=HEAD).
 
 
-## manuals
+# manuals
 
 -   [Git User Manual
     ](https://www.kernel.org/pub/software/scm/git/docs/user-manual.html)
@@ -205,8 +128,8 @@ with ``git help <concept>`` where concept is one of
     update 2008_ the html version seems non longer available but the
     [source is on GitHub](https://github.com/bakerjonas/git-guides).
 
-## Tutorials, recipes, tips
-### Official Tutorials
+# Tutorials, recipes, tips
+## Official Tutorials
 
 -   [git tutorial
     ](https://www.kernel.org/pub/software/scm/git/docs/gittutorial.html)
@@ -224,7 +147,7 @@ with ``git help <concept>`` where concept is one of
 -   [Git Tips](https://git.wiki.kernel.org/index.php/GitTips)
 -   [Git FAQ](https://git.wiki.kernel.org/index.php/GitFaq)
 
-### Git internals
+## Git internals
 -   [Git from the bottom up (pdf)
     ](http://ftp.newartisans.com/pub/git.from.bottom.up.pdf)
     by John Wiegley _2009_ explain git starting from the repository
@@ -238,7 +161,7 @@ with ``git help <concept>`` where concept is one of
     is an expanded version (detached heads, reflog ...) of the
     one from Tommi Virtanen.
 
-### Other tutorials
+## Other tutorials
 -   Some other resources are in the the
     [Git documentation](http://git-scm.com/documentation).
 -   GitHub [Git reference](http://git.github.io/git-reference/)
@@ -249,30 +172,17 @@ with ``git help <concept>`` where concept is one of
 -   [Ry’s Git Tutorial
     ](https://web.archive.org/web/20161121145226/http://rypress.com:80/tutorials/git/index)
     a detailed introduction to the entire Git porcelain _2012_.
--   [A tour of git: the basics](http://cworth.org/hgbook-git/tour/)
-    a complete tutorial, more verbose and aimed at beginners,
-    _2007_ by  Bryan O'Sullivan and Carl D. Worth.
 -   Lars Vogel has many git tutorials, including:
-    -   [Git
-        ](http://www.vogella.com/tutorials/Git/article.html) _2018_
-    -   [Using submodules
-        ](http://www.vogella.com/tutorials/GitSubmodules/article.html)
+    -   [Git](http://www.vogella.com/tutorials/Git/article.html) _2019_
+    -   [Using submodules](http://www.vogella.com/tutorials/GitSubmodules/article.html)
         _2015_
     -   [Git typical workflows
         ](http://www.vogella.com/tutorials/GitWorkflows/article.html)
         _2016_.
--   [Kernel Hackers' Guide to git](http://linux.yyz.us/git-howto.html)
-    by Jeff Garzik is a short and easy *but not over-easy*, tutorial.
-    _2008_.
--   Denx [Basic git Commands
-    ](http://www.denx.de/en/Documents/GitBasicCommands),
-    and [Using git (advanced commands)
-    ](http://www.denx.de/en/Documents/GitAdvancedUse),
-    are tutorials coverring complex branch management
-    (*They are related to a previous state of git (2005)
-    so they use more plumbing commands that it would be necessary today*).
--   [GitCasts](http://www.gitcasts.com) present is a
-    repository of git podcasts.
+-   [Learn Git Branching](https://learngitbranching.js.org/)
+    is a git repository visualizer, sandbox, and a series of educational tutorials and
+    challenges. It is clientside application written in JavaScript.
+    -   [Learn Git Branching - GitHub](https://github.com/pcottle/learnGitBranching)
 -   [git ready](http://gitready.com/) is a collection of short git tips.
 -   [A Visual Git Reference
     ](http://marklodato.github.com/visual-git-guide/index-en.html)
@@ -291,13 +201,34 @@ with ``git help <concept>`` where concept is one of
         _2012_
     -   [On undoing, fixing, or removing commits
         ](http://sethrobertson.github.io/GitFixUm/fixup.html) _2012_.
+-   [Git Tutorial | Backlog](https://backlog.com/git-tutorial/)
+    Git Basics, Git Collaboration, Work with Git, Reference.
 
-### Blogs and notes
+## Older tutorials
+_I group here some pre 2010 tutorials, they are still valid but Git evolve, so we do now
+with new commands what we did with some script using plumbing commands_
+
+
+-   [A tour of git: the basics](http://cworth.org/hgbook-git/tour/)
+    a complete tutorial, more verbose and aimed at beginners,
+    _2007_ by  Bryan O'Sullivan and Carl D. Worth.
+   [Kernel Hackers' Guide to git](http://linux.yyz.us/git-howto.html)
+    by Jeff Garzik is a short and easy *but not over-easy*, tutorial.
+    _2008_.
+--   Denx [Basic git Commands
+    ](http://www.denx.de/en/Documents/GitBasicCommands) _2005_,
+    and [Using git (advanced commands)
+    ](http://www.denx.de/en/Documents/GitAdvancedUse) _2005_,
+    are tutorials coverring complex branch management
+    (*They are related to a previous state of git (2005)
+    so they use more plumbing commands that it would be necessary today*).
+
+## Blogs and notes
 -   [Junio C. Hamano old blog](http://gitster.livejournal.com/) _until 2011_
     and [new blog](http://git-blame.blogspot.fr/) _2011-2016_.
 -   [Git Notes](http://gitolite.com/index2.html)
     ( [GitHub repository](https://github.com/sitaramc/git-notes) )
-    by Sitaram Chamarty, a set of various notes
+    by Sitaram Chamarty, _mainly maintenance fixes since 2014_ a set of various notes
     with a useful not so common documentation on
     commands like _reflog_, _grafting_, __pull --rebase__, ...
     <br />
@@ -305,20 +236,20 @@ with ``git help <concept>`` where concept is one of
     ](http://gitolite.com/deploy.html).
     He is also author of a version of
     [git for computer scientists](http://gitolite.com/gcs.html).
--   [Git cookbook](https://git.seveas.net/) by Dennis Kaarsemaker is a collection of
-    recipes for using git.
+-   [Git cookbook](https://git.seveas.net/) _2016_ by Dennis Kaarsemaker is a collection
+    of recipes for using git.
 -   Martin f. Krafft *(madduck)* has written
     [Packaging with Git](http://madduck.net/blog/2007.10.03:packaging-with-git/)
     followed by
     [Converting a package to Git
-    ](http://madduck.net/blog/2007.10.07:converting-a-package-to-git/)
+    ](http://madduck.net/blog/2007.10.07:converting-a-package-to-git/) _2007_
     _The madduck blog seems no longer available, while his
     [git.madduck.net](https://git.madduck.net/) and
     [GitHub Repository](https://github.com/madduck)_ are still active._
 -   [Packaging With Git - Debian Wiki](https://wiki.debian.org/PackagingWithGit)
 -   [Git Developer Pages](https://git.github.io/)
 
-## Git cheatsheets
+# Git cheatsheets
 -   [Git Cheat Sheet & Git Flow
     ](https://github.com/arslanbilal/git-cheat-sheet)
 -   [Git Tips](https://github.com/git-tips/tips)
@@ -358,39 +289,6 @@ with ``git help <concept>`` where concept is one of
     ](https://github.com/arslanbilal/git-cheat-sheet)  written in Markdown.
 -   [git-tips - Most commonly used git tips and tricks
     ](https://github.com/git-tips/tips)
-
-# Language bindings
--   [Git Wiki - Interfaces to other programming languages
-    ](https://git.wiki.kernel.org/index.php/Interfaces,_frontends,_and_tools#Interfaces_to_other_programming_languages)
-
--   [Dulwich](http://samba.org/~jelmer/dulwich/) is a pure-Python
-    read-write implementation of the Git file formats and protocols.
-    _active in 2018._
-    [Dulwich Tutorial](http://samba.org/~jelmer/dulwich/tutorial).
--   [GitPython](http://gitpython.readthedocs.io/en/stable/) (BSD License)
-    is a python (2 or 3) library used to interact with git
-    repositories, high-level like git-porcelain, or low-level like
-    git-plumbing.  It provides object model access to your git
-    repository. _active in 2018_.
-    -   [GitPython tutorial
-        ](http://gitpython.readthedocs.io/en/stable/tutorial.html)
-        is part of the documentation.
-   -   [GitHub: GitPython
-       ](https://github.com/gitpython-developers/GitPython).
--   [libgit2](http://libgit2.github.com/)
-    is a portable, pure C implementation of the Git core methods provided
-    as a re-entrant linkable library. It has
-    [Binding to a lot of languages
-    ](http://libgit2.github.com/#bindings) python, lua, node, go,
-    erlang, gobject, ruby, objective-c .... and gives
-    [many code samples
-    ](https://libgit2.github.com/docs/guides/101-samples/)
-    _active in 2018;_
-    -   [GitHub: libgit2
-        ](https://github.com/libgit2/libgit2)
-    -   [Pygit2](http://www.pygit2.org/) ([GitHub
-    ](https://github.com/libgit2/pygit2)) is the python binding
-    (with py3k support).
 
 # Repository management
 -   First you can set your own server, it is the simpler when you have
@@ -440,10 +338,43 @@ with ``git help <concept>`` where concept is one of
     -   [GitHub - Gitea](https://github.com/go-gitea/gitea)
     -   [ArchWiki: Gitea](https://wiki.archlinux.org/index.php/Gitea)
 
-# front-end layers
+# Front End Layer
+## Language bindings
+-   [Git Wiki - Interfaces to other programming languages
+    ](https://git.wiki.kernel.org/index.php/Interfaces,_frontends,_and_tools#Interfaces_to_other_programming_languages)
+
+-   [Dulwich](http://samba.org/~jelmer/dulwich/) is a pure-Python
+    read-write implementation of the Git file formats and protocols.
+    _active in 2018._
+    [Dulwich Tutorial](http://samba.org/~jelmer/dulwich/tutorial).
+-   [GitPython](http://gitpython.readthedocs.io/en/stable/) (BSD License)
+    is a python (2 or 3) library used to interact with git
+    repositories, high-level like git-porcelain, or low-level like
+    git-plumbing.  It provides object model access to your git
+    repository. _active in 2018_.
+    -   [GitPython tutorial
+        ](http://gitpython.readthedocs.io/en/stable/tutorial.html)
+        is part of the documentation.
+   -   [GitHub: GitPython
+       ](https://github.com/gitpython-developers/GitPython).
+-   [libgit2](http://libgit2.github.com/)
+    is a portable, pure C implementation of the Git core methods provided
+    as a re-entrant linkable library. It has
+    [Binding to a lot of languages
+    ](http://libgit2.github.com/#bindings) python, lua, node, go,
+    erlang, gobject, ruby, objective-c .... and gives
+    [many code samples
+    ](https://libgit2.github.com/docs/guides/101-samples/)
+    _active in 2018;_
+    -   [GitHub: libgit2
+        ](https://github.com/libgit2/libgit2)
+    -   [Pygit2](http://www.pygit2.org/) ([GitHub
+    ](https://github.com/libgit2/pygit2)) is the python binding
+    (with py3k support).
+
 ## Git extensions
-The {{< iref "backup#git_backup" "git backup tools" >}} are in the
-{{< iref "backup" "Backup Page" >}}.
+The {{< iref "../system/backup#git_backup" "git backup tools" >}} are in the
+{{< iref "../system/backup" "Backup Page" >}}.
 
 -   [EtcKeeper](http://etckeeper.branchable.com/) (GPL)
     is a collection of tools to let /etc be stored in a git repository. It hooks into
@@ -775,12 +706,14 @@ See {{< iref "#ediff" "above for emacs frontends" >}}:
     [trydiscope](https://github.com/lamby/trydiffoscope)
     both diffscope and trydiffscope are in Debian.
 -   [Diffuse](http://diffuse.sourceforge.net/) (GPL)
-    is a diff GUI tool written in python. Diffuse can
-    retrieve revisions of files from Bazaar, CVS, Darcs, Git,
-    Mercurial, Monotone, RCS, Subversion, and SVK repositories
-    for comparison and merging. Diffuse is in Debian.
-    [Diffuse Manual](http://diffuse.sourceforge.net/manual.html)
--   [Meld](http://meldmerge.org/) is a visual diff and merge tool
+    is a diff GUI tool written in python GTKxs. Diffuse can retrieve revisions of files from
+    Bazaar, CVS, Darcs, Git, Mercurial, Monotone, RCS, Subversion, and SVK repositories
+    for comparison and merging. _Diffuse is in Debian but as far of Buster only the old
+    4.8 release, which reqires python2_.
+    -   [MightyCreak/diffuse](https://github.com/MightyCreak/diffuse) (GPL)
+        is a fork of sourcforge Diffuse projectn to migrate from Python 2 to Python 3,.
+    -   [Diffuse Manual](http://diffuse.sourceforge.net/manual.html)
+-   [Meld](http://meldmerge.org/) (GPL) is a visual diff and merge tool
     that supports Git, Bazaar, Mercurial, Subversion, etc and can be
     used with git mergetool.
     -   [Meld Manual](http://meldmerge.org/help/)
@@ -801,10 +734,10 @@ See {{< iref "#ediff" "above for emacs frontends" >}}:
     side-by-side diff view.
 -   [xxdiff](http://furius.ca/xxdiff/) (GPL)
     is a graphical file and directories comparator and merge tool.
-    It is in the Debian package xxdiff.
-    There is also a set of [helper scripts
-    http://furius.ca/xxdiff/doc/xxdiff-scripts.html)
-    in the package xxdiff-scripts.
+    Debian has a package _xxdiff_ an a  set of [helper scripts
+    ](http://furius.ca/xxdiff/doc/xxdiff-scripts.html)
+    in the package _xxdiff-scripts_.
+    -   [xxdiff GitHub](https://github.com/blais/xxdiff)
 
 ### vimdiff
 -   [vimdiff manual](http://vimdoc.sourceforge.net/htmldoc/diff.html)
@@ -857,6 +790,9 @@ When used as a git mergetool you get the following windows:
 
 
 ## Misc
+-   [git-draw](https://github.com/sensorflo/git-draw/wiki)
+    is a shell script which draws nearly the full content of a tiny git repository as a
+    graph.
 -   [GitStats](http://gitstats.sourceforge.net/) (GPL)
     generates statistics for git,
 -   [Pepper](http://scm-pepper.sourceforge.net/) (GPL)
@@ -1008,7 +944,7 @@ support: submodules, subtrees, and wrappers they are compared in
     but it is no longer developped since 2012.
 
 
-## git-submodule
+# git-submodule
 -   [Git Submodule Tutorial](https://git.wiki.kernel.org/index.php/GitSubmoduleTutorial)
     _2012_.
 -   [git-submodules(1)
@@ -1034,7 +970,7 @@ won’t be able to clone the repository as shown in
 and [Pro Git: Issues with Submodules
 ](https://git-scm.com/book/en/v2/Git-Tools-Submodules_issues_with_submodules)
 
-## Subtree merge
+# Subtree merge
 A subtree merge is used to contain a repository in a folder within a
 repository.
 
@@ -1055,7 +991,7 @@ repository.
     [Scott W. Bradley: Merge Git Repositories and Preseve Commit History
     ](http://scottwb.com/blog/2012/07/14/merge-git-repositories-and-preseve-commit-history/).
 
-## git-subtree
+# git-subtree
 See also my
 [Git Subtree — Git Memo](https://git-memo.readthedocs.io/en/latest/subtree.html).
 
@@ -1086,7 +1022,7 @@ See also my
     ](https://makingsoftware.wordpress.com/2013/02/16/using-git-subtrees-for-repository-separation/)
     _2013_
 
-### comparisons with submodules
+## comparisons with submodules
 -   [Handling Dependencies with Submodules and Subtrees - GitHub Cheatsheets
     ](https://github.github.com/training-kit/downloads/submodule-vs-subtree-cheat-sheet/)
 -   [Git: submodules vs. subtrees - Andrey Nering
@@ -1096,7 +1032,7 @@ See also my
 -   [Git Submodules vs Git Subtrees | Code Wins Arguments
     ](https://codewinsarguments.co/2016/05/01/git-submodules-vs-git-subtrees/)
 
-## Other tools
+# Other tools
 Some other tools to act on a group of repositories
 
 -   <a name="gitslave"></a>[GitSlave](http://gitslave.sourceforge.net/)
@@ -1189,6 +1125,52 @@ and [Bl.ocks rendering](https://bl.ocks.org/mbostock/1353700).
 -   [BitBucket](https://bitbucket.org/) gives unlimited private code
     repositories for at most 5 users.
 
+## Other Source Conf Management Software
+-   {{< wp "Revision_control"  "Wikipedia: Revision Control" >}}
+    and {{< wp "Comparison of revision control software" >}}
+-   [Better SCM Initiative](http://better-scm.shlomifish.org/) was
+    comparing many SCM software but it is now tagged as _mostly irrelevant_ as Git
+    established itself as the de-facto standard.
+-   [Semantic Versioning](http://semver.org/)
+    is a simple set of rules and requirements that dictate how version
+    numbers are assigned and incremented.  Under this scheme, version
+    numbers and the way they change convey meaning about the
+    underlying code and what has been modified from one version to the
+    next.
+-   {{< wp "Concurrent Versions System" >}} more known as _CVS_ is the ancestor of
+    modern source control management software since 1990. It is now obsolete and run
+    only for old projects , no more developed or for few files history tracking.
+    -   [The CVS Book](http://cvsbook.red-bean.com/)
+-   {{< wp "Bazaar_(software)"  "Bazaar" >}} GPL is a distributed revision control
+    system written in python. It was created by _Cannonical_, many projects previously
+    managed in _Bazaar_ now moved to _Git_, and the list of big project managed by
+    _Bazaar_ on the _Bazaar_ Home Page reflect a past greatness, now _inkscape_,
+    _squid_, _BitlBee_, ... and _LaunchPad_ itsell dropped _Bazaar_ and moved to _Git_.
+-   [Subversion](http://subversion.tigris.org/),
+    [Version Control with Subversion](http://svnbook.red-bean.com/)
+    (subversion reference manual), and
+    [Subversion FAQ](http://subversion.apache.org/faq.html).
+-   [Rapidsvn](http://rapidsvn.org/) is a gui for Subversion.
+-   {{< wp "Darcs" >}} is a revision control system written in Haskell,
+    along the lines of CVS or arch. Darcs has two distinctive
+    features: 1) each copy of the source is a fully functional branch,
+    and 2) underlying darcs is a powerful theory of patches.
+    [Darcs Home](http://darcs.net/)
+    [Darcs Manual](http://darcs.net/manual/)
+-   [Mercurial (hg)](https:www.mercurial-scm.org)
+    (GPL) is a fast lightweight distributed Source Control Management
+    system written in python, C and Rust. Mercurial is used for some big open
+    source projects like  mozilla, xine, pidgin, ....
+    even if many project previously managed in Mercurial now moved to Git  like _alsa_,
+    _e2fsprogs_, _xen_, _moinmoin_.
+    -   [Mercurial: The Definitive Guide](http://hgbook.red-bean.com/read/)
+    -   [Mercurial for Git users](http://mercurial.selenic.com/wiki/GitConcepts)
+-   [src](https://gitlab.com/esr/src)
+    from Eric Raymond is a *RCS reloaded* with a modern UI, designed
+    to manage single-file solo projects. It features sequential
+    revision numbers, lockless operation, embedded command help, and a
+    command set that familiar to users of Subversion, Mercurial, and
+    Git.
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
