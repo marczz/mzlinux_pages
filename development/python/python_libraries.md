@@ -120,6 +120,30 @@ The source code of python modules is found in the
         ajax enabled browser like firefox, chrome, opera (vivaldi),
         safari,....
     -   See also the {{< iref "programming_languages#pcre" "pcre references" >}}
+-   <a name="typing_module"></a>[Typing](https://docs.python.org/3/library/typing.html)
+    provides runtime support for type hints.
+
+    Type Hints are defined in [PEP 484](https://www.python.org/dev/peps/pep-0484/),
+    [PEP 526](https://www.python.org/dev/peps/pep-0526/) gives the syntax for type
+    annotations, [PEP 544](https://www.python.org/dev/peps/pep-0544/) the static Duck
+    Typing,[PEP 586](https://www.python.org/dev/peps/pep-0586/)  add to type hints
+    _literal types_ to indicate that some expression has literally a specific value.
+    [PEP 589](https://www.python.org/dev/peps/pep-0589/) defines _TypedDict_ which are
+    type Hints for Dictionaries with a fixed set of keys,
+    [PEP 591](https://www.python.org/dev/peps/pep-0591/) add to the typing module a
+    _final_ qualifier to indicate that a method should not be overridden, or a class
+    should not be subclassed, or a variable or attribute should not be reassigned.
+
+    -   [Type hints cheat sheet
+        ](https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html)
+        from {{< iref "#mypy" "MyPy" >}} documentation.
+    -   [Python Type Checking Guide – Real Python
+        ](https://realpython.com/python-type-checking/).
+    -   [Abstact of Type Hints](https://stackoverflow.com/a/32558710/965798) in a
+        StackOverflow answer.
+
+    You can use a type checker like {{< iref "#mypy" "MyPy" >}} to do the static type
+    checking. _PyCharm_ also includes sytatic type checking.
 
 ## Concurent execution  {#process_modules}
 [Concurrent Execution](https://docs.python.org/3/library/concurrency.html)
@@ -469,6 +493,20 @@ see also the {{< iref "python_web#wsgi" "xCGI stuff" >}}.
 -   [toolz](http://toolz.readthedocs.org)
     provides a set of utility functions for iterators, functions, and dictionaries.
     They extend the {{< iref "#functools" "standard libraries itertools and functools" >}} .
+-   <a name="mypy">[MyPi](http://www.mypy-lang.org/) (MIT License)
+    static typing checker for Python.
+    Mypi is included in _Vim_ _syntastic_ and _ALE_ in _emacs_ _Flycheck_, in _Atom_,
+    _Pycherm_, _Flake8_.
+    -   [MyPy - GitHub](https://github.com/python/mypy)
+    -   [Mypy documentation](https://mypy.readthedocs.io/en/stable/)
+-   [PyTypes](https://github.com/Stewori/pytypes)) (Apache License)
+    is a python type checker.
+-   [TypeShed](https://github.com/python/typeshed) (Apache License)
+    contains external type annotations for the Python standard library and Python
+    builtins, as well as third party packages. It is included in
+-   [PyDantic](https://github.com/samuelcolvin/pydantic) (MIT License)
+    Data parsing and validation using {{< iref "#typing_module" "Python type hints" >}}.
+    Pydantic is used by  {{< iref "python_web#fastapi" "FastApi Web Framework" >}}.
 
 ## Build Automation {#build_automation}
 The continuous integration software is in the main
