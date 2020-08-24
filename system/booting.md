@@ -2,8 +2,6 @@
 title: Booting
 ---
 
-{{% toc /%}}
-
 # Boot Process
 -  [Debian reference: The system initialization
    ](https://www.debian.org/doc/manuals/debian-reference/ch03.en.html#_stage_4_the_normal_debian_system)
@@ -63,7 +61,7 @@ Debian Lenny) _the switch to v2 began in 2007_.
 ### Syslinux
 {{< wp "Syslinux" >}} is used for booting from FAT,or
 as __isolinux__ from CD-ROM ISO 9660, or as __pxelinux__ from network using
-{{< iref "network#network_boot" "Pre-boot eXecution Environment (PXE)" >}},
+{{< iref "../network/network#network_boot" "Pre-boot eXecution Environment (PXE)" >}},
 or as __extlinux__ from ext2/3fs _but not ext4_.
 
 -   [SysLinux Wiki](https://www.syslinux.org/wiki/)
@@ -184,11 +182,6 @@ or as __extlinux__ from ext2/3fs _but not ext4_.
     ](http://0pointer.net/blog/systemd-for-administrators-part-xxi.html).
 -   [Understanding Systemd Units and Unit Files | DigitalOcean
     ](https://www.digitalocean.com/community/tutorials/understanding-systemd-units-and-unit-files)
--   [How to use systemd for system administration on Debian - Xmodulo
-    ](http://xmodulo.com/use-systemd-system-administration-debian.html)
--   [Without Systemd](http://without-systemd.org/) is a site from
-    opponents to systemd, they explain how to set up a system (like
-    Debian) without using systemd.
 -   The [Timer unit
     ](https://www.freedesktop.org/software/systemd/man/systemd.timer.html)
     allow a timer dependent service activation. The `WakeSystem=true`
@@ -199,6 +192,9 @@ or as __extlinux__ from ext2/3fs _but not ext4_.
     -   Joey Hess  give an example in his
         [programmable alarm clock using systemd
         ](http://joeyh.name/blog/entry/a_programmable_alarm_clock_using_systemd/)
+-   [Without Systemd](http://without-systemd.org/) is a site from
+    opponents to systemd, they explain how to set up a system (like
+    Debian) without using systemd.
 
 ## Manual pages
 
@@ -213,6 +209,22 @@ or as __extlinux__ from ext2/3fs _but not ext4_.
 -   [logind
     ](http://www.freedesktop.org/wiki/Software/systemd/logind/)
 -   [loginctl](http://www.freedesktop.org/software/systemd/man/loginctl.html)
+
+
+For unit syntax [systemd.directives
+](https://www.freedesktop.org/software/systemd/man/systemd.directives.html)
+gives an index of alldirctives with the manual page where they are described. The main
+pages for unit syntax are:
+
+-   [systemd.service
+    ](https://www.freedesktop.org/software/systemd/man/systemd.service.html)
+    Service unit configuration.
+-   [systemd.unit](https://www.freedesktop.org/software/systemd/man/systemd.unit.html)
+    Unit configuration.
+-   [systemd.exec](https://www.freedesktop.org/software/systemd/man/systemd.exec.html)
+    the execution environment configuration.
+-   [systemd.mount](https://www.freedesktop.org/software/systemd/man/systemd.mount.html)
+    Mount unit configuration.xs
 
 ## /dev/console
 -   For post booting configuration of the linux console terminal go to
