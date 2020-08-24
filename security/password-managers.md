@@ -2,13 +2,11 @@
 title: Password Managers
 ---
 
-{{% toc /%}}
-
----
-
 _See also  {{< iref "authentication" "Authentication" >}},
 {{< iref "security" "Security" >}},
-{{< iref "network" "Network Security" >}}._
+{{< iref "../network/network" "Network Security" >}}._
+
+---
 
 A {{< wp "Password_manager"  "Password Manager" >}} holds your passwords in an
 encrypted local database. Some password managers comes under the form
@@ -38,7 +36,7 @@ device application are also available.
     also define locking state item by item.
 
     Even if the user access secret by attribute. Each secret has also an _object path_
-    which look like
+    which look like:
 
         /org/freedesktop/secrets/collection/xxxx/iiii
 
