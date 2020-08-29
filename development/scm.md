@@ -806,6 +806,65 @@ When used as a git mergetool you get the following windows:
     git, bzr, Subversion, darcs, and fossil directly, also hg, CVS,
     and RCS through plugins.
 
+# Managing dotfiles
+
+-   To find where a dotfile comes from you can use
+    [Debian Wiki: Dotfiles List](https://wiki.debian.org/DotFilesList).
+-   [Awesome Dotfiles](https://github.com/webpro/awesome-dotfiles).
+-   [GitHub does dotfiles - dotfiles.github.io
+    ](https://dotfiles.github.io/)
+    list all dotfile management systems, specific tools configuration,
+    and tutorials on dotfile management.
+-   [ArchWiki: Dotfiles](https://wiki.archlinux.org/index.php/Dotfiles)
+    give multiple options of dotfile management.
+-   See also the list of software related to _myrepos_
+    at the end of the  [myrepos Home Page](http://myrepos.branchable.com/)
+-   [GNU Stow](http://www.gnu.org/software/stow/)
+    is a Perl symlink farm manager which takes distinct packages of
+    software and/or data located in separate directories on the
+    filesystem, and makes them appear to be installed in the same
+    place.  _Stow_ can be used to symlink dotfiles from a repository
+    into the $HOME tree.
+    -   [managing your dotfiles with gnu stow tutorial
+        ](http://blog.xero.nu/managing_dotfiles_with_gnu_stow)
+    -   [mr plugin for stow
+        ](https://github.com/aspiers/kitenet-mr/blob/master/lib/stow).
+-   [Graft](http://peters.gormand.com.au/Home/tools/graft/graft.html)
+    is a stow replacement. This introduction compare many stow
+    alternatives.
+-   [dotdrop](https://deadc0de.re/articles/dotfiles.html)
+    is a bash script to manage dotfiles in a single git repository.
+    -   [dotdrop GitHub repository](https://github.com/deadc0de6/dotdrop)
+-   [Yet Another Dotfiles Manager - yadm
+    ](https://thelocehiliosan.github.io/yadm/)
+    is a git wrapper like vcsh but targeted to manage dotfiles for
+    multiple hosts in a single directory.
+-   [Github: dotbot](https://github.com/anishathalye/dotbot).
+    -   [dotbot wiki](https://github.com/anishathalye/dotbot/wiki)
+        dotbot is installed as a submodule in your repository.
+-   [VCSH](https://github.com/RichiH/vcsh) (GPL)
+    manage multiple Git repositories in $HOME
+
+    _VCSH_ origin is the vcs discutions see
+    -   [vcs-home Wiki](http://vcs-home.madduck.net/) and
+        [vcs-home mailing list
+        ](http://lists.madduck.net/pipermail/vcs-home) also at
+        [marc](http://marc.info/?l=vcs-home) with search facilities:
+    -   [Using Git for etc or your home directory (2007-11)
+        ](http://lists.madduck.net/pipermail/vcs-home/2007-November/thread.html#105),
+        [Keeping your dotfiles in git  (2008-08)
+        ](http://lists.madduck.net/pipermail/vcs-home/2008-August/thread.html#167),
+        with the [madduck useof git for dotfiles
+        ](http://lists.madduck.net/pipermail/vcs-home/2008-August/000175.html)
+    -   The problem first appears in git mailing list as
+            [finding the right remote branch for a commit
+        ](http://marc.info/?l=git&m=118407895625277&w=2)
+        from madduck, and was solved in this [follow-up post
+        ](http://marc.info/?l=git&m=118422647932244&w=2);
+        then martin f krafft (madduck) added
+        [some more git for etc tweaking
+        ](http://lists.madduck.net/pipermail/vcs-home/2007-November/000107.html)
+
 
 # Git Workflow {#git_worflow}
 ## What are git workflows
