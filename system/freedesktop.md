@@ -2,10 +2,6 @@
 title: Freedesktop
 ---
 
-{{% toc /%}}
-
----
-
 # References
 -   [freedesktop.org](http://www.freedesktop.org/) a base platform
     (both software and standard) for desktop software.
@@ -37,7 +33,7 @@ title: Freedesktop
 # XDG menus
 -   [XDG Menu in LXDE](http://wiki.lxde.org/en/Main_Menu)
 -   [ArchLinux: xdg-menu](https://wiki.archlinux.org/index.php/Xdg-menu).
--   [xdg-utils](http://portland.freedesktop.org/)
+-   [xdg-utils](https://www.freedesktop.org/wiki/Software/xdg-utils/)
     is a set of command line utilities for Free Desktop:  creating
     menus, opening files, setting mime types it includes the command
     {{< man "xdg-desktop-menu" >}}
@@ -68,14 +64,21 @@ title: Freedesktop
 
 
 # XDG Default application.
-The freedesktop way of opening applications is
-thru `xdg-open` and the Mime type of the file,
-it is explained in Freedesktop
+The freedesktop way of opening applications is thru `xdg-open` and the Mime type of the
+file, it is explained in Freedesktop
 [Desktop Entry Specification
 ](http://standards.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html),
 [Mime Actions Specification
 ](http://standards.freedesktop.org/mime-apps-spec/latest/)
-and:
+
+The MIME Applications Associations define the default application. It is specipied in
+[Association between MIME types and applications
+](https://specifications.freedesktop.org/mime-apps-spec/latest/).
+
+The user can override the default in `~/.config/$desktop-mimeapps.list` for a specfic
+desktop in the env variable `$XDG_CURRENT_DESKTOP` or  `~/.config/mimeapps.list`
+rmfor any desktop.
+
 
 -   [ArchLinux: Default applications
     ](https://wiki.archlinux.org/index.php/Default_Applications)
