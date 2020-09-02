@@ -2,8 +2,6 @@
 title: Terminal emulators
 ---
 
-{{% toc /%}}
-
 # XTerminals
 -   Wikipedia has an _incomplete_ {{< wp "List of terminal emulators" >}}.
 -   [ArchWiki: List of terminal emulators
@@ -78,7 +76,7 @@ between multiple windows
 a scriptable OpenGL based terminal emulator with tiling capabilities, TrueColor,
 ligatures support and protocol extensions for keyboard input and image rendering.
 
-
+I tried in 2020 Kitty on Linux, but it let my window manager, in an unrecoverable state.
 
 [Terminology](https://www.enlightenment.org/about-terminology)
 is a terminal emulator created for the Enlightenment desktop.  it
