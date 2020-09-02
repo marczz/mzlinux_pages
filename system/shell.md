@@ -2,10 +2,6 @@
 title: Shell
 ---
 
-{{% toc /%}}
-
-___
-
 # Shell references
 -   [Wikipedia: Unix shells](http://en.wikipedia.org/wiki/Unix_shell),
     [Comparison of computer shells
@@ -284,7 +280,7 @@ expansion, nor process substitution)
 -   [zplugin](https://github.com/zdharma/zplugin) (MIT License)
     A flexible Zsh plugin manager.
 
-# Awk
+# Awk {#awk}
 
 -   Wikipedia {{< wp "Akw" >}}
 -   [Gawk: Effective AWK Programming
