@@ -30,11 +30,11 @@ title: Documents management.
     Bibliographic entries can be exported as BibTeX through {{< wp "unAPI" >}},
     making it compatible with Zotero.
 -   {{< wp "Zotero" >}} (AGPL)
-    is a reference management software to manage bibliographic data
-    and related research materials (such as PDF files).
-    Features include web browser integration, online syncing,
-    generation of in-text citations, footnotes and bibliographies,
-    as well as integration with word processors.
+    is a reference management software to manage bibliographic data and related research
+    materials (such as PDF files).  Features include web browser integration, online
+    syncing, generation of in-text citations, footnotes and bibliographies, as well as
+    integration with word processors. Zotero is no longer in debian but a flatpack is
+    provided.
     -   [Zotero Home](https://www.zotero.org/)
     -   [Zotero Bookmarklets](https://www.zotero.org/downloadbookmarklet)
         for desktop and mobile browsers.
