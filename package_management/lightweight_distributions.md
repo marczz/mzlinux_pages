@@ -2,13 +2,13 @@
 title: Lightweight Distributions
 ---
 
-{{% toc /%}}
-
 _See also the pages:
 {{< iref "distributions" "Distributions" >}},
-{{< iref "network" "Forensic Distributions" >}},
+{{< iref "../network/network" "Forensic Distributions" >}},
 {{< iref "firewall#firewall_distributions" "Firewall distributions" >}},
 {{< iref "hdrive#rescue_systems" "Rescue Systems" >}}.
+
+---
 
 # Lightweight Distributions
 
@@ -28,6 +28,14 @@ Debian Live and GRML are in the main {{< iref "distributions" "Distributions sec
 
 -   {{< wp "Alpine Linux" >}},
     [Alpine Linux Home](https://www.alpinelinux.org/)
+    is a security-oriented, lightweight Linux distribution based on musl libc and
+    busybox. A container requires no more than 8 MB and a minimal installation to disk
+    requires around 130 MB of storage.
+
+    Alpine Linux is used heavily in containers (e.g. docker images) on servers, so many
+    of its main packages are focused on server services.
+
+    -   [Alpine Linux Wiki](https://wiki.alpinelinux.org/wiki/Main_Page)
 -   [BunsenLabs Linux](https://www.bunsenlabs.org/) is the continuation of
     {{< wp "Crunchbang_Linux" "CrunchBang" >}} which stopped in 2015. It is a derivative
     of Debian with Openbox window manager, tint2 panel and conky system monitor.
