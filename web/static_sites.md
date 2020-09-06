@@ -59,7 +59,6 @@ The site generators are written in various languages:
     {{< iref "#hyde" "Hyde" >}},
     {{< iref "#liquidluck" "liquidluck" >}},
     {{< iref "#markdoc" "MarkDoc" >}},
-    {{< iref "#markwiki" "MarkWiki" >}},
     {{< iref "#mkdocs" "Mkdocs" >}},
     {{< iref "#nib" "Nib" >}},
     {{< iref "#nikola" "Nikola" >}},
@@ -126,7 +125,6 @@ The site generators are written in various languages:
     {{< iref "#jekyll" "Jekyll" >}},
     {{< iref "#liquidluck" "liquidluck" >}},
     {{< iref "#markdoc" "MarkDoc" >}},
-    {{< iref "#markwiki" "MarkWiki" >}},
     {{< iref "#middleman" "Middleman" >}},
     {{< iref "#mkdocs" "Mkdocs" >}},
     {{< iref "#mynt" "Mynt" >}},
@@ -288,14 +286,6 @@ The site generators are written in various languages:
         The site [git-ready](http://gitready.com/) is built with Jekyll and the
         [source is available on GitHub](https://github.com/gitready/gitready).
         It is a good example of a simple Jekyll layout, .
--   <a name="markwiki"></a>[MarkWiki
-    ](http://pythonhosted.org/MarkWiki/) (BSD License)
-    is a _Python_ + {{< iref "python_web#flask" "Flask" >}} wiki _not static_
-    that uses Markdown to create pages.  Markwiki has an option to
-    _freeze_ the wiki with
-    {{< iref "python_web#frozen" "Frozen-Flask" >}}
-    and export it to a static site.
-    -   [GitHub: MarkWiki](https://github.com/mblayman/markwiki)
 -   <a name="metalsmith"></a>[Metalsmith](http://www.metalsmith.io/)
     a node.js plugable static site generator. It accepts documentation in Markdown and
     through plugin ReSTructured text, asciidoc, org-mode.
@@ -457,10 +447,13 @@ most o them where primary aimed to blogging.
         ](https://segment.com/blog/building-technical-documentation-with-metalsmith/).
 
 ### Hugo {#hugo}
-[Hugo](https://gohugo.io/) is a static site
-generator written in go. It is in Debian. Hugo can be used for documentation.
+[Hugo](https://gohugo.io/) is a static site generator written in go. It is in
+Debian. Hugo can be used for documentation.
 
-It uses since v 0.60 {{< iref "markdown#goldmark" "Goldmark" >}} for markdown formatting.
+It uses since v 0.60 {{< iref "markdown#goldmark" "Goldmark" >}} for markdown
+formatting, and {{< iref "source_code#chroma" Chroma >}} for
+[syntax highlighting
+    ](https://gohugo.io/content-management/syntax-highlighting/).
 
 There are many themes aimed to Documentation, you can find many in
 [documentation | Hugo Themes](https://themes.gohugo.io/tags/documentation/).
@@ -492,6 +485,7 @@ Examples of Documentation build with Hugo:
 
 Building doc with Hugo:
 
+-   [ox-hugo](https://ox-hugo.scripter.co) export an org file to hugo markdown.
 -   [How We Rebuilt Our Documentation Using Hugo | Presslabs
     ](https://www.presslabs.com/how-to/documentation-hugo/)
 -   [hugo-academic](https://github.com/gcushen/hugo-academic)
