@@ -577,6 +577,21 @@ the Git Wiki [list also the Web interfaces
 -   [Git Extensions](http://gitextensions.github.io/)
     is a graphical user interface for Git that allows you control Git without using the commandline.
     _what a big Deal!_
+## Console interfaces
+-   <a name="lazygit"></a>[lazygit](https://github.com/jesseduffield/lazygit/) (MIT Licence)
+    A simple terminal UI for git commands, written in Go.
+    The documentation is mainly in the [docs directory
+    ](https://github.com/jesseduffield/lazygit/blob/master/docs/)
+    and in the [wiki](https://github.com/jesseduffield/lazygit/wiki/).
+-   [tig](http://jonas.nitro.dk/tig/) is a git repository browser
+    written using ncurses.
+    -   [tig-manual](http://jonas.nitro.dk/tig/manual.html),
+        the tig manaual is also available as the manpage _tigmanual(7)_ if you have
+        installed _tig_.
+    [GitHub: tig](https://github.com/jonas/tig).
+    [tig user manual](http://jonas.nitro.dk/tig/manual.html)
+-   [GitUi](https://github.com/extrawurst/gitui) ( MIT License )
+    a terminal client for git written in Rust
 
 # Tools
 -   [Git Wiki - Tools
