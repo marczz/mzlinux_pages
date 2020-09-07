@@ -2,7 +2,9 @@
 title: Programming Languages
 ---
 
-{{% toc /%}}
+See also {{< iref "source_code" "Source code beautifiers" >}}.
+
+---
 
 # General References
 
@@ -37,7 +39,8 @@ More references on  Wikipedia:
     [awesome-awesomeness
     ](https://github.com/bayandin/awesome-awesomeness) and
     [awesome](https://github.com/sindresorhus/awesome).
-# {{< wp "programming paradigms" >}}
+
+# Programming Paradigms
 I mention only some paradigms look at
 {{< wp "programming paradigms"  "Wikipedia: programming paradigms" >}} for a full
 list.
@@ -85,13 +88,13 @@ list.
     programs, and even modify itself while running.
 
     It includes:
+
     -   {{< wp "Template metaprogramming" >}} like in C++ or D;
     -   {{< wp "Reflection_(computer_programming)"  "reflective programming" >}}
         i.e. the ability of a computer program to examine _type
         introspection_ and modify its' structure and behavior at runtime.
         this feature is present in many languages like ECMAScript, clojure,
         Java, lisp, Objective-C, Perl, PHP, Python, R, Ruby, scheme ...
-        -
 
 {{< wp "Object-oriented programming" >}} (OOP)
 :   is a paradigm based on the
@@ -148,7 +151,7 @@ list.
     Clean, Opa, Rust, Swift, Visual Basic (starting with version 9.0),
     C# and C++11.
 
-# language benchmarks
+# Language benchmarks
 -   [kostya/benchmarks · GitHub](https://github.com/kostya/benchmarks)
     is a benchmark for Nim Clang, Nim Gcc, C++, D Ldc, Crystal, Go, D,
     D Gdc, Julia, Javascript V8, Rust, Scala, Go Gcc, Javascript Node,
@@ -170,10 +173,11 @@ list.
     There is a [page of results
     ](http://attractivechaos.github.io/plb/)
 
-# Language comparisons {{< iref "#rust" "Rust" >}}, {{< iref "#golang" "ŋo" >}}
-{#language_comparison}
--   [Of  Rust, D, Go and Nim, which is the strongest language and why?
-    - Quora
+# Language comparisons {#language_comparison}
+They compare {{< iref "#rust" "Rust" >}}, {{< iref "#golang" "Go" >}} and
+{{< iref "#nim" Nim >}}.
+
+-   [Of  Rust, D, Go and Nim, which is the strongest language and why? - Quora
     ](http://www.quora.com/Of-the-emerging-systems-languages-Rust-D-Go-and-Nim-which-is-the-strongest-language-and-why)
 -   an Interview with Steve Klabnik:
     [How Rust Compares to Other Languages
@@ -229,14 +233,13 @@ list.
     ](http://www.bradcypert.com/2017/06/28/5-programming-languages-you-could-learn-from/)
     by Brad Cypert _2017_ Nim, Go, F#, Rust Clojure.
 
-# {{< wp "ATS_(programming_language)"  "ATS" >}}
+# ATS
+{{< wp "ATS_(programming_language)" "ATS" >}} is a derivative of Ocaml that focus on
+theorem proving support.  ATS is very quick, a lot better than Ocaml and Haskell, and
+comparable to C cf. [The  benchmarks game](http://shootout.alioth.debian.org/)
 
-ATS is a derivative of Ocaml that focus on theorem proving support.
-ATS is very quick, a lot better than Ocaml and Haskell,
-and comparable to C cf. [The  benchmarks game](http://shootout.alioth.debian.org/)
-
-# {{< wp "C (programming language)"  "C" >}}
--   [Wikipedia: C (programming language)](http://en.wikipedia.org/wiki/C_(programming_language)),
+#  C programming Language
+-   Wikipedia: {{< wp "C (programming language)"  "C programming language" >}}
     [C syntax](http://en.wikipedia.org/wiki/C_syntax),
     {{< wp "C preprocessor" >}}.
 -   A wikibook :
@@ -313,7 +316,7 @@ and comparable to C cf. [The  benchmarks game](http://shootout.alioth.debian.org
 -   {{< wp "Frama-C" >}} (LGPL) is a set of interoperable program analyzers for C programs.
 -   [C-C++ Beautifier HOW-TO](http://www.yolinux.com/HOWTO/C-C++Beautifier-HOWTO.html)
     by Alavoor Vasudevan.
--   Other links to program pretty-printing are in the section
+-   Other links to pretty-print code are in the section
     {{< iref "source_code" "Source code beautifiers" >}}
 
 ## C libraries
@@ -382,30 +385,15 @@ njamd
 efence
 :   An other malloc debugger {{< man "efence(3)" >}}
 
-# {{< wp "C++" >}}
-
--   [Bjarne Stroustrup's homepage](http://www.research.att.com/~bs/)
--   [Programming Using C++
-    ](http://www.desy.de/gna/html/cc/material.html)
-    (GNA Course: P Müller)
--   [Bruce Eckel Books](http://www.mindview.net/Books)
-    [Thinking in C++, in Java, in python, in patterns ]
--   [C/C++ Users Group Home Page](http://www.hal9k.com/cug/)
--   [Standard Template Library Programmer's Guide
-    ](http://www.sgi.com/tech/stl/) [[table des matières
-    ](http://www.sgi.com/tech/stl/table_of_contents.html),
-    [index](http://www.sgi.com/tech/stl/stl_index.html)]
--   [the metakit home page](http://equi4.com/metakit/)
-    from [meta4]((http://www.equi4.com/).
-
-# {{< wp "Caml" >}}
+# C++
+-   Wikipedia:  {{< wp "Caml" >}}
 -   [Objective Caml Home](http://ocaml.org/),
 -   [manual](http://caml.inria.fr/pub/docs/manual-ocaml/)
 -   [Functional programming using Caml Light
     ](http://caml.inria.fr/pub/docs/fpcl/index.html)
 
-## {{< wp "Clojure" >}} {#clojure}
-Clojure (eclipse public license) is a lisp dialect that compiles
+## Clojure {#clojure}
+ {{< wp "Clojure" >}} (eclipse public license) is a lisp dialect that compiles
 directly to JVM bytecode (and the CLR, and JavaScript). It supports
 multithreaded programming.
 -   [Clojure - home](http://clojure.org/)
@@ -465,12 +453,13 @@ multithreaded programming.
 -   [Category Clojure - Rosetta Code
     ](http://rosettacode.org/wiki/Category:Clojure)
 
-# {{< wp "D(programming_language)"  "D" >}}
+# D Programming Language
+-   Wikipedia: {{< wp "D(programming_language)"  "D Programming Language" >}}
 -   The [D Programming Language](http://digitalmars.com/d/) originated
     as a re-engineering of C++, and as C++ is an object-oriented,
     imperative, multi-paradigm system programming language
 
-# {{< wp "Go_(programming_language)"  "Go" >}}
+# Go
 -   {{< wp "Go_(programming_language)"  "Go" >}} is a compiled, garbage-collected,
     concurrent programming language developed by Google.
 -   [Go Home Page](http://golang.org/)
@@ -531,7 +520,8 @@ multithreaded programming.
 -   [Golang Templates Cheatsheet
     ](https://curtisvermeeren.github.io/2017/09/14/Golang-Templates-Cheatsheet).
 
-# {{< wp "Haskell_(programming_language)"  "Haskell" >}} {#haskell}
+# Haskell {#haskell}
+-   Wikipedia {{< wp "Haskell_(programming_language)"  "Haskell" >}}
 -   [Haskell Home](http://www.haskell.org/)
     in the [Haskell Wiki](http://www.haskell.org/haskellwiki/)
 -   [Hugs](http://www.haskell.org/hugs/) is a bytecode interpreter for Haskell.
@@ -571,36 +561,36 @@ multithreaded programming.
     by Tommy M. McGuire are working programs that solve real-world
     problems.
 
-# {{< wp "Haxe" >}}
-Haxe (GPL, MIT) is a multiplatform programming language and compiler
+# Haxe
+{{< wp "Haxe" >}} (GPL, MIT) is a multiplatform programming language and compiler
 that can translate the Haxe language into Adobe Flash applications,
 JavaScript programs, Java, C#, C++ standalone applications, Python,
 PHP, Apache CGI, and Node.js server-side applications.
 
 The Haxe compiler is developed in the OCaml. Haxe is a general-purpose
 language with object-oriented programming, exceptions, and
-{{< wp "type inference" >}} with class parameters. {{< wp "Generic classes" >}},
-{{< wp "Reflection (computer programming)"  "Reflection" >}}, {{< wp "iterators" >}}, and
-[w:functional programming) are built-in functionality of the language and libraries.
+{{< wp "type inference" >}} with class parameters.
+{{< wp "Generic classes" >}},
+{{< wp "Reflection (computer programming)"  "Reflection" >}}, {{< wp "iterators" >}},
+and {{< wp "functional programming" >}} are built-in functionality of the language and
+libraries.
 
 -   [Haxe Home](http://haxe.org/).
 
-# {{< wp "Java_(programming language)"  "Java" >}}
 
--   [Java2python](https://github.com/natural/java2python/) (GPL)
-    library to translate Java source code to Python.
-
-# {{< wp "Lua (programming language)"  "Lua" >}}
+# Lua
+-   Wikipedia {{< wp "Lua (programming language)"  "Lua" >}}
 -   [lua](http://www.lua.org/) (MIT License) [
     [lua projects](http://www.lua.org/uses.html)]
--   {{< wp "Lua_(programming_language)"  "Wikipedia: Lua (programming language)" >}} has a feature list,
-    programming examples of the Lua programming language and numerous references to software
-    that can embed lua code.
+-   {{< wp "Lua_(programming_language)"  "Wikipedia: Lua (programming language)" >}}
+    has a feature list, programming examples of the Lua programming language and
+    numerous references to software that can embed lua code.
 -   [awesome-lua (by forhappy)
     ](https://github.com/forhappy/awesome-lua)
     and [awesome-lua (by Lewis J Ellis)
     ](https://github.com/LewisJEllis/awesome-lua)
--   [A Look at Lua](http://www.linuxjournal.com/article/9605) by Joseph Quigley a tutorial in linux-journal 2007.
+-   [A Look at Lua](http://www.linuxjournal.com/article/9605) a tutorial by Joseph
+    Quigley in linux-journal 2007.
 -   [Embeddable scripting with Lua](http://www.ibm.com/developerworks/linux/library/l-lua.html)
     by Martin Streicher  in _IBM developer works_ 2006.
 -   [lua-users wiki](http://lua-users.org/wiki/) [
@@ -627,7 +617,7 @@ language with object-oriented programming, exceptions, and
     other components that allow the use of SQL, LDAP, XML, SOAP etc.
     -   [LuaJava - A Script Tool for Java
         ](http://www.keplerproject.org/luajava/)
--   [Lua Manual 5.3](http://www.lua.org/manual/5.3/)
+-   [Lua Manual 5.4](http://www.lua.org/manual/5.4/)
 -   [Programming in Lua (first edition lua 5.0)
     ](http://www.lua.org/pil/)
 -   [Litt's Lua Laboratory
@@ -639,17 +629,19 @@ language with object-oriented programming, exceptions, and
     {{< iref "desktop" "Awesome" >}},
     does not appreciate the lua design so he made some
     [rants about Lua](https://julien.danjou.info/blog/2008/rants-about-lua) in 2008
-    that he extended in 2011 in [why not Lua](https://julien.danjou.info/blog/2011/why-not-lua)
+    that he extended in 2011 in
+    [why not Lua](https://julien.danjou.info/blog/2011/why-not-lua)
 -   [lua ncurses](https://github.com/msva/lua-ncurses)
     is a wrapper around the ncurses library for terminal programming.
 
-# {{< wp "Mirah_%28programming_language%29"  "Mirah" >}}
+# Mirah
+-   Wikipedia: {{< wp "Mirah_%28programming_language%29"  "Mirah" >}}
 -   [Mirah](http://en.wikipedia.org/wiki/Mirah_%28programming_language%29) (Apache License)
     is a programming language based on Ruby syntax,
     local type inference, hybrid static/dynamic type system, that compile to JVM bytecode.
 -   [Mirah Home](http://www.mirah.org/)
 
-# {{< wp "Nim" >}} {#nim}
+# Nim   {#nim}
 
 Nim is an imperative compiled language supporting metaprogramming,
 functional, message passing, procedural, and object-oriented
@@ -671,6 +663,7 @@ works with PostgreSQL, MySQL and SQLite databases. Nim can interface
 with the Lua and Python interpreter. The tool c2nim helps to generate
 new bindings from C code.
 
+-   Wikipedia: {{< wp "Nim" >}}.
 -   [Nim Home](http://nim-lang.org/)
 -   [Nim Wiki](https://github.com/Araq/Nim/wiki)
 -   [GitHub: Nim](https://github.com/Araq/Nim)
@@ -738,8 +731,9 @@ new bindings from C code.
     [gh_nimrod_doc_pagesusage guide ](http://gradha.github.io/gh_nimrod_doc_pages/)
 
 
-# {{< wp "Perl" >}}
+# Perl
 
+-   Wikipedia: {{< wp "Perl" >}}
 -   [PERL Home](http://www.perl.com/) (GPL or Artistic License)
 -   {{< wp "Perl_6" >}}
 -   [free perl books
@@ -755,13 +749,16 @@ new bindings from C code.
     ](http://www.greenteapress.com/perl/perl.pdf)
 -   [wikibook: Perl Programming](http://en.wikibooks.org/wiki/Perl_Programming)
 
-# {{< wp "Prolog" >}}
+# Prolog
+-   Wikipedia: {{< wp "Prolog" >}}, {{< wp "Logic_programming" >}},
+    {{< wp "Category:Logic programming" >}}
 -   [SWI-Prolog: Edinburgh compatible Prolog compiler](http://www.swi-prolog.org/)
--   Wikipedia {{< wp "Logic_programming" >}}, {{< wp "Category:Logic programming" >}}
 
-# {{< wp "Ruby_(programming_language)"  "Ruby" >}}
+
+# Ruby
 _Ruby is covered by GPL or the GPL compatible {{< wp "Ruby License" >}}_
 
+-   Wikipedia:  {{< wp "Ruby_(programming_language)"  "Ruby" >}}
 -   [Ruby home page](http://www.ruby-lang.org/)
 -   [Ruby in twenty minutes](http://www.ruby-lang.org/en/documentation/quickstart/)
     the official tutorial.
@@ -779,7 +776,7 @@ _Ruby is covered by GPL or the GPL compatible {{< wp "Ruby License" >}}_
 -   [Rubygems](http://rubygems.org/) the Ruby community's gem hosting service.
 -   [gem command reference](http://docs.rubygems.org/read/book/2)
 
-# [Rust](http://en.m.wikipedia.org/wiki/Rust_(programming_language) {#rust}
+# Rust {#rust}
 
 Rust is a systems programming language for highly concurrent and
 highly safe code.
@@ -791,6 +788,7 @@ The type system supports a mechanism similar to type classes, called
 Rust features {{< wp "type inference" >}}, its object system uses
 _implementation_ that fulfill a role similar to that of classes.
 
+-   Wikipedia: {{< wp "Rust_(programming_language)" "Rust" >}}
 -   [Rust book - The Rust Programming Language
     ](https://doc.rust-lang.org/stable/book/)
 -   [The Rust Reference
@@ -856,7 +854,7 @@ There is a package in Debian, but the developpement seemed to have
 stopped in 2015.
 
 -   [Rusthon Wiki Home](https://github.com/rusthon/Rusthon/wiki)
--   [Rusdthon GitHub Repository](https://github.com/rusthon/Rusthon)
+-   [Rusthon GitHub Repository](https://github.com/rusthon/Rusthon)
 -   [Rusthon Blog](http://rusthon-lang.blogspot.fr/)
 -   [Nim and Rusthon
     ](http://rusthon-lang.blogspot.fr/2015/02/nim-and-rusthon.html)
@@ -865,12 +863,15 @@ stopped in 2015.
 -   [Rusthon C++11 Backend
     ](http://rusthon-lang.blogspot.fr/2015/02/rusthon-c11-backend.html)
 
-# {{< wp "Scala_(programming_language)"  "Scala" >}}
-_Scala_ combine object-oriented language and functional programming and
-compile to java byte code.  Scala speed compare with java speed in
+# Scala
+{{< wp "Scala_(programming_language)" "Scala" >}} combines object-oriented language and
+functional programming and compile to java byte code.  Scala speed compare with java
+speed in
 [The computer language benchmarks game](http://shootout.alioth.debian.org/)
 
-# {{< wp "Scheme (programming language)"  "Scheme" >}}
+# Scheme
+
+-   Wikipedia: {{< wp "Scheme (programming language)"  "Scheme" >}}
 -   [Revised6 Report on the Algorithmic Language Scheme (R6RS)
     ](http://www.r6rs.org/)
 -   [Revised(5) Report on the Algorithmic Language Scheme (R5RS)
@@ -924,8 +925,9 @@ compile to java byte code.  Scala speed compare with java speed in
     opengl, gtk bindings.
 -   [sawfish](http://sawfish.wikia.com/wiki/Main_Page) lisp window manager
 
-## {{< wp "Lisp_(programming_language)"  "Lisp" >}}
--   Wikipedia: {{< wp "Common Lisp" >}}
+## Lisp
+-   Wikipedia: {{< wp "Lisp_(programming_language)"  "Lisp" >}},
+    {{< wp "Common Lisp" >}}.
 -   [CLISP](http://clisp.cons.org/)
 
 
@@ -939,7 +941,8 @@ compile to java byte code.  Scala speed compare with java speed in
 -   [Dorai Sitaram \\eval for TeX
     ](http://www.ccs.neu.edu/home/dorai/eval4tex/eval4tex-doc.html)
 
-# {{< wp "Unicon_programming_language"  "Unicon" >}} and {{< wp "Icon_(programming_language)"  "Icon" >}}
+# Unicon and Icon
+
 -    {{< wp "Icon_(programming_language)"  "Icon" >}} is a programming language with syntax similar
      to C or Pascal released in  1977. It features goal directed execution and many facilities
      for managing strings and textual patterns. There is a
@@ -949,7 +952,9 @@ compile to java byte code.  Scala speed compare with java speed in
      It descends from Icon but offers better access to the operating system
      as well as support for object-oriented programming.
 
-# {{< wp "Vala_(programming_language)"  "Vala" >}}, {{< wp "Genie_%28programming_language%29"  "Genie" >}} <a name="vala"></a>
+# Vala, Genie {#vala}
+-   Wikipedia: {{< wp "Vala_(programming_language)"  "Vala" >}},
+    {{< wp "Genie_%28programming_language%29"  "Genie" >}}
 -   {{< wp "Vala_(programming_language)"  "Vala" >}} (LGPL)
     is a programming language whose syntax borrows heavily from C#.
     Vala is compiled to C and uses the {{< wp "GObject" >}} object system.
