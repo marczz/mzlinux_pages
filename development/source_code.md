@@ -2,8 +2,6 @@
 title: Source Code
 ---
 
-{{% toc /%}}
-
 # Literate Programming {#literate_programming}
 
 This section is about literate programming and source code
@@ -87,17 +85,13 @@ There is a related
 -   [PyLit](https://pypi.python.org/pypi/pylit) (GPL) is a python tool that feature a
     _bidirectional text/code converter_; it can convert between the _code_ form
     and the _text_ form  the _code_  without loss of information.
-    [PyLit3](https://github.com/slott56/PyLit-3) (GPL) is a fork for Python3 by Steven Lott.
+    [PyLit3](https://github.com/slott56/PyLit-3) (GPL) is a fork for Python3 by Steven
+    Lott, which [replace PyWeb
+    ]((http://slott-softwarearchitect.blogspot.fr/2013/10/literate-programming-and-pylit.html)
+    previously developped by  Steven Lott.
 -   [pyreport](http://gael-varoquaux.info/computers/pyreport/) (BSD-like license)
     runs a python script and captures its output, compiling it to a
     report in a pdf or an html file.
--   [pyWeb]( http://pywebtool.sourceforge.net/)
-    is a literate programming tool written in python that combines
-    the actions of _weaving_ a document with _tangling_ source files.
-    It is independent of any particular document markup or source language.
-    It uses a simple set of markup tags to define chunks of code and documentation.
-    Steven Lott, author of PyWeb [advise now to better use Pylit
-    ](http://slott-softwarearchitect.blogspot.fr/2013/10/literate-programming-and-pylit.html)
 -   [Pweave](http://mpastell.com/pweave/)
     Pweave is a scientific report generator and a literate programming tool for Python
     developed after Sweave. Pweave can capture the results and plots
@@ -131,45 +125,107 @@ There is a related
     A tool for generating ReST documentation from shell scripts
 
 #  Source code beautifiers {#code_beautifiers}
+_There are two different operations that might be used to prettify source code,
+re-formatting, and higlighting._
+
 -   [Wikipedia: Prettyprint](http://en.wikipedia.org/wiki/Pretty-printing)
     review code beautifiers.
--   [code-prettify](https://github.com/google/code-prettify)
-    (Apache License) is  a Javascript module and CSS file that allows syntax
-    highlighting of source code snippets in an html page.
-    It works on a number of languages including C and friends, Java,
-    Python, Bash, SQL, HTML, XML, CSS, Javascript, Makefiles, and
+-   [bat and other highlighting software feature comparison
+    ](https://github.com/sharkdp/bat/blob/master/doc/alternatives.md).
+
+-   <a name="bat"</a>[Bat](https://github.com/sharkdp/bat) (MIT/Apache License)
+    is a  cat(1) clone with syntax highlighting and Git integration.
+    It uses the {{ "#syntect" "Syntect" >}} library to hightlight code; and integrates
+    with unix utilities like `find` or `fd`, `ripgrep`, `git --show`. _Bat is in
+    Debian._
+
+    The original bat theme is for Dark bckground console, but you can use:
+    ~~~
+    $ bat --themes
+    ~~~
+    to show all the themes with an example of code coloring.
+    For light backgroundyou can choose `GitHub`, `Monokai Extended Light`,
+    `OneHalfLight`, `Solarized (light)` (and also `Solarized (dark)`!), `ansi-light`,
+
+    -   [bat-extras)(https://github.com/eth-p/bat-extras) (MIT Licence)
+        are utlities to use unix commands with _bat_ output. It includes
+        _batman_, _batgrep_, _batdiff_, _batwatch_, _prettybat_.
+-   <a name="chroma"></a>[Chroma](https://github.com/alecthomas/chroma) (MIT License)
+    is a general purpose syntax highlighter in pure Go based heavily on
+    {{< iref "#pygments" "Pygments" >}}.
+    _Chroma_ includes translators for Pygments lexers and styles.
+    _Chroma_ formatters can output HTML, as well as terminal output in 8/256/true
+    colour. Chroma has also a command line client.
+
+    _Chroma_ can be used with the {{< iref "markdown#goldmark" "Goldmark" >}}
+    Markdown renderer using the
+    [syntax-highlighting for fenced code blocks extension
+    ](https://github.com/yuin/goldmark-highlighting).
+    The static site generator {{< iref "static_sites#hugo" "Hugo" >}} uses
+    [chroma for syntax highlighting
+    ](https://gohugo.io/content-management/syntax-highlighting/).
+
+-   [code-prettify](https://github.com/google/code-prettify) (Apache License)
+    is a Javascript module and CSS file that allows syntax highlighting of source code
+    snippets in an html page.  It works on a number of languages including C and
+    friends, Java, Python, Bash, SQL, HTML, XML, CSS, Javascript, Makefiles, and
     Rust. Other languages are supported via extensions.
--   [highlight](http://www.andre-simon.de/doku/highlight/en/highlight.php)
-    from André Simon is a C++ program _not to be confused with the
-    javascript Highlight.js below_. It can prettify
-    any language (120 programming languages) and output HTML, XHTMML,
-    ansi, XSL-FO, RTF or latex.
--   [Highlight.js ](https://highlightjs.org/)
-    <a name="highlight_js"></a>(BSD License)
-    is a syntax highlighter written in JavaScript.
-    It works in the browser as well as on the server. It works with
-    [many markups
-    ](http://highlightjs.readthedocs.org/en/latest/css-classes-reference.html),
+-   [highlight](http://www.andre-simon.de/doku/highlight/en/highlight.php) (GPL)
+    from André Simon is a C++ program _not to be confused with the javascript
+    Highlight.js below_. It can prettify a [huge number of languages
+    ](https://gitlab.com/saalen/highlight/-/wikis/Languages-List) (120 programming
+    languages) and output HTML, XHTML, RTF, LaTeX, TeX, SVG, BBCode and ANSI terminal
+    escape sequences. It can also [Integrate in Pandoc
+    ](https://gitlab.com/saalen/highlight/-/wikis/Pandoc-Integration).
+    -   [highlight - GitLab](https://gitlab.com/saalen/highlight)
+    -   [highlight Wiki][https://gitlab.com/saalen/highlight/-/wikis)
+-   <a name="highlight_js"></a>[Highlight.js ](https://highlightjs.org/) (BSD License)
+    is a syntax highlighter written in JavaScript.  It works in the browser as well as
+    on the server. It works with [many markups languages
+    ](https://github.com/highlightjs/highlight.js/blob/master/SUPPORTED_LANGUAGES.md),
     and has automatic language detection.
     -   [Highlight.js Demo](https://highlightjs.org/static/demo/).
     -   [Documentation for the API and other topics
         ](http://highlightjs.readthedocs.org/).
     -   [Highlight.js GitHub Repository
         ](https://github.com/isagalaev/highlight.js).
+    -   [hicat](https://github.com/rstacruz/hicat) (MIT License)
+         a CLI to `cat` with highlight.js syntax highlighting.
 -   [GNU indent](http://www.gnu.org/software/indent/manual/indent.html) (GPL)
     changes the appearance of a C program by inserting or deleting whitespace,
     It can also convert from one style of writing C to another.
--   <a name="pygments"></a>[Pygments](http://pygments.org/)
+-   <a name="pygments"></a>[Pygments](http://pygments.org/) (BSD-2-Clause License)
     is a generic syntax highlighter. It supports a
     [wide range of common languages and markup formats](http://pygments.org/languages/)
     and can output to HTML, RTF, LaTeX and ANSI sequences.
     It has a [Command Line Interface](http://pygments.org/docs/cmdline/)
     and is often used by {{< iref "structured_text" "Structured Text Formatters" >}}
     like Rest, Sphinx, Markdown, MoinMoin... or webframeworks like Wordpress, Hyde ....
--   [Ostermiller syntax package](http://ostermiller.org/syntax/features.html)(GPL)
-    is a java program that add syntax coloring to web pages for source
-    code of C/C++, Java, HTML.
--   [GNU Source-highlight](http://www.gnu.org/software/src-highlite/)
+
+    [pygmentize](https://pygments.org/docs/cmdline/) is the command line interface to
+    pygments.
+
+-   [Ostermiller syntax package](http://ostermiller.org/syntax/features.html) (GPL)
+    is a java program that add syntax coloring to web pages for source code of C/C++,
+    Java, HTML.
+-   <a name="prettier">[Prettier](https://prettier.io/) (MIT License)
+    is a node.js code formatter with support for:
+    JavaScript, JSX, Angular, Vue, Flow, TypeScript, CSS, Less, and SCSS, HTML, JSON,
+    GraphQL, Markdown _including GFM and MDX_, YAML.
+    It removes all original styling* and ensures that all outputted code conforms to a
+    consistent style. It disregards the original styling* by parsing it away and
+    re-printing the parsed AST with its own rules that take the maximum line length into
+    account, wrapping code when necessary.
+
+    [Prettier integrates with many editors](https://prettier.io/docs/en/editors.html)
+    including _emacs_ and _vim_.
+
+    You may need to [ignore some files or some section of your code
+    ](https://prettier.io/docs/en/ignore.html)
+    -   [Prettier - GitHub](https://github.com/prettier/prettier).
+    -   [prettierx](https://github.com/brodybits/prettierx) (MIT License)
+        is a less opinionated code formatter fork of prettier.
+-   [GNU Source-highlight](http://www.gnu.org/software/src-highlite/) (GPL)
     (GPL) is a C++ program wich uses boost library regular expression
     handling to highlight programming languages source code. Gnu
     highlight can handle: C/C++, C#, Bib, Bison, Caml, Changelog, Diff,
@@ -177,6 +233,13 @@ There is a related
     Lua, ML, Pascal, Perl, PHP, Postscript, Prolog, Python, Ruby,
     Shell, Sql, Tcl, XML. It can output, HTML, XHTML, LATEX, TEXINFO,
     ANSI color escape sequences, DocBook.
+-   <a name="synctect"></a>[Synctect](https://github.com/trishume/syntect) (MIT License)
+    is a syntax highlighting library for Rust that uses
+    [Sublime Text syntax definitions](http://www.sublimetext.com/docs/3/syntax.html).
+    It is used by [many rust open source projects
+    ](https://github.com/trishume/syntect#projects-using-syntect) including
+    {{< iref "#bat"  "bat" >}}, and _crowdown_,
+    {{< iref "git#delta" "Delta diff viewer" >}}.
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
