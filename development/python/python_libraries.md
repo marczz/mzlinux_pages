@@ -653,15 +653,15 @@ List of build tools:
     gives a full list of python IDEs.
 -   [python3-trepan](https://github.com/rocky/python3-trepan/) (GPL)
     is an extended python debugger replacing the previous _pdb_.
-    -   [pytho3-trepan documentation](http://python3-trepan.readthedocs.org/).
+    -   [python3-trepan documentation](http://python3-trepan.readthedocs.org/).
    <a name="ipython"> [IPython](http://ipython.org/)
-    is an interactive development environment for python
-    which provides an enhanced interactive Python shell and a
-    {{< iref "#jupyter" "Jupyter" >}} kernel to work with Python code in Jupyter notebooks
+    is an interactive development environment for python which provides an enhanced
+    interactive Python shell and a {{< iref "#jupyter" "Jupyter" >}} kernel to work with
+    Python code in Jupyter notebooks
     -    [documentation of IPython](http://ipython.readthedocs.io/en/stable/).
--   <a name="jupyter">[Jupyter](https://jupyter.org/)
-    Jupyter Notebook (formerly IPython Notebooks) is a web-based
-    interactive computational environment.
+-   <a name="jupyter">[Jupyter](https://jupyter.org/) (BSD-3-Clause License)
+    _Jupyter Notebook_ (formerly _IPython Notebooks_) is a web-based interactive
+    computational environment.
 
     A Jupyter Notebook document is a versionned {{< iref "data_exchange#json" >}}
     document, containing an ordered list of input/output cells which can contain code,
