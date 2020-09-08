@@ -28,6 +28,7 @@ title: MarkDown
     ](http://xbeta.org/wiki/show/Markdown)
 -   [DropPages](http://droppages.com/) is a site that allows to put a static site
     written in markdown in your DropBox.
+-   [Markdown Guide](https://www.markdownguide.org/getting-started/) (MIT License)
 -   [tpl4md](https://github.com/dloureiro/tpl4md) (AGPL)
     by David Loureiro is a set of markdown templates for widely used
     documents like letters, invoices, orders, slides. _2013_
@@ -476,6 +477,9 @@ table of content, you can control its depth with `--toc-depth`.
     -   PHP Markdown Extra:
         [Definitions Lists](https://michelf.ca/projects/php-markdown/extra/#def-list),
         [Footnotes](https://michelf.ca/projects/php-markdown/extra/#footnotes)
+    -   [syntax-highlighting for fenced code blocks
+        ](https://github.com/yuin/goldmark-highlighting) using the
+        {{< iref "source_code#chroma" "Chroma" >}} syntax highlighting Go library.
 
     It is the default formatter for {{< iref "static_sites#hugo" "Hugo" >}}.
 
