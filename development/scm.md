@@ -502,6 +502,14 @@ provides a detailled description of the use of the following packages.
     magit: [vdiff-magit](https://github.com/justbur/emacs-vdiff-magit).
     vdiff and vdiff-magit are in melpa.
 
+## vim interface
+-   [Vim and git – Linux Hint](https://linuxhint.com/vim_git/) uses _Fugitive_.
+-   [vim-fugitive](https://github.com/tpope/vim-fugitive) (Vim License)
+    Vim plugin for Git.
+-   [git-blame.vim](https://github.com/zivyangll/git-blame.vim) (MIT License)
+    See Git Blame information in the status bar for the currently selected line.
+-   [blamer.nvim](https://github.com/APZelos/blamer.nvim) (MIT License)
+    A git blame plugin for (neo)vim.
 ## Git Fuse filesystems
 
 -   [Git Wiki -  Filesystem interfaces
