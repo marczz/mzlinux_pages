@@ -392,10 +392,11 @@ efence
 -   [Functional programming using Caml Light
     ](http://caml.inria.fr/pub/docs/fpcl/index.html)
 
-## Clojure {#clojure}
- {{< wp "Clojure" >}} (eclipse public license) is a lisp dialect that compiles
+# Clojure {#clojure}
+{{< wp "Clojure" >}} (eclipse public license) is a lisp dialect that compiles
 directly to JVM bytecode (and the CLR, and JavaScript). It supports
 multithreaded programming.
+
 -   [Clojure - home](http://clojure.org/)
 -   [Clojure Programming (the book)](http://www.clojurebook.com/)
 -   [The Clojure Style Guide
@@ -633,6 +634,8 @@ libraries.
     [why not Lua](https://julien.danjou.info/blog/2011/why-not-lua)
 -   [lua ncurses](https://github.com/msva/lua-ncurses)
     is a wrapper around the ncurses library for terminal programming.
+-   [GopherLua](https://github.com/yuin/gopher-lua) (MIT License)
+    is a Lua VM and compiler written in Go.
 
 # Mirah
 -   Wikipedia: {{< wp "Mirah_%28programming_language%29"  "Mirah" >}}
@@ -835,7 +838,8 @@ _implementation_ that fulfill a role similar to that of classes.
     Hyper offers both a Client and a Server which can be used to drive
     complex web applications written entirely in Rust.
 -   [remacs](https://github.com/Wilfred/remacs) is a port to Rust of
-    emacs. In February 2018 it is a very active project.
+    emacs. In 2020 it is a very active project. It provides a docker file to run the
+    development version.
 
 # Rusthon {#rusthon}
 
