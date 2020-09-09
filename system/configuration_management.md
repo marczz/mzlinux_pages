@@ -15,7 +15,7 @@ Configuration Management software allow to do
 first controling the coherence of system software and administering
 changes; then recording t(he changes with the ability to review them
 and to roll back them. The last part is dealed with in the
-{{< iref "scm" "Source Configuration Management section" >}}.
+{{< iref "git" "Source Configuration Management section" >}}.
 but some tools combine the two aspects in an unified front-end.
 
 

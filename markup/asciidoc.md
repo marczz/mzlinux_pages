@@ -12,7 +12,7 @@ title: Asciidoc
     AsciiDoc files can be translated to latex, (X)HTML, HTML5,
     man-troff, epub, DocBook, and from DocBook to pdf, man, chunked
     html. Asciidoc is the documentation format used by the
-    {{< iref "scm" "git source code management system" >}}.
+    {{< iref "git" "git source code management system" >}}.
 -   [AsciiDoc cheatsheet](http://powerman.name/doc/asciidoc)
     by Alex Efros. He also provides a [compact theme for asciidoc
     ](http://powerman.name/download/asciidoc/).

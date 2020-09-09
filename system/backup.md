@@ -601,7 +601,7 @@ among other backends and have recent release like
 
 # Synchronization {#synchronization}
 See also {{< iref "network_filesystems#distributed_filesystems" "Distributed File Systems" >}},
-{{< iref "scm#fs_sync" "File systems synchronization" >}}.
+{{< iref "git#fs_sync" "File systems synchronization" >}}.
 
 ## rsync {#rsync}
 See also the {{< iref "#rsync_backup" "Section on rsync backup" >}}
