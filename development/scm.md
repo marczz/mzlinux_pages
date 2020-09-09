@@ -455,35 +455,30 @@ provides a detailled description of the use of the following packages.
 
 -   __vc-git.el__ hich is the Emacs VC backend, is now part of the emacs distribution (since emacs-22).
     The use of _vc_ is described in the
-    [Version Control chapter of the Emacs manual](http://www.gnu.org/software/emacs/manual/html_node/emacs/Version-Control.html)
--   [git.el](http://www.kernel.org/git/?p=git/git.git;a=blob;hb=HEAD;f=contrib/emacs/git.el)
-    from Alexandre Julliard is distributed with _git-core_ and part of emacs.
-    The entry point is the command 'git-status'.<br />
-    The package
-    [egit.el](http://github.com/jimhourihan/egit)
-    gives an interface to git commands which are not
-    part of git.el. Primarily, this is a view of the git commit
-    history with the ability to mark ranges and/or single commits and
-    operate on them..
--   [git-emacs](http://files.taesoo.org/git-emacs/git-emacs.html) has almost the same functionality, as the git.el package, and it add some improvements.<br />
-    [git-emacs repository](https://github.com/tsgates/git-emacs) at [github](https://github.com/)
+    [Version Control chapter of the Emacs manual
+    ](http://www.gnu.org/software/emacs/manual/html_node/emacs/Version-Control.html)
+-   [git-emacs](http://files.taesoo.org/git-emacs/git-emacs.html)
+    has almost the same functionality, as the git.el package, and it add some improvements.
+    -   [git-emacs repository](https://github.com/tsgates/git-emacs) at [github](https://github.com/)
 -   <a name="magit"></a>[Magit](http://philjackson.github.com/magit)
     by Marius Voller and Phil Jackson has an online
     -   [Magit Manual](http://magit.github.io/master/magit.html),
     -   [Magit Cheatsheet](http://daemianmack.com/magit-cheatsheet.html)
         has its'
         [org source in GitHub](https://github.com/daemianmack/magit-cheatsheet).
--   [Egg](http://github.com/byplayer/egg) is a fork of magit. An
+-   [Egg](http://github.com/byplayer/egg) (GPL) is a fork of magit. An
     [introduction to Egg](http://bogolisk.blogspot.com/2009/01/introduction-to-egg.html)
+    _2009_. _Egg_ in _2020_ support support 2.5.x, but seems to have a low activity
+    compared to magit.
 -   <a name="git-wip"></a>[git-wip](https://github.com/bartman/git-wip) (GPL)
     by Bart Trojanowski  is a script that will manage Work
     In Progress (or WIP) branches. It includes hooks for vim and
     emacs.
 -   [magit-wip
     ](https://github.com/magit/magit/blob/master/magit-wip.el)
-    is a magit plugin included in {{< iref "#magit" "magit distribution" >}} which add two modes to emacs.
-    The global mode _magit-wip-mode_ provides highlighting of wip refs in
-    Magit buffers while the local mode _magit-wip-save-mode_
+    is a magit plugin included in {{< iref "#magit" "magit distribution" >}}
+    which add two modes to emacs.  The global mode _magit-wip-mode_ provides
+    highlighting of wip refs in Magit buffers while the local mode _magit-wip-save-mode_
     commits to such a ref when saving a file-visiting buffer.
 -   <a name="ediff"></a>[Ediff (UserManual)
     ](http://www.gnu.org/software/emacs/manual/html_node/ediff/)
