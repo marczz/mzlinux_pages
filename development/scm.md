@@ -971,6 +971,10 @@ is Vincent Driessen's branching model. He has written
 [git-flow](https://github.com/nvie/gitflow)
 a git extensions to provide high-level repository operations along this model.
 
+There are explanation of this model in the
+[git-flow Wiki](https://github.com/nvie/gitflow/wiki/), and it is made clear in
+[git-flow cheatsheet](https://danielkummer.github.io/git-flow-cheatsheet/index.html).
+
 Benjamin Sandofsky in
 [Understanding the Git Workflow](http://sandofsky.com/blog/git-workflow.html)
 warn us against the overuse of non fast forward merges used in Vincent
@@ -986,17 +990,23 @@ points out the advantages of *git-flow*
 He speaks also some of its issues and why GitHub uses a much simpler
 Git workflow.
 
-This GitFlow has also been tweaked for GitHub with
-[HubFlow](http://datasift.github.io/gitflow/)
-this topic is also discussed by Pedro Melo in
-[Flow setups for git
-](http://www.simplicidade.org/notes/archives/2012/09/flow_setups_for.html).
+### GitHub Flow
+-   [Understanding the GitHub flow · GitHub Guides
+    ](https://guides.github.com/introduction/flow/index.html)
+-   [GitHub flow - GitHub Docs
+    ](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/github-flow#following-the-github-flow)
+-   [HubFlow](http://datasift.github.io/gitflow/)
+    explains how adapt GitFlow and the GitFlow tools git extension for working with
+    GitHub.
+
+    This topic is also discussed by Pedro Melo in
+    [Flow setups for git
+    ](http://www.simplicidade.org/notes/archives/2012/09/flow_setups_for.html).
 
 ## Merge or rebase
 Vincent Driessen's git-flow use heavily merges at many levels.
 
-The [Git Manual
-](https://www.kernel.org/pub/software/scm/git/docs/user-manual.html)
+The [Git Manual](https://www.kernel.org/pub/software/scm/git/docs/user-manual.html)
 explains
 [why bisecting merge commits can be harder than bisecting linear history
 ](https://www.kernel.org/pub/software/scm/git/docs/user-manual.html#bisect-merges)
@@ -1014,8 +1024,7 @@ and 2011.
 
 As Randy Fay noted later the present way of acting is with
 [pull requests](https://help.github.com/articles/about-pull-requests/)
-used in [GitHub workflow
-](https://help.github.com/articles/github-flow/)
+used in [GitHub workflow](https://help.github.com/articles/github-flow/)
 and detailed in the pages from
 [Proposing changes to your work with pull requests
 ](https://help.github.com/articles/proposing-changes-to-your-work-with-pull-requests/)
@@ -1027,10 +1036,8 @@ shows also when fast forwarding and when avoiding it.
 
 When your head is spinning and you are like a Buridan’s Ass between a
 rebased stack of hay and a merged pail of water, you can read this
-[post from Linus Torvald
-](http://article.gmane.org/gmane.linux.kernel/681763)
-([thread view
-](http://thread.gmane.org/gmane.linux.kernel/681712/focus=681763))
+[post from Linus Torvald](http://article.gmane.org/gmane.linux.kernel/681763)
+([thread view](http://thread.gmane.org/gmane.linux.kernel/681712/focus=681763))
 
 > Rebasing branches is absolutely not a bad thing for individual developers.
 But it *is* a bad thing for a subsystem maintainer....
