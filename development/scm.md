@@ -620,6 +620,16 @@ the Git Wiki [list also the Web interfaces
     A bash script to watch a file or folder and commit changes to a git repo.
     I uses _inotify_ to watch for changes.
 
+## Local repositories management
+-   [gita](https://github.com/nosarthur/gita) (MIT License)
+    a python command-line tool to manage multiple git repos.
+-   [myrepos](http://myrepos.branchable.com/) (GPL)
+    by Joey Hess can checkout, update, or perform other actions on a set of
+    repositories as if they were one combined respository. It supports
+    any combination of subversion, git, cvs, mecurial, bzr and darcs
+    repositories.
+    -   [myrepos source Repository](https://git.kitenet.net/index.cgi/myrepos.git/tree/)
+
 ## Sensitive information
 -   [git-remote-gcrypt
     ](https://spwhitton.name/tech/code/git-remote-gcrypt/)
