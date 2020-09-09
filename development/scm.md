@@ -510,6 +510,7 @@ provides a detailled description of the use of the following packages.
     See Git Blame information in the status bar for the currently selected line.
 -   [blamer.nvim](https://github.com/APZelos/blamer.nvim) (MIT License)
     A git blame plugin for (neo)vim.
+
 ## Git Fuse filesystems
 
 -   [Git Wiki -  Filesystem interfaces
@@ -559,45 +560,53 @@ the Git Wiki [list also the Web interfaces
     are Tcl/Tk GUI for git distributed with git. _gitk_ is useful for
     browsing history, diff, and trees; while _git_gui_ is mainly a
     commit tool.
-    -   [The missing gitk documentation
+    -   [The missing gitk documentation - Gitolite
          ](http://gitolite.com/gitk.html).
--   [tig](http://jonas.nitro.dk/tig/) is a git repository browser
-    written using
-    ncurses. [tig-manual](http://jonas.nitro.dk/tig/manual.html),
-    [GitHub: tig](https://github.com/jonas/tig).
-    [tig user manual](http://jonas.nitro.dk/tig/manual.html)
--   [QGit](http://digilander.libero.it/mcostalba/) (GPL) uses Qt toolkit
+
+-   [GitAhead](https://github.com/gitahead/gitahead) (MIT License)
+    is a C++/QT graphical Git client designed to help you understand and manage your
+    source code history.
 -   [Giggle](https://wiki.gnome.org/Apps/giggle) (GPL)  uses GTK+/Gnome toolkit
--   [git-cola](http://cola.tuxfamily.org/) (GPL) uses PyQt4.
+-   [git-cola](http://git-cola.github.io/) (GPL) written in Python uses PyQt4.
     [git-cola documentation
     ](http://git-cola.github.io/share/doc/git-cola/html/index.html)
--   [gitg](http://git.gnome.org/cgit/gitg/) (GPL) GTK+/Gnome clone of
-    the mac/OS gui _GitX_.
+-   [gitg](http://git.gnome.org/cgit/gitg/) (GPL)
+    GTK+/Gnome clone of the mac/OS gui _GitX_.
 -   [GitForce](https://sites.google.com/site/gitforcetool/home) (GPL)
     written in C#.
+-   [Mgit](https://github.com/maks/MGit) (GPL) is an android client
+    for git.
+-   [QGit](http://digilander.libero.it/mcostalba/) (GPL) uses Qt toolkit
+
+## Web interfaces
 -   [GitWeb](https://git.wiki.kernel.org/index.php/Gitweb) distributed with Git,
     is a web interface written in Perl.
+    -   [Gitweb - ArchWiki](https://wiki.archlinux.org/index.php/Gitweb).
 -   [Klaus](https://github.com/jonashaag/klaus) (BSD License)
     by Jonas Haag is a Git web viewer written in python.
+    -   [Klaus Wiki](https://github.com/jonashaag/klaus/wiki).
     [Pypi Klaus](https://pypi.python.org/pypi/klaus/).
--   [Agit](https://github.com/rtyley/agit/wiki) (GPL) is a 'read-only'  android client for git.
-    It can clone a repository and explore history, presently you cannot commit or push.
--   [Git Extensions](http://gitextensions.github.io/)
-    is a graphical user interface for Git that allows you control Git without using the commandline.
-    _what a big Deal!_
+-   [Cgit](https://git.zx2c4.com/cgit/)
+    is a fast web interface for git written in C, using a built in cache to decrease
+    pressure on the git server.
+    -   [cgit - ArchWiki](https://wiki.archlinux.org/index.php/Cgit)
+-   [ungit](https://github.com/FredrikNoren/ungit) (MIT License)
+    a node.js application which brings user friendliness to git.
+
 ## Console interfaces
 -   <a name="lazygit"></a>[lazygit](https://github.com/jesseduffield/lazygit/) (MIT Licence)
     A simple terminal UI for git commands, written in Go.
     The documentation is mainly in the [docs directory
     ](https://github.com/jesseduffield/lazygit/blob/master/docs/)
     and in the [wiki](https://github.com/jesseduffield/lazygit/wiki/).
--   [tig](http://jonas.nitro.dk/tig/) is a git repository browser
-    written using ncurses.
-    -   [tig-manual](http://jonas.nitro.dk/tig/manual.html),
+-   [tig](http://jonas.nitro.dk/tig/) ( GPL-2.0)
+    is a git repository browser written using ncurses.
+    -   [tig - GitHub](https://github.com/jonas/tig).
+    -   [tig user manual](http://jonas.nitro.dk/tig/manual.html)
         the tig manaual is also available as the manpage _tigmanual(7)_ if you have
         installed _tig_.
-    [GitHub: tig](https://github.com/jonas/tig).
-    [tig user manual](http://jonas.nitro.dk/tig/manual.html)
+    -   [tig(1) Man Page](http://jonas.nitro.dk/tig/tig.1.html)
+    -   [tig custom bindings](https://github.com/jonas/tig/wiki/Bindings)
 -   [GitUi](https://github.com/extrawurst/gitui) ( MIT License )
     a terminal client for git written in Rust
 
