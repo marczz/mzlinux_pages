@@ -738,6 +738,14 @@ See {{< iref "#ediff" "above for emacs frontends" >}}:
 {{< iref "#emerge" "emerge" >}},
 {{< iref "#vdiff" "vdiff" >}}.
 
+-   [Delta](https://github.com/dandavison/delta) (MIT License)
+    is a viewer for git and diff output. It features
+    themable syntax highlighting with {{< iref "source_code#synctect" "Synctect" >}},
+    within-line highlights, git style strings, side-by-side view, line numbering,
+    stylable box/line decorations, support for Git's `--color-moved`, moving between
+    files in `log -p` views.
+    -   [magit-delta](https://github.com/dandavison/magit-delta) integrate Delta in
+        {{< iref "#magit" "Magit" >}} output.
 -   [Diffoscope](https://diffoscope.org/) (GPLv3)
     is a files or directories python comparison tools, it can
     recursively unpack archives of many kinds and transform various
@@ -755,6 +763,20 @@ See {{< iref "#ediff" "above for emacs frontends" >}}:
     -   [MightyCreak/diffuse](https://github.com/MightyCreak/diffuse) (GPL)
         is a fork of sourcforge Diffuse projectn to migrate from Python 2 to Python 3,.
     -   [Diffuse Manual](http://diffuse.sourceforge.net/manual.html)
+-   <a name="diff-highlight"</a>
+    [diff-highlight](https://github.com/git/git/tree/master/contrib/diff-highlight)
+    is a perl script distributed in the git _contrib_ directory, aimed to impove the
+    result of the `--color-words` option of git diff output.
+
+    This script post-processes the line-oriented diff, finds pairs of lines, and
+    highlights the differing segments.
+
+    You can use it in your git commands with:
+
+        git log -p --color | /path/to/diff-highlight
+
+    Or use it with the environment variable `$GIT_PAGER` or set it as default pager in
+    your global git config.
 -   [Meld](http://meldmerge.org/) (GPL) is a visual diff and merge tool
     that supports Git, Bazaar, Mercurial, Subversion, etc and can be
     used with git mergetool.
@@ -771,6 +793,10 @@ See {{< iref "#ediff" "above for emacs frontends" >}}:
     -   [Pretty Diff Online Interface](http://prettydiff.com/)
     -   [Pretty Diff Documentation
         ](http://prettydiff.com/documentation.xhtml)
+-   [diffr](https://github.com/mookid/diffr) (MIT License)
+    is a Rust diff viewer that works hunk by hunk, recomputing the diff on a
+    word-by-word basis. It is an improvement of the git contrib
+    {{< iref "#diff-highlight" "diff-highlight" >}}.
 -   [tkdiff](http://sourceforge.net/projects/tkdiff/)
     is a gui for diff written in TK that provides a
     side-by-side diff view.
