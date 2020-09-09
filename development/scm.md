@@ -110,6 +110,7 @@ where concept is one of:
     along with the
     [Git manual page](https://git-scm.com/docs/git)
     with a different formatting than the kernel.org raw layout.
+-   [Git Reference](https://git.github.io/git-reference/)  by GitHub.
 -   [Git magic](http://www-cs-students.stanford.edu/~blynn/gitmagic/)
     by Ben Lynn is a Git Manual, lighter than the official manual. The
     [asciidoc source is available in GitHub
@@ -248,6 +249,7 @@ with new commands what we did with some script using plumbing commands_
     [GitHub Repository](https://github.com/madduck)_ are still active._
 -   [Packaging With Git - Debian Wiki](https://wiki.debian.org/PackagingWithGit)
 -   [Git Developer Pages](https://git.github.io/)
+-   [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/).
 
 # Git cheatsheets
 -   [Git Cheat Sheet & Git Flow
@@ -514,7 +516,7 @@ provides a detailled description of the use of the following packages.
 -   [figfs](http://www.qotw.net/~reillyeon/projects/figfs/) (GPL)
     from Reilly Grant. _last update 2009_. A fuse fs written in Ocaml/sqlite3,
     _figfs_ allows to browse branchs, tags, and revisions.
-    [GitHub Repository](https://github.com/reillyeon/figfs).
+    -   [GitHub Repository](https://github.com/reillyeon/figfs).
 -   [pygitfs (GitHub)](https://github.com/tv42/pygitfs) (MIT License)
     by Tommi Virtanen is a pythonic filesystem API to Git, allowing
     you to access contents of bare git repositories, including
@@ -522,7 +524,7 @@ provides a detailled description of the use of the following packages.
     It is a python library, exposing an API, with no command line frontend
     included, the last release is from 2009.  [pygitfs is in Pypi
     ](https://pypi.python.org/pypi/gitfs).
--   [legitfs (GitHub)](https://github.com/mbr/legitfs) (MIT License)
+-   [legitfs - GitHub](https://github.com/mbr/legitfs) (MIT License)
     a read-only fuse filesystem written in python.
     [legitfs is on pypi](https://pypi.python.org/pypi/legitfs/).
 
@@ -571,6 +573,7 @@ the Git Wiki [list also the Web interfaces
     written in C#.
 -   [Mgit](https://github.com/maks/MGit) (GPL) is an android client
     for git.
+-   [PocketGit](http://pocketgit.com/) (proprietary) android git client. _2€40_.
 -   [QGit](http://digilander.libero.it/mcostalba/) (GPL) uses Qt toolkit
 
 ## Web interfaces
@@ -613,7 +616,7 @@ the Git Wiki [list also the Web interfaces
 -   See {{< iref "#git-wip" "git-wip" >}} above.
 -   [gitwatch](https://github.com/gitwatch/gitwatch) (GPL)
     A bash script to watch a file or folder and commit changes to a git repo.
-    I uses _inotify_ to watch for changes.
+    I uses {{< iref "schedulers#inotify" "Inotify" >}}_ to watch for changes.
 
 ## Local repositories management
 -   [gita](https://github.com/nosarthur/gita) (MIT License)
@@ -1248,14 +1251,10 @@ and [Bl.ocks rendering](https://bl.ocks.org/mbostock/1353700).
 
 
 ## Project specific open source software
--   Debian has for its projects a
-    [git.debian.org](http://git.debian.org/) gitweb
-    repository. At
-    [Alioth](http://wiki.debian.org/Alioth) you
-    will find a
+-   Debian has for its projects a [git.debian.org](http://git.debian.org/) gitweb
+    repository. At [Alioth](http://wiki.debian.org/Alioth) you will find a
     [notice to use it](http://wiki.debian.org/Alioth/Git).
--   [Savanah](http://savannah.gnu.org/) the Gnu
-    software repository has a
+-   [Savanah](http://savannah.gnu.org/) the Gnu software repository has a
     [gitweb access](http://git.sv.gnu.org/gitweb/).
 
 ## Free open-source and private repositories
@@ -1264,8 +1263,8 @@ and [Bl.ocks rendering](https://bl.ocks.org/mbostock/1353700).
 -   [GitLab Cloud](http://www.gitlab.com/) unlimited private repositories,
     unlimited collaborators, max 1G per repository. It is based on the
     [GitLab Web frontend](http://gitlab.org/) (MIT License).
-    [Framagit](https://framagit.org/) is an other free instance of
-    GitLab Community.
+    -   [Framagit](https://framagit.org/) is an other free instance of
+        GitLab Community.
     -   [ArchWiki: Gitlab](https://wiki.archlinux.org/index.php/Gitlab).
 -   [BitBucket](https://bitbucket.org/) gives unlimited private code
     repositories for at most 5 users.
