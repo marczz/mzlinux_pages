@@ -865,9 +865,6 @@ When used as a git mergetool you get the following windows:
     generates statistics for git,
 -   [Pepper](http://scm-pepper.sourceforge.net/) (GPL)
     generates statistics for git, mercurial and Subversion.
--   [octogit](https://github.com/myusuf3/octogit/) (MIT License)
-    by Mahdi Yusuf
-    is a python command line interface to github.
 -   [reposurgeon](https://gitlab.com/esr/reposurgeon)
     by Eric S. Raymond is a tool for editing version-control
     repositories and translating among different systems. Supports
@@ -1189,8 +1186,27 @@ and in the Wikipedia
 [GitHub](http://github.com/) gives you a free git
 repository for public _and now private_ projects.
 
+-   [How to Use GitHub
+    ](https://www.gun.io/blog/how-to-github-fork-branch-and-pull-request)
+    Fork, Branch, Track, Squash and Pull Requests.
+_   [A comparison of protocols offered by GitHub
+    ](https://gist.github.com/grawity/4392747).
 -   [GitHub Full workflow inside the browser
     ](https://github.com/blog/1557-github-flow-in-the-browser)
+-   [GitHub Cli](https://github.com/cli/cli) (MIT License)
+    is the official GitHub command line tool. The executable ois named `gh`.
+    -   [Manual | GitHub CLI](https://cli.github.com/manual/).
+-   [Hub](https://github.com/github/hub)
+    is an older unofficial GitHub client.
+    -   Manual [hub(1)](https://hub.github.com/hub.1.html)
+    -   [cli/gh vs hub](https://github.com/cli/cli/blob/trunk/docs/gh-vs-hub.md)
+-   [octogit](https://github.com/myusuf3/octogit/) (MIT License)
+    by Mahdi Yusuf is a python command line interface to github.
+-   [FastGit](https://fastgit.org/)
+    is an open source mirror speeder for GitHub.com. It uses open resources to speed up
+    the access to GitHub. It  is physically a proxy of GitHub, and you need only to
+    replace the URL `github.com` by `hub.fastgit.org`.
+    -   [FastGit - ArchWiki](https://wiki.archlinux.org/index.php/FastGit).
 
 ### Gist
 GitHub  host a pastebin-style site called
