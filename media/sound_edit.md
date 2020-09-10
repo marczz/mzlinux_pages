@@ -201,13 +201,14 @@ bladeenc
     it encodes to flac and vorbis, or with the gstreamer-lame plugin to mp3.
     _Opus don't seem supported as far as 2020_. _Packaged in Debian._
 
-<a name="xcfa"></a>[X Convert File Audio - XCFA](http://www.xcfa.tuxfamily.org/static2/xcfa) (GPL)
+<a name="xcfa"></a>[X Convert File Audio - XCFA
+    ](http://www.xcfa.tuxfamily.org/static2/xcfa) (GPL)
 :   XCFA is a tool to extract the content of
     Audio-CDs and convert musical audio files conversion to FLAC, WAV,
     OGG, M4A, MPC, MP3, WavPack, ... _Xcfa_ uses _libasound2_,
     _cdparanoia_, _icedax_ and a choice among many tools to perform
     the re-encoding: _mplayer_, _vorbis-tools_, _lame_, _mppen_c,
-    _sox_, etc. _xcfa is no more developed since 2015, it is packaged in Debian._
+    _sox_, etc. _xcfa is no more developed since 2015, it is no more packaged in Debian._
 
 ## CD ripping basic tools
 
