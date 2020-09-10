@@ -46,6 +46,8 @@ _Gentoo_ offer both and _Archlinux_ never adopted _libav_ and stick to _FFmpeg_.
     -   [AudioChannelManipulation
         ](https://trac.ffmpeg.org/wiki/AudioChannelManipulation)
         gives the options for downmixing audio.
+    -   [How To Burn Subtitles Into Video
+        ](http://trac.ffmpeg.org/wiki/HowToBurnSubtitlesIntoVideo).
 
 
 [libav](http://libav.org/) documentation:
@@ -72,18 +74,23 @@ The following references can be used for both projects.
 
 # Debian packages
 
-The _libavcodecs56_ from official distribution support supports most
+The _libavcodecs58_ from official distribution support supports most
 existing codecs (MPEG, MPEG2, MPEG4, AC3, DV...), but not some
 non-free codecs.
-The _libavcodecs56-extras_ __replace__  _libavcodecs56_ by adding AMR
+The _libavcodecs58-extras_ __replace__  _libavcodecs58_ by adding AMR
 encoders/decoders and AAC encoder. There is an alternative version in debian-multimedia
 
-It seems support more encoders like for _aac_: _libfdk-aac1_ and
-_libfaac0_  add to _ibvo-aacenc0_ _aac_ android encoder also present
-in Debian.
+It seems support more encoders like for _aac_: _libfdk-aac2_ add to _ibvo-aacenc0_ _aac_
+android encoder also present in Debian; _libkvazaar6_ an HEVC encoder, _libdav1d4_ the
+videolan av1 decoder. Also the version of some encoder like x264 or x265 may be more
+recent.
+
+So _ffmpeg_ compiled against these libraries support more codecs than the Debian one.
 
 This is dealed with in the Debian Wiki page:
-[MultimediaCodecs](https://wiki.debian.org/MultimediaCodecs).
+[MultimediaCodecs](https://wiki.debian.org/MultimediaCodecs)
+which warn again poluting your source list with a foreign apt reository, but this risk
+can be mitigated by using the _preferences_ for apt.
 
 # ffmpeg Memo
 
