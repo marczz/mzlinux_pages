@@ -934,7 +934,7 @@ When used as a git mergetool you get the following windows:
 There are a great number of species of git workflows with their
 varieties each one having multiple forms. To have a taste of if you
 can begin with the [Chapter 5 of Pro Git: Distributed Git
-](http://git-scm.com/book/en/Distributed-Git).
+](https://git-scm.com/book/en/v2/Distributed-Git-Distributed-Workflows).
 
 In the same way than the {{< wp "Species problem" >}} in biology git workflows
 is a controversial subject, with his proponents of eugenics an genetic
@@ -946,26 +946,29 @@ Some are individual developers, some other maintain
 a big project with many contributors....
 
 In any case it is useful to read about experimented people practice.
-They met traps, either by themselves, or have observed pitfalls
+They met traps, either in their own way of doing, or have observed pitfalls
 in other practices and their advice can avoid to expose
 ourself or our friends to the same traps.
 
 ## Basis of git worflow
 A good introduction is the [previously cited chapter
-](http://git-scm.com/book/en/Distributed-Git)
-of the book of Scott Chacon, then
-the secure basis for our workflow seems to lie in the git documentation: the
+](https://git-scm.com/book/en/v2/Distributed-Git-Distributed-Workflows)
+of the book of Scott Chacon.
+
+The the git documentation is a secure basis for choosing a workflow :
 [Git Manual](https://www.kernel.org/pub/software/scm/git/docs/user-manual.html),
-[Everyday GIT](https://www.kernel.org/pub/software/scm/git/docs/everyday.html)
+[Everyday GIT](https://www.kernel.org/pub/software/scm/git/docs/giteveryday.html)
 and [gitworflows](https://www.kernel.org/pub/software/scm/git/docs/gitworkflows.html)
+(or in [git-scm: gitworkflows](https://git-scm.com/docs/gitworkflows/en))
 based on the understanding of
 [git-merge](https://www.kernel.org/pub/software/scm/git/docs/git-merge.html)
 and [git-rebase](https://www.kernel.org/pub/software/scm/git/docs/git-rebase.html).
+
 The [git wiki: GitWorkflows
-](https://git.wiki.kernel.org/articles/g/i/t/GitWorkflows_d0c8.html)
+](https://git.wiki.kernel.org/index.php/GitWorkflows)
 gives useful tips.
-Personally I have to refer to them again and again to them when I feel
-to switch to a more fashionable workflow.
+
+I read them again and again whenever I feel to switch to a more fashionable workflow.
 
 ## Git-Flow
 [A successful Git branching model
@@ -993,11 +996,13 @@ points out the advantages of *git-flow*
 He speaks also some of its issues and why GitHub uses a much simpler
 Git workflow.
 
-### GitHub Flow
+### GitHub Flow {#github_flow}
 -   [Understanding the GitHub flow · GitHub Guides
     ](https://guides.github.com/introduction/flow/index.html)
 -   [GitHub flow - GitHub Docs
     ](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/github-flow#following-the-github-flow)
+-   [Git Scm: Contributing to a Project, GitHub Flow
+    ](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project)
 -   [HubFlow](http://datasift.github.io/gitflow/)
     explains how adapt GitFlow and the GitFlow tools git extension for working with
     GitHub.
@@ -1187,19 +1192,30 @@ repositories they are [listed in the Git Wiki
 and in the Wikipedia
 {{< wp "Comparison of open-source software hosting facilities" >}}.
 
-## GitHub
+## GitHub {#github}
+See also {{< iref "#github_flow" "GitHub Flow" >}}.
+
 [GitHub](http://github.com/) gives you a free git
 repository for public _and now private_ projects.
 
+-   [Git Scm: GitHub Chapter
+    ](https://git-scm.com/book/en/v2/GitHub-Account-Setup-and-Configuration).
 -   [How to Use GitHub
     ](https://www.gun.io/blog/how-to-github-fork-branch-and-pull-request)
-    Fork, Branch, Track, Squash and Pull Requests.
-_   [A comparison of protocols offered by GitHub
+    Fork, Branch, Track, Squash and Pull Requests, a guide by Taylor Veino.
+-   [GitHub Help](https://help.github.com/en).
+-   [GitHub cheat-sheet](https://github.com/tiimgreen/GitHub-cheat-sheet).
+-   Awesome lists:
+    -   [Awesome GitHub](https://github.com/Kikobeats/awesome-github)
+        _not up to date_, several other repos on GitHub are also named _awesome-github_.
+    -   [Browser extensions for GitHub
+        ](https://github.com/stefanbuck/awesome-browser-extensions-for-github).
+-   [A comparison of protocols offered by GitHub
     ](https://gist.github.com/grawity/4392747).
 -   [GitHub Full workflow inside the browser
     ](https://github.com/blog/1557-github-flow-in-the-browser)
 -   [GitHub Cli](https://github.com/cli/cli) (MIT License)
-    is the official GitHub command line tool. The executable ois named `gh`.
+    is the official GitHub command line tool. The executable is named `gh`.
     -   [Manual | GitHub CLI](https://cli.github.com/manual/).
 -   [Hub](https://github.com/github/hub)
     is an older unofficial GitHub client.
