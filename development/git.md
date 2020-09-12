@@ -902,7 +902,7 @@ When used as a git mergetool you get the following windows:
     ](https://thelocehiliosan.github.io/yadm/)
     is a git wrapper like vcsh but targeted to manage dotfiles for
     multiple hosts in a single directory.
--   [Github: dotbot](https://github.com/anishathalye/dotbot).
+-   [dotbot - GitHub](https://github.com/anishathalye/dotbot).
     -   [dotbot wiki](https://github.com/anishathalye/dotbot/wiki)
         dotbot is installed as a submodule in your repository.
 -   [VCSH](https://github.com/RichiH/vcsh) (GPL)
@@ -1228,24 +1228,56 @@ repository for public _and now private_ projects.
     the access to GitHub. It  is physically a proxy of GitHub, and you need only to
     replace the URL `github.com` by `hub.fastgit.org`.
     -   [FastGit - ArchWiki](https://wiki.archlinux.org/index.php/FastGit).
+-   [MagitHub](https://github.com/vermiculus/magithub/) (GPL)
+    a collection of interfaces to GitHub integrated into Magit workflows.
+-   [Forge](https://github.com/magit/forge) (GPL)
+    by Jonas Bernoulli _tarsius_. Work with Git forges, such as Github and Gitlab, from
+    the comfort of MagitWork with Git forges, such as Github and Gitlab, from the
+    comfort of Magit.
+    -   [Forge User and Developer Manual](https://magit.vc/manual/forge/)
 
 ### Gist
 GitHub  host a pastebin-style site called
 [Gist](https://gist.github.com/) for hosting code snippets.
 
-You can write any block of text in the space provided,
+You can write any block of text in the provided form,
 You can choose to have a secret Gist that will not be visible to
 search engines but only to those who know the URL.
 
 All changed to a gist are recorded and you can compare the releases.
 
-Your gist can be in GitHub Markdown and previewed in the browser.
+Your gist can be in any format accepted by GitHub, like GitHub Markdown, ReStructured
+Tex, org-mode.  You can preview it in the browser.
 
-[Roughdraft](http://www.roughdraft.io/) allow to serve your page
-written in GitHub-flavored Markdown, Textile, Haml, and plain text on
-the web.
+GitHub has help pages explaining [how to create a Gist
+](https://docs.github.com/en/github/writing-on-github/creating-gists) and
+[clone or fork it
+](https://docs.github.com/en/github/writing-on-github/forking-and-cloning-gists).
 
-[Bl.ocks](https://bl.ocks.org) is a simple viewer for sharing code examples hosted on GitHub Gist.
+[gist.el](https://github.com/defunkt/gist.el) (GPL) is an emacs interface to gist, it
+allows to create, view and modify gists from emacs.
+[yagist](https://github.com/mhayashi1120/yagist.el) is a clone of gist.
+
+Gist are just git repositories, you can clone it locally:
+``` sh
+$ git clone git@gist.github.com:12345678901234567890.git mygist
+```
+
+    Work on it locally and publish your changes:
+``` sh
+$ cd mygist
+$ ls
+mygist.org
+$ emacs mygist.org
+..... edit and change the file
+$ git commit mygist.org -m"refactored, improved, and fixed errors."
+$ git push origin
+......
+To gist.github.com:12345678901234567890.git
+  11c738a..d06a13d  master -> master
+```
+
+[Bl.ocks](https://bl.ocks.org/-/about) is a simple viewer for sharing code examples hosted on GitHub Gist.
 You put in your gist an html document with relative links to other
 files in your Gist, such as images, scripts or stylesheets; a
 Readme.md in markdown a `.block` YAML configuration, and _Bl.ocks_
