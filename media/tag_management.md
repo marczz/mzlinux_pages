@@ -142,14 +142,14 @@ id3ren
     [pytagsfs(1)
     ](http://manpages.debian.org/cgi-bin/man.cgi?query=pytagsfs&sektion=1&apropos=0&manpath=Debian+unstable+sid&locale=en)
 
-[Tagtool](http://sourceforge.net/projects/tagtool/)<a name="tagtool"></a>
+<a name="tagtool">[Tagtool](http://sourceforge.net/projects/tagtool/)</a>
 :   Audio Tag Tool (GPL)is a program to manage the information
     fields in MP3 and Ogg Vorbis files.
 
     The most useful features are the ability to easily tag or
     rename hundreds of files at once, in any desired format.
 
-    Tagtool is packaged in Debian. _sources from 2008_
+    _Tagtool is no longer in Debian, sources from 2008._
 
 
 [getID3](http://getid3.sourceforge.net/)
