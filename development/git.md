@@ -29,11 +29,6 @@ which gives some reminders and explanations on git use._
     list of Git resources
     -   [Git Add-ons](https://github.com/stevemao/awesome-git-addons)
         to enhance the `git` CLI.
-    -   [Awesome GitHub](https://github.com/Kikobeats/awesome-github)
-        -   [Browser extensions for GitHub
-            ](https://github.com/stefanbuck/awesome-browser-extensions-for-github)
-        -   [Toolkits for Github
-            ](https://github.com/xohozu/awesome-toolkit)
 
 # Git Documentation
 Git includes a live version of the documentation. You can access the manual for any
@@ -292,12 +287,25 @@ with new commands what we did with some script using plumbing commands_
 -   [git-tips - Most commonly used git tips and tricks
     ](https://github.com/git-tips/tips)
 
-# Repository management
--   First you can set your own server, it is the simpler when you have
+# Git Server
+-   On a server with Git you can set your own Git server, it is the simpler when you have
     few users and not to manage authentication protocol, it is the
     subject of
     [Pro Git: Git on the server
     ](https://git-scm.com/book/en/v2/Git-on-the-Server-The-Protocols)
+-   [GitWeb](https://git.wiki.kernel.org/index.php/Gitweb) distributed with Git,
+    is a web interface written in Perl.
+    -   [Gitweb - ArchWiki](https://wiki.archlinux.org/index.php/Gitweb).
+-   [Klaus](https://github.com/jonashaag/klaus) (BSD License)
+    by Jonas Haag is a Git web viewer written in python.
+    -   [Klaus Wiki](https://github.com/jonashaag/klaus/wiki).
+    [Pypi Klaus](https://pypi.python.org/pypi/klaus/).
+-   [Cgit](https://git.zx2c4.com/cgit/)
+    is a fast web interface for git written in C, using a built in cache to decrease
+    pressure on the git server.
+    -   [cgit - ArchWiki](https://wiki.archlinux.org/index.php/Cgit)
+-   [ungit](https://github.com/FredrikNoren/ungit) (MIT License)
+    a node.js application which brings user friendliness to git.
 -   [gitdir](https://github.com/belak/gitdir) (MIT Licence)
     by Kaleb Elwert _belak_, a secure git server written in Go.
 -   [Gitosis](http://eagain.net/gitweb/?p=gitosis.git)
@@ -322,14 +330,6 @@ with new commands what we did with some script using plumbing commands_
     -   [Gitolite Tutorial
     ](http://sites.google.com/site/senawario/home/gitolite-tutorial)
     by Sena Wario,
--   [Gitlab](https://github.com/gitlabhq/gitlabhq) (MIT)
-    is a git repository management application based on Ruby on Rails.
-    It uses ruby, redis and a sgbd either MySQL, MariaDB or
-    PostgreSQL. It needs at least 1GB Memory for up to 100 users.
-    -   [Pro Git: Gitlab
-        ]( https://git-scm.com/book/en/v2/Git-on-the-Server-GitLab)
-    -   [ArchWiki: Gitlab](https://wiki.archlinux.org/index.php/gitlab)
-    -   [Gentoo Wiki:Gitlab](http://wiki.gentoo.org/wiki/GitLab)
 -   [Gogs](https://gogs.io/) (MIT)
     is a self-hosted Git service written in Go.
     -   [GitHub - Gogs](https://github.com/gogits/gogs).
@@ -339,6 +339,183 @@ with new commands what we did with some script using plumbing commands_
     is a community managed fork of Gogs.
     -   [GitHub - Gitea](https://github.com/go-gitea/gitea)
     -   [ArchWiki: Gitea](https://wiki.archlinux.org/index.php/Gitea)
+-   <a name="pagure"></a>[Pagure](https://pagure.io/pagure) (GPL)
+    is a git-centered forge based on
+    [pygit2](https://github.com/libgit2/pygit2) developed by RedHat .
+    You can run it from docker or Vagrant. It is provided as rpm package in Fedora, or
+    as Debian package, accompanied by other packages to enhance it's functionality.
+    -   [pagure.io](https://pagure.io/) is an hosted pagure server.
+    -   [pagure documentation](https://docs.pagure.org/pagure/).
+
+-   [RocketGit](https://rocketgit.com/) (Affero GPLv3+)
+    A PHP server.
+    -   [Git hosting solutions comparison - RocketGit](https://rocketgit.com/op/doc/compare)
+    -   [RocketGit source repository
+        ](https://rocketgit.com/user/catalinux/rocketgit/source/tree/branch/master)
+
+# Git Hosting as a service
+There are some git free or *adware* or *{{< wp "Freeware"  "freemium" >}}*
+service hosting  they are [listed in the Git Wiki
+](https://git.wiki.kernel.org/index.php/GitHosting)
+and in the Wikipedia
+{{< wp "Comparison of open-source software hosting facilities" >}}.
+
+## GitHub {#github}
+See also {{< iref "#github_flow" "GitHub Flow" >}}.
+
+[GitHub](http://github.com/) gives you a free git
+repository for public _and now private_ projects.
+
+-   [Git Scm: GitHub Chapter
+    ](https://git-scm.com/book/en/v2/GitHub-Account-Setup-and-Configuration).
+-   [How to Use GitHub
+    ](https://www.gun.io/blog/how-to-github-fork-branch-and-pull-request)
+    Fork, Branch, Track, Squash and Pull Requests, a guide by Taylor Veino.
+-   [GitHub Help](https://help.github.com/en).
+-   [GitHub cheat-sheet](https://github.com/tiimgreen/GitHub-cheat-sheet).
+-   Awesome lists:
+    -   [Awesome GitHub](https://github.com/Kikobeats/awesome-github)
+        _not up to date_, several other repos on GitHub are also named _awesome-github_.
+    -   [Browser extensions for GitHub
+        ](https://github.com/stefanbuck/awesome-browser-extensions-for-github).
+-   [A comparison of protocols offered by GitHub
+    ](https://gist.github.com/grawity/4392747).
+-   [GitHub Full workflow inside the browser
+    ](https://github.com/blog/1557-github-flow-in-the-browser)
+-   <a name="github-cli"></a>[GitHub Cli](https://github.com/cli/cli) (MIT License)
+    is the official GitHub command line tool. The executable is named `gh`.
+    -   [Manual | GitHub CLI](https://cli.github.com/manual/).
+-   [Hub](https://github.com/github/hub)
+    is an older unofficial GitHub client.
+    -   Manual [hub(1)](https://hub.github.com/hub.1.html)
+    -   [cli/gh vs hub](https://github.com/cli/cli/blob/trunk/docs/gh-vs-hub.md)
+-   [octogit](https://github.com/myusuf3/octogit/) (MIT License)
+    by Mahdi Yusuf is a python command line interface to github.
+-   [FastGit](https://fastgit.org/)
+    is an open source mirror speeder for GitHub.com. It uses open resources to speed up
+    the access to GitHub. It  is physically a proxy of GitHub, and you need only to
+    replace the URL `github.com` by `hub.fastgit.org`.
+    -   [FastGit - ArchWiki](https://wiki.archlinux.org/index.php/FastGit).
+-   [MagitHub](https://github.com/vermiculus/magithub/) (GPL)
+    a collection of interfaces to GitHub integrated into Magit workflows.
+-   [Forge](https://github.com/magit/forge) (GPL)
+    by Jonas Bernoulli _tarsius_. Work with Git forges, such as Github and Gitlab, from
+    the comfort of MagitWork with Git forges, such as Github and Gitlab, from the
+    comfort of Magit.
+    -   [Forge User and Developer Manual](https://magit.vc/manual/forge/)
+
+### Gist
+GitHub  host a pastebin-style site called
+[Gist](https://gist.github.com/) for hosting code snippets.
+
+You can write any block of text in the provided form,
+You can choose to have a secret Gist that will not be visible to
+search engines but only to those who know the URL.
+
+All changed to a gist are recorded and you can compare the releases.
+
+Your gist can be in any format accepted by GitHub, like GitHub Markdown, ReStructured
+Tex, org-mode.  You can preview it in the browser.
+
+GitHub has help pages explaining [how to create a Gist
+](https://docs.github.com/en/github/writing-on-github/creating-gists) and
+[clone or fork it
+](https://docs.github.com/en/github/writing-on-github/forking-and-cloning-gists).
+
+-   [gist.el](https://github.com/defunkt/gist.el) (GPL) is an emacs interface to gist, it
+    allows to create, view and modify gists from emacs.
+-   [yagist](https://github.com/mhayashi1120/yagist.el) is a clone of gist.
+-   [defunkt/gist](https://github.com/defunkt/gist) ( MIT License)
+    is a ruby command line gist client. It allows to create, update, adds a description,
+    paste from the clipboard to gist, list all gists, print content, delete your gists.
+-   [jdowner/gist](https://github.com/jdowner/gist) (MIT License)
+    a python command line gist client. It allows to create, edit the file, updates the
+    description, list gists, clone, delete, list files, creates a tarball, print
+    content, output detailed information, print version of your gists.
+
+The {{< iref "#github-cli" "GitHub official client gh" >}} allows to create a gist.
+Examples:
+``` sh
+# publish file 'hello.py' as a public gist
+$ gh gist create --public hello.py
+# create a private gist from output piped from another command, and gives a description
+$ ls -la ~/this/directory | gh gist create -d "Content of ~/this/directory"
+```
+
+Gist are just git repositories, you ca
+$ git clone git@gist.github.com:12345678901234567890.git mygist
+```
+
+    Work on it locally and publish your changes:
+``` sh
+$ cd mygist
+$ ls
+mygist.org
+$ emacs mygist.org
+..... edit and change the file
+$ git commit mygist.org -m"refactored, improved, and fixed errors."
+$ git push origin
+......
+To gist.github.com:12345678901234567890.git
+  11c738a..d06a13d  master -> master
+```
+
+[Bl.ocks](https://bl.ocks.org/) is a simple viewer for sharing code examples hosted on
+GitHub Gist.  You put in your gist an html document with relative links to other files
+in your Gist, such as images, scripts or stylesheets; a Readme.md in markdown a `.block`
+YAML configuration, and _Bl.ocks_ serve your page. Look at
+this [example source](https://gist.github.com/mbostock/1353700),
+and [Bl.ocks rendering](https://bl.ocks.org/mbostock/1353700).
+
+-   [awesome-gists](https://github.com/vsouza/awesome-gists)
+    a list of few interesting gists.
+
+## GitLab {#gitlab}
+[Gitlab](https://gitlab.com/gitlab-org/gitlab) (MIT)
+is a git repository management application based on Ruby on Rails.
+It uses ruby, redis and a sgbd either MySQL, MariaDB or
+PostgreSQL. It needs at least 1GB Memory for up to 100 users.
+There are two editions of GitLab: GitLab Community Edition (CE) (MIT License),
+and GitLab Enterprise Edition (EE) which includes extra features.
+
+-   [Pro Git: Gitlab
+    ]( https://git-scm.com/book/en/v2/Git-on-the-Server-GitLab)
+-   [ArchWiki: Gitlab](https://wiki.archlinux.org/index.php/gitlab)
+-   [Gentoo Wiki:Gitlab](http://wiki.gentoo.org/wiki/GitLab)
+-   [gitlabhq: GitLab CE Mirror on GitHub](https://github.com/gitlabhq/gitlabhq)
+
+[GitLab Cloud](http://www.gitlab.com/) is an hosted version of  GitLab Enterprise
+Edition, it ofers unlimited private repositories,
+unlimited collaborators, max 1G per repository.
+
+[Framagit](https://framagit.org/) is a free instance of GitLab Community.
+
+
+## Free open-source and private repositories
+In addition to {{< iref "#github" >}} and {{< iref "#gitlab" "GitLab" >}}
+
+-   [BitBucket](https://bitbucket.org/) gives unlimited private code
+    repositories for at most 5 users.
+-   [Codeberg.org](https://codeberg.org/)
+-   [RocketGit](https://rocketgit.com/) (Hosted version)
+-   [git.sr.ht](https://git.sr.ht/) git hosting service for
+    [sourcehut](https://sourcehut.org)
+
+## Free for open source software
+-   [repo.or.cz](http://repo.or.cz/) offer free git hosting
+    for open-source projects, you find
+    there mirrors of numerous projects (\~250): cogito, dia, darcs2git,
+    django, elinks, fast-export, findutils, gajim, git,
+    git-\<something\>, guile, moodle, qemu, rox-filer,...
+-   [pagure.io](https://pagure.io/) is an hosted {{< iref "#pagure" "pagure server" >}}.
+
+## Project specific open source software
+-   Debian has for its projects a [git.debian.org](http://git.debian.org/) gitweb
+    repository. At [Alioth](http://wiki.debian.org/Alioth) you will find a
+    [notice to use it](http://wiki.debian.org/Alioth/Git).
+-   [Savanah](http://savannah.gnu.org/) the Gnu software repository has a
+    [gitweb access](http://git.sv.gnu.org/gitweb/).
+
 
 # Front End Layer
 ## Language bindings
@@ -499,6 +676,8 @@ provides a detailled description of the use of the following packages.
     magit: [vdiff-magit](https://github.com/justbur/emacs-vdiff-magit).
     vdiff and vdiff-magit are in melpa.
 
+### Git Hosts Interfaces
+
 ## vim interface
 -   [Vim and git – Linux Hint](https://linuxhint.com/vim_git/) uses _Fugitive_.
 -   [vim-fugitive](https://github.com/tpope/vim-fugitive) (Vim License)
@@ -576,20 +755,6 @@ the Git Wiki [list also the Web interfaces
 -   [PocketGit](http://pocketgit.com/) (proprietary) android git client. _2€40_.
 -   [QGit](http://digilander.libero.it/mcostalba/) (GPL) uses Qt toolkit
 
-## Web interfaces
--   [GitWeb](https://git.wiki.kernel.org/index.php/Gitweb) distributed with Git,
-    is a web interface written in Perl.
-    -   [Gitweb - ArchWiki](https://wiki.archlinux.org/index.php/Gitweb).
--   [Klaus](https://github.com/jonashaag/klaus) (BSD License)
-    by Jonas Haag is a Git web viewer written in python.
-    -   [Klaus Wiki](https://github.com/jonashaag/klaus/wiki).
-    [Pypi Klaus](https://pypi.python.org/pypi/klaus/).
--   [Cgit](https://git.zx2c4.com/cgit/)
-    is a fast web interface for git written in C, using a built in cache to decrease
-    pressure on the git server.
-    -   [cgit - ArchWiki](https://wiki.archlinux.org/index.php/Cgit)
--   [ungit](https://github.com/FredrikNoren/ungit) (MIT License)
-    a node.js application which brings user friendliness to git.
 
 ## Console interfaces
 -   <a name="lazygit"></a>[lazygit](https://github.com/jesseduffield/lazygit/) (MIT Licence)
@@ -1184,138 +1349,6 @@ Some other tools to act on a group of repositories
 -   [metagit (GitHub)](https://github.com/stettberger/metagit) (GPL)
     is a python tool for defining sets of git (or whatever scm)
     repositories and perform actions like clone/pull/push on them.
-
-# Git repositories
-There are some git free or *adware* or *{{< wp "Freeware"  "freemium" >}}*
-repositories they are [listed in the Git Wiki
-](https://git.wiki.kernel.org/index.php/GitHosting)
-and in the Wikipedia
-{{< wp "Comparison of open-source software hosting facilities" >}}.
-
-## GitHub {#github}
-See also {{< iref "#github_flow" "GitHub Flow" >}}.
-
-[GitHub](http://github.com/) gives you a free git
-repository for public _and now private_ projects.
-
--   [Git Scm: GitHub Chapter
-    ](https://git-scm.com/book/en/v2/GitHub-Account-Setup-and-Configuration).
--   [How to Use GitHub
-    ](https://www.gun.io/blog/how-to-github-fork-branch-and-pull-request)
-    Fork, Branch, Track, Squash and Pull Requests, a guide by Taylor Veino.
--   [GitHub Help](https://help.github.com/en).
--   [GitHub cheat-sheet](https://github.com/tiimgreen/GitHub-cheat-sheet).
--   Awesome lists:
-    -   [Awesome GitHub](https://github.com/Kikobeats/awesome-github)
-        _not up to date_, several other repos on GitHub are also named _awesome-github_.
-    -   [Browser extensions for GitHub
-        ](https://github.com/stefanbuck/awesome-browser-extensions-for-github).
--   [A comparison of protocols offered by GitHub
-    ](https://gist.github.com/grawity/4392747).
--   [GitHub Full workflow inside the browser
-    ](https://github.com/blog/1557-github-flow-in-the-browser)
--   [GitHub Cli](https://github.com/cli/cli) (MIT License)
-    is the official GitHub command line tool. The executable is named `gh`.
-    -   [Manual | GitHub CLI](https://cli.github.com/manual/).
--   [Hub](https://github.com/github/hub)
-    is an older unofficial GitHub client.
-    -   Manual [hub(1)](https://hub.github.com/hub.1.html)
-    -   [cli/gh vs hub](https://github.com/cli/cli/blob/trunk/docs/gh-vs-hub.md)
--   [octogit](https://github.com/myusuf3/octogit/) (MIT License)
-    by Mahdi Yusuf is a python command line interface to github.
--   [FastGit](https://fastgit.org/)
-    is an open source mirror speeder for GitHub.com. It uses open resources to speed up
-    the access to GitHub. It  is physically a proxy of GitHub, and you need only to
-    replace the URL `github.com` by `hub.fastgit.org`.
-    -   [FastGit - ArchWiki](https://wiki.archlinux.org/index.php/FastGit).
--   [MagitHub](https://github.com/vermiculus/magithub/) (GPL)
-    a collection of interfaces to GitHub integrated into Magit workflows.
--   [Forge](https://github.com/magit/forge) (GPL)
-    by Jonas Bernoulli _tarsius_. Work with Git forges, such as Github and Gitlab, from
-    the comfort of MagitWork with Git forges, such as Github and Gitlab, from the
-    comfort of Magit.
-    -   [Forge User and Developer Manual](https://magit.vc/manual/forge/)
-
-### Gist
-GitHub  host a pastebin-style site called
-[Gist](https://gist.github.com/) for hosting code snippets.
-
-You can write any block of text in the provided form,
-You can choose to have a secret Gist that will not be visible to
-search engines but only to those who know the URL.
-
-All changed to a gist are recorded and you can compare the releases.
-
-Your gist can be in any format accepted by GitHub, like GitHub Markdown, ReStructured
-Tex, org-mode.  You can preview it in the browser.
-
-GitHub has help pages explaining [how to create a Gist
-](https://docs.github.com/en/github/writing-on-github/creating-gists) and
-[clone or fork it
-](https://docs.github.com/en/github/writing-on-github/forking-and-cloning-gists).
-
-[gist.el](https://github.com/defunkt/gist.el) (GPL) is an emacs interface to gist, it
-allows to create, view and modify gists from emacs.
-[yagist](https://github.com/mhayashi1120/yagist.el) is a clone of gist.
-
-Gist are just git repositories, you can clone it locally:
-``` sh
-$ git clone git@gist.github.com:12345678901234567890.git mygist
-```
-
-    Work on it locally and publish your changes:
-``` sh
-$ cd mygist
-$ ls
-mygist.org
-$ emacs mygist.org
-..... edit and change the file
-$ git commit mygist.org -m"refactored, improved, and fixed errors."
-$ git push origin
-......
-To gist.github.com:12345678901234567890.git
-  11c738a..d06a13d  master -> master
-```
-
-[Bl.ocks](https://bl.ocks.org/-/about) is a simple viewer for sharing code examples hosted on GitHub Gist.
-You put in your gist an html document with relative links to other
-files in your Gist, such as images, scripts or stylesheets; a
-Readme.md in markdown a `.block` YAML configuration, and _Bl.ocks_
-serve your page. Look at
-this [example source](https://gist.github.com/mbostock/1353700),
-and [Bl.ocks rendering](https://bl.ocks.org/mbostock/1353700).
-
-
-## Free for open source software
--   [repo.or.cz](http://repo.or.cz/) offer free git hosting
-    for open-source projects, you find
-    there mirrors of numerous projects (\~250): cogito, dia, darcs2git,
-    django, elinks, fast-export, findutils, gajim, git,
-    git-\<something\>, guile, moodle, qemu, rox-filer,...
--   {{< wp "Gitorious" >}} (AGPL) was hosting
-    freely your open source git repository. It is now acquired by
-    GitLab, and closed, an archive is at
-    [Gitorous read-only mirror ](http://gitorious.org)
-
-
-## Project specific open source software
--   Debian has for its projects a [git.debian.org](http://git.debian.org/) gitweb
-    repository. At [Alioth](http://wiki.debian.org/Alioth) you will find a
-    [notice to use it](http://wiki.debian.org/Alioth/Git).
--   [Savanah](http://savannah.gnu.org/) the Gnu software repository has a
-    [gitweb access](http://git.sv.gnu.org/gitweb/).
-
-## Free open-source and private repositories
--   [CloudHost](http://git.cloudhost.io/) free open sources, and up to
-    1000 private repositories.
--   [GitLab Cloud](http://www.gitlab.com/) unlimited private repositories,
-    unlimited collaborators, max 1G per repository. It is based on the
-    [GitLab Web frontend](http://gitlab.org/) (MIT License).
-    -   [Framagit](https://framagit.org/) is an other free instance of
-        GitLab Community.
-    -   [ArchWiki: Gitlab](https://wiki.archlinux.org/index.php/Gitlab).
--   [BitBucket](https://bitbucket.org/) gives unlimited private code
-    repositories for at most 5 users.
 
 ## Other Source Conf Management Software
 -   {{< wp "Revision_control"  "Wikipedia: Revision Control" >}}
