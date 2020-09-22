@@ -30,7 +30,6 @@ web links to Web content.
 -   [FeedValidator](http://feedvalidator.org/)
     (MIT license) is a rss-2.0 and atom-1.0 online validator.
 
-
 # Feed readers
 -   {{< wp "News Aggregator" >}} are  client software to read syndicated contents.
 -   Wikipedia {{< wp "News Aggregator" >}}, {{< wp "Comparison of feed aggregators" >}},
@@ -54,8 +53,8 @@ way to always access your feeds.
 -   <a name="commafeed"></a>[CommaFeed](https://github.com/Athou/commafeed)
     (Apache License)
     is a Google Reader inspired, self-hosted RSS reader. It has quite heavy
-    java requirements, but there is a free online server at
-    [commafeed.com](https://www.commafeed.com/welcome).
+    java requirements. There is a demo server at
+    [commafeed.com](https://www.commafeed.com/#/welcome).
     -   Commafeed has a public [REST API](https://www.commafeed.com/api/)
     -   There many android applicationss
         the official one is [commafeed extension for News+
@@ -117,6 +116,8 @@ way to always access your feeds.
         use cases.
     -   [Restful API for Apps or any other external access
         ](https://github.com/SSilence/selfoss/wiki/Restful-API-for-Apps-or-any-other-external-access).
+    -   [Selfoss images on  Docker Hub
+        ](https://hub.docker.com/search?q=selfoss&type=image)
 -   <a name="tinytinyrss"></a>
     [Tiny Tiny RSS](https://tt-rss.org/) (GPL-3)
     is a web-based  PHP and Ajax news feed (RSS/Atom) reader and
@@ -139,10 +140,8 @@ way to always access your feeds.
         ](http://www.softaculous.com/demos/Tiny_Tiny_RSS)
 
 Among other free online _private license_ RSS readers, that I have not tested:
-[InoReader](https://inoreader.com/), [EldonReader](http://reader.eldonlabs.com),
-[G2Reader](http://www.g2reader.com/fr/), [Go Read](http://www.goread.io),
-[HiveReader](http://hivereader.com), [SilverReader](http://silverreader.com),
-[The Old Reader](https://theoldreader.com/).
+-   [InoReader](https://inoreader.com/) _free adds upported, supporter 20$/y, Pro 50$/y_.
+-   [The Old Reader](https://theoldreader.com/) _30$/y_.
 
 
 ## Desktop {#desktop_aggregator}
@@ -213,6 +212,10 @@ But you can also consider [akregator for kde](http://akregator.kde.org/), the QT
 -   [RssCalendar](http://www.rsscalendar.com/)
     is a free web service that creates RSS feeds that show calendars by day, week,
     month, or year.
+-   [rss-bridge](https://github.com/RSS-Bridge/rss-bridge)
+    is a PHP project capable of generating RSS and Atom feeds for websites that don't
+    have one. It can be used on webservers or as a stand-alone
+    application in CLI mode. _rss-bridge is in Debian_.
 -   [rss2email](https://github.com/rss2email/rss2email) (GPL)
     is a python gateway from rss to email. It can be used with _cron_ to watch for new
     news on a feed, and send them to your mail._in 2020 this project is actively
@@ -227,7 +230,13 @@ But you can also consider [akregator for kde](http://akregator.kde.org/), the QT
     directly in your Jabber client.
     The application is
     [hosted on Google App Engine](http://talkfeed.appspot.com)
-
+-   [tweeper](https://git.ao2.it/tweeper.git) (GPL-3)
+    is a PHP web scraper which can be used to conveniently follow the public activity of
+    social network users by converting it to RSS.
+    Tweeper can be used via web or as a command line program.
+    The currently supported sites are: Twitter.com, Pump.io based websites, like
+    Identi.ca, Dilbert.com, Instagram.com, Facebook.com (public pages).
+    _Tweeper is in Debian_.
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
