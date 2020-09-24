@@ -90,6 +90,12 @@ way to always access your feeds.
         Instapaper, Evernote, OneNote, Pocket, and Dropbox.
     -   We can use {{< wp "IFTTT" >}} to automatically send saved stories.
 
+-   [FreshRSS](https://github.com/FreshRSS/FreshRSS) (AGPL-3.0)
+    is a self-hostable aggregator. It needs a web server, PHP, MySQL or MariaDB, or
+    PostgreSQL, or SQLite. A Docker image is provided. FreshRSS supports access from
+    mobile / native apps for Linux, Android, iOS, and OS X.
+-   [Kriss Feed](https://github.com/tontof/kriss_feed) (public domain)
+    a simple _KISS_ feed reader, it needs only PHP, no database.
 -   [Leed](https://github.com/ldleman/Leed) (AGPL-3.0 ),
     is a web-based news reader, it needs PHP with MySQL, and has an android application.
 -   [Miniflux](https://miniflux.app/) (Apache-2.0 License)
@@ -132,7 +138,7 @@ way to always access your feeds.
         [plugins](https://tt-rss.org/wiki/Plugins).
     -   [tt-rss Git Repository](https://git.tt-rss.org/git/tt-rss/src/master)
     -   The [Android Client](https://git.tt-rss.org/fox/tt-rss-android) (GPL-3)
-        _(1.1M)- is on F-Droid and google store
+        _(1.1M)_ is on F-Droid and google store
     -   [ttrss-mobile](https://github.com/mboinet/ttrss-mobile) (AGPL-3.0)
         is a Jquery-mobile webapp for Tiny Tiny RSS using Backbone.js and
         RequireJS.
