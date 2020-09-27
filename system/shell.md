@@ -15,8 +15,8 @@ title: Shell
     ](http://www.faqs.org/faqs/unix-faq/shell/shell-differences/).
 -   [The Open Group Base Specifications - §2 Shell Command Language
     ](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html)
--   [Linux Shell Scripting Tutorial
-    ](http://www.freeos.com/guides/lsst/) _2002_
+-   [Linux Shell Scripting Tutorial v2.0
+    ](https://bash.cyberciti.biz/guide/Main_Page)
 -   The page
     [The Traditional Bourne Shell Family
     ](http://www.in-ulm.de/~mascheck/bourne/)
@@ -313,7 +313,7 @@ expansion, nor process substitution)
     [GitHub Project new.awk.info
     ](https://github.com/pjimenez-cl/new.awk.info).
 
-#Sed
+# Sed
 -   [Wikipedia: Sed](http://en.wikipedia.org/wiki/Sed "en.wikipedia.org Sed"),
     you may find there references to many tutorials.
 -   [sed manual
