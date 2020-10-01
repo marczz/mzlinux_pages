@@ -46,7 +46,16 @@ begining of July 2013. It can be replaced by  many other
 [free or open source online rss readers
 ](http://alternativeto.net/software/google-reader/?license=free&platform=online)
 
-{{< wp "Firefox" >}} can read RSS or atom flux with the {{< wp "Live bookmarks" >}}
+{{< wp "Firefox" >}} previously used {{< wp "Live bookmarks" >}} to read  RSS or atom
+flux, but it it is no longer included.
+
+Many [rss readers – Add-ons for Firefox
+](https://addons.mozilla.org/en-US/firefox/search/?q=rss&platform=Linux)
+can display feeds in the browser. The most dowloaded, and featurefull seems to be
+[Feedbro](https://addons.mozilla.org/en-US/firefox/addon/feedbroreader/).
+
+
+with the {{< wp "Live bookmarks" >}}
 feature. It does not have all all the features of an aggregator, but could be an easy
 way to always access your feeds.
 
@@ -188,9 +197,6 @@ But you can also consider [akregator for kde](http://akregator.kde.org/), the QT
         _NewsBoat knows what what you have read on the remote, but the remote ignore
         what you have read on NewsBoat_
 
--   <a name="newsticker"></a>
-    [NewsTicker](http://www.emacswiki.org/emacs/NewsTicker) (GPL)
-    is an rss/atom reader for emacs.
 -   [Rawdog](http://offog.org/code/rawdog.html)
     is a RSS Aggregator written in Python2 _rawdog won't work with Python 3.x_ using
     [feedparser](http://www.feedparser.org/), that reads articles from a
@@ -210,14 +216,25 @@ But you can also consider [akregator for kde](http://akregator.kde.org/), the QT
     yarr is a server written in Go which provides a desktop application accessible
     via web browser. The frontend is in Vue.js, and the storage is backed by SQLite.
 
+## Emacs feed readers {#emacs_feed}
+
+-   [elfeed](https://github.com/skeeto/elfeed) (Unlicense License)
+     An Emacs web feeds client
+     -   [fasheng/elfeed-protocol](https://github.com/fasheng/elfeed-protocol)
+         Provide extra protocols for elfeed like Fever, NewsBlur, Nextcloud/ownCloud
+         News and Tiny Tiny RSS.
+-   {{< iref "mail#gnus" "Gnus" >}} in addition of being an emacs mail client, can also
+    read feeds.
+-   <a name="newsticker"></a>
+    [NewsTicker](https://www.gnu.org/software/emacs/manual/html_mono/newsticker.html)
+    (GPL) is an rss/atom reader for emacs.
+
+
 # Rss converter/generator
 
 -   [JabRSS](http://dev.cmeerw.org/jabrss/Documentation) (GPL)
     is a simple RSS (RDF Site Summary) headline notification service for Jabber.
     _Seems quite old, and unmaintened._
--   [RssCalendar](http://www.rsscalendar.com/)
-    is a free web service that creates RSS feeds that show calendars by day, week,
-    month, or year.
 -   [rss-bridge](https://github.com/RSS-Bridge/rss-bridge)
     is a PHP project capable of generating RSS and Atom feeds for websites that don't
     have one. It can be used on webservers or as a stand-alone
@@ -243,6 +260,54 @@ But you can also consider [akregator for kde](http://akregator.kde.org/), the QT
     The currently supported sites are: Twitter.com, Pump.io based websites, like
     Identi.ca, Dilbert.com, Instagram.com, Facebook.com (public pages).
     _Tweeper is in Debian_.
+
+## Web Service
+
+-   [FeedBurner](https://feedburner.google.com/)
+    provides custom RSS feeds and management tools for bloggers, podcasters, and other
+    web-based content publishers. Google acquired FeedBurner in 2007.
+    -   [FeedBurner Help](https://support.google.com/feedburner/)
+    -   [QuickStart Guides for Blogger, WordPress, TypePad, MySpace, Podcasting
+        ](https://support.google.com/feedburner/topic/13055?hl%3Den&ref_topic%3D13046)
+    -    feedburners url can be used with the desired format
+        `http://feeds.feedburner.com/fedname?format=atom`, or `format=rss`
+        or `format=xml`.
+-   {{< wp "Blogger_(service)" "Google Blogger" >}} publish feeds with the syntax
+    -   Full site feed:
+        -   Atom 1.0: `http://blogname.blogspot.com/feeds/posts/default`
+        -   RSS 2.0: `http://blogname.blogspot.com/feeds/posts/default?alt=rss`
+    -   Label-specific site feed:
+        -   Atom 1.0: `http://www.googleblog.blogspot.com/feeds/posts/default/-/privacy`
+        -   RSS 2.0:
+            `http://www.googleblog.blogspot.com/feeds/posts/default?alt=rss/-/privacy`
+-   [WordPress Feeds](https://wordpress.org/support/article/wordpress-feeds/)
+    In a wordpress site `http://example.com/` the feeds are found at
+    ~~~
+    http://example.com/?feed=rss
+    http://example.com/?feed=rss2
+    http://example.com/?feed=rdf
+    http://example.com/?feed=atom
+    ~~~
+    most often the site uses permalinks and you also find them at:
+    ~~~
+    http://example.com/feed/
+    http://example.com/feed/rss/
+    http://example.com/feed/rss2/
+    http://example.com/feed/rdf/
+    http://example.com/feed/atom/
+    ~~~
+    Other feeds are availables for posts, comments, authors, search they are described
+    in the page
+    [WordPress Feeds](https://wordpress.org/support/article/wordpress-feeds/).
+
+    Wordpress is powering 1/3 of sites, so on a site without visible link to RSS you can
+    always try the previous URLs. If you truly want to know if it is built with
+    wordpress, you can look if there are some default pages to wordpress sites like
+    `/readme.html`, `license.txt`. You you can use a site dedicated to WP detection like
+    [IsItWP](https://www.isitwp.com/).
+-   [RssCalendar](http://www.rsscalendar.com/)
+    is a free web service that creates RSS feeds that show calendars by day, week,
+    month, or year.
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
