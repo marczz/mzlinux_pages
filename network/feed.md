@@ -47,12 +47,17 @@ begining of July 2013. It can be replaced by  many other
 ](http://alternativeto.net/software/google-reader/?license=free&platform=online)
 
 {{< wp "Firefox" >}} previously used {{< wp "Live bookmarks" >}} to read  RSS or atom
-flux, but it it is no longer included.
+flux, but it was removed in 2018.
 
 Many [rss readers – Add-ons for Firefox
 ](https://addons.mozilla.org/en-US/firefox/search/?q=rss&platform=Linux)
-can display feeds in the browser. The most dowloaded, and featurefull seems to be
+can act as a rss reader, the most dowloaded, and featurefull seems to be
 [Feedbro](https://addons.mozilla.org/en-US/firefox/addon/feedbroreader/).
+Some other addons are limited to display a feed as an html page, I use
+[Want My RSS](https://addons.mozilla.org/en-US/firefox/addon/want-my-rss/) for this
+task.
+
+In the same way there are chrome extensions.
 
 
 with the {{< wp "Live bookmarks" >}}
