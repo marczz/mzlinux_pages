@@ -2,10 +2,6 @@
 title: Mail
 ---
 
-{{% toc /%}}
-
-----
-
 # SMTP {#smtp}
 
 -   Wikipedia: {{< wp "Extended_SMTP"  "ESMTP" >}},{{< wp "SMTP Authentication" >}},
@@ -43,21 +39,25 @@ My {{< noteref ref "mutt" "Mutt page" >}}
 -   [Comparing Mail Back Ends
     ](http://www.gnu.org/software/emacs/manual/html_node/gnus/Comparing-Mail-Back-Ends.html)
     from [Gnus Manual](http://www.gnu.org/software/emacs/manual/html_node/gnus/)
--   [jetable.org](http://www.jetable.org/en/index)
+-   [jetable.org](http://www.jetable.org/en/index),
     ([fr](http://www.jetable.org/fr/index)),
     [guerilla.com](https://www.guerrillamail.com/),
-    [mailnator;com](http://mailinator.com/),
-    [airmail](http://getairmail.com/),
-    [10minutemail.com](http://10minutemail.com/)
-    [mailnull.com](https://mailnull.com/) provide you with a temporary
-    disposable email address.
-    [more sites on google
-    ](https://www.google.com/search?q=mail+temporary+disposable)
+    [10minutemail.com](http://10minutemail.com/),
+    [mailnull.com](https://mailnull.com/)
+    -   [1sec MAIL](https://www.1secmail.com/) provide you with a temporary disposable
+        email address receive emails at this temporary address, after certain period of
+        time email will be delated and address will be canceled.
+        [sdushantha/tmpmail](https://github.com/sdushantha/tmpmail)
+        is a sh script which creates an address on _1sec MAIL_, and send and receive
+        message at this address. It uses _curl_, _w3m_, and yhr json procesor
+        [jq](https://github.com/stedolan/jq).
+    -   [more sites on google
+        ](https://www.google.com/search?q=mail+temporary+disposable)
 -   [BongoUs](https://bongous.com/)
     is a package and mail Forwarding Services for shopping
     to an oversea country (EU or US).
 -   [Alpine](http://www.washington.edu/alpine/)
-    (apache license)  from Washington University is the successor of
+    (apache license) from Washington University is the successor of
     [Pine](http://www.washington.edu/pine/)
     (free software with half-closed license!)
     -   Now the development of Alpine continue in a fork:
