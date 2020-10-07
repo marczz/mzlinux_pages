@@ -2,7 +2,6 @@
 title: Monitoring
 ---
 
-{{% toc /%}}
 
 See also
 {{< iref "configuration_management" "Configuration Management" >}} and
@@ -40,7 +39,7 @@ area
 # Monitoring Tools {#monitoring_tools}
 
 
-<a name="conky"></a>[conky](http://conky.sourceforge.net/) (GPL)
+<a name="conky"></a>[conky](https://github.com/brndnmtthws/conky) (GPL)
 :   Conky is a light-weight system monitor which can display
     arbitrary information to the root window in X11 or in an xterm.  A
     lot of plugin exists that allow to view information not only from
@@ -74,24 +73,23 @@ area
     2.2M res/1.6shrd, with usually many threads or processes.  If you
     don't need to see your system with a refresh rate of 1s but are
     happy with an update each 5 of 10 second you can even launch
-    discontinuous instance of conky like in this example of
-    [Conky and GNU Screen
-    ](http://wiki.conky.be/index.php?title=Conky_and_GNU_Screen)
+    discontinuous instance of conky.
 
-    -   [Conky documentation
-        ](http://conky.sourceforge.net/documentation.html),
-    -   [Conky FAQ
-        ](http://conky.sourceforge.net/faq.html)
+    -   [Conky Wiki](https://github.com/brndnmtthws/conky/wiki)
+    -   [Conky FAQ](https://github.com/brndnmtthws/conky/wiki/FAQ)
     -   [List of conky variables
         ](http://conky.sourceforge.net/variables.html)
+    -   [Configuration Settings](http://conky.sourceforge.net/config_settings.html)
     -   [linux.com guide to configuring Conky
         ](http://www.linux.com/archive/feature/136147) By Dmitri Popov.
     -   [Gentoo Wiki: Conky Guide
         ](https://wiki.gentoo.org/wiki/Conky/Guide).
-    -   [ArchWiki: conky](https://wiki.archlinux.org/index.php/Conky)
+    -   [ArchWiki: conky](https://wiki.archlinux.org/index.php/Conky),
+        [Conky/Tips and tricks
+        ](https://wiki.archlinux.org/index.php/Conky/Tips_and_tricks)
     -   The [Ubuntu conky configuration thread
         ](http://ubuntuforums.org/showthread.php?t=281865)
-        _huge! 23400 posts from 2006 to 2018_.
+        _huge! 23471 posts from 2006 to 2020_.
     -   [Conky Companions PPA
         ](https://launchpad.net/~conky-companions/+archive/ppa)
         Kaivalagi's Python Scripts  collection _Conky_, mainly aimed
@@ -107,16 +105,13 @@ area
         written in python,
         conkyemail in [Conky Companions PPA
         ](https://launchpad.net/~conky-companions/+archive/ppa)
-    -   [conky disks
-        ](http://www.kittykatt.us/index.php?page=scripts&s=conkydisk)
-        a python script to show disk usage in conky.
     -   [Ubuntu fr - Conky](https://doc.ubuntu-fr.org/conky) publish
         conky scripts
         [conky system
         ](https://doc.ubuntu-fr.org/conky_scripts_systeme),
         [conky multimedia
         ](https://doc.ubuntu-fr.org/conky_scripts_multimedia),
-
+    -   [using conky with screen or tmux](https://github.com/brndnmtthws/conky/wiki/Window-Configuration#gnu-screen)
 
 [Glances](https://nicolargo.github.io/glances/)
 :   glances is a python ncurses program that replace and improve _top_
