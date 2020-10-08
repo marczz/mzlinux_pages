@@ -2,8 +2,6 @@
 title: Images
 ---
 
-{{% toc /%}}
-
 Among {{< wp " image file formats" >}}.
 this section deals with _raster_ or _bitmap_ file formats, the _vector_
 file formats are in the
@@ -123,6 +121,22 @@ Bi-levels Formats
         It is similar to the JB2 compression used in
         {{< iref "ps_pdf_djvu#djvu" "DjVu" >}}.
         More {{< iref "ps_pdf_djvu#jbig2" "references on JBig2 in the PDF section" >}}.
+
+# Color Management
+
+An [ICC profile](https://en.wikipedia.org/wiki/ICC_profile) is describe the color
+attributes of a particular device or viewing requirement by defining a bidirectional
+mapping between the device source or target color space and a profile connection space
+(PCS).
+
+You can find exemple of ICC profiles in the [ICC profiles provided by
+Adobe](https://supportdownloads.adobe.com/detail.jsp?ftpID=4075), if you have installed
+the colord package many profiles are installed under `/usr/share/color/icc/`.
+
+
+-   Wikipedia: {{< wp "Linux color management" >}}, {{< wp "ICC profile" >}}
+-   [ICC profiles - ArchWiki
+    ](https://wiki.archlinux.org/index.php/ICC_profiles#Gnome_Color_Manager)
 
 
 # Image metadata
