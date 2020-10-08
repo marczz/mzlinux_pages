@@ -254,50 +254,6 @@ Some microblogging servers are refered to in the
     -   [mxtoot](https://github.com/ma1uta/mxtoot)    (Apache License)
         is a Matrix <=> Mastodon bot written on java.
 
--   <a name="mastodon"></a>{{< wp "Mastodon_(software)"  "Mastodon" >}} (AGPL)
-    is a federated social network written in Ruby with front end in
-    JavaScript, with similar microblogging features to Twitter.
-    It support the {{< iref "#ostatus" "Ostatus" >}} and
-    {{< iref "#activitypub" "ActivityPub" >}} protocols.
-    Each message has a privacy option,  private messages are only
-    shared on the timelines of the user's followers, or can be direct
-    between users.
-
-    Mastodon is part of {{< iref "#fediverse" "Fediverse" >}} network.
-
-    -   [Mastodon Home](https://joinmastodon.org/)
-        contains the list of public servers.
-    -   [GitHub - Mastodon](https://github.com/tootsuite/mastodon).
-    -   [Mastodon documentation](https://docs.joinmastodon.org/)
-        including the [FAQ
-        ](https://github.com/tootsuite/documentation/blob/master/Using-Mastodon/FAQ.md)
-        and the [List of apps
-        ](https://github.com/tootsuite/documentation/blob/master/Using-Mastodon/Apps.md)
-        -   [Mastodon Documentation Source
-            ](https://github.com/tootsuite/documentation)
-    -   [Mastodon Blog](https://blog.joinmastodon.org/)
-        -   [Guides](https://blog.joinmastodon.org/categories/guides/)
-    -   [Awesome Mastodon](https://github.com/tleb/awesome-mastodon)
-        Curated list of Mastodon-related stuff!
-    -   [Framapiaf](https://framapiaf.org) is the Mastodon instance of
-        [Framasoft](https://framasoft.org/).
-    -   [umr](https://github.com/Ulrar/umrc)
-        is a bot to allow using a Mastodon account from IRC
-    -   {{< iref "xmpp#bitlbee" "BitlBee" >}}
-        [plugin for Mastodon
-        ](https://github.com/kensanata/bitlbee-mastodon).
-    -   [mastodon.el](https://github.com/jdenen/mastodon.el)
-        an Emacs client for Mastodon, you find it in MELPA.
-    -   [toot](https://github.com/ihabunek/toot/) (GPL)
-        is a python  Mastodon CLI client. There is an apt repository
-        with the package.
-    -   [tootstream](https://github.com/magicalraccoon/tootstream)
-        another  python  Mastodon CLI client.
-    -   [Mastodon Twitter Crossposter](https://crossposter.masto.donte.com.br/) is a
-        service which allows you to connect a Mastodon account and a Twitter account and
-        enable cross-posting between them.
-    -   [Moa](https://moa.party/)
-        Link your Mastodon account to Twitter and Instagram. the code is on GitHub.
 -   <a name="pleroma"></a>[Pleroma](https://pleroma.social/) (AGPL)
     is a federated social networking server,
     based on "{{< iref "#activitypub" "ActivityPub" >}} protocol it is part of
@@ -323,6 +279,61 @@ Some microblogging servers are refered to in the
     -   GitHub [twister-core
         ](https://github.com/miguelfreitas/twister-core) and
         [twister-html](https://github.com/miguelfreitas/twister-html).
+
+## Mastodon
+<a name="mastodon"></a>{{< wp "Mastodon_(software)"  "Mastodon" >}} (AGPL)
+is a federated social network written in Ruby with front end in
+JavaScript, with similar microblogging features to Twitter.
+It support the {{< iref "#ostatus" "Ostatus" >}} and
+{{< iref "#activitypub" "ActivityPub" >}} protocols.
+Each message has a privacy option,  private messages are only
+shared on the timelines of the user's followers, or can be direct
+between users.
+
+Mastodon is part of {{< iref "#fediverse" "Fediverse" >}} network.
+
+-   [Mastodon Home](https://joinmastodon.org/)
+    contains the list of public servers.
+-   [GitHub - Mastodon](https://github.com/tootsuite/mastodon).
+-   [Mastodon documentation](https://docs.joinmastodon.org/)
+    including the [FAQ
+    ](https://github.com/tootsuite/documentation/blob/master/Using-Mastodon/FAQ.md)
+    and the [List of apps
+    ](https://github.com/tootsuite/documentation/blob/master/Using-Mastodon/Apps.md)
+    -   [Mastodon Documentation Source
+        ](https://github.com/tootsuite/documentation)
+-   [Mastodon Blog](https://blog.joinmastodon.org/)
+    -   [Guides](https://blog.joinmastodon.org/categories/guides/)
+-   [Awesome Mastodon](https://github.com/tleb/awesome-mastodon)
+    Curated list of Mastodon-related stuff!
+-   [Framapiaf](https://framapiaf.org) is the Mastodon instance of
+    [Framasoft](https://framasoft.org/).
+-   [umr](https://github.com/Ulrar/umrc)
+    is a bot to allow using a Mastodon account from IRC
+-   {{< iref "xmpp#bitlbee" "BitlBee" >}}
+    [plugin for Mastodon
+    ](https://github.com/kensanata/bitlbee-mastodon).
+-   [Mastodon Twitter Crossposter](https://crossposter.masto.donte.com.br/) is a
+    service which allows you to connect a Mastodon account and a Twitter account and
+    enable cross-posting between them.
+-   [Moa](https://moa.party/)
+    Link your Mastodon account to Twitter and Instagram. the code is on GitHub.
+
+### Mastodon clients
+-   [jmcbray/brutaldon](https://git.carcosa.net/jmcbray/brutaldon) (AGPL)
+    A [brutalist](https://brutalist-web.design/) web interface for Mastodon written in
+    python.  It works in text-mode browsers such as Lynx, w3m, or elinks, and also in
+    more heavy-weight graphical browsers, such as Firefox, or on mobile platform.  There
+    is a hosted instance at [brutaldon.online](https://brutaldon.online/).
+-   [madonctl](https://github.com/McKael/madonctl)
+    a Go language mastodon CLI.
+-   [mastodon.el](https://github.com/jdenen/mastodon.el)
+    an Emacs client for Mastodon, you find it in MELPA.
+-   [toot](https://github.com/ihabunek/toot/) (GPL)
+    is a python  Mastodon CLI client. There is an apt repository
+    with the package.
+-   [tootstream](https://github.com/magicalraccoon/tootstream) (MIT License)
+    a  python  Mastodon CLI client.
 
 ## Pump.io {#pumpio}
 {{< wp "Pump.io" >}} (Apache License) is an activity streams engine that can be
