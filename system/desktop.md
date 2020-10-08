@@ -78,7 +78,7 @@ Unix. It uses  the GTK+ toolkit. The components of lxde are not
 strongly bound with a common library set as in KDE, Gnome or Xfce.
 The standard component include the  window manager
 {{< iref "#openbox" "Openbox" >}}, the session manager
-{{< iref "#lxsession" "lxsession" >}}, the panel {{< iref "#lxpanel" "lxpanel"<}}
+{{< iref "#lxsession" "lxsession" >}}, the panel {{< iref "#lxpanel" "lxpanel" >}}
 and the file manager {{< iref "file_managers#pcmanfm" "PCManFM" >}})
 _but you are free to use an other one_.
 
@@ -105,7 +105,7 @@ _but you are free to use an other one_.
     be configured from a GUI preferences dialog, and has theming support via custom
     gtkrc file.
 
-# Window managers
+# Window managers {#window_manager}
 
 See also the the
 {{< iref "#desktop_environments" "Desktop environment" >}} and
@@ -175,6 +175,8 @@ See also the {{< iref "#wm_control" "WM Control" >}} subsection.
 
 
 ## Low resource tiling and dynamic Window Managers {#tiling_wm}
+_ArchWiki_ has a [Comparison of tiling window managers
+](https://wiki.archlinux.org/index.php/Comparison_of_tiling_window_managers).
 
 A tuttorial to desktop configuration with tiling wm:
 [Home Sweet Home](http://blog.z3bra.org/2013/10/home-sweet-home.html)
@@ -289,6 +291,9 @@ floating, on an individual window base.
         your own.
 -   [i3 doc](https://github.com/i3/i3/tree/next/docs) contain tools,
     the userguide, the refcard &#x2026;
+-   [Sway](https://swaywm.org/) is a tiling Wayland compositor and a drop-in replacement
+    for the i3 window manager for X11. It works with your existing i3 configuration.
+    -   [Sway - ArchWiki](https://wiki.archlinux.org/index.php/Sway)
 
 The window manager alone uses 5.9M/4.8M, the i3bar 5M/4.2M, i3status
 1.6M/1.3M.
@@ -426,17 +431,12 @@ if the chosen panel does not include one.
 -   The development tree is in [git.fluxbox](http://git.fluxbox.org/)
     There are instructions to
     [build fluxbox from source](http://fluxbox-wiki.org/index.php?title=Build_fluxbox_from_source).
--   [fluxbox-xdg-menu](http://code.google.com/p/fluxbox-xdg-menu/) is a small python script using
-    [python-xdg](http://freedesktop.org/wiki/Software/pyxdg)
-    to create a menu for fluxbox using freedesktop.org standards.
 -   [fbxdgmenu](pyhttps://bitbucket.org/confluence/fluxbox-tools) is a
     fork of *fluxbox-xdg-menu*, it is a simpler program that only deal
     with menu not the background.
 -   You can complete your fluxbox desktops with some other light
     components referenced in the
     {{< iref "#desktop_components" "Desktop components sections" >}}
-
-
 
 ### Fluxbox configuration
 
@@ -554,15 +554,13 @@ See also {{< iref "emacs#emacs_themes" "Emacs Themes" >}}.
     [colorschemedesigner](http://colorschemedesigner.com/csd-3.5/),
     [The 28 best tools for choosing a colour scheme (2014)
     ](http://www.creativebloq.com/colour/tools-colour-schemes-12121430).
-
-
-
 -   For bash you can look at [ArchLinux: Color Bash Prompt
     ](https://wiki.archlinux.org/index.php/Color_Bash_Prompt)
 
 ## Panels {#panels}
 
-Most window managers provide their own panel, only some small/micro manager use an external one.
+Most window managers provide their own panel, only some small/micro manager use an
+external one.
 
 -   _aewm++-fspanel_ (MIT) is a minimal panel developped with aewm++, but it
     does not depend on iT. It is in the debian package aewm++-goodies.
@@ -572,9 +570,9 @@ Most window managers provide their own panel, only some small/micro manager use 
     launchbar, clock, and more through plugins is EWMH/NETWM
     compliant. _available in Debian_
     -   [fbpanel configuration](http://fbpanel.sourceforge.net/docs.html)
--   _fspanel_ (GPL)
+-   _Fspanel_ (GPL)
     works with EWMH compliant WMs. _available in Debian_
--   _hpanel_ is a fork of _fspane_ to better handle maximized windows.
+-   _Hpanel_ is a fork of _fspanel_ to better handle maximized windows.
     _available in Debian_
 -   [ltpanel](http://ltpanel.sourceforge.net/) (GPL)
     is a lightweight panel, looking similar to the gnome tasklist
@@ -586,7 +584,7 @@ Most window managers provide their own panel, only some small/micro manager use 
     is a lightweight panel/taskbar written in Python and C
     it works with EWMH compliant WMs (Openbox, PekWM, FVWM, etc.)
     -   [ArchWiki: pypanel](https://wiki.archlinux.org/index.php/PyPanel)
--   [tint2](http://code.google.com/p/tint2/)  (GPLv2)
+-   <a name="tint2"></a>[tint2](http://code.google.com/p/tint2/)  (GPLv2)
     is a panel (made for openbox3 but without lxde dependencies)
     with taskbar,
     systray, clock and battery status and  window manager's menu.
@@ -614,10 +612,8 @@ Most window managers provide their own panel, only some small/micro manager use 
 is a dynamic menu for X, originally designed for dwm. part of
 the suckless-tools package in Debian.
 -   [ArchWiki: dmenu](https://wiki.archlinux.org/index.php/dmenu),
--   [Archlinux dmnenu hacking thread
-    ](https://bbs.archlinux.org/viewtopic.php?id=80145),
--   [jukil/dmenu-scripts-collection
-    ](https://github.com/jukil/dmenu-scripts-collection)
+-   [Archlinux dmnenu hacking thread](https://bbs.archlinux.org/viewtopic.php?id=80145),
+-   [jukil/dmenu-scripts-collection](https://github.com/jukil/dmenu-scripts-collection)
     collected from the hacking thread _until 2014, newer scripts are not here!_.
 -   [tlvince/dmenu-tools](https://github.com/tlvince/dmenu-tools).
     A collection of scripts in the _dmenu_tools_ AUR package:
@@ -628,23 +624,9 @@ the suckless-tools package in Debian.
 -   [bemenu](https://github.com/Cloudef/bemenu) (GPLv3 and LGPLv3)
     is an dynamic menu library and client program inspired by dmenu.
     -   [bemenu API documentation](http://cloudef.pw/bemenu/).
--   [dmenu-pango-imlib](https://github.com/Cloudef/dmenu-pango-imlib)
-    is a dmenu fork with pango and imlib support.
--   {{< iref "#lemonbar" "lemonbar" >}}
-    in the status bar section.
+-   You find {{< iref "#lemonbar" "lemonbar" >}} in the status bar section.
 -   [pdmenu](https://joeyh.name/code/pdmenu/) full screen console
     menuing system for Unix.
--   The [rliang repository](https://github.com/rliang)
-    offer many derivatives of dmenu:
-    -   [rliang/gdmenu · GitHub](https://github.com/rliang/gdmenu)
-        a GTK+ dmenu clone.
-    -   [rliang/cdmenu · GitHub](https://github.com/rliang/cdmenu)
-        a Curses/console dmenu clone.
-    -   [rliang/cpbar · GitHub](https://github.com/rliang/cpbar)
-        a XCB-based panel for displaying textual information from
-        STDIN using Cairo and Pango markup.
-    -   [rliang/sdmenu · GitHub](https://github.com/rliang/sdmenu)
-        a shell dmenu.
 -   <a name="rofi"></a>[Rofi](https://davedavenport.github.io/rofi/) (MIT License)
     A popup window switcher requiring only xlib and pango.
     Rofi can act as a drop-in dmenu replacement and provides
@@ -655,43 +637,35 @@ the suckless-tools package in Debian.
     -    [Rofi - manpage](https://github.com/DaveDavenport/rofi/blob/master/doc/rofi.1.markdown),
     -    [Rofi wiki](https://github.com/DaveDavenport/rofi/wiki),
     -    [reddit - Qball tools forum](https://reddit.com/r/qtools/)
--   [slmenu](https://bitbucket.org/rafaelgg/slmenu/src) (MIT License)
-    a dmenu clone for the console.<br />
-    [slmenu, and some seriously wicked console wizardry
-    ](http://inconsolation.wordpress.com/2013/03/16/bonus-slmenu-and-some-seriously-wicked-console-wizardry/)
-    in [incosolation blog](http://inconsolation.wordpress.com).
 -   {{< iref "#yabar" "yabar" >}} in the status bar section.
 
 ### Dzen {#dzen}
-[Dzen](https://github.com/robm/dzen)
-is a notification and menuing program for X11 rhat requires only X11.
-It is designed to be
-scriptable in any language and integrate well with light window managers.
-A _dzen_ daemon takes only 1.5M res/1.1M shr.
+[Dzen](https://github.com/robm/dzen) (MIT License)
+is a notification and menuing program for X11 rhat requires only X11.  It is designed to
+be scriptable in any language and integrate well with light window managers.  A _dzen_
+daemon takes only 1.5M res/1.1M shr. It is no more developed since 2013,
+[nezd](https://github.com/telser/nezd) is a fork of dzen.
 
--   The [Dzen Wiki
-    ](https://github.com/robm/dzen/wiki) gives
-    many examples of using _dzen_ as system monitor, with simple
-    scripts.
+_dzen2_ is in Debian.
+
+-   The [Dzen Wiki](https://github.com/robm/dzen/wiki) gives many examples of using
+    _dzen_ as system monitor, with simple scripts.
 -   [ArchLinux: dzen](https://wiki.archlinux.org/index.php/Dzen)
 -   You can [pipe the output of conky
     ](https://wiki.archlinux.org/index.php/Dzen#Dzen_.26_Conky) to dzen.
--   Or [pipe the output of i3status
-    ](http://i3.zekjur.net/i3status/).
+-   Or [pipe the output of i3status ](http://i3.zekjur.net/i3status/).
 -   [dzen-tools](https://github.com/dgvncsz0f/dzen-tools)
-    by Diego Souza has
-    _systat2dzen_, a python script that gives hostname, date/time, sys statistics,
-    meminfo, iostat, load ifo, disk status, battery status, check
-    local or imap mailboxes, ethernet and wireless status
+    by Diego Souza has _systat2dzen_, a python script that gives hostname, date/time,
+    sys statistics, meminfo, iostat, load ifo, disk status, battery status, check local
+    or imap mailboxes, ethernet and wireless status
 -   [Creating an App. Launcher with Dzen2 and bash
     ](https://bbs.archlinux.org/viewtopic.php?id=45364)
 
 ### Root menu
 Root menus are parts of most floating window managers, but there are
-some stand alone:
+some stand alone,  for window managers which do not provide a menu such as Oroborus.
 
--   [deskmenu (debian package)
-    ](https://packages.debian.org/jessie/deskmenu).
+-   [deskmenu (debian package)](https://packages.debian.org/sid/deskmenu).
 
 ### Freedesktop (xdg) menus {#xdg_menus}
 
@@ -703,10 +677,6 @@ The python programs use
 -   The Faq.i3wm forum [How can I use autostart .desktop files in i3?
     ](https://faq.i3wm.org/question/2155/how-can-i-use-autostart-desktop-files-in-i3/)
     teach how to use dex to test your autostart files.
--   [dmenu_launch
-    ](https://github.com/Wintervenom/Scripts/blob/master/file/launch/dmenu-launch)
-    by Scott Garrett (Wintervenom) in
-    [GitHub: Wintervenom/Scripts](https://github.com/Wintervenom/Scripts).
 -   [fluxbox-xdg-menu](http://code.google.com/p/fluxbox-xdg-menu/) (GPL)
     is a python based menu generator used to create a menu for fluxbox
     using freedesktop.org standards.
@@ -714,69 +684,71 @@ The python programs use
     (Gnome Completion-Run) is an lightweight application launcher,
     with bash-like TAB completion, thet propose all the xdg desktop programs.
     -   [ArchWiki: Gmrun](https://wiki.archlinux.org/index.php/Gmrun)
--   Thomas Bellembois [i3-start-menu
-    ](http://perso.ens-lyon.fr/thomas.bellembois/doku.php?id%3Di3_start_menu)
--   [j4-dmenu-desktop](https://github.com/enkore/j4-dmenu-desktop)
+-   [i3-start-menu](https://tbellembois.github.io/i3_menu.html) (GPL)
+    by Thomas Bellembois.
+-   <a name="jgmenu"></a>[jgmenu](https://github.com/johanmalm/jgmenu) (GPL)
+    is an X11 menu, written ic C with no toolkit dependencies, designed for scripting.
+    t can display the following types of menu : a jgmenu flavoured CSV format,
+    XDG application menu, pipe menus, openbox XML menu.
+
+    A Debian source package is provided in the distribution.
+
+    _Jgmenu_ is the standard menu of
+    [busenlabs distribution](https://www.bunsenlabs.org/)
+    which provides a Debian package in it's apt repository.
+    -   [jgmenu documentation](https://jgmenu.github.io/)
+        contains the [man pages](https://jgmenu.github.io/manual.html).
+    -   [jgmenututorial(7)](https://jgmenu.github.io/jgmenututorial.7.html)
+        is a step-by-step tutorial to _jgmenu_.
+-   <a name="j4-dmenu-desktop"></a>
+    [j4-dmenu-desktop](https://github.com/enkore/j4-dmenu-desktop) (GPL)
     it is an alternative (a lot quicker) for  i3-dmenu-desktop.
     _j4-dmenu-desktop_ doesn't require i3wm and work on any desktop
     environment.
--   [MenuMaker](http://menumaker.sourceforge.net/)
-    is a python menu generation utility for: Blackbox, Deskmenu,
-    FluxBox, IceWM, OpenBox, Pekwm, WindowMaker ,XFce4 it can use both
-    of Freedesktop.org's .desktop files and Debian application
-    entries. _last release 2005, dev tree from 2007_
--   [morc_menu
-    ](https://github.com/Boruch-Baum/morc_menu/)
+-   [MenuMaker](http://menumaker.sourceforge.net/) (BSD Licence)
+    is a python menu generation utility for: Blackbox, Deskmenu, FluxBox, IceWM, Jwm,
+    OpenBox, Pekwm, WindowMaker ,XFce4 it can use both of Freedesktop.org's `.desktop`
+    files and Debian application entries.
+-   [morc_menu](https://github.com/Boruch-Baum/morc_menu/) (GPL)
     is an categorized desktop application menu, independent of any window manager.
-    it is an alternative for  i3-dmenu-desktop and [j4-dmenu-desktop
-    ](https://github.com/enkore/j4-dmenu-desktop)
--   [uxdgmenu](https://github.com/ju1ius/uxdgmenu) (python) generates
-    desktop menus for window managers, it supports currently
-    Fluxbox, Openbox, Awesome, Blackbox, WindowMaker, FVWM2, IceWM,
-    Ion3, PekWM, TWM _2013_
+    it is an alternative for  i3-dmenu-desktop and
+    {{< iref "#j4-dmenu-desktop" "j4-dmenu-desktop" >}}.
 -   [ArchLinux xdg-menu](https://wiki.archlinux.org/index.php/Xdg-menu)
     generates menus for twm, ion3, WindowMaker, fvwm2, icewm,
     blackbox, fluxbox, openbox, awesome.
--   [xdgmenu](https://github.com/crichon/xdgmenu)
+    -   [xdgmenu](https://github.com/crichon/xdgmenu) (xdgMIT License)
     is a python/ncurses application to launch a xdg menu.
 -   [xdmenug
     ](https://raw.githubusercontent.com/sagotsky/.dotfiles/master/scripts/xdmenug.py)
     in [sagotsky dotfiles](https://github.com/sagotsky/.dotfiles)
     referenced in [dmenu toys](http://sagotsky.github.io/2013/10/11/dmenu-toys.html)
--   [GitHub - xdgmenumaker
-    ](https://github.com/gapan/xdgmenumaker/) (GPL)
-    is a command line tool, written in python (2 or 3), that generates
-    application menus using xdg information, by scanning *.desktop
-    files. It can generate menus for Fluxbox, IceWM, jwm, pekwm,
-    Window Maker.
+-   [GitHub - xdgmenumaker](https://github.com/gapan/xdgmenumaker/) (GPL)
+    is a command line tool, written in python, that generates application menus using
+    xdg information, by scanning *.desktop files. It can generate menus for Fluxbox,
+    IceWM, jwm, pekwm, Window Maker.
 
 ## Status Line {#status_line}
 Most window manager have their own status bar and a status generation
 programs or scripts, like _i3bar_ with _i3status_ or _i3blocks_.
 But some alternative status are window manager independant.
 
--   <a name="j4status"></a>[j4status](http://j4status.j4tools.org/)
-    (GPL) is an alternative
-    to _i3-status_ but it is available on any tiling wm.
-    It provides a status line using several plugins
-    to retrieve system information.
+-   <a name="j4status"></a>[j4status](http://j4status.j4tools.org/) (GPL)
+    is an alternative to _i3-status_ but it is available on any tiling wm.  It
+    provides a status line using several plugins to retrieve system information.
     -   [j4status-plugins
         ](https://j4status.j4tools.org/j4status-plugins/)
-        add plugins for _alsa_, _mpris_, filesystem, cpu and memory
-        usage, backlight percentage, i3 focus, _networkmanager_, and
-        an inotify plugein to _j4status_.
--   <a name="lemonbar"></a>[lemonbar](https://github.com/LemonBoy/bar)
-    is a lightweight bar based on XCB. It provides
-    foreground/background color switching along with text alignment
-    and colored under/overlining of text, full utf8 support and
-    reduced memory footprint.
+        add plugins for _alsa_, _mpris_, filesystem, cpu and memory usage, backlight
+        percentage, i3 focus, _networkmanager_, and an inotify plugein to _j4status_.
+-   <a name="lemonbar"></a>[lemonbar](https://github.com/LemonBoy/bar) (MIT License)
+    is a lightweight bar based on XCB. It provides foreground/background color switching
+    along with text alignment and colored under/overlining of text, full utf8 support
+    and reduced memory footprint.
 -   [xmobar](http://projects.haskell.org/xmobar/)
-    written in haskell,  is a lightweight, text-based, status.
-    It was originally designed to work with xmonad,
-    but it's actually usable with any window-manager. It is in Debian.
-    It can be used for _conky_ or _i3status_ output.
+    written in haskell, is a lightweight, text-based, status.  It was originally
+    designed to work with xmonad, but it's actually usable with any window-manager. It
+    is in Debian.  It can be used for _conky_ or _i3status_ output.
     -   [ArchWiki xmobar](https://wiki.archlinux.org/index.php/Xmobar)
--   <a name="yabar"></a>[Yabar](https://github.com/geommer/yabar)
+-   <a name="yabar"></a>[Yabar](https://github.com/geommer/yabar) (MIT License)
     (MIT License)
     is a lightweight status bar for X window managers.
     _Yabar_ is in debian.
