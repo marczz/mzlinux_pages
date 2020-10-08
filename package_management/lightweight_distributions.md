@@ -36,9 +36,12 @@ Debian Live and GRML are in the main {{< iref "distributions" "Distributions sec
     of its main packages are focused on server services.
 
     -   [Alpine Linux Wiki](https://wiki.alpinelinux.org/wiki/Main_Page)
--   [BunsenLabs Linux](https://www.bunsenlabs.org/) is the continuation of
-    {{< wp "Crunchbang_Linux" "CrunchBang" >}} which stopped in 2015. It is a derivative
-    of Debian with Openbox window manager, tint2 panel and conky system monitor.
+-   <a name="bunsenlabs"></a>[BunsenLabs Linux](https://www.bunsenlabs.org/)
+    is the continuation of {{< wp "Crunchbang_Linux" "CrunchBang" >}} which stopped
+    in 2015. It is a derivative
+    of Debian with {{< iref "desktop#openbox "Openbox window manager" >}},
+    {{< iref "desktop#tint2" "tint2 panel" >}}, {{< iref "desktop#jgmenu" "Jgmenu" >}}
+    and conky system monitor.
 -   [Damn Small Linux](http://www.damnsmalllinux.org/) was a
     business card size (50MB) distribution, stopped since 2012.
 -   [Devil Linux](http://www.devil-linux.org/) Linux on a CD that
