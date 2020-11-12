@@ -295,6 +295,10 @@ exif, gexif,  exiv2, and exiftools.
     `wrjpgcom`, for inserting and extracting textual comments in JFIF
     files, `jpegtran` for lossless transcoding between different JPEG
     formats.
+-   [lsix](https://github.com/hackerb9/lsix)
+    Shows thumbnails of images in a directory in terminal using {{< wp "Sixel" >}}
+    graphics.  It is a bash script that uses {{< iref "#imagemagick" "ImageMagick" >}}
+    for displaying images.
 -   [Mirage](http://mirageiv.sourceforge.net/)
     is a Python/GTK  image viewer. It allow also simple image
     manipulation: rotating at 90-degree, flipping
@@ -314,7 +318,7 @@ exif, gexif,  exiv2, and exiftools.
 -   <a name="pqiv"></a>[PQIV](https://github.com/phillipberndt/pqiv)
     is the continuation of {{< iref "#qiv" "QIV" >}}.
     It is an image viewer written in C using GTK 2 or GTK 3 and
-    GLIB 2. It is actively maintained in 2017, and is in Debian.
+    GLIB 2. It is actively maintained in 2020, and is in Debian.
     It start at 26M resident / 21M shared on a small thumbnail,
     and browsing my image test directory 64M / 21M.
 -   <a name="qiv"></a>[QIV - Quick Image Viewer](http://spiegl.de/qiv/)
@@ -375,6 +379,12 @@ _Notes_
     art into bitmap graphics in _png_ format.
     Aafigure can be used with _asciidoc_, _Restructured Text_,
     _MoinMoin_, _Sphinx_
+-   [Converseen](http://converseen.fasterland.net/) (GPL-3.0)
+    Converseen is a batch image processor for Windows and Linux that
+    allows you to convert, resize, rotate and flip an infinite number of images with a
+    mouse click. It is written in C++ with Qt5 libraries and uses the Magick++ library.
+    It is packaged in Debian.
+    -   [Converseen - GitHub](https://github.com/Faster3ck/Converseen)
 -   [CoolText online graphics generator](http://www.cooltext.com/)
 -   [Ditaa](http://ditaa.sourceforge.net/)
     is a command-line utility written in Java, that convert diagrams
@@ -434,12 +444,9 @@ _Notes_
         [montage](http://www.graphicsmagick.org/montage.html),
         [mogrify](http://www.graphicsmagick.org/mogrify.html),
         [composite](http://www.graphicsmagick.org/composite.html)
--   <a name="imagemagick"></a> [Image Magick
-    ](http://www.imagemagick.org/)
-    (Open Source free
-    [custom license](http://www.imagemagick.org/script/license.php))
-    is an image display and manipulation tool for the
-    X Window System.
+-   <a name="imagemagick"></a> [Image Magick](http://www.imagemagick.org/)
+    (Open Source free [custom license](http://www.imagemagick.org/script/license.php))
+    is an image display and manipulation tool for the X Window System.
 
     ImageMagick can read and write
     [many format](https://imagemagick.org/script/formats.php#supported) among which:
