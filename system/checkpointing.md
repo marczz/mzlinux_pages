@@ -2,8 +2,6 @@
 title: Checkpointing
 ---
 
-{{% toc /%}}
-
 See also {{< iref "xorg#xpra" "Xpra" >}},
 {{< iref "xorg#winswitch" "Winswitch" >}},
 {{< iref "xterminals" "Terminal emulators" >}}, .
@@ -76,9 +74,12 @@ may be switched between sessions.
 
 -   [GitHub - tmux](https://github.com/tmux/tmux)
 -   [tmux FAQ](https://github.com/tmux/tmux/wiki/FAQ)
--   [tmux crash course](https://robots.thoughtbot.com/a-tmux-crash-course)
--   [Quick and easy guide to tmux](http://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/)) and a few books
--   [The Tao of Tmux](https://leanpub.com/the-tao-of-tmux/read))
+-   [Tactical tmux: The 10 Most Important Commands
+    ](https://danielmiessler.com/study/tmux/) by  Daniel Miessler.
+-   [Quick and easy guide to tmux
+    ](http://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/)
+    by Ham Vocke.
+-   [The Tao of Tmux](https://leanpub.com/the-tao-of-tmux/read) a book
 -   [Awesome tmux](https://github.com/rothgar/awesome-tmux)
     a list of helpful tmux links for various tutorials, plugins, and configuration
     settings.
@@ -125,7 +126,38 @@ may be switched between sessions.
     -   [byobu(1)
         ](http://manpages.debian.org/cgi-bin/man.cgi?query=byobu&format=html&locale=en).
 
+### Tmux themes {#tmux_themes}
+See also {{< iref "desktop#color_themes" Deskto color themes >}}
+
+-   [Dr. Bunsen / The Text Triumvirate (archive)
+    ](https://web.archive.org/web/20200414221857/https://www.drbunsen.org/the-text-triumvirate/)
+-   [tmux themes - awesome-tmux
+    ](https://github.com/rothgar/awesome-tmux#themes)
+-   [tmux-gruvbox](https://github.com/egel/tmux-gruvbox)
+    Gruvbox colorscheme for tmux.
+-   [tmux-powerline-gruvbox-colorscheme
+    ](https://github.com/PetrusZ/tmux-powerline-gruvbox-colorscheme)
+    A gruvbox colorscheme for tmux powerline.
+-   [Nord tmux](https://www.nordtheme.com/ports/tmux) for the
+    {{< iref "desktop#nord-theme" "Nord theme" >}}.
+-   <a name="tmux-solarized"></a>[seebi/tmux-colors-solarized
+    ](https://github.com/seebi/tmux-colors-solarized)
+    theme for tmux using Ethan Schoonover’s Solarized color scheme. It is compatible
+    with tmux plugin manager.
+-   [dracula/tmux](https://github.com/dracula/tmux)
+     the official  {{< iref "desktop#dracula" "Dracula theme" >}} dark theme for tmux.
+-   [tmux-tomorrow](https://github.com/edouard-lopez/tmux-tomorrow)
+    5 flavors of Tomorrow theme _now {{< iref "desktop#base16" "base16" >}}_
+    (i.e. dark/blue and light).
+-   [jimeh/tmux-themepack](https://github.com/jimeh/tmux-themepack)
+    A pack of various Tmux themes.
+-   [odedlaz/tmux-onedark-theme](https://github.com/odedlaz/tmux-onedark-theme)
+    dark tmux color scheme inspired by Atom's One Dark syntax theme.
+-   [charlietag/tmux-themes](https://github.com/charlietag/tmux-themes)
+    an plugin that applying the tmux themes maintened by the author.
+
 ### Tmux addons
+-   [tmux plugins repository](https://github.com/tmux-plugins)
 -   [Battery](https://github.com/Goles/Battery) by Nicolas Goles
     is a little bash script that uses
     [Spark](http://zachholman.com/spark/)
