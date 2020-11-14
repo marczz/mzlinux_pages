@@ -4,7 +4,7 @@ title: Console configuration
 
 ---
 
-See also {{< iref "xorg" "Xorg section" >}},
+See also {{< "booting" "Booting" >}}, {{< iref "xorg" "Xorg section" >}},
 {{< iref "checkpointing" "Checkpointing" >}}.
 
 # References
@@ -257,24 +257,55 @@ simultaneously on all seats.
 
 # Framebuffer terminals {#framebuffer_terminals}
 
-[fbterm](http://code.google.com/p/fbterm/ )(Frame buffer terminal emulator),
-[Archwiki: Fbterm](https://wiki.archlinux.org/index.php/Fbterm)
-is a replacement of Linux console terminal that can function outside
-of Xorg. The development has stopped _there is still a Debian package_.
+-   [fbterm](http://code.google.com/p/fbterm/ )(Frame buffer terminal emulator),
+    is a replacement of Linux console terminal that can function outside
+    of Xorg. The development has stopped _there is still a Debian package_.
+    It uses X libraries to handle TTF fonts.
+    -   [Archwiki: Fbterm](https://wiki.archlinux.org/index.php/Fbterm)
 
 
-[fbpad (git)](http://repo.or.cz/w/fbpad.git),
-[ArchWiki: fbpad](https://wiki.archlinux.org/index.php/Fbpad) is a
-small framebuffer terminal that manages many terminals through single
-character tags. It is exceptionally lightweight,  written in C and
-using its own font format, tinyfont, which avoids xorg font
-dependencies. fbpad optionally supports 256 colors, bold fonts, and
-saving the framebuffer contents to memory.
+-   [fbpad (git)](http://repo.or.cz/w/fbpad.git),
+    is a small framebuffer terminal that manages many terminals through single character
+    tags. It is exceptionally lightweight, written in C and using its own font format,
+    tinyfont, which avoids xorg font dependencies. fbpad optionally supports 256 colors,
+    bold fonts, and saving the framebuffer contents to memory.
+    -   [ArchWiki: fbpad](https://wiki.archlinux.org/index.php/Fbpad)
+    -   _fbpad_ use fonts in a special _tinyfont_ format.
+        The two programs *mkfn_ft* and *mkfn_stb* from the
+        [fbpad_mkfn](https://repo.or.cz/fbpad_mkfn.git) repository convert ttf or stb
+        truetype to The font format for fbpad _tinyfonts_.
 
-[yaft](https://github.com/uobikiemukot/yaft)
-is simple framebuffer terminal emulator.  yaft supports UCS2 glyphs
-including wide character and 256 color.
+-   [yaft](https://github.com/uobikiemukot/yaft)
+    is simple framebuffer terminal emulator.  yaft supports UTF8 and UCS2 glyphs
+    including wide character and 256 color. It hs its own format of fonts, that are
+    created by translating BDF fonts with the provided utility *mkfont_bdf*
 
+-   The [nosh package](https://jdebp.eu/Softwares/nosh/) is a suite of
+    system-level utilities for initializing and running a BSD or Linux system, for managing
+    daemons, for managing terminals, and for managing logging. All the nosh software is
+    also available as Debian packages.
+
+    [User-space virtual terminals
+    ](https://jdebp.eu/Softwares/nosh/user-vt-screenshots.html)
+    are one of the terminal management features of the nosh package.
+
+    [console-terminal-emulator
+    ](https://jdebp.eu/Softwares/nosh/guide/commands/console-terminal-emulator.xml)
+    a userspace virtual terminal aimed at replicating Linux and FreeBSD/PC-BSD kernel
+    virtual terminals.
+
+    For more info look at the [nosh Guide](https://jdebp.eu/Softwares/nosh/guide/).
+
+-  [Bogl Bterm](https://packages.debian.org/sid/bogl-bterm)
+   an a UTF-enabled framebuffer terminal, part of Ben's Own Graphics Library, a small
+   framebuffer library including basic widgets, support for text in multiple languages,
+   and mouse handling. It uses its own bgf font format from fonts created with the
+   _bdftobogl_ utility.
+
+
+-   More references in the excellent summary of this
+    [answer to: How to use /dev/fb0 as a console from userspace
+    ](https://unix.stackexchange.com/questions/20458/how-to-use-dev-fb0-as-a-console-from-userspace-or-output-text-to-it#177209).
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
