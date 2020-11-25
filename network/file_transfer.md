@@ -2,10 +2,8 @@
 title: File Transfer
 ---
 
-{{% toc /%}}
-
-See also {{< iref "backup#synchronization" "Synchronization" >}},
-{{< iref "backup" "Backup" >}},
+See also {{< iref "../system/backup#synchronization" "Synchronization" >}},
+{{< iref "../system/backup" "Backup" >}},
 {{< iref "p2p#p2p_file_sharing" "P2P file sharing software" >}},
 {{< iref "clouds#temporary_storage" "Temporary storage" >}}.
 
