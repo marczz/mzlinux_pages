@@ -96,7 +96,7 @@ With {{< man "qdbus+1"  "qdbus" >}}
 -   [Bustle
     ](http://www.willthompson.co.uk/bustle/)
 
-# Dbus Notification
+# Dbus Notification {#dbus_notification}
 -   [ArchWiki Desktop notifications
     ](https://wiki.archlinux.org/index.php/Desktop_notifications)
     explain how to display desktop notifications and information, with
@@ -113,7 +113,7 @@ With {{< man "qdbus+1"  "qdbus" >}}
 -   _notification daemon_ is the standard gnome a daemon to display
     passive notifications, it binds to gtk3 libraries and takes 14.6M
     resident/9.6M shared
--   [dunst](http://www.knopwob.org/dunst/) (BSD License) is a
+-   <a name="dunst"></a>[dunst](http://www.knopwob.org/dunst/) (BSD License) is a
     lightweight notification daemons for desktop notifications.  Dunst
     is designed to fit nicely into minimalistic windowmanagers, and
     has minimal dependencies. It takes only 3.3M resident with 2.7M
@@ -128,6 +128,9 @@ With {{< man "qdbus+1"  "qdbus" >}}
 -   [statnot](https://github.com/halhen/statnot) (GPL)
     is a notification-daemon replacement for lightweight window
     managers written in python/gtk.
+-   <a name="mako"></a>[emersion/mako](https://github.com/emersion/mako)
+    (MIT License)
+    A lightweight Wayland notification daemon
 -   [twmn](https://github.com/sboli/twmn)
     is a notification system for tiling window managers build in
     C++/QT.  Notifications are shown in a one-line bar called the
