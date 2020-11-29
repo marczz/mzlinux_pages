@@ -2,8 +2,6 @@
 title: Linux Distributions
 ---
 
-{{% toc /%}}
-
 See also the  {{< iref "lightweight_distributions" "Lightweight Linuxes" >}} section.
 
 A full state of distributions is given in
@@ -177,15 +175,64 @@ allows to create your own customized Debian Live system.
 -   [Fedora](https://getfedora.org/)
 -   [Dag Wierrs Apt and Yum repository](http://dag.wieers.com/rpm/)
 
+# NiX
+{{< wp "Nix package manager" >}} utilizes a purely functional deployment model where
+software is installed into unique directories generated through cryptographic hashes, it
+is also the name of the programming language.
+
+{{< wp "NixOx" >}} is a Linux distribution built on top of the Nix package manager.
+
+-   [NixOS - NixOS Linux](https://nixos.org/)
+-   [NixOS - Learn Guides ](https://nixos.org/learn.html#learn-guides):
+    -   [Install Nix](https://nixos.org/guides/install-nix.html)
+    -   [Ad hoc developer environments
+        ](https://nixos.org/guides/ad-hoc-developer-environments.html)
+    -   [Declarative and reproducible developer environments
+        ](https://nixos.org/guides/declarative-and-reproducible-developer-environments.html)
+    -   [Setup a development environment
+        ](https://nixos.org/guides/dev-environment.html)
+    -   [Towards reproducibility: Pinning nixpkgs
+        ](https://nixos.org/guides/towards-reproducibility-pinning-nixpkgs.html)
+    -   [Continuous Integration with GitHub Actions
+        ](https://nixos.org/guides/continuous-integration-github-actions.html)
+    -   [Building and running Docker images
+        ](https://nixos.org/guides/building-and-running-docker-images.html)
+-   [nix.dev documentation](https://nix.dev/) provides the previous tutorials and
+    -   [getting-started-nix-template](https://github.com/nix-dot-dev/getting-started-nix-template)
+        Based on nix.dev tutorials, repository template to get you started with Nix.
+    -   [Anti-patterns](https://nix.dev/anti-patterns/index.html),
+        [Nix language](https://nix.dev/anti-patterns/language.html)
+    -   [Pinning Nixpkgs](https://nix.dev/reference/pinning-nixpkgs.html)
+    -   [Frequently Asked Questions](https://nix.dev/faq.html)
+        ( [Nix](https://nix.dev/faq.html#nix),
+        [NixOS](https://nix.dev/faq.html#nixos) )
+
+-   [Nix manual](https://nixos.org/manual/nix/stable/#chap-package-management)
+-   [Nixpkgs Manual](https://nixos.org/manual/nixpkgs/stable)
+-   [NixOS Manual](https://nixos.org/manual/nixos/stable)
+-   [Nix Pills](https://nixos.org/guides/nix-pills/pr01.html)
+    is a a series of blog posts written by Luca Bruno (aka Lethalman).
+    It provides a tutorial introduction into Nix  and Nixpkgs package collection,
+    in the form of short chapters called _pills_.
+-   [nix-shorts](https://github.com/justinwoo/nix-shorts)
+    A collection of short notes about Nix.
+    -   [posts folder](https://github.com/justinwoo/nix-shorts/tree/master/posts)
+
+
+-   [Nix - GitHub](https://github.com/NixOS/nix)
+-   [NixOS Discourse - NixOS community forum](https://discourse.nixos.org/)
+
+-   [Cachix](https://cachix.org/)  Nix binary cache hosting, with Continuous Integration
+    support.
+    Hosted instance with 10 GB free storage for open source projects.
+-   [Cachix docs](https://docs.cachix.org/index.html)
+-   [cachix - GitHub.](https://github.com/cachix/cachix) (Apache-2.0)
+    is written in haskell.
+
 # minor dists
 
 -   {{< wp "Solus" >}} is a desktop operating system based on the Linux kernel.
     -   [Solus Home](https://solus-project.com/)
--   [NixOs](https://nixos.org/)
-    is a Linux distribution built on top of the
-    [Nix package manager](https://nixos.org/nix/). NixOS currently
-    runs on 32-bit and 64-bit x86 machines , and experimentally on
-    ARM.
 -   [OpenPKG](http://www.openpkg.org/) not a distribution, but an
     alternate packaging system.
 
