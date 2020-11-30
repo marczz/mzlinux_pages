@@ -105,6 +105,15 @@ _but you are free to use an other one_.
     be configured from a GUI preferences dialog, and has theming support via custom
     gtkrc file.
 
+## LXQt {#lxqt}
+LXQt was started by the author of LXDE to replace it; so all development take place on
+LXQt project since 2013. It is a merge of LXDE an Razor-Qt. It is composed by many
+applications written in Qt-5 and will gradually become compatible with Wayland.
+
+-   Wikipedia: {{< wp "LXQt" >}} _look here for the application list._
+-   [LXQt Home](https://lxqt-project.org/).
+-   [LXQt - GitHub](https://github.com/lxqt)
+
 # Window managers {#window_manager}
 
 See also the the
@@ -264,7 +273,26 @@ There is also a [Tutorial index
     a tiny (1.3M rsz) and fully functional wm
         [Doc App Warehouse](http://www.bensinclair.com/dockapp/).
 
-## i3 {#i3_wm}
+## Wayland enabled compositors
+-   [List of Wayland compositors - ArchWiki
+    ](https://wiki.archlinux.org/index.php/Wayland#Compositors)
+-   [Greenfield](https://github.com/udevbe/greenfield) (AGPL-3.0)
+    an HTML5 Wayland compositor. a Wayland compositor written entirely in TypeScript
+    while utilizing WebAssembly and WebGL for the performance critical parts. It can run
+    native Wayland applications remotely, or it can run Wayland web applications
+    directly in your browser.
+    -   [Greenfield Documentations](https://greenfield.app/docs/)
+-   [weston](https://gitlab.freedesktop.org/wayland/weston)
+    Weston is the reference implementation of a Wayland compositor.
+    -   [Weston Gitlab repository](https://gitlab.freedesktop.org/wayland/weston)
+    -   [Weston - ArchWiki](https://wiki.archlinux.org/index.php/Weston)
+    -   [Building and Running Weston - Freedesktop
+        ](https://wayland.freedesktop.org/building.html)
+    -   [wlroots](https://github.com/swaywm/wlroots)
+        A modular Wayland compositor library, on wich are based numerous compositors
+        including Weston.
+
+## i3 and sway {#i3_wm}
 
 [i3](http://i3wm.org/) (BSD Licence) is a tiling window manager
 written in C. It is ewmh compliant. I3 has a dynamic switching to
@@ -291,9 +319,6 @@ floating, on an individual window base.
         your own.
 -   [i3 doc](https://github.com/i3/i3/tree/next/docs) contain tools,
     the userguide, the refcard &#x2026;
--   [Sway](https://swaywm.org/) is a tiling Wayland compositor and a drop-in replacement
-    for the i3 window manager for X11. It works with your existing i3 configuration.
-    -   [Sway - ArchWiki](https://wiki.archlinux.org/index.php/Sway)
 
 The window manager alone uses 5.9M/4.8M, the i3bar 5M/4.2M, i3status
 1.6M/1.3M.
@@ -302,6 +327,16 @@ We can use [i3blocks](https://github.com/vivien/i3blocks)
 to replace _i3status_  With the standard configuration which
 mimic i3status _i3blocks_ has a memory footprint of 0.7M/0.5M to
 which are temporarily added the called programs to update status.
+
+### Sway {#sway}
+[Sway](https://swaywm.org/) (MIT License)
+is a tiling Wayland compositor and a drop-in replacement for the i3 window manager for
+X11. It can works with your existing i3 configuration, but need some adjustement to
+be fully functional
+-   [Sway Wiki](https://github.com/swaywm/sway/wiki).
+-   [Sway - ArchWiki](https://wiki.archlinux.org/index.php/Sway).
+-   [dotfiles with a Nord theme for sway](https://github.com/nboughton/dotfiles)
+
 
 ### i3 tools and scripts
 -   [i3status](http://i3wm.org/i3status/manpage.html) (BSD Licence)
@@ -314,6 +349,10 @@ which are temporarily added the called programs to update status.
         ](http://i3pystatus.readthedocs.io/en/latest/)
 -   {{< iref "#j4status" "j4status" >}} below is an alternative
     to _i3-status_;
+-   [i3lock-color](https://github.com/Raymo111/i3lock-color) a color fork of the
+    [i3lock](https://github.com/i3/i3lock) lockscreen for i3.
+    -   [i3lock-solarized](https://github.com/parsiad/i3lock-solarized)
+        Solarized theme for i3lock-color.
 -   [GitHub: i3-py](https://github.com/ziberna/i3-py)
     contains python tools for i3. No new commit since 2012 there are many forks, but
     nobody seems to maintain the repository.<br /> The script _winmenu.py_ launches
@@ -337,8 +376,60 @@ which are temporarily added the called programs to update status.
         the list.
 -   [GitHub: i3-emacs](https://github.com/vava/i3-emacs) is an emacs
     package for i3-emacs integration.
+-   [open-dynaMIX/raiseorlaunch](https://github.com/open-dynaMIX/raiseorlaunch)
+    A run-or-raise-application-launcher for i3 window manager.
+
+### tools for both sway and i3
+-   [i3keys](https://github.com/RasmusLindroth/i3keys) (MIT License)
+    lists all the keys that are bound to some action in i3 or sway,
+    You can see the results in three ways. By opening a local web page, output the
+    keyboards as text in the terminal or generate SVG files.
+
+### sway tools
+All wayland tools which accept _wlroots_ based compositors, work with sway, you find
+them below in the{{< iref "wayland_desktop_components" "Wayland destop components" >}}.
+
+See also the menu tools _bemenu_, _wofi_, _rofi wayland fork_ below.
+
+-   [swaybg](https://github.com/swaywm/swaybg)
+    is the Wallpaper tool for Wayland compositors provided by sway. It is in Debian and
+    the package _sway-backgrounds_ contains the backgrounds provided with sway.
+-   [swayidle](https://github.com/swaywm/swayidle) (MIT LIcense)
+    Idle management daemon for Wayland. It allows to monitor user idle time and notifies
+    when user activity resumes. This is useful for chat applications setting user away,
+    power management features to dim screen, etc.. _In Debian._
+-   [swaylock](https://github.com/swaywm/swaylock) (MIT License)
+    Screen locker for Wayland. _In Debian._
+
+### i3/sway themes
+I3  and sway are themables, but it is configured in _config_ so not easy to switch.
+You can find in the {{< iref "#color_theme" "color theme section" >}}
+themes like
+
+-   [a-schaefers/i3-wm-gruvbox-theme
+    ](https://github.com/a-schaefers/i3-wm-gruvbox-theme)
+    An i3-wm gruvbox theme implementation.
+-   [dracula/i3](https://github.com/dracula/i3)  Dark theme for i3.
+-   [lighthaus-theme/i3](https://github.com/lighthaus-theme/i3),
+    A Lighthaus theme for i3.
+-   [Online i3wm Theme Maker](http://i3designer.aoeu.xyz/)
+-   [Online Colorscheme Configurator for i3, i3status, dmenu
+    ](https://thomashunter.name/i3-configurator/)
+
+Some script are helping to manage i3 themes.
 -   [j4-make-config](https://github.com/okraits/j4-make-config)
-    is a theme switcher and config generator for i3.
+    is python a theme switcher and config generator for i3.
+    It has a fork
+    [D-Vaillant/j4-make-config](https://github.com/D-Vaillant/j4-make-config)
+-   [i3-style](https://github.com/altdesktop/i3-style)
+    a rust program which applies a theme to your i3 config file to change the
+    colorscheme of the window decorations and the different parts of i3bar.
+-   [i3wm-themer](https://github.com/unix121/i3wm-themer)
+    Theme collection manager for i3-wm.
+-   [raven](https://git.sr.ht/~nicohman/raven)
+    A rust theme manager for linux, currently focusing on i3. Supports multiple different
+    configuration files.
+    -   [raven wiki](https://man.sr.ht/~nicohman/raven).
 
 ## Openbox {#openbox}
 
@@ -359,7 +450,7 @@ OpenBox use 10M resident memory including 5.5M shared.
     [Urukrama Web Log](http://urukrama.wordpress.com/)
 -   man pages: {{< man "openbox(1)" >}}, {{< man "openbox-session(1)" >}}
 
-## Fluxbox
+## Fluxbox {#fluxbox}
 
 [fluxbox](http://fluxbox.org/) (MIT license) is a small (5.8M resident
 4.4M shared) fast and highly configurable window manager, with root
@@ -371,7 +462,7 @@ fork of [Blackbox](http://blackboxwm.sf.net/) and share with it some
 
 Fluxbox doesn't
 depends on a specific toolkit and does not use any windowing toolkit
-(no gtk/Qt binding) but can be used with any Freedesktop compliant
+(no gtk/Qt binding) but can be used with any Freedesktop X11 compliant
 desktop; as the main program contain everything needed for a window
 manager, you have not to use any add-on like systray or panel, it
 makes fluxbox one of the lighter window manager. If you need to
@@ -503,73 +594,144 @@ These are the most common keyboard shortcuts used in icewm to make your life eas
 See also the {{< iref "xorg#wayland" "Wayland Section" >}},
 {{< iref "xterminals#wayland_terminals" "Wayland Terminals" >}}.
 
+-   [dwl](https://github.com/djpohly/dwl) (GPL-3)
+    dwm clone for Wayland based on wlroots, an hackable compositor.
+
+
 -   [Enlightenment](https://en.wikipedia.org/wiki/Enlightenment_(software)) (BSD
     License) is a compositing window manager for Xorg or a  since version 20 a Wayland
     compositor.
     -   [Enlightenment Home](https://www.enlightenment.org/)
+-   [Mutter](https://gitlab.gnome.org/GNOME/mutter) (GPL-2)
+    A Wayland display server and X11 window manager for Gnome used by Gnome-Shell.
 
-## Wayland destop components
+    When used as a Wayland display server, it runs on top of KMS and libinput. It
+    implements the compositor side of the Wayland core protocol as well as various
+    protocol extensions. It also has functionality related to running X11 applications
+    using Xwayland.
+
+    When used on top of Xorg it acts as a X11 window manager and compositing manager.
+-   [Wayfire](https://wayfire.org/) (MIT License)
+    a wayland compositor based on wlroots.
+    -   [Wayfire - GitHub](https://github.com/WayfireWM/wayfire)
+        The [WayfireWM - GitHub repository ](https://github.com/WayfireWM/)
+        contains also many composants for wayfire, _wf-shell_ a GTK3-based panel for
+        wayfire,  _wf-config_ a library for managing configuration files,
+        _wcm_ Wayfire Config Manager, _wf-utils_ utility classes for Wayfire,
+        _wf-touch_ touchscreen gesture library, _wf-osk_ on-screen keyboard using gtkmm.
+
+## Wayland destop components {#wayland_desktop_components}
+   [grim](https://github.com/emersion/grim) (MIT Licence)
+    Grab images from a Wayland compositor. Works with slurp and with sway.
+-   [kanshi](https://github.com/emersion/kanshi) (MIT License)
+    Dynamic display configuration for wayland compositors. Kanshi allows you to define
+    output profiles that are automatically enabled and disabled on hotplug. _in Debian._
+-   [slurp](https://github.com/emersion/slurp) (MIT License)
+    Select a region in a Wayland compositor. Used by _grim_. _In Debian._
 -   [imv](https://github.com/eXeC64/imv) is an image viewer for X11/Wayland.
-
+-   [wev](https://git.sr.ht/~sircmpwn/wev)
+    wayland event viewer analagous to the X11 tool xev.
+-   [wshowkeys](https://git.sr.ht/~sircmpwn/wshowkeys)
+    Displays keypresses on screen on supported Wayland compositors.
+-   [wf-recorder](https://github.com/ammen99/wf-recorder)
+    screen recorder for wlroots based compositors. _in Debian._
+-   [wdisplays](https://github.com/cyclopsian/wdisplays) (GPL-3.0)
+    GUI display configurator for wlroots compositors. _In Debian._
+-   [wlr-randr](https://github.com/emersion/wlr-randr)
+    An xrandr clone for wlroots compositors. _in Debian_.
 
 # Desktop components {#desktop_components}
 ## Color Themes {#color_themes}
 
 See also {{< iref "emacs#emacs_themes" "Emacs Themes" >}}.
--   [base16](https://github.com/chriskempson/base16)
+
+-   <a name="base16"></a>[base16](https://github.com/chriskempson/base16)
     by Chris Kempson is the improvement of
     [tomorrow-theme](https://github.com/chriskempson/tomorrow-theme)
-    it is very actively maintained
-    It has color schemes for:
-    _vim_, _shell_ (_bash_, _zsh_), _Xressources_, _XFCE4 Terminal_, _gimp_,
-    _mate terminal_, _gnome terminal_, _emacs_, _zathura_ and _mac os_ apps.
--   [nord](https://github.com/arcticicestudio/nord) is an arctic, north-bluish color
-    palette.
+    it is very actively maintained It has color schemes for:
+     _Xressources_, _i3_, _XFCE4 Terminal_, _mate terminal_, _termite_, _gnome
+     terminal_, _alacritty_, _shell_ (_bash_, _zsh_), _vim_, _emacs_, _gimp_, _dunst_,
+     _zathura_, _rofi_, _st_, and _mac os_ apps.
+-   <a name="dracula"></a>[Dracula](https://draculatheme.com/) is a dark theme
+    for a lot of apps (135!) including vim, zsh, emacs, gnome-terminal, alacritty,
+    chrome, gitk, firefox, i3, rofi, termite, gtk, zathura, and many windows or OS X
+    applications.
+-   <a name="gruvbox"></a>[Gruvbox](https://github.com/morhetz/gruvbox-contrib)
+    group ports on many application of the original
+    [gruvbox vim theme](https://github.com/morhetz/gruvbox); a theme inspired by
+    badwolf, jellybeans and solarized. It has a dark and light mode and covers many apps
+    including xresources, shell, awesome wm, i3 wm, i3 status, conky,rofi,
+    {{< iref "tmux#tmux_themes" "tmux" >}}  st, alacritty, emacs.
+-   [lighthaus](https://github.com/lighthaus-theme/lighthaus)
+    A focused dark color lighthouse inspired color scheme.  It supports alacritty,
+    Dunst, bottom system monitor, gnome-terminal, i3, iTerm, Kitty, Konsole, rofi,
+    terminator, termite, termux, tilix, vim, vim-airline status bar, xfce-terminal,
+    xresources, zathura, zsh.
+-   <a name="nord-theme"></a>[nord](https://github.com/arcticicestudio/nord)
+    is an arctic, north-bluish color palette. It provides four palettes,
+    but it seems that all port are using a dark one, and the light one
+    is [delayed to a far future
+    ](https://github.com/arcticicestudio/nord/issues/46#issuecomment-661675957).
     -   [Nord Home](https://www.nordtheme.com)
     -   [nord vim](https://github.com/arcticicestudio/nord-vim)
     -   [nord tmux](https://github.com/arcticicestudio/nord-tmux)
+    -   [nord emacs](https://github.com/arcticicestudio/nord-emacs)
+    -   {{< iref "xterminal#st" "st" >}} color patch
+        [nordtheme](https://st.suckless.org/patches/nordtheme/).
+    -   [mtyn/polar](https://github.com/mtyn/polar)
+        is a light colour scheme based on Nord.
 -   [Solarized](http://ethanschoonover.com/solarized)
-    is a sixteen color palette for vim, Xresources, emacs,  mutt,
-    GIMP Palette; and some Mac OS apps. It is also
-    [ported to gnome-terminal
-    ](https://github.com/Anthony25/gnome-terminal-colors-solarized)
-    which can easily be also adapted to roxterm.
+    is a sixteen color palette. The same palette is used for dark or light themes. There
+    are ports to vim, Xresources, emacs,  mutt,
+    {{< iref "tmux#tmux_themes" "tmux" >}}, GIMP Palette; and some Mac OS apps. It is
+    also [ported to gnome-terminal
+    ](https://github.com/Anthony25/gnome-terminal-colors-solarized).
 -   [Smyck](https://github.com/hukl/Smyck-Color-Scheme),
     [Smyck Home](http://color.smyck.org/)
     is no longer updated since 2012, but has many forks.
     The ariejan fork has a [color scheme for roxterm
     ](https://github.com/ariejan/Smyck-Color-Scheme/tree/roxterm)
 -   [Zenburn](http://sysphere.org/~anrxc/j/articles/zenburn/index.html)
-    by [anrxc](http://sysphere.org/~anrxc/)
+    by [anrxc](http://sysphere.org/~anrxc/) are ports of the
+    [Zenburn vim theme](https://github.com/jnurmine/Zenburn). It
     has scheme for [awsome](http://awesome.naquadah.org/wiki/Zenburn_Theme),
-    console, _Gajim_, _pidgin_, _emacs_, X apps thru
-    _.Xdefaults _, [roxterm theme
+    console, _Gajim_, _pidgin_, _emacs_, X apps thru _.Xdefaults _, [roxterm theme
     ](http://git.sysphere.org/dotfiles/tree/config/roxtnerm.sourceforge.net/Colours/Zenburn).
 
 -   There are many web applications to help to configure color themes
-    [256 colors - cheat sheet](https://jonasjacek.github.io/colors/),
-    [terminal sexy](http://terminal.sexy/),
-    [4bit Terminal Color Scheme Designer
-    ](http://ciembor.github.io/4bit/),
-    [colorschemedesigner](http://colorschemedesigner.com/csd-3.5/),
-    [The 28 best tools for choosing a colour scheme (2014)
+    -   [256 colors - cheat sheet](https://jonasjacek.github.io/colors/),
+    -   [4bit Terminal Color Scheme Designer](http://ciembor.github.io/4bit/)
+        can export to Xresources, gnome terminal, and many other terminals.
+    -   [colorschemedesigner](http://colorschemedesigner.com/csd-3.5/), Export to
+        text, HTML+CSS, XML.
+    -   [terminal sexy](http://terminal.sexy/) ,
+        [terminal sexy GitHub repository](https://github.com/stayradiated/terminal.sexy)
+        can export to many formats using the
+        [termcolor library](https://github.com/stayradiated/termcolors) including
+        Xresources, st, linux console, gnome ...
+    -   [The 28 best tools for choosing a colour scheme (2014)
     ](http://www.creativebloq.com/colour/tools-colour-schemes-12121430).
 -   For bash you can look at [ArchLinux: Color Bash Prompt
     ](https://wiki.archlinux.org/index.php/Color_Bash_Prompt)
 
 ## Panels {#panels}
+The distinction between taskbar, panel, and status bar is not clear, as some status bar
+offer menus, system tray, launcher, volume-control ... On the other side panels can also
+display the status. So you should also look at the
+{{< iref "#status_bar" "status bar section" >}}.
 
-Most window managers provide their own panel, only some small/micro manager use an
-external one.
+
+Many window managers provide their own panel, some window manager other mostly the lean
+ones let the user choose an external one.
 
 -   _aewm++-fspanel_ (MIT) is a minimal panel developped with aewm++, but it
     does not depend on iT. It is in the debian package aewm++-goodies.
--   [fbpanel](http://fbpanel.sourceforge.net/) (GPL)
-    FBPanel is a spinoff of the fspanel written -n c/GTK+.
+-   [fbpanel](https://github.com/aanatoly/fbpanel) (GPL)
+    FBPanel is a spinoff of the fspanel written in C/GTK-2
     It provides a taskbar (list of all opened windows), pager, desktop switcher,
     launchbar, clock, and more through plugins is EWMH/NETWM
-    compliant. _available in Debian_
-    -   [fbpanel configuration](http://fbpanel.sourceforge.net/docs.html)
+    compliant. Last commit 2015, but there are more recent fork _ available in Debian_
+    -   [fbpanel configuration](http://aanatoly.github.io/fbpanel/docs.html)
 -   _Fspanel_ (GPL)
     works with EWMH compliant WMs. _available in Debian_
 -   _Hpanel_ is a fork of _fspanel_ to better handle maximized windows.
@@ -580,6 +742,8 @@ external one.
     It is based on Peter Zelzny's _fspanel_ and is available in Debian.
 -   [LXPanel](http://lxde.org) is the  GTK+2 desktop panel for lxde, it
     has minimal gtk2 dependencies.
+-   [lxqt-panel](https://github.com/lxqt/lxqt-panel)
+    is the {{< iref "#lxqt" "LxQt" >}} panel.
 -   [pypanel](http://pypanel.sourceforge.net/) (GPLv2)
     is a lightweight panel/taskbar written in Python and C
     it works with EWMH compliant WMs (Openbox, PekWM, FVWM, etc.)
@@ -592,6 +756,33 @@ external one.
     -   [tintwizard](http://code.google.com/p/tintwizard/) is a theme
         switcher for tint2.
     -   [ArchWiki: tint2](https://wiki.archlinux.org/index.php/Tint2)
+
+## Status Bar {#status_bar}
+Most window manager have their own status bar and a status generation
+programs or scripts, like _i3bar_ with _i3status_ or _i3blocks_.
+But some alternative status are window manager independant.
+
+-   <a name="j4status"></a>[j4status](http://j4status.j4tools.org/) (GPL)
+    is an alternative to _i3-status_ but it is available on any tiling wm.  It
+    provides a status line using several plugins to retrieve system information.
+    -   [j4status-plugins
+        ](https://j4status.j4tools.org/j4status-plugins/)
+        add plugins for _alsa_, _mpris_, filesystem, cpu and memory usage, backlight
+        percentage, i3 focus, _networkmanager_, and an inotify plugein to _j4status_.
+-   <a name="lemonbar"></a>[lemonbar](https://github.com/LemonBoy/bar) (MIT License)
+    is a lightweight bar based on XCB. It provides foreground/background color switching
+    along with text alignment and colored under/overlining of text, full utf8 support
+    and reduced memory footprint.
+-   [xmobar](http://projects.haskell.org/xmobar/)
+    written in haskell, is a lightweight, text-based, status.  It was originally
+    designed to work with xmonad, but it's actually usable with any window-manager. It
+    is in Debian.  It can be used for _conky_ or _i3status_ output.
+    -   [ArchWiki xmobar](https://wiki.archlinux.org/index.php/Xmobar)
+-   <a name="yabar"></a>[Yabar](https://github.com/geommer/yabar) (MIT License)
+    is a lightweight status bar for X window managers. _Yabar_ is in debian.
+-   [yambar](https://codeberg.org/dnkl/yambar) (MIT License)
+    Modular status panel for X11 and Wayland, inspired by
+    [polybar](https://github.com/jaagr/polybar).
 
 ## Menu system
 ### menus from shell
@@ -620,31 +811,58 @@ the suckless-tools package in Debian.
     dmenu_edit, dmenu_menu, dmenu_mpc, dmenu_netctl, dmenu_raise, dmenu_raise_or_run,
     dmenu_run_recent.
 
+### Rofi {#Rofi}
+[Rofi](https://davedavenport.github.io/rofi/) (MIT License)
+is a popup window switcher requiring only xlib and pango.
+Rofi can act as a drop-in dmenu replacement and provides
+extra features, like a run-dialog, ssh-launcher, ....
+Rofi is written by Dave Davenport alias _Qball_ it is in Debian.
+-    [GitHub - DaveDavenport/rofi
+    ](https://github.com/DaveDavenport/rofi)
+-    [Rofi - manpage](https://github.com/DaveDavenport/rofi/blob/master/doc/rofi.1.markdown),
+-    [Rofi wiki](https://github.com/DaveDavenport/rofi/wiki).
+-    [Rofi scripts index](https://github.com/davatorium/rofi/wiki/User-scripts)
+-    [reddit - Qball tools forum](https://reddit.com/r/qtools/)
+
+
 ### dmenu alternatives
--   [bemenu](https://github.com/Cloudef/bemenu) (GPLv3 and LGPLv3)
-    is an dynamic menu library and client program inspired by dmenu.
-    -   [bemenu API documentation](http://cloudef.pw/bemenu/).
 -   You find {{< iref "#lemonbar" "lemonbar" >}} in the status bar section.
 -   [pdmenu](https://joeyh.name/code/pdmenu/) full screen console
     menuing system for Unix.
--   <a name="rofi"></a>[Rofi](https://davedavenport.github.io/rofi/) (MIT License)
-    A popup window switcher requiring only xlib and pango.
-    Rofi can act as a drop-in dmenu replacement and provides
-    extra features, like a run-dialog, ssh-launcher, ....
-    Rofi is written by Dave Davenport alias _Qball_ it is in Debian.
-    -    [GitHub - DaveDavenport/rofi
-        ](https://github.com/DaveDavenport/rofi)
-    -    [Rofi - manpage](https://github.com/DaveDavenport/rofi/blob/master/doc/rofi.1.markdown),
-    -    [Rofi wiki](https://github.com/DaveDavenport/rofi/wiki),
-    -    [reddit - Qball tools forum](https://reddit.com/r/qtools/)
 -   {{< iref "#yabar" "yabar" >}} in the status bar section.
+
+### wayland dmenu/rofi alternatives
+-   [bemenu](https://github.com/Cloudef/bemenu) (GPLv3 and LGPLv3)
+    is an dynamic menu library and client program inspired by dmenu.
+    It has a ncurses, x11, and wayland backend.
+    You can use it with {{< iref "#j4-menu-desktop" "j4-menu-desktop" >}} for a desktop
+    files menu.
+    -   [bemenu API documentation](http://cloudef.pw/bemenu/).
+-   [dmenu-wl](https://github.com/nyyManni/dmenu-wayland) (MIT License)
+    dmenu for wayland (wlroots) compositors.
+-   [lbonn/rofi](https://github.com/lbonn/rofi) (MIT License)
+    a rofi fork with wayland support.
+-   [wofi](https://hg.sr.ht/~scoopta/wofi) (GPL-3.0)
+    a launcher/menu program for wlroots based wayland compositors such as sway.
+    The documentation is in the man pages. There are packages for most distribution
+    including Debian.
+    -   [wofi-scripts](https://github.com/tobiaspc/wofi-scripts)
+        Scripts for wofi, Window switcher and SSH session launcher.
+    -   [dracula/wofi](https://github.com/dracula/wofi) (MIT License)
+        Dark {{< iref "#dracula" "Dracula" >}} theme for wofi.
+    -   [sachahjkl/wofi-arc-dark](https://github.com/sachahjkl/wofi-arc-dark)
+        : A stylesheet recreating the arc-dark theme for wofi.
+-   [sgtk-menu](https://github.com/nwg-piotr/sgtk-menu) (GPL-3.0)
+    Python GTK launchers for sway & other WMs w/ menu, dmenu, application grid and button bar.
+    There is also a C++ version
+    [nwg-launchers](https://github.com/nwg-piotr/nwg-launchers) (GPL-3.0).
 
 ### Dzen {#dzen}
 [Dzen](https://github.com/robm/dzen) (MIT License)
-is a notification and menuing program for X11 rhat requires only X11.  It is designed to
-be scriptable in any language and integrate well with light window managers.  A _dzen_
+is a notification and menuing program for X11 that requires only X11.  It is designed to
+be scriptable in any language and integrate well with light window managers. A _dzen_
 daemon takes only 1.5M res/1.1M shr. It is no more developed since 2013,
-[nezd](https://github.com/telser/nezd) is a fork of dzen.
+[nezd](https://github.com/telser/nezd) is a fork of dzen _2019_.
 
 _dzen2_ is in Debian.
 
@@ -727,32 +945,10 @@ The python programs use
     xdg information, by scanning *.desktop files. It can generate menus for Fluxbox,
     IceWM, jwm, pekwm, Window Maker.
 
-## Status Line {#status_line}
-Most window manager have their own status bar and a status generation
-programs or scripts, like _i3bar_ with _i3status_ or _i3blocks_.
-But some alternative status are window manager independant.
-
--   <a name="j4status"></a>[j4status](http://j4status.j4tools.org/) (GPL)
-    is an alternative to _i3-status_ but it is available on any tiling wm.  It
-    provides a status line using several plugins to retrieve system information.
-    -   [j4status-plugins
-        ](https://j4status.j4tools.org/j4status-plugins/)
-        add plugins for _alsa_, _mpris_, filesystem, cpu and memory usage, backlight
-        percentage, i3 focus, _networkmanager_, and an inotify plugein to _j4status_.
--   <a name="lemonbar"></a>[lemonbar](https://github.com/LemonBoy/bar) (MIT License)
-    is a lightweight bar based on XCB. It provides foreground/background color switching
-    along with text alignment and colored under/overlining of text, full utf8 support
-    and reduced memory footprint.
--   [xmobar](http://projects.haskell.org/xmobar/)
-    written in haskell, is a lightweight, text-based, status.  It was originally
-    designed to work with xmonad, but it's actually usable with any window-manager. It
-    is in Debian.  It can be used for _conky_ or _i3status_ output.
-    -   [ArchWiki xmobar](https://wiki.archlinux.org/index.php/Xmobar)
--   <a name="yabar"></a>[Yabar](https://github.com/geommer/yabar) (MIT License)
-    (MIT License)
-    is a lightweight status bar for X window managers.
-    _Yabar_ is in debian.
-
+### Other Menus
+#### Wayland
+-   [wlogout](https://github.com/ArtsyMacaw/wlogout)
+    A wayland based logout menu in GTK+.
 
 ## Launchers  {#launch_bars}
 Launchers are also named _taskbar_, _launchbar_, _dock_ ....
@@ -871,7 +1067,8 @@ selection, not they use the clipboard.
     ](http://standards.freedesktop.org/clipboards-spec/clipboards-latest.txt)
     present the use and recommendations for the three selections.
 -   [ArchWiki: Clipboard
-    ](https://wiki.archlinux.org/index.php/Clipboard)
+    ](https://wiki.archlinux.org/index.php/Clipboard) gives a list of
+    [clipboard managers](https://wiki.archlinux.org/index.php/Clipboard#Managers).
 
 The X11 applications  provide some tools to deal
 with the selections
@@ -900,7 +1097,7 @@ data among computers or mobile platforms like
 You can also use any {{< iref "clouds#pastebin" "pastebin" >}}.
 
 
-Some newer command line to manage selection:
+Some newer command line apps to manage selection:
 
 -   [autocutsel](http://www.nongnu.org/autocutsel/).
     synchronize the three selectionS; _in debian_.
@@ -914,8 +1111,7 @@ Some newer command line to manage selection:
     directory, and call dmenu to select one.
 -   [xclip](http://sourceforge.net/projects/xclip/)
     is a command line interface to X selections. It is in Debian.
--   <a name="xsel"></a>[XSel
-    ](http://www.vergenet.net/~conrad/software/xsel/)
+-   <a name="xsel"></a>[XSel](http://www.vergenet.net/~conrad/software/xsel/)
     is a command-line program for getting and setting the contents of
     the X selection; by default  operates on the _primary_ selection,
     but you can also specify the _secondary_ or _clipboard_.
@@ -942,28 +1138,29 @@ There are also many clipboard managers:
     It can also be used from the command line.
     Clipit has preferences to manage _CLIPBOARD_ and _PRIMARY_
     selections and synchronize them.
-    Memory footprints: 19M res/ 17M shr or 25M / 21M. Clipit is in Debian.
+    Memory footprints: 19M res/ 17M shr or 25M / 21M. _Clipit is in Debian._
 -   [CopyQ](https://github.com/hluk/CopyQ)
     is a C++/QT  clipboard manager with editing, scripting and a
-    command-line interface. It is in Debian, along with a
-    _copyq-plugins_ package.
+    command-line interface. _It is in Debian, along with a
+    copyq-plugins package._
 -   [Diodon](https://launchpad.net/diodon)
     is a vala clipboard manager for Gnome/Unity.
     It seems to have a big list of dependencies, when we don't use
-    these full desktop software. It is in Debian.
+    these full desktop software. _It is in Debian._
 -   [Glipper](https://launchpad.net/glipper)
     is a python clipboardmanager for Gnome,  Glipper appears in the
     notification area, it uses app indicator
     _seem abandoned since 2012 but still in debian stretch_.
 -   [gpaste](https://github.com/Keruspe/GPaste)
     is a clipboard management system for Gnome. in Debian.
--   {{< wp "Glipper" >}} is a clipboard utility for Gnome. _in debian_.
+-   {{< wp "Glipper" >}} is a clipboard utility for Gnome. _in Debian_.
 -   [Parcellite](https://github.com/rickyrockrat/parcellite){: #parcellite}
     is a lightweight GTK+ clipboard manager
 -   [qlipper](https://github.com/pvanek/qlipper)
-    is the clipboard management system for QTDesktop. it is in Debian.
+    is the clipboard management system for QTDesktop. _It is in Debian_.
 
-more applications on the ArchWiki page.
+More [applications on the ArchWiki page
+](https://wiki.archlinux.org/index.php/Clipboard#Managers).
 
 ## Keyboard addons
 
@@ -973,6 +1170,7 @@ more applications on the ArchWiki page.
     using a configuration file. It's independant of the window
     manager and can capture all keyboard keys (ex: Power, Wake...).
     XbindKeys is actively maintained and is in debian.
+    -   [Xbindkeys - ArchWiki](https://wiki.archlinux.org/index.php/Xbindkeys).
 -   [TrigerHappy](https://github.com/wertarbyte/triggerhappy)
     Triggerhappy is a hotkey daemon developed with small and embedded
     systems in mind. It attaches to the input device files and
