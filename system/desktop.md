@@ -273,26 +273,8 @@ There is also a [Tutorial index
     a tiny (1.3M rsz) and fully functional wm
         [Doc App Warehouse](http://www.bensinclair.com/dockapp/).
 
-## Wayland enabled compositors
--   [List of Wayland compositors - ArchWiki
-    ](https://wiki.archlinux.org/index.php/Wayland#Compositors)
--   [Greenfield](https://github.com/udevbe/greenfield) (AGPL-3.0)
-    an HTML5 Wayland compositor. a Wayland compositor written entirely in TypeScript
-    while utilizing WebAssembly and WebGL for the performance critical parts. It can run
-    native Wayland applications remotely, or it can run Wayland web applications
-    directly in your browser.
-    -   [Greenfield Documentations](https://greenfield.app/docs/)
--   [weston](https://gitlab.freedesktop.org/wayland/weston)
-    Weston is the reference implementation of a Wayland compositor.
-    -   [Weston Gitlab repository](https://gitlab.freedesktop.org/wayland/weston)
-    -   [Weston - ArchWiki](https://wiki.archlinux.org/index.php/Weston)
-    -   [Building and Running Weston - Freedesktop
-        ](https://wayland.freedesktop.org/building.html)
-    -   [wlroots](https://github.com/swaywm/wlroots)
-        A modular Wayland compositor library, on wich are based numerous compositors
-        including Weston.
 
-## i3 and sway {#i3_wm}
+## i3 {#i3_wm}
 
 [i3](http://i3wm.org/) (BSD Licence) is a tiling window manager
 written in C. It is ewmh compliant. I3 has a dynamic switching to
@@ -328,17 +310,8 @@ to replace _i3status_  With the standard configuration which
 mimic i3status _i3blocks_ has a memory footprint of 0.7M/0.5M to
 which are temporarily added the called programs to update status.
 
-### Sway {#sway}
-[Sway](https://swaywm.org/) (MIT License)
-is a tiling Wayland compositor and a drop-in replacement for the i3 window manager for
-X11. It can works with your existing i3 configuration, but need some adjustement to
-be fully functional
--   [Sway Wiki](https://github.com/swaywm/sway/wiki).
--   [Sway - ArchWiki](https://wiki.archlinux.org/index.php/Sway).
--   [dotfiles with a Nord theme for sway](https://github.com/nboughton/dotfiles)
 
-
-### i3 tools and scripts
+### i3 tools and scripts {#i3_tools}
 -   [i3status](http://i3wm.org/i3status/manpage.html) (BSD Licence)
     is a small program for generating a status bar for
     i3bar, dzen2, xmobar or similar programs.
@@ -385,23 +358,7 @@ be fully functional
     You can see the results in three ways. By opening a local web page, output the
     keyboards as text in the terminal or generate SVG files.
 
-### sway tools
-All wayland tools which accept _wlroots_ based compositors, work with sway, you find
-them below in the{{< iref "wayland_desktop_components" "Wayland destop components" >}}.
-
-See also the menu tools _bemenu_, _wofi_, _rofi wayland fork_ below.
-
--   [swaybg](https://github.com/swaywm/swaybg)
-    is the Wallpaper tool for Wayland compositors provided by sway. It is in Debian and
-    the package _sway-backgrounds_ contains the backgrounds provided with sway.
--   [swayidle](https://github.com/swaywm/swayidle) (MIT LIcense)
-    Idle management daemon for Wayland. It allows to monitor user idle time and notifies
-    when user activity resumes. This is useful for chat applications setting user away,
-    power management features to dim screen, etc.. _In Debian._
--   [swaylock](https://github.com/swaywm/swaylock) (MIT License)
-    Screen locker for Wayland. _In Debian._
-
-### i3/sway themes
+### i3/Sway themes {#i3_themes}
 I3  and sway are themables, but it is configured in _config_ so not easy to switch.
 You can find in the {{< iref "#color_theme" "color theme section" >}}
 themes like
@@ -594,14 +551,21 @@ These are the most common keyboard shortcuts used in icewm to make your life eas
 See also the {{< iref "xorg#wayland" "Wayland Section" >}},
 {{< iref "xterminals#wayland_terminals" "Wayland Terminals" >}}.
 
+-   [List of Wayland compositors - ArchWiki
+    ](https://wiki.archlinux.org/index.php/Wayland#Compositors)
+
 -   [dwl](https://github.com/djpohly/dwl) (GPL-3)
     dwm clone for Wayland based on wlroots, an hackable compositor.
-
-
 -   [Enlightenment](https://en.wikipedia.org/wiki/Enlightenment_(software)) (BSD
     License) is a compositing window manager for Xorg or a  since version 20 a Wayland
     compositor.
     -   [Enlightenment Home](https://www.enlightenment.org/)
+-   [Greenfield](https://github.com/udevbe/greenfield) (AGPL-3.0)
+    an HTML5 Wayland compositor. a Wayland compositor written entirely in TypeScript
+    while utilizing WebAssembly and WebGL for the performance critical parts. It can run
+    native Wayland applications remotely, or it can run Wayland web applications
+    directly in your browser.
+    -   [Greenfield Documentations](https://greenfield.app/docs/)
 -   [Mutter](https://gitlab.gnome.org/GNOME/mutter) (GPL-2)
     A Wayland display server and X11 window manager for Gnome used by Gnome-Shell.
 
@@ -611,34 +575,134 @@ See also the {{< iref "xorg#wayland" "Wayland Section" >}},
     using Xwayland.
 
     When used on top of Xorg it acts as a X11 window manager and compositing manager.
--   [Wayfire](https://wayfire.org/) (MIT License)
+-   <a name=wayfire"></a>[Wayfire](https://wayfire.org/) (MIT License)
     a wayland compositor based on wlroots.
+    Wayfire is in [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland).
     -   [Wayfire - GitHub](https://github.com/WayfireWM/wayfire)
-        The [WayfireWM - GitHub repository ](https://github.com/WayfireWM/)
+    -   [Wayfire Wiki](https://github.com/WayfireWM/wayfire/wiki)
+    -   The [WayfireWM - GitHub repository ](https://github.com/WayfireWM/)
         contains also many composants for wayfire, _wf-shell_ a GTK3-based panel for
         wayfire,  _wf-config_ a library for managing configuration files,
         _wcm_ Wayfire Config Manager, _wf-utils_ utility classes for Wayfire,
         _wf-touch_ touchscreen gesture library, _wf-osk_ on-screen keyboard using gtkmm.
+    -   There are also third party plugins:
+        [wstroke](https://github.com/dkondor/wstroke),
+        [ammen99-plugins](https://github.com/ammen99/wayfire-plugins),
+        [wf-gsettings](https://github.com/DankBSD/wf-gsettings),
+        [wf-mod2key](https://github.com/DankBSD/wf-mod2key),
+        [wf-wallpaper](https://github.com/DankBSD/wf-wallpaper),
+        [windecor](https://gitlab.com/marcusbritanicus/wayfire-plugins)
+    -  [Waysmoke](https://github.com/DankBSD/waysmoke)
+       is a desktop shell for _Wayfire_. _In alpha in end 2020._
+-   [weston](https://gitlab.freedesktop.org/wayland/weston)
+    Weston is the reference implementation of a Wayland compositor.
+    -   [Weston Gitlab repository](https://gitlab.freedesktop.org/wayland/weston)
+    -   [Weston - ArchWiki](https://wiki.archlinux.org/index.php/Weston)
+    -   [Building and Running Weston - Freedesktop
+        ](https://wayland.freedesktop.org/building.html)
+    -   [wlroots](https://github.com/swaywm/wlroots)
+        A modular Wayland compositor library, on wich are based numerous compositors
+        including Weston.
+
+## Sway {#sway}
+[Sway](https://swaywm.org/) (MIT License)
+is a tiling Wayland compositor and a drop-in replacement for the
+{{< "#i3_wm" "i3 X11 window manager" >}} .
+It can works with your existing i3 configuration, but need some adjustement to
+be fully functional
+-   [Sway Wiki](https://github.com/swaywm/sway/wiki).
+-   [Sway - ArchWiki](https://wiki.archlinux.org/index.php/Sway).
+-   [dotfiles with a Nord theme for sway](https://github.com/nboughton/dotfiles)
+
+### sway tools
+All wayland tools which accept _wlroots_ based compositors, work with sway, you find
+them below in the {{< iref "#wayland_desktop_components" "Wayland destop components" >}}.
+
+The {{< iref "#i3_tools" "i3 status tools" >}} like _i3status_ and alternatives like
+_i3blocks_ can be used in _swaybar_ like in _i3bar_ and tools with text or web output
+like _i3keys_.
+
+The themes are the same than for i3 you find them in
+{{< iref "#i3_themes" "I3/Sway themes" >}}.
+
+-   [swaybg](https://github.com/swaywm/swaybg)
+    is the Wallpaper tool for Wayland compositors provided by sway. It is in Debian and
+    the package _sway-backgrounds_ contains the backgrounds provided with sway.
+-   [swayidle](https://github.com/swaywm/swayidle) (MIT LIcense)
+    Idle management daemon for Wayland. It allows to monitor user idle time and notifies
+    when user activity resumes. This is useful for chat applications setting user away,
+    power management features to dim screen, etc.. _In Debian._
+-   [swaylock](https://github.com/swaywm/swaylock) (MIT License)
+    Screen locker for Wayland. _In Debian._
 
 ## Wayland destop components {#wayland_desktop_components}
-   [grim](https://github.com/emersion/grim) (MIT Licence)
+
+Sway has a long list of [Clients that use the wlr protocols
+]https://github.com/swaywm/wlr-protocols/wiki). The [wlr protocol
+](https://github.com/swaywm/wlr-protocols) is supported by
+many wlroots-based compositors.
+
+The Nix overlay [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)
+has built many wayland tools. _List in the Readme_
+
+See also {{< iref "#wayland_remote_desktop" "Wayland remote desktop" >}}
+
+See below the {{< iref "#waylan_menus" "dmenu/rofi alternatives" >}}.
+
+-   [CuboCore](https://cubocore.gitlab.io/)
+    develop _Coreapps_ alias _C suite_, a set of QT apps, which are Desktop Independent
+    with Consistent Look and have minimum dependencies. The repository provides Debian
+    sid packages.
+
+    The current applications are:
+     -    CoreFm - A lightweight file-manager.
+     -    CoreAction - A side bar for showing widgets.
+     -    CoreStats - A system resource viewer.
+     -    CorePad - A document editor.
+     -    CoreRenamer - A batch file renamer.
+     -    CorePDF - A PDF viewer.
+     -    CoreInfo - Show file informations.
+     -    CorePaint - A paint app.
+     -    CoreStuff - An activity viewer.  -
+     -    CoreHunt - A file finder utility.
+     -    CoreTime - A time related task manager.
+     -    CoreTerminal - A terminal emulator.
+     -    CoreShot - A screen capture utility.
+     -    CorePins - A bookmarking app.
+     -    CoreKeyboard - A x11 based virtual keyboard(alpha).
+     -    CoreUniverse - Shows information about apps  from the CoreApps family.
+     -    CoreImage - An image viewer.
+     -    CoreArchiver - Archiver to create and extract archives.  -
+     -    CoreGarage - A settings manager.
+
+     _CuboCore_ also develop a desktop based on {{< iref "#wayfire" "WayFire" >}}:
+     <a name="paper"></a>[Paper](https://gitlab.com/cubocore/paper)
+     _still in alpha in end 2020._
+
+-   [grim](https://github.com/emersion/grim) (MIT Licence)
     Grab images from a Wayland compositor. Works with slurp and with sway.
+    _In Debian and [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)._
 -   [kanshi](https://github.com/emersion/kanshi) (MIT License)
     Dynamic display configuration for wayland compositors. Kanshi allows you to define
     output profiles that are automatically enabled and disabled on hotplug. _in Debian._
 -   [slurp](https://github.com/emersion/slurp) (MIT License)
-    Select a region in a Wayland compositor. Used by _grim_. _In Debian._
+    Select a region in a Wayland compositor. Used by _grim_. _In Debian and
+    [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)._
 -   [imv](https://github.com/eXeC64/imv) is an image viewer for X11/Wayland.
+    _In Debian_
 -   [wev](https://git.sr.ht/~sircmpwn/wev)
     wayland event viewer analagous to the X11 tool xev.
+    _In Debian and [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)._
 -   [wshowkeys](https://git.sr.ht/~sircmpwn/wshowkeys)
     Displays keypresses on screen on supported Wayland compositors.
 -   [wf-recorder](https://github.com/ammen99/wf-recorder)
-    screen recorder for wlroots based compositors. _in Debian._
+    screen recorder for wlroots based compositors. _in Debian and
+    [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)._
 -   [wdisplays](https://github.com/cyclopsian/wdisplays) (GPL-3.0)
     GUI display configurator for wlroots compositors. _In Debian._
 -   [wlr-randr](https://github.com/emersion/wlr-randr)
-    An xrandr clone for wlroots compositors. _in Debian_.
+    An xrandr clone for wlroots compositors. _in Debian and
+    [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)_.
 
 # Desktop components {#desktop_components}
 ## Color Themes {#color_themes}
@@ -831,7 +895,7 @@ Rofi is written by Dave Davenport alias _Qball_ it is in Debian.
     menuing system for Unix.
 -   {{< iref "#yabar" "yabar" >}} in the status bar section.
 
-### wayland dmenu/rofi alternatives
+### wayland dmenu/rofi alternatives {#wayland_menus}
 -   [bemenu](https://github.com/Cloudef/bemenu) (GPLv3 and LGPLv3)
     is an dynamic menu library and client program inspired by dmenu.
     It has a ncurses, x11, and wayland backend.
@@ -853,9 +917,13 @@ Rofi is written by Dave Davenport alias _Qball_ it is in Debian.
     -   [sachahjkl/wofi-arc-dark](https://github.com/sachahjkl/wofi-arc-dark)
         : A stylesheet recreating the arc-dark theme for wofi.
 -   [sgtk-menu](https://github.com/nwg-piotr/sgtk-menu) (GPL-3.0)
-    Python GTK launchers for sway & other WMs w/ menu, dmenu, application grid and button bar.
-    There is also a C++ version
-    [nwg-launchers](https://github.com/nwg-piotr/nwg-launchers) (GPL-3.0).
+    Python GTK launchers for sway & other WMs w/ menu, dmenu, application grid and
+    button bar.  There is also a C++ version
+    [nwg-launchers](https://github.com/nwg-piotr/nwg-launchers) (GPL-3.0)
+    which is packaged in [nixpkgs-wayland
+    ](https://github.com/colemickens/nixpkgs-wayland).
+-   [wlogout](https://github.com/ArtsyMacaw/wlogout)
+    A wayland based logout menu in GTK+.
 
 ### Dzen {#dzen}
 [Dzen](https://github.com/robm/dzen) (MIT License)
@@ -875,9 +943,7 @@ _dzen2_ is in Debian.
 -   [dzen-tools](https://github.com/dgvncsz0f/dzen-tools)
     by Diego Souza has _systat2dzen_, a python script that gives hostname, date/time,
     sys statistics, meminfo, iostat, load ifo, disk status, battery status, check local
-    or imap mailboxes, ethernet and wireless status
--   [Creating an App. Launcher with Dzen2 and bash
-    ](https://bbs.archlinux.org/viewtopic.php?id=45364)
+    or imap mailboxes, ethernet and wireless status; _Last commit 2013._
 
 ### Root menu
 Root menus are parts of most floating window managers, but there are
@@ -944,11 +1010,6 @@ The python programs use
     is a command line tool, written in python, that generates application menus using
     xdg information, by scanning *.desktop files. It can generate menus for Fluxbox,
     IceWM, jwm, pekwm, Window Maker.
-
-### Other Menus
-#### Wayland
--   [wlogout](https://github.com/ArtsyMacaw/wlogout)
-    A wayland based logout menu in GTK+.
 
 ## Launchers  {#launch_bars}
 Launchers are also named _taskbar_, _launchbar_, _dock_ ....
