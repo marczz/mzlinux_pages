@@ -153,11 +153,16 @@ See also {{< iref "xterminals#framebuffer_terminals" "Framebuffers Terminals" >}
 :   VNC client on a linux framebuffer.
 
 [fbff](http://repo.or.cz/w/fbff.git)
-: A small ffmpeg-based framebuffer media player.
+: A small ffmpeg or libmpeg3 based framebuffer media player.
+  [GitHub mirror](https://github.com/aligrudi/fbff).
+
+[fbfv](https://github.com/smokku/fvb)
+is a simple program to view pictures on a linux framebuffer device.
+
 
 [fbgrab](https://fbgrab.monells.se/)
 : Grabs an image of a framebuffer device and store it as a png file.
-  -   [GitHub mirror](https://github.com/MikeMayer/FBGrab).
+  -   [GitHub mirror](https://github.com/MikeMayer/FBGrab), see also the forks.
 
 {{< iref "images#fbida" "fbi" >}}
 : image viewer for framebuffer console.
@@ -166,9 +171,26 @@ See also {{< iref "xterminals#framebuffer_terminals" "Framebuffers Terminals" >}
 {{< iref "ps_pdf_djvu#fbpdf" "fbpdf" >}}
 : A small framebuffer pdf viewer based on MuPdf.
 
+[fbutils](https://github.com/richinfante/fbutils)
+: a framebuffer png, jpg, svg image display program.
+
+[fbv](https://github.com/godspeed1989/fbv)
+: framebuffer image viewer with png, jpeg, bmp support.
+   -   [kfarnsworth /fbv](https://github.com/kfarnsworth/fbv)
+       this fork support gif through giflib.
+   -   The original [fbv-1.0](http://s-tech.elsat.net.pl/fbv/) is used in archlinux
+       package.
+
 [fim](http://www.autistici.org/dezperado/)
 : Fbi IMproved image viewer {{< iref "images" "see Images" >}}.
 
+[hovacui](http://sgerwk.altervista.org/hovacui/hovacui.html)
+: is a pdf viewer for X11 and the Linux framebuffer, Its main feature is its autozoom to
+  text. It is part of [pdftorof](https://github.com/sgerwk/pdftoroff) pdf viewer,
+  scaler, converter (to text, html, etc.) by blocks of text.
+
+[jfbview](https://github.com/jichu4n/jfbview)
+: a PDF and image viewer for the Linux framebuffer.  There are Debian packages.
 
 {{< iref "browsers#links2" "links2" >}}
 : browser that can work in text mode, or graphic mode with X11, fb or
