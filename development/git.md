@@ -272,7 +272,7 @@ with new commands what we did with some script using plumbing commands_
         ](http://jan-krueger.net/development/git-cheat-sheet-extended-edition).
 -   [GitHub : Git cheat sheet
     ](https://github.github.com/training-kit/downloads/github-git-cheat-sheet/),
-    [Github : git cheat sheet (pdf)
+    [GitHub : git cheat sheet (pdf)
     ](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf)
     reference some other cheat sheets and give a git memo.
 -   [Magit Cheatsheet](http://daemianmack.com/magit-cheatsheet.html)
@@ -676,6 +676,14 @@ provides a detailled description of the use of the following packages.
     magit: [vdiff-magit](https://github.com/justbur/emacs-vdiff-magit).
     vdiff and vdiff-magit are in melpa.
 
+### Emacs and Forges
+-   [sshaw/git-link](https://github.com/sshaw/git-link) (GPL)
+    package to get the GitHub/Bitbucket/GitLab/... URL for  for files and commits
+    buffers.
+-   [Magit/forge](https://github.com/magit/forge) (GPL-3.0)
+    work with forges (GitHub, GitLab, GitWeb, Cgit, Stgit, Shrt) from Magit.
+    -   [Forge Manual](https://magit.vc/manual/forge/).
+
 ### Git Hosts Interfaces
 
 ## vim interface
@@ -849,8 +857,8 @@ the Git Wiki [list also the Web interfaces
 
 
 ## File systems synchronization {#fs_synch}
-See also {{< iref "backup#synchronization" "Synchronization" >}} in the
-{{< iref "backup" "Backup Section" >}}.
+See also {{< iref "../system/backup#synchronization" "Synchronization" >}} in the
+{{< iref "../system/backup" "Backup Section" >}}.
 
 -   [SparkleShare](http://www.sparkleshare.org/) is a collaboration and sharing tool
     that uses a git repository backend.  It is written in mono and uses libnotify (with
