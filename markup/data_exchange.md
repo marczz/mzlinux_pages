@@ -3,7 +3,7 @@ title: Data exchange formats
 ---
 
 RSS and Atom formats are
-{{< iref "rss_readers#rss_formats" "in the rss readers section" >}}.
+{{< iref "feed#rss_formats" "in the Web Feed section" >}}.
 
 See also {{< iref "shell#awk" "Awk" >}} in the {{< iref "shell" "Shell Page" >}}.
 
@@ -31,8 +31,7 @@ See also the related {{< iref "javascript" "Javascript Page" >}}
     JsonML allows easy manipulation of the markup in JavaScript.
     [JsonML.org Home](http://jsonml.org/).<br />
 -   [awesome-json](https://github.com/burningtree/awesome-json)
-    and [awesome-Json-Datasets
-    ](https://github.com/jdorfman/awesome-json-datasets)
+    and [awesome-Json-Datasets](https://github.com/jdorfman/awesome-json-datasets)
     lists of json resources.
 -   [rson](https://code.google.com/p/rson/)
     is a format that sits between json and yaml a Python decoder is
@@ -70,6 +69,15 @@ See also the related {{< iref "javascript" "Javascript Page" >}}
 -   [jq](https://stedolan.github.io/jq/) (MIT license)
     is a lightweight and flexible command-line JSON processor, written in C it is like
     sed for JSON data.
+
+    -   [jq - GitHub](https://github.com/stedolan/jq/)
+    -   [jq tutorial](https://stedolan.github.io/jq/tutorial/)
+    -   [manual](https://stedolan.github.io/jq/manual/)
+    -   [jq questions tagged jq](https://stackoverflow.com/questions/tagged/jq)
+    -   [#jq](http://irc.lc/freenode/%23jq/) channel on
+        [Freenode](https://webchat.freenode.net/).
+    -   [jqplay.org](https://jqplay.org) an online A playground for jq.
+
 -   [fx](https://github.com/antonmedv/fx) (MIT license)
     _fx_ is a command-line tool and terminal JSON viewer. Written in node js.
 -   [jo](https://github.com/jpmens/jo) (GPL)
