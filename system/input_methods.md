@@ -2,10 +2,8 @@
 title: Input Methods
 ---
 
-{{% toc /%}}
-
 See also
-{{< iref "i18n" "Localisation (I18N)" >}}
+{{< iref "i18n" "Localisation (I18N)" >}}, {{< iref "xorg" "Xorg" >}}.
 
 # References
 -   Wikipedia: {{< wp "Unicode input" >}}, {{< wp "Input Method" >}},
@@ -95,6 +93,8 @@ Among them:<a name="tibetan_m17n"></a>
     -   [Xmodmap
         ](https://wiki.archlinux.org/index.php/Xmodmap)
     -   [Xbindkeys](https://wiki.archlinux.org/index.php/Xbindkeys)
+    -   [Keyboard shortcuts](https://wiki.archlinux.org/index.php/Keyboard_shortcuts)
+
 -   [MultimediaKeys - Ubuntu Help](https://help.ubuntu.com/community/MultimediaKeys)
 -   [RMLVO keyboard configuration
     ](http://who-t.blogspot.com/2008/09/rmlvo-keyboard-configuration.html)
@@ -136,7 +136,9 @@ _most entries target both console and Xorg_
     libinput is a library that provides a full input stack for display servers and other
     applications that need to handle input devices provided by the kernel.
 -   [Peter Hutterer blog on libinput - Who-T](http://who-t.blogspot.com/)
-
+-   [Xbindkeys](https://wiki.archlinux.org/index.php/Xbindkeys)
+    is a program that allows to bind commands to certain keys or key combinations on the
+    keyboard. Xbindkeys is independent of the window manager and desktop environment.
 
 ### Configuration notes
 -   The setxkbmap {{< man "setxkbmap(1)" >}} command configures the keyboard to
