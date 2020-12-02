@@ -48,17 +48,11 @@ title: Freedom of information
     everything to be known by anybody._
 -   [Defective By Design](http://www.defectivebydesign.org/) is a campaign
     of the Free Software Foundation  against DRM.
--   [Bad Vista](http://badvista.fsf.org/) is a campaign against this
-    drm enforcing OS. The
-    [Analysis of Microsoft's Suicide Note
-    ](http://badvista.fsf.org/blog/analysis-of-microsofts-suicide-note-part-1)
-    by Oliver Day analyses the “content protection scheme” in Microsoft
-    Windows Vista.
 -   [A Cost Analysis of Windows Vista Content Protection
     ](http://www.cs.auckland.ac.nz/~pgut001/pubs/vista_cost.html)
     by Peter Gutmann, is analysing the technical costs of the drm
     enforcing part of Widows Vista.
-    [DRM, Vista and your rights](http://polishlinux.org/gnu/drm-vista-and-your-rights/ "article in polishlinux.org")
+    [DRM, Vista and your rights](http://polishlinux.org/gnu/drm-vista-and-your-rights/)
     by Borys Musielak is a detailed explanations of drm (digital right
     management).
 -   [Windows 7 sins](http://en.windows7sins.org/)
