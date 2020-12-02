@@ -314,7 +314,7 @@ which are temporarily added the called programs to update status.
 ### i3 tools and scripts {#i3_tools}
 -   [i3status](http://i3wm.org/i3status/manpage.html) (BSD Licence)
     is a small program for generating a status bar for
-    i3bar, dzen2, xmobar or similar programs.
+    i3bar, swaybar, dzen2, xmobar or similar programs.
 -   [i3pystatus](https://github.com/enkore/i3pystatus)
     is a  collection of python 3 scripts for status output
     compatible to i3status / i3bar.
@@ -349,10 +349,8 @@ which are temporarily added the called programs to update status.
         the list.
 -   [GitHub: i3-emacs](https://github.com/vava/i3-emacs) is an emacs
     package for i3-emacs integration.
--   [open-dynaMIX/raiseorlaunch](https://github.com/open-dynaMIX/raiseorlaunch)
+-   [raiseorlaunch](https://github.com/open-dynaMIX/raiseorlaunch) (MIT License)
     A run-or-raise-application-launcher for i3 window manager.
-
-### tools for both sway and i3
 -   [i3keys](https://github.com/RasmusLindroth/i3keys) (MIT License)
     lists all the keys that are bound to some action in i3 or sway,
     You can see the results in three ways. By opening a local web page, output the
@@ -566,7 +564,7 @@ See also the {{< iref "xorg#wayland" "Wayland Section" >}},
     native Wayland applications remotely, or it can run Wayland web applications
     directly in your browser.
     -   [Greenfield Documentations](https://greenfield.app/docs/)
--   [Mutter](https://gitlab.gnome.org/GNOME/mutter) (GPL-2)
+-   <a name="mutter"></a>[Mutter](https://gitlab.gnome.org/GNOME/mutter) (GPL-2)
     A Wayland display server and X11 window manager for Gnome used by Gnome-Shell.
 
     When used as a Wayland display server, it runs on top of KMS and libinput. It
@@ -688,21 +686,27 @@ See below the {{< iref "#waylan_menus" "dmenu/rofi alternatives" >}}.
 -   [slurp](https://github.com/emersion/slurp) (MIT License)
     Select a region in a Wayland compositor. Used by _grim_. _In Debian and
     [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)._
--   [imv](https://github.com/eXeC64/imv) is an image viewer for X11/Wayland.
-    _In Debian_
--   [wev](https://git.sr.ht/~sircmpwn/wev)
+-   [imv](https://github.com/eXeC64/imv)  (MIT License)
+    is an image viewer for X11/Wayland. _In Debian_
+-   [wev](https://git.sr.ht/~sircmpwn/wev) (MIT License)
     wayland event viewer analagous to the X11 tool xev.
     _In Debian and [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)._
 -   [wshowkeys](https://git.sr.ht/~sircmpwn/wshowkeys)
     Displays keypresses on screen on supported Wayland compositors.
--   [wf-recorder](https://github.com/ammen99/wf-recorder)
+-   [wf-recorder](https://github.com/ammen99/wf-recorder) (MIT License)
     screen recorder for wlroots based compositors. _in Debian and
     [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)._
 -   [wdisplays](https://github.com/cyclopsian/wdisplays) (GPL-3.0)
     GUI display configurator for wlroots compositors. _In Debian._
--   [wlr-randr](https://github.com/emersion/wlr-randr)
+-   [wlr-randr](https://github.com/emersion/wlr-randr) (MIT License)
     An xrandr clone for wlroots compositors. _in Debian and
     [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)_.
+-   [wlvncc](https://github.com/any1/wlvncc) (ISC License)
+    A Wayland Native VNC Client. _In
+    [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)._
+-   [wtype](https://github.com/atx/wtype) (MIT License)
+    xdotool type for wayland. _in Debian and
+    [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)._
 
 # Desktop components {#desktop_components}
 ## Color Themes {#color_themes}
