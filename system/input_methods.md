@@ -233,13 +233,16 @@ input through _uim-fep_, Emacs with _uim.el_.
     ](https://github.com/uim/uim/wiki/OfficialUserDocument).
 
 
-# Other input method engines
--   [Smart Common Input Method platform project, SCIM
-    ](http://sourceforge.net/projects/scim/)
-    _older_ input method user interface for Unix
+# SCIM
+-   [Smart Common Input Method platform SCIM](https://github.com/scim-im/scim) (LGPL)
+    input method user interface for Unix. It has bindings to uim and m17n library
+    and has support for covering more than 30 languages. It is an old project with only
+    few maintenance commits.
     -   [Arch Linux SCIM](https://wiki.archlinux.org/index.php/SCIM)
--   [FriBidi](http://fribidi.sf.net/) Free Implementation of the
-    [Unicode Bidirectional Algorithm. (tr9 report)
+
+# Other input method engines
+-   [FriBidi](https://github.com/fribidi/fribidi) (LGPL)
+    Implementation of the [Unicode Bidirectional Algorithm. (tr9 report)
     ](http://www.unicode.org/reports/tr9/)
 
 
