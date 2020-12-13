@@ -990,7 +990,8 @@ is the encoder included in the mplayer distribution.
 
 ## MPV {#mpv}
 
-[mpv](https://mpv.io/) is a media player based on MPlayer and MPlayer2.
+[mpv](https://mpv.io/) (LGPLv2.1+ and GPLv2+)
+is a media player based on MPlayer and MPlayer2.
 
 _MPlayer2_ was a fork of mplayer, that  the internal gui
 _gmplayer_ and the encoder _mencoder_; and use shared libratries
@@ -1014,6 +1015,14 @@ There are numerous other
 There is a Debian package _mpv_, but mpv developpers
 [recommand to use a newer version](https://mpv.io/installation/)
 in deb-multimedia.
+
+_mpv_ can be used in Wayland for hardware video acceleration under Wayland use
+`--gpu-context=wayland`. If you compile it specifically for wayland use:
+~~~
+./configure --disable-x11 --disable-sdl --enable-wayland --disable-libass
+make
+sudo make install
+~~~
 
 ### MPV frontends
 
@@ -1153,8 +1162,9 @@ an example of MPRIS control of a player.
 
 Other control tools are:
 
-[playerctl](https://github.com/acrisci/playerctl)
-:   is an mpris command-line controller and library for spotify.
+[playerctl](https://github.com/altdesktop/playerctl) (LGPL-3.0)
+:   is an mpris command-line controller and library for vlc, mpv, RhythmBox, web
+    browsers, cmus, mpd, spotify and others. _active in 2020_.
 
 [mpris-remote](http://incise.org/mpris-remote.html)
 :   is a utility that controls an MPRIS-capable music player.
@@ -1265,6 +1275,8 @@ On amd64 I have experienced Kodi playing a TV stream taking
 
 On raspberry PI 1 osmc distribution I have Kodi multiple threads
 109M / 55 M shared.
+
+Kodi can be used in wayland, _kodi-wayland is packaged in Debian_.
 
 -   `kodi-send`  is used for sending actions to a kodi server in the lan.
     It is in the Debian Package _kodi-eventclients-kodi-send_; Of course you don't need
