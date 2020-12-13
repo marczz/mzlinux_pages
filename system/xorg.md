@@ -38,8 +38,14 @@ See also {{< iref "input_methods" "Input method" >}} where you find
     This is useful when you are doing a demo and you need to annotate
     parts of what is on-screen.
 
-# xrandr {#randr}
+# Xresources
+{{< wp "X resources" >}} are configuration parameters for X client applications.
 
+-   [X resources - ArchWiki](https://wiki.archlinux.org/index.php/X_resources)
+-   Utilities to manipulate X resources: {{< man "xrdb" >}}, {{< man "appres" >}},
+    {{< man "editres" >}}.
+
+# Xrandr {#randr}
 {{< wp "RandR" >}} is an extension to the X11. With Randr you can set the
 screen refresh rate, choose a monitor output, resize, rotate and
 reflect the root window of a screen.
@@ -96,7 +102,11 @@ with X. Wayland is a graphics multiplexer for a number of X servers,
     {{< wp "List_of_display_servers#Wayland"  "List of Wayland compositors" >}}
 -   [Freedesktop Wayland Home](http://wayland.freedesktop.org/):
     [Wayland FAQ](http://wayland.freedesktop.org/faq.html)
--   <a name='weston"></a>{{< wp "Wayland_(display_server_protocol)#Weston"  "weston" >}}
+-   [Wayland - ArchWiki](https://wiki.archlinux.org/index.php/Wayland)
+-   [Wayland - Debian Wiki](https://wiki.debian.org/Wayland)
+-   [Wayland - Gentoo Wiki](https://wiki.gentoo.org/wiki/Wayland)
+-   <a name="weston"></a>
+    {{< wp "Wayland_(display_server_protocol)#Weston"  "weston" >}}
     is the reference C implementation of a Wayland compositor.
     It is in debian.
 -   [Xwayland](http://wayland.freedesktop.org/xserver.html)
@@ -106,6 +116,41 @@ with X. Wayland is a graphics multiplexer for a number of X servers,
     the same acceleration code as it does when it runs natively. The
     main difference is that wayland handles presentation of the
     windows instead of KMS. xwayland is in debian.
+-   [awesome Wayland](https://github.com/natpen/awesome-wayland)
+    a list of Wayland resources.
+-   [Are we Wayland yet?](https://arewewaylandyet.com/)
+    list of wayland enabled applications.
+-   [How to debug Wayland problems - Fedora Project Wiki
+    ](https://fedoraproject.org/wiki/How_to_debug_Wayland_problems)
+-   [hello-wayland](https://github.com/emersion/hello-wayland)
+    A hello world Wayland client.
+
+The applications are in
+{{< iref "desktop#wayland_compositors"  "Wayland Compositors" >}},
+{{< iref "xterminals#wayland_terminals" "Wayland Terminals" >}},
+{{< iref "desktop#wayland_desktop_components"  "Wayland desktop components" >}}
+{{< iref "desktop#wayland_menus" "Wayland desktop menus" >}},
+{{< iref "#wayland_remote_display" "Wayland Remote Display" >}}.
+
+You can also uses the web browsers _Firefox_, _Web (previously Epiphany)_, _Xombrero_, _Falcon_.
+
+Wayland is completely supported in GTK 3.22, but many applications have components with
+X.org dependencies, more information in [Initiatives/Wayland/GTK+ - GNOME Wiki!
+](https://wiki.gnome.org/Initiatives/Wayland/GTK%2B).
+
+Wayland should be recognized by the GTK application but it can be necessary to set the
+environment variable:
+~~~
+$ export GDK_BACKEND=wayland
+~~~
+
+QT 5 support wayland using the QtWayland module. More information in
+[QtWayland - Qt Wiki](https://wiki.qt.io/QtWayland), and
+[Qt 5 on Wayland - Freedesktop](https://wayland.freedesktop.org/qt5.html).
+
+[Extras that work with Wayland - Freedesktop
+](https://wayland.freedesktop.org/extras.html)
+gives a list of debugging tools, including protocol dumpers.
 
 # Framebuffer
 See also {{< iref "xterminals#framebuffer_terminals" "Framebuffer terminals" >}},
@@ -460,7 +505,32 @@ package.
 -   Wikipedia {{< wp "RealVNC" >}},
 -   [FAQ](http://www.realvnc.com/faq.html)
 
-## Other clients and software
+### HTML/JS/CSS Clients {#inbrowser_vnc}
+-   [noVNC](https://novnc.com/info.html) (Mozilla Public License)
+    is a HTML5 VNC client that runs well in any modern browser
+    including mobile browsers (iOS and Android).
+    It supports WebSocket SSL/TLS encryption (i.e. `wss://`).
+
+    _noVNC_ should work on any browser with reasonable HTML5 support:
+    Chrome 49, Firefox 44, Safari 11, Opera 36, IE 11, Edge 12
+
+    _noVNC_ does require WebSockets support, which is included in servers like
+    {{< iref "#x11vnc" "X11vnc" >}} or in {{< iref "virtualization#qemu" "Qemu" >}},
+    and [MobileVNC](http://www.smartlab.at/mobilevnc/). For others servers you need to
+    use a WebSockets to TCP socket proxy like
+    [websockify](https://github.com/novnc/websockify).
+
+
+    -   [noVNC GitHub](https://github.com/novnc/noVNC).
+-   [FreeRDP](https://github.com/FreeRDP/FreeRDP) (MIT _Expat_ License)
+    is a free remote desktop protocol library and clients.
+    It is produced by [Myrtille](https://www.myrtille.io/) a firm that offer
+    HTML5 Remote Access Gateway, with paid and free plans.
+    _It is in several Debian packages freerdp2-x11, reerdp2-shadow-x11,
+    freerdp2-wayland, and many libraries, you find also the wayland client
+    in [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)._
+
+### Other clients and software
 
 -   <a name="directvnc">[directvnc](http://drinkmilk.github.com/directvnc/) (GPL)
     VNC client on a linux framebuffer. It is in Debian.
@@ -490,23 +560,6 @@ package.
     to another's screen of a person that offer support. It is
     available in windows, linux, OSX. The project is no longer active since _2010_ but it
     is still in Debian.
--   [noVNC](https://novnc.com/info.html) (Mozilla Public License)
-    is a HTML5 VNC client that runs well in any modern browser
-    including mobile browsers (iOS and Android).
-    It supports WebSocket SSL/TLS encryption (i.e. "wss://").
-
-    _noVNC_ should work on any browser with reasonable HTML5 support:
-    Chrome 49, Firefox 44, Safari 11, Opera 36, IE 11, Edge 12
-
-    _noVNC_ does require WebSockets support, which is included in servers like
-    {{< iref "#x11vnc" "X11vnc" >}} or in {{< iref "virtualization#qemu" "Qemu" >}},
-    and [MobileVNC](http://www.smartlab.at/mobilevnc/). For others servers you need to
-    use a WebSockets to TCP socket proxy like
-    [websockify](https://github.com/novnc/websockify).
-
-
-    -   [noVNC GitHub](https://github.com/novnc/noVNC).
-
 -   <a name="virtualgl">[VirtualGL](https://virtualgl.org/Main/HomePage) (GPL)
     gives any Linux or Unix remote display software the ability to run OpenGL
     applications with full hardware acceleration.
@@ -518,6 +571,29 @@ package.
 
     -   [VirtualGL - ArchWiki](https://wiki.archlinux.org/index.php/VirtualGL).
 -   VNC can be used with {{< iref "#winswitch" "winswitch" >}}.
+
+
+## Wayland Remote desktop {#wayland_remote_desktop}
+The  {{< iref "#inbrowser_vnc" "in browser HTML/JS/CSS Clients" >}}
+can be used in wayland.
+
+-   [wayvnc](https://github.com/any1/wayvnc) ( ISC License )
+    A VNC server for wlroots based Wayland compositors.
+    _In [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)._
+-   [neatvnc](https://github.com/any1/neatvnc)  ( open source!)
+    VNC server library.
+     _In [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)._
+-   The Gnome wayland compositor and X11 window manager
+    {{< iref "desktop#mutter" "Mutter" >}} support VNC as explained in
+    [Mutter/RemoteDesktop - GNOME Wiki!](https://wiki.gnome.org/Projects/Mutter/RemoteDesktop)
+-   [Waypipe](https://gitlab.freedesktop.org/mstoeckl/waypipe/)
+    is a proxy for Waylan clients. It forwards Wayland messages and serializes
+    changes to shared memory buffers over a single socket. This makes application
+    forwarding similar to `ssh -X` feasible.
+    -  The network protocol is explained in the author
+       [M. Stoeckl's blog](https://mstoeckl.com/notes/gsoc/blog.html)
+       _In [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)._
+
 
 ## NX and X2Go {#x2go}
 
