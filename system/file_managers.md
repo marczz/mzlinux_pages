@@ -2,8 +2,6 @@
 title: File Managers
 ---
 
-{{% toc /%}}
-
 # Reference
 -   Wikipedia: {{< wp "File manager" >}}, [Comparison of file managers].
 -   [ArchWiki: list of file managers
@@ -12,14 +10,13 @@ title: File Managers
 # Console File managers {#console}
 -   The ancestor of Ncurses file managers is
     [Thomas E. Dickey's ded](http://dickey.his.com/ded/ded.html) now
-    superseded by Midnight Commander. The ded design date from 1988,
+    superseded by Midnight Commander. The ded design dates from 1988,
     but there is still available build and even deb packages on the
     home page.
--   The {{< wp "Midnight Commander" >}} (GPL) is a console application written with Ncurses
-(or S-Lang).
-    -   The [Midnight Commander Development site
-    ](https://www.midnight-commander.org)
-    contains the Git development repository.
+-   The {{< wp "Midnight Commander" >}} (GPL) is a console application written with
+    Ncurses (or S-Lang) it is an old application still actively maintained in 2020.
+    -   [Midnight Commander Development site](https://www.midnight-commander.org)
+    -   [Midnight Commander's Github repository](https://github.com/MidnightCommander/mc).
     -   [Draft of documentation](https://www.midnight-commander.org/wiki/doc)
     -   [Midnight Commander FAQ
         ](https://www.midnight-commander.org/wiki/doc/faq).
@@ -35,15 +32,23 @@ title: File Managers
     (GPL) is a light c++ graphical two panels file manager that
     has very low requirements  (X11, nO X toolkit).
     Like MC it provides access to archives and remote file systems.
-    It is packaged in Debian and development is active in 2015.<br/>
+    It is packaged in Debian and development is active in 2020.<br/>
     As for version 3.4.1 in 2015 it uses 12.6M resident / 9.8M shr.
--   [ranger](http://nongnu.org/ranger/)
-    a python (2 or 3) file manager with VI key bindings _and optional
+-   [ranger](http://nongnu.org/ranger/) (GPL-3.0)
+    a python file manager with VI key bindings _and optional
     emacs bindings_. It provides a curses interface with a view on the
     directory hierarchy. _in debian_ .
-    _ranger_ development is active in 2015.
+    _ranger_ _development is active in 2020_.
     -   Wikipedia {{< wp "Ranger_(file_manager)"  "ranger" >}}.
     -   [ArchWiki: Ranger](https://wiki.archlinux.org/index.php/Ranger).
+-   [nnn](https://github.com/jarun/nnn/)
+    n³ a terminal file manager. _nnn_ can analyze disk usage, batch rename, launch apps
+    and pick files. There are many plugins to extend the capabilities further
+    e.g. preview, (un)mount disks, find & list, file/dir diff, upload files.
+    _In Debian._
+    -   [nnn Wiki](https://github.com/jarun/nnn/wiki)
+    -   [nnn - ArchWiki](https://wiki.archlinux.org/index.php/Nnn)
+
 
 # Graphical file managers
 
@@ -51,12 +56,11 @@ title: File Managers
 -   [ArchWiki: File manager functionality
     ](https://wiki.archlinux.org/index.php/File_manager_functionality)
 
--   [PCManFM](http://pcmanfm.sourceforge.net/)
-    <a name="pcmanfm"></a>
+-   <a name="pcmanfm"></a>[PCManFM](https://wiki.lxde.org/en/PCManFM)
     is a
     light GTK-2 file manager, it is comparable to Thunar, but have
     lower requirements, and you may prefer it if you don't have xfce.
-    -   _PCManFM_  is part of {{< iref "desktop#lxde" "lxde" >}}
+    _PCManFM_  is part of {{< iref "desktop#lxde" "lxde" >}}
     -   _pcmanfm_ memory footprint is 14M Resident/ 10M shr for an empty
         directory but it will grow when opening directories with many
         files (and bitmaps thumbnails) and as so many applications;
@@ -64,6 +68,15 @@ title: File Managers
     -   _pcmanfm_ can be used as a desktop manager daemon with the options
         `--desktop -d`, it then uses 11M resident/8.5 shared
         _before opening any folder_.
+
+    <a name="pcmanfm-qt"></a>{{< iref "desktop#lxqt" "lxqt" >}} replaces the GTK-2 version
+    by [lxqt/pcmanfm-qt](https://github.com/lxqt/pcmanfm-qt) (GPL)
+    a Qt port of PCManFM and libfm. PCManFM-QT is wayland compatible as it is based on
+    QT-5.
+
+    PCManFM can also be built with GTK3, this build is used in arch-linux package
+    _pcmanfm-gtk3_ and in the Nix package.
+
     -   Wikipedia: {{< wp "PCMan File Manager" >}}.
     -   [Archlinux: PCManFM](https://wiki.archlinux.org/index.php/PCManFM)
         contains a usefull section on [Volume handling
@@ -72,7 +85,8 @@ title: File Managers
     -   [Gentoo Wiki: PCManFM](http://wiki.gentoo.org/wiki/PCManFM).
 -   [SpaceFM](http://ignorantguru.github.io/spacefm/) (GPL)
     is a fork of PCManFM 0.5 that has been competing with pcmanfm for
-    years, but now since march 2015 it has only a minimal maintenance.
+    years, but now since march 2015 it had only a minimal maintenance, and the last
+    commit is in 2018.
     The fork of PCManFM 0.5 was did by developers that did not want the gvfs
     bindings that were added to PCManFM, and rather preferred
     the [udevil](http://ignorantguru.github.io/udevil/)
@@ -114,8 +128,7 @@ title: File Managers
         ](https://github.com/IgnorantGuru/spacefm/wiki/plugins),
         [trile7 script directory
         ](http://code.google.com/p/bashscripts/source/browse/trunk/)
--   {{< wp "Thunar" >}} (GPL) the
-    [xfce](http://xfce.org/) window manager.
+-   {{< wp "Thunar" >}} (GPL) the [xfce](http://xfce.org/) window manager.
     -    [Thunar Home](http://docs.xfce.org/xfce/thunar/start)
     -    Thunar project was publishing  a
          _memory usage page_ (unavailable today?)
