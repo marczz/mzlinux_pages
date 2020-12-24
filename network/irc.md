@@ -290,6 +290,9 @@ Weechat has some frontends:
 -   [glowing-bear](https://www.glowing-bear.org/) (GPL)
     is a WeeChat web frontend. The [source is in GitHub
     ](https://github.com/glowing-bear/glowing-bear).
+    -   [Installation de Weechat et Glowing Bear comme client IRC distant
+        ](https://mathdatech.fr/?post/2018/07/30/Installation-de-Weechat-et-Glowing-Bear-comme-client-IRC-distant).
+
 
 # IRC Web clients
 
@@ -319,6 +322,8 @@ Weechat has some frontends:
 -   [Gozerbot](http://gozerbot.org/) (BSD License) is an IRC and
     Jabber bot written in python. It is in Debian.
     -   [Pypi:Gozerbot](https://pypi.python.org/pypi/gozerbot)
+-   [LogBot](https://freenode.logbot.info/) (MIT License)
+    is an IRC logging bot, it logs many freenode channels.
 -   [Sopel](https://sopel.chat/)
     ([Eiffel Forum License](http://opensource.org/licenses/EFL-2.0))
     formerly [Willie](http://willie.dftba.net/)
