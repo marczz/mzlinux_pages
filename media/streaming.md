@@ -560,6 +560,8 @@ enables using a a DLNA
 service/UPnP device in a gst pipeline; and a configuration gui in
 _rygel-preferences_.
 
+_rygel_, _rygel-playbin_, and severall plugins are in Debian.
+
 Rygel with the playbin plugin takes on amd64 47M res / 17M shr on
 may 2018 for rygel 0.36.1, when playing a TV stream I got
 56M / 26M.
@@ -610,8 +612,12 @@ Taken from the [Rygel Wiki - features
 ## UPnP media renderers (clients): {#upnp_media_clients}
 
 -   [djmount](http://djmount.sourceforge.net/) (GPL)
-    is an UPnP AV client. It mounts as a Linux filesystem the media
-    content of compatible UPnP AV devices. _djmount is in debian_
+    is an UPnP AV client. It mounts as a Linux filesystem the media content of
+    compatible UPnP AV devices. _djmount devellopement on sourceforge stopped in 2006,
+    it was in debian until stretch._
+
+    A newer fork of _djmount_ is [djmount - GitHub](https://github.com/mwilck/djmount/),
+    this fork has severall fixes including the transition from libupnp3 to libupnp6.
 -   [eezpnp](http://www.eezupnp.de/) (Free but not open source ?)
     is a control point written in Java.
 -   [GMediaRender](http://gmrender.nongnu.org/) (GPL)
@@ -641,29 +647,22 @@ These streaming server acts as  UPnP media renderers.
     can [act as an UPnP client](https://kodi.wiki/view/UPnP/Client)
     that can be controlled by an UPnP control point.
 -   {{< iref "media_players#mpd" "MPD" >}}
-    can natively read UPnP streams on the local network with the
-    native upnp plugin
-    but there is also a frontend to serve UPnP content _upmdcli_
-    the difference between the two approaches are described in
-    [MPD and UPnP - umpdcli or mpd upnp
+    can natively read UPnP streams on the local network with the native upnp plugin but
+    there is also a frontend to serve UPnP content _upmdcli_ the difference between the
+    two approaches are described in [MPD and UPnP - umpdcli or mpd upnp
     ](http://www.lesbonscomptes.com/upmpdcli/upmpdcli-or-mpdupnp.html)
     -   [upmpdcli](http://www.lesbonscomptes.com/upmpdcli/) (GPL)
-        is a UPnP Media Renderer front-end for MPD written in C++, It
-        supports UPnP gapless track transitions and the OpenHome
-        ohMedia services (including a Radio service to listen to
-        Internet streams), see also
-        [Upmpdcli downloads](https://www.lesbonscomptes.com/upmpdcli/downloads.html).
--   {{< iref "media_players#rhythmnbox" "Rhythmnbox" >}}
-    can play UPnP medias, and DAAP via a plugin which uses
-    _libdmapsharing_.
--   {{< iref "media_players#totem" "Totem" >}}
-    has a DLNA plugins from
-    {{< iref "#coherence" "coherence project" >}}
-    which allows it to work as UPnP media client.
--   {{< iref "media_players#vlc" "VLC" >}}
-    can play UPnP medias since 1.2.0 release.
--   {{< iref "media_players#kodi" "Kodi" >}}
-    can play UPnP medias.
+        is a UPnP Media Renderer front-end for MPD written in C++, It supports UPnP
+        gapless track transitions and the OpenHome Media services (including a Radio
+        service to listen to Internet streams).
+    -   [Upmpdcli downloads](https://www.lesbonscomptes.com/upmpdcli/downloads.html).
+-   {{< iref "media_players#rhythmnbox" "Rhythmnbox" >}} can play UPnP medias, and DAAP
+    via a plugin which uses _libdmapsharing_.
+-   {{< iref "media_players#totem" "Totem" >}} has a DLNA plugins from
+    {{< iref "#coherence" "coherence project" >}} which allows it to work as UPnP media
+    client.
+-   {{< iref "media_players#vlc" "VLC" >}} can play UPnP medias since 1.2.0 release.
+-   {{< iref "media_players#kodi" "Kodi" >}} can play UPnP medias.
 
 ## Hardware including an UPNP renderer
 
@@ -685,25 +684,23 @@ may function as a complete music playing application.
 
 
 -   <a name="gupnp"></a>[GUPnP](https://wiki.gnome.org/Projects/GUPnP)
-    is a framework for creating UPnP devices and control points.
-    GUPnP-Tools is a set of utilities to work with UPnP. It includes
-    an AV control point `gupnp-av-cp`, a Generic Control Point
-    `gnupnp-universal-cp` an uploader `gupnp-upload` and a
-    {{< wp "Simple Service Discovery Protocol" >}} (SSDP) commandline client
-    `gssdp-discover`.
+    is a framework for creating UPnP devices and control points.  _GUPnP-Tools_ is a set
+    of utilities to work with UPnP. It includes an AV control point `gupnp-av-cp`, a
+    Generic Control Point `gnupnp-universal-cp` an uploader `gupnp-upload` and a
+    {{< wp "Simple Service Discovery Protocol" >}} (SSDP) commandline client.
+    `gssdp-discover`. _GUPnP-Tools is in Debian._
 
-    On amd64 _gupnp-av-cp_ takes 25 res / 17M shr
-    on may 2018 for gupnp-tools 0.8.14.
+    On amd64 _gupnp-av-cp_ takes 25 res / 17M shr on may 2018 for gupnp-tools 0.8.14.
 
 -   [upplay](https://www.lesbonscomptes.com/upplay/) (GPL)
     is a desktop UPnP audio Control Point written in C++ for
-    Linux/Unix and MS Windows. A Debian package repository
+    Linux/Unix and MS Windows. A _Debian_ package repository
     is provided. On amd64 upplay takes 53M res / 35M shr on may 2018
     for 1.2.11, which is very heavy for a control point.
 
 -   {{< iref "media_players#kodi" "Kodi" >}}
     can  [act as an UPnP Control Point
-        ](https://kodi.wiki/view/UPnP/Client#Sending_video_to_other_UPnP_targets).
+    ](https://kodi.wiki/view/UPnP/Client#Sending_video_to_other_UPnP_targets).
 
 ### Android and IOS control points and renderers
 More control points and server are in the
