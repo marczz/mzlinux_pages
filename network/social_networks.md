@@ -212,48 +212,6 @@ Some microblogging servers are refered to in the
         it is used in the client side web pgp key generators
         [Fncontact - Pgpkeys](https://fncontact.com/pgpkeys),
         [PgpKeyGen](https://pgpkeygen.com/)
--   <a name="matrix"></a>{{< wp "Matrix" >}}
-    is an open protocol for real-time communication. It
-    allows to users to communicate via online chat, Voice over IP, and
-    Videotelephony. It provides HTTP APIs and open source reference
-    implementations for securely distributing and persisting messages
-    in JSON format over an open federation of servers.[2][3] It can
-    integrate with standard web services via {{< wp "WebRTC" >}}.Matrix is not
-    a pure peer-to-peer system; instead each user has a well-defined
-    homeserver which stores his data and that he can depend upon.
-
-    -   [The Faq](https://matrix.org/docs/guides/faq.html)
-        Explain the differences between Matrix and IM applications
-        like Xmpp, Tox and other.
-    -   There are planty of [Matrix projects
-        ](https://matrix.org/docs/projects/).
-    -   <a name="riotim"></a>[Riot.im](https://riot.im/)
-        _formerly Vector_ (Apache License)
-        is an internet messaging app for group chat voip & video
-        calling file transfer.  It is built on the top of Matrix. It
-        has clients for Linux, Mac OS X, IOS, Android, Windoze, we can
-        also use a Web interface.  That make it one of the F2F
-        communication tool with the broader support.
-    -   [weechat-matrix-protocol-script
-        ](https://github.com/torhve/weechat-matrix-protocol-script)
-        is a {{< iref "irc#weechat" "WeeChat" >}} script in Lua that implements
-        the matrix.org chat protocol.
-    -   [Unofficial selection of public Matrix servers
-        ](https://www.hello-matrix.net/public_servers.php)
-    -   [Matrix Public Homeservers](https://www.anchel.nl/matrix-publiclist/)
-    -   [Matrix bridges](https://matrix.org/bridges/) the irc bridge is builtin,
-        some public servers provide a bridge like [Telegram at utwente.io
-        ](https://syscom.utwente.io/info/matrix/telegram/) or [t2bot.io
-        ](https://t2bot.io/telegram/). The server [t2bot.io
-        ](https://t2bot.io/) provides many bridges and bot: tlegram, discord,
-        [Slack compatible webhooks
-        ](https://github.com/turt2live/matrix-appservice-webhooks),
-        and many bots. Other bridges must be self-installed, some have light
-        dependencies, some are quite heavy needing even yo have your own home server
-        like the WhatsApp bridge.
-    -   [mxtoot](https://github.com/ma1uta/mxtoot)    (Apache License)
-        is a Matrix <=> Mastodon bot written on java.
-
 -   <a name="pleroma"></a>[Pleroma](https://pleroma.social/) (AGPL)
     is a federated social networking server,
     based on "{{< iref "#activitypub" "ActivityPub" >}} protocol it is part of
@@ -280,15 +238,61 @@ Some microblogging servers are refered to in the
         ](https://github.com/miguelfreitas/twister-core) and
         [twister-html](https://github.com/miguelfreitas/twister-html).
 
-## Mastodon
-<a name="mastodon"></a>{{< wp "Mastodon_(software)"  "Mastodon" >}} (AGPL)
-is a federated social network written in Ruby with front end in
-JavaScript, with similar microblogging features to Twitter.
+## Matrix {#matrix}
+{{< wp "Matrix" >}} is an open protocol for real-time communication. It allows to users
+to communicate via online chat, Voice over IP, and Videotelephony. It provides HTTP APIs
+and open source reference implementations for securely distributing and persisting
+messages in JSON format over an open federation of servers It can integrate with
+standard web services via {{< wp "WebRTC" >}}.Matrix is not a pure peer-to-peer system;
+instead each user has a well-defined homeserver which stores his data and that he can
+depend upon.
+
+-   [The Faq](https://matrix.org/docs/guides/faq.html)
+    Explain the differences between Matrix and IM applications like Xmpp, Tox and other.
+-   There are planty of [Matrix projects](https://matrix.org/docs/projects/).
+-   <a name="element"></a>[Riot.im](https://riot.im/)
+    [Element](https://element.io/) (Apache License)
+    _formerly riot.im, formerly Vector_
+    is an internet messaging app for group chat voip & video calling file transfer.  It
+    is built on the top of Matrix. It has clients for Linux, Mac OS X, IOS, Android,
+    Windoze, we can also use a Web interface.  That make it one of the F2F communication
+    tool with the broader support.
+
+    Element has a Debian package _element-desktop_ in a deb repository.
+
+    -   [Element Web interface](https://app.element.io/).
+-   [weechat-matrix-protocol-script
+    ](https://github.com/torhve/weechat-matrix-protocol-script)
+    is a {{< iref "irc#weechat" "WeeChat" >}} script in Lua that implements
+    the matrix.org chat protocol.
+-   [weechat-matrix](https://github.com/poljar/weechat-matrix)
+    a Weechat{{< iref "irc#weechat" "WeeChat" >}} Matrix protocol python script.
+    _In Debian._
+-   [Unofficial selection of public Matrix servers
+    ](https://www.hello-matrix.net/public_servers.php)
+-   [Matrix Public Homeservers](https://www.anchel.nl/matrix-publiclist/)
+-   [Matrix bridges](https://matrix.org/bridges/) the irc bridge is builtin,
+    some public servers provide a bridge like [Telegram at utwente.io
+    ](https://syscom.utwente.io/info/matrix/telegram/) or [t2bot.io
+    ](https://t2bot.io/telegram/). The server [t2bot.io
+    ](https://t2bot.io/) provides many bridges and bot: telegram, discord,
+    [Slack compatible webhooks
+    ](https://github.com/turt2live/matrix-appservice-webhooks),
+    and many bots. Other bridges must be self-installed, some have light
+    dependencies, some are quite heavy needing even yo have your own home server
+    like the WhatsApp bridge.
+-   [mxtoot](https://github.com/ma1uta/mxtoot)    (Apache License)
+    is a Matrix <=> Mastodon bot written on java.
+
+
+
+## Mastodon {#mastodon}
+{{< wp "Mastodon_(software)" "Mastodon" >}} (AGPL) is a federated social network written
+in Ruby with front end in JavaScript, with similar microblogging features to Twitter.
 It support the {{< iref "#ostatus" "Ostatus" >}} and
-{{< iref "#activitypub" "ActivityPub" >}} protocols.
-Each message has a privacy option,  private messages are only
-shared on the timelines of the user's followers, or can be direct
-between users.
+{{< iref "#activitypub" "ActivityPub" >}} protocols.  Each message has a privacy option,
+private messages are only shared on the timelines of the user's followers, or can be
+direct between users.
 
 Mastodon is part of {{< iref "#fediverse" "Fediverse" >}} network.
 
@@ -311,8 +315,7 @@ Mastodon is part of {{< iref "#fediverse" "Fediverse" >}} network.
 -   [umr](https://github.com/Ulrar/umrc)
     is a bot to allow using a Mastodon account from IRC
 -   {{< iref "xmpp#bitlbee" "BitlBee" >}}
-    [plugin for Mastodon
-    ](https://github.com/kensanata/bitlbee-mastodon).
+    [plugin for Mastodon](https://github.com/kensanata/bitlbee-mastodon).
 -   [Mastodon Twitter Crossposter](https://crossposter.masto.donte.com.br/) is a
     service which allows you to connect a Mastodon account and a Twitter account and
     enable cross-posting between them.
@@ -330,8 +333,7 @@ Mastodon is part of {{< iref "#fediverse" "Fediverse" >}} network.
 -   [mastodon.el](https://github.com/jdenen/mastodon.el)
     an Emacs client for Mastodon, you find it in MELPA.
 -   [toot](https://github.com/ihabunek/toot/) (GPL)
-    is a python  Mastodon CLI client. There is an apt repository
-    with the package.
+    is a python Mastodon CLI client. There is an apt repository with the package.
 -   [tootstream](https://github.com/magicalraccoon/tootstream) (MIT License)
     a  python  Mastodon CLI client.
 
@@ -374,11 +376,9 @@ read as Atom or RSS streams.
     Jessica _xray7224_ also develop the python library
     [PyPump](https://github.com/xray7224/PyPump).
 -   [Pump.io protocol and API](https://github.com/pump-io/pump.io/blob/master/API.md)
-Ug
-
 -   [MediaGoblin](http://mediagoblin.org/) (GPL)
-    is a media publishing platform that anyone can run.
-    It is powered by {{< iref "#pumpio" "Pump.io" >}}.
+    is a media publishing platform that anyone can run.  It is powered by
+    {{< iref "#pumpio" "Pump.io" >}}.
 
 ## Facebook {#facebook}
 
@@ -457,7 +457,7 @@ I group here _Slack like_ software. IRC-like features:
             protocol. It is in melpa. You can also use an emacs IRC
             client with the gitter bridge.
         -   {{< iref "xmpp#matterbridge" "matterbrige" >}} support Gitter.
--   {{< iref "#riotim" "Riot.im" >}} is above with the
+-   {{< iref "#element" "Element" >}} is above with the
     {{< iref "#matrix" "Matrix protocol" >}}.
 -   <a name="rocketchat"></a>{{< wp "Rocket.Chat" >}} (MIT License)
     is an instant messaging and chat room system. There are electron
