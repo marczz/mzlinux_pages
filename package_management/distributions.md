@@ -121,8 +121,8 @@ allows to create your own customized Debian Live system.
     [Gentoo packages](http://packages.gentoo.org/)
 -   [Gentoo FAQ](http://www.gentoo.org/doc/en/faq.xml),
 -   [Gentoo Handbook](http://www.gentoo.org/doc/en/handbook/):
-    [Gentoo Linux AMD64 Handbook]](https://wiki.gentoo.org/wiki/Handbook:AMD64),
--   [Gentoo Documentation Resources](http://www.gentoo.org/doc/en/ "gentoo.org /doc/en/")
+    [Gentoo Linux AMD64 Handbook](https://wiki.gentoo.org/wiki/Handbook:AMD64),
+-   [Gentoo Documentation Resources](http://www.gentoo.org/doc/en/)
 -   The site [gentoo-portage](http://gentoo-portage.com/) allows to
     browse all the gentoo packages and list releases, dependencies,
     change logs, use flags.
@@ -207,7 +207,7 @@ is also the name of the programming language.
         ( [Nix](https://nix.dev/faq.html#nix),
         [NixOS](https://nix.dev/faq.html#nixos) )
 
--   [Nix manual](https://nixos.org/manual/nix/stable/#chap-package-management)
+-   [Nix manual](https://nixos.org/manual/nix/stable/)
 -   [Nixpkgs Manual](https://nixos.org/manual/nixpkgs/stable)
 -   [NixOS Manual](https://nixos.org/manual/nixos/stable)
 -   [Nix Pills](https://nixos.org/guides/nix-pills/pr01.html)
@@ -221,6 +221,9 @@ is also the name of the programming language.
 
 -   [Nix - GitHub](https://github.com/NixOS/nix)
 -   [NixOS Discourse - NixOS community forum](https://discourse.nixos.org/)
+-   [Flakes](https://nixos.wiki/wiki/Flakes)
+    Flakes allow you to specify your code's dependencies (e.g. remote Git repositories)
+    in a declarative way, Flakes are meant as a replacement for channels.
 
 -   [Cachix](https://cachix.org/)  Nix binary cache hosting, with Continuous Integration
     support.
