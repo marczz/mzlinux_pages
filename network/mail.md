@@ -27,7 +27,7 @@ title: Mail
 
 # Mail User Agents
 
-My {{< noteref ref "mutt" "Mutt page" >}}
+My {{< iref "mutt" "Mutt page" >}}
 
 -   Wikipedia: {{< wp "Comparison of e-mail clients" >}} and {{< wp "Webmail" >}},
     {{< wp "Mixmaster anonymous remailer" >}}
@@ -39,23 +39,16 @@ My {{< noteref ref "mutt" "Mutt page" >}}
 -   [Comparing Mail Back Ends
     ](http://www.gnu.org/software/emacs/manual/html_node/gnus/Comparing-Mail-Back-Ends.html)
     from [Gnus Manual](http://www.gnu.org/software/emacs/manual/html_node/gnus/)
--   [jetable.org](http://www.jetable.org/en/index),
-    ([fr](http://www.jetable.org/fr/index)),
-    [guerilla.com](https://www.guerrillamail.com/),
-    [10minutemail.com](http://10minutemail.com/),
-    [mailnull.com](https://mailnull.com/)
-    -   [1sec MAIL](https://www.1secmail.com/) provide you with a temporary disposable
-        email address receive emails at this temporary address, after certain period of
-        time email will be delated and address will be canceled.
-        [sdushantha/tmpmail](https://github.com/sdushantha/tmpmail)
-        is a sh script which creates an address on _1sec MAIL_, and send and receive
-        message at this address. It uses _curl_, _w3m_, and yhr json procesor
-        [jq](https://github.com/stedolan/jq).
-    -   [more sites on google
-        ](https://www.google.com/search?q=mail+temporary+disposable)
--   [BongoUs](https://bongous.com/)
-    is a package and mail Forwarding Services for shopping
-    to an oversea country (EU or US).
+-   [aerc](https://aerc-mail.org/)
+    is a terminal mail client with support for IMAP, Maildir, SMTP, and sendmail
+    transfer protocols. It has Vim-style keybindings and render HTML emails with an
+    interactive terminal web browser, highlight patches with diffs, and browse with an
+    embedded less session. _aerc is in Debian._
+    -   [aerc - sourcehut git](https://git.sr.ht/~sircmpwn/aerc).
+    -   _aerc_ documentation is in the man pages; their source is in
+        [aerc/doc](https://git.sr.ht/~sircmpwn/aerc/tree/master/item/doc).
+    -   [aerc miling list](https://lists.sr.ht/~sircmpwn/aerc), the irc is `#aerc2` on
+        freenode.
 -   [Alpine](http://www.washington.edu/alpine/)
     (apache license) from Washington University is the successor of
     [Pine](http://www.washington.edu/pine/)
@@ -65,34 +58,29 @@ My {{< noteref ref "mutt" "Mutt page" >}}
         [re-alpine git repo
         ](http://sourceforge.net/p/re-alpine/code/ci/master/tree/).
     -   [ArchWiki: Alpine](https://wiki.archlinux.org/index.php/Alpine).
--   [cone - COnsole Newsreader And Emailer
-    ](http://www.courier-mta.org/cone/)
+-   [cone - COnsole Newsreader And Emailer](http://www.courier-mta.org/cone/)
     (GPL) handles local mail folders, maildirs, IMAP and POP3
     accounts, and Usenet newsgroups.  Cone shares a lot of its code
     base with the Courier mail server.  and supports SSL/TLS and SASL,
     PGP/GPG based encryption, and digital signatures.
--   <a name=gnus"></a>[Gnus](http://www.gnus.org/) by Lars Magne
-    Ingebrigtsen.
+-   <a name=gnus"></a>[Gnus](http://www.gnus.org/) by Lars Magne Ingebrigtsen.
     -   [Gnus Manual](http://www.gnu.org/software/emacs/manual/html_node/gnus/)
     -   [Practical guide to use Gnus with Gmail
         ](https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/gnus-guide-en.org)
         in [Master Emacs in one year
         ](https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-en.org)
         by 陈斌 Chen bin.
-    -   [EmacsWiki: GnusGmail
-        ](https://www.emacswiki.org/emacs/GnusGmail)
--   [S-nail](http://sourceforge.net/projects/s-nail/) [
-    [open source Licence
+    -   [EmacsWiki: GnusGmail](https://www.emacswiki.org/emacs/GnusGmail)
+-   [S-nail](http://sourceforge.net/projects/s-nail/) ([open source Licence
     ](http://sourceforge.net/p/s-nail/code/ci/master/tree/COPYING))
-    is the continuation of
-    [Heirloom mailx](http://heirloom.sourceforge.net/mailx.html)
-    from the
-    [Heirloom project](http://heirloom.sourceforge.net/) ([CDDL
+    is the continuation of [Heirloom mailx](http://heirloom.sourceforge.net/mailx.html)
+    from the [Heirloom project](http://heirloom.sourceforge.net/) ([CDDL
     ](http://en.wikipedia.org/wiki/Common_Development_and_Distribution_License))
-    (a set of unix sys V compliant tools) no longer developped since 2009<br />
-    _S-nail_ also packaged with the previous name _Heirloom mailx_ is a mail user agent with an
-    interface like the original Berkeley mailx, but that supports mime,
-    imap, pop3, ssl, s/mime. It was previously known as *nail*.
+    _a set of unix sys V compliant tools no longer developped since 2009_
+
+    _S-nail_ also packaged with the previous name _Heirloom mailx_ is a mail user agent
+    with an interface like the original Berkeley mailx, but that supports mime, imap,
+    pop3, ssl, s/mime. It was previously known as *nail*.
     -   [S-nail git repo](http://sourceforge.net/p/s-nail/code/ci/master/tree/)
     -   [Using Mailx with Gmail](http://forums.debian.net/viewtopic.php?f=16&t=103322)
     -   [ArchWiki: S-nail](https://wiki.archlinux.org/index.php/S-nail)
@@ -126,7 +114,23 @@ My {{< noteref ref "mutt" "Mutt page" >}}
     -   [ArchWiki: Thunderbird
         ](https://wiki.archlinux.org/index.php/Thunderbird).
 
-## Mail search tools {#mail_search}
+# Temporary email adresses
+-   [jetable.org](http://www.jetable.org/en/index),
+    ([fr](http://www.jetable.org/fr/index)),
+    [guerilla.com](https://www.guerrillamail.com/),
+    [10minutemail.com](http://10minutemail.com/),
+    [mailnull.com](https://mailnull.com/)
+    -   [1sec MAIL](https://www.1secmail.com/) provide you with a temporary disposable
+        email address receive emails at this temporary address, after certain period of
+        time email will be delated and address will be canceled.
+        [sdushantha/tmpmail](https://github.com/sdushantha/tmpmail)
+        is a sh script which creates an address on _1sec MAIL_, and send and receive
+        message at this address. It uses _curl_, _w3m_, and yhr json procesor
+        [jq](https://github.com/stedolan/jq).
+    -   [more sites on google
+        ](https://www.google.com/search?q=mail+temporary+disposable)
+
+# Mail search tools {#mail_search}
 -   [mairix](http://www.rpcurnow.force9.co.uk/mairix/index.html) (GPL)
     is a program for indexing and searching email messages
     stored in {{< wp "maildir" >}}, [MH Message Handling System] or {{< wp "mbox" >}} folders.
@@ -432,12 +436,10 @@ how to deal with root mails sent by cron with the smtp relay agents.
         ](https://www.emacswiki.org/emacs/MultipleSMTPAccounts).
     -   [Command Line Gmail Using msmtp/mailx
         ](http://www.klenwell.com/is/UbuntuCommandLineGmail)
-    -   We can use [cscorley/send.py
-        ](http://www.klenwell.com/is/UbuntuCommandLineGmail)
-        to access gmail with Oauth2 authentication; it is further
-        explained in
-        [OAuth2 authentication for offline email clients
-        ](https://jrvcomputing.wordpress.com/2016/11/21/oauth2-authentication-for-offline-email-clients/).
+-       [OAuth2 authentication for offline email clients
+        ](https://jrvcomputing.wordpress.com/2016/11/21/oauth2-authentication-for-offline-email-clients/)
+        uses [cscorley/send.py](https://github.com/cscorley/send.py) _2014_
+         to access gmail with Oauth2 authentication.
     -   [mir.msmtpq](https://github.com/darkfeline/mir.msmtpq)
         is a python drop-in  replacement for sendmail or msmtp. Unlike
         sendmail or msmtp, msmtpq will only queue messages. It is in
@@ -474,6 +476,54 @@ how to deal with root mails sent by cron with the smtp relay agents.
     -   [The Quick-N-Dirty Guide to ssmtp
         ](http://www.scottro.net/qnd/qnd-ssmtp.html),
     -   [ssmtp(8)](http://linux.die.net/man/8/ssmtp).
+
+# Mail providers
+-   {{< wp "Comparison of webmail providers" >}}
+-   [Posteo](https://posteo.de/en) uses only open-source software and
+    offers support for
+    [DNSSEC](https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions)/
+    [DANE](https://en.wikipedia.org/wiki/DNS-based_Authentication_of_Named_Entities) and
+    S-Mime and {{< wp "PGP" >}} (through {{< wp "Mailvelope" >}} ) in the web interface,
+    which is running {{< wp "Roundcube" >}}.
+    Additionally they offer two-factor-authentication via
+    {{< wp "Time-based One-time Password Algorithm" >}} _TOTP_ and use
+    {{< wp "Extended Validation Cerificates" >}} and
+    {{< wp "HTTP Public Key Pinning" >}} for the https connection.
+
+    An account is billed 12€/yearly with 2GB (3€/year*GB for extra storage) 2 email
+    adresses (1€20/year for additional adresses) 3 calendars (1€20/year for additional
+    calendar), attachments of up to 50 MB, MAP/POP3 support, spam and virus filter,
+    unlimited addresse filters, support via email.
+
+    An AES encrypted adress book which can be can be synchronised using CardDAV.
+    In the same way the calendar can be AES encrypted and synchronized with CalDav.
+
+    -   [Email accounts features](https://posteo.de/en/site/features).
+
+-   {{< wp "protonMail" >}} is an end-to-end encrypted email service which uses
+    ProtonMail uses a combination of public-key cryptography and symmetric encryption.
+    Emails sent from ProtonMail to non-ProtonMail email addresses may optionally be sent
+    in plain text or with end-to-end AES encryption wit a  a previously exchanged
+    password.
+
+    There is a Free plan with limits of 150 mails/day, 3 folders, 20 labels, 500MB
+    storage. For 45€/yearly you get 5GB storage, and VPN connection.
+
+    -   [ProtonMail Home](https://protonmail.com/)
+
+-   {{< wp "Tutanota"}}  offers end-to-end encryption for emails sent from one Tutanota
+    user to another. It uses  symmetrical and an asymmetrical algorithm - AES with a
+    length of 128 bit and RSA with 2048 bit. To external recipients who do not use
+    Tutanota a notification is sent with a link to a temporary Tutanota account. After
+    entering a previously exchanged password, the recipient can read the message and
+    reply end-to-end encrypted.
+
+    There is a Free plan with 1GB storage and limited search, the free plans are deleted
+    after 6 monts of inactivity. For 12€/yearly you get unlimited serch, multiple
+    calendars, 5 aliases, and email support. _price 2021_.
+    -   [Tutanota Home](https://tutanota.com/).
+
+
 
 [AW ssmtp]: http://wiki.archlinux.org/index.php/SSMTP
 
