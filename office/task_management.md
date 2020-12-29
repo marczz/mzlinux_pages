@@ -207,9 +207,39 @@ lisp.
 -   [Bringing ETL to the Masses with APIs
     ](http://apievangelist.com/2013/02/10/bringing-etl-to-the-masses-with-apis/)
     zapier, ifttt znd friends
+-   [Boxcar](https://boxcar.io/)
+    Push notification platform. Free plan 200 Pushes Per Minute, 100 ios and 100 android
+    devices.
+    - [Boxcar Documentation](https://developer.boxcar.io/)
+-   <a name="IFTT">[IFTTT](https://ifttt.com/)
+    is a service that lets you create, connections between internet service providers.
+-   free plan allow to create 3 applets, and turn on any provided applet. For 48€/year
+    you have unlimited applet creattion, allowing conditional logic and multiple actions
+    and customer support.
+-   [Flowoid](https://flowoid.com/)
+    _-No-Code Workflow Automation_ hs many integrtions and a free plan with 1,000
+    operations per month, Unlimited private workflows, Multi-step workflows, Custom
+    logic with decision paths. The Pro plan with 20 000 operations/month is fre while it
+    is in beta and will then be priced 20$ (month? year?).
+-   [Huginn](https://github.com/huginn/huginn)     (MIT License)
+    Create agents that monitor and perform automated tasks for you online. They can read
+    the web, watch for events, and take actions on your behalf. It is an open-source
+    self-hosted hackable version of IFTTT or Zapier.
+
+    There is a Docker image, or Huginn works on the cheapest Heroku paid plan. If you
+    want to do a manual install you need ruby, MySql or PosgresQl, Nginx or Apache, and
+    a lot of RAM, the minimum is 1GB RAM + 1GB Swap dual core CPU, recommended at lest
+    2GB RAM.
+
+    -   [Huginn Documentation](https://github.com/huginn/huginn/tree/master/doc).
+    -   [Huginn Wiki](https://github.com/huginn/huginn/wiki)
 -   [Instapush - Instant Notifications for Important Transactions
     ](https://instapush.im/) accept an http post request to
-    send a notification
+    send a notification.
+-   [Pushed](https://pushed.co/)
+    Pushed allows you to send real-time push notifications to iOs, Android and Desktop
+    (Chrome, Firefox & Safari) devices. Pushed has apps for iOs and Android.
+    The free plan allow 1000 notifications/month, 1 application and 2 channels.
 -   [Pushover](https://pushover.net/) allow to receive notifications,
     from some enabled applications (including IFTT), or your own
     application using the API. There are client applications for
@@ -288,14 +318,18 @@ lisp.
         It sends and receives SMS to Android devices, mirrors Android notifications.
         You can use a google or facebook login, without need of an API key.
         There are prebuilt packages for Debian/ubuntu, and appimage  and downloads for
-        OSX, windows
--   <a name="IFTT">[IFTTT](https://ifttt.com/)
-    is a service that lets you create
-    connections between internet service providers.
--   [BipIO - For People and Robots](https://bip.io/) open source
-    alternative of IFTTT.
--   [DERI Pipes](http://pipes.deri.org/) open source clone of
-    [yahoo pipes](https://pipes.yahoo.com/pipes/)
+        OSX, windows.
+-   [Spontit](https://spontit.com/)
+    send and receive push notifications. Spontit has IOS and Android apps; and webhooks
+    for Gitlab/GitHub/Bitbucket.
+    -   [Spontit API](https://api.spontit.com/) and
+        [Python Api wrapper](https://github.com/spontit/spontit-api-python-wrapper).
+    -   [Spontit Tutorial](https://spontit.com/tutorials) _Send push notifications with
+        cURL_.
+-   [Zapier](https://zapier.com/)
+    Workflow automation. Integration with thousand of apps.
+    Free plan allows 5 workflows nd 100 tasks/month, 240$/year 20 workflows 750
+    tasks/month.
 
 remind
 ======
