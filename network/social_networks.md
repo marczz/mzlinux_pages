@@ -26,7 +26,7 @@ For messaging applications, {{< iref "irc" "IRC" >}} came first using a de-facto
 communication protocol, but without any standard, but soon many RFC appeared following
 the evolution of IRC, but their support is irregular among clients.
 
-{< iref "xmpp" "XMPP" >}} enhanced the IRC protocol with an open standard, in XMPP the
+{{< iref "xmpp" "XMPP" >}} enhanced the IRC protocol with an open standard, in XMPP the
 diverse clients can communicate together, ven if all clients don't implement the same
 RFC for some features like encryption. XMPP also allow to speak with other protocols
 through Gateways.
@@ -284,8 +284,6 @@ depend upon.
 -   [mxtoot](https://github.com/ma1uta/mxtoot)    (Apache License)
     is a Matrix <=> Mastodon bot written on java.
 
-
-
 ## Mastodon {#mastodon}
 {{< wp "Mastodon_(software)" "Mastodon" >}} (AGPL) is a federated social network written
 in Ruby with front end in JavaScript, with similar microblogging features to Twitter.
@@ -323,17 +321,21 @@ Mastodon is part of {{< iref "#fediverse" "Fediverse" >}} network.
     Link your Mastodon account to Twitter and Instagram. the code is on GitHub.
 
 ### Mastodon clients
--   [jmcbray/brutaldon](https://git.carcosa.net/jmcbray/brutaldon) (AGPL)
+-   [Brutaldon](https://git.carcosa.net/jmcbray/brutaldon) (AGPL)
     A [brutalist](https://brutalist-web.design/) web interface for Mastodon written in
     python.  It works in text-mode browsers such as Lynx, w3m, or elinks, and also in
     more heavy-weight graphical browsers, such as Firefox, or on mobile platform.  There
     is a hosted instance at [brutaldon.online](https://brutaldon.online/).
--   [madonctl](https://github.com/McKael/madonctl)
+-   [feed2toot](https://gitlab.com/chaica/feed2toot) (MIT License)
+    parses rss feeds, identifies new posts and posts them on Mastodon.
+-   [madonctl](https://github.com/McKael/madonctl) (MIT License)
     a Go language mastodon CLI.
 -   [mastodon.el](https://github.com/jdenen/mastodon.el)
     an Emacs client for Mastodon, you find it in MELPA.
 -   [toot](https://github.com/ihabunek/toot/) (GPL)
-    is a python Mastodon CLI client. There is an apt repository with the package.
+    is a python Mastodon CLI client. There is also a ncurses UI.
+    Since Debian 10 (buster) and Ubuntu 19.04 (disco), a deb package is available.
+    -   [toot documentation](https://toot.readthedocs.io/en/latest/).
 -   [tootstream](https://github.com/magicalraccoon/tootstream) (MIT License)
     a  python  Mastodon CLI client.
 
@@ -480,7 +482,7 @@ I group here _Slack like_ software. IRC-like features:
 
     It [integrates to a huge list of Apps and Clouds
     ](https://about.mattermost.com/community-applications/), though
-    [Zappier](https://zapier.com/).
+    [Zapier](https://zapier.com/).
 
     For XMPP/IRC access we there is:  a {{< iref "xmpp#pidgin_plugins" "purple plugin" >}},
     {{< iref "xmpp#matterbridge" "matterbrige" >}},
