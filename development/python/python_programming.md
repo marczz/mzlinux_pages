@@ -76,31 +76,22 @@ See the references to Cog, pyreport , pyWeb, PyLit in the
     or _Python Code Quality Authority_ is an organization which group
     projects in the domain of automatic style and quality reporting.
     -   [GitHub - PyCQA](https://github.com/PyCQA)
--   [PyChecker](http://pychecker.sourceforge.net/)
-    (BSD License) is a python syntax checker, it allows to report
-    errors found by the compiler in a compiled language. We must
-    syntaxly check our python programs, otherwise piece of codes that
-    stay unused will keep gross mistakes, until we meet the causes of
-    a program crash. PyChecker has a faster
-    alternative
-    {{< iref "#pyflakes" "Pyflakes" >}}.
-    Pychecker is limited to Python 2.
--   [PyLint](http://www.pylint.org/) (GPL)
+-   [PyChecker](http://pychecker.sourceforge.net/) (BSD License)
+    was a python syntax checker for python 2.x. PyChecker has a faster
+    alternative  {{< iref "#pyflakes" "Pyflakes" >}}.
+    Pychecker was limited to Python 2.
+-   <a name=pylint></a>[PyLint](http://www.pylint.org/) (GPL)
     includes PyChecker checks, plus checking line-code's
     length, checking if variable names are well-formed, checking if declared
-    interfaces are truly implemented ...<br />
-    [Pylint User Manual](http://docs.pylint.org/).
-    You can configure the rules used by pylint by a `.pylintrc` file,
-    the defaults are given by: `pylint --generate-rcfile`.
-    Pylint is now compatible with Python 3k.
--    <a name=pyflakes"></a>[Pyflakes](http://pypi.python.org/pypi/pyflakes)
+    interfaces are truly implemented ... Pylint support python 3.5+
+    -  [Pylint User Manual](http://docs.pylint.org/).
+       You can configure the rules used by pylint by a `.pylintrc` file,
+       the defaults are given by: `pylint --generate-rcfile`.
+-    <a name=pyflakes"></a>[Pyflakes](https://github.com/PyCQA/pyflakes)
     is program to analyze Python programs and detect various errors.
     Pylint import the analyzed module but Pyflakes only parse the source file,
     so it is safe to use on modules with side effects.
-    It's also much faster. Pyflakes has a Python 3 port:
-    [Pyflakes3k](http://pypi.python.org/pypi/pyflakes3k)
-    ([Pyflakes3k Bitbucket repository
-    ](http://bitbucket.org/hsoft/pyflakes3k)).
+    It supports Python: 2.7 and > 3.4
 -   [pycodestyle](https://github.com/PyCQA/pycodestyle)
     (MIT _Expat_ Licence)
     formerly pep8.py is a Python PEP 8 code style checker
@@ -136,18 +127,20 @@ See the references to Cog, pyreport , pyWeb, PyLit in the
 ## Unicode memo
 
 -   Representation of text has
-    [changed a lot since v 3.0](http://docs.python.org/3.1/whatsnew/3.0.html#text-vs-data-instead-of-unicode-vs-8-bit).
+    [changed a lot since v 3.0
+    ](http://docs.python.org/3.1/whatsnew/3.0.html#text-vs-data-instead-of-unicode-vs-8-bit).
 
 -   Now python name _text_ what was previously called _unicode_ but
     the type is the new _str_,  and the old _str_ is now _bytes_.
 
     You no longer use _u"..."_ for text but you have to use _b"..."_ for _bytes_.
 
--   Python has a clear distinction between _text_ and _data_ the text "au cœur de l'été" has
-    16 characters, if you want to repesent these characters as data, you need to convert them
-    using an _encoding_, these encoding can use a fixed number of bytes to render a single character
-    as do `ascii`, `iso-8859-1` or `utf-32` _but ascii or iso-8859-1 cannot render the previous text_
-    or a variable number of bytes like `utf-8` or `utf-16`.
+-   Python has a clear distinction between _text_ and _data_ the text "au cœur de l'été"
+    has 16 characters, if you want to represent these characters as data, you need to
+    convert them using an _encoding_, these encoding can use a fixed number of bytes to
+    render a single character as do `ascii`, `iso-8859-1` or `utf-32` _but ascii or
+    iso-8859-1 cannot render the previous text_ or a variable number of bytes like
+    `utf-8` or `utf-16`.
 
 - In python 2.6 _in an utf-8 terminal_ you write:
 
