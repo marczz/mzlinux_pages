@@ -467,15 +467,21 @@ see also the {{< iref "python_web#wsgi" "xCGI stuff" >}}.
     [GitHub repository](https://github.com/pgbovine/OnlinePythonTutor/).
     -   Use it [online at pythontutor.com
         ](http://pythontutor.com/visualize.html).
--   [PyMacs](http://pymacs.progiciels-bpi.ca/pymacs.html)
+-   [PyMacs](http://web.archive.org/web/20100706203836/http://pymacs.progiciels-bpi.ca:80/pymacs.html)
     by François Pinard allows two-way communication between Emacs Lisp and Python.
-    The [Manual](http://pymacs.progiciels-bpi.ca/pymacs.html)
+    The [Manual](http://web.archive.org/web/20100706203836/http://pymacs.progiciels-bpi.ca:80/pymacs.html)
     contains many reference to examples.
-    [PyMacs repository](https://github.com/pinard/Pymacs)
--   [Rope](http://rope.sourceforge.net/)
-    is a python refactoring library, that integrates with emacs using the
-    [ropemacs plugin](http://rope.sourceforge.net/ropemacs.htm)
-    and pymacs. Rope has now a Py3k branch.
+
+    Since the death of François Pinard n 2014 the project ha a new home
+    [PyMacs repository](https://github.com/dgentry/Pymacs).
+    A 0.26 version was released by the new maintainer i 2017, but the repository is no
+    longer very active.
+-   [Rope](https://github.com/python-rope/rope) (LGPL-3.0)
+    is a python refactoring library Rope has now a Py3k branch.
+
+    It integrates with emacs using the
+    [ropemacs package](https://github.com/python-rope/ropemacs) (GPL-2.0)
+    which use pymacs.
 -   [Python Six](http://packages.python.org/six/)
     is a Python 2 and 3 Compatibility Library.
 -   [Skulpt](http://www.skulpt.org/) (MIT License)
@@ -1124,9 +1130,6 @@ See also the {{< iref "static_sites" "Static Site section" >}}.
 -   [Preprocess](http://code.google.com/p/preprocess/) (MIT License)
     is a variation on the C preprocessor that works on multiple languages and
     encodes preprocessor statements as comments. _2009 Python 2_
--   [pppp — Poor's Python Pre-Processor](http://pymacs.progiciels-bpi.ca/pppp.html)
-     by François Pinard is a python preprocessor that was written
-     to help porting Pymacs to Python 3.
 
 We can also use
 {{< iref "source_code#literate_programming" "literate programming tools" >}} like
