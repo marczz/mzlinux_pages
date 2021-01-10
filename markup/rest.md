@@ -22,11 +22,8 @@ title: reStructuredText
     [Sphinx: reStructuredText Primer
     ](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html),
     [Restructured Text (reST) and Sphinx CheatSheet
-    ](http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html),
-    [rules, tips, and tricks for using Sphinx and reStructuredText
-    ](http://docs.geoserver.org/trunk/en/docguide/sphinx.html)
-    or this [Christoph Reller: restructured tutorial
-    ](http://people.ee.ethz.ch/~creller/web/tricks/reST.html)
+    ](http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html).
+
 
 # ReSt on the web
 -   ReStructuredText be used in
@@ -197,11 +194,13 @@ formats, HtmlHelp, TexInfo, Epub, man page, LaTeX
     -   [rst2pdf online converter](http://www.rst2pdf.net/)
 
 ## Sphinx themes
-Sphinx has
-[theming support](http://sphinx-doc.org/latest/theming.html)
-and a collection of [builtin themes
-](http://sphinx-doc.org/latest/theming.html#builtin-themes).
+Sphinx has [theming support](http://sphinx-doc.org/latest/theming.html)
+and a collection of
+[builtin themes](http://sphinx-doc.org/latest/theming.html#builtin-themes).
 
+-   [alabaster](https://github.com/bitprophet/alabaster)
+    Lightweight configurable Sphinx theme; now the Sphinx default.
+    -   [Alabaster documentation](https://alabaster.readthedocs.io/en/latest/).
 -   [Sphinxjp.themes.s6](http://pypi.python.org/pypi/sphinxjp.themes.s6/)
     is a sphinx theme for generate S6 presentation.
 -   [sphinxjp.themes.htmlslide](http://pypi.python.org/pypi/sphinxjp.themes.htmlslide)
@@ -219,14 +218,11 @@ and a collection of [builtin themes
     ](https://github.com/ryan-roemer/sphinx-bootstrap-theme) (MIT
     License): [Sphinx Bootstrap Theme Demo
     ](http://ryan-roemer.github.io/sphinx-bootstrap-theme/),
-    [Pypi: Sphinx Bootstrap Theme
-    ](https://pypi.python.org/pypi/sphinx-bootstrap-theme/).
--   [Linfiniti Sphinx Theme
-    ](https://github.com/timlinux/linfiniti-sphinx-theme) an older and
-    simpler bootstrap theme for Sphinx.
--   [Sphinx theme for readthedocs.org
-    ](https://github.com/snide/sphinx_rtd_theme) can also be used in
-    other places. It is a mobile-friendly sphinx theme.
+    [Pypi: Sphinx Bootstrap Theme](https://pypi.python.org/pypi/sphinx-bootstrap-theme/).
+-   [Linfiniti Sphinx Theme](https://github.com/timlinux/linfiniti-sphinx-theme)
+    an older and simpler bootstrap theme for Sphinx.
+-   [Sphinx theme for readthedocs.org](https://github.com/snide/sphinx_rtd_theme)
+    can also be used in other places. It is a mobile-friendly sphinx theme.
 
 [rest]: http://docutils.sourceforge.net/rst.html
 [sphinx]: https://www.sphinx-doc.org/en/master/
