@@ -1,3 +1,4 @@
 ---
 title: Web
+bookCollapseSection: true
 ---

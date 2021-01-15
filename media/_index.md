@@ -1,3 +1,4 @@
 ---
 title: Media
+bookCollapseSection: true
 ---
