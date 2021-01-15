@@ -39,7 +39,7 @@ Debian Live and GRML are in the main {{< iref "distributions" "Distributions sec
 -   <a name="bunsenlabs"></a>[BunsenLabs Linux](https://www.bunsenlabs.org/)
     is the continuation of {{< wp "Crunchbang_Linux" "CrunchBang" >}} which stopped
     in 2015. It is a derivative
-    of Debian with {{< iref "desktop#openbox "Openbox window manager" >}},
+    of Debian with {{< iref "desktop#openbox" "Openbox window manager" >}},
     {{< iref "desktop#tint2" "tint2 panel" >}}, {{< iref "desktop#jgmenu" "Jgmenu" >}}
     and conky system monitor.
 -   [Damn Small Linux](http://www.damnsmalllinux.org/) was a
@@ -91,7 +91,8 @@ Debian Live and GRML are in the main {{< iref "distributions" "Distributions sec
     based raid-1_.
 
 # Embedded distributions
--   Wikipedia {{< wp "Comparison of mobile operating systems" >}}
+-   Wikipedia {{< wp "Comparison of mobile operating systems" >}},
+    {{< wp "Mobile operating system" >}}.
 -   [Embedded Linux Wiki ](http://elinux.org/Main_Page)
 -   [Ångström distribution
     ](http://en.wikipedia.org/wiki/%C3%85ngstr%C3%B6m_distribution)(GPL)
@@ -100,10 +101,6 @@ Debian Live and GRML are in the main {{< iref "distributions" "Distributions sec
     Gumstix and Kouchuk-Bars, Hawkboard, BeagleBoard, BeagleBone and
     BeagleBone Black, PandaBoard, OpenPandora, OMAPEVM, Base for Openmoko
     distribution, Archos 5/7/101/32/28 ....
--   {{< wp "Firefox OS" >}} is an open-source operating system made for
-    smartphones, tablet computers and smart TVs designed by
-    Mozilla and external contributors, based on the rendering engine
-    of  Firefox and the Linux kernel.
 -   [FreedomBox](http://wiki.debian.org/FreedomBox)
     is a Debian project to build cheap and simple computer system that
     serves internet services and preserve Freedom.
@@ -118,21 +115,27 @@ Debian Live and GRML are in the main {{< iref "distributions" "Distributions sec
         is a prototype of some Freedom Box services on a plug computer.
 -   [Gentoo Embedded Handbook
     ](https://gentoo-handbook.lugons.org/proj/en/base/embedded/handbook/index.xml)
--   {{< wp "Maemo" >}} is a development platform, {{< wp "MeeGo" >}} is a Linux project
+-   {{< wp "Maemo" >}} is a development platform, the project is abandonned by Nokia,
+    but there is still an open source branch
+    {{< wp "Maemo#Maemo_Leste" "Maemo Leste" >}} , {{< wp "MeeGo" >}} was a Linux project
     by Intel and Nokia that merge Moblin from Intel and Maemo from
-    Nokia.
-    {{< wp "Mer" >}}  is a fork of MeeGo trying to recover a more open (source) mind.
--   {{< wp "OpenEmbedded" >}} is a tool which allows
-    developers to create a fully usable Linux base for various embedded
-    systems. It supports Ångström, KaeilOS, Openmoko, SHR, SlugOS,
-    WebOS.
+    Nokia. Meego is now merged in {{< iref "Tizen" >}}.
+    {{< wp "Mer_(software_distribution)" "Mer" >}} is a fork of MeeGo trying to recover
+    a more open (source) mind.
+-   {{< wp "OpenEmbedded" >}} is a tool which allows developers to create a fully usable
+    Linux base for various embedded systems. It supports Ångström, KaeilOS, Openmoko,
+    SHR, SlugOS, WebOS.
     -    [OpenEmbedded Home](http://www.openembedded.org/)
--   {{< wp " Tizen" >}} is an open source software platform for smartphones,
-    tablets, smart TVs, and more. It is the continuation of Meego by
-    Samsung, Intel and als.  Tizen's main components are Linux,
-    Enlightenment and WebKit.  [Tizen Homepage](https://www.tizen.org/)
+-   <a name= tizen"></a>{{< wp " Tizen" >}} is an open source software platform for
+    smartphones, tablets, smart TVs, and more. It is the continuation of Meego by
+    Samsung, Intel and als.  Tizen's main components are Linux, Enlightenment and
+    WebKit.  [Tizen Homepage](https://www.tizen.org/)
 -   {{< wp "Sailfish_OS"  "Sailfish" >}} is an other derivative of Meego
-    opensource but with a proprietary interface.
+    opensource but with a proprietary interface. It is an active distribution in 2021.
+    There are a free version of the OS and a 50$ version including updates and support.
+    The supported devices a Gemini PDA, and Sony Xperia phones. There are akso community
+    ports to moyorola, redmi, onepluS. More information in
+    {{< wp "Sailfish_OS#Hardware_overview" "Hardware overview" >}} of Wikipedia.
 
 ## Software suites
 -   [linux-to-go](http://www.linuxtogo.org/ "linuxtogo.org") is a
