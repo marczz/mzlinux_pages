@@ -347,7 +347,7 @@ With one tab no js
     is based on WebKit and Qt Framework. It supports tabbed browsing,
     bookmarks, history, search in a page, screenshots, news
     feeds. Beginning of 2018 Qupzilla is renamed Falkon and becomes
-    the KDE browser.
+    the KDE browser. As Falkon is a QT 5 applicatio it runs under Wayland.
 -   {{< wp "Links_(web_browser)"  "Links" >}} (GPL), the ancestor of elinks
     and an other offspring:
     <a name="links2">[Twibright Labs: Links
@@ -369,7 +369,7 @@ With one tab no js
 -   {{< wp "Midori (web browser)" "Midori" >}}  is a web browser
     based on the {{< wp "Webkit" >}} engine as are Uzbl and Epiphany.
     It the default browser for Xfce, and many small distributions like Slitaz, Bodhi
-    Linux, and other.
+    Linux, and other. Midori run also on Wayland.
     -   [Midori Home](https://astian.org/midori/)
     -   [Midori - ArchWiki](https://wiki.archlinux.org/index.php/Midori).
 -   [NetSurf](http://www.netsurf-browser.org/)
@@ -381,10 +381,11 @@ With one tab no js
 
     There is a frame buffer version of netsurf, it has no shortcuts, menu, tabs, but has
     minimal memory footprint.
--   [Qutebrowser](https://www.qutebrowser.org/) (GPL)
+-   [Qutebrowser](https://www.qutebrowser.org/) (GPL-3.0)
     is a keyboard-focused browser with a minimal GUI. It’s based on
     Python and PyQt5. It was inspired by other browsers/addons like
     {{< iref "#dwb" "dwb" >}}  and Vimperator/Pentadactyl. QuteBrowser is in Debian.
+    -   [Qutebrowser - GitHub](https://github.com/qutebrowser/qutebrowser)
     -   [ArchWiki: Qutebrowser
         ](https://wiki.archlinux.org/index.php/Qutebrowser).
 -   [servo](https://servo.org/) (Mozilla public License)
@@ -398,7 +399,7 @@ With one tab no js
 -   [Web](https://wiki.gnome.org/Apps/Web)
     previously named _Epiphany_ is a web browser based on Gtk+ and {{< wp "Webkit" >}}
     engine as are Uzbl and Midori.  Previous releases of epiphany used gecko now
-    replaced by webkit.
+    replaced by webkit. Epiphany can be used on Wayland.
     -   [GNOME/Web - ArchWiki](https://wiki.archlinux.org/index.php/GNOME/Web).
 
 
