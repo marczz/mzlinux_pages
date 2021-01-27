@@ -2,9 +2,7 @@
 title: SSL/TLS
 ---
 
-{{% toc /%}}
-
----
+See also {{< iref "authentication" "Authentication" >}}
 
 This Page is on Transport Layer Security (TLS) and its predecessor,
 Secure Sockets Layer (SSL) they provides endpoint authentication
@@ -68,27 +66,60 @@ and communications privacy using cryptography. See also
     [manpages](https://www.openssl.org/docs/manmaster/apps/)
     [certificates.txt](http://www.openssl.org/docs/HOWTO/certificates.txt),
     [key.txt](http://www.openssl.org/docs/HOWTO/keys.txt),
-    [proxy\_certificates.txt](http://www.openssl.org/docs/HOWTO/proxy_certificates.txt).They
-    are also part of the OpenSSL distribution, in doc/HOWTO/
--
-    [OpenSSL Cookbook
+    [proxy\_certificates.txt](http://www.openssl.org/docs/HOWTO/proxy_certificates.txt).
+    They are also part of the OpenSSL distribution, in doc/HOWTO/
+-   [OpenSSL Cookbook
     ](https://www.feistyduck.com/books/openssl-cookbook/)
-    covers the most frequently used OpenSSL features and commands. It
-    is updated often. _checked version 2016_.
+    covers the most frequently used OpenSSL features and commands. It is a free book
+    in pdf, epub and online and is updated often. _checked version 2016_.
+
+    The cookbook is taken from a book of [Ivan Ristić](https://blog.ivanristic.com/)
+    _Bulletproof SSL and TLS_ second edition 2021.
+
+    Two other articles are available in [SSL Labs](https://www.ssllabs.com/) Github
+    [research wiki](https://github.com/ssllabs/research/wiki) :
+    [SSL and TLS Deployment Best Practices
+    ](https://github.com/ssllabs/research/wiki/SSL-and-TLS-Deployment-Best-Practices)
+    and [SSL Server Rating Guide
+    ](https://github.com/ssllabs/research/wiki/SSL-Server-Rating-Guide).
+
+    This [wiki](https://github.com/ssllabs/research/wiki) gives also lists of
+    assessment tools, attack tools, configuration tools.
 -   [SSL Certificates HOWTO](http://tldp.org/HOWTO/SSL-Certificates-HOWTO/)
     by Franck Martin _obsolete 2002_
 -   [Zitrax survival guide - SSL/TLS and X.509 (SSL) Certificates
     ](http://www.zytrax.com/tech/survival/ssl.html)
-    explains also how to create self signed certificates, for root, server, CA, Subordinate CAs,
-    Intermediate and Cross certificates.
+    explains also how to create self signed certificates, for root, server, CA,
+    Subordinate CAs, Intermediate and Cross certificates. _update in december 2019_.
 -   [Notes pour la création de CA avec OpenSSL
     ](http://zertrin.org/how-to/openssl-ca/) par zertrin.
 -   [CAcert wiki](http://wiki.cacert.org/wiki/)
--   [Apache SSL Indtroduction](http://httpd.apache.org/docs/ssl/ssl_intro.html#certificates) :
-    [Certificates](http://httpd.apache.org/docs/ssl/ssl_intro.html#certificates)
--   [Apache SSL FAQ](http://httpd.apache.org/docs/ssl/ssl_faq.html) :
-    [about certificates](http://httpd.apache.org/docs/ssl/ssl_faq.html#aboutcerts).
--   See also the [Apache page](node/252).
+-   [Apache SSL Introduction](http://httpd.apache.org/docs/ssl/ssl_intro.html) :
+    -   [Certificates](http://httpd.apache.org/docs/ssl/ssl_intro.html#certificates)
+    -   [about certificates](http://httpd.apache.org/docs/ssl/ssl_faq.html#aboutcerts).
+    -   [Apache SSL FAQ](http://httpd.apache.org/docs/ssl/ssl_faq.html) :
+    -   [Name based SSL Vhosts With SNI
+        ](https://cwiki.apache.org/confluence/display/httpd/NameBasedSSLVHostsWithSNI)
+-   {{< man "openssl(1)" >}}
+-   See also {{< iref "apache#mod_ssl" "Apache mod_ssl deocumentation" >}} .
+
+### Certificate providers
+-   [CAcert](http://wiki.cacert.org/) deliver free server certificates.
+    -   [FAQ/ServerCerts
+        ](http://wiki.cacert.org/FAQ/ServerCerts?action=show&redirect=ServerCerts)
+        explain how to produce the certificate request (CSR)
+    -   Wikipedia {{< wp "Cacert" >}}.
+-   [Let's Encrypt - Wikipedia](https://en.wikipedia.org/wiki/Let%27s%5FEncrypt)
+    -   [Let's Encrypt](https://letsencrypt.org/) provides X.509 certificates for
+        Transport Layer Security (TLS) encryption at no charge.
+    -   [Let's Encrypt Community Support](https://community.letsencrypt.org/)
+    -   [Certbot](https://certbot.eff.org/) is an open source software tool, made by the
+        Electronic Frontier Foundation (EFF), for automatically using Let’s Encrypt
+        certificates on manually-administrated websites to enable HTTPS.
+-   [SSLkeys - Debian Wiki](https://wiki.debian.org/SSLkeys)
+-   {{< man "update-ca-certificates(8)" >}} is a program that updates the directory
+    `/etc/ssl/certs` to hold SSL certificates and generates `ca-certificates.crt`.
+
 
 ## Simple Authentication and Security Layer (SASL)
 
