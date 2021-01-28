@@ -2,14 +2,11 @@
 title: Nginx
 ---
 
-{{% toc /%}}
 
-[Nginx](http://nginx.org/)
-(BSD-like license) is a small http server that can be
-used as standalone HTTP server or as a reverse proxy server before
-another big server to reduce load.
-There are many plugins available to extend the core functionality of
-Nginx.
+[Nginx](http://nginx.org/) (BSD-like license) is a small http server that can be used as
+standalone HTTP server or as a reverse proxy server before another big server to reduce
+load.  There are many plugins available to extend the core functionality of Nginx.
+
 Wikipedia: {{< wp "Nginx" >}}.
 
 
@@ -80,15 +77,13 @@ Third party modules
 -   [nginx documentation](http://nginx.org/en/docs/)
     include documentaition on each module.
 -   [Nginx Wiki](https://www.nginx.com/resources/wiki/) -
-    [Configuration index
-    ](ttps://www.nginx.com/resources/wiki/start/)
+    [Configuration index](ttps://www.nginx.com/resources/wiki/start/)
 -   [nginxconfig.io](https://nginxconfig.io/) is an config generator for nginx.
-    The source is [GitHub - digitalocean/nginxconfig.io
-    ](https://github.com/digitalocean/nginxconfig.io).
+    The source is
+    [GitHub - digitalocean/nginxconfig.io](https://github.com/digitalocean/nginxconfig.io).
 
 # Configuration for PHP-FPM
--   [Optimizing PHP-FPM for High Performance
-    ](https://geekflare.com/php-fpm-optimization/).
+-   [Optimizing PHP-FPM for High Performance](https://geekflare.com/php-fpm-optimization/).
 -   [Nginx and php-fpm for performance
     ](https://jeremymarc.github.io/2013/04/22/nginx-and-php-fpm-for-performance)
     from which following items are extracted.
@@ -102,40 +97,36 @@ Third party modules
 
 # [Nginx Variables](http://nginx.org/en/docs/varindex.html)
 -   `$request_filename`
-    ::  file path for the current request, based on the [root
-        ](http://nginx.org/en/docs/http/ngx_http_core_module.html#root) or
-        [alias
-        ](http://nginx.org/en/docs/http/ngx_http_core_module.html#alias)
+    ::  file path for the current request, based on the
+        [root](http://nginx.org/en/docs/http/ngx_http_core_module.html#root) or
+        [alias](http://nginx.org/en/docs/http/ngx_http_core_module.html#alias)
         directives, and the request URI.
 -   [$document_root
     ](http://nginx.org/en/docs/http/ngx_http_core_module.html#var_document_root)
-    ::  [root
-        ](http://nginx.org/en/docs/http/ngx_http_core_module.html#root) or
-        alias
-        ](http://nginx.org/en/docs/http/ngx_http_core_module.html#alias)
+    ::  [root](http://nginx.org/en/docs/http/ngx_http_core_module.html#root) or
+        [alias](http://nginx.org/en/docs/http/ngx_http_core_module.html#alias)
         directive’s value for the current request.
 -   [$fastcgi_script_name
     ](http://nginx.org/en/docs/http/ngx_http_fastcgi_module.html#var_fastcgi_script_name)
-    ::  request URI or, if a URI ends with a slash, request URI with an
-        index file name configured by the
-        [fastcgi_index](http://nginx.org/en/docs/http/ngx_http_fastcgi_module.html#fastcgi_index)
-        directive appended to it. This variable can be used to set the
-        `SCRIPT_FILENAME` and `PATH_TRANSLATED` parameters that
-        determine the script name in PHP.
+    request URI or, if a URI ends with a slash, request URI with an
+    index file name configured by the
+    [fastcgi_index](http://nginx.org/en/docs/http/ngx_http_fastcgi_module.html)
+    directive appended to it. This variable can be used to set the
+    `SCRIPT_FILENAME` and `PATH_TRANSLATED` parameters that
+    determine the script name in PHP.
 
-        When using the [fastcgi_split_path_info
-        ](http://nginx.org/en/docs/http/ngx_http_fastcgi_module.html#fastcgi_split_path_info)
-        directive, the `$fastcgi_script_name` variable equals the
-        value of the first capture set by the directive and [$fastcgi_path_info
-        ](http://nginx.org/en/docs/http/ngx_http_fastcgi_module.html#fastcgi_split_path_info)
-        the second capture.
+    When using the [fastcgi_split_path_info
+    ](http://nginx.org/en/docs/http/ngx_http_fastcgi_module.html#fastcgi_split_path_info)
+    directive, the `$fastcgi_script_name` variable equals the value of the first capture
+    set by the directive and [$fastcgi_path_info
+    ](http://nginx.org/en/docs/http/ngx_http_fastcgi_module.html#fastcgi_split_path_info)
+    the second capture.
 
-        So if there is no index, and we don't use
-        `fastcgi_split_path_info` we have
+    So if there is no index, and we don't use `fastcgi_split_path_info` we have
 
-            $request_filename = $document_root + $fastcgi_script_name
+        $request_filename = $document_root + $fastcgi_script_name
 
-        but if using one of these element they can differ.
+    but if using one of these element they can differ.
 
 # directives
 
@@ -207,12 +198,10 @@ To use php-fpm we use _before_ including the previous directives:
     fastcgi_index index.php;
 
 We should be very careful that
-[try_files
-](http://nginx.org/en/docs/http/ngx_http_core_module.html#try_files)
-directive changes URI of a request to the one matched on the file
-system, and subsequent attempt to split the URI into
-`$fastcgi_script_name` and `$fastcgi_path_info` results in empty path
-info - as there is no path info in the URI after `try_files`.
+[try_files](http://nginx.org/en/docs/http/ngx_http_core_module.html#try_files)
+directive changes URI of a request to the one matched on the file system, and subsequent
+attempt to split the URI into `$fastcgi_script_name` and `$fastcgi_path_info` results in
+empty path info - as there is no path info in the URI after `try_files`.
 
 So we can either save the `$fastcgi_path_info` before the `try_files`
 with
@@ -224,16 +213,14 @@ with
     include fastcgi_params;
     fastcgi_param PATH_INFO $path_info;
 
-Or an easier way is to set the fastcgi parameters __before__
-the `try_files`:
+Or an easier way is to set the fastcgi parameters __before__ the `try_files`:
 
     include fastcgi_params;
     fastcgi_param PATH_INFO $fcgi_path_info;
     fastcgi_split_path_info ^(.+\.php)($|/.*);
 
 This is commented in the
-[nginx bug #321 (try_files & $fastcgi_path_info)
-](http://trac.nginx.org/nginx/ticket/321)
+[nginx bug #321 (try_files & $fastcgi_path_info)](http://trac.nginx.org/nginx/ticket/321)
 and
 [Nginx Mailing List: Problem with fastcgi_split_path_info
 ](http://forum.nginx.org/read.php?2,238825,238825#msg-238825)
@@ -246,10 +233,9 @@ Then use `$script_name` and `$path_info`.
 
 # Converting `.htaccess`
 Nginx don't uses the apache .htaccess, nor [apache mod_rewrite
-](http://httpd.apache.org/docs/2.2/mod/mod_rewrite.html) but instead
-the
-[Nginx rewrite expressions
-](http://nginx.org/en/docs/http/ngx_http_rewrite_module.html)
+](http://httpd.apache.org/docs/2.2/mod/mod_rewrite.html)
+but instead the
+[Nginx rewrite expressions](http://nginx.org/en/docs/http/ngx_http_rewrite_module.html)
 which are close but not the same syntax.
 
 Exemple:
@@ -258,10 +244,9 @@ Exemple:
 
 Some apache rewrite rules can also be replaced by [try_files
 ](http://nginx.org/en/docs/http/ngx_http_core_module.html#try_files)
-checks for the existence of files in order,
-and returns the first file that is found.
-In the event that no file is found, an internal redirect to the last
-parameter is invoked.
+checks for the existence of files in order, and returns the first file that is found.
+In the event that no file is found, an internal redirect to the last parameter is
+invoked.
 
 Some converters are available to help the translation:
 -   [winginx.com](http://winginx.com) _nginx web server on Windows_
@@ -279,23 +264,32 @@ is a guide in nginx documentation. It has a serction on
 [Name-based HTTPS servers
 ](http://nginx.org/en/docs/http/configuring_https_servers.html#name_based_https_servers).
 
-A [module for SPDY
-](http://nginx.org/en/docs/http/ngx_http_spdy_module.html)
-is also available. [SPDY (Wikipedia)
-](http://en.wikipedia.org/wiki/SPDY) is a  networking protocol that
-reduce http latency by  compression, multiplexing, and prioritization
-so that only one connection per client is required.
+A [module for SPDY](http://nginx.org/en/docs/http/ngx_http_spdy_module.html)
+is also available. [SPDY (Wikipedia)](http://en.wikipedia.org/wiki/SPDY)
+is a networking protocol that reduce http latency by compression, multiplexing, and
+prioritization so that only one connection per client is required.
+
+# Memcached {#memcached}
+[memcached](https://memcached.org/)
+:memcached is a high-performance, distributed memory object
+ caching system used for speeding up dynamic web applications;
+
+-   [memc-nginx-module](https://github.com/openresty/memc-nginx-module)
+    An extended version of the standard memcached module that supports set, add, delete,
+    and  more memcached commands.
+-   [openresty/srcache-nginx-module](https://github.com/openresty/srcache-nginx-module)
+    Transparent subrequest-based caching layout for arbitrary nginx locations.
 
 # Webdav
-Webdav is provided with the [ngx_http_dav_module
+Webdav is provided with the [nginx_http_dav_module
 ](http://nginx.org/en/docs/http/ngx_http_dav_module.html)
 which is not built by default, but is provided with its companion *Dav
 ext* in the Debian package _nginx-full_.
 
-The PROPFIND and OPTIONS command are not supported by [ngx_http_dav_module
-](http://nginx.org/en/docs/http/ngx_http_dav_module.html)
-you need a complementary module [nginx-dav-ext-module
-](https://github.com/arut/nginx-dav-ext-module)
+The PROPFIND and OPTIONS command are not supported by
+[ngx_http_dav_module](http://nginx.org/en/docs/http/ngx_http_dav_module.html)
+you need a complementary module
+[nginx-dav-ext-module](https://github.com/arut/nginx-dav-ext-module)
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
