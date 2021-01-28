@@ -2,8 +2,6 @@
 title: Web Servers
 ---
 
-{{% toc /%}}
-
 -    The main stream servers have their own page:
     {{< iref "apache" "Apache" >}},
     {{< iref "lighttpd" "Lighttpd" >}},
@@ -12,93 +10,48 @@ title: Web Servers
 
 # Server Architectures
 
-:   The different server architectures and a comparison are
-    introduced in the
-    [Server Architectures chapter from Benjamin Erb's Thesis
-    ](http://berb.github.io/diploma-thesis/community/042_serverarch.html#42).
+The different server architectures and a comparison are
+introduced in the
+[Server Architectures chapter from Benjamin Erb's Thesis
+](http://berb.github.io/diploma-thesis/community/042_serverarch.html).
 
-    There are two main streams of httpd servers those which are
-    **thread-based** and those who are **event-driven**.
+There are two main streams of httpd servers those which are
+**thread-based** and those who are **event-driven**.
 
-    The **thread-based architecture** is achieved through thread proper or though processes.
-    In this model each incoming connection is associated with a
-    separate thread or process by using synchronous blocking I/O.
-    In this model, each thread or process handle a single sequential
-    task, and the concurrency is achieved by duplicating these single
-    task processes or thread. This is the older model, and the easier
-    to understand, code and debug, because each process/thread can be
-    isolated as a single task sequential process/thread.
+The **thread-based architecture** is achieved through thread proper or though processes.
+In this model each incoming connection is associated with a
+separate thread or process by using synchronous blocking I/O.
+In this model, each thread or process handle a single sequential
+task, and the concurrency is achieved by duplicating these single
+task processes or thread. This is the older model, and the easier
+to understand, code and debug, because each process/thread can be
+isolated as a single task sequential process/thread.
 
-    This is the original model adopted by CERN first server, most of
-    the older servers. The oustanding server for this model is
-    [Apache httpd server](node/252"internal reference"), which
-    offer a choice of multi-processes and multi-threaded servers.
+This is the original model adopted by CERN first server, most of
+the older servers. The oustanding server for this model is
+[Apache httpd server](node/252"internal reference"), which
+offer a choice of multi-processes and multi-threaded servers.
 
-    See the [comparison of thread-based and process-based server architectures
-    ](http://berb.github.io/diploma-thesis/community/042_serverarch.html#thread)
-    by Benjamin Erb for details.
+See the [comparison of thread-based and process-based server architectures
+](http://berb.github.io/diploma-thesis/community/042_serverarch.html#thread)
+by Benjamin Erb for details.
 
-    In the **event-driven architecture** a single thread is mapped to
-    multiple connections. The events are queued and processed by an
-    *event-loop* that multiplexes multiple connections to a single
-    flow of execution. This is the model used by {{< iref "lighttpd" "lighttpd" >}}, {{< iref "#nginx" "nginx" >}},
-    the python web server {{< iref "python_web#tornado" "Tornado" >}},
-    {{< iref "python_web#cyclone" "cyclone" >}},
-    the emacs server {{< iref "emacs#elnode" "elnode" >}} and many
-    new servers.
+In the **event-driven architecture** a single thread is mapped to
+multiple connections. The events are queued and processed by an
+*event-loop* that multiplexes multiple connections to a single
+flow of execution. This is the model used by {{< iref "lighttpd" "lighttpd" >}}, {{< iref "#nginx" "nginx" >}},
+the python web server {{< iref "python_web#tornado" "Tornado" >}},
+{{< iref "python_web#cyclone" "cyclone" >}},
+the emacs server {{< iref "emacs#elnode" "elnode" >}} and many
+new servers.
 
-    For more details look at the B. Erb chapters on
-    [I/O multiplexing patters](
-    http://berb.github.io/diploma-thesis/community/042_serverarch.html#io)
-    and [hybrid server architecture
-    ](http://berb.github.io/diploma-thesis/community/042_serverarch.html#combined).
-
-
-__ACME__ tiny http servers
-
-:   -   [thttpd](http://www.acme.com/software/thttpd/)  has CGI, external
-        SSI as cgi program, and a throttling feature,
-    -   [mini\_httpd](http://www.acme.com/software/mini_httpd/) 0.7Meg,
-        includes CGI,
-    -   [micro\_httpd](http://www.acme.com/software/micro_httpd/) a
-        tiny server that can run from inetd/xinetd
+For more details look at the B. Erb chapters on
+[I/O multiplexing patters](
+http://berb.github.io/diploma-thesis/community/042_serverarch.html#io)
+and [hybrid server architecture
+](http://berb.github.io/diploma-thesis/community/042_serverarch.html#combined).
 
 
-[memcached](http://www.danga.com/memcached/)
-:   memcached is a high-performance, distributed memory object
-    caching system used for speeding up dynamic web applications;
-    [libmemcache](http://people.freebsd.org/~seanc/libmemcache/) is a C
-    API to memcached,
-    [CML aka Cache Meta Language](http://trac.lighttpd.net/trac/wiki/CacheMetaLanguage)
-    is an implementation of memcached for lighttpd.
-
-
-
-# Authentication
-
--   [Stanford WebAuth](http://webauth.stanford.edu/) is an
-    authentication system for web pages and web applications. The
-    first time a user attempts to access a web page protected by
-    WebAuth, they will be sent to a central login server
-    (weblogin.stanford.edu at Stanford) and prompted to
-    authenticate. Normally, they will be asked for a username and
-    password, although other authentication methods are possible. Once
-    the user has logged in, the weblogin server will send their
-    encrypted identity back to the original web page they were trying
-    to access. Their identity will also be stored in a cookie set by
-    the weblogin server and they will not need to authenticate again
-    until their credentials expire, even if they visit multiple
-    protected web sites.
--   Webauth is available in Debian as _webauth-weblogin_,
-    _webauth-utils_; The the Apache module for the central
-    authentication server is _libapache2-mod-webkdc_.
--   [WebAuth with UNIX Guide
-    ](https://itservices.stanford.edu/service/web/centralhosting/webauth/unix).
--   {{< wp "Pubcookie" >}} (Apache License)
-    Pubcookie is a protocol and a software package
-    for providing single sign-on within web applications
-    and websites of an organization.
-    -   [PubCookie Home](http://www.pubcookie.org/)
 
 # web log analysis
 -   {{< wp "analog" >}} web log analysis program
