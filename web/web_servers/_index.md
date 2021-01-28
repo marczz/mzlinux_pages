@@ -89,26 +89,6 @@ and [hybrid server architecture
 
 -   <http://wiki.cacert.org/> deliver free server certificates.
 -   <http://wiki.cacert.org/wiki/ServerCerts> explain how
-    to produce the certificate request (CSR), then we can combine the
-    certificate and the private key in a file ` mycert.pem`
--   we can test the pem file with
-
-        openssl s_server -cert mycert.pem -www
-
--   a browser pointed at `https://localhost:4433/` then gives the
-    details of the certificate.
--   All these openssl command usage is described at
-    [OpenSSL Command-Line HOWTO](http://www.madboa.com/geek/openssl/).
--   [HOWTO: Creating your own CA with OpenSSL
-    ](http://svn.osafoundation.org/m2crypto/trunk/doc/howto.ca.html) uses the perl script CA.pl
--   [Introducing SSL and Certificates using OpenSSL
-    ](http://old.pseudonym.org/ssl/wwwj-index.html) by Frederick J. Hirsch
--   {{< ldoc "apache2.2-common/README.Debian.gz" >}}
--   The package ssl-cert  is a wrapper for openssl req  to create self-signed certificates.
--   we can use the command line
-
-        openssl req -new -x509 -keyout server.pem -out server.pem -days 365 -nodes
-
 -   [StartCom Free SSL Certification Authority](http://cert.startcom.org/)
 -   To use https with virtual host we need [SNI
 ]https://wiki.apache.org/httpd/NameBasedSSLVHostsWithSNI)
