@@ -68,41 +68,12 @@ and [hybrid server architecture
 
 
 
-# Polipo
--   [Polipo Home page](http://www.pps.jussieu.fr/~jch/software/polipo/)
--   [comp.web.polipo.user at gmame
-    ](http://dir.gmane.org/gmane.comp.web.polipo.us)
--   If polypo is installed locally:
-    -   [Polipo Webserver](http://localhost:8123/polipo/) local interface:
-        [Config](http://localhost:8123/polipo/config?),
-        [servers statistic](http://localhost:8123/polipo/servers?),
-        [indices of the disk cache](http://localhost:8123/polipo/index?)
-    -   [Polypo local documentation](http://127.0.0.1:8123/doc/)
-
--   See DataNameServer for polipo resolv ignoring `/etc/hosts`
--   To switch polipo ON-LINE or OFF-line:
-
-        sudo  /usr/lib/polipo/polipo-control go-online
-        sudo  /usr/lib/polipo/polipo-control go-offline
-
-# SSL Certificates
-
--   <http://wiki.cacert.org/> deliver free server certificates.
--   <http://wiki.cacert.org/wiki/ServerCerts> explain how
--   [StartCom Free SSL Certification Authority](http://cert.startcom.org/)
--   To use https with virtual host we need [SNI
-]https://wiki.apache.org/httpd/NameBasedSSLVHostsWithSNI)
-
 # Mirroring Tools
 -   [How To mirror your web site with rsync
     ](http://www.howtoforge.com/mirroring_with_rsync)
 -   [httrack](http://www.httrack.com)
-    download a website from the Internet to a local directory
-
-# Free.fr conf
-
--   .htaccess allows Redirect, File and Directory access, htpasswd
--   RedirectMatch seems to no longer work properly, Rewrite is not allowed.
+    download a website from the Internet to a local directory.
+    It is in debian packages _httrack_ and _webhttrack_, and _proxytrack_.
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
