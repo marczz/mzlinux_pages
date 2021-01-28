@@ -51,7 +51,13 @@ http://berb.github.io/diploma-thesis/community/042_serverarch.html#io)
 and [hybrid server architecture
 ](http://berb.github.io/diploma-thesis/community/042_serverarch.html#combined).
 
-
+## Acme httpd servers
+-   [thttpd](http://www.acme.com/software/thttpd/)  has CGI, external
+    SSI as cgi program, and a throttling feature,
+-   [mini\_httpd](http://www.acme.com/software/mini_httpd/) 0.7Meg,
+    includes CGI,
+-   [micro\_httpd](http://www.acme.com/software/micro_httpd/) a
+    tiny server that can run from inetd/xinetd
 
 # web log analysis
 -   {{< wp "analog" >}} web log analysis program
