@@ -2,8 +2,6 @@
 title: Lighttpd
 ---
 
-{{% toc /%}}
-
 [lighttpd](http://www.lighttpd.net/) is a low memory footprint http server (1.3 Meg
     base+cgi) with FastCGI, CGI, SSI, Auth, Output-Compression,
     URL-Rewriting, SSL.
@@ -115,8 +113,11 @@ The failure to recognize it is the [bug 1427](http://redmine.lighttpd.net/issues
 -  [ModWebDAV](http://redmine.lighttpd.net/wiki/lighttpd/Docs:ModWebDAV)
 -  [How To Set Up WebDAV With Lighttpd On Debian Squeeze
    ](http://www.howtoforge.com/how-to-set-up-webdav-with-lighttpd-on-debian-squeeze)
+-   [CML aka Cache Meta Language
+     ](http://trac.lighttpd.net/trac/wiki/CacheMetaLanguage)
+     is an implementation of {{< iref "nginw#memcached" "Memcached" >}} for lighttpd.
 
-## __Common modules__
+## Common modules
 that require options but no complicated    configuration
 
 -   [mod\_access
