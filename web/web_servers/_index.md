@@ -39,7 +39,8 @@ by Benjamin Erb for details.
 In the **event-driven architecture** a single thread is mapped to
 multiple connections. The events are queued and processed by an
 *event-loop* that multiplexes multiple connections to a single
-flow of execution. This is the model used by {{< iref "lighttpd" "lighttpd" >}}, {{< iref "#nginx" "nginx" >}},
+flow of execution. This is the model used by {{< iref "lighttpd" "Lighttpd" >}},
+{{< iref "nginx" "Nginx" >}},
 the python web server {{< iref "python_web#tornado" "Tornado" >}},
 {{< iref "python_web#cyclone" "cyclone" >}},
 the emacs server {{< iref "emacs#elnode" "elnode" >}} and many
@@ -50,6 +51,17 @@ For more details look at the B. Erb chapters on
 http://berb.github.io/diploma-thesis/community/042_serverarch.html#io)
 and [hybrid server architecture
 ](http://berb.github.io/diploma-thesis/community/042_serverarch.html#combined).
+
+Wikipedia has a {{< wp "Comparison of web server software" >}}.
+
+You find in other pages of this chapter {{< iref "apache" "Apache" >}},
+{{< iref "lighttpd" "Lighttpd" >}}, {{< iref "nginx" "Nginx" >}}.
+
+#  Light servers
+-   {{< wp "Caddy_(web_server)" "Caddy" >}} (Apache-2.0 License ) is a Go web server
+    which support HTTPS and can activates HTTPS by default for sites with qualifying
+    domain names.
+    -   [Caddy - GitHub](https://github.com/caddyserver/caddy).
 
 ## Acme httpd servers
 -   [thttpd](http://www.acme.com/software/thttpd/)  has CGI, external
