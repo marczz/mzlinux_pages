@@ -2,8 +2,6 @@
 title: IP protocols
 ---
 
-{{% toc /%}}
-
 See also {{< iref "netconf" "Network Configuration" >}},
 {{< iref "nettools" "Network Tools" >}}.
 
@@ -40,10 +38,8 @@ ONC/RPC, RTP, RTSP, RIP,
 SSH, Telnet, {{< iref "ssl" "TLS/SSL" >}},
 {{< iref "xmpp" "XMPP" >}}
 
-
-
-
 -----------------
+
 # General References
 
 -   Wikipedia: {{< wp "Lists of network protocols" >}}, {{< wp "Internet Protocol" >}}
@@ -98,10 +94,11 @@ SSH, Telnet, {{< iref "ssl" "TLS/SSL" >}},
     a logical loop-free topology for Ethernet networks.
 
 # SOCKS {#socks}
-{{< wp "Socket Secure" >}} (SOCKS) is an Internet protocol of the
-OSI {{< wp "session layer" >}} (layer 5). I forward packets between a client and
-server through a proxy server. SOCKS5 additionally provides
-authentication.
+{{< wp "SOCKS" >}} is an Internet protocol of the OSI {{< wp "session layer" >}}
+(layer 5). It forward packets between a client and server through a proxy server.
+SOCKS5 additionally provides authentication.
+
+See also {{< iref "proxy#socks_proxy" "Socks Proxy servers" >}}.
 
 -   [RFC 1928](http://www.ietf.org/rfc/rfc1928.txt)
     SOCKS Protocol Version 5
@@ -120,8 +117,7 @@ authentication.
 # DHCP {#dhcp}
 
 -   [Wikipedia: DHCP](http://en.wikipedia.org/wiki/DHCP),
-    {{< wp "Comparison of DHCP server software" >}}, {{< wp "DHCPD" >}},
-    {{< wp "Wake-on-LAN" >}}.
+    {{< wp "Comparison of DHCP server software" >}}, {{< wp "DHCPD" >}}.
 -   [DHCP RFC - Dynamic Host Configuration Protocol RFC's
     ](http://www.bind9.net/rfc-dhcp) , and
     [DHCP Articles and Links](http://www.bind9.net/dhcp) at bind9.net.
