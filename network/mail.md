@@ -4,7 +4,8 @@ title: Mail
 
 # SMTP {#smtp}
 
--   Wikipedia: {{< wp "Extended_SMTP"  "ESMTP" >}},{{< wp "SMTP Authentication" >}},
+-   Wikipedia: {{< "Simple Mail Transfer Protocol" >}},
+    {{< wp "Extended_SMTP"  "ESMTP" >}},{{< wp "SMTP Authentication" >}},
     {{< wp "Simple Authentication and Security Layer" >}} (SASL),
     {{< wp "STARTTLS" >}}
 -   The *smtp* protocol is fiven by two base RFCs:
@@ -23,7 +24,17 @@ title: Mail
     [RFC 3207 - SMTP Service Extension for Secure SMTP over Transport
     Layer Security](http://tools.ietf.org/html/rfc3207)
     (STARTTLS)
-
+-   __DANE__ is short for "DNS-based Authentication of Named Entities". DANE establishes
+    a downgrade-resistant method to verify an SMTP servers identity before it starts to
+    transport an email message.
+    -   [DANE for SMTP How To
+        ](https://github.com/internetstandards/toolbox-wiki/blob/master/DANE-for-SMTP-how-to.md)
+    -   [DANE SMTP Validator](https://dane.sys4.de) sheck mail servers against
+        [common mistakes](https://dane.sys4.de/common_mistakes).
+-   [MTA-STS (RFC8461)](https://tools.ietf.org/html/rfc8461) is a new standard that
+    makes it possible to send downgrade-resistant email over SMTP. In that sense, it is
+    like an alternative to DANE.
+    -   [MTA-STS validator](https://aykevl.nl/apps/mta-sts/).
 
 # Mail User Agents
 
@@ -511,7 +522,7 @@ how to deal with root mails sent by cron with the smtp relay agents.
 
     -   [ProtonMail Home](https://protonmail.com/)
 
--   {{< wp "Tutanota"}}  offers end-to-end encryption for emails sent from one Tutanota
+-   {{< wp "Tutanota" >}}  offers end-to-end encryption for emails sent from one Tutanota
     user to another. It uses  symmetrical and an asymmetrical algorithm - AES with a
     length of 128 bit and RSA with 2048 bit. To external recipients who do not use
     Tutanota a notification is sent with a link to a temporary Tutanota account. After
