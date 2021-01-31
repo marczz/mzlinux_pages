@@ -92,39 +92,294 @@ See also {{< iref "irc" "IRC" >}},
         ](https://xmpp.org/uses/internet-of-things.html).
 -   <a name="jabberfr"></a>[jabber.fr](http://www.jabberfr.org/):
     -   [Jabber.fr wiki (french)](http://wiki.jabberfr.org/)
-        with plenty of _french_ jabber documentation.<br />
+        with plenty of _french_ jabber documentation, but quite outdated.<br />
     -   [Presence service](http://presence.jabberfr.org/)
-    -   [Passerelles](http://wiki.jabberfr.org/Passerelles)
+    -   [Passerelles](http://wiki.jabberfr.org/Passerelles) _these bridges are mainly
+        with non longer used or deprecated protocols._
     -   [Pages de la Catégorie:Fonctionnalité Jabber
         ](http://wiki.jabberfr.org/Cat%C3%A9gorie:Fonctionnalit%C3%A9_Jabber)
     -   [MUC](http://wiki.jabberfr.org/MUC)
     -   [Jwchat tutorial](http://wiki.jabberfr.org/JWChat)
     -   [linuxFR - xmpp](http://linuxfr.org/sections/xmpp)
--   The proprietary {{< wp "Yahoo! Messenger Protocol" >}} is handled by many
-    open source clients: Ayttm, BitlBee, CenterIm, Empathy, Jitsi,
-    minbif, Pidgin, Polari, Spectrum2
+-   The proprietary {{< wp "Yahoo! Messenger" >}} now closed was handled by many
+    open source client.
 -   XMPP is used in {{< wp "Distributed social network" >}} Wikipedia gives a
     {{< wp "Comparison of software and protocols for distributed social networking" >}}
--   [MucSearch](http://search.wensley.org.uk/)
-    a conference web search service.
+-   [MucSearch](https://search.wensley.org.uk/) a conference web search service.
 -   {{< wp "SIMPLE_(instant_messaging_protocol)"  "SIMPLE" >}} is IM over sip,
     ietf has [rfc 3428 SIP Extension for Instant Messaging
     ](http://www.ietf.org/rfc/rfc3428.txt)
 
+# Secure messaging
+Secure Messaging is an essential feature of IM, but these days it is a
+mainly used as a selling point, to make you adopt some proprietary
+protocol. So you have to convince all your friends to buy the same
+product, or to buy yourself all the products owned by one of your
+friend, and buy also a more powerfull mobile phone to host these
+multiple software. But even if you do it, how can you use the _multi user
+chat_ or _group chat_ that is proposed by these software?
+
+Imagine you have to have the same brand of phone to call somebody, the
+same email software to read her emails....
+
+To ensure interoperability there is presently few protocols,
+{{< iref "#fish" "FiSH" >}} the older, obsolete security,
+{{< iref "#openpgp" "OpenPGP" >}},
+{{< iref "#omemo" "OMEMO" >}},
+{{< iref "#otr" "OTR" >}}.  Supported by a fair number of clients, but now superseded by
+{{< iref "#omemo" "OMEMO" >}}.
+
+I give here also some other open source systems, but even if the
+protocol is open source, it is used only by one product.
+
+The first level of security is to use a
+{{< wp "Transport_Layer_Security" "TLS" >}} connection, that avoid (if correctly
+authentified) that your data is stolen during transport. But to be
+secure it should provide {{< wp "Forward secrecy" >}}, and avoid
+{{< wp "Man-in-the-middle attack" >}} by technics like
+{{< wp "HTTP Public Key Pinning" >}} (HPKP).
+
+But if it can protect again an occasional hacker taht intercept your communication, it
+is of no use when the hacker is member or beak into the server organisation, or is as
+powerful as to convince or force the provider to give its data. And of course it is of
+no use whent the data is stolen at one end of the communication, which is so easy with
+mobile devices.
+
+-   Wikipedia {{< wp "Secure instant messaging" >}}, {{< wp "Secure communication" >}},
+    {{< wp "Mobile security" >}},
+    {{< wp "Deniable authentication" >}}, {{< wp "forward secrecy" >}},
+    {{< wp "Comparison_of_instant_messaging_clients#Secure_messengers"  "Secure messengers" >}}
+-   [End-to-End XMPP Cryptographic Protocol Desiderata
+    ](https://developer.pidgin.im/wiki/EndToEndXMPPCrypto) from
+    [Pidgin developer Wiki](https://developer.pidgin.im/wiki/).
+-   [Propublica: Privacy Tools - The Best Encrypted Messaging Programs
+    ](https://www.propublica.org/article/privacy-tools-the-best-encrypted-messaging-programs)
+    has a [comparison of security features of secure messaging tools
+    ](http://projects.propublica.org/graphics/privacy-tools).
+
+For secure messaging we can expect the following features:
+
+-   encrypted communications between all the links in the
+    communication path.
+-   end-to-end encryption, i.e the provider does not have access
+    to keys.
+-   authentication of correspondents e.g. by comparing key
+    fingerprints.
+-   {{< wp "forward secrecy" >}} i.e. having past communications secure if the
+    encryption keys are stolen.
+-   open source with documented security design and
+    recent independent {{< wp "security audit" >}}.
+-   no log or store any information  regarding message contents,
+    senders and destination, timestamps, sessions or events.
+-   Do not rely on a central authority for the relaying of messages
+    ({{< wp "decentralized computing" >}}).
+
+
+
+## OTR or _Off-the-Record Messaging_ {#otr}
+{{< wp "Off-the-Record Messaging" >}} (GPL) Off the Record _(OTR)_ Messaging allows you
+to have private conversations over instant messaging by providing encryption,
+{{< wp "Deniable authentication" >}}, perfect {{< wp "forward secrecy" >}}.
+
+OTR allow instant messaging, secure file transfer, the plugin supports multiple OTR
+conversations with the same buddy who is logged in at multiple locations. MUC is not yet
+supported.
+
+-   [otr.cypherpunks: OTR Protocol Home](https://otr.cypherpunks.ca/)
+-   [OTR.im: OTR user Home](https://www.otr.im/).
+-   [XEP-0364: Current Off-the-Record Messaging Usage
+    ](https://xmpp.org/extensions/xep-0364.html)
+-   [XEP-0378: OTR Discovery](https://xmpp.org/extensions/xep-0378.html)
+-   [OTR version 4 draft](https://bugs.otr.im/otrv4/otrv4)
+
+We can use any server using TLS for OTR messaging. Some may offer more security
+[jabber.otr.im](https://www.otr.im/chat.html) offers a free and secure server, or even a
+[Tor hidden service: ](https://www.torproject.org/docs/hidden-services.html.en) their
+server uses SSL/TLS, but the specific feature is that it forces communication to be OTR
+encrypted, thus cleartext messages between clients is impossible. The server uses full
+disk encryption taht will protect all data if the server is powered off, logging is
+completely disabled on the Jabber server, even error logs.
+
+In case of seizure if the server is kept online, the disk encryption is useless, and one
+can still see your username and SHA1 hash of the password, your vcard _if you did
+provide one_, your ip address if you don't use TOR, the encrypted content of offline
+message and their destination and timestamp, and your roster including Jabber address of
+contacts and their name and group if they are present. What is securely hidden is
+message content as they are end-to-end encrypted by OTR, and they have no logs even you
+connection timestamps.
+
+You can inspect what provide your server to look if it offers an comparable level of
+protection, it seems that for a higher security you have to go to a P2P connection that
+avoid completely the server aspects; but it is beyond Xmmp, and you will miss many
+features.
+
+
+The main drawback of OTR compared to
+{{< iref "#omemo" "OMEMO" >}} is the lack of offline delivery.
+
+{{< iref "#openpgp" "OpenPGP" >}} has  offline delivery but not
+ {{< wp " forward secrecy" >}} provided by OTR.
+
+{{< iref "#omemo" "OMEMO" >}} meet the three  requirements of
+{{< wp " forward secrecy" >}}, offline delivery, and
+{{< wp "Deniable authentication" >}}.
+
+For Linux use of OTR see also the
+[EFF - Surveillance Self-Defense](https://ssd.eff.org/) guide
+[How to: Use OTR on Linux](https://ssd.eff.org/en/module/how-use-otr-linux).
+
+OTR is supported by many messaging clients, either a native
+support or through plugin. For Linux native support we have:
+
+-   {{< iref "#bitlbee" "Bitlbee" >}} since 3.0.
+-   {{< iref "sip#blink" "Blink" >}} a sip client with messaging.
+-   {{< iref "#cryptocat" "Cryptocat" >}} protocol _(not open
+    XMPP)_ uses OTR for webbrowsers.
+-   {{< iref "sip#jitsi" "Jitsi" >}} -  Video Calls
+    and Chat.
+-   {{< wp "Kopete" >}}  multi-protocol messaging for KDE.
+-   {{< iref "#kadu" "Kadu" >}} _obsolete_
+-   {{< iref "#mcabber" "Mcabber" >}}
+-   [LeechCraft](https://leechcraft.org/) _modular live environment_ for Linux, Windows,
+    OSX.
+-   {{< iref "#profanity" "Profanity" >}}
+-   {{< iref "#psi" "PSI+" >}}
+
+The following Linux clients have OTR support through a plugin:
+
+-   [bitlbee-otr](https://wiki.bitlbee.org/bitlbee-otr)
+    for {{< iref "#bitlbee" "Bitlbee" >}}
+-   [Off-the-Record Encryption plugin
+    ](https://trac-plugins.gajim.org/wiki/OffTheRecordPlugin)
+    through [gajim-otr](https://github.com/python-otr/gajim-otr)
+    for {{< iref "#gajim" "Gajim" >}} _alpha plugin_.
+-   [HexChat-OTR](https://github.com/TingPing/hexchat-otr)
+    for {{< iref "irc#hexchat" "HexChat" >}}.
+-   [Irsii-OTR](https://github.com/cryptodotis/irssi-otr/) for
+    {{< iref "irc#irssi" "irsii" >}}.
+-   [pidgin-OTR](https://bugs.otr.im/plugins/pidgin-otr)
+    for {{< iref "#pidgin" "Pidgin" >}}.
+-   {{< iref "#poezio" "poezio" >}}.
+-   {{< iref "#tkabber" "Tkabber" >}}
+-   [Weechat-OTR](https://github.com/mmb/weechat-otr) for
+    {{< iref "irc#weechat" "Weechat" >}}.
+
+
+Windows and Mac OSX clients
+
+-   Adium  multiprotocol client for Mac OSX.
+-   Blink SIP  Mac OSX client
+-   {{< wp "climm" >}} IRC for Windows, OSX, and unix.
+-   {{< iref "#kadu" "Kadu" >}} Unix Windows and Mac OSX
+    gadu-gadu and Xmpp client.
+-   Textual 5 (OS X)
+-   {{< iref "#tkabber" "Tkabber" >}}
+
+Android and IOS clients:
+
+-   {{< iref "#beem" "Beem" >}}
+-   {{< iref "#chatsecure" "Chatsecure" >}}
+-   {{< iref "#conversations" "Conversations" >}}
+-   {{< iref "#xabber" "Xabber" >}}  GPL Xmpp client for
+    Android.
+
+
+## OMEMO {#omemo}
+[OMEMO](https://conversations.im/omemo/) is an XMPP Extension Protocol (XEP)
+for secure multi-client end-to-end encryption. It features
+[Future and Forward Secrecy](https://whispersystems.org/blog/advanced-ratcheting/)
+and deniability, while allowing you to keep the benefits of
+[message synchronization and offline delivery](http://conversations.im/#xmpp).
+
+-   [LWN article: A look at the OMEMO protocol](https://lwn.net/Articles/691315/)
+-   [Getting started with OMEMO
+    ](https://gist.github.com/iNPUTmice/e3fe475752e39b40ea87ae5ed73b3e01).
+-   [XEP-384 - OMEMO specification](https://xmpp.org/extensions/xep-0384.html).
+
+There is a comparison of features of OTR {{< iref "#openpgp" "OpenPGP" >}}
+and OMEMO on the [OMEMO Home page](https://conversations.im/omemo/).
+
+The main drawback of OMEMO is the lack of support by some popular clients _as far as year
+2021_  the list is given on the page [Are we OMEMO yet?](https://omemo.top/).
+
+Begining 2021 this list include for Linux,
+-   for graphical clients support for:
+    {{< iref "#dino" "Dino" >}},
+    {{< iref "#jsxc" "jsxc" >}},
+    {{< iref "#gajim" "Gajim" >}}
+    through the plugin [gajim-omemo](https://github.com/omemo/gajim-omemo),
+    {{< iref "#pidgin" "pidgin" >}} through the plugin _lurch_,
+    {{< iref "#psi" "PSI" >}},
+    {{< iref "#psi_plus" "PSI+" >}},
+    {{< iref "#salutatoi" "Salut à Toi" >}},
+-   Web clients:
+    {{< iref "#xabber_web" "Xabber for Web"  >}},
+    {{< iref "#converse" "Converse.js" >}}
+-   Console clients:
+    {{< iref "#pidgin" "Finch" >}} (pidgin curse)  through the plugin _lurch_
+    {{< iref "#poezio"  >}} _in progress_,
+    {{< iref "#profanity" "profanity" >}},
+    {{< iref "#salutatoi" "primitivus" >}},
+
+For mobiles
+-   ios client
+    {{< iref "#chatsecure" "chatsecure" >}}
+-   android client
+    [blabber](https://blabber.im/),
+    {{< iref "#conversations" "Conversations" >}} and many forks
+    {{< iref "#zom" "Zom" >}},
+
+On windows there is _Miranda_, {{< iref "#psi" "PSI" >}},
+{{< iref "#pidgin" "pidgin" >}}, {{< iref "#gajim" "Gajim" >}}
+
+On OS X _Adium_, {{< iref "#psi" "PSI" >}},{{< iref "#pidgin" "pidgin" >}},
+{{< iref "#gajim" "Gajim" >}}.
+
+## OpenPGP {#openpgp}
+
+{{< wp "OpenPGP" >}} for XMPP was first decribed by
+[XEP-0027: Current Jabber OpenPGP Usage
+](http://www.xmpp.org/extensions/xep-0027.html) which is now
+obsolete. There is a new experimental draft
+[XEP-0373: OpenPGP for XMPP
+](https://xmpp.org/extensions/xep-0374.html).
+
+While {{< iref "#openpgp" "OpenPGP" >}} can be used for Xmpp, {{< iref "#OTR" "OTR" >}}
+or {{< iref "#omemo" "OMEMO" >}} are more secure as they provide
+{{< wp "forward secrecy" >}}, and {{< wp "deniability" >}} that is missing to OpenPGP,
+OTR is also easier to use; on the other hand OpenPGP is a well known and simpler method
+of asymetric encryption, and it can be applied easily to offline messages.
+
+The IM clients supporting OpenPGP are
+
+-   {{< iref "#conversations" "Conversations" >}}
+    for Android,
+    {{< iref "#mcabber" "Mcabber" >}},
+    {{< iref "#pidgin" "Pidgin" >}}
+    with the [GPG/OpenPGP Plugin for Pidgin
+    ](https://github.com/segler-alex/Pidgin-GPG/wiki),
+    {{< iref "#poesio" "poesio" >}},
+    {{< iref "#profanity" "profanity" >}},
+    {{< iref "#psi" "PSI" >}}, Gabber, Miranda ICQ
+    (IRC/ICQ client for Windows),
+    {{< iref "#tkabber" "Tkabber" >}},
+    [wija](http://www.media-art-online.org/wija/) _no more developed
+    since 2007_. Most are referenced on the [GPG software list
+    ](https://www.gnupg.org/related_software/swlist.html).
+
+You can find an _HOW TO_ in [Encrypted instant messaging with
+Jabber and GnuPG](https://box.matto.nl/gnupgjabber.html).
+
+
 # Xmpp public servers
--   [xmpp.net Public XMPP Server Directory
-    ](https://xmpp.net/directory.php)
-    gives a  list of jabber servers by country, their
-    [IM Observatory](https://xmpp.net/)
-    evaluate the security of servers.
--   [jabber.at: Public XMPP servers](https://list.jabber.at/)
-    a larger list of servers.
+-   [xmpp.net Public XMPP Server Directory](https://xmpp.net/directory.php)
+    gives a  list of jabber servers by country,
+    -   [IM Observatory](https://xmpp.net/) evaluate the security of servers.
+-   [jabber.at: Public XMPP servers](https://list.jabber.at/) a larger list of servers.
 -   [Cryptoparty list of secure jabber servers
     ](https://www.cryptoparty.in/connect/contact/jabber).
-
--   [jabber.org](http://www.jabber.org/) is the original XMPP service.
-    In 2010 the service was migrated to Isode's M-Link
-    proprietary XMPP Server.
+-   [jabber.org](https://www.jabber.org/) is the original XMPP service.  In 2010 the
+    service was migrated to Isode's M-Link proprietary XMPP Server.
     -   [jabber.org FAQ](http://www.jabber.org/faq.html)
 -   [jabber.apinc.org](http://jabber.apinc.org/) run the server
     {{< iref "#jabberfr" "jabber.fr" >}}
@@ -1044,272 +1299,8 @@ protocol.
     -   [Franz 5 xmpp plugin
         ](https://github.com/alexander-schranz/franz-xmpp-client)
 
-# Secure messaging
-Secure Messaging is an essential feature of IM, but these days it is a
-mainly used as a selling point, to make you adopt some proprietary
-protocol. So you have to convince all your friends to buy the same
-product, or to buy yourself all the products owned by one of your
-friend, and buy also a more powerfull mobile phone to host these
-multiple software. But even if you do it, how can you use the _multi user
-chat_ or _group chat_ that is proposed by these software?
 
-Imagine you have to have the same brand of phone to call somebody, the
-same email software to read her emails....
-
-To ensure interoperability there is presently few protocols,
-{{< iref "#fish" "FiSH" >}} the older, obsolete security,
-{{< iref "#openpgp" "OpenPGP" >}},
-{{< iref "#omemo" "OMEMO" >}} which has few clients,
-{{< iref "#otr" "OTR" >}}. The last one is supported by a fair
-number of clients.
-
-I give here also some other open source systems, but even if the
-protocol is open source, it is used only by one product.
-
-The first level of security is to use a
-x:[Transport_Layer_Security|TLS] connection, that avoid (if correctly
-authentified) that your data is stolen during transport. But to be
-secure it should provide {{< wp "Forward secrecy" >}}, and avoid
-{{< wp "Man-in-the-middle attack" >}} by technics like
-{{< wp "HTTP Public Key Pinning" >}} (HPKP).
-
-But if it can protect again an occasional hacker taht intercept your
-communication, it is of no use when the hacker is member or beak into
-the server organisation, or is as powerful as to convince or force the
-provider to give its data. And of course it is of no use whent the
-data is stolen at one end of the communication, which is so easy with
-mobile devices.
-
--   Wikipedia {{< wp "Secure instant messaging" >}}, {{< wp "Secure communication" >}},
-    {{< wp "Mobile security" >}},
-    {{< wp "Deniable authentication" >}}, {{< wp "forward secrecy" >}},
-    {{< wp "Comparison_of_instant_messaging_clients#Secure_messengers"  "Secure messengers" >}}
--   [End-to-End XMPP Cryptographic Protocol Desiderata
-    ](https://developer.pidgin.im/wiki/EndToEndXMPPCrypto) from
-    [Pidgin developer Wiki](https://developer.pidgin.im/wiki/).
--   [Propublica: Privacy Tools - The Best Encrypted Messaging Programs
-    ](https://www.propublica.org/article/privacy-tools-the-best-encrypted-messaging-programs)
-    has a [comparison of security features of secure messaging tools
-    ](http://projects.propublica.org/graphics/privacy-tools).
-
-For secure messaging we can expect the following features:
-
--   encrypted communications between all the links in the
-    communication path.
--   end-to-end encryption, i.e the provider does not have access
-    to keys.
--   authentication of correspondents e.g. by comparing key
-    fingerprints.
--   {{< wp "forward secrecy" >}} i.e. having past communications secure if the
-    encryption keys are stolen.
--   open source with documented security design and
-    recent independent {{< wp "security audit" >}}.
--   no log or store any information  regarding message contents,
-    senders and destination, timestamps, sessions or events.
--   Do not rely on a central authority for the relaying of messages
-    ({{< wp "decentralized computing" >}}).
-
-
-
-## OTR or _Off-the-Record Messaging_ {#otr}
-{{< wp "Off-the-Record Messaging" >}}
-(GPL) Off the Record _(OTR)_ Messaging allows you to have private
-conversations over instant messaging by providing encryption,
-{{< wp "Deniable authentication" >}}, perfect {{< wp "forward secrecy" >}}.
-
-OTR allow instant messaging, secure file transfer,
-the plugin supports multiple OTR conversations with the same buddy
-who is logged in at multiple locations. MUC is not yet supported.
-
--   [otr.cypherpunks: OTR Protocol Home](https://otr.cypherpunks.ca/)
--   [OTR.im: OTR user Home](https://www.otr.im/).
--   [XEP-0364: Current Off-the-Record Messaging Usage
-    ](https://xmpp.org/extensions/xep-0364.html)
--   [XEP-0378: OTR Discovery
-    ](https://xmpp.org/extensions/xep-0378.html)
-
-We can use any server using TLS for OTR messaging. Some may offer
-more security [jabber.otr.im](https://www.otr.im/chat.html) offers
-a free and secure server, or even a
-[Tor hidden service: ](https://www.torproject.org/docs/hidden-services.html.en)
-their server uses SSL/TLS, but the specific feature is that it
-forces communication to be OTR encrypted, thus cleartext messages
-between clients is impossible. The server uses full disk
-encryption taht will protect all data if the server is powered
-off, logging is completely disabled on the Jabber server, even
-error logs.
-
-In case of seizure if the server is kept online, the
-disk encryption is useless, and one can still see your username
-and SHA1 hash of the password, your vcard _if you did provide
-one_, your ip address if you don't use TOR, the encrypted content
-of offline message and their destination and timestamp, and your
-roster including Jabber address of contacts and their name and
-group if they are present. What is securely hidden is message
-content as they are end-to-end encrypted by OTR, and they have no
-logs even you connection timestamps.
-
-You can inspect what provide your server to look if it offers an
-comparable level of protection, it seems that for a higher
-security you have to go to a P2P connection that avoid completely
-the server aspects; but it is beyon Xmmp, hand you will miss many
-features.
-
-
-The main drawback of OTR compared to
-{{< iref "#openpgp" "OpenPGP" >}} and
-{{< iref "#omemo" "OMEMO" >}} is the lack of offline
-delivery. OTR and {{< iref "#omemo" "OMEMO" >}} have
-{{< wp " forward secrecy" >}} which lack to
-{{< iref "#openpgp" "OpenPGP" >}}.
-
-For Linux use of OTR see also the
-[EFF - Surveillance Self-Defense](https://ssd.eff.org/) guide
-[How to: Use OTR on Linux
-](https://ssd.eff.org/en/module/how-use-otr-linux).
-
-OTR is supported by many messaging clients, either a native
-support or through plugin. For Linux native support we have:
-
--   {{< iref "#bitlbee" "Bitlbee" >}} since 3.0.
--   {{< iref "sip#blink" "Blink" >}}
-    a sip client with messaging.
--   {{< iref "#converse" "Converse.js" >}}
--   {{< iref "#cryptocat" "Cryptocat" >}} protocol _(not open
-    XMPP)_ uses OTR for webbrowsers.
--   {{< iref "sip#jitsi" "Jitsi" >}} -  Video Calls
-    and Chat.
--   {{< wp "Kopete" >}}  multi-protocol messaging for KDE.
--   {{< iref "#kadu" "Kadu" >}}
--   {{< iref "#mcabber" "Mcabber" >}}
--   [LeechCraft](https://leechcraft.org/) _modular live
-    environment_ for Linux, Windows, OSX.
--   {{< iref "#profanity" "Profanity" >}}
--   {{< iref "#psi" "PSI+" >}}
-
-The following Linux clients have OTR support through a plugin:
-
--   [bitlbee-otr](https://wiki.bitlbee.org/bitlbee-otr)
-    for {{< iref "#bitlbee" "Bitlbee" >}}
--   [Off-the-Record Encryption plugin
-    ](https://trac-plugins.gajim.org/wiki/OffTheRecordPlugin)
-    through [gajim-otr](https://github.com/python-otr/gajim-otr)
-    for {{< iref "#gajim" "Gajim" >}} _alpha plugin_.
--   [HexChat-OTR](https://github.com/TingPing/hexchat-otr)
-    for {{< iref "irc#hexchat" "HexChat" >}}.
--   [Irsii-OTR](https://github.com/cryptodotis/irssi-otr/) for
-    {{< iref "irc#irssi" "irsii" >}}.
--   [pidgin-OTR](https://bugs.otr.im/plugins/pidgin-otr)
-    for {{< iref "#pidgin" "Pidgin" >}}.
--   {{< iref "#poezio" "poezio" >}}.
--   {{< iref "#tkabber" "Tkabber" >}}
--   [Weechat-OTR](https://github.com/mmb/weechat-otr) for
-    {{< iref "irc#weechat" "Weechat" >}}.
-
-
-Windows and Mac OSX clients
-
--   Adium  multiprotocol client for Mac OSX.
--   Blink SIP  Mac OSX client
--   {{< wp "climm" >}} IRC for Windows, OSX, and unix.
--   {{< iref "#kadu" "Kadu" >}} Unix Windows and Mac OSX
-    gadu-gadu and Xmpp client.
--   Textual 5 (OS X)
--   {{< iref "#tkabber" "Tkabber" >}}
-
-Android and IOS clients:
-
--   {{< iref "#beem" "Beem" >}}
--   {{< iref "#chatsecure" "Chatsecure" >}}
--   {{< iref "#conversations" "Conversations" >}}
--   {{< iref "#xabber" "Xabber" >}}  GPL Xmpp client for
-    Android.
-
-Although Gmail's Google Talk uses the term "off the record", the
-feature has no connection to the Off-the-Record Messaging protocol,
-its chats are not end-to-end encrypted and could be logged internally
-by Google even if not accessible by end-users.
-
-## OMEMO {#omemo}
-[OMEMO](https://conversations.im/omemo/)
-is an XMPP Extension Protocol (XEP) for secure multi-client
-end-to-end encryption. It features
-[Future and Forward Secrecy
-](https://whispersystems.org/blog/advanced-ratcheting/)
-and deniability while
-allowing you to keep the benefits of [message synchronization and
-offline delivery](http://conversations.im/#xmpp).
-
-There is a comparison of features of OTR
-{{< iref "#openpgp" "OpenPGP" >}}
-and OMEMO on the
-[OMEMO Home page](https://conversations.im/omemo/)
-
-The main drawback of OMEMO is to be supported _as far as year
-2018_ only by few clients, the list is given on the page
-[Are we OMEMO yet? | progress of OMEMO integration in XMPP clients
-](https://omemo.top/).
-
-Beginin 2018 this list include for Linux
-an alpha support for {{< iref "#gajim" "Gajim" >}}
-through the plugin [gajim-omemo
-](https://github.com/omemo/gajim-omemo),
-{{< iref "#pidgin" "pidgin" >}} and _Finch_
-through the plugin _lurch_,
-{{< iref "#profanity" "profanity" >}},
-{{< iref "#dino" "Dino" >}},
-{{< iref "#jsxc" "jsxc" >}}.
-
-
-On Mobile we have  the ios client
-{{< iref "#chatsecure" "chatsecure" >}}
-and android client
-{{< iref "#conversations" "Conversations" >}} and
-{{< iref "#zom" "Zom" >}}
-
-On windows there is _Miranda_ and on OS X _Adium_.
-
-
-## OpenPGP {#openpgp}
-
-{{< wp "OpenPGP" >}} for XMPP was first decribed by
-[XEP-0027: Current Jabber OpenPGP Usage
-](http://www.xmpp.org/extensions/xep-0027.html) which is now
-obsolete. There is a new experimental draft
-[XEP-0373: OpenPGP for XMPP
-](https://xmpp.org/extensions/xep-0374.html).
-
-While {{< iref "#openpgp" "OpenPGP" >}}
-can be used for Xmpp, {{< iref "#OTR" "OTR" >}} or
-{{< iref "#omemo" "OMEMO" >}}
-are more secure as they provide {{< wp "forward secrecy" >}}, and
-{{< wp "deniability" >}} that is missing to OpenPGP, OTR is also easier to
-use; on the other hand OpenPGP is a well known and simpler method
-of asymetric encryption, and it can be applied easily to offline
-messages.
-
-The IM clients supporting OpenPGP are
-
--   {{< iref "#conversations" "Conversations" >}}
-    for Android,
-    {{< iref "#mcabber" "Mcabber" >}},
-    {{< iref "#pidgin" "Pidgin" >}}
-    with the [GPG/OpenPGP Plugin for Pidgin
-    ](https://github.com/segler-alex/Pidgin-GPG/wiki),
-    {{< iref "#poesio" "poesio" >}},
-    {{< iref "#profanity" "profanity" >}},
-    {{< iref "#psi" "PSI" >}}, Gabber, Miranda ICQ
-    (IRC/ICQ client for Windows),
-    {{< iref "#tkabber" "Tkabber" >}},
-    [wija](http://www.media-art-online.org/wija/) _no more developed
-    since 2007_. Most are referenced on the [GPG software list
-    ](https://www.gnupg.org/related_software/swlist.html).
-
-You can find an _HOW TO_ in [Encrypted instant messaging with
-Jabber and GnuPG](https://box.matto.nl/gnupgjabber.html).
-
-
-
+# Other secure messaging clients
 
 ## Other secure protocols
 
