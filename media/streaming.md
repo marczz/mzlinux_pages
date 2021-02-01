@@ -15,8 +15,7 @@ See also {{< iref "ffmpeg" "FFmpeg section" >}},
 -   [Streaming Media With Linux part 1
     ](http://www.linuxdevcenter.com/pub/a/linux/2001/03/23/streaming_media.html)
     and
-    [part 2
-    ](http://www.linuxdevcenter.com/pub/a/linux/2001/03/30/streaming_linux2.html)
+    [part 2](http://www.linuxdevcenter.com/pub/a/linux/2001/03/30/streaming_linux2.html)
     tutorial on streaming _2001_
 -   Music stream directories:
     [Shoutcast](http://www.shoutcast.com/),
@@ -109,10 +108,9 @@ See also {{< iref "ffmpeg" "FFmpeg section" >}},
 
 -   [AmpJuke](http://www.ampjuke.org/) (GPL) is a PHP+MySQL streaming
     server. _Not updated since 2014_.
--   [Apache MusicIndex
-    ](http://www.parisc-linux.org/~varenet/musicindex/)
-    is an apache module that allows to display and stream the
-    directory tree of your music collection.
+-   [Apache MusicIndex](http://www.parisc-linux.org/~varenet/musicindex/)
+    is an apache module that allows to display and stream the directory tree of your
+    music collection.
 -   <a name="cherrymusic"></a>[CherryMusic
     ](http://www.fomori.org/cherrymusic/) (GPL)
     is a music streaming server written in python. It lets you remotely
@@ -121,26 +119,21 @@ See also {{< iref "ffmpeg" "FFmpeg section" >}},
     Grooveshark.
     -   [ArchWiki - CherryMusic
         ](https://wiki.archlinux.org/index.php/CherryMusic)
--   <a name="groovebasin"></a>[GrooveBasin
-    ](https://github.com/andrewrk/groovebasin)
-    is a music player server with a web-based user
-    interface. Groove Basin runs on a server optionally connected to
-    speakers. Guests can control the music player by connecting with a
-    laptop, tablet, or smart phone. Further, users can stream their
+-   <a name="groovebasin"></a>[GrooveBasin](https://github.com/andrewrk/groovebasin)
+    is a music player server with a web-based user interface. Groove Basin runs on a
+    server optionally connected to speakers. Guests can control the music player by
+    connecting with a laptop, tablet, or smart phone. Further, users can stream their
     music libraries remotely.
-    -   [ArchWiki - GrooveBasin
-        ](https://wiki.archlinux.org/index.php/Groovebasin)
--   [litestream](http://litestream.org/ "litestream.org Home") (BSD
-    license) is a mp3 streaming server written in C. It is compatible
-    with the shoutcast protocol and with muse.
+    -   [ArchWiki - GrooveBasin](https://wiki.archlinux.org/index.php/Groovebasin)
+-   [litestream](http://litestream.org/ "litestream.org Home") (BSD license)
+    is a mp3 streaming server written in C. It is compatible with the shoutcast protocol
+    and with muse.
 -   {{< iref "media_players#mpd" "Music Player Daemon" >}} has a subsection.
     in the {{< iref "media_players#mpd" "Media Players" >}}.
 -   <a name="mopidy"></a>[Mopidy](https://www.mopidy.com/)
-    is a music server written in Python.
-    It can play music from local files, radio streams, and cloud
-    services such as Spotify,  Google Play Music, and SoundCloud.
-    Mopidy is just a server that output Http streams or act as a MPD
-    server.
+    is a music server written in Python.  It can play music from local files, radio
+    streams, and cloud services such as Spotify, Google Play Music, and SoundCloud.
+    Mopidy is just a server that output Http streams or act as a MPD server.
     -   [Mopidy documentation](https://docs.mopidy.com/)
     -   [GitHub Mopidy](https://github.com/mopidy/mopidy)
 -   [MuSE](https://www.dyne.org/software/muse/) <a name="muse"></a> (GPL)
@@ -149,8 +142,6 @@ See also {{< iref "ffmpeg" "FFmpeg section" >}},
     stream to icecast, shoutcast, and darwin. _Last release 2005_
 -   [Sonerezh](https://www.sonerezh.bzh/) (AGPL)
     a php+sql web music server.
--   [streeme](http://code.google.com/p/streeme/) (MIT License)
-    is a php web music server that uses FFMPEG. _last commit 2012_.
 
 ### Ampache (LGPL/GPL) {#ampache}
 {{< wp "Ampache" >}} is a PHP-based tool for managing, updating and playing
@@ -211,12 +202,10 @@ need transcoding.
 
 ### PulseAudio {#pulseaudio}
 [PulseAudio](http://www.freedesktop.org/wiki/Software/PulseAudio/)
-(LGPL library, GPL server) is a a networked sound
-server, that has support in audacious, gst (gst-pulse), libao,
-{{< iref "media_players#mpd448" "mpd" >}},
- mplayer, qmmp, xine.... There is an alsa bridge, with which alsa can
-be both a backend and a frontend to PulseAudio, through it any alsa
-player can use PulseAudio.
+(LGPL library, GPL server) is a a networked sound server, that has support in audacious,
+gst (gst-pulse), libao, {{< iref "media_players#mpd" "mpd" >}},
+ mplayer, qmmp, xine.... There is an alsa bridge, with which alsa can be both a backend
+and a frontend to PulseAudio, through it any alsa player can use PulseAudio.
 
 
 Wikipedia has a {{< wp "Pulseaudio" >}} page.
@@ -238,8 +227,7 @@ Wikipedia has a {{< wp "Pulseaudio" >}} page.
     -   module-cli Command Line Language is described in
         the man page {{< man "pulse-cli-syntax(5)" >}}
 -   Wikipedia {{< wp "PulseAudio" >}}
--   Ubuntu has a basic
-    [PulseAudio page](https://wiki.ubuntu.com/PulseAudio),
+-   Ubuntu has a basic [PulseAudio page](https://wiki.ubuntu.com/PulseAudio),
     note there the importance of `/etc/asound.conf`.
 -   [Debian Wiki PulseAudio](https://wiki.debian.org/PulseAudio).
 -   [Gentoo Pulseausdio](http://wiki.gentoo.org/wiki/PulseAudio).
@@ -253,8 +241,7 @@ Wikipedia has a {{< wp "Pulseaudio" >}} page.
     ](https://wiki.archlinux.org/index.php/PulseAudio/Troubleshooting).
 -   [pamixer](https://github.com/cdemoulins/pamixer)(GPL) and
     [ponymix](https://github.com/falconindy/ponymix) are
-    two command line mixers for pulseaudio, but you can also use
-    _amixer_.
+    two command line mixers for pulseaudio, but you can also use _amixer_.
 -   [mpd wiki: how to set mpd to use Pulseaudio](http://mpd.wikia.com/wiki/PulseAudio)
 -   [Linux MAO PulseAudio
     ](http://www.linuxmao.org/tikiwiki/tiki-index.php?page=PulseAudio)
@@ -262,45 +249,30 @@ Wikipedia has a {{< wp "Pulseaudio" >}} page.
     [proaudio.tuxfamily.org PulseAudio Howto
     ](http://proaudio.tuxfamily.org/wiki/index.php?title=PulseAudio).
 -   The utilities in the package pulseaudio-utils are
-    [paplay(1)
-    ](http://manpages.debian.org/cgi-bin/man.cgi?query=paplay+1),
-    [padsp(1)
-    ](http://manpages.debian.org/cgi-bin/man.cgi?query=padsp+1),
-    [pactl(1)
-    ](http://manpages.debian.org/cgi-bin/man.cgi?query=pactl+1),
-    [pacmd(1)
-    ](http://manpages.debian.org/cgi-bin/man.cgi?query=pacmd+1),
-    [pacat(1)
-    ](http://manpages.debian.org/cgi-bin/man.cgi?query=pacat+1),
-    [pamont(1)
-    ](http://manpages.debian.org/cgi-bin/man.cgi?query=pamont+1),
-    [parect(1)
-    ](http://manpages.debian.org/cgi-bin/man.cgi?query=parect+1),
-    [pax11publish(1)
-    ](http://manpages.debian.org/cgi-bin/man.cgi?query=pax11publish+1),
-    [pasuspender(1)
-    ](http://manpages.debian.org/cgi-bin/man.cgi?query=pasuspender+1),
+    [paplay(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=paplay+1),
+    [padsp(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=padsp+1),
+    [pactl(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=pactl+1),
+    [pacmd(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=pacmd+1),
+    [pacat(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=pacat+1),
+    [pamont(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=pamont+1),
+    [parect(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=parect+1),
+    [pax11publish(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=pax11publish+1),
+    [pasuspender(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=pasuspender+1),
 -   The gtk utilities are in separate packages:
-    [pavucontrol(1)
-    ](http://manpages.debian.org/cgi-bin/man.cgi?query=pavucontrol+1)
+    [pavucontrol(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=pavucontrol+1)
     *PulseAudio Volume Control*,
-    [paprefs(1)
-    ](http://manpages.debian.org/cgi-bin/man.cgi?query=paprefs+1)
+    [paprefs(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=paprefs+1)
     *PulseAudio Preferences* ,
-    [pavumeter(1)
-    ](http://manpages.debian.org/cgi-bin/man.cgi?query=pavumeter+1)
+    [pavumeter(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=pavumeter+1)
     *PulseAudio Volume Meter*,
-    [paman(1)
-    ](http://manpages.debian.org/cgi-bin/man.cgi?query=paman+1)
+    [paman(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=paman+1)
     *PulseAudio Manager*,
-    [padevchooser(1)
-    ](http://manpages.debian.org/cgi-bin/man.cgi?query=padevchooser+1)
+    [padevchooser(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=padevchooser+1)
     *PulseAudio Device Chooser*
 -   [pamixer](https://github.com/cdemoulins/pamixer)(GPL) and
     [ponymix](https://github.com/falconindy/ponymix) are
     two command line mixers for pulseaudio, but you can also use _amixer_.
--   When the server run in user mode it load the
-    [default.pa - server module config file
+-   When the server run in user mode it load the [default.pa - server module config file
     ](https://wiki.archlinux.org/index.php/PulseAudio/Configuration#default.pa)
     in `~/.config/pulse/default.pa`  and  when  that  file  doesn't  exist
     `/etc/pulse/default.pa` to configure modules.
@@ -308,25 +280,24 @@ Wikipedia has a {{< wp "Pulseaudio" >}} page.
     tool they follow {{< man "pulse-cli-syntax(5)" >}}.
 -   [client.conf -  PulseAudio client applications configuration
     ](https://wiki.archlinux.org/index.php/PulseAudio/Configuration#client.conf)
-    is used to configure runtime options for individual clients.
-    It can be used to set the configure the default sink and source
-    statically as well as allowing (or disallowing) clients to
-    automatically start the server if not currently running.<br/>
-    Spanning pulse with the session is disabled by putting
-    `autospawn = no`.<br/>
-    The client read `~/config/pulse/client.conf` and if it does
-    not exists `/etc/pulse/client.conf`.
-    See {{< man "pulse-client.conf(5)" >}} for more information
+    is used to configure runtime options for individual clients.  It can be used to set
+    the configure the default sink and source statically as well as allowing (or
+    disallowing) clients to automatically start the server if not currently
+    running.<br/> Spanning pulse with the session is disabled by putting `autospawn =
+    no`.
+
+    The client read `~/config/pulse/client.conf` and if it does not exists
+    `/etc/pulse/client.conf`.  See {{< man "pulse-client.conf(5)" >}} for more
+    information
 -   [daemon.conf - daemon configuration
     ](https://wiki.archlinux.org/index.php/PulseAudio/Configuration#daemon.conf)
-    defines base settings like the default sample rates used by
-    modules, resampling methods, realtime scheduling ... . These can
-    not be changed at runtime without restarting the PulseAudio
-    daemon.  See the {{< man "pulse-daemon.conf" >}} for information.
--   To start manually pulseaudio to debug it, first disable
-    _as above_ and stop the autospawned session then start again
-    with `pulseaudio -v` to get info messages,
-    `pulseaudio -vv` toalso get debugging messages.
+    defines base settings like the default sample rates used by modules, resampling
+    methods, realtime scheduling ... . These can not be changed at runtime without
+    restarting the PulseAudio daemon.  See the {{< man "pulse-daemon.conf" >}} for
+    information.
+-   To start manually pulseaudio to debug it, first disable _as above_ and stop the
+    autospawned session then start again with `pulseaudio -v` to get info messages,
+    `pulseaudio -vv` to also get debugging messages.
 -   [pa-applet](https://github.com/fernandotcl/pa-applet)
     is a systray-applet that allows you to control
     the volume level of the default sink and mute or unmute it.
@@ -340,6 +311,7 @@ Wikipedia has a {{< wp "Pulseaudio" >}} page.
     ](https://gitlab.freedesktop.org/pipewire/pipewire/-/wikis/home)
 -   [PipeWire - ArchWiki](https://wiki.archlinux.org/index.php/PipeWire)
 -   [Pipewire - Gentoo Wiki](https://wiki.gentoo.org/wiki/Pipewire#Replacing_PulseAudio)
+-   [Fedora Switch to Pipewire](https://fedoraproject.org/wiki/Changes/DefaultPipeWire).
 
 ## Video and Music
 -   <a name="icecast"></a>{{< wp "Icecast" >}} (GPL) streaming server
@@ -378,39 +350,33 @@ Wikipedia has a {{< wp "Pulseaudio" >}} page.
     -   [ArchWiki - Jinzora
         ](https://wiki.archlinux.org/index.php/Jinzora)
 -   [LIVE.COM](http://www.live555.com/mediaServer/) (LGPL)
-    is a source-code C++ library for standards-based RTP/RTCP/RTSP/SIP
-    multimedia streaming, suitable for embedded and/or low-cost
-    streaming applications. It is used by the following applications:
-    -   [openRTSP](http://www.live555.com/openRTSP/) a command-line
-        RTSP client
-    -   [playSIP](http://www.live555.com/playSIP/) - a command-line SIP
-        session recorder
+    is a source-code C++ library for standards-based RTP/RTCP/RTSP/SIP multimedia
+    streaming, suitable for embedded and/or low-cost streaming applications. It is used
+    by the following applications:
+    -   [openRTSP](http://www.live555.com/openRTSP/) a command-line RTSP client
+    -   [playSIP](http://www.live555.com/playSIP/) - a command-line SIP session
+        recorder.
     -   [live555 MediaServer](http://www.live555.com/mediaServer/)
         is a complete RTSP server application. It can stream mpeg 1, 2, 4
         or aac. You can use openRTSP, vlc, or mplayer as client.
     -   [RTSP/RTP streaming support](http://www.live555.com/mplayer/)
         for the "MPlayer" media player
-    -   [vobStreamer](http://www.live555.com/vobStreamer/) - a network
-        DVD player that allows to stream your DVD content over a LAN.
--   [Subsonic](http://www.subsonic.org/) (GPL) is a streaming server
-    written in Java.
-    _Subsonic_ supports any streamable media (including MP3, AAC, and
-    Ogg) with on-the-fly media conversion.
-    Some features like DLNA/UPnP compatibility,
-    are only available in the private source _Subsonic
-    Premium_ that costs 1$/month.<br />
+    -   [vobStreamer](http://www.live555.com/vobStreamer/)
+        A network DVD player that allows to stream your DVD content over a LAN.
+-   [Subsonic](http://www.subsonic.org/) (GPL)
+    is a streaming server written in Java.  _Subsonic_ supports any streamable media
+    (including MP3, AAC, and Ogg) with on-the-fly media conversion.  Some features like
+    DLNA/UPnP compatibility, are only available in the private source _Subsonic Premium_
+    that costs 1$/month.
     -   [ArchWiki: Subsonic](https://wiki.archlinux.org/index.php/Subsonic).
-    -   [Subsonic Apps](www.subsonic.org/pages/apps.jsp) list subsonic
-        clients.
+    -   [Subsonic Apps](www.subsonic.org/pages/apps.jsp) list subsonic clients.
     -   [SubFirePlayer](http://www.subfireplayer.net/)
-        is a pure HTML5 audio player for SubSonic, implemented in
-        JQueryMobile. It is
-        available as a web application, as a Chrome
-        hosted app, and as appli for devices including
-        well as Android and the Kindle Fire HD.
+        is a pure HTML5 audio player for SubSonic, implemented in JQueryMobile. It is
+        available as a web application, as a Chrome hosted app, and as appli for devices
+        including well as Android and the Kindle Fire HD.
     -  [Jamstash](https://github.com/tsquillario/Jamstash)
        is an HTML5 Music Streamer for SubSonic.
-        -   [Jamstash online site]([http://jamstash.com/)
+        -   [Jamstash online site](http://jamstash.com/)
 
     There are many derivatives of _subsonic_, they are listed in the
     Wikipedia {{< wp "Subsonic" >}} page, among the active projects that are
@@ -421,11 +387,9 @@ Wikipedia has a {{< wp "Pulseaudio" >}} page.
         a java fork of Subsonic that adds features and bug fixes over the
         main branch._active in 2018._
     -   [FutureSonic](https://code.google.com/p/futuresonic/) (GPL)
-        a java Madsonic and SubSonic fork _only maintenance commits since
-        2014._
+        a java Madsonic and SubSonic fork _only maintenance commits since 2014._
     -   [Supysonic](https://github.com/spl0k/supysonic) (GPL)
-        a Python implementation of the Subsonic server API.
-        _active in 2018_.
+        a Python implementation of the Subsonic server API. _active in 2018_.
 
 -   {{< iref "media_players#videolan" "VideoLan Client (VLC)" >}} is in the
     {{< iref "media_players#video_players" "Video Players section" >}}.
@@ -459,10 +423,7 @@ and broadcasting of digital media which is used by {{< wp "DLNA" >}} devices.
     in Python. It provides a Media Server and Media Renderer to play medias,
     and a Media Applet to start/stop media servers/renderers. _no
     longer active_
--   <a name="cohen"></a>
-
-    -   [Cohen is on pypi](https://pypi.python.org/pypi/Cohen).
-
+-   <a name="cohen"></a>[Cohen](https://pypi.python.org/pypi/Cohen).
 -   <a name="coherence"></a>[Coherence](http://coherence-project.org/)
     (MIT License) is a UPnP/DLNA Framework that provides a
     server. Coherence developper resigned, and the development ceased
@@ -477,22 +438,20 @@ and broadcasting of digital media which is used by {{< wp "DLNA" >}} devices.
      -  [Coherence](https://pypi.org/project/Coherence/) and
         [Cohen](https://pypi.python.org/pypi/Cohen) are on Pypi.
 -   [Emby](https://emby.media/) (GPL)
-    is an personal media server written in C#. It has clients for
-    many platforms like html5 server, android, ipad, windows and
-    many more. It is used to organize personal home media, as
-    well as play back on other devices. It supports DLNA and can
-    send to chromecast.
+    is an personal media server written in C#. It has clients for many platforms like
+    html5 server, android, ipad, windows and many more. It is used to organize personal
+    home media, as well as play back on other devices. It supports DLNA and can send to
+    chromecast.
     Emby provides Debian packages for amd64 and armhf.
     -   [GitHub - Emby](https://github.com/MediaBrowser/Emby).
 -   [FreeMi](http://freemiupnp.fr/) (Open Source License)
     FreeMi is an C#/Mono UPnP Media Server audio/video for the FreeBox.
     the CLI can be used on Linux.
 -   [Fuppes](https://github.com/u-voelkel/fuppes) (GPL)
-    is an UPnP A/V MediaServer (not yet fully UPnP compliant).
-    It supports on-the-fly transcoding from ogg/vorbis, musepack/mpc,
-    FLAC and AAC/MP4 to mp3, mp2, wav or pcm, image conversion/rescaling
-    and video transcoding. [Fuppes sourceforge Page
-    ](http://sourceforge.net/projects/fuppes/).
+    is an UPnP A/V MediaServer (not yet fully UPnP compliant).  It supports on-the-fly
+    transcoding from ogg/vorbis, musepack/mpc, FLAC and AAC/MP4 to mp3, mp2, wav or pcm,
+    image conversion/rescaling and video transcoding.
+    -   [Fuppes sourceforge Page](http://sourceforge.net/projects/fuppes/).
 -   <a name="gerbera"></a>[Gerbera](https://gerbera.io/)
     is an upnp media server written in C++, the continuation of
     {{< iref "#mediatomb" "MediaTomb" >}}.
@@ -507,9 +466,9 @@ and broadcasting of digital media which is used by {{< wp "DLNA" >}} devices.
     and continued by {{< iref "#gerbera" "Gerbera" >}}.
 -   [ReadyMedia previously MiniDLNA
     ](http://sourceforge.net/projects/minidlna/) (GPL)
-    is server software with the aim of being fully compliant with
-    DLNA/UPnP-AV clients. It is developed by a NETGEAR employee for
-    the ReadyNAS product line. _active in 2018_
+    is server software with the aim of being fully compliant with DLNA/UPnP-AV
+    clients. It is developed by a NETGEAR employee for the ReadyNAS product
+    line. _active in 2018_
     -   [ReadyMedia git repository
         ](https://sourceforge.net/p/minidlna/git/ci/master/tree/)
     -   [ReadyMedia news
@@ -521,25 +480,21 @@ and broadcasting of digital media which is used by {{< wp "DLNA" >}} devices.
         _outdated 2009!_
 -   {{< iref "media_players#mythtv" "MythTV" >}}
     has a [builtin UPnP server](https://www.mythtv.org/wiki/UPnP).
--   <a name=pulseaudio-dlna"></a>[pulseaudio-dlna
-    ](https://github.com/masmu/pulseaudio-dlna)
-    is a lightweight streaming server which brings DLNA
-    / UPNP and Chromecast support to PulseAudio. It can
-    stream your current PulseAudio playback to different UPNP devices
+-   <a name=pulseaudio-dlna"></a>
+    [pulseaudio-dlna](https://github.com/masmu/pulseaudio-dlna)
+    is a lightweight streaming server which brings DLNA / UPNP and Chromecast support to
+    PulseAudio. It can stream your current PulseAudio playback to different UPNP devices
     (UPNP Media Renderers) or Chromecasts in your network.
     It is packaged in Debian.
-    -   [How to stream audio to chromecast
-        or dlna / upnp device using pulseaudio-dnla
+    -   [How to stream audio to chromecast or dlna / upnp device using pulseaudio-dnla
         ](http://www.webupd8.org/2016/03/how-to-stream-audio-to-chromecast-or.html)
--   [PS3 Media Server
-    ](https://github.com/ps3mediaserver/ps3mediaserver)
-    is an UPnP server wriiten in java, and initially targeted to the
+-   [PS3 Media Server](https://github.com/ps3mediaserver/ps3mediaserver)
+    is an UPnP server written in java, and initially targeted to the
     PS3 renderer.  This is a big java application (495M resident).
 -   [Universal Media Player](http://www.universalmediaserver.com/)
     is a fork of _PS3 Media Server_, It is written in Java.
     It has support for Chromecast, they gives a
-    [comparaison of features
-    ](http://www.universalmediaserver.com/comparison/)
+    [comparaison of features](http://www.universalmediaserver.com/comparison/)
     with _PS3 Media server_, _Serviio_, _KooRaRoo_, _Plex_.
 -   [uShare _GeexBox page_](http://ushare.geexbox.org/) (GPL)
     is an Upnp (TM) A/V Media Server based on
@@ -551,24 +506,20 @@ and broadcasting of digital media which is used by {{< wp "DLNA" >}} devices.
 
 ### Rygel {#rygel}
 [Rygel](https://wiki.gnome.org/action/show/Projects/Rygel)
-is an UPnP AV MediaServer, It stick to a strict conformance to
-DNLA, and provide on the fly conversion of media.
-<br />
-Media players may use Rygel to become a MediaRenderer through the
-Playbin plugin.  It can then be controlled remotely by a UPnP or
-DLNA Controller.
+is an UPnP AV MediaServer, It stick to a strict conformance to DNLA, and provide on the
+fly conversion of media.
 
-_Rygel_ is in debian, the renderer plugin is in
-_rygel-playbin_, `rygel-gst-launch` is a gst-launch plugin that
-enables using a a DLNA
-service/UPnP device in a gst pipeline; and a configuration gui in
-_rygel-preferences_.
+Media players may use Rygel to become a MediaRenderer through the Playbin plugin.  It
+can then be controlled remotely by a UPnP or DLNA Controller.
+
+_Rygel_ is in debian, the renderer plugin is in _rygel-playbin_, `rygel-gst-launch` is a
+gst-launch plugin that enables using a a DLNA service/UPnP device in a gst pipeline; and
+a configuration gui in _rygel-preferences_.
 
 _rygel_, _rygel-playbin_, and severall plugins are in Debian.
 
-Rygel with the playbin plugin takes on amd64 47M res / 17M shr on
-may 2018 for rygel 0.36.1, when playing a TV stream I got
-56M / 26M.
+Rygel with the playbin plugin takes on amd64 47M res / 17M shr on may 2018 for rygel
+0.36.1, when playing a TV stream I got 56M / 26M.
 
 -   [ArchWiki: Rygel](https://wiki.archlinux.org/index.php/Rygel)
 -   [Rygel.conf man page
@@ -582,15 +533,14 @@ may 2018 for rygel 0.36.1, when playing a TV stream I got
 Taken from the [Rygel Wiki - features
 ](https://wiki.gnome.org/Projects/Rygel/Features)
 
--   Export of on-disk media via [Tracker
-    ](https://wiki.gnome.org/Projects/Tracker)
-    or media-export [server plugins
-    ](https://wiki.gnome.org/Projects/Rygel/ServerPlugins).
--   Export of online media from [2nd German TV station
-    ](http://www.zdf.de/).
+-   Export of on-disk media via [Tracker](https://wiki.gnome.org/Projects/Tracker)
+    or media-export
+    [server plugins](https://wiki.gnome.org/Projects/Rygel/ServerPlugins).
+-   Export of online media from
+    [2nd German TV station](http://www.zdf.de/).
 -   Export of media hierarchies provided by external applications
-    through implementation of [D-Bus MediaServer spec
-    ](https://wiki.gnome.org/Projects/Rygel/MediaServer2Spec).
+    through implementation of
+    [D-Bus MediaServer spec](https://wiki.gnome.org/Projects/Rygel/MediaServer2Spec).
     Applications that utilize this feature are:
 
     -   [DVB Daemon](https://wiki.gnome.org/Projects/DVBDaemon):
@@ -598,19 +548,17 @@ Taken from the [Rygel Wiki - features
     -   {{< iref "media_players#rythmbox" "Rhythmbox" >}}.
     -   {{< iref "#pulseaudio" "PulseAudio" >}}.
     -   [GRILO](https://wiki.gnome.org/Projects/Grilo)
-        a framework focused on making media discovery and browsing
-        easy, used with Rygel and
-        {{< iref "media_players#totem" "Totem" >}}.
+        a framework focused on making media discovery and browsing easy, used with Rygel
+        and  {{< iref "media_players#totem" "Totem" >}}.
 
--   Export of GStreamer pipelines as media items on the network,
-    specified through gst-launch syntax in the user configuration.
--   Audio and Video Transcoding when using [Rygel's GStreamer media
-    engine](https://wiki.gnome.org/Projects/Rygel/MediaEngines).
+-   Export of GStreamer pipelines as media items on the network, specified through
+    gst-launch syntax in the user configuration.
+-   Audio and Video Transcoding when using
+    [Rygel's GStreamer media engine](https://wiki.gnome.org/Projects/Rygel/MediaEngines).
 -   Standalone MediaRenderer plugin based on [GStreamer playbin
     ](http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-base-plugins/html/gst-plugins-base-plugins-playbin.html){.http}
     element.
--   Export of media players that implement
-    [MPRIS2](http://www.mpris.org/2.0/spec/)
+-   Export of media players that implement [MPRIS2](http://www.mpris.org/2.0/spec/)
     D-Bus interface, as MediaRenderer devices.
 
 ## UPnP media renderers (clients): {#upnp_media_clients}
@@ -625,15 +573,13 @@ Taken from the [Rygel Wiki - features
 -   [eezpnp](http://www.eezupnp.de/) (Free but not open source ?)
     is a control point written in Java.
 -   [GMediaRender](http://gmrender.nongnu.org/) (GPL)
-    is a UPnP media renderer for Linux,  It provides UPnP controllers
-    to render media content from a UPnP media server. _Like
-    {{< iref "#gmediaserver" "GMediaServer" >}} this project
-    is no longer maintained and is not updated since 2007 and still in
-    debian_.
-    -   [gmrender-resurrect
-        ](https://github.com/hzeller/gmrender-resurrect)
+    is a UPnP media renderer for Linux, It provides UPnP controllers to render media
+    content from a UPnP media server. _Like {{< iref "#gmediaserver" "GMediaServer" >}} this
+    project is no longer maintained and is not updated since 2007 and still in debian_.
+    -   [gmrender-resurrect](https://github.com/hzeller/gmrender-resurrect)
         is a newer fork of gmediarender.
--   _rygel-playbin_ is a media renderer par of the {{< iref "#rygel" "Rygel" >}} upnp media server.
+-   _rygel-playbin_ is a media renderer par of the {{< iref "#rygel" "Rygel" >}}
+    upnp media server.
 -   [simple-dlna-browser
     ](https://github.com/javier-lopez/learn/blob/master/sh/tools/simple-dlna-browser)
     is a simple shell script to browse dlna servers.
@@ -676,15 +622,14 @@ These streaming server acts as  UPnP media renderers.
 
 
 ## UpNP control point
-A control point, functions as a digital audio/video remote
-control. Control points automatically detect UPnP servers on the
-network to browse content directories and request the transfer or
-streaming of media. A UPnP media renderer performs the actual audio or
-video rendering. Control points and media renderers most commonly run
-on separate devices, the control point being for example a tablet, and
-the renderer a television or a networked audio computer connected to
-an audio receiver. Some control points integrate a media renderer and
-may function as a complete music playing application.
+A control point, functions as a digital audio/video remote control. Control points
+automatically detect UPnP servers on the network to browse content directories and
+request the transfer or streaming of media. A UPnP media renderer performs the actual
+audio or video rendering. Control points and media renderers most commonly run on
+separate devices, the control point being for example a tablet, and the renderer a
+television or a networked audio computer connected to an audio receiver. Some control
+points integrate a media renderer and may function as a complete music playing
+application.
 
 
 -   <a name="gupnp"></a>[GUPnP](https://wiki.gnome.org/Projects/GUPnP)
@@ -697,10 +642,9 @@ may function as a complete music playing application.
     On amd64 _gupnp-av-cp_ takes 25 res / 17M shr on may 2018 for gupnp-tools 0.8.14.
 
 -   [upplay](https://www.lesbonscomptes.com/upplay/) (GPL)
-    is a desktop UPnP audio Control Point written in C++ for
-    Linux/Unix and MS Windows. A _Debian_ package repository
-    is provided. On amd64 upplay takes 53M res / 35M shr on may 2018
-    for 1.2.11, which is very heavy for a control point.
+    is a desktop UPnP audio Control Point written in C++ for Linux/Unix and MS
+    Windows. A _Debian_ package repository is provided. On amd64 upplay takes 53M res /
+    35M shr on may 2018 for 1.2.11, which is very heavy for a control point.
 
 -   {{< iref "media_players#kodi" "Kodi" >}}
     can  [act as an UPnP Control Point
