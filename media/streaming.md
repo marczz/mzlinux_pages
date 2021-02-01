@@ -335,18 +335,22 @@ Wikipedia has a {{< wp "Pulseaudio" >}} page.
 -   Pulseaudio can stream to UPnP / DLNA with
     {{< iref "#pulseaudio" "pulseaudio-dlna" >}}.
 
+## PipeWire {#pipewire}
+-   [PipeWire Wiki - Freedesktop
+    ](https://gitlab.freedesktop.org/pipewire/pipewire/-/wikis/home)
+-   [PipeWire - ArchWiki](https://wiki.archlinux.org/index.php/PipeWire)
+-   [Pipewire - Gentoo Wiki](https://wiki.gentoo.org/wiki/Pipewire#Replacing_PulseAudio)
+
 ## Video and Music
 -   <a name="icecast"></a>{{< wp "Icecast" >}} (GPL) streaming server
     (audio/video) with support of Ogg/Vorbis and Ogg/Theora, Opus,
     WebM and MP3 streams.
     Icecast is small 2.3M many threads on my armel nas server.:
     -   [Icecast Home](http://www.icecast.org/)
-    -   [Icecast official documentation
-        ](http://icecast.org/docs/icecast-latest)
+    -   [Icecast official documentation](http://icecast.org/docs/icecast-latest)
     -   [Icecast 3rd Party Applications](http://icecast.org/apps/)
         Source Clients, Mediaplayers that support Icecast streams,
-    -   [ArchWiki - Icecast
-        ](https://wiki.archlinux.org/index.php/Icecast).
+    -   [ArchWiki - Icecast](https://wiki.archlinux.org/index.php/Icecast).
     -   [YoLinux: Linux Audio Streaming - Server Set-Up Using IceCast
         ](http://www.yolinux.com/TUTORIALS/LinuxTutorialAudioStreaming.html)
     -   [Ezstream](http://www.icecast.org/ezstream.php)
