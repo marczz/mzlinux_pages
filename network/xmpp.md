@@ -1205,63 +1205,40 @@ to remote Xmpp clients.
 
 # Google Talk and Hangouts
 
-In 2013 Google is in the process of closing Google Talk in favor of
-{{< wp "Google+ Hangout" >}} which is part of {{< wp "Google+" >}} an uses  a proprietary protocol.
-If you are switching to Hangout you loose the interoperability that XMMP provided.
-It is still possible to (for how long?)
-to keep Google Talk or to revert back to  Gtalk following the
-[FAQ
-](https://productforums.google.com/forum/?hl=en#!category-topic/hangouts/how-do-i/XoWmdBtAIX4)
-The menu _revert to old chat_ is still offered as far as may 2016.
+In 2013 Google closed Google Talk in favor of
+{{< wp "Google Hangout" >}} which uses  a proprietary protocol.
 
-With all ssl/tls able clients you can connect for IM with google
-talk, you just have to set as server `talk.google.com:5222` with a
-tls client or `talk.google.com:5223` for a sslclient, I have
-successfully used googletalk with pidgin, gajim, jabber.el, ayttm, jitsi,
-psi, mcabber, bitlbee irc gateway. conversejs.
+Google [announced
+](https://blog.google/products/workspace/latest-google-hangouts-and-upgrade-google-chat/)
+that it will close hangout in 2021, it will be replaced by {{< wp "Google Meet" >}}
+and {{< wp "Google Chat" >}}.
 
+Google Chat is a product which is rerved to user of Google Worspace account (paid plan).
 
--   {{< wp "Google Talk" >}} use extensions to xmpp to allow it to carry voice
-    (and in the future video) {{< iref "#jingle" "Jingle" >}}
-    and
-    [Jingle Audio via RTP](http://www.xmpp.org/extensions/xep-0167.html)
--   [Google: Talk Help](https://support.google.com/talk/) annonce the
-    shutdown of Google Talk the February 23, 2015.
-    You can also still connect to Google Talk with compatible
-    third-party apps.
--   [Google Talk Conference Bot](http://sites.google.com/site/conferencebot/)
-    runs as a normal google talk user that relays everything said to it
-    to everyone on its contact list.
--   {{< wp "Google Voice" >}} a telephony service that provides call forwarding
-    and voicemail services, couldforward call too Google Chat, it is
-    now integrated with {{< wp "Google Hangouts" >}}
--   [xmpp.org: No, it's not the end of XMPP for Google Talk
-    ](https://xmpp.org/2015/03/no-its-not-the-end-of-xmpp-for-google-talk/)
+In beginning 2021 Google meet can be used freely and it is announced that it will be
+also the case of Google Chat mid 2021, and the hangout accounts will be migrated to Chat.
 
 There are attempts to provide access to the Hangout proprietary
 protocol.
 
 -   [Hangup](https://github.com/tdryer/hangups) (MIT License)
-    is a third-party instant messaging client for Google Hangout
-    written in python, it is implemented by reverse-engineering
-    the protocol.
+    is a third-party instant messaging client for Google Hangout written in python, it
+    is implemented by reverse-engineering the protocol.
 
-    It supports features like group messaging that aren't available in
-    clients that connect via XMPP.
+    It supports features like group messaging that aren't available in clients that
+    connect via XMPP.
 
     There are many project using Hangup [see the project page
     ](https://github.com/tdryer/hangups) among which many bots,
-    [hangups.el](https://github.com/jtamagnan/hangups.el) an Hangout
-    client for emacs, [pickups](https://github.com/mtomwing/pickups)
-    an IRC to Hangout gateway, [telepathy-hangups
-    ](https://github.com/davidedmundson/telepathy-hangups) telepathy
-    bindings for hangout, [jabber-hangouts-transport
-    ](https://github.com/ZeWaren/jabber-hangouts-transport)
+    [hangups.el](https://github.com/jtamagnan/hangups.el) an Hangout client for emacs,
+    [pickups](https://github.com/mtomwing/pickups) an IRC to Hangout gateway,
+    [telepathy-hangups](https://github.com/davidedmundson/telepathy-hangups) telepathy
+    bindings for hangout,
+    [jabber-hangouts-transport](https://github.com/ZeWaren/jabber-hangouts-transport)
     a XMPP transport/gateway for Google Hangouts.
 
--   [purple-hangouts
-    ](https://bitbucket.org/EionRobb/purple-hangouts) is
-    a hangout plugin for libpurple
+-   [purple-hangouts](https://github.com/EionRobb/purple-hangouts) is an hangout plugin
+    for libpurple
 
 # Multiprotocols clients
 
