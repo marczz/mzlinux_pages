@@ -117,8 +117,8 @@ See {{< iref "#weechat" "Weechat" >}} below.
 
 ## Graphical irc client        s
 -   [Polari](https://wiki.gnome.org/Apps/Polari) (GPL-v2.0)
-    is a gnome graphical irc client that uses the {{< iref "xmpp#telepathy" "Telepathy
-    framework" >}}. _It is in Debian._
+    is a gnome graphical irc client that uses the
+    {{< iref "xmpp#telepathy" "Telepathy framework" >}}. _It is in Debian._
 
 -   <a name="xchat"></a>[XChat](http://xchat.org) (GPL) is a GTK+
     IRC client. _In Debian. No development since 2010_
@@ -173,9 +173,7 @@ emacs only to chat, it cost you 18M, it is my mean emacs size, that is 13M bare 
 to the end, as I use to do on my main desktop, it costs you virtually nothing (circe is
 tiny and loading it is not perceptible when looking at res. mem. size).
 
-
-
-## Weechat {#weechat}
+## Weechat {#Weechat}
 [WeeChat](http://www.weechat.org/) (GPL)
 is an irc ncurses client, extensible by C plugins or script language (Perl, Python,
 Ruby, guile, Lua, Tcl, javascript, php).
@@ -247,7 +245,7 @@ Plugins for other protocols:
 
 -   [weechat xmpp plugin](https://weechat.org/scripts/source/jabber.py.html/).
 -   [weechat-matrix](https://github.com/poljar/weechat-matrix)
-    a Weechat {{social_networks#matrix" "Matrix protocol" >}} python script. _In
+    a Weechat {{< "microblogging#matrix" "Matrix protocol" >}} python script. _In
     Debian._
     There is also an older [weechat-matrix-protocol-script
     ](https://github.com/torhve/weechat-matrix-protocol-script)
@@ -296,14 +294,17 @@ Weechat has some frontends:
 
 # IRC Web clients
 
--   [qwebirc](http://www.qwebirc.org/)
+-   [qwebirc](http://www.qwebirc.org/) (GPL-2.0)
     is a python AJAX irc client for web. An online site is at
+    -   [QuakeNet qwebirc](https://webchat.quakenet.org/) online qwebirc site.
+    -   [qwebirc - GitHub](https://github.com/qwebirc/qwebirc/).
     [freenode webchat](https://webchat.freenode.net/).
 -   [KiwiIRC](https://kiwiirc.com/) (Affero GPL)
     is a node.js irc client.
     -   [KiwiIRC GitHub repository
         ](https://github.com/prawnsalad/KiwiIRC)
-    -   [KiwiIRC live client](https://kiwiirc.com/)
+    -   [KiwiIRC live client](https://kiwiirc.com/nextclient/).
+    -   [freenode webchat](https://webchat.freenode.net/) is also powered by KiwiIRC.
 
 # IRC Bots
 -   Wikipedia: {{< wp "Internet Relay Chat bot" >}} and
