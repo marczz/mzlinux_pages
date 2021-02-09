@@ -344,9 +344,57 @@ expansion, nor process substitution)
         ](http://www.pement.org/sed/sd.ksh.txt
 -   [Seder's grab bag](http://sed.sourceforge.net/grabbag/)
     is a collection of sed scripts and tutorials.
+
+# Regexps {#regexps}
+-   [Regular Expressions/POSIX-Extended Regular Expressions - Wikibook
+    ](https://en.wikibooks.org/wiki/Regular_Expressions/POSIX-Extended_Regular_Expressions).
+-   [Regexp Chapter of Gawk manual
+    ](http://www.gnu.org/software/gawk/manual/html_node/Regexp.html)
+    describes gnu Extended Regexps.
+-   <a name="pcre"></a>[PCRE - Perl Compatible Regular Expressions](http://www.pcre.org/)
+    is a set of C functions that implement regular expression pattern matching using the
+    same syntax and semantics as
+    [Perl Regular Expressions](http://perldoc.perl.org/perlre.html).
+    _PCRE_ are used in numerous languages and utilities.
+    -   [PCRE2 HTML documentation
+        ](http://www.pcre.org/current/doc/html/):
+        [pcre2syntax - pcre2 expression syntax quick-reference
+        ](http://www.pcre.org/current/doc/html/pcre2syntax.html).
+    -   The [Wikipedia:  PCRE](http://en.wikipedia.org/wiki/PCRE)
+        page details the features of pcre expressions and the differences
+        with perl re.
+    -   There are many online pcre tester:
+        [regexpal](http://www.regexpal.com/),
+        [regex101](https://regex101.com/),
+        [debuggex](https://www.debuggex.com/),
+        [myregextester](https://www.myregextester.com/),
+        [reg-exp](http://reg-exp.com/),
+        [pythex](http://pythex.org/) _python regexp_.
+-   See also the {{< iref "python_libraries#python_re" "Python _re_ references" >}},
+    {{< iref "text_editors#vim_regexps" "Vim Regexps" >}}.
+
+
+## Grep tools {#grep}
+-   [ack](http://beyondgrep.com/)
+    perl tool like grep, optimized for programmers. _In debian._
+-   [ag](https://geoff.greer.fm/ag/)
+    The silver searcher_ like grep and ack but written in C and a lot
+    quicker. [Emacs package ag](https://github.com/Wilfred/ag.el) s a front end to ag.
+     _In debian._
+-   [BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep)
+    recursively searches directories for a regex pattern.  _In debian._
+    -   Ripgep_ use [Crate regexps](https://docs.rs/regex/1.4.2/regex/#syntax)
+        which are similar to Perl-style regular expressions, but lacks look around and
+        backreferences.
+    -   [ripgrep User Guide](https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md)
+    -   [supplementary documentation
+        ](https://github.com/BurntSushi/ripgrep/blob/master/README.md#documentation-quick-links).
+    -   [ripgrep is faster than {grep, ag, git grep, ucg, pt, sift}
+        ](https://blog.burntsushi.net/ripgrep/)
+        by the author of _ripgrep_ Andrew Gallant
 -   [txt2regex](http://txt2regex.sourceforge.net/) is a regular expression
-    wizard written in bash that converts human sentences to regexes
-    (gnu prce or more format ...).
+    wizard written in bash that converts human sentences to regexps
+    (gnu prce or more formats ...).
 
 # Browse, bookmark and change directory {#dir_bookmarks}
 
