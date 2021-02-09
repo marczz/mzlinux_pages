@@ -2,12 +2,14 @@
 title: IRC
 ---
 
-See also {{< iref "xmpp" "XMPP" >}}
-{{< iref "social_networks" "Social Networks" >}},
+A page from{{< iref "social_networks" "Social Networks section" >}}.
+
+See also {{< iref "xmpp" "XMPP" >}},
+{{< iref "microblogging" "Micro Blogging" >}},
 {{< iref "sip" "SIP" >}} and
 {{< iref "p2p" "P2P" >}}.
 
-# common Internet Messaging refs
+# Common Internet Messaging refs
 -   Wikipedia: {{< wp "Instant messaging" >}},
     {{< wp "list of instant messaging protocols" >}},
     {{< wp "Comparison of instant messaging protocols" >}},
@@ -55,6 +57,8 @@ irc gateways that allow to connect to irc from any jabber client.
     [Wiki](http://wiki.swiftirc.net/wiki/Main_Page) with commands
     memos.
 -   [Search Irc](http://searchirc.com/) for channels or servers.
+-   [IRC Chat Rooms Search - netsplit.de](https://netsplit.de/channels/)
+    -  In a client connected to a server you can do `/list *keyword*`.
 
 ## IRC Commands
 A List of commands is givent in Wikipedia: {{< wp "List of IRC Commands" >}}
@@ -164,6 +168,8 @@ There are sveral emacs iRC clients _under  GPL License_.
 -   [rcirc](http://www.emacswiki.org/cgi-bin/wiki/rcirc),
 -   [RieceIrcClient
     ](http://www.emacswiki.org/cgi-bin/wiki/RieceIrcClient),
+-   [weechat.el (Emacs)](https://github.com/the-kenny/weechat.el) is a client for the
+    {{< iref "#weechat_relay" "WeeChat protocol" >}}.
 -   [ZenIRC](http://www.zenirc.org/) (
     [ZenIRC emacswiki links](http://www.emacswiki.org/cgi-bin/wiki/ZenIRC)).
 
@@ -245,7 +251,7 @@ Plugins for other protocols:
 
 -   [weechat xmpp plugin](https://weechat.org/scripts/source/jabber.py.html/).
 -   [weechat-matrix](https://github.com/poljar/weechat-matrix)
-    a Weechat {{< "microblogging#matrix" "Matrix protocol" >}} python script. _In
+    a Weechat {{< iref "microblogging#matrix" "Matrix protocol" >}} python script. _In
     Debian._
     There is also an older [weechat-matrix-protocol-script
     ](https://github.com/torhve/weechat-matrix-protocol-script)
@@ -281,15 +287,36 @@ Plugins for secure messaging:
 -   [weechat-fish](https://github.com/freshprince/weechat-fish) provides
     {{< iref "xmpp#fish" "FiSH encryption" >}}.
 
-Weechat has some frontends:
+<a name=weechat_relay"></a>Weechat has a [relay plugin
+](https://weechat.org/files/doc/stable/weechat_user.en.html#relay_plugin)
+with which has two variants
+-   [IRC proxy
+    ](https://weechat.org/files/doc/stable/weechat_user.en.html#relay_irc_proxy)
+    used to share connections to IRC servers with one or many other IRC clients
+-   [Weechat protocol
+    ](https://weechat.org/files/doc/stable/weechat_user.en.html#relay_weechat_protocol)
+    used by remote interfaces to display and interact with WeeChat.
 
--   [QTWeechat](https://github.com/weechat/qweechat).
+Both protocol can connect via IP, [websocket
+](https://weechat.org/files/doc/stable/weechat_user.en.html#relay_websocket),
+or [unix domain socket
+](https://weechat.org/files/doc/stable/weechat_user.en.html#relay_unix_socket).
+
+The relay is established by the [/relay command
+](https://weechat.org/files/doc/stable/weechat_user.en.html#relay_commands).
+
+The available remote interfaces are
+-   [QWeeChat](https://github.com/weechat/qweechat).
     is the official python/QT GUI
--   [glowing-bear](https://www.glowing-bear.org/) (GPL)
+-   [Glowing-Bear](https://www.glowing-bear.org/) (GPL)
     is a WeeChat web frontend. The [source is in GitHub
     ](https://github.com/glowing-bear/glowing-bear).
     -   [Installation de Weechat et Glowing Bear comme client IRC distant
         ](https://mathdatech.fr/?post/2018/07/30/Installation-de-Weechat-et-Glowing-Bear-comme-client-IRC-distant).
+-   [WeeChat-Android](https://github.com/ubergeek42/weechat-android)
+-   [weechat.el (Emacs)](https://github.com/the-kenny/weechat.el)
+-   [WeeCloud](https://github.com/eirikb/weecloud)
+    Node.js library for relaying WeeChat to a webapp. _last commit 2014._
 
 
 # IRC Web clients
