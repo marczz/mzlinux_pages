@@ -22,6 +22,8 @@ See also {{< iref "file_managers#console" "console file managers" >}}
 -   [incosolation blog](http://inconsolation.wordpress.com) is devoted
     to console applications, it stopped in 2015.
 -   [cli.fan — Showcasing the best command-line tools](https://cli.fan/posts/).
+-   [suckless.org software that sucks less](https://suckless.org/rocks/)
+    many cli among these applications.
 
 # Command line WEB search
 
@@ -40,19 +42,15 @@ See also {{< iref "file_managers#console" "console file managers" >}}
         ](http://surfraw.alioth.debian.org/#elvilist)
 
 # List of applications
+See also {{< iref "#shell#grep" "Grep and other tools" >}}
+
+
 The applications below are not cross-referenced with their main entry
 in this site, you can make a search to find the appropriate page.
 
 [abook](http://abook.sourceforge.net/)
 : text-based ncurses address book application
 
-[ack](http://beyondgrep.com/)
-: perl tool like grep, optimized for programmers
-
-[ag](https://geoff.greer.fm/ag/)
-: _The silver searcher_ like grep and ack but written in C and a lot
-  quicker. It is available inside Emacs with the [ag](https://github.com/Wilfred/ag.el)
-  package.
 
 {{< wp "alpine" >}}
 : A mail user agent.
