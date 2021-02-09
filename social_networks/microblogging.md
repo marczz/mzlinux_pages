@@ -462,33 +462,27 @@ I group here _Slack like_ software. IRC-like features:
 -   {{< iref "#element" "Element" >}} is above with the
     {{< iref "#matrix" "Matrix protocol" >}}.
 -   <a name="rocketchat"></a>{{< wp "Rocket.Chat" >}} (MIT License)
-    is an instant messaging and chat room system. There are electron
-    based desktop application, ios, android, and web interfaces.
-    An xmpp access is under development.
+    is an instant messaging and chat room system. There are electron based desktop
+    application, ios, android, and web interfaces.  An xmpp access is under development.
 
     There is a {{< iref "xmpp#pidgin_plugins" "purple plugin" >}} for Rocket.Chat,
     {{< iref "xmpp#matterbridge" "matterbrige" >}}
     support Rocket.Chat
 
--   <a name="mattermost">[Mattermost](https://about.mattermost.com/)
-    (MIT License) is a  private cloud, Slack-alternative.
-    It's written in Golang and React and runs as a single Linux binary
-    with MySQL or PostgreSQL.
-    Mattermost has a free plan for a self-hosted  instance for small
-    teams.
-
-    There are many solutions of [Mattermost Integration
-    ](https://docs.mattermost.com/overview/integrations.html)
-
-    It [integrates to a huge list of Apps and Clouds
-    ](https://about.mattermost.com/community-applications/), though
-    [Zapier](https://zapier.com/).
-
-    For XMPP/IRC access we there is:  a {{< iref "xmpp#pidgin_plugins" "purple plugin" >}},
-    {{< iref "xmpp#matterbridge" "matterbrige" >}},
-
-    -   [Mattermost Server - GitHub
-        ](https://github.com/mattermost/mattermost-server)
+-   <a name="mattermost">[Mattermost](https://github.com/mattermost/mattermost-server)
+    (MIT License)
+    is an open source private cloud, Slack-alternative.  It's written in Golang and
+    React and runs as a single Linux binary with MySQL or PostgreSQL.
+    -   [Mattermost Inc.](https://about.mattermost.com/) run Mattermost Entreprise and
+        has a free plan for a for small teams.
+    -   There are many solutions of [Mattermost Integration
+        ](https://docs.mattermost.com/overview/integrations.html)
+    -   [Zapier](https://zapier.com/) allows to
+        [integrates to a huge list of Apps and Clouds
+        ](https://about.mattermost.com/community-applications/).
+    -   Several bridges provide XMPP/IRC access :  a
+        {{< iref "xmpp#pidgin_plugins" "purple plugin" >}},
+        {{< iref "xmpp#matterbridge" "matterbrige" >}}.
     -   [Framateam](https://framateam.org) is the mattermost instance
         of [Framasoft](https://framasoft.org/).
 
