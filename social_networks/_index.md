@@ -17,3 +17,11 @@ microblogging also often include messaging...
 
 {{< iref "p2p" "P2P" >}} is also used by some application and you find also a
 {{< iref "p2p" "P2P Section" >}}.
+
+# General References
+
+-   Wikipedia {{< wp "List of collaborative software" >}}, {{< wp "Social Software" >}}
+    with references to specific service page,
+    {{< wp "Social networking service" >}}, {{< wp "Distributed social network" >}},
+    {{< wp "Comparison of software and protocols for distributed social networking" >}},
+    {{< wp "List of social networking websites" >}},
