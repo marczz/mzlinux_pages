@@ -280,9 +280,16 @@ expansion, nor process substitution)
 -   [zplugin](https://github.com/zdharma/zplugin) (MIT License)
     A flexible Zsh plugin manager.
 
+# Shell Utilities
+-   [GNU Coreutils](https://www.gnu.org/software/coreutils/manual/html_node/index.html)
+-   [Shell and Utilities volume of POSIX.1-2017
+    ](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/contents.html)
+-   [POSIX Shell and Utilities Quick Reference](http://shellhaters.org/)
+    See also the [slides of Shell Hater's Handbook](http://shellhaters.org/deck/#1)
+
 # Awk {#awk}
 
--   Wikipedia {{< wp "Akw" >}}
+-   Wikipedia {{< wp "Awk" >}}
 -   [Gawk: Effective AWK Programming
     ](http://www.gnu.org/software/gawk/manual/)
     (FDL) an online book by Arnold Robbins available in pdf and html.
@@ -290,42 +297,35 @@ expansion, nor process substitution)
     ](http://www.gnu.org/software/gawk/manual/html_node/Regexp.html)
     is a good reference on gnu Regexps.
 -   [Awk Faq](http://www.faqs.org/faqs/computer-lang/awk/faq/)
--   [Getting started with awk
-    ](http://www.cs.hmc.edu/tech_docs/qref/awk.html)
--   [Steve's Awk Acadamy
-    ](http://www.troubleshooters.com/codecorn/awk/index.htm)
+-   [Awk in 20 Minutes](https://ferd.ca/awk-in-20-minutes.html) by Fred Hebert.
+-   [Getting started with awk](http://www.cs.hmc.edu/tech_docs/qref/awk.html)
+-   [Steve's Awk Acadamy](http://www.troubleshooters.com/codecorn/awk/index.htm)
     by Steve Litt is an awk tutorial.
--   Bruce Barnett [Grymoire: Awk
-    ](http://www.grymoire.com/Unix/Awk.html).
--   [awk cheat sheet (.pdf)
-    ](http://www.catonmat.net/download/awk.cheat.sheet.pdf) and
-    [awk cheat sheet (.txt)
-    ](http://www.catonmat.net/download/awk.cheat.sheet.txt) by
+-   Bruce Barnett [Grymoire: Awk](http://www.grymoire.com/Unix/Awk.html).
+-   [awk cheat sheet (.pdf)](http://www.catonmat.net/download/awk.cheat.sheet.pdf) and
+    [awk cheat sheet (.txt)](http://www.catonmat.net/download/awk.cheat.sheet.txt) by
     [Peteris Krumins](http: www.catonmat.net).
 -   [Awk.Info](http://awk.info/) is the Portal of Awk community.
     It has many awk recipes [one liners](http://awk.info/?OneLiners),
     [ten liners](http://awk.info/?TenLiners),
     [Tips]([http://awk.info/?Tips),
-    [real world Awk programs](http://awk.info/?awk100).<br />
-    The [lawker repository](https://code.google.com/p/lawker/)
-    holds all the code (and web pages).<br />
+    [real world Awk programs](http://awk.info/?awk100).
+
+    The [lawker repository](https://code.google.com/p/lawker/) holds all the code
+    (and web pages).
     The site seems sleeping, but may be not dead as there is a
-    [GitHub Project new.awk.info
-    ](https://github.com/pjimenez-cl/new.awk.info).
+    [GitHub Project new.awk.info](https://github.com/pjimenez-cl/new.awk.info).
 
 # Sed
--   [Wikipedia: Sed](http://en.wikipedia.org/wiki/Sed "en.wikipedia.org Sed"),
+-   [Wikipedia: Sed](http://en.wikipedia.org/wiki/Sed),
     you may find there references to many tutorials.
--   [sed manual
-    ](http://www.gnu.org/software/sed/manual/html_node/index.htm")
+-   [sed manual](http://www.gnu.org/software/sed/manual/html_node/index.htm)
 -   [Sed by example, Part 1
     ](http://www.ibm.com/developerworks/linux/library/l-sed1.html),
-    [Part 2
-    ](http://www.ibm.com/developerworks/linux/library/l-sed2.html),
-    and [Part 3
-    ](http://www.ibm.com/developerworks/linux/library/l-sed3.html)
-    by Daniel Robbins at IBM developerWorks is an excellent
-    introduction by examples to sed.
+    [Part 2](http://www.ibm.com/developerworks/linux/library/l-sed2.html),
+    and [Part 3](http://www.ibm.com/developerworks/linux/library/l-sed3.html)
+    by Daniel Robbins at IBM developerWorks is an excellent introduction by examples to
+    sed.
 -   Bruce Barnett [Grymoire: Sed - An Introduction and Tutorial
     ](http://www.grymoire.com/Unix/Sed.html)
 -   [sed1line](http://sed.sourceforge.net/sed1line.txt)
@@ -336,12 +336,9 @@ expansion, nor process substitution)
     host an extended collections of links to sed documentation programs
     and tools and a great collection of sed scripts.
 -   [sedsed](http://sedsed.sourceforge.net/)
-    (GPL) is a very usefull sed debugger (and formatter) written in
-    python.
-    -   [original sedsed by E. Pement
-        ](http://www.pement.org/sed/sedsed.txt)
-    -   [ksh version
-        ](http://www.pement.org/sed/sd.ksh.txt
+    (GPL) is a very usefull sed debugger (and formatter) written in python.
+    -   [original sedsed by E. Pement](http://www.pement.org/sed/sedsed.txt)
+    -   [ksh version](http://www.pement.org/sed/sd.ksh.txt)
 -   [Seder's grab bag](http://sed.sourceforge.net/grabbag/)
     is a collection of sed scripts and tutorials.
 
@@ -363,6 +360,9 @@ expansion, nor process substitution)
     -   The [Wikipedia:  PCRE](http://en.wikipedia.org/wiki/PCRE)
         page details the features of pcre expressions and the differences
         with perl re.
+    -   [Regular Expression HOWTO — Python documentation
+        ](https://docs.python.org/dev/howto/regex.html)
+        is for Python RE, which are close _but not identical_ to PCRE.
     -   There are many online pcre tester:
         [regexpal](http://www.regexpal.com/),
         [regex101](https://regex101.com/),
