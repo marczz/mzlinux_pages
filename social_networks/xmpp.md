@@ -20,59 +20,6 @@ See also {{< iref "irc" "IRC" >}},
     an instant messaging (IM) and presence protocol suite based on SIP.
 -   [ArchWiki: List of instant messaging software
     ](https://wiki.archlinux.org/index.php/List_of_applications/Internet#Instant_messaging)
--   XMPP specifications:
-    [RFC 6120 - XMPP Protocol Core](https://tools.ietf.org/html/rfc6120),
-    [RFC 6121 - XMPP Instant Messaging and Presence](https://tools.ietf.org/html/rfc6121)
-    [RFC 7622 - XMPP Address Format](https://tools.ietf.org/html/rfc7622),
-    [RFC 7590 - Use of TLS in XMPP](https://tools.ietf.org/html/rfc7590)
--   [Table of XMPP extensions](https://xmpp.org/extensions/).
--   [XMPP Standards Foundation](http://www.xmpp.org/ )
-    references all xmmp standards and extensions.
--   [XMPP software : Clients Servers Libraries Projects](http://xmpp.org/software)
--   <a name="jingle"></a>{{< wp "Jingle (protocol)"  "Jingle Protocol" >}}
-    is an extension to XMPP which adds peer-to-peer (P2P) session
-    control (signaling) for multimedia.  Interactions such as in voice
-    over IP (VoIP) or videoconferencing communications, or also for
-    p2p file transfer.  Jingle is supported by Xmpp software based on
-    telepathy like empathy, minirc; software base on it like pidgin,
-    Coccinella, Gajim, Macabber (file transfer only),
-    Pidgin, Psi, Jabbin, Tapioca. It is also supported by telephony
-    software like {{< wp "Yate_(telephony_engine)"  "Yate" >}} or
-    {{< wp "Asterisk_(PBX)"  "Asterisk" >}}.
-
-    It is defined in many XEP documents
-    (see list on Wikipedia: {{< wp "Jingle (protocol)" >}}) among which:
-
-    -   [XEP-0166: Jingle](http://www.xmpp.org/extensions/xep-0166.html)
-        defines a framework for initiating and managing peer-to-peer
-        multimedia sessions,
-    -   [XEPidiculously-0167: Jingle Audio via RTP
-        ](http://www.xmpp.org/extensions/xep-0167.html)
-        defines methods for negotiating Jingle audio sessions that use
-        the Real-time Transport Protocol (RTP) for media exchange.
-        provided by jitsi, pidgin.
-    -   [XEP-0234: Jingle File Transfer](http://xmpp.org/extensions/xep-0234.html)
-    -   [XEP-0280: Message Carbons](https://xmpp.org/extensions/xep-0280.html)
-        In order to keep all IM clients for a user engaged in a
-        conversation, outbound messages are carbon-copied to all
-        interested resources. It allows to be easily simultaneously
-        connected from many clients with the same account.  It is
-        provided by most of the recent clients from this page.
-        _but pidgin need the plugin carbons_.
-    -   [XEP-0313: Message Archive Management
-        ](https://xmpp.org/extensions/xep-0313.html)
-        present in conversations, converse.js, gajim, xabber.
-    -   [XEP-0357: Push Notifications](https://xmpp.org/extensions/xep-0357.html).
-        works with chatsecure, conversation,
-    -   [XEP-0373: OpenPGP for XMPP](https://xmpp.org/extensions/xep-0374.html).
-        experimental draft that replace the obsolete
-        [XEP-0027: Current Jabber OpenPGP Usage](http://www.xmpp.org/extensions/xep-0027.html)
-        see the {{< iref "#openpgp" "OpenPGP section" >}}.
-        for description and list of clients.
-    -   [XEP-0364: Current Off-the-Record Messaging Usage
-        ](https://xmpp.org/extensions/xep-0364.html)
-        see the {{< iref "#otr" "OTR section" >}}.
-    -   [XEP-0378: OTR Discovery](https://xmpp.org/extensions/xep-0378.html).
 -   [XMPP Internet of Things](http://www.xmpp-iot.org/)
     _The Internet of Things (or IoT) is what we get when we connect
     Things, that are not operated by humans, to the Internet._
@@ -98,14 +45,170 @@ See also {{< iref "irc" "IRC" >}},
     ietf has [rfc 3428 SIP Extension for Instant Messaging
     ](http://www.ietf.org/rfc/rfc3428.txt)
 
+## XMPP Specification
+[XMPP Standards Foundation](http://www.xmpp.org/ ) references all xmmp standards and
+extensions.
+
+
+-   [XMPP software : Clients Servers Libraries Projects](http://xmpp.org/software)
+
+[Technology Overview of XMPP](https://xmpp.org/about/technology-overview.html)
+present the specifications of XMPP.
+
+The core specification is defined in RFC:
+    [RFC 6120 - XMPP Protocol Core](https://tools.ietf.org/html/rfc6120),
+    [RFC 6121 - XMPP Instant Messaging and Presence](https://tools.ietf.org/html/rfc6121)
+    [RFC 7622 - XMPP Address Format](https://tools.ietf.org/html/rfc7622),
+    [RFC 7590 - Use of TLS in XMPP](https://tools.ietf.org/html/rfc7590).
+
+It is complemented by extensions whose full list is in
+the [table of XMPP extensions](https://xmpp.org/extensions/)
+
+
+These extensions can be divided in core extensions,
+{{< iref "#xmpp_muc" "MUC Multi user Chat" >}},
+{{< iref "#xmpp_jingle" "Jingle multimedia messaging" >}},
+{{< iref "#pubsub" "pubsub publish-subscribe functionality" >}},
+{{< iref "#bosh" "BOSH Bidirectional-streams Over Synchronous HTTP" >}}.
+
+And the extensions for secure messaging in {{< iref "#openpgp" "OpenPGP" >}},
+{{< iref "#omemo" "OMEMO" >}},
+{{< iref "#otr" "OTR" >}}.
+
+
+Core extensions can extend the RFCS, some core extensions are:
+-   [XEP-0280: Message Carbons](https://xmpp.org/extensions/xep-0280.html)
+    In order to keep all IM clients for a user engaged in a conversation, outbound
+    messages are carbon-copied to all interested resources. It allows to be easily
+    simultaneously connected from many clients with the same account.  It is provided by
+    most of the recent clients from this page.  _but pidgin need the plugin carbons_.
+-   [XEP-0313: Message Archive Management](https://xmpp.org/extensions/xep-0313.html)
+    and [XEP-0441: Message Archive Management Preferences
+    ](https://xmpp.org/extensions/xep-0441.html)
+    present in conversations, converse.js, gajim, xabber.
+-   [XEP-0357: Push Notifications](https://xmpp.org/extensions/xep-0357.html).
+    works with chatsecure, conversation,
+
+### MUC - Multi user Chat{#xmpp_muc}
+MUC brings IRC like  functionalities to XMPP, and allow multiple XMPP users to exchange
+messages in the context of a room or channel.
+
+It is described in
+[MUC overview -xmpp.org](https://xmpp.org/about/technology-overview.html#muc)
+Specification is in the following XEPs:
+-   [XEP-0045: Multi-User Chat](https://xmpp.org/extensions/xep-0045.html)
+-   [XEP-0249: Direct MUC Invitations](https://xmpp.org/extensions/xep-0249.html)
+-   [XEP-0272: Multiparty Jingle](https://xmpp.org/extensions/xep-0272.html)
+
+Most servers and Clients support MUC. The message encryption in MUC, is a more complex
+and is only implemented in few clients.
+
+### Jingle{#xmpp_jingle}}
+<a name="jingle"></a>{{< wp "Jingle (protocol)"  "Jingle Protocol" >}}
+is an extension to XMPP which adds peer-to-peer (P2P) session
+control (signaling) for multimedia.  Interactions such as in voice
+over IP (VoIP) or videoconferencing communications, or also for
+p2p file transfer.  Jingle is supported by Xmpp software based on
+telepathy like empathy, minirc; software base on it like pidgin,
+Coccinella, Gajim, Macabber (file transfer only),
+Pidgin, Psi, Jabbin, Tapioca. It is also supported by telephony
+software like {{< wp "Yate_(telephony_engine)"  "Yate" >}} or
+{{< wp "Asterisk_(PBX)"  "Asterisk" >}}.
+
+It is defined in [several XEP documents
+](https://xmpp.org/about/technology-overview.html#jingle)
+(also listed on Wikipedia: {{< wp "Jingle (protocol)" >}}):
+
+-   [XEP-0166: Jingle](http://www.xmpp.org/extensions/xep-0166.html)
+    defines a framework for initiating and managing peer-to-peer
+    multimedia sessions,
+-   [XEPidiculously-0167: Jingle Audio via RTP
+    ](http://www.xmpp.org/extensions/xep-0167.html)
+    defines methods for negotiating Jingle audio sessions that use the Real-time
+    Transport Protocol (RTP) for media exchange.  provided by jitsi, pidgin.
+-   [XEP-0234: Jingle File Transfer](http://xmpp.org/extensions/xep-0234.html)
+-   [XEP-0176: Jingle ICE-UDP Transport Method
+    ](https://xmpp.org/extensions/xep-0176.html)
+-   [XEP-0177: Jingle Raw UDP Transport Method
+    ](https://xmpp.org/extensions/xep-0177.html)
+-   [XEP-0181: Jingle DTMF](https://xmpp.org/extensions/xep-0181.html)
+-   [XEP-0272: Multiparty Jingle](https://xmpp.org/extensions/xep-0272.html)
+
+### BOSH {#bosh}
+[BOSH  “Bidirectional-streams Over Synchronous HTTP”
+](http://xmpp.org/about-xmpp/technology-overview/bosh/)
+is a technology for two-way communication over the HTTP. BOSH has been used mainly as a
+transport for traffic exchanged between Jabber/XMPP clients and servers. BOSH is more
+bandwidth-efficient and responsive than AJAX.  Bosh is supported by Xmpp servers and
+standalone XMPP connection managers;[Which BOSH Server Do You Need?
+](http://metajack.im/2008/09/08/which-bosh-server-do-you-need/)
+compare these two options.
+
+BOSH is defined in two XEP specifications:
+-   [XEP-0124: Bidirectional-streams Over Synchronous HTTP
+    ](https://xmpp.org/extensions/xep-0124.html)
+-   [XEP-0206: XMPP Over BOSH](https://xmpp.org/extensions/xep-0206.html)
+
+The following clients have support for BOSH
+{{< iref "#converse" "Converse" >}},
+{{< iref "#gajim" "Gajim" >}},
+{{< iref "#jwchat" "JWChat" >}},
+{{< iref "#jsxc" "jsxc" >}},
+{{< iref "#movim" "Movim" >}},
+{{< iref "#pidgin" "Pidgin" >}},
+{{< iref "#swift" "Swift" >}},
+{{< iref "#xmpp4js" "xmpp4js" >}} and Soashable,
+[Adium](https://adium.im/) _client for Mac OS X_.
+
+The following XMPP servers include built-in support for BOSH:
+{{< iref "#ejaberd" "ejabberd" >}},
+Jabber XCP, M-Link, MongooseIM,
+{{< iref "#openfire" "Openfire" >}},
+{{< iref "#prosody" "Prosody" >}},
+{{< iref "#tigasexmppserver" "Tigase" >}}.
+
+### PubSub
+[PubSub](https://xmpp.org/about/technology-overview.html#pubsub)
+is an extension for generic publish-subscribe functionality.It enables
+to publish information on nodes (topics) at a pubsub service.
+An event notification is then broadcasted to all
+entities that have subscribed to the node.
+
+PubSub is defined in several specifications:
+-   [XEP-0060: Publish-Subscribe](https://xmpp.org/extensions/xep-0060.html)
+-   [XEP-0163: Personal Eventing Protocol](https://xmpp.org/extensions/xep-0163.html)
+-   [XEP-0248: PubSub Collection Nodes](https://xmpp.org/extensions/xep-0248.html)
+
+### Server compliance test
+
+-   [XMPP Compliance Tester](https://compliance.conversations.im/)
+-   [IM Observatory](https://xmpp.net/) evaluate the security of servers.
+
+See also [How to choose you Jabber service?
+](https://mov.im/?blog/debacle@movim.eu/1646bb0e-8d18-4fb9-8b1a-46a1b40e0143).
+
+## Xmpp HowTo, comparison
+-   [Secure Chat Guide](https://securechatguide.org/):
+    [Decentralized Apps](https://securechatguide.org/decentralizedapps.html),
+    [Centralized Apps](https://securechatguide.org/centralizedapps.html),
+    [Peer to Peer Apps](https://securechatguide.org/p2papps.html)
+    guides and detailed information on secure messaging apps for Android, iOS, Windows,
+    Mac and Linux.
+-   [Better than WhatsApp — Free Software Foundation India
+    ](https://fsf.org.in/article/better-than-whatsapp/).
+-   [Messagerie chiffrée. Pourquoi pas XMPP ? — echolib
+    ](https://www.echolib.space/utiliser-messagerie-chiffree-xmpp)
+-   [Secure Messaging Apps Comparison | Privacy Matters
+    ](https://www.securemessagingapps.com/)
+    Aclear table of features, but many apps are missing; XMPP is not even mentioned.
+
 # Secure messaging
-Secure Messaging is an essential feature of IM, but these days it is a
-mainly used as a selling point, to make you adopt some proprietary
-protocol. So you have to convince all your friends to buy the same
-product, or to buy yourself all the products owned by one of your
-friend, and buy also a more powerfull mobile phone to host these
-multiple software. But even if you do it, how can you use the _multi user
-chat_ or _group chat_ that is proposed by these software?
+Secure Messaging is an essential feature of IM, but these days it is a mainly used as a
+selling point, to make you adopt some proprietary protocol. So you have to convince all
+your friends to buy the same product, or to buy yourself all the products owned by one
+of your friend, and buy also a more powerfull mobile phone to host these multiple
+software. But even if you do it, how can you use the _multi user chat_ or _group chat_
+that is proposed by these software?
 
 Imagine you have to have the same brand of phone to call somebody, the
 same email software to read her emails....
