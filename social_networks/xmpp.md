@@ -800,72 +800,51 @@ by the telepathy clients,
 {{< iref "#spectrum" "Spectrum" >}},
 {{< iref "#bitlbee" "bitlbee-libpurple" >}}.
 
-
-
 ### Pidgin/libpurple plugins {#pidgin_plugins}
-The [Pidgin Plugins list
-](https://developer.pidgin.im/wiki/ThirdPartyPlugins)
-includes numerous plugins to add features,
-support many protocols, ensure privacy.
+The [Pidgin Plugins list](https://pidgin.im/plugins/)
+includes numerous plugins to add features, support many protocols, ensure privacy.
 
-The [Additional protocols plugins
-](https://developer.pidgin.im/wiki/ThirdPartyPlugins#AdditionalProtocols)
+The [Additional protocols plugins](https://pidgin.im/plugins/?type=Protocol)
 list plugins, _some of them are obsolete_, this list includes:
--   [Tox protocol plugin](http://tox.dhs.org/) (GPL) for
-    {{< iref "#tox" "Tox protocol" >}}.
--   [telegram-purle plugin
-    ](https://github.com/majn/telegram-purple)
+
+-   Facebook messenger - [purple-facebook](https://github.com/dequis/purple-facebook).
+-   Hangout - [purple-hangouts](https://github.com/EionRobb/purple-hangouts)
+-   Instagram - [purple-instagram](https://github.com/EionRobb/purple-instagram)
+-   Matrix - [purple-matrix](https://github.com/matrix-org/purple-matrix)
+    for {{< iref "microblogging#matrix" "Matrix" >}}.
+-   Mattermost - [purple-mattermost](https://github.com/EionRobb/purple-mattermost)
+    connect to a {{< iref "microblogging#mattermost" "Mattermost" >}} server.
+-   PulseSMS Android app - [purple-pulsesms](https://github.com/EionRobb/purple-pulsesms)
+-   Rocketchat - [purple-rocketchat](https://github.com/EionRobb/purple-rocketchat)
+    for {{< iref "microblogging#rocketchat" "RocketChat" >}}.
+-   Signal - [libpurple-signald](https://github.com/hoehermann/libpurple-signald/)
+    Pidgin libpurple bridge for the {{< iref "#signald" "Signal Daemon - signald" >}}.
+-   Slack - [slack-libpurple](https://github.com/dylex/slack-libpurple)
+    for access to {{< iref "microblogging#slack" "Slack" >}}
+-   Telegram - [telegram-purle plugin](https://github.com/majn/telegram-purple)
     allow a bridge to {{< iref "#telegram" "Telegram" >}}
--   [purple-mattermost](https://github.com/EionRobb/purple-mattermost)
-    connect to a
-    {{< iref "social_networks#mattermost" "Mattermost" >}}
-    server
--   [slack-libpurple](https://github.com/dylex/slack-libpurple)
-    for access to {{< iref "social_networks#slack" "Slack" >}}
--   [purple-rocketchat
-    ](https://bitbucket.org/EionRobb/purple-rocketchat)
-    for {{< iref "social_networks#rocketchat" "Rocket.Chat" >}}.
--   [whatsapp-purple](https://github.com/davidgfnet/whatsapp-purple/)
-    is obsolete, don't use.
--   [purple-facebook](https://github.com/dequis/purple-facebook).
--   [purple-matrix](https://github.com/matrix-org/purple-matrix)
-    for {{< iref "social_networks#matrix" "Matrix" >}}.
--   [purple-hangouts](https://bitbucket.org/EionRobb/purple-hangouts/wiki/Home)
--   [libpurple-signald](https://github.com/hoehermann/libpurple-signald)
-    for the {{< iref "#signald" "Signal Daemon - signald" >}}.
+-   Tox - [Tox protocol plugin](https://github.com/EionRobb/tox-prpl) (GPL) for
+    {{< iref "#tox" "Tox protocol" >}}.
+-   Whatsapp Web - [purple-gowhatsapp](https://github.com/hoehermann/purple-gowhatsapp/)
+    Pidgin/libpurple plugin for WhatsApp __Web__.
 
-{{< iref "#pidgin" "Pidgin" >}} has many
-[Security and privacy plugins
-](https://developer.pidgin.im/wiki/ThirdPartyPlugins#SecurityandPrivacy):
-
+Among the
+[Security and privacy plugins](https://pidgin.im/plugins/?type=Security+and+Privacy).
 -   [Pidgin encryption](http://pidgin-encrypt.sourceforge.net/),
-    transparently encrypts your instant messages with RSA
-    encryption. _low activity since 2007, last change 2010_, _is
-    in Debian_.
--   [Tinfoil Chat OTP (TFC)](https://github.com/maqp/tfc-otp)
-    high assurance encryption plugin for Pidgin IM client.
-    Encryption is done with one-time pad that provides perfect
-    secrecy even if the adversary has unlimited computing power.
-    Authentication is done with unconditionally secure one-time
-    MAC, Keys are generated with an open circuit design hardware
-    random number generator.
-    -   [TFC Manual (pdf)
-        ](https://cs.helsinki.fi/u/oottela/tfc-manual.pdf)
-    _In Debian_.
+    transparently encrypts your instant messages with RSA encryption. _Obsolete__.
 -   [GPG/OpenPGP Plugin for Pidgin
     ](https://github.com/segler-alex/Pidgin-GPG/wiki)
-    works asynchronously and allows you to send an
-    {{< iref "#openpgp" "GPG" >}}
+    works asynchronously and allows you to send an {{< iref "#openpgp" "GPG" >}}
     encrypted message to peer even if she is offline.
-    _OTR would be possible only online_
-    but PGP does not allow {{< wp "Deniable authentication"  "deniability" >}}.
+    (PGP does not allow {{< wp "Deniable authentication"  "deniability" >}}.)
     _In Debian_.
 -   [pidgin-OTR](https://bugs.otr.im/plugins/pidgin-otr) an
-    {{< iref "#otr" "OTR" >}} plugin for Pidgin _in
-    Debian_. See also [How to: Use OTR on Linux
-    ](https://ssd.eff.org/en/module/how-use-otr-linux)
+    {{< iref "#otr" "OTR" >}} plugin for Pidgin _in Debian_.
+    See also [How to: Use OTR on Linux](https://ssd.eff.org/en/module/how-use-otr-linux)
     by The Electronic Frontier Foundation.
-
+-   [Lurch - OMEMO plugin for Pidgin](https://github.com/gkdr/lurch/)
+    for {{< iref "#omemo" "OMEMO" >}}. The Debian package is _purple-lurch_.
+    It is also used by {{< iref "#chatty" "Chatty" >}}.
 
 # Web clients
 
