@@ -126,12 +126,12 @@ session the memory and swap protection is a primary concern.
     (GPL) is a java password manager availabe on Linux, Android,
     windows that encrypt its database with AES.
 
-# [KeePass](http://keepass.info/) (GPL) {#keepass}
+# KeePass (GPL) {#keepass}
 
-is a password manager for Windows written in C++ (v1) or C#.  It is
-also available for ios, android and linux.  Keepass stores many
-different information in a database encrypted {{< wp "AES" >}} for database v3
-i.e. keepass 1.x and v4 i.e. keepass 2.x or {{< wp "Twofish" >}} only for v3.
+[KeePass](http://keepass.info/) is a password manager for Windows written in C++ (v1) or
+C#.  It is also available for ios, android and linux.  Keepass stores many different
+information in a database encrypted {{< wp "AES" >}} for database v3 i.e. keepass 1.x
+and v4 i.e. keepass 2.x or {{< wp "Twofish" >}} only for v3.
 
 -   [Awesome Keepass](https://github.com/lgg/awesome-keepass)
     is a list of Keepass resources [this Tiki page
@@ -144,7 +144,7 @@ i.e. keepass 1.x and v4 i.e. keepass 2.x or {{< wp "Twofish" >}} only for v3.
     The [ KeePass Edition Comparison
     ](http://keepass.info/compare.html) give a detailled table of
     similarities/differences. A package is available in Debian.
--   <a name="keepassx></a>[KeePassX](http://www.keepassx.org/) (GPL)
+-   <a name="keepassx"></a>[KeePassX](http://www.keepassx.org/) (GPL)
     is a clone of Keepass written in C with a QT GUI.  Databases
     created by KeePassX 0.4.3 are binary-compatible with databases v3
     created by KeePass 1.x _standard suffix_ `.kbd`.  The new releases
@@ -158,23 +158,38 @@ i.e. keepass 1.x and v4 i.e. keepass 2.x or {{< wp "Twofish" >}} only for v3.
         clear text or own xml format and import it from KeePassX xml,
         Kwallet xml, PwManager or from
         {{< iref "#password_gorilla" "password gorilla" >}} CSV.
--   <a name="keepassxc>[KeepassXC](https://keepassxc.org/)
-    is a fork or KeepassX with many additional features,
-    including two factor authentication with Yubikey or OTP.
-    Packages are available for Linux, Windows, OS X.
-    The repository is in november 2018 very active, while KeepassX
-    itself is sleeping.
+-   <a name="keepassxc">[KeepassXC](https://keepassxc.org/) (GPL) is a fork or KeepassX,
+    written in C++ with many additional features, including two factor authentication
+    with Yubikey or OTP.  Packages are available for Linux, Windows, OS X.  The
+    repository is in 2021 very active, while KeepassX itself is sleeping. Debian has a
+    _KeepassXC_ package.
+
+    KeePassXC currently uses the KeePass 2.x (.kdbx) password database format, but can
+    import  KeePass 1.x databases.
+
     -   The project live on GitHub as
         [keepassxreboot](https://github.com/keepassxreboot/)
-    -   [Keepassxc Quickstart
-        ](https://github.com/keepassxreboot/keepassxc/blob/develop/docs/QUICKSTART.md)
-    -   [unofficial Debian package
-        ](https://github.com/magkopian/keepassxc-debian/releases).
+    -   [KeePassXC: Getting Started Guide
+        ](https://keepassxc.org/docs/KeePassXC_GettingStarted.html)
+    -   [KeePassXC: User Guide](https://keepassxc.org/docs/KeePassXC_UserGuide.html).
     -   [EFF - Surveillance Self-Defense](https://ssd.eff.org/) :
-        [How to: Use KeePassXC
-        ](https://ssd.eff.org/en/module/how-use-keepassxc).
+        [How to: Use KeePassXC](https://ssd.eff.org/en/module/how-use-keepassxc).
     -   __keepassxc-cli__ is the command line client for Keypassx, it allows to do any
         operation _including the XML export_ with a command line client.
+    -   [KeePassXC Browser Extension
+        ](https://github.com/keepassxreboot/keepassxc-browser)
+        is compatible with Firefox or Chrome/Chromium or Microsoft Edge.
+        Its use is described in [Setup Browser Integration Guide
+        ](https://keepassxc.org/docs/KeePassXC_GettingStarted.html#_setup_browser_integration).
+
+        The extension is provided in Debian package _webext-keepassxc-browser_.
+    -   No application is provided for mobile, but KeepassXC site recommend
+        for Android {{< iref "#keypassdx" "KeePassDX" >}}
+        and {{< iref "#keypass2android" "KeePass2Android" >}};
+        for iOS, [Strongbox
+        ](https://itunes.apple.com/us/app/strongbox-password-safe/id897283731) and
+        [KeePassium
+        ](https://apps.apple.com/us/app/keepassium-keepass-passwords/id1435127111).
 
 -   The standard CSV format for Keepass and KeepassX(C) is
 
@@ -184,20 +199,21 @@ i.e. keepass 1.x and v4 i.e. keepass 2.x or {{< wp "Twofish" >}} only for v3.
 
     "Group","Title","Username","Password","URL","Notes"
 
-    There is a [Keepass2 CVS importer help
-    ](https://keepass.info/help/kb/imp_csv.html) that give details.
+    -   [Keepass2 CVS importer help
+        ](https://keepass.info/help/kb/imp_csv.html)
+    -   [KeePassXC: Importing CSV files
+        ](https://keepassxc.org/docs/KeePassXC_UserGuide.html#_importing_csv_file)
 
-    KeePass has a huge [list of plugins and extensions
+-   KeePass has a huge [list of plugins and extensions
     ](http://keepass.info/plugins.html) but most of them restricted to windoze.
 -   [keepass-diff](https://github.com/Narigo/keepass-diff) (MIT License)
     is a A CLI-tool to diff Keepass (.kdbx) files.
 
 ## Keepass alternative clients
 -   <a name="keepassc">[KeePassC](https://github.com/raymontag/keepassc) (GPL)
-    is a Python 3 curses-based password manager compatible to KeePass v.1.x and
-    KeePassX. In 2018 it is still maintained even if the author, Karsten-Kai König
-    _raymontag_, reimplement it in Rust. It is also the author of
-    {{< iref "#kppy" "Kppy" >}}.
+    is a Python 3 curses-based password manager compatible to KeePass v.1.x only and
+    KeePassX. No more developed since 2018. The author Karsten-Kai König
+    _raymontag_, produced also the library  {{< iref "#kppy" "Kppy" >}}.
 -   [kpcli](http://kpcli.sourceforge.net/) (Perl artistic Licence)
     is a command line perl interface to KeePass 1.x or 2.x database files
 -   [passhole](https://github.com/purdueLUG/passhole) (GPL)
@@ -232,14 +248,14 @@ i.e. keepass 1.x and v4 i.e. keepass 2.x or {{< wp "Twofish" >}} only for v3.
     various open source licenses) is a port of
     KeePass  for the Android platform it support both v3 and v4
     databases.
--   [Keepass2Android
-    ](http://keepass2android.codeplex.com/) (GPL)
-    has its user interface based on Keepassdroid , ported from
-    Java to Mono for Android. The backend uses the original
-    KeePass libraries to handle file access to ensure
-    file format compatibility (database v4).
--   [KeePassDX (github)](https://github.com/Kunzisoft/KeePassDX) (GPL)
-    Has support for .kdb and .kdbx files (version 1 to 4) with AES - Twofish - ChaCha20 -
+-    <a name="keypass2android"></a>
+    [Keepass2Android](http://keepass2android.codeplex.com/) (GPL)
+    has an user interface based on Keepassdroid , ported from Java to Mono for
+    Android. The backend uses the original KeePass libraries to handle file access to
+    ensure file format compatibility (database v4).
+-   <a name="keypassdx"></a>
+    [KeePassDX (github)](https://github.com/Kunzisoft/KeePassDX) (GPL)
+    has support for .kdb and .kdbx files (version 1 to 4) with AES - Twofish - ChaCha20 -
     Argon2 algorithm. It allows AutoFill and provide a field filling keyboard
     It is available in F-Droid repository.
 
@@ -269,15 +285,16 @@ i.e. keepass 1.x and v4 i.e. keepass 2.x or {{< wp "Twofish" >}} only for v3.
     deprecated for the following _pykeepass_  but still active in
     november 2018.
 -   [pykeepass](https://github.com/pschmitt/pykeepass)
-    is a library to read and write entries to a KeePass database (supports KDBX3 and KDBX4).
-    _active in november 2018_.
+    is a library to read and write entries to a KeePass database (supports KDBX3 and
+    KDBX4). It is in the Debian package _python3-pykeepass_.
+    _active in Mars 2021_.
 -   [Python KeepassX](https://github.com/jamesls/python-keepassx)
     allow read access to Keepass v3 databases. The goal is to provide
     a CLI access to KeepassX; Seemed to have stopped in 2015.
 -   <a name="kppy">[kppy](https://github.com/raymontag/kppy)
-    a python 3 module to read/write Keepass1.x database, maintained in 2018,
-    but the author, Karsten-Kai König _raymontag_, who authored also
-    {{< iref "#keepassc" "keepass" >}} now focus on keepass access from rust.
+    a python 3 module to read/write Keepass1.x database, no longer developed since 2018.
+    The author, Karsten-Kai König _raymontag_, authored also
+    {{< iref "#keepassc" "keepassc" >}}.
 
 ## Keepass database conversion
 
