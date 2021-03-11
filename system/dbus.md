@@ -11,15 +11,15 @@ title: Dbus
     ](http://www.freedesktop.org/wiki/Software/dbus/#index4h1),
     [D-Bus Tutorial](http://dbus.freedesktop.org/doc/dbus-tutorial.html),
 -   [Dbus FAQ](http://dbus.freedesktop.org/doc/dbus-faq.html)
-    gives a very comprehensive comparison between `Dbus` and
-    other interprocess communication `IPC`: `CORBA`, `XML-RPC`, `SOAP`,
-    Distributed Computing Environment (`DCE`), ZeroC's Internet
-    Communications Engine (`Ice`), `DCOP`.
+    gives a very comprehensive comparison between `Dbus` and other interprocess
+    communication `IPC`: `CORBA`, `XML-RPC`, `SOAP`, Distributed Computing Environment
+    (`DCE`), ZeroC's Internet Communications Engine (`Ice`), `DCOP`.
+-   [D-Bus - ArchWiki](https://wiki.archlinux.org/index.php/D-Bus).
 -   [Using of D-Bus - D-Bus integration in Emacs
-    ](http://www.gnu.org/software/emacs/manual/html_node/dbus/index.html#Top)
-        [Inspection - Using of D-Bus
+    ](http://www.gnu.org/software/emacs/manual/html_node/dbus/index.html#Top):
+    -   [Inspection - Using of D-Bus
         ](http://www.gnu.org/software/emacs/manual/html_node/dbus/Inspection.html#Inspection)
-        [Introspection - Using of D-Bus
+    -   [Introspection - Using of D-Bus
         ](http://www.gnu.org/software/emacs/manual/html_node/dbus/Introspection.html)
 -   [Ian's TechBlog: Dbus Tutorial
     ](http://cheesehead-techblog.blogspot.fr/2012/07/dbus-tutorial-intro-and-resources.html) :
@@ -27,7 +27,9 @@ title: Dbus
     ](http://cheesehead-techblog.blogspot.fr/2012/08/dbus-tutorial-introspection-figuring.html)
 
 -   Dbus Cli tools: {{< man "dbus-send+1" >}}, {{< man "gdbus+1" >}},
-    {{< man "mdbus2+1" >}}, {{< man "dfeet+1" >}}
+    {{< man "mdbus2+1" >}}.
+    -   {{< man "dfeet+1" >}} graphical D-Bus viewer and debugger.
+    -   {{< man "busctl" >}} may be used to introspect and monitor the D-Bus bus;
 
 # Dbus API
 In the {{< iref "python_libraries" "Python Libraries Page" >}} you find the
@@ -90,16 +92,28 @@ With {{< man "qdbus+1"  "qdbus" >}}
 # Dbus monitoring tools
 
 -   {{< man "dbus-monitor+1" >}}
--   [DFeet
-    ](https://wiki.gnome.org/action/show/Apps/DFeet?action%3Dshow&redirect%3DDFeet),
-    {{< lman "dfeet+1" >}}
--   [Bustle
-    ](http://www.willthompson.co.uk/bustle/)
+-   [DFeet](https://wiki.gnome.org/action/show/Apps/DFeet) (GPL-2.0)
+    is a D-Bus debugger for Gnome, based on gobject-introspection, gdbus and and
+    Gtk+3. . D-Feet can be used to inspect D-Bus interfaces of running programs and
+    invoke methods on those interfaces. _Available in Debian._
+    -   {{< man "dfeet+1" >}}
+    -   [d-feet · GitLab](https://gitlab.gnome.org/GNOME/d-feet/-/tree/master).
+-   [Bustle](https://gitlab.freedesktop.org/bustle/bustle) (LPGL)
+    Graphical D-Bus message analyser and profiler.
+
+    _Bustle_ draws sequence diagrams of D-Bus activity, showing signal emissions, method
+    calls and their corresponding returns, with timestamps for each individual event and
+    the duration of each method call.
+
+    It is available in Debian and on _FlatHub_.
+-   [Qt D-Bus](https://doc.qt.io/qt-5/qdbusviewer.html)
+    Qt D-Bus Viewer is a tool that lets you introspect D-Bus objects and messages.
+-   {{< man "busctl"  >}} from systemd, is used to introspect and monitor the D-Bus bus.
 
 # Dbus Notification {#dbus_notification}
 -   [ArchWiki Desktop notifications
     ](https://wiki.archlinux.org/index.php/Desktop_notifications)
-    explain how to display desktop notifications and information, with
+    explains how to display desktop notifications and information, with
     _libnotify_, in each programming language.
 -   [Desktop Notifications Specification
     ](https://developer.gnome.org/notification-spec/)
