@@ -154,29 +154,6 @@ See also among the  {{< iref "#ftp_clients" "FTP clients" >}} _axel_, _lftp_, _w
 -   {{< iref "#wget" "wget" >}}
     supports HTTP, HTTPS, and FTP protocols.
 
-# File sharing with android and ios
-
-{{< iref "p2p#p2p_file_sharing" "P2P file sharing software" >}} can be supported in the
-browser or with dedicated application,
-{{< iref "clouds#temporary_storage" "Temporary storage" >}} have usually a web interface
-and sometime an ftp access.
-
-If we want to share files with linux, we can use ftp, or sftp with an
-ftp/sftp client on the mobile device.
-
-There are also clients for smb, and webdav.
-
--   [shareviahttp](https://github.com/marcosdiez/shareviahttp) (BSD Licence)
-    is an application th share files from Android via http.
-    it is available on F-Droid
--   [Sharik](https://github.com/marchellodev/sharik) ( MIT License)
-    is a golang cross-platform solution for sharing files via Wi-Fi or Mobile Hotspot.
-    it is available for Android, Windows, Linux, iOS. Sharik provides an HTTP server
-    allowing to download the file you want to share, so the client can download without
-    installing a specific client.
-    -  There is also a go cli-only version
-       [sharic](https://github.com/marchellodev/sharic)..
-
 
 
 
