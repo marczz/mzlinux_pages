@@ -12,6 +12,10 @@ See also {{< iref "../system/backup#synchronization" "Synchronization" >}},
 # Common references
 
 -   Wikipedia: {{< wp "File sharing" >}}, {{< wp "List of file transfer protocols" >}},
+    [List of FTP applications - ArchWiki
+    ](https://wiki.archlinux.org/index.php/List_of_applications#FTP),
+    [List of download managers - ArchWiki
+    ](https://wiki.archlinux.org/index.php/List_of_applications#Download_managers).
 
 # FTP {#ftp}
 -   Wikipedia: {{< wp "List of file transfer protocols" >}},
@@ -22,36 +26,7 @@ See also {{< iref "../system/backup#synchronization" "Synchronization" >}},
 -   [Wikibook: Communication Networks/File Transfer Protocol
     ](http://en.wikibooks.org/wiki/Communication_Networks/File_Transfer_Protocol)
 
-## clients {#ftp_clients}
--   [axel](https://github.com/axel-download-accelerator/axel) (GPL-2.0)
-    Lightweight CLI download accelerator,  Axel can speed up a download up to 60%.
-    Axel supports HTTP, HTTPS, FTP and FTPS protocols. _In Debian._
--   [FileZilla](https://filezilla-project.org/) (GPL)
-    supports FTP, FTP over TLS (FTPS) and SFTP, HTTP/1.1, SOCKS5 and FTP Proxy
-    support. It has a wxWidgets GUI.
-    -   [Documentation - FileZilla Wiki
-        ](https://wiki.filezilla-project.org/Documentation).
--   {{< wp "FireFTP" >}} (Mozilla Public License) was a ftp client plugin _add-on_ for
-    mozilla. It supports FTP, FTPS, and SFTP. Firefox has now
-    officially removed FireFTP and FireSSH support from the browser. It is still
-    available for [Waterfox](https://www.waterfox.net/).
--   [gFTP](https://github.com/masneyb/gftp) (GPL)
-    multithreaded file transfer gtk-2 client, it supports the FTP,
-    FTPS (control connection only), FXP transfer,  HTTP proxy.
-    gFTP can also be compiled as a console client.
-
-    Debian provide a _gftp-GTK_ and _gftp-text_ package.
--   <a name="lftp"></a>[lftp](http://lftp.yar.ru/) (GPL)
-    file transfer program supporting ftp, http, sftp, fish, and torrent.
-    -   [LFTP - the manual page](http://lftp.yar.ru/lftp-man.html)
-    -   [LFTP - torrent usage examples](https://lftp.tech/torrent.html)
-    -   [lftp tips and tricks](https://linux.overshoot.tv/wiki/lftp)
--   [Net2ftp](http://www.net2ftp.com) (GPL)
-    web based FTP client, written in PHP. You can use the
-    [Net2ftp online client](http://www.net2ftp.com) _unsecure_ or intall it on your lan.
-
-
-## servers
+## FTP servers
 -   [atftp](https://sourceforge.net/projects/atftp/) (GPL-2.0)
     is the standard  {{< wp "Trivial File Transfer Protocol" >}} server used for
     {{< iref "IP#network_boot" "Network Boot" >}}. It is packaged in Debian.
@@ -87,6 +62,36 @@ See also {{< iref "../system/backup#synchronization" "Synchronization" >}},
     _in 2021_.
     -   [vstpd conf manual
         ](https://security.appspot.com/vsftpd/vsftpd_conf.html)
+
+
+## FTP clients {#ftp_clients}
+-   [axel](https://github.com/axel-download-accelerator/axel) (GPL-2.0)
+    Lightweight CLI download accelerator,  Axel can speed up a download up to 60%.
+    Axel supports HTTP, HTTPS, FTP and FTPS protocols. _In Debian._
+-   [FileZilla](https://filezilla-project.org/) (GPL)
+    supports FTP, FTP over TLS (FTPS) and SFTP, HTTP/1.1, SOCKS5 and FTP Proxy
+    support. It has a wxWidgets GUI.
+    -   [Documentation - FileZilla Wiki
+        ](https://wiki.filezilla-project.org/Documentation).
+-   {{< wp "FireFTP" >}} (Mozilla Public License) was a ftp client plugin _add-on_ for
+    mozilla. It supports FTP, FTPS, and SFTP. Firefox has now
+    officially removed FireFTP and FireSSH support from the browser. It is still
+    available for [Waterfox](https://www.waterfox.net/).
+-   [gFTP](https://github.com/masneyb/gftp) (GPL)
+    multithreaded file transfer gtk-2 client, it supports the FTP,
+    FTPS (control connection only), FXP transfer,  HTTP proxy.
+    gFTP can also be compiled as a console client.
+
+    Debian provide a _gftp-GTK_ and _gftp-text_ package.
+-   <a name="lftp"></a>[lftp](http://lftp.yar.ru/) (GPL)
+    file transfer program supporting ftp, http, sftp, fish, and torrent.
+    -   [LFTP - the manual page](http://lftp.yar.ru/lftp-man.html)
+    -   [LFTP - torrent usage examples](https://lftp.tech/torrent.html)
+    -   [lftp tips and tricks](https://linux.overshoot.tv/wiki/lftp)
+-   [Net2ftp](http://www.net2ftp.com) (GPL)
+    web based FTP client, written in PHP. You can use the
+    [Net2ftp online client](http://www.net2ftp.com) _unsecure_ or intall it on your lan.
+
 
 # HTTP download {#http_download}
 See also among the  {{< iref "#ftp_clients" "FTP clients" >}} _axel_, _lftp_, _wget_.
@@ -137,6 +142,9 @@ See also among the  {{< iref "#ftp_clients" "FTP clients" >}} _axel_, _lftp_, _w
 
 
 # Multiprotocol download utilities
+
+Many applications are listed in [List of download managers - ArchWiki
+](https://wiki.archlinux.org/index.php/List_of_applications#Download_managers).
 
 -   {{< wp "cURL" >}} (MIT License)
     Client-side URL transfer library and command-line client,
