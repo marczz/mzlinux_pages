@@ -2,8 +2,6 @@
 title: Apache httpd
 ---
 
-{{% toc /%}}
-
 # Apache documentation
 - [APACHE](http://www.apache.org)
 -   [Apache 2.2 Documentation](http://httpd.apache.org/docs/2.2/):
@@ -14,7 +12,6 @@ title: Apache httpd
    [mod CGI](http://httpd.apache.org/docs/current/mod/mod_cgi.html),
    [mod proxy](http://httpd.apache.org/docs/current/mod/mod_proxy.html),
    [mod rewrite](http://httpd.apache.org/docs/current/mod/mod_rewrite.html),
-   [mod\_ssl](http://httpd.apache.org/docs/current/mod/mod_ssl.html),
    - External modules:
      [mod\_fastcgi](http://www.fastcgi.com/mod_fastcgi/docs/mod_fastcgi.html)
      from [fcgi.com](http://www.fastcgi.com/),
@@ -28,15 +25,16 @@ title: Apache httpd
     as described in the previous Wikipedia Page and
     [HTTPS Virtual Hosts in Apache](http://www.crsr.net/Notes/Apache-HTTPS-virtual-host.html)
     [Dynamic Content with CGI](http://httpd.apache.org/docs/current/howto/cgi.html)
--   <strong>mod_ssl</strong> documentation:
-    [SSL/TLS Strong Encryption: An Introduction
-    ](http://httpd.apache.org/docs/current/ssl/ssl_intro.html),
-    [SSL/TLS Strong Encryption: How-To
-    ](http://httpd.apache.org/docs/current/ssl/ssl_howto.html),
-    [Apache Module mod_ssl
+-   <a name="mod_ssl"></a>[mod\_ssl
     ](http://httpd.apache.org/docs/current/mod/mod_ssl.html),
-    [SSL FAQ](http://httpd.apache.org/docs/current/ssl/ssl_faq.html).
-
+    <strong>mod_ssl</strong> documentation:
+    -   [SSL/TLS Strong Encryption: An Introduction
+        ](http://httpd.apache.org/docs/current/ssl/ssl_intro.html),
+    -   [SSL/TLS Strong Encryption: How-To
+        ](http://httpd.apache.org/docs/current/ssl/ssl_howto.html),
+    -   [Apache Module mod_ssl
+        ](http://httpd.apache.org/docs/current/mod/mod_ssl.html),
+    -   [Apache SSL FAQ](http://httpd.apache.org/docs/current/ssl/ssl_faq.html).
     See also the page {{< iref "ssl" "SSL/TLS" >}}.
 -   [Apache XML Project](http://xml.apache.org/)
     (Xerces: XML parsers in Java and C++, Xalan: XSL stylesheet processors in Java & C+,
@@ -120,27 +118,24 @@ General references on httpd authentication are in the section
 
 Each Apache security policy is handled by an
 [Apache modules](http://httpd.apache.org/docs/current/mod/) they
-are summarized in
-[Apache Howto: Authentication, Authorization and Access Control](http://httpd.apache.org/docs/current/howto/auth.html).
+are summarized in [Apache Howto: Authentication, Authorization and Access Control
+](http://httpd.apache.org/docs/current/howto/auth.html).
 
-The
-[Access Control](http://httpd.apache.org/docs/current/howto/access.html)
-is distinct from [authentication
-](http://httpd.apache.org/docs/current/howto/auth.html),
-the goal of access control is to limit some part of your site to some _hosts_, but the aim of authentication
-is  to limit some part of your site to some _people_.
+The [Access Control](http://httpd.apache.org/docs/current/howto/access.html)
+is distinct from [authentication](http://httpd.apache.org/docs/current/howto/auth.html),
+the goal of access control is to limit some part of your site to some _hosts_,
+but the aim of authentication is  to limit some part of your site to some _people_.
 
-Access control is done with [mod authz_core
-](http://httpd.apache.org/docs/current/mod/mod_authz_core.html)
-which allow some user to access a resource and [mod authz_host
-](http://httpd.apache.org/docs/current/mod/mod_authz_host.html)
+Access control is done with
+[mod authz_core](http://httpd.apache.org/docs/current/mod/mod_authz_core.html)
+which allow some user to access a resource and
+[mod authz_host](http://httpd.apache.org/docs/current/mod/mod_authz_host.html)
 that allow some hosts to have access.
 
 Both authorization and authentication now (in apache 2.4) use the
 _Require_ directive.
 
-The _[Require
-](http://httpd.apache.org/docs/current/mod/mod_authz_core.html#require)_
+The _[Require](http://httpd.apache.org/docs/current/mod/mod_authz_core.html#require)
 directive, replace the older _Allow_, _Deny_ directive, yet available
 through a [backward compatibility module
 ](http://httpd.apache.org/docs/current/mod/mod_access_compat.html).
