@@ -21,8 +21,11 @@ see also {{< iref "clouds" "Clouds" >}},
     [Debian Help: tools Available for Linux Backup
     ](http://www.debianhelp.co.uk/backuptools1.htm)
 -   [Arch Wiki: Synchronization and backup programs
-    ](https://wiki.archlinux.org/index.php/Synchronization_and_backup_programs)
-    gives a complete up-to-date list of programs.
+    ](https://wiki.archlinux.org/index.php/Synchronization_and_backup_programs),
+    [System backup](https://wiki.archlinux.org/index.php/System_backup) and
+    [List of applications - File Synchronisation
+    ](https://wiki.archlinux.org/index.php/List_of_applications#File_synchronization)
+    give a complete up-to-date list of programs.
 -   <a name="cachedir"></a> [Cache Directory Tagging Standard _cachedir_
     ](http://www.brynosaurus.com/cachedir/spec.html)
     allows to identify cache directories that you may want to exclude from backup.
@@ -433,7 +436,7 @@ Many frontends and wrapper for duplicity are availables:
 -   <a name="bup"></a>[bup](https://github.com/bup/bup) (LGPL) from Avery Pennarun
     is an incremental backup tool based on git. _It is in debian._
     Avery [explains the options in his blog](http://apenwarr.ca/log/?m=201111).
--   [FlashBake](https://github.com/commandline/flashbake/wiki)
+-   [FlashBake](https://github.com/commandline/flashbake/wiki) by Thomas Gideon
     is a tool which watches files and automatically checks them in to a git repository.
 
 
@@ -650,6 +653,17 @@ See also the {{< iref "#rsync_backup" "Section on rsync backup" >}}
     {{< iref "performances#qos" "Performance Tuning -  Network bandwith control" >}}.
 
 ### Rsync frontends
+-   <a name="clsync"></a>[clsync](https://github.com/clsync/clsync) (GPL-3.+)
+    live sync daemon based on {{< iref "schedulers#inotify" "inotify" >}}
+    (or kqueue/bsm in FreeBSD), written in GNU C.
+
+    _clsync_ recursively watches for source directory and executes rsync to sync the
+    changes. This utility is much more lightweight than competitors and supports such
+    features as separate queue for big files, regex file filter, multi-threading.
+
+    It was conceived to deal with some havoc in
+    {{< iref "#lsyncd" "lsyncd" >}}, [detailed in the README
+    ](https://github.com/clsync/clsync/blob/master/README.md)
 -   [Grsync](http://www.opbyte.it/grsync/) (GPL)
     is a GTK Graphic User Interface for rsync. It is packaged in Debian.
 -   [gadmin-rsync
@@ -659,11 +673,16 @@ See also the {{< iref "#rsync_backup" "Section on rsync backup" >}}
     is a C/GTK+ graphical user interface for rsync, it is packaged in
     debian. _There are also frontends for samba, proftpd, dhcpd3-server,
     openvpn-server/client, and bind9._
--   [Lsyncd](https://github.com/axkibe/lsyncd) (GPL)
-    a light-weight live mirror, use inotify to watch files and rsync
-    and ssh to synchronize them.
-    -   [DigitalOcean: How To Mirror Local and Remote Directories
-        on a VPS with lsyncd
+-   <a name="lsyncd">[Lsyncd](https://github.com/axkibe/lsyncd) (GPL)
+    a light-weight live mirror, written in LUA and C languages. It uses
+    {{< iref "schedulers#inotify" "inotify" >}} to watch files
+    and rsync and ssh to synchronize them. [Lsyncd is packaged in Debian
+    ](https://tracker.debian.org/pkg/lsyncd). The source repository seems to be sleeping
+    since 2018, the issues and pull request are unanswered.
+
+    See also {{< iref "#clsync" "clsync" >}} which was conceived as an enhancement of
+    _lsyncd_.
+    -   [DigitalOcean: How To Mirror Local and Remote Directories on a VPS with lsyncd
         ](https://www.digitalocean.com/community/tutorials/how-to-mirror-local-and-remote-directories-on-a-vps-with-lsyncd)
 -   [Osync](https://github.com/deajan/osync) (BSD)
     A two way bash rsync wrapper,  can be run manually, as scheduled task, or
@@ -745,12 +764,11 @@ See also the {{< iref "#rsync_backup" "Section on rsync backup" >}}
 -   {{< iref "clouds#rclone" "Rclone" >}} in {{< iref "clouds" "Clouds Section" >}}
     support _one way_ synchronization.
 -   [syrep](http://0pointer.de/lennart/projects/syrep/)
-    by Lennart Poettering   is a repository synchronization tool used to synchronize
-    large file hierarchies bidirectionally by exchanging patch
-    files.Files are tracked by their message digests, currently MD5.
-    The patch files may be transferred via offline media,
-    e.g. removable hard disks or compact discs. The last release is
-    from 2006. The package is in debian.
+    by Lennart Poettering is a repository synchronization tool used to synchronize large
+    file hierarchies bidirectionally by exchanging patch files.Files are tracked by
+    their message digests, currently MD5.  The patch files may be transferred via
+    offline media, e.g. removable hard disks or compact discs. The last release is
+    from 2006. The [package is in debian](https://tracker.debian.org/pkg/syrep).
 -   [Synkron](http://synkron.sourceforge.net/) (GPL)
     is a  C++-Qt application  for synchronising two or more folders.
     This project seems dead no commit since 2014.
