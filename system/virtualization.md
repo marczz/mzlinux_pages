@@ -342,6 +342,21 @@ software vulnerabilities from spreading.
 
 -   [Security, sandboxing - ArchWiki
     ](https://wiki.archlinux.org/index.php/Security#Sandboxing_applications).
+-   {{< wp "Sandbox_(computer_security)" "Wikipedia: Sandbox" >}}
+
+-   [containerd](https://containerd.io/) (Apache License)
+    container runtime with an emphasis on simplicity, robustness and portability.  It is
+    available as a daemon for Linux and Windows, which can manage the complete container
+    life cycle of its host system: image transfer and storage, container execution and
+    supervision, low-level storage and network attachments, etc.
+
+    Containerd is designed to be embedded into a larger system, rather than being used
+    directly by developers or end-users.
+
+    _Containerd_ is packaged in Debian.
+
+    -   [Getting started with containerd](https://containerd.io/docs/getting-started/)
+    -   [GitHub - containerd](https://github.com/containerd/containerd)
 -   [Firejail](https://firejail.wordpress.com/) (GPL)
     is a SUID program that reduces the risk of security breaches by restricting
     the running environment of untrusted applications using Linux namespaces and
@@ -349,11 +364,27 @@ software vulnerabilities from spreading.
     ](https://www.kernel.org/doc/html/latest/userspace-api/seccomp_filter.html).
     It is used for browsers and internet facing applications, as well as
     any servers.
+
+    _Firejail_ is packaged in Debian, with an extra package _firejail-profiles_.
     -   [Firejail - ArchWiki](https://wiki.archlinux.org/index.php/Firejail).
     -   [Firejail - GitHub](https://github.com/netblue30/firejail).
 -   [Bubblewrap](https://github.com/containers/bubblewrap) (LGPL)
     is a lightweight sandbox application developed from Flatpak.
+    The readme contains a comparison with _runc_, _Firejail_ and _SandStorm_.
+
+    _Bubblewrap_  is packaged in Debian.
     -   [Bubblewrap - ArchWiki](https://wiki.archlinux.org/index.php/Bubblewrap).
+-   [runc](https://github.com/opencontainers/runc) (Apache-2.0 License)
+    CLI tool for spawning and running containers according to the OCI specification
+    _Open Container Project specification_.
+    _runc_ is in Debian.
+-   [Sandstorm](https://sandstorm.io/) (Apache License)
+    is a platform for self-hosting web apps. It's implemented as a
+    security-hardened web app package manager.
+    -   [Sandstorm install instructions](https://sandstorm.io/install).
+    -   [Sandstorm App Market](https://apps.sandstorm.io/).
+    -   [Sandstorm docsumentation](https://docs.sandstorm.io/en/latest/).
+    -   [GitHub - sandstorm](https://github.com/sandstorm-io/sandstorm).
 
 ## distribution independent application image
 -   {{< wp "Flatpak" >}}
