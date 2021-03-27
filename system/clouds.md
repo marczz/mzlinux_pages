@@ -1064,10 +1064,8 @@ but that works also.
     _february 2016_
 -   [15 Super Quick Ways to Share Files Without Cloud Storage
     ](http://www.makeuseof.com/tag/15-super-quick-ways-share-files-without-cloud-storage/)
--   [Alternatives to Send Anywhere
-    ](http://alternativeto.net/software/send-anywhere/)
--   [Alternative to Senduit
-    ](http://alternativeto.net/software/senduit/)
+-   [Alternatives to Send Anywhere](http://alternativeto.net/software/send-anywhere/)
+-   [Alternative to Senduit](http://alternativeto.net/software/senduit/)
 
 -   [filebin.ca](http://filebin.ca/) up to 50 megabytes, without time
     limit, but deleted after 6 months of inactivity. No registration
@@ -1079,72 +1077,58 @@ but that works also.
     chrome or dolphin)
 -   [mozilla/send](https://github.com/mozilla/send) (Mozilla Public Licence)
     share file from firefox with encryption and a link that expires.
-    The main instance [Firefox Send](https://send.firefox.com/) allows  mx of 1GB
-    without registration and 2.5GB with registration.
--   Service d'envoi de fichiers [dl.free.fr](http://dl.free.fr).  On
-    peut aussi les envoyer par ftp sur <dl.free.fr> le login est
-    l'adresse email ou on reçoit le nom pour le téléchargement.  Les
-    fichiers ne sont pas effacés tant qu'il y aura au moins un
-    téléchargement par période de 30 jours au minimum (en fonction de
-    l'espace disponible sur les serveurs ).  La taille maximale par
-    fichier déposée par FTP est de 10Go. et 1GO sur le web.
-    Files are password protected.
+    The main instance [Firefox Send](https://send.firefox.com/) allowed a maximum of 1GB
+    without registration and 2.5GB with registration. The repository is now archived,
+    and the extension no longer available.
+-   Free file sending service [dl.free.fr] (http://dl.free.fr).
+    An javascript free web interface
+    [is also available](http://dl.free.fr/index_nojs.pl)
+
+    We can also send files by ftp on `dl.free.fr` the login is the email address where
+    we receive the name for the download.
+
+    The files are not deleted until there is at least one download per period
+    of at least 30 days (depending on the space available on the servers). The maximum
+    size per file uploaded by FTP is 10GB. and 1GO on the web.  Files are password
+    protected.
 -   [Hightail](https://www.hightail.com/) up to 50MB encrypted. Needs
-    to register.
--   [Lufy](https://framagit.org/luc/lufi/) (AGPL) is a Perl server
-    application of file sharing. The files are encrypted in the
-    browser and stored on the server. All the encryption/decryption
-    processes take place in your browser. The encryption key is never
-    sent over the network. You can host Lufy on your server
-    or use [FramaDrop](https://framadrop.org)
-    -   [Lufy Wiki](https://framagit.org/luc/lufi/wikis/home).
-    -   [Lufy Cli](https://framagit.org/luc/lufi-cli)
-        is a javascript client for Lufy.
-    -   [FramaDrop](https://framadrop.org) an instance of Lufy.
--   [Lutim](https://framagit.org/luc/lutim) (AGPL) is a Perl server
-    application for image sharing. The file are optionally encrypted
-    on the server, _not the browser like in Lufy,_ which allow to use
-    it even with a browser without javascript.
-    -   [Lutim Wiki](https://framagit.org/luc/lutim/wikis/).
-    -   [lut.im](https://lut.im/) an instance of _Lutim_.
-    -   [Framapi](https://framapic.org/) an other instance of _Lutim_.
+    to register. free 100MB/upload, max 2G; other plans are expensive.
+-   {{< iref "#lufi" "Lufi free hosted instances" >}} see
+    {{< iref "#lufi" "below" >}}
+-   {{< iref "#lutim" "Lutim free hosted instance" >}} for image sharing.
 -   [mediafire](http://www.mediafire.com/) 3€/month 1TB permanent
-    storage, 20GB per file; free plan add supported.
--   [senduit](http://www.senduit.com/) up to 100M, no registration,
-    choose keep time between 30mn and week. No encryption or password
-    protection.
--   [Send Anywhere](https://send-anywhere.com/)
-    described
+    storage, 20GB per file; free plan add supported up to 10GB.
+-   [Send Anywhere](https://send-anywhere.com/) described
     {{< iref "p2p#sendanywhere" "in the P2P file sharing section" >}} is
     mainly a P2P service, but it includes cloud storage to free the
     user from the contraint that both browser need to be open during
     all the transfer time.
--   [Uploadfiles.io](https://uploadfiles.io/) up to 5G kept 30 days
+-   [Ufile.io](https://ufile.io/) up to 5G kept 30 days
     for the free service.No registration, encrypted. The download is
-    by url, with a speed limit of 500KB/s so 1G has a minimal time of
-    2000s ie 33mn.
+    by url, with a speed limit of 1MB/s so 1G has a minimal time of
+    1000s ie 17mn. Paid plans are expensive.
 -   [wetransfer](https://www.wetransfer.com/) up to 2G, 7 days for
     free account, No encryption or password protection. It is one of
     the more used site for file exchange, but to get 20G and password
     without even encryption, you have to pay 120$ annual!
--   [wikisend](http://wikisend.com/) up to 100MB, no registration
+-   [wikisend](http://wikisend.com/) up to 100MB, free, no registration
     necessary, password protection, default save time 7 days, when
     registered it can be set up to 90 days.
 
 ## Pastebin {#pastebin}
 
-There are many similar services that we name with the common name
-{{< wp "Pastebin" >}} from the first {{< wp "pastebin.com" >}} they allow a free web clip by pasting
-some text, and they give you an url to retrieve the text.
+There are many similar services that we name with the common name {{< wp "Pastebin" >}}
+from the first {{< wp "pastebin.com" >}} they allow a free web clip by pasting some
+text, and they give you an url to retrieve the text.
 
-You can use to create you post a web page and
-most sites have a REST HTTP Api that allow to create posts with a
-script. _I list only the sites offering an API, and not too much adds_.
+You can use to create you post a web page and most sites have a REST HTTP Api that allow
+to create posts with a script. _I list only the sites offering an API, and not too much
+adds_.
 
-They can offer optional features like expiration dates, private posts,
-syntax highlighting,
+They can offer optional features like expiration dates, private posts, syntax
+highlighting,
 
--   [pastbin.com](http://pastebin.com/) has syntax highlighting,
+-   [pastebin.com](http://pastebin.com/) has syntax highlighting,
     expiration dates, private posts, ads,
     [API](https://pastebin.com/api), many official
     [command line clients](https://pastebin.com/tools#pastebincl)
@@ -1156,10 +1140,9 @@ syntax highlighting,
 -   [Paste.ee](https://paste.ee) is a free pastebin with no ads, SSL,
     IPv6, [API](https://pastee.github.io/docs/),
     [CLI programs](https://paste.ee/wiki/Programs).
--   <a name="paste_debian"></a>
-    [paste.debian.net](http://paste.debian.net/) is a pastebin
-    It has an [xml RPC interface
-    ](http://paste.debian.net/rpc-interface.html)  and
+-   <a name="paste_debian"></a>[paste.debian.net](http://paste.debian.net/)
+    is a pastebin.
+    It has an [xml RPC interface](http://paste.debian.net/rpc-interface.html)  and
     [xml RPC clients](http://paste.debian.net/paste.pl?show_template=clients)
     including {{< iref "#pastebinit" "pastebinit" >}} and an
     emacs client _debpaste_ in elpa and also as Debian package.
@@ -1177,25 +1160,19 @@ syntax highlighting,
         online in the browser. It relies on a MongoDB database.
 
 
--   [spunge](http://sprunge.us/) is a command line pastebin that you
-    use with:
+-   [spunge](http://sprunge.us/) is a command line pastebin that you use with:
 
         <command> | curl -F 'sprunge=<-' http://sprunge.us
 
-    [sprunge source at GitHub](https://github.com/rupa/sprunge).
-
-    -    [sprunge bash script
-        ](http://www.shellperson.net/sprunge-pastebin-script/)
-
+    -   [sprunge source at GitHub](https://github.com/rupa/sprunge).
+    -   [sprunge bash script](http://www.shellperson.net/sprunge-pastebin-script/)
 -   [termbin](http://termbin.com/) is a command line pastbin that
     requires only _netcat_, you use it like this:
 
         <command> | nc termbin.com 9999
 
-    [fiche the termbin source on GitHub
-    ](https://github.com/solusipse/fiche) is a 484 sloc C program.
-    _fiche_ support ipv6.
-
+    [fiche the termbin source on GitHub](https://github.com/solusipse/fiche)
+    is a 484 sloc C program. _fiche_ support ipv6.
 
 Some pastebin offer encryption
 
@@ -1230,27 +1207,26 @@ There are many text clip, screenshot clip, file sharing programs that
 can interface with many pastebin.
 
 
--   <a name="pastbinit"></a>
-    [pastebinit](https://help.ubuntu.com/community/Pastebinit)
-    can use  [paste.ubuntu.com](http://paste.ubuntu.com),
+-   <a name="pastbinit"></a>[pastebinit](https://help.ubuntu.com/community/Pastebinit)
+    can use [paste.ubuntu.com](http://paste.ubuntu.com),
     {{< iref "#paste_debian" "paste.debian.net" >}},
     [pastebin.mozilla.org](http://pastebin.mozilla.org),
-    [pastebin.ca](http://pastebin.ca), slexy.org,
-    [yourpaste.net](http://yourpaste.net), paste.drizzle.org, paste.kde.org,
-    paste.openstack.org, paste.pocoo.org, paste.pound-python.org,
-    paste.ubuntu.org.cn, paste2.org, pastie.org,
+    [pastebin.ca](http://pastebin.ca), slexy.org, [yourpaste.net](http://yourpaste.net),
+    paste.drizzle.org, paste.kde.org, paste.openstack.org, paste.pocoo.org,
+    paste.pound-python.org, paste.ubuntu.org.cn, paste2.org, pastie.org,
     pb.daviey.com, sprunge.us
     (see [all conf files
     ](http://bazaar.launchpad.net/~pastebinit-developers/pastebinit/trunk/files/head:/pastebin.d/).
-    There is a Debian package.
--   [sleeksnap](https://pastee.github.io/docs/) written in java
-    dedicated to screenshots.
+    There is a pastbinit Debian package.
+-   [sleeksnap](https://pastee.github.io/docs/) written in java dedicated to screenshots.
 
 ## Web file sharing servers
 _They are self-hosted solutions._
 
 -   [Open source alternatives to ZendTo
     ](http://alternativeto.net/software/zendto/?license=opensource)
+
+
 -   [Bozon](https://github.com/broncowdd/BoZoN) (AGPL)
     is a self-hosted php drag & drop file sharing app.It allows to
     stream mp3, to manage users, to display a photo gallery.  BoZoN
@@ -1259,12 +1235,18 @@ _They are self-hosted solutions._
     smartphone with your browser, and use a qrcode to share your link
     with smartphone users. You can share a whole folder and Download
     its contents into a zip.
--   [F*EX](http://fex.rus.uni-stuttgart.de/) (Artistic Licence)
-    Frams' Fast File EXchange is a PERL service to send big files
-    between two users. he sender uploads the file to the F*EX server
+-   [Coquelicot](https://coquelicot.potager.org/) (AGPL)
+    _one-click_ file sharing with a focus on privacy. While being uploaded, files are
+    written to the disk using symmetric encryption. The encryption key is either part
+    of the download URL, or specified by the uploader. More details in the
+    [Readme](https://coquelicot.potager.org/README). Coquelicot is written in ruby.
+    The last release is from 2016, it was packaged in Debian until stretch.
+-   <a name="fex"></a>[F*EX](http://fex.rus.uni-stuttgart.de/) (Artistic Licence)
+    _Frams' Fast File EXchange_ is a PERL service to send big files
+    between two users. The sender uploads the file to the F*EX server
     using a WWW upload form and the recipient automatically gets a
-    notification e-mail with a download-URL. _Fex_ is in Debian
-    the client utilities are in a separate package _fex-utils_.
+    notification e-mail with a download-URL. _Fex_ is in a Debian
+    package, the client utilities are in a separate package _fex-utils_.
 -   [FileTea](https://github.com/elima/FileTea) (AGPL)
     functions as a web server. Users can drag files into their web
     browser and a URL will be generated for each one. Those URLs can
@@ -1281,7 +1263,7 @@ _They are self-hosted solutions._
 
     The service is anonymous and does not require user registration.
 
-    _Filetea is not updated since january 2014. It is in Debian_
+    _Filetea is not updated since january 2014. It is still in Debian_
 
 -   [FileZ](https://github.com/FileZ/FileZ) (GPL)
     is a php Web service to upload and manage files and
@@ -1290,12 +1272,68 @@ _They are self-hosted solutions._
     is a self-hosted php web service for file sharing, it uses no
     database, files can be protected by password and encrypted, and
     have expiration time for downloads.
--   [Zendto](http://zend.to/) (Open source _licence?_)
-    is a PHP service to share files.  It will also integrate with any
-    Active Directory, LDAP or IMAP system.
-    MyZendTo has a restricted access to your users there is no public
-    acces. Zend needs PHP and a database SQLite or MySQL.
+-   <a name="lufi"></a>[Lufi](https://framagit.org/luc/lufi/) (AGPL)
+    is a Perl server application of file sharing. The files are encrypted in the browser
+    and stored on the server. All the encryption/decryption processes take place in your
+    browser. The encryption key is never sent over the network. You can host Lufi on
+    your server or use a free instance.
+    -   [Lufi Wiki](https://framagit.org/luc/lufi/wikis/home).
+    -   [Lufi Cli](https://framagit.org/luc/lufi-cli)
+        is a javascript client for Lufi.
+    -   Many on line service offer a free Lufi, instance, the available services change
+        quite quickly, so I don't give a list but you can see some european instances at
+        the page [framasoft: lufi](https://alt.framasoft.org/en/framadrop).
+-   <a name="lutim"></a>[Lutim](https://framagit.org/luc/lutim) (AGPL) is a Perl server
+    application for image sharing. The file are optionally encrypted
+    on the server, _not the browser like in Lufy,_ which allow to use
+    it even with a browser without javascript.
+    -   [Lutim Wiki](https://framagit.org/luc/lutim/wikis/).
+-   [Plik](https://github.com/root-gg/plik/tree/master) (MIT License)
+     is a scalable & friendly temporary file upload system in golang.  It uses as data
+     backend Files, OpenStack Swift, or S3 this last allow server side encryption; and
+     as metadata backend Sqlite3 or postgresql. There is a go client with packages for
+     all platforms, and a bash client in the repository.
 
+     -   [Plik vulpecula.fr](https://plik.vulpecula.fr/#/) is a free hosted instance of
+     Plik.
+-   <a name="sharik"></a>[Sharik](https://github.com/marchellodev/sharik) ( MIT License)
+    is a golang cross-platform solution for sharing files via Wi-Fi or Mobile Hotspot.
+    it is available for Android, Windows, Linux, iOS. Sharik provides an HTTP server
+    allowing to download the file you want to share, so the client can download without
+    installing a specific client.
+    -  There is also a go cli-only version
+       [sharic](https://github.com/marchellodev/sharic).
+
+    _Sharik_ serve the files on HTTP on the localhost, neither the protocol, nor the
+    files are encrypted. So it is only acceptable if the local network is on a firewall
+    protected lan. When connected to an hotspot, we should not send private files. For
+    mobile to mobile transmission we can also use a wifi connection sharing protected by
+    password, giving some protection against _naive_ intruder, the main benefit here is
+    that don't require a wifi internet connection and it does not count against your
+    data plan.
+
+    So Sharik is good for _quick and dirty_ file exchange, all the protected file
+    storages servers of this section offer a more secure solution, at the price of
+    needing a relay, and an internet connection.
+-   [weborf](https://github.com/ltworf/weborf) (GPL-3.0)
+    is a python instant server to share files using the HTTP protocol. It provides CLI
+    and It comes with a Python/QT5 GUI called _qweborf_, allows using webdav, can
+    compress directories on the fly.  The server has CGI and (x)inetd support, and
+    systemd integration. It can do NAT traversal to share files outside of the local
+    network.
+
+    Weborf can
+    [cache the server generated contents](https://ltworf.github.io/weborf/cache.html)
+    With the expense of a small amount of disk space, this can greatly increase the
+    speed.
+
+    [_weborf_, _weborf-daemon_ and  _qweborf_ are in Debian
+    ](https://tracker.debian.org/pkg/weborf)..
+-   [Zendto](https://zend.to/) (Open source _Unknown licence_)
+    is a PHP service to share files.  It will also integrate with any Active Directory,
+    LDAP or IMAP system.  MyZendTo has a restricted access to your users there is no
+    public acces. Zend needs PHP and a database SQLite or MySQL.
+    -   [ZendTo documentation](https://zend.to/documentation)
 
 # Collaborative editors
 -  [Etherpad](http://etherpad.org/) (Apache License)
@@ -1307,8 +1345,8 @@ _They are self-hosted solutions._
 -  See also {{< iref "#codepad" "codepad" >}} in the
    {{< iref "#pastbin" "pastbin list" >}}).
 -  [CryptPad](https://github.com/xwiki-labs/cryptpad)(AGPL and private licence)
-   is the zero knowledge realtime online node.js collaborative editor, it can use
-   MongoDB or [leveldb](https://en.wikipedia.org/wiki/LevelDB). A docker configuration,
+   is the zero knowledge realtime online _node.js_ collaborative editor, it can use
+   _MongoDB_ or [leveldb](https://en.wikipedia.org/wiki/LevelDB). A docker configuration,
    and an Ansible recipe is also provided.
    [cryptpad](https://cryptpad.fr/)
    is an online service instance that offer encrypted pad to registered user, and
