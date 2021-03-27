@@ -2,8 +2,6 @@
 title: GTK
 ---
 
-{{% toc /%}}
-
 # Glib GObject
 -   {{< wp "GTK+"  "Wikipedia: GTK+" >}}, {{< wp "Glib" >}}, {{< wp "GObject" >}}
 -   [GTK home page](http://www.gtk.org/) (and Gimp toolkit)
@@ -18,8 +16,7 @@ title: GTK
     and libc and is used by GTK+ (and so by gnome) and gnome.<br />
     GObject is used by the programming languages
     {{< iref "programming_languages#vala" "Vala and Genie" >}}
--   [List of Gnome Development Guides
-    ](https://developer.gnome.org/guides)
+-   [List of Gnome Development Guides](https://developer.gnome.org/guides)
 -   Gnome:  [Glib Reference Manual](http://library.gnome.org/devel/glib/stable/)
 -   [GObject Reference Manual](http://developer.gnome.org/gobject/stable/)
 -   Official [GObbject Tutorial](http://developer.gnome.org/gobject/stable/pt02.html)
@@ -69,13 +66,18 @@ title: GTK
     development environment. It was developed to provide a small and
     fast IDE, which has only a few dependencies from other packages.
 
-# Gnome
+# Gnome {#gnome}
 -   [Gnome](http://www.gnome.org/) [
 -   [developer.gnome.org](http://developer.gnome.org) [
 -   [GnomeFiles](http://www.gnomefiles.org/) is the GTK+ software
     repository.
 -   [gnome office](http://www.gnome.org/gnome-office/) (AbiWord,
     Gnumeric, and GNOME-DB)
+-   [List of Gnome Development Guides](https://developer.gnome.org/guides)
+-   [Configuring Desktop with GSettings and dconf - Red Hatdesktop migration and
+    administration guide Chapter 9
+    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/desktop_migration_and_administration_guide/configuration-overview-gsettings-dconf)
+-   [Projects/dconf - GNOME Wiki!](https://wiki.gnome.org/Projects/dconf).
 
 # PyGobject {#pygobject}
 [PyGobject](https://pygobject.readthedocs.io/en/latest/)
