@@ -4,7 +4,7 @@ title: Mail
 
 # SMTP {#smtp}
 
--   Wikipedia: {{< "Simple Mail Transfer Protocol" >}},
+-   Wikipedia: {{< wp "Simple Mail Transfer Protocol" >}},
     {{< wp "Extended_SMTP"  "ESMTP" >}},{{< wp "SMTP Authentication" >}},
     {{< wp "Simple Authentication and Security Layer" >}} (SASL),
     {{< wp "STARTTLS" >}}
@@ -490,6 +490,8 @@ how to deal with root mails sent by cron with the smtp relay agents.
 
 # Mail providers
 -   {{< wp "Comparison of webmail providers" >}}
+-   [Serverlist | dismail.de](https://dismail.de/serverlist.html)
+    gives the security features of email providers.
 -   [Posteo](https://posteo.de/en) uses only open-source software and
     offers support for
     [DNSSEC](https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions)/
