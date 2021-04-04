@@ -50,14 +50,14 @@ SSH, Telnet, {{< iref "ssl" "TLS/SSL" >}},
     {{< wp "Transport layer" >}} _Layer 4_,
     {{< wp " session layer" >}} _layers 5_ , _6 presentation_ and {{< wp "Application layer" >}}
     _layer 7_,
--   UDP protocol is defined in the
-    [rfc 768](http://rfc.net/rfc768.html)
-    an TCP protocol in the
-    [rfc 793](http://rfc.net/rfc768.html).
+-   UDP protocol is defined in the  [rfc 768](https://tools.ietf.org/html/rfc768)
+    an TCP protocol in the [rfc 793]((https://tools.ietf.org/html/rfc/793)
 -   [Cisco: Internetworking Technology Handbook
     ](http://docwiki.cisco.com/wiki/Internetworking_Technology_Handbook).
--   [Kernel Networking
+-   [linux foundation - Kernel Networking
     ](http://www.linuxfoundation.org/collaborate/workgroups/networking/)
+-   [Omnisecure - TCP/IP articles](https://www.omnisecu.com/tcpip/index.php) with
+    explanations OSI and TCP/P layers.
 
 # Bridge
 
@@ -76,7 +76,7 @@ SSH, Telnet, {{< iref "ssl" "TLS/SSL" >}},
 -   [ProxyARP Subnetting HOWTO
     ](http://www.faqs.org/docs/Linux-mini/Proxy-ARP-Subnet.html)
     by Bob Edwards.
--   [Proxy ARP with Linux](http://www.sjdjweis.com/linux/proxyarp/)
+-   [Proxy ARP with Linux](https://www.televationcomm.com/linux/proxyarp/)
     by David Weis.
 -   [Virtual Square
     ](http://wiki.v2.cs.unibo.it/wiki/index.php?title=Main_Page)
@@ -122,28 +122,24 @@ See also {{< iref "proxy#socks_proxy" "Socks Proxy servers" >}}.
     ](http://www.bind9.net/rfc-dhcp) , and
     [DHCP Articles and Links](http://www.bind9.net/dhcp) at bind9.net.
 -   Out of the 56 current dhcp rfcs, you can want to use:
-    -   [RFC 2131 Dynamic Host Configuration
-        Protocol](https://tools.ietf.org/html/rfc2131)
-    -   [RFC 2132 DHCP Options and BOOTP Vendor
-        Extensions](https://tools.ietf.org/html/rfc2132)
+    -   [RFC 2131 Dynamic Host Configuration Protocol
+        ](https://tools.ietf.org/html/rfc2131)
+    -   [RFC 2132 DHCP Options and BOOTP Vendor Extensions
+        ](https://tools.ietf.org/html/rfc2132)
         (supersedes rfc 1497 BOOTP Vendor Information Extensions)
-    -   [RFC 2937 The Name Service Search Option for
-        DHCP](https://tools.ietf.org/html/rfc2937) extended by
-    -   [RFC 3397 DHCP Domain Search
-        Option](https://tools.ietf.org/html/rfc3397)
-    -   [RFC 3004 The User Class Option for
-        DHCP](https://tools.ietf.org/html/http://rfc.net/rfc3004)
-    -   [RFC 3046 DHCP Relay Agent Information
-        Option](https://tools.ietf.org/html/rfc3046)
+    -   [RFC 2937 The Name Service Search Option for DHCP
+        ](https://tools.ietf.org/html/rfc2937) extended by
+    -   [RFC 3397 DHCP Domain Search Option](https://tools.ietf.org/html/rfc3397)
+    -   [RFC 3004 The User Class Option for DHCP
+        ](https://tools.ietf.org/html/http://rfc.net/rfc3004)
+    -   [RFC 3046 DHCP Relay Agent Information Option
+        ](https://tools.ietf.org/html/rfc3046)
         (extend rfc2132)
-    -   [RFC 3397 DHCP Domain Search
-        Option](https://tools.ietf.org/html/rfc3397)
-    -   [RFC 3442 The Classless Static Route Option for DHCP version
-        4](https://tools.ietf.org/html/rfc3442)
-    -   [RFC2855 DHCP for IEEE
-        1394 (FireWire)](https://tools.ietf.org/html/rfc2855)
-    -   [RFC 4390 DHCP over
-        InfiniBand](https://tools.ietf.org/html/rfc4390)
+    -   [RFC 3397 DHCP Domain Search Option](https://tools.ietf.org/html/rfc3397)
+    -   [RFC 3442 The Classless Static Route Option for DHCP version 4
+        ](https://tools.ietf.org/html/rfc3442)
+    -   [RFC2855 DHCP for IEEE 1394 (FireWire)](https://tools.ietf.org/html/rfc2855)
+    -   [RFC 4390 DHCP over InfiniBand](https://tools.ietf.org/html/rfc4390)
 -   [ISC dhcp page](https://www.isc.org/downloads/dhcp/) has
     reference material links and links to their tools suite DHCP server,
     DHCP client, DHCP relay agent.
@@ -151,25 +147,23 @@ See also {{< iref "proxy#socks_proxy" "Socks Proxy servers" >}}.
     implementaion of DHCP Server by Internet Systems Consortium.
     -   [ArchWiki: dhcpd](https://wiki.archlinux.org/index.php/Dhcpd).
     -   [Debian Wiki: DHCP Server](https://wiki.debian.org/DHCP_Server)
--   [dhcpcd](http://roy.marples.name/projects/dhcpcd/index)
+-   [dhcpcd](https://roy.marples.name/projects/dhcpcd/)
     is a full RFC2131 compliant DHCP and DHCPv6
     client and the only open source DHCP client to support out of
-    [RFC2131 Dynamic Host Configuration Protocol
-    ](https://tools.ietf.org/html/rfc2131),
-    [RFC 3004 The User Class Option for DHCP
-    ](https://tools.ietf.org/html/rfc3004),
-    [RFC 3397 DHCP Domain Search Option
-    ](https://tools.ietf.org/html/rfc3397),
+    [RFC2131 Dynamic Host Configuration Protocol](https://tools.ietf.org/html/rfc2131),
+    [RFC 3004 The User Class Option for DHCP](https://tools.ietf.org/html/rfc3004),
+    [RFC 3397 DHCP Domain Search Option](https://tools.ietf.org/html/rfc3397),
     [RFC 3442 The Classless Static Route Option for DHCP version 4
     ](https://tools.ietf.org/html/rfc3442),
-    [RFC 2855 DHCP for IEEE 1394 (FireWire)
-    ](https://tools.ietf.org/html/rfc2855),
+    [RFC 2855 DHCP for IEEE 1394 (FireWire)](https://tools.ietf.org/html/rfc2855),
     [RFC 4390 DHCP over InfiniBand](https://tools.ietf.org/html/rfc4390).
 
     Dhcpd is
     said to be less memory and cpu hungry than the isc dhclient, it
     works under Linux and BSD.
 
+    -   [dhcpd - Git repository](https://roy.marples.name/git/dhcpcd/tree) and
+        [dhcpd - Github mirror](https://github.com/NetworkConfiguration/dhcpcd).
     -   [ArchWiki: dhcpcd](https://wiki.archlinux.org/index.php/Dhcpcd)
     -   Man pages {{< man "dhcpd" >}}, [man: dhcpcd.conf)
 
@@ -199,20 +193,19 @@ See also {{< iref "proxy#socks_proxy" "Socks Proxy servers" >}}.
     {{< wp "Bootstrap Protocol" >}} (Bootp),
 -   [Network Boot and Exotic Root HOWTO
     ](http://tldp.org/HOWTO/Network-boot-HOWTO/index.html) _2002_.
--   [ArchWiki: Diskless system
-    ](https://wiki.archlinux.org/index.php/Diskless_system),
+-   [ArchWiki: Diskless system](https://wiki.archlinux.org/index.php/Diskless_system),
     has a chapter on PXE.
 -   [ArchWiki: Pxe](https://wiki.archlinux.org/index.php/PXE)
--   [Archwiki: Syslinux - Pxelinux](https://wiki.archlinux.org/index.php/Syslinux#PXELINUX)
 -   [Pxelinux](https://www.syslinux.org/wiki/index.php?title=PXELINUX)
     is a SYSLINUX derivative, for booting Linux off a network server.
+-   [Archwiki: Syslinux - Pxelinux
+    ](https://wiki.archlinux.org/index.php/Syslinux#PXELINUX)
 -   [Remote Network Boot via PXE](http://www.kegel.com/linux/pxe.html),
-    [Intel PXE specification
+    [Intel PXE specification](http://www.pix.net/software/pxeboot/archive/pxespec.pdf).
     ](http://www.munts.com/diskless/Docs/pxespec.pdf)
 -   [Debian Installation Guide 4.5. Preparing Files for TFTP Net Booting
-    ](https://www.debian.org/releases/stable/amd64/ch04s05.html)
+    ](https://www.debian.org/releases/stable/amd64/ch04s05)
 -   [Installing Debian using PXE](https://wiki.debian.org/PXEBootInstall)
--   [Installing Debian using BootP](
 -   [Root over nfs clients & server Howto
     ](http://tldp.org/HOWTO/Diskless-root-NFS-HOWTO.html) _1999_,
     [Root over NFS - Another Approach
@@ -235,22 +228,20 @@ See also {{< iref "proxy#socks_proxy" "Socks Proxy servers" >}}.
 
 # HTTP {#http}
 See also {{< iref "file_transfer#http_download" "HTTP file download" >}},
-{{< iref "proxy" "Proxy" >}}.
+{{< iref "proxy" "Proxy" >}}, {{< iref "web_servers" "HTTP daemons"  >}},
+{{< iref "html" "HTML" >}}.
 
 -   {{< wp "Hypertext_Transfer_Protocol"  "Wikipedia: Hypertext Transfer Protocol" >}}
 -   RFC:
-    -   [RFC1945 - HTTP/1.0
-        ](http://www.apps.ietf.org/rfc/rfc1945.html),
-    -   [RFC2616 - HTTP/1.1
-        ](http://www.w3.org/Protocols/rfc2616/rfc2616.html)
+    -   [RFC1945 - HTTP/1.0](https://tools.ietf.org/html/rfc1945).
+    -   [RFC2616 - HTTP/1.1](https://www.w3.org/Protocols/rfc2616/rfc2616.html)
         ([sec 10 Status Code Definitions
-        ](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)),
+        ](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)),
     -   [RFC2617 - HTTP Authentication: Basic and Digest Access
-        ](http://www.apps.ietf.org/rfc/rfc2617.html),
-    -   [RFC1867 - Form-based File Upload in HTML
-        ](http://www.apps.ietf.org/rfc/rfc1867.html).
+        ](https://tools.ietf.org/html/rfc2617),
+    -   [RFC1867 - Form-based File Upload in HTML](https://tools.ietf.org/html/rfc1867).
     -   [RFC3875 - The Common Gateway Interface (CGI) Version 1.1
-        ](http://www.apps.ietf.org/rfc/rfc3875.html)
+        ](https://tools.ietf.org/html/rfc3875)
 -   Http Headers are given in
     {{< wp "List_of_HTTP_headers"  "Wikipedia: List of HTTP headers" >}},
     [The Quick reference to HTTP headers
@@ -270,11 +261,15 @@ See also {{< iref "file_transfer#http_download" "HTTP file download" >}},
     succession of *Location* headers. It can be very useful to see how
     big server redirect a download depending on your ip geographic
     zone.
--   There are many link checkers: [Checklinks
-    ](http://www.jmarshall.com/tools/cl/)
-    is a PERL links checker, [linklint]( http://www.linklint.org/),
-    _linkchecker-web_ and
-    [linkchecker](https://linkchecker.github.io/linkchecker/), .
+
+There are many link checkers:
+-   [Checklinks](http://www.jmarshall.com/tools/cl/) and
+        [linklint]( http://www.linklint.org/) are two old _year 2000 and 2001_
+        PERL links checker, _linklint_ is packaged in Debian.
+-   [linkchecker](https://github.com/linkchecker/linkchecker) (GPL-2.0)
+    is a python link checker. Debian offer  two packages a CLI _linkchecker_ and web
+    interface _linkchecker-web_.
+    -   [linkchecker manual](https://linkchecker.github.io/linkchecker/), .
 -   See also other Python programmatic browsers tools in the
     {{< iref "python_web#web" "Web client side programming section" >}}
 
@@ -295,11 +290,6 @@ See also {{< iref "file_transfer#http_download" "HTTP file download" >}},
     process alive and the gateway talk to that process to serve the request.
     Because the gateway doesn't spawn the processes that serve
     requests, the gateway can run with far less privileges enabled.
-    -   [FastCGI Home at fastcgi.com](http://www.fastcgi.com)
-    -   [Application Libraries / Development Kits | FastCGI
-        ](http://fastcgi.com/drupal/node/5)
-    -   [FastCGI Developer's Kit
-        ](http://fastcgi.com/devkit/doc/fcgi-devel-kit.htm)
 -   {{< wp "SCGI" >}}
     Simple Common Gateway Interface (SCGI) is a protocol similar to
     FastCGI  as an alternative to the CGI protocol.
@@ -348,10 +338,8 @@ are in the {{< iref "netconf" "Network Configuration Section" >}}._
     from
     [iana (internet assigned numbers authority)](http://www.iana.org/)
 -   [GRC](http://www.grc.com/) Port Info Database:
--   [DSHIELD](https://secure.dshield.org/myisc.html)
-    port/ip lookup/search:
--   [Debian: Network Configuration
-    ](https://wiki.debian.org/NetworkConfiguration)
+-   [DSHIELD](https://secure.dshield.org/) port/ip lookup/search:
+-   [Debian: Network Configuration](https://wiki.debian.org/NetworkConfiguration)
 -   [ArchWiki: Router](https://wiki.archlinux.org/index.php/Router).
 
 # IP V6 {#ipv6}
@@ -391,18 +379,14 @@ are in the {{< iref "netconf" "Network Configuration Section" >}}._
 -   [Ubuntu Wiki - IPv6 ](https://wiki.ubuntu.com/IPv6)
 -   [The initscripts-ipv6 Homepage
     ](http://www.deepspace6.net/projects/initscripts-ipv6.html)
--   [Association G6: Livre IPv6
-    ](http://livre.g6.asso.fr/index.php/Table_des_mati%25C3%25A8res)
--   [6DEPLOY-2](http://www.6deploy.org/index.php) :
-    [6DEPLOY-2 Tutorials
-    ](http://www.6deploy.org/index.php?page%3Dtutorials2) list of pdf tutorials
--   [Thorsten - tagged ipv6
-    ](http://yorickdowne.wordpress.com/tag/ipv6/) _around 2010_
--   [Omnisecu.com IPV6 Tutorials
-    ](http://www.omnisecu.com/tcpip/ipv6/index.php).
--   [SI6 ipv6 security articles
-    ](https://www.si6networks.com/publications/articles.html)
-    available with free _(ads powered)_ user registration.
+-   [Association G6: Livre IPv6](http://livre.g6.asso.fr/index.php/Table_des_mati%C3%A8res)
+-   [6DEPLOY-2](http://www.6deploy.eu/) :
+    [6DEPLOY-2 Tutorials](http://www.6deploy.eu/index.php?page=tutorials2) list of pdf tutorials
+-   [Thorsten - tagged ipv6](http://yorickdowne.wordpress.com/tag/ipv6/).
+-   [Omnisecu.com IPV6 Tutorials](http://www.omnisecu.com/tcpip/ipv6/index.php).
+-   [SI6 Networks](https://www.si6networks.com/) network security:
+    [Articles](https://www.si6networks.com/publications/articles/),
+    and see below their {{< iref "#pv6toolkit" "[IPv6 Toolkit" >}}."
 
 ## Ipv6 Tunnels
 ### 6to4 doc
@@ -416,9 +400,8 @@ protocol {{< wp "6in4" >}}. BUt the two names are often used interchangeably.
     ](https://mithrandi.net/blog/2010/05/setting-up-6to4-on-debian/)
 -   [ArchWiki: IPv6 - 6in4 Tunnel
     ](https://wiki.archlinux.org/index.php/IPv6_-_6in4_Tunnel)
--   [shorewall: 6to4 and 6in4 Tunnels
-    ](http://www.shorewall.net/6to4.htm) with a section on [Connecting two IPv6 Networks
-    ](http://www.shorewall.net/6to4.htm#Tunnel6to4).
+-   [shorewall: 6to4 and 6in4 Tunnels](http://www.shorewall.net/6to4.htm) with a section
+    on [Connecting two IPv6 Networks](http://www.shorewall.net/6to4.htm#Tunnel6to4).
 
 ### Tunnel Brokers
 -   Wikipedia: {{< wp "Tunnel broker" >}}, {{< wp "List of IPv6 tunnel brokers" >}}
@@ -441,74 +424,57 @@ protocol {{< wp "6in4" >}}. BUt the two names are often used interchangeably.
 -   [Miredo : Teredo for Linux and BSD](http://www.remlab.net/miredo/)
     used for terredo and packaged in Debian.
 
-    The {{< wp "Teredo_tunneling"  "Teredo IPv6 tunneling protocol" >}}
-    encapsulates IPv6 packets into UDP/IPv4 datagrams, to allow hosts
-    behind NAT devices to access the IPv6 Internet.  Miredo can
-    provide IPv6 connectivity to a dual-stack IPv6/IPv4. It can also
-    operate as a Teredo relay which forwards IPv6 packets between the
-    IPv6 Internet and remote Teredo clients.
+    The {{< wp "Teredo_tunneling" "Teredo IPv6 tunneling protocol" >}} encapsulates IPv6
+    packets into UDP/IPv4 datagrams, to allow hosts behind NAT devices to access the
+    IPv6 Internet.  Miredo can provide IPv6 connectivity to a dual-stack IPv6/IPv4. It
+    can also operate as a Teredo relay which forwards IPv6 packets between the IPv6
+    Internet and remote Teredo clients.
 
 -   [BOSixNet](https://github.com/tehnick/bosixnet)
-    – Build Own IPv6 Network. BOSixNet includes the collection of
-    tools for automatic updating the list of your computers
-    distributed through different networks and connected via NAT.
-    *bosixnet-webui* is the Debian package.
+    – Build Own IPv6 Network. BOSixNet includes the collection of tools for automatic
+    updating the list of your computers distributed through different networks and
+    connected via NAT.  *bosixnet-webui* is the Debian package.
 
 ## IPV6 Testing and tools
--   [test-ipv6.com - Test your IPv6](http://test-ipv6.com/)
-    Test your IPv6 connectivity. It is an ipv4 test client-side
-    javascript.It sends a series of ajax requests are made from the
-    web server, using various DNS names that force the use of IPv6
-    only.  It is also available in ipv6 at
-    [ipv6.test-ipv6.com](http://ipv6.test-ipv6.com/)
--   [AERAsec - IPv4/IPv6 Address Information Page
-    ](http://ipv6.aerasec.de/index2.html),
--   [www.ipv6.bieringer.de (native IPv6 only)
-    ](http://www.ipv6.bieringer.de/)
--   [ipv6.dinhosting.fr - Din'Hosting - Outils pour webmasters
-    ](http://ipv6.dinhosting.fr/)
+-   [test-ipv6.com - Test your IPv6](https://test-ipv6.com/)
+    Test your IPv6 connectivity. It is an ipv4 test client-side javascript.It sends a
+    series of ajax requests are made from the web server, using various DNS names that
+    force the use of IPv6 only.  It is also available in ipv6 at
+    [ipv6.test-ipv6.belwue.net](http://ipv6.test-ipv6.belwue.net/) and other mirrors.
+-   [www.ipv6.bieringer.de (native IPv6 only)](http://www.ipv6.bieringer.de/)
 -   [ipv6calc](http://www.deepspace6.net/projects/ipv6calc.html)
-    is an utility can convert between different formats of IPv4 or
-    IPv6 addresses. It can also show information about the addresses,
-    including who they are assigned to on the Internet.
-    _ipv6calc_ is packaged in debian.
--   [ipv6 calculator](http://www.ipv6calculator.net/)
-    online javascript tool.
+    is an utility can convert between different formats of IPv4 or IPv6 addresses. It
+    can also show information about the addresses, including who they are assigned to on
+    the Internet.  _ipv6calc_ is packaged in debian.
+-   [ipv6 calculator](http://www.ipv6calculator.net/) online javascript tool.
 -   [Online TraceRoute IPv6
     ](http://www.subnetonline.com/pages/ipv6-network-tools/online-ipv6-traceroute.php)
--   [hackertarget.com: check your ports
-    ](http://hackertarget.com/port-check/)
--   [Online IPv6 Port Scanner
-    ](http://ipv6.chappell-family.com/ipv6tcptest/)
-    allow to test from a text browser the  standard
-    or specified list of ports.
--   [ipv6toolkit](https://www.si6networks.com/tools/ipv6toolkit/)
-    [SI6](https://www.si6networks.com/) Networks' IPv6 Toolkit
-    A security assessment and troubleshooting tool for the IPv6
+-   [hackertarget.com: check your ports](http://hackertarget.com/port-check/)
+-   [Online IPv6 Port Scanner](http://ipv6.chappell-family.com/ipv6tcptest/)
+    allow to test from a text browser the standard or specified list of ports.
+-   <a name="ipv6toolkit"></a>[SI6](https://www.si6networks.com/) -
+    [IPv6 Toolkit](https://www.si6networks.com/research/tools/ipv6toolkit/).
+    Networks' IPv6 Toolkit A security assessment and troubleshooting tool for the IPv6
     protocols. _ipv6toolkit_ is packaged in Debian.
 
     List of tools:
 
     -   addr6: An IPv6 address analysis and manipulation tool.
-    -   flow6: A tool to perform a security asseessment of the IPv6
-        Flow Label.
-    -   frag6: A tool to perform IPv6 fragmentation-based attacks and
-        to perform a security assessment of a number of
-        fragmentation-related aspects.
-    -   icmp6: A tool to perform attacks based on ICMPv6 error
-        messages.
-    -   jumbo6: A tool to assess potential flaws in the handling of
-        IPv6 Jumbograms.
+    -   flow6: A tool to perform a security asseessment of the IPv6 Flow Label.
+    -   frag6: A tool to perform IPv6 fragmentation-based attacks and to perform a
+        security assessment of a number of fragmentation-related aspects.
+    -   icmp6: A tool to perform attacks based on ICMPv6 error messages.
+    -   jumbo6: A tool to assess potential flaws in the handling of IPv6 Jumbograms.
     -   na6: A tool to send arbitrary Neighbor Advertisement messages.
-    -   ni6: A tool to send arbitrary ICMPv6 Node Information messages,
-        and assess possible flaws in the processing of such packets.
+    -   ni6: A tool to send arbitrary ICMPv6 Node Information messages, and assess
+        possible flaws in the processing of such packets.
     -   ns6: A tool to send arbitrary Neighbor Solicitation messages.
     -   ra6: A tool to send arbitrary Router Advertisement messages.
     -   rd6: A tool to send arbitrary ICMPv6 Redirect messages.
     -   rs6: A tool to send arbitrary Router Solicitation messages.
     -   scan6: An IPv6 address scanning tool.
-    -   tcp6: A tool to send arbitrary TCP segments and perform a
-        variety of TCP-based attacks.
+    -   tcp6: A tool to send arbitrary TCP segments and perform a variety of TCP-based
+        attacks.
 
 -   [thc-ipv6](https://github.com/vanhauser-thc/thc-ipv6) (AFFERO GPL)
     is an attack toolkit for testing IPv6 and ICMPv6 protocol weaknesses.
@@ -516,27 +482,21 @@ protocol {{< wp "6in4" >}}. BUt the two names are often used interchangeably.
     List of tools:
 
     -   alive6: an effective alive scanning.
-    -   denial6: try a collection of denial-of-service tests against
-        a target.
+    -   denial6: try a collection of denial-of-service tests against a target.
     -   detect-new-ip6: detect new ip6 devices which join the network.
     -   dnsdict6: parallelized dns ipv6 dictionary bruteforcer.
-    -   dos-new-ip6: detect new ip6 devices and tell them that their
-        chosen IP collides on the network (DOS).
+    -   dos-new-ip6: detect new ip6 devices and tell them that their chosen IP collides
+        on the network (DOS).
     -   exploit6: test known ipv6 vulnerabilities against a target.
-    -   fake_mld6: announce yourself in a multicast group of your
-        choice on the net.
+    -   fake_mld6: announce yourself in a multicast group of your choice on the net.
     -   fake_router6: announce yourself as a router on the network.
-    -   flood_advertise6: flood a target with random neighbor
-        advertisements.
-    -   flood_router6: flood a target with random router
-        advertisements.
-    -   implementation6: performs various implementation checks on
-        ipv6.
+    -   flood_advertise6: flood a target with random neighbor advertisements.
+    -   flood_router6: flood a target with random router advertisements.
+    -   implementation6: performs various implementation checks on ipv6.
     -   parasite6: icmp neighbor solitication/advertisement spoofer.
-    -   redir6: redirect traffic to you intelligently
-        (man-in-the-middle) with a clever icmp6 redirect spoofer.
-    -   rsmurf6: remote smurfer (known to work only against Linux
-        at the moment).
+    -   redir6: redirect traffic to you intelligently (man-in-the-middle) with a clever
+        icmp6 redirect spoofer.
+    -   rsmurf6: remote smurfer (known to work only against Linux at the moment).
     -   thcping6: sends a hand crafted ping6 packet.
 
 # IPv6 Address Scopes:
@@ -562,15 +522,14 @@ This is MAC Address based IPv6 Address used in
 
 To turn into a 64-bit EUI-64 address a MAC address follow the recipe:
 
--   Suppose your MAC address is  00:0c:29:0c:47:d5
+-   Suppose your MAC address is 00:0c:29:0c:47:d5
 -   insert FF:FE in the middle: 00:0c:29:ff:fe:0c:47:d5
--   Invert the the local link flag which is bit seven of the sixty four
-    bit MAC. here it is the third bit of the second hexadecimal digit
-    0, which become 0010 or 2 in hexadecimal.
-    So the EUI64 suffix is  02:0c:29:ff:fe:0c:47:d5
--   If you use it in a link local address you obtain
-    fe80::20c:29ff:fe0c:47d5/10 or if you use it in a 2001:db8:1:2::/64
-    network it yields the address 2001:db8:1:2:20c:29ff:fe0c:47d5/64
+-   Invert the the local link flag which is bit seven of the sixty four bit MAC. here it
+    is the third bit of the second hexadecimal digit 0, which become 0010 or 2 in
+    hexadecimal.  So the EUI64 suffix is 02:0c:29:ff:fe:0c:47:d5
+-   If you use it in a link local address you obtain fe80::20c:29ff:fe0c:47d5/10 or if
+    you use it in a 2001:db8:1:2::/64 network it yields the address
+    2001:db8:1:2:20c:29ff:fe0c:47d5/64
 
 
 If you want a tool to compute for you, use
