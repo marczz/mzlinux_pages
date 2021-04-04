@@ -26,6 +26,8 @@ protocols, some referenced in other pages it groups
 BGP, {{< iref "#dhcp" "DHCP" >}},
 {{< iref "dns" "DNS" >}},
 {{< iref "file_transfer#ftp" "FTP" >}},
+{{< iref "#gemini" "Gemini" >}},
+{{< iref "#gopher" "GOPHER" >}},
 {{< iref "#http" "HTTP" >}},
 {{< iref "mail" "IMAP" >}},
 {{< iref "irc" "IRC" >}},
@@ -51,7 +53,7 @@ SSH, Telnet, {{< iref "ssl" "TLS/SSL" >}},
     {{< wp " session layer" >}} _layers 5_ , _6 presentation_ and {{< wp "Application layer" >}}
     _layer 7_,
 -   UDP protocol is defined in the  [rfc 768](https://tools.ietf.org/html/rfc768)
-    an TCP protocol in the [rfc 793]((https://tools.ietf.org/html/rfc/793)
+    an TCP protocol in the [rfc 793](https://tools.ietf.org/html/rfc/793)
 -   [Cisco: Internetworking Technology Handbook
     ](http://docwiki.cisco.com/wiki/Internetworking_Technology_Handbook).
 -   [linux foundation - Kernel Networking
@@ -308,6 +310,48 @@ There are many link checkers:
         ](https://github.com/unbit/uwsgi/blob/master/contrib/uwsgi_dynamic_client.c).
         from [uwsgi repository
         ](https://github.com/unbit/uwsgi).
+
+# Gemini {#gemini}
+{{< wp "Gemini_(protocol)" "Gemini" >}} is an application layer protocol for distributed
+hypertext. It aims at being simpler and more secure than http/html, and is inspired by
+{{< iref "#gopher" "Gopher" >}}, but uses TLS.
+
+In the same way that HTTP distribute information in WWW, Gemini gives access to
+information in {{< wp "Gemini Space" >}}.
+
+-   [Awesome Gemini](https://github.com/kr1sp1n/awesome-gemini)
+-   [Circumlunar Space - Project Gemini](https://gemini.circumlunar.space/)
+    -   [Project Gemini FAQ](https://gemini.circumlunar.space/docs/faq.html)
+    -   [Gemini documentation](https://gemini.circumlunar.space/docs/)
+    -   [Gemini software](https://gemini.circumlunar.space/software/)
+    -   [Known Gemini servers](https://gemini.circumlunar.space/servers/)
+-   [Wikipedia:List of Gemini Software
+    ](https://en.wikipedia.org/wiki/Gemini_(protocol)#Software).
+-   [Gemini Wiki Space](https://transjovian.org:1965/gemini/) List of Gemini :
+    -   [Servers](https://transjovian.org:1965/gemini/page/Servers)
+    -   [Clients](https://transjovian.org:1965/gemini/page/Clients)
+    -   [Web Proxies](https://transjovian.org:1965/gemini/page/Web%20Proxies)
+    -   [Other Software](https://transjovian.org:1965/gemini/page/Other%20Software)
+    -   [Sites](https://transjovian.org:1965/gemini/page/Sites)
+    -   [Chat](https://transjovian.org:1965/gemini/page/Chat)
+-   [portal.mozz.us - Gemini to HTTP proxy](https://portal.mozz.us/)
+-   [proxy.vulpes.one - Gemini to HTTP proxy ](https://proxy.vulpes.one/)
+-   [geminispace.info search engine](https://gemini.circumlunar.space/x/geminispace.info/)
+-   [Gemini mailing list](https://lists.orbitalfox.eu/listinfo/gemini)
+-   [Medusae Gemini Directory](https://portal.mozz.us/gemini/medusae.space/) (gemini://medusae.space/)
+    a catalog of capsules organised into categories.
+# Gopher {#gopher}
+The {{< wp "Gopher" >}} internet protocol released in mid-1991 is a predecessor of World
+Wide Web designed for distributing, searching, and retrieving documents in IP networks.
+
+Gopher is defined by [rfc 1436](https://tools.ietf.org/html/rfc/1436) _year 1993_.
+
+A list of gopher software, browser support, http gateways, and gopher server is given in
+[Wikipedia gopher page](https://en.wikipedia.org/wiki/Gopher_(protocol)#Client_software).
+
+-   The master Gopherspace search engine is
+    [Veronica](https://en.wikipedia.org/wiki/Veronica_(search_engine)).
+
 
 # IP routing
 _The {{< iref "netconf" "network management utilities" >}}
