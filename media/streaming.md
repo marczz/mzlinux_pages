@@ -305,9 +305,25 @@ Wikipedia has a {{< wp "Pulseaudio" >}} page.
 ## PipeWire {#pipewire}
 -   [PipeWire Wiki - Freedesktop
     ](https://gitlab.freedesktop.org/pipewire/pipewire/-/wikis/home)
--   [PipeWire - ArchWiki](https://wiki.archlinux.org/index.php/PipeWire)
+-   [PipeWire README
+    ](https://gitlab.freedesktop.org/pipewire/pipewire/-/blob/master/README.md)
+-   [PipeWire - ArchWiki](https://wiki.archlinux.org/index.php/PipeWire),
+    [PipeWire/Examples](https://wiki.archlinux.org/title/PipeWire/Examples)
 -   [Pipewire - Gentoo Wiki](https://wiki.gentoo.org/wiki/Pipewire#Replacing_PulseAudio)
 -   [Fedora Switch to Pipewire](https://fedoraproject.org/wiki/Changes/DefaultPipeWire).
+
+The release 3.25 add pw-loopback tool and support module-loopback. pw-loopback
+Sends the captured data from a source directly to a sink.
+
+It uses an input and output stream so the source and sink can be moved in pavucontrol,
+channel remixing is possible and the volume can be adjusted.
+
+The module loopback and the command `pw-loopback` are
+described in pipewire wiki [in the page Migrate-PulseAudio
+](https://gitlab.freedesktop.org/pipewire/pipewire/-/wikis/Migrate-PulseAudio#module-loopback).
+Examples of use of pw-looback are in the page [coupled streams virtual devices
+](https://gitlab.freedesktop.org/pipewire/pipewire/-/wikis/Virtual-Devices#loopback)
+
 
 ## Video and Music
 -   <a name="icecast"></a>{{< wp "Icecast" >}} (GPL) streaming server
