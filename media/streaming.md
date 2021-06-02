@@ -35,26 +35,22 @@ See also {{< iref "ffmpeg" "FFmpeg section" >}},
     ](http://gstreamer.freedesktop.org/data/doc/gstreamer/head/manual/html/section-checklist-applications.html).
     They are:
 
+    _Gstreamer_ provides some [Command line tools
+    ](https://gstreamer.freedesktop.org/documentation/tools/index.html?gi-language=c)
     gst-inspect
-    :   [gst-inspect(1)
-        ](http://manpages.debian.org/cgi-bin/man.cgi?query=gst-inspect(1)
+    :   [gst-inspect-1.0
+        ](https://gstreamer.freedesktop.org/documentation/tools/tools/gst-inspect.html)
         print info about a GStreamer plugin. se also
         [using Gstreamer
-        ](http://gstreamer.freedesktop.org/data/doc/gstreamer/head/faq/html/chapter-using.html)
-
-    gst-visualise
-    :   [gst-visualise(1)
-        ](http://manpages.debian.org/cgi-bin/man.cgi?query=gst-visualise(1))
-        is used to display a graphical visualisation of an audio stream.
-
-    gst-launch, gst-xmllaunch
+        ](http://gstreamer.freedesktop.org/data/doc/gstreamer/head/faq/html/chapter-using.html).
+    ges-launch
+    :   [gst-launch-1.0]
+        (https://gstreamer.freedesktop.org/documentation/tools/tools/gst-launch.html)
+        creates a multimedia timeline and plays it back, or renders it to the specified format.
+    gst-launch
     :   [gst-launch(1)
-        ](http://manpages.debian.org/cgi-bin/man.cgi?query=gst-launch(1))
-        and
-        [gst-xmllaunch(1)
-        ](http://manpages.debian.org/cgi-bin/man.cgi?query=gst-xmllaunch(1))
-        are tools that builds and runs basic
-        {{< iref "#gstreamer" "GStreamer" >}}
+        ](https://gstreamer.freedesktop.org/documentation/tools/tools/gst-launch.html)
+        is a tools that builds and runs basic {{< iref "#gstreamer" "GStreamer" >}}
         pipelines it allows playing and transforming sounds and images.
 
     They are many clients available, some listed below, but to
