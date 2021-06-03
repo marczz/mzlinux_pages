@@ -30,28 +30,32 @@ See also {{< iref "ffmpeg" "FFmpeg section" >}},
     on media data. Applications using this library can do real-time
     sound processing and playing videos. New data types or processing
     capabilities can be added by installing new plugins.
-    The Debian package _gstreamer-tools_ include the basic
-    [command-line tools provided with GStreamer
-    ](http://gstreamer.freedesktop.org/data/doc/gstreamer/head/manual/html/section-checklist-applications.html).
-    They are:
+    The Debian package _gstreamer1.0-tools_ include the basic
+    command-line tools provided with GStreamer
+
 
     _Gstreamer_ provides some [Command line tools
-    ](https://gstreamer.freedesktop.org/documentation/tools/index.html?gi-language=c)
+    ](https://gstreamer.freedesktop.org/documentation/tools/index.html)
     gst-inspect
     :   [gst-inspect-1.0
-        ](https://gstreamer.freedesktop.org/documentation/tools/tools/gst-inspect.html)
+        ](https://gstreamer.freedesktop.org/documentation/tools/gst-inspect.html)
         print info about a GStreamer plugin. se also
         [using Gstreamer
         ](http://gstreamer.freedesktop.org/data/doc/gstreamer/head/faq/html/chapter-using.html).
     ges-launch
-    :   [gst-launch-1.0]
-        (https://gstreamer.freedesktop.org/documentation/tools/tools/gst-launch.html)
+    :   [ges-launch-1.0
+        ](https://gstreamer.freedesktop.org/documentation/tools/ges-launch.html)
         creates a multimedia timeline and plays it back, or renders it to the specified format.
     gst-launch
     :   [gst-launch(1)
-        ](https://gstreamer.freedesktop.org/documentation/tools/tools/gst-launch.html)
+        ](https://gstreamer.freedesktop.org/documentation/tools/gst-launch.html)
         is a tools that builds and runs basic {{< iref "#gstreamer" "GStreamer" >}}
         pipelines it allows playing and transforming sounds and images.
+    gst-stats
+    :   A terminal app that shows summary/running stats.
+    gst-typefind
+    :   uses  the  GStreamer type finding system to determine the relevant
+        GStreamer plugin to parse or decode a file, and the corresponding media type.
 
     They are many clients available, some listed below, but to
     experiment with gstreamer you need a command line tool like
@@ -75,21 +79,21 @@ See also {{< iref "ffmpeg" "FFmpeg section" >}},
     {{< iref "media_players#towel" "Towel" >}}.
 
     [Gstreamer Documentation](http://gstreamer.freedesktop.org/documentation/):
-    [Overview of all Plug-ins
-    ](http://gstreamer.freedesktop.org/documentation/plugins.html),
-    [GStreamer Core Plugins Reference
-    ](http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gstreamer-plugins/html/),
-    [GStreamer Base Plugins Reference
-    ](http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-base-plugins/html/),
-    [GStreamer Good Plugins Reference
-    ](http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-good-plugins/html/),
-    [GStreamer Ugly Plugins Reference
-    ](http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-ugly-plugins/html/),
-    [GStreamer Bad Plugins Reference
-    ](http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-bad-plugins/html/)
+    -   [Gstreamer tutorials
+        ](https://gstreamer.freedesktop.org/documentation/tutorials/index.html)
+    -   [List of all Plug-ins
+        ](https://gstreamer.freedesktop.org/documentation/plugins_doc.html),
+        [GStreamer Core Plugins Reference
+        ](http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gstreamer-plugins/html/),
+        [GStreamer Base Plugins Reference
+        ](http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-base-plugins/html/),
+        [GStreamer Good Plugins Reference
+        ](http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-good-plugins/html/),
+        [GStreamer Ugly Plugins Reference
+        ](http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-ugly-plugins/html/),
+        [GStreamer Bad Plugins Reference
+        ](http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-bad-plugins/html/)
 
--   [Music Browser](http://musicbrowser.sourceforge.net/)
-    is a light-weight web-based browser and streamer
 -   [streamripper](http://streamripper.sourceforge.net/) is a
     command-line tool that record MPEG III and OGG  streams. _last
     commit 2010_.
@@ -107,12 +111,10 @@ See also {{< iref "ffmpeg" "FFmpeg section" >}},
 -   [Apache MusicIndex](http://www.parisc-linux.org/~varenet/musicindex/)
     is an apache module that allows to display and stream the directory tree of your
     music collection.
--   <a name="cherrymusic"></a>[CherryMusic
-    ](http://www.fomori.org/cherrymusic/) (GPL)
-    is a music streaming server written in python. It lets you remotely
-    stream, browse and manage your music collection. It is intended to
-    be an alternative to streaming services like Last.fm, Spotify and
-    Grooveshark.
+-   <a name="cherrymusic"></a>[CherryMusic](https://github.com/devsnd/cherrymusic) (GPL)
+    is a music streaming server written in python. It lets you remotely stream, browse
+    and manage your music collection. It is intended to be an alternative to streaming
+    services like Last.fm, Spotify and Grooveshark.
     -   [ArchWiki - CherryMusic
         ](https://wiki.archlinux.org/index.php/CherryMusic)
 -   <a name="groovebasin"></a>[GrooveBasin](https://github.com/andrewrk/groovebasin)
