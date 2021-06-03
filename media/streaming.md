@@ -73,7 +73,6 @@ See also {{< iref "ffmpeg" "FFmpeg section" >}},
     {{< iref "media_players#exaile" "Exaile" >}},
     {{< iref "sound_edit#jokosher" "Jokosher" >}},
     {{< iref "video_edit#pitivi" "PiTiVi" >}},
-    [OggConvert](node/sound_edit#oggconvert "internal reference"),
     {{< iref "video_edit#thoggen" "Thoggen" >}},
     {{< iref "media_players#totem" "Totem" >}},
     {{< iref "media_players#towel" "Towel" >}}.
@@ -97,11 +96,10 @@ See also {{< iref "ffmpeg" "FFmpeg section" >}},
 -   [streamripper](http://streamripper.sourceforge.net/) is a
     command-line tool that record MPEG III and OGG  streams. _last
     commit 2010_.
--   [TomaHawk](http://tomahawk-player.org/) (GPL)
-    is a multisource, multi-platform media player.
-    It can hook via plugins on numerous source API,
-    including {{< iref "#ampache" "ampache" >}}
-    and owncloud.
+-   <a name="tomahawk"></a>[TomaHawk](http://tomahawk-player.org/) (GPL)
+    _seems abandonned in 2020_
+    is a multisource, multi-platform media player.  It can hook via plugins on numerous
+    source API, including {{< iref "#ampache" "ampache" >}} and owncloud.
 
 # Stream servers {#streamservers}
 ## Music only
@@ -163,22 +161,25 @@ need transcoding.
     mysql/mariadb server and
     [docker-ampache-mysql](https://github.com/jgoerzen/docker-ampache-mysql)
     which provides an internal an embedded MariaDB server.
--   Some players can interface to ampache through the XML api, like:
-    [viridian](http://viridian.daveeddy.com/),
+
+### Ampache clients.
+-   [Ampache Wiki: Clients](https://github.com/ampache/ampache/wiki/Clients).
+-   Some players can interface to ampache through the XML api you can find
+    a [list on Ampache wiki](https://github.com/ampache/ampache/wiki/client-api), like:
     {{< iref "media_players#mpd" "mpd" >}},
     {{< iref "media_players#vlc" "VideoLan Client (VLC)" >}}
     _for playlist only, not the xml api_,
     {{< iref "media_players#amarok" "Amarok" >}} or
     {{< iref "media_players#clementine" "Clementine" >}},
+    {{< iref "#tomahawk" "Tomahawk" >}},
     {{< iref "media_players#rhythmbox" "Rhythmbox" >}}
     can play ampache streams thru a plugin,
-    [Viridian](http://viridian.daveeddy.com/about/) a python/pygtk client,
-    [TomaHawk](https://github.com/tomahawk-player/tomahawk) or the
-    [Quickplay light interface](http://quickplay.ampache.org/).
+-   [Viridian](http://viridian.daveeddy.com/about/) (BSD 3-clause license)
+    is a python/pygtk ampache client.
 -   [Ampyche](https://github.com/tych0/ampyche)
     ([Beerware License](http://people.freebsd.org/~phk/))
     by Tycho Andersen is a python "binding" for the ampache API.
--   [amdroid](http://amdroid.ampache.org/),
+-   [ampdroid](https://github.com/4phun/amproid) (GPL-3.0),
     [ampache.net
     ](https://play.google.com/store/apps/details?id=johnmooreampachenet.johnmooreampachenet),
     [justplayer
@@ -191,12 +192,7 @@ need transcoding.
 -   For any system you can also use any client that understand UpNP
     or DAAP or Subsonic API, if you have
     [enabled the API in ampache](https://github.com/ampache/ampache/wiki/API).
--   Ampache combined with {{< iref "#coherence" "coherence UPnP/DLNA server" >}} provide
-    [Ampache-Coherence DLNA/UPnP MediaServer
-    ](https://github.com/ampache/ampache/wiki/Coherence),
-    It is also described in the [Coherence Wiki
-    ](http://coherence-project.org/wiki) in the page
-    [MediaServer: Ampache](http://coherence-project.org/wiki/Ampache).
+
 
 ### PulseAudio {#pulseaudio}
 [PulseAudio](http://www.freedesktop.org/wiki/Software/PulseAudio/)
