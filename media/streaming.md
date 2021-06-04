@@ -154,8 +154,8 @@ shoutcast server.
     This plugin is
     to play mp3 encoded sounds at 44 khz sample rate, other formats (ogg, or even mp3 48khz)
 need transcoding.
--   _Ampache_ can  [control multiple mpd instances on the network
-    ](http://mpd.wikia.com/wiki/Client:Ampache)
+-   _Ampache_ can  control multiple mpd instances on the network, it is listed in the
+    [MPD clients](https://mpd.fandom.com/wiki/Clients)
 -   John Goerzen has written two Docker images for _Ampache_,
     [docker-ampache](https://github.com/jgoerzen/docker-ampache) which need an external
     mysql/mariadb server and
@@ -163,6 +163,9 @@ need transcoding.
     which provides an internal an embedded MariaDB server.
 
 ### Ampache clients.
+-   For any system you can also use any client that understand UpNP
+    or DAAP or Subsonic API, if you have
+    [enabled the API in ampache](https://github.com/ampache/ampache/wiki/API).
 -   [Ampache Wiki: Clients](https://github.com/ampache/ampache/wiki/Clients).
 -   Some players can interface to ampache through the XML api you can find
     a [list on Ampache wiki](https://github.com/ampache/ampache/wiki/client-api), like:
@@ -174,24 +177,34 @@ need transcoding.
     {{< iref "#tomahawk" "Tomahawk" >}},
     {{< iref "media_players#rhythmbox" "Rhythmbox" >}}
     can play ampache streams thru a plugin,
--   [Viridian](http://viridian.daveeddy.com/about/) (BSD 3-clause license)
+-   [Viridian](http://viridian.daveeddy.com/) (BSD 3-clause license)
     is a python/pygtk ampache client.
 -   [Ampyche](https://github.com/tych0/ampyche)
     ([Beerware License](http://people.freebsd.org/~phk/))
     by Tycho Andersen is a python "binding" for the ampache API.
--   [ampdroid](https://github.com/4phun/amproid) (GPL-3.0),
-    [ampache.net
-    ](https://play.google.com/store/apps/details?id=johnmooreampachenet.johnmooreampachenet),
-    [justplayer
-    ](https://play.google.com/store/apps/details?id=jp.co.kayo.android.localplayer),
-    and [lullaby 4 Ampache
-    ](https://play.google.com/store/apps/details?id=com.blackspruce.lullaby)
-    are android clients for ampache.
+-   [GitHub - ampache-xbmc-plugin](https://github.com/ampache/ampache-xbmc-plugin)
+    KODI plugin for Ampache.
+
+### android clients for ampache
+More on ampache wiki, you can also use android clients for subsonic, UpNP/DLNA, DAAP if
+you have enabled these API.
+_
+-   [GitHub - meandor/ampdroid](https://github.com/meandor/ampdroid) (MIT license)
+    by Daniel Schruhl, there is also an other repository:
+    [4phun/ampdroid](https://github.com/4phun/amproid) (GPL-3.0) this last is on
+    [Amproid on Google Play
+    ](https://play.google.com/store/apps/details?id=com.pppphun.amproid),
+-   [justplayer
+    ](https://play.google.com/store/apps/details?id=jp.co.kayo.android.localplayer)
+    last release 2015, no longer developped in the [Bitbucket repository
+    ](https://bitbucket.org/yokmama/just-player/).
+-   [reactive-ampache · GitLab](https://gitlab.com/antoniotari/reactive-ampache/) or
+    (GPL v3.0) [named power-ampache on f-droid
+    ](https://f-droid.org/en/packages/com.antoniotari.reactiveampacheapp/).
+
 
 ### Ampache API and plugins
--   For any system you can also use any client that understand UpNP
-    or DAAP or Subsonic API, if you have
-    [enabled the API in ampache](https://github.com/ampache/ampache/wiki/API).
+
 
 
 ### PulseAudio {#pulseaudio}
@@ -233,10 +246,7 @@ Wikipedia has a {{< wp "Pulseaudio" >}} page.
     ](https://wiki.archlinux.org/index.php/PulseAudio/Examples),
     [PulseAudio/Troubleshooting
     ](https://wiki.archlinux.org/index.php/PulseAudio/Troubleshooting).
--   [pamixer](https://github.com/cdemoulins/pamixer)(GPL) and
-    [ponymix](https://github.com/falconindy/ponymix) are
-    two command line mixers for pulseaudio, but you can also use _amixer_.
--   [mpd wiki: how to set mpd to use Pulseaudio](http://mpd.wikia.com/wiki/PulseAudio)
+-   [mpd wiki: how to set mpd to use Pulseaudio](https://mpd.fandom.com/wiki/PulseAudio)
 -   [Linux MAO PulseAudio
     ](http://www.linuxmao.org/tikiwiki/tiki-index.php?page=PulseAudio)
     (français) translated and adapted for gentoo in
