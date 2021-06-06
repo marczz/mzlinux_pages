@@ -443,9 +443,8 @@ and broadcasting of digital media which is used by {{< wp "DLNA" >}} devices.
     in Python. It provides a Media Server and Media Renderer to play medias,
     and a Media Applet to start/stop media servers/renderers. _no
     longer active_
--   <a name="cohen"></a>[Cohen](https://pypi.python.org/pypi/Cohen).
--   <a name="coherence"></a>[Coherence](http://coherence-project.org/)
-    (MIT License) is a UPnP/DLNA Framework that provides a
+-   <a name="coherence"></a>[Coherence](https://github.com/coherence-project/Coherence)
+    (MIT License) was an UPnP/DLNA Framework that provides a
     server. Coherence developper resigned, and the development ceased
     in 2014, but there are some maintenance commits in the repository that merge the
     change made by  {{< iref "#cohen" "Cohen" >}} a fork of
@@ -453,10 +452,10 @@ and broadcasting of digital media which is used by {{< wp "DLNA" >}} devices.
     -   [Github: Coherence
         ](https://github.com/coherence-project/Coherence)
         record the last state of the abandonned Coherence project.
+-   <a name="cohen"></a>[Cohen](https://cohen.readthedocs.io/en/latest/) (MIT License).
     -   [Github: Cohen](https://github.com/unintended/Cohen).
-     -  [Cohen manual](https://cohen.readthedocs.org/en/latest/)
-     -  [Coherence](https://pypi.org/project/Coherence/) and
-        [Cohen](https://pypi.python.org/pypi/Cohen) are on Pypi.
+    -   [Cohen manual](https://cohen.readthedocs.org/en/latest/)
+    -   [Cohen](https://pypi.python.org/pypi/Cohen) is on Pypi.
 -   [Emby](https://emby.media/) (GPL)
     is an personal media server written in C#. It has clients for many platforms like
     html5 server, android, ipad, windows and many more. It is used to organize personal
@@ -484,20 +483,16 @@ and broadcasting of digital media which is used by {{< wp "DLNA" >}} devices.
 -   <a name="mediatomb"></a>[MediaTomb](http://mediatomb.cc/) (GPL)
     is an UPnP AV Mediaserver for Linux. It is not updated since 2010,
     and continued by {{< iref "#gerbera" "Gerbera" >}}.
--   [ReadyMedia previously MiniDLNA
-    ](http://sourceforge.net/projects/minidlna/) (GPL)
+-   [ReadyMedia previously MiniDLNA](http://sourceforge.net/projects/minidlna/) (GPL)
     is server software with the aim of being fully compliant with DLNA/UPnP-AV
     clients. It is developed by a NETGEAR employee for the ReadyNAS product
-    line. _active in 2018_
+    line. _active in 2020_
     -   [ReadyMedia git repository
         ](https://sourceforge.net/p/minidlna/git/ci/master/tree/)
     -   [ReadyMedia news
         ](http://sourceforge.net/p/minidlna/git/ci/master/tree/NEWS)
     -   [Webmin plugin for miniDLNA
         ](http://sourceforge.net/projects/minidlnawebmin/)
-    -   A [comparison of Mediatomb vs. MiniDLNA
-        ](http://blog.flexion.org/2009/12/18/mediatomb-minidlna/)
-        _outdated 2009!_
 -   {{< iref "media_players#mythtv" "MythTV" >}}
     has a [builtin UPnP server](https://www.mythtv.org/wiki/UPnP).
 -   <a name=pulseaudio-dlna"></a>
@@ -519,10 +514,8 @@ and broadcasting of digital media which is used by {{< wp "DLNA" >}} devices.
 -   [uShare _GeexBox page_](http://ushare.geexbox.org/) (GPL)
     is an Upnp (TM) A/V Media Server based on
     {{< iref "#gmediaserver" "GmediaServer" >}}.
-    -    [nas-central: Ushare - UPnP Media Server for Linux
-         ](http://buffalo.nas-central.org/wiki/Ushare_-_UPnP_Media_Server_for_Linux).
 -   {{< iref "media_players#kodi" "Kodi (Xbmc)" >}}
-    has a [builtin UPnP server](http://kodi.wiki/view/UPnP/Server).
+    has a [builtin UPnP server](https://kodi.wiki/view/UPnP).
 
 ### Rygel {#rygel}
 [Rygel](https://wiki.gnome.org/action/show/Projects/Rygel)
@@ -578,11 +571,13 @@ Taken from the [Rygel Wiki - features
 -   Standalone MediaRenderer plugin based on [GStreamer playbin
     ](http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-base-plugins/html/gst-plugins-base-plugins-playbin.html){.http}
     element.
--   Export of media players that implement [MPRIS2](http://www.mpris.org/2.0/spec/)
-    D-Bus interface, as MediaRenderer devices.
+-   Export of media players that implement
+    {{< iref "media_players#mpris" "Mpris specification" >}} D-Bus interface,
+    as MediaRenderer devices.
 
 ## UPnP media renderers (clients): {#upnp_media_clients}
 
+-   {{< wp "List_of_UPnP_AV_media_servers_and_clients#UPnP_AV_clients" "Wikipedia list of UPnP clients" >}}.
 -   [djmount](http://djmount.sourceforge.net/) (GPL)
     is an UPnP AV client. It mounts as a Linux filesystem the media content of
     compatible UPnP AV devices. _djmount devellopement on sourceforge stopped in 2006,
@@ -593,11 +588,12 @@ Taken from the [Rygel Wiki - features
 -   [eezpnp](http://www.eezupnp.de/) (Free but not open source ?)
     is a control point written in Java.
 -   [GMediaRender](http://gmrender.nongnu.org/) (GPL)
-    is a UPnP media renderer for Linux, It provides UPnP controllers to render media
-    content from a UPnP media server. _Like {{< iref "#gmediaserver" "GMediaServer" >}} this
-    project is no longer maintained and is not updated since 2007 and still in debian_.
+    is an UPnP media renderer for Linux, It provides UPnP controllers to render media
+    content from a UPnP media server. _Like {{< iref "#gmediaserver" "GMediaServer" >}}
+    this project is no longer maintained and is not updated since 2007_.
     -   [gmrender-resurrect](https://github.com/hzeller/gmrender-resurrect)
-        is a newer fork of gmediarender.
+        is a newer fork of gmediarender _active in 2021_, it is in the Debian package
+        _gmediarender_.
 -   _rygel-playbin_ is a media renderer par of the {{< iref "#rygel" "Rygel" >}}
     upnp media server.
 -   [simple-dlna-browser
@@ -614,23 +610,24 @@ These streaming server acts as  UPnP media renderers.
 -   {{< iref "media_players#banshee" "Banshee" >}} a mono
     player.
 -   {{< iref "media_players#kodi" "Kodi (Xbmc)" >}}
-    can [act as an UPnP client](https://kodi.wiki/view/UPnP/Client)
+    can [act as an UPnP client](https://kodi.wiki/view/UPnP)
     that can be controlled by an UPnP control point.
 -   {{< iref "media_players#mpd" "MPD" >}}
     can natively read UPnP streams on the local network with the native upnp plugin but
-    there is also a frontend to serve UPnP content _upmdcli_ the difference between the
-    two approaches are described in [MPD and UPnP - umpdcli or mpd upnp
-    ](http://www.lesbonscomptes.com/upmpdcli/upmpdcli-or-mpdupnp.html)
-    -   [upmpdcli](http://www.lesbonscomptes.com/upmpdcli/) (GPL)
+    there is also a frontend to serve UPnP content _upmdcli_.  The difference between the
+    two approaches are described in [Libupnpp, Upmpdcli and Sc2mpd Documentation
+    ](https://www.lesbonscomptes.com/upmpdcli/pages/docs.html)
+    -   [upmpdcli](https://www.lesbonscomptes.com/upmpdcli/) (GPL)
         is a UPnP Media Renderer front-end for MPD written in C++, It supports UPnP
         gapless track transitions and the OpenHome Media services (including a Radio
         service to listen to Internet streams).
     -   [Upmpdcli downloads](https://www.lesbonscomptes.com/upmpdcli/downloads.html).
 -   {{< iref "media_players#rhythmnbox" "Rhythmnbox" >}} can play UPnP medias, and DAAP
     via a plugin which uses _libdmapsharing_.
--   {{< iref "media_players#totem" "Totem" >}} has a DLNA plugins from
-    {{< iref "#coherence" "coherence project" >}} which allows it to work as UPnP media
-    client.
+-   {{< iref "media_players#totem" "Totem" >}} has a [DLNA plugins
+    ](https://help.gnome.org/users/totem/stable/totem-plugins.html.en#totem-plugins-coherence)
+    for {{< iref "#coherence" "coherence project" >}} or
+    {{<  iref "#cohen"  "cohen" >}} which allows it to work as UPnP media client.
 -   {{< iref "media_players#vlc" "VLC" >}} can play UPnP medias since 1.2.0 release.
 -   {{< iref "media_players#kodi" "Kodi" >}} can play UPnP medias.
 
@@ -667,8 +664,7 @@ application.
     35M shr on may 2018 for 1.2.11, which is very heavy for a control point.
 
 -   {{< iref "media_players#kodi" "Kodi" >}}
-    can  [act as an UPnP Control Point
-    ](https://kodi.wiki/view/UPnP/Client#Sending_video_to_other_UPnP_targets).
+    can  [act as an UPnP Control Point](https://kodi.wiki/view/UPnP/Client).
 
 ### Android and IOS control points and renderers
 More control points and server are in the
