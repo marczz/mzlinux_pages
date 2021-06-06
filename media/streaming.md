@@ -692,19 +692,20 @@ More control points and server are in the
     there are also opensource software to play DAAP.  Daap is also
     used by {{< wp "Roku" >}} products.
 
--   DAAP is played by applications such as {{< iref "media_players#rhythmnbox" "Rhythmnbox" >}},
+### DAAP Clents
+-   DAAP is played by DAP clients, a [list is on Wikipedia
+    ]((https://en.wikipedia.org/wiki/Digital_Audio_Access_Protocol#DAAP_clients).
+
+    They include: {{< iref "media_players#rhythmnbox" "Rhythmnbox" >}},
     {{< iref "media_players#amarok" "Amarok" >}},
     {{< iref "media_players#exaile" "Exaile" >}}
     {{< iref "media_players#exaile" "Banshee" >}},
     {{< iref "media_players#kodi" "Kodi" >}}.
--   [Network your music with DAAP for Linux ](http://forums.techarena.in/guides-tutorials/1368286.htm)
-    examine DAAP server solutions on Linux. _2010_
--   {{< wp "Firefly" >}}
-    (GPL)<a name="firefly"></a> is an open-source media server (or
-    daemon) for the {{< wp "Roku" >}} Server Protocol (RSP) and Digital Audio
-    Access Protocol (DAAP).  It has support for MP3, AAC, Ogg, FLAC,
-    and WMA and support on-the-fly transcoding of Ogg, FLAC, ALAC, and
-    WMA.
+-   <a name="firefly"></a> {{< wp "Firefly" >}} (GPL)
+    is an open-source media server (or daemon) for the {{< wp "Roku" >}} Server Protocol
+    (RSP) and Digital Audio Access Protocol (DAAP).  It has support for MP3, AAC, Ogg,
+    FLAC, and WMA and support on-the-fly transcoding of Ogg, FLAC, ALAC, and WMA.
+
     -   [Firefly client
         ](http://sourceforge.net/projects/fireflyclient/)
         is a java client and a java client applet to Firefly media
@@ -712,16 +713,24 @@ More control points and server are in the
     -   [FirePlay
         ](http://www.mediasmartserver.net/wiki/index.php/FirePlay)
         is a web player for Firefly music streams.
-    -   __Forked-dappd__  (GPL) is a fork
-        of {{< iref "#firefly" "Firefly" >}} the original code is at
-        `git://git.debian.org/~jblache/forked-daapd.git` and now
-        [mirrored on GitHub
-        ](https://github.com/jasonmc/forked-daapd).
-        A new fork is at [Github: ejurgensen/forked-daapd
-        ](https://github.com/ejurgensen/forked-daapd) which is in Debian.
+
+### DAAP Servers
+-   [Wikipedia list of DAAP servers
+    ](https://en.wikipedia.org/wiki/Digital_Audio_Access_Protocol#DAAP_servers)
+-   __Forked-dappd__ (GPL) was a fork of {{< iref "#firefly" "Firefly" >}} no longer
+    developed after 2012, the original code is at
+    `git://git.debian.org/~jblache/forked-daapd.git` and now
+    [mirrored on GitHub](https://github.com/jasonmc/forked-daapd).
+
+    A new fork is at [Github: ejurgensen/forked-daapd
+    ](https://github.com/ejurgensen/forked-daapd). It is active in 2021 and packaged
+    in Debian.
+-   {{< iref "#ampache" "Ampache" >}} provides a
+    [DAAP API](https://sourceforge.net/p/ampache4/wiki/API/)
+    allowing it to be used as a DAAP server.
 -   [spydaap](https://github.com/egh/spydaap)
-     is a media server supporting the DAAP protocol written in Python
-     that  uses the mutagen media metadata library. _not updated since 2011_
+    is a media server supporting the DAAP protocol written in Python
+    that  uses the mutagen media metadata library. _not updated since 2011_
     _spydaap_ can stream mp3s, ogg, flac, and Quicktime videos. It is used in an
     {{< iref "media_players#exaile" "Exaile" >}} plugin.
 
