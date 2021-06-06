@@ -96,7 +96,7 @@ See also {{< iref "ffmpeg" "FFmpeg section" >}},
 -   [streamripper](http://streamripper.sourceforge.net/) is a
     command-line tool that record MPEG III and OGG  streams. _last
     commit 2010_.
--   <a name="tomahawk"></a>[TomaHawk](http://tomahawk-player.org/) (GPL)
+-   <a name="tomahawk"></a>[TomaHawk](https://github.com/tomahawk-player/tomahawk) (GPL)
     _seems abandonned in 2020_
     is a multisource, multi-platform media player.  It can hook via plugins on numerous
     source API, including {{< iref "#ampache" "ampache" >}} and owncloud.
@@ -136,7 +136,7 @@ See also {{< iref "ffmpeg" "FFmpeg section" >}},
     is a sound streaming server written in C++ that can mix multiple
     sources to stream to the net.  It can encode as mp3 or ogg and
     stream to icecast, shoutcast, and darwin. _Last release 2005_
--   [Sonerezh](https://www.sonerezh.bzh/) (AGPL)
+-   [Sonerezh](https://github.com/Sonerezh/sonerezh) (AGPL)
     a php+sql web music server.
 
 ### Ampache (LGPL/GPL) {#ampache}
@@ -254,12 +254,12 @@ Wikipedia has a {{< wp "Pulseaudio" >}} page.
     ](http://proaudio.tuxfamily.org/wiki/index.php?title=PulseAudio).
 -   The utilities in the package pulseaudio-utils are
     [paplay(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=paplay+1),
+    [parecord(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=parecord+1),
     [padsp(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=padsp+1),
     [pactl(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=pactl+1),
     [pacmd(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=pacmd+1),
     [pacat(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=pacat+1),
-    [pamont(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=pamont+1),
-    [parect(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=parect+1),
+    [pamon(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=pamon+1),
     [pax11publish(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=pax11publish+1),
     [pasuspender(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=pasuspender+1),
 -   The gtk utilities are in separate packages:
@@ -269,10 +269,6 @@ Wikipedia has a {{< wp "Pulseaudio" >}} page.
     *PulseAudio Preferences* ,
     [pavumeter(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=pavumeter+1)
     *PulseAudio Volume Meter*,
-    [paman(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=paman+1)
-    *PulseAudio Manager*,
-    [padevchooser(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=padevchooser+1)
-    *PulseAudio Device Chooser*
 -   [pamixer](https://github.com/cdemoulins/pamixer)(GPL) and
     [ponymix](https://github.com/falconindy/ponymix) are
     two command line mixers for pulseaudio, but you can also use _amixer_.
@@ -343,9 +339,7 @@ Examples of use of pw-looback are in the page [coupled streams virtual devices
     -   [Icecast 3rd Party Applications](http://icecast.org/apps/)
         Source Clients, Mediaplayers that support Icecast streams,
     -   [ArchWiki - Icecast](https://wiki.archlinux.org/index.php/Icecast).
-    -   [YoLinux: Linux Audio Streaming - Server Set-Up Using IceCast
-        ](http://www.yolinux.com/TUTORIALS/LinuxTutorialAudioStreaming.html)
-    -   [Ezstream](http://www.icecast.org/ezstream.php)
+    -   [Ezstream](https://icecast.org/ezstream/)
         is a command line source client for Icecast media streaming servers
         that streams files without reencoding.
         It is tiny 1.5M resident on my armel nas.
@@ -383,13 +377,13 @@ Examples of use of pw-looback are in the page [coupled streams virtual devices
         for the "MPlayer" media player
     -   [vobStreamer](http://www.live555.com/vobStreamer/)
         A network DVD player that allows to stream your DVD content over a LAN.
--   [Subsonic](http://www.subsonic.org/) (GPL)
+-   <a name="subsonic"></a>[Subsonic](http://www.subsonic.org/) (GPL)
     is a streaming server written in Java.  _Subsonic_ supports any streamable media
     (including MP3, AAC, and Ogg) with on-the-fly media conversion.  Some features like
     DLNA/UPnP compatibility, are only available in the private source _Subsonic Premium_
     that costs 1$/month.
     -   [ArchWiki: Subsonic](https://wiki.archlinux.org/index.php/Subsonic).
-    -   [Subsonic Apps](www.subsonic.org/pages/apps.jsp) list subsonic clients.
+    -   [Subsonic Apps](http://www.subsonic.org/pages/apps.jsp) list subsonic clients.
     -   [SubFirePlayer](http://www.subfireplayer.net/)
         is a pure HTML5 audio player for SubSonic, implemented in JQueryMobile. It is
         available as a web application, as a Chrome hosted app, and as appli for devices
@@ -405,11 +399,9 @@ Examples of use of pw-looback are in the page [coupled streams virtual devices
 
     -   [madsonic](http://www.madsonic.org/) (GPL)
         a java fork of Subsonic that adds features and bug fixes over the
-        main branch._active in 2018._
-    -   [FutureSonic](https://code.google.com/p/futuresonic/) (GPL)
-        a java Madsonic and SubSonic fork _only maintenance commits since 2014._
+        main branch._active in 2019._
     -   [Supysonic](https://github.com/spl0k/supysonic) (GPL)
-        a Python implementation of the Subsonic server API. _active in 2018_.
+        a Python implementation of the Subsonic server API. _active in 2021_.
 
 -   {{< iref "media_players#videolan" "VideoLan Client (VLC)" >}} is in the
     {{< iref "media_players#video_players" "Video Players section" >}}.
