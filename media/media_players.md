@@ -740,12 +740,15 @@ playing music  and managing playlists.
     ](https://wiki.archlinux.org/index.php/Icecast#Streaming_with_MPD).
     but the native MPD streaming server can be preferred.
 
--   [MPD User documentation](https://www.musicpd.org/doc/user/)
+-   [Music Player Daemon documentation](https://mpd.readthedocs.io/en/latest/index.html),
+    [MPD User Manual](https://mpd.readthedocs.io/en/stable/user.html)
 -   [mpd(1)
     ](http://manpages.debian.org/cgi-bin/man.cgi?query=mpd%281%29)
 -   [MPD configuration example
     ](https://github.com/MusicPlayerDaemon/MPD/blob/master/doc/mpdconf.example)
 -   [GitHub - MPD](https://github.com/MusicPlayerDaemon/MPD)
+-   [Music Player Daemon Wiki | Fandom
+    ](https://mpd.fandom.com/wiki/Music_Player_Daemon_Wiki).
 -   [ArchWiki: Music Player Daemon](https://wiki.archlinux.org/index.php/Mpd)
 -   [ArchWiki: MPD Tips and tricks
     ](https://wiki.archlinux.org/index.php/Music_Player_Daemon/Tips_and_tricks)
@@ -758,14 +761,11 @@ playing music  and managing playlists.
     and the {{< iref "bluetooth" "Bluetooth section" >}}.
 
 -   xmms2 team has published a
-    [comparison of xmms2 and mpd
-    ](https://xmms2.org/wiki/XMMS2_vs_MPD),
+    [comparison of xmms2 and mpd](https://xmms2.org/wiki/XMMS2_vs_MPD),
     may be slightly biased in favor of {{< iref "#xmms2" "xmms2" >}},
-    it omits that _mpd_ is
-    lighter in memory and cpu than xmms2, and also that if the client
-    development effort of {{< iref "#xmms2" "xmms2" >}}
-    is presently greater than the older
-    _mpd_, _mpd_ has still more language bindings and clients. In any case
+    it omits that _mpd_ is lighter in memory and cpu than xmms2, and also that if the
+    client development effort of {{< iref "#xmms2" "xmms2" >}} is presently greater than
+    the older _mpd_, _mpd_ has still more language bindings and clients. In any case
     both server are worthwhile to try.
 -   mpd can be controlled by a {{< iref "sound_libs#mpris" "MPRIS" >}} client
     through the [mpDris2](https://github.com/eonpatapon/mpDris2)
@@ -773,9 +773,10 @@ playing music  and managing playlists.
     monitors a local or distant mpd server.
 
 ## Clients
-Mpd has
-[client libraries](http://mpd.wikia.com/wiki/Client_Libraries)
+Mpd has some client libraries
 in C/C++, Java, lisp/scheme, haskell, perl, php, python, Ruby.
+-   [libmpdclient](https://www.musicpd.org/doc/libmpdclient/)
+    s a client library for the Music Player Daemon, written in C.
 
 For python you fin two main libraries:
 
@@ -789,9 +790,14 @@ The [MPD Manual](http://www.musicpd.org/doc/user/) has a a
 [Configuration chapter](http://www.musicpd.org/doc/user/ch03.html).
 
 You find a [long list of MPD clients in the mpd wiki
-](http://mpd.wikia.com/wiki/Clients), most of
+](https://mpd.fandom.com/wiki/Clients), most of
 them are in the [mpd git repository](http://git.musicpd.org/),
 the list is not always up-to date and some software are obsoletes.
+
+Some scripts are also in the page  [MPD Hacks
+](https://web.archive.org/web/20160414023836/http://mpd.wikia.com/wiki/Hacks)
+_(archive of the page which has not be transferred to new fandom wiki.)_
+
 
 A selection of clients:
 
@@ -816,10 +822,11 @@ A selection of clients:
 -   [glurp](http://sourceforge.net/projects/glurp/)
     Graphical interface written in GTK+ (10M resident, 8.5M shared
     ).  [GitHub: glurp](http://git.musicpd.org/cgit/master/glurp.git/)
--   [gmpc](http://gmpc.wikia.com/wiki/Gnome_Music_Player_Client)
+-   [gmpc](https://gmpc.fandom.com/wiki/Gnome_Music_Player_Client) (GPL-2.0)
     Gnome Music Player Client with playlist and tag management. It is
     a GTK client with light gnome dependencies (13M resident,10M, 3M
     added on my sys. ).
+    -   [Github- gmpc](https://github.com/DaveDavenport/gmpc)
 -   {{< iref "streaming#jinzora" "Jinzora" >}}
     A web based streaming and media management system.
 -   _mpc_ the reference (Scriptable) command
