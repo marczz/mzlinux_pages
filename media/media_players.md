@@ -937,14 +937,14 @@ and a page {{< wp "List of Linux audio software" >}}.
 
 ## Gstreamer {#gstreamer}
 
-GStreamer (LGPL) is a streaming-media framework, based on graphs of filters
-which operate on media data. Applications using this library can do
-anything from real-time sound processing to playing videos.it is
+{{< iref "streaming#gstreamer" "GStreamer" >}} (LGPL) is a streaming-media framework,
+based on graphs of filters which operate on media data. Applications using this library
+can do anything from real-time sound processing to playing videos.it is
 {{< iref "streaming#gstreamer" "referenced in the Music Streamer section" >}}
 
-## [Gnash](http://gnashdev.org/) {#gnash}
+## Gnash {#gnash}
 
-Gnash (GPLv3) is the GNU Flash movie player which can be run
+[Gnash](http://gnashdev.org/) (GPLv3) is the GNU Flash movie player which can be run
 standalone, as well as as a plugin for several browsers. Gnash can use
 either {{< iref "streaming#gstreamer" "GStreamer" >}} or ffmpeg as codec support library.
 
@@ -995,9 +995,9 @@ is the encoder included in the mplayer distribution.
 -   [ArchWiki: Mplayer](https://wiki.archlinux.org/index.php/MPlayer)
 
 
-## MPV {#mpv}
+## Mpv {#mpv}
 
-[mpv](https://mpv.io/) (LGPLv2.1+ and GPLv2+)
+[Mpv](https://mpv.io/) (LGPLv2.1+ and GPLv2+)
 is a media player based on MPlayer and MPlayer2.
 
 _MPlayer2_ was a fork of mplayer, that  the internal gui
@@ -1011,19 +1011,19 @@ There are numerous other
 [differences of mpv with mplayer and mplayer2
 ](https://github.com/mpv-player/mpv/blob/master/DOCS/mplayer-changes.rst).
 
--   [mpv source (GitHub)](https://github.com/mpv-player/mpv)
--   [mpv manual](https://mpv.io/manual/stable/),
+-   [Mpv source (GitHub)](https://github.com/mpv-player/mpv)
+-   [Mpv manual](https://mpv.io/manual/stable/),
     [FAQ](https://github.com/mpv-player/mpv/wiki/FAQ) and
     [Wiki](https://github.com/mpv-player/mpv/wiki).
 -   Wikipedia: {{< wp "Mpv_(media_player)"  "MPV" >}}
 -   [Archwiki -  Mpv](https://wiki.archlinux.org/index.php/Mpv)
--   [Gentoo Wiki - mpv](https://wiki.gentoo.org/wiki/Mpv)
+-   [Gentoo Wiki - Mpv](https://wiki.gentoo.org/wiki/Mpv)
 
 There is a Debian package _mpv_, but mpv developpers
 [recommand to use a newer version](https://mpv.io/installation/)
 in deb-multimedia.
 
-_mpv_ can be used in Wayland for hardware video acceleration under Wayland use
+_Mpv_ can be used in Wayland for hardware video acceleration under Wayland use
 `--gpu-context=wayland`. If you compile it specifically for wayland use:
 ~~~
 ./configure --disable-x11 --disable-sdl --enable-wayland --disable-libass
@@ -1031,9 +1031,9 @@ make
 sudo make install
 ~~~
 
-### MPV frontends
+### Mpv frontends
 
-mpv itself has only a rudimentary {{< iref "#mpv_pseudo" "pseudo-gui" >}}
+Mpv itself has a rudimentary {{< iref "#mpv_pseudo" "pseudo-gui" >}}
 and many
 [third party frontends
 ](https://github.com/mpv-player/mpv/wiki/Applications-using-mpv#gui-frontends)
@@ -1054,17 +1054,27 @@ this need you have Chrome or Chromium installed. SMPlayer is in Debian.
 is a  GTK+ frontend for mpv.
 
 <a name="mpv_pseudo-gui"></a>
-It now provides a _pseudo-gui mode_ that you get by starting it
+Mpv provides a _pseudo-gui mode_ that you get by starting it
 with:
 
     $ mpv  --player-operation-mode=pseudo-gui
 
 or by using the `mpv.desktop` file
 
+## Streamlink
+[Streamlink](https://streamlink.github.io/index.html) is a command-line utility
+written in Python which allows you to watch online video streams in video players, such
+as {{< iref "#vlc" "VLC" >}}, {{< iref "#mplayer" "Mplayer" >}},
+{{< iref "arm_sbc#omxplayer" "OMXPlayer" >}} or {{< iref  "#mpv" "Mpv" >}}
 
+_Streamlink_ was forked from the now dead _Livestreamer_ project.
 
-## [Sayonara](https://sayonara-player.com/index.php)
-_Sayonara_ is a small C++/QT music player,
+-   [Streamlink - GitHub](https://github.com/streamlink/streamlink)
+-   [Streamlink documentation](https://streamlink.github.io/index.html)
+-   [Streamlink - ArchWiki](https://wiki.archlinux.org/title/Streamlink)
+
+## Sayonara
+[Sayonara](https://sayonara-player.com/index.php) is a small C++/QT music player,
 there is a [PPA repository for Sayonara
 ](https://launchpad.net/~lucioc/+archive/ubuntu/sayonara).
 with i386 and amd64 packages.
@@ -1090,6 +1100,11 @@ On an Amd64 in may 2018 Totem take 82M res / 46shr for a single ogg
 track; 116M res / 57M shr for a tv broadcast on DLNA.
 
 -   [Totem -  Gnome Home](http://www.gnome.org/projects/totem/)
+-   [Totem Manual](https://help.gnome.org/users/totem/stable/index.html.en)
+-   [Totem plugin - YouTube Browser
+    ](https://help.gnome.org/users/totem/stable/totem-plugins.html.en#totem-plugins-youtube)
+    allows you to search and browse YouTube, and play YouTube videos directly in Totem
+    Movie Player.
 
 ## VideoLAN {#vlc}
 
@@ -1139,9 +1154,10 @@ Refs:
 ](http://manpages.debian.org/cgi-bin/man.cgi?query=xine-remote(1)).
 
 
-#[MPRIS](http://specifications.freedesktop.org/mpris-spec/latest/){#mpris}
+# MPIS {#mpris}
 
-The Media Player Remote Interfacing Specification is a standard D-Bus
+The [Media Player Remote Interfacing Specification (MPRIS)
+](http://specifications.freedesktop.org/mpris-spec/latest/)is a standard D-Bus
 interface which aims to provide a common programmatic API for
 controlling media players.
 
