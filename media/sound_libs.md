@@ -148,30 +148,30 @@ title: Sound and Video Processing Libraries
 
 
 # Alsa {#alsa}
-Alsa is packaged as three packages, alsa-utils, alsa-lib,
-alsa-driver
 
 ## Documentation on alsa
 -   [ALSA project](http://www.alsa-project.org/)
     page, and
     [Documentation](http://www.alsa-project.org/main/index.php/Documentation),
     [Asoundrc](http://www.alsa-project.org/main/index.php/Asoundrc).
--   [Linux ALSA sound notes](http://www.sabi.co.uk/Notes/linuxSoundALSA.html)
-    are notes about configuring ALSA. _2008_
--   [AlsaOpensrcOrg unofficial wiki](http://alsa.opensrc.org/)
--   [Gentoo Wiki: ALSA](https://wiki.gentoo.org/wiki/ALSA)
-    [HOWTO ALSA Complete (includes dmix)](http://gentoo-wiki.com/HOWTO_ALSA_sound_mixer_aka_dmix).
 -   [ArchLinux Alsa Guide
-    ](http://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture),
+    ](http://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture) is the most
+    comprehensive documentation on alsa configuration on Linux, it comes with two
+    additional pages
     [Advanced Linux Sound Architecture/Example Configurations
     ](https://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture/Example_Configurations),
     [Advanced Linux Sound Architecture/Troubleshooting
     ](https://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture/Troubleshooting).
 -   [Debian Wiki: Alsa
     ](https://wiki.debian.org/ALSA)
+-   [Gentoo Wiki: ALSA](https://wiki.gentoo.org/wiki/ALSA)
+    [HOWTO ALSA Complete (includes dmix)](http://gentoo-wiki.com/HOWTO_ALSA_sound_mixer_aka_dmix).
 -   [Wikibook: Configuring Sound on Linux
     ](https://en.wikibooks.org/wiki/Configuring_Sound_on_Linux)
-
+-   [Linux ALSA sound notes](http://www.sabi.co.uk/Notes/linuxSoundALSA.html)
+    are notes about configuring ALSA. _2008_
+-   [AlsaOpensrcOrg unofficial wiki](http://alsa.opensrc.org/)
+-
 ## Alsa components
 
 Alsa pcm plugins
@@ -186,10 +186,6 @@ Alsa pcm plugins
     ](http://alsa-project.org/alsa-doc/alsa-lib/pcm_plugins.html)
 :   [alsa.opensrc.org](http://alsa.opensrc.org/):
     [Plugin documentation](http://alsa.opensrc.org/Plugin_Documentation)
-:   [HOWTO ALSA sound mixer aka dmix
-    ](http://gentoo-wiki.com/HOWTO_ALSA_sound_mixer_aka_dmix)
-    this how-to explains the old conf setting for dmix which is no
-    longer necessary since v. 1.09
 :   [alsa.opensrc.org: Dmix Plugin HowTo
     ](http://alsa.opensrc.org/DmixPlugin)
 
@@ -201,7 +197,7 @@ alsa-driver
     [alsa sound cards](http://alsa.opensrc.org/Sound_cards).
 
 alsa-utils
-:   offers the following programs:
+:   This package groups the following programs:
 :   alsactl
     :   [alsactl(1)
         ](http://manpages.debian.org/cgi-bin/man.cgi?query=alsactl(1))
@@ -231,8 +227,7 @@ alsa-lib
 ## Alsa devices
 Alsa put devices information and control in `/proc/asound`. The
 layout of the alsa proc subsytem is explained in the
-[Proc asound documentation
-](https://alsa.opensrc.org/Proc_asound_documentation)
+[Proc asound documentation](https://alsa.opensrc.org/Proc_asound_documentation)
 of the [Alsa Wiki](http://alsa.opensrc.org/).
 
 The list of cards is in `/proc/asound/cards` so on one laptop I have:
@@ -252,7 +247,7 @@ But now the `/sys` filesystem is to be preferred and the alsa devices are in
      $ cat /sys/class/sound/card1/id
      PCH
 
-And we find the directories for each device control, hw dvices, and pcm inthe directory
+And we find the directories for each device control, hw devices, and pcm inthe directory
 `/sys/class/sound`.
 
 For the devices we look at:
@@ -274,10 +269,13 @@ The first number is the card number, the second the device number.
 they appear as device in `/dev/snd` directory They are named in the form `aaaCxDy` where
 `aaa` is the service name, `x` is the card number (0-7), and `y` the device number (0-?)
 
+The playback devices will also be listed by `aplay --list-devices` or `aplay -l` and
+the record devices by `arecord --list-devices` or `arecord -l`.
+
 The service names can be `pcm`, `hw`, `seq` _sequencer_, `timer`, `control`
 _mixer, etc._
 
-For the previous example we hve two hardware cards that appear as devices as `hwC0D0`,
+For the previous example we have two hardware cards that appear as devices as `hwC0D0`,
 `hwC1D0`, with their respective control the devices `controlC0` and `controlC1`.
 
 For the `pcm`s we have for the card number 1 (PCH)  one control,
@@ -288,8 +286,29 @@ For the card number 0 (HDMI) we have one control,
 and four playbacks  wich appear as device in `/dev/snd` as
 `controlC0`, `pcmC0D3p`, `pcmC0D7p`, `pcmC0D8p`
 
-The playback devices will also be listed by `aplay --list-devices` or `aplay -l` and
-the record devices by `arecord --list-devices` or `arecord -l`.
+For an usb sound card I get:
+
+    # cat /proc/asound/card0/stream0
+    Creative Labs Sound Blaster MP3+ at usb-f10f8000.usb3-1, full speed : USB Audio
+
+    Playback:
+      Status: Stop
+      Interface 1
+        Altset 1
+        Format: S16_LE
+        Channels: 2
+        Endpoint: 1 OUT (ADAPTIVE)
+        Rates: 48000
+
+    Capture:
+      Status: Stop
+      Interface 2
+        Altset 1
+        Format: S16_LE
+        Channels: 2
+        Endpoint: 2 IN (ASYNC)
+        Rates: 48000, 44100
+
 
 If you loaded the `snd-pcm1-oss` module, you can also use
 the OSS-compatibility to access your sound card. It provides mapping from
@@ -323,7 +342,7 @@ can also be written:
     $ aplay -D plughw:PCH /tmp/train2.wav
     Playing WAVE '/tmp/train2.wav' : Signed 32 bit Big Endian, Rate 11025 Hz, Stereo
 
-The conversion of format is done by using the `plug` conversion and a slave pcm; ici
+The conversion of format is done by using the `plug` conversion and a slave pcm;
 `plughw:1,0` is an abbreviated form of `-D "plug:'hw:1,0'"`.
 
 ## Pulseaudio
