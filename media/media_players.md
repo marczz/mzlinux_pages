@@ -143,8 +143,7 @@ Wikipedia: {{< wp "Comparison of audio player software" >}},
 :   Audacious is an GPL, XMMS like app written in GTK 2, that
     support nearly the same plugins. It is a fork of BMP, like are
     {{< iref "#xmms2" "xmms2" >}} and
-    {{< iref "#bmpx" "Bmpx" >}}.
-    {{< iref "#xmms2" "xmms2" >}}
+
     Other forks are build in a client-server model, but
     Audacious was first a single player, but now can be controlled
     through DBUS.
@@ -155,24 +154,31 @@ Wikipedia: {{< wp "Comparison of audio player software" >}},
         wav, midi, CD audio;
     -   output to oss4, alsa, esound, jack, pulseaudio, sndio, sdl
     -   support for transcoding and streaming.
-    -   Controlled through DBUS, accept MPRIS protocol
+    -   Controlled through DBUS, accept MPRIS protocol, and can be controlled by MPRIS clients.
     -   Can be controlled with Conky.
-    -   Includes the client _audtool_ to sends commands to a running
+    -   Includes the client {{< man "audtool" >}}_ to sends commands to a running
         instance of Audacious.
     -   curses clients like
-        [Audtty](http://audtty.alioth.debian.org/)
-        and
-        [comms](http://hoo.homeunix.net/~teknohog/hacks/comms/)
-        (GPL).
+        [Audtty](http://audtty.alioth.debian.org/) _packaged in debian but the source code
+        can no longer be accessed in 2021_.
 
-    Audacious has a light memory footprint but seems somewhat processor
+
+    <!-- Audacious has a light memory footprint but seems somewhat processor
     demanding, I have no measure but I see my load average climbing
     each time I use it, more than other players.
-    Auidacious is in Debian. The development seems to have slow down,
-    no commit during the period 2016-2018.
+    -->
+    Audacious is in Debian some newer _audacious_ and _audacious_plugins_ are in
+    the [ppa](https://launchpad.net/~ubuntuhandbook1/+archive/ubuntu/apps) maintained by
+    [UbuntuHandbook](https://ubuntuhandbook.org/).
+
+    The development seems to have slow down, at the end of version 3.x which was based
+    by default on GTK2 and was developed during the years 2011-2019, but become again
+    active in 2020 with the release of version 4.0 which is now based on QT5 with GTK2
+    optional fallback.
 
     -   [Audacious Home page](http://audacious-media-player.org/),
-    -   [Audacious Plugins](http://audacious-media-player.org/Plugins)
+    -   [audacious-plugins · GitHub
+        ](https://github.com/audacious-media-player/audacious-plugins/tree/master/src)
     -   [GitHub - Audacious
         ](https://github.com/audacious-media-player/audacious).
     -   [ArchWiki - Audacious
