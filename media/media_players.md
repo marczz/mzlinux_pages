@@ -514,20 +514,28 @@ MikMod
 <a name="moc"></a>[Moc](http://moc.daper.net/)
 :   Moc (GPL)
     ([Moc wikipedia page](http://en.wikipedia.org/wiki/Music_On_Console))
-    is an ncurses-based console audio player with ALSA, OSS or JACK
+    is an ncurses-based console audio player with ALSA, OSS, SNDIO or JACK
     outputs.
     Supported file formats are: mp3, Ogg Vorbis, FLAC, Musepack (mpc),
-    Speex, WAVE,  AIFF, AU, SVX, Sphere Nist WAV, IRCAM SF, Creative VOC
-    with the  FFmpeg plugin we add  (WMA, RealAudio, AAC, MP4).
-    _Moc_ works as a daemon and can be controlled by a command line or
-    via conky, but it is not usable thru the network like the music
-    servers {{< iref "#mpd" "Mpd" >}} or
-    {{< iref "#xmms2" "Xmms2" >}}. It uses 6M resident.
+    Speex, Opus, WAVE,  AIFF, AU, SVX, Sphere Nist WAV, IRCAM SF, Creative VOC,SID,
+    wavpack, MIDI and modplug.
+    With the  FFmpeg plugin we add  (WMA, RealAudio, AAC, MP4).
+    _Moc_ works as a daemon and can be controlled by a command line or via conky, or the
+    gui client mentioned below but it is not usable through the network like the music
+    servers {{< iref "#mpd" "Mpd" >}} or {{< iref "#xmms2" "Xmms2" >}}.
 
+    It uses 6M resident.
+
+   -   [MOC Home page](http://moc.daper.net/)
+   -   [Documentation | MOC](http://moc.daper.net/documentation)
    -   [MOC Readme](http://moc.daper.net/node/87)
-   -   [Python Music On Console](http://moc.lophus.org/)
-       is a wrapper around moc.
+   -   [MOC Scripts](http://moc.daper.net/contrib)
    -   [ArchWiki - Moc](https://wiki.archlinux.org/index.php/Moc).
+   -   [MocIcon](http://mocicon.sourceforge.net/) is a simple GTK+ Music On Console tray
+       icon. _Last release 2010._
+   -   [Exo](https://github.com/loimu/exo) (GPL-3.0) is a C++ QT frontend for MOC.
+       it supports Lyrics from web, {{< iref "#mpris" "MPRISv2" >}}, bookmarks, OSD with
+       an additional Python script.
 
 <a name="mpg123"></a>{{< wp "Mpg123" >}}
 :   Mpg123 (LGPL) is a very fast decoder and player for mp3 _or any
