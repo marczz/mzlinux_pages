@@ -196,6 +196,8 @@ storage, but a single subvolume can use all space.
         main reference for
         [UBIFS](http://www.linux-mtd.infradead.org/doc/ubifs.html) and
         [UBI](http://www.linux-mtd.infradead.org/doc/ubi.html).
+
+## Bootable SD Card
 -   [Gentoo Wiki SD card](https://wiki.gentoo.org/wiki/SDCard)
     explain how to format a SD card for io speed, and compare the
     speed of diferent file system.
@@ -233,13 +235,21 @@ storage, but a single subvolume can use all space.
     The software is provided as an app image, It also provides a Debian repository to
     install the node application.
 
-    This tool is [recommended by armbian
+    This tool, and _usbimager_ are [recommended by armbian
     ](https://docs.armbian.com/User-Guide_Getting-Started/#how-to-prepare-a-sd-card)
     for writing images.
 
     There was previously a CLI version which did not
     require the electron stuff, but it was removed _without explanation_ at version
     1.5.0 - 2019-02-16.
+-   [usbimager](https://gitlab.com/bztsrc/usbimager) (MIT Licence)
+    is a GUI application that writes compressed disk images to USB drives and creates
+    backups. It is lighter than _balena-etcher_. The repository provides Debian and
+    Raspbian packages
+-   [Ventoy](https://github.com/ventoy/Ventoy) (GPL 3.0)
+    creates bootable USB drive for ISO/WIM/IMG/VHD(x)/EFI files. 86 Legacy BIOS, IA32
+    UEFI, x86_64 UEFI, ARM64 UEFI and MIPS64EL UEFI with  MBR or GPT partition are
+    supported.
 
 # LVM {#lvm}
 
