@@ -162,8 +162,38 @@ Many applications are listed in [List of download managers - ArchWiki
 -   {{< iref "#wget" "wget" >}}
     supports HTTP, HTTPS, and FTP protocols.
 
+# Asynchronous File Transfer
+In contrast with the older technologies {{< wp "UUCP" >}} and {{< wp "BITNET" >}}
+the file transfer protocols (s)FTP, SFTP, SCP, HTTP(s), Gopher are synchronous. Both
+ends of the file transfer must be active simultenously to set up a connection.
 
+To mitigate this problem we use a relay server, which is supposed to stay online.
 
+The previous {{< iref "#temporary_storage" "Temporary Storage provider" >}}
+allow to copy the whole file to the server, then the recipient get it back using
+HTTP(S), FTP(S) or webdav(s). It needs to have been given an encryption key, and/or a
+password.
+
+To avoid the problems inherent to the transmission via an FTP server, or by mail
+a new protocol [Asynchronous File Transfert Protocol - SAFT
+](http://fex.belwue.de/saft/) , and a [sendfile
+](http://fex.belwue.de/saft/sendfile.html) software to implement this protocol  have
+been devised by Ulli Horlacher at university of Stuttgart.
+
+_Sendfile_ is still available and packaged in Debian.
+
+But the author himself point some drawbacks of this approach.
+
+- the recipient needs a sendfiled installation on his host which is available only on
+  unix, or an interactive account on the saft-server
+- the recipient's saft-server must be permamently online
+- the tcp port 487 must not be blocked by any firewall or ip-filter all the whole way
+  from the sender to the recipient
+
+So they created an other software, a file server named
+{{< iref "clouds#fex" "F*EX - Fram's Fast File EXchange" >}}.
+With _F*EX_ The sender uploads the file to the _F*EX_ server using a WWW upload form and the
+recipient automatically gets a notification e-mail with a download-URL.
 
 
 <!--  Local Variables: -->
