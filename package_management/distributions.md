@@ -8,7 +8,7 @@ A full state of distributions is given in
 [DistroWatch](http://distrowatch.com).
 
 
-# Ubuntu
+# Ubuntu {#ubuntu}
 
 -   Richard Stallman gave an advice on
     [Ubuntu Spyware: What to Do?](http://www.gnu.org/philosophy/ubuntu-spyware.html)
@@ -21,25 +21,29 @@ A full state of distributions is given in
     > If you ever recommend or redistribute GNU/Linux,
     >  please remove Ubuntu from the distros you recommend or redistribute.
 
--   [Ubuntu](http://www.ubuntu.com/),
+-   [Ubuntu](https://www.ubuntu.com/),
     [wiki.ubuntu](https://wiki.ubuntu.com/),
     [Documentation for Ubuntu](https://help.ubuntu.com/),
-    [Xubuntu](http://www.xubuntu.org/),
-    [Lubuntu](https://wiki.ubuntu.com/Lubuntu) *LXDE+Ubuntu*
-     targeted at low-spec hardware, can run from 128MB RAM.
--   [Ubuntu Packages](http://packages.ubuntu.com)
+    [Xubuntu](https://www.xubuntu.org/),
+-   <a name="lubuntu"></a>[Lubuntu](https://lubuntu.me/) *LXQT+Ubuntu*
+     is the {{< iref "desktop#lxqt" "LXQT" >}} flavor of Ubuntu, it is targeted at
+     low-spec hardware.
+     -   [Lubuntu Wiki](https://phab.lubuntu.me/w/)
+     -   [Lubuntu Manual](https://manual.lubuntu.me/stable/)
+     -   Wikipedia: {{< wp "Lubuntu" >}}
+-   [Ubuntu Packages](https://packages.ubuntu.com)
 -   [How to install Ubuntu on low memory systems
     ](https://help.ubuntu.com/community/Installation/LowMemorySystems).
--   [Ubuntu  Guide](http://ubuntuguide.org/) browse on all categories of software
+-   [Ubuntu  Guide](https://ubuntuguide.org/) browse on all categories of software
     you may want to install on Ubuntu or any other distribution.
 -   [Ubuntu Low End System Support
     ](https://help.ubuntu.com/community/LowEndSystemSupport)
 -   [Documentation for latest distribution
     ](https://help.ubuntu.com/) contains
     _Ubuntu Desktop Help_,    _Ubuntu Server Guide_,   _Installing Ubuntu_.
--   [ubuntugeek](http://www.ubuntugeek.com/) site
+-   [ubuntugeek](https://www.ubuntugeek.com/) site
     contains tips,howtos,tutorials and articles about Ubuntu Linux.
--   [Linux Mint](http://www.linuxmint.com/)
+-   [Linux Mint](https://www.linuxmint.com/)
     is a distribution aimed at the ease of use.  It is based on Debian
     and Ubuntu and provides full multimedia support. There are many
     variants of Mint, the main one is based on Ubuntu, there is alo a
