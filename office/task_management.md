@@ -189,18 +189,18 @@ The core interface and server are built in javascript; there is also a
 core version in Rust, used by mobile applications. The desktop
 application for windows, OS X and linux is in javascript.
 
+The server require postgres and Node.
+
 In all the previous versions the core was in common
 lisp.
 
--   [GitHub: Turtl](https://github.com/turtl)
+-   [GitHub: Turtl](https://github.com/turtl) (AGPL-3.0)
 -   [Turtl developers documentation](https://turtlapp.com/docs/)
 -   ýou can run your [own instance of Turtl
     ](https://turtlapp.com/docs/server/)
     there are also docker images.
 -   [turtlapp.com]](https://turtlapp.com/) is the main instance of
     turtl, the service is free until some limit.
--   [Framanote](https://framanotes.org/) free instance of Turtl.
-
 
 # Notifications
 
