@@ -82,18 +82,16 @@ The standard component include the  window manager
 and the file manager {{< iref "file_managers#pcmanfm" "PCManFM" >}})
 _but you are free to use an other one_.
 
+Since the author of LXDE switched to LXQT, this distribution is still maintained but no
+longer evolving.
+
 -   [LXDE Home](https://lxde.github.io/)
 -   [LXDE Wiki](http://wiki.lxde.org/en/Main_Page)
 -   [LXDE - GitHub](https://github.com/lxde)
 -   [ArchLinux: LXDE](https://wiki.archlinux.org/index.php/LXDE)
--   [LXDE on Debian](http://wiki.lxde.org/en/Debian)
+-   [LXDE - Debian Wiki](https://wiki.debian.org/LXDE)
 -   [Gentoo: XDE](https://wiki.gentoo.org/wiki/LXDE)
--   [LXDE in Ubuntu](http://wiki.lxde.org/en/Ubuntu) is available on
-    -   [Lubuntu](http://lubuntu.me) - Ubuntu with LXDE.
-    -   [LXLE](http://lxle.net) - Lubuntu customized for aging computers.
-    -   [WattOS](http://www.planetwatt.com/) \- Designed for older and low power
-        computers. _site not available in July 2020_
-    -   [Knoppix](http://knoppix.net/) - live CD with LXDE
+-   [Knoppix](http://knoppix.net/) - live CD with LXDE
 -   [Lxde-Openbox Guide](http://lxlinux.com/index.html)has a lot
     information on configuration of all components of lxde.
 -   <a name= "lxsession"></a>[lxsession](http://wiki.lxde.org/en/LXSession) is the
@@ -113,6 +111,19 @@ applications written in Qt-5 and will gradually become compatible with Wayland.
 -   Wikipedia: {{< wp "LXQt" >}} _look here for the application list._
 -   [LXQt Home](https://lxqt-project.org/).
 -   [LXQt - GitHub](https://github.com/lxqt)
+-   [LXQt Wiki](https://github.com/lxqt/lxqt/wiki)
+-   [LXQt - Debian Wiki](https://wiki.debian.org/LXQt)
+-   {{< iref "distributions#lubuntu" "Lubuntu" >}} is the LXQT flavor of Ubuntu.
+-   [LXQt - ArchWiki](https://wiki.archlinux.org/index.php/LXQt)
+-   [LXQt - Gentoo Wiki](https://wiki.gentoo.org/wiki/LXQt)
+
+
+LXQT is composed of many applications, the current list is on
+{{< wp "LXQt" "Wikipedia" >}}. Some are independent of the desktop:
+{{< iref "xterminals#qterminal" "qterminal" >}}, Falkon, sddm  _Simple Desktop Display
+Manager_, lximage-qt, {{< iref "file_managers#pcmanfm-qt""pcmanfm-qt"  >}}.
+
+LXQT is the core of {{< iref "distributions#lubuntu" "Lubuntu distribution" >}}.
 
 # Window managers {#window_manager}
 
