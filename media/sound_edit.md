@@ -272,20 +272,22 @@ OggConvert
     M4A, AC3, DTS, ALAC, MPC, Shorten, APE, SID, etc...), and writes
     WAV, FLAC, MP3, and Ogg Vorbis files.
 
-<a name="sox"></a>[SoX](http://sox.sourceforge.net)
-:   {{< wp "SoX" >}} _Sound eXchange_ (GPL) is a sound file format converter SoX can
+<a name="sox"></a>[SoX](http://sox.sourceforge.net)  (GPL)
+:   {{< wp "SoX" >}} _Sound eXchange_ is a sound file format converter SoX can
     convert between many different digitized sound formats and perform
     simple sound manipulation functions, including sound effects.
+
+    The last release 14.4.2 is from february 2015, but there s still development in
+    the [git repository](https://sourceforge.net/p/sox/code/ci/master/tree/). Debian
+    package the git development tree.
 
     -   [SoX Home](http://sox.sourceforge.net/),
         [sox features](http://sox.sourceforge.net/Docs/Features).
     -   Wikipedia: {{< wp "SoX" >}}
     -   [SoX Documentation](http://sox.sourceforge.net/Docs/Documentation)
-    -   manpages: [sox(1)
-        ](http://sox.sourceforge.net/sox.html)
+    -   manpages: [sox(1)](http://sox.sourceforge.net/sox.html)
         _sox_, can also used with the name _play_ or _rec_ ,
-        [soxi(1)
-        ](http://sox.sourceforge.net/soxi.html),
+        [soxi(1)](http://sox.sourceforge.net/soxi.html),
     -   [SoX supported formats and devices](http://sox.sourceforge.net/soxformat.html)
     -   [examples scripts
         ](http://sox.sourceforge.net/Docs/Scripts)
