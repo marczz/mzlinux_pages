@@ -208,6 +208,18 @@ Wikipedia: {{< wp "Comparison of audio player software" >}},
     -   [Controlling Clementine from the commandline with DBus and MPRIS
         ](https://github.com/clementine-player/Clementine/wiki/Controlling-Clementine-from-the-commandline-with-DBus-and-MPRIS)
 
+<a name="deadbeef"></a>[DeaDBeeF](https://deadbeef.sourceforge.io/) (GPL v2)
+:   is a C lang maudio player for Mp3, ogg vorbis,  flac, ape, wv/iso.wv, wav,
+    m4a/m4b/mp4 (aac and alac), mpc, tta, cd audio, and  more.
+
+    It reads and write tags in any format,  supports Shoutcast/Icecast and MMS, and
+    cuesheets. _Deadbeef_ is not in Debian, but provides Debian packages for amd64.
+
+    There are plugins for Pulseaudio, Jack, Mpris2.
+
+    -   [Deadbeef - GitHub](https://github.com/DeaDBeeF-Player/deadbeef)
+    -   Wikipedia:  {{< wp "Deadbeef" >}}
+
 <a name="exaile"></a>[Exaile](http://www.exaile.org/)
 :   [Exaile](http://en.wikipedia.org/wiki/Exaile)
     (GPL) is an audio player written in python using pygtk and using
