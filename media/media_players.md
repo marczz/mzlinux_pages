@@ -626,15 +626,20 @@ __ogg123__, __oggdec__
    tried only on one stream. More interesting _oggdec_ and _mpg123_ stayed
    at 1.2Mb and 1Mb of resident memory, while _mpg321_ went up to 36Mb.
 
+<a name="musikcube"></a>[MusikCube](https://musikcube.com/) (BSD-3-Clause License)
+:   A terminal-based audio engine, library, player and server written in c++.
+    Plug-ins provide core functionality for audio decoding, data streaming, output
+    device handling, metadata parsing, digital signal processing.
 
-[Plait](http://stephenjungels.com/jungels.net/projects/plait/)
-:   A command-line jukebox and music player front end. It can play a
-    single song, mix queries that combine works from multiple artists,
-    stream queries that find Shoutcast radio streams.  Plait
-    automatically hands off a play list to one of the supported music
-    players (or you can use it manually with any player that supports
-    .m3u playlists). It is in Debian.
+    MusikCube is capable of streaming audio via an integrated server, and can be
+    controlled by an android client. It supports also {{< iref "#mpris" "Mpris" >}}.
 
+    Debian packages for amd64 are provided in the
+    [releases page](https://github.com/clangen/musikcube/releases).
+
+    -   [musikcube - GitHub](https://github.com/clangen/musikcube) .
+    -   [MusikCube user guide](https://github.com/clangen/musikcube/wiki/user-guide)
+    -   [MusikCube wiki](https://github.com/clangen/musikcube/wiki)
 
 [play]( http://git.sysphere.org/play/)
 :   A curses front-end written in python for various audio players based
