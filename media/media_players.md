@@ -408,14 +408,12 @@ Wikipedia: {{< wp "Comparison of audio player software" >}},
 
 ## Text Players
 
-<a name="audiopreview"></a>
-[audiopreview](http://audiopreview.codealpha.net/audiopreview/)
+<a name="audiopreview"></a> [audiopreview](http://audiopreview.codealpha.net/audiopreview/)
 :   is a simple command line tool based on
     {{< iref "streaming#gstreamer" "gstreamer" >}}
-    to play previews of audio and video
-    files, and internet streams. It can also be used as a
-    regular media player. It is no longer in Debian since jessie,
-    and the home page went away.
+    to play previews of audio and video files, and internet streams. It can also be used
+    as a regular media player. It is no longer in Debian since jessie, and the home page
+    went away.
 
 auditive
 :   [auditive](http://www.rillion.net/auditive/)
@@ -482,39 +480,49 @@ cdda2wav
 
     -   Can play mp3, ogg/vorbis, FLAC, Opus, Musepack, WavPack, WAV,
         AAC, MP4, audio CD, and everything supported by ffmpeg (WMA, APE,
-        MKA, TTA, SHN, ...) and libmodplug
-    -   Tiny cmus 2.7.0 is 24M res. / 17 shr on amd64 (may 2018)
+        MKA, TTA, SHN, ...) and libmodplug.
+    -   configurable colorscheme, filters, album/artists sorting and a vi-like
+        configuration interface.
+    -   Play MP3 and Ogg streaming from SHOUTcast or Icecast.
+    -   [support detaching natively](https://github.com/cmus/cmus/wiki/detachable-cmus).
+    -   It can be controlled with an UNIX socket, and has many
+        [remote controls](https://github.com/cmus/cmus/wiki/remote-control) from web,
+        android, command line
+    -   {{< iref "#mpris" "MPRIS" >}} support.
+    -   Tiny: cmus 2.7.0 is 24M res. / 17 shr on amd64 (may 2018)
+
+    Debian has a _cmus_ and a _cmus-plugin-ffmpeg_ package.
 
     Cmus has uncommon key binding and unusual help system: you have to
     type 7 to get help on key-bindings, to know you have to type 7,
     you just need hit the 7 key! Of course q does not quit, h or ?
     does not give help. But to be fair I must say that you are free to
     configure key-bindings as you want. It is in active development in
-    2018 and packaged in Debian.
+    2021 and packaged in Debian.
 
-    -   [GitHub cmus repository
-        ](https://github.com/cmus/cmus)
+    -   [GitHub cmus repository](https://github.com/cmus/cmus)
     -   [cmus wiki](https://github.com/cmus/cmus/wiki)
+    -   [Extensions and useful scripts](https://github.com/cmus/cmus/wiki)
+    -   [cmus - C* Music Player](https://cmus.github.io/#documentation)
+    -   Manual pages (last source):
+        [cmus-tutorial](https://github.com/cmus/cmus/blob/master/Doc/cmus-tutorial.txt),
+        [cmus](https://github.com/cmus/cmus/blob/master/Doc/cmus.txt) and
+        [cmus-remote](https://github.com/cmus/cmus/blob/master/Doc/cmus-remote.txt).
+    -   Manual pages  {{< man "cmus" >}}, {{< man "cmus-tutorial" >}},
+        {{< man "cmus-remote" >}}.
     -   Wikipedia {{< wp "Cmus" >}}
+    -   Cmus supports [remote control](https://github.com/cmus/cmus/wiki/remote-control)
+        through a WEB interface or Android, and using {{< IREF "#MPRIS" "MPRIS" >}}
     -   [ArchWiki - Cmus](https://wiki.archlinux.org/index.php/Cmus)
+    -   [Articles about cmus](https://github.com/cmus/cmus/wiki/reviews)
 
-[Herrie](https://github.com/EdSchouten/herrie) (BSD Licence)
-:   Herrie is a minimalistic command line music player. It supports wav,
-    ogg, flac, mp3 and playlist (XSPF), it is 5.8M resident when
-    playing mp3.
+<a name="gst123"></a>[gst123](http://space.twc.de/~stefan/gst123.php) (LGPL)
+:   flexible command line player in the spirit of ogg123 and mpg123, based on
+    {{< iref "#gstreamer" "Gstreamer" >}}. It plays all file formats gstreamer
+    understands. Since gst123-0.1.0 support for watching videos has been added.
 
-
-MikMod
-:   MikMod ( [mikmod(1)
-    ](http://manpages.debian.org/cgi-bin/man.cgi?query=mikmod%281%29))
-    is a MOD
-    music file players for UNIX-like systems. MikMod uses the OSS
-    /dev/dsp driver included in all recent kernels for output, and will
-    also write .wav files. Supported file formats include MOD, STM,
-    S3M, MTM, XM, ULT, and IT. The player uses ncurses for console
-    output and supports transparent loading from gzip/pkzip/zoo
-    archives and the loading/saving of playlists.
-
+    _gst123_ is packaged in Debian.
+    -   [gst123 - GitHub](https://github.com/swesterfeld/gst123).
 
 <a name="madplay"></a>[madplay(1)
 ](http://manpages.debian.org/cgi-bin/man.cgi?query=madplay)
@@ -528,32 +536,44 @@ MikMod
     formats. _see  [madplay(1)
     ](http://manpages.debian.org/cgi-bin/man.cgi?query=madplay(1))
 
+[MikMod](http://mikmod.sourceforge.net/)
+:   _MikMod_ is a [MOD](https://en.wikipedia.org/wiki/MOD_(file_format))
+    music file players for UNIX-like systems. Mikmod is a module
+    player and library supporting many formats, including mod, s3m, it, and xm.
+    MikMod uses the OSS /dev/dsp driver included in all recent kernels for output, and
+    will also write .wav files.
 
-<a name="moc"></a>[Moc](http://moc.daper.net/)
-:   Moc (GPL)
-    ([Moc wikipedia page](http://en.wikipedia.org/wiki/Music_On_Console))
-    is an ncurses-based console audio player with ALSA, OSS, SNDIO or JACK
-    outputs.
-    Supported file formats are: mp3, Ogg Vorbis, FLAC, Musepack (mpc),
-    Speex, Opus, WAVE,  AIFF, AU, SVX, Sphere Nist WAV, IRCAM SF, Creative VOC,SID,
-    wavpack, MIDI and modplug.
-    With the  FFmpeg plugin we add  (WMA, RealAudio, AAC, MP4).
+    The player uses ncurses for console output and supports transparent loading from
+    gzip/pkzip/zoo archives and the loading/saving of playlists.
+    -   [mikmod(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=mikmod))
+    -   [mikmod - GitHub](https://github.com/sezero/mikmod)
+
+<a name="moc"></a>[Moc](http://moc.daper.net/) (GPL)
+:   _Moc_ is an ncurses-based console audio player with ALSA, OSS, SNDIO or JACK
+    outputs.  Supported file formats are: mp3, Ogg Vorbis, FLAC, Musepack (mpc), Speex,
+    Opus, WAVE, AIFF, AU, SVX, Sphere Nist WAV, IRCAM SF, Creative VOC,SID, wavpack,
+    MIDI and modplug.  With the FFmpeg plugin we add (WMA, RealAudio, AAC, MP4).
+
     _Moc_ works as a daemon and can be controlled by a command line or via conky, or the
     gui client mentioned below but it is not usable through the network like the music
     servers {{< iref "#mpd" "Mpd" >}} or {{< iref "#xmms2" "Xmms2" >}}.
 
-    It uses 6M resident.
+    In 2021 there is no new release since MOC 2.5.2 and 2.6-alpha3 Released in 2016.
+    Moc uses 6M resident.
 
-   -   [MOC Home page](http://moc.daper.net/)
-   -   [Documentation | MOC](http://moc.daper.net/documentation)
-   -   [MOC Readme](http://moc.daper.net/node/87)
-   -   [MOC Scripts](http://moc.daper.net/contrib)
-   -   [ArchWiki - Moc](https://wiki.archlinux.org/index.php/Moc).
-   -   [MocIcon](http://mocicon.sourceforge.net/) is a simple GTK+ Music On Console tray
-       icon. _Last release 2010._
-   -   [Exo](https://github.com/loimu/exo) (GPL-3.0) is a C++ QT frontend for MOC.
-       it supports Lyrics from web, {{< iref "#mpris" "MPRISv2" >}}, bookmarks, OSD with
-       an additional Python script.
+    -   [Moc wikipedia page](http://en.wikipedia.org/wiki/Music_On_Console)
+    -   [MOC Home page](http://moc.daper.net/)
+    -   [Documentation | MOC](http://moc.daper.net/documentation)
+    -   [MOC Readme](http://moc.daper.net/node/87)
+    -   [MOC Scripts](http://moc.daper.net/contrib)
+    -   [ArchWiki - Moc](https://wiki.archlinux.org/index.php/Moc).
+    -   [MocIcon](http://mocicon.sourceforge.net/) is a simple GTK+ Music On Console tray
+        icon. _Last release 2010._
+    -   [moc-pris](https://github.com/progwolff/moc-mpris) is a mpris bridge for moc.
+    -   [Exo](https://github.com/loimu/exo) (GPL-3.0) is a C++ QT frontend for MOC
+        and {{< iref "#cmus" "Cmus" >}}.
+        it supports Lyrics from web, {{< iref "#mpris" "MPRISv2" >}}, bookmarks, OSD with
+        an additional Python script.
 
 <a name="mpg123"></a>{{< wp "Mpg123" >}}
 :   Mpg123 (LGPL) is a very fast decoder and player for mp3 _or any
@@ -561,15 +581,13 @@ MikMod
     unix and w32 it support a lot aof audio interfaces including alsa,
     coreaudio, esound, jack, nas, oss, portaudio, pulseaudio, SDL.
     It  can also play MPEG audio files from a WWW server.
-    _[mpg123(1)
-    ](http://manpages.debian.org/cgi-bin/man.cgi?query=mpg123(1))
+    _[mpg123(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=mpg123(1))
 
     [Mpg321](http://sourceforge.net/projects/mpg321)<a name="mpg321"></a>
     is a GPL replacement
     for Mpg123 which aimed at a truly free software mp3 player, while
     previous versions of mpg123 did not have a clear free opensource license.
-    [mpg321(1)
-    ](http://manpages.debian.org/cgi-bin/man.cgi?query=mpg321(1))
+    [mpg321(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=mpg321(1))
 
     There are some controversies about the respective performance of mpg123
     and mpg321. I have even read that mpg123 is twenty time faster. I made
@@ -588,18 +606,19 @@ MikMod
     but I found it 10% faster on an intel dual core._
 
 
-<a name="mp3blaster"></a>[mp3blaster](http://mp3blaster.sourceforge.net/)
+<a name="mp3blaster"></a>[mp3blaster](http://mp3blaster.sourceforge.net/) (GPL 2.0)
 :   An interactive text-console based ogg, mp3, sid and wav player, with
     playlist management. As a ncurses application his memory
-    requirements are low 3.5M resident. refs:
-    [mp3blaster(1)
-    ](http://manpages.debian.org/cgi-bin/man.cgi?query=mp3blaster%281%29)
-    ,
-    [splay
-    ](http://manpages.debian.org/cgi-bin/man.cgi?query=splay%281%29)
-    ,
-    [nmixer(1)
-    ](http://manpages.debian.org/cgi-bin/man.cgi?query=nmixer%281%29)
+    requirements are low 3.5M resident.
+
+    _mp3blaster_ last release was in 2014, and the development seems stopped since 2017.
+
+    -   [GitHub - mp3blaster](https://github.com/stragulus/mp3blaster)
+    -   manpages:
+        [mp3blaster(1)
+        ](http://manpages.debian.org/cgi-bin/man.cgi?query=mp3blaster%281%29),
+        [splay](http://manpages.debian.org/cgi-bin/man.cgi?query=splay%281%29),
+        [nmixer(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=nmixer%281%29).
 
 
 mpd text clients
@@ -643,31 +662,21 @@ __ogg123__, __oggdec__
 
 [play]( http://git.sysphere.org/play/)
 :   A curses front-end written in python for various audio players based
-    on cplay.
-
-[PyTone](http://www.luga.de/pytone/)
-:   is a GPLv2 music jukebox written in Python with a curses based
-    GUI. I had no opportunity to try v3.0.0 which freeze when trying to
-    index my sound library.
-
+    on cplay. _last commit 2013._
 
 [Orpheus](http://thekonst.net/en/orpheus)
-:   is a GPL text mode menu- and window-driven audio player
-    application for CDs, internet stream broadcasts and files in MP3
-    and Vorbis OGG format. It is in debian.
+:   is a GPL text mode menu- and window-driven audio player application for CDs,
+    internet stream broadcasts and files in MP3 and Vorbis OGG format. It is in debian.
 
-[Radiotray](http://radiotray.sourceforge.net/)
+[Radiotray-NG](https://github.com/ebruck/radiotray-ng) (GPL-3.0)
 :   is a simple music streaming player that lives on the system
     tray. By clicking on the RadioTray icon, you'll be presented with
     a list of pre-configured online radios. By selecting one of those
-    radios, it will start playing. Radiotray is in Debian.
-    -   [ArchWiki - Radiotray
-        ](https://wiki.archlinux.org/index.php/Radiotray)
+    radios, it will start playing.
 
-[Sotetsu](http://code.google.com/p/sotetsu/) (GPL)
-:   Sotetsu is a Terminal-based music plyaer written in Python3.x
-    using Digital Audio Access Protocol (DAAP).
-    The script has been written in 2009, and not updated.
+    This project is the continuation of [Radiotray
+    ](https://sourceforge.net/projects/radiotray/files/releases/).
+
 
 
 ## Emacs controlled Players {#emacs_players}
