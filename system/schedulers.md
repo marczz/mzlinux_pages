@@ -64,13 +64,17 @@ the {{< iref "python_libraries#inotify" "Python Libraries - Inotify" >}} section
 -   [incron](http://inotify.aiken.cz/?section=incron&page=doc)
     is an _inotify cron_ C compiled daemon and a table manipulator.
     Inotify cron handles filesystem events rather than time periods.
+    It is a project unmaintained since 2012, the package was still in _buster_ but no
+    longer in __bullseye_
 -   [fswatch](https://github.com/emcrisostomo/fswatch/) (GPL)
     A cross-platform file change monitor with multiple backends, works on Linux with
     inotify, and also OS/X, BSD, Windows. _In Debian._
     -   [fswatch Home](http://emcrisostomo.github.io/fswatch/).
--   [IWatch](http://iwatch.sourceforge.net/)
-    simple Perl script using inotify to watch files and directories,
-    sending notifications of file changes by e-mail. _In Debian, last commit 2009_.
+-   [IWatch](http://iwatch.sourceforge.net/) simple Perl script using inotify to watch
+    files and directories, sending notifications of file changes by e-mail. The last
+    release 2.2 of upstream branch is in 2009, The [Debian maintainer branch
+    ](https://salsa.debian.org/debian/iwatch/) has made a lot of improvements to
+    allow it to work with modern Debian distribution.
 -   {{< man "tail" >}} when using  `tail --follow` uses inotify if it is available.
 
 ## Knowing who consume instances
