@@ -25,74 +25,6 @@ See also {{< iref "ffmpeg" "FFmpeg section" >}},
 
 # Streaming renderers
 -   [Cortado](http://theora.org/cortado/)   (GPL) is a java streaming applet.
--   <a name="gstreamer"></a>[GStreamer (LGPL)](http://gstreamer.freedesktop.org/) is a
-    streaming-media framework, based on graphs of filters which operate
-    on media data. Applications using this library can do real-time
-    sound processing and playing videos. New data types or processing
-    capabilities can be added by installing new plugins.
-    The Debian package _gstreamer1.0-tools_ include the basic
-    command-line tools provided with GStreamer
-
-
-    _Gstreamer_ provides some [Command line tools
-    ](https://gstreamer.freedesktop.org/documentation/tools/index.html)
-    gst-inspect
-    :   [gst-inspect-1.0
-        ](https://gstreamer.freedesktop.org/documentation/tools/gst-inspect.html)
-        print info about a GStreamer plugin. se also
-        [using Gstreamer
-        ](http://gstreamer.freedesktop.org/data/doc/gstreamer/head/faq/html/chapter-using.html).
-    ges-launch
-    :   [ges-launch-1.0
-        ](https://gstreamer.freedesktop.org/documentation/tools/ges-launch.html)
-        creates a multimedia timeline and plays it back, or renders it to the specified format.
-    gst-launch
-    :   [gst-launch(1)
-        ](https://gstreamer.freedesktop.org/documentation/tools/gst-launch.html)
-        is a tools that builds and runs basic {{< iref "#gstreamer" "GStreamer" >}}
-        pipelines it allows playing and transforming sounds and images.
-    gst-stats
-    :   A terminal app that shows summary/running stats.
-    gst-typefind
-    :   uses  the  GStreamer type finding system to determine the relevant
-        GStreamer plugin to parse or decode a file, and the corresponding media type.
-
-    They are many clients available, some listed below, but to
-    experiment with gstreamer you need a command line tool like
-    [gst123](http://space.twc.de/~stefan/gst123.php).
-
-    Gstreamer is appropriate for playing music and converting formats.
-    The plugins are in the package gstreamer-plugins.
-
-    Gstreamer is the basis of
-    [numerous applications](http://gstreamer.freedesktop.org/apps/)
-    the following are refered in these pages:
-    {{< iref "media_players#audiopreview" "audiopreview" >}},
-    {{< iref "media_players#bmpx" "Bmpx" >}},
-    {{< iref "media_players#gnash" "gnash" >}},
-    {{< iref "media_players#exaile" "Exaile" >}},
-    {{< iref "sound_edit#jokosher" "Jokosher" >}},
-    {{< iref "video_edit#pitivi" "PiTiVi" >}},
-    {{< iref "video_edit#thoggen" "Thoggen" >}},
-    {{< iref "media_players#totem" "Totem" >}},
-    {{< iref "media_players#towel" "Towel" >}}.
-
-    [Gstreamer Documentation](http://gstreamer.freedesktop.org/documentation/):
-    -   [Gstreamer tutorials
-        ](https://gstreamer.freedesktop.org/documentation/tutorials/index.html)
-    -   [List of all Plug-ins
-        ](https://gstreamer.freedesktop.org/documentation/plugins_doc.html),
-        [GStreamer Core Plugins Reference
-        ](http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gstreamer-plugins/html/),
-        [GStreamer Base Plugins Reference
-        ](http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-base-plugins/html/),
-        [GStreamer Good Plugins Reference
-        ](http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-good-plugins/html/),
-        [GStreamer Ugly Plugins Reference
-        ](http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-ugly-plugins/html/),
-        [GStreamer Bad Plugins Reference
-        ](http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-bad-plugins/html/)
-
 -   [streamripper](http://streamripper.sourceforge.net/) is a
     command-line tool that record MPEG III and OGG  streams. _last
     commit 2010_.
@@ -100,6 +32,86 @@ See also {{< iref "ffmpeg" "FFmpeg section" >}},
     _seems abandonned in 2020_
     is a multisource, multi-platform media player.  It can hook via plugins on numerous
     source API, including {{< iref "#ampache" "ampache" >}} and owncloud.
+
+
+## Gstreamer {#gstreamer}
+<a name="gstreamer"></a>[GStreamer (LGPL)](http://gstreamer.freedesktop.org/) is a
+streaming-media framework, based on graphs of filters which operate
+on media data. Applications using this library can do real-time
+sound processing and playing videos. New data types or processing
+capabilities can be added by installing new plugins.
+The Debian package _gstreamer1.0-tools_ include the basic
+command-line tools provided with GStreamer
+
+
+_Gstreamer_ provides some [Command line tools
+](https://gstreamer.freedesktop.org/documentation/tools/index.html)
+gst-inspect
+:   [gst-inspect-1.0
+    ](https://gstreamer.freedesktop.org/documentation/tools/gst-inspect.html)
+    print info about a GStreamer plugin. se also
+    [using Gstreamer
+    ](http://gstreamer.freedesktop.org/data/doc/gstreamer/head/faq/html/chapter-using.html).
+ges-launch
+:   [ges-launch-1.0
+    ](https://gstreamer.freedesktop.org/documentation/tools/ges-launch.html)
+    creates a multimedia timeline and plays it back, or renders it to the specified format.
+gst-launch
+:   [gst-launch(1)
+    ](https://gstreamer.freedesktop.org/documentation/tools/gst-launch.html)
+    is a tools that builds and runs basic {{< iref "#gstreamer" "GStreamer" >}}
+    pipelines it allows playing and transforming sounds and images.
+gst-stats
+:   A terminal app that shows summary/running stats.
+gst-typefind
+:   uses  the  GStreamer type finding system to determine the relevant
+    GStreamer plugin to parse or decode a file, and the corresponding media type.
+
+They are many clients available, some listed below, but to
+experiment with gstreamer you need a command line tool like
+[gst123](http://space.twc.de/~stefan/gst123.php).
+
+Gstreamer is appropriate for playing music and converting formats.
+The plugins are in the package gstreamer-plugins.
+
+Gstreamer is the basis of
+[numerous applications](http://gstreamer.freedesktop.org/apps/)
+the following are refered in these pages:
+{{< iref "media_players#audiopreview" "Audiopreview" >}},
+{{< iref "media_players#amarok" "Amarok" >}},
+{{< iref "media_players#banshee" "Banshee" >}},
+{{< iref "media_players#bmpx" "Bmpx" >}},
+{{< iref "media_players#clementine" "Clementine" >}},
+{{< iref "media_players#exaile" "Exaile" >}},
+{{< iref "media_players#gnash" "gnash" >}},
+{{< iref "media_players#guayadeque" "Guayadeque" >}},
+{{< iref "sound_edit#jokosher" "Jokosher" >}},
+{{< iref "media_players#muine" Muine" >}},
+{{< iref "video_edit#pitivi" "PiTiVi" >}},
+{{< iref "media_players#quodlibet" "Quod Libet" >}},
+{{< iref "media_players#rhytmnbox" "RhytmnBox" >}},
+{{< iref "media_players#sayonara" "Sayonara" >}},
+{{< iref "media_players#strawberry" "Strawberry" >}},
+{{< iref "video_edit#thoggen" "Thoggen" >}},
+{{< iref "media_players#totem" "Totem" >}},
+{{< iref "media_players#towel" "Towel" >}}.
+
+[Gstreamer Documentation](http://gstreamer.freedesktop.org/documentation/):
+-   [Gstreamer tutorials
+    ](https://gstreamer.freedesktop.org/documentation/tutorials/index.html)
+-   [List of all Plug-ins
+    ](https://gstreamer.freedesktop.org/documentation/plugins_doc.html),
+    [GStreamer Core Plugins Reference
+    ](http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gstreamer-plugins/html/),
+    [GStreamer Base Plugins Reference
+    ](http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-base-plugins/html/),
+    [GStreamer Good Plugins Reference
+    ](http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-good-plugins/html/),
+    [GStreamer Ugly Plugins Reference
+    ](http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-ugly-plugins/html/),
+    [GStreamer Bad Plugins Reference
+    ](http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-bad-plugins/html/)
+
 
 # Stream servers {#streamservers}
 ## Music only
