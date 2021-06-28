@@ -2,8 +2,6 @@
 title: Sound and Video Processing Libraries
 ---
 
-{{% toc /%}}
-
 # Sound Libraries
 <a name="audiofile"></a>[audiofile](http://www.68k.org/~michael/audiofile/)
 :   The Audio File library is an implementation of SGI's Audio File
@@ -50,26 +48,22 @@ title: Sound and Video Processing Libraries
     {{< iref "sound_edit#sweep" "Sweep" >}}
 
 <a name="libao"></a>[libao](http://www.xiph.org/ao/)
-:   Libao is a cross-platform audio library that allows programs to
-    output audio using a simple API on a wide variety of platforms. It
-    supports: null output, wav, au, oss (Open Sound System), alsa,
-    alsa09 (alsa version 0.9x or 1.x), polypaudio (next generation
-    GNOME sound server), esd (Enlighten Sound Daemon), nas (Network
-    Audio Server), irix and sun. The driver is given in
-    `/etc/libao.conf` or `.libao` with the syntax `default_driver=x`
+:   Libao is a cross-platform audio library that allows programs to output audio using a
+    simple API on a wide variety of platforms. It supports: null output, wav, au, oss
+    (Open Sound System), alsa, pulseaudio, esd (Enlighten Sound Daemon), nas (Network
+    Audio Server), irix and sun. The driver is given in `/etc/libao.conf` or `.libao`
+    with the syntax `default_driver=x`
 
-:   Libao is needed by
-    {{< iref "media_players#mpg321" "mpg321" >}}, the python bindins
+    Libao is needed by
+    {{< iref "media_players#mpg321" "mpg321" >}}, the python bindings
     are provided by the package pyao.
 
-:   An interesting feature of the {{< iref "streaming#esound" "esd" >}} driver of
-    libao is the possibility to send sound to networked computer by
-    using the option `"host=hostname:port"`.
+    -   [libao - Documentation](https://www.xiph.org/ao/doc/).
 
 <a name="libfishsound</a>libfishsound
 :   FishSound (libfishsound) provides a simple programming
     interface for decoding and encoding audio data using the codecs
-    {{< iref "#vorbis" "Vorbis" >}}and{{< iref "#speex" "Speex" >}}.
+    {{< iref "codecs#vorbis" "Vorbis" >}}and{{< iref "codecs#speex" "Speex" >}}.
 
 :   Refs:[libfishsound api](http://www.annodex.net/software/libfishsound/html/)
 
@@ -86,28 +80,17 @@ title: Sound and Video Processing Libraries
     eighty applications using libmad. It is the most popular free mpeg
     decoding library.
 
-)<a name="liboggz"></a>[liboggz](https://xiph.org/oggz/doc/
+<a name="liboggz"></a>[liboggz](https://xiph.org/oggz/doc/
 :   Oggz provides a simple programming interface for reading and
-    writing Ogg (cf. {{< iref "#vorbis" "Vorbis" >}}, {{< iref "#libogg" "libogg" >}})
-    files and streams.
+    writing Ogg (cf. {{< iref "codecs#vorbis" "Vorbis" >}},
+    {{< iref "#libogg" "libogg" >}}) files and streams.
 
-[Ogg Vorbis](codecs#ogg_vorbis "Internal reference")
-:   Ogg Vorbis is a GPLed compressed audio format for audio and
-    music at fixed and variable bitrates from 16 to 128 kbps/channel.
-    Look at [Technical Details in Wikipedia Vorbis page
-    ](http://en.wikipedia.org/wiki/Vorbis#Technical_details).
-
-    - Libogg is a library for manipulating Ogg bitstream. , the
-    python bindins are provided by the package pyogg.
+-   Libogg is a library for manipulating Ogg bitstream. , the
+    python bindings are provided by the package pyogg.
     - The {{< iref "#libogg" "libvorbis" >}} package contains runtime
     libraries for use in programs that support Ogg Vorbis.
     - See also {{< iref "#libfishsound" "libfishsound" >}} and
     {{< iref "#liboggz" "liboggz" >}}for a programming interface
-    - [xiph.org  Ogg homepage](http://www.xiph.org/ogg/).
-    _(in french:  [page francophone du format Ogg Vorbis](http://ptaff.ca/ogg/)
-    )_.
-   -  A list of ogg vorbis players is provided by the
-    [PortablePlayers Wiki](http://wiki.xiph.org/index.php/PortablePlayers)
 
 <a name="libsndfile"></a>[libsndfile](http://www.mega-nerd.com/libsndfile/)
 :   Libsndfile is a C library for reading and writing files
@@ -140,12 +123,16 @@ title: Sound and Video Processing Libraries
 
 
 
-[SDL](http://www.libsdl.org/)
-:   Simple DirectMedia Layer (SDL) is a cross-platform multimedia
-    library designed to provide fast access to the graphics frame
-    buffer and audio device.
-:   SDL\_net is a portable network library for use with SDL.
+[SDL](http://www.libsdl.org/) (zlib license)
+:   Simple DirectMedia Layer (SDL) is a cross-platform development library designed to
+    provide low level access to audio, keyboard, mouse, joystick, and graphics hardware
+    via OpenGL and Direct3D. It is used by video playback software, emulators, and
+    popular games.
 
+    _SDL net_ is a portable network library for use with SDL.
+
+    -   [SDL Wiki](https://wiki.libsdl.org/)
+    -   [SDL - GitHub](https://github.com/libsdl-org)
 
 # Alsa {#alsa}
 
@@ -241,7 +228,12 @@ The list of cards is in `/proc/asound/cards` so on one laptop I have:
 Each card has a directory in `/proc/asound/` so if I want to have info on the playback
 if the pcm in the card numer 1, I look in `cat /proc/asound/card1/pcm0p/info`.
 
-But now the `/sys` filesystem is to be preferred and the alsa devices are in
+To know what sample rate is actually running playing audio on your first soundcard:
+
+    $ cat /proc/asound/card0/pcm0p/sub0/hw_params
+
+
+Now the `/sys` filesystem is to be preferred and the alsa devices are in
 `/sys/class/sound/` so the `car1` is a
 
      $ cat /sys/class/sound/card1/id
@@ -345,14 +337,15 @@ can also be written:
 The conversion of format is done by using the `plug` conversion and a slave pcm;
 `plughw:1,0` is an abbreviated form of `-D "plug:'hw:1,0'"`.
 
-## Pulseaudio
+## Pulseaudio and PipeWire
 
 Pulseaudio sound server is
-{{< iref "streaming#pulseaudio" "in the streaming section" >}}
+{{< iref "streaming#pulseaudio" "in the streaming section" >}} where you find also
+{{< iref "streaming#pipewire" "PipeWire" >}}.
 
 # Video Libraries
 
-Theora<a name="theora"></a>
+<a name="theora"></a>Theora
 :   Theora is an open video codec being developed by the Xiph.org Foundation
     as part of their Ogg project.
 
@@ -360,7 +353,7 @@ Theora<a name="theora"></a>
     [FAQ](http://www.theora.org/theorafaq.html)
 
 
-DVB and Video4Linux<a name="v4l"></a>
+<a name="v4l"></a>DVB and Video4Linux
 :   The [LinuxTV project](http://www.linuxtv.org/) develops and maintains
     the DVB driver subsystem which is included in the Linux 2.6.x kernel,
     DVB links are in the
@@ -370,13 +363,11 @@ DVB and Video4Linux<a name="v4l"></a>
     parallel port and USB video cameras.
 
 SDL
-:   see {{< iref "#sdl" "in sound libraries" >}}
+:   See {{< iref "#sdl" "SDL in sound libraries" >}}
 
-General Graphic Interface (GGI))<a name="gci"></a>
-: The {{< wp "General Graphics Interface" >}} project aims to
-develop a reliable, stable and fast graphics system that works
-everywhere.
-
+<a name="gci"></a>General Graphic Interface (GGI))
+:   The {{< wp "General Graphics Interface" >}} project aims to develop a reliable,
+    stable and fast graphics system that works everywhere.
 
 
 <!--  Local Variables: -->
