@@ -23,6 +23,142 @@ See also {{< iref "ffmpeg" "FFmpeg section" >}},
     [Xiph.org](http://dir.xiph.org/),
     [basic.ch](http://www.basic.ch/).
 
+
+# Sound Servers
+-   <a name="esound"></a>{{< wp "ESound" >}}
+    the Enlightened Sound Daemon, is a server process that mixes
+    several audio streams for playback by a single audio device.
+    Now esd is largely replaced by
+    {{< iref "#pulseaudio" "PulseAudio" >}}.
+-   <a name="jack"><a>[Jack](http://jackit.sourceforge.net)
+    JACK is a low-latency audio server. It can connect a number of
+    different applications to an audio device, as well as allowing them
+    to share audio between themselves.
+    -   Wikipedia {{< wp "JACK Audio Connection Kit" >}}
+    -   [ArchWiki: JACK Audio Connection Kit
+        ](https://wiki.archlinux.org/index.php/JACK_Audio_Connection_Kit)
+
+## PulseAudio {#pulseaudio}
+[PulseAudio](http://www.freedesktop.org/wiki/Software/PulseAudio/)
+(LGPL library, GPL server) is a a networked sound server, that has support in audacious,
+gst (gst-pulse), libao, {{< iref "media_players#mpd" "mpd" >}},
+ mplayer, qmmp, xine.... There is an alsa bridge, with which alsa can be both a backend
+and a frontend to PulseAudio, through it any alsa player can use PulseAudio.
+
+
+Wikipedia has a {{< wp "Pulseaudio" >}} page.
+
+-   [Freedesktop PulseAudio Home
+    ](http://www.freedesktop.org/wiki/Software/PulseAudio/)
+    -   [About PulseAudio
+        ](http://www.freedesktop.org/wiki/Software/PulseAudio/About/)
+    -   The pulseaudio server setup is described in the
+        [PerfectSetup Page
+        ](http://www.freedesktop.org/wiki/Software/PulseAudio/Documentation/User/PerfectSetup/)
+    -   [Server Strings
+        ](http://www.freedesktop.org/wiki/Software/PulseAudio/Documentation/User/ServerStrings/)
+        to select the server.
+    -   [list of modules
+        ](http://www.freedesktop.org/wiki/Software/PulseAudio/Documentation/User/Modules),
+    -   [network setup
+        ](https://www.freedesktop.org/wiki/Software/PulseAudio/Documentation/User/Network/)
+    -   module-cli Command Line Language is described in
+        the man page {{< man "pulse-cli-syntax(5)" >}}
+-   Wikipedia {{< wp "PulseAudio" >}}
+-   Ubuntu has a basic [PulseAudio page](https://wiki.ubuntu.com/PulseAudio),
+    note there the importance of `/etc/asound.conf`.
+-   [Debian Wiki PulseAudio](https://wiki.debian.org/PulseAudio).
+-   [Gentoo Pulseausdio](http://wiki.gentoo.org/wiki/PulseAudio).
+-   [ArchWiki: PulseAudio
+    ](https://wiki.archlinux.org/index.php/PulseAudio),
+    [PulseAudio/Configuration
+    ](https://wiki.archlinux.org/index.php/PulseAudio/Configuration),
+    [PulseAudio/Examples
+    ](https://wiki.archlinux.org/index.php/PulseAudio/Examples),
+    [PulseAudio/Troubleshooting
+    ](https://wiki.archlinux.org/index.php/PulseAudio/Troubleshooting).
+-   [mpd wiki: how to set mpd to use Pulseaudio](https://mpd.fandom.com/wiki/PulseAudio)
+-   [Linux MAO PulseAudio
+    ](http://www.linuxmao.org/tikiwiki/tiki-index.php?page=PulseAudio)
+    (français) translated and adapted for gentoo in
+    [proaudio.tuxfamily.org PulseAudio Howto
+    ](http://proaudio.tuxfamily.org/wiki/index.php?title=PulseAudio).
+-   The utilities in the package pulseaudio-utils are
+    [paplay(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=paplay+1),
+    [parecord(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=parecord+1),
+    [padsp(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=padsp+1),
+    [pactl(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=pactl+1),
+    [pacmd(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=pacmd+1),
+    [pacat(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=pacat+1),
+    [pamon(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=pamon+1),
+    [pax11publish(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=pax11publish+1),
+    [pasuspender(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=pasuspender+1),
+-   The gtk utilities are in separate packages:
+    [pavucontrol(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=pavucontrol+1)
+    *PulseAudio Volume Control*,
+    [paprefs(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=paprefs+1)
+    *PulseAudio Preferences* ,
+    [pavumeter(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=pavumeter+1)
+    *PulseAudio Volume Meter*,
+-   [pamixer](https://github.com/cdemoulins/pamixer)(GPL) and
+    [ponymix](https://github.com/falconindy/ponymix) are
+    two command line mixers for pulseaudio, but you can also use _amixer_.
+-   When the server run in user mode it load the [default.pa - server module config file
+    ](https://wiki.archlinux.org/index.php/PulseAudio/Configuration#default.pa)
+    in `~/.config/pulse/default.pa`  and  when  that  file  doesn't  exist
+    `/etc/pulse/default.pa` to configure modules.
+    The same commands can also be entered during runtime  in  the  {{< man "pacmd(1)" >}}
+    tool they follow {{< man "pulse-cli-syntax(5)" >}}.
+-   [client.conf -  PulseAudio client applications configuration
+    ](https://wiki.archlinux.org/index.php/PulseAudio/Configuration#client.conf)
+    is used to configure runtime options for individual clients.  It can be used to set
+    the configure the default sink and source statically as well as allowing (or
+    disallowing) clients to automatically start the server if not currently
+    running.<br/> Spanning pulse with the session is disabled by putting `autospawn =
+    no`.
+
+    The client read `~/config/pulse/client.conf` and if it does not exists
+    `/etc/pulse/client.conf`.  See {{< man "pulse-client.conf(5)" >}} for more
+    information
+-   [daemon.conf - daemon configuration
+    ](https://wiki.archlinux.org/index.php/PulseAudio/Configuration#daemon.conf)
+    defines base settings like the default sample rates used by modules, resampling
+    methods, realtime scheduling ... . These can not be changed at runtime without
+    restarting the PulseAudio daemon.  See the {{< man "pulse-daemon.conf" >}} for
+    information.
+-   To start manually pulseaudio to debug it, first disable _as above_ and stop the
+    autospawned session then start again with `pulseaudio -v` to get info messages,
+    `pulseaudio -vv` to also get debugging messages.
+-   [pa-applet](https://github.com/fernandotcl/pa-applet)
+    is a systray-applet that allows you to control
+    the volume level of the default sink and mute or unmute it.
+    pa-applet is not a replacement to padevchooser and pavucontrol,
+    but offer basic functions for regular desktop usage.
+-   Pulseaudio can stream to UPnP / DLNA with
+    {{< iref "#pulseaudio" "pulseaudio-dlna" >}}.
+
+## PipeWire {#pipewire}
+-   [PipeWire Wiki - Freedesktop
+    ](https://gitlab.freedesktop.org/pipewire/pipewire/-/wikis/home)
+-   [PipeWire README
+    ](https://gitlab.freedesktop.org/pipewire/pipewire/-/blob/master/README.md)
+-   [PipeWire - ArchWiki](https://wiki.archlinux.org/index.php/PipeWire),
+    [PipeWire/Examples](https://wiki.archlinux.org/title/PipeWire/Examples)
+-   [Pipewire - Gentoo Wiki](https://wiki.gentoo.org/wiki/Pipewire#Replacing_PulseAudio)
+-   [Fedora Switch to Pipewire](https://fedoraproject.org/wiki/Changes/DefaultPipeWire).
+
+The release 3.25 add pw-loopback tool and support module-loopback. pw-loopback
+Sends the captured data from a source directly to a sink.
+
+It uses an input and output stream so the source and sink can be moved in pavucontrol,
+channel remixing is possible and the volume can be adjusted.
+
+The module loopback and the command `pw-loopback` are
+described in pipewire wiki [in the page Migrate-PulseAudio
+](https://gitlab.freedesktop.org/pipewire/pipewire/-/wikis/Migrate-PulseAudio#module-loopback).
+Examples of use of pw-looback are in the page [coupled streams virtual devices
+](https://gitlab.freedesktop.org/pipewire/pipewire/-/wikis/Virtual-Devices#loopback)
+
 # Streaming renderers
 -   [Cortado](http://theora.org/cortado/)   (GPL) is a java streaming applet.
 -   [streamripper](http://streamripper.sourceforge.net/) is a
@@ -221,129 +357,6 @@ _
 -   [reactive-ampache · GitLab](https://gitlab.com/antoniotari/reactive-ampache/) or
     (GPL v3.0) [named power-ampache on f-droid
     ](https://f-droid.org/en/packages/com.antoniotari.reactiveampacheapp/).
-
-
-
-### PulseAudio {#pulseaudio}
-[PulseAudio](http://www.freedesktop.org/wiki/Software/PulseAudio/)
-(LGPL library, GPL server) is a a networked sound server, that has support in audacious,
-gst (gst-pulse), libao, {{< iref "media_players#mpd" "mpd" >}},
- mplayer, qmmp, xine.... There is an alsa bridge, with which alsa can be both a backend
-and a frontend to PulseAudio, through it any alsa player can use PulseAudio.
-
-
-Wikipedia has a {{< wp "Pulseaudio" >}} page.
-
--   [Freedesktop PulseAudio Home
-    ](http://www.freedesktop.org/wiki/Software/PulseAudio/)
-    -   [About PulseAudio
-        ](http://www.freedesktop.org/wiki/Software/PulseAudio/About/)
-    -   The pulseaudio server setup is described in the
-        [PerfectSetup Page
-        ](http://www.freedesktop.org/wiki/Software/PulseAudio/Documentation/User/PerfectSetup/)
-    -   [Server Strings
-        ](http://www.freedesktop.org/wiki/Software/PulseAudio/Documentation/User/ServerStrings/)
-        to select the server.
-    -   [list of modules
-        ](http://www.freedesktop.org/wiki/Software/PulseAudio/Documentation/User/Modules),
-    -   [network setup
-        ](https://www.freedesktop.org/wiki/Software/PulseAudio/Documentation/User/Network/)
-    -   module-cli Command Line Language is described in
-        the man page {{< man "pulse-cli-syntax(5)" >}}
--   Wikipedia {{< wp "PulseAudio" >}}
--   Ubuntu has a basic [PulseAudio page](https://wiki.ubuntu.com/PulseAudio),
-    note there the importance of `/etc/asound.conf`.
--   [Debian Wiki PulseAudio](https://wiki.debian.org/PulseAudio).
--   [Gentoo Pulseausdio](http://wiki.gentoo.org/wiki/PulseAudio).
--   [ArchWiki: PulseAudio
-    ](https://wiki.archlinux.org/index.php/PulseAudio),
-    [PulseAudio/Configuration
-    ](https://wiki.archlinux.org/index.php/PulseAudio/Configuration),
-    [PulseAudio/Examples
-    ](https://wiki.archlinux.org/index.php/PulseAudio/Examples),
-    [PulseAudio/Troubleshooting
-    ](https://wiki.archlinux.org/index.php/PulseAudio/Troubleshooting).
--   [mpd wiki: how to set mpd to use Pulseaudio](https://mpd.fandom.com/wiki/PulseAudio)
--   [Linux MAO PulseAudio
-    ](http://www.linuxmao.org/tikiwiki/tiki-index.php?page=PulseAudio)
-    (français) translated and adapted for gentoo in
-    [proaudio.tuxfamily.org PulseAudio Howto
-    ](http://proaudio.tuxfamily.org/wiki/index.php?title=PulseAudio).
--   The utilities in the package pulseaudio-utils are
-    [paplay(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=paplay+1),
-    [parecord(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=parecord+1),
-    [padsp(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=padsp+1),
-    [pactl(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=pactl+1),
-    [pacmd(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=pacmd+1),
-    [pacat(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=pacat+1),
-    [pamon(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=pamon+1),
-    [pax11publish(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=pax11publish+1),
-    [pasuspender(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=pasuspender+1),
--   The gtk utilities are in separate packages:
-    [pavucontrol(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=pavucontrol+1)
-    *PulseAudio Volume Control*,
-    [paprefs(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=paprefs+1)
-    *PulseAudio Preferences* ,
-    [pavumeter(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=pavumeter+1)
-    *PulseAudio Volume Meter*,
--   [pamixer](https://github.com/cdemoulins/pamixer)(GPL) and
-    [ponymix](https://github.com/falconindy/ponymix) are
-    two command line mixers for pulseaudio, but you can also use _amixer_.
--   When the server run in user mode it load the [default.pa - server module config file
-    ](https://wiki.archlinux.org/index.php/PulseAudio/Configuration#default.pa)
-    in `~/.config/pulse/default.pa`  and  when  that  file  doesn't  exist
-    `/etc/pulse/default.pa` to configure modules.
-    The same commands can also be entered during runtime  in  the  {{< man "pacmd(1)" >}}
-    tool they follow {{< man "pulse-cli-syntax(5)" >}}.
--   [client.conf -  PulseAudio client applications configuration
-    ](https://wiki.archlinux.org/index.php/PulseAudio/Configuration#client.conf)
-    is used to configure runtime options for individual clients.  It can be used to set
-    the configure the default sink and source statically as well as allowing (or
-    disallowing) clients to automatically start the server if not currently
-    running.<br/> Spanning pulse with the session is disabled by putting `autospawn =
-    no`.
-
-    The client read `~/config/pulse/client.conf` and if it does not exists
-    `/etc/pulse/client.conf`.  See {{< man "pulse-client.conf(5)" >}} for more
-    information
--   [daemon.conf - daemon configuration
-    ](https://wiki.archlinux.org/index.php/PulseAudio/Configuration#daemon.conf)
-    defines base settings like the default sample rates used by modules, resampling
-    methods, realtime scheduling ... . These can not be changed at runtime without
-    restarting the PulseAudio daemon.  See the {{< man "pulse-daemon.conf" >}} for
-    information.
--   To start manually pulseaudio to debug it, first disable _as above_ and stop the
-    autospawned session then start again with `pulseaudio -v` to get info messages,
-    `pulseaudio -vv` to also get debugging messages.
--   [pa-applet](https://github.com/fernandotcl/pa-applet)
-    is a systray-applet that allows you to control
-    the volume level of the default sink and mute or unmute it.
-    pa-applet is not a replacement to padevchooser and pavucontrol,
-    but offer basic functions for regular desktop usage.
--   Pulseaudio can stream to UPnP / DLNA with
-    {{< iref "#pulseaudio" "pulseaudio-dlna" >}}.
-
-## PipeWire {#pipewire}
--   [PipeWire Wiki - Freedesktop
-    ](https://gitlab.freedesktop.org/pipewire/pipewire/-/wikis/home)
--   [PipeWire README
-    ](https://gitlab.freedesktop.org/pipewire/pipewire/-/blob/master/README.md)
--   [PipeWire - ArchWiki](https://wiki.archlinux.org/index.php/PipeWire),
-    [PipeWire/Examples](https://wiki.archlinux.org/title/PipeWire/Examples)
--   [Pipewire - Gentoo Wiki](https://wiki.gentoo.org/wiki/Pipewire#Replacing_PulseAudio)
--   [Fedora Switch to Pipewire](https://fedoraproject.org/wiki/Changes/DefaultPipeWire).
-
-The release 3.25 add pw-loopback tool and support module-loopback. pw-loopback
-Sends the captured data from a source directly to a sink.
-
-It uses an input and output stream so the source and sink can be moved in pavucontrol,
-channel remixing is possible and the volume can be adjusted.
-
-The module loopback and the command `pw-loopback` are
-described in pipewire wiki [in the page Migrate-PulseAudio
-](https://gitlab.freedesktop.org/pipewire/pipewire/-/wikis/Migrate-PulseAudio#module-loopback).
-Examples of use of pw-looback are in the page [coupled streams virtual devices
-](https://gitlab.freedesktop.org/pipewire/pipewire/-/wikis/Virtual-Devices#loopback)
 
 
 ## Video and Music
@@ -855,21 +868,6 @@ chromecast with many applications {{< iref "#casting_apps" "referenced above" >}
 or icecast.
 
 
-# Sound Servers
--   {{< iref "#pulseaudio" "PulseAudio" >}}:
-    is referenced {{< iref "#pulseaudio" "above" >}}.
--   <a name="esound"></a>{{< wp "ESound" >}}
-    the Enlightened Sound Daemon, is a server process that mixes
-    several audio streams for playback by a single audio device.
-    Now esd is largely replaced by
-    {{< iref "#pulseaudio" "PulseAudio" >}}.
--   <a name="jack"><a>[Jack](http://jackit.sourceforge.net)
-    JACK is a low-latency audio server. It can connect a number of
-    different applications to an audio device, as well as allowing them
-    to share audio between themselves.
-    -   Wikipedia {{< wp "JACK Audio Connection Kit" >}}
-    -   [ArchWiki: JACK Audio Connection Kit
-        ](https://wiki.archlinux.org/index.php/JACK_Audio_Connection_Kit)
 
 
 <!--  Local Variables: -->
