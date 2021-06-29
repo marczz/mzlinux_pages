@@ -2,8 +2,6 @@
 title: Python Documentation
 ---
 
-{{% toc /%}}
-
 # References
 
 ## General references
@@ -25,36 +23,36 @@ See also
 ## Offficial documentation
 -   [Python Home Page](http://www.python.org)
 -   [Python Wiki](http://wiki.python.org/moin/)
--   [What's New in last Python release.](http://docs.python.org/3/whatsnew/)
+-   [What's New in last Python release.](https://docs.python.org/3/whatsnew/)
 -   The official
-    [Python documentation](http://docs.python.org/3/) and
-    [Python documentation 2k](http://docs.python.org/2/)
+    [Python documentation](https://docs.python.org/3/) (
+    [2.7](https://docs.python.org/2/))
     includes links to other introductory material as well as language
     references.
--   [Python tutorial](http://docs.python.org/tutorial/3/index.html)
-    ([Python tutorial 2.7](http://docs.python.org/2/tutorial/index.html))
+-   [Python tutorial](https://docs.python.org/3/tutorial/)
+    ([2.7](https://docs.python.org/2/tutorial/index.html))
     by Guido van Rossum use to be the front gate of Python.
 -   The
-    [Python Library Reference](http://docs.python.org/3/library/index.html)
-    ([Python 2.7 Library Reference](http://docs.python.org/2/library/index.html "python.org doc"))
+    [Python Library Reference](https://docs.python.org/3/library/index.html)
+    ([2.7](https://docs.python.org/2/library/index.html))
     describe the available Python modules APIs. The
-    [Python debugger pdb](http://docs.python.org/3/library/pdb.html)
-    ( [Python debugger pdb 2.x](http://docs.python.org/2/library/pdb.html)
+    [Python debugger pdb](https://docs.python.org/3/library/pdb.html)
+    ( [2.7](https://docs.python.org/2/library/pdb.html))
     is documented there.
--   [Python Developer’s Guide](http://docs.python.org/devguide/)
+-   [Python Developer’s Guide](https://docs.python.org/devguide/)
      is a comprehensive resource for contributing to Python.
--   [Python faq](http://docs.python.org/3/faq/)
-    [Python faq 2.7](http://docs.python.org/2/faq/) or
+-   [Python faq](https://docs.python.org/3/faq/)
+    ([2.7](https://docs.python.org/2/faq/)) or
     _(General Programming, Programming, Library and Extension, Extending/Embedding, GUI Programming)_
 -   [Python Infrequently Answered Questions](http://norvig.com/python-iaq.html "norvig.com python-iaq.html")
     by Peter Norvig the author of
     [Artificial Intelligence: A Modern Approach](http://aima.cs.berkeley.edu/) who also commented the use of python for AI programming in [Python for Lisp Programmers](http://www.norvig.com/python-lisp.html).
 -   Guido van Rossum's
-    [What’s New In Python 3.3](http://docs.python.org/3/whatsnew/3.3.html),
-    [What’s New In Python 3.4](http://docs.python.org/3/whatsnew/3.4.html).
-    [What's new in python 3.5](http://docs.python.org/3/whatsnew/3.5.html),
-    [What’s New In Python 3.6](http://docs.python.org/3/whatsnew/3.6.html),
-    [What’s New In Python 3.7](http://docs.python.org/3/whatsnew/3.7.html),
+    [What’s New In Python 3.3](https://docs.python.org/3/whatsnew/3.3.html),
+    [What’s New In Python 3.4](https://docs.python.org/3/whatsnew/3.4.html).
+    [What's new in python 3.5](https://docs.python.org/3/whatsnew/3.5.html),
+    [What’s New In Python 3.6](https://docs.python.org/3/whatsnew/3.6.html),
+    [What’s New In Python 3.7](https://docs.python.org/3/whatsnew/3.7.html),
 -   [Fredrik Lundh's zone.effbot.org](http://www.effbot.org/zone/index.htm),
     gives an important documentation on many python aspect. His
 
@@ -91,17 +89,17 @@ See also
     [Python for Programmers](http://wiki.python.org/moin/BeginnersGuide/Programmers),
     [Moving To Python From Other Languages](http://wiki.python.org/moin/MovingToPythonFromOtherLanguages),
     from [The Python Wiki](http://wiki.python.org/)
--   [Python HOWTOs](http://docs.python.org/3/howto/):
-    -   [Curses Programming with Python](http://docs.python.org/3/howto/curses.html) by A.M. Kuchling and Eric S. Raymond.
-    -   [Functional Programming HOWTO](http://docs.python.org/3/howto/functional.html) by A.M. Kuchling
-    -   [Logging HOWTO](http://docs.python.org/3/howto/logging.html)
+-   [Python HOWTOs](https://docs.python.org/3/howto/):
+    -   [Curses Programming with Python](https://docs.python.org/3/howto/curses.html) by A.M. Kuchling and Eric S. Raymond.
+    -   [Functional Programming HOWTO](https://docs.python.org/3/howto/functional.html) by A.M. Kuchling
+    -   [Logging HOWTO](https://docs.python.org/3/howto/logging.html)
          by Vinay Sajip.
-    -   [Regular Expression HOWTO](http://docs.python.org/3/howto/regex.html) by A.M. Kuchling
-    -   [Socket Programming HOWTO](http://docs.python.org/3/howto/sockets.html)
+    -   [Regular Expression HOWTO](https://docs.python.org/3/howto/regex.html) by A.M. Kuchling
+    -   [Socket Programming HOWTO](https://docs.python.org/3/howto/sockets.html)
         by Gordon McMillan.
     -   [Sorting Mini-HOWTO](http://wiki.python.org/moin/HowTo/Sorting) by Andrew Dalke &amp; Raymond Hettinger.
-    -   [Unicode HOWTO](http://docs.python.org/3/howto/unicode.html),
-        [Py2k: Unicode HOWTO](http://docs.python.org/2/howto/unicode.html)
+    -   [Unicode HOWTO](https://docs.python.org/3/howto/unicode.html),
+        [Py2k: Unicode HOWTO](https://docs.python.org/2/howto/unicode.html)
 -   [WikiBook Python Programming](http://en.wikibooks.org/wiki/Programming:Python),
     [WikiBook: Category Python Programming
     ](https://en.wikibooks.org/wiki/Category:Book:Python_Programming)
