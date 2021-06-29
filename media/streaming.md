@@ -151,7 +151,7 @@ the following are refered in these pages:
 -   [Sonerezh](https://github.com/Sonerezh/sonerezh) (AGPL)
     a php+sql web music server.
 
-### Ampache (LGPL/GPL) {#ampache}
+### Ampache (AGPL-3.0) {#ampache}
 {{< wp "Ampache" >}} is a PHP-based tool for managing, updating and playing
 MP3/OGG/RM/FLAC/WMA/M4A files via a web interface. It is implemented with Apache (or any
 web server), MySQL, and PHP. It includes a HTML5 Web Player, shoutcast streams; subsonic
@@ -163,9 +163,8 @@ shoutcast server.
 -   [Ampache page on wikipedia](http://en.wikipedia.org/wiki/Ampache).
 -   [ArchWiki: Ampache](https://wiki.archlinux.org/index.php/Ampache).
 -   Ampache web interface can play music by using the Adobe Flash plugin.
-    This plugin is
-    to play mp3 encoded sounds at 44 khz sample rate, other formats (ogg, or even mp3 48khz)
-need transcoding.
+    This plugin is to play mp3 encoded sounds at 44 khz sample rate, other formats (ogg,
+    or even mp3 48khz) need transcoding.
 -   _Ampache_ can  control multiple mpd instances on the network, it is listed in the
     [MPD clients](https://mpd.fandom.com/wiki/Clients)
 -   John Goerzen has written two Docker images for _Ampache_,
@@ -174,10 +173,19 @@ need transcoding.
     [docker-ampache-mysql](https://github.com/jgoerzen/docker-ampache-mysql)
     which provides an internal an embedded MariaDB server.
 
-### Ampache clients.
--   For any system you can also use any client that understand UpNP
-    or DAAP or Subsonic API, if you have
-    [enabled the API in ampache](https://github.com/ampache/ampache/wiki/API).
+#### Ampache clients.
+-   By [enabling ampache API](https://github.com/ampache/ampache/wiki/API).
+    you can also set Ampache as [UpNP/DLNA Server
+    ](https://github.com/ampache/ampache/wiki/API#upnp--dlna-api)
+    and use {{< iref "#upnp_media_clients" "any UpNP client" >}}.
+-   [The DAAP API](https://github.com/ampache/ampache/wiki/API#daap-api)
+    allow the use of {{< iref "#daap clients" "DAAP Clients" >}}.
+-   [Subsonic API](https://github.com/ampache/ampache/wiki/subsonic)
+    gives access to many clients, as there are many subsonic clients for android, ios,
+    windows, MacOS, and Linux.
+-   [Webdav API](https://github.com/ampache/ampache/wiki/API#webdav-api) gives acces to
+    ampache through webdav, allowing to use potentially any music player, either by
+    using webdav in the client, or mounting webdav with fuse.
 -   [Ampache Wiki: Clients](https://github.com/ampache/ampache/wiki/Clients).
 -   Some players can interface to ampache through the XML api you can find
     a [list on Ampache wiki](https://github.com/ampache/ampache/wiki/client-api), like:
@@ -188,7 +196,7 @@ need transcoding.
     {{< iref "media_players#clementine" "Clementine" >}},
     {{< iref "#tomahawk" "Tomahawk" >}},
     {{< iref "media_players#rhythmbox" "Rhythmbox" >}}
-    can play ampache streams thru a plugin,
+    can play ampache streams through a plugin,
 -   [Viridian](http://viridian.daveeddy.com/) (BSD 3-clause license)
     is a python/pygtk ampache client.
 -   [Ampyche](https://github.com/tych0/ampyche)
@@ -197,7 +205,7 @@ need transcoding.
 -   [GitHub - ampache-xbmc-plugin](https://github.com/ampache/ampache-xbmc-plugin)
     KODI plugin for Ampache.
 
-### android clients for ampache
+#### android clients for ampache
 More on ampache wiki, you can also use android clients for subsonic, UpNP/DLNA, DAAP if
 you have enabled these API.
 _
@@ -213,9 +221,6 @@ _
 -   [reactive-ampache · GitLab](https://gitlab.com/antoniotari/reactive-ampache/) or
     (GPL v3.0) [named power-ampache on f-droid
     ](https://f-droid.org/en/packages/com.antoniotari.reactiveampacheapp/).
-
-
-### Ampache API and plugins
 
 
 
