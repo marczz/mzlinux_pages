@@ -360,78 +360,106 @@ _
 
 
 ## Video and Music
--   <a name="icecast"></a>{{< wp "Icecast" >}} (GPL) streaming server
-    (audio/video) with support of Ogg/Vorbis and Ogg/Theora, Opus,
-    WebM and MP3 streams.
-    Icecast is small 2.3M many threads on my armel nas server.:
-    -   [Icecast Home](http://www.icecast.org/)
-    -   [Icecast official documentation](http://icecast.org/docs/icecast-latest)
-    -   [Icecast 3rd Party Applications](http://icecast.org/apps/)
-        Source Clients, Mediaplayers that support Icecast streams,
-    -   [ArchWiki - Icecast](https://wiki.archlinux.org/index.php/Icecast).
-    -   [Ezstream](https://icecast.org/ezstream/)
-        is a command line source client for Icecast media streaming servers
-        that streams files without reencoding.
-        It is tiny 1.5M resident on my armel nas.
-    -   [tunapie](http://tunapie.sourceforge.net/documentation.html)
-        is a GUI based program for displaying Shoutcast or Icecast
-        video and radio streams. It gives information about streams
-        including bitrate, IP and current number of listeners. Streams
-        can then be played using a favorite media player, or recorded
-        using streamripper. It is in Debian.
-    -   _Icecast_ can be used to [stream with MPD
-        ](https://wiki.archlinux.org/index.php/Icecast#Streaming_with_MPD),
-        but {{< iref "media_players#MPD" "MPD" >}}
-        has its [own HTTP streaming server
-        ](https://wiki.archlinux.org/index.php/Music_Player_Daemon/Tips_and_tricks#HTTP_streaming).
--   <a name="jinzora"></a>[Jinzora
-    ](https://sourceforge.net/projects/jinzora/)
-    (GPL) is a Web-based media streamer and local Media Jukebox. It
-    can play numerous audio and video formats Jinzora is a quite
-    powerful system, but the administrative interface is not easy to
-    use. _Jinzora last release was in 2011 with only maintenance
-    commits in 2014._
-    -   [ArchWiki - Jinzora
-        ](https://wiki.archlinux.org/index.php/Jinzora)
--   [LIVE.COM](http://www.live555.com/mediaServer/) (LGPL)
-    is a source-code C++ library for standards-based RTP/RTCP/RTSP/SIP multimedia
-    streaming, suitable for embedded and/or low-cost streaming applications. It is used
-    by the following applications:
-    -   [openRTSP](http://www.live555.com/openRTSP/) a command-line RTSP client
-    -   [playSIP](http://www.live555.com/playSIP/) - a command-line SIP session
-        recorder.
-    -   [live555 MediaServer](http://www.live555.com/mediaServer/)
-        is a complete RTSP server application. It can stream mpeg 1, 2, 4
-        or aac. You can use openRTSP, vlc, or mplayer as client.
-    -   [RTSP/RTP streaming support](http://www.live555.com/mplayer/)
-        for the "MPlayer" media player
-    -   [vobStreamer](http://www.live555.com/vobStreamer/)
-        A network DVD player that allows to stream your DVD content over a LAN.
--   <a name="subsonic"></a>[Subsonic](http://www.subsonic.org/) (GPL)
-    is a streaming server written in Java.  _Subsonic_ supports any streamable media
-    (including MP3, AAC, and Ogg) with on-the-fly media conversion.  Some features like
-    DLNA/UPnP compatibility, are only available in the private source _Subsonic Premium_
-    that costs 1$/month.
-    -   [ArchWiki: Subsonic](https://wiki.archlinux.org/index.php/Subsonic).
-    -   [Subsonic Apps](http://www.subsonic.org/pages/apps.jsp) list subsonic clients.
-    -   [SubFirePlayer](http://www.subfireplayer.net/)
-        is a pure HTML5 audio player for SubSonic, implemented in JQueryMobile. It is
-        available as a web application, as a Chrome hosted app, and as appli for devices
-        including well as Android and the Kindle Fire HD.
-    -  [Jamstash](https://github.com/tsquillario/Jamstash)
-       is an HTML5 Music Streamer for SubSonic.
-        -   [Jamstash online site](http://jamstash.com/)
+### Icecast {#icecast}
+{{< wp "Icecast" >}} (GPL)is a streaming server (audio/video) with support of Ogg/Vorbis
+and Ogg/Theora, Opus, WebM and MP3 streams.
+Icecast has tiny memory footprints:
+-   [Icecast Home](http://www.icecast.org/)
+-   [Icecast official documentation](http://icecast.org/docs/icecast-latest)
+-   [Icecast 3rd Party Applications](http://icecast.org/apps/)
+    Source Clients, Mediaplayers that support Icecast streams,
+-   [ArchWiki - Icecast](https://wiki.archlinux.org/index.php/Icecast).
+-   [tunapie](http://tunapie.sourceforge.net/documentation.html) (LGPL-2.0)
+    is a GUI based program for displaying Shoutcast or Icecast video and radio
+    streams. It gives information about streams including bitrate, IP and current
+    number of listeners. Streams can then be played using a favorite media player,
+    or recorded using streamripper. It is in Debian.
 
-    There are many derivatives of _subsonic_, they are listed in the
-    Wikipedia {{< wp "Subsonic" >}} page, among the active projects that are
-    completly free (not a freemium like Subsonic itself) you can
-    find:
+Icecast source clients:
+-    [official list of source clients](http://icecast.org/apps/) contains approximately
+    twenty five clients.
+-   _Icecast_ can be used to [stream from MPD
+    ](https://wiki.archlinux.org/index.php/Icecast#Streaming_with_MPD),
+    but {{< iref "media_players#MPD" "MPD" >}}
+    has its [own HTTP streaming server
+    ](https://wiki.archlinux.org/index.php/Music_Player_Daemon/Tips_and_tricks#HTTP_streaming).
+-   [Ezstream](https://icecast.org/ezstream/)
+    is a command line source client for Icecast media streaming servers that streams
+    files without reencoding. It supports mp3, WebM, and Matroska streams. _Ezstream_ is
+    in Debian.
+    It is tiny 1.5M resident on my armel nas.
+-   [DarkIce](http://www.darkice.org/)
+    is a  live audio streamer, It records audio from an audio interface
+    (e.g. sound card), encodes it and sends it to a streaming server. It supports
+    encoding in mp3, ogg vorbis, AAC, Opus.
+    -    Icecast can be controlled from
+        [darksnow](https://darksnow.radiolivre.org/index.en.html)
+        GTK-2 gui interface.
 
-    -   [madsonic](http://www.madsonic.org/) (GPL)
-        a java fork of Subsonic that adds features and bug fixes over the
-        main branch._active in 2019._
-    -   [Supysonic](https://github.com/spl0k/supysonic) (GPL)
-        a Python implementation of the Subsonic server API. _active in 2021_.
+    Darkice and Darksnow are packaged in Debian.
+
+### Jinzora {#jinzora}
+<a name="jinzora"></a>[Jinzora](https://sourceforge.net/projects/jinzora/) (GPL)
+is a Web-based media streamer and local Media Jukebox. It can play numerous audio and
+video formats Jinzora is a quite powerful system, but the administrative interface is
+not easy to use. _Jinzora last release was in 2011 with only maintenance commits in
+2014._
+-   [ArchWiki - Jinzora](https://wiki.archlinux.org/index.php/Jinzora)
+
+## Live.com
+[LIVE.COM](http://www.live555.com/mediaServer/) (LGPL)
+is a source-code C++ library for standards-based RTP/RTCP/RTSP/SIP multimedia
+streaming, suitable for embedded and/or low-cost streaming applications. It is used
+by the following applications:
+-   [openRTSP](http://www.live555.com/openRTSP/) a command-line RTSP client
+-   [playSIP](http://www.live555.com/playSIP/) - a command-line SIP session
+    recorder.
+-   [live555 MediaServer](http://www.live555.com/mediaServer/)
+    is a complete RTSP server application. It can stream mpeg 1, 2, 4
+    or aac. You can use openRTSP, vlc, or mplayer as client.
+-   [RTSP/RTP streaming support](http://www.live555.com/mplayer/)
+    for the "MPlayer" media player
+-   [vobStreamer](http://www.live555.com/vobStreamer/)
+    A network DVD player that allows to stream your DVD content over a LAN.
+
+## Subsonic and forks {#subsonic}
+[Subsonic](http://www.subsonic.org/) (closed source, previously GPL)
+is a streaming server written in Java.  _Subsonic_ supports any streamable media
+(including MP3, AAC, and Ogg) with on-the-fly media conversion. Subsonic was no
+longer open source until version 6.  Some features like
+DLNA/UPnP compatibility, are only available in the private source _Subsonic Premium_
+that costs 12 $/year.
+-   [ArchWiki: Subsonic](https://wiki.archlinux.org/index.php/Subsonic).
+-   [Subsonic Apps](http://www.subsonic.org/pages/apps.jsp) list subsonic clients.
+-   [SubFirePlayer](http://www.subfireplayer.net/)
+    is a pure HTML5 audio player for SubSonic, implemented in JQueryMobile. It is
+    available as a web application, as a Chrome hosted app, and as appli for devices
+    including well as Android and the Kindle Fire HD.
+-  [Jamstash](https://github.com/tsquillario/Jamstash)
+   is an HTML5 Music Streamer for SubSonic.
+    -   [Jamstash online site](http://jamstash.com/)
+
+-   [madsonic](http://www.madsonic.org/) (closed source, previously GPL)
+    a java fork of Subsonic that adds features and bug fixes over the main branch.
+
+    Like _Subsonic_ _Madsonic_ was opensource until version 6.  It introduce some extra
+    features listed in the comparison page.
+
+    Madsonic has now introduced a private source _premium_ version. Only _Madsonic
+    Premium_ has support for UPnP/DLNA and Chromecast.  There are Premium plans from 24
+    $/y to 40 $/y. It is still flagged as open source under GPL, but the source code
+    don't seem available.
+
+-   [Airsonic](https://airsonic.github.io/) (GPL)
+    is a java media server, fork of Subsonic and Libresonic. _Airsonic_
+    streams any audio or video format that can stream over HTTP, for instance AAC
+    and OGG, and can transcode other formats.
+    -   [airsonic - GitHub](https://github.com/airsonic/airsonic/)
+        active in 2021.
+    -   [Documentation - Airsonic](https://airsonic.github.io/docs/)
+
+-   [Supysonic](https://github.com/spl0k/supysonic) (GPL)
+    a Python implementation of the Subsonic server API. _active in 2021_.
 
 -   {{< iref "media_players#videolan" "VideoLan Client (VLC)" >}} is in the
     {{< iref "media_players#video_players" "Video Players section" >}}.
