@@ -1062,21 +1062,46 @@ based on graphs of filters which operate on media data. Applications using this 
 can do anything from real-time sound processing to playing videos.it is
 {{< iref "streaming#gstreamer" "referenced in the Music Streamer section" >}}
 
-## Gnash {#gnash}
 
-[Gnash](http://gnashdev.org/) (GPLv3) is the GNU Flash movie player which can be run
-standalone, as well as as a plugin for several browsers. Gnash can use
-either {{< iref "streaming#gstreamer" "GStreamer" >}} or ffmpeg as codec support library.
+### Gnash {#gnash}
 
-## [Lightspark](https://github.com/lightspark/lightspark) {#lightspark}
-__Lightspark__ (GPL) is a Flash player implementation that run as a
-web browser plugin or as a standalone application.
+[Gnash](https://www.gnu.org/software/gnash/) (GPLv3) is the GNU Flash movie player which
+can be run standalone, as well as as a plugin for several browsers. Gnash can use either
+{{< iref "streaming#gstreamer" "GStreamer" >}} or ffmpeg as codec support library.
+
+### Gnome Videos {#gnome_videos}
+{{< wp "GNOME_Videos" >}} (GPL) previously named <a name="#totem"></a> _Totem_ is a GTK+
+media player (audio and video) for GNOME based on
+{{< iref "streaming#gstreamer" "GStreamer" >}}, it can play all mainstream media formats
+supported by {{< iref "streaming#gstreamer" "GStreamer" >}}.
+
+It also understands numerous playlist formats, including SHOUTcast, M3U, XML Shareable
+Playlist Format (XSPF), SMIL, Windows Media Player playlists and RealAudio playlists.
+
+While _Videos_ offers a gnome desktop integration, it's gnome
+dependencies are moderate, wich allow to install it in lighter GTK
+environments. _Videos_ is in the Debian package _Totem_.
+
+On an Amd64 in may 2018 Totem take 82M res / 46shr for a single ogg
+track; 116M res / 57M shr for a tv broadcast on DLNA.
+
+-   [Videos -  Gnome Home](https://wiki.gnome.org/Apps/Videos)
+-   [Totem Manual](https://help.gnome.org/users/totem/stable/index.html.en)
+-   [Totem Plugins](https://help.gnome.org/users/totem/stable/totem-plugins.html.en) :
+    [YouTube Browser
+    ](https://help.gnome.org/users/totem/stable/totem-plugins.html.en#totem-plugins-youtube)
+    allows you to search and browse YouTube, and play YouTube videos directly in Totem
+    Movie Player.
+-   [Totem Gitlab repository](https://gitlab.gnome.org/GNOME/totem).
+
+### Other Video players
+### Lightspark {#lightspark}
+[Lightspark](https://github.com/lightspark/lightspark) (GPL) is a Flash player
+implementation that run as a web browser plugin or as a standalone application.
 _LightSpark_ is in Debian.
 
--   [Lightspark GitHub repository
-    ](https://github.com/lightspark/lightspark)
--   [Lightspark Wiki
-    ](https://github.com/lightspark/lightspark/wiki/)
+-   [Lightspark GitHub repository](https://github.com/lightspark/lightspark)
+-   [Lightspark Wiki](https://github.com/lightspark/lightspark/wiki/)
 -   [Lightspark Support for various websites
     ](https://github.com/lightspark/lightspark/wiki/Site-Support)
 
@@ -1193,29 +1218,6 @@ _Streamlink_ was forked from the now dead _Livestreamer_ project.
 -   [Streamlink documentation](https://streamlink.github.io/index.html)
 -   [Streamlink - ArchWiki](https://wiki.archlinux.org/title/Streamlink)
 
-## Totem {#totem}
-
-[Totem](http://en.wikipedia.org/wiki/Totem_(media_player)) (GPL)
-is a media player (audio and video) for GNOME based on xine-lib or
-{{< iref "streaming#gstreamer" "GStreamer" >}}. Totem is able to play
-all mainstream media formats supported by one of the two backends. It
-also understands numerous playlist formats, including SHOUTcast, M3U,
-XML Shareable Playlist Format (XSPF), SMIL, Windows Media Player
-playlists and RealAudio playlists.
-
-While Totem offers a gnome desktop integration, it's gnome
-dependencies are moderate, wich allow to install it in lighter GTK
-environments.
-
-On an Amd64 in may 2018 Totem take 82M res / 46shr for a single ogg
-track; 116M res / 57M shr for a tv broadcast on DLNA.
-
--   [Totem -  Gnome Home](http://www.gnome.org/projects/totem/)
--   [Totem Manual](https://help.gnome.org/users/totem/stable/index.html.en)
--   [Totem plugin - YouTube Browser
-    ](https://help.gnome.org/users/totem/stable/totem-plugins.html.en#totem-plugins-youtube)
-    allows you to search and browse YouTube, and play YouTube videos directly in Totem
-    Movie Player.
 
 ## VideoLAN {#vlc}
 
