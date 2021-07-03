@@ -70,14 +70,7 @@ Wikipedia: {{< wp "Comparison of audio player software" >}},
 [Comparison of free software for audio - Players
 ](https://en.wikipedia.org/wiki/Comparison_of_free_software_for_audio#Players)
 
-[alsaplayer](http://www.alsaplayer.org/)
-:   AlsaPlayer (GPL v3) <a name="alsaplayer"></a> is a PCM player. The Input Plugins include:
-    MP2, MP3, WAV, CDDA, OGG, MPEG, MAD, CDDA, MikMod, and audiofile.
-    The Output Plugins include: Alsa, OSS and OSS/Lite, Esound, Sparc,
-    SGI, and JACK. Alsaplayer development stopped in 2004 with version
-    0.99.75, but seem to begin again in 2007 with a new gtk2 interface,
-    and has slept again the next year
-
+## Gstreamer based sound players
 <a href="amarok"></a>{{< wp "Amarok_(software)"  "Amarok" >}} (GPL)
 :   said to be a very good audio player with a QT user interface,
     but is quite heavy and targeted to KDE. Amarok has been redesigned
@@ -111,6 +104,167 @@ Wikipedia: {{< wp "Comparison of audio player software" >}},
      -   Podcast
      -   Play UPnP / DLNA streams
 
+<a name="banshee"></a>{{< wp "Banshee_(music_player)"  "Banshee" >}}
+:   An other music player using {{< iref "Streaming#Gstreamer" "GStreamer" >}} framework, but built
+    upon Mono and Gtk#.
+
+<a name="bmpx"></a>[Bmpx](https://sourceforge.net/projects/beepmp/) (GPL)
+:   Bmpx is based on {{< iref "streaming#gstreamer" "GStreamer" >}},
+    and can be considered as a gstreamer gui. The old *Bmp* was based on xmms, but
+    *Bmpx* was rewritten from scratch in C++ and no longer share code with
+    xmms. Bmpx can play every format for which you have a gst plugin. It supports also
+    MusicBrainz, Last.fm radio/scrobbling, HAL, DBus. It is an obsolete software
+    abandoned since 2006.
+
+<a name="clementine"></a>[Clementine](https://www.clementine-player.org/)
+:   Clementine is a QT fork of {{< iref "#amarok" "amarok 1.4" >}},
+    with which it shares main features.
+    {{< wp "Clementine_(software)" "Wikipedia: Clementine" >}}.  Clementine can play
+    internet streams, transcode music into MP3, Ogg Vorbis, speex, FLAC or AAC, manage
+    tags, use {{< iref "tag_management#cuesheet" "Cue Sheets" >}}, display lyrics, be controlled from android phone, and many
+    [features](http://www.clementine-player.org/about), playing main formats included
+    opus, and can read all playlists including {{< iref "tag_management#cuesheet" "Cue Sheets" >}} but has no bookmark nor access
+    to chapters. With one ogg file loaded it uses 85M resident / 60M shared.
+
+    {{< iref "#strawberry" "Strawberry" >}} is a fork of clementine written in C++, QT5 or QT6.
+
+    -   [Controlling Clementine from the commandline with DBus and MPRIS
+        ](https://github.com/clementine-player/Clementine/wiki/Controlling-Clementine-from-the-commandline-with-DBus-and-MPRIS)
+
+<a name="exaile"></a>[Exaile](https://www.exaile.org/)
+:   [Exaile](http://en.wikipedia.org/wiki/Exaile)
+    (GPL) is an audio player written in python using pygtk and using
+    {{< iref "streaming#gstreamer" "GStreamer" >}}
+    aiming to be similar to KDE's AmaroK, but for GTK+. It has a plugin system that
+    allow: {{< iref "#mpris" "MPRIS" >}} control
+    ([mpris plugin](https://github.com/exaile/exaile/tree/master/plugins/mpris)),
+    bidirectional last.fm support, a shoutcast directory browser, tag
+    editing thru an
+    {{< iref "tag_management#mutagen" "ExFalso" >}}
+    plugin, {{< iref "streaming#daap" "DAAP protocol" >}}
+    _client and server_ support.  As a PyGTK player you can expect a memory footprint of
+    81M/39M shared (one ogg file loaded). Exaile is no longer in Debian since _jessie_.
+
+    -   [GitHub - Exaile](https://github.com/exaile/exaile)
+    -   [Exaile Documentation](http://exaile.readthedocs.io/en/stable/)
+    -   [ArchWiki - Exaile](https://wiki.archlinux.org/index.php/Exaile)
+
+<a name="guayadeque"></a>[Guayadeque](http://guayadeque.org/) (GPL)
+:   Guayadeque is an audio player with database written in C++. It uses
+    {{< iref "streaming#gstreamer" "GStreamer" >}}
+    and _wxWidgets_ for the UI. It can play Ogg Vorbis, FLAC, MP3 or anything supported
+    by _gstreamer_.  It can be interfaced through {{< iref "#mpris" "MPRIS" >}} D-Bus interface.  _in Debian_.
+
+    -   Wikipedia: {{< wp "Guayadeque Music Player" >}}.
+
+<a name=muine"></a>{{< wp "Muine" >}}
+:   An other music player using {{< iref "streaming#Gstreamer" "GStreamer" >}}
+    framework, but built upon Mono and Gtk# (like _Banshee_), not used on my systems.
+
+<a name="parlatype"<a>[Parlatype](https://www.parlatype.org/)
+:   A  GNOME audio player for transcription using
+    {{< iref "streaming#Gstreamer" "GStreamer" >}}
+
+    It is packaged in Debian.
+
+<a name=quodlibet></a>[QuodLibet](http://code.google.com/p/quodlibet/)
+:   Quod Libet (GPL) is a GTK+-based audio player written in
+    Python. It uses {{< iref "streaming#gstreamer" "gstreamer" >}}
+    and supports Ogg Vorbis, FLAC, MP3, Musepack/Wavepack, MOD, MP4, TrueAudio, WMA.
+
+    _QuodLibet_ uses playlists based on regular expressions and can display and edit
+    tags.
+
+    As other PyGTK players _like {{< iref "#exaile" "Exaile" >}}
+    __QuodLibet__ is quite memory hungry (52M resident when playing mp3) as is ExFalso
+    and if you are not using a full gnome desktop, you need to avoid _python-gnome2_
+    otherwise you pull all the libraries and daemons.
+
+    Even if we can find _QuodLibet_ too big as a background player, it is a nice tool
+    for the _listen then tag_ game _like its brother _{{< iref "#exaile" "Exaile" >}}_.
+
+    __Quodlibet__ use the python library {{< iref "tag_management#mutagen" "mutagen" >}}
+    and share code with the {{< iref "tag_management#exfalso" "ExFalso" >}} tag editor.
+
+    -   [ExFalso/Quodlibet manual](https://quodlibet.readthedocs.org/en/latest/)
+
+<a name="rhythmnbox"></a>[Rhythmbox](http://en.wikipedia.org/wiki/Rhythmbox) (GPL)
+:   Rhythmbox is a gnome audio player using the
+    {{< iref "streaming#gstreamer" "GStreamer" >}} media framework.
+
+    Main features:
+    -   play streamed Internet radio and podcasts
+    -   playlist
+    -   gapless playback
+    -   Audio CD ripping
+    -   Album cover display
+    -   Song lyrics display
+    -   Scrobbling
+    -   DAAP  via DAAP sharing plugin which uses libdmapsharing.
+    -   UpNP through [Grilo](https://developer.gnome.org/grilo/)
+        plugin. _On Debian the package grilo-plugin is needed_.
+    -   can subscribe to podcasts
+    -   Web Remote Control[edit]
+    -   Plays ampache streams through a plugin.
+    -   {{< iref "#mpris" "MPRIS" >}} plugin.
+    -   Numerous [plugins
+        ](https://en.wikipedia.org/wiki/Rhythmbox#Plug-ins), given also in
+        [Rhythmbox/Plugins - GNOME Wiki!](https://wiki.gnome.org/Apps/Rhythmbox/Plugins)
+        including [Third party plugins
+        ](https://wiki.gnome.org/Apps/Rhythmbox/Plugins/ThirdParty).
+
+    Rhythmbox playing a single small mp3 take 90M res / 50M shr (on
+    amd64 in may 2018)
+
+    -   [Apps/Rhythmbox - GNOME Wiki!](https://wiki.gnome.org/Apps/Rhythmbox/)
+    -   [Rhythmbox · GitLab](https://gitlab.gnome.org/GNOME/rhythmbox/-/tree/master)
+    -   [ArchWiki - Rhythmbox
+        ](https://wiki.archlinux.org/index.php/Rhythmbox)
+
+<a name="sayonara"></a>[Sayonara](https://sayonara-player.com/index.php) (GPL-3.O)
+:   is a small C++/QT music player,using {{< iref "streaming#gstreamer" "GStreamer" >}}.
+
+    Sayonara supports {{< iref "#mpris" "MPRIS" >}}, lyrics and allow streaming from
+    soundcloud, last.fm, Soma.fm, internet streams, radio broadcasting.
+
+
+    Sayonara is in Debian since bullseye. for previous releases there is a
+    [PPA repository for Sayonara
+    ](https://launchpad.net/~lucioc/+archive/ubuntu/sayonara).
+    with i386 and amd64 packages.
+
+    On amd64 _Sayonara_ consume 68M res / 51M shr for _Sayonara
+    1.0.0 in may 2018.
+
+    -   [Sayonara Player · GitLab](https://gitlab.com/luciocarreras/sayonara-player)
+
+<a name="strawberry"></a>[Strawberry](https://www.strawberrymusicplayer.org/) (GPL-3.0)
+:   _Strawberry_ is a fork of  {{< iref "#clementine" "Clementine" >}} written in C++
+    using the Qt toolkit QT5 or QT6 and {{< iref "streaming#gstreamer" "GStreamer" >}}.
+
+    The features are essentially the same than {{< iref "#clementine" "Clementine" >}}
+    play internet streams, Supports WAV, FLAC, WavPack, Ogg FLAC, Ogg Vorbis, Ogg Opus,
+    Ogg Speex, MPC, TrueAudio, AIFF, MP4, MP3, ASF and Monkey's Audio.  manage tags, use
+    {{< iref "tag_management#cuesheet" "Cue Sheets" >}}, display lyrics,  {{< iref "#mpris" "MPRIS control" >}},
+    be controlled from android phone, and many
+    [features](https://www.strawberrymusicplayer.org/#features), playing all formats
+    recopgnized by {{< iref "streaming#gstreamer" "GStreamer" >}},
+    and can read all playlists including cue sheet.
+
+    Strawberry is not yet in Debian, but the project provides Debian packages, and
+    Appimages built with QT5 or Qt6.
+
+    -   [GitHub - Strawberry](https://github.com/strawberrymusicplayer/strawberry)
+
+
+## Other music players
+[alsaplayer](http://www.alsaplayer.org/)
+:   AlsaPlayer (GPL v3) <a name="alsaplayer"></a> is a PCM player. The Input Plugins include:
+    MP2, MP3, WAV, CDDA, OGG, MPEG, MAD, CDDA, MikMod, and audiofile.
+    The Output Plugins include: Alsa, OSS and OSS/Lite, Esound, Sparc,
+    SGI, and JACK. Alsaplayer development stopped in 2004 with version
+    0.99.75, but seem to begin again in 2007 with a new gtk2 interface,
+    and has slept again the next year
 
 [Aqualung](http://aqualung.factorial.hu/home.html)
 :   Aqualung (GPL) is a Gtk music player.
@@ -184,61 +338,18 @@ Wikipedia: {{< wp "Comparison of audio player software" >}},
     -   [ArchWiki - Audacious
         ](https://wiki.archlinux.org/index.php/Audacious)
 
-<a name="banshee"></a>{{< wp "Banshee_(music_player)"  "Banshee" >}}
-:   An other music player using {{< iref "Streaming#Gstreamer" "GStreamer" >}} framework, but built
-    upon Mono and Gtk#.
-
-<a name="bmpx"></a>[Bmpx](http://bmpx.backtrace.info/site/BMPx_Homepage)
-:   Bmpx (GPL) is based on {{< iref "streaming#gstreamer" "GStreamer" >}},
-    and can be considered as a gstreamer gui. The old *Bmp* was based on xmms, but the
-    present *Bmpx* was rewritten from scratch in C++ and no longer share code with
-    xmms. Bmpx can play every format for which you have a gst plugin. It supports also
-    MusicBrainz, Last.fm radio/scrobbling, HAL, DBus.
-
-<a name="clementine"></a>[Clementine](http://www.clementine-player.org/)
-:   Clementine is a QT fork of amarok 1.4, with which it shares main features.
-    {{< wp "Clementine_(software)"  "Wikipedia: Clementine" >}}.
-    Clementine can play internet streams, transcode music into MP3, Ogg Vorbis, speex,
-    FLAC or AAC, manage tags, use CUE sheets, be controlled from android phone, and many
-    [features](http://www.clementine-player.org/about), playing main
-    formats included opus, and can read all playlists including cue sheets but has no
-    bookmark nor access to chapters. With one ogg file loaded it uses
-    85M resident / 60M shared.
-
-    -   [Controlling Clementine from the commandline with DBus and MPRIS
-        ](https://github.com/clementine-player/Clementine/wiki/Controlling-Clementine-from-the-commandline-with-DBus-and-MPRIS)
 
 <a name="deadbeef"></a>[DeaDBeeF](https://deadbeef.sourceforge.io/) (GPL v2)
 :   is a C lang maudio player for Mp3, ogg vorbis,  flac, ape, wv/iso.wv, wav,
     m4a/m4b/mp4 (aac and alac), mpc, tta, cd audio, and  more.
 
     It reads and write tags in any format,  supports Shoutcast/Icecast and MMS, and
-    cuesheets. _Deadbeef_ is not in Debian, but provides Debian packages for amd64.
+    {{< iref "tag_management#cuesheet" "cuesheet" >}}. _Deadbeef_ is not in Debian, but provides Debian packages for amd64.
 
     There are plugins for Pulseaudio, Jack, Mpris2.
 
     -   [Deadbeef - GitHub](https://github.com/DeaDBeeF-Player/deadbeef)
     -   Wikipedia:  {{< wp "Deadbeef" >}}
-
-<a name="exaile"></a>[Exaile](http://www.exaile.org/)
-:   [Exaile](http://en.wikipedia.org/wiki/Exaile)
-    (GPL) is an audio player written in python using pygtk and using
-    {{< iref "streaming#gstreamer" "GStreamer" >}}
-    aiming to be similar to KDE's AmaroK, but for GTK+. It has a plugin system that
-    allow: MPRIS control
-    ([mpris plugin
-    ](https://github.com/exaile/exaile/tree/master/plugins/mpris)),
-    bidirectional last.fm support, a shoutcast directory browser, tag
-    editing thru an
-    {{< iref "tag_management#mutagen" "ExFalso" >}}
-    plugin, {{< iref "streaming#daap" "DAAP protocol" >}}
-    _client and server_ support.  As a PyGTK player you can expect a memory footprint of
-    81M/39M shared (one ogg file loaded). Exaile is no longer in Debian since _jessie_.
-
-    -   [GitHub - Exaile](https://github.com/exaile/exaile)
-    -   [Exaile Documentation](http://exaile.readthedocs.io/en/stable/)
-    -   [ArchWiki - Exaile
-        ](https://wiki.archlinux.org/index.php/Exaile)
 
 
 [Gradio](https://github.com/haecker-felix/gradio)
@@ -246,25 +357,20 @@ Wikipedia: {{< wp "Comparison of audio player software" >}},
     [ArchWiki - Gradio](https://wiki.archlinux.org/index.php/Gradio)
 
 
-[Goggles Music Manager](https://gogglesmm.github.io/)
+[Goggles Music Manager](https://gogglesmm.github.io/) ( GPL-3.0 License )
 :   is a music collection manager and player. It is written in C++, and uses a sqlite
     database, the xine library for playback and the
     [FOX Toolkit](http://www.fox-toolkit.org/) for the interface.
-    </br />
+
     It categorizes your music files based on genre, artist, album, and song.  It
     supports gapless playback and tag editing.  It supports Ogg Vorbis , FLAC, MP3 ,
-    MP4, ASF and Musepack music files.<br />
+    MP4, ASF and Musepack music files.
+
     As it uses a desktop agnostic UI it has limited dependencies.
 
     -   [GitHub: goglesmm](https://github.com/gogglesmm/gogglesmm)
+    -   [Goglesmm Ubuntu PPA package](https://launchpad.net/~s.jansen/+archive/ubuntu/gogglesmm)
 
-<a name="guayadeque"></a>[Guayadeque](http://guayadeque.org/) (GPL)
-:   Guayadeque is an audio player with database written in C++. It uses
-    {{< iref "streaming#gstreamer" "GStreamer" >}}
-    and _wxWidgets_ for the UI. It can play Ogg Vorbis, FLAC, MP3 or anything supported
-    by _gstreamer_.  It can be interfaced through MPRIS D-Bus interface.  _in Debian_.
-
-    -   Wikipedia: {{< wp "Guayadeque Music Player" >}}.
 
 {{< iref "#mplayer" "mplayer" >}}
 :   MPlayer is a movie player. It plays most video and **audio**
@@ -277,10 +383,6 @@ Wikipedia: {{< wp "Comparison of audio player software" >}},
 
 {{< iref "#mpd" "Music Player Daemon" >}}
 :   has a subsection.
-
-{{< wp "Muine" >}}
-:   An other music player using {{< iref "streaming#Gstreamer" "GStreamer" >}}
-    framework, but built upon Mono and Gtk# (like _Banshee_), not used on my systems.
 
 <a name="qmmp"></a>[Qmmp](http://qmmp.ylsoftware.com/) (GPL)
 :   _Qmmp_ is a C++/QT audio player. Qmmp is in Debian.
@@ -302,28 +404,6 @@ Wikipedia: {{< wp "Comparison of audio player software" >}},
     -   Cue sheet
     -   Lyrics
     -   [Extra plugins](http://qmmp.ylsoftware.com/links.php)
-
-
-<a name=quodlibet></a>[QuodLibet](http://code.google.com/p/quodlibet/)
-:   Quod Libet (GPL) is a GTK+-based audio player written in
-    Python. It uses
-    {{< iref "streaming#gstreamer" "gstreamer" >}}
-    and supports Ogg Vorbis, FLAC, MP3, Musepack/Wavepack,
-    MOD, MP4, TrueAudio, WMA.<br /> _QuodLibet_ uses playlists based
-    on regular expressions and can display and edit tags.
-
-    As other PyGTK players _like {{< iref "#exaile" "Exaile" >}}
-    __QuodLibet__ is quite memory hungry (52M resident when playing mp3) as is ExFalso
-    and if you are not using a full gnome desktop, you need to avoid _python-gnome2_
-    otherwise you pull all the libraries and daemons.
-
-    Even if we can find _QuodLibet_ too big as a background player, it is a nice tool
-    for the _listen then tag_ game _like its brother _{{< iref "#exaile" "Exaile" >}}_.
-
-    __Quodlibet__ use the python library {{< iref "tag_management#mutagen" "mutagen" >}}
-    and share code with the {{< iref "tag_management#exfalso" "ExFalso" >}} tag editor.
-
-    -   [ExFalso/Quodlibet manual](https://quodlibet.readthedocs.org/en/latest/)
 
 
 [RealPlayer](http://www.real.com/linux) and [Helix Player](https://helixcommunity.org/)
@@ -1112,15 +1192,6 @@ _Streamlink_ was forked from the now dead _Livestreamer_ project.
 -   [Streamlink - GitHub](https://github.com/streamlink/streamlink)
 -   [Streamlink documentation](https://streamlink.github.io/index.html)
 -   [Streamlink - ArchWiki](https://wiki.archlinux.org/title/Streamlink)
-
-## Sayonara
-[Sayonara](https://sayonara-player.com/index.php) is a small C++/QT music player,
-there is a [PPA repository for Sayonara
-](https://launchpad.net/~lucioc/+archive/ubuntu/sayonara).
-with i386 and amd64 packages.
-
-On amd64 _Sayonara_ consume 68M res / 51M shr for _Sayonara
-1.0.0 in may 2018.
 
 ## Totem {#totem}
 
