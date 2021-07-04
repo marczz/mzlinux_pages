@@ -179,6 +179,24 @@ PubSub is defined in several specifications:
 -   [XEP-0163: Personal Eventing Protocol](https://xmpp.org/extensions/xep-0163.html)
 -   [XEP-0248: PubSub Collection Nodes](https://xmpp.org/extensions/xep-0248.html)
 
+The {{< iref "#salutatoi" "Salut à Toi _Libervia_" >}} project has developed its own
+[XMPP PubSub service component (XEP-0060) - Sat Pubsub
+](https://salut-a-toi.org/documentation/sat%20pubsub). they have proposed
+[XMPP extensions for the Sat Pubsub protocol
+](https://salut-a-toi.org/__b/doc/sat/overview.html#xmpp-extension-protocols)
+
+-   [XEP-0355](https://xmpp.org/extensions/xep-0355.html): Namespace Delegation -
+    allows the XMPP server to “delegate” some features management to a third party
+    service.
+-   [XEP-0356](https://xmpp.org/extensions/xep-0356.html): Privileged Entity -
+    allows a “component” (which is more or less a server generic plugin) to gain some
+    privileged access to data such as presence information, roster or to send a message
+    like if it was sent by the server.
+-   [XEP-0413](https://xmpp.org/extensions/xep-0413.html): Order-By -
+    to specify the sorting order in which a client wishes to retrieve some results.
+
+PubSub is also the base of the {{< iref "#movim" "Movim" >}} server component.
+
 ### Server compliance test
 
 -   [XMPP Compliance Tester](https://compliance.conversations.im/)
@@ -474,9 +492,6 @@ Jabber and GnuPG](https://box.matto.nl/gnupgjabber.html).
     -   [jabber.org FAQ](http://www.jabber.org/faq.html)
 -   [jabber.apinc.org](http://jabber.apinc.org/) run the server
     {{< iref "#jabberfr" "jabber.fr" >}}
--   {{< wp "Movim" >}} run a jabber server, the domain of the obsolete xmpp client
-    _jappix_ jappix.com is now handled by movim.
-    -   [movim.eu](http://movim.eu)
 -   [OTR.im](https://www.otr.im/chat.htm)
     offers a free and secure Jabber service nammed __jabber.otr.im__
     It is also possible to connect through our Tor hidden service.
@@ -588,11 +603,15 @@ Jabber and GnuPG](https://box.matto.nl/gnupgjabber.html).
         ](https://github.com/boothj5/profanity-plugins)
     -   [Profanity OMEMO plugin
         ](https://github.com/ReneVolution/profanity-omemo-plugin)
--   _primitivus_ is a console client for
-    {{< iref "#salutatoi" "Salut à Toi" >}}
-    the Debian package is _sat-xmpp-primitivus_.
 -   {{< iref "irc#weechat" "Weechat" >}}
     has an
+-   {{< iref "#salutatoi" "Primitivus now called Libervia CLI" >}}
+    is a console client for {{< iref "#salutatoi" "Salut à Toi" >}} the Debian package
+        is _sat-xmpp-primitivus_. To run primitivus you have first to launch the sat
+    backend which is shared with all {{< iref "#salutatoi" "Salut à Toi" >}} frontends.
+    On my amd64 laptop the sat daemon v 0.8.0 backend uses 81M res / 19M shr; to this
+    you add  the primitivus frontend of 40M res / 14M shr (the shared memory should be
+    effectively shared between thes two!)
 -   {{< iref "irc#weechat" "Weechat" >}} has an
     [xmpp plugin](https://github.com/weechat/scripts/blob/master/python/jabber.py)
     but it does not handle anonymous authentication nor chatrooms,
@@ -702,16 +721,35 @@ _(said to be lightweight but need libgnome and all bonobo framework)_ ...
         is an abstraction layer for providing audio and video RTP services to Psi-like
         IM clients.  The implementation is based on GStreamer. _In the Debian package
         psi-plus-plugin-psimedia_.
--   <a name="salutatoi"></a>[Salut à Toi](https://salut-a-toi.org/) (AGPL)
+-   <a name="salutatoi"></a>[Salut à Toi](https://salut-a-toi.org/) (AGPL) now
+    renamed _Libervia_
     is a Xmpp multi-frontends python tools wich allow in addition to
     jabber microblogging, file sharing, irc access, email client
     access. It has desktop, android, web server and client, console,
     and cli frontends.
-    -   _primitivus_ is a console client for
-        _Salut à Toi_ the Debian package is _sat-xmpp-primitivus_.
-    -   [Libervia demo](https://www.libervia.org/) Libervia is the
-        web frontend, that allow notifications via web push.
-    -   [Salut à Toi Wiki](http://wiki.goffi.org/wiki/Sat)
+    -   [Salut à Toi Documentation](https://salut-a-toi.org/documentation)
+    -   [primitivus](https://salut-a-toi.org/__b/doc/backend/libervia-tui/index.html)
+        also named _libervia TUI_
+        is a console client for _Salut à Toi_ the Debian package is
+        _sat-xmpp-primitivus_.
+    -   [jp](https://salut-a-toi.org/__b/doc/backend/libervia-cli/index.html)
+        alias _Libervia CLI_ is the CLI frontend of Salut à Toi. With it you can send
+        chat messages, share files, retrieve avatars, write blog entries, etc.  The
+        Debian package is _sat-xmpp-jp_.
+    -   [cagou](https://salut-a-toi.org/documentation/cagou) alias _Libervia Desktop_ is
+        the desktop/mobile frontend of Salut à Toi. It is not yet in Debian _because
+        of blocking bugs_, but a flatpack package is available.
+    -   [Libervia Web](https://salut-a-toi.org/__b/doc/backend/overview.html#libervia-web) Libervia is the
+        web frontend for _Salut à Toi_, that allow notifications via web push.
+-   [Kaidan](https://www.kaidan.im/) (GPL 3)
+    is a C++/QT 5.x xmpp client built with the Qt-based XMPP library QXmpp.
+    As far as v 0.7, it dos not support encryption, OMEMO is planned.
+
+    _Kaidan_ supports audio / video calls, and is packaged in Debian.
+
+    -   [Kaidan · GitLab](https://invent.kde.org/network/kaidan).
+    -   [Kaidan support for XEPs, RFCs
+        ](https://invent.kde.org/network/kaidan/-/wikis/xeps-rfcs)
 -   <a name="spark"></a>[Spark](http://www.igniterealtime.org/projects/spark/index.jsp)
     (Apache License) is a java based client proposed by
     [ignite realtime](http://igniterealtime.org/) the authors of
@@ -928,38 +966,43 @@ Jabber XCP, M-Link, MongooseIM,
     -   [JWChat at jwchat.org](https://jwchat.org/).
     -   [Jwchat tutorial](http://wiki.jabberfr.org/JWChat).
     -   [Jwchat GitHub repo](https://github.com/sstrigler/jwchat)
+-   {{< iref "#salutatoi" "Libervia Web" >}} is the web frontend of
+    {{< iref "#salutatoi" "Salut à Toi alias Libervia" >}}, that allow notifications via
+    web push.
+    -   [Libervia demo](https://www.libervia.org/)
 -   <a name="movim"></a>{{< wp "Movim" >}}
-    is a Web client, developed largely in PHP which can be
-    deployed on a web server (Apache, nginx ... ) . This server
-    provides a social network Web interface XMPP which will be the
-    intermediary between the browser and the XMPP server that contains
+    is a Server, developed largely in PHP which can be deployed on a web server
+    (Apache, nginx ... ) . This server provides a social network Web interface XMPP
+    which will be the intermediary between the browser and the XMPP server that contains
     the user account.
-    -   [Movim Wiki](https://github.com/movim/movim/wiki)
-    -   [Movim.eu](https://movim.eu/)
-        propose a jabber server, and movim service.
--   <a name="prodomus"></a>[Prodomus
-    ](http://forge.webpresso.net/projects/prodromus) (AGPL)
-    is a simple XMPP messaging client, mainly reasonable as contact form
-    replacement/supplement or support contact utility.
--   <a name="speeqe"></a>[Speeqe
-    ](https://github.com/thepug/speeqe/wiki) (AGPL)
-    is a web python/javascript group chat client that works with the
-    XMPP/MUC protocol. _development inactive since 2012_
-    -   [List of SpeeqeInstances
-        ](https://github.com/thepug/Speeqe/wiki/SpeeqeInstances)
-        _The list is from year 2015 and most instances seems to be
-        down by now._
--   <a name=tigaseweb></a>[Tigase Web client](http://www.tigase.net/content/web-client)
-    (AGPL) supports XMPP Core - RFC 6120, XMPP IM - RFC 6121 and
-    [many XEP extensions](http://www.tigase.net/webclient-features)
-    including XMPP Over BOSH - XEP-0206.
-
-    There are also two _tigase messenger_ Afero GPL applications for
-    [ios](https://tigase.net/content/tigase-messenger-ios) and
-    [android](https://tigase.net/content/tigase-messenger-android).
-
-    -   [Online Tigase Web client](http://tigase.im/)
-    -   [Tigase projects](https://tigase.tech/projects)
+    -   [Movim - Github](https://github.com/movim/) the source code of the Movim server.
+    -   [Movim Wiki](https://github.com/movim/movim/wiki) Wiki of the movim server.
+    -   [Movim.eu](https://movim.eu/) propose a jabber server, and
+        [mov.im](https://mov.im/) movim service.
+    -   [Movim community - Lemmy](https://lemmy.ml/c/movim).
+    -   [XEP-0060: Publish-Subscribe](https://xmpp.org/extensions/xep-0060.html)
+        describe the use of {{< wp "Publish–subscribe pattern" >}} in xmpp.
+    -   [Jaussoin Timothée _edhelas_](https://edhelas.movim.eu/) is the author, and main
+        developer of Movim.
+        -   [Timothée Jaussoin’s Blog](https://mov.im/?blog/edhelas)
+        -   [Blog • How's Movim made? Part I - The Architecture
+            ](https://mov.im/?blog/edhelas%40movim.eu/how-s-made-movim-part-i-the-architecture-CCA7If)
+            or in french: [Movim, mode d’emploi — Première partie : l’architecture - LinuxFr.org
+            ](https://linuxfr.org/news/movim-mode-d-emploi-premiere-partie-l-architecture.hml)
+        -   [Movim Groups réinvente les flux d'actualité - LinuxFr.org
+            ](https://linuxfr.org/users/edhelas/journaux/movim-groups-reinvente-les-flux-d-actualite)
+        -   [atomtopubsub](https://github.com/edhelas/atomtopubsub)
+            A little client that parses Atom feeds and send them on XMPP Pubsub Nodes.
+    -   Release notes
+        -   The releases are in
+            [Movim nodes tagged #release](https://mov.im/?tag/release).
+        -   [Movim 0.18 – Oterma
+            ](https://mov.im/?node/pubsub.movim.eu/Movim/11655111-e7ad-4e0c-975c-3c78755d22aa)
+        -   [Movim 0.17 – Catalina
+            ](https://mov.im/?node/pubsub.movim.eu/Movim/87633da7-3963-4923-aabc-54ac5f6ad1d8)
+            [Movim 0.17 – Catalina (fr)](https://linuxfr.org/news/movim-0-17-catalina),
+            [Movim 0.17.1, Movim Android 0.17.0.0 and Movim Account Panel
+            ](https://mov.im/?node/pubsub.movim.eu/Movim/a-3in1-surprise-movim-0-17-1-movim-android-0-17-0-0-and-movim-account-panel-4oRRuP).
 -   <a name="xabber_web"></a>[Xabber for Web](https://www.xabber.com/web/)
     support {{< iref "#omemo" "OMEMO" >}}
     -   [Xabber Web online client](https://web.xabber.com/)
@@ -987,9 +1030,10 @@ Jabber XCP, M-Link, MongooseIM,
     {{< iref "#openpgp" "OpenPGP" >}}.
     See the [homepage](https://github.com/siacs/Conversations)
     for a list of features and supported XEP.
--   {{< iref "#saluatoi" "Salut à Toi" >}} (AGPL) has an Android client.
 -   <a name="stork"></a>[Stork](https://github.com/tigase/stork) (AGPL) by [Tigase
     Inc.](https://tigase.net/) is a XMPP client. It supports all XMPP specifications RFC
+-   {{< iref "#salutatoi" "Salut à Toi alias Libervia" >}} (AGPL) is developing
+    an Android client.
     6120 - XMPP COR, RFC 6121 - XMPP IM ,and many extensions including Multi-User Chat
     XEP-0045, and {{< iref "#omemo" "OMEMO" >}}.
 -   [Beem](http://beem-project.com/projects/beem/) (GPL)
