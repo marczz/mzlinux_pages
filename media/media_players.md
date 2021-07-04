@@ -162,6 +162,14 @@ Wikipedia: {{< wp "Comparison of audio player software" >}},
     framework, but built upon Mono and Gtk# (like _Banshee_), not used on my systems.
 
 <a name="parlatype"<a>[Parlatype](https://www.parlatype.org/)
+<a name="juk"></a>[Juk](https://juk.kde.org/) (GPL-2.0)
+is an audio jukebox application, supporting collections of MP3, Ogg Vorbis, and FLAC
+audio files. It's main focus, is on music management.
+
+For playing media it uses {{< iref "streaming#Gstreamer" "GStreamer" >}}.
+
+-   [JuK · GitLab](https://invent.kde.org/multimedia/juk)
+
 :   A  GNOME audio player for transcription using
     {{< iref "streaming#Gstreamer" "GStreamer" >}}
 
@@ -1082,6 +1090,17 @@ track; 116M res / 57M shr for a tv broadcast on DLNA.
     allows you to search and browse YouTube, and play YouTube videos directly in Totem
     Movie Player.
 -   [Totem Gitlab repository](https://gitlab.gnome.org/GNOME/totem).
+
+
+### Kaffeine {#kaffeine}
+[Kaffeine](https://apps.kde.org/kaffeine/) (GPL-2.0+)
+is a media player for KDE with support of digital TV (DVB). Kaffene uses
+{{< iref "streaming#gstreamer" "GStreamer" >}}.
+
+Its KDE dependencies are moderate, and it can be installed
+in an other QT desktop.
+-   [Multimedia / Kaffeine · GitLab](https://invent.kde.org/multimedia/kaffeine)
+
 
 ### Other Video players
 ### Lightspark {#lightspark}
