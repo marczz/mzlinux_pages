@@ -486,7 +486,8 @@ Wikipedia: {{< wp "Comparison of audio player software" >}},
     _xmms2-plugin-daap_.
 
 
-## Text Players
+
+## Command Line Players {#CLI_players}
 
 <a name="audiopreview"></a> [audiopreview](http://audiopreview.codealpha.net/audiopreview/)
 :   is a simple command line tool based on
@@ -495,19 +496,12 @@ Wikipedia: {{< wp "Comparison of audio player software" >}},
     as a regular media player. It is no longer in Debian since jessie, and the home page
     went away.
 
-auditive
-:   [auditive](http://www.rillion.net/auditive/)
-    is a ncurses {{< iref "streaming#gstreamer" "GStreamer" >}} player written in vala.
-    _last release 2013_.
-
 cdtool
-:   cdtool ([cdtool(1)
-    ](http://manpages.debian.org/cgi-bin/man.cgi?query=cdtool%281%29))
-    contains
-    several programs for playing audio CDs and controlling a CD-ROM
+:
+    _cdtool_ contains several programs for playing audio CDs and controlling a CD-ROM
     drive from the command line:
-
-:   -   [cdplay](http://www.x-paste.de/cdplay/) is an interactive
+    -   [cdtool(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=cdtool%281%29)
+    -   [cdplay](http://www.x-paste.de/cdplay/) is an interactive
         text-mode program for playing audio CDs. ref:
         [cdplay(1)
         ](http://manpages.debian.org/cgi-bin/man.cgi?query=cdplay%281%29)
@@ -525,7 +519,6 @@ cdtool
     -   The _cdeject_ command ejects the current compact disc and the
         cdclose command closes the CDROM tray.
 
-
 [cdparanoia](http://www.xiph.org/paranoia/)
 :   Cdparanoia (Paranoia III) reads digital audio directly from a
     CD, then writes the data to a file or pipe in WAV, AIFC or raw 16
@@ -538,13 +531,68 @@ cdtool
     [cdparanoia FAQ](http://www.xiph.org/paranoia/faq.html),
     [cdparanoia troubleshooting](http://www.xiph.org/paranoia/trouble.html)
 
-
-cdda2wav
-:   [cdda2wav(1)
+icedax
+:   [icedax(1)
     ](http://manpages.debian.org/cgi-bin/man.cgi?query=cdda2wav%281%29)
-    is a sampling utility for CD-ROM (see
-    {{< iref "sound_edit#cdda2wav" "cdda2wav entry in the Sound Editors, recorders section" >}}),
+    also known as _ccda2wav_ is a sampling utility for CD-ROM (see
+    {{< iref "sound_edit#icedax" "icedax entry in the Sound Editors, recorders section" >}}),
     it can also be used as a CD player.
+
+
+<a name="gst123"></a>[gst123](http://space.twc.de/~stefan/gst123.php) (LGPL)
+:   flexible command line player in the spirit of ogg123 and mpg123, based on
+    {{< iref "#gstreamer" "Gstreamer" >}}. It plays all file formats gstreamer
+    understands. Since gst123-0.1.0 support for watching videos has been added.
+
+    _gst123_ is packaged in Debian.
+    -   [gst123 - GitHub](https://github.com/swesterfeld/gst123).
+
+<a name="madplay"></a>[madplay(1)
+](http://manpages.debian.org/cgi-bin/man.cgi?query=madplay)
+:   madplay is a command-line MPEG audio decoder and player based
+    on the  MAD library {{< iref "sound_libs#item_libmad" "libmad" >}} and the
+    [Mad audio decoder](http://www.underbit.com/products/mad/).
+    madplay reads and decodes one or more input files containing MPEG audio data and
+    plays them on the native audio device. It can also output a sound file in cdda,
+    aiff, wave, snd, esd, raw formats. _see
+    [madplay(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=madplay(1))
+
+<a name="mpg123"></a>{{< wp "Mpg123" >}}
+:   Mpg123 (LGPL) is a very fast decoder and player for mp3 _or any
+    MPEG 1.0/2.0/2.5 stream (layers 1, 2 and 3)_ running on
+    unix and w32 it support a lot aof audio interfaces including alsa,
+    coreaudio, esound, jack, nas, oss, portaudio, pulseaudio, SDL.
+    It  can also play MPEG audio files from a WWW server.
+    _[mpg123(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=mpg123(1))
+
+    [Mpg321](http://sourceforge.net/projects/mpg321)<a name="mpg321"></a>
+    is a GPL replacement
+    for Mpg123 which aimed at a truly free software mp3 player, while
+    previous versions of mpg123 did not have a clear free opensource license.
+    [mpg321(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=mpg321(1))
+
+    There are some controversies about the respective performance of mpg123
+    and mpg321. I have even read that mpg123 is twenty time faster. I made
+    some test on an  Intel Core 2 Duo CPU  @ 2.00GHz, and found that
+    mpg321 _(mpg321  0.2.10)_ is 16% slower than mpg123 _(mpg123 1.4.3)_.
+    Of course it does not presume what it could be on other platforms.
+
+    One other aspect of comparing both decoders is on memory footprint.
+    when decoding a 42mn mp3 stream _(32kHz 128b/s)_ the resident size of
+    mpg321 climbed progressively up to 36M, while mpg123 staid at 1M
+    resident.
+
+    Of course {{< iref "#madplay" "madplay" >}} that is based on the same libmad library
+    has analogous performance in term of speed and memory fottprints, than mpg321.
+    _It should be slower because doing only fixed arithmetic,
+    but I found it 10% faster on an intel dual core._
+
+
+## Ncurses sound players
+<a name="auditive"></a>auditive
+:   [auditive](http://www.rillion.net/auditive/)
+    is a ncurses {{< iref "streaming#gstreamer" "GStreamer" >}} player written in vala.
+    _last release 2013_.
 
 [Cjukebox](http://muth.org/Robert/Cjukebox/)
 :   is a GPL Python/Curses based management system for audio files
@@ -552,12 +600,10 @@ cdda2wav
     that uses xmms plugins in a non X environment. Development stalled
     since 2005
 
-
 <a name="cmus"></a>[cmus](https://cmus.github.io/) (GPL)
 :   cmus (GPL) is a ncurses text player.
 
     Main Features:
-
     -   Can play mp3, ogg/vorbis, FLAC, Opus, Musepack, WavPack, WAV,
         AAC, MP4, audio CD, and everything supported by ffmpeg (WMA, APE,
         MKA, TTA, SHN, ...) and libmodplug.
@@ -573,13 +619,12 @@ cdda2wav
 
     Debian has a _cmus_ and a _cmus-plugin-ffmpeg_ package.
 
-    Cmus has uncommon key binding and unusual help system: you have to
-    type 7 to get help on key-bindings, to know you have to type 7,
-    you just need hit the 7 key! Of course q does not quit, h or ?
-    does not give help. But to be fair I must say that you are free to
-    configure key-bindings as you want. It is in active development in
-    2021 and packaged in Debian.
+    Cmus has uncommon key binding and unusual help system: you have to type 7 to get
+    help on key-bindings, to know you have to type 7, you just need hit the 7 key! Of
+    course q does not quit, h or ?  does not give help. But to be fair I must say that
+    you are free to configure key-bindings as you want.
 
+    It is in active development in 2021 and packaged in Debian.
     -   [GitHub cmus repository](https://github.com/cmus/cmus)
     -   [cmus wiki](https://github.com/cmus/cmus/wiki)
     -   [Extensions and useful scripts](https://github.com/cmus/cmus/wiki)
@@ -592,36 +637,16 @@ cdda2wav
         {{< man "cmus-remote" >}}.
     -   Wikipedia {{< wp "Cmus" >}}
     -   Cmus supports [remote control](https://github.com/cmus/cmus/wiki/remote-control)
-        through a WEB interface or Android, and using {{< IREF "#MPRIS" "MPRIS" >}}
+        through a WEB interface or Android, and using {{< iref "#mpris" "MPRIS" >}}
     -   [ArchWiki - Cmus](https://wiki.archlinux.org/index.php/Cmus)
     -   [Articles about cmus](https://github.com/cmus/cmus/wiki/reviews)
 
-<a name="gst123"></a>[gst123](http://space.twc.de/~stefan/gst123.php) (LGPL)
-:   flexible command line player in the spirit of ogg123 and mpg123, based on
-    {{< iref "#gstreamer" "Gstreamer" >}}. It plays all file formats gstreamer
-    understands. Since gst123-0.1.0 support for watching videos has been added.
-
-    _gst123_ is packaged in Debian.
-    -   [gst123 - GitHub](https://github.com/swesterfeld/gst123).
-
-<a name="madplay"></a>[madplay(1)
-](http://manpages.debian.org/cgi-bin/man.cgi?query=madplay)
-:   madplay is a command-line MPEG audio decoder and player based
-    on the  MAD library
-    {{< iref "sound_libs#item_libmad" "libmad" >}} and the
-    [Mad audio decoder](http://www.underbit.com/products/mad/).
-    madplay reads and decodes one or more input files containing MPEG
-    audio data and plays them on the native audio device. It can also
-    output a sound file in cdda, aiff, wave, snd, esd, raw
-    formats. _see  [madplay(1)
-    ](http://manpages.debian.org/cgi-bin/man.cgi?query=madplay(1))
-
 [MikMod](http://mikmod.sourceforge.net/)
 :   _MikMod_ is a [MOD](https://en.wikipedia.org/wiki/MOD_(file_format))
-    music file players for UNIX-like systems. Mikmod is a module
-    player and library supporting many formats, including mod, s3m, it, and xm.
-    MikMod uses the OSS /dev/dsp driver included in all recent kernels for output, and
-    will also write .wav files.
+    music file players for UNIX-like systems. Mikmod is a module player and library
+    supporting many formats, including mod, s3m, it, and xm.  MikMod uses the OSS
+    /dev/dsp driver included in all recent kernels for output, and will also write .wav
+    files.
 
     The player uses ncurses for console output and supports transparent loading from
     gzip/pkzip/zoo archives and the loading/saving of playlists.
@@ -655,42 +680,9 @@ cdda2wav
         it supports Lyrics from web, {{< iref "#mpris" "MPRISv2" >}}, bookmarks, OSD with
         an additional Python script.
 
-<a name="mpg123"></a>{{< wp "Mpg123" >}}
-:   Mpg123 (LGPL) is a very fast decoder and player for mp3 _or any
-    MPEG 1.0/2.0/2.5 stream (layers 1, 2 and 3)_ running on
-    unix and w32 it support a lot aof audio interfaces including alsa,
-    coreaudio, esound, jack, nas, oss, portaudio, pulseaudio, SDL.
-    It  can also play MPEG audio files from a WWW server.
-    _[mpg123(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=mpg123(1))
-
-    [Mpg321](http://sourceforge.net/projects/mpg321)<a name="mpg321"></a>
-    is a GPL replacement
-    for Mpg123 which aimed at a truly free software mp3 player, while
-    previous versions of mpg123 did not have a clear free opensource license.
-    [mpg321(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=mpg321(1))
-
-    There are some controversies about the respective performance of mpg123
-    and mpg321. I have even read that mpg123 is twenty time faster. I made
-    some test on an  Intel Core 2 Duo CPU  @ 2.00GHz, and found that
-    mpg321 _(mpg321  0.2.10)_ is 16% slower than mpg123 _(mpg123 1.4.3)_.
-    Of course it does not presume what it could be on other platforms.
-
-    One other aspect of comparing both decoders is on memory footprint.
-    when decoding a 42mn mp3 stream _(32kHz 128b/s)_ the resident size of
-    mpg321 climbed progressively up to 36M, while mpg123 staid at 1M
-    resident.
-
-    Of course {{< iref "#madplay" "madplay" >}} that is based on the same libmad library
-    has analogous performance in term of speed and memory fottprints, than mpg321.
-    _It should be slower because doing only fixed arithmetic,
-    but I found it 10% faster on an intel dual core._
-
-
 <a name="mp3blaster"></a>[mp3blaster](http://mp3blaster.sourceforge.net/) (GPL 2.0)
-:   An interactive text-console based ogg, mp3, sid and wav player, with
-    playlist management. As a ncurses application his memory
-    requirements are low 3.5M resident.
-
+:   An interactive text-console based ogg, mp3, sid and wav player, with playlist
+    management. As a ncurses application his memory requirements are low 3.5M resident.
     _mp3blaster_ last release was in 2014, and the development seems stopped since 2017.
 
     -   [GitHub - mp3blaster](https://github.com/stragulus/mp3blaster)
@@ -700,12 +692,9 @@ cdda2wav
         [splay](http://manpages.debian.org/cgi-bin/man.cgi?query=splay%281%29),
         [nmixer(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=nmixer%281%29).
 
-
 mpd text clients
-:  {{< iref "#mpd" "mpd" >}} can be controlled by text clients
-   like mpc, ncmpc, bash mp; they are referenced in the
-   {{< iref "#mpd" "mpd section" >}}.
-
+:  {{< iref "#mpd" "mpd" >}} can be controlled by text clients like mpc, ncmpc, bash mp;
+   they are referenced in the {{< iref "#mpd" "mpd section" >}}.
 
 __ogg123__, __oggdec__
 :  both GPL,  are part of the _vorbis tools_ which are the command lines utility
