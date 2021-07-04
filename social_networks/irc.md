@@ -102,8 +102,8 @@ and also available in the help of most clients.
 See {{< iref "#weechat" "Weechat" >}} below.
 
 -   [CenterIm](http://www.centerim.org/) (GPL) is a ncurses
-    ICQ/Yahoo!/AIM/IRC/MSN/Jabber/GaduGadu/RSS/LiveJournal Client.<br />
-    it replaced {{< wp "Centericq" >}} dead since 2007.
+    ICQ/Yahoo!/AIM/IRC/MSN/Jabber/GaduGadu/RSS/LiveJournal Client,
+    which replaced {{< wp "Centericq" >}} dead since 2007.
 -   [epic](http://www.epicsol.org/) programmable irc-II client, and
     online [EPIC Help Pages](http://help.epicsol.org)
 -   <a name=irssi></a>[irssi](https://irssi.org/)
@@ -111,16 +111,14 @@ See {{< iref "#weechat" "Weechat" >}} below.
     {{< iref "xmpp#otr" "OTR" >}}
     with [Irsii-OTR](https://github.com/cryptodotis/irssi-otr/)
     _in Debian_, FISH and alternate  protocols ( XMPP, SILC, ICB,
-    [RobustIRC](robustirc.net)) via
-    [modules](https://irssi.org/modules/). _irssi_ can be scripted in
-    Perl, and via modules in python, lua, tcl.
-    _irssi_ and it's plugins are in Debian.
+    [RobustIRC](robustirc.net)) via  [modules](https://irssi.org/modules/).
+    _irssi_ can be scripted in Perl, and via modules in python, lua, tcl.  _irssi_ and
+    it's plugins are in Debian.
     -   [ArchWiki: Irssi](https://wiki.archlinux.org/index.php/Irssi)
-        and [Irssi-otr
-        ](https://wiki.archlinux.org/index.php/Irssi-otr).
+        and [Irssi-otr](https://wiki.archlinux.org/index.php/Irssi-otr).
 
-## Graphical irc client        s
--   [Polari](https://wiki.gnome.org/Apps/Polari) (GPL-v2.0)
+## Graphical irc clients
+-   <a name="polari"><a>[Polari](https://wiki.gnome.org/Apps/Polari) (GPL-v2.0)
     is a gnome graphical irc client that uses the
     {{< iref "xmpp#telepathy" "Telepathy framework" >}}. _It is in Debian._
 
