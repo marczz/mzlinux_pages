@@ -60,21 +60,18 @@ has its own page.
     libvorbis), AAC (with FAAC), MP2 and AC-3 (with libavcodecs), MP2
     (with TwoLame), WAV PCM and WAV LPCM. The documentation is in the
     [Avidemux wiki](http://www.avidemux.org/admWiki/index.php).
+    _Active in 2021_.
 
     It is not in Debian but in deb-multimedia.
 
 [dvdauthor](http://dvdauthor.sourceforge.net/) (GPL)
 :   `dvdauthor` is simple set of tools to help author a DVD. The idea
-    is to be able to create menus, buttons, chapters, etc. It is
-    packaged in Debian.
-
-    [tutorial on dvdauthor](http://gecius.de/linux/dvd.html) by Jens
-    Gecius
-
-    [qdvdauthor](http://qdvdauthor.sourceforge.net/) is a frontend for
-    _dvdauthor_
-
-    [GitHub: dvdauthor](https://github.com/ldo/dvdauthor)
+    is to be able to create menus, buttons, chapters, etc. It is an old tool but still
+    maintained _in 2021_. It is packaged in Debian.
+    -   [DVDAuthor documentation](http://dvdauthor.sourceforge.net/doc/index.html)
+    -   [qdvdauthor](http://qdvdauthor.sourceforge.net/) was a frontend for
+        _dvdauthor_. Last commit 2011.
+    -   [GitHub: dvdauthor](https://github.com/ldo/dvdauthor)
 
 [Flowblade](https://github.com/jliljebl/flowblade) (GPL)
 :   is a multitrack non-linear video editor to compose movies from video clips, audio
@@ -83,11 +80,12 @@ has its own page.
     objects. _Flowblade is packaged in Debian._
 
 
-[HandBrake](https://handbrake.fr/) (GPL)
+<a name="handbrake"></a>[HandBrake](https://handbrake.fr/) (GPL)
 :   is a tool for converting video from nearly any format to videos in H.265 (x265 and
     QuickSync), H.264(x264 and QuickSync), H.265 MPEG-4 and MPEG-2, VP8, VP9 and Theora;
-    and audio in AAC / HE-AAC, MP3, Flac, AC3, Opus, or Vorbis._In Debian and
-    deb-multimedia_
+    and audio in AAC / HE-AAC, MP3, Flac, AC3, Opus, or Vorbis.As such it can be used
+    for for converting DVDs or making videos that are compatible with portable video
+    devices. _In Debian and deb-multimedia_
 
     -   [HandBrake Documentation](https://handbrake.fr/docs/en/latest/)
     -   [HandBrake - GitHub](https://github.com/HandBrake/HandBrake)
@@ -102,8 +100,8 @@ has its own page.
     AVI, OGM MP4 or Matroska files using a wide variety of codecs (vorbis, mp3, pcm,
     ac3, dts, aac, xvid, lavc, x264, theora). OgmRip relies on mplayer, mencoder,
     ogmtools, mkvtoolnix, mp4box, oggenc, lame, and faac to perform its tasks.  There is
-    a CLI client, it's called shRip. _Latest release 2015.  In Debian and
-    deb-multimedia._
+    a CLI client, it's called shRip. _Latest release 2015, last commit 2018_.
+    -   [OGMRip source repository](https://sourceforge.net/p/ogmrip/code/ci/master/tree/)
 
 [OpenShot](https://www.openshot.org/) (GPL)
 :   a video editor using _ffmpeg_ and supporting all it's codecs. It allows
@@ -133,11 +131,12 @@ has its own page.
 
 
 <a name="pitivi"></a>[PiTiVi](http://www.pitivi.org/)
-
 :   __PiTivi__ (LGPL) is an audio/video editing software written in python
-    GTK+ that uses the gstreamer framework and integrates with _Gnome_.
+    GTK+ that uses the {{< iref "streaming#gstreamer" "gstreamer" >}}
+    framework and integrates with _Gnome_. Packaged in Debian._
     -   Wikipedia: {{< wp "PiTiVi" >}}.
     -   [PiTiVi Home](http://www.pitivi.org/)
+    -   [Pitivi Manual](http://www.pitivi.org/manual/)
 
 [Shotcut](https://www.shotcut.org/) (GPL)
 :   QT video editor, based on ffmpeg, with features like 4k resolution support, network
@@ -203,7 +202,7 @@ _low activity or obsolete projects._
     the {{< iref "Streaming#Gstreamer" "GStreamer framework" >}}.
 
     {{< iref "sound_edit#soundconverter" "SoundConverter" >}} for audio,
-    {{< iref "#pitivi" "PiTiVi" >}} for video are  alternatives to
+    {{< iref "#handbrake" "Handbrake" >}} for video are  alternatives to
     _OggConvert_.
     _Oggconvert is no more packaged in Debian since jessie._
 
