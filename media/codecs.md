@@ -374,18 +374,23 @@ from ATRAC1 Stereo 292 kbps to ATRAC3 Stereo Longplay 4x (LP4) 66
 kbps
 
 ## [Ogg Vorbis](http://en.wikipedia.org/wiki/Ogg_vorbis) {#ogg_vorbis}
+Ogg is a multimedia container format, and the native file and stream format for the
+Xiph.org multimedia codecs.
 
-Vorbis is a general purpose perceptual audio unpatented CODEC.
-At the high quality/ bitrate end of the scale (CD or DAT rate
-stereo), it is in the same league as MPEG-4 (AAC), and similar to,
-but higher performance than MPEG-1/2 audio layer 3, MPEG-4 audio
-(TwinVQ), WMA and PAC. Similarly, the 1.0 encoder can encode
-high-quality CD and DAT rate stereo at below 48 kbps without
-resampling to a lower rate. Vorbis is also intended for lower and
-higher sample rates (from 8 kHz telephony to 192 kHz digital
-masters) and a range of channel representations (monaural,
-polyphonic, stereo, quadraphonic, 5.1, ambisonic, or up to 255
-discrete channels).
+Vorbis is a general purpose perceptual audio unpatented CODEC. Nowaday it is largely
+replaced by the newer Xiph codec {{< iref "#opus" "Opus" >}}.
+
+At the high quality/ bitrate end of the scale (CD or DAT rate stereo), it is in the same
+league as MPEG-4 (AAC), and similar to, but higher performance than MPEG-1/2 audio layer
+3, MPEG-4 audio (TwinVQ), WMA and PAC.
+
+Similarly, the 1.0 encoder can encode high-quality CD and DAT
+rate stereo at below 48 kbps without resampling to a lower rate. Vorbis is also intended
+for lower and higher sample rates (from 8 kHz telephony to 192 kHz digital masters) and
+a range of channel representations (monaural, polyphonic, stereo, quadraphonic, 5.1,
+ambisonic, or up to 255 discrete channels).
+See also [Technical Details in Wikipedia Vorbis page
+](http://en.wikipedia.org/wiki/Vorbis#Technical_details).
 
 Ogg vorbis use a *quality* factor instead of average bit rate.  This
 quality is explained in the
@@ -403,8 +408,12 @@ Some comparison is also given in
 
 Refs:
 
+-   [xiph.org  Ogg homepage](http://www.xiph.org/ogg/).
 -   [xiph.org: Ogg Vorbis](http://www.xiph.org/vorbis/)
 -   [vorbis.com](http://www.vorbis.com/)
+-   [page francophone du format Ogg Vorbis](http://ptaff.ca/ogg/)
+-   A list of ogg vorbis players is provided by the
+    [PortablePlayers Wiki](http://wiki.xiph.org/index.php/PortablePlayers)
 
 ## Opus {#opus_codec}
 {{< wp "Opus_(audio_format)" "Opus" >}} is a lossy audio coding format developed by the
