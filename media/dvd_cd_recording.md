@@ -2,7 +2,6 @@
 title: DVD and CD Recording
 ---
 
-{{% toc /%}}
 
 # General information
 -   Wikipedia: {{< wp "Comparison of disc image software" >}};
@@ -30,7 +29,7 @@ title: DVD and CD Recording
 -   [YoLinux Tutorial: Burning a CD or DVD
     ](http://www.yolinux.com/TUTORIALS/LinuxTutorialCDBurn.html)
 -   [DVD FAQ](http://dvddemystified.com/dvdfaq.html) from
-    dvddemystified.com _not updated since 2013__
+    dvddemystified.com.
 -   [Blu-ray Disc/ DVD+RW/+R/ -R/-RW for Linux](http://fy.chalmers.se/~appro/linux/DVD+RW/) _2008_
 -   Quite outdated: [CD-Writing-HOWTO
     ](http://en.tldp.org/HOWTO/CD-Writing-HOWTO.html) _2000_,
@@ -44,8 +43,7 @@ title: DVD and CD Recording
 
 # Recording tools
 dvd+rw-tools
-:   Is a set of tools to master the DVD media, both +RW/+R and
-    -R[W]. The main page is
+:   Is a set of tools to master the DVD media, both +RW/+R and -R[W]. The main page is
     [DVD+RW/+R/-R[W] for Linux](http://fy.chalmers.se/~appro/linux/DVD+RW/)
     and
     [dvd+rw-tools burning tips](http://crashrecovery.org/oss-dvd/HOWTO-ossdvd.html),
@@ -59,10 +57,9 @@ cdrdao
 :   refs [cdrdao(1)](http://man.cx/cdrdao(1))
 
 <a name="cdrtools"></a>{{< wp "cdrtools" >}}
-:    is a collection of programs for recording CDs
-    and DVDs, created by Jörg Schilling. After a contreversy on the
-    project license {{< iref "#cdrkit" "cdrkit" >}} was forked
-    and Debian, Ubuntu, and Fedora opted for
+:   is a collection of programs for recording CDs and DVDs, created by Jörg
+    Schilling. After a contreversy on the project license
+    {{< iref "#cdrkit" "cdrkit" >}} was forked and Debian, Ubuntu, and Fedora opted for
     {{< iref "#cdrkit" "cdrkit" >}}.
 
     Cdtools works with many different brands of CD recorders, fully
@@ -72,7 +69,7 @@ cdrdao
     _cdrkit_ fork, _cdda2wav_ renamed {{< man "icedax" >}}, and _mkisofs_
     renamed {{< man "genisoimage" >}}.
 
-    ArchLinux use _cdrtools_ and you fnd cdrtools recipes in
+    ArchLinux use _cdrtools_ and you fInd cdrtools recipes in
     [Optical disc drive
     ](https://wiki.archlinux.org/index.php/Optical_disc_drive)
     for burning CD/DVD, playback, ripping, troubleshooting.
@@ -101,10 +98,9 @@ cdrdao
 
 
 tovid
-:   [tovid](http://tovid.wikia.com/wiki/Tovid_Wiki) is a
-    collection of GPL DVD authoring tools. It can convert your video
-    files to the correct format, generate navigational menus, and
-    create and burn the disc image.
+:   [tovid](http://tovid.wikia.com/wiki/Tovid_Wiki) (GPL)
+    is a collection of DVD authoring tools. It can convert your video files to the
+    correct format, generate navigational menus, and create and burn the disc image.
 
     -  [tovid  GitHub repository](https://github.com/tovid-suite/tovid)
 
@@ -115,47 +111,49 @@ xorriso
     Ridge extensions.
 
 repair tools
-:  [recoverdm](http://www.vanheusden.com/recoverdm/) help to recover
-   disks with damaged sectors.
-:  [ddrescue](http://www.gnu.org/software/ddrescue/ddrescue.html)
-   a data recovery tool, can also be used with cdrom.
+:   [recoverdm](http://www.vanheusden.com/recoverdm/) help to recover
+    disks with damaged sectors.
+:   [ddrescue](http://www.gnu.org/software/ddrescue/ddrescue.html)
+    a data recovery tool, can also be used with cdrom.
 
 # Front Ends
 
 Video encoding front ends (*that are also audio-ables*) are in the
 section {{< iref "video_edit" "video encoders" >}}
 
-[bashburn](http://http://bashburn.dose.se/)
-:   cd/dvd burning and ripping shell script.
-    BashBurn handles burning of multiple image formats, including ISO,
-    bin/cue and nrg.
+[bashburn](https://sourceforge.net/projects/bashburn/files/bashburn/)
+:   cd/dvd burning and ripping shell script.  BashBurn handles burning of multiple image
+    formats, including ISO, bin/cue and nrg.
 
-Brasero
-:   [Brasero](http://projects.gnome.org/brasero/) (GPL) is an
-    application to burn CD/DVD for the Gnome Desktop. Brasero uses
-    *wodim* and communicate thru the dbus. Brasero is a gtk
-    application with no specific gnome dependency. Brasero can also
-    use cdrkit It is an active project.
+    Last release on sourceforge is 2.2 beta 2008, there is also a
+    [Bashburn - GitHub](https://github.com/aelinden/BashBurn/) with few changes, mainly
+    related to german language translations.
 
-cdlabelgen
-:   Cdlabelgen is a utility which generates frontcards and
-    traycards (in `PostScript(TM)` format) for CD jewelcases.
+Brasero (GPL)
+:   [Brasero](https://wiki.gnome.org/Apps/Brasero) uses *wodim* and
+    communicate thru the dbus. Brasero is a gtk3 application with no specific gnome
+    dependency. Brasero can also use cdrkit It is an active project, in Debian.
+
+Cdlabelgen
+:   _Cdlabelgen_ is a utility which generates frontcards and traycards (in
+    `PostScript(TM)` format) for CD jewelcases.
 :   refs: [cdlabelgen(1)](http://man.cx/cdlabelgen(1))
     [Online CD/DVD Inserts and Envelopes](http://www.aczone.com/tools/cdinsert/form.html)
 
-[cdw](http://cdw.sourceforge.net/)
-:   Cdw (GPL) is a ncurses text front end for many cd/dvd record tools
+[cdw](http://cdw.sourceforge.net/) (GPL-2.0)
+:   Cdw  is a ncurses text front end for many cd/dvd record tools
     cdrecord/wodim, mkisofs/genisoimage, growisofs, dvd+rw-mediainfo, dvd+rw-format.
 
+    Last release 0.8.1, in 2016, this release is in Debian, no repository with
+    development code.
 
-[K3b](http://www.k3b.org/)
-:   A frontend to cdrecord, cdrdao, and growisofs. It allows to
-    create data, audio, video, mixed-mode, emovix CDs, DVD-R(W)
-    burning, CD/DVD Ripping. K3b is developed using KDe desktop, but
-    has a reasonable dependency list, you need QT, and kdelibs but
-    kde-base is optional.
+[K3b](https://userbase.kde.org/K3b)
+:   A frontend to cdrecord, cdrdao, and growisofs. It allows to create data, audio,
+    video, mixed-mode, emovix CDs, DVD-R(W) burning, CD/DVD Ripping. K3b is developed
+    using KDe desktop, but has a reasonable dependency list, you need QT, and kdelibs
+    but kde-base is optional. It is in Debian.
 
-[X-CD-Roast](http://www.xcdroast.org/)
-:   X-CD-Roast (GPL) is a CD-burning software that provides a GUI
-    interface for commands like _cdrecord_ and
-    _mkisofs_ .
+[X-CD-Roast](http://www.xcdroast.org/) (GPL)
+:   X-CD-Roast is a CD-burning software that provides a GUI interface for commands
+    like _cdrecord_ and _mkisofs_. There is a
+    [PPA with deb packages](http://www.xcdroast.org/release/ubuntu_install.html).
