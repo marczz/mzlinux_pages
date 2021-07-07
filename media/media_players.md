@@ -201,6 +201,11 @@ For playing media it uses {{< iref "streaming#Gstreamer" "GStreamer" >}}.
     {{< iref "streaming#gstreamer" "GStreamer" >}} media framework.
 
     Main features:
+    -   Numerous [plugins
+        ](https://en.wikipedia.org/wiki/Rhythmbox#Plug-ins), given also in
+        [Rhythmbox/Plugins - GNOME Wiki!](https://wiki.gnome.org/Apps/Rhythmbox/Plugins)
+        including [Third party plugins
+        ](https://wiki.gnome.org/Apps/Rhythmbox/Plugins/ThirdParty).
     -   play streamed Internet radio and podcasts
     -   playlist
     -   gapless playback
@@ -208,18 +213,14 @@ For playing media it uses {{< iref "streaming#Gstreamer" "GStreamer" >}}.
     -   Album cover display
     -   Song lyrics display
     -   Scrobbling
-    -   DAAP  via DAAP sharing plugin which uses libdmapsharing.
-    -   UpNP through [Grilo](https://developer.gnome.org/grilo/)
-        plugin. _On Debian the package grilo-plugin is needed_.
+    -   DAAP  server via DAAP sharing plugin which uses libdmapsharing.
+    -   UpNP, DAAP, shoutcast,... client through
+        [Grilo](https://developer.gnome.org/grilo/) plugin. _On Debian the package
+        grilo-plugin is needed_.
     -   can subscribe to podcasts
-    -   Web Remote Control[edit]
+    -   Web Remote Control.
     -   Plays ampache streams through a plugin.
     -   {{< iref "#mpris" "MPRIS" >}} plugin.
-    -   Numerous [plugins
-        ](https://en.wikipedia.org/wiki/Rhythmbox#Plug-ins), given also in
-        [Rhythmbox/Plugins - GNOME Wiki!](https://wiki.gnome.org/Apps/Rhythmbox/Plugins)
-        including [Third party plugins
-        ](https://wiki.gnome.org/Apps/Rhythmbox/Plugins/ThirdParty).
 
     Rhythmbox playing a single small mp3 take 90M res / 50M shr (on
     amd64 in may 2018)
@@ -302,7 +303,7 @@ For playing media it uses {{< iref "streaming#Gstreamer" "GStreamer" >}}.
     delay/flanger/chorus, or output the data to a soundcard.
 
 <a name="audacious"></a>[Audacious](http://audacious-media-player.org/)
-:   Audacious is an GPL, XMMS like app written in GTK 2, that
+:   Audacious is an GPL, XMMS like app written in QT5 or GTK 2, that
     support nearly the same plugins. It is a fork of BMP, like are
     {{< iref "#xmms2" "xmms2" >}} and
 
@@ -316,13 +317,12 @@ For playing media it uses {{< iref "streaming#Gstreamer" "GStreamer" >}}.
         wav, midi, CD audio;
     -   output to oss4, alsa, esound, jack, pulseaudio, sndio, sdl
     -   support for transcoding and streaming.
-    -   Controlled through DBUS, accept MPRIS protocol, and can be controlled by MPRIS clients.
+    -   Controlled through DBUS, accept {{< iref "#mpris" "MPRIS" >}} protocol.
     -   Can be controlled with Conky.
     -   Includes the client {{< man "audtool" >}}_ to sends commands to a running
         instance of Audacious.
-    -   curses clients like
-        [Audtty](http://audtty.alioth.debian.org/) _packaged in debian but the source code
-        can no longer be accessed in 2021_.
+    -   curses clients like [Audtty](http://audtty.alioth.debian.org/) _packaged in
+        debian but the source code can no longer be accessed in 2021_.
 
 
     <!-- Audacious has a light memory footprint but seems somewhat processor
@@ -423,76 +423,54 @@ For playing media it uses {{< iref "streaming#Gstreamer" "GStreamer" >}}.
     [RealAudio and RealVideo Test Clips
     ](http://service.real.com/realplayer/test/)
 
-<a name="rhythmnbox"></a>[Rhythmbox](http://en.wikipedia.org/wiki/Rhythmbox)
-:   [Rhythmbox]((https://wiki.gnome.org/Apps/Rhythmbox)
-    (GPL) is a gnome audio player using the
-    {{< iref "streaming#gstreamer" "GStreamer" >}} media framework.
-
-    Main features:
-    -   play streamed Internet radio and podcasts
-    -   playlist
-    -   gapless playback
-    -   Audio CD ripping
-    -   Album cover display
-    -   Song lyrics display
-    -   Scrobbling
-    -   DAAP  via DAAP sharing plugin which uses libdmapsharing.
-    -   UpNP through [Grilo](https://developer.gnome.org/grilo/)
-        plugin. _On Debian the package grilo-plugin is needed_.
-    -   can subscribe to podcasts
-    -   Web Remote Control[edit]
-    -   Plays ampache streams through a plugin.
-    -   Numerous [plugins
-        ](https://en.wikipedia.org/wiki/Rhythmbox#Plug-ins)
-        including [Third party plugins
-        ](https://wiki.gnome.org/Apps/Rhythmbox/Plugins/ThirdParty).
-
-    Rhythmbox playing a single small mp3 take 90M res / 50M shr (on
-    amd64 in may 2018)
-
-    -   [ArchWiki - Rhythmbox
-        ](https://wiki.archlinux.org/index.php/Rhythmbox)
-
 
 [xmcd & cda](http://www.amb.org/xmcd/)
 :   Xmcd is a full-featured CD Player and Ripper, cda is a shell
     command-line utility which also features a curses-based,
     screen-oriented mode. xmcd is an alsa compatible application
 
-<a name="xmms2"></a>[Xmms2](http://wiki.xmms2.xmms.se/index.php/Main_Page)
+<a name="xmms2"></a>[Xmms2](https://github.com/xmms2/wiki/wiki)
 :   XMMS2 (GPL) is a music player developped using the
     client-server model which will provide kde, gtk, and command-line
     interface.
     It replaces the old _Xmms_ which was unmaintained and is sticked to gtk-1,
     It can play mp3, vorbis, aac, alac, wma, mac, sid, mod,
-    wav, flac, mpc, speex files. It is provided as a daemon with
-    numerous plugin packages and client.
+    wav, flac, mpc, speex files. _No support for opus in the stable release_.
+    It is provided as a daemon with numerous plugin packages and client.
+
+    The documentation for Xmms2 is in the
+    [Xmms2 Wiki](https://github.com/xmms2/wiki/wiki)
 
     __xmms2__ has numerous clients
     graphic ones for gtk or kde, command line and ncurses clients, and
     also webclient that allow to control the daemon from a remote
     device. They are listed on the
-    [Client page of xmms2 wiki](http://wiki.xmms2.xmms.se/wiki/Clients).
+    [Client page of xmms2 wiki](https://github.com/xmms2/wiki/wiki/Clients).
 
-    The daemon itself is small 4.5M, and clients are 11M for gxmms2,
+    The daemon itself is small.
+    <!-- , and clients are 11M for gxmms2,
     14M for xmms2tray, wmxmms2 is only 1.7M and is the great winner
-    among the graphic clients.
+    among the graphic clients. -->
 
     We can also dispense with graphic gadgets
     and use the [console or command line client
-    ](https://xmms2.org/wiki/Clients#Console_Clients) starting with _nyxmms2_
-    the standard console application coming with XMMS2
-    and use no permanent resource at
-    all when you use it only to launch, pause or stop the daemon, and
-    only up to 1M is you let the status run on a permanent basis. In
-    the same way a web client will use very few resources if running as
-    a cgi script.
+    ](https://github.com/xmms2/wiki/wiki/Clients#console-clients) starting with _nyxmms2_
+    the standard console application coming with XMMS2 and use no permanent resource at
+    all when you use it only to launch, pause or stop the daemon, and only up to 1M is
+    you let the status run on a permanent basis. In the same way a web client will use
+    very few resources if running as a cgi script.
 
     Support for music formats/protocols is done through
-    [plugins](https://xmms2.org/wiki/Plugins). There is a transport
+    [plugins](https://github.com/xmms2/wiki/wiki/Plugins). There is a transport
     plugin for DAAP protocol, it is packaged in Debian as
     _xmms2-plugin-daap_.
 
+    The stable version of Xmms2 is dated 2011, this 0.8 version is still proposed in the
+    Debian package. The development version is no
+    longer active.
+
+    There are few forks of Xmms2: {{< iref "#bmpx" "Bmpx" >}},
+    {{< iref "#audacious" "Audacious" >}}.
 
 
 ## Command Line Players {#CLI_players}
