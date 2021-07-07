@@ -39,7 +39,7 @@ has its own page.
     ](https://wiki.archlinux.org/index.php/List_of_applications#Subtitles),
     [subtitles editors
     ](https://wiki.archlinux.org/index.php/List_of_applications#Subtitle_editors),
-    [screecast
+    [screencast
     ](https://wiki.archlinux.org/index.php/List_of_applications#Screencast),
     [webcam
     ](https://wiki.archlinux.org/index.php/List_of_applications#Webcam),
@@ -279,30 +279,55 @@ _low activity or obsolete projects._
 
 # Screencasting {#screencast}
 -   Wikipedia {{< wp "Screencast" >}} and
-    {{< wp "Comparison of screencasting software" >}}
+    {{< wp "Comparison of screencasting software" >}}.
 -   [ArchWiki: list of screencasting software
-    ](https://wiki.archlinux.org/index.php/List_of_applications/Multimedia#Screencast)
--   [xvidcap](http://xvidcap.sourceforge.net/)
-    (GPL) is a screen recording utility using FFMPEG's
-    libavcodec/libavformat. _2006_
--   [recordMyDesktop](http://recordmydesktop.sourceforge.net/)
-    is a desktop session recorder it records theora video with
-    ogg vorbis audio. recordMyDesktop has a gtk and a qt frontend.
-    -   [Screencasts in Ubuntu, part 1: recordmydesktop
-        ](http://polishlinux.org/linux/ubuntu/screencasts-in-ubuntu-part-1/)
-        by Marcin Seredyński is a recordmydesktop tutorial.
+    ](https://wiki.archlinux.org/title/Screen_capture#Screencast_software)
+
+-   {{< iref "ffmpeg" "ffmpeg" >}} or {{< iref "ffmpeg" "libav" >}}
+    can be used for screencasting as described in
+    [Screencasts in Ubuntu, part 2: FFmpeg
+    ](http://polishlinux.org/linux/ubuntu/screencasts-in-ubuntu-part-2/)
+    by Marcin Seredyński and [FFmpeg screen capture- ArchWiki
+    ](https://wiki.archlinux.org/title/FFmpeg#Screen_capture).
+-   {{< iref "media_players#vlc" "VLC" >}} allows screen capture.
+
 -   [istanbul](https://wiki.gnome.org/Projects/Istanbul)
     (GPL) is a gnome project written in python. It is a desktop
     session recorder for the Free Desktop. It records your session
     into an Ogg Theora .
--   [vnc2swf](http://www.unixuser.org/~euske/python/vnc2flv/index.html)
-    is a screen recorder either build in python
--   {{< iref "ffmpeg" "ffmpeg" >}} or
-    {{< iref "ffmpeg" "libav" >}}
-    can be used for screencasting as described in
-    [Screencasts in Ubuntu, part 2: FFmpeg
-    ](http://polishlinux.org/linux/ubuntu/screencasts-in-ubuntu-part-2/)
-    by Marcin Seredyński.
+-   [recordMyDesktop - Github](https://github.com/Enselic/recordmydesktop/)
+    is a CLI desktop session recorder written in C. It records theora video, and
+    ogg vorbis audio.
+
+    The project was stalled at 3.8.1 december 2008. But Martin Nordholts who is the
+    maintainer of recordMyDesktop moved it to Github and relaunched development and a
+    new release 4.0. in march 2021.  recordMyDesktop had a gtk and a qt front-end, but at
+    time of release 4.0, they have not yet been ported to the new code base.
+
+    recordMyDesktop is in Debian.
+    -   [Screencasts in Ubuntu, part 1: recordmydesktop
+        ](http://polishlinux.org/linux/ubuntu/screencasts-in-ubuntu-part-1/)
+        by Marcin Seredyński is a recordmydesktop tutorial.
+    -   [recordMyDesktop - Sourceforge](http://recordmydesktop.sourceforge.net/)
+        was the home of recordmydesktop until 3.8.1.
+    -   [RecordMyDesktop - ArchWiki](https://wiki.archlinux.org/title/RecordMyDesktop).
+-   [SimpleScreenRecorder](https://en.wikipedia.org/wiki/SimpleScreenRecorder) (GPL-3.0)
+    is a Qt-based screencast software thar can record the entire screen or part of it,
+    or record OpenGL applications directly. It uses libav/ffmpeg libraries for encoding,
+    so it supports many different codecs and file formats. _packaged in Debian_.
+    -   [SimpleScreenRecorder Home](https://www.maartenbaert.be/simplescreenrecorder/)
+-   [vokoscreenNG](https://linuxecke.volkoh.de/vokoscreen/vokoscreen.html) (GPL-2.0)
+    vokoscreenNG is a QT5 screencasting software, to record the screen, an area or a
+    window; and audio from multiple sources. It has also built-in camera support.
+    _packaged in Debian_
+    -   [vokoscreenNG - GitHub](https://github.com/vkohaupt/vokoscreenNG)
+-   [vnc2flv](http://www.unixuser.org/~euske/python/vnc2flv/index.html)
+    is a screen recorder  build in python. The old 2010 Python 2 is obsolete, but
+    [matthayes / vnc2flv - Github](https://github.com/matthayes/vnc2flv) is a port to
+    Python 3.
+-   [xvidcap](http://xvidcap.sourceforge.net/)
+    (GPL) is a screen recording utility using FFMPEG's libavcodec/libavformat.
+    _Obsolete, last release 2006._
 
 # Video download helpers {#video_download_helpers}
 -   Wikipedia {{< wp "Comparison of YouTube downloaders" >}},
