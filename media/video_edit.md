@@ -39,8 +39,8 @@ has its own page.
     ](https://wiki.archlinux.org/index.php/List_of_applications#Subtitles),
     [subtitles editors
     ](https://wiki.archlinux.org/index.php/List_of_applications#Subtitle_editors),
-    [screencast
-    ](https://wiki.archlinux.org/index.php/List_of_applications#Screencast),
+    [screencasting software
+    ](https://wiki.archlinux.org/title/Screen_capture#Screencast_software),
     [webcam
     ](https://wiki.archlinux.org/index.php/List_of_applications#Webcam),
     [DVD authoring
@@ -278,6 +278,9 @@ _low activity or obsolete projects._
     -   [Subtitle Editor - GitHub](https://github.com/kitone/subtitleeditor).
 
 # Screencasting {#screencast}
+
+See also {{< iref "#webcam" "Webcam" >}}.
+
 -   Wikipedia {{< wp "Screencast" >}} and
     {{< wp "Comparison of screencasting software" >}}.
 -   [ArchWiki: list of screencasting software
@@ -328,6 +331,203 @@ _low activity or obsolete projects._
 -   [xvidcap](http://xvidcap.sourceforge.net/)
     (GPL) is a screen recording utility using FFMPEG's libavcodec/libavformat.
     _Obsolete, last release 2006._
+
+# Video recording
+
+## Television (DVB) and cameras
+### DVB
+
+DVB systems distribute data using a variety of standards:
+-   Satellite: DVB-S, DVB-S2, DVB-S3, DVB-SH _Satellite Handhelds_.
+-   Cable: DVB-C, DVB-C2
+-   Terrestrial television: DVB-T, DVB-T2, DVB-H _Handhelds_.
+
+The DVB card support for linux is given by the entries in
+[Hardware device information - LinuxTVWiki
+](https://www.linuxtv.org/wiki/index.php/Hardware_device_information)
+which are classified by standard _cf above_ and card interface pci, pcie, pcmia,
+IEEE1394 / Firewire, usb device.
+
+### DVB and Video4Linux {#v4l}
+[LinuxTV.org - Television with Linux](https://www.linuxtv.org/)
+develops and maintains the Linux Kernel Media Subsystems, provide support for
+devices like webcams, streaming capture and output, analog TV, digital TV, AM/FM
+radio, Sofware Digital Radio (SDR), remote controllers and encoders/decoders for
+compressed video formats. It offers native support for a large number of drivers for
+commonly available PCI cards and USB devices
+
+The DVB driver subsystem is included in the Linux kernel ≥ 2.6.
+
+Video4Linux (V4L) is intended to provide a common programming interface for TV,
+capture cards, parallel port and USB video cameras.
+-   Wikipedia: {{< wp "Digital Video Broadcasting" >}}
+-   [LinuxTV.org - Projects](https://www.linuxtv.org/projects.php).
+-   DVB links are in the
+    [V4L - DVB Wiki](http://www.linuxtv.org/wiki/index.php/Main_Page).
+-   [Video for Linux resources](http://www.exploits.org/v4l/)
+-   [Radio Listening Software](https://www.linuxtv.org/wiki/index.php/Radio_Listening_Software)
+-   [DVB-T - ArchWiki](https://wiki.archlinux.org/title/DVB-T)
+-   [DVB-S - ArchWiki](https://wiki.archlinux.org/title/DVB-S)
+-   [RTL-SDR - ArchWiki](https://wiki.archlinux.org/title/RTL-SDR)
+-   [GNU Radio - ArchWiki](https://wiki.archlinux.org/title/GNU_Radio)
+
+-   [v4l2ucp](http://v4l2ucp.sourceforge.net) is an universal control
+    panel for V4L and V4L2 devices. it is in Debian until _buster_ but
+    [the source repository is no longer available
+    ](https://tracker.debian.org/pkg/v4l2ucp).
+-   [V4l-utils](https://linuxtv.org/wiki/index.php/V4l-utils)
+    are a series of programs for handling media devices.
+    It is packaged in the Debian package _dvb-tools_.
+    v4l-utils  contains the following video4linux command line utilities:
+    -   decode_tm6000: decodes tm6000 proprietary format streams
+    -   v4l2-compliance: tool to test v4l2 API compliance of drivers
+    -   v4l2-ctl, cx18-ctl, ivtv-ctl: tools to control v4l2 controls from the cmdline
+    -   v4l2-dbg: tool to directly get and set registers of v4l2 devices
+    -   v4l2-sysfs-path: sysfs helper tool
+-   [LinuxTV dvb-apps](https://www.linuxtv.org/wiki/index.php/LinuxTV_dvb-apps)
+    are a set of libraries, applications and utilities geared towards the initial setup,
+    testing and operation of an DVB device supporting the DVB-S, DVB-C, DVB-T,
+    and ATSC standards. It is packaged in the Debian package _dvb-apps_
+-   [VDR](http://www.tvdr.de/software.htm)
+    The Video Disk Recorder Software, is a digital sat-receiver program to record MPEG2
+    streams, as well as output the stream to TV. It is also possible to watch DVDs and
+    use an IR remote control. It is packaged in Debian.
+-   [Xawtv](https://www.linuxtv.org/wiki/index.php/Xawtv)
+    is a set of software for watching and recording television channels and webcams.
+    In Debian distribution it is in the following packages:
+
+    -   alevtd : HTTP daemon for teletext pages
+    -   fbtv : television viewer - Linux framebuffer application
+    -   pia : movie player for xawtv
+    -   radio : ncurses-based radio application
+    -   scantv : television channel-scanner
+    -   streamer : television and webcams capture tool (images/movies)
+    -   ttv : television viewer - console application
+    -   v4l-conf : tool to configure video4linux drivers
+    -   webcam : image grabber and uploader
+    -   xawtv, xawtv-plugins, xawtv-plugin-qt : television viewer - X11 application
+    -   xawtv-tools : television viewer - tools
+
+### Gnome DVB Daemon {#dvb_daemon}
+
+[DVBDaemon](https://wiki.gnome.org/action/show/Projects/DVBDaemon)
+is a GStreamer based daemon to setup your DVB devices, record and/or watch TV shows and
+browse EPG. It supports DVB-C, DVB-S, DVB-S2 and DVB-T devices (DVBv5 API), is
+controlled via its D-Bus interface by any application, allow to watch live TV using
+{{< iref "#gnome_videos" "Gnome Videos" >}}, and acces UPnP / DLNA through
+{{< iref "streaming#rygel" "Rygel" >}}.
+
+gnome-dvb-client Python GTK+ client, which speaks to the daemon via DBUS.
+
+### Camera applications {#webcam}
+-   [Webcam setup - ArchWiki](https://wiki.archlinux.org/title/Webcam_setup)
+-   [List of applications Webcam - ArchWiki
+    ](https://wiki.archlinux.org/title/List_of_applications/Multimedia#Webcam)
+-   Wikipedia {{< wp "Comparison of webcam software" >}}
+-   [Webcam HOWTO](http://en.tldp.org/HOWTO/Webcam-HOWTO) _2005_
+-   {{< iref "ffmpeg" "FFMPEG" >}} can [record your webcam
+    ](https://wiki.archlinux.org/title/FFmpeg#Recording_webcam)
+-   {{< iref "#mpv" "mpv" >}} can take a [v4l source as input
+    ](https://github.com/mpv-player/mpv/wiki/Video4Linux2-Input).
+-   You can take snapshots from your webcam
+    [with mplayer](https://wiki.archlinux.org/title/Webcam_setup#MPlayer)
+    or
+    [with mpv](https://wiki.archlinux.org/title/Webcam_setup#mpv).
+
+-   [Cheese](https://wiki.gnome.org/Apps/Cheese)
+    is a Gnome webcam application that supports image and video capture, it has features
+    such as Multi-Burst mode, Countdown timer for photos. It is in Debian.
+-   [deepin-camera](https://github.com/linuxdeepin/deepin-camera) (GPL-3.0)
+    a QT5 software to view camera, take photo and video.
+-   [FFmpeg recoding webcam - ArchWiki
+    ](https://wiki.archlinux.org/title/FFmpeg#Recording_webcam)
+-   [fswebcam](http://www.sanslogic.co.uk/fswebcam/) (GPL-2.0)
+    _fswebcam_ is a CLI program which captures images from a V4L1/V4L2 compatible device
+    or file, averages them to reduce noise and draws a caption, compress the image to
+    PNG or JPEG using the GD Graphics Library and save it to a file or send to stdio
+    where it can be piped to something like ncftpput or scp.
+
+     _fswebcam_ is in Debian but as far than 2021, the 2020 release us not packaged, but
+     only the 2014 release.
+
+     -   [fswebcam - GitHub](https://github.com/fsphil/fswebcam).
+     -   [Raspberrypi fswebcam tutorial
+         ](https://www.raspberrypi.org/documentation/usage/webcams/)
+-   [Kamoso](https://apps.kde.org/kamoso/) (GPL-2.0)
+    Webcam KDE recorder.
+-   [Motion](https://motion-project.github.io/index.html)
+    Motion is a highly configurable program that monitors video signals from many types
+    of cameras. Features include
+    -   Create mpeg/mp4/swf/flv/mov/ogg videos or save jpg/ppm pictures of the activity.
+    -   Passthrough recording from many IP cameras
+    -   View live stream of cameras
+    -   Invoke scripts when activities occur
+    -   Log activity into multiple types of databases
+    -   Fully customizable masks for privacy or motion detection
+    -   Full tls(https) support with authentication for webcontrol and streams
+    -   Can use Network cameras via RTSP, RTMP and HTTP; PI cameras; V4L2 webcams;
+        Video capture cards
+
+    Motion is a command line based tool with options setup via the command line or via
+    configuration files. It has also minimalistic web server allowing to access the
+    webcam output via a browser.
+
+    Motion is packaged in Debian.
+
+    There is also a  package gmotionlive  for a GTK  viewer
+    for streaming webcams that use multipart/x-mixed-replace streams, originally
+    targeted to motion, but this program does not seem anymore maintained.
+
+    -   [Motion Documentation](https://motion-project.github.io/motion_guide.html)
+    -   [Motion - Github](https://github.com/Motion-Project/motion)
+
+-   [Qtcam
+    ](https://www.e-consystems.com/opensource-linux-webcam-software-application.asp)
+    (GPL 3.0) C++/QT webcam software provides easier user interface for capturing and
+    viewing video from devices supported by Linux UVC driver, and any V4L2 compatible
+    device. An ubuntu package is provded on a Launchpad PPA.
+    -   [Qtcam - Github](https://github.com/econsysQtCAM/QtCAM)
+    -   [list of supported cameras
+        ](https://www.e-consystems.com/opensource-linux-webcam-software-application.asp#Supported-Cameras)
+-   _uvcdynctrl_ (GPL) from [libwecam](https://sourceforge.net/projects/libwebcam/)
+    is a command line tool to control v4l2 devices. It is in Debian until _buster_,
+    [look here for more recent support](https://tracker.debian.org/pkg/libwebcam).
+-   [vgrabbj](http://vgrabbj.gecius.de/) grabs a image from a camera
+    (any v4l compatible device) and puts it in jpg/png format. It is
+    in debian.
+-   _Webcam_ from {{< iref "#xawtv" "Xawtv software suite" >}}
+    provides an utility that captures images from a video4linux device such as bttv,
+    annotates them and uploads them to a webserver in an endless loop using FTP or SSH.
+    It is a Debian package. From  {{< iref "#xawtv" "Xawtv " >}} you can also use
+    _streamer_, also packaged in Debian.
+-   [Webcamoid](http://webcamoid.github.io/) ( GPL-3.0 )
+    a C++, QT application to capture, save and view a video stream. In Debian.
+    -   [Webcamoid - GitHub](https://github.com/webcamoid/webcamoid)
+-   [ZoneMinder](https://zoneminder.com/)
+    is intended for use in single or multi-camera video security applications,
+    It supports capture, analysis, recording, and monitoring of video data coming from
+    one or more video or network cameras. It needs a mysql/mariadb database.
+    There is _an heavy_ package on Debian _with a lot of Perl dependencies_.
+    _For a lighter software look at motion above_.
+
+### USB video device class, UVC  {#uvc}
+{{< wp "UVC" >}}is a USB device class that describes devices capable of streaming video
+like webcams, digital camcorders, transcoders, analog video converters and still-image
+cameras.
+
+The support of UVC in linux is done by the
+[Linux UVC project](http://www.ideasonboard.org/uvc/)
+which includes a V4L2 kernel device driver.
+
+-   Wikipedia {{< wp "List of USB video class devices" >}}.
+-   [Linux UVC list of supported devices](http://www.ideasonboard.org/uvc/#devices).
+-   [Linux UVC driver & tools – FAQ](http://www.ideasonboard.org/uvc/faq/).
+
+-   [guvview GTK+ UVC Viewer](http://guvcview.sourceforge.net/)
+    Gtk3 or Qt5  interface for capturing and viewing video from UVC devices.
+    The GTK3 build is available in Debian.
+
+
 
 # Video download helpers {#video_download_helpers}
 -   Wikipedia {{< wp "Comparison of YouTube downloaders" >}},
