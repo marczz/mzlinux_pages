@@ -1126,7 +1126,7 @@ is the encoder included in the mplayer distribution.
 -   [ArchWiki: Mplayer](https://wiki.archlinux.org/index.php/MPlayer)
 
 
-## Mpv {#mpv}
+### Mpv {#mpv}
 
 [Mpv](https://mpv.io/) (LGPLv2.1+ and GPLv2+)
 is a media player based on MPlayer and MPlayer2.
@@ -1162,7 +1162,7 @@ make
 sudo make install
 ~~~
 
-### Mpv frontends
+#### Mpv frontends
 
 Mpv itself has a rudimentary {{< iref "#mpv_pseudo" "pseudo-gui" >}}
 and many
@@ -1172,31 +1172,40 @@ see also the [list on Wikipedia
 ](https://en.wikipedia.org/wiki/Mpv_(media_player)#Interface_and_graphical_front-ends).
 
 <a name="smplayer"></a>[SMPlayer](http://www.smplayer.info/)
-(GPL) is a GUI for {{< iref "#mplayer" "mplayer" >}} or mpv
-written in C++ with Qt4/Qt5. It supports [numerous formats and codecs
-](http://www.smplayer.info/en/supported-formats-and-codecs), it can
-play YouTube videos. And support [chromecast
-](https://blog.smplayer.info/category/chromecast/) since v17.1
-this need you have Chrome or Chromium installed. SMPlayer is in Debian.
+:   (GPL) is a GUI for {{< iref "#mplayer" "mplayer" >}} or mpv
+    written in C++ with Qt4/Qt5. It supports [numerous formats and codecs
+    ](http://www.smplayer.info/en/supported-formats-and-codecs), it can
+    play YouTube videos. And support [chromecast
+    ](https://blog.smplayer.info/category/chromecast/) since v17.1
+    this need you have Chrome or Chromium installed. SMPlayer is in Debian.
 -   [SMPlayer Blog](https://blog.smplayer.info/)
 -   [Wikipedia: SMPlayer](https://en.wikipedia.org/wiki/SMPlayer).
 
-[gnome-mpv/gnome-mpv](https://github.com/gnome-mpv/gnome-mpv) (GPL)
-is a  GTK+ frontend for mpv.
+[celluloid](https://celluloid-player.github.io/) (GPL-3.0)
+:   is a  GTK+ frontend for mpv.
+    -   [GitHub - celluloid](https://github.com/celluloid-player/celluloid)
 
-<a name="mpv_pseudo-gui"></a>
-Mpv provides a _pseudo-gui mode_ that you get by starting it
-with:
+<a name="mpv_pseudo-gui"></a>pseudo-gui mode
+:   Mpv provides a _pseudo-gui mode_ that you get by starting it
+    with:
 
-    $ mpv  --player-operation-mode=pseudo-gui
+        $ mpv  --player-operation-mode=pseudo-gui
 
-or by using the `mpv.desktop` file
+    or by using the `mpv.desktop` file
 
-## Streamlink
-[Streamlink](https://streamlink.github.io/index.html) is a command-line utility
-written in Python which allows you to watch online video streams in video players, such
-as {{< iref "#vlc" "VLC" >}}, {{< iref "#mplayer" "Mplayer" >}},
-{{< iref "arm_sbc#omxplayer" "OMXPlayer" >}} or {{< iref  "#mpv" "Mpv" >}}
+
+### Streamlink {#streamlink}
+[Streamlink](https://streamlink.github.io/index.html) ( BSD-2-Clause License )
+is a command-line utility written in Python which allows you to watch online video
+streams in video players, such as {{< iref "#vlc" "VLC" >}},
+{{< iref "#mplayer" "Mplayer" >}}, {{< iref "arm_sbc#omxplayer" "OMXPlayer" >}} or
+{{< iref  "#mpv" "Mpv" >}}.
+
+Most of the big streaming services are supported, such as: Twitch, YouTube, Livestream,
+Dailymotion, facebook, pluzz, vimeo, and a [huge list of site supporting plugins
+](https://streamlink.github.io/plugin_matrix.html).
+
+Streamlink is in Debian.
 
 _Streamlink_ was forked from the now dead _Livestreamer_ project.
 
