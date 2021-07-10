@@ -1213,7 +1213,6 @@ _Streamlink_ was forked from the now dead _Livestreamer_ project.
 -   [Streamlink documentation](https://streamlink.github.io/index.html)
 -   [Streamlink - ArchWiki](https://wiki.archlinux.org/title/Streamlink)
 
-
 ## VideoLAN {#vlc}
 
 [VideoLAN](http://www.videolan.org/) (GPL) targets streaming of MPEG-1,
@@ -1230,39 +1229,47 @@ Since version 3.0.1 VLC support {{< iref "streaming#chromecast" "Chromecast" >}}
 **Refs:**
 
 -   {{< wp "Wikipedia VLC media player" >}}
--   videolan.org documentation: [VLC Play-Howto (en)
-    ](http://www.videolan.org/doc/play-howto/en/play-howto-en.html) (
-    [french
-    ](http://www.videolan.org/doc/play-howto/fr/play-howto-fr.html)),
--   [VLC Streaming-Howto (en)
-    ](http://www.videolan.org/doc/streaming-howto/en/streaming-howto-en.html)
-    ([french
-    ](http://www.videolan.org/doc/streaming-howto/fr/streaming-howto-fr.html))
--   Actual documentation: is on
-    [VideoLan Wiki](https://wiki.videolan.org/)
--   [VLC Streaming-Howto
-    ](https://wiki.videolan.org/Documentation:Streaming_HowTo),
+-   [VideoLan Wiki](https://wiki.videolan.org/)
+-   [VLC Documentation](https://wiki.videolan.org/Documentation).
+-   [VLC playback documentation](https://wiki.videolan.org/Documentation:Play_HowTo)
+-   [VLC Streaming documentation](https://wiki.videolan.org/Documentation:Streaming_HowTo),
     [HowTo/Receive and Save a Stream - VideoLAN Wiki
     ](https://wiki.videolan.org/Documentation:Streaming_HowTo/Receive_and_Save_a_Stream/)
--   [ArchWiki - VLC
-    ](https://wiki.archlinux.org/index.php/VLC_media_player)
+-   [VLC FAQ](https://wiki.videolan.org/Frequently_Asked_Questions/)
+-   [ArchWiki - VLC](https://wiki.archlinux.org/index.php/VLC_media_player)
 
-## [Xine](http://www.xine-project.org/)
-Xine (GPL) is a free multimedia player which plays back CDs, DVDs, and
-VCDs, decodes AVI, MOV, WMV, and MP3 from local disk drives, and
-displays multimedia streamed over the Internet.
+### VLC memory footprints.
 
-Refs:
-[Xine FAQ](http://xinehq.de/index.php/faq),
-[Xine HowTo](http://dvd.sourceforge.net/xine-howto/),
-[xine(1)
-](http://manpages.debian.org/cgi-bin/man.cgi?query=xine(1)),
-[aaxine(1)](http://man.cx/aaxine(1)),
-[xine-remote(1)
-](http://manpages.debian.org/cgi-bin/man.cgi?query=xine-remote(1)).
+In june 2021 _vlc_ 3.0.12 loaded without playing anything takes on an AMD64 103M
+resident / 80M shared.
+
+Playing a simple opus file on DLNA don't change much the memory footprint going to 110M /
+83M.
+
+When playing a DLNA streamed film I get 173M / 98M, as usual the memory is not
+automatically reclaimed, and after closing the film we have still 153M / 93M.
+
+The qvlc i.e. vlc-qt interface is similar with 110M / 88M without playing.
+
+The Ncurses interface launched with `vlc  -I ncurses` get 71M / 56M without playing,
+
+### Xine {#xine}
+[Xine](http://www.xine-project.org/) (GPL) is a free multimedia player which plays back
+CDs, DVDs, and VCDs, decodes AVI, MOV, WMV, and MP3 from local disk drives, and displays
+multimedia streamed over the Internet.
+
+It is an old project, but still maintained and packaged in Debian.
+
+-   {{< wp "xine" "Wikipedia: Xine" >}}
+-   [Xine FAQ](http://xinehq.de/index.php/faq),
+-   [Xine HowTo](http://dvd.sourceforge.net/xine-howto/),
+-   [xine(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=xine(1)),
+    [aaxine(1)](http://man.cx/aaxine(1)),
+    [xine-remote(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=xine-remote(1)).
 
 
-# MPIS {#mpris}
+
+# MPRIS {#mpris}
 
 The [Media Player Remote Interfacing Specification (MPRIS)
 ](http://specifications.freedesktop.org/mpris-spec/latest/)is a standard D-Bus
