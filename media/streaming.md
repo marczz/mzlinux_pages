@@ -739,6 +739,12 @@ More control points and server are in the
     control point available for iPod/iPhone, iPad, Android, Google TV
     and macOS.
 
+## UPnP IGD client/server
+
+-   [MiniUPnP Project](http://miniupnp.free.fr/) includes a UPnP IGD
+    server and a library and client to control UPnP IGD devices.
+    _active in 2018_
+    -   [GitHub _ MiniUPnP](https://github.com/miniupnp/miniupnp).
 
 ## DAAP {#daap}
 -   The {{< wp "Digital Audio Access Protocol" >}} (DAAP) is a proprietary
@@ -747,39 +753,46 @@ More control points and server are in the
     there are also opensource software to play DAAP.  Daap is also
     used by {{< wp "Roku" >}} products.
 
-### DAAP Clents
--   DAAP is played by DAP clients, a [list is on Wikipedia
-    ]((https://en.wikipedia.org/wiki/Digital_Audio_Access_Protocol#DAAP_clients).
+### DAAP Clients {#daap_clients}
+-   a DAAP client _i.e. players_ os [on Wikipedia - DAAP Clients
+    ](https://en.wikipedia.org/wiki/Digital_Audio_Access_Protocol#DAAP_clients).
 
     They include: {{< iref "media_players#rhythmnbox" "Rhythmnbox" >}},
     {{< iref "media_players#amarok" "Amarok" >}},
     {{< iref "media_players#exaile" "Exaile" >}}
     {{< iref "media_players#exaile" "Banshee" >}},
     {{< iref "media_players#kodi" "Kodi" >}}.
--   <a name="firefly"></a> {{< wp "Firefly" >}} (GPL)
-    is an open-source media server (or daemon) for the {{< wp "Roku" >}} Server Protocol
-    (RSP) and Digital Audio Access Protocol (DAAP).  It has support for MP3, AAC, Ogg,
-    FLAC, and WMA and support on-the-fly transcoding of Ogg, FLAC, ALAC, and WMA.
-
-    -   [Firefly client
-        ](http://sourceforge.net/projects/fireflyclient/)
-        is a java client and a java client applet to Firefly media
-        server.
-    -   [FirePlay
-        ](http://www.mediasmartserver.net/wiki/index.php/FirePlay)
-        is a web player for Firefly music streams.
 
 ### DAAP Servers
 -   [Wikipedia list of DAAP servers
     ](https://en.wikipedia.org/wiki/Digital_Audio_Access_Protocol#DAAP_servers)
--   __Forked-dappd__ (GPL) was a fork of {{< iref "#firefly" "Firefly" >}} no longer
-    developed after 2012, the original code is at
-    `git://git.debian.org/~jblache/forked-daapd.git` and now
-    [mirrored on GitHub](https://github.com/jasonmc/forked-daapd).
+-   <a name="owntone"></a>[owntone server](https://github.com/owntone/owntone-server)
+    (GPL) previously __Forked-daapd__ is a fork by E.Jurgensen of the the _forked-daapd_
+    originally written by Julien Blache whose development stopped in 2012, which was
+    itself a fork of{{< iref "#firefly" "Firefly" >}}.
 
-    A new fork is at [Github: ejurgensen/forked-daapd
-    ](https://github.com/ejurgensen/forked-daapd). It is active in 2021 and packaged
-    in Debian.
+    _Owntone_ is a daemon which serve your music library with the DAAP protocol,
+    the MPD protocol, and the RSP protocol used by {{< wp "Roku" >}} devices.
+
+    _Owntone_ can output through daap clients, {{< wp "Itunes" >}} clients like
+    _Apple Remote_, MPD Clients, Airplay or Chromecast devices _audio only_,
+    the computer sound card with alsa, or PulseAudio, or to an http mp3 stream.
+
+    _Owntone_ can transcode a stream with ffmpeg, when the format is not understood by
+    the client. It also supports  M3U and PLS playlists.
+
+    _forked-daapd_ is in Debian.
+
+    -   [owntone server - Raspberry Pi Forums
+        ](https://www.raspberrypi.org/forums/viewtopic.php?t=49928)
+        E Jurgensen propose a Raspbian repository for _Owntone_.
+
+-   [canary](http://code.woong.org/canary)
+    is a DAAP server written in Node js.
+    -   [canary - GitHub](https://github.com/mycoboco/canary)
+_   <a name="dmapd"></a>[dmapd](https://www.flyn.org/projects/dmapd/)
+    is a DAAP and DPAP server with realtime transcoding, it uses
+    {{< iref "#gstreamer" "GStreamer" >}}, and as been used on small OpenWrt servers.
 -   {{< iref "#ampache" "Ampache" >}} provides a
     [DAAP API](https://sourceforge.net/p/ampache4/wiki/API/)
     allowing it to be used as a DAAP server.
@@ -788,13 +801,15 @@ More control points and server are in the
     that  uses the mutagen media metadata library. _not updated since 2011_
     _spydaap_ can stream mp3s, ogg, flac, and Quicktime videos. It is used in an
     {{< iref "media_players#exaile" "Exaile" >}} plugin.
-
-## UPnP IGD client/server
-
--   [MiniUPnP Project](http://miniupnp.free.fr/) includes a UPnP IGD
-    server and a library and client to control UPnP IGD devices.
-    _active in 2018_
-    -   [GitHub _ MiniUPnP](https://github.com/miniupnp/miniupnp).
+-   <a name="firefly"></a> {{< wp "Firefly" >}} (GPL), previously _mnt-daap_
+    is an open-source media server (or daemon) for the {{< wp "Roku" >}} Server Protocol
+    (RSP) and Digital Audio Access Protocol (DAAP). It is abandoned since 2008.
+    Two clients were targeted specifically to Firefly:
+    -   [Firefly client](http://sourceforge.net/projects/fireflyclient/)
+        was a java client and a java client applet to Firefly media
+        server. _last release 2008_
+    -   [FirePlay](https://sourceforge.net/projects/fireplay/)
+        A flash based client. _Last release 2010._
 
 # Chromecast {#chromecast}
 {{< wp "Chromecast" >}} are digitals players by Google. They can display video
