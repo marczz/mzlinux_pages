@@ -283,7 +283,7 @@ the following are refered in these pages:
 -   [MuSE](https://www.dyne.org/software/muse/) <a name="muse"></a> (GPL)
     is a sound streaming server written in C++ that can mix multiple
     sources to stream to the net.  It can encode as mp3 or ogg and
-    stream to icecast, shoutcast, and darwin. _Last release 2005_
+    stream to {{<iref "#icecast" "Icecast" >}}, shoutcast, and darwin. _Last release 2005_
 -   [Sonerezh](https://github.com/Sonerezh/sonerezh) (AGPL)
     a php+sql web music server.
 
@@ -362,8 +362,8 @@ _
 ## Video and Music
 ### Icecast {#icecast}
 {{< wp "Icecast" >}} (GPL)is a streaming server (audio/video) with support of Ogg/Vorbis
-and Ogg/Theora, Opus, WebM and MP3 streams.
-Icecast has tiny memory footprints:
+and Ogg/Theora, Opus, WebM and MP3 streams. Icecast is in Debian.
+Icecast has tiny memory footprints.
 -   [Icecast Home](http://www.icecast.org/)
 -   [Icecast official documentation](http://icecast.org/docs/icecast-latest)
 -   [Icecast 3rd Party Applications](http://icecast.org/apps/)
@@ -392,11 +392,16 @@ Icecast source clients:
     is a  live audio streamer, It records audio from an audio interface
     (e.g. sound card), encodes it and sends it to a streaming server. It supports
     encoding in mp3, ogg vorbis, AAC, Opus.
-    -    Icecast can be controlled from
+    -   [DarkIce - GitHub](https://github.com/rafael2k/darkice)
+    -   Darkice can be controlled from
         [darksnow](https://darksnow.radiolivre.org/index.en.html)
         GTK-2 gui interface.
 
     Darkice and Darksnow are packaged in Debian.
+-   [GlassCoder](https://github.com/ElvishArtisan/GlassCoder) (GPL-2.0)
+    is a minimalist audio encoder for IceCast and Shoutcast as well as HTTP Live
+    Streaming (HLS). It can stream from ALSA, Jack, and files.
+    It is in Debian as well as the gui _glassgui_.
 
 ### Jinzora {#jinzora}
 <a name="jinzora"></a>[Jinzora](https://sourceforge.net/projects/jinzora/) (GPL)
