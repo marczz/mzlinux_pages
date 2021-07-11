@@ -2,6 +2,8 @@
 title: Terminal emulators
 ---
 
+See also {{< iref "desktop" "Desktop" >}}, {{< iref "checkpointing#tmux" "Tmux" >}}.
+
 # XTerminals
 -   Wikipedia has an _incomplete_ {{< wp "List of terminal emulators" >}}.
 -   [ArchWiki: List of terminal emulators
@@ -10,21 +12,52 @@ title: Terminal emulators
     ](http://martin.ankerl.com/2007/09/01/comprehensive-linux-terminal-performance-comparison/)
     _2007_
 
+The terminal with smaller footprint are built whithout the desktop rendering libraries
+like GTK or KDE, but when you want support for complex scripts you need a
+layout library like {{< wp "pango" >}} for GTK or libxrender1 for qt.
+
+Even if we look for a simple support of unicode our choice reduce to
+{{< iref "#xterm" "xterm" >}}, {{< iref "#st" "st" >}},
+{{< iref "#rxvt" "rxvt-unicode" >}}, _mlterm_.
+
+The smaller foot print are for  {{< iref "#xterm" "xterm" >}}, {{< iref "#st" "st" >}},
+{{< iref "#rxvt" "rxvt" >}}.
+
+ The footprints of _xterm_ are 9.5M resident with 5.6M shared, for _st_
+it is 7.3M/6.3M. This has not changed between {{< iref "#oldtest" "old test (1)" >}}
+and {{< iref "#newtest15" "new 2015 test (2)" >}}.
+
+There are many web applications to help to configure
+{{< iref "desktop#color_themes" color themes  >}} for xterm, st or other terminal
+emulators that don't have a graphic interface to configure colors.
+
+You can use [terminal sexy](http://terminal.sexy/),
+or  [4bit Terminal Color Scheme Designer](http://ciembor.github.io/4bit/).
+
+
+## xterm {#xterm}
 The standard X {{< wp "terminal emulator" >}} is
 [xterm](http://invisible-island.net/xterm/xterm.html).
--   [ArchWiki: xterm](https://wiki.archlinux.org/index.php/Xterm).
+-   [ArchWiki: xterm](https://wiki.archlinux.org/index.php/Xterm)
+-   [list of xterm control sequences
+    ](http://invisible-island.net/xterm/ctlseqs/ctlseqs.html).
 
-<a name="st"></a>[suckless st](http://st.suckless.org/),
-[Archwiki: st](https://wiki.archlinux.org/index.php/St) is intended to
-serve as a lightweight replacement for xterm or rxvt-unicode. It
-currently supports 256 colors, most VT10X escape sequences, UTF-8, X11
-copy/paste, anti-aliased fonts (using fontconfig), fallback fonts,
-resizing, shortcuts via config.h, and line drawing. The configuration
-is explained in
+## St {#st}
+[suckless st](http://st.suckless.org/),
+is intended to serve as a lightweight replacement for {{< iref "#xterm" "xterm" >}} or
+rxvt-unicode. It currently supports 256 colors, most VT10X escape sequences, UTF-8, X11
+copy/paste, anti-aliased fonts (using fontconfig), fallback fonts, resizing, shortcuts
+via config.h, and line drawing. The configuration is explained in
 [Archwiki: st](https://wiki.archlinux.org/index.php/St).
 There is also a fork for Wayland named {{< iref "#wterm" "wterm" >}}.
 In Debian _st_ is packaged a _stterm_.
 
+One benefit of _st_ over _xterm_ is the support of fontconfig and
+24bits colour scheme. So it matches the
+[powerline terminal requirements
+](https://powerline.readthedocs.org/en/latest/usage.html#terminal-emulator-requirements).
+
+## rxvt and friends
 There are also
 a lot of alternate terminals like {{< wp "rxvt" >}},
 [rxvt-unicode](https://wiki.archlinux.org/index.php/Rxvt-unicode)
@@ -32,64 +65,11 @@ a lot of alternate terminals like {{< wp "rxvt" >}},
 [mrxvt](http://materm.sourceforge.net/wiki/pmwiki.php) _stopped in
 2008_,
 _wterm_ Wterm is a fork of rxvt designed for  Window Maker, it is distinct from the
-homonym  Wayland terminal {{< iref "#wterm" "wterm" >}}.
+homonym Wayland terminal {{< iref "#wterm" "wterm" >}}.
 
 
 [mlterm](http://mlterm.sourceforge.net/) _active in 2019_ is a
 multilingual terminal with support for input-methods.
-
-
-... few, but _xterm_, _rxvt-unicode_, _mlterm_ and _st_ support unicode.
-
-The footprints of _xterm_ are 9.5M resident with 5.6M shared, for _st_
-it is 7.3M/6.3M. This has not changed between {{< iref "#oldtest" "old test (1)" >}} and {{< iref "#newtest15" "new 2015 test (2)" >}}.
-
-One benefit of _st_ over _xterm_ is the support of fontconfig and
-24bits colour scheme. So it matches the
-[powerline terminal requirements
-](https://powerline.readthedocs.org/en/latest/usage.html#terminal-emulator-requirements).
-
-In any case when you want support for complex scripts you need a
-layout library like {{< wp "pango" >}} for GTK or libxrender1 for qt.
-
-
-There are many web applications to help to configure color themes for
-xterm, st or other terminal emulators that don't have a graphic
-interface to configure colors.
-for example you can use [terminal sexy](http://terminal.sexy/),
-or  [4bit Terminal Color Scheme Designer
-](http://ciembor.github.io/4bit/).
-
-
-# Advanced non-vte Terminal Emulators.
-The Kde/Qt terminal is {{< wp "Konsole" >}} it has heavy KDE dependencies; but
-there is a light Qt terminal named
-[qterminal](https://github.com/lxqt/qterminal/) which is part of
-[lxqt](https://lxqt.org/) The Lightweight Qt Desktop Environment
-(previously _Razor-qt_) It has no
-dependencies but its own qtwidget library and use  34M / 29M
-shr {{< iref "#newtest17" "3" >}} with 2 tabs.
-You can have multiple tabs but it does not allow to share a process
-between multiple windows
-
-[Kitty](https://sw.kovidgoyal.net/kitty/) (GPL)
-a scriptable OpenGL based terminal emulator with tiling capabilities, TrueColor,
-ligatures support and protocol extensions for keyboard input and image rendering.
-
-I tried in 2020 Kitty on Linux, but it let my window manager, in an unrecoverable state.
-
-[Terminology](https://www.enlightenment.org/about-terminology)
-is a terminal emulator created for the Enlightenment desktop.  it
-allows: Multiple copy and paste selections, multiple tabs and
-split into multiple panes, inline display of link content, to
-preview thumbnails of images, videos and documents A unique
-feature is its ability to work in X11, Wayland and directly in the
-Linux framebuffer (fbcon).  It is usable out of Enlightenment
-desktop, but its insatllation will pull all the enlightenement
-libraries.
--   [GitHub: Terminology](https://github.com/billiob/terminology)
--   Terminology uses 27M resident memory / 17 shared.
--   Wikipedia: {{< wp "terminology" >}}
 
 
 # List of  vte terminal emulators
@@ -181,7 +161,7 @@ only on Gtk and xfreedesktop and avoid heavy desktop bindings like:
     Memory footprints: 18M res. / 16M shared {{< iref "#newtest15" "(2)" >}}.
 -   [roxterm](http://roxterm.sourceforge.net/) (GPL) heavier than
     lxterminal but easier to customize, it allows colour schemes.
-    It seems no more developped since 2016.
+    It is no more developped since 2016, and no more available in Debian.
 -   [Sakura](http://www.pleyades.net/david/projects/sakura) (GPL),
     has many tabs and configurable keybindings,  a
     contextual menu with some basic options but no preference profile.
@@ -274,6 +254,9 @@ Other terminal emulators open a new process for each window, of course they
 support multiple tabs, but it seems they need to be opened from the
 window.
 
+[tdrop](https://github.com/noctuid/tdrop/) (BSD License)
+is a bash script to allow dropdown for a an independent terminal, it is also
+WM-Independent. _tdrop_ is compatible with many terminal software and window managers.
 
 # Wayland Terminals {#wayland_terminals}
 
@@ -281,9 +264,57 @@ See also the {{< iref "xorg#wayland" "Wayland Section" >}},
 {{< iref "desktop#wayland_compositors" "Wayland Compositors" >}}.
 
 
+-   [foot](https://codeberg.org/dnkl/foot) (MIT License)
+    -   [foot Wiki](https://codeberg.org/dnkl/foot/wiki)
+    fast, lightweight and minimalistic Wayland terminal emulator.
 -   [wterm](https://github.com/majestrate/wterm) (MIT Licee)
-    is an st fork for wayland
+    is an _st_ fork for wayland.
 
+## Terminals that work on both Wayland and X11
+
+-   [Alacritty](https://github.com/alacritty/alacritty) (Apache License)
+    A Rust cross-platform, GPU-accelerated terminal emulator, with a strong focus on
+    performance.  Wayland is also supported.
+
+    Many {{<  iref "desktop#color_themes" "color themes" >}} are available for
+    _Alacritty_.
+
+    -   [Alacritty features
+        ](https://github.com/alacritty/alacritty/blob/master/docs/features.md)
+    -   [Alacritty Ubuntu PPA](https://launchpad.net/~mmstick76/+archive/ubuntu/alacritty)
+        is [not up to date with last releases
+        ](https://github.com/alacritty/alacritty/pull/3983).
+    -   The POP_OS fork add a [debian package configuration
+        ](https://github.com/pop-os/alacritty/tree/master/debian).
+
+-   The Kde/Qt terminal is {{< wp "Konsole" >}} it has heavy KDE dependencie.
+
+-   <a name="qterminal"></a>[qterminal](https://github.com/lxqt/qterminal/)
+    is a light Qt terminal which is part
+    of [lxqt](https://lxqt.org/) The Lightweight Qt Desktop Environment (previously
+    _Razor-qt_) It has no dependencies but its own qtwidget library and use on
+    X11 34M / 29M shr {{< iref "#newtest17" "3" >}} with 2 tabs.
+
+    You can have multiple tabs but it does not allow to share a process
+    between multiple windows
+
+-   [Kitty](https://sw.kovidgoyal.net/kitty/) (GPL)
+    a scriptable OpenGL based terminal emulator with tiling capabilities, TrueColor,
+    ligatures support and protocol extensions for keyboard input and image rendering.
+
+    I tried in 2020 Kitty on Linux X11, but it let my window manager, in an
+    unrecoverable state.
+
+-   [Terminology](https://www.enlightenment.org/about-terminology)
+    is a terminal emulator created for the Enlightenment desktop.  it allows: Multiple
+    copy and paste selections, multiple tabs and split into multiple panes, inline
+    display of link content, to preview thumbnails of images, videos and documents A
+    unique feature is its ability to work in X11, Wayland and directly in the Linux
+    framebuffer (fbcon).  It is usable out of Enlightenment desktop, but its
+    installation will pull all the enlightenement libraries.
+    -   [GitHub: Terminology](https://github.com/billiob/terminology)
+    -   Terminology uses 27M resident memory / 17 shared.
+    -   Wikipedia: {{< wp "terminology" >}}
 
 # Javascript Terminals
 -   [terminal javascript Library](http://www.masswerk.at/termlib/)
