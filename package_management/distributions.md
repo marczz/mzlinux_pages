@@ -66,28 +66,28 @@ _See the also sections:
 [Package management
 ](node/debian_admin#package_management "internal reference").
 
--   [Debian](http://www.debian.org/),
-    [Debian FAQ](http://www.debian.org/doc/FAQ/).
+-   [Debian](https://www.debian.org/),
+    [Debian FAQ](https://www.debian.org/doc/FAQ/).
 
--   <a name="grml"></a>[Grml](http://grml.org/)
+-   <a name="grml"></a>[Grml](https://grml.org/)
     is a bootable live system for system administrators based on Debian.
-    -   [Grml Wiki](http://wiki.grml.org/doku.php)
+    -   [Grml Wiki](https://wiki.grml.org/doku.php)
     -   The Grml rescue system supports [booting the Grml ISO from a hard disk
-        ](http://wiki.grml.org/doku.php?id=rescueboot)
+        ](https://wiki.grml.org/doku.php?id=rescueboot)
         by using the package grml-rescueboot which integrates ISO-booting into GRUB.
-    -   [Boot Grml from Harddisk](http://wiki.grml.org/doku.php?id=rescueboot)
+    -   [Boot Grml from Harddisk](https://wiki.grml.org/doku.php?id=rescueboot)
     -   [Grml-Forensic](https://grml-forensic.org/)  is a system designed for forensic
         investigations and data rescue tasks.
-    -   [Use grml as a rescue system](http://wiki.grml.org/doku.php?id=rescue)
-    -   [Use Grml for bios update](http://wiki.grml.org/doku.php?id=biosupdate)
-    -   [use Grml to scan for virus](http://wiki.grml.org/doku.php?id=antivirus)
--   [gNewSense](http://www.gnewsense.org/) is a derivative of Debian
+    -   [Use grml as a rescue system](https://wiki.grml.org/doku.php?id=rescue)
+    -   [Use Grml for bios update](https://wiki.grml.org/doku.php?id=biosupdate)
+    -   [use Grml to scan for virus](https://wiki.grml.org/doku.php?id=antivirus)
+-   [gNewSense](https://www.gnewsense.org/) is a derivative of Debian
     (with Ubuntu ingredients) that focus on restricting to free
-    software and qualify as [Free GNU/Linux distributions](http://www.gnu.org/distros/free-distros.html)
+    software and qualify as [Free GNU/Linux distributions](https://www.gnu.org/distros/free-distros.html)
     as defined by the FSF in their
     [Guidelines for Free System Distributions
-    ](http://www.gnu.org/philosophy/free-system-distribution-guidelines.html).
--   [SparkyLinux](http://sparkylinux.org/)
+    ](https://www.gnu.org/philosophy/free-system-distribution-guidelines.html).
+-   [SparkyLinux](https://sparkylinux.org/)
     is a Debian testing based Linux distribution, and Live CD
     with a set of slightly customized lightweight desktops like
     Enlightenment, OpenBox, LXDE.
@@ -121,13 +121,13 @@ allows to create your own customized Debian Live system.
 <!-- See the {{< iref "portage_notes" "Portage Notes" >}} the
     Gentoo packaging system.-->
 
--   [Gentoo](http://www.gentoo.org/),
-    [Gentoo packages](http://packages.gentoo.org/)
--   [Gentoo FAQ](http://www.gentoo.org/doc/en/faq.xml),
--   [Gentoo Handbook](http://www.gentoo.org/doc/en/handbook/):
+-   [Gentoo](https://www.gentoo.org/),
+    [Gentoo packages](https://packages.gentoo.org/)
+-   [Gentoo FAQ](https://www.gentoo.org/doc/en/faq.xml),
+-   [Gentoo Handbook](https://www.gentoo.org/doc/en/handbook/):
     [Gentoo Linux AMD64 Handbook](https://wiki.gentoo.org/wiki/Handbook:AMD64),
--   [Gentoo Documentation Resources](http://www.gentoo.org/doc/en/)
--   The site [gentoo-portage](http://gentoo-portage.com/) allows to
+-   [Gentoo Documentation Resources](https://www.gentoo.org/doc/en/)
+-   The site [gentoo-portage](https://gentoo-portage.com/) allows to
     browse all the gentoo packages and list releases, dependencies,
     change logs, use flags.
 -   [Gentoo Linux AMD64 Handbook](https://wiki.gentoo.org/wiki/Handbook:AMD64):
@@ -137,7 +137,7 @@ allows to create your own customized Debian Live system.
 -   [Hardened Gentoo](https://wiki.gentoo.org/wiki/Project:Hardened) is a
     high security gentoo distribution.
 -   Gentoo bugs tracking is done thru
-    [Gentoo Bugzilla](http://bugs.gentoo.org/)
+    [Gentoo Bugzilla](https://bugs.gentoo.org/)
 -   [Gentoo Power Management Guide](https://wiki.gentoo.org/wiki/Power_management/Guide)
     is aimed to increase battery run time on laptops.
 -   [Gentoo Wiki](https://wiki.gentoo.org/wiki/Main_Page)
@@ -165,7 +165,7 @@ allows to create your own customized Debian Live system.
     [documentation](https://wiki.archlinux.org/index.php/Table_of_contents)
     in the [ArchWiki](https://wiki.archlinux.org/)
 -   Arch Linux [supports LXDE](https://wiki.archlinux.org/index.php/LXDE)
--   [ArchBang](http://archbang.org/)
+-   [ArchBang](https://archbang.org/)
      is a minimal Arch Linux system using Openbox Window Manager. Its
      goal is to allow the user to skip the Arch post installation work
      to have a functional desktop.
@@ -174,10 +174,10 @@ allows to create your own customized Debian Live system.
 
 # Fedora - Red Hat
 
--   [Red Hat Home](http://www.redhat.com/),
-    [Red Hat Developer Connection](http://developer.redhat.com/)
+-   [Red Hat Home](https://www.redhat.com/),
+    [Red Hat Developer Connection](https://developer.redhat.com/)
 -   [Fedora](https://getfedora.org/)
--   [Dag Wierrs Apt and Yum repository](http://dag.wieers.com/rpm/)
+-   [Dag Wierrs Apt and Yum repository](https://dag.wieers.com/rpm/)
 
 # NiX
 {{< wp "Nix package manager" >}} utilizes a purely functional deployment model where
@@ -240,16 +240,16 @@ is also the name of the programming language.
 
 -   {{< wp "Solus" >}} is a desktop operating system based on the Linux kernel.
     -   [Solus Home](https://solus-project.com/)
--   [OpenPKG](http://www.openpkg.org/) not a distribution, but an
+-   [OpenPKG](https://www.openpkg.org/) not a distribution, but an
     alternate packaging system.
 
 # Site mirroring many distributions
 
--   [ftp.heanet.ie](http://ftp.heanet.ie/) :
-    [distributions](http://ftp.heanet.ie/pub/).
--   [Linux à IBP](http://ftp.lip6.fr/pub/linux/),
-    [distributions](http://ftp.lip6.fr/pub/linux/distributions/).
--   [Miroirs free.fr](http://ftp.free.fr/pub/)
+-   [ftp.heanet.ie](https://ftp.heanet.ie/) :
+    [distributions](https://ftp.heanet.ie/pub/).
+-   [Linux à IBP](https://ftp.lip6.fr/pub/linux/),
+    [distributions](https://ftp.lip6.fr/pub/linux/distributions/).
+-   [Miroirs free.fr](https://ftp.free.fr/pub/)
     [Distributions linux](http://ftp.free.fr/pub/Distributions_Linux/)
 
 
