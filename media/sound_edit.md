@@ -212,19 +212,16 @@ bladeenc
 
 ## CD ripping basic tools
 
-:   [cdda2wav(1)
-    ](http://manpages.debian.org/cgi-bin/man.cgi?query=cdda2wav%281%29)
-    is a sampling
-    utility for CD-ROM drives that are capable of providing a CD's
-    audio data in digital form to your host. Audio data read from the
-    CD can be saved as .wav or .sun format sound files. Recording
-    formats include stereo/mono, 8/12/16 bits and different rates.
-    Cdda2wav can also be used as a CD player.
-:   [cdda2ogg(1)
+<a name="icedax"></a>[icedax(1)
+    ](http://manpages.debian.org/cgi-bin/man.cgi?query=icedax%281%29)
+:   also known as _cdda2wav_ is a sampling utility for CD-ROM drives that are capable of providing a CD's audio
+    data in digital form to your host. Audio data read from the CD can be saved as .wav
+    or .sun format sound files. Recording formats include stereo/mono, 8/12/16 bits and
+    different rates.  Cdda2wav can also be used as a CD player.
+:   [cdda2ogg(1) and cdda2mp3(1)
     ](http://manpages.debian.org/cgi-bin/man.cgi?query=cdda2ogg%281%29)
-    is a simple script that uses the cdda2wav and ogg123
-    to encode audio tracks.
-:   cddawav and cdda2ogg are part of the
+    are simple scripts that uses the cdda2wav and ogg123 to encode audio tracks.
+:   icedax and cdda2ogg are part of the
     {{< iref "dvd_cd_recording.md#cdrkit" "cdrkit" >}} package
 
 
@@ -233,16 +230,17 @@ bladeenc
 :   audio convert is a a script to convert wav, ogg, mp3, mpc, flac, ape
     or wma format. It uses MPlayer to decode WMA files, musepack-tools
     to manipulate MPC audio files, and flac. It is mainly a command line
-    utility, but uses zenity to provide a GUI. audio convert is packaged
-    in ubuntu as *nautilus-script-audio-convert*.*audio convert is
-    unchanged since 2005*
+    utility, but uses zenity to provide a GUI. *audio convert is
+    unchanged since 2005, does not support modern formats like opus,
+    and no longer packaged n Debian*
 
 <a name="dir2ogg">[dir2ogg](http://jak-linux.org/projects/dir2ogg/) (GPL)
 :   _dir2ogg_ is a python script which converts mp3, m4a, wma,
     and wav files into ogg-vorbis format. It uses _mpg123_ or _mplayer_, _lame_
     _mpg321_ for mp3, _faad_ or  _mplayer_ for mp4/m4a/aac, _flac_ for flac, _mpcdec_
     for musepack, _cdparanoia_ or _cedax_ or
-    _cdda2wav_ for audio-cd. _dirr2ogg_ is still maintained but no more developed.
+    _cdda2wav_ for audio-cd. _dirr2ogg_ is still maintained but no more developed, it
+    has no support for opus.
     _It is packaged in Debian._
 
 <a name="gnac">[gnac](http://gnac.sourceforge.net/) (GPL)
@@ -254,23 +252,25 @@ bladeenc
 OggConvert
 :   a discontinued converter see
     {{< iref "video_edit#oggconvert" "Video Edit: OggConvert" >}}.
-    {{< iref "#soundconverter" "SoundConverter" >}} or
-    {{< iref "#gnac" "gnac" >}} are an audio replacements.
+    {{< iref "#soundconverter" "SoundConverter" >}} is an audio replacement.
+    and {{< iref "video_edit#handbrake" "Handbrake" >}} a video converter
+    replacement.
 
 <a name="soundconverter">[SoundConverter](http://soundconverter.org/) (GPL)
-:   SoundConverter is a sound converter to ogg/vorbis for Gnome
-    using {{< iref "streaming#gstreamer" "GStreamer" >}}, it is similar to
+:   SoundConverter is a sound converter for Gnome written in python.
+    It uses {{< iref "streaming#gstreamer" "GStreamer" >}}, it is similar to
     {{< iref "#gnac" "gnac" >}} and {{< iref "video_edit#oggconvert" "OggConvert" >}},
     but while _oggconvert_ deal both with video and sound formats,
-    _soundconverter_ and _gnac_ focus only on sounds.<br />
-    _soundconverter_ as more gnome dependencies than _oggconvert_
-    or _gnac_, that make it an heavy package if you don't run a
-    full gnome desktop.
+    _soundconverter_ and _gnac_ focus only on sounds.
 
     SoundConverter reads anything the GStreamer
     library can read (Ogg Vorbis, AAC, MP3, FLAC, WAV, AVI, MPEG, MOV,
     M4A, AC3, DTS, ALAC, MPC, Shorten, APE, SID, etc...), and writes
-    WAV, FLAC, MP3, and Ogg Vorbis files.
+    WAV, FLAC, MP3, M4A, Ogg/Vorbis and Ogg/Opus files, depending of which gstreamer
+    pipeline plugins are available. It is packaged in Debian.
+
+    -   [GitHub - soundconverter](https://github.com/kassoulet/soundconverter).
+
 
 <a name="sox"></a>[SoX](http://sox.sourceforge.net)  (GPL)
 :   {{< wp "SoX" >}} _Sound eXchange_ is a sound file format converter SoX can
@@ -289,8 +289,7 @@ OggConvert
         _sox_, can also used with the name _play_ or _rec_ ,
         [soxi(1)](http://sox.sourceforge.net/soxi.html),
     -   [SoX supported formats and devices](http://sox.sourceforge.net/soxformat.html)
-    -   [examples scripts
-        ](http://sox.sourceforge.net/Docs/Scripts)
+    -   [examples scripts](http://sox.sourceforge.net/Docs/Scripts)
 
 # High Level sound editors
 <a name="audacity"></a>[audacity](http://audacity.sourceforge.net/)
