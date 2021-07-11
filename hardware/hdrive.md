@@ -20,8 +20,8 @@ See also {{< iref "filesystems" "File Systems" >}}.
 -   [Red Hat - Managing storage devices
     ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/managing_storage_devices/index)
 -   [Red Hat - Online Storage Reconfiguration Guide
-    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/5/html/online_storage_reconfiguration_guide/index)
-    : [1.4. Removing a Storage Device
+    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/5/html/online_storage_reconfiguration_guide/index) :
+    [1.4. Removing a Storage Device
     ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/5/html/online_storage_reconfiguration_guide/removing_devices).
 -   [Fedora - Storage Administration Guide
     ](https://docs.fedoraproject.org/en-US/Fedora/14/html/Storage_Administration_Guide/index.html)
@@ -123,7 +123,7 @@ ranging from 1 to 253. If this normalized value is less than or equal
 to the threshold (THRESH), the Attribute is said to have failed
 
 | attribute                   | meaning                                         |
-|-----------------------------+-------------------------------------------------+
+|-----------------------------|-------------------------------------------------|
 | 1 Raw_Read_Error_Rate       | read failure                                    |
 | 3 Spin_Up_Time              | Average time of spindle spin up in millisec     |
 | 4 Start_Stop_Count          | number of start from off or sleep               |
@@ -179,8 +179,8 @@ See also {{< iref "filesystems" "File Systems" >}}
 where you find {{< iref "filesystems#lvm" "LVM" >}}.
 
 -   [ArchWiki: partitionning
-    ](https://wiki.archlinux.org/index.php/Partitioning)
-    : [partitionning tools
+    ](https://wiki.archlinux.org/index.php/Partitioning) :
+    [partitionning tools
     ](https://wiki.archlinux.org/index.php/Partitioning#Partitioning_tools),
     [fstab](https://wiki.archlinux.org/index.php/Fstab),
     [swap](https://wiki.archlinux.org/index.php/Swap).
@@ -245,7 +245,8 @@ utility when they don't know the file system.
         ](http://www.gnu.org/software/coreutils/manual/html_node/dd-invocation.html)
     -   [ArchWiki: Cloning - using dd
         ](https://wiki.archlinux.org/index.php/Disk_cloning#Using_dd)
-    I find sometime useful during a long *dd* to get progress information with:
+
+    During a long *dd*, get progress information with:
 
         $ dd if=/dev/zero of=/dev/null count=10MB
         $ killall -s USR1 dd
@@ -253,12 +254,28 @@ utility when they don't know the file system.
         5221620+0 records out
         2673469440 bytes (2.7 GB) copied, 2.70126 s, 990 MB/s
 
+    To make a copy of an iso image to an usb thumb:
+
+        $ sudo dd bs=4M if=lubuntu-20.04.2-desktop-amd64.iso of=/dev/sdb  conv=fdatasync
+
 -   <a name="dcfldd"></a>[dcfldd](http://dcfldd.sourceforge.net/) (GPL)
     is an enhanced version of GNU with hashing on-the-fly, progress report,
     wipe disks with a pattern, bit-for-bit verify of the image,
     multiple concurent outputs, split output to multiple files, piped output and logs.
     _dcfldd_ is in Debian.
     -   [dcfldd(1)](https://manpages.debian.org/testing/dcfldd/dcfldd.1.en.html)
+
+    To make a copy of an iso image to an usb thumb:
+
+        $ sudo dcfldd hash=sha256 hashlog=lubuntudd.sha256  bs=4M \
+          if=lubuntu-20.04.2-desktop-amd64.iso of=/dev/sdb
+
+    To check byte to byte the copy
+
+        $ dcfldd if=/dev/sdb vf=lubuntu-20.04.2-desktop-amd64.iso
+
+    Of course you can also use the checksum.
+
 -   <a name="dc3dd"></a>[dc3dd](https://sourceforge.net/projects/dc3dd/)
     is a patched version of Coreutil dd, with added features similar to
     {{< iref "#dcfldd" "dcfldd" >}} i.e on the fly hashing (md5, sha-1, sha-256,
@@ -360,7 +377,7 @@ utility when they don't know the file system.
 -   [Disk Maintenance under Linux (Disk Recovery)
     ](http://www.linuxjournal.com/article/193) explains dumpe2fs, badblocks, debugfs use
     _1997_
--   <a name=testdisk"></a>[TestDisk](http://www.cgsecurity.org/wiki/TestDisk)
+-   <a name="testdisk"></a>[TestDisk](http://www.cgsecurity.org/wiki/TestDisk)
     TestDisk can find lost partitions for many file systems including
     DOS/Windows FAT12, FAT16, FAT32, exFat, NTFS; linux  ext2, ext3, ext4,
     btrfs, GFS2, GFS2, RAID 1/4/5/6, swap, lvm, lvm2; zfs, reiserfs
