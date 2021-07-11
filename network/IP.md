@@ -340,6 +340,17 @@ information in {{< wp "Gemini Space" >}}.
 -   [Gemini mailing list](https://lists.orbitalfox.eu/listinfo/gemini)
 -   [Medusae Gemini Directory](https://portal.mozz.us/gemini/medusae.space/) (gemini://medusae.space/)
     a catalog of capsules organised into categories.
+
+-   {{< iref "elpher"  "Elpher Gopher and Gemini Client  for Emacs" >}}.
+-   [Lagrange](https://gmi.skyjake.fi/lagrange/)
+    desktop GUI client for browsing Geminispace.  It is written in C and uses SDL for
+    graphics and OpenSSL for secure communications. It features: sidebar for page
+    outline, bookmarks and identities, and viewing history; multiple tabs,
+    identity management. It create and use TLS client certificates, and allow audio
+    playback for MP3, Ogg Vorbis, WAV.
+
+    Lagrange is in flathub.
+
 # Gopher {#gopher}
 The {{< wp "Gopher" >}} internet protocol released in mid-1991 is a predecessor of World
 Wide Web designed for distributing, searching, and retrieving documents in IP networks.
@@ -349,9 +360,31 @@ Gopher is defined by [rfc 1436](https://tools.ietf.org/html/rfc/1436) _year 1993
 A list of gopher software, browser support, http gateways, and gopher server is given in
 [Wikipedia gopher page](https://en.wikipedia.org/wiki/Gopher_(protocol)#Client_software).
 
+
+-   [Why still use Gopher? What makes Gopher relevant?
+    ](http://gopher.floodgap.com/overbite/relevance.html) by Cameron Kaiser, from the
+    Overbite Project.
 -   The master Gopherspace search engine is
     [Veronica](https://en.wikipedia.org/wiki/Veronica_(search_engine)).
-
+-   [Public Gopher to HTTP Proxy @ Floodgap.com](http://gopher.floodgap.com/gopher/)
+    allow to access Gopher Sites from any Browser withoutin-browser gopher support.
+-   <a name="elpher"></a>[Elpher Gopher and Gemini Client for Emacs
+    ](https://thelambdalab.xyz/elpher/)
+    _elpher_ is in melpa. The full documentation for Elpher can be found in the Info
+    manual.
+    -   The _elpher_ gopher home page is  gopher://thelambdalab.xyz/1/projects/elpher/
+-   [OverbiteWX](https://addons.mozilla.org/en-US/firefox/addon/overbitewx/)
+    is an extension for Firefox 56+, that redirect gopher url through the floodgap
+    gopher proxy.
+-   [OverbiteNX](https://addons.mozilla.org/en-US/firefox/addon/overbitenx/)
+    (Floodgap Free Software License)
+    is an extension for Firefox 59+ that allows access to gopher content using
+    [Onyx native Gopher component](https://github.com/classilla/overbitenx).
+-   [Burrow chrome extension](https://gitlab.com/burrow-project/burrow-chrome-extension)
+    (MIT License) rewrites all gopher:// links to point to Floodgap's Public Gopher
+    Proxy.
+-   [PocketGopher](https://github.com/afonsotrepa/PocketGopher) (Unlicense License)
+    Gopher browser for android written in java available in F-Droid repository.
 
 # IP routing
 _The {{< iref "netconf" "network management utilities" >}}
