@@ -71,39 +71,6 @@ Wikipedia: {{< wp "Comparison of audio player software" >}},
 ](https://en.wikipedia.org/wiki/Comparison_of_free_software_for_audio#Players)
 
 ## Gstreamer based sound players
-<a href="amarok"></a>{{< wp "Amarok_(software)"  "Amarok" >}} (GPL)
-:   said to be a very good audio player with a QT user interface,
-    but is quite heavy and targeted to KDE. Amarok has been redesigned
-    between v1.4 and v2.0, and many forks from previous version 1.4
-    where done.
-
-    -   _Amarok_ requires _KDE runtime_, which is a very heavy
-        dependency, if your desktop is not KDE.
-    -   {{< iref "#clementine" "Clementine" >}}
-        is a fork of the version 1.4
-        wich uses Qt and {{< iref "streaming#gstreamer" "GStreamer" >}},
-        and so is less deeply immersed in KDE.
-    -   {{< iref "#exaile" "Exaile" >}} is a GTK+ clone of amarok.
-    -   _Amarok_ is the primary client for
-        {{< iref "streaming#ampache" "Ampache" >}}
-        this feature is not shared by the above derivatives.
-    -   _Amarok_ can [play UPnP / DLNA streams
-        ](https://userbase.kde.org/Amarok/Manual/Organization/Collection/RemoteCollections/UPnP)
-        this feature is not shared by Clementine or Exaile.
-    -   [ArchWiki - Amarok
-        ](https://wiki.archlinux.org/index.php/Amarok)
-
-     Main features:
-     -   Play many formats including FLAC, Ogg, Opus, MP3, AAC, WAV,
-         Windows Media Audio, Apple Lossless, WavPack, TTA and
-         Musepack.
-     -   Tag digital music files
-     -   Search Covers and artist informations
-     -   Playlist editing
-     -   Display lyrics
-     -   Podcast
-     -   Play UPnP / DLNA streams
-
 <a name="banshee"></a>{{< wp "Banshee_(music_player)"  "Banshee" >}}
 :   An other music player using {{< iref "Streaming#Gstreamer" "GStreamer" >}} framework, but built
     upon Mono and Gtk#.
@@ -117,16 +84,19 @@ Wikipedia: {{< wp "Comparison of audio player software" >}},
     abandoned since 2006.
 
 <a name="clementine"></a>[Clementine](https://www.clementine-player.org/)
-:   Clementine is a QT fork of {{< iref "#amarok" "amarok 1.4" >}},
-    with which it shares main features.
+:   Clementine is a QT5 fork of {{< iref "#amarok" "amarok 1.4" >}} but using
+    {{< iref "Streaming#Gstreamer" "GStreamer" >}} .
     {{< wp "Clementine_(software)" "Wikipedia: Clementine" >}}.  Clementine can play
     internet streams, transcode music into MP3, Ogg Vorbis, speex, FLAC or AAC, manage
-    tags, use {{< iref "tag_management#cuesheet" "Cue Sheets" >}}, display lyrics, be controlled from android phone, and many
-    [features](http://www.clementine-player.org/about), playing main formats included
-    opus, and can read all playlists including {{< iref "tag_management#cuesheet" "Cue Sheets" >}} but has no bookmark nor access
+    tags, use {{< iref "tag_management#cuesheet" "Cue Sheets" >}}, display lyrics,
+    be controlled from android phone, and many
+    [features](http://www.clementine-player.org/about), playing
+    main formats included opus, and can read all playlists including
+    {{< iref "tag_management#cuesheet" "Cue Sheets" >}} but has no bookmark nor access
     to chapters. With one ogg file loaded it uses 85M resident / 60M shared.
 
-    {{< iref "#strawberry" "Strawberry" >}} is a fork of clementine written in C++, QT5 or QT6.
+    {{< iref "#strawberry" "Strawberry" >}} is a fork of clementine written in C++, QT5
+    or QT6.
 
     -   [Controlling Clementine from the commandline with DBus and MPRIS
         ](https://github.com/clementine-player/Clementine/wiki/Controlling-Clementine-from-the-commandline-with-DBus-and-MPRIS)
@@ -252,9 +222,11 @@ For playing media it uses {{< iref "streaming#Gstreamer" "GStreamer" >}}.
     using the Qt toolkit QT5 or QT6 and {{< iref "streaming#gstreamer" "GStreamer" >}}.
 
     The features are essentially the same than {{< iref "#clementine" "Clementine" >}}
-    play internet streams, Supports WAV, FLAC, WavPack, Ogg FLAC, Ogg Vorbis, Ogg Opus,
+    Plays internet streams and interface with subsonic, Tidal, Qobuz.
+    Supports WAV, FLAC, WavPack, Ogg FLAC, Ogg Vorbis, Ogg Opus,
     Ogg Speex, MPC, TrueAudio, AIFF, MP4, MP3, ASF and Monkey's Audio.  manage tags, use
-    {{< iref "tag_management#cuesheet" "Cue Sheets" >}}, display lyrics,  {{< iref "#mpris" "MPRIS control" >}},
+    {{< iref "tag_management#cuesheet" "Cue Sheets" >}}, display lyrics,
+    {{< iref "#mpris" "MPRIS control" >}},
     be controlled from android phone, and many
     [features](https://www.strawberrymusicplayer.org/#features), playing all formats
     recopgnized by {{< iref "streaming#gstreamer" "GStreamer" >}},
@@ -265,6 +237,8 @@ For playing media it uses {{< iref "streaming#Gstreamer" "GStreamer" >}}.
 
     -   [GitHub - Strawberry](https://github.com/strawberrymusicplayer/strawberry)
 
+    On AMD64 in 2021 the memory footprints of _strawberry v0.9.3_ idle is 146M resident /
+    100M shared.
 
 ## Other music players
 [alsaplayer](http://www.alsaplayer.org/)
@@ -274,6 +248,43 @@ For playing media it uses {{< iref "streaming#Gstreamer" "GStreamer" >}}.
     SGI, and JACK. Alsaplayer development stopped in 2004 with version
     0.99.75, but seem to begin again in 2007 with a new gtk2 interface,
     and has slept again the next year
+
+<a href="amarok"></a>{{< wp "Amarok_(software)"  "Amarok" >}} (GPL)
+:   said to be a very good audio player with a QT user interface,
+    but is quite heavy and targeted to KDE. Amarok has been redesigned
+    between v1.4 and v2.0, and many forks from previous version 1.4
+    where done. The development stalled at 2.8 and marok was bound to QT4, as it was not
+    updated it was [dropped from Debian](https://tracker.debian.org/pkg/amarok).
+    But the development is kicking up again, and the release 3.0 should be using QT5 (or
+    QT6?).
+
+    -   _Amarok_ requires _KDE runtime_, which is a very heavy
+        dependency, if your desktop is not KDE.
+    -   {{< iref "#clementine" "Clementine" >}}
+        is a fork of the version 1.4
+        wich also uses Qt ( but QT5) and replaced the use of ffmpeg libraries by
+        {{< iref "streaming#gstreamer" "GStreamer" >}}, and dropped the KDE
+        dependencies. {{< iref "#strawberry" "Strawberry" >}} is a further fork of
+        Clementine and share many features with it.
+    -   {{< iref "#exaile" "Exaile" >}} is a GTK+ clone of amarok.
+    -   _Amarok_ is the primary client for {{< iref "streaming#ampache" "Ampache" >}}
+        this feature is not shared by the above derivatives.
+    -   _Amarok_ can [play UPnP / DLNA streams
+        ](https://userbase.kde.org/Amarok/Manual/Organization/Collection/RemoteCollections/UPnP)
+        this feature is not shared by Clementine or Exaile.
+    -   [ArchWiki - Amarok](https://wiki.archlinux.org/index.php/Amarok)
+    -   [Amarok · GitLab](https://invent.kde.org/multimedia/amarok/-/tree/master)
+
+     Main features:
+     -   Play many formats including FLAC, Ogg, Opus, MP3, AAC, WAV,
+         Windows Media Audio, Apple Lossless, WavPack, TTA and
+         Musepack.
+     -   Tag digital music files
+     -   Search Covers and artist informations
+     -   Playlist editing
+     -   Display lyrics
+     -   Podcast
+     -   Play UPnP / DLNA streams
 
 [Aqualung](http://aqualung.factorial.hu/home.html)
 :   Aqualung (GPL) is a Gtk music player.
