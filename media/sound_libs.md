@@ -353,15 +353,6 @@ Pulseaudio sound server is
     [FAQ](http://www.theora.org/theorafaq.html)
 
 
-<a name="v4l"></a>DVB and Video4Linux
-:   The [LinuxTV project](http://www.linuxtv.org/) develops and maintains
-    the DVB driver subsystem which is included in the Linux 2.6.x kernel,
-    DVB links are in the
-    [DVB Wiki](http://www.linuxtv.org/wiki/index.php/Main_Page).
-    [Video4Linux (V4L)](http://www.linuxtv.org/v4lwiki/index.php/Main_Page)
-    is intended to provide a common programming interface for TV, capture cards,
-    parallel port and USB video cameras.
-
 SDL
 :   See {{< iref "#sdl" "SDL in sound libraries" >}}
 
