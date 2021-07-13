@@ -214,23 +214,32 @@ Gstreamer is the basis of
 [numerous applications](http://gstreamer.freedesktop.org/apps/)
 the following are refered in these pages:
 {{< iref "media_players#audiopreview" "Audiopreview" >}},
-{{< iref "media_players#amarok" "Amarok" >}},
+{{< iref "media_players#auditive" "Auditive" >}},
 {{< iref "media_players#banshee" "Banshee" >}},
-{{< iref "media_players#bmpx" "Bmpx" >}},
+{{< iref "media_players#bmpx" "Bmpx" >}} _obsolete_,
 {{< iref "media_players#clementine" "Clementine" >}},
+{{< iref "#dmapd" "dmapd" >}} DAAP server >}},
 {{< iref "media_players#exaile" "Exaile" >}},
 {{< iref "media_players#gnash" "gnash" >}},
 {{< iref "media_players#guayadeque" "Guayadeque" >}},
 {{< iref "sound_edit#jokosher" "Jokosher" >}},
-{{< iref "media_players#muine" Muine" >}},
+{{< iref "media_players#juk" "Juk" >}},
+{{< iref "media_players#kaffeine" "Kaffeine"  >}},
+{{< iref "media_players#muine" "Muine" >}},
+{{< iref "video_edit#oggconvert" "OggConvert" >}} _obsolete_,
+{{< iref "media_players#parlatype" "Parlatype" >}},
 {{< iref "video_edit#pitivi" "PiTiVi" >}},
 {{< iref "media_players#quodlibet" "Quod Libet" >}},
 {{< iref "media_players#rhytmnbox" "RhytmnBox" >}},
+{{< iref "#rygel" "Rygel" >}},
+{{< iref "soundconverter" "SoundConverter" >}},
 {{< iref "media_players#sayonara" "Sayonara" >}},
 {{< iref "media_players#strawberry" "Strawberry" >}},
 {{< iref "video_edit#thoggen" "Thoggen" >}},
-{{< iref "media_players#totem" "Totem" >}},
-{{< iref "media_players#towel" "Towel" >}}.
+{{< iref "media_players#gnome_videos" "Gnome Videos" >}}
+
+[GStreamer: Applications](https://gstreamer.freedesktop.org/apps/).
+is a larger list, but contains some obsolete applications.
 
 [Gstreamer Documentation](http://gstreamer.freedesktop.org/documentation/):
 -   [Gstreamer tutorials
