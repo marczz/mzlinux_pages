@@ -333,11 +333,17 @@ See also {{< iref "#webcam" "Webcam" >}}.
     _Obsolete, last release 2006._
 
 # Video recording
+-   {{< wp "OBS Studio" >}} (GPL-2.0) is a streaming and recording program Written in C,
+    C++ and Qt. _obs-studio_ is in Debian.
+    -   [Open Broadcaster Software | OBS](https://obsproject.com/)
+    -   [OBS studio - GitHub](https://github.com/obsproject/obs-studio).
+
 
 ## Television (DVB) and cameras
 ### DVB
 
-DVB systems distribute data using a variety of standards:
+{{< wp "Digital Video Broadcasting" "DVB" >}} systems distribute data using a variety of
+standards:
 -   Satellite: DVB-S, DVB-S2, DVB-S3, DVB-SH _Satellite Handhelds_.
 -   Cable: DVB-C, DVB-C2
 -   Terrestrial television: DVB-T, DVB-T2, DVB-H _Handhelds_.
@@ -576,10 +582,10 @@ which includes a V4L2 kernel device driver.
     provides access to functionality and data through an API, and does
     not enable or require the use of the flash technology. Quvi is in
     Debian.
--   [Streamlink](https://streamlink.github.io/index.html)
-    Streamlink is a command-line utility which pipes video streams from [various services
+-   {{< iref "media_players#streamlink" "Streamlink" >}} is not a download utility
+    but a command-line utility which pipes video streams from [various services
     ](https://streamlink.github.io/plugin_matrix.html) into a video player, such as VLC.
-    -   [Streamlink - GitHub](https://github.com/streamlink/streamlink).
+    Streamlink is has the same use than _Youtube-dl_ but for live streaming.
 
 ## browser extensions
 -   [video bookmarlets
