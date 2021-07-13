@@ -763,6 +763,8 @@ See also [EmacsWiki: MusicPlayers](http://www.emacswiki.org/emacs/MusicPlayers)
     {{< iref "#mpd" "mpd" >}}, or any simple player available as unix command
     line client.
 
+#### mpd control from emacs
+
 <a name="libmpdee"></a>[libmpdee](https://github.com/andyetitmoves/libmpdee) (GPL)
 :   LMibmpdee    is a client library for  {{< iref "#mpd" "mpd" >}}
     in emacslisp, packaged in MELPA.
@@ -778,16 +780,14 @@ See also [EmacsWiki: MusicPlayers](http://www.emacswiki.org/emacs/MusicPlayers)
     used to play any local sound files, it provides a cd-burning tool
     and tag editing with [taggit]( https://github.com/ft/taggit).
 
-[MonK](http://www.asahi-net.or.jp/%7Epi9s-nnb/monk/)
-:   is an emacs player for cd audio, mp3, mpg video. Don't seem any
-    longer maintained since 2003
-
 __MPC__
-:   is major mode providing an interface to MPD bundled with
-    Emacs >= 23.2 .
+:   is major mode providing an interface to MPD bundled with Emacs >= 23.2 .
 
 [mpdel](https://gitea.petton.fr/mpdel/mpdel) (GPL)
 :   Emacs user interface for Music Player Daemon, Available from melpa.
+    It provides an Emacs user interface including playlists, navigation in
+    the database and playback control. It can be controlled by ivy with
+    [ivy-mpdel](https://gitea.petton.fr/mpdel/ivy-mpdel).
 
 [simple-mpc](https://github.com/jorenvo/simple-mpc) (GPL)
 :   A GNU Emacs major mode that acts as a front end to mpc.
@@ -823,7 +823,7 @@ playing music  and managing playlists.
     twolame, opus, or vorbis for ogg vorbis, wave.
 -   MPD can use any type of playlist with the [playlist plugins
     ](https://www.musicpd.org/doc/user/playlist_plugins.html)
-    .asx, .cue,  embedded CUE sheets from the "CUESHEET" tag with the
+    .asx, .cue,  embedded {{< iref "tag_management#cuesheet" "Cue Sheets" >}} from the "CUESHEET" tag with the
     embcue plugin, .m3u, extm3u, cuesheet metablock from a FLAC file
     with the flac plugin, .pls, .rss, playlist from SoundCloud,  XSPF
     playlists.
@@ -867,22 +867,22 @@ playing music  and managing playlists.
     and the {{< iref "bluetooth" "Bluetooth section" >}}.
 
 -   xmms2 team has published a
-    [comparison of xmms2 and mpd](https://xmms2.org/wiki/XMMS2_vs_MPD),
+    [comparison of xmms2 and mpd](https://github.com/xmms2/wiki/wiki/XMMS2-vs-MPD),
     may be slightly biased in favor of {{< iref "#xmms2" "xmms2" >}},
     it omits that _mpd_ is lighter in memory and cpu than xmms2, and also that if the
     client development effort of {{< iref "#xmms2" "xmms2" >}} is presently greater than
     the older _mpd_, _mpd_ has still more language bindings and clients. In any case
     both server are worthwhile to try.
--   mpd can be controlled by a {{< iref "sound_libs#mpris" "MPRIS" >}} client
-    through the [mpDris2](https://github.com/eonpatapon/mpDris2)
-    <a name="mpdris2"></a> daemon that is run in the user session and
-    monitors a local or distant mpd server.
+-   mpd can be controlled by a {{< iref "#mpris" "MPRIS" >}} with
+    {{< iref "#mpdris2" "mpdris2" >}}.
+
+
 
 ## Clients
 Mpd has some client libraries
 in C/C++, Java, lisp/scheme, haskell, perl, php, python, Ruby.
 -   [libmpdclient](https://www.musicpd.org/doc/libmpdclient/)
-    s a client library for the Music Player Daemon, written in C.
+    is a client library for the Music Player Daemon, written in C.
 
 For python you fin two main libraries:
 
@@ -920,9 +920,10 @@ A selection of clients:
 -   [fookebox](https://github.com/cockroach/fookebox/)
     is a jukebox-style web-frontend to mpd written in python
     with the pylons framework. It is in debian.
--   [Gimmix](https://github.com/cmende/gimmix) is a
-    graphical client written in C using GTK+2. It supports playlist
-    management and ID3v2 Tag editing. _20M resident including 12M shared_
+-   [Gimmix](https://github.com/cmende/gimmix) (GPL-2.0)
+    is a graphical client written in C using GTK+2. It supports playlist management and
+    ID3v2 Tag editing. _20M resident including 12M shared. The source repository has
+    only few bug fixes since 2012 (checked in 2021)_
 -   [Guimup](http://www.coonsden.com/) a client
     written in C++ and GTKmm.
 -   [glurp](http://sourceforge.net/projects/glurp/)
@@ -946,6 +947,9 @@ A selection of clients:
     designed for a mobile phone's browser.
 -   [Mpd WebAmp](http://cseickel.googlepages.com/mpdwebamp)
     (GPL) is a web client for mpd based on turbogears.
+-   <a name="mpdris2"></a>[mpDris2](https://github.com/eonpatapon/mpDris2) (GPL-3.0)
+    is a {{< iref "#mpris" "MPRIS" >}} client daemon that is run in the user session and
+    monitors a local or distant mpd server.
 -   [musicpm](http://code.google.com/p/musicpm/)
     is a firefox extension written with the xul library it communicates
     with MPD over TCP sockets.
@@ -1005,29 +1009,25 @@ A selection of clients:
 To use bookmarks in mpd we can use
 
 -   Joey Hess has set
-    [mpdtoys](http://git.kitenet.net/?p=mpdtoys.git;a=tree),
-    which is a collections of perl scripts for mpd. He [explains
-    how he use them](https://joeyh.name/blog/entry/my_mpd_setup/).
-    _mpstore_, and _mpdload_ which dumps and restore the mpd daemon
-    state can be used with audiobooks.
--   [MPD Bookmark](https://github.com/RaoulChartreuse/mpd_bookmark)
-    is a simple script witch monitor MPD and keep a trace of where
-    the listening of a file ended.
--   [mpdmark](https://github.com/Mic92/mpdtools) by Jörg Thalheim
-    is a python script to bookmark songs, The author has also written
-    [mpstated](https://github.com/Mic92/mpdstated) a vala program
-    which restore recent position for each podcast in mpd.
+    [mpdtoys](https://git.kitenet.net/index.cgi/mpdtoys.git/tree/), which is a
+    collections of perl scripts for mpd. He
+    [explains how he use them](https://joeyh.name/blog/entry/my_mpd_setup/).  _mpstore_,
+    and _mpdload_ which dumps and restore the mpd daemon state can be used with
+    audiobooks.
+-   [MPD Bookmark](https://github.com/RaoulChartreuse/mpd_bookmark) is a simple script
+    witch monitor MPD and keep a trace of where the listening of a file ended.
+-   [mpdmark](https://github.com/Mic92/mpdtools) by Jörg Thalheim is a python script to
+    bookmark songs, The author has also written
+    [mpstated](https://github.com/Mic92/mpdstated) a vala program which restore recent
+    position for each podcast in mpd.
 
 
 # Video Players {#video_players}
 
-All
-{{< iref "streaming#upnp_media_clients" "UPnP media clients" >}},
+All {{< iref "streaming#upnp_media_clients" "UPnP media clients" >}},
 all {{< iref "#media_centers" "media centers" >}},
-and many of the
-{{< iref "streaming" "Music Streamers" >}}
-can also stream video,
-so you can also look around in these sections.
+and many of the {{< iref "streaming" "Music Streamers" >}}
+can also stream video, so you can also look around in these sections.
 
 Of course video players allow also to play music, for other sound
 players see the {{< iref "#sound_players" "Music Players section" >}}.
