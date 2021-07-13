@@ -105,14 +105,8 @@ Among them:<a name="tibetan_m17n"></a>
     ](http://www.charvolant.org/~doug/xkb/html/index.html) _2004_.
 -   [XKB Layout Creation Notes
     ](http://www.x.org/wiki/XKBLayoutCreationNotes/)
--   [Extending the X keyboard map with xkb
-    ](http://madduck.net/docs/extending-xkb/) by Martin F. Krafft is
-    probably the best advanced tutorial on xkb.
--   For kdrive there is an old _2003_
-    [kdrive with xkb Howto?
-    ](http://lists.hellug.gr/pipermail/rule-list/2003/002759.html),
-    and a [forum page showing examples of kdrive keyboard conf
-    ](http://blog.gmane.org/gmane.comp.handhelds.openembedded/month=20080901/page=9)
+-   [Extending the X keyboard map with xkb](http://madduck.net/docs/extending-xkb/)
+    by Martin F. Krafft is probably the best advanced tutorial on xkb.
 
 ## Input configuration
 _most entries target both console and Xorg_
@@ -139,6 +133,16 @@ _most entries target both console and Xorg_
 -   [Xbindkeys](https://wiki.archlinux.org/index.php/Xbindkeys)
     is a program that allows to bind commands to certain keys or key combinations on the
     keyboard. Xbindkeys is independent of the window manager and desktop environment.
+-   [GitHub - key-mapper](https://github.com/sezanzeb/key-mapper)
+    A tool to change the mapping of your input device buttons.
+    Supports mice, keyboards, gamepads, X11, Wayland, combined buttons and programmable
+    macros.
+
+    There is a Debian package in the
+    [releases](https://github.com/sezanzeb/key-mapper/releases).
+
+    -   [How to Remap Keyboard / Gamepad  Easily with key-mapper | UbuntuHandbook
+        ](https://ubuntuhandbook.org/index.php/2021/07/remap-keyboard-gamepad-ubuntu/)
 
 ### Configuration notes
 -   The setxkbmap {{< man "setxkbmap(1)" >}} command configures the keyboard to
