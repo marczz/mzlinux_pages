@@ -2,10 +2,10 @@
 title: Console configuration
 ---
 
----
-
-See also {{< "booting" "Booting" >}}, {{< iref "xorg" "Xorg section" >}},
+See also {{< iref "booting" "Booting" >}}, {{< iref "xorg" "Xorg section" >}},
 {{< iref "checkpointing" "Checkpointing" >}}.
+
+---
 
 # References
 -   Wikipedia {{< wp "Linux Console" >}},
@@ -115,7 +115,7 @@ See also {{< iref "input_methods" "input method" >}},
 
     to activate the new setting run
 
-        # service keyboard-setup restart
+        # systemctl restart keyboard-setup
 
     But if you only want to temporarily change the console keyboard run
 
