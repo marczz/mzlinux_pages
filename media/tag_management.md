@@ -466,7 +466,7 @@ A {{< wp "Playlist" >}} is a list of songs there are many popular playlist forma
     is a simple GTK-based playlist manager
 
 
-# Lyrics
+# Lyrics {#lyrics}
 
 To synchronizes song lyrics with an audio file we use lyrics
 -   Wikipedia: {{< wp "LRC_(file_format)" >}}
@@ -486,13 +486,15 @@ To synchronizes song lyrics with an audio file we use lyrics
     mode for editing lyric (.lrc) files.
 
 Some media player have support for lyric display, like
-    -   {{< iref "media_players#vlc" "VLC" >}}
     -   {{< iref "media_players#clementine" "Clementine" >}}.
     -   {{< iref "media_players#amarok" "Amarok" >}}.
+    -   {{< iref "media_players#qmmp" "Qmmp" >}}.
+    -   {{< iref "media_players#lollylop" "Lollylop" >}}.
     -   {{< iref "media_players#rythmbox" "Rhythmbox" >}} displays lyrics through
         plugins like the [official lyric plugin
         ](https://wiki.gnome.org/Apps/Rhythmbox/Plugins) or
         [lLyrics](https://github.com/dmo60/lLyrics).
+    -   {{< iref "media_players#trawberry" "Strawberry" >}}.
 -   {{< iref "media_players#mpd" "mpd" >}} has [several hacks
     ](https://web.archive.org/web/20160414023836/http://mpd.wikia.com/wiki/Hacks)
     _(archive of the page which has not be transferred to new fandom wiki.)_
