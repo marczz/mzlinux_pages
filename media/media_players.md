@@ -140,6 +140,20 @@ For playing media it uses {{< iref "streaming#Gstreamer" "GStreamer" >}}.
 
 -   [JuK · GitLab](https://invent.kde.org/multimedia/juk)
 
+<a name="lollylop"></a>[Lollypop](https://wiki.gnome.org/Apps/Lollypop) (GPL-3.0)
+:   is a Python / GTK3, {{< iref "streaming#Gstreamer" "GStreamer" >}} music player for
+    Gnome.  It supports downloading of lyrics and cover art, syncing music with MTP
+    devices (android), and has a kiosk mode view.
+
+    Lollylop has no other Gnome dependencies that the GObject libraries (_gir1.2-xxx_),
+    it is in Debian.
+
+    As most python/GTK players it has heavy footprints, even with a small music library
+    I get 430M resident / 84M shared without even playing anything.
+
+    -   [lollypop · GitLab](https://gitlab.gnome.org/World/lollypop)
+
+<a name="parlatype"><a>[Parlatype](https://www.parlatype.org/)
 :   A  GNOME audio player for transcription using
     {{< iref "streaming#Gstreamer" "GStreamer" >}}
 
@@ -390,16 +404,6 @@ For playing media it uses {{< iref "streaming#Gstreamer" "GStreamer" >}}.
     -   [GitHub: goglesmm](https://github.com/gogglesmm/gogglesmm)
     -   [Goglesmm Ubuntu PPA package](https://launchpad.net/~s.jansen/+archive/ubuntu/gogglesmm)
 
-
-{{< iref "#mplayer" "mplayer" >}}
-:   MPlayer is a movie player. It plays most video and **audio**
-    formats. He is described in the
-    {{< iref "#mplayer" "Video Players section" >}} MPlayer can be used to
-    record streaming audio with a command line like:
-    `mplayer -playlist playlist.txt -ao pcm -aofile mystream.wav -vc dummy -vo null`
-    It can be used from a cron tab like:
-    `0 11 * * 1-5 /home/username/scripts/streamrecorder >& /dev/null 0 14 * * 1-5 killall -9 mplayer`
-
 {{< iref "#mpd" "Music Player Daemon" >}}
 :   has a subsection.
 
@@ -426,14 +430,19 @@ For playing media it uses {{< iref "streaming#Gstreamer" "GStreamer" >}}.
 
 
 [RealPlayer](http://www.real.com/linux) and [Helix Player](https://helixcommunity.org/)
-:   Helix player is an open source media player, with support for
-    the proprietary format `RealAudio` and `RealVideo` it is known as
-    the proprietary RealPlayer. Mplayer is also known to play real
-    audio and video with the appropriate codec. A test page for real
-    audio and video streams is the
-    [RealAudio and RealVideo Test Clips
-    ](http://service.real.com/realplayer/test/)
+:   Helix player is an open source media player, with support for the proprietary format
+    `RealAudio` and `RealVideo` it is known as the proprietary RealPlayer. Mplayer is
+    also known to play real audio and video with the appropriate codec. A test page for
+    real audio and video streams is the
+    [RealAudio and RealVideo Test Clips](http://service.real.com/realplayer/test/)
 
+[TranscriberAG](http://transag.sourceforge.net/)
+:   assists the manual annotation of speech signals. It
+    provides a GUI for segmenting speech recordings, transcribing them,
+    labeling speech turns, topic changes and acoustic conditions.
+
+    See also {{< iref "#parlatype" "Parlatype" >}}
+    -   [eroux/transcriberAG](https://github.com/eroux/transcriber-ag)
 
 [xmcd & cda](http://www.amb.org/xmcd/)
 :   Xmcd is a full-featured CD Player and Ripper, cda is a shell
@@ -584,6 +593,19 @@ icedax
     _It should be slower because doing only fixed arithmetic,
     but I found it 10% faster on an intel dual core._
 
+{{< iref "#mplayer" "mplayer" >}}
+:   MPlayer is a movie player. It plays most video and **audio**
+    formats. He is described in the
+    {{< iref "#mplayer" "Video Players section" >}} MPlayer can be used to
+    record streaming audio with a command line like:
+
+        mplayer -playlist playlist.txt -ao pcm -aofile mystream.wav -vc dummy -vo null
+
+    It can be used from a cron tab like:
+
+        0 11 * * 1-5 /home/username/scripts/streamrecorder >& /dev/null 0 14 * * 1-5  killall -9 mplayer
+
+    You can also use in the same way {{< iref "#mpv" "mpv" >}}
 
 ## Ncurses sound players
 <a name="auditive"></a>auditive
@@ -1102,7 +1124,7 @@ _LightSpark_ is in Debian.
 -   [Lightspark Support for various websites
     ](https://github.com/lightspark/lightspark/wiki/Site-Support)
 
-## MPlayer  {#mplayer}
+### MPlayer  {#mplayer}
 
 [Mplayer](http://www.mplayerhq.hu/) (GPL) is a movie player. It plays most video formats
 as well as DVDs.  Its big feature is the wide range of supported output drivers.
