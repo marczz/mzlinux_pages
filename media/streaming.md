@@ -916,15 +916,32 @@ Some media players have built-in support for Chromecast like
 {{< iref "media_players#emby" "Emby" >}}.
 
 Other players that use pulseaudio as output device can use
-{{< iref "#pulseaudio" "pulseaudio-dlna" >}} or
+{{< iref "#pulseaudio-dlna" "pulseaudio-dlna" >}} or
 {{< iref "#mkchromecast" "mkchromecast" >}}
 this can be used for instance with mpd, mpv, mplayer2, ffmpeg.
 
 When a player can output to http we can also send this URL to
-chromecast with many applications {{< iref "#casting_apps" "referenced above" >}}. This can be used with mpd,
-or icecast.
+chromecast with many applications {{< iref "#casting_apps" "referenced above" >}}.
+This can be used with mpd, or {{<iref "#icecast" "Icecast" >}}.
+
+# Miracast {#miracast}
+{{< wp "Miracast" >}} Miracast is a standard for wireless connections from sending
+devices to display receivers launched by the  Wi-Fi Alliance. It can roughly be
+described as "HDMI over Wi-Fi" using the peer-to-peer Wi-Fi Direct standard.
+
+-   [MiracleCast](https://github.com/albfan/miraclecast) (LGPL)
+    MiracleCast implements the Display-Source as well as Display-Sink side.
+
+    The Display-Source side allows you to connect external displays to your system and
+    stream local content to the device.
+
+    The Display-Sink side allows you to create wifi-capable external displays
+    yourself. You can use it on your embedded devices or even on full desktops to allow
+    other systems to use your device as external display.
 
 
+-   [gnome-network-displays](https://gitlab.gnome.org/GNOME/gnome-network-displays)
+    is a miracast implementation for gnome.
 
 
 <!--  Local Variables: -->
