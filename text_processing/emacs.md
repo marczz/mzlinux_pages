@@ -517,7 +517,7 @@ pn    using [use-package].
     [Keep your secrets secret](http://emacs.wordpress.com/2008/07/18/keeping-your-secrets-secret/)
 -   [eldav](http://www.emacswiki.org/emacs/ElDav)
     is an interface to the WebDAV servers for Emacs.
--   [EWW Emacs Web Wowser][]
+-   [EWW Emacs Web Wowser][eww]
     is a web browser for GNU Emacs.  It can load, parse, and display
     various web pages using shr.el.
 -   [ReBuilder][rebuilder]
@@ -568,10 +568,12 @@ but persistent.
 -   [EmacsWiki: Bookmark basic](https://www.emacswiki.org/emacs/BookmarkPlus#BookmarkBasics)
 
 It is enhenced in many
-[bookmarking packages](https://www.emacswiki.org/emacs/CategoryBookmarking), the
+[bookmarking packages](https://www.emacswiki.org/emacs/CategoryBookmarking).
 
 -   [bookmark+][] enhances vanilla Emacs bookmarks: tag, sort, mark, cycle, highlight,
-    save/restore state.
+    save/restore state. It allows
+    [Annotations](https://www.emacswiki.org/emacs/BookmarkPlus#BookmarkAnnotations)
+    which are free-text descriptions, we can use _org-mode_ syntax.
     -   [EmacsWiki: Bookmark Plus
         ](https://www.emacswiki.org/emacs/BookmarkPlus#BookmarkBasics)
 -  [Visible bookmarks (bm)][bm] provides visible, buffer local, bookmarks and the ability to
@@ -610,14 +612,57 @@ _   [EmacsWiki: Category Frames](https://www.emacswiki.org/emacs/CategoryFrames)
 -   [i3wm][] _alias emacs-i3_ is an emacs package for i3-emacs integration. It does not
     access directly the RPC interface but use _i3-msg_ command.
 
-## Other packages
--   [ag][] allows you to search
-    using ag from inside Emacs.
+## Completion
 -   <a name="amx"></a>[amx](https://github.com/DarwinAwardWinner/amx) is a fork of
     {{< iref "#smex" "smex" >}} that provide an alternative
     interface for M-x in Emacs.it can use ido and {{< iref "#ivy"  "ivy" >}} completion.
     _in Melpa._
--   <a name=define-word"></a>[define-word][] by Oleh Krehel _abo-abo_
+-   <a name="helm"><a>[Helm][] is an incremental completion and selection narrowing
+    framework for Emacs.
+    -   [GitHub: Helm](https://github.com/emacs-helm/helm)
+    -   [Helm Wiki](https://github.com/emacs-helm/helm/wiki)
+    -   [Official Helm intro](http://tuhdo.github.io/helm-intro.html)
+    -   [Helm-Projective](https://github.com/bbatsov/helm-projectile)
+        integration.
+-   <a name="hercules"></a>[hercules][] An auto-magical, which-key based hydra banisher.
+    hercules.el lets you call any group of related command sequentially with no prefix
+    keys, while showing a handy popup to remember the bindings for those commands.
+-   <a name="ivy"></a>[Ivy][ivy]
+    is a generic completion method for Emacs, similar to
+    _icomplete-mode_. It is part of [swiper][] a regex isearch with
+    an overview for emacs.   [swiper][] is in melpa.
+    The package author Oleh Krehel in his [oremacs blog](http://oremacs.com/) gives more
+    information and examples.
+    -   An _Ivy info manual_ is part of the package, read it with
+        `C-h i g (ivy) Enter` or in the repository
+        [Ivy User Manual (org source)
+        ](https://github.com/abo-abo/swiper/blob/master/doc/ivy.org);
+        the html manual is the [Ivy and Swiper Manual](http://oremacs.com/swiper/)
+        which gives [Ivy Keybindings](http://oremacs.com/swiper/#key-bindings).
+    -   [Introducing ivy-mode](http://oremacs.com/2015/04/16/ivy-mode/)
+        from the package author.
+        [Oleh Krehel _oremacs_ blog](http://oremacs.com/),
+        other articles give more examples.
+    -   [Hello Ivy-mode, bye Helm](http://oremacs.com/2015/04/16/ivy-mode/).
+    -   [counsel.el](https://github.com/abo-abo/swiper/blob/master/counsel.el).
+        is a set of completion functions with Ivy. Melpa distribute it
+        as a separate package.
+-   <a name="smex"></a>[smex]
+    is a M-x enhancement for Emacs. Built on top of Ido, it proposes
+    your most frequently used commands. A more recent fork is
+    {{< iref "#amx" "amx" >}}. _in elpa_
+-   [which-key][] by Justin Burkett automatically pops up the keys following your
+    favorite prefixes. It can also highlight particular commands choosen by regex. It is
+    less polished than {{< iref "#hydra" "Hydra" >}} but does not need manual
+    configuration of the completions.
+
+    It was forked and now replaces [guide-key][] which is no longer maintained.
+
+
+## Other packages
+-   [ag][] allows you to search
+    using ag from inside Emacs.
+-   <a name="define-word"></a>[define-word][] by Oleh Krehel _abo-abo_
     show the definition of a word inside emacs by parsing the result
     of the search in [wordnick](http://wordnik.com/).
 -   [Bug Hunter](https://github.com/Malabarba/elisp-bug-hunter/)
@@ -630,52 +675,10 @@ _   [EmacsWiki: Category Frames](https://www.emacswiki.org/emacs/CategoryFrames)
     ](https://github.com/technomancy/find-file-in-project)
     find a file in any project using find. It is in melpa and use
     {{< iref "#ivy" "ivy" >}}.
--   [guide-key](https://github.com/kai2nenobu/guide-key)
-    automatically pops up the keys following your favorite
-    prefixes. It can also highlight particular commands choosen by
-    regex. It is less polished than {{< iref "#hydra" "Hydra" >}}
-    but does not need manual configuration of the completions.<br/>
-    A fork of _guide-key_ is
-    [emacs-which-key](https://github.com/justbur/emacs-which-key)
-    by Justin Burkett.
--   [Helm](https://emacs-helm.github.io/helm/)
-    is an incremental completion and selection narrowing framework for
-    Emacs.
-    -   [GitHub: Helm](https://github.com/emacs-helm/helm)
-    -   [Helm Wiki](https://github.com/emacs-helm/helm/wiki)
-    -   [Official Helm intro](http://tuhdo.github.io/helm-intro.html)
-    -   [Helm-Projective](https://github.com/bbatsov/helm-projectile)
-        integration.
 -   <a name="hydra"></a>[Hydra][hydra]
-    by Oleh Krehel _abo-abo_
-    group common group of command by prefix, with an interactive
-    chooser for the bindings.
--   <a name="ivy"></a>[Ivy][ivy]
-    is a generic completion method for Emacs, similar to
-    _icomplete-mode_. It is part of [swiper][] a regex isearch with
-    an overview for emacs.   [swiper][] is in melpa.
-    The package author
-    [Oleh Krehel _oremacs_ blog](http://oremacs.com/) gives more
-    information and examples.
-    -   An _Ivy info manual_ is part of the package, read it with
-        `C-h i g (ivy) Enter` or in the repository
-        [Ivy User Manual (org source)
-        ](https://github.com/abo-abo/swiper/blob/master/doc/ivy.org);
-        the html manual is the [Ivy and Swiper Manual
-        ](http://oremacs.com/swiper/)
-        which gives [Ivy Keybindings
-        ](http://oremacs.com/swiper/#key-bindings).
-    -   [Introducing ivy-mode
-        ](http://oremacs.com/2015/04/16/ivy-mode/)
-        from the package author
-        [Oleh Krehel _oremacs_ blog](http://oremacs.com/),
-        other articles give more examples.
-    -   [Hello Ivy-mode, bye Helm
-        ](http://oremacs.com/2015/04/16/ivy-mode/)
-    -   [counsel.el
-        ](https://github.com/abo-abo/swiper/blob/master/counsel.el)
-        is a set of completion functions with Ivy. Melpa distribute it
-        as a separate package.
+    by Oleh Krehel _abo-abo_ group common group of command by prefix, with an
+    interactive chooser for the bindings.
+    See {{< iref "#hercules" "hercules" >}} for an automatic hydra menu builder.
 -   [perspective](https://github.com/nex3/perspective-el)
     provides multiple workspaces or "perspectives".  Each perspective
     represent a separate project with a window configuration and a set
@@ -705,10 +708,6 @@ _   [EmacsWiki: Category Frames](https://www.emacswiki.org/emacs/CategoryFrames)
     user has SSH access.  It's similar in purpose to services such as
     [paste.lisp.org](http://paste.lisp.org) or
     [rafb.net](http://rafb.net). In elpa.
--   <a name="smex"></a>[smex]
-    is a M-x enhancement for Emacs. Built on top of Ido, it proposes
-    your most frequently used commands. A more recent fork is
-    {{< iref "#amx" "amx" >}}. _in elpa_
 -   [telephone line](https://github.com/dbordak/telephone-line)
     is an implementation of {{< iref "checkpointing#powerline" "Powerline" >}} for emacs.
 -   [use-package](https://github.com/jwiegley/use-package) add a
@@ -822,6 +821,7 @@ https://emacs.stackexchange.com/questions/12235/edit-file-as-root-over-when-alre
 
 <!---------------------------- Packages ------------------------->
 
+[adoc]: https://github.com/sensorflo/adoc-mode
 [ace-jump]:  https://github.com/winterTTr/ace-jump-mode/
 [ace-window]: https://github.com/abo-abo/ace-window
 [ag]: https://github.com/Wilfred/ag.el
@@ -829,10 +829,11 @@ https://emacs.stackexchange.com/questions/12235/edit-file-as-root-over-when-alre
 [all-the-icons]: https://github.com/domtronn/all-the-icons.el
 [android-mode]: https://github.com/remvee/android-mode
 [anzu]: https://github.com/syohex/emacs-anzu
-[async](https://github.com/jwiegley/emacs-async)
+[async]: https://github.com/jwiegley/emacs-async
 [auto-complete]: https://github.com/auto-complete/auto-complete
 [auto-dim-other-buffers]: https://github.com/mina86/auto-dim-other-buffers.el
 [avy]: https://github.com/abo-abo/avy
+[back-button]: https://github.com/rolandwalker/back-button
 [bookmark+]: https://www.emacswiki.org/emacs/BookmarkPlus
 [bm]: https://github.com/joodland/bm "Visible Bookmarks"
 [calfw]: https://www.emacswiki.org/emacs/Calfw
@@ -857,19 +858,26 @@ https://emacs.stackexchange.com/questions/12235/edit-file-as-root-over-when-alre
 [ee]: https://www.emacswiki.org/emacs/CategorizingInformationManager "Categorizing information manager"
 [elscreen]: https://github.com/knu/elscreen
 [enh-ruby]:  http://github.com/zenspider/Enhanced-Ruby-Mode "Enhanced ruby mode"
-[eww]: https://www.gnu.org/software/emacs/manual/html_node/eww/
 [ERC]: https://www.emacswiki.org/emacs/ERC
+[ewmctrl]: https://github.com/flexibeast/ewmctrl
+[eww]: https://www.gnu.org/software/emacs/manual/html_node/eww/
 [font-lock]: https://www.gnu.org/software/emacs/manual/html_node/emacs/Font-Lock.html
 [fixme]: https://www.emacswiki.org/emacs/FixmeMode
 [flycheck]: https://www.flycheck.org/en/latest/
+[geiser]: http://www.nongnu.org/geiser/
 [git-commit]: https://github.com/rafl/git-commit-mode
 [go-mode]: https://github.com/dominikh/go-mode.el
 [guide-key]: https://github.com/kai2nenobu/guide-key
+[Helm]: https://emacs-helm.github.io/helm/
+[hercules]: https://gitlab.com/jjzmajic/hercules.el
 [hi-lock]: https://github.com/emacs-mirror/emacs/blob/master/lisp/hi-lock.el
 [hydra]: https://github.com/abo-abo/hydra
 [imenu]: https://www.emacswiki.org/emacs/ImenuMode
 [info+]: https://www.emacswiki.org/emacs/InfoPlus
 [ivy]: https://github.com/abo-abo/swiper
+[ivy-posframes]: https://github.com/tumashu/ivy-posframe
+[i3-emacs]: https://github.com/vava/i3-emacs
+[i3wm]: https://git.flintfam.org/swf-projects/emacs-i3/src/master/i3wm.el
 [js2]: https://github.com/mooz/js2-mode
 [js3]: https://github.com/tamzinblake/js3-mode
 [interaction-log]: https://github.com/michael-heerdegen/interaction-log.el
@@ -879,11 +887,14 @@ https://emacs.stackexchange.com/questions/12235/edit-file-as-root-over-when-alre
 [linum-relative]: https://github.com/emacsmirror/linum-relative
 [lsp-ui]: https://github.com/emacs-lsp/lsp-ui
 [lusty-explorer]: https://www.emacswiki.org/emacs/LustyExplorer
+[markup-faces]: https://github.com/sensorflo/markup-faces/blob/master/markup-faces.el
+[mark-tools]: https://github.com/stsquad/emacs-mark-tools
 [mic-paren]: https://melpa.org/#/mic-paren
 [multipe-cursors]: https://github.com/magnars/multiple-cursors.el
 [neotree]: https://github.com/jaypei/emacs-neotree
 [nxml]: https://www.emacswiki.org/emacs/NxmlMode
 [pabbrev]: https://www.emacswiki.org/emacs/PredictiveAbbreviation
+[posframes]: https://github.com/tumashu/posframe
 [powerline]: http://github.com/milkypostman/powerline/
 [rainbow-delimiters]: http://www.emacswiki.org/emacs/RainbowDelimiters
 [realgud]: https://github.com/realgud/realgud
@@ -894,6 +905,7 @@ https://emacs.stackexchange.com/questions/12235/edit-file-as-root-over-when-alre
 [smerge]: https://www.gnu.org/software/emacs/manual/html_node/emacs/Comparing-Files.html
 [smex]: https://github.com/nonsequitur/smex
 [sml]: http://elpa.gnu.org/packages/sml-mode.html "smart mode line"
+[Sunrise Commander]: https://www.emacswiki.org/emacs/Sunrise_Commander
 [swiper]: https://github.com/abo-abo/swiper
 [tabbar]: https://www.emacswiki.org/emacs/TabBarMode "EmacsWiki TabBarMode"
 [use-package]: https://github.com/jwiegley/use-package
@@ -901,6 +913,8 @@ https://emacs.stackexchange.com/questions/12235/edit-file-as-root-over-when-alre
 [visible-mark]:  https://gitlab.com/iankelling/visible-mark
 [vhdl]: https://www.gnu.org/software/emacs/manual/html_mono/vhdl-mode.html
 [vm]: https://www.emacswiki.org/emacs/CategoryViewMail "View Mail"
+[which-key]: https://github.com/justbur/emacs-which-key
+[which-key-posframes]: https://github.com/yanghaoxie/which-key-posframe
 [xcscope]:  https://github.com/dkogan/xcscope.el
 [ztree]: https://github.com/manateelazycat/lazycat-emacs/tree/master/site-lisp/extensions/ztree
 
