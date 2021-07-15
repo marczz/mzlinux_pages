@@ -2,6 +2,8 @@
 title: Emacs
 ---
 
+<!-- see also [[file:/share/sync_folders/misc/mznotes/content-org/notes/text_processing_notes/emacs_notes.org][emacs_notes]] -->
+
 # Emacs references
 
 -   [gnu.emacs.sources
@@ -105,8 +107,9 @@ title: Emacs
     shared for whatever interface you use joe, jmacs, jpico, jstar.
 -   [jupp]() (GPL) is the portable version of joe. It can be linked
     with dietlibc or klibc for rescue systems and with µClibc for ARM
--   [remacs](https://github.com/Wilfred/remacs) is a port to Rust of
-    emacs. In 2020 it is a very active project.
+-   [remacs](https://github.com/Wilfred/remacs) (GPL 3.0)
+    is a port to Rust of emacs. In 2020 it is a very active project. It provides a
+    docker file to run the development version.
 
 # Elisp {#elisp}
 -   [gnu: An Introduction to Programming in Emacs Lisp
@@ -183,9 +186,11 @@ the first by [popularity on MELPA](https://emacsthemes.com/popular/index.html).
 ](https://emacsthemes.com/themes/zenburn-theme.html) are available here and also in
 [emacs theme gallery].
 
-The author of [zenburn], Bozhidar Batsov who authored and maintain also
+The author of [zenburn][], Bozhidar Batsov who authored and maintain also
 {{< iref "#prelude" "Emacs distribution Prelude" >}}; also maintain an other theme
-second by popularity, and first _light_ theme, [solarized]. [solarized] a port of  [solarized for vim].
+second by popularity, and first _light_ theme, [solarized][]. [solarized][] is a port
+of  [solarized for vim].
+
 Some screenshots are
 [available here](https://emacsthemes.com/themes/solarized-themes.html).
 
@@ -249,11 +254,11 @@ In emacs we have:
 
     They support powerline, whitespace, compilation, rst, org mode, magit, markdown, helm,
     company, tuareg.
--   [plan9](https://github.com/john2x/plan9-theme.el) which support compilation, grep,
-    ag, isearch, table, [ledger](https://www.ledger-cli.org/), clojure, diff, diff-hl,
-    dired/dired+/dired-subtree, elfeed, erc, company, flycheck, git-gutter,
+-   [plan9 theme](https://github.com/john2x/plan9-theme.el) which support compilation,
+    grep, ag, isearch, table, [ledger](https://www.ledger-cli.org/), clojure, diff,
+    diff-hl, dired/dired+/dired-subtree, elfeed, erc, company, flycheck, git-gutter,
     hl-line/hl-sexp, ido, ivy, js2, lsp-mode, magit, sml-mode-line, web-mode, org mode,
-    mue4, message
+    mue4, message.
 
 -   [punpun](https://github.com/wasamasa/punpun-theme) .
 
@@ -382,9 +387,13 @@ You find also nice packages in the
 ## References from other pages
 -   Look also at
     {{< iref "media_players#emacs_players" "Emacs sound players" >}},
-    {{< iref "org-mode" "Org Mode" >}}.
+    {{< iref "org-mode" "Org Mode" >}}, all the
+    {{< iref "org-mode#annotations" "references to document annotion" >}}
+    are in the {{< iref "org-mode" "Org Mode page" >}} even when non specifically
+    targeted to org mode.
+
 -   Look at
-    -   {{< iref "scm#emacs_git" "Git" >}}
+    -   {{< iref "git#emacs_git" "Git" >}}
         for emacs git interface, and diff frontends.
     -   {{< iref "irc#emacs_irc" "IRC" >}}
         for emacs irc clients,
@@ -462,7 +471,7 @@ You find also nice packages in the
     is a list of people with nice emacs config files.
 
 
-## Emacs configuration exemples
+## Emacs configuration systems
 -   [EmacsWiki: Starter Kits](https://www.emacswiki.org/emacs/StarterKits)
     is a list and activity comparison of the various starter kits.
 -   [Emacs Starter Kit](https://github.com/technomancy/emacs-starter-kit/tree/v3)
@@ -484,16 +493,16 @@ You find also nice packages in the
     ](https://github.com/bbatsov/prelude/blob/master/core/prelude-packages.el)
     in beginning 2020 it was:
 
-    >    ace-window, [avy], [anzu], beacon, browse-kill-ring, crux,
-    >    discover-my-major, [diff-hl], diminish, easy-kill, editorconfig, epl,
-    >    expand-region, [flycheck], gist, git-timemachine, gitconfig-mode,
-    >    gitignore-mode,  guru-mode, imenu-everywhere, hl-todo, projectile,
-    >    magit, move-text, operate-on-number, [smart-mode-line][sml],
-    >    [smartparens], smartrep, supersave, [undo-tree], volatile-highlights, which-key
+    >    ace-window, [avy][], [anzu][], beacon, browse-kill-ring, crux,
+    >    discover-my-major, [diff-hl][], diminish, easy-kill, editorconfig, epl,
+    >    expand-region, [flycheck][], gist, git-timemachine, gitconfig-mode,
+    >    gitignore-mode, guru-mode, imenu-everywhere, hl-todo, projectile, magit,
+    >    move-text, operate-on-number, [smart-mode-line][sml], [smartparens], smartrep,
+    >    supersave, [undo-tree][], volatile-highlights, [which-key][]
     >    [zenburn-theme][zenburn], zop-to-char
 
 -   [Sebastian Wiesner emacs.d](https://github.com/lunaryorn/.emacs.d)
-pn    using [use-package].
+    using [use-package][].
 -   [Steve Purcell emacs.d](https://github.com/purcell/emacs.d)
     an emacs configuration used in Chen bin [Master Emacs in one year
     ](https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-en.org).
@@ -503,6 +512,9 @@ pn    using [use-package].
     {{< iref "#ivy" "Ivy" >}},
     {{< iref "#ivy" "swiper" >}},
     {{< iref "#hydra" "hydra" >}} and others.
+-   [Doom](https://github.com/hlissner/doom-emacs/) (MIT License)
+    is a configuration framework for emacs using {{< iref "#straight" "Straight" >}}.
+    It is like Spacemacs but lighter.
 
 
 ## Packages provided inside emacs distrib
@@ -595,6 +607,9 @@ or a
 -   <a name="avy"></a>[avy][] by Oleh Krehel _abo-abo_ allow to move point to any
     position in Emacs, by giving the sequence of characters at that position. Avy is an
     alternative to [ace-jump][]. It is in Melpa.
+-   [button-lock][] provide visual navigation, with two-way movement within  local and
+    global mark rings.
+-   [mark-tools][]  allow navigating the global and local mark rings in Emacs.;;
 
 ## Frames
 -   [Frames - Emacs Manual
@@ -945,4 +960,5 @@ https://emacs.stackexchange.com/questions/12235/edit-file-as-root-over-when-alre
 <!-- Local Variables: -->
 <!-- mode: markdown -->
 <!-- ispell-local-dictionary: "english" -->
+<!-- eval: (org-link-minor-mode 1) -->
 <!-- End: -->
