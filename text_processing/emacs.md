@@ -374,44 +374,57 @@ It seems that only few themes support [Markup Faces][markup-faces], among them y
 [Zenburn for vim]: http://kippura.org/zenburnpage/
 
 
-# Emacs Packages
+# Emacs configuration
+-   [EmacsWiki: Dot Emacs Structuring
+    ](https://www.emacswiki.org/emacs/DotEmacsStructuring)
+-   [emacs.dz: Awesome emacs config files](https://github.com/caisah/emacs.dz)
+    is a list of people with nice emacs config files.
 
-The [EmacsWiki](http://www.emacswiki.org) is the more complete
-references on packages, I only list in the followings subsections some
-package that I use, mainly to remember what choice I have made for
-domains which are targeted by many packages.
 
-You find also nice packages in the
-[awesome-emacs list](https://github.com/emacs-tw/awesome-emacs).
+## Emacs configuration systems
+-   [EmacsWiki: Starter Kits](https://www.emacswiki.org/emacs/StarterKits)
+    is a list and activity comparison of the various starter kits.
+-   [Emacs Starter Kit](https://github.com/technomancy/emacs-starter-kit/tree/v3)
+    help to manage an emacs configuration, version v3
+    is a guide to various packages and settings. It consist mainly in
+    the marmelade package
+    [better-defaults](https://github.com/technomancy/better-defaults).
+    It recommands also installing magit, {{< iref "#smex" "smex" >}}, ido-ubiquitous,
+    paredit, idle-highlight-mode, find-file-in-project, scpaste.
+-   Eric Shulte [Emacs Starter Kit](http://eschulte.github.io/emacs24-starter-kit)
+    ([GitHub - emacs24-starter-kit](https://github.com/eschulte/emacs24-starter-kit)),
+    was long time ago forked from the previous, but use
+    {{< iref "org-mode#babel" "Literate programming in Org Babel" >}}.
+-   <a name="prelude"></a>[Prelude](https://github.com/bbatsov/prelude)
+    is an emacs distribution configuration systems.
+    -   [Prelude Manual](https://prelude.emacsredux.com/en/latest/).
 
-## References from other pages
--   Look also at
-    {{< iref "media_players#emacs_players" "Emacs sound players" >}},
-    {{< iref "org-mode" "Org Mode" >}}, all the
-    {{< iref "org-mode#annotations" "references to document annotion" >}}
-    are in the {{< iref "org-mode" "Org Mode page" >}} even when non specifically
-    targeted to org mode.
+    It use a [list of packages
+    ](https://github.com/bbatsov/prelude/blob/master/core/prelude-packages.el)
+    in beginning 2020 it was:
 
--   Look at
-    -   {{< iref "git#emacs_git" "Git" >}}
-        for emacs git interface, and diff frontends.
-    -   {{< iref "irc#emacs_irc" "IRC" >}}
-        for emacs irc clients,
-    -   {{< iref "xmpp#emacs_jabber" "Xmpp" >}}
-        for emacs jabber client,
-    -   {{< iref "calendar#bbdb" "Calendar and PIM" >}}
-        for _bbdb_,
-    -   {{< iref "mail" "Mail" >}} for emacs MUA
-        {{< iref "mail#gnus" "Gnus" >}} and
-        {{< iref "mail#mu4e" "mu4e" >}})
-    -   {{< iref "rss_readers" "RSS" >}}
-        for emacs rss readers,
-        {{< iref "rss_readers#newsticker" "RSS" >}}
-    -   {{< iref "dictionaries" "Dictionary Software" >}}
-        for emacs dictionary interface,
-    -   {{< iref "latex" "LaTeX" >}} for emacs latex interface.
--   Other applications are in their own section you can find them by
-    searching this site for <i>Emacs</i>.
+    >    ace-window, [avy][], [anzu][], beacon, browse-kill-ring, crux,
+    >    discover-my-major, [diff-hl][], diminish, easy-kill, editorconfig, epl,
+    >    expand-region, [flycheck][], gist, git-timemachine, gitconfig-mode,
+    >    gitignore-mode, guru-mode, imenu-everywhere, hl-todo, projectile, magit,
+    >    move-text, operate-on-number, [smart-mode-line][sml], [smartparens], smartrep,
+    >    supersave, [undo-tree][], volatile-highlights, [which-key][]
+    >    [zenburn-theme][zenburn], zop-to-char
+
+-   [Sebastian Wiesner emacs.d](https://github.com/lunaryorn/.emacs.d)
+    using [use-package][].
+-   [Steve Purcell emacs.d](https://github.com/purcell/emacs.d)
+    an emacs configuration used in Chen bin [Master Emacs in one year
+    ](https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-en.org).
+-   [Oleh Krehel _abo-abo_ oremacs
+    ](https://github.com/abo-abo/oremacs) by the author of
+    [oremacs blog](http://oremacs.com/) and many packages
+    {{< iref "#ivy" "Ivy" >}},
+    {{< iref "#ivy" "swiper" >}},
+    {{< iref "#hydra" "hydra" >}} and others.
+-   [Doom](https://github.com/hlissner/doom-emacs/) (MIT License)
+    is a configuration framework for emacs using {{< iref "#straight" "Straight" >}}.
+    It is like Spacemacs but lighter.
 
 ## Emacs packaging
 -   [Emacs Wiki - Packaging](https://www.emacswiki.org/emacs/CategoryPackaging)
@@ -464,57 +477,45 @@ You find also nice packages in the
     -   [straight comparison with other package managers
         ](https://github.com/raxod502/straight.el#tldr-1)
 
-## Emacs configuration
--   [EmacsWiki: Dot Emacs Structuring
-    ](https://www.emacswiki.org/emacs/DotEmacsStructuring)
--   [emacs.dz: Awesome emacs config files](https://github.com/caisah/emacs.dz)
-    is a list of people with nice emacs config files.
 
+# Emacs Packages
 
-## Emacs configuration systems
--   [EmacsWiki: Starter Kits](https://www.emacswiki.org/emacs/StarterKits)
-    is a list and activity comparison of the various starter kits.
--   [Emacs Starter Kit](https://github.com/technomancy/emacs-starter-kit/tree/v3)
-    help to manage an emacs configuration, version v3
-    is a guide to various packages and settings. It consist mainly in
-    the marmelade package
-    [better-defaults](https://github.com/technomancy/better-defaults).
-    It recommands also installing magit, {{< iref "#smex" "smex" >}}, ido-ubiquitous,
-    paredit, idle-highlight-mode, find-file-in-project, scpaste.
--   Eric Shulte [Emacs Starter Kit](http://eschulte.github.io/emacs24-starter-kit)
-    ([GitHub - emacs24-starter-kit](https://github.com/eschulte/emacs24-starter-kit)),
-    was long time ago forked from the previous, but use
-    {{< iref "org-mode#babel" "Literate programming in Org Babel" >}}.
--   <a name="prelude"></a>[Prelude](https://github.com/bbatsov/prelude)
-    is an emacs distribution configuration systems.
-    -   [Prelude Manual](https://prelude.emacsredux.com/en/latest/).
+The [EmacsWiki](http://www.emacswiki.org) is the more complete
+references on packages, I only list in the followings subsections some
+package that I use, mainly to remember what choice I have made for
+domains which are targeted by many packages.
 
-    It use a [list of packages
-    ](https://github.com/bbatsov/prelude/blob/master/core/prelude-packages.el)
-    in beginning 2020 it was:
+You find also nice packages in the
+[awesome-emacs list](https://github.com/emacs-tw/awesome-emacs).
 
-    >    ace-window, [avy][], [anzu][], beacon, browse-kill-ring, crux,
-    >    discover-my-major, [diff-hl][], diminish, easy-kill, editorconfig, epl,
-    >    expand-region, [flycheck][], gist, git-timemachine, gitconfig-mode,
-    >    gitignore-mode, guru-mode, imenu-everywhere, hl-todo, projectile, magit,
-    >    move-text, operate-on-number, [smart-mode-line][sml], [smartparens], smartrep,
-    >    supersave, [undo-tree][], volatile-highlights, [which-key][]
-    >    [zenburn-theme][zenburn], zop-to-char
+## References from other pages
+-   Look also at
+    {{< iref "media_players#emacs_players" "Emacs sound players" >}},
+    {{< iref "org-mode" "Org Mode" >}}, all the
+    {{< iref "org-mode#annotations" "references to document annotion" >}}
+    are in the {{< iref "org-mode" "Org Mode page" >}} even when non specifically
+    targeted to org mode.
 
--   [Sebastian Wiesner emacs.d](https://github.com/lunaryorn/.emacs.d)
-    using [use-package][].
--   [Steve Purcell emacs.d](https://github.com/purcell/emacs.d)
-    an emacs configuration used in Chen bin [Master Emacs in one year
-    ](https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-en.org).
--   [Oleh Krehel _abo-abo_ oremacs
-    ](https://github.com/abo-abo/oremacs) by the author of
-    [oremacs blog](http://oremacs.com/) and many packages
-    {{< iref "#ivy" "Ivy" >}},
-    {{< iref "#ivy" "swiper" >}},
-    {{< iref "#hydra" "hydra" >}} and others.
--   [Doom](https://github.com/hlissner/doom-emacs/) (MIT License)
-    is a configuration framework for emacs using {{< iref "#straight" "Straight" >}}.
-    It is like Spacemacs but lighter.
+-   Look at
+    -   {{< iref "git#emacs_git" "Git" >}}
+        for emacs git interface, and diff frontends.
+    -   {{< iref "irc#emacs_irc" "IRC" >}}
+        for emacs irc clients,
+    -   {{< iref "xmpp#emacs_jabber" "Xmpp" >}}
+        for emacs jabber client,
+    -   {{< iref "calendar#bbdb" "Calendar and PIM" >}}
+        for _bbdb_,
+    -   {{< iref "mail" "Mail" >}} for emacs MUA
+        {{< iref "mail#gnus" "Gnus" >}} and
+        {{< iref "mail#mu4e" "mu4e" >}})
+    -   {{< iref "rss_readers" "RSS" >}}
+        for emacs rss readers,
+        {{< iref "rss_readers#newsticker" "RSS" >}}
+    -   {{< iref "dictionaries" "Dictionary Software" >}}
+        for emacs dictionary interface,
+    -   {{< iref "latex" "LaTeX" >}} for emacs latex interface.
+-   Other applications are in their own section you can find them by
+    searching this site for <i>Emacs</i>.
 
 
 ## Packages provided inside emacs distrib
