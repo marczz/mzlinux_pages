@@ -104,17 +104,34 @@ and communications privacy using cryptography. See also
 -   See also {{< iref "apache#mod_ssl" "Apache mod_ssl deocumentation" >}} .
 
 ### Certificate providers
+-   <a name="acme"></a>{{< wp "Automated Certificate Management Environment" >}}
+    __ACME__ is a communications protocol for automation of deployment of public key
+    infrastructure designed by {{< iref "#let_s_enscrypt" "Let's Encrypt" >}}.
+    -   It is described in the IETF RFCs:
+        [RFC 8555 - Automatic Certificate Management Environment (ACME)
+        ](https://tools.ietf.org/html/rfc8555) wich describes ACME V2
+        _(ACME V1 is deprecated)_and the RFC8657, RFC8737, RFC8738,
+        RFC8739.
+    -   [List of ACME Client Implementations
+        ](https://letsencrypt.org/docs/client-options/) by _Let's Encrypt_.
+    -   [lacme](https://git.guilhem.org/lacme/) (GPL-3+)
+        Small ACME client written with process isolation and minimal privileges.
+        _lacme_ is pckaged in Debian.
+        -   [lacme(8)](https://guilhem.org/man/lacme.8.html),
+        -   [lacme-accountd(1)](https://guilhem.org/man/lacme-accountd.1.html).
+
 -   [CAcert](http://wiki.cacert.org/) deliver free server certificates.
     -   [FAQ/ServerCerts
         ](http://wiki.cacert.org/FAQ/ServerCerts?action=show&redirect=ServerCerts)
         explain how to produce the certificate request (CSR)
     -   Wikipedia {{< wp "Cacert" >}}.
--   [Let's Encrypt - Wikipedia](https://en.wikipedia.org/wiki/Let%27s%5FEncrypt)
+-   <a name="let_s_enscrypt"</a>
+    [Let's Encrypt - Wikipedia](https://en.wikipedia.org/wiki/Let%27s%5FEncrypt)
     -   [Let's Encrypt](https://letsencrypt.org/) provides X.509 certificates for
         Transport Layer Security (TLS) encryption at no charge.
     -   [Let's Encrypt Community Support](https://community.letsencrypt.org/)
-    -   [Certbot](https://certbot.eff.org/) is an open source software tool, made by the
-        Electronic Frontier Foundation (EFF), for automatically using Let’s Encrypt
+    -   [Certbot](https://certbot.eff.org/) made by the Electronic Frontier Foundation
+        (EFF), is the recommended ACME client, for automatically using Let’s Encrypt
         certificates on manually-administrated websites to enable HTTPS.
 -   [SSLkeys - Debian Wiki](https://wiki.debian.org/SSLkeys)
 -   {{< man "update-ca-certificates(8)" >}} is a program that updates the directory
