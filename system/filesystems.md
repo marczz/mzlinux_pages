@@ -242,6 +242,21 @@ storage, but a single subvolume can use all space.
     There was previously a CLI version which did not
     require the electron stuff, but it was removed _without explanation_ at version
     1.5.0 - 2019-02-16.
+-   [mkusb](https://help.ubuntu.com/community/mkusb)
+    is a wrapper around _dd_ to flash or clone an iso image or a compressed image file
+    to a mass storage device, either an USB drive, an internal drive or an eSATA drive.
+    _Mkusb_ is the recommended ubuntu tool to create a bootable drive. It exists in
+    several flavors. The GUI version named _mkusb_, a text only interface _mkusb-nox_, a
+    simple shell script _mkusb-min_.
+    -   [mkusb PPA](https://launchpad.net/~mkusb/+archive/ubuntu/ppa)
+    -   [How to make usb boot drive](https://ubuntuforums.org/showthread.php?t=1958073)
+        is an ubuntu mkusb tutorial.
+    -   [mkusb quick start manual (pdf)
+        ](https://phillw.net/isos/linux-tools/mkusb/mkUSB-quick-start-manual-12.pdf)
+    -   [How to install mkusb in Debian
+        ](https://help.ubuntu.com/community/mkusb/install-to-debian).
+    -   _mkusb-min_, minimal shell script can be downloaded and used following the
+        [mkusb-min manual](https://help.ubuntu.com/community/mkusb/min).
 -   [usbimager](https://gitlab.com/bztsrc/usbimager) (MIT Licence)
     is a GUI application that writes compressed disk images to USB drives and creates
     backups. It is lighter than _balena-etcher_. The repository provides Debian and
@@ -250,6 +265,13 @@ storage, but a single subvolume can use all space.
     creates bootable USB drive for ISO/WIM/IMG/VHD(x)/EFI files. 86 Legacy BIOS, IA32
     UEFI, x86_64 UEFI, ARM64 UEFI and MIPS64EL UEFI with  MBR or GPT partition are
     supported.
+
+An advice given by _mkusb_ manual is if you want to re-use a USB drive previously used
+for a booting image, you should wipe the first megabyte it with dd (overwrite with
+zeros), otherwise grub-install doesn't want to write into the mbr area, because it
+recognizes the CD file system
+
+
 
 # LVM {#lvm}
 
