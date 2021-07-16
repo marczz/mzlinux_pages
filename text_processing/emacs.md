@@ -126,7 +126,6 @@ title: Emacs
     ](http://nic.ferrier.me.uk/blog/2012_07/tips-and-tricks-for-emacslisp)
 -   [Xah Emacs Lisp Tutorial](http://ergoemacs.org/emacs/elisp.html)
 
-
 # Emacs color themes {#emacs_themes}
 See also {{< iref "desktop#color_themes" "Desktop Color themes" >}}.
 
@@ -219,16 +218,13 @@ some are themes based on the plan9 editor acme, like the vim themes
 
 In emacs we have:
 
--   [parchment](https://github.com/ajgrf/parchment)
-    is derived from [nofrils] and
-    [leuven] but avoid the agressive white background of [leuven].
-    It has support for  markdown, org mode, show-paren, whitespace, diff, [rainbow-delimiters],
-    rst, calendar, company, dired, [diredfl](https://github.com/purcell/diredfl), elfeed, emms, eshell, evil,
-    [geiser]( http://www.nongnu.org/geiser/), gnus,
-    [guix]( https://emacs-guix.gitlab.io/website/), helm,
-    [hi-lock](https://github.com/emacs-mirror/emacs/blob/master/lisp/hi-lock.el),
-    ido, info, ivy, git-gutter, magit, mu4e,
-    [rainbow-delimiters], swiper, term,
+-   [parchment][] is derived from [nofrils] and [leuven] but avoid the agressive white
+    background of [leuven].  It has support for markdown, org mode, show-paren,
+    whitespace, diff, [rainbow-delimiters], rst, calendar, company, dired, [diredfl][],
+    elfeed, emms, eshell, evil, [geiser]( http://www.nongnu.org/geiser/), gnus, [guix](
+    https://emacs-guix.gitlab.io/website/), helm,
+    [hi-lock](https://github.com/emacs-mirror/emacs/blob/master/lisp/hi-lock.el), ido,
+    info, ivy, git-gutter, magit, mu4e, [rainbow-delimiters], swiper, term,
     [undo-tree](https://github.com/apchamberlain/undo-tree.el), transient, which-key.
 -   [nofrils](https://gitlab.com/esessoms/nofrils-theme), a port to emacs from
     [nofril for vim] with
@@ -259,22 +255,20 @@ In emacs we have:
     diff-hl, dired/dired+/dired-subtree, elfeed, erc, company, flycheck, git-gutter,
     hl-line/hl-sexp, ido, ivy, js2, lsp-mode, magit, sml-mode-line, web-mode, org mode,
     mue4, message.
-
 -   [punpun](https://github.com/wasamasa/punpun-theme) .
-
--   [tao] a two uncoloured color themes for Emacs: tao-yin and tao-yang (dark and sepia). It
-    support compilation, grep, make, isearch, newsticker, ace, ack, auctex,
+-   [tao][] a two uncoloured color themes for Emacs: tao-yin and tao-yang (dark and
+    sepia). It support compilation, grep, make, isearch, newsticker, ace, ack, auctex,
     [auto-complete](https://www.emacswiki.org/emacs/AutoComplete), android mode,
-    [bm (visual bookmarks)](https://github.com/joodland/bm), clojure-test-mode, diff,
+    [bm (visual bookmarks)][bm], clojure-test-mode, diff,
     dired+, ediff, elfeed, ert, eshell, flycheck, flymake, flyspell, erc, git-gutter,
     gnus, guide-key, helm, hl-line-mode, ido, js2, jsx, jabber, ledger,
     [macrostep](https://github.com/joddie/macrostep), magit, egg, message, mew,
-    mic-paren, mingus, nav, mu4e, [mumamo](https://www.emacswiki.org/emacs/MuMaMo),
-    org mode, outline,  p4, proofgeneral, [rainbow delimiters], rcirc, rpm mode, rst-mode,
-    sh-mode, show-paren, [slime](https://www.emacswiki.org/emacs/SlimeMode), speedbar,
+    mic-paren, mingus, nav, mu4e, [mumamo][], org
+    mode, outline, p4, proofgeneral, [rainbow delimiters], rcirc, rpm mode, rst-mode,
+    sh-mode, show-paren, [slime][], speedbar,
     [tabbar](https://www.emacswiki.org/emacs/TabBarMode), term,
     [undo-tree](https://github.com/apchamberlain/undo-tree.el), w3m, web mode,
-    whitespace, wanderlust, markdown, [swoop](https://github.com/emacsorphanage/swoop),
+    whitespace, wanderlust, markdown, [swoop][],
     company, neotree, geiser, tuareg, avy, ace-window, ivy, hideshow, circe, lui,
     racket.
 -   [leuven] is a theme in an color theme on white background, with also a dark variant. It has
@@ -368,6 +362,7 @@ It seems that only few themes support [Markup Faces][markup-faces], among them y
 [manoj]: https://github.com/emacs-mirror/emacs/blob/master/etc/themes/manoj-dark-theme.el
 [nofrils]: https://gitlab.com/esessoms/nofrils-theme
 [nofrils for vim]: https://github.com/robertmeta/nofrils
+[parchment]: https://github.com/ajgrf/parchment
 [solarized]: https://github.com/bbatsov/solarized-emacs
 [tao]: https://github.com/11111000000/tao-theme-emacs
 [zenburn]: https://github.com/bbatsov/zenburn-emacs
@@ -391,10 +386,17 @@ It seems that only few themes support [Markup Faces][markup-faces], among them y
     [better-defaults](https://github.com/technomancy/better-defaults).
     It recommands also installing magit, {{< iref "#smex" "smex" >}}, ido-ubiquitous,
     paredit, idle-highlight-mode, find-file-in-project, scpaste.
--   Eric Shulte [Emacs Starter Kit](http://eschulte.github.io/emacs24-starter-kit)
-    ([GitHub - emacs24-starter-kit](https://github.com/eschulte/emacs24-starter-kit)),
+-   [Emacs Starter Kit](http://eschulte.github.io/emacs24-starter-kit)
+    by [Eric Shulte](http://eschulte.github.io/)
     was long time ago forked from the previous, but use
     {{< iref "org-mode#babel" "Literate programming in Org Babel" >}}.
+    -   [GitHub - emacs24-starter-kit](https://github.com/eschulte/emacs24-starter-kit).
+-   [Doom](https://github.com/hlissner/doom-emacs/) (MIT License)
+    is a configuration framework for emacs using {{< iref "#straight" "Straight" >}}.
+    It is like Spacemacs but lighter.
+-   [emacs.d](https://github.com/purcell/emacs.d) by [Steve Purcell](https://github.com/purcell)
+    an emacs configuration used in Chen bin [Master Emacs in one year
+    ](https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-en.org).
 -   <a name="prelude"></a>[Prelude](https://github.com/bbatsov/prelude)
     is an emacs distribution configuration systems.
     -   [Prelude Manual](https://prelude.emacsredux.com/en/latest/).
@@ -411,40 +413,41 @@ It seems that only few themes support [Markup Faces][markup-faces], among them y
     >    supersave, [undo-tree][], volatile-highlights, [which-key][]
     >    [zenburn-theme][zenburn], zop-to-char
 
--   [Sebastian Wiesner emacs.d](https://github.com/lunaryorn/.emacs.d)
-    using [use-package][].
--   [Steve Purcell emacs.d](https://github.com/purcell/emacs.d)
-    an emacs configuration used in Chen bin [Master Emacs in one year
-    ](https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-en.org).
 -   [Oleh Krehel _abo-abo_ oremacs
     ](https://github.com/abo-abo/oremacs) by the author of
     [oremacs blog](http://oremacs.com/) and many packages
     {{< iref "#ivy" "Ivy" >}},
     {{< iref "#ivy" "swiper" >}},
     {{< iref "#hydra" "hydra" >}} and others.
--   [Doom](https://github.com/hlissner/doom-emacs/) (MIT License)
-    is a configuration framework for emacs using {{< iref "#straight" "Straight" >}}.
-    It is like Spacemacs but lighter.
+
+    Oremacs uses {{< iref "straight"  "Straight" >}}
+    and many [snippets](https://github.com/abo-abo/oremacs/tree/github/snippets),
+    there is an init file for each [mode]
+    that contains few hydra snippets for avy, buffer-menu, dired, helm, info,
+    org-roam, projectile,  search.
 
 ## Emacs packaging
--   [Emacs Wiki - Packaging](https://www.emacswiki.org/emacs/CategoryPackaging)
+-   [Emacs Wiki : Category Packaging](https://www.emacswiki.org/emacs/CategoryPackaging)
+-   [EmacsWiki: Making Packages](https://www.emacswiki.org/emacs/MakingPackages)
 -   [ELPA](http://www.emacswiki.org/emacs/ELPA) is the main packaging system for Emacs
     as it is included in emacs since emacs 24.
-    [ELPA Home](http://tromey.com/elpa/),
+    -   [ELPA Home](http://tromey.com/elpa/),
     -   [elpa.gnu.org/](http://elpa.gnu.org/) official repository, now replaced by
         [Melpa](http://melpa.milkbox.net/).
     -   [Melpa](http://melpa.milkbox.net/) (
         [Melpa source on GitHub](https://github.com/milkypostman/melpa)) is a collaborative
-        development repository.<br />
+        development repository.
+
         MELPA, has a cron to pull from upstream sources.  MELPA thus presents the
         _bleeding edge_ of packages.
+
 -   [El-Get](https://github.com/dimitri/el-get) ([WTFPL](http://sam.zoy.org/wtfpl/)
     License) from Dimitri Fontaine
     allows you to install and manage elisp code for Emacs.
     It supports  different types of sources including elpa packages, git, privately hosted code ....
     El get  is able to install the packages, update them and remove them,
-    it will also init them for you. <br />
-    [EmacsWiki: el-get](http://www.emacswiki.org/emacs/el-get) is a tutorial
+    it will also init them for you.
+    -   [EmacsWiki: el-get](http://www.emacswiki.org/emacs/el-get) is a tutorial
     of el-get installation and configuration.<br />
     You find an example of el-get configuration in the [Dimitri Fontaine El-Get Page
     ](http://tapoueh.org/emacs/el-get.html), an other example is the
@@ -456,12 +459,13 @@ It seems that only few themes support [Markup Faces][markup-faces], among them y
     manage packages as git submodules. It uses the
     [Emacsmirror](http://github.com/emacsmirror) which collects Emacs Lisp packages and
     distributes them in form of Git repositories.
--   [Cask](http://cask.readthedocs.io/en/latest/guide/) (GPL)
-    is an Emacs Lisp project management tool, similar to Maven or
-    Leiningen. It aims to control and automate the entire life cycle
-    of an Emacs Lisp package, including dependency management,
-    packaging, distribution and testing. The [Cask Repository
-    ](https://github.com/cask/cask) is on GitHub.
+-   <a name="cask"></a>[Cask](http://cask.readthedocs.io/en/latest/guide/) (GPL-3.0)
+    by [Johan Andersson](https://github.com/rejeep) and
+    [Sebastian Wiesner](https://github.com/lunaryorn)
+    is a project management tool for Emacs Lisp to automate the package development
+    cycle; development, dependencies, testing, building, packaging and more.  _Cask_ is
+    also used to manage emacs configuration.
+    -   [Cask - Github](https://github.com/cask/cask)
 -   [Quelpa](https://github.com/quelpa/quelpa) (GPL)
     is a tool to compile and install packages locally from local or remote source code.
     quelpa gets the package source code, builds an ELPA compatible package and installs
@@ -476,6 +480,11 @@ It seems that only few themes support [Markup Faces][markup-faces], among them y
 -   <a name="straignt"></a>[Straight](https://github.com/raxod502/straight.el)
     -   [straight comparison with other package managers
         ](https://github.com/raxod502/straight.el#tldr-1)
+    -   [Advanced Emacs Package Management with straight.el
+        ](https://systemcrafters.cc/advanced-package-management/using-straight-el/)
+        a tutorial with a section on Converting an existing packages.el configuration
+        to straight.el.
+    -
 
 
 # Emacs Packages
@@ -508,9 +517,8 @@ You find also nice packages in the
     -   {{< iref "mail" "Mail" >}} for emacs MUA
         {{< iref "mail#gnus" "Gnus" >}} and
         {{< iref "mail#mu4e" "mu4e" >}})
-    -   {{< iref "rss_readers" "RSS" >}}
-        for emacs rss readers,
-        {{< iref "rss_readers#newsticker" "RSS" >}}
+    -   {{< iref "feed" "RSS" >}}
+        for emacs rss readers like elffeed and newsticker.
     -   {{< iref "dictionaries" "Dictionary Software" >}}
         for emacs dictionary interface,
     -   {{< iref "latex" "LaTeX" >}} for emacs latex interface.
@@ -684,6 +692,11 @@ _   [EmacsWiki: Category Frames](https://www.emacswiki.org/emacs/CategoryFrames)
 -   [Bug Hunter](https://github.com/Malabarba/elisp-bug-hunter/)
     is an Emacs library that finds the source of an error or
     unexpected behavior inside an elisp configuration file
+-   [flycheck][] (GPL-3.0)
+    is a syntax checking extension for GNU Emacs.
+    It has a long list of [supported Languages
+    ](https://www.flycheck.org/en/latest/languages.html)
+    -   [Flycheck documentation](https://www.flycheck.org/en/latest/index.html)
 -   <a name="elnode"></a>
     [elnode](https://github.com/nicferrier/elnode) (GPL)
     ids an  evented IO webserver in Emacs Lisp.
@@ -907,6 +920,7 @@ https://emacs.stackexchange.com/questions/12235/edit-file-as-root-over-when-alre
 [mark-tools]: https://github.com/stsquad/emacs-mark-tools
 [mic-paren]: https://melpa.org/#/mic-paren
 [multipe-cursors]: https://github.com/magnars/multiple-cursors.el
+[mumamo]: https://www.emacswiki.org/emacs/MuMaMo
 [neotree]: https://github.com/jaypei/emacs-neotree
 [nxml]: https://www.emacswiki.org/emacs/NxmlMode
 [pabbrev]: https://www.emacswiki.org/emacs/PredictiveAbbreviation
@@ -917,12 +931,14 @@ https://emacs.stackexchange.com/questions/12235/edit-file-as-root-over-when-alre
 [rebuilder]: https://www.emacswiki.org/emacs/ReBuilder
 [rst]: http://docutils.sourceforge.net/docs/user/emacs.html
 [shm]: https://github.com/projectional-haskell/structured-haskell-mode "structured-haskell-mode"
+[slime]: https://www.emacswiki.org/emacs/SlimeMode
 [smartparens]: https://github.com/Fuco1/smartparens
 [smerge]: https://www.gnu.org/software/emacs/manual/html_node/emacs/Comparing-Files.html
 [smex]: https://github.com/nonsequitur/smex
 [sml]: http://elpa.gnu.org/packages/sml-mode.html "smart mode line"
 [Sunrise Commander]: https://www.emacswiki.org/emacs/Sunrise_Commander
 [swiper]: https://github.com/abo-abo/swiper
+[swoop]: https://github.com/emacsorphanage/swoop
 [tabbar]: https://www.emacswiki.org/emacs/TabBarMode "EmacsWiki TabBarMode"
 [use-package]: https://github.com/jwiegley/use-package
 [undo-tree]: http://www.dr-qubit.org/undo-tree/undo-tree.el
