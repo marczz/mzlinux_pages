@@ -61,10 +61,14 @@ title: Org Mode
 
 -   [The Org Manual: Working with source code
     ](https://orgmode.org/manual/Working-with-source-code.html#Working-with-source-code)
+-   [running code section
+    ](http://ehneilsen.net/notebook/orgExamples/org-examples.html#sec-15)
+    from [Emacs org-mode examples and cookbook
+    ](http://ehneilsen.net/notebook/orgExamples/org-examples.html)
 -   [Babel: Introduction](http://orgmode.org/worg/org-contrib/babel/intro.html)
 -   [Index of babel/languages/
     ](https://orgmode.org/worg/org-contrib/babel/languages/)
--   [GitHub - dfeich/org-babel-examples
+-   [GitHub - dfeich: org-babel examples
     ](https://github.com/dfeich/org-babel-examples)
     with different backend languages.
 
