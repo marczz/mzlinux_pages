@@ -2,19 +2,30 @@
 title: Org Mode
 ---
 
+# Org Mode References
+-   [Org Mode Home](http://orgmode.org/).
+-   [org-mode Git Repository](https://code.orgmode.org/bzg/org-mode.git)
+-   mailing list
+    [emacs-orgmode Archives](https://lists.gnu.org/archive/html/emacs-orgmode/)
+    also available at gmame.
+-   [Release notes | Org mode](https://www.orgmode.org/Changes.html)
+-   [Tools | Org mode](https://orgmode.org/tools.html).
+
 # Org Mode Manuals
 
--   [OrgMode Home](http://orgmode.org/),
-    [Emacs org manual](http://orgmode.org/org.html),
-    [The compact Org-mode Guide](http://orgmode.org/guide/)
+-   [Org Manual](https://orgmode.org/manual/)
+-   [last release org manual](http://orgmode.org/org.html),
+-   [The compact Org-mode Guide](http://orgmode.org/guide/)
 -   [Emacswiki: OrgMode](http://www.emacswiki.org/emacs/OrgMode)
-
+-   [Org-mode Frequently Asked Questions](https://orgmode.org/worg/org-faq.html)
+-   [Documentation for Org hooks, commands and options
+    ](https://orgmode.org/worg/doc.html).
+-   [Org ad hoc code, quick hacks and workarounds](https://orgmode.org/worg/org-hacks.html)
 
 # Tutorials:
 -   [Worg List of Org tutorials
     ](http://orgmode.org/worg/org-tutorials/index.html)
--   [Org Mode - Organize Your Life In Plain Text
-    ](http://doc.norang.ca/org-mode.html)
+-   [Org Mode - Organize Your Life In Plain Text](http://doc.norang.ca/org-mode.html)
     by Bernt Hansen is a very useful compact guide that includes a section on
     [Git synchronization](http://doc.norang.ca/org-mode.html#GitSync)
 -   [David O'Toole Org tutorial
@@ -30,15 +41,12 @@ title: Org Mode
     ](http://home.fnal.gov/~neilsen/notebook/orgExamples/org-examples.html)
 -   Eric Schulte [collection of Org-mode snippets using code blocks
     ](https://eschulte.github.io/org-scraps/).
--   [org2latex - a yasnippet
-    ](http://www.sharons.org.uk/org2latex.html)
+-   [org2latex - a yasnippet](http://www.sharons.org.uk/org2latex.html)
 -   [Org-mode Basics](http://www.star.bris.ac.uk/bjm/org-basics.html)
 -   [Emacs In a Box](http://caiorss.github.io/Emacs-Elisp-Programming/)
     A tutorial about programming Elisp and Emacs text editor customization.
     The source repository is [GitHub - Emacs-Elisp-Programming
     ](https://github.com/caiorss/Emacs-Elisp-Programming)
-
-
 
 # Articles and Blogs
 -   [Sacha Chua
