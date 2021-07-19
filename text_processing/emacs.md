@@ -391,9 +391,14 @@ It seems that only few themes support [Markup Faces][markup-faces], among them y
     was long time ago forked from the previous, but use
     {{< iref "org-mode#babel" "Literate programming in Org Babel" >}}.
     -   [GitHub - emacs24-starter-kit](https://github.com/eschulte/emacs24-starter-kit).
--   [Doom](https://github.com/hlissner/doom-emacs/) (MIT License)
+-   <a name=chemacs2></a>[Chemacs2](https://github.com/plexus/chemacs2)
+    is an Emacs profile switcher, it makes it easy to run multiple Emacs configurations
+    side by side.
+-   <a name="doom"></a>[Doom](https://github.com/hlissner/doom-emacs/) (MIT License)
     is a configuration framework for emacs using {{< iref "#straight" "Straight" >}}.
     It is like Spacemacs but lighter.
+    -   [Doom modules index
+        ](https://github.com/hlissner/doom-emacs/blob/develop/docs/modules.org)
 -   [emacs.d](https://github.com/purcell/emacs.d) by [Steve Purcell](https://github.com/purcell)
     an emacs configuration used in Chen bin [Master Emacs in one year
     ](https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-en.org).
@@ -425,6 +430,9 @@ It seems that only few themes support [Markup Faces][markup-faces], among them y
     there is an init file for each [mode]
     that contains few hydra snippets for avy, buffer-menu, dired, helm, info,
     org-roam, projectile,  search.
+-   [Spacemacs](https://www.spacemacs.org/)
+    is a configuration kit focused on Evil
+    -   [spacemacs - GitHub](https://github.com/syl20bnr/spacemacs)
 
 ## Emacs packaging
 -   [Emacs Wiki : Category Packaging](https://www.emacswiki.org/emacs/CategoryPackaging)
@@ -446,16 +454,13 @@ It seems that only few themes support [Markup Faces][markup-faces], among them y
     allows you to install and manage elisp code for Emacs.
     It supports  different types of sources including elpa packages, git, privately hosted code ....
     El get  is able to install the packages, update them and remove them,
-    it will also init them for you.
+    it will also init them for you. _el-get_ is less useful than previously, because
+    newer package managers like {{< iref "#cask" "Cask" >}},
+    {{< iref "#straight" "Straight" >}}, {{< iref "#borg" "Borg" >}},
+    {{< iref "#quelpa"  "Quelpa" >}} allow the use of any git repository.
     -   [EmacsWiki: el-get](http://www.emacswiki.org/emacs/el-get) is a tutorial
-    of el-get installation and configuration.<br />
-    You find an example of el-get configuration in the [Dimitri Fontaine El-Get Page
-    ](http://tapoueh.org/emacs/el-get.html), an other example is the
-    [emacs-kicker](https://github.com/dimitri/emacs-kicker)
-    _a minimal kick start init file for emacs_ by Dimitri.<br >
-    [Sébastien Gross emacs configuration](https://github.com/renard/emacs-el)
-    is also managed by el-get.
--   [Borg](https://emacsmirror.net/manual/borg/index.html)
+    of el-get installation and configuration.
+-   <a name="borg"></a>[Borg](https://emacsmirror.net/manual/borg/index.html)
     manage packages as git submodules. It uses the
     [Emacsmirror](http://github.com/emacsmirror) which collects Emacs Lisp packages and
     distributes them in form of Git repositories.
@@ -466,7 +471,7 @@ It seems that only few themes support [Markup Faces][markup-faces], among them y
     cycle; development, dependencies, testing, building, packaging and more.  _Cask_ is
     also used to manage emacs configuration.
     -   [Cask - Github](https://github.com/cask/cask)
--   [Quelpa](https://github.com/quelpa/quelpa) (GPL)
+-   <a name="quelpa"></a>[Quelpa](https://github.com/quelpa/quelpa) (GPL)
     is a tool to compile and install packages locally from local or remote source code.
     quelpa gets the package source code, builds an ELPA compatible package and installs
     that locally with package.el. It allows to build the bleeding edge of MELPA
@@ -477,15 +482,16 @@ It seems that only few themes support [Markup Faces][markup-faces], among them y
     ```
     -   [quelpa-use-package](https://github.com/quelpa/quelpa-use-package)
         allow to use _use-package_ with _Quelpa_.
--   <a name="straignt"></a>[Straight](https://github.com/raxod502/straight.el)
+-   <a name="straight"></a>[Straight](https://github.com/raxod502/straight.el)
     -   [straight comparison with other package managers
         ](https://github.com/raxod502/straight.el#tldr-1)
     -   [Advanced Emacs Package Management with straight.el
         ](https://systemcrafters.cc/advanced-package-management/using-straight-el/)
         a tutorial with a section on Converting an existing packages.el configuration
         to straight.el.
-    -
-
+-   <a name="use-package"></a>[use-package](https://github.com/jwiegley/use-package) add a
+    macro which allows you to isolate each emacs package
+    configuration.
 
 # Emacs Packages
 
@@ -534,8 +540,8 @@ You find also nice packages in the
     the {{< iref "mail" "mail page" >}}
 -   [EasyPg][]
     ([EmacsWiki: EasyPg](http://www.emacswiki.org/emacs/EasyPG))
-    is a gpg interface. It can be used to
-    [Keep your secrets secret](http://emacs.wordpress.com/2008/07/18/keeping-your-secrets-secret/)
+    is a gpg interface. It can be used to [Keep your secrets secret
+    ](http://emacs.wordpress.com/2008/07/18/keeping-your-secrets-secret/).
 -   [eldav](http://www.emacswiki.org/emacs/ElDav)
     is an interface to the WebDAV servers for Emacs.
 -   [EWW Emacs Web Wowser][eww]
@@ -548,6 +554,16 @@ You find also nice packages in the
     [ReplaceRegexp Examples](http://www.emacswiki.org/emacs/ReplaceRegexp).
 -   [reStructuredText mode][rst]
     is used for {{< iref "rest" "reStructuredText" >}}.
+
+
+## Editor
+-   [Evil - Github](https://github.com/emacs-evil/evil) (GPL-3.0)
+    is an extensible vi layer for Emacs. It emulates the main features of Vim, and
+    provides facilities for writing custom extensions.
+    -   [EmacsWiki: Evil](https://www.emacswiki.org/emacs/Evil).
+    -   [Evil documentation](https://evil.readthedocs.io/en/latest/)
+
+
 
 ## File explorers
 The Integrated Emacs file explorer is [Dired][dired]
@@ -671,7 +687,7 @@ _   [EmacsWiki: Category Frames](https://www.emacswiki.org/emacs/CategoryFrames)
     -   [counsel.el](https://github.com/abo-abo/swiper/blob/master/counsel.el).
         is a set of completion functions with Ivy. Melpa distribute it
         as a separate package.
--   <a name="smex"></a>[smex]
+-   <a name="smex"></a>[smex][]
     is a M-x enhancement for Emacs. Built on top of Ido, it proposes
     your most frequently used commands. A more recent fork is
     {{< iref "#amx" "amx" >}}. _in elpa_
@@ -682,32 +698,16 @@ _   [EmacsWiki: Category Frames](https://www.emacswiki.org/emacs/CategoryFrames)
 
     It was forked and now replaces [guide-key][] which is no longer maintained.
 
-
-## Other packages
--   [ag][] allows you to search
-    using ag from inside Emacs.
--   <a name="define-word"></a>[define-word][] by Oleh Krehel _abo-abo_
-    show the definition of a word inside emacs by parsing the result
-    of the search in [wordnick](http://wordnik.com/).
--   [Bug Hunter](https://github.com/Malabarba/elisp-bug-hunter/)
-    is an Emacs library that finds the source of an error or
-    unexpected behavior inside an elisp configuration file
+## Programming, Projects
 -   [flycheck][] (GPL-3.0)
     is a syntax checking extension for GNU Emacs.
     It has a long list of [supported Languages
     ](https://www.flycheck.org/en/latest/languages.html)
     -   [Flycheck documentation](https://www.flycheck.org/en/latest/index.html)
--   <a name="elnode"></a>
-    [elnode](https://github.com/nicferrier/elnode) (GPL)
-    ids an  evented IO webserver in Emacs Lisp.
 -   [find-file-in-project
     ](https://github.com/technomancy/find-file-in-project)
     find a file in any project using find. It is in melpa and use
     {{< iref "#ivy" "ivy" >}}.
--   <a name="hydra"></a>[Hydra][hydra]
-    by Oleh Krehel _abo-abo_ group common group of command by prefix, with an
-    interactive chooser for the bindings.
-    See {{< iref "#hercules" "hercules" >}} for an automatic hydra menu builder.
 -   [perspective](https://github.com/nex3/perspective-el)
     provides multiple workspaces or "perspectives".  Each perspective
     represent a separate project with a window configuration and a set
@@ -717,6 +717,18 @@ _   [EmacsWiki: Category Frames](https://www.emacswiki.org/emacs/CategoryFrames)
 -   [Polymode](https://polymode.github.io/) is a framework for multiple major modes
     (MMM) inside a single Emacs buffer. It is in elpa.
     -   [GitHub - Polymode](https://github.com/polymode/polymode)
+    -   [Comparaison of Libraries providing multiple Major Modes - Emacswiki
+        ](https://www.emacswiki.org/emacs/MultipleModes).
+    An alternative to multiple modes is to use [Indirect buffers
+    ](https://www.gnu.org/software/emacs/manual/html_node/emacs/Indirect-Buffers.html).
+    You can reduce the scope of an indirect buffer by using `indirect-region` which is a
+    function described in [EmacsWiki: Indirect Buffers
+    ](https://www.emacswiki.org/emacs/IndirectBuffers), and now bundled with emacs.
+
+    There is also
+    [EmacsWiki: Narrow Indirect](https://www.emacswiki.org/emacs/NarrowIndirect)
+    the source code is [narrow-indirect.el
+    ](https://github.com/emacsmirror/narrow-indirect/blob/master/narrow-indirect.el).
 -   [Projectile](https://github.com/bbatsov/projectile)
     is a project interaction library for Emacs.
     It can manage git, mercurial, darcs, bazaar, lein, maven, sbt,
@@ -732,6 +744,44 @@ _   [EmacsWiki: Category Frames](https://www.emacswiki.org/emacs/CategoryFrames)
             {{< iref "#perspective" "perspective" >}})
     -   [Exploring large projects with Projectile and Helm Projectile
         ](http://tuhdo.github.io/helm-projectile.html)
+
+## Search
+-   [ag][] allows you to search using ag from inside Emacs.
+
+## Keys
+-   [Mastering Key Bindings in Emacs
+    ](https://www.masteringemacs.org/article/mastering-key-bindings-emacs).
+
+-   [general.el](https://github.com/noctuid/general.el) (GPL-3.0)
+    provides an unified interface for key definitions.
+-   <a name="hydra"></a>[Hydra][hydra]
+    by Oleh Krehel _abo-abo_ group common group of command by prefix, with an
+    interactive chooser for the bindings.
+    See {{< iref "#hercules" "hercules" >}} for an automatic hydra menu builder.
+-   [yasnippet](https://github.com/joaotavora/yasnippet)
+    is a template system for Emacs. It allows you to type an abbreviation and
+    automatically expand it into function templates.
+
+    Yasnippet is packaged in elpa, many snippets are in the snippet directory, this is
+    the[collection of snippets of Andre Cotti
+    ](https://github.com/AndreaCrotti/yasnippet-snippets/tree/master/snippets/org-mode)
+    also in the elpa package yasnippet-snippets, for many specific languages there is an
+    additional snippet collections in an elpa package.
+
+    -   [Yasnippet Manual](http://joaotavora.github.io/yasnippet/)
+    -   [EmacsWiki: Yasnippet](https://www.emacswiki.org/emacs/Yasnippet)
+
+
+## Other packages
+
+-   <a name="define-word"></a>[define-word][] by Oleh Krehel _abo-abo_
+    show the definition of a word inside emacs by parsing the result
+    of the search in [wordnick](http://wordnik.com/).
+-   [Bug Hunter](https://github.com/Malabarba/elisp-bug-hunter/)
+    is an Emacs library that finds the source of an error or
+    unexpected behavior inside an elisp configuration file
+-   <a name="elnode"></a> [elnode](https://github.com/nicferrier/elnode) (GPL)
+    ids an  evented IO webserver in Emacs Lisp.
 -   [scpaste](https://github.com/technomancy/scpaste)
     place an HTML copy of a buffer on the web on a server to which the
     user has SSH access.  It's similar in purpose to services such as
@@ -739,24 +789,6 @@ _   [EmacsWiki: Category Frames](https://www.emacswiki.org/emacs/CategoryFrames)
     [rafb.net](http://rafb.net). In elpa.
 -   [telephone line](https://github.com/dbordak/telephone-line)
     is an implementation of {{< iref "checkpointing#powerline" "Powerline" >}} for emacs.
--   [use-package](https://github.com/jwiegley/use-package) add a
-    macro which allows you to isolate each emacs package
-    configuration.  I'm reluctant to use it because, if it is missing
-    on some machine, all your init will fail.
--   [yasnippet](https://github.com/joaotavora/yasnippet)
-    is a template system for Emacs. It allows you to type an
-    abbreviation and automatically expand it into function templates.
-
-    Yasnippet is packaged in elpa, many snippets are in the snippet
-    directory, this is the [collection of snippets of Andre Cotti
-    ](https://github.com/AndreaCrotti/yasnippet-snippets/tree/master/snippets/org-mode)
-    also in the elpa package yasnippet-snippets, for many specific
-    languages there is an additional snippet collections in an elpa
-    package.
-
-    -   [Yasnippet Manual](http://joaotavora.github.io/yasnippet/)
-    -   [EmacsWiki: Yasnippet
-        ](https://www.emacswiki.org/emacs/Yasnippet)
 
 ## Tramp {#tramp}
 -   [Tramp (manual)](https://www.gnu.org/software/tramp/)
@@ -924,6 +956,7 @@ https://emacs.stackexchange.com/questions/12235/edit-file-as-root-over-when-alre
 [neotree]: https://github.com/jaypei/emacs-neotree
 [nxml]: https://www.emacswiki.org/emacs/NxmlMode
 [pabbrev]: https://www.emacswiki.org/emacs/PredictiveAbbreviation
+[polymode]: https://polymode.github.io/
 [posframes]: https://github.com/tumashu/posframe
 [powerline]: http://github.com/milkypostman/powerline/
 [rainbow-delimiters]: http://www.emacswiki.org/emacs/RainbowDelimiters
