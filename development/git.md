@@ -70,7 +70,7 @@ where concept is one of:
     [howto](http://www.google.com/search?q=git+howto), and
     [comparisons](http://www.google.com/search?q=git+comparison)
 -   The mailing list is `comp.version-control.git` archived at:
-    -   You find it archived at:
+    -   You find it archived at gmame _in 2021 gmame is unavailable_:
         [gmame  (search form)](http://search.gmame.org) with a choice of formats:
         [gmame.news: git](http://news.gmane.org/gmane.comp.version-control.git)
         [gmame blog-like interface : git
@@ -81,9 +81,8 @@ where concept is one of:
 -   [users mailing list on google groups
     ](http://groups.google.com/group/git-users)
 -   IRC  #git ([log](http://colabti.org/irclogger/irclogger_logs/git))
-    or #git-devel ([log
-    ](http://colabti.org/irclogger/irclogger_logs/git-devel))
-    channels on irc.freenode.net. #github #bitbucket and #gitlab have
+    or #git-devel ([log](http://colabti.org/irclogger/irclogger_logs/git-devel))
+    channels on irc.libera.chat. #github #bitbucket and #gitlab have
     also their channel.
 -   You can have a fresh view of the latest official git
     documentation at
