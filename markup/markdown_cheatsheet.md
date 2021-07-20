@@ -389,9 +389,22 @@ replaced by minus, and omitting special characters_.
 [link to the "Writing links references" Subsection](#writing-links-references)
 ```
 
-## Markdown parsers and attributes {#attributes}
+<div class="example">
+[link to the "Writing links references" Subsection](#writing-links-references)
+</div>
 
-The basis of defining a link target is in the {{< iref "#list" "previous section" >}}.
+<a name="H_attributes"></a>
+## Title Attributes {#attributes}
+
+
+A special syntax for attributes is not part of [Common Mark][] nor [GFM][], but some
+formatter like
+[Python-Markdown](https://python-markdown.github.io/extensions/attr_list/), maruku,
+[Kramdown](https://kramdown.gettalong.org/syntax.html#attribute-list-definitions),
+[PHP Markdown](https://michelf.ca/projects/php-markdown/extra/#spe-attr)
+[Pandoc](https://pandoc.org/MANUAL.html#heading-identifiers), [GoldMark][] let you define
+attributes for generated html.
+
 
 The general syntax for attributes is
 ```text
@@ -401,31 +414,73 @@ The general syntax for attributes is
 We have key-value pairs, `#myid` is equivlallent to `id=myid`,
 `.class1` to `class=class1`,
 
-An attribute list for a header is put on the line of the header.
-for pandoc or php-markdown don't use `{: }` but `{ }`.
+The delimiters used in _Python Markdown_, _maruku_ and _kramdown_ are `{: }`.  _PHP
+Markdown Extra_, _Pandoc_ and _GoldMark_ uses `{ }`.
 
+All previously cited  formatters allow to apply the attributes to any section level,
+few have a [wider use of attributes](#extended_attributes).
+
+Attributes can be used to define an _id_:
+
+```markdown
+#### subsection with id {#manual_id}
+....
+<a id="without-id"></a>
+#### subsection whithout id
+
+For the [first subsection](#manual_id) we can follow a link to the manual id
+but no longer to the [automatic id](#subsection-with-id) which has been replaced.
+
+For the [second subsection](#without-id) the [automatic id](#subsection-without-id)
+is still valid.
+```
+
+<div class="example"></a>
+
+#### subsection with id {#manual_id}
+....
+<a id="without-id"></a>
+#### subsection whithout id
+
+For the [first subsection](#manual_id) we can follow a link to the manual id
+but no longer to the [automatic id](#subsection-with-id) which has been replaced.
+
+For the [second subsection](#without-id) the [automatic id](#subsection-without-id)
+is still valid.
+</div>
+
+### Extended block attributes {#extended_attributes}
+_Markdown Extra_, _Maruku_, _Python-markdown_ and _Kramdown_ allow also to apply an
+attribute list to any container, paragraph, blockquote, source code, inline code ...
+
+```markdown
+You can also define id in attributes for a paragraph. {: #attr-example .css-class }
+```
+
+It generates:
+```html
+<p class="css-class" id="attr-example">You can also define id in attributes for a paragraph.</p>
+```
 
 For a span level element you put it after the element. So:
-```text
+```markdown
 We are here inside the **second**{: #id1} paragraph.
 {: #otherid}
 ```
 
-generate:
+generates:
 
 ```html
 <p id="otherid">We are here inside the <strong id="id1">second</strong> paragraph.</p>
 ```
 
-This work at least in python-markdown, maruku, and [kramdown
-](https://kramdown.gettalong.org/syntax.html).
-
-For pandoc you should use *native spans*.
-```text
+For [Pandoc][] you should use *native spans*.
 ```markdown
 <span id=otherid>We are here inside the <span id=id1>**second**</span>
 paragraph</span>
 ```
+
+Pandoc allow also attributes to fenced code blocks and verbatim text.
 
 
 We take  a small example to show how attributes are handled
@@ -437,11 +492,11 @@ Simple test
 
 ## first section
 We refer here to the {{< iref "#deux" "paragraph" >}} inside this
-{{< iref "#sub_two" "subsection" >}}. Yes {{< iref "#otherid" "this one" >}}.
+{{< iref "#sub_two" "subsection" >}}. Yes [this one](#otherid").
 
 ## second section
 First an useless paragraph.
-{: #python-markdown_style_ref class="red"}
+{: class="red"}
 
 ### subparagraph of third paragraph {#sub_two class="blue"}
 <div id="deux">
@@ -450,7 +505,7 @@ We are here inside the **second** paragraph.
 </div>
 ```
 
-With python markdown with _Extra_ extensions we get
+With [Python Markdown][] with _Extra_ extensions we get
 ```html
 <h1 id="simple-test">Simple test</h1>
 <h2 id="first-section">first section</h2>
@@ -477,7 +532,7 @@ With pandoc
 
 The `{: }` is not understood.
 
-With pandoc when disabling *raw_html*:
+With [Pandoc][] when disabling *raw_html*:
 ```html
 <h1 id="simple-test">Simple test</h1>
 <h2 id="first-section">first section</h2>
@@ -489,13 +544,16 @@ With pandoc when disabling *raw_html*:
 <p>We are here inside the <strong>second</strong> paragraph. &lt;a id=&quot;otherid&quot;&gt;&lt;/a&gt;</p>
 </div>
 ```
+
 The only attributes rendered are those in `<div>` and the `{ }`
 syntax. It could seem strange that  `<div>` is handled even when
-*raw_html* is disabled, but these `<div>` are not raw html for pandoc
-but *native div*, in the same way there are *native span*.
+*raw_html* is disabled, but these `<div>` are not raw html for [Pandoc][]
+but [native div](https://pandoc.org/MANUAL.html#extension-native_divs),
+in the same way there are [
+native span](https://pandoc.org/MANUAL.html#extension-native_spans).
 
 This is quite important when converting to an other text format,
-because if we use pandoc to convert this text to _asciidoc_ we get:
+because if we use [Pandoc][] to convert this text to _asciidoc_ we get:
 
 ```markdown
 Simple test
@@ -532,25 +590,27 @@ is not translated and appear as raw html.
 Here's our logo (hover to see the title text):
 
 Inline-style:
-![alt text](http://www.mzlinux.org/files/images/moon1.png "Logo Title Text 1")
+![alt text](/images/moon1.png "Logo Title Text 1")
 
 Reference-style:
 ![alt text][logo]
 
-[logo]: http://www.mzlinux.org/files/images/moon1.png "Logo Title Text 2"
+[logo]: /images/moon1.png "Logo Title Text 2"
 ```
 
 <div class="example">
 
+as link [first link](/images/moon1.png "Logo Title Text 1").
+
 Here's our logo (hover to see the title text):
 
 Inline-style:
-![alt text]( http://www.mzlinux.org/files/images/moon1.png "Logo Title Text 1")
+![alt text](/images/moon1.png "Logo Title Text 1")
 
 Reference-style:
 ![alt text][logo]
 
-[logo]:  http://www.mzlinux.org/files/images/moon1.png "Logo Title Text 2"
+[logo]:  /images/moon1.png "Logo Title Text 2"
 
 </div>
 
