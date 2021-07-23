@@ -69,21 +69,41 @@ where concept is one of:
     [guides](http://www.google.com/search?q=git+guide),
     [howto](http://www.google.com/search?q=git+howto), and
     [comparisons](http://www.google.com/search?q=git+comparison)
--   The mailing list is `comp.version-control.git` archived at:
-    -   You find it archived at gmame _in 2021 gmame is unavailable_:
+-   [Git - Community](https://git-scm.com/community) gives the references to the git
+    mailing lists, news channels, and IRC groups.
+
+-   The mailing list  is `git@vger.kernel.org.` it is archived at
+    [git@vger.kernel.org list mirror - public-inbox.org](https://public-inbox.org/git/)
+    and also available on usenet at
+    `nntp://news.public-inbox.org/inbox.comp.version-control.git`,
+    `nntp://news.gmane.io/gmane.comp.version-control.git` also available through
+    [Tor and other mirrors](https://public-inbox.org/git/#mirror)
+    <!-- You find it archived at gmame _in 2021 gmame is unavailable_:
         [gmame  (search form)](http://search.gmame.org) with a choice of formats:
         [gmame.news: git](http://news.gmane.org/gmane.comp.version-control.git)
         [gmame blog-like interface : git
         ](http://blog.gmane.org/gmane.comp.version-control.git),
-        [gmame rss feeds](http://rss.gmane.org/topics/excerpts/gmane.comp.version-control.git)
-    -   It is also mirrored at [marc: git](http://marc.info/?l=git)
-        *(search form)*.
+        [gmame rss feeds
+        ](http://rss.gmane.org/topics/excerpts/gmane.comp.version-control.git) -->
+
+    It is also mirrored at [marc: git](http://marc.info/?l=git) *(search form)*.
+
 -   [users mailing list on google groups
     ](http://groups.google.com/group/git-users)
 -   IRC  #git ([log](http://colabti.org/irclogger/irclogger_logs/git))
     or #git-devel ([log](http://colabti.org/irclogger/irclogger_logs/git-devel))
     channels on irc.libera.chat. #github #bitbucket and #gitlab have
     also their channel.
+-   [Git Rev News](https://git.github.io/rev_news/rev_news/)
+     is a digest of all things Git, written collaboratively on GitHub by volunteers.
+     They aggregate the activities on the Git mailing list, and link to some of the
+     interesting Git-related articles, tools and projects.
+
+     -   Git Rev News is available as [RSS/atom feed](https://git.github.io/feed.xml)
+         or by signing  up for the [Email Newsletter](http://eepurl.com/bjP2WT).
+     -   [Git Rev News latest edition](https://git.github.io/rev_news/)
+     -   The previous newletters are stored at
+         [Git Rev News Archive](https://git.github.io/rev_news/archive/).
 -   You can have a fresh view of the latest official git
     documentation at
     [Gitweb access to the Documentation folder of the git *git* repository
