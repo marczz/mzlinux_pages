@@ -298,6 +298,15 @@ See also {{< iref "#webcam" "Webcam" >}}.
     (GPL) is a gnome project written in python. It is a desktop
     session recorder for the Free Desktop. It records your session
     into an Ogg Theora .
+-   [peek](https://github.com/phw/peek)  (GPL-3.0)
+    is an animated GIF screen recorder with GUI .
+    _Peek_ was built for the specific use case of recording screen areas, e.g. for
+    easily showing UI features of your own apps or for showing a bug in bug report.
+
+    Peek is optimized for generating animated GIFs, but you can also directly record to
+    WebM or MP4 if you prefer.
+
+    Peek is [in Debian](https://packages.debian.org/search?keywords=peek).
 -   [recordMyDesktop - Github](https://github.com/Enselic/recordmydesktop/)
     is a CLI desktop session recorder written in C. It records theora video, and
     ogg vorbis audio.
@@ -314,6 +323,15 @@ See also {{< iref "#webcam" "Webcam" >}}.
     -   [recordMyDesktop - Sourceforge](http://recordmydesktop.sourceforge.net/)
         was the home of recordmydesktop until 3.8.1.
     -   [RecordMyDesktop - ArchWiki](https://wiki.archlinux.org/title/RecordMyDesktop).
+-   [screenkey](https://www.thregr.org/~wavexx/software/screenkey/) (GPL-3.0)
+    is a Python/GTK3  screencast tool to display your keys inspired by
+    [Screenflick](http://www.araelium.com/screenflick/). for MacOS
+
+    The Gui is working in X11 and Xwayland. _not yet wayland._
+
+    Screenkey is [in Debian](https://packages.debian.org/search?keywords=screenkey).
+
+    -   [screenkey - GitHub](https://gitlab.com/screenkey/screenkey)
 -   [SimpleScreenRecorder](https://en.wikipedia.org/wiki/SimpleScreenRecorder) (GPL-3.0)
     is a Qt-based screencast software thar can record the entire screen or part of it,
     or record OpenGL applications directly. It uses libav/ffmpeg libraries for encoding,
