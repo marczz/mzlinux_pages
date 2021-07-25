@@ -58,23 +58,69 @@ My {{< iref "mutt" "Mutt page" >}}
     -   [aerc - sourcehut git](https://git.sr.ht/~sircmpwn/aerc).
     -   _aerc_ documentation is in the man pages; their source is in
         [aerc/doc](https://git.sr.ht/~sircmpwn/aerc/tree/master/item/doc).
-    -   [aerc miling list](https://lists.sr.ht/~sircmpwn/aerc), the irc is `#aerc2` on
-        freenode.
--   [Alpine](http://www.washington.edu/alpine/)
-    (apache license) from Washington University is the successor of
-    [Pine](http://www.washington.edu/pine/)
-    (free software with half-closed license!)
-    -   Now the development of Alpine continue in a fork:
-        [re-alpine](http://sourceforge.net/projects/re-alpine/),
-        [re-alpine git repo
-        ](http://sourceforge.net/p/re-alpine/code/ci/master/tree/).
+    -   [aerc mailing list](https://lists.sr.ht/~sircmpwn/aerc), the irc is `#aerc2` on
+        libra.chat.
+-   <a name="alpine"></a>[Alpine](http://www.washington.edu/alpine/) (apache license)
+    from Washington University is the successor of
+    [Pine](http://www.washington.edu/pine/)(free software with half-closed license!).
+
+    Alpine supports IMAP, POP, SMTP, NNTP and LDAP protocols natively. Ut works with
+    folders in Maildir, mbox, or mh format.
+
+    Alpine itself was dropped by Washington university in 2008,
+    and development of Alpine continued in the fork:
+        [re-alpine](http://sourceforge.net/projects/re-alpine/)
+        ( [re-alpine git repo](http://sourceforge.net/p/re-alpine/code/ci/master/tree/))
+
+    This fork was no longer developped after 2013, Eduardo Chappa a contributor of Pine,
+    alpine, and re-alpine, maintains his own version of Alpine, in his
+    [Alpine Release Home Page](http://alpine.x10host.com/). This version is the one
+    packaged in Debian and ArchLinux.
+
+    -   Wikipedia {{< wp "Alpine (email client)" >}}.
+    -   [alpine Git Repository](https://repo.or.cz/alpine.git)
     -   [ArchWiki: Alpine](https://wiki.archlinux.org/index.php/Alpine).
--   [cone - COnsole Newsreader And Emailer](http://www.courier-mta.org/cone/)
-    (GPL) handles local mail folders, maildirs, IMAP and POP3
-    accounts, and Usenet newsgroups.  Cone shares a lot of its code
-    base with the Courier mail server.  and supports SSL/TLS and SASL,
-    PGP/GPG based encryption, and digital signatures.
--   <a name=gnus"></a>[Gnus](http://www.gnus.org/) by Lars Magne Ingebrigtsen.
+
+-   <a name="claws"></a>
+    [Claws Mail](https://www.claws-mail.org) is a lightweight and highly configurable
+    email client writen in C/GTK2 until version 3.18 and C/GTK3 since version 4.0 July
+    2020.
+
+    Claws is also an {{< iref "feed#nntp" "Usenet Reader" >}} and also a
+    {{< iref "feed#rss" "RSS Reader" >}} through a plugin.
+
+    Claws has [many features](https://www.claws-mail.org/features.php), some available
+    through plugins.
+
+    _claws-mail_ is a Debian package, along with numerous additional packages for
+    functionalities and plugins.
+
+    -   Wikipedia {{< wp "Claws Mail" >}}
+    -   [Claws Mail - Documentation](https://www.claws-mail.org/documentation.php)
+    -   [Claws Mail - Plugins](https://www.claws-mail.org/plugins.php)
+    -   [Claws Git repository](https://git.claws-mail.org/)
+
+-   <a name="cone"></a>[cone - COnsole Newsreader And Emailer
+    ](http://www.courier-mta.org/cone/) (GPL)
+    is part of the {{< iref "#courier" "Courier MTA" >}} software suite.
+    handles local mail folders, maildirs, IMAP and POP3
+    accounts, and {{< iref "feed#nntp" "Usenet newsgroups" >}}}.
+    Cone shares a lot of its code base with the Courier mail server.  and supports
+    SSL/TLS and SASL, PGP/GPG based encryption, and digital signatures.
+
+    The last release of cone is _(checked in 2021)_ v 1.2 March 2020.
+
+    While Debian propose recent package of {{< iref "#courier" "Courier" >}}, it stopped
+    to [package cone](https://tracker.debian.org/pkg/cone) since _jessy_ with the old
+    releqse 0.89.1.
+-   {{< wp "GNOME Evolution" >}} (LGPL)
+    is the official personal information manager for GNOME.
+    It combines e-mail, address book, calendar, task list, note-taking, rss reader
+    throuh a plugin.
+    It is an heavy software with many Gnome dependncies.
+
+    -   [GNOME/Evolution - ArchWiki](https://wiki.archlinux.org/title/GNOME/Evolution)
+-   <a name="gnus"></a>[Gnus](http://www.gnus.org/) by Lars Magne Ingebrigtsen.
     -   [Gnus Manual](http://www.gnu.org/software/emacs/manual/html_node/gnus/)
     -   [Practical guide to use Gnus with Gmail
         ](https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/gnus-guide-en.org)
@@ -82,19 +128,6 @@ My {{< iref "mutt" "Mutt page" >}}
         ](https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-en.org)
         by 陈斌 Chen bin.
     -   [EmacsWiki: GnusGmail](https://www.emacswiki.org/emacs/GnusGmail)
--   [S-nail](http://sourceforge.net/projects/s-nail/) ([open source Licence
-    ](http://sourceforge.net/p/s-nail/code/ci/master/tree/COPYING))
-    is the continuation of [Heirloom mailx](http://heirloom.sourceforge.net/mailx.html)
-    from the [Heirloom project](http://heirloom.sourceforge.net/) ([CDDL
-    ](http://en.wikipedia.org/wiki/Common_Development_and_Distribution_License))
-    _a set of unix sys V compliant tools no longer developped since 2009_
-
-    _S-nail_ also packaged with the previous name _Heirloom mailx_ is a mail user agent
-    with an interface like the original Berkeley mailx, but that supports mime, imap,
-    pop3, ssl, s/mime. It was previously known as *nail*.
-    -   [S-nail git repo](http://sourceforge.net/p/s-nail/code/ci/master/tree/)
-    -   [Using Mailx with Gmail](http://forums.debian.net/viewtopic.php?f=16&t=103322)
-    -   [ArchWiki: S-nail](https://wiki.archlinux.org/index.php/S-nail)
 -   <a name="mu4e"></a>
     [mu4e (documentation)](http://www.djcbsoftware.nl/code/mu/mu4e/index.html)
     is an emacs-based e-mail clien based on the
@@ -111,6 +144,19 @@ My {{< iref "mutt" "Mutt page" >}}
 -   [Roundcube](https://roundcube.net/) (GPL)
     is a browser-based multilingual IMAP client.
     -   [Archwiki: Roundcube](https://wiki.archlinux.org/index.php/Roundcube).
+-   [S-nail](http://sourceforge.net/projects/s-nail/) ([open source Licence
+    ](http://sourceforge.net/p/s-nail/code/ci/master/tree/COPYING))
+    is the continuation of [Heirloom mailx](http://heirloom.sourceforge.net/mailx.html)
+    from the [Heirloom project](http://heirloom.sourceforge.net/) ([CDDL
+    ](http://en.wikipedia.org/wiki/Common_Development_and_Distribution_License))
+    _a set of unix sys V compliant tools no longer developped since 2009_
+
+    _S-nail_ also packaged with the previous name _Heirloom mailx_ is a mail user agent
+    with an interface like the original Berkeley mailx, but that supports mime, imap,
+    pop3, ssl, s/mime. It was previously known as *nail*.
+    -   [S-nail git repo](http://sourceforge.net/p/s-nail/code/ci/master/tree/)
+    -   [Using Mailx with Gmail](http://forums.debian.net/viewtopic.php?f=16&t=103322)
+    -   [ArchWiki: S-nail](https://wiki.archlinux.org/index.php/S-nail)
 -   [Sup](http://supmua.org/) (GPL)
     is a console-based email client written in ruby.
     It uses a list of threads, which are each hierarchical collections email messages.
@@ -118,12 +164,23 @@ My {{< iref "mutt" "Mutt page" >}}
     -   [Sup Wiki](https://github.com/sup-heliotrope/sup/wiki).
     -   [GitHub: Sup](https://github.com/sup-heliotrope/sup/)
     -   [ArchWiki: Sup](https://wiki.archlinux.org/index.php/Sup)
--   [Mozilla Thunderbird](http://en.wikipedia.org/wiki/Mozilla_Thunderbird)
-    (MPL/GPL/LGPL),
-    [Thunderbird Home](http://www.mozilla.com/thunderbird/)
-    cross-platform e-mail and news client.
-    -   [ArchWiki: Thunderbird
-        ](https://wiki.archlinux.org/index.php/Thunderbird).
+-   <a name="thunderbird"></>[Mozilla Thunderbird
+    ](http://en.wikipedia.org/wiki/Mozilla_Thunderbird) (MPL/GPL/LGPL),
+    cross-platform e-mail and {{< iref "feed#nntp"" "news client" >}}.
+
+    {{< wp "SeeMonkey" >}} is an other Mozilla / Gecko mail and nntp client.
+    -   [Thunderbird Home](http://www.mozilla.com/thunderbird/)
+    -   [ArchWiki: Thunderbird](https://wiki.archlinux.org/index.php/Thunderbird).
+-   <a name="sylpheed"></a>{{< wp "Sylpheed" >}} (GPL/LGPL)
+    is an e-mail client written in C / GTK2 (no GTK3 as far as 2021).
+    Is is also an {{< iref "feed#nntp"" "Usenet client" >}}.
+
+    {{< iref "#claws" "Claws" >}} is a _Sylpheed_ fork.
+    _Sylpheed_ is packaged in Debian.
+    -   [Sylpheed Home](https://sylpheed.sraoss.jp/en/)
+    -   [Sylpheed plugins](https://sylpheed.sraoss.jp/en/plugin.html)
+        few plugins, mainly targeted to windows.  The {{< iref "#claws" "Claws" >}}
+        fork has more plugins.
 
 # Temporary email adresses
 -   [jetable.org](http://www.jetable.org/en/index),
@@ -270,13 +327,21 @@ notification daemon as the are weighting only
 -   [Gentoo Wiki: Complete Virtual Mail Server
     ](https://wiki.gentoo.org/wiki/Complete_Virtual_Mail_Server)
     a full manual distributed in subpages.
--   {{< wp "Qmail" >}} ({{< wp "public domain" >}}) [Qmail Home](http://www.qmail.org/top.html) smtp server and replacement for sendmail by {{< wp "Daniel J. Bernstein" >}}.
 -   [Maildir format](http://cr.yp.to/proto/maildir.html) ,
     [maildir(5) man page from qmail](http://www.qmail.org/man/man5/maildir.html)
+
 -   [Bongo](http://bongo-project.org/)
     (GPL) the continuation of previous Novell {{< wp "Hula" >}} is a
     server-side e-mail and calendaring server, and a web GUI for
     accessing your e-mail and calendar.
+-   <a name="courier"></a>{{< wp "Courier" >}} (GPL)
+    is an integrated mail/groupware server based on ESMTP, IMAP, POP3, LDAP, TLS, and
+    HTTP protocols.
+
+    In Debian the _Courier_ software suite is split in many packages
+    -   [Courier Mail Server Home](http://www.courier-mta.org/)
+    -   [Courier - GitHub](https://github.com/svarshavchik/courier).
+    -    [Courier contrib - GitHub](https://github.com/svarshavchik/courier-contrib)
 -   [OpenSMTPD](https://www.opensmtpd.org/)
     is a complete smtp implementation, part of openBSD he is also
     available in other BSD flavors and linux including a Debian
@@ -285,8 +350,11 @@ notification daemon as the are weighting only
         ](https://www.opensmtpd.org/manual.html).
     -   [OpenSMTPD FAQ
         ](https://www.opensmtpd.org/faq/index.html).
+-   {{< wp "Qmail" >}} (public domain)
+    smtp server and replacement for sendmail by {{< wp "Daniel J. Bernstein" >}}.
+    -   [Qmail Home](http://www.qmail.org/top.html)
 
-## Exim
+## Exim {#exim}
 {{< wp "Exim" >}} (GPL) the default MTA on Debian.
 
 -   [Exim Home page](http://www.exim.org/index.html)
