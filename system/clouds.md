@@ -4,7 +4,6 @@ title: Clouds
 
 See also
 {{< iref "network_filesystems#distributed_filesystems" "Distributed File Systems" >}},
-{{< iref "scm#fs_sync" "File systems synchronization" >}},
 {{< iref "backup" "Backup" >}}.
 
 ------
@@ -14,8 +13,11 @@ See also
     {{< wp "Comparison of file hosting services" >}},
     {{< wp "Comparison of online backup services" >}}.
 -   [ArchWiki: backup - cloud storage
-    ](https://wiki.archlinux.org/index.php/Synchronization_and_backup_programs#Cloud_storage).
-
+    ](https://wiki.archlinux.org/index.php/Synchronization_and_backup_programs#Cloud_storage),
+    [list of cloud storage servers
+    ](https://wiki.archlinux.org/index.php/List_of_applications#Cloud_storage_servers),
+    [list of cloud synchronization clients
+    ](https://wiki.archlinux.org/index.php/List_of_applications#Cloud_synchronization_clients).
 -   [Backup Review](http://www.backupreview.com/) review many storage plans.
 -   [appappeal: Top 40 Free File Sharing Apps](http://www.appappeal.com/apps/file-sharing)
 -   Richard Stallman warn us: [Cloud computing is a trap
@@ -609,7 +611,7 @@ Is a cloud block storage S3 compatible. The minimum plan is 1TB. And it applies 
 uniform cost of 5.90$/TB/Month -August 2020 Pricing_, with free in and out trafic, and
 free api calls.
 
-# [Yandex.Disk](http://disk.yandex.com/)
+# Yandex.Disk
 
 [Yandex.Disk](http://disk.yandex.com/) gives 10GB free, 100G 20$year,
 1T 100$/year _2017_.
@@ -1050,6 +1052,7 @@ See also {{< iref "p2p#p2p_file_sharing" "P2P File sharing" >}},
 {{< iref "task_management#note_taking" "Notes Taking" >}}.
 
 _I list only services with a password protection and/or encryption._
+
 
 <a name="android_web_upload"></a>
 For the web interface android browsers you cannot use drag & drop, but
