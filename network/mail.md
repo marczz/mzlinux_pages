@@ -38,7 +38,6 @@ title: Mail
 
 # Mail User Agents
 
-My {{< iref "mutt" "Mutt page" >}}
 
 -   Wikipedia: {{< wp "Comparison of e-mail clients" >}} and {{< wp "Webmail" >}},
     {{< wp "Mixmaster anonymous remailer" >}}
@@ -50,6 +49,9 @@ My {{< iref "mutt" "Mutt page" >}}
 -   [Comparing Mail Back Ends
     ](http://www.gnu.org/software/emacs/manual/html_node/gnus/Comparing-Mail-Back-Ends.html)
     from [Gnus Manual](http://www.gnu.org/software/emacs/manual/html_node/gnus/)
+
+
+## Terminal clients
 -   [aerc](https://aerc-mail.org/)
     is a terminal mail client with support for IMAP, Maildir, SMTP, and sendmail
     transfer protocols. It has Vim-style keybindings and render HTML emails with an
@@ -80,26 +82,6 @@ My {{< iref "mutt" "Mutt page" >}}
     -   Wikipedia {{< wp "Alpine (email client)" >}}.
     -   [alpine Git Repository](https://repo.or.cz/alpine.git)
     -   [ArchWiki: Alpine](https://wiki.archlinux.org/index.php/Alpine).
-
--   <a name="claws"></a>
-    [Claws Mail](https://www.claws-mail.org) is a lightweight and highly configurable
-    email client writen in C/GTK2 until version 3.18 and C/GTK3 since version 4.0 July
-    2020.
-
-    Claws is also an {{< iref "feed#nntp" "Usenet Reader" >}} and also a
-    {{< iref "feed#rss" "RSS Reader" >}} through a plugin.
-
-    Claws has [many features](https://www.claws-mail.org/features.php), some available
-    through plugins.
-
-    _claws-mail_ is a Debian package, along with numerous additional packages for
-    functionalities and plugins.
-
-    -   Wikipedia {{< wp "Claws Mail" >}}
-    -   [Claws Mail - Documentation](https://www.claws-mail.org/documentation.php)
-    -   [Claws Mail - Plugins](https://www.claws-mail.org/plugins.php)
-    -   [Claws Git repository](https://git.claws-mail.org/)
-
 -   <a name="cone"></a>[cone - COnsole Newsreader And Emailer
     ](http://www.courier-mta.org/cone/) (GPL)
     is part of the {{< iref "#courier" "Courier MTA" >}} software suite.
@@ -113,14 +95,8 @@ My {{< iref "mutt" "Mutt page" >}}
     While Debian propose recent package of {{< iref "#courier" "Courier" >}}, it stopped
     to [package cone](https://tracker.debian.org/pkg/cone) since _jessy_ with the old
     releqse 0.89.1.
--   {{< wp "GNOME Evolution" >}} (LGPL)
-    is the official personal information manager for GNOME.
-    It combines e-mail, address book, calendar, task list, note-taking, rss reader
-    throuh a plugin.
-    It is an heavy software with many Gnome dependncies.
-
-    -   [GNOME/Evolution - ArchWiki](https://wiki.archlinux.org/title/GNOME/Evolution)
 -   <a name="gnus"></a>[Gnus](http://www.gnus.org/) by Lars Magne Ingebrigtsen.
+    is an emacs based e-mail and {{< iref "feed#nntp" "news (nntp)" >}} client
     -   [Gnus Manual](http://www.gnu.org/software/emacs/manual/html_node/gnus/)
     -   [Practical guide to use Gnus with Gmail
         ](https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/gnus-guide-en.org)
@@ -130,14 +106,13 @@ My {{< iref "mutt" "Mutt page" >}}
     -   [EmacsWiki: GnusGmail](https://www.emacswiki.org/emacs/GnusGmail)
 -   <a name="mu4e"></a>
     [mu4e (documentation)](http://www.djcbsoftware.nl/code/mu/mu4e/index.html)
-    is an emacs-based e-mail clien based on the
+    is an emacs-based e-mail client based on the
     [mu](http://www.djcbsoftware.nl/code/mu) e-mail indexer/searcher
     by  Dirk-Jan Binnema (djcb)
     -   [introducing mu4e
         ](http://emacs-fu.blogspot.fr/2012/08/introducing-mu4e-for-email.html)
         by djcb.
-    -   [mu4 for Gmail guide in StackExchange
-        ](http://emacs.stackexchange.com/a/12932)
+    -   [mu4 for Gmail guide in StackExchange](http://emacs.stackexchange.com/a/12932)
     -   [EmacsWiki: mu4e](http://www.emacswiki.org/emacs/mu4e)
     -   [Mu CheatSheet](http://www.djcbsoftware.nl/code/mu/cheatsheet.html)
 -   [mailfilter](http://mailfilter.sourceforge.net/) (GPL) a spam filter.
@@ -164,6 +139,34 @@ My {{< iref "mutt" "Mutt page" >}}
     -   [Sup Wiki](https://github.com/sup-heliotrope/sup/wiki).
     -   [GitHub: Sup](https://github.com/sup-heliotrope/sup/)
     -   [ArchWiki: Sup](https://wiki.archlinux.org/index.php/Sup)
+
+## GUI clients
+-   <a name="claws"></a>
+    [Claws Mail](https://www.claws-mail.org) is a lightweight and highly configurable
+    email client writen in C/GTK2 until version 3.18 and C/GTK3 since version 4.0 July
+    2020.
+
+    Claws is also an {{< iref "feed#nntp" "Usenet Reader" >}} and also a
+    {{< iref "feed#rss" "RSS Reader" >}} through a plugin.
+
+    Claws has [many features](https://www.claws-mail.org/features.php), some available
+    through plugins.
+
+    _claws-mail_ is a Debian package, along with numerous additional packages for
+    functionalities and plugins.
+
+    -   Wikipedia {{< wp "Claws Mail" >}}
+    -   [Claws Mail - Documentation](https://www.claws-mail.org/documentation.php)
+    -   [Claws Mail - Plugins](https://www.claws-mail.org/plugins.php)
+    -   [Claws Git repository](https://git.claws-mail.org/)
+
+-   {{< wp "GNOME Evolution" >}} (LGPL)
+    is the official personal information manager for GNOME.
+    It combines e-mail, address book, calendar, task list, note-taking, rss reader
+    throuh a plugin.
+    It is an heavy software with many Gnome dependncies.
+
+    -   [GNOME/Evolution - ArchWiki](https://wiki.archlinux.org/title/GNOME/Evolution)
 -   <a name="thunderbird"></>[Mozilla Thunderbird
     ](http://en.wikipedia.org/wiki/Mozilla_Thunderbird) (MPL/GPL/LGPL),
     cross-platform e-mail and {{< iref "feed#nntp"" "news client" >}}.
@@ -181,6 +184,19 @@ My {{< iref "mutt" "Mutt page" >}}
     -   [Sylpheed plugins](https://sylpheed.sraoss.jp/en/plugin.html)
         few plugins, mainly targeted to windows.  The {{< iref "#claws" "Claws" >}}
         fork has more plugins.
+
+## Webmail
+
+-   <a name="rainloop">[RainLoop](http://www.rainloop.net) (AGPL v3 for the community
+    edition)
+    is a webmail with support of IMAP and SMTP protocols including SSL and STARTTLS.
+    It needs a web server apache or nginx, and a database mariadb, postgresql or
+    sqlite3.
+
+    There is a [Debian RainLoop package](https://tracker.debian.org/pkg/rainloop).
+
+    -   [Rainloop - GitHub](https://github.com/RainLoop/rainloop-webmail)
+    -   [RainLoop documentation](http://www.rainloop.net/docs/)
 
 # Temporary email adresses
 -   [jetable.org](http://www.jetable.org/en/index),
