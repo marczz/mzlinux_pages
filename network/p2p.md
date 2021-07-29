@@ -2,8 +2,6 @@
 title: P2P
 ---
 
-{{% toc /%}}
-
 See also {{< iref "irc" "IRC" >}},
 {{< iref "xmpp" "XMPP" >}},
 {{< iref "sip" "SIP" >}},
@@ -13,11 +11,10 @@ See also {{< iref "irc" "IRC" >}},
 
 
 # P2P references
--   Wikipedia: {{< wp "P2P" >}}, {{< wp "Friend-to-friend" >}} _F2F_, {{< wp "Anonymous P2P" >}},
-    {{< wp "Private peer-to-peer" >}}, {{< wp "Darknet" >}}, {{< wp "I2P" >}} _invisible internet
-    project_, {{< wp "Comparison of file sharing applications" >}},
-    {{< wp "Direct Connect (protocol)"  "Direct Connect" >}},
-    {{< wp "Advanced Direct Connect" >}}, {{< wp "Comparison of ADC software" >}}
+-   Wikipedia: {{< wp "P2P" >}}, {{< wp "Friend-to-friend" >}} _F2F_,
+    {{< wp "Anonymous P2P" >}}, {{< wp "Private peer-to-peer" >}}, {{< wp "Darknet" >}},
+    {{< wp "I2P" >}} _invisible internet project_,
+    {{< wp "Comparison of file sharing applications" >}},
 -   [infoAnarchy](http://www.infoanarchy.org/) is a wiki on the
     subject of information retrieval, distribution and management.
     It contains numerous references to P2P.
@@ -25,6 +22,20 @@ See also {{< iref "irc" "IRC" >}},
     A list of peer-to-peer resources.
 -   [Awesome decentralized](https://github.com/croqaz/awesome-decentralized)
     Awesome distributed, decentralized, p2p apps or tools.
+
+## Direct connect
+-   Wikipedia:     {{< wp "Direct Connect (protocol)"  "Direct Connect" >}},
+    {{< wp "Advanced Direct Connect" >}}, {{< wp "Comparison of ADC software" >}}
+
+-   [EiskaltDC++](https://github.com/eiskaltdcpp/eiskaltdcpp) (GNU-GPL)
+    EiskaltDC++ is a cross-platform file sharing program that uses the Direct Connect
+    (DC aka NMDC) and Advanced Direct Connect (ADC) protocols. It is compatible with
+    DC++, AirDC++, FlylinkDC++ and other DC clients. EiskaltDC++ also interoperates with
+    all common DC hub software. Debian has several _eiskaltdcpp_ packages with CLI
+    interface or QT5 or GTK3.
+-   [NCurses Direct Connect _ncdc_](https://dev.yorhel.nl/ncdc)
+    is a lightweight direct connect client with a  ncurses interface.
+    [ncdc is packaged in Debian](https://tracker.debian.org/pkg/ncdc).
 
 # Bittorent {#bittorent}
 Bittorent is a client application for the torrent peer-to-peer (P2P)
@@ -94,12 +105,15 @@ informations in a `.torrent` file.
         and [Wiki](https://trac.transmissionbt.com/wiki)
     -   [ArchWiki: Transmission
         ](https://wiki.archlinux.org/index.php/Transmission)
--   [Vuze](https://www.vuze.com/) (previously Azureus)
+-   <a name="vuze"></a>[Vuze](https://www.vuze.com/) (previously _Azureus_) (GPL-2.0)
     is a java bittorrent client. In addition to downloading .torrent
     files, Azureus allows to view, publish and share DVD and HD
     quality video content.
-    Vuze is in Debian, but in _2017_ only an old version, may be
-    because of the licence of new releases.
+
+    Vuze
+    was in Debian, [it is no longer the case
+    ](https://tracker.debian.org/pkg/azureus), there is some
+    [licence incompatibility](https://wiki.vuze.com/w/Vuze_License).
     -   [Vuze Wiki](https://wiki.vuze.com/).
 
 ## WebTorrent {#webtorrent}
@@ -204,9 +218,6 @@ rely on {{< wp "Anonymous P2P" >}}, mainly through {{< wp "I2P" >}}; or on
 {{< wp "Friend-to-friend"  "F2F (Friend to Friend" >}}.
 
 
--   [infoAnarchy](http://www.infoanarchy.org/) Reviews of File Sharing /
-    Anonymity Tools. [infoAnarchy Wiki
-    ](http://www.infoanarchy.org/wiki/index.php/Main_Page)
 -   [ArchWiki: list of P2P applications (other than bittorent)
     ](https://wiki.archlinux.org/index.php/List_of_applications#Other_P2P_networks).
 -   {{< wp "Freenet" >}} is a censorship-resistant peer-to-peer distributed
@@ -240,18 +251,15 @@ rely on {{< wp "Anonymous P2P" >}}, mainly through {{< wp "I2P" >}}; or on
     -   [Comparison of Gnutella software
     ](https://en.wikipedia.org/wiki/Gnutella#Software)
 -   [MLDonkey](http://mldonkey.sourceforge.net/) is a multiprotocol
-    p2p client and server written in Ocaml, it can access
-    EDonkey (edonkey2000 _ED2K_, overnet, Kademlia, emule),
-    BitTorrent,  DC++, Gnutella 1/2. The server can be remote
-    controled by telnet, WEB browser or GTK+ interface. It is
-    available in Debian.
+    p2p client and server written in Ocaml, it can access EDonkey (edonkey2000 _ED2K_,
+    overnet, Kademlia, emule), BitTorrent, DC++, Gnutella 1/2. The server can be remote
+    controled by telnet, WEB browser or GTK+ interface. It is available in Debian.
 -   {{< wp "OneSwarm" >}} is a privacy-preserving P2P client developed at the
-    University of Washington. It is written in java, and is based on
-    Azureus (Vuze) BitTorrent client, it keeps compatibility with
-    traditional BitTorrent clients, but is aimed at using {{< wp "F2F" >}}
-    network in order that your data is shared with friends, shared
-    with some friends but not others, and so forth.
-    OneSwarm download are available for Linux, Windoze and Mac OS X.
+    University of Washington. It is written in java, and is based on {{< iref "#vuze"
+    "Azureus (Vuze) BitTorrent client" >}}, it keeps compatibility with traditional
+    BitTorrent clients, but is aimed at using {{< wp "F2F" >}} network in order that
+    your data is shared with friends, shared with some friends but not others, and so
+    forth.  OneSwarm download are available for Linux, Windoze and Mac OS X.
     _Developpement of OneSwarm stopped in 2012_
     -   [OneSwarm Home](http://www.oneswarm.org/).
     -   [GitHub OneSwarm](https://github.com/CSEMike/OneSwarm)
@@ -259,20 +267,16 @@ rely on {{< wp "Anonymous P2P" >}}, mainly through {{< wp "I2P" >}}; or on
 -   [OnionShare](https://onionshare.org/) (GPL)
     is a python tool that lets you securely and anonymously share a file of
     any size. A PPA repository provides `.deb` packages.
-    -   [GitHub - OnionShare
-        ](https://github.com/micahflee/onionshare).
-    -   [OnionShare Wiki
-        ](https://github.com/micahflee/onionshare/wiki)
+    -   [GitHub - OnionShare](https://github.com/micahflee/onionshare).
+    -   [OnionShare Wiki](https://github.com/micahflee/onionshare/wiki)
         provides the OnionShare Manual.
 -   {{< wp "RetroShare" >}} is an open source, cross-platform Friend-to-Friend
-    application that in addition of social networking (chat) offers
-    file sharing, even fo big files with 1GB or more.  Your privacy is
-    protected with anonymous tunnels and only your direct friends
-    might learn which files you download. In contrast with many
+    application that in addition of social networking (chat) offers file sharing, even
+    fo big files with 1GB or more.  Your privacy is protected with anonymous tunnels and
+    only your direct friends might learn which files you download. In contrast with many
     P2P / F2F / I2P software it's developpement is active.
 
-    It is referenced
-    {{< iref "xmpp#retroshare" "in the Xmpp Page" >}}
+    It is referenced {{< iref "xmpp#retroshare" "in the Xmpp Page" >}}
 -   {{< wp "Robert" >}} is a file sharing application that relies upon the
     security and encryption of peers and tunnels inside of I2P.
 -   {{< iref "xmpp#tox" "Tox" >}}
@@ -282,16 +286,16 @@ rely on {{< wp "Anonymous P2P" >}}, mainly through {{< wp "I2P" >}}; or on
 
 
 ## P2P file transfer {#p2p_file_transfer}
-Is an alternative to store a file for exchange, as the file are not
-saved in the cloud they are available for big files, and once the
-transfer done the file can not be stolen.
+Is an alternative to store a file for exchange, as the file are not saved in the cloud
+they are available for big files, and once the transfer done the file can not be stolen.
 
 Some applications use dedicated applications, some have a web
 interface with transfer in {{< wp "WebRTC" >}}, mainly those built on
 {{< iref "#webtorrent" "WebTorrent" >}} and work with
 {{< wp "WebRTC#Support"  "compatible browsers" >}}, some have both.
 
-For uploading on android with the web interface see the {{< iref "clouds#android_web_upload" "this note" >}}.
+For uploading on android with the web interface see
+{{< iref "clouds#android_web_upload" "this note" >}}.
 
 Take care than most {{< iref "#webtorrent" "WebTorrent" >}}
 based application don't offer encryption or any privacy, your file can
@@ -307,32 +311,30 @@ be viewed by any body having or guessing the URL or magnet Link.
     Both browsers must remain open during the full transfer. A
     password protection is available.
     transfer from android with dolphin or chrome work but UC is rejected.
--   [ShareDrop](https://www.sharedrop.io/) is a P2P WebRtc file transfer web application.
--   <a name="sendanywhere"></a>
-    [Send Anywhere](https://send-anywhere.com/) is mainly a P2P
-    service, but also include cloud storage to free the sender from
-    the contraint that both browser need to be open during all the
-    transfer time.
+-   [ShareDrop](https://www.sharedrop.io/) is a P2P WebRtc file transfer web
+    application.
+    It allows to share directly on the lan or via an URL on wan.
+-   <a name="sendanywhere"></a> [Send Anywhere](https://send-anywhere.com/) (
+    Private License)
+    is mainly a P2P service, but also include cloud storage to free the sender from the
+    contraint that both browser need to be open during all the transfer time.
 
-    You can transfer up to 1G for the web
-    service, up to 20G using a dedicated desktop app
-    (windows, ios, android, linux, chrome extension).Registering is
-    not deemed, and the applications are free.
+    You can transfer up to 1G for the web service, up to 20G using a dedicated desktop
+    app (windows, ios, android, linux, chrome extension).Registering is not deemed, and
+    the applications are free.
 
-    File transfer using the 6-digit key transfers files directly between
-    the two devices in P2P, and does not store files on the server.
+    File transfer using the 6-digit key transfers files directly between the two devices
+    in P2P, and does not store files on the server.
 
-    For link sharing and send to device, files are encrypted and
-    uploaded to the server temporarily.
+    For link sharing and send to device, files are encrypted and uploaded to the server
+    temporarily.
 
-    The Send Anywhere link is valid 48h.  For gmail you can send up to
-    10GB stored in the cloud for 7 days.
+    The Send Anywhere link is valid 48h.  For gmail you can send up to 10GB stored in
+    the cloud for 7 days.
 
-    Note that the web interface is unavailable with an android
-    user-agent, we are supposed to download the android apk. When
-    setting the user-agent to desktop we can use the classic web
-    interface, it is successful with chrome, but on Dolphin I always
-    got the mobile site.
+    Note that the web interface is unavailable with an android user-agent, we are
+    supposed to download the android apk. When setting the user-agent to desktop we can
+    use the classic web interface.
 -   [Tresorit Send](https://send.tresorit.com/)
     web app to  send files with end-to-end encryption, free for use until a storage of
     3G, with file max size of 500MB.
@@ -344,18 +346,19 @@ be viewed by any body having or guessing the URL or magnet Link.
     client for Linux.
 -   [Dukto R6](https://www.msec.it/blog/dukto/) (GPL)
     application for transfer on lan between Android, Mac, Linux, Windows, and third
-    party ios app. Do not need an
-    internet connection. [Sourceforge project page
-    ](https://sourceforge.net/projects/dukto/) _Last update 2013_.
+    party ios app. Do not need an internet connection.
+    -   [Sourceforge project page](https://sourceforge.net/projects/dukto/)
+        _Last update 2013_.
 -   {{< iref "task_management#pushbullet" "Pushbullet" >}} allows to transfer small
     files up to 25MB. The company produce also a dedicated free wifi file transfer app
-    for Android and ios,  [Portal  (Google Play)
+    for Android, ios was dropped in 2021  [Portal  (Google Play)
     ](https://play.google.com/store/apps/details?id=com.pushbullet.android.portal)
 -   See also {{< iref "sip#jami" "Jami">}} _previously Ring_ a communication software
     with file sharing.
 
--   They are many other WebTorrent clients in the browser, but for
-    most of them your file are public and without protection.
+-   They are many other WebTorrent clients in the browser, but for most of them your
+    file are public and without protection.
+
     To use it in wan, you have also to use a port which is not blocked by the firewall.
     You can also use it in lan on a port non available on wan, to mitigate the risk of
     your data being spied.
