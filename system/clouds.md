@@ -1126,50 +1126,126 @@ text, and they give you an url to retrieve the text.
 
 You can use to create you post a web page and most sites have a REST HTTP Api that allow
 to create posts with a script. _I list only the sites offering an API, and not too much
-adds_.
+adds, and the FOSS software_.
 
 They can offer optional features like expiration dates, private posts, syntax
 highlighting,
 
--   [pastebin.com](http://pastebin.com/) has syntax highlighting,
+-   Wikioedia {{< wp "
+-   [Pastebin Services - ArchWiki
+    ](https://wiki.archlinux.org/title/List_of_applications#Pastebin_services)
+
+
+-   [pastebin.com](https://pastebin.com/) has syntax highlighting,
     expiration dates, private posts, ads,
+    see wikipedia {{< wp "Pastebin.com" >}} for more informations.
     [API](https://pastebin.com/api), many official
     [command line clients](https://pastebin.com/tools#pastebincl)
     written in many programming languages. The [original code
     ](https://github.com/lordelph/pastebin) is available in GitHub.
--   [pastebin.ca](http://pastebin.ca/) has expiration dates,
-    optional encryption,
-    [API and tools](https://pastebin.ca/tools.php)
+    -   There are extension for Chrome, Firefox, Opera.
+    -   The ios client is [PasteMe
+        ](https://apps.apple.com/us/app/pasteme-pastebin-client-for/id1191488320).
+    -   For android: [Pastebin for Android
+        ](https://play.google.com/store/apps/details?id=com.jmz.pastedroidapp).
+    -   For linux and old client written in Python2
+        [pastbin-cl](https://github.com/tupton/pastebin-cl)
+
+    There was many controversies about Pastebin, quoting  [Pastebin Services - ArchWiki
+    ](https://wiki.archlinux.org/title/List_of_applications#Pastebin_services)
+
+    > An acceptable pastebin service does not require enabling JavaScript for viewing,
+    > does not display adverts, manipulate the pasted content or require a
+    > login. pastebin.com is blocked for some people because of malware found on the
+    > site and has a history of annoying issues (requires JavaScript, displays adverts,
+    > inserts CRLF line-endings and displaying CAPTCHAs at random). Do not use it.
+
+    Following the monitoring of content by Pastebin _Anonymous_ launched
+    {{< iref "#anonpaste" "Anonpaste" >}}.
+
 -   [Paste.ee](https://paste.ee) is a free pastebin with no ads, SSL,
     IPv6, [API](https://pastee.github.io/docs/),
     [CLI programs](https://paste.ee/wiki/Programs).
+    -   For Linux there is [past-ee-cli](https://git.meow.tf/paste-ee/cli) written in
+        go. The releases includes binaries and rpm and deb packages.
 -   <a name="paste_debian"></a>[paste.debian.net](http://paste.debian.net/)
-    is a pastebin.
-    It has an [xml RPC interface](http://paste.debian.net/rpc-interface.html)  and
+    is a pastebin. It has an
+    [xml RPC interface](http://paste.debian.net/rpc-interface.html)  and
     [xml RPC clients](http://paste.debian.net/paste.pl?show_template=clients)
     including {{< iref "#pastebinit" "pastebinit" >}} and an
-    emacs client _debpaste_ in elpa and also as Debian package.
+    emacs client [debpaste](https://github.com/alezost/debpaste.el) in elpa.
+    -   [EmacsWiki: Debpaste](https://www.emacswiki.org/emacs/Debpaste).
 -   [fpaste or paste.fedoraproject.org
     ](https://paste.fedoraproject.org/) is the fedora pastebin service
     you use it with the program [fpaste](https://pagure.io/fpaste).
+-   {{< iref "#teknik"  "Teknik" >}} has a   [Pastebin](https://paste.teknik.io)
+    with a [paste shell script
+    ](https://git.teknik.io/Teknikode/Tools/src/branch/master/Paste/paste.sh)
+    you can also use {{< "#uugush" "uugush" >}}.
+-   <a name="technik"></a>[Teknik](https://www.teknik.io/)
+    provide many services
+    -   Free: [Encrypted File Uploads](https://upload.teknik.io/) _24h, filesize 1GB_,
+        [Pastebin](https://paste.teknik.io)
+        Technical Podcasts, Url Shortener, Mumble Server.
+    -   Free registered users: Non-Expiring Uploads, Unlimited pubic or private Git
+        Repos with a {{< iref "git#gitea" "Gitea instance" >}}, Personal Blog,
+        Service Data.
+    -   5$ lifetime account: Email Account {{< "#mail#rainloop" "RainLoop" >}},
+        Upload Size 2GB/file, total 50GB, No Embed Limits
+    -   [API Help](https://help.teknik.io/API)
+    -   [Tool Help](https://help.teknik.io/Tools) you find there  a [paste shell script
+        ](https://git.teknik.io/Teknikode/Tools/src/branch/master/Paste/paste.sh),
+        a command line script to upload files [tekup
+        ](https://git.teknik.io/danthebeastman/tekup), a [weechat script
+        ](https://git.teknik.io/Teknikode/Tools/src/branch/master/Weechat/teknik.py)
+        to interact with the Teknik Services, including file uploads, pastes, and url
+        shortening, [Hexchat script
+        ](https://git.teknik.io/Teknikode/Tools/src/branch/master/Hexchat/teknik.py),
+        and a firefox and chrome extension to access teknik services.
+
+## Codepad
 -   <a name="codepad">[codepad.org](http://codepad.org/)
     is an online compiler/interpreter, and a simple collaboration tool. It's
     a pastebin that executes code for you. It can interpret code in C, C++, D, haskell,
     lua, ocaml, php, perl, python, ruby, scheme, Tcl.
+-   [LaKing/codepad](https://github.com/LaKing/codepad) (MIT License) is a
+    collaborative online code editor and project written in node.js manager running
+    online in the browser. It relies on a MongoDB database.
 
-    There are also some codepad projects on GitHub
-    -   [LaKing/codepad](https://github.com/LaKing/codepad) (MIT License) is a
-        collaborative online code editor and project written in node.js manager running
-        online in the browser. It relies on a MongoDB database.
+## pastebin cli
+here are many text clip, screenshot clip, file sharing programs that
+can interface with many pastebin.
+
+-   [ix.io/](http://ix.io/) is a command line pastebin.
+-   <a name="pastbinit"></a>[pastebinit](https://help.ubuntu.com/community/Pastebinit)
+    can use
+    [pastebin.ca](http://pastebin.ca),
+    [pastebin.mozilla.org](http://pastebin.mozilla.org),
+    {{< iref "#paste_debian" "paste.debian.net" >}},
+    paste.drizzle.org,
+    [paste.kde.org](https://paste.kde.org/),
+    paste.openstack.org, paste.pocoo.org,
+    paste.pound-python.org, paste.ubuntu.org.cn,
+    [paste.ubuntu.com](http://paste.ubuntu.com),
+    [pastie.org](http://pastie.org/),
+    paste2.org,
+    pb.daviey.com,
+    slexy.org, {{< iref "#sprunge" " sprunge.us" >}},
+    [yourpaste.net](http://yourpaste.net),
 
 
--   [spunge](http://sprunge.us/) is a command line pastebin that you use with:
+    To see all services do `pastebinit -l` or look at  [all conf files
+    ](http://bazaar.launchpad.net/~pastebinit-developers/pastebinit/trunk/files/head:/pastebin.d/).
+
+    There is a pastbinit Debian package.
+-   [sleeksnap](https://pastee.github.io/docs/) written in java dedicated to screenshots.
+-   <a name="sprunge"></a>[sprunge](http://sprunge.us/) is a python command line
+    pastebin that you use with:
 
         <command> | curl -F 'sprunge=<-' http://sprunge.us
 
     -   [sprunge source at GitHub](https://github.com/rupa/sprunge).
-    -   [sprunge bash script](http://www.shellperson.net/sprunge-pastebin-script/)
--   [termbin](http://termbin.com/) is a command line pastbin that
+-   [termbin](http://termbin.com/) is a command line pastebin that
     requires only _netcat_, you use it like this:
 
         <command> | nc termbin.com 9999
@@ -1177,7 +1253,22 @@ highlighting,
     [fiche the termbin source on GitHub](https://github.com/solusipse/fiche)
     is a 484 sloc C program. _fiche_ support ipv6.
 
+    There is also an Android termbin application.
+-   <a name="uguush"></a>[uguush](https://gitlab.com/jschx/uguush/-/tree/master) (MIT
+    License) is a shell command-line uploader for [uguu](https://uguu.se/),
+    {{< iref "#teknik" "Teknik" >}}, [0x0](https://0x0.st/), ptpb _obsolete_, mixtape
+    _obsolete_, [lewd](https://lewd.se/), fiery _obsolete_ or doko _obsolete_.
+
+## Crypted pastbin
 Some pastebin offer encryption
+
+-   <a name="anonpaste"></a>[AnonPaste](https://anonpaste.org/).
+    _The Ultimate Secure Pastebin_ launched by _Anonymous_after Pastebin.cm
+    move to censor content and pass on the IP addresses of people posting on its site
+    to law enforcement authorities.
+    It is said to use real 256bit AES encryption, which takes place directly in your
+    browser. At launch in 2012 it was said powered by ZeroBin, but now all information
+    pages on the site is only the same _Lorem ipsum dolor_ blob.
 
 -   [cryptbin](https://cryptbin.com/) AES-256 encryption in the
     browser, using a private key given to you. When your message is
@@ -1200,29 +1291,9 @@ Some pastebin offer encryption
 
 There are also some web applications that allow sharing of a pasted
 data among computers or mobile platforms like
--   [wepaste.com](http://www.wepaste.com/)
 -   [IPShare.net](http://www.ipshare.net/) for use on lan.
 
-The _wepaste.com_ can be considered as a pastbin _IPShare.net_ is just
-for immediate sharing on lan, no url, and it does not store anything.
-
-There are many text clip, screenshot clip, file sharing programs that
-can interface with many pastebin.
-
-
--   <a name="pastbinit"></a>[pastebinit](https://help.ubuntu.com/community/Pastebinit)
-    can use [paste.ubuntu.com](http://paste.ubuntu.com),
-    {{< iref "#paste_debian" "paste.debian.net" >}},
-    [pastebin.mozilla.org](http://pastebin.mozilla.org),
-    [pastebin.ca](http://pastebin.ca), slexy.org, [yourpaste.net](http://yourpaste.net),
-    paste.drizzle.org, paste.kde.org, paste.openstack.org, paste.pocoo.org,
-    paste.pound-python.org, paste.ubuntu.org.cn, paste2.org, pastie.org,
-    pb.daviey.com, sprunge.us
-    (see [all conf files
-    ](http://bazaar.launchpad.net/~pastebinit-developers/pastebinit/trunk/files/head:/pastebin.d/).
-    There is a pastbinit Debian package.
--   [sleeksnap](https://pastee.github.io/docs/) written in java dedicated to screenshots.
-
+T
 ## Web file sharing servers
 _They are self-hosted solutions._
 
