@@ -247,8 +247,9 @@ lisp.
     payement of 5$ per device.
 -   <a name="pushbullet"></a>[Pushbullet](https://www.pushbullet.com/)
     The [Web interface](https://www.pushbullet.com/), allows you to use pushbullet
-    anywhere a browser is available, official apps are available for Ios and Android,
+    anywhere a browser is available, official apps are available for Android,
     plugins for Firefox, Chrome/ium, Opera. And third party apps for Linux.
+    ios support was abandoned in 2021
     In addition to pushing notifications from one device to the others, sending SMS  or
     WhatsApps messages (up  to 100/month), it allows to send files up to 25MB.
     A 5$/month plan is proposed to lift the restriction on SMS, and allow 1GB File
@@ -298,21 +299,17 @@ lisp.
 
             $ pb list -c 20
 
-    -   [GitHub - randomchars/pushbullet.py
-        ](https://github.com/randomchars/pushbullet.py)
+    -   [GitHub - randomchars/pushbullet.py](https://github.com/randomchars/pushbullet.py)
         (MIT License)
         a python library for the Pushbullet service.
-    -   [GitHub - rharder/asyncpushbullet
-        ](https://github.com/rharder/asyncpushbullet)
-        (MIT License) a python library for synchronous and
-        asyncio-based communication with Pushbullet service. It is a
-        fork of of the synchronous-only randomchars/pushbullet.py and
-        is in Pypi.
+    -   [GitHub - rharder/asyncpushbullet](https://github.com/rharder/asyncpushbullet)
+        (MIT License) a python library for synchronous and asyncio-based communication
+        with Pushbullet service. It is a fork of of the synchronous-only
+        randomchars/pushbullet.py and is in Pypi.
     -   [rbrcsk/pushbullet.py](https://github.com/rbrcsk/pushbullet.py)
         is a python client for pushbullet.
     -   [theanalyst/revolver](https://github.com/theanalyst/revolver)
-        is an emacs client for pushbullet. It is in elpa under the name
-        _pushbullet_.
+        is an emacs client for pushbullet. It is in elpa under the name _pushbullet_.
     -   [pb-for-desktop](https://github.com/sidneys/pb-for-desktop) (MIT License)
         A Desktop node.js app for PushBullet. It receives native push notifications
         It sends and receives SMS to Android devices, mirrors Android notifications.
