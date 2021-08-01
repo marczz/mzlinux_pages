@@ -2,10 +2,20 @@
 title: XMPP
 ---
 
-See also {{< iref "irc" "IRC" >}},
-{{< iref "social_networks" "Social Networks" >}},
-{{< iref "sip" "SIP" >}} and
-{{< iref "xmpp" "P2P" >}}.
+We put here protocols and applications that mainly focus on messaging,
+{{< iref "irc" "IRC" >}} has its own page, voice and video aimed applications are in the page
+{{< iref "sip" "SIP" >}}, while microblogging and applications based on protocols like
+{{< iref "microblogging#ostatus" "Ostatus" >}},
+{{< iref "microblogging#activitypub" "ActivityPub"  >}},
+{{< iref "microblogging#diaspora" "Diaspora" >}},
+{{< iref "microblogging#pumpio" "Pump.io" >}} are in
+{{< iref "microblogging" "Microblogging" >}}.
+
+But there is no clean frontier, voice and video often include also a messaging ability,
+microblogging also often include messaging...
+
+{{< iref "p2p" "P2P" >}} is also used by some application and you find also a
+{{< iref "p2p" "P2P Section" >}}.
 
 -----------------
 
@@ -103,7 +113,7 @@ Specification is in the following XEPs:
 Most servers and Clients support MUC. The message encryption in MUC, is a more complex
 and is only implemented in few clients.
 
-### Jingle{#xmpp_jingle}}
+### Jingle{#xmpp_jingle}
 <a name="jingle"></a>{{< wp "Jingle (protocol)"  "Jingle Protocol" >}}
 is an extension to XMPP which adds peer-to-peer (P2P) session
 control (signaling) for multimedia.  Interactions such as in voice
@@ -268,18 +278,15 @@ mobile devices.
 
 For secure messaging we can expect the following features:
 
--   encrypted communications between all the links in the
-    communication path.
--   end-to-end encryption, i.e the provider does not have access
-    to keys.
--   authentication of correspondents e.g. by comparing key
-    fingerprints.
+-   encrypted communications between all the links in the communication path.
+-   end-to-end encryption, i.e the provider does not have access to keys.
+-   authentication of correspondents e.g. by comparing key fingerprints.
 -   {{< wp "forward secrecy" >}} i.e. having past communications secure if the
     encryption keys are stolen.
--   open source with documented security design and
-    recent independent {{< wp "security audit" >}}.
--   no log or store any information  regarding message contents,
-    senders and destination, timestamps, sessions or events.
+-   open source with documented security design and recent independent
+    {{< wp "security audit" >}}.
+-   no log or store any information regarding message contents, senders and destination,
+    timestamps, sessions or events.
 -   Do not rely on a central authority for the relaying of messages
     ({{< wp "decentralized computing" >}}).
 
@@ -294,8 +301,12 @@ OTR allow instant messaging, secure file transfer, the plugin supports multiple 
 conversations with the same buddy who is logged in at multiple locations. MUC is not yet
 supported.
 
--   [otr.cypherpunks: OTR Protocol Home](https://otr.cypherpunks.ca/)
+-   [OTR Protocol Home - otr.cypherpunks](https://otr.cypherpunks.ca/)
+-   [List of OTR Software - otr.cypherpunks](https://otr.cypherpunks.ca/software.php)
 -   [OTR.im: OTR user Home](https://www.otr.im/).
+
+
+OTR is specified in the following XEPs:
 -   [XEP-0364: Current Off-the-Record Messaging Usage
     ](https://xmpp.org/extensions/xep-0364.html)
 -   [XEP-0378: OTR Discovery](https://xmpp.org/extensions/xep-0378.html)
@@ -392,6 +403,9 @@ Android and IOS clients:
 -   {{< iref "#xabber" "Xabber" >}}  GPL Xmpp client for
     Android.
 
+A list is also available
+{{< wp "Off-the-Record_Messaging#Client_support" "in the wikipedia OTR page" >}}.
+
 
 ## OMEMO {#omemo}
 [OMEMO](https://conversations.im/omemo/) is an XMPP Extension Protocol (XEP)
@@ -432,26 +446,28 @@ Begining 2021 this list include for Linux,
 
 For mobiles
 -   ios client
-    {{< iref "#chatsecure" "chatsecure" >}}
+    {{< iref "#chatsecure" "chatsecure" >}},  {{< iref "#siskin" "Siskin" >}},
+    {{< iref "#monal" "Monal"  >}}
 -   android client
-    [blabber](https://blabber.im/),
-    {{< iref "#conversations" "Conversations" >}} and many forks
-    {{< iref "#zom" "Zom" >}},
+    {{< iref "#blabber"  >}},
+    {{< iref "#conversations" "Conversations" >}} and many forks,
+    {{< iref "#stork" "Stork"  >}},
 
-On windows there is _Miranda_, {{< iref "#psi" "PSI" >}},
-{{< iref "#pidgin" "pidgin" >}}, {{< iref "#gajim" "Gajim" >}}
+On windows there is [Miranda NG](https://www.miranda-ng.org/en/),
+{{< iref "#psi" "PSI" >}}, {{< iref "#pidgin" "pidgin" >}},
+{{< iref "#gajim" "Gajim" >}}
 
-On OS X _Adium_, {{< iref "#psi" "PSI" >}},{{< iref "#pidgin" "pidgin" >}},
-{{< iref "#gajim" "Gajim" >}}.
+On OS X [Beagle IM](https://beagle.im/),
+{{< iref "#psi" "PSI" >}}, {{< iref "#pidgin" "pidgin" >}},
+{{< iref "#gajim" "Gajim" >}},  _Adium (support in progres with the lurch plugin)_.
 
 ## OpenPGP {#openpgp}
 
 {{< wp "OpenPGP" >}} for XMPP was first decribed by
-[XEP-0027: Current Jabber OpenPGP Usage
-](http://www.xmpp.org/extensions/xep-0027.html) which is now
-obsolete. There is a new experimental draft
-[XEP-0373: OpenPGP for XMPP
-](https://xmpp.org/extensions/xep-0374.html).
+-   [XEP-0027: Current Jabber OpenPGP Usage
+    ](http://www.xmpp.org/extensions/xep-0027.html) which is now obsolete and replaced
+    by XEP-0373.
+-   [XEP-0373: OpenPGP for XMPP](https://xmpp.org/extensions/xep-0374.html).
 
 While {{< iref "#openpgp" "OpenPGP" >}} can be used for Xmpp, {{< iref "#OTR" "OTR" >}}
 or {{< iref "#omemo" "OMEMO" >}} are more secure as they provide
@@ -483,23 +499,14 @@ Jabber and GnuPG](https://box.matto.nl/gnupgjabber.html).
 # Xmpp public servers
 -   [xmpp.net Public XMPP Server Directory](https://xmpp.net/directory.php)
     gives a  list of jabber servers by country,
-    -   [IM Observatory](https://xmpp.net/) evaluate the security of servers.
 -   [jabber.at: Public XMPP servers](https://list.jabber.at/) a larger list of servers.
 -   [Cryptoparty list of secure jabber servers
     ](https://www.cryptoparty.in/connect/contact/jabber).
 -   [jabber.org](https://www.jabber.org/) is the original XMPP service.  In 2010 the
     service was migrated to Isode's M-Link proprietary XMPP Server.
     -   [jabber.org FAQ](http://www.jabber.org/faq.html)
--   [jabber.apinc.org](http://jabber.apinc.org/) run the server
-    {{< iref "#jabberfr" "jabber.fr" >}}
--   [OTR.im](https://www.otr.im/chat.htm)
-    offers a free and secure Jabber service nammed __jabber.otr.im__
-    It is also possible to connect through our Tor hidden service.
-    The server use SSL/TLS  and accept only
-    {{< iref "#otr" "OTR encoded" >}} conversations.
-
-
-
+-   [Blog • How to choose you Jabber service?
+    ](https://mov.im/?blog/debacle%40movim.eu/1646bb0e-8d18-4fb9-8b1a-46a1b40e0143)
 # Xmpp  console clients
 
 -   Wikipedia:
@@ -584,27 +591,33 @@ Jabber and GnuPG](https://box.matto.nl/gnupgjabber.html).
     -   Debian packages are provided by the
         [jabber.at apt repository
         ](https://jabber.at/p/apt-repository/).
--   <a name="profanity">[profanity](http://www.profanity.im) (GPL)
+    -   [poezio · GitLab](https://lab.louiz.org/poezio/poezio)
+-   <a name="profanity">[profanity](https://profanity-im.github.io/) (GPL)
     is a C-ncurses console based client for XMPP,
     inspired by {{< iref "irc#irssi" "irssi" >}}.  It
-    features XMPP chat services, including GoogleTalk and Facebook.
+    features XMPP chat services, MUC chat room support, Roster management with grouping,,
+    Desktop notifications via libnotify, Plugins in Python and C.
+
+    Profanity support
     {{< iref "#otr" "OTR encryption" >}},
     {{< iref "#openpgp" "OpenPGP" >}},
-    {{< iref "#omemo" "OMEMO" >}},
-    MUC (multi user chatroom), roster management with
-    grouping, Desktop notifications via libnotify.  plugins in C,
-    Python, Ruby, and Lua. Profanity take 27M res / 15M shr.
-    Profanity is in debian.
-    -   {{< wp "Profanity_(instant_messaging_client)"  "Wikipedia: Profanity" >}}
-    -   [Profanity GitHub repo](https://github.com/boothj5/profanity)
-    -   [Profanity user guide](http://www.profanity.im/userguide.html)
+    {{< iref "#omemo" "OMEMO" >}}.
 
-    -   [Profanity official plugins
-        ](https://github.com/boothj5/profanity-plugins)
-    -   [Profanity OMEMO plugin
-        ](https://github.com/ReneVolution/profanity-omemo-plugin)
--   {{< iref "irc#weechat" "Weechat" >}}
-    has an
+    There is an internal `/help` system that bring a menu, individual `help command`
+    gives the manual for the command, which is also provided as a manpage
+    `profanity-command(1)`.
+
+    Profanity (0.10 released january 2021) take 42M res / 29M shr.
+    Profanity is in debian, there are also a package _profanity-light_ which has no
+    binding with X11, nor Python.
+    -   {{< wp "Profanity_(instant_messaging_client)"  "Wikipedia: Profanity" >}}
+    -   [Profanity GitHub repo](https://github.com/profanity-im/profanity)
+    -   [Profanity user guide](https://profanity-im.github.io/guide/latest/userguide.html)
+    -   [Profanity official plugins](https://github.com/profanity-im/profanity-plugins)
+        are described in [Profanity plugins user guide
+        ](https://profanity-im.github.io/plugins.html)
+    -   [Profanity OMEMO plugin](https://github.com/ReneVolution/profanity-omemo-plugin)
+    -   profanity xmpp room: `profanity@rooms.dismail.de`
 -   {{< iref "#salutatoi" "Primitivus now called Libervia CLI" >}}
     is a console client for {{< iref "#salutatoi" "Salut à Toi" >}} the Debian package
         is _sat-xmpp-primitivus_. To run primitivus you have first to launch the sat
@@ -615,7 +628,7 @@ Jabber and GnuPG](https://box.matto.nl/gnupgjabber.html).
 -   {{< iref "irc#weechat" "Weechat" >}} has an
     [xmpp plugin](https://github.com/weechat/scripts/blob/master/python/jabber.py)
     but it does not handle anonymous authentication nor chatrooms,
-    but you can use a proxy like {{< iref "#bitlbee" "bitlbee" >}}
+    but you can use a proxy like {{< iref "#bitlbee" "Bitlbee" >}}
     or bitlbee-purple.
     You find it {{< iref "irc#weechat" "weechat on IRC section" >}}.
 -   <a name="xmpp-client"></a>[xmpp-client](https://github.com/agl/xmpp-client)
@@ -649,24 +662,32 @@ _(said to be lightweight but need libgnome and all bonobo framework)_ ...
     OTR 3 protocol.  {{< iref "#otr" "OTR" >}} is enabled by default, as Tor when it is
     available.  coyIM is in Debian. _very active development as far as 2021, OMEMO planed_
     -   [GitHub - coyim](https://github.com/coyim/coyim/).
--   <a name="dino"></a> [Dino](https://github.com/dino/dino)
-    is a GTK+/Vala xmpp client with
-    {{< iref "#omemo" "OMEMO" >}} support.
--   <a name="empathy"></a> [Empathy
-    ](https://wiki.gnome.org/action/show/Apps/Empathy)
-    is a messaging program which uses
-    {{< iref "#telepathy" "Telepathy" >}} for
+-   <a name="dino"></a>[Dino](https://dino.im/) (GPL 3.0)
+    is a GTK+/Vala xmpp client with {{< iref "#omemo" "OMEMO" >}}
+    and {{< iref "#openpgp" "OpenPGP" >}} support. Dino is packaged on all the main
+    Linux distributions, on Debian there is a package _dino-im_.
+
+    On amd64 the memory footprint of Dino v 0.2.0 is 90M res / 64M shr.
+    -   [Dino - GitHub](https://github.com/dino/dino)
+    -   [Dino Wiki](https://github.com/dino/dino/wiki)
+    -   [Supported XEPs](https://github.com/dino/dino/wiki/Supported-XEPs)
+
+-   <a name="empathy"></a> [Empathy](https://wiki.gnome.org/action/show/Attic/Empathy)
+    is a messaging program which uses {{< iref "#telepathy" "Telepathy" >}} for
     protocol support and inherit from the large  Voice and Video
-    protocol support from
-    {{< iref "#telepathy" "Telepathy" >}},
+    protocol support from {{< iref "#telepathy" "Telepathy" >}},
     Look at {{< wp "Empathy_(software)"  "Wikipedia: Empathy" >}} for a
     full list of protocol, note that empathy support SIP and
     {{< wp "Jingle (protocol)"  "Jingle" >}} allowing Google Talk, on the other
-    hand it lack the privacy support of Pidgin.  It is based on
+    hand it does not support OTR and lack the privacy support of Pidgin.  It is based on
     __gossip__ for the user interface, and inherit from gossip gnome
-    dependencies. Nevetherless empathy just waiting idly is 35M
-    Res/25M shr; but after a video call it climbs up to 65M/25M (still
-    a lot less than java clients like jitsi!)._in Debian_
+
+    Empathy is currently no longer in development since 2017 the commits are only on
+    improving the language translations.
+
+    _Empathy is still in Debian, as far as bullseye_
+    -   [empathy · GitLab](https://gitlab.gnome.org/Archive/empathy)
+
 -   <a name="gajim">[Gajim](http://www.gajim.org/) (GPL)
     Jabber client written in PyGTK.  Gajim handle ssl connections and connect to google
     talk service.  Gajim can be either linked to gnome libraries and services or used
@@ -826,7 +847,7 @@ as Gaim.*.  Pidgin is documented in:
 is a multi-protocol instant messaging library it supports AIM/ICQ,
 Yahoo!, MSN, IRC, Jabber/XMPP/Google Talk, Napster, Zephyr,
 Gadu-Gadu, Bonjour, Groupwise, Sametime, SIMPLE, MySpaceIM, and
-MXit, Facebook chat, Rocket.Chat, {{< Iref "Microblogging#Mattermost" "Mattermost" >}},
+MXit, Facebook chat, Rocket.Chat, {{< iref "microblogging#mattermost" "Mattermost" >}},
 {{< iref "microblogging#matrix" "Matrix" >}}, Telegram, and more.
 
 _libpurple_ is part of {{< iref "#pidgin" "pidgin" >}} and
@@ -859,7 +880,8 @@ list plugins, _some of them are obsolete_, this list includes:
     Pidgin libpurple bridge for the {{< iref "#signald" "Signal Daemon - signald" >}}.
 -   Slack - [slack-libpurple](https://github.com/dylex/slack-libpurple)
     for access to {{< iref "microblogging#slack" "Slack" >}}
--   Telegram - [telegram-purle plugin](https://github.com/majn/telegram-purple)
+-   {{< iref "#telegram" "Telegram" >}} -
+    [telegram-purle plugin](https://github.com/majn/telegram-purple)
     allow a bridge to {{< iref "#telegram" "Telegram" >}}
 -   Tox - [Tox protocol plugin](https://github.com/EionRobb/tox-prpl) (GPL) for
     {{< iref "#tox" "Tox protocol" >}}.
@@ -886,41 +908,11 @@ Among the
 
 # Web clients
 
-There are many web clients using Ajax or even java, I scarcely use
-them on desktop, because Jabber does not need a full featured
-Javascript (or worse Java) enabled brother.  Whenever I'm on a foreign
-computer, a jabber client can be very useful, I had used googlechat
-but the new _hangout_ has turned into a proprietary protocol.
+Web clients uses the {{< iref "#bosh" "Bosh Protocol" >}}.
 
-<a name="bosh"></a>[BOSH  “Bidirectional-streams Over Synchronous HTTP”
-](http://xmpp.org/about-xmpp/technology-overview/bosh/)
-is a technology for two-way communication over the HTTP. BOSH has
-been used mainly as a transport for traffic exchanged between
-Jabber/XMPP clients and servers. BOSH is more bandwidth-efficient and
-responsive than AJAX.  Bosh is supported by Xmpp servers and
-standalone XMPP connection managers; [Which BOSH Server Do You Need?
-](http://metajack.im/2008/09/08/which-bosh-server-do-you-need/)
-compare these two options.
-
-The following clients have support for BOSH
-{{< iref "#converse" "Converse" >}}
-{{< iref "#gajim" "Gajim" >}},
-{{< iref "#jwchat" "JWChat" >}},
-{{< iref "#jsxc" "jsxc" >}},
-{{< iref "#movim" "Movim" >}},
-{{< iref "#pidgin" "Pidgin" >}},
-{{< iref "#swpeeqe" "Speeqe" >}},
-{{< iref "#swift" "Swift" >}},
-{{< iref "#tigaseweb" "Tigase Web client" >}},
-{{< iref "#xmpp4js" "xmpp4js" >}} and Soashable,
-Adium _client for Mac OS X_.
-
-The following XMPP servers include built-in support for BOSH:
-{{< iref "#ejaberd" "ejabberd" >}},
-Jabber XCP, M-Link, MongooseIM,
-{{< iref "#openfire" "Openfire" >}},
-{{< iref "#prosody" "Prosody" >}},
-{{< iref "#tigase" "Tigase" >}}.
+There are many web clients using Ajax or even java, I scarcely use them on desktop,
+because Jabber does not need a full featured Javascript (or worse Java) enabled brother.
+Whenever I'm on a foreign computer, a jabber client can be very useful.
 
 -   [AjaxJabber](http://ajaxbber.sourceforge.net/)
     (LGPL) is what it's name announce!.
@@ -941,16 +933,30 @@ Jabber XCP, M-Link, MongooseIM,
     -   [List of supported XEP](https://conversejs.org/#features).
     -   [Converse.js Security
         ](https://conversejs.org/docs/html/security.html).
-    -   [Converse supports OTR
-        ](https://conversejs.org/docs/html/features.html),
+    -   Converse was supporting OTR, but when OMEMO was introduced OTR was dropped.
         but quoting the author JC Brand
-        > In its current state, JavaScript cryptography is fraught
-        > with dangers and challenges that make it impossible to reach
-        > the same standard of security that is available with native
-        > “desktop” software.
-        He explains it more in details in his post
-        [Converse OTR support
+        > In its current state, JavaScript cryptography is fraught with dangers and
+        > challenges that make it impossible to reach the same standard of security that
+        > is available with native “desktop” software.
+        He explains it more in details in his post [Converse OTR support
         ](https://opkode.com/blog/2013/11/11/conversejs-otr-support/).
+    -   [Converse OMEMO support
+        ](https://conversejs.org/docs/html/features.html#end-to-end-message-encryption-xep-0384-omemo)
+        Converse.js (as of version 4.1.2) does NOT support encryption or decryption of
+        uploaded files, even when {{< iref "#omemo" "OMEMO" >}} is enabled.
+        Quoting JC Brand
+        > In its current state, JavaScript cryptography is fraught with dangers and
+        > challenges that make it impossible to reach the same standard of security that
+        > is available with native “desktop” software.
+        He explains it more in details in his post [Converse OTR support
+        ](https://opkode.com/blog/2013/11/11/conversejs-otr-support/)
+        which is also valid for OMEMO.
+
+        It is further explained in Converse documentation in
+        [Security considerations for browser-based crypto
+        ](https://conversejs.org/docs/html/features.html#security-considerations-for-browser-based-crypto).
+        Which is valid for any javascript messaging application.
+
 -   <a name="jsxc"></a>[jsxc](https://www.jsxc.org/) (MIT License)
     is a real-time xmpp javascript app it requires an external XMPP server. It supports
     {{< iref "#omemo" "OMEMO" >}}.  It is in the Debian package _libjs-jsxc_.<br/> They
@@ -1013,139 +1019,188 @@ Jabber XCP, M-Link, MongooseIM,
     [Soashable](http://soashable.sourceforge.net/)
 
 # Android clients
--   <a name="chatsecure"></a>[Chatsecure](https://chatsecure.org/)
-    (GPL)
-    is a Xmpp client for android and IOS supporting
-    {{< iref "#otr" "OTR" >}} and
-    {{< iref "#omemo" "OMEMO" >}}.
-    It is developped by
-    {{< wp "The_Guardian_Project_(software)"  "The Guardian Project" >}}
-    -   [ChatSecure, Conversations and Zom — ChatSecure
-    ](https://chatsecure.org/blog/chatsecure-conversations-zom/).
--   <a name="conversation"></a>[Conversations
-    ](https://github.com/siacs/Conversations) (GPL)
+-   <a name="atalk"></a>[aTalk](https://cmeng-git.github.io/atalk/) (Apache License)
+    is an android XMPP client with {< iref "#omemo" "OMEMO" >}} including OMEMO media
+    file sharing and {{< iref "#otr" "OTR" >}}, and zrtp video call.
+    -   [aTalk - GitHub](https://github.com/cmeng-git/atalk-android/)
+    -   [aTalk FAQ](https://cmeng-git.github.io/atalk/faq.html)
+-    <a name="blabber"></a>[Blabber](https://blabber.im/) (GPL 3)
+    is a client forAndroid and IOS, it is a fork of Converstation.The changes aim to
+    improve usability and ease transition from pre-installed and other widespread
+    messengers.
+    -   [blabber.im - Codeberg.org](https://codeberg.org/kriztan/blabber.im)
+    -   [blabber.im README-en
+        ](https://codeberg.org/kriztan/blabber.im/src/branch/master/README-en.md)
+-   <a name="conversation"></a>
+    [Conversations](https://github.com/siacs/Conversations) (GPL)
     XMPP/Jabber client for Android 4.0+ with end-to-end encryption
     with {{< iref "#omemo" "OMEMO" >}},
     {{< iref "#otr" "OTR" >}}, or
     {{< iref "#openpgp" "OpenPGP" >}}.
     See the [homepage](https://github.com/siacs/Conversations)
     for a list of features and supported XEP.
--   <a name="stork"></a>[Stork](https://github.com/tigase/stork) (AGPL) by [Tigase
-    Inc.](https://tigase.net/) is a XMPP client. It supports all XMPP specifications RFC
 -   {{< iref "#salutatoi" "Salut à Toi alias Libervia" >}} (AGPL) is developing
     an Android client.
+-   <a name="stork"></a>[Stork](https://github.com/tigase/stork) (AGPL) by
+    [Tigase Inc.](https://tigase.net/) is a XMPP client. It supports all XMPP specifications RFC
     6120 - XMPP COR, RFC 6121 - XMPP IM ,and many extensions including Multi-User Chat
     XEP-0045, and {{< iref "#omemo" "OMEMO" >}}.
 -   [Beem](http://beem-project.com/projects/beem/) (GPL)
     _last release 2013_
 -   [Xabber](https://www.xabber.com/)  (GPL) Xmpp client for
     Android, it supports {{< iref "#otr" "OTR" >}}.
--   <a name= "zom"></a>[Zom](https://zom.im/) is an ios and android
+-   [yaxim - Github](https://github.com/yaxim-org/yaxim)
+    lean XMPP/Jabber client for Android, in beginning 2021 OMEMO is planned.
+-   <a name= "zom"></a>[འཛོམས་](https://zom.im/)
+    or
+    [Zom](https://zom.im/zomenglish.html)was an ios and android
     xmpp client supporting
     {{< iref "#otr" "OTR" >}} and
     {{< iref "#omemo" "OMEMO" >}}
     created by the {{< iref "#chatsecure" "ChatSecure project" >}}.
+    But the new zom 2 version of འཛོམས་ is targeted to
+    {{< iref "microblogging#matrix" "Matrix" >}} protocol.
+
+# Ios Clients
+-   <a name="chatsecure"></a>[Chatsecure](https://chatsecure.org/) (GPL)
+    is an Xmpp client for IOS supporting
+    {{< iref "#otr" "OTR" >}} and
+    {{< iref "#omemo" "OMEMO" >}} but not yet in group chats _(no PGP)_; and using
+    [SQLCipher](https://www.zetetic.net/sqlcipher/design/) to locally encrypt
+    conversation logs.
+    -   [Chatsecure IOS - GitHub](https://github.com/ChatSecure/ChatSecure-iOS).
+    -   [ChatSecure, Conversations and Zom — ChatSecure
+        ](https://chatsecure.org/blog/chatsecure-conversations-zom/), in the
+        {{< wp "The_Guardian_Project_(software)"  "The Guardian Project" >}} Blog.
+-   <a name="monal"></a>[Monal](https://monal.im/) ( BSD License)
+    an IOS and Mac OS xmpp client with
+    [OMEMO and Jingle support](https://monal.im/supported-xeps/).
+    -   [Monal - Github](https://github.com/anurodhp/Monal/).
+-   <a name="siskin"></a>[Siskin IM](https://siskin.im/) ( GPL-3.0 )
+    by [Tigase Inc](https://tigase.net/) is an XMMP client for ios with
+    {{< iref "#omemo" "OMEMO" >}} support. _Tigase_ has also a MacOS client
+    [Beagle IM](https://beagle.im/)  which support also {{< iref "#omemo" "OMEMO" >}}.
+    -   [Siskin Documentation
+        ](https://docs.tigase.net/siskin-im/master-snapshot/Tigase_SiskinIM_Guide/html/)
+    -   [Siskin IM - GitHub](https://github.com/tigase/siskin-im).
 
 # IRC to Xmpp gateways
 By IRC to Xmpp we mean here a software allowing an IRC Client to talk
 to remote Xmpp clients.
 
--   <a name="bitlbee"></a> {{< wp "bitlbee" >}} (GPL) is an IRC to other chat
-    networks gateway, such as AIM, ICQ, Microsoft Messenger, Yahoo!,
-    Jabber, Facebook Messenger, Twitter, Identi.ca,
-    and status.net.  It allows you to browse other chat protocols with
-    your irc client. Bitlbee can be usefull if you want to use only a
-    light irc client to take part in chats from many protocols
-    including jabber/ssl as in gmail accounts.
-
-    Bitlbee has support for {{< iref "#otr" "OTR" >}}
-    with _libotr_.
-
-    The bitlbee
-    daemon is tiny 1.2M res./0.8M shared. _in Debian_.
-
-    -   [bitlbee Home](http://www.bitlbee.org/)
-    -   [Bitlbee documentation
-        ](http://www.bitlbee.org//user-guide.html)
-    -   [Bitlbee Wiki](https://wiki.bitlbee.org/)
-        offer on-line searchable BitlBee documentation.
-        There is a list of supported protocols in the first page.
-    -   [list of public bitlbee servers
-        ](http://www.bitlbee.org/main.php/servers.html)
-        they allow to use Bitlbee without installing
-        it.
-    -   [ArchLinux BitlBee Tutorial
-        ](http://wiki.archlinux.org/index.php/Bitlbee)
-        explains how to connect to Jabber using your Gmail account.
-    -   [ArchLinux Screen Irssi Bitlbee and SSH
-        ](http://wiki.archlinux.org/index.php/Screen_Irssi_Bitlbee)
-        explains how to have a persistent connection to messaging
-        services.
-    -   [Emacs and BitlBee
-        ](http://www.emacswiki.org/cgi-bin/wiki?BitlBee)
-    -   [bitlbee-otr](https://wiki.bitlbee.org/bitlbee-otr) add
-        support for {{< iref "#otr" "Off-the-Record Messaging (OTR)" >}} either by a plugin
-        _bitlbee-plugin-otr is in Debian_ or Bitlbee has an
-        optional native support for OTR since 3.0, which can be
-        enabled at compile time.
-    -   [Bitlbee development daily package
-        ](https://wiki.bitlbee.org/Packages) may be fresher then the
-        Debian standard one.
-    -   [BitlBee native support to Twitter
-        ](https://wiki.bitlbee.org/HowtoTwitter) partly [deprecated
-        ](https://wiki.bitlbee.org/HowtoTwitter/StreamDeprecation).
-    -   [BitlBee native support for Gnu Social
-        ](https://wiki.bitlbee.org/HowtoStatusNet).
-    -   [BitlBee support for Facebook
-        ](https://wiki.bitlbee.org/HowtoFacebookMQTT).
-    -   [BitlBee plugin for Mastodon
-        ](https://github.com/kensanata/bitlbee-mastodon).
-
-    [BitlBee can be compiled to use libpurple
-    ](https://wiki.bitlbee.org/HowtoPurple)
-    instead of the built-in code. It offers a few extra features
-    (like file transfers on all IM networks) and
-    support more networks protocols.  It
-    adds a lot of dependencies (around 100MBytes of extra
-    packages), and it makes the program more resource-hungry at
-    runtime.
-
-    But _bitlbee-libpurple_ allow to use some more protocols
-    like [Skype with skypeweb](https://wiki.bitlbee.org/HowtoSkypeWeb),
-    GaduGadu, SIPE, Microsoft's OCS, Lync (on Office 365 as well), Skype for Business,
-    Telegram through [telegram-purle plugin](https://github.com/majn/telegram-purple),
-    Slack, Rocket.Chat, {{< Iref "Microblogging#Mattermost" "Mattermost" >}}, Google Hangout through
-    [purple hangout plugin](https://bitbucket.org/EionRobb/purple-hangouts),
-    WhatsApp no longer work due to whatsapp forbidding libpurple access.
-
-    _bitlbee-libpurple_ is in debian. See also the
-    {{< iref "#libpurple" "libpurple section" >}}.
-    -   [Using BitlBee with the libpurple IM backend
-        ](https://wiki.bitlbee.org/HowtoPurple)
 -   [jatter](https://github.com/binfalse/jatter) (GPL)
     is a java bot providing a  a Jabber-Twitter-bridge.
--   <a name="matterbridge"></a>[Matterbridge](https://github.com/42wim/matterbridge)
-    (Apache License)
-    is a bridge written in go between {{< Iref "Microblogging#Mattermost" "Mattermost" >}}, IRC, Gitter, xmpp,
-    {{< iref "microblogging#slack" "Slack" >}},
-    {{< iref "microblogging#gitter" "Gitter"  >}},
-    Discord,  {{< iref "#telegram" "Telegram" >}},
-    {{< iref "microblogging#keybase" "Keybase" >}},
-    {{< iref "microblogging#rocketchat" "Rocket.Chat" >}}
-    Hipchat (via xmpp), Steam,
-    Twitch, ssh-chat and  {{< iref "microblogging#matrix" "Matrix" >}} with REST API.
--   <a name="spectrum2">[Spectrum2](http://spectrum.im/) (GPL)
-    is a proxy  allowing to connect from Xmpp or
-    {{< iref "microblogging#slack" "Slack" >}} to many protocols. We can choose the
-    backend we use with {{< iref "#libpurple" "libPurple" >}} we can all the lipurple plugins
-    : AIM, Jabber, ICQ, MSN, Yahoo, Skype, Telegram, Facebook;
-    with _LibCommuni_ we bridge to IRC; Twitter backend is for Twitter (!); Swiften
-    backend allows XMPP; [Transwhat backend](https://github.com/stv0g/transwhat) is used
-    for WhatsApp.
 
-    The repository offer an apt repo with source deb packages,
-    and a Docker image.
-    -   [Spectrum2 GitHub repository](https://github.com/hanzz/spectrum2)
+
+## Bitlbee{#bitlbee}
+
+[//]: ( [[file:/share/sync_folders/misc/mznotes/content-org/notes/im_notes.org::#bitlbee_notes][Bitlbee Notes]] )
+
+{{< wp "bitlbee" >}} (GPL) is an IRC to other chat
+networks gateway, such as AIM, ICQ, Microsoft Messenger, Yahoo!,
+Jabber, Facebook Messenger, Twitter, Identi.ca,
+and status.net.  It allows you to browse other chat protocols with
+your irc client. Bitlbee can be usefull if you want to use only a
+light irc client to take part in chats from many protocols
+including jabber/ssl as in gmail accounts.
+
+Bitlbee has support for {{< iref "#otr" "OTR" >}}
+with _libotr_.
+
+The bitlbee
+daemon is tiny 1.2M res./0.8M shared. _in Debian_.
+
+-   [bitlbee Home](http://www.bitlbee.org/)
+-   [Bitlbee documentation
+    ](http://www.bitlbee.org//user-guide.html)
+-   [Bitlbee Wiki](https://wiki.bitlbee.org/)
+    offer on-line searchable BitlBee documentation.
+    There is a list of supported protocols in the first page.
+-   [list of public bitlbee servers
+    ](http://www.bitlbee.org/main.php/servers.html)
+    they allow to use Bitlbee without installing
+    it.
+-   [ArchLinux BitlBee Tutorial
+    ](http://wiki.archlinux.org/index.php/Bitlbee)
+    explains how to connect to the basic jabber, and th private services
+    {{< iref "#telegram" "Telegram" >}}, {{< iref "sip#discord" "Discord" >}}, twitter.
+-   [ArchLinux Screen Irssi Bitlbee and SSH
+    ](http://wiki.archlinux.org/index.php/Screen_Irssi_Bitlbee)
+    explains how to have a persistent connection to messaging
+    services.
+-   [Emacs and BitlBee
+    ](http://www.emacswiki.org/cgi-bin/wiki?BitlBee)
+-   [bitlbee-otr](https://wiki.bitlbee.org/bitlbee-otr) add
+    support for {{< iref "#otr" "Off-the-Record Messaging (OTR)" >}} either by a plugin
+    _bitlbee-plugin-otr is in Debian_ or Bitlbee has an
+    optional native support for OTR since 3.0, which can be
+    enabled at compile time.
+-   [Bitlbee development daily package
+    ](https://wiki.bitlbee.org/Packages) may be fresher then the
+    Debian standard one.
+-   [BitlBee native support to Twitter
+    ](https://wiki.bitlbee.org/HowtoTwitter) partly [deprecated
+    ](https://wiki.bitlbee.org/HowtoTwitter/StreamDeprecation).
+-   [BitlBee native support for Gnu Social
+    ](https://wiki.bitlbee.org/HowtoStatusNet).
+-   [BitlBee support for Facebook
+    ](https://wiki.bitlbee.org/HowtoFacebookMQTT).
+-   [BitlBee plugin for Mastodon](https://github.com/kensanata/bitlbee-mastodon),
+    [How to Mastodon - BitlBee Wiki](https://wiki.bitlbee.org/HowtoMastodon).
+    this plugin does not need libpurple and  is also available from Debian.
+    -   [bitlbee-mastodon Help
+        ](https://alexschroeder.ch/cgit/bitlbee-mastodon/tree/doc/HELP.md)
+        commands for the mastodon plugin, also available from bitlbee help.
+
+[BitlBee can be compiled to use libpurple
+](https://wiki.bitlbee.org/HowtoPurple)
+instead of the built-in code. It offers a few extra features
+(like file transfers on all IM networks) and
+support more networks protocols.  It
+adds a lot of dependencies (around 100MBytes of extra
+packages), and it makes the program more resource-hungry at
+runtime.
+
+But _bitlbee-libpurple_ allow to use some more protocols
+like [Skype with skypeweb](https://wiki.bitlbee.org/HowtoSkypeWeb),
+GaduGadu, SIPE, Microsoft's OCS, Lync (on Office 365 as well), Skype for Business,
+{{< iref "#telegram" "Telegram" >}} through
+[telegram-purle plugin](https://github.com/majn/telegram-purple),
+Slack, Rocket.Chat, {{< iref "microblogging#mattermost" "Mattermost" >}}, Google Hangout through
+[purple hangout plugin](https://bitbucket.org/EionRobb/purple-hangouts),
+WhatsApp no longer work due to whatsapp forbidding libpurple access.
+
+_bitlbee-libpurple_ is in debian. See also the
+{{< iref "#libpurple" "libpurple section" >}}.
+-   [Using BitlBee with the libpurple IM backend
+    ](https://wiki.bitlbee.org/HowtoPurple)
+
+
+## MatterBrigde{#matterbridge}>
+[Matterbridge](https://github.com/42wim/matterbridge) (Apache License)
+is a bridge written in go between
+{{< iref "microblogging#mattermost" "Mattermost" >}}, IRC, Gitter, xmpp,
+{{< iref "microblogging#slack" "Slack" >}},
+{{< iref "microblogging#gitter" "Gitter"  >}},
+{{< iref "sip#discord" "Discord" >}},  {{< iref "#telegram" "Telegram" >}},
+{{< iref "microblogging#keybase" "Keybase" >}},
+{{< iref "microblogging#rocketchat" "Rocket.Chat" >}}
+Hipchat (via xmpp), Steam,
+Twitch, ssh-chat and  {{< iref "microblogging#matrix" "Matrix" >}} with REST API.
+
+## Spectrum2{#spectrum2}
+[Spectrum2](http://spectrum.im/) (GPL)
+is a proxy  allowing to connect from Xmpp or
+{{< iref "microblogging#slack" "Slack" >}} to many protocols. We can choose the
+backend we use with {{< iref "#libpurple" "libPurple" >}} we can all the lipurple plugins
+: AIM, Jabber, ICQ, MSN, Yahoo, Skype, {{< iref "#telegram" "Telegram" >}}, Facebook;
+with _LibCommuni_ we bridge to IRC; Twitter backend is for Twitter (!); Swiften
+backend allows XMPP; [Transwhat backend](https://github.com/stv0g/transwhat) is used
+for WhatsApp.
+
+The repository offer an apt repo with source deb packages,
+and a Docker image.
+-   [Spectrum2 GitHub repository](https://github.com/hanzz/spectrum2)
 
 # Xmpp servers software
 -   Wikipedia: {{< wp "Comparison of XMPP server software" >}} compare
@@ -1183,13 +1238,18 @@ to remote Xmpp clients.
         ](https://wiki.archlinux.org/index.php/Prosody)
     -   A french [prosody Tutorial
         ](http://www.vanaryon.tk/2010/01/prosody-un-serveur-jabber-leger/)
--   <a name="tigasexmppserver"></a>[Tigase Xmpp Server
-    ](http://www.tigase.net/content/tigase-xmpp-server)  (AGPL)
+-   <a name="tigasexmppserver"></a>[Tigase Xmpp Server](https://tigase.net/xmpp-server)
+    (AGPL)
     Is a java Xmpp web server.
     It supports RFC 6120 - XMPP CORE and RFC 6121 - XMPP IM  along
     with a [many extensions](http://www.tigase.net/server-features).
     It is designed to run from very small machines, to standard
     servers.
+
+    It is produced by  [Tigase Inc](https://tigase.net/), which also develop
+    [Tigase XMPP Client Apps](https://tigase.net/xmpp-clients)
+    {{< iref "#siskin" "Siskin" >}},  {{< iref "#stork" "Stork" >}} and _Beagle_.
+    -   [Tigase Server - GitHub](https://github.com/tigase/tigase-server).
 -   [IMSpector](http://www.imspector.org/wordpress/) (GPL)
     is an Instant Messenger proxy written in C++ with monitoring,
     blocking and content-filtering capabilities. It supports MSN,
@@ -1201,28 +1261,37 @@ to remote Xmpp clients.
 ## C or C++
 -   {{< iref "#libpurple" "Libpurple" >}}
     is above with its main frontend {{< iref "#pidgin" "Pidgin" >}}.
--   <a name="telepathy"></a>[Telepathy
-    ](http://telepathy.freedesktop.org/wiki/) is a framework
-    that provide communication as a desktop service by using a unified
+-   <a name="telepathy"></a>[Telepathy](http://telepathy.freedesktop.org/wiki/) is a
+    framework that provide communication as a desktop service by using a unified
     [D-Bus](http://dbus.freedesktop.org/) API.
-    Telepathy provides protocol backends for Jabber/XMPP/Jingle,
-    link-local XMPP, SIP, Yahoo/AIM and IRC. It supports instant
-    messaging, voice calls and video calls. The gnome messaging
-    clients are
-    {{< iref "#empathy" "Empathy" >}} and _polari_.
+
+    Telepathy provides protocol backends for Jabber/XMPP/Jingle, link-local XMPP, SIP,
+    Yahoo/AIM and IRC. It supports instant messaging, voice calls and video calls. The
+    gnome messaging clients are {{< iref "#empathy" "Empathy" >}} and
+    {{< iref "irc#polari" "Polary" >}}.
     Telepathy and it's plugins are in Debian.
 
-    -   The _haze_ plugin is a Telepathy connection manager based on
-        libpurple, this allows to connect to all protocols supported
-        by libpurple (Pidgin) including AIM, Windows Live (MSN),
-        Yahoo!, Gadu-Gadu, Groupwise and ICQ.
-    -   _rakia_ is a SIP connection manager for
-        Telepathy based on the
+    -   The [haze](https://telepathy.freedesktop.org/components/telepathy-haze/)
+        plugin is a Telepathy connection manager based on libpurple, this allows to
+        connect to all protocols supported by libpurple (Pidgin) including AIM, Windows
+        Live (MSN), Yahoo!, Gadu-Gadu, Groupwise and ICQ.
+    -   [rakia](https://telepathy.freedesktop.org/components/telepathy-rakia/)
+        is a SIP connection manager for Telepathy based on the
         [SofiaSIP](http://sofia-sip.sourceforge.net/development.html)
         stack.
-    -   _Gabble_ is a Jabber/XMPP connection manager for Telepathy,
-        it handles Google Talk and Facebook Chat.
-    -   _Idle_ is an IRC connection manager for the Telepathy.
+    -   [Gabble](https://telepathy.freedesktop.org/components/telepathy-gabble)
+        is a Jabber/XMPP connection manager for Telepathy, it handles Google Session and
+        Facebook Chat.
+    -   [Idle](https://telepathy.freedesktop.org/components/telepathy-idle)
+        is an IRC connection manager for the Telepathy.
+    -   [Morse](https://telepathy.freedesktop.org/components/telepathy-morse)
+        connection manager for {{< iref "#telegram" "Telegram" >}} network
+    -   [Nonsense](https://telepathy.freedesktop.org/components/telepathy-nonsense)
+        connection manager for the XMPP (Jabber) protocol, based on QXmpp
+    -   [Hanging](https://telepathy.freedesktop.org/components/telepathy-hanging)
+        connection manager for Hangouts
+
+
 
 ## Python, Lua
 -   [jabberpy](http://jabberpy.sourceforge.net/)
@@ -1230,7 +1299,8 @@ to remote Xmpp clients.
 -   [pyxmpp2](https://github.com/Jajcus/pyxmpp2) (LGPL)
     python Xmpp library  _based on libxml2 _,
 -   [Twisted Words](http://twistedmatrix.com/documents/current/words/)
-    (MIT License) python Xmpp library.
+    (MIT License) python Xmpp library based on
+    {{< iref "python_libraries#twisted" "Twisted" >}}.
 -   [Verse](http://matthewwild.co.uk/projects/verse/home)
     is a Jabber library in Lua.
 -   [Xmpp on Google App Engine
@@ -1347,9 +1417,9 @@ protocol.
     -   [GitHub Rambox](https://github.com/saenzramiro/rambox)
 -   <a name="franz5"></a>[Franz 5](https://meetfranz.com/)
     Franz is a Windows, OS X, and linux messaging app for Facebook
-    Messenger, Gitter, HipChat, {{< Iref "Microblogging#Mattermost" "Mattermost" >}},
+    Messenger, Gitter, HipChat, {{< iref "microblogging#mattermost" "Mattermost" >}},
     {{< iref "microblogging#rocketchat" "RocketChat" >}}, Skype, Slack,
-    Telegram, WhatsApp,and more.
+    {{< iref "#telegram" "Telegram" >}}, WhatsApp,and more.
     There is a Debian/Ubuntu package.
     -   [GitHub - meetfranz/franz
         ](https://github.com/meetfranz/franz) (Apache License).
@@ -1443,13 +1513,12 @@ recordings. All devices linked to Cryptocat accounts will receive
 messages, even when offline.
 
 For the transport layer encryption _Cryptocat_ uses the
-{{< iref "#omemo" "OMEMO Multi-End Message and Object Encryption" >}}. _Cryptocat_'s network uses XMPP
-over WebSockets and only relays encrypted messages and does not
-store any data. In addition to the Cryptocat client's end-to-end
-encryption protocol, client-server communication is protected by
-TLS. It provide {{< wp "forward secrecy" >}} of messages, that is protects
-past sessions against future compromises of secret keys or
-passwords.
+{{< iref "#omemo" "OMEMO Multi-End Message and Object Encryption" >}}.
+_Cryptocat_'s network uses XMPP over WebSockets and only relays encrypted messages and
+does not store any data. In addition to the Cryptocat client's end-to-end encryption
+protocol, client-server communication is protected by TLS. It provide
+{{< wp "forward secrecy" >}} of messages, that is protects past sessions against future
+compromises of secret keys or passwords.
 
  _Cryptocat_ is available for Linux, windows, OSX.
 
@@ -1553,11 +1622,30 @@ the new [Signal fundation](https://signal.org/blog/signal-foundation/).
     ](https://ssd.eff.org/en/module/how-use-signal-android).
 
 The is an an alternate CLI
-[GitHub - AsamK/signal-cli](https://github.com/AsamK/signal-cli).
-This CLI can also be used with the netcurses interface
-[GitHub - jwoglom/signal-curses](https://github.com/jwoglom/signal-curses)
-or through weechat with
-[GitHub - thefinn93/signal-weechat](https://github.com/thefinn93/signal-weechat).
+[GitHub - AsamK/signal-cli](https://github.com/AsamK/signal-cli) (GPLv3).
+a commandline interface for libsignal-service-java. It supports registering, verifying,
+sending and receiving messages.
+
+or registering you need a phone number where you can receive SMS or incoming
+calls. signal-cli is primarily intended to be used on servers to notify admins of
+important events. For this use-case, it has a dbus interface, that can be used to send
+messages from any programming language that has dbus bindings.
+
+Binaries are provided in the
+[releases repository](https://github.com/AsamK/signal-cli/releases/)
+they need JRE 11.
+
+-   [signal-cli Wiki](https://github.com/AsamK/signal-cli/wiki) contains the man page,
+    _Quck Start_, Dbus usage, examples, _Linking other devices_, trusted keys management.
+
+
+The _signal-cli_ client is used in many frontends listed [in the Wiki
+](https://github.com/AsamK/signal-cli/wiki#signal-cli-scriptsexamples), among them
+
+-   [GitHub - jwoglom/signal-curses](https://github.com/jwoglom/signal-curses)
+    netcurses interface.
+-   [GitHub - thefinn93/signal-weechat](https://github.com/thefinn93/signal-weechat).
+    Weechat plugin.
 
 <a name=signald></a>[signald](https://git.callpipe.com/finn/signald) (GPL)
 is a daemon that facilitates communication over Signal bu sending messages in the signald
@@ -1604,54 +1692,47 @@ is also available.
 Users can also access Telegram's
 cloud-based messages via an official web browser interface called
 [Telegram Web](https://web.telegram.org/), the source are in the
-[GiyHub repository Webogram](https://github.com/zhukov/webogram).
-
-
+[GitHub repository Webogram](https://github.com/zhukov/webogram).
 
 There are bridges to IRC with [teleirc](https://github.com/FruitieX/teleirc)
-an also to IRC,XMPP, and numerous protocols using
+and  multiprotocol bridges including IRC and XMPP, using
 {{< iref "#matterbridge" "Matterbrige" >}} or {{< iref "#libpurple"  "libpurple" >}}.
 
 
 ## Whatsapp {#whatsapp}
-{{< wp "WhatsApp" >}} __proprietary__ cross-platform instant messaging
-client for smartphones.  It uses the Internet to send text
-messages, documents, images, video, user location and audio media
-messages to other users using standard cellular mobile numbers.
+{{< wp "WhatsApp" >}} __proprietary__ cross-platform instant messaging client for
+smartphones.  It uses the Internet to send text messages, documents, images, video, user
+location and audio media messages to other users using standard cellular mobile numbers.
 _WhatsApp_ has been acquired by Facebook in 2014.
 
-There are applications for all kind of mobile phone systems,
- WhatsApp Web is a a client used through a web
-browser by syncing with the mobile device's connection.
+There are applications for all kind of mobile phone systems, WhatsApp Web is a a client
+ used through a web browser by syncing with the mobile device's connection.
 
-A Pidgin plug-in called whatsapp-purple aimed to XMPP
-interoperability was blocked by whatsapp by blocking the phone
-itself that used this application.
+A Pidgin plug-in called whatsapp-purple aimed to XMPP interoperability was blocked by
+whatsapp by blocking the phone itself that used this application.
 
-_WhatsApp_ uses a customized version of XMPP; Multimedia messages
-are sent by uploading the image, audio or video to be sent to an
-HTTP server and then sending a link to the content, all messages
-are first stored on _WhatsApp_ servers then poll the receiver to
-ask an ack, when the message is delivered it is dropped, there is
-a miximum time of 30 days for delivery.
+_WhatsApp_ uses a customized version of XMPP; Multimedia messages are sent by uploading
+the image, audio or video to be sent to an HTTP server and then sending a link to the
+content, all messages are first stored on _WhatsApp_ servers then poll the receiver to
+ask an ack, when the message is delivered it is dropped, there is a miximum time of 30
+days for delivery.
 
 _Whatsapp_ has shown [many security breaches
 ](https://en.wikipedia.org/wiki/WhatsApp#Security) even since the
 adoption _but unpublished_ of encryption.
 
 As well _Whatsapp_ as displayed
-[many privacy problems ](https://en.wikipedia.org/wiki/WhatsApp#Privacy). In
-February 2015, a Dutch university studen proved that anyone could
-track a _WhatsApp_ user's status and profile pictures, privacy
-settings or status messages regardless of their privacy settings.
+[many privacy problems ](https://en.wikipedia.org/wiki/WhatsApp#Privacy). In February
+2015, a Dutch university studen proved that anyone could track a _WhatsApp_ user's
+status and profile pictures, privacy settings or status messages regardless of their
+privacy settings.
 
 Sinxe _Whatsapps_ was acquired by Facebook it is sharing data with
 the rest of Facebook’s services. Look at
-[Data transfer from WHATSAPP to FACEBOOK: CNIL publicly serves formal
-notice for lack of legal basis
+[Data transfer from WHATSAPP to FACEBOOK: CNIL publicly serves formal notice for lack of legal basis
 ](https://www.cnil.fr/en/data-transfer-whatsapp-facebook-cnil-publicly-serves-formal-notice-lack-legal-basis)
-_the CNIL is an independent administrative authority that exercises
-its functions with accordance to the French Data Protection Act_.
+_the CNIL is an independent administrative authority that exercises its functions with
+accordance to the French Data Protection Act_.
 
 if you have to use it read the
 {{< iref "#eff_whatsapp" "following guides of the Electronic Frontier Foundation" >}}.
@@ -1677,20 +1758,18 @@ and
     The EFF [don't recommend WhatsApp for secure communications
     ](https://www.eff.org/deeplinks/2016/10/where-whatsapp-went-wrong-effs-four-biggest-security-concerns)
 -   <a name="yowsup"</a>[Yowsup](https://github.com/tgalal/yowsup)
-    (GPL) a python library that enables you build application which
-    use WhatsApp service. It includes a client application
+    (GPL) a python library that enables you build application which use WhatsApp
+    service. It includes a client application
     [yowsupcli](https://github.com/tgalal/yowsup/wiki/yowsup-cli-2.0)
 
     _It seems that WhatsApp now detect Yowsup and  ban  your number, so don't use it
     until they find a workaround_.
 
-    Yowsup allows you to login and use the WhatsApp service, providing
-    encryption of messages. This program can be used for multiple
-    purposes as to send message to phones, receive messages from
-    network servers or appliances, notifying about issues, via direct
-    command or by special agents. There is also a
-    {{< iref "irc#weechat" "WeeChat" >}} plugin using
-    Yowsup library.
+    Yowsup allows you to login and use the WhatsApp service, providing encryption of
+    messages. This program can be used for multiple purposes as to send message to
+    phones, receive messages from network servers or appliances, notifying about issues,
+    via direct command or by special agents. There is also a
+    {{< iref "irc#weechat" "WeeChat" >}} plugin using Yowsup library.
 -   [Whatsapp-Desktop](https://github.com/Enrico204/Whatsapp-Desktop)
     (GPL) Unofficial whatsapp web desktop client for OSX, Linux and
     Windows. Build with Electron.
@@ -1700,17 +1779,16 @@ and
 
 ## Other secure messengers
 -   [surespot](https://www.surespot.me/)
-    is an encrypted messenger for Android and IOS, the Gihub repo has
-    also a javascript node server. _Surespot_ uses 256 bit
-    AES-GCM encryption using keys created with 521 bit ECDH
-    your key is not stored on the servers, and support voice messages,
-    emoji, pictures, multiple identities, multiple devices,
-    authentication.
+    is an encrypted messenger for Android and IOS, the Gihub repo has also a javascript
+    node server. _Surespot_ uses 256 bit AES-GCM encryption using keys created with 521
+    bit ECDH your key is not stored on the servers, and support voice messages, emoji,
+    pictures, multiple identities, multiple devices, authentication.
 
-    As many encryption software, one of its drawback is to allow only
-    communication with people holding the same software. One other
-    havoc is the lack of perfect of forward security.
-
+    As many encryption software, one of its drawback is to allow only communication with
+    people holding the same software. One other havoc is the lack of perfect of forward
+    security.
+-   [Scuttlebut](https://scuttlebutt.nz/) is a p2p protocol; which allows you to send
+    messages, and share posts. It also works offline.
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
