@@ -2,11 +2,19 @@
 title: Web Servers
 ---
 
+Web servers are also called _HTTP Daemons_. In the
+{{{< iref "IP" "Internet protocols page" >}}} you find the
+{{{< iref "IP#http" "HTTP Protocol" >}}}, and the
+{{{< iref "IP#web_protocols" "CGI/WSGI/SCGI/FastCGI protocols" >}}}.
+
+HTML has it's {{{{< iref "html" "own section" >}}}.
+
 -    The main stream servers have their own page:
     {{< iref "apache" "Apache" >}},
     {{< iref "lighttpd" "Lighttpd" >}},
     {{< iref "nginx" "Nginx" >}}.
--   See also {{< iref "php" "PHP-FPM" >}}.
+-   See also {{< iref "php" "PHP" >}},
+    {{<  iref "file_transfer#http_download" "HTTP download"  >}}.
 
 # Server Architectures
 
@@ -79,13 +87,6 @@ You find in other pages of this chapter {{< iref "apache" "Apache" >}},
 -   Alternative _webalizer_, _visitors_, _lire_.
 
 
-
-# Mirroring Tools
--   [How To mirror your web site with rsync
-    ](http://www.howtoforge.com/mirroring_with_rsync)
--   [httrack](http://www.httrack.com)
-    download a website from the Internet to a local directory.
-    It is in debian packages _httrack_ and _webhttrack_, and _proxytrack_.
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
