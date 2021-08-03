@@ -87,14 +87,14 @@ adds, and the FOSS software_.
 They can offer optional features like expiration dates, private posts, syntax
 highlighting,
 
--   Wikioedia {{< wp "
+-   Wikipedia {{< wp "Pastebin" >}}.
 -   [Pastebin Services - ArchWiki
     ](https://wiki.archlinux.org/title/List_of_applications#Pastebin_services)
+-   See also {{< iref "desktop#clipboard_share" "Clipboard Sharing" >}}.
 
 
--   [pastebin.com](https://pastebin.com/) has syntax highlighting,
-    expiration dates, private posts, ads,
-    see wikipedia {{< wp "Pastebin.com" >}} for more informations.
+-   [pastebin.com](https://pastebin.com/) has syntax highlighting, expiration dates,
+    private posts, ads, see wikipedia {{< wp "Pastebin.com" >}} for more informations.
     [API](https://pastebin.com/api), many official
     [command line clients](https://pastebin.com/tools#pastebincl)
     written in many programming languages. The [original code
@@ -107,7 +107,7 @@ highlighting,
     -   For linux and old client written in Python2
         [pastbin-cl](https://github.com/tupton/pastebin-cl)
 
-    There was many controversies about Pastebin, quoting  [Pastebin Services - ArchWiki
+    There was many controversies about pastebin.com, quoting  [Pastebin Services - ArchWiki
     ](https://wiki.archlinux.org/title/List_of_applications#Pastebin_services)
 
     > An acceptable pastebin service does not require enabling JavaScript for viewing,
@@ -119,17 +119,59 @@ highlighting,
     Following the monitoring of content by Pastebin _Anonymous_ launched
     {{< iref "#anonpaste" "Anonpaste" >}}.
 
+-   [Hastebin](https://hastebin.com/about) (MIT License)
+    is a FOSS alternative to pastebin.com.
+    -   [Haste server](https://github.com/seejohnrun/haste-server)
+        is written in node.js, you can use as backend the filesystem, reddis, Postgres,
+        MongoDB, Memcached, RethinkDB, Google Datastore, Amazon S3.
+        A Docker build is also available.
+    -   [haste-client](https://github.com/seejohnrun/haste-client)  is a ruby CLI for
+        Haste.
+    -   You can also use a simple bash function:
+        ``` sh
+        haste() { a=$(cat); curl -X POST -s -d "$a" https://hastebin.com/documents |\
+           awk -F '"' '{print "https://hastebin.com/"$4}
+        ```
+    -   Or the bash script [hastebin.sh
+        ](https://github.com/diethnis/standalones/blob/master/hastebin.sh)
+    -   Python scripts
+        [kevr / hastebin](https://github.com/kevr/hastebin/blob/master/hastebin)
+        [RobertKolner / hastebin-client
+        ](https://github.com/RobertKolner/hastebin-client) (MIT License) and
+        [jirutka / haste-client ](https://github.com/jirutka/haste-client).
+    -   in Go [zneix / haste-client](https://github.com/zneix/haste-client) (AGPL-3.0)
+        and [lus / hastebin-cli ](https://github.com/lus/hastebin-cli) (MIT License)
+    -   In Rust [upaste](https://github.com/jaemk/upaste) (MIT License)
+        works also with paste.rs, and the  personal server
+        [upaste-server](https://github.com/jaemk/upaste-server).
+        It has a companion vim-plugin [vim-upaste](https://github.com/jaemk/vim-upaste)
+    -   [Emacs Haste client](https://github.com/rlister/emacs-haste-client) (GPL-2.0)
+    -   [davidjcralph/hastebin-bot](https://github.com/davidjcralph/hastebin-bot) (MIT
+        License) is a node.js {{< iref "sip#discord" "Discord" >}} bot that posts data
+        to Hastebin.
+    -   [drforse/hastebin_bot](https://github.com/drforse/hastebin_bot)
+        is a telegram bot written in Python for uploading code to hastebin.com.
+
+    There are some lighter clones of _Haste_:
+    -   [mkr bin](https://bin.mkr.pw/)
+        is a lightweight hastebin alternative with no frontend JS dependency.
+        -   [mkr bin server](https://github.com/MKRhere/bin) ( MIT License )
+            in node.js, use  mogoDB backend.
 -   [Paste.ee](https://paste.ee) is a free pastebin with no ads, SSL,
     IPv6, [API](https://pastee.github.io/docs/),
     [CLI programs](https://paste.ee/wiki/Programs).
     -   For Linux there is [past-ee-cli](https://git.meow.tf/paste-ee/cli) written in
         go. The releases includes binaries and rpm and deb packages.
 -   <a name="paste_debian"></a>[paste.debian.net](http://paste.debian.net/)
-    is a pastebin. It has an
+    is a pastebin, targeted to source code with enlightening. It has an
     [xml RPC interface](http://paste.debian.net/rpc-interface.html)  and
     [xml RPC clients](http://paste.debian.net/paste.pl?show_template=clients)
-    including {{< iref "#pastebinit" "pastebinit" >}} and an
+    including {{< iref "#pastebinit" "pastebinit" >}},
+    [paste.py](https://github.com/gebi/debianpaste-clients),
+    [paste-dn.pl](http://ankh-morp.org/~vetinari/tools/paste-dn.pl) and an
     emacs client [debpaste](https://github.com/alezost/debpaste.el) in elpa.
+    -   [paste.pl - Github](https://github.com/formorer/paste.pl) (AGPL-3.0)
+        is the perl software powering _paste.debian.net_
     -   [EmacsWiki: Debpaste](https://www.emacswiki.org/emacs/Debpaste).
 -   [fpaste or paste.fedoraproject.org
     ](https://paste.fedoraproject.org/) is the fedora pastebin service
@@ -137,27 +179,7 @@ highlighting,
 -   {{< iref "#teknik"  "Teknik" >}} has a   [Pastebin](https://paste.teknik.io)
     with a [paste shell script
     ](https://git.teknik.io/Teknikode/Tools/src/branch/master/Paste/paste.sh)
-    you can also use {{< "#uugush" "uugush" >}}.
--   <a name="technik"></a>[Teknik](https://www.teknik.io/)
-    provide many services
-    -   Free: [Encrypted File Uploads](https://upload.teknik.io/) _24h, filesize 1GB_,
-        [Pastebin](https://paste.teknik.io)
-        Technical Podcasts, Url Shortener, Mumble Server.
-    -   Free registered users: Non-Expiring Uploads, Unlimited pubic or private Git
-        Repos with a {{< iref "git#gitea" "Gitea instance" >}}, Personal Blog,
-        Service Data.
-    -   5$ lifetime account: Email Account {{< "#mail#rainloop" "RainLoop" >}},
-        Upload Size 2GB/file, total 50GB, No Embed Limits
-    -   [API Help](https://help.teknik.io/API)
-    -   [Tool Help](https://help.teknik.io/Tools) you find there  a [paste shell script
-        ](https://git.teknik.io/Teknikode/Tools/src/branch/master/Paste/paste.sh),
-        a command line script to upload files [tekup
-        ](https://git.teknik.io/danthebeastman/tekup), a [weechat script
-        ](https://git.teknik.io/Teknikode/Tools/src/branch/master/Weechat/teknik.py)
-        to interact with the Teknik Services, including file uploads, pastes, and url
-        shortening, [Hexchat script
-        ](https://git.teknik.io/Teknikode/Tools/src/branch/master/Hexchat/teknik.py),
-        and a firefox and chrome extension to access teknik services.
+    you can also use {{< iref "#uugush" "uugush" >}}.
 
 ## Codepad
 -   <a name="codepad">[codepad.org](http://codepad.org/)
@@ -170,31 +192,37 @@ highlighting,
 
 ## pastebin cli
 here are many text clip, screenshot clip, file sharing programs that
-can interface with many pastebin.
+can interface with many pastebin. Many of them have unclear license, and no source
+available, so it is difficult to know if your data and metadata is monitored, for
+sensible data use a {{< iref "#crypted_bin" "Crypted Bin" >}}
 
--   [ix.io/](http://ix.io/) is a command line pastebin.
--   <a name="pastbinit"></a>[pastebinit](https://help.ubuntu.com/community/Pastebinit)
-    can use
-    [pastebin.ca](http://pastebin.ca),
-    [pastebin.mozilla.org](http://pastebin.mozilla.org),
-    {{< iref "#paste_debian" "paste.debian.net" >}},
-    paste.drizzle.org,
-    [paste.kde.org](https://paste.kde.org/),
-    paste.openstack.org, paste.pocoo.org,
-    paste.pound-python.org, paste.ubuntu.org.cn,
-    [paste.ubuntu.com](http://paste.ubuntu.com),
-    [pastie.org](http://pastie.org/),
-    paste2.org,
-    pb.daviey.com,
-    slexy.org, {{< iref "#sprunge" " sprunge.us" >}},
-    [yourpaste.net](http://yourpaste.net),
+### pastebin with access from curl/nc
+-   <a name="ix.io"></a>[ix.io](http://ix.io/) (said open source, but unpublished source!)
+    is a command line pastebin.
 
+    You use it with curl like this:
+    ```
+    ~$ echo Hello world. | curl -F 'f:1=<-' ix.io
+    http://ix.io/fpW
+    ```
 
-    To see all services do `pastebinit -l` or look at  [all conf files
-    ](http://bazaar.launchpad.net/~pastebinit-developers/pastebinit/trunk/files/head:/pastebin.d/).
+    or
+    ```
+    curl -F 'f:1=<-' ix.io < file
+    ```
 
-    There is a pastbinit Debian package.
--   [sleeksnap](https://pastee.github.io/docs/) written in java dedicated to screenshots.
+    More detailled usage on the [ix.io Page](http://ix.io/).
+
+    You can also use the [bash client](http://ix.io/client), or from emacs
+    [ix.el](https://github.com/theanalyst/ix.el) _in MELPA_.
+-   [clbin.com](https://clbin.com/) _no source available?_
+    is a command line pastebin similar to _ix.io_.
+
+    There is a [gist with a bash script for clbin
+    ](https://gist.github.com/GermainZ/9177423) and an [emacs interface
+    ](https://gist.github.com/welliam/9788acbc2d46530a8a9974ab7fc2afa8).
+-   [localpaste](https://github.com/petermaloney/localpaste) (GPL-2.0)
+    is a python clone of clbin.
 -   <a name="sprunge"></a>[sprunge](http://sprunge.us/) is a python command line
     pastebin that you use with:
 
@@ -207,15 +235,59 @@ can interface with many pastebin.
         <command> | nc termbin.com 9999
 
     [fiche the termbin source on GitHub](https://github.com/solusipse/fiche)
-    is a 484 sloc C program. _fiche_ support ipv6.
+    is a 484 sloc C program. _fiche_ support ipv6. It is packaged ind Debian.
 
     There is also an Android termbin application.
+
+### cli for multiple pastebin
+-   [anypaste](https://anypaste.xyz/)
+    Anypaste is a file sharing bash script which uses the mime type of a file to
+    automatically detect compatible hosting sites.
+
+    The actual upload site is found in a
+    [list of plugins](https://anypaste.xyz/#plugins), you can configure enabled plugins,
+    and us a specific one with an option. It can be used for pastebins or file sharing
+    including images and videos.
+
+    The provided plugins for text are {{< iref "#ix.io" "ix.io">}},
+    [Pastie](https://pastie.org/), [P.defau.lt](https://p.defau.lt/),
+    [Paste2](https://paste2.org/), {{< iref "#hastebin" "Hastebin" >}},
+    ([Docdroid](https://docdroid.net/) for pdf, docx, ODS, ...).
+
+-   <a name="pastebinit"></a>[pastebinit](https://help.ubuntu.com/community/Pastebinit)
+    can use
+    [pastebin.ca](http://pastebin.ca),
+    [pastebin.mozilla.org](http://pastebin.mozilla.org),
+    {{< iref "#paste_debian" "paste.debian.net" >}},
+    paste.drizzle.org,
+    [paste.kde.org](https://paste.kde.org/),
+    paste.openstack.org, paste.pocoo.org,
+    paste.pound-python.org, paste.ubuntu.org.cn,
+    [paste.ubuntu.com](http://paste.ubuntu.com),
+    [pastie.org](http://pastie.org/),
+    [Paste2](https://paste2.org/),
+    pb.daviey.com,
+    slexy.org, {{< iref "#sprunge" " sprunge.us" >}},
+    [yourpaste.net](http://yourpaste.net),
+
+
+    To see all services do `pastebinit -l` or look at  [all conf files
+    ](http://bazaar.launchpad.net/~pastebinit-developers/pastebinit/trunk/files/head:/pastebin.d/).
+
+    There is a pastbinit Debian package.
+-   [sleeksnap](https://pastee.github.io/docs/) written in java dedicated to screenshots.
+
 -   <a name="uguush"></a>[uguush](https://gitlab.com/jschx/uguush/-/tree/master) (MIT
     License) is a shell command-line uploader for [uguu](https://uguu.se/),
     {{< iref "#teknik" "Teknik" >}}, [0x0](https://0x0.st/), ptpb _obsolete_, mixtape
     _obsolete_, [lewd](https://lewd.se/), fiery _obsolete_ or doko _obsolete_.
+-   [ix.io syntax highlighter](https://github.com/xero/ix.io-syntax) highlight code
+    pastes on sprunge or clbin.
 
-## Crypted pastbin
+
+## Crypted pastbin {#crypted_bin}
+<!-- [[file:/share/sync_folders/misc/mznotes/content-org/weblinks/network.org::*Privatebin][My list of Privatebin services]]
+-->
 Some pastebin offer encryption
 
 -   <a name="anonpaste"></a>[AnonPaste](https://anonpaste.org/).
@@ -226,30 +298,19 @@ Some pastebin offer encryption
     browser. At launch in 2012 it was said powered by ZeroBin, but now all information
     pages on the site is only the same _Lorem ipsum dolor_ blob.
 
--   [cryptbin](https://cryptbin.com/) AES-256 encryption in the
-    browser, using a private key given to you. When your message is
-    marked for instant self-destruction it is destroyed immediately
-    after being viewed the first time. A free account allows you to
-    save your pastes. It does not seem to have an API. There is also a
-    [cryptbin server on GitHub
-    ](https://github.com/JABirchall/cryptbin/tree/master/) but this
-    one is from JA Birchall and the former from WD Kevin.
-    See also a [Discussion on cryptbin technic and features
-    ](https://www.reddit.com/r/webdev/comments/21z3bx/i_created_cryptbin_a_pastebin_alternative_with/).
--   [Zero Bin](http://sebsauvage.net/wiki/doku.php?id=php:zerobin) by
-    Seb Sauvage is a minimalist, opensource online pastebin/discussion
+-   <a name="privatebin"></a>[PrivateBin](https://privatebin.info/) (Zlib/libpng license)
+    is a minimalist, opensource online pastebin/discussion
     board where the server has zero knowledge of hosted data. Data is
-    encrypted/decrypted in the browser using 256 bits AES.  You can
-    use the online [Seb sauvage site](http://sebsauvage.net/paste/),
-    or on [Framabin](https://framabin.org/) a [Framasoft
-    ](https://framasoft.org/).
+    encrypted/decrypted in the browser using 256 bits AES.
 
+    It is the continuation of
+    [Zero Bin](http://sebsauvage.net/wiki/doku.php?id=php:zerobin)
+    by Sebastien Sauvage, an instance of Zerobin is online on
+    [Seb sauvage site](http://sebsauvage.net/paste/),
 
-There are also some web applications that allow sharing of a pasted
-data among computers or mobile platforms like
--   [IPShare.net](http://www.ipshare.net/) for use on lan.
+    -   [PrivateBin - GitHub](https://github.com/PrivateBin/PrivateBin/).
+    -   [PrivateBin Instance Directory](https://privatebin.info/directory/)
 
-T
 ## Web file sharing servers
 _They are self-hosted solutions._
 
@@ -298,6 +359,10 @@ _They are self-hosted solutions._
 -   [FileZ](https://github.com/FileZ/FileZ) (GPL)
     is a php Web service to upload and manage files and
     share them through unique URLs. _not active since 2014_.
+-   [File2Link](https://framagit.org/kepon/file2link)
+    ([Beerware License](https://en.wikipedia.org/wiki/Beerware))
+    is a PHP File sharing service. A database is not necessary.
+    -   [File 2 Link instance - dl.zici.fr](https://dl.zici.fr/)
 -   [Jirafeau](https://gitlab.com/mojo42/Jirafeau) (AGPL)
     is a self-hosted php web service for file sharing, it uses no
     database, files can be protected by password and encrypted, and
@@ -364,6 +429,28 @@ _They are self-hosted solutions._
     LDAP or IMAP system.  MyZendTo has a restricted access to your users there is no
     public acces. Zend needs PHP and a database SQLite or MySQL.
     -   [ZendTo documentation](https://zend.to/documentation)
+
+# Collaborative services
+-   <a name="technik"></a>[Teknik](https://www.teknik.io/)
+    provide many services
+    -   Free: [Encrypted File Uploads](https://upload.teknik.io/) _24h, filesize 1GB_,
+        [Pastebin](https://paste.teknik.io)
+        Technical Podcasts, Url Shortener, Mumble Server.
+    -   Free registered users: Non-Expiring Uploads, Unlimited pubic or private Git
+        Repos with a {{< iref "git#gitea" "Gitea instance" >}}, Personal Blog,
+        Service Data.
+    -   5$ lifetime account: Email Account {{< iref "mail#rainloop" "RainLoop" >}},
+        Upload Size 2GB/file, total 50GB, No Embed Limits
+    -   [API Help](https://help.teknik.io/API)
+    -   [Tool Help](https://help.teknik.io/Tools) you find there  a [paste shell script
+        ](https://git.teknik.io/Teknikode/Tools/src/branch/master/Paste/paste.sh),
+        a command line script to upload files [tekup
+        ](https://git.teknik.io/danthebeastman/tekup), a [weechat script
+        ](https://git.teknik.io/Teknikode/Tools/src/branch/master/Weechat/teknik.py)
+        to interact with the Teknik Services, including file uploads, pastes, and url
+        shortening, [Hexchat script
+        ](https://git.teknik.io/Teknikode/Tools/src/branch/master/Hexchat/teknik.py),
+        and a firefox and chrome extension to access teknik services.
 
 # Collaborative editors
 -  [Etherpad](http://etherpad.org/) (Apache License)
