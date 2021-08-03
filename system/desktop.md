@@ -1123,7 +1123,7 @@ thin.
 Fluxbox, and i3 among the lighter wm have a systray included in the
 build-in taskbar or statusbar.
 
-## Clipboard managers {#clipboard}
+## Clipboard {#clipboard}
 
 The ICCCM (Inter-Client Communication Conventions Manual) standard
 defines three _selections_, called _PRIMARY_, _SECONDARY_ and
@@ -1142,9 +1142,11 @@ selection, not they use the clipboard.
 -   [Freedesktop clipboard specification
     ](http://standards.freedesktop.org/clipboards-spec/clipboards-latest.txt)
     present the use and recommendations for the three selections.
--   [ArchWiki: Clipboard
-    ](https://wiki.archlinux.org/index.php/Clipboard) gives a list of
+-   [ArchWiki: Clipboard](https://wiki.archlinux.org/index.php/Clipboard)
+    gives a list of
     [clipboard managers](https://wiki.archlinux.org/index.php/Clipboard#Managers).
+
+### x11 Clipboard tools
 
 The X11 applications  provide some tools to deal
 with the selections
@@ -1165,19 +1167,12 @@ with the selections
     the command line, or with the mouse in a point and click
     manner. It uses 4.1M res / 3.6M shr.
 
-There are also some web applications that allow sharing of a pasted
-data among computers or mobile platforms like
--   [wepaste.com](http://www.wepaste.com/)
--   [IPShare.net](http://www.ipshare.net/) for use on lan.
 
-You can also use any {{< iref "clouds#pastebin" "pastebin" >}}.
-
-
-Some newer command line apps to manage selection:
+Some newer command line apps to manage selection in X11:
 
 -   [autocutsel](http://www.nongnu.org/autocutsel/).
-    synchronize the three selectionS; _in debian_.
--   [clipmenu](https://github.com/cdown/clipmenu)
+    synchronize the three selections; _in debian_.
+-   [clipmenu](https://github.com/cdown/clipmenu)  (public domain)
     is a simple clipboard manager using
     {{< iref "#dmenu" "dmenu" >}}
     (or {{< iref "#rofi" "rofi" >}}) and
@@ -1185,6 +1180,8 @@ Some newer command line apps to manage selection:
     _clipmenud_ polls the clipboard every 0.5 seconds,  changes to the
     clipboard contents is writen to a cache; clipmenu reads the cache
     directory, and call dmenu to select one.
+
+    No support for Wayland is planed.
 -   [xclip](http://sourceforge.net/projects/xclip/)
     is a command line interface to X selections. It is in Debian.
 -   <a name="xsel"></a>[XSel](http://www.vergenet.net/~conrad/software/xsel/)
@@ -1192,51 +1189,109 @@ Some newer command line apps to manage selection:
     the X selection; by default  operates on the _primary_ selection,
     but you can also specify the _secondary_ or _clipboard_.
     It is in Debian.
--   [megahertz/clipboard-share
-    ](https://github.com/megahertz/clipboard-share)
+
+### Wayland Cilpboard tools{#wayland_clipboard}
+-   <a nma="wl-clipboard"></a>[wl-clipboard](https://github.com/bugaevc/wl-clipboard)
+     (GPL-3.0). Command-line copy/paste utilities for Wayland.
+    {{< man "wl-copy" >}} and {{< man "wl-paste" >}}, copy data between the clipboard and
+    pipes, sockets, files and so on.
+    _wl-clipboard_ is in Debian.
+-   [wl-clipboard-manager](https://github.com/maximbaz/wl-clipboard-manager) (ISC License)
+    wrapper over {{< iref "#wl-clipboard" "#wl-clipboard" >}}
+    that implements a clipboard manager.
+-   [clipman](https://github.com/yory8/clipman) (GPL v3.0)
+    Golang clipboard manager for Wayland. It is in Debian.
+
+    _Don't confuse with xfce4 clipboard plugin also named clipman._
+
+    Some clipboard managers in the following section have also a wayland support, but
+    for most of them by using Xwayland.
+
+### Clipboard managers
+A list is in [Archwiki Clipboard/Managers
+](https://wiki.archlinux.org/title/Clipboard#Managers).
+
+
+-   [clipcat](https://github.com/xrelkd/clipcat) (GPL-3.0)
+    is a clipboard manager written in Rust, written with a Client-Server architecture.
+
+    A [wayland support](https://github.com/xrelkd/clipcat/issues/1) is in progress.
+    In august 2021 the wayland fork live in
+    [Icelk / clipcat](https://github.com/Icelk/clipcat).
+-   [clipit](https://github.com/shantzu/ClipIt)
+    is a lightweight GTK3 clipboard manager forked from
+    {{< iref "#parcellite" "parcellite" >}}.
+
+    Clipit seat in your tray, and allow to select clipboard history.
+    It can also be used from the command line.  Clipit has preferences to manage
+    _CLIPBOARD_ and _PRIMARY_ selections and synchronize them.
+
+     ClipIt is no longer supported. and is replaced by {{< iref "#diodon" "Diodon" >}}.
+-   [clipman for xfce4](https://docs.xfce.org/panel-plugins/xfce4-clipman-plugin/)
+    is a clipboard manager for Xfce. It keeps the clipboard contents around while it is
+    usually lost when you close an application.
+-   [clipman](https://github.com/yory8/clipman) (GPL-3.0)
+    is a basic clipboard manager for Wayland, with support for persisting copy buffers
+    after an application exits.
+-   [CopyQ](https://github.com/hluk/CopyQ) (GPL-3.0)
+    is a C++/QT  clipboard manager with editing, scripting and a
+    command-line interface. _It is in Debian, along with a
+    copyq-plugins package._
+
+    CopyQ support wayland, but without global shortcuts, clipboard access from window
+    that is not active, and pasting.
+    If you want these features you can use it with Xwayland by launching it with
+
+        $ QT_QPA_PLATFORM=xcb copyq
+
+-   <a name="diodon"></a>[Diodon](https://github.com/diodon-dev/diodon) (GPL-2.0)
+    is a vala / GTK3 clipboard manager for Gnome/unity.
+
+    In Wayland it needs to use Xwayland.
+
+    _It is in Debian._
+-   [gpaste](https://github.com/Keruspe/GPaste) (BSD-2-Clause License)
+    is a GTK3 clipboard management system for Gnome. The wayland support is in the TODO
+    list, it can run under Xwayland. _in Debian._
+-   <a name="parcellite"></a>[Parcellite](https://github.com/rickyrockrat/parcellite)
+    (GPL-3.0)
+    is a lightweight, basic-features-only X11 and GTK2 clipboard manager.
+    In Gnome software suite _parcellite_ is replaced by {{< iref "#diodon" "Diodon" >}}.
+    _in Debian_.
+-   [qlipper](https://github.com/pvanek/qlipper) (GPL-2.0)
+    is a QT5 clipboard history applet.
+    It depends on X11 and does not support wayland.
+
+    _It is packaged in Debian_.
+-   [greenclip](https://github.com/erebe/greenclip) (BSD License)
+    is an haskell clipboard manager for {{< iref "#rofi" "rofi" >}}.
+    It does not support wayland, since Haskell ecosystem does not have a wayland
+    package.
+
+[redguardtoo/cliphist](https://github.com/redguardtoo/cliphist)
+is an emacs package by [Chen Bin (reguardtoo)](https://github.com/redguardtoo) to paste from clipboard manager into Emacs
+
+### Clipboard sharing {#clipboard_share}
+
+There are also some web applications that allow sharing of a pasted
+data among computers or mobile platforms like
+-   [IPShare.net](http://www.ipshare.net/) for use on lan
+    _source not available, confidentiality unknown_.
+
+You can also use any {{< iref "file_sharing#pastebin" "pastebin" >}}.
+
+-   [megahertz/clipboard-share](https://github.com/megahertz/clipboard-share)
     is a node.js server and client to share clipboard between two
     computers.
 -   [wincent/clipper](https://github.com/wincent/clipper)
     linux daemon that provide a service exposing the local clipboard
-    to local or remote processes. It is meant to be used with tmux.
-    running both locally and remotely.
--   [Exposing your clipboard over SSH
-    ](https://gist.github.com/dergachev/8259104)
-    explains how to copy clipboard to loacl and remote machines with
+    to local or remote processes. It is meant to be used with
+    {{< iref "checkpointing#tmux" "tmux" >}} running both locally and remotely.
+-   [Exposing your clipboard over SSH](https://gist.github.com/dergachev/8259104)
+    explains how to copy clipboard to local and remote machines with
     `netcat`, `xclip`, and a reverse ssh session. In this article the
     linux reader will remplace `pbcopy` by `xclip -sel clip`.
 
-There are also many clipboard managers:
--   [clipit](https://github.com/shantzu/ClipIt)
-    is a lightweight GTK+ clipboard manager forked from
-    {{< iref "#parcellite" "parcellite" >}}.
-    Clipit seat in your tray, and allow to select clipboard history.
-    It can also be used from the command line.
-    Clipit has preferences to manage _CLIPBOARD_ and _PRIMARY_
-    selections and synchronize them.
-    Memory footprints: 19M res/ 17M shr or 25M / 21M. _Clipit is in Debian._
--   [CopyQ](https://github.com/hluk/CopyQ)
-    is a C++/QT  clipboard manager with editing, scripting and a
-    command-line interface. _It is in Debian, along with a
-    copyq-plugins package._
--   [Diodon](https://launchpad.net/diodon)
-    is a vala clipboard manager for Gnome/Unity.
-    It seems to have a big list of dependencies, when we don't use
-    these full desktop software. _It is in Debian._
--   [Glipper](https://launchpad.net/glipper)
-    is a python clipboardmanager for Gnome,  Glipper appears in the
-    notification area, it uses app indicator
-    _seem abandoned since 2012 but still in debian stretch_.
--   [gpaste](https://github.com/Keruspe/GPaste)
-    is a clipboard management system for Gnome. in Debian.
--   {{< wp "Glipper" >}} is a clipboard utility for Gnome. _in Debian_.
--   [Parcellite](https://github.com/rickyrockrat/parcellite){: #parcellite}
-    is a lightweight GTK+ clipboard manager
--   [qlipper](https://github.com/pvanek/qlipper)
-    is the clipboard management system for QTDesktop. _It is in Debian_.
-
-More [applications on the ArchWiki page
-](https://wiki.archlinux.org/index.php/Clipboard#Managers).
 
 ## Keyboard addons
 
