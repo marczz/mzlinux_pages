@@ -202,6 +202,8 @@ is easier.
 -   [Samba man pages](https://www.samba.org/samba/docs/current/man-html/)
 -   [ArchLinux: Samba](https://wiki.archlinux.org/index.php/Samba) is
     a new complete howto.
+-   Debian Wiki: [Samba Main page and subpages index](https://wiki.debian.org/Samba),
+    [Samba/ServerSimple](https://wiki.debian.org/Samba/ServerSimple),
 -   [Gentoo Wiki: Samba](https://wiki.gentoo.org/wiki/Samba),
     [Samba/Samba 4 Migration](https://wiki.gentoo.org/wiki/Samba/Samba_4_Migration),
 -   [The Unofficial Samba HOWTO
@@ -211,28 +213,34 @@ is easier.
 
 ## Samba tools
 -   [Samba.org: List of Samba Gui tools](http://www.samba.org/samba/GUI/)
+-   [smbclient](https://www.samba.org/samba/docs/current/man-html/smbclient.1.html)
+    is a ftp-like samba client from the samba distribution,
 -   [Samba Commander (SMBC)](http://sourceforge.net/projects/smbc/) (GPL)
-     is a text mode SMB network commander that
-     allows to browse the local network, search for files,  download/upload files and directories
-     and create them both locally and remotely.
+    is a text mode SMB network commander that allows to browse the local network,
+    search for files, download/upload files and directories and create them both
+    locally and remotely. The last release is in 2005 and it is no longer packaged in
+    Debian.
 -   [SMBNetFS](http://sourceforge.net/projects/smbnetfs/)
     (GPL) is a fuse filesystem that allows you to use samba/microsoft
     network in the same manner as the network eighbourhood in
     Windoze. It is in Debian.
     -   [ArchWiki: samba - smbnetfs
         ](https://wiki.archlinux.org/index.php/samba#smbnetfs)
-    -   [Gentoo Wiki: smbnetfs
-        ](https://wiki.gentoo.org/wiki/Smbnetfs)
-
+    -   [Gentoo Wiki: smbnetfs](https://wiki.gentoo.org/wiki/Smbnetfs)
+    -   [SMBNetFS - Git repository
+        ](https://sourceforge.net/p/smbnetfs/git/ci/master/tree/)
 -   [Fusesmb](http://www.ricardis.tudelft.nl/~vincent/fusesmb/) is an
     older implementation of samba under fuse that allows you to create
     a folder that displays the available shares on a network. SMBNetFS
-    and Fusesmb uses the same library _libsmbclient_ _gvf_ has also a
+    and Fusesmb uses the same library _libsmbclient_ _gvfs_ has also a
     backend for Samba. It is in Debian.
--   [swat](http://www.samba.org) is the Samba web administration tool.
-    -   [SWAT: The Samba Web Administration Tool
-        ](http://www.samba.org/samba/docs/man/Samba-HOWTO-Collection/SWAT.html)
-        in Samba Reference Guide.
+
+    [FuseSmb - Ubuntu Help](https://help.ubuntu.com/community/FuseSmb)
+    warns that:
+    >> Note that "fusesmb" has several outstanding bug reports from people who find that
+    >> it leaves an empty directory with no contents, and that its "fusesmb.cache" file
+    >> never gets written.
+
 
 ## Samba tips
 
@@ -296,7 +304,9 @@ See also {{< iref "clouds" "Cloud Storage" >}}.
 
 See also {{< iref "clouds" "Cloud Storage" >}}.
 
--   [Linux-HA](http://linux-ha.org/wiki/Main_Page).
+-   [awesome distributed systems
+    ](https://github.com/theanalyst/awesome-distributed-systems).
+-   [Linux High Availability _HA_](http://linux-ha.org/wiki/Main_Page).
 -   [ Red Hat - Configuring and managing high availability clusters
     ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8-beta/html/configuring_and_managing_high_availability_clusters/)
 -   [Cluster From Scratch - pdf HA Guide
