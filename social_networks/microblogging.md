@@ -11,11 +11,8 @@ See also the related page {{< iref "xmpp" "XMPP" >}},
 -----------------
 
 # References
--   Wikipedia: {{< wp "Social Software" >}} with references to specific service
-    page, {{< wp "Social networking service" >}}, {{< wp "Distributed social network" >}},
-    {{< wp "Comparison of software and protocols for distributed social networking" >}},
-    {{< wp "List of social networking websites" >}},
-    {{< wp "Microblogging" >}}, {{< wp "Comparison of microblogging services" >}}
+-   Wikipedia:  {{< wp "Microblogging" >}},
+    {{< wp "Comparison of microblogging services" >}}
 -   [Activity Streams](http://wiki.activitystrea.ms/w/page/1359261/FrontPage)
     is an open format specification for activity stream protocols,
     which are used to syndicate activities taken in social web
@@ -206,12 +203,6 @@ Some microblogging servers are refered to in the
 -   <a name="keybase">[keybase](https://keybase.io/) (BSD Licence)
     is a security app for mobile phones and computers powered by
     public-key cryptography.
-    -   [keybase docs](https://keybase.io/docs)
-    -   <a name="kbpgp">[kbpgp](https://keybase.io/kbpgp)
-        is Keybase's implementation of PGP in JavaScript
-        it is used in the client side web pgp key generators
-        [Fncontact - Pgpkeys](https://fncontact.com/pgpkeys),
-        [PgpKeyGen](https://pgpkeygen.com/)
 -   <a name="pleroma"></a>[Pleroma](https://pleroma.social/) (AGPL)
     is a federated social networking server,
     based on "{{< iref "#activitypub" "ActivityPub" >}} protocol it is part of
@@ -283,6 +274,11 @@ depend upon.
     like the WhatsApp bridge.
 -   [mxtoot](https://github.com/ma1uta/mxtoot)    (Apache License)
     is a Matrix <=> Mastodon bot written on java.
+-    <a name= "zom"></a>[འཛོམས་](https://zom.im/)    or
+    [Zom](https://zom.im/zomenglish.html) (Apache License)
+    is an ios and android client for the Matrix protocol.
+    -   [zom-android-matrix - GitHub](https://github.com/zom/zom-android-matrix)
+    -   [zom-ios-matrix](https://github.com/zom/zom-ios-matrix)
 
 ## Mastodon {#mastodon}
 {{< wp "Mastodon_(software)" "Mastodon" >}} (AGPL) is a federated social network written
@@ -313,12 +309,17 @@ Mastodon is part of {{< iref "#fediverse" "Fediverse" >}} network.
 -   [umr](https://github.com/Ulrar/umrc)
     is a bot to allow using a Mastodon account from IRC
 -   {{< iref "xmpp#bitlbee" "BitlBee" >}}
-    [plugin for Mastodon](https://github.com/kensanata/bitlbee-mastodon).
+    [plugin for Mastodon](https://github.com/kensanata/bitlbee-mastodon),
+    [How to Mastodon - BitlBee Wiki](https://wiki.bitlbee.org/HowtoMastodon),
+    this plugin is also available from Debian..
 -   [Mastodon Twitter Crossposter](https://crossposter.masto.donte.com.br/) is a
     service which allows you to connect a Mastodon account and a Twitter account and
     enable cross-posting between them.
--   [Moa](https://moa.party/)
-    Link your Mastodon account to Twitter and Instagram. the code is on GitHub.
+-   [Moa](https://moa.party/) Link your Mastodon account to Twitter and Instagram.
+    The code is on GitHub.
+-   [Mastodon.py](https://github.com/halcy/Mastodon.py) (MIT License)
+    Python wrapper for the Mastodon API. It is in the Debian package _python3-mastodon_.
+    -   [Mastodon.py documentation](https://mastodonpy.readthedocs.io/en/stable/).
 
 ### Mastodon clients
 -   [Brutaldon](https://git.carcosa.net/jmcbray/brutaldon) (AGPL)
