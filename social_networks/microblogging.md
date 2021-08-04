@@ -200,9 +200,6 @@ Some microblogging servers are refered to in the
     -   Wikipedia {{< wp "GNU social" >}}
     -   {{< iref "#bitlbee" "BitlBee" >}} has support for
         Gnu Social.
--   <a name="keybase">[keybase](https://keybase.io/) (BSD Licence)
-    is a security app for mobile phones and computers powered by
-    public-key cryptography.
 -   <a name="pleroma"></a>[Pleroma](https://pleroma.social/) (AGPL)
     is a federated social networking server,
     based on "{{< iref "#activitypub" "ActivityPub" >}} protocol it is part of

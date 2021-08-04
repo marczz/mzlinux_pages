@@ -2,8 +2,6 @@
 title: Encrypted File Systems
 ---
 
-{{% toc /%}}
-
 See also the companion pages on
 {{< iref "filesystems" "filesystems" >}},
 {{< iref "network_filesystems" "network filesystems" >}}.
@@ -217,8 +215,13 @@ This project was inspired by EncFS and strives to fix its security issues.
 Gocryptfs is in Debian.
 
 -   [GitHub: gocryptfs](https://github.com/rfjakob/gocryptfs)
--   [gocryptfs comparison and benchmarks
-    ](https://nuetzlich.net/gocryptfs/comparison/).
+-   [gocryptfs comparison and benchmarks](https://nuetzlich.net/gocryptfs/comparison/).
+
+# Keybase
+<a name="keybase">[keybase](https://keybase.io/) (BSD Licence)
+is a security app for mobile phones and computers powered by
+public-key cryptography.
+
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
