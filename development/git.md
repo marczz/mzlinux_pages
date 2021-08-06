@@ -354,7 +354,7 @@ with new commands what we did with some script using plumbing commands_
     -   [GitHub - Gogs](https://github.com/gogits/gogs).
     -   Demo site [try.gogs](https://try.gogs.io/).
     -   [ArchWiki - Gogs](https://wiki.archlinux.org/index.php/Gogs).
--   [Gitea](https://gitea.io/) (MIT)
+-   <a name="gitea"><a>[Gitea](https://gitea.io/) (MIT)
     is a community managed fork of Gogs.
     -   [GitHub - Gitea](https://github.com/go-gitea/gitea)
     -   [ArchWiki: Gitea](https://wiki.archlinux.org/index.php/Gitea)
@@ -821,56 +821,54 @@ the Git Wiki [list also the Web interfaces
     -   [myrepos source Repository](https://git.kitenet.net/index.cgi/myrepos.git/tree/)
 
 ## Sensitive information
--   [git-remote-gcrypt
-    ](https://spwhitton.name/tech/code/git-remote-gcrypt/)
-    is a git remote helper to push and pull from repositories
-    encrypted with GnuPG. It works with the standard git transports,
-    including repository hosting services like GitHub. There is a
-    Debian package.
+-   [git-remote-gcrypt](https://spwhitton.name/tech/code/git-remote-gcrypt/)
+    (GPL-3.0)
+    is a git remote helper to push and pull from repositories encrypted with GnuPG. It
+    works with the standard git transports, including repository hosting services like
+    GitHub. There is a Debian package.
 
-    Supported locations are `local`, `rsync://` and `sftp://`, where
-    the repository is stored as a set of files, or instead any
-    `<giturl>` where gcrypt will store the same representation in a
-    git repository, bridged over arbitrary git transport.
+    Supported locations are `local`, `sftp://`, `rsync://user@host/path` and
+    `rclone://remote:subdir` where the repository is stored as a set of files, or instead
+    any `<giturl>` where gcrypt will store the same representation in a git repository,
+    bridged over arbitrary git transport.
 
-    Using an arbitrary `<giturl>` or an `sftp://` URI requires
-    uploading the entire repository history with each push.  The
-    `rsync://` transport _(not git rsync!)_, performs incremental
-    pushes.
-    -   [source mirror on GitHub
-        ](https://github.com/spwhitton/git-remote-gcrypt)
--   [git-crypt](https://www.agwa.name/projects/git-crypt/)
-    is a C++ program that enables transparent encryption and decryption
-    of files in a git repository. You can choose files which are
-    encrypted when committed, and decrypted when checked out.  This
-    lets you store your secret material (such as keys or passwords) in
-    the same repository as your code, without requiring you to lock
+    Using an arbitrary `<giturl>` or an `sftp://` URI requires uploading the entire
+    repository history with each push.  The `rsync://` transport _(not git rsync!)_,
+    performs incremental pushes.
+    -   [git-remote-gcrypt Manual
+        ](https://github.com/spwhitton/git-remote-gcrypt/blob/master/README.rst)
+    -   [git-remote-gcrypt git repository
+        ](https://git.spwhitton.name/git-remote-gcrypt/)
+    -   [mirror on GitHub](https://github.com/spwhitton/git-remote-gcrypt)
+-   [git-crypt](https://www.agwa.name/projects/git-crypt/) (GPL-3.0)
+    is a C++ program that enables transparent encryption and decryption of files in a
+    git repository. You can choose files which are encrypted when committed, and
+    decrypted when checked out.  This lets you store your secret material (such as keys
+    or passwords) in the same repository as your code, without requiring you to lock
     down your entire repository.
--   [git secret](http://git-secret.io/)
-    is a bash script which stores gpg encrypted credential inside
-    source code git repository.
+    -   [git-crypt - GitHub](https://github.com/AGWA/git-crypt)
+-   [git secret](http://git-secret.io/) (MIT License)
+    is a bash script which stores gpg encrypted credential inside source code git
+    repository.
 
-    _git secret_ is similar to _git-crypt_, but written as a script
-    while git-crypt is a binary program. _git-crypt_ also has an has
-    an option to export a symmetric key, that is not available in
-    _git-secret_.  With _git-secre_t you can simply encrypt/decrypt
-    files with gpg commands which is [harder with git-crypt
+    _git secret_ is similar to _git-crypt_, but written as a script while git-crypt is a
+    binary program. _git-crypt_ also has an has an option to export a symmetric key,
+    that is not available in _git-secret_.  With _git-secret_ you can simply
+    encrypt/decrypt files with gpg commands which is [harder with git-crypt
     ](https://github.com/AGWA/git-crypt/issues/99#issuecomment-270179200).
 
+    -   [git-secret - GitHub](https://github.com/sobolevn/git-secret)
 -   [Blackbox](https://github.com/StackExchange/blackbox) (MIT)
-    is a bash suite of utilities to gpg encrypt secrets in a VCS repo
-    (i.e. Git, Mercurial, Subversion or Perforce). Blackbox allow
-    collaboration by allowing to retreive the secrets files with the
-    gpg key of each registered user.
+    is a bash suite of utilities to gpg encrypt secrets in a VCS repo (i.e. Git,
+    Mercurial, Subversion or Perforce). Blackbox allow collaboration by allowing to
+    retreive the secrets files with the gpg key of each registered user.
 -   [transcrypt](https://github.com/elasticdog/transcrypt) (MIT)
-    is a bash script to provide transparent encryption of sensitive
-    files stored in a git directory. Sensitive files are recognized by
-    a  `.gitattributes` filter pattern.
+    is a bash script to provide transparent encryption of sensitive files stored in a
+    git directory. Sensitive files are recognized by a `.gitattributes` filter pattern.
 -   [Keyringer](https://keyringer.pw/) (GPL)
-    lets you manage and share secrets using GnuPG and Git in
-    a distributed fashion. It has custom commands to encrypt, decrypt
-    and recrypt secrets as well as create key pairs and supports
-    encryption to multiple recipients and groups of different
+    lets you manage and share secrets using GnuPG and Git in a distributed fashion. It
+    has custom commands to encrypt, decrypt and recrypt secrets as well as create key
+    pairs and supports encryption to multiple recipients and groups of different
     recipients. Keyringer is in Debian.
     -   [keyringer source](https://git.fluxo.info/keyringer/)
 
