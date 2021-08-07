@@ -1183,7 +1183,7 @@ is a bridge written in go between
 {{< iref "microblogging#slack" "Slack" >}},
 {{< iref "microblogging#gitter" "Gitter"  >}},
 {{< iref "sip#discord" "Discord" >}},  {{< iref "#telegram" "Telegram" >}},
-{{< iref "microblogging#keybase" "Keybase" >}},
+{{< iref "#keybase_chat" "Keybase Chat" >}},
 {{< iref "microblogging#rocketchat" "Rocket.Chat" >}}
 Hipchat (via xmpp), Steam,
 Twitch, ssh-chat and  {{< iref "microblogging#matrix" "Matrix" >}} with REST API.
@@ -1539,6 +1539,15 @@ encrypt messages between Cryptocat users, and use Cryptocat server..
 -   [Blog - Cryptocat, ou le piège du client magique
     ](https://nl.movim.eu/?blog/edhelas@movim.eu/ebc3a98e-3a37-440f-8cb4-8de1fa7eed3b).
 
+## Keybase Chat{#keybase_chat}
+Is the {{<iref "encrypted_filesystems#keybase" "Keybase" >}} end-to-end encrypted chat.
+You can chat with other keybase users, you can chat with members of (one of) your team,
+organize chat by channels. Chat also support bots.
+-   [Keybase chat](https://book.keybase.io/chat).
+-   [Technical documentation for chat](https://book.keybase.io/docs/chat).
+-   [Keybase Managed Bots - GitHub](https://github.com/keybase/managed-bots).
+-   [technical documentation for bot development](https://book.keybase.io/docs/bots)
+
 ## Retroshare {#retroshare}
 {{< wp "RetroShare" >}} (GPL) is a cross-platform decentralised
 {{< wp "Friend-to-Friend" >}} application that offers social networking and
@@ -1626,7 +1635,7 @@ The is an an alternate CLI
 a commandline interface for libsignal-service-java. It supports registering, verifying,
 sending and receiving messages.
 
-or registering you need a phone number where you can receive SMS or incoming
+To register you need a phone number where you can receive SMS or incoming
 calls. signal-cli is primarily intended to be used on servers to notify admins of
 important events. For this use-case, it has a dbus interface, that can be used to send
 messages from any programming language that has dbus bindings.
