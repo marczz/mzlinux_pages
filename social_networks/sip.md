@@ -2,19 +2,15 @@
 title: SIP
 ---
 
-{{% toc /%}}
-
------------------
 
 See also the related page {{< iref "xmpp" "XMPP" >}}
 where are included the XMPP/Jingle clients like {{< iref "xmpp#pidgin" "Pidgin" >}},
-{{< iref "xmpp#psi" "Psi" >}},
-{{< iref "xmpp#jabbin" "Jabbin" >}},
+{{< iref "xmpp#psi" "Psi" >}}, {{< iref "xmpp#jabbin" "Jabbin" >}},
 {{< iref "xmpp#jabbin" "Gajim" >}}.
 
 Other related pages are {{< iref "irc" "IRC" >}},
 {{< iref "xmpp" "XMPP" >}}
-and {{< iref "social_networks" "Social Networks" >}}
+and {{< iref "microblogging" "Micro Blogging" >}}
 
 
 # VoIp protocols references
@@ -27,33 +23,26 @@ and {{< iref "social_networks" "Social Networks" >}}
     things VOIP (
     [VOIP Service Providers
     ](http://www.voip-info.org/wiki/view/VOIP+Service+Providers))
--   [Erlang](http://www.erlang.com/support.html)
-    gives a
+-   [Erlang](http://www.erlang.com/support.html) gives a
     [Voice over IP protocols](http://www.erlang.com/protocols.html)
-    article that is a simple desription of the layered hierarchy of the
-    protocols involved in the transmission of voice samples through an
-    IP based network.
+    article that is a simple desription of the layered hierarchy of the protocols
+    involved in the transmission of voice samples through an IP based network.
     You find also a
     [Bandwith whitepaper](http://www.erlang.com/bandwidth.html)
-    which explain the bandwidth calculations.<br />
-    It also ofers
-    [on line calculators](http://www.erlang.com/calculator/)
+    which explain the bandwidth calculations.
+
+    It also ofers [on line calculators](http://www.erlang.com/calculator/)
     among which
-    [Lines to VoIP Bandwidth Calculator
-    ](http://www.erlang.com/calculator/lipb/)
+    [Lines to VoIP Bandwidth Calculator](http://www.erlang.com/calculator/lipb/)
     which is very usefull to know how many voice paths you can manage
     knowing your bandwith and codec.
--   [Session Initiation Protocol (SIP)
-    ](http://www.cs.columbia.edu/sip/)
+-   [Session Initiation Protocol (SIP)](http://www.cs.columbia.edu/sip/)
     at cs.columbia.edu
--   <a="cusax"></a>[CUSAX RFC 7081
-    ](https://tools.ietf.org/html/rfc7081)
-    Combined Use of the Session Initiation Protocol (SIP)
-    and the Extensible Messaging and Presence Protocol (XMPP)
--   [Klaus Darilion's VoIP bookmarks
-    ](http://www.pernau.at/kd/voip/index.html)
--   [Search google for VoIp tests sites
-    ](http://www.google.com/search?q=voip+test).
+-   <a="cusax"></a>[CUSAX RFC 7081](https://tools.ietf.org/html/rfc7081)
+    Combined Use of the Session Initiation Protocol (SIP) and the Extensible Messaging
+    and Presence Protocol (XMPP)
+-   [Klaus Darilion's VoIP bookmarks](http://www.pernau.at/kd/voip/index.html)
+-   [Search google for VoIp tests sites](http://www.google.com/search?q=voip+test).
     [Klaus Darilion's SIP Test Tools bookmarks
     ](http://www.pernau.at/kd/voip/bookmarks-sip-test.html).
 -   Some bandwith calculators:
@@ -65,7 +54,7 @@ and {{< iref "social_networks" "Social Networks" >}}
 -   [voip-info:Codecs](http://www.voip-info.org/wiki-Codecs) gives
     a table of codecs used for VoIp _seems obsolete_,
     and links to each one.
-    [opus.org](http://opus-codec.org/) gives a
+-   [opus.org](http://opus-codec.org/) gives a
     [codecs comparison with Opus](http://opus-codec.org/comparison/)
 -   [SIPSorcery](http://www.sipsorcery.com/) is an online call
     management application, allowing you using multiple SIP providers
@@ -143,7 +132,7 @@ and {{< iref "social_networks" "Social Networks" >}}
 # Voip clients
 _mainly sip clients_
 
--   <a name="blink"></a>[Blink](http://icanblink.com/) (eitehr open
+-   <a name="blink"></a>[Blink](http://icanblink.com/) (either open
     source or shareware)
     a python/QT Linux and windows, or python/Cocoa Mac OS X, sip client
     with instant messaging, OTR support, file transfer and multi-party
@@ -174,17 +163,17 @@ _mainly sip clients_
     {{< iref "#cusax" "CUSAX" >}} and has built-in
     IPv6, NAT traversal and DNSSEC.
     -   [Jitsi Home](https://jitsi.org/)
-    -   [Jitsi Meet](https://jitsi.org/Projects/JitsiMeet) (apache
-        License) is the VideoConferencing application of Jitsi. It is
-        a WebRTC JavaScript applicationthe communication is Encrypted
-        by default, and provide HD audio with Opus. The desktop
-        application is packaged for Debian/Ubuntu. There is a Web
-        application that works in a WebRtc able Browser. The reference
-        server is [meet.jit.si](https://meet.jit.si/) (Ireland), an
-        alternate one in France is
-        [Framatalk](https://framatalk.org/).
-        There is a [Docker container of Jitsi-Meet
+    -   [Jitsi Meet](https://jitsi.org/Projects/JitsiMeet) (apache License)
+        is the VideoConferencing application of Jitsi. It is a WebRTC JavaScript
+        application the communication is Encrypted by default, and provide HD audio with
+        Opus. The desktop application is packaged for Debian/Ubuntu. There is a Web
+        application that works in a WebRtc able Browser.
+    -   [Docker container of Jitsi-Meet
         ](https://hub.docker.com/r/robertoandrade/jitsi-meet/).
+    -   [meet.jit.si](https://meet.jit.si/) the reference Jitsi _irish_server.
+    -   [List of Jitsi Meet instances](https://framatalk.org/accueil/en/info/)
+        from [Framatalk](https://framatalk.org/).
+    -   [Bim Jisti Meet instance](https://allo.bim.land/) (france)
 -   [Linphone](http://www.linphone.org/) (GPL)
     is an audio and video GTK+ SIP client.  linphone takes 21M
     resident/15M shared; it is comparable with twinkle.  There is also
@@ -281,13 +270,14 @@ open source.
         ](https://help.ubuntu.com/community/SkypeTroubleshooting)
     -   [Debian Wiki: Skype](https://wiki.debian.org/skype)
 
--   {{< wp "Discord_(software)"  "Discord" >}}
+-   <a name="discord"></a>{{< wp "Discord_(software)"  "Discord" >}} (proprietary)
     is a proprietary freeware VoIP application designed for
     gaming communities. The multi-platform Discord client is built
     on the Electron framework. It allows voice calling, Video calling
-    and screensharing.
+    and screensharing, text messaging, media and files.
+
     There are paid addons and gadgets.
-    -   [Discord Home](https://discordapp.com/)
+    -   [Discord Home](https://discord.com/) has a web frontend to Discord.
 
 -   {{< wp "TeamSpeak" >}} (proprietary, Freeware)
     is a VoIP  application for audio conference.
