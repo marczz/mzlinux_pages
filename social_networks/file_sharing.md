@@ -2,7 +2,7 @@
 Title: File Sharing
 ---
 
-# Temporary File hosting {#temporary_storage}
+# Temporary File storage services{#temporary_storage}
 See also {{< iref "p2p#p2p_file_sharing" "P2P File sharing" >}},
 {{< iref "task_management" "Task Management" >}},
 {{< iref "task_management#note_taking" "Notes Taking" >}}.
@@ -74,7 +74,139 @@ but that works also.
     necessary, password protection, default save time 7 days, when
     registered it can be set up to 90 days.
 
-## Pastebin {#pastebin}
+## Web file sharing servers
+_They are self-hosted solutions._
+
+-   [Open source alternatives to ZendTo
+    ](http://alternativeto.net/software/zendto/?license=opensource)
+
+
+-   [Bozon](https://github.com/broncowdd/BoZoN) (AGPL)
+    is a self-hosted php drag & drop file sharing app.It allows to
+    stream mp3, to manage users, to display a photo gallery.  BoZoN
+    doesn't use any database back end. Files are shared by url, with
+    an optional password protection. You can Access BoZoN on a
+    smartphone with your browser, and use a qrcode to share your link
+    with smartphone users. You can share a whole folder and Download
+    its contents into a zip.
+-   [Coquelicot](https://coquelicot.potager.org/) (AGPL)
+    _one-click_ file sharing with a focus on privacy. While being uploaded, files are
+    written to the disk using symmetric encryption. The encryption key is either part
+    of the download URL, or specified by the uploader. More details in the
+    [Readme](https://coquelicot.potager.org/README). Coquelicot is written in ruby.
+    The last release is from 2016, it was packaged in Debian until stretch.
+-   <a name="fex"></a>[F*EX](http://fex.rus.uni-stuttgart.de/) (Artistic Licence)
+    _Frams' Fast File EXchange_ is a PERL service to send big files
+    between two users. The sender uploads the file to the F*EX server
+    using a WWW upload form and the recipient automatically gets a
+    notification e-mail with a download-URL. _Fex_ is in a Debian
+    package, the client utilities are in a separate package _fex-utils_.
+-   [FileTea](https://github.com/elima/FileTea) (AGPL)
+    functions as a web server. Users can drag files into their web
+    browser and a URL will be generated for each one. Those URLs can
+    be sent to other people, who will be able to start downloading the
+    files immediately.
+
+    An HTML5 capable browser is required in order to share the files, but
+    any HTTP client can download them, including command-line tools such
+    as curl or wget.
+
+    Files are sent through the server, but no data is stored there:
+    FileTea is only used to route the traffic. This also means that
+    there's no limit to the size of shared files.
+
+    The service is anonymous and does not require user registration.
+
+    _Filetea is not updated since january 2014. It is still in Debian_
+
+-   [FileZ](https://github.com/FileZ/FileZ) (GPL)
+    is a php Web service to upload and manage files and
+    share them through unique URLs. _not active since 2014_.
+-   [File2Link](https://framagit.org/kepon/file2link)
+    ([Beerware License](https://en.wikipedia.org/wiki/Beerware))
+    is a PHP File sharing service. A database is not necessary.
+    -   [File 2 Link instance - dl.zici.fr](https://dl.zici.fr/)
+-   [Jirafeau](https://gitlab.com/mojo42/Jirafeau) (AGPL)
+    is a self-hosted php web service for file sharing, it uses no
+    database, files can be protected by password and encrypted, and
+    have expiration time for downloads.
+-   <a name="lufi"></a>[Lufi](https://framagit.org/luc/lufi/) (AGPL)
+    is a Perl server application of file sharing. The files are encrypted in the browser
+    and stored on the server. All the encryption/decryption processes take place in your
+    browser. The encryption key is never sent over the network. You can host Lufi on
+    your server or use a free instance.
+    -   [Lufi Wiki](https://framagit.org/luc/lufi/wikis/home).
+    -   [Lufi Cli](https://framagit.org/luc/lufi-cli)
+        is a javascript client for Lufi.
+    -   Many on line service offer a free Lufi, instance, the available services change
+        quite quickly, so I don't give a list but you can see some european instances at
+        the page [framasoft: lufi](https://alt.framasoft.org/en/framadrop).
+-   [Plik](https://github.com/root-gg/plik/tree/master) (MIT License)
+     is a scalable & friendly temporary file upload system in golang.  It uses as data
+     backend Files, OpenStack Swift, or S3 this last allow server side encryption; and
+     as metadata backend Sqlite3 or postgresql. There is a go client with packages for
+     all platforms, and a bash client in the repository.
+
+     -   [Plik vulpecula.fr](https://plik.vulpecula.fr/#/) is a free hosted instance of
+     Plik.
+-   <a name="sharik"></a>[Sharik](https://github.com/marchellodev/sharik) ( MIT License)
+    is a golang cross-platform solution for sharing files via Wi-Fi or Mobile Hotspot.
+    it is available for Android, Windows, Linux, iOS. Sharik provides an HTTP server
+    allowing to download the file you want to share, so the client can download without
+    installing a specific client.
+    -  There is also a go cli-only version
+       [sharic](https://github.com/marchellodev/sharic).
+
+    _Sharik_ serve the files on HTTP on the localhost, neither the protocol, nor the
+    files are encrypted. So it is only acceptable if the local network is on a firewall
+    protected lan. When connected to an hotspot, we should not send private files. For
+    mobile to mobile transmission we can also use a wifi connection sharing protected by
+    password, giving some protection against _naive_ intruder, the main benefit here is
+    that don't require a wifi internet connection and it does not count against your
+    data plan.
+
+    So Sharik is good for _quick and dirty_ file exchange, all the protected file
+    storages servers of this section offer a more secure solution, at the price of
+    needing a relay, and an internet connection.
+-   [weborf](https://github.com/ltworf/weborf) (GPL-3.0)
+    is a python instant server to share files using the HTTP protocol. It provides CLI
+    and It comes with a Python/QT5 GUI called _qweborf_, allows using webdav, can
+    compress directories on the fly.  The server has CGI and (x)inetd support, and
+    systemd integration. It can do NAT traversal to share files outside of the local
+    network.
+
+    Weborf can
+    [cache the server generated contents](https://ltworf.github.io/weborf/cache.html)
+    With the expense of a small amount of disk space, this can greatly increase the
+    speed.
+
+    [_weborf_, _weborf-daemon_ and  _qweborf_ are in Debian
+    ](https://tracker.debian.org/pkg/weborf)..
+-   [Zendto](https://zend.to/) (Open source _Unknown licence_)
+    is a PHP service to share files.  It will also integrate with any Active Directory,
+    LDAP or IMAP system.  MyZendTo has a restricted access to your users there is no
+    public acces. Zend needs PHP and a database SQLite or MySQL.
+    -   [ZendTo documentation](https://zend.to/documentation)
+
+### image files servers
+-   <a name="lutim"></a>[Lutim](https://framagit.org/luc/lutim) (AGPL) is a Perl server
+    application for image sharing. The file are optionally encrypted
+    on the server, _not the browser like in Lufy,_ which allow to use
+    it even with a browser without javascript.
+    -   [Lutim Wiki](https://framagit.org/luc/lutim/wikis/).
+-  [TeDomum / TedImg](https://forge.tedomum.net/tedomum/tedimg) (Beer-ware License)
+   a flask image server, written in python, Node.js
+
+## Codepad
+-   <a name="codepad">[codepad.org](http://codepad.org/)
+    is an online compiler/interpreter, and a simple collaboration tool. It's
+    a pastebin that executes code for you. It can interpret code in C, C++, D, haskell,
+    lua, ocaml, php, perl, python, ruby, scheme, Tcl.
+-   [LaKing/codepad](https://github.com/LaKing/codepad) (MIT License) is a
+    collaborative online code editor and project written in node.js manager running
+    online in the browser. It relies on a MongoDB database.
+
+# Pastebin {#pastebin}
 
 There are many similar services that we name with the common name {{< wp "Pastebin" >}}
 from the first {{< wp "pastebin.com" >}} they allow a free web clip by pasting some
@@ -181,14 +313,6 @@ highlighting,
     ](https://git.teknik.io/Teknikode/Tools/src/branch/master/Paste/paste.sh)
     you can also use {{< iref "#uugush" "uugush" >}}.
 
-## Codepad
--   <a name="codepad">[codepad.org](http://codepad.org/)
-    is an online compiler/interpreter, and a simple collaboration tool. It's
-    a pastebin that executes code for you. It can interpret code in C, C++, D, haskell,
-    lua, ocaml, php, perl, python, ruby, scheme, Tcl.
--   [LaKing/codepad](https://github.com/LaKing/codepad) (MIT License) is a
-    collaborative online code editor and project written in node.js manager running
-    online in the browser. It relies on a MongoDB database.
 
 ## pastebin cli
 here are many text clip, screenshot clip, file sharing programs that
@@ -286,8 +410,8 @@ sensible data use a {{< iref "#crypted_bin" "Crypted Bin" >}}
 
 
 ## Crypted pastbin {#crypted_bin}
-<!-- [[file:/share/sync_folders/misc/mznotes/content-org/weblinks/network.org::*Privatebin][My list of Privatebin services]]
--->
+<!-- [[file:/share/sync_folders/misc/mznotes/content-org/weblinks/network.org::*Privatebin][My list of Privatebin services]] -->
+
 Some pastebin offer encryption
 
 -   <a name="anonpaste"></a>[AnonPaste](https://anonpaste.org/).
@@ -297,11 +421,10 @@ Some pastebin offer encryption
     It is said to use real 256bit AES encryption, which takes place directly in your
     browser. At launch in 2012 it was said powered by ZeroBin, but now all information
     pages on the site is only the same _Lorem ipsum dolor_ blob.
-
 -   <a name="privatebin"></a>[PrivateBin](https://privatebin.info/) (Zlib/libpng license)
-    is a minimalist, opensource online pastebin/discussion
-    board where the server has zero knowledge of hosted data. Data is
-    encrypted/decrypted in the browser using 256 bits AES.
+    is a minimalist, opensource online pastebin/discussion board where the server has
+    zero knowledge of hosted data. Data is encrypted/decrypted in the browser using 256
+    bits AES.
 
     It is the continuation of
     [Zero Bin](http://sebsauvage.net/wiki/doku.php?id=php:zerobin)
@@ -310,125 +433,6 @@ Some pastebin offer encryption
 
     -   [PrivateBin - GitHub](https://github.com/PrivateBin/PrivateBin/).
     -   [PrivateBin Instance Directory](https://privatebin.info/directory/)
-
-## Web file sharing servers
-_They are self-hosted solutions._
-
--   [Open source alternatives to ZendTo
-    ](http://alternativeto.net/software/zendto/?license=opensource)
-
-
--   [Bozon](https://github.com/broncowdd/BoZoN) (AGPL)
-    is a self-hosted php drag & drop file sharing app.It allows to
-    stream mp3, to manage users, to display a photo gallery.  BoZoN
-    doesn't use any database back end. Files are shared by url, with
-    an optional password protection. You can Access BoZoN on a
-    smartphone with your browser, and use a qrcode to share your link
-    with smartphone users. You can share a whole folder and Download
-    its contents into a zip.
--   [Coquelicot](https://coquelicot.potager.org/) (AGPL)
-    _one-click_ file sharing with a focus on privacy. While being uploaded, files are
-    written to the disk using symmetric encryption. The encryption key is either part
-    of the download URL, or specified by the uploader. More details in the
-    [Readme](https://coquelicot.potager.org/README). Coquelicot is written in ruby.
-    The last release is from 2016, it was packaged in Debian until stretch.
--   <a name="fex"></a>[F*EX](http://fex.rus.uni-stuttgart.de/) (Artistic Licence)
-    _Frams' Fast File EXchange_ is a PERL service to send big files
-    between two users. The sender uploads the file to the F*EX server
-    using a WWW upload form and the recipient automatically gets a
-    notification e-mail with a download-URL. _Fex_ is in a Debian
-    package, the client utilities are in a separate package _fex-utils_.
--   [FileTea](https://github.com/elima/FileTea) (AGPL)
-    functions as a web server. Users can drag files into their web
-    browser and a URL will be generated for each one. Those URLs can
-    be sent to other people, who will be able to start downloading the
-    files immediately.
-
-    An HTML5 capable browser is required in order to share the files, but
-    any HTTP client can download them, including command-line tools such
-    as curl or wget.
-
-    Files are sent through the server, but no data is stored there:
-    FileTea is only used to route the traffic. This also means that
-    there's no limit to the size of shared files.
-
-    The service is anonymous and does not require user registration.
-
-    _Filetea is not updated since january 2014. It is still in Debian_
-
--   [FileZ](https://github.com/FileZ/FileZ) (GPL)
-    is a php Web service to upload and manage files and
-    share them through unique URLs. _not active since 2014_.
--   [File2Link](https://framagit.org/kepon/file2link)
-    ([Beerware License](https://en.wikipedia.org/wiki/Beerware))
-    is a PHP File sharing service. A database is not necessary.
-    -   [File 2 Link instance - dl.zici.fr](https://dl.zici.fr/)
--   [Jirafeau](https://gitlab.com/mojo42/Jirafeau) (AGPL)
-    is a self-hosted php web service for file sharing, it uses no
-    database, files can be protected by password and encrypted, and
-    have expiration time for downloads.
--   <a name="lufi"></a>[Lufi](https://framagit.org/luc/lufi/) (AGPL)
-    is a Perl server application of file sharing. The files are encrypted in the browser
-    and stored on the server. All the encryption/decryption processes take place in your
-    browser. The encryption key is never sent over the network. You can host Lufi on
-    your server or use a free instance.
-    -   [Lufi Wiki](https://framagit.org/luc/lufi/wikis/home).
-    -   [Lufi Cli](https://framagit.org/luc/lufi-cli)
-        is a javascript client for Lufi.
-    -   Many on line service offer a free Lufi, instance, the available services change
-        quite quickly, so I don't give a list but you can see some european instances at
-        the page [framasoft: lufi](https://alt.framasoft.org/en/framadrop).
--   <a name="lutim"></a>[Lutim](https://framagit.org/luc/lutim) (AGPL) is a Perl server
-    application for image sharing. The file are optionally encrypted
-    on the server, _not the browser like in Lufy,_ which allow to use
-    it even with a browser without javascript.
-    -   [Lutim Wiki](https://framagit.org/luc/lutim/wikis/).
--   [Plik](https://github.com/root-gg/plik/tree/master) (MIT License)
-     is a scalable & friendly temporary file upload system in golang.  It uses as data
-     backend Files, OpenStack Swift, or S3 this last allow server side encryption; and
-     as metadata backend Sqlite3 or postgresql. There is a go client with packages for
-     all platforms, and a bash client in the repository.
-
-     -   [Plik vulpecula.fr](https://plik.vulpecula.fr/#/) is a free hosted instance of
-     Plik.
--   <a name="sharik"></a>[Sharik](https://github.com/marchellodev/sharik) ( MIT License)
-    is a golang cross-platform solution for sharing files via Wi-Fi or Mobile Hotspot.
-    it is available for Android, Windows, Linux, iOS. Sharik provides an HTTP server
-    allowing to download the file you want to share, so the client can download without
-    installing a specific client.
-    -  There is also a go cli-only version
-       [sharic](https://github.com/marchellodev/sharic).
-
-    _Sharik_ serve the files on HTTP on the localhost, neither the protocol, nor the
-    files are encrypted. So it is only acceptable if the local network is on a firewall
-    protected lan. When connected to an hotspot, we should not send private files. For
-    mobile to mobile transmission we can also use a wifi connection sharing protected by
-    password, giving some protection against _naive_ intruder, the main benefit here is
-    that don't require a wifi internet connection and it does not count against your
-    data plan.
-
-    So Sharik is good for _quick and dirty_ file exchange, all the protected file
-    storages servers of this section offer a more secure solution, at the price of
-    needing a relay, and an internet connection.
--   [weborf](https://github.com/ltworf/weborf) (GPL-3.0)
-    is a python instant server to share files using the HTTP protocol. It provides CLI
-    and It comes with a Python/QT5 GUI called _qweborf_, allows using webdav, can
-    compress directories on the fly.  The server has CGI and (x)inetd support, and
-    systemd integration. It can do NAT traversal to share files outside of the local
-    network.
-
-    Weborf can
-    [cache the server generated contents](https://ltworf.github.io/weborf/cache.html)
-    With the expense of a small amount of disk space, this can greatly increase the
-    speed.
-
-    [_weborf_, _weborf-daemon_ and  _qweborf_ are in Debian
-    ](https://tracker.debian.org/pkg/weborf)..
--   [Zendto](https://zend.to/) (Open source _Unknown licence_)
-    is a PHP service to share files.  It will also integrate with any Active Directory,
-    LDAP or IMAP system.  MyZendTo has a restricted access to your users there is no
-    public acces. Zend needs PHP and a database SQLite or MySQL.
-    -   [ZendTo documentation](https://zend.to/documentation)
 
 # Collaborative services
 -   <a name="technik"></a>[Teknik](https://www.teknik.io/)
@@ -452,25 +456,56 @@ _They are self-hosted solutions._
         ](https://git.teknik.io/Teknikode/Tools/src/branch/master/Hexchat/teknik.py),
         and a firefox and chrome extension to access teknik services.
 
-# Collaborative editors
--  [Etherpad](http://etherpad.org/) (Apache License)
-   is a customizable online editor written in nodejs providing real-time collaborative
-   editing. There are many online instance of etherpad that you can find in
-   [this list
-   ](https://github.com/ether/etherpad-lite/wiki/Sites-that-run-Etherpad-Lite),
-   like the french [framapad](https://framapad.org/).
+## Collaborative editors
 -  See also {{< iref "#codepad" "codepad" >}} in the
    {{< iref "#pastbin" "pastbin list" >}}).
--  [CryptPad](https://github.com/xwiki-labs/cryptpad)(AGPL and private licence)
-   is the zero knowledge realtime online _node.js_ collaborative editor, it can use
-   _MongoDB_ or [leveldb](https://en.wikipedia.org/wiki/LevelDB). A docker configuration,
-   and an Ansible recipe is also provided.
-   [cryptpad](https://cryptpad.fr/)
-   is an online service instance that offer encrypted pad to registered user, and
-   temporary encrypted pads to anonymous users.
 
+### Etherpad {#etherpad}
+[Etherpad](http://etherpad.org/) (Apache License)
+is a customizable online editor written in nodejs providing real-time collaborative
+editing. There are many online instances of etherpad .
+-   [list of instance running Etherpad Lite
+    ](https://github.com/ether/etherpad-lite/wiki/Sites-that-run-Etherpad-Lite)
+-   [etherpad.wikimedia](https://etherpad.wikimedia.org/)
+-   [framapad](https://framapad.org/) _France_.
+-   [Bim Etherpad](https://pad.bim.land/) _Montpellier, France_.
+-   [Etherpad de La Quadrature Du Net](https://pad.lqdn.fr/)
+
+[Libreto](https://github.com/Ventricule/libreto) (GPL-3.0)
+is a collaborative notebook based on etherpad, It can become a mini-website, a workshop
+logbook or a collective book writing tool.
+
+The demonstration site [libreto.net](https://libreto.net)
+allows to create libretto book on many etherpads: framapad, wikimedia, allmende, factor,
+etherpad, la quadrature du net.
+
+
+### Cryptpad {#cryptpad}
+[CryptPad](https://github.com/xwiki-labs/cryptpad)(AGPL and private licence)
+is the zero knowledge realtime online _node.js_ collaborative editor, it can use
+_MongoDB_ or [leveldb](https://en.wikipedia.org/wiki/LevelDB). A docker configuration,
+and an Ansible recipe is also provided.
+
+-   [cryptpad.fr](https://cryptpad.fr/)
+    is an online  instance that offer temporary 90 days encrypted pads to anonymous
+    users, lasting encrypted pad up to a total 1GB to free registered user, and from 5GB
+    to 50GB for 60€/year to 180€/year.
+
+-   [Bim CryptPad](https://doc.bim.land/)   temporary 90 days encrypted pads to anonymous
+    users, lasting encrypted pad up to a total 100MB to free registered users.
+
+## Slides
+-   [Strut](https://strut.io/)
+    is an HTML5 Presentation Editor
+    -   [strut.io instance](http://strut.io/dist/index.html)
+
+## Diagrams
+- [diagrams.net](https://app.diagrams.net/)  is an online diagramming web site
+- [jgraph/drawio: Source to app.diagrams.net](https://github.com/jgraph/drawio)
+  (Apache License)
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
 <!-- ispell-local-dictionary: "english" -->
+<!-- eval: (org-link-minor-mode 1) -->
 <!-- End: -->
