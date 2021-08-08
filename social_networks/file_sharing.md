@@ -435,6 +435,9 @@ Some pastebin offer encryption
     -   [PrivateBin Instance Directory](https://privatebin.info/directory/)
 
 # Collaborative services
+See also voice and video calling {{< iref "sip#jitsi" Jitsi" >}},
+{{< iref "sip#bigbluebutton" "BigBlueButton" >}}
+
 -   <a name="technik"></a>[Teknik](https://www.teknik.io/)
     provide many services
     -   Free: [Encrypted File Uploads](https://upload.teknik.io/) _24h, filesize 1GB_,
@@ -466,19 +469,24 @@ is a customizable online editor written in nodejs providing real-time collaborat
 editing. There are many online instances of etherpad .
 -   [list of instance running Etherpad Lite
     ](https://github.com/ether/etherpad-lite/wiki/Sites-that-run-Etherpad-Lite)
--   [etherpad.wikimedia](https://etherpad.wikimedia.org/)
--   [framapad](https://framapad.org/) _France_.
--   [Bim Etherpad](https://pad.bim.land/) _Montpellier, France_.
--   [Etherpad de La Quadrature Du Net](https://pad.lqdn.fr/)
 
-[Libreto](https://github.com/Ventricule/libreto) (GPL-3.0)
+There are numerous (~200) [Etherpad plugins](https://static.etherpad.org/index.html)
+adding new functionalities.
+
+Many free services hosting uses
+[Mypads](https://framagit.org/framasoft/Etherpad/ep_mypads) which add privates pads:
+-   users and their authentication;
+-   groups of pads per user, unlimited, sharable;
+-   attached pads, with choice between invite known users to use them, making them private
+    with password or letting them public.
+
+<a name="libreto"></a>[Libreto](https://github.com/Ventricule/libreto) (GPL-3.0)
 is a collaborative notebook based on etherpad, It can become a mini-website, a workshop
 logbook or a collective book writing tool.
 
 The demonstration site [libreto.net](https://libreto.net)
 allows to create libretto book on many etherpads: framapad, wikimedia, allmende, factor,
 etherpad, la quadrature du net.
-
 
 ### Cryptpad {#cryptpad}
 [CryptPad](https://github.com/xwiki-labs/cryptpad)(AGPL and private licence)
@@ -494,6 +502,11 @@ and an Ansible recipe is also provided.
 -   [Bim CryptPad](https://doc.bim.land/)   temporary 90 days encrypted pads to anonymous
     users, lasting encrypted pad up to a total 100MB to free registered users.
 
+## Spreadsheet
+[Ethercalc](https://github.com/audreyt/ethercalc) (Common Public Attribution License (CPAL) and
+Artistic License 2.0) is a node web spreatsheet
+
+
 ## Slides
 -   [Strut](https://strut.io/)
     is an HTML5 Presentation Editor
@@ -503,6 +516,30 @@ and an Ansible recipe is also provided.
 - [diagrams.net](https://app.diagrams.net/)  is an online diagramming web site
 - [jgraph/drawio: Source to app.diagrams.net](https://github.com/jgraph/drawio)
   (Apache License)
+
+## Poll System {#poll_system}
+They are {{< wp "Doodle_(website)" "Doodle" >}} open source alternatives.
+
+A list of alternatives is [given in jawanndenn Readme
+](https://github.com/hartwork/jawanndenn#goals)
+
+
+-   [Framadate](https://framadate.org/) has its source at
+    [Framadate · Framagit](https://framagit.org/framasoft/framadate/framadate).
+
+    It is powered by [OpenSondage](https://github.com/leblanc-simon/OpenSondage) which
+    is a fork of _Studs_.
+
+    In 2021 is in maintenance mode, will be replaced by
+    [funky framadate - Framagit](https://framagit.org/framasoft/framadate/funky-framadate-front).
+
+-   [Nuages](https://nuages.domainepublic.net/) A collaborative meeting poll system,
+    similar to doodle or rdvz.  It is build in python, using the django framework and a
+    little of javascript.
+
+-   [jawanndenn](https://github.com/hartwork/jawanndenn) (AGPL-3.0)
+    Simple alternative to Doodle polls and scheduling (Python 3, Django 3, JavaScript)
+    -   [jawanndenn demo instance](https://jawanndenn.de/).
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
