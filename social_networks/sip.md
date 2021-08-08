@@ -150,30 +150,6 @@ _mainly sip clients_
     {{< iref "xmpp#empathy" "Empathy in my xmpp page" >}}.
 -   The [eZuce SRN](http://srn.ezuce.com/) is a distributed
     collaboration system for research community.
--   <a name="jitsi"></a>{{< wp "Jitsi" >}} (apache License)
-    is a VoIP, videoconferencing, instant messaging application for
-    Windows, Linux, Mac OS X and Android written in Java. It supports
-    XMPP including {{< iref "xmpp#jingle" "Jingle" >}}
-    and {{< iref "xmpp#jingle" "OTR encryption" >}} and
-    other proprietary IM protocols {{< wp "Microsoft Notification Protocol" >}}
-    _MSN, .NET, or Live_, {{< wp "OSCAR_PROTOCOL"  "OSCAR" >}} _AIM/ICQ/MobileMe_,
-    the {{< wp "SIMPLE" >}}  _IM and presence protocol suite based on SIP_,
-    {{< wp "Facebook Messenger" >}} and voice/video conferencing
-    (SIP/RTP/SRTP/ZRTP). _Jitsi_ supports
-    {{< iref "#cusax" "CUSAX" >}} and has built-in
-    IPv6, NAT traversal and DNSSEC.
-    -   [Jitsi Home](https://jitsi.org/)
-    -   [Jitsi Meet](https://jitsi.org/Projects/JitsiMeet) (apache License)
-        is the VideoConferencing application of Jitsi. It is a WebRTC JavaScript
-        application the communication is Encrypted by default, and provide HD audio with
-        Opus. The desktop application is packaged for Debian/Ubuntu. There is a Web
-        application that works in a WebRtc able Browser.
-    -   [Docker container of Jitsi-Meet
-        ](https://hub.docker.com/r/robertoandrade/jitsi-meet/).
-    -   [meet.jit.si](https://meet.jit.si/) the reference Jitsi _irish_server.
-    -   [List of Jitsi Meet instances](https://framatalk.org/accueil/en/info/)
-        from [Framatalk](https://framatalk.org/).
-    -   [Bim Jisti Meet instance](https://allo.bim.land/) (france)
 -   [Linphone](http://www.linphone.org/) (GPL)
     is an audio and video GTK+ SIP client.  linphone takes 21M
     resident/15M shared; it is comparable with twinkle.  There is also
@@ -235,6 +211,31 @@ _mainly sip clients_
     Resident/15M shared.
     -   Wikipedia {{< wp "Twinkle (software)" >}}
 
+## Jitsi {#jitsi}
+<!-- See [[file:/share/sync_folders/misc/mznotes/content-org/weblinks/network.org::#jitsi][Liste d'instances Jitsi]] -->
+{{< wp "Jitsi" >}} (apache License) is a VoIP, videoconferencing, instant messaging
+application for Windows, Linux, Mac OS X and Android written in Java. It supports XMPP
+including {{< iref "xmpp#jingle" "Jingle" >}},
+{{< iref "xmpp#jingle" "OTR encryption" >}} and other proprietary IM protocols like
+{{< wp "Microsoft Notification Protocol" >}} _MSN, .NET, or Live_;
+{{< wp "OSCAR_PROTOCOL" "OSCAR" >}},_AIM/ICQ/MobileMe_, the {{< wp "SIMPLE" >}}
+_IM and presence protocol suite based on SIP_, {{< wp "Facebook Messenger" >}}
+and voice/video conferencing (SIP/RTP/SRTP/ZRTP).
+
+_Jitsi_ supports {{< iref "#cusax" "CUSAX" >}} and has built-in IPv6, NAT traversal and
+DNSSEC.
+-   [Jitsi Home](https://jitsi.org/)
+-   [Jitsi Meet](https://jitsi.org/Projects/JitsiMeet) (apache License)
+    is the VideoConferencing application of Jitsi. It is a WebRTC JavaScript
+    application the communication is Encrypted by default, and provide HD audio with
+    Opus. The desktop application is packaged for Debian/Ubuntu. There is a Web
+    application that works in a WebRtc able Browser.
+-   [Docker container of Jitsi-Meet
+    ](https://hub.docker.com/r/robertoandrade/jitsi-meet/).
+-   [meet.jit.si](https://meet.jit.si/) the reference Jitsi _irish_server.
+-   [List of Jitsi Meet instances](https://framatalk.org/accueil/en/info/)
+    from [Framatalk](https://framatalk.org/).
+
 # Alt Open source Protocols
 -   {{< wp "Mumble" >}} (BSD License) Mumble is a voice over IP (VoIP)
     application written in C++/QT primarily designed for use by gamers
@@ -273,7 +274,7 @@ open source.
 -   <a name="discord"></a>{{< wp "Discord_(software)"  "Discord" >}} (proprietary)
     is a proprietary freeware VoIP application designed for
     gaming communities. The multi-platform Discord client is built
-    on the Electron framework. It allows voice calling, Video calling
+    on the Electron framework. It allows voice calling, video calling
     and screensharing, text messaging, media and files.
 
     There are paid addons and gadgets.
@@ -304,4 +305,5 @@ open source.
 <!-- Local Variables: -->
 <!-- mode: markdown -->
 <!-- ispell-local-dictionary: "english" -->
+<!-- eval: (org-link-minor-mode 1) -->
 <!-- End: -->
