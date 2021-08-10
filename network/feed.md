@@ -314,6 +314,73 @@ But you can also consider [akregator for kde](http://akregator.kde.org/), the QT
     is a free web service that creates RSS feeds that show calendars by day, week,
     month, or year.
 
+# NNTP {{#nntp}
+
+{{< wp "NNTP" >}} is an {{< wp "Application layer" >}} protocol used for transporting
+Usenet news articles _Usenet news_ between {{< wp "Usenet" >}} news servers, and for
+reading/posting article with an user client applications.
+
+-   Wikipedia: {{< wp "NNTP" >}},  {{< wp "Usenet" >}},
+    {{< wp "Category:Usenet clients" >}}, {{< wp "List of Usenet newsreaders" >}},
+    {{< wp "Comparison of Usenet newsreaders" >}},
+    {{< wp "News server" >}}, {{< wp "Category:Usenet servers" >}}.
+-   [Usenet newsreaders for Linux - Linux.com
+    ](https://www.linux.com/news/usenet-newsreaders-linux/)
+-   [Linux newsreaders - TechRepublic
+    ](https://www.techrepublic.com/article/linux-newsreaders/)
+
+Some mail clients ar also Usenet news clients like {{< iref "mail#cone" "Cone" >}},
+{{< iref "mail#claws" "Claws Mail" >}},  {{< wp "GNOME Evolution" >}},
+{{< iref "mail#gnus" "Gnus" >}},
+{{< iref "mutt" "Mutt (NeoMutt)"  >}}, {{< wp "SeeMonkey" >}} _an internet suite,
+browser, mail and nntp client_,
+{{< iref "mail#sylpheed" "Sylpheed" >}},
+{{< iref "mail#thunderbird" "Thunderbird" >}}.
+
+
+## NNTP text clients.
+
+-   [Slrn](https://slrn.info/) ( GP-2.0)
+    is a threaded news reader with color support that is designed to read news
+    fast over slow links.
+
+    Slrn can read usenet news via NNTP or directly from a local news spool.
+
+    Slrn can be heavily customized from its rc file, and even includes a built in macro
+    language. There is also support for killfiles and article scoring.
+
+    -   slrn source repository is stored on John Davis repositories at
+        `git://git.jedsoft.org/git/slrn.git`, It does not seem to have a web interface,
+        but there is [slrn GitHub mirror](https://github.com/arafel/slrn).
+    -   The documentation is installed in plain text format with slrn in
+        `/usr/share/doc/slrn/` the last source is
+        [in the git repository](https://github.com/arafel/slrn/tree/master/doc)
+        and also available html formatted in the
+        [Slrn Home site](https://slrn.info/https://slrn.info/documentation.html).
+        -   [slrn - First Steps](https://slrn.info/docs/FIRST_STEPS.html)
+             guides you through the configuration.
+        -   [The slrn reference manual](https://slrn.info/docs/slrn-manual.html)
+            gives a detailed explanation of every configuration option.
+        -   [slrn FAQ](https://slrn.info/docs/slrn-FAQ.html).
+
+## NNTP Gateways
+-   {{< wp Gmane >}} provides an NNTP gateway to many Free Software-related mailing
+    lists.  It was created and is administrated by
+    [Lars Magne Ingebrigtsen](http://quimby.gnus.org/lmi/lmi.html) who is also the
+    author of  {{< iref "mail#gnus" "Gnus" >}}.
+
+    -   The news about Gmane are in the
+        [LMI's blog](https://lars.ingebrigtsen.no/category/gmane/).
+    -   Until 2016, Gmane.org was available as nntp and also with a nice web interface
+        with search form, blog-like interface, rss feeds, ... But in 2016 it was the
+        target of DDOS attacks, and it was the
+        [end of Gmanes](https://lars.ingebrigtsen.no/2016/07/28/the-end-of-gmane/).
+   -    In 2020  Lars explained
+       [Whatever Happened To news.gmane.org?
+       ](https://lars.ingebrigtsen.no/2020/01/06/whatever-happened-to-news-gmane-org/)
+       and Gmane nntp server came up again on [news.gmane.io](http://news.gmane.io/).
+   -   [Admin - Gmane.io](https://admin.gmane.io/) is the search interface.
+
 <!-- Local Variables: -->
 <!-- mode: markdown -->
 <!-- ispell-local-dictionary: "english" -->
