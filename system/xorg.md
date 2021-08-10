@@ -1,5 +1,5 @@
 ---
-title: Xorg
+title: Xorg and Wayland
 ---
 
 See also {{< iref "input_methods" "Input method" >}} where you find
@@ -190,6 +190,19 @@ See also the {{< iref "#xdmcp" "XDMCP section" >}}
     -   [GDM Reference Manual
         ](https://help.gnome.org/admin/gdm/stable/)
     -   [ArchWiki: GDM](https://wiki.archlinux.org/index.php/GDM).
+-   <a name="greetd"></a>[greetd](https://git.sr.ht/~kennylevinsen/greetd) (GPL-3.0)
+    minimal, and flexible login manager daemon
+    It can launch many greeters:
+
+
+    -   agreety - text-based default greeter, provided with _greetd_.
+    -   [gtkgreet](https://git.sr.ht/~kennylevinsen/gtkgreet)  GTK based greeter
+        using xdg-shell or wlr-layer-shell, to be used with something like `cage`.
+    -   [dlm](https://git.sr.ht/~kennylevinsen/dlm) Dumb Login Manager using fbdev.
+    -   [wlgreet](https://git.sr.ht/~kennylevinsen/wlgreet) Wayland greeter using
+        wlr-layer-shell, used for wayland compositors like  `sway`.
+    -   [tuigreet](https://github.com/apognu/tuigreet) Console UI greeter using tui-rs
+
 -   <a name="lightdm"></a>[LightDM](http://en.wikipedia.org/wiki/LightDM) (GPL)
     is a window manager with same functionalities than _GDM_ but without Gnome
     dependencies.  LightDM is the default display manager for LXDE including lxubuntu,
@@ -544,7 +557,7 @@ package.
 -   [Remina](https://remmina.org) (GPL)
      is a Gnome remote desktop client written in GTK+, which supports multiple network
      protocols, Currently RDP, {{< iref "#vnc" "VNC" >}}, {{< iref "#spice" "SPICE" >}},
-     {{< iref "x2go" "NX" >}}, {{< iref "#xdmcp" "XDMCP" >}},  {{< iref "ssh" "SSH" >}}
+     {{< iref "#x2go" "NX" >}}, {{< iref "#xdmcp" "XDMCP" >}},  {{< iref "ssh" "SSH" >}}
      and EXEC. It is in Debian and also provided as _Flatpak_ or _Snap_ package.
      -   [Remmina GitLab repository](https://gitlab.com/Remmina/Remmina)
      -   [Remmina Wiki](https://gitlab.com/Remmina/Remmina/wikis/home)
