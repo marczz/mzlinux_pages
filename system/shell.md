@@ -7,6 +7,11 @@ title: Shell
     [Comparison of computer shells
     ](http://en.wikipedia.org/wiki/Comparison_of_computer_shells),
     {{< wp "POSIX" >}}
+-   [uhub/awesome-shell](https://github.com/uhub/awesome-shell)
+    long list of unclassified shell references. _so messy that is is unusable_.
+-   [alebcay/awesome-shell](https://github.com/alebcay/awesome-shell)
+    properly classified list of shell references, contains not only resources for shell
+    development, but also  list of application written in shell.
 -   [Shell Features](http://tldp.org/LDP/intro-linux/html/app3.html)
     in [Introduction to Linux](http://tldp.org/LDP/intro-linux/html/) _2008_
     gives rough common and differing features between shells
@@ -28,8 +33,34 @@ title: Shell
 -   Bruce Barnett [Grymoire: Sh - the Bourne Shell
     ](http://www.grymoire.com/Unix/Sh.html#uh-14)
 
-
 # Shell scripting libraries {#shell_libraries}
+-   [Shell development - awesome-shell
+    ](https://github.com/alebcay/awesome-shell#shell-script-development).
+
+-   [Argbash](https://argbash.readthedocs.io/en/latest/index.html)
+    is a bash code generator that can assist you in writing scripts that accept
+    arguments.
+    -   [argbash · GitHub](https://github.com/matejak/argbash)
+    -   [Argbash alternatives
+        ](https://argbash.readthedocs.io/en/latest/others.html)
+-   John Dubois who maintains [armory.com](http://www.armory.com/)
+    has made available a huge number of
+    [Ksh and awk scripts](http://www.armory.com/~ftp/) _2011_.
+-   [bash-modules](https://github.com/vlisivka/bash-modules)
+    A module system for bash which provide a set of bash subroutines,
+-   [log4sh](https://sites.google.com/a/forestent.com/projects/log4sh) (LGPL)
+    is a logging framework for shell scripts
+-   Pádraig Brady has many command line references, in his
+    [PixelBeat Site](http://www.pixelbeat.org) and scripts in
+    [his GitHub repository](https://github.com/pixelb) (LGPL).
+-   [pluginhook](https://github.com/progrium/pluginhook) (MIT)
+-   [sh](https://pkg.go.dev/mvdan.cc/sh/v3)
+    is a Go shell parser, formatter, and interpreter. Supports POSIX Shell, Bash, and mksh.
+    -   [mvdan / sh - GitHub](https://github.com/mvdan/sh)
+        (BSD 3-Clause revised license)
+    -   `shfmt` formats shell programs, accoding to a [cannonical syntax
+        ](https://github.com/mvdan/sh/blob/v3.3.1/syntax/canonical.sh)
+    A plugin system for Bash. In Debian.
 -   [Heiner's SHELLdorado](http://www.shelldorado.com/)
     see also the extensive
     [link page](http://www.shelldorado.com/links/index.html)
@@ -37,30 +68,9 @@ title: Shell
     is the first unit testing framework for Bourne derived shells.
 -   [shunit2](https://github.com/kward/shunit2)
     is an improved xUnit based unit testing for Unix shell scripts.
--   [log4sh](https://sites.google.com/a/forestent.com/projects/log4sh) (LGPL)
-    is a logging framework for shell scripts
--   John Dubois who maintains [armory.com](http://www.armory.com/)
-    has made available a huge number of
-    [Ksh and awk scripts](http://www.armory.com/~ftp/) _2011_.
--   Pádraig Brady has many command line references, in his
-    [PixelBeat Site](http://www.pixelbeat.org) and scripts in
-    [his GitHub repository](https://github.com/pixelb) (LGPL).
--   A [list of bash shell-scripting libraries
-    ](http://dberkholz.com/2011/04/07/bash-shell-scripting-libraries/)
-    _2011_.
 -   Nathaniel Landau [Boilerplate Shell Script Template
     ](https://natelandau.com/boilerplate-shell-script-template/)
     is a template for writing shell scripts.
--   [pluginhook](https://github.com/progrium/pluginhook) (MIT)
-    A plugin system for Bash. In Debian.
--   [bash-modules](https://github.com/vlisivka/bash-modules)
-    A module system for bash which provide a set of bash subroutines,
--   [Argbash](https://argbash.readthedocs.io/en/latest/index.html)
-    is a bash code generator that can assist you in writing scripts that accept
-    arguments.
-    -   [argbash · GitHub](https://github.com/matejak/argbash)
-    -   [Argbash alternatives
-        ](https://argbash.readthedocs.io/en/latest/others.html)
 -   {{< iref "python_libraries#docopt" "Docopt" >}}
     is a python utilities, that is also suited to parsing bash command line arguments.
 
@@ -156,23 +166,21 @@ Bash (without my big init) is 3.8M/3.2M; zsh (without user init)
 -   [Greg's Wiki Bash FAQ
     ](http://mywiki.wooledge.org/BashFAQ)
     _other material from Greg's Wiki are {{< iref "#gregs_wiki" "below" >}}
--   [Bash Reference Sheet
-    ](http://mywiki.wooledge.org/BashSheet)
+-   [Bash Reference Sheet](http://mywiki.wooledge.org/BashSheet)
 -   [Bash Hackers Wiki](http://bash-hackers.org/wiki/doku.php/)
     hold documentations about the GNU Bash.
--   [Bash Guide for Beginners
-    ](http://www.tldp.org/LDP/Bash-Beginners-Guide/html/)
+-   [Bash Guide for Beginners](http://www.tldp.org/LDP/Bash-Beginners-Guide/html/)
     _2008_.
--   [Bash Programming Introduction
-    ](http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html)
+-   [Bash Programming Introduction](http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html)
     _for this elementary guide being old (2000) is not challenging_.
 -   [Advanced Bash Scripting Guide
     ](http://tldp.org/LDP/abs/html/index.html)
 -   [Bash Hackers Wiki](http://wiki.bash-hackers.org/doku.php)
-    hold documentations  about the GNU Bash. The first page is an
-    index of pages on commands, builtins, and expressions of bash.
--   [Greg Wooledge's Wiki, in short Greg's Wiki
-    ](http://mywiki.wooledge.org/) contains bash resources:
+    hold documentations about the GNU Bash. The first page is an index of pages on
+    commands, builtins, and expressions of bash.
+-   <a name="gregs_wiki"></a>[Greg Wooledge's Wiki, in short Greg's Wiki
+    ](http://mywiki.wooledge.org/)
+    contains bash resources:
     -   [Bash Guide](http://mywiki.wooledge.org/BashGuide)
         more than a Tutorial, a guide to nearly all bash constructs.
     -   [Bash Reference Sheet](http://mywiki.wooledge.org/BashSheet)
@@ -185,13 +193,15 @@ Bash (without my big init) is 3.8M/3.2M; zsh (without user init)
         or _don't use bash for large programs, they would be unreliable_.
     -   The [Shell category](http://mywiki.wooledge.org/CategoryShell)
         includes many interesting pages.
--   [Bash by example, Part 1
-    ](http://www.ibm.com/developerworks/linux/library/l-bash/index.html),
-    [Part 2
-    ](http://www.ibm.com/developerworks/linux/library/l-bash2/index.html),
-    [Part 3](http://www.ibm.com/developerworks/library/l-bash3/index.html)
-    by Daniel Robbins. From the same author:
-    [Tip: Prompt magic
+-   [Shell style guide](https://google.github.io/styleguide/shellguide.html)
+    some additional explanations in this [Stack Overflow answer
+    ](https://stackoverflow.com/a/45386798/965798).
+-   Bash by example by Daniel Robbins:
+    [Part 1](http://www.ibm.com/developerworks/linux/library/l-bash/index.html),
+    [Part 2](http://www.ibm.com/developerworks/linux/library/l-bash2/index.html),
+    [Part 3](http://www.ibm.com/developerworks/library/l-bash3/index.html).
+
+    From the same author: [Tip: Prompt magic
     ](http://www.ibm.com/developerworks/linux/library/l-tip-prompt/index.html?dwzone=linux)
     Show how to customize the BASH prompt, and set the xterm title.
 -   [Commandline Fu](http://www.commandlinefu.com/)
@@ -200,8 +210,7 @@ Bash (without my big init) is 3.8M/3.2M; zsh (without user init)
     gives other accesses to it like RSS feeds.
 -   [bashdb](http://bashdb.sourceforge.net/)
     is a source code debugger for bash.
--   [Bashdoc
-    ](https://github.com/ajdiaz/bashdoc)
+-   [Bashdoc](https://github.com/ajdiaz/bashdoc)
     is a bash documentation processor similar to javadoc
     but use reStructuredText to provide the final document.
 
