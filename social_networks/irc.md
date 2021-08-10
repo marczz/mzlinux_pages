@@ -20,8 +20,8 @@ See also {{< iref "xmpp" "XMPP" >}},
 # IRC References
 
 Some Jabber clients are also supporting IRC, they are listed in the
-{{< iref "xmpp" "XMPP Page" >}}. There are also jabber to
-irc gateways that allow to connect to irc from any jabber client.
+{{< iref "xmpp" "XMPP Page" >}}. There are also jabber to irc gateways that allow to
+connect to irc from any jabber client.
 
 -   Wikipedia:  {{< wp "Internet Relay Chat" >}},
     {{< wp "Comparison of Internet Relay Chat clients" >}},
@@ -32,57 +32,48 @@ irc gateways that allow to connect to irc from any jabber client.
     {{< wp "Comparison of Internet Relay Chat daemons" >}},
     {{< wp "List of Internet Relay Chat commands" >}}
 -   [Awesome IRC](https://github.com/davisonio/awesome-irc)
-    a list of tools, software & other resources related to the
-    Internet Relay Chat (IRC) protocol.
--   [RFC 1459](http://www.faqs.org/rfcs/rfc1459.html) - Original IRC
-    Protocol, [RFC 2810](http://www.faqs.org/rfcs/rfc2810.html) -
-    Updated IRC Architecture,
-    [RFC 2811](http://www.faqs.org/rfcs/rfc2811.html) - Channel
-    Management, [RFC 2812](http://www.faqs.org/rfcs/rfc2812.html) - IRC
-    Client Protocol, [RFC 2813](http://www.faqs.org/rfcs/rfc2813.html) -
-    Server Protocol.
+    a list of tools, software & other resources related to the Internet Relay Chat (IRC)
+    protocol.
+-   Wikibooks: [Internet Technologies/IRC
+    ](https://en.wikibooks.org/wiki/Internet_Technologies/IRC),
+
+-   RFC:
+    -   [RFC 1459](http://www.faqs.org/rfcs/rfc1459.html) Original IRC Protocol,
+    -   [RFC 2810](http://www.faqs.org/rfcs/rfc2810.html) - Updated IRC Architecture,
+    -   [RFC 2811](http://www.faqs.org/rfcs/rfc2811.html) - Channel Management,
+    -   [RFC 2812](http://www.faqs.org/rfcs/rfc2812.html) - IRC Client Protocol,
+    -   [RFC 2813](http://www.faqs.org/rfcs/rfc2813.html) - Server Protocol.
 -   [IRCv3 Specifications - IRCv3](https://ircv3.net/irc/)
 -   [Internet Relay Chat Help](http://www.irchelp.org/) or _irchelp_, comprehensive set
     of resources for IRC.
-    -   [The IRC Prelude](http://irchelp.org/irchelp/new2irc.html) basic
-        IRC documentation from [irchelp](http://www.irchelp.org/),
+    -   [The IRC Prelude](http://irchelp.org/irchelp/new2irc.html) basic IRC
+        documentation,
     -   [An IRC Tutorial](http://www.irchelp.org/irchelp/irctutorial.html)
     -   [IRCHelp.org — Privacy on IRC](http://www.irchelp.org/security/privacy.html).
--   [freenode](http://freenode.net/) IRC servers,
-    the [freenode Knowledge Database](http://freenode.net/kb/all)
-    explains _Channels_, _Connecting to freenode_, _Connecting with SASL_
-    _General Expectations for Conduct_, _Nickname Registration_.
-    -   Wikipedia: {{< wp "Freenode" >}}
--   [SwiftIRC](http://www.swiftirc.net/) has a
-    [Wiki](http://wiki.swiftirc.net/wiki/Main_Page) with commands
-    memos.
--   [Search Irc](http://searchirc.com/) for channels or servers.
--   [IRC Chat Rooms Search - netsplit.de](https://netsplit.de/channels/)
-    -  In a client connected to a server you can do `/list *keyword*`.
+-   [Libera Chat](https://libera.chat/)
+    IRC network for FOSS projects collaboration. It replaced
+    [freenode](http://freenode.net/) after the takeover by the businessman Andrew Lee,
+    and the staff of Freenode and all the FOSS projects moved from frenode to
+    libera.chat.
+    -   Wikipedia {{<wp "Libera Chat" >}} and   {{<wp "Freenode" >}}
+    -   [Guides | Libera Chat](https://libera.chat/guides)
+         explain _Choosing a client_, _Connecting to libera.chat_, _Connecting with
+         SASL_,  _Nickname Registration_, _Channels use and administration_.
+-   Channel discovery:
+   -  In a client connected to a server you can do `/list *keyword*`.
+   -   [Search Irc](https://search.mibbit.com/) for channels or servers.
+   -   [IRC Chat Rooms Search - netsplit.de](https://netsplit.de/channels/)
+       Search chat rooms among 500 IRC networks.
 
 ## IRC Commands
 A List of commands is givent in Wikipedia: {{< wp "List of IRC Commands" >}}
 and also available in the help of most clients.
 
--   [toxin](http://toxin.jottit.com/) has list of
+-   [toxin](http://toxin.jottit.com/) has _obsolete_ documentation with
     -   [General IRC Commands](http://toxin.jottit.com/irc_commands)
-    -   [XChat Help Commands
-        ](http://toxin.jottit.com/xchat_help_commands)
-    -   [Freenode NickServ Commands
-        ](http://toxin.jottit.com/freenode_nickserv_commands)
-    -   [Freenode ChanServ Commands
-        ](http://toxin.jottit.com/freenode_chanserv_commands)
-    -   [Freenode MemoServ Commands
-        ](http://toxin.jottit.com/freenode_chanserv_commands)
--   [SwiftIRC Wiki](http://wiki.swiftirc.net/wiki/Main_Page):
-    -   [general commands
-        ](http://wiki.swiftirc.net/wiki/Other_commands)
-    -   [NickServer](http://wiki.swiftirc.net/wiki/NickServ)
-    -   [ChanServ](http://wiki.swiftirc.net/wiki/Chanserv)
-    -   [MemoServ](http://wiki.swiftirc.net/wiki/Memoserv)
-    -   [BotServ](http://wiki.swiftirc.net/wiki/Botserv)
-
-    There are also FAQS for the services.
+-   [IRC - Wikibook: Basic commands
+    ](https://en.wikibooks.org/wiki/Internet_Technologies/IRC#Basic_commands)
+-   [IRC/Instructions - meta.wikimedia](https://meta.wikimedia.org/wiki/IRC/Instructions)
 
 # IRC Clients {#irc_clients}
 -   Wikipedia:
@@ -123,33 +114,27 @@ See {{< iref "#weechat" "Weechat" >}} below.
     {{< iref "xmpp#telepathy" "Telepathy framework" >}}. _It is in Debian._
 
 -   <a name="xchat"></a>[XChat](http://xchat.org) (GPL) is a GTK+
-    IRC client. _In Debian. No development since 2010_
+    IRC client. _No development since 2010_. It stayed in Debian until 2020, and
+    [is now removed](https://tracker.debian.org/pkg/xchat).
 
     -   [xchat doc](http://xchat.org/docs/).
-    -   [toxin](http://toxin.jottit.com) has also an Xchat documentation.
-        [Xchat Documentation](http://toxin.jottit.com/xchat)
-    -   [XChatData.net](http://xchatdata.net/) is also a Schat
-        documentation wiki.
-    -   Xchat allows plugins in C, C++, guile, Perl, Python, Tcl and
-        Ruby. Xchat is one of the more intuitive client for the irc
-        newcomer. It is quite big 15M of res. mem. for an IRC only
-        client.
+        [Xchat Documentation](http://xchat.org/docs/)
+    -   Xchat allows plugins in C, C++, guile, Perl, Python, Tcl and Ruby. Xchat is one
+        of the more intuitive client for the irc newcomer. It is quite big 15M of
+        res. mem. for an IRC only client.
 
     <a name="hexchat"></a>[HexChat](http://hexchat.github.io/) (GPL-2.0)
     is an IRC client based on {{< iref "#xchat" "XChat" >}}, but unlike XChat it’s
     completely free for both Windows and Unix and it is actively
     developed it is scriptable with Python and Perl. It supports
-    {{< iref "xmpp#fish" "FISH encryption" >}}
-    thru [FISHLIM addon
-    ](http://fishlim.kodafritt.se/) _in Debian package hexchat-plugins_,
+    {{< iref "xmpp#fish" "FISH encryption" >}} through
+    [FISHLIM addon](http://fishlim.kodafritt.se/) _in Debian package hexchat-plugins_,
     and OTR through the plugin
-    [HexChat-OTR](https://github.com/TingPing/hexchat-otr) _in Debian_.
+    [HexChat-OTR](https://github.com/TingPing/hexchat-otr). _in Debian_.
 
     -   [hexchat - GitHub](https://github.com/hexchat/hexchat)
-    -   [HexChat Documentation
-        ](https://hexchat.readthedocs.io/en/latest/)
-    -   [ArchWiki: Hexchat
-        ](https://wiki.archlinux.org/index.php/HexChat)
+    -   [HexChat Documentation](https://hexchat.readthedocs.io/en/latest/)
+    -   [ArchWiki: Hexchat](https://wiki.archlinux.org/index.php/HexChat)
 
 ## Emacs irc client {#emacs_irc}
 There are sveral emacs iRC clients _under  GPL License_.
@@ -178,6 +163,8 @@ to the end, as I use to do on my main desktop, it costs you virtually nothing (c
 tiny and loading it is not perceptible when looking at res. mem. size).
 
 ## Weechat {#Weechat}
+<!-- [[file:/share/sync_folders/misc/mznotes/content-org/notes/im_notes.org::#weechat][im_notes - weechat]] -->
+
 [WeeChat](http://www.weechat.org/) (GPL)
 is an irc ncurses client, extensible by C plugins or script language (Perl, Python,
 Ruby, guile, Lua, Tcl, javascript, php).
@@ -219,7 +206,7 @@ Weechat has an extensive documentation:
 -   [Tester’s Guide
     ](http://www.weechat.org/files/doc/stable/weechat_tester.en.html)
     ([dev
-    ](http://www.weechat.org/files/doc/devel/weechat_tester.en.html).
+    ](http://www.weechat.org/files/doc/devel/weechat_tester.en.html)).
     are available _with many translations_ on
     [WeeChat  Home](http://www.weechat.org/).
 -   You find  info on recent development in the [WeeChat Blog](http://dev.weechat.org/).
@@ -319,17 +306,17 @@ The available remote interfaces are
 
 # IRC Web clients
 
--   [qwebirc](http://www.qwebirc.org/) (GPL-2.0)
-    is a python AJAX irc client for web. An online site is at
-    -   [QuakeNet qwebirc](https://webchat.quakenet.org/) online qwebirc site.
-    -   [qwebirc - GitHub](https://github.com/qwebirc/qwebirc/).
-    [freenode webchat](https://webchat.freenode.net/).
+-   [Libera Chat Web client](https://web.libera.chat/)
+-   [gamja - libera.chat](https://web.libera.chat/gamja/) a ligther IRC web client.
 -   [KiwiIRC](https://kiwiirc.com/) (Affero GPL)
     is a node.js irc client.
     -   [KiwiIRC GitHub repository
         ](https://github.com/prawnsalad/KiwiIRC)
     -   [KiwiIRC live client](https://kiwiirc.com/nextclient/).
-    -   [freenode webchat](https://webchat.freenode.net/) is also powered by KiwiIRC.
+    -   [Kiwi IRC - libera.chat](https://kiwiirc.com/nextclient/irc.libera.chat/)
+-   [qwebirc](http://www.qwebirc.org/) (GPL-2.0)
+    is a python AJAX irc client for web.
+    -   [qwebirc - GitHub](https://github.com/qwebirc/qwebirc/).
 
 # IRC Bots
 -   Wikipedia: {{< wp "Internet Relay Chat bot" >}} and
@@ -404,4 +391,5 @@ The available remote interfaces are
 <!-- Local Variables: -->
 <!-- mode: markdown -->
 <!-- ispell-local-dictionary: "english" -->
+<!-- eval: (org-link-minor-mode 1) -->
 <!-- End: -->
