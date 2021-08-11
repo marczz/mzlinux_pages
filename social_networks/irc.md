@@ -162,7 +162,7 @@ emacs only to chat, it cost you 18M, it is my mean emacs size, that is 13M bare 
 to the end, as I use to do on my main desktop, it costs you virtually nothing (circe is
 tiny and loading it is not perceptible when looking at res. mem. size).
 
-## Weechat {#Weechat}
+## Weechat {#weechat}
 <!-- [[file:/share/sync_folders/misc/mznotes/content-org/notes/im_notes.org::#weechat][im_notes - weechat]] -->
 
 [WeeChat](http://www.weechat.org/) (GPL)
@@ -211,7 +211,14 @@ Weechat has an extensive documentation:
     [WeeChat  Home](http://www.weechat.org/).
 -   You find  info on recent development in the [WeeChat Blog](http://dev.weechat.org/).
 -   [GitHub WeeChat](https://github.com/weechat/).
--   [WeeChat Wiki](https://github.com/weechat/weechat/wiki).
+-   [WeeChat Wiki](https://github.com/weechat/weechat/wiki):
+    -   [Alias examples](https://github.com/weechat/weechat/wiki/Alias-examples)
+    -   [buflist](https://github.com/weechat/weechat/wiki/buflist)
+    -   [Cursor mode](https://github.com/weechat/weechat/wiki/Cursor-mode)
+    -   [Links](https://github.com/weechat/weechat/wiki/Links)
+    -   [Miscellaneous](https://github.com/weechat/weechat/wiki/Miscellaneous)
+    -   [Script aliases](https://github.com/weechat/weechat/wiki/Script-aliases)
+    -   [Triggers](https://github.com/weechat/weechat/wiki/Triggers)
 -   [weechat list of scripts](https://weechat.org/scripts/) and
     [gitHub script repository](https://github.com/weechat/scripts).
 -   weechat.org provides
@@ -222,6 +229,8 @@ External Documentation:
 -   [ArchWiki: WeeChat](https://wiki.archlinux.org/index.php/WeeChat)
 -   [Gentoo Wiki: WeeChat](https://wiki.gentoo.org/wiki/WeeChat).
 -   Wikipedia {{< wp "Weechat" >}}
+-   [My always up-to-date WeeChat configuration (weechat-dev)
+    ](https://gist.github.com/pascalpoitras/8406501) by Pascal Poitras
 -   [InWee](https://github.com/susam/inwee)
     is a wrapper script to send text messages and commands to WeeChat from shell or from
     within WeeChat via
@@ -229,8 +238,6 @@ External Documentation:
     ](http://www.weechat.org/files/doc/stable/weechat_user.en.html#fifo_plugin),
     In the Home page the author Susam Pal explains also how to use
     the  FIFO pipe plugin _without imwee_.
--   [Weechat.el](https://github.com/the-kenny/weechat.el)
-    is an emacs interface for weechat. It is available in _melpa_.
 
 Plugins for other protocols:
 
@@ -300,6 +307,7 @@ The available remote interfaces are
         ](https://mathdatech.fr/?post/2018/07/30/Installation-de-Weechat-et-Glowing-Bear-comme-client-IRC-distant).
 -   [WeeChat-Android](https://github.com/ubergeek42/weechat-android)
 -   [weechat.el (Emacs)](https://github.com/the-kenny/weechat.el)
+    is an emacs interface for weechat. It is available in _melpa_.
 -   [WeeCloud](https://github.com/eirikb/weecloud)
     Node.js library for relaying WeeChat to a webapp. _last commit 2014._
 
