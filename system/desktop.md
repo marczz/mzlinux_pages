@@ -135,7 +135,8 @@ See also the the
     Language, License, Type (stacking/dynamic/tiling), Configurable
     titlebar buttons, Graphical configuration, Hotkeys,	ICCCM/EWMH
     compliant, Panel for window switching, Tabbed windows,
-    Themeable.<br />
+    Themeable.
+
     The light window managers are also compared with full environments
     in the {{< wp "Comparison of X Window System desktop environments" >}}.
 -   [ArchWiki - Window manager
@@ -158,11 +159,13 @@ See also the the
     to create custom Linux-based systems for embedded products.
 
 
--   {{< wp "Compiz" >}} is a {{< wp "Compositing window manager" >}} that can be used with gnome or KDE.
+-   {{< wp "Compiz" >}} is a {{< wp "Compositing window manager" >}} that can be used
+    with gnome or KDE.
     - [Compiz Home](http://www.compiz.org/).
     - [Phoronix: The Cost Of Running Compiz](http://www.phoronix.com/scan.php?page=article&item=compiz_speed_test).
     -   [Gentoo Compiz Fusion HowTo](http://en.gentoo-wiki.com/wiki/Compiz-Fusion)
--   {{< wp "Mutter" >}} is a {{< wp "Compositing window manager" >}} and the standard window manager for Gnome.
+-   {{< wp "Mutter" >}} is a {{< wp "Compositing window manager" >}}
+    and the standard window manager for Gnome.
     -   [Phoronix: Mutter Can Cause A Gaming/OpenGL Performance Hit Too
         ](http://www.phoronix.com/scan.php?page=article&item=mutter_composite_hit)
 
@@ -198,14 +201,14 @@ See also the {{< iref "#wm_control" "WM Control" >}} subsection.
 _ArchWiki_ has a [Comparison of tiling window managers
 ](https://wiki.archlinux.org/index.php/Comparison_of_tiling_window_managers).
 
-A tuttorial to desktop configuration with tiling wm:
+A tutorial to desktop configuration with tiling wm:
 [Home Sweet Home](http://blog.z3bra.org/2013/10/home-sweet-home.html)
 with sections on the
 [windows bars](http://blog.z3bra.org/2014/04/meeting-at-the-bar.html),
 [popup notifications](http://blog.z3bra.org/2014/04/pop-it-up.html),
 [colors settings](http://blog.z3bra.org/2015/06/vomiting-colors.html).
 
-There is also a [Tutorial index
+There is also a _uncomplete and not up to date_ [Tutorial index on reddit r/unixporn
 ](https://www.reddit.com/r/unixporn/wiki/links/external).
 
 -   [Awesome](http://awesome.naquadah.org/)
@@ -292,47 +295,28 @@ written in C. It is ewmh compliant. I3 has a dynamic switching to
 floating, on an individual window base.
 
 -   [i3 documentation](http://i3wm.org/docs/):
-    [user guide](http://i3wm.org/docs/userguide.html),
-    [External workspace bars such as i3bar or dzen2
-    ](http://i3wm.org/docs/wsbar.html)
--   [Lukáš Zapletal’s i3 configuration
-    ](http://i3wm.org/docs/user-contributed/lzap-config.html)
+-   [i3 doc](https://github.com/i3/i3/tree/next/docs) contain tools,
+    the userguide, the refcard &#x2026;
+    -   [user guide](http://i3wm.org/docs/userguide.html).
+-   [i3: IPC interface (interprocess communication)
+    ](http://i3wm.org/docs/ipc.html)
+-   <a name="i3bar"></a>[i3bar](https://i3wm.org/docs/userguide.html#_configuring_i3bar)
+    is a status bar for i3, included in i3 distribution.
+    -   [External workspace bars such as i3bar or dzen2](http://i3wm.org/docs/wsbar.html)
 -   {{< wp "I3_(window_manager)"  "Wikipedia: I3" >}}
 -   [GitHub mirror of i3](https://github.com/mgsnova/i3/)
 -   [ArchLinux: I3](https://wiki.archlinux.org/index.php/I3)
 -   _I3_ use [i3status](http://i3wm.org/i3status/manpage.html) to generate
-     a status line for i3bar, dzen2 or xmobar.
--   [i3: IPC interface (interprocess communication)
-    ](http://i3wm.org/docs/ipc.html)
--   [i3blocks](https://github.com/vivien/i3blocks)
-    status line for the i3 window manager. It handles clicks, signals
-    and language-agnostic user scripts.
-    -   [i3blocks wiki](https://github.com/vivien/i3blocks/wiki)
-        give example of _i3blocks_ scripts, and explain how to write
-        your own.
--   [i3 doc](https://github.com/i3/i3/tree/next/docs) contain tools,
-    the userguide, the refcard &#x2026;
+     a status line for {{< iref "#i3bar" "i3bar" >}}, dzen2 or {{< iref "#xmobar" "xmobar" >}}.
+-   [Lukáš Zapletal’s i3 configuration
+    ](http://i3wm.org/docs/user-contributed/lzap-config.html)
 
-The window manager alone uses 5.9M/4.8M, the i3bar 5M/4.2M, i3status
+
+The window manager alone uses 5.9M/4.8M, the {{< iref "#i3bar" "i3bar" >}} 5M/4.2M, i3status
 1.6M/1.3M.
-
-We can use [i3blocks](https://github.com/vivien/i3blocks)
-to replace _i3status_  With the standard configuration which
-mimic i3status _i3blocks_ has a memory footprint of 0.7M/0.5M to
-which are temporarily added the called programs to update status.
 
 
 ### i3 tools and scripts {#i3_tools}
--   [i3status](http://i3wm.org/i3status/manpage.html) (BSD Licence)
-    is a small program for generating a status bar for
-    i3bar, swaybar, dzen2, xmobar or similar programs.
--   [i3pystatus](https://github.com/enkore/i3pystatus)
-    is a  collection of python 3 scripts for status output
-    compatible to i3status / i3bar.
-    -   [i3pystatus documentation
-        ](http://i3pystatus.readthedocs.io/en/latest/)
--   {{< iref "#j4status" "j4status" >}} below is an alternative
-    to _i3-status_;
 -   [i3lock-color](https://github.com/Raymo111/i3lock-color) a color fork of the
     [i3lock](https://github.com/i3/i3lock) lockscreen for i3.
     -   [i3lock-solarized](https://github.com/parsiad/i3lock-solarized)
@@ -345,10 +329,9 @@ which are temporarily added the called programs to update status.
 -   [GitHub: quickswitch-for-i3
     ](https://github.com/proxypoke/quickswitch-for-i3)
     ( [WFPT Licence](http://sam.zoy.org/wtfpl/COPYING))
-    is a python script using _i3-py_ that
-    allows you to quickly switch to and locate windows on all your
-    workspaces, using an interactive
-    {{< iref "#dmenu" "dmenu" >}} prompt.
+    is a python script using _i3-py_ that allows you to quickly switch to and locate
+    windows on all your workspaces, using an interactive {{< iref "#dmenu" "dmenu" >}}
+    prompt.
     A more recent fork is [Oliver Uvman - quickswitch-for-i3
     ](https://github.com/OliverUv/quickswitch-for-i3)
 -   [GitHub: i3-wm-scripts](https://github.com/MicahChambers/i3-wm-scripts)
@@ -362,10 +345,6 @@ which are temporarily added the called programs to update status.
     package for i3-emacs integration.
 -   [raiseorlaunch](https://github.com/open-dynaMIX/raiseorlaunch) (MIT License)
     A run-or-raise-application-launcher for i3 window manager.
--   [i3keys](https://github.com/RasmusLindroth/i3keys) (MIT License)
-    lists all the keys that are bound to some action in i3 or sway,
-    You can see the results in three ways. By opening a local web page, output the
-    keyboards as text in the terminal or generate SVG files.
 
 ### i3/Sway themes {#i3_themes}
 I3  and sway are themables, but it is configured in _config_ so not easy to switch.
@@ -389,7 +368,7 @@ Some script are helping to manage i3 themes.
     [D-Vaillant/j4-make-config](https://github.com/D-Vaillant/j4-make-config)
 -   [i3-style](https://github.com/altdesktop/i3-style)
     a rust program which applies a theme to your i3 config file to change the
-    colorscheme of the window decorations and the different parts of i3bar.
+    colorscheme of the window decorations and the different parts of {{< iref "#i3bar" "i3bar" >}}.
 -   [i3wm-themer](https://github.com/unix121/i3wm-themer)
     Theme collection manager for i3-wm.
 -   [raven](https://git.sr.ht/~nicohman/raven)
@@ -538,8 +517,6 @@ if the chosen panel does not include one.
     [collection of gentoo bubble icons](http://bubbleicons.tuxfamily.org/)
     is appropiate.
 
-
-
 ## icewm shortcuts
 These are the most common keyboard shortcuts used in icewm to make your life easier:
 
@@ -616,19 +593,61 @@ See also the {{< iref "xorg#wayland" "Wayland Section" >}},
 ## Sway {#sway}
 [Sway](https://swaywm.org/) (MIT License)
 is a tiling Wayland compositor and a drop-in replacement for the
-{{< "#i3_wm" "i3 X11 window manager" >}} .
+{{< iref "#i3_wm" "i3 X11 window manager" >}}.
 It can works with your existing i3 configuration, but need some adjustement to
 be fully functional
 -   [Sway Wiki](https://github.com/swaywm/sway/wiki).
 -   [Sway - ArchWiki](https://wiki.archlinux.org/index.php/Sway).
+-   <a name="swaybar"></a>{{< man "Swaybar" >}} is the status-bar included in sway project, it
+    supports a {{< man "swaybar-protocol" "similar ipc protocol"  >}} and most of the
+    same features as {{< iref "#i3bar" "i3bar" >}}, and is configured in the same way.
+-   [Sway IRC channel](http://webchat.freenode.net/?channels=sway&uio=d4) _#sway on
+    irc.freenode.net_.
 -   [dotfiles with a Nord theme for sway](https://github.com/nboughton/dotfiles)
+
+### Tools that work in both Sway and i3. {#sway_and_i3_tools}
+-   [i3status](http://i3wm.org/i3status/manpage.html) (BSD Licence)
+    is a small program for generating a status bar for
+    {{< iref "#i3bar" "i3bar" >}}, {{< iref "#swaybar" "swaybar" >}}, dzen2,
+    {{< iref "#xmobar" "xmobar" >}} or similar programs.
+-   [i3pystatus](https://github.com/enkore/i3pystatus)
+    is a  collection of python 3 scripts for status output
+    compatible to i3status / {{< iref "#i3bar" "i3bar" >}}.
+    -   [i3pystatus documentation
+        ](http://i3pystatus.readthedocs.io/en/latest/)
+-   {{< iref "#j4status" "j4status" >}} below is an alternative
+    to _i3-status_;
+-   [i3blocks](https://github.com/vivien/i3blocks)
+    status line for the i3 window manager. It handles clicks, signals
+    and language-agnostic user scripts.
+
+    We can use [i3blocks](https://github.com/vivien/i3blocks) in _{{< iref "#i3bar" "i3bar" >}}_
+    to replace _i3status_ or inside {{< iref "#swaybar" "swaybar" >}}. With the standard configuration which
+    mimic i3status _i3blocks_ has a memory footprint of 0.7M/0.5M to
+    which are temporarily added the called programs to update status.
+    -   [i3blocks wiki](https://github.com/vivien/i3blocks/wiki)
+        give example of _i3blocks_ scripts, and explain how to write
+        your ownmp.
+-   [i3-dstatus](https://github.com/altdesktop/i3-dstatus)
+
+statusline generator for i3wm or sway
+-   [i3keys](https://github.com/RasmusLindroth/i3keys) (MIT License)
+    lists all the keys that are bound to some action in _i3_ or _sway_,
+    You can see the results in three ways. By opening a local web page, output the
+    keyboards as text in the terminal or generate SVG files.
+-   [i3ipc-python](https://github.com/altdesktop/i3ipc-python) ( BSD-3)
+    is a Python library to control _i3wm_ and _sway_.
+    -   [i3ipc-python Documentation](https://i3ipc-python.readthedocs.io/en/latest/).
+    -   [i3ipc-python examples
+        ](https://github.com/altdesktop/i3ipc-python/tree/master/examples)
 
 ### sway tools
 All wayland tools which accept _wlroots_ based compositors, work with sway, you find
 them below in the {{< iref "#wayland_desktop_components" "Wayland destop components" >}}.
 
 The {{< iref "#i3_tools" "i3 status tools" >}} like _i3status_ and alternatives like
-_i3blocks_ can be used in _swaybar_ like in _i3bar_ and tools with text or web output
+_i3blocks_ can be used in _{{< iref "#swaybar" "swaybar" >}}_
+like in _{{< iref "#i3bar" "i3bar" >}}_ and tools with text or web output
 like _i3keys_.
 
 The themes are the same than for i3 you find them in
@@ -644,11 +663,12 @@ The themes are the same than for i3 you find them in
 -   [swaylock](https://github.com/swaywm/swaylock) (MIT License)
     Screen locker for Wayland. _In Debian._
 
-## Wayland destop components {#wayland_desktop_components}
+## Wayland desktop components {#wayland_desktop_components}
 
-Sway has a long list of [Clients that use the wlr protocols
-]https://github.com/swaywm/wlr-protocols/wiki). The [wlr protocol
-](https://github.com/swaywm/wlr-protocols) is supported by
+_Sway_ has a long list of [Clients that use the wlr protocols
+](https://github.com/swaywm/wlr-protocols/wiki).
+
+The [wlr protocol](https://github.com/swaywm/wlr-protocols) is supported by
 many wlroots-based compositors.
 
 The Nix overlay [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)
@@ -656,7 +676,8 @@ has built many wayland tools. _List in the Readme_
 
 See also {{< iref "#wayland_remote_desktop" "Wayland remote desktop" >}}
 
-See below the {{< iref "#waylan_menus" "dmenu/rofi alternatives" >}}.
+See below the {{< iref "#wayland_menus" "dmenu/rofi alternatives" >}} and above the
+{{< iref "wayland_clipboard" "Wayland clipboard tools" >}}.
 
 -   [CuboCore](https://cubocore.gitlab.io/)
     develop _Coreapps_ alias _C suite_, a set of QT apps, which are Desktop Independent
@@ -740,7 +761,7 @@ See also {{< iref "emacs#emacs_themes" "Emacs Themes" >}}.
     [gruvbox vim theme](https://github.com/morhetz/gruvbox); a theme inspired by
     badwolf, jellybeans and solarized. It has a dark and light mode and covers many apps
     including xresources, shell, awesome wm, i3 wm, i3 status, conky,rofi,
-    {{< iref "tmux#tmux_themes" "tmux" >}}  st, alacritty, emacs.
+    {{< iref "checkpointing#tmux_themes" "tmux" >}}  st, alacritty, emacs.
 -   [lighthaus](https://github.com/lighthaus-theme/lighthaus)
     A focused dark color lighthouse inspired color scheme.  It supports alacritty,
     Dunst, bottom system monitor, gnome-terminal, i3, iTerm, Kitty, Konsole, rofi,
@@ -755,14 +776,14 @@ See also {{< iref "emacs#emacs_themes" "Emacs Themes" >}}.
     -   [nord vim](https://github.com/arcticicestudio/nord-vim)
     -   [nord tmux](https://github.com/arcticicestudio/nord-tmux)
     -   [nord emacs](https://github.com/arcticicestudio/nord-emacs)
-    -   {{< iref "xterminal#st" "st" >}} color patch
+    -   {{< iref "xterminals#st" "st" >}} color patch
         [nordtheme](https://st.suckless.org/patches/nordtheme/).
     -   [mtyn/polar](https://github.com/mtyn/polar)
         is a light colour scheme based on Nord.
 -   [Solarized](http://ethanschoonover.com/solarized)
     is a sixteen color palette. The same palette is used for dark or light themes. There
     are ports to vim, Xresources, emacs,  mutt,
-    {{< iref "tmux#tmux_themes" "tmux" >}}, GIMP Palette; and some Mac OS apps. It is
+    {{< iref "checkpointing#tmux_themes" "tmux" >}}, GIMP Palette; and some Mac OS apps. It is
     also [ported to gnome-terminal
     ](https://github.com/Anthony25/gnome-terminal-colors-solarized).
 -   [Smyck](https://github.com/hukl/Smyck-Color-Scheme),
@@ -838,7 +859,7 @@ ones let the user choose an external one.
 
 ## Status Bar {#status_bar}
 Most window manager have their own status bar and a status generation
-programs or scripts, like _i3bar_ with _i3status_ or _i3blocks_.
+programs or scripts, like _{{< iref "#i3bar" "i3bar" >}}_ with _i3status_ or _i3blocks_.
 But some alternative status are window manager independant.
 
 -   <a name="j4status"></a>[j4status](http://j4status.j4tools.org/) (GPL)
@@ -852,7 +873,12 @@ But some alternative status are window manager independant.
     is a lightweight bar based on XCB. It provides foreground/background color switching
     along with text alignment and colored under/overlining of text, full utf8 support
     and reduced memory footprint.
--   [xmobar](http://projects.haskell.org/xmobar/)
+-   <a name="polybar"></a>[polybar](https://github.com/polybar/polybar) (MIT License)
+    highly customizable status bar, written in c++. It has built-in functionality to
+    display information about the most commonly used services.
+    _polybar_ has no wayland support (except xwayland!) waybar is a wayland bar with
+    similar functionalities. _polybar_ is in Debian.
+-   <a name="xmobar"</a>[xmobar](http://projects.haskell.org/xmobar/) (BSD License)
     written in haskell, is a lightweight, text-based, status.  It was originally
     designed to work with xmonad, but it's actually usable with any window-manager. It
     is in Debian.  It can be used for _conky_ or _i3status_ output.
@@ -861,7 +887,7 @@ But some alternative status are window manager independant.
     is a lightweight status bar for X window managers. _Yabar_ is in debian.
 -   [yambar](https://codeberg.org/dnkl/yambar) (MIT License)
     Modular status panel for X11 and Wayland, inspired by
-    [polybar](https://github.com/jaagr/polybar).
+    {{< iref "#polybar" "polybar" >}}.
 
 ## Menu system
 ### menus from shell
@@ -909,6 +935,17 @@ Rofi is written by Dave Davenport alias _Qball_ it is in Debian.
 -   [pdmenu](https://joeyh.name/code/pdmenu/) full screen console
     menuing system for Unix.
 -   {{< iref "#yabar" "yabar" >}} in the status bar section.
+-   [Albert](https://albertlauncher.github.io/)
+    is a keyboard launcher written in C++/Qt.
+    -   [Switching to Sway (Wayland) from i3 (X11)
+        ](https://www.autodidacts.io/switching-to-sway-wayland-from-i3-x11-ubuntu/)
+        explains how to use it in wayland by installing the proper fork. It lso warn us
+        that _albert_ is very memory hungry.
+-   [Kupfer](https://github.com/kupferlauncher/kupfer) (GPL-3.0)
+    is a Python/GTk3 launcher .
+    -   [Kupfer Manual](https://kupferlauncher.github.io/help/en/).
+    -   [Kupfer Technical Documentation
+        ](https://kupferlauncher.github.io/Documentation/).
 
 ### wayland dmenu/rofi alternatives {#wayland_menus}
 -   [bemenu](https://github.com/Cloudef/bemenu) (GPLv3 and LGPLv3)
@@ -1204,8 +1241,8 @@ Some newer command line apps to manage selection in X11:
 
     _Don't confuse with xfce4 clipboard plugin also named clipman._
 
-    Some clipboard managers in the following section have also a wayland support, but
-    for most of them by using Xwayland.
+Some clipboard managers in the following section have also a wayland support, but for
+most of them by using Xwayland.
 
 ### Clipboard managers
 A list is in [Archwiki Clipboard/Managers
