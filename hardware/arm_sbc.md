@@ -226,12 +226,21 @@ H2, H3, H8 are {{< wp " Cortex-A7" >}} ArmV7 SoCs and  AllWinner
     the Raspberry Pi hardware. The [Raspbian FAQ](http://www.raspbian.org/RaspbianFAQ)
     and [Raspbian Documentation](http://www.raspbian.org/RaspbianDocumentation)
     give hints on package compiling.
--   <a name="omxplayer">[OMXPlayer](http://omxplayer.sconde.net/)
-    is the command line OMX player for the Raspberry PI. Don't miss the keyboard
-    shortcut listed on this page, ore in the [Github repository
-    ](https://github.com/popcornmix/omxplayer).  There is no manual, and the command
-    line options are in the usage string (from -h or missing arguments), but the
-    keybindings are missing from the distribution.
+-   <a name="omxplayer">[OMXPlayer](https://github.com/popcornmix/omxplayer/)
+    is the command line OMX player for the Raspberry PI.
+
+    Omxplayer is deprecated and should be replaced by vlc , his is due to: omxplayer
+    uses openvg for OSD and subtitles which isn't supported on Pi4. omxplayer uses
+    openmax which has been deprecated for a long time and isn't supported with 64-bit
+    kernels. omxplayer does not support software decode omxplayer does not support
+    advanced subtitles omxplayer does not support playback from ISO files. omxplayer
+    does not integrate with the X desktop.
+
+    Don't miss the keyboard shortcut listed on this page, ore in the
+    [Github repository](https://github.com/popcornmix/omxplayer).
+
+    There is no manual, and the command line options are in the usage string (from -h or
+    missing arguments), but the keybindings are missing from the distribution.
     -   [GitHub - OMXPlayer](https://github.com/popcornmix/omxplayer).
     -   [OMXPlayer - Raspbian
         ](https://www.raspberrypi.org/documentation/raspbian/applications/omxplayer.md)
