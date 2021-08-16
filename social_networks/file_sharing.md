@@ -197,20 +197,28 @@ _They are self-hosted solutions._
 -  [TeDomum / TedImg](https://forge.tedomum.net/tedomum/tedimg) (Beer-ware License)
    a flask image server, written in python, Node.js
 
-## Codepad
--   <a name="codepad">[codepad.org](http://codepad.org/)
+## Codepad {#codepad}
+-   <a name="codepad.org">[codepad.org](http://codepad.org/)
+    ([closed source](http://codepad.org/about))
     is an online compiler/interpreter, and a simple collaboration tool. It's
     a pastebin that executes code for you. It can interpret code in C, C++, D, haskell,
     lua, ocaml, php, perl, python, ruby, scheme, Tcl.
 -   [LaKing/codepad](https://github.com/LaKing/codepad) (MIT License) is a
     collaborative online code editor and project written in node.js manager running
     online in the browser. It relies on a MongoDB database.
+-   [Ideone.com](https://ideone.com/) (proprietary software)
+    is an online codepad compiler/interpreter and IDE for many languages.
 
 # Pastebin {#pastebin}
 
 There are many similar services that we name with the common name {{< wp "Pastebin" >}}
 from the first {{< wp "pastebin.com" >}} they allow a free web clip by pasting some
 text, and they give you an url to retrieve the text.
+
+Some pastebin have unclear license, and no source
+available, so it is difficult to know if your data and metadata is monitored. If you
+have to store sensible data you should use a {{< iref "#crypted_bin" "Crypted Bin" >}}.
+
 
 You can use to create you post a web page and most sites have a REST HTTP Api that allow
 to create posts with a script. _I list only the sites offering an API, and not too much
@@ -236,10 +244,20 @@ highlighting,
         ](https://apps.apple.com/us/app/pasteme-pastebin-client-for/id1191488320).
     -   For android: [Pastebin for Android
         ](https://play.google.com/store/apps/details?id=com.jmz.pastedroidapp).
-    -   For linux and old client written in Python2
+    -   For linux an old client written in Python2
         [pastbin-cl](https://github.com/tupton/pastebin-cl)
+    -   [elpastebin](https://github.com/nicferrier/elpastebin) or _pastebin.el_
+        is an interface to _pastebin.com_ see also
+        [EmacsWiki: pastebin](https://www.emacswiki.org/emacs/pastebin) for other
+        versions of  _pastebin.el_.  _pastebin.el_ is in MELPA.
+    -    {{< iref "#webpaste.el"  "webpaste.el" >}} supports _pastebin.com_.
 
-    There was many controversies about pastebin.com, quoting  [Pastebin Services - ArchWiki
+    _pastebin.com_ was [written by Paul Dixon
+    ](https://github.com/lordelph/pastebin) and released under AGPL-3.0 Licence, but he
+    sold the domain in 2010, and it is now a commercial site.
+
+    There was many controversies about pastebin.com, quoting
+    [Pastebin Services - ArchWiki
     ](https://wiki.archlinux.org/title/List_of_applications#Pastebin_services)
 
     > An acceptable pastebin service does not require enabling JavaScript for viewing,
@@ -250,6 +268,55 @@ highlighting,
 
     Following the monitoring of content by Pastebin _Anonymous_ launched
     {{< iref "#anonpaste" "Anonpaste" >}}.
+-   <a name="bpaste"></a>[bpaste](https://bpa.st/) (MIT Licence)
+    is the free instance of [pinnwand](https://github.com/supakeen/pinnwand)
+    a Python pastebin software with _pygments_ syntax highlighting,
+    using _tornado_, _sqlalchemy_, and a database driver.
+
+    You can use curl to paste on bpaste:
+    ``` sh
+    € echo "foo" | curl -X POST http://localhost:8000/curl -F 'raw=<-'
+    Paste URL:   http://localhost:8000/OE
+    Raw URL:     http://localhost:8000/raw/GU
+    Removal URL: http://localhost:8000/remove/GQBHGJYKRWIS34D6FNU6CJ3B5M
+    ```
+    -   [Steck](https://supakeen.com/project/steck) is a CLI for _bpaste_/_pinnwand_.
+    -   [pinnwand documentation](https://pinnwand.readthedocs.io/en/latest/)
+    -   {{< iref "#wgetpaste" "wgetpaste">}} can paste to _bpaste_.
+
+-   <a name="dpaste.com"></a>[Dpaste.com](https://dpaste.com/) (closed source)
+    is a pastebin on a python / Django application. It has code syntax highlighting with
+    _pygments_.
+
+    Dpaste.com has many [Scripts, Tools, Integrations](https://dpaste.com/help)
+    including:
+    -   [dpaste.sh](https://hg.sr.ht/~paulbissex/dpaste-tools/) (MIT Licence)
+        command-line client for creating dpaste items from stdin.
+    -   [dpaste.el](https://github.com/gregnewman/dpaste.el)
+        is an emacs client to post a region or buffer to
+        dpaste.com and put the paste URL into the kill-ring.
+    -   {{< iref "#webpaste.el"  "webpaste.el" >}} supports _dpaste.com_.
+    -   {{< iref "#wgetpaste"  "wgetpaste" >}} supports _dpaste.com_.
+-   < a name="dpaste.org"></a>[Dpaste.org](https://dpaste.org/) ( MIT License )
+        is a django application implementing a pastebin.
+
+        _paste.org_ was previously named _paste.de_.
+
+    -   [pastebin.mozilla.org the Mozilla Community Pastebin
+        ](https://pastebin.mozilla.org/) is an other instance of _dpaste.org_.
+    -   [dpaste.org API](https://dpaste.readthedocs.io/en/latest/api.html)
+        You can paste your file content to the API via curl,
+        directly from the command line:
+        ``` sh
+        $ alias dpaste="curl -F 'format=url' -F 'content=<-' https://dpaste.org/api/"
+        $ cat foo.txt | dpaste
+        https://dpaste.de/ke2pB
+        ```
+    -   [dpaste.org - GitHub](https://github.com/bartTC/dpaste)
+    -   [dpaste.org documentation](https://dpaste.readthedocs.io/en/latest/)
+    -   [dpaste_de.el](https://github.com/theju/dpaste_de.el) is an emacs package to
+        paste to _paste.org_. _in ELPA_
+    -   {{< iref "#webpaste.el"  "webpaste.el" >}} has support for dpaste.org.
 
 -   [Hastebin](https://hastebin.com/about) (MIT License)
     is a FOSS alternative to pastebin.com.
@@ -291,9 +358,21 @@ highlighting,
             in node.js, use  mogoDB backend.
 -   [Paste.ee](https://paste.ee) is a free pastebin with no ads, SSL,
     IPv6, [API](https://pastee.github.io/docs/),
-    [CLI programs](https://paste.ee/wiki/Programs).
+    [CLI programs](https://paste.ee/wiki/Programs). It is the CentOs pastbin.
+
+    It is an instance of [Stikked](https://paste.centos.org/about) an Open-Source PHP
+    Pastebin, with features like Syntaxhighlighting for many languages, including live
+    syntax highlighting with CodeMirror, Paste replies and diff view between the
+    original paste and the reply, API, anti-spam, themes, multilanguage.
+
+    A _Stikked_ instance needs a web server, a database: MySQL, Postgres or sqlite, PHP and
+    PHP GD.
+    -   [Stikked - GitHub](https://github.com/claudehohl/Stikked)
+        ( [WTFPL](http://www.wtfpl.net/))
     -   For Linux there is [past-ee-cli](https://git.meow.tf/paste-ee/cli) written in
         go. The releases includes binaries and rpm and deb packages.
+    -   [Run Your Own Pastebin with Stikked
+        ](https://www.maketecheasier.com/run-your-own-pastebin-with-stikked/).
 -   <a name="paste_debian"></a>[paste.debian.net](http://paste.debian.net/)
     is a pastebin, targeted to source code with enlightening. It has an
     [xml RPC interface](http://paste.debian.net/rpc-interface.html)  and
@@ -305,54 +384,150 @@ highlighting,
     -   [paste.pl - Github](https://github.com/formorer/paste.pl) (AGPL-3.0)
         is the perl software powering _paste.debian.net_
     -   [EmacsWiki: Debpaste](https://www.emacswiki.org/emacs/Debpaste).
--   [fpaste or paste.fedoraproject.org
+-   <a name="paste.fedora"></a>[paste.fedoraproject.org or fpaste
     ](https://paste.fedoraproject.org/) is the fedora pastebin service
     you use it with the program [fpaste](https://pagure.io/fpaste).
+-   <a name="paste.gg"></a>[paste.gg](https://paste.gg/)
+    is powered by [paste](https://github.com/ascclemens/paste) (MIT License)
+    by Anna  Clemens. The _paste_ repository is also in
+    [~jkcclemens/paste - SourceHut](https://git.sr.ht/~jkcclemens/paste)
+
+    _paste_ is a rust software with heavy requirements rust, ruby, postgres, redis,
+    nginx, sidekiq.
+
+    {{< iref "#bins" "bins" >}} from the same author is a command line client with
+    _paste_ support.
+-   [pastemyst](https://paste.myst.rs/) (MPL-2.0 License)
+    is a pastebin with syntax highlighting, and optional encryption.
+    -   [pastemyst - GitHub](https://github.com/codemyst/pastemyst)
+    -   [pastemyst API](https://paste.myst.rs/api-docs/index) is used by many libraries
+        in a variety of languages. See the [pastemyst API page
+        ](https://paste.myst.rs/api-docs/index) for a list.
+    -   [pastry](https://github.com/CodeMyst/pastry) (MIT License)
+        is the official client written in D language. Binaries are provided in the
+        [releases page](https://github.com/CodeMyst/pastry/releases).
+-   [paste.ofcode.org](https://paste.ofcode.org/) is an instance of
+    [ofcode](https://github.com/bbangert/ofcode) it has _of course_ syntax highlighting,
+    the paste is limited to 1 week. An emacs client in elpa is [paste-of-code.el
+    ](https://github.com/spebern/paste-of-code.el) (GPL-3.0) It pastes the region or the
+    whole buffer and place the url in the kill ring. _in MELPA_.
+-   <a name="lodgeit"></a>[paste.opendev.org](https://paste.opendev.org/) _or
+    paste.openstack.org via a redirection_
+    is [an instance of _lodgeit_](https://paste.opendev.org/about/)
+    which was a previous project from _Pocoo_ which was [retired due to spam
+    ](https://www.reddit.com/r/Python/comments/swrj8/pastepocooorg_is_now_gone_because_of_spams_and/).
+    -   [lodgeit-el](https://github.com/ionrock/lodgeit-el) (GPL-2.0) is an emacs client
+        for _lodgeit_ based pastebins.
+    -   [spacepaste](https://github.com/shirkey/spacepaste) is a fork on GitHub, after
+        the project ws retired.
+    -   _lodgeitlib_ is a client library and command line client for _lodgeit_ based
+        pastebins,  the documenttion is still on _pythonhosted_
+        [lodgeitlib documentation](https://pythonhosted.org/lodgeitlib/index.html),
+        and [lodgeitlib code was forked on GitHub](https://github.com/TC01/pastelib).
+-   [pastery.net](https://www.pastery.net/) _unknown source_
+    is a pastebin with syntax highlighting. Its [API](https://www.pastery.net/api/)
+    is illustrated by _curl_ examples, and is the base of many
+    [plugins](https://www.pastery.net/plugins/).
+    -   [pastery.el](https://github.com/diasbruno/pastery.el) (MIT License)
+        is an emacs client. _in MELPA_.
+    -   [pastery.vim](https://github.com/skorokithakis/pastery.vim) and
+        [vim-pastery](https://github.com/fishbullet/vim-pastery).
+    -   [bakeit](https://github.com/skorokithakis/bakeit) (MIT License) a python client.
+    -   [rust-bakeit](https://gitlab.com/stavros/rust-bakeit) is a port of _bkeit_ to
+        rust.
 -   {{< iref "#teknik"  "Teknik" >}} has a   [Pastebin](https://paste.teknik.io)
     with a [paste shell script
     ](https://git.teknik.io/Teknikode/Tools/src/branch/master/Paste/paste.sh)
     you can also use {{< iref "#uugush" "uugush" >}}.
 
+## pastebin without public instance
+-  [paste.cf](https://sr.ht/~kota/paste.cf/) (3-Clause BSD License)
+   a simple ftp based pastebin server and client.
 
-## pastebin cli
-here are many text clip, screenshot clip, file sharing programs that
-can interface with many pastebin. Many of them have unclear license, and no source
-available, so it is difficult to know if your data and metadata is monitored, for
-sensible data use a {{< iref "#crypted_bin" "Crypted Bin" >}}
+   It is used by doing a ftp to the site and doint a `put myfile` in the `incoming`
+   directory. The sha1sum of the file is the the key by which you find your file on the
+   web server.
 
-### pastebin with access from curl/nc
+   The hosted `paste.cf` site is down and redirect to `pastebin.net` then to
+   `pastebin.com`.
+
+   The installation on your server is detailed in the repository.
+   -   [paste.cf - sourcehut git](https://sr.ht/~kota/paste.cf/) (3-Clause BSD License)
+   -   [pcf - sourcehut git](https://git.sr.ht/~kota/pcf) (GPL-3.0)
+       is a golang CLI for paste.cf.
+
+
+## Minimal pastebins with access from curl/nc
+Some pastebin listed above have also, an access from curl, the following light pastebin
+don't have syntx highlighting.
+
 -   <a name="ix.io"></a>[ix.io](http://ix.io/) (said open source, but unpublished source!)
     is a command line pastebin.
 
     You use it with curl like this:
-    ```
+    ``` sh
     ~$ echo Hello world. | curl -F 'f:1=<-' ix.io
     http://ix.io/fpW
     ```
-
     or
-    ```
+    ```sh
     curl -F 'f:1=<-' ix.io < file
     ```
 
     More detailled usage on the [ix.io Page](http://ix.io/).
 
     You can also use the [bash client](http://ix.io/client), or from emacs
-    [ix.el](https://github.com/theanalyst/ix.el) _in MELPA_.
+    [ix.el](https://github.com/theanalyst/ix.el) _in MELPA_ which snd the selection or
+    entire buffer to ix.io, the url is notified in the minibuffer and saved in the kill
+    ring.
 -   [clbin.com](https://clbin.com/) _no source available?_
     is a command line pastebin similar to _ix.io_.
 
+    You use it with curl in the same way than _ix.io_
+    ``` sh
+    $ cat hello-world.c | curl -F 'clbin=<-' https://clbin.com
+    https://clbin.com/y94KD
+    ```
     There is a [gist with a bash script for clbin
     ](https://gist.github.com/GermainZ/9177423) and an [emacs interface
     ](https://gist.github.com/welliam/9788acbc2d46530a8a9974ab7fc2afa8).
 -   [localpaste](https://github.com/petermaloney/localpaste) (GPL-2.0)
     is a python clone of clbin.
+-   [paste.c-net.org](https://paste.c-net.org/)
 -   <a name="sprunge"></a>[sprunge](http://sprunge.us/) is a python command line
     pastebin that you use with:
 
         <command> | curl -F 'sprunge=<-' http://sprunge.us
 
     -   [sprunge source at GitHub](https://github.com/rupa/sprunge).
+-   [el-sprunge](https://github.com/eschulte/el-sprunge) (GPL-3.0)
+    An emacs powered command line paste server with Emacs highlighting in the style of
+    sprunge.  Pastes may be submitted to the server from the command line using `curl'
+    as follows.
+    ``` sh
+    $ <command> | curl -s -F 'sprunge=<-' %s
+    ```
+    The server will respond with the path at which the URL is available.  To enable
+    syntax highlighting append "?foo" to the returned URL and the server will return the
+    paste highlighted with "foo-mode".
+-   [paste.c-net.org](https://paste.c-net.org/) (no source available)
+    is a pastebin that allows pasting binary files.
+    It is used with curl like this:
+    ``` sh
+    $ curl -s --data 'Hello World!' 'https://paste.c-net.org/'
+    $ curl --upload-file '/tmp/file' 'https://paste.c-net.org/'
+    $ curl --upload-file - 'https://paste.c-net.org/' <'/tmp/file'
+    ```
+    or with wget:
+    ``` sh
+    $ wget --quiet -O- --post-file='/tmp/file' 'https://paste.c-net.org/'
+    ```
+    or with nc:
+    ``` sh
+    $ nc paste.c-net.org 9999 <'/tmp/file'
+    ```
+    The [author](https://blog.dhampir.no/content/binary-pastebin) gives no information
+    on the program source.
 -   [termbin](http://termbin.com/) is a command line pastebin that
     requires only _netcat_, you use it like this:
 
@@ -363,8 +538,8 @@ sensible data use a {{< iref "#crypted_bin" "Crypted Bin" >}}
 
     There is also an Android termbin application.
 
-### cli for multiple pastebin
--   [anypaste](https://anypaste.xyz/)
+## cli for multiple pastebin
+-   [anypaste](https://anypaste.xyz/) (GPL-3.0)
     Anypaste is a file sharing bash script which uses the mime type of a file to
     automatically detect compatible hosting sites.
 
@@ -374,25 +549,37 @@ sensible data use a {{< iref "#crypted_bin" "Crypted Bin" >}}
     including images and videos.
 
     The provided plugins for text are {{< iref "#ix.io" "ix.io">}},
-    [Pastie](https://pastie.org/), [P.defau.lt](https://p.defau.lt/),
-    [Paste2](https://paste2.org/), {{< iref "#hastebin" "Hastebin" >}},
+    [Pastie](http://pastie.org/) __syntax highlighting, closed source, no https_,
+    [P.defau.lt](https://p.defau.lt/) _no syntax ghlighting, unknown software_,
+    [Paste2](https://paste2.org/) _syntax highlighting support, unknown source_,
+    {{< iref "#hastebin" "Hastebin" >}},
     ([Docdroid](https://docdroid.net/) for pdf, docx, ODS, ...).
+    -   [anypaste - Github](https://github.com/markasoftware/anypaste).
+    -   [anypaste documenttion](https://anypaste.xyz/) on the Home site.
+-   <a name="bins"></a>[bins](https://github.com/ascclemens/bins) ( MPL-2.0 License)
+    is a rust client for  [GitHub Gist](https://gist.github.com/),
+    {{< iref "#pastebin.com" "pastebin.com" >}}, {{< iref "#hastebin" "hastebin" >}},
+    {{< iref "#sprunge" "sprunge" >}}, Bitbucket snippets,
+    {{< iref "#paste.fedora" "fedora pastebin" >}}, and
+    {{< iref "#paste.gg" "paste.gg"  >}}.
 
+    A compiled binary is provided in the Release.
 -   <a name="pastebinit"></a>[pastebinit](https://help.ubuntu.com/community/Pastebinit)
     can use
-    [pastebin.ca](http://pastebin.ca),
-    [pastebin.mozilla.org](http://pastebin.mozilla.org),
+    [pastebin.ca](http://pastebin.ca) _unavailable_,
+    {{< iref "#dpaste.org" "pastebin.mozilla.org" >}}_,
     {{< iref "#paste_debian" "paste.debian.net" >}},
-    paste.drizzle.org,
-    [paste.kde.org](https://paste.kde.org/),
-    paste.openstack.org, paste.pocoo.org,
-    paste.pound-python.org, paste.ubuntu.org.cn,
+    paste.drizzle.org _unavailable_,
+    [paste.kde.org](https://paste.kde.org/) _gitlab snippet_,
+    paste.openstack.org _renamed_ [paste.opendev.org](https://paste.opendev.org/),
+    paste.pocoo.org _retired service_,
+    paste.ubuntu.org.cn,
     [paste.ubuntu.com](http://paste.ubuntu.com),
-    [pastie.org](http://pastie.org/),
-    [Paste2](https://paste2.org/),
-    pb.daviey.com,
-    slexy.org, {{< iref "#sprunge" " sprunge.us" >}},
-    [yourpaste.net](http://yourpaste.net),
+    [pastie.org](http://pastie.org/) _syntax highlighting, closed source, no https_,
+    [Paste2](https://paste2.org/) _syntax highlighting, unknown software_,
+    pb.daviey.com _unavailable_,
+    slexy.org _ads powered_, {{< iref "#sprunge" " sprunge.us" >}},
+    [yourpaste.net](http://yourpaste.net) _unavailable_,
 
 
     To see all services do `pastebinit -l` or look at  [all conf files
@@ -400,14 +587,41 @@ sensible data use a {{< iref "#crypted_bin" "Crypted Bin" >}}
 
     There is a pastbinit Debian package.
 -   [sleeksnap](https://pastee.github.io/docs/) written in java dedicated to screenshots.
-
 -   <a name="uguush"></a>[uguush](https://gitlab.com/jschx/uguush/-/tree/master) (MIT
     License) is a shell command-line uploader for [uguu](https://uguu.se/),
     {{< iref "#teknik" "Teknik" >}}, [0x0](https://0x0.st/), ptpb _obsolete_, mixtape
     _obsolete_, [lewd](https://lewd.se/), fiery _obsolete_ or doko _obsolete_.
+-   <a name="wgetpaste">__wgetpaste__ (open source) is a script relying only on bash,
+    sed, coreutils , and wget to paste to {{< iref "#codepad.org" "codepad.org" >}},
+    {{< iref "#bpaste" "bpaste" >}}, {{< iref "#dpaste.com" "dpaste.com" >}}, gists,
+    [gitlab snippets](https://gitlab.com/api/v4/snippets).
+    -   [Wgetpaste gentoo manual](https://wiki.gentoo.org/wiki/Wgetpaste)
+    -   [wgetpaste source](https://wgetpaste.zlin.dk/)
+
 -   [ix.io syntax highlighter](https://github.com/xero/ix.io-syntax) highlight code
     pastes on sprunge or clbin.
 
+### Emacs pastebin cli {emacs_pastebin_cli}
+-   [dpaste.el](https://github.com/gregnewman/dpaste.el) (GPL-2.0)
+    is an emacs client to post a region or buffer to
+    {{< iref "#dpaste.com" "dpaste.com" >}} and put the paste URL into the
+    kill-ring. _in ELPA_
+-   [debpaste.el](https://github.com/alezost/debpaste.el) (GPL-3.0)
+    the  emacs client for {{< iref "#debpaste" "debpaste" >}} is in ELPA.
+-   [ix.el](https://github.com/theanalyst/ix.el) the  emacs client for
+    {{< iref "#ix.io" "ix.io" >}} is _in ELPA_.
+-   [scpaste.el](https://git.sr.ht/~technomancy/scpaste)  (GPL 3.0)
+    is an emacs library which place an HTML copy of a buffer on the web on a server to
+    which the user has SSH access.
+    It uses scp as its transport and uses Emacs' font-lock as its syntax highlighter.
+    _in MELPA_.
+-   <a name="webpaste.el"></a>[webpaste.el](https://github.com/etu/webpaste.el)
+    (GPL-3.0) is an emacs client to paste to many services
+    {{< iref "#ix.io" "ix.io" >}}, [paste.rs](https://paste.rs),
+    {{< iref "#dpaste.com" "dpaste.com" >}},
+    {{< iref "#dpaste.org" "dpaste.org" >}},
+    [paste.mozilla.org](https://paste.mozilla.org/), gist,
+    [bpa.st](https://bpa.st/).
 
 ## Crypted pastbin {#crypted_bin}
 <!-- [[file:/share/sync_folders/misc/mznotes/content-org/weblinks/network.org::*Privatebin][My list of Privatebin services]] -->
@@ -435,7 +649,7 @@ Some pastebin offer encryption
     -   [PrivateBin Instance Directory](https://privatebin.info/directory/)
 
 # Collaborative services
-See also voice and video calling {{< iref "sip#jitsi" Jitsi" >}},
+See also voice and video calling {{< iref "sip#jitsi" "Jitsi" >}},
 {{< iref "sip#bigbluebutton" "BigBlueButton" >}}
 
 -   <a name="technik"></a>[Teknik](https://www.teknik.io/)
