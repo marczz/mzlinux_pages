@@ -174,8 +174,10 @@ and v4 i.e. keepass 2.x or {{< wp "Twofish" >}} only for v3.
     -   [KeePassXC: User Guide](https://keepassxc.org/docs/KeePassXC_UserGuide.html).
     -   [EFF - Surveillance Self-Defense](https://ssd.eff.org/) :
         [How to: Use KeePassXC](https://ssd.eff.org/en/module/how-use-keepassxc).
-    -   __keepassxc-cli__ is the command line client for Keypassx, it allows to do any
+    -   __keepassxc-cli__ is the command line client for Keypassx, it allows to do many
         operation _including the XML export_ with a command line client.
+
+        But the operations on extended attributes are not availables.
     -   [KeePassXC Browser Extension
         ](https://github.com/keepassxreboot/keepassxc-browser)
         is compatible with Firefox or Chrome/Chromium or Microsoft Edge.
@@ -187,9 +189,11 @@ and v4 i.e. keepass 2.x or {{< wp "Twofish" >}} only for v3.
         for Android {{< iref "#keypassdx" "KeePassDX" >}}
         and {{< iref "#keypass2android" "KeePass2Android" >}};
         for iOS, [Strongbox
-        ](https://itunes.apple.com/us/app/strongbox-password-safe/id897283731) and
+        ](https://itunes.apple.com/us/app/strongbox-password-safe/id897283731)
+        _commercial 50$/y_  and
         [KeePassium
-        ](https://apps.apple.com/us/app/keepassium-keepass-passwords/id1435127111).
+        ](https://apps.apple.com/us/app/keepassium-keepass-passwords/id1435127111)
+        _commercial 50$/y_.
 
 -   The standard CSV format for Keepass and KeepassX(C) is
 
@@ -209,7 +213,7 @@ and v4 i.e. keepass 2.x or {{< wp "Twofish" >}} only for v3.
 -   [keepass-diff](https://github.com/Narigo/keepass-diff) (MIT License)
     is a A CLI-tool to diff Keepass (.kdbx) files.
 
-## Keepass alternative clients
+## Keepass alternative CLI
 -   <a name="keepassc">[KeePassC](https://github.com/raymontag/keepassc) (GPL)
     is a Python 3 curses-based password manager compatible to KeePass v.1.x only and
     KeePassX. No more developed since 2018. The author Karsten-Kai König
@@ -219,14 +223,17 @@ and v4 i.e. keepass 2.x or {{< wp "Twofish" >}} only for v3.
 -   [passhole](https://github.com/purdueLUG/passhole) (GPL)
     is a CLI interface for KeePass 1.x (v3) and 2.x (v4) databases with support for
     dmenu inspired by pass.
--   [keepmenu](https://github.com/firecat53/keepmenu) (MIT License)
+-   <a name="keepmenu"></a>[keepmenu](https://github.com/firecat53/keepmenu)
+    (MIT License)
     is a  Dmenu/Rofi frontend for managing Keepass databases inspired by _passhole_.
+    It is based on the Python library {{< iref "#pykeepass" "pykeepass" >}}.
+    _keepmenu is [in Pypi](https://pypi.org/project/keepmenu/).
 -   [kp2](https://github.com/tobischo/kp2) (MIT)
     is a go language commandline tool for accessing Keepass 2 files (kdbx).
 
 ## Keepass web clients
--   [NeoXiD/keepass.io](https://github.com/NeoXiD/keepass.io) (GPL) is a
-    KeePass database reader in NodeJS. _last commit 09/2016 checked 11/2018_
+-   [keepass.io](https://github.com/NeoXiD/keepass.io) (GPL) is a
+    KeePass database reader in NodeJS. _last commit 09/2016 checked 03/2021_
 -   [KeePass-Node](https://github.com/gesellix/keepass-node) (Apache License)
     Node.js with AngularJS implementation of a KeePass2 editor with a browser frontend .
 -   [BrowsePass](https://bitbucket.org/namn/browsepass) (GPL)
@@ -235,9 +242,12 @@ and v4 i.e. keepass 2.x or {{< wp "Twofish" >}} only for v3.
 -   [keepass4web](https://github.com/lixmal/keepass4web/) (GPL)
     Application that serves KeePass database entries on a web frontend.
 -   [keeweb](https://github.com/keeweb/keeweb) (MIT License)
-    a password manager compatible with KeePass. The app can run either in browser,
-    or as a desktop app. An online frontend is at
-    [app.keeweb.info](https://app.keeweb.info/)
+    a password manager written in Node compatible with KeePass. The app can run either
+    in browser, or as a desktop app. A deb package is available in the releases. An
+    online frontend is at [app.keeweb.info](https://app.keeweb.info/). It is an ctive
+    project in 2021.
+    -   [nextcloud-keeweb](https://github.com/jhass/nextcloud-keeweb) (MIT License)
+        integrate Keeweb into Nextcloud.
 -   [CliPass](https://github.com/bartlomiej-dudala/clipass) (MIT License)
     is a PHP tool to connect and gather data from KeePass 2.x It
     uses KeePassHttp plugin, as the browser plugins PassIFox or chromeIPass.
@@ -284,13 +294,16 @@ and v4 i.e. keepass 2.x or {{< wp "Twofish" >}} only for v3.
     Argon2 key derivation and ChaCha20 encryption are unsupported.It is in the way to be
     deprecated for the following _pykeepass_  but still active in
     november 2018.
--   [pykeepass](https://github.com/pschmitt/pykeepass)
-    is a library to read and write entries to a KeePass database (supports KDBX3 and
-    KDBX4). It is in the Debian package _python3-pykeepass_.
-    _active in Mars 2021_.
+-   <a name="pykeepass"></a>[pykeepass](https://github.com/libkeepass/pykeepass)
+    (GPL-3.0) is a library to read and write entries to a KeePass database (supports
+    KDBX3 and KDBX4). It is in Pypi and the Debian package _python3-pykeepass_. It is
+    used in the cli application{{< iref "#keepmenu" "keepmenu" >}}.  _active in Mars
+    2021_.
+
+    See also the fork [pschmitt/pykeepass](https://github.com/pschmitt/pykeepass).
 -   [Python KeepassX](https://github.com/jamesls/python-keepassx)
     allow read access to Keepass v3 databases. The goal is to provide
-    a CLI access to KeepassX; Seemed to have stopped in 2015.
+    a CLI access to KeepassX; Seem to have stopped in 2015.
 -   <a name="kppy">[kppy](https://github.com/raymontag/kppy)
     a python 3 module to read/write Keepass1.x database, no longer developed since 2018.
     The author, Karsten-Kai König _raymontag_, authored also
