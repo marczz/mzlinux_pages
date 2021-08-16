@@ -423,7 +423,7 @@ repository for public _and now private_ projects.
     comfort of Magit.
     -   [Forge User and Developer Manual](https://magit.vc/manual/forge/)
 
-### Gist
+### Gist {#gist}
 GitHub  host a pastebin-style site called
 [Gist](https://gist.github.com/) for hosting code snippets.
 
@@ -503,12 +503,89 @@ and GitLab Enterprise Edition (EE) which includes extra features.
 -   [Gentoo Wiki:Gitlab](http://wiki.gentoo.org/wiki/GitLab)
 -   [gitlabhq: GitLab CE Mirror on GitHub](https://github.com/gitlabhq/gitlabhq)
 
+-   <a name="gitlab_snippets"></a>
+    [Snippets | GitLab](https://docs.gitlab.com/ee/user/snippets.html) are similar to
+    GitHub gists. You can store and share bits of code and text with other users.
+    You can
+    [comment on](https://docs.gitlab.com/ee/user/snippets.html#comment-on-snippets),
+    [clone](https://docs.gitlab.com/ee/user/snippets.html#clone-snippets), and
+    [use version control
+    ](https://docs.gitlab.com/ee/user/snippets.html#versioned-snippets) in snippets.
+
+    They can [contain multiple files
+    ](https://docs.gitlab.com/ee/user/snippets.html#add-or-remove-multiple-files).
+    They also support [syntax highlighting
+    ](https://docs.gitlab.com/ee/user/snippets.html#filenames),
+    [embedding](https://docs.gitlab.com/ee/user/snippets.html#embed-snippets),
+    [downloading](https://docs.gitlab.com/ee/user/snippets.html#download-snippets),
+    and you can maintain your snippets with the
+    [snippets API](https://docs.gitlab.com/ee/api/snippets.html).
+
 [GitLab Cloud](http://www.gitlab.com/) is an hosted version of  GitLab Enterprise
 Edition, it ofers unlimited private repositories,
 unlimited collaborators, max 1G per repository.
 
 [Framagit](https://framagit.org/) is a free instance of GitLab Community.
 
+## SourceHut {#sourcehut}
+[sourcehut](https://sourcehut.org/) is a Free Open Source Software forge, it is proud to
+be the [fastest and lightest software forge](https://forgeperf.org).
+
+-   [meta.sr.ht](https://man.sr.ht/meta.sr.ht/) manages accounts.
+
+    A free accounts allows to participate in projects.
+
+    For paid accounts on sr.ht, all plans have access to the same features, at the same
+    level. Youe contibution can be 20€/y, 50€/y, or 100€/year following your financial
+    needs and you level of investment in sourcehut.
+-   [git.sr.ht](https://git.sr.ht/) the git hosting service provides
+    public, private, and "unlisted" repositories with fine grained access control,
+    including access for users without sourcehut accounts.
+-   [builds.sr.ht](https://man.sr.ht/builds.sr.ht/) is the continuous integration
+    system, a  virtual machine run your scripts following the specifications you submit
+    in _build manifests_.
+-   [git-send-mail](https://git-send-email.io/) is used for collaboration, including
+    sending patches, it replaces the pull requests in use on GitHub and GitLab.
+-   [man.sr.ht](https://man.sr.ht/man.sr.ht/) is a git-powered wiki that can host
+    documentation for your projects.
+-   [todo.sr.ht](https://todo.sr.ht/) is the issue tracker.
+-   [lists.sr.ht](https://man.sr.ht/lists.sr.ht/) is the _sr.ht_ mailing list service.
+-   [sourcehut pages](https://srht.site/) allows you to publish static websites, under
+    the _username.srht.site_ domain or your own domain. You can use any content
+    generator, including Jekyll, Hugo, Doxygen.
+-   [dispatch.sr.ht](https://man.sr.ht/dispatch.sr.ht/)  is used to connect resources on
+    sourcehut with resources hosted on third-party services.
+    -   [GitHub integration](https://man.sr.ht/dispatch.sr.ht/github.md)
+-   [paste.sr.ht](https://man.sr.ht/paste.sr.ht/) is the sourcehut pastebin (AGPL-3.0).
+    -   [paste.sr.ht API reference](https://man.sr.ht/paste.sr.ht/api.md)
+    -   [paste.sr.ht - sourcehut git](https://git.sr.ht/~sircmpwn/paste.sr.ht/tree)
+    -   [originlodge](https://sr.ht/~krystianch/originlodge/) (GPL-3.0)
+         paste.sr.ht client for Android
+
+You can use all the services as hosted on sourcehut, but also install them on your
+server following
+[Installation from packages](https://man.sr.ht/installation.md#installing-from-packages).
+
+The services need a PostgreSQL, redis, and mail servers and a cron daemon.
+
+-   [sourcehut-client](https://sr.ht/~quf/sourcehut-client/) (GPL-3.0)
+    Python 3 CLI client for sourcehut, it provides access to _builds.r.ht_, _git.sr.ht_,
+    _paste.sr.ht_.
+
+[SourceHut Tutorials](https://man.sr.ht/tutorials/):
+
+-   [Setting up your account & first git repository
+    ](https://man.sr.ht/tutorials/#setting-up-your-account-amp-first-git-repository)
+-   [Contributing to projects on SourceHut
+    ](https://man.sr.ht/tutorials/#contributing-to-srht-projects)
+-   [Getting started with builds.sr.ht
+    ](https://man.sr.ht/tutorials/#getting-started-with-buildssrht)
+-   [Mastering git rebase](https://man.sr.ht/tutorials/#git-rebase)
+
+The author, and _benevolent dictator_ of SourceHut is
+[Drew Devault](https://drewdevault.com/), his sourcehut directory is
+[~sircmpwn](https://sr.ht/~sircmpwn) his [Blog](https://drewdevault.com/)
+is also available as [gemini://drewdevault.com](gemini://drewdevault.com).
 
 ## Free open-source and private repositories
 In addition to {{< iref "#github" >}} and {{< iref "#gitlab" "GitLab" >}}
