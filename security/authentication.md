@@ -414,25 +414,23 @@ interface.
 
 ### control
 
--   __requisite__ --  Failure to authenticate via this module results
-    in immediate denial of authentication.
--   __ required__ --      Failure also results in denial of
-    authentication, although PAM will still call all the other modules
-    listed for this service before denying authentication.
-    For the function to be able to return success to the
-    application all `required' modules have to report success.
--   __sufficient__ -- If authentication by this module is
-    successful, PAM will grant authentication immediatly.
-    In the case this module succeed no other stacked module is called.
--   __optional__  -- Whether this module succeeds or fails is only
-    significant if it is the only module of its type for this service.
+-   __requisite__ -- Failure to authenticate via this module results in immediate denial
+    of authentication.
+-   __required__ -- Failure also results in denial of authentication, although PAM will
+    still call all the other modules listed for this service before denying
+    authentication.  For the function to be able to return success to the application
+    all `required' modules have to report success.
+-   __sufficient__ -- If authentication by this module is successful, PAM will grant
+    authentication immediatly.  In the case this module succeed no other stacked module
+    is called.
+-   __optional__ -- Whether this module succeeds or fails is only significant if it is
+    the only module of its type for this service.
 
 ### options
--   __use_first_pass__  Use the same password used by the first
-    mechanism that asked for a password.
--   __try_first_pass__  This is the same as `use_first_pass', except
-    that if the primary password is not valid, it should prompt the
-    user for the password.
+-   __use_first_pass__ Use the same password used by the first mechanism that asked for
+    a password.
+-   __try_first_pass__ This is the same as `use_first_pass', except that if the primary
+    password is not valid, it should prompt the user for the password.
 
 For the new syntax:
 
@@ -445,7 +443,7 @@ For the new syntax:
 -   __optional__ is equivalent to
     `[new_authtok_reqd=ok default=ignore](success=ok)`
 
-Myc onfig is in `/etc/pam.d/system-auth`
+The configuration is in `/etc/pam.d/system-auth`
 and `/etc/nsswitch.conf`
 
 # Polkit
@@ -500,24 +498,7 @@ removable storage, etc.
     (french translation:
     [Authentification basique
     ](http://www.voidspace.org.uk/python/articles/authentication_francais.shtml))
--   {{< wp "OAuth" >}} provides a method for clients to access server resources on behalf
-    of a resource  owner (such as a different client or an end-user).
-    It also provides a process for end-users to authorize third-party access to their server
-    resources without sharing their credentials, using user-agent redirections.
 
-## OpenId
--   {{< wp "OpenId" >}}   is a URL based distributed identity system, see also
-    [OpenId Home](http://openid.net/).
--   __MyOpenId__  provider have shut down their service in  February
-    2014.
-    Look at [Replacing MyOpenID
-    ](http://evertpot.com/replacing-myopenid/) to use instead
-    [IndieAuth](https://indieauth.com/) part of
-    [IndieWeb](http://indiewebcamp.com/Getting_Started)
--   For OpenId development see
-    [OpenId Wiki](http://wiki.openid.net/Main_Page),
-    libraries are available at
-    [openidenabled Home Page](http://www.openidenabled.com/)
 
 ## SSO
 -   {{< wp "Single sign-on" >}} allows users to log in once and gain
@@ -528,6 +509,26 @@ removable storage, etc.
     ](https://help.ubuntu.com/community/SingleSignOn)
     describes how to set up network-connected Ubuntu machines to
     support Single Sign On (SSO).
+-   {{< wp "OAuth" >}} provides a method for clients to access server resources on behalf
+    of a resource  owner (such as a different client or an end-user).
+    It also provides a process for end-users to authorize third-party access to their server
+    resources without sharing their credentials, using user-agent redirections.
+-   {{< wp "Security Assertion Markup Language" >}} or _SAML_
+    is an open standard for exchanging authentication and authorization data between
+    an identity provider and a service provider. It is used in  web-browser single
+    sign-on (SSO).
+    -   [SAML at Stanford University IT](https://uit.stanford.edu/service/saml).
+
+### OpenId
+-   {{< wp "OpenId" >}}   is a URL based distributed identity system, see also
+    [OpenId Home](http://openid.net/).
+-   __MyOpenId__  provider have shut down their service in  February
+    2014. Other providers are [Replacing MyOpenID
+    ](http://evertpot.com/replacing-myopenid/).
+-   [IndieAuth](https://indieauth.com/) is an OpenId provider part of
+    [IndieWeb](http://indiewebcamp.com/Getting_Started)
+-   For OpenId development see [OpenId Wiki](http://wiki.openid.net/Main_Page),
+    libraries are available at [openidenabled Home Page](http://www.openidenabled.com/)
 
 
 <!-- Local Variables: -->
