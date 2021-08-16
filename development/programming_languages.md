@@ -333,26 +333,10 @@ comparable to C cf. [The  benchmarks game](http://shootout.alioth.debian.org/)
 -   [AT&T Open Source software tools (pdf)
     ](http://www2.research.att.com/~astopen/publications/open-2000-1.pdf)
     (Common Public License) ast, Graphviz, sfio, dytona ....
-    [AST downloads](http://www.research.att.com/sw/download/ "research.att.com sw/download").
+    [AST downloads](http://www.research.att.com/sw/download/).
 -   [PCRE - Perl Compatible Regular Expressions](http://www.pcre.org/)
-    is library for C that implement
-    [Perl RE](http://perldoc.perl.org/perlre.html).
-    -   [PCRE2 HTML documentation
-        ](http://www.pcre.org/current/doc/html/):
-        [pcre2syntax - pcre2 expression syntax quick-reference
-        ](http://www.pcre.org/current/doc/html/pcre2syntax.html).
-    -   The [Wikipedia:  PCRE](http://en.wikipedia.org/wiki/PCRE)
-        page details the features of pcre expressions and the differences
-        with perl re.
-    -   There are many online pcre tester:
-        [regexpal](http://www.regexpal.com/),
-        [regex101](https://regex101.com/),
-        [debuggex](https://www.debuggex.com/),
-        [myregextester](https://www.myregextester.com/),
-        [reg-exp](http://reg-exp.com/),
-        [pythex](http://pythex.org/) _python regexp_.
-    -   See also the {{< iref "python_libraries#python_re" "Python _re_ references" >}}
-
+    is library for C that implement {{< iref "shell#pcre"  "PCRE" >}}
+    regular expression pattern matching using the PERl RE syntax.
 ### antlr
 
 {{< wp "Antlr" >}} (ANother Tool for Language Recognition) provides a framework for
@@ -804,6 +788,8 @@ _implementation_ that fulfill a role similar to that of classes.
     ](https://github.com/rust-unofficial/awesome-rust)
     a list of Rust code and resources.
 -   [Rust Projects](http://www.rust-ci.org/projects/)
+-   [Getting started with ... Rust - Stack Overflow Blog
+    ](https://stackoverflow.blog/2021/03/15/getting-started-with-rust/)
 -   [a very brief intro to rust
     ](https://ashleygwilliams.github.io/a-very-brief-intro-to-rust/)
 -   [Rust by Example](http://rustbyexample.com/)
@@ -837,9 +823,9 @@ _implementation_ that fulfill a role similar to that of classes.
     is a fast, modern HTTP implementation written in and for Rust.
     Hyper offers both a Client and a Server which can be used to drive
     complex web applications written entirely in Rust.
--   [remacs](https://github.com/Wilfred/remacs) is a port to Rust of
-    emacs. In 2020 it is a very active project. It provides a docker file to run the
-    development version.
+-   [remacs](https://github.com/Wilfred/remacs) (GPL 3.0)
+    is a port to Rust of emacs. In 2020 it is a very active project. It provides a
+    docker file to run the development version.
 
 # Rusthon {#rusthon}
 
