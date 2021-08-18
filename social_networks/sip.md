@@ -1,5 +1,5 @@
 ---
-title: SIP
+title: Web Conferencing
 ---
 
 
@@ -12,8 +12,9 @@ Other related pages are {{< iref "irc" "IRC" >}},
 {{< iref "xmpp" "XMPP" >}}
 and {{< iref "microblogging" "Micro Blogging" >}}
 
+# Voice transport - SIP
 
-# VoIp protocols references
+## VoIp protocols references
 
 -   Wikipedia: {{< wp "Voice over IP" >}}, {{< wp "Session Initiation Protocol" >}},
     {{< wp "H.323, [w:IAX" >}}, {{< wp "List of SIP software" >}},
@@ -62,7 +63,7 @@ and {{< iref "microblogging" "Micro Blogging" >}}
 -   The [GNU Telephony Secure Calling initiative
     ](http://www.gnutelephony.org/index.php/Secure_Call)
 
-# VoiP servers and proxys
+## VoiP servers and proxys
 
 -   {{< wp "FreeSWITCH" >}} is a  telephony platform that lie between
     a softphone and a PBX or a carrier-class softswitch.
@@ -95,7 +96,7 @@ and {{< iref "microblogging" "Micro Blogging" >}}
 -   The [SIP Router Project](http://sip-router.org/)
     is the common development framework for SER and Kamailio.
 
-## Asterisk
+### Asterisk
 -   {{< wp "Asterisk" >}} is a complete PBX in software.
     Asterisk does voice over IP in four protocols, and can interoperate
     with almost all standards-based telephony equipment.
@@ -121,7 +122,7 @@ and {{< iref "microblogging" "Micro Blogging" >}}
     ](http://www.voip-info.org/wiki/view/X100P+clone)
 
 
-# Sip Test/Administration tools
+## Sip Test/Administration tools
 -   [SIPp](http://sipp.sourceforge.net/) (GPL) is a a performance
     testing tool for the SIP protocol. it is packaged in the debian
     package _sip-tester_.
@@ -129,7 +130,7 @@ and {{< iref "microblogging" "Micro Blogging" >}}
     that can be used for some simple tests on SIP applications and
     devices.
 
-# Voip clients
+## Voip clients
 _mainly sip clients_
 
 -   <a name="blink"></a>[Blink](http://icanblink.com/) (either open
@@ -187,6 +188,51 @@ _mainly sip clients_
     online. So I renounced to use this version 2.2 from 2010.
 -   [sflphone](http://www.sflphone.org/) (GPL) sip and IAX2  client for
     linux.
+-   [Twinkle](http://twinkle.dolezel.info/)
+    soft phone for VOIP using SIP protocol. It has a light interface not depending
+    of any desktop, even if it can integrate with Kde. It takes 20M
+    Resident/15M shared.
+    -   Wikipedia {{< wp "Twinkle (software)" >}}
+
+## Alt Open source Protocols
+-   {{< wp "Mumble" >}} (BSD License) Mumble is a voice over IP (VoIP)
+    application written in C++/QT primarily designed for use by gamers
+    and is similar to programs such as TeamSpeak.  It features
+    encrypted communication encoded in Opus with high sound quality
+    and low latency.  It uses the
+    {{< wp "Interactive Connectivity Establishment" >}} (ICE) protocol.
+    -   [Mumble Home](https://wiki.mumble.info/wiki/Main_Page).
+    -   [GitHub - Mumble](https://github.com/mumble-voip/mumble)
+    -   {{< wp "TeamSpeak" >}} (proprietary, Freeware)
+        is a VoIP  application for audio conference.
+
+## sip registrars and Public Switched Telephone Network gateways
+
+-   sip registrars and PSTN gateways:
+    [directcentrex.com](http://www.directcentrex.com/)(PSTN),
+    [FreeWorldDialup](http://www.freeworlddialup.com),
+    [SipPhone](http://www.sipphone.com/)(PSTN) more known as
+    [Gizmo Project](http://www.gizmoproject.com/) _now bought by Google_
+    [voipgate.co](http://www.voipgate.com)(PSTN),
+    [voipuser.org](http://www.voipuser.org/) (uk PSTN)
+    [sipgate.com](http://www.sipgate.com)(us PSTN),
+    [sipgate.co.uk](http://www.sipgate.co.uk)(uk PSTN),
+    [www.voipstunt.com](http://www.voipstunt.com/en/)(PSTN, many free
+    destinations),
+    {{< wp "SIP_Broker" >}},
+-   A list of SIP provider prefixes, as well as SIP providers,
+    can be found in the [Provider WhitePage
+    ](http://www.sipbroker.com/sipbroker/action/providerWhitePages)
+
+# Video and voice
+-   <a name="discord"></a>{{< wp "Discord_(software)"  "Discord" >}} (proprietary)
+    is a proprietary freeware VoIP application designed for
+    gaming communities. The multi-platform Discord client is built
+    on the Electron framework. It allows voice calling, video calling
+    and screensharing, text messaging, media and files.
+
+    There are paid addons and gadgets.
+    -   [Discord Home](https://discord.com/) has a web frontend to Discord.
 -   <a name="jami"></a>[Jami (previously Gnu Ring)](https://jami.net/) (GPL)
     is a secure and distributed voice, video, file sharing and chat communication
     platform that replaced _sflphone_. It supports SIP, IAX2, RTP,
@@ -205,11 +251,6 @@ _mainly sip clients_
     {{< iref "xmpp#tox" "in the XMPP section" >}}.
     It uses its {{< iref "xmpp#tox" "Tox protocol" >}}
     and has suport for {{< wp "Opus" >}} codex.
--   [Twinkle](http://twinkle.dolezel.info/)
-    soft phone for VOIP using SIP protocol. It has a light interface not depending
-    of any desktop, even if it can integrate with Kde. It takes 20M
-    Resident/15M shared.
-    -   Wikipedia {{< wp "Twinkle (software)" >}}
 
 ## Jitsi {#jitsi}
 <!-- See [[file:/share/sync_folders/misc/mznotes/content-org/weblinks/network.org::#jitsi][Liste d'instances Jitsi]] -->
@@ -236,17 +277,7 @@ DNSSEC.
 -   [List of Jitsi Meet instances](https://framatalk.org/accueil/en/info/)
     from [Framatalk](https://framatalk.org/).
 
-# Alt Open source Protocols
--   {{< wp "Mumble" >}} (BSD License) Mumble is a voice over IP (VoIP)
-    application written in C++/QT primarily designed for use by gamers
-    and is similar to programs such as TeamSpeak.  It features
-    encrypted communication encoded in Opus with high sound quality
-    and low latency.  It uses the
-    {{< wp "Interactive Connectivity Establishment" >}} (ICE) protocol.
-    -   [Mumble Home](https://wiki.mumble.info/wiki/Main_Page).
-    -   [GitHub - Mumble](https://github.com/mumble-voip/mumble)
-
-# Proprietary protocols
+## Proprietary protocols
 I just give a pointer to most popular VoIP solutions. We should prefer
 open source.
 
@@ -271,38 +302,7 @@ open source.
         ](https://help.ubuntu.com/community/SkypeTroubleshooting)
     -   [Debian Wiki: Skype](https://wiki.debian.org/skype)
 
--   <a name="discord"></a>{{< wp "Discord_(software)"  "Discord" >}} (proprietary)
-    is a proprietary freeware VoIP application designed for
-    gaming communities. The multi-platform Discord client is built
-    on the Electron framework. It allows voice calling, video calling
-    and screensharing, text messaging, media and files.
 
-    There are paid addons and gadgets.
-    -   [Discord Home](https://discord.com/) has a web frontend to Discord.
-
--   {{< wp "TeamSpeak" >}} (proprietary, Freeware)
-    is a VoIP  application for audio conference.
-
-
-# sip registrars and Public Switched Telephone Network gateways
-
--   sip registrars and PSTN gateways:
-    [directcentrex.com](http://www.directcentrex.com/)(PSTN),
-    [FreeWorldDialup](http://www.freeworlddialup.com),
-    [SipPhone](http://www.sipphone.com/)(PSTN) more known as
-    [Gizmo Project](http://www.gizmoproject.com/) _now bought by Google_
-    [voipgate.co](http://www.voipgate.com)(PSTN),
-    [voipuser.org](http://www.voipuser.org/) (uk PSTN)
-    [sipgate.com](http://www.sipgate.com)(us PSTN),
-    [sipgate.co.uk](http://www.sipgate.co.uk)(uk PSTN),
-    [www.voipstunt.com](http://www.voipstunt.com/en/)(PSTN, many free
-    destinations),
-    {{< wp "SIP_Broker" >}},
--   A list of SIP provider prefixes, as well as SIP providers,
-    can be found in the [Provider WhitePage
-    ](http://www.sipbroker.com/sipbroker/action/providerWhitePages)
-
-<!-- Local Variables: -->
 <!-- mode: markdown -->
 <!-- ispell-local-dictionary: "english" -->
 <!-- eval: (org-link-minor-mode 1) -->
