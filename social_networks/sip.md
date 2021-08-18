@@ -130,69 +130,24 @@ and {{< iref "microblogging" "Micro Blogging" >}}
     that can be used for some simple tests on SIP applications and
     devices.
 
-## Voip clients
-_mainly sip clients_
-
--   <a name="blink"></a>[Blink](http://icanblink.com/) (either open
-    source or shareware)
-    a python/QT Linux and windows, or python/Cocoa Mac OS X, sip client
-    with instant messaging, OTR support, file transfer and multi-party
-    conferencing, remote desktop sharing using RFB protocol (VNC), and
-    SIMPLE presence.
--   [Ekiga](http://www.ekiga.org/) previously known as *Gnomeeting* a
-    sip and H.323 compatible videoconferencing and VOIP/IP-Telephony
-    application. The documentation is in
-    [Ekiga Wiki](http://wiki.ekiga.org/)
--   {{< wp "Empathy_(Software)"  "Empathy" >}} (GPL) is an instant messaging
-    client which supports text, voice, video, file transfers, and a
-    large inter-application communication nearly identical to pidgin
-    but including SIP. It is written in C against gnome libraries, so
-    it has importants Gnome dependencies. See
-    {{< iref "xmpp#empathy" "Empathy in my xmpp page" >}}.
--   The [eZuce SRN](http://srn.ezuce.com/) is a distributed
-    collaboration system for research community.
--   [Linphone](http://www.linphone.org/) (GPL)
-    is an audio and video GTK+ SIP client.  linphone takes 21M
-    resident/15M shared; it is comparable with twinkle.  There is also
-    a console client and an android platform build.  `linphonec` that
-    uses only 7M resident/5M shared.
--   [Minisip](http://www.minisip.org/) (LGPL for the libraries, GPL
-    for the application) User Agent running on Linux.
--   {{< wp "Pidgin_(software)"  "Pidgin" >}} (GPL)
-    is a multi-platform instant messaging client for many commonly
-    used instant messaging protocols _(but not yet SIP!)_. It is
-    written in C, Python, Perl. See
+## Voip SIP clients
+-   [Linphone](https://www.linphone.org/) (GPL)
+    is an audio and video GTK+ SIP client.  linphone takes 21M resident/15M shared; it
+    is comparable with twinkle.  There is also a console client and an android platform
+    build.  `linphonec` that uses only 7M resident/5M shared.
+-   {{< iref "xmpp#pidgin" "Pidgin" >}} (GPL)
+    is a multi-platform instant messaging client for many commonly used instant
+    messaging protocols _(but not yet SIP!)_. It is written in C, Python, Perl. See
     {{< iref "xmpp#pidgin" "Pidgin in my xmpp page" >}}.
--   {{< wp "Mumble" >}} (BSD License) is a voice chat application for groups.
-    It is primarily intended for gaming.
--   [w:QuteCom](GPL) _[QuteCom Home](http://www.qutecom.org/)_
-    previously _Wengophone_ is a sip client written in C++ with Qt
-    lybraries, available on linux, windoze, and MacOs. It is packaged
-    on Debian and Ubuntu.  It pretends to support also the xmms
-    protocol and allows video-calls.  The front end is build with QT
-    without extra KDE dependencies.<br /> The _meager_ documentation
-    is in the [QuteCom Wiki](http://trac.qutecom.org/wiki).  Qutecom
-    take 60M Resident/32 shr, 38M when disabling video, even before
-    the first call, quite heavy compared to the 20M of twinkle.<br />
-    Qutecom has kept from Wengophone some features that push you to
-    connct with one provider, and make mainly landlines and mobile
-    calls.<br /> The configuration interface is quite disappointing,
-    you have to configure a main sip accounts, and add some alternates
-    accounts for other protocols,wich are at a sub level of the main
-    account. There is no way to enter a firewall traversing option, or
-    simply set a stun server, but editing the advanced
-    configuration. Very few is configurable even for sip, and still
-    less for other protocols. I have been able to register on some of
-    my accounts, but it refuses some others. And some of my jabber
-    contacts, appears on-line, some others don't, even if they are
-    online. So I renounced to use this version 2.2 from 2010.
--   [sflphone](http://www.sflphone.org/) (GPL) sip and IAX2  client for
-    linux.
--   [Twinkle](http://twinkle.dolezel.info/)
-    soft phone for VOIP using SIP protocol. It has a light interface not depending
-    of any desktop, even if it can integrate with Kde. It takes 20M
-    Resident/15M shared.
+-   [w:QuteCom](GPL)
+    previously _Wengophone_ was a sip client written in C++ with Qt
+    lybraries, available on linux, windoze, and MacOs. It is no more maintained since
+    2011 and dropped fron Debian in 2016
+-   [Twinkle](http://twinkle.dolezel.info/) (GPL-2.0)
+    soft phone for VOIP using SIP protocol. The new port is a QT5 application with a
+    light interface not depending of any desktop.
     -   Wikipedia {{< wp "Twinkle (software)" >}}
+    -   [twinkle - GitHub](https://github.com/LubosD/twinkle)
 
 ## Alt Open source Protocols
 -   {{< wp "Mumble" >}} (BSD License) Mumble is a voice over IP (VoIP)
@@ -225,6 +180,18 @@ _mainly sip clients_
     ](http://www.sipbroker.com/sipbroker/action/providerWhitePages)
 
 # Video and voice
+-   <a name="blink"></a>[Blink](https://icanblink.com/) (GPL 3.0)
+    a python/QT Linux and and windows software or _Blink Pro_ a proprietary
+    python/Cocoa Mac OS X and ios software.
+    _Blink_ is a sip client with many [features](https://icanblink.com/features/)
+    including:
+    -   Voice and Video calls with Opus codec, H.264, VP8 and VP9 video codecs
+        Acoustic Echo Cancellation, and ZRTP End-to-end Encryption.
+    -   Instant messaging, OTR support, {{< wp "Message Session Relay Protocol" >}}
+        _(MSRP)_ and SIMPLE presence.
+    -   file transfer
+    -   multi-party conferencing,
+    -   remote desktop sharing using RFB protocol (VNC)
 -   <a name="discord"></a>{{< wp "Discord_(software)"  "Discord" >}} (proprietary)
     is a proprietary freeware VoIP application designed for
     gaming communities. The multi-platform Discord client is built
@@ -233,19 +200,27 @@ _mainly sip clients_
 
     There are paid addons and gadgets.
     -   [Discord Home](https://discord.com/) has a web frontend to Discord.
+-   [Ekiga](https://www.ekiga.org/) previously known as *Gnomeeting* a
+    sip and H.323 compatible videoconferencing and VOIP/IP-Telephony
+    application. The documentation is in the    [Ekiga Wiki](http://wiki.ekiga.org/)
+-   {{< iref "xmpp#empathy" "Empathy" >}} (GPL) is an instant messaging client which
+    supports text, voice, video, file transfers, and a large inter-application
+    communication nearly identical to pidgin but including SIP. It is written in C
+    against gnome libraries, so it has importants Gnome dependencies. See
+    {{< iref "xmpp#empathy" "Empathy in my xmpp page" >}}.
 -   <a name="jami"></a>[Jami (previously Gnu Ring)](https://jami.net/) (GPL)
     is a secure and distributed voice, video, file sharing and chat communication
-    platform that replaced _sflphone_. It supports SIP, IAX2, RTP,
-    STUN, SRV and accept many codecs including {{< wp "Opus" >}}.  It features
-    a daemon and desktop clients, and can output to pulseaudio.
+    platform that replaced _sflphone_. It supports SIP, IAX2, RTP, STUN, SRV and accept
+    many codecs including {{< wp "Opus" >}}.  It features a daemon and desktop clients,
+    and can output to pulseaudio.
+
     On Linux Desktop clients for gnome, and kde  are available. The
     gnome version is in Debian and Ubuntu under the name _ring_ until stretch (debian 8)
     and from buster (debian 9) the package is named _jami_.
-    There are also clients for  OS X, Windows, Android, iOS
+    There are also clients for  OS X, Windows, Android, IOS
     -   {{< wp "Ring_(software)"  "Wikipedia: Ring" >}}.
     -   [Jami repository](https://git.jami.net/savoirfairelinux/ring-project/)
     -   [Jami Wiki](https://git.jami.net/savoirfairelinux/ring-project/wikis/home)
-
 -   {{< iref "xmpp#tox" "Tox" >}} (GPL)
     is a Voice, video, instant messaging, file transfers client it is
     {{< iref "xmpp#tox" "in the XMPP section" >}}.
