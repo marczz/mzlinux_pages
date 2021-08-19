@@ -5,8 +5,10 @@ title: P2P
 See also {{< iref "irc" "IRC" >}},
 {{< iref "xmpp" "XMPP" >}},
 {{< iref "sip" "SIP" >}},
-{{< iref "social_networks" "Social Networks" >}}.
-
+{{< iref "social_networks" "Social Networks" >}},
+{{< iref "file_sharing" "File Sharing" >}}.
+<!-- [[file:/share/sync_folders/misc/mznotes/content/docs/mzlinux/social_networks/file_sharing.md][file_sharing.md]]
+-->
 -----------------
 
 
@@ -202,8 +204,10 @@ WebRTC is used for {{< iref "#webtorrent" "WebTorrents" >}},
 
 # P2P file sharing software {#p2p_file_sharing}
 See also {{< iref "file_transfer" "File Transfer" >}},
-{{< iref "clouds#temporary_storage" "Temporary storage" >}}
+{{< iref "file_sharing#temporary_storage" "Temporary storage" >}}
 and {{< iref "clouds" "Clouds" >}}.
+
+<!--[[file:/share/sync_folders/misc/mznotes/content/docs/mzlinux/social_networks/file_sharing.md::{#temporary_storage}][Temporary File storage]] -->
 
 Before choosing a P2P file sharing protocol we must be aware of the
 lack of privacy of P2P and the risk for anybody to  be framed for
@@ -392,30 +396,23 @@ be viewed by any body having or guessing the URL or magnet Link.
     -   [awesome-webrtc](https://github.com/openrtc-io/awesome-webrtc)
         gives a list of WebRTC resources, but it is no longer updated since 2017
 
-
-
     Most of the previous applications have the ability to directly preview a media in
-    the browser. But many other applications listed in the[WebTorrent FAQ
-    ](https://webtorrent.io/faq) are dedicated to music or video
+    the browser. Many other applications listed in the
+    [WebTorrent FAQ](https://webtorrent.io/faq) are dedicated to music or video
     streaming.
-
-
 
 # P2P WebRTC conferencing. {#webrtc_conference}
 
--   [Awesome WebRTC list of chat applications
-    ](http://awesome.openrtc.io/#chat)
+-   [Awesome WebRTC list of chat applications](http://awesome.openrtc.io/#chat)
 -   [apptr.tc](https://appr.tc/)
     is a {{< iref "#webrtc" "WebRTC" >}} application from the
-    [Chrome developers WebRTC samples
-    ](https://webrtc.github.io/samples/).
+    [Chrome developers WebRTC samples](https://webrtc.github.io/samples/).
 -   [WebRTC Experiment](https://www.webrtc-experiment.com/)
-    includes many WebRTC Video Conferencing and Multi-user
-    Conferencing applications,
+    includes many WebRTC Video Conferencing and Multi-user Conferencing applications,
     and also File Sharing, Screen Sharing.
 -   [Multi-User Video Conference with WebRTC
     ](http://blog.mgechev.com/2014/12/26/multi-user-video-conference-webrtc-angularjs-yeoman/)
-    by Minko Gechev is a tutorial for how to implement a multi-user
+    _2014_ by Minko Gechev is a tutorial for how to implement a multi-user
     video conference with WebRTC, AngularJS and Yeoman. It includes
     explanation of how the ICE (Interactive-Connectivity
     Establishment) framework is used for NAT traversal.
@@ -424,8 +421,7 @@ be viewed by any body having or guessing the URL or magnet Link.
     ](https://webrtchacks.com/web-audio-conference/) by Alexey Aylarov
     include a [live demo](https://demos.voximplant.com/clientconf/).
 -   [PubNub](https://www.pubnub.com/) can be used for
-    [WebRTC Video Chat Signaling
-    ](https://www.pubnub.com/developers/demos/webrtc/)
+    [WebRTC Video Chat Signaling](https://www.pubnub.com/developers/demos/webrtc/)
 -   [BigBlueButton](https://bigbluebutton.org/) (GPL)
     is a web conferencing system for online learning.  BigBlueButton
     enables real-time sharing of audio, video, slides (with
@@ -445,29 +441,32 @@ There are also many private expensive software that allow a big number
 of clients, that would be impossible with the pure P2P mesh
 architecture like :
 
--   [voxeet](http://www.voxeet.com/) has a free plan allowing
-    up to six participants conferences and Android and iOS apps.
+-   [voxeet](http://www.voxeet.com/) has a free plan allowing up to six participants
+    conferences and Android and iOS apps.
 -   [Bluejeans](https://www.bluejeans.com/)
-    allow videoconferencing up to 100 or thousands clients, and
-    provide
-    [BlueJeans Apps
-    ](https://support.bluejeans.com/knowledge/bluejeans-app)
-    for Mac OS, Windows, and Linux, and [android
-    ](https://support.bluejeans.com/knowledge/bluejeans-android)
-    and a [Chrome plugin
-    ](https://support.bluejeans.com/knowledge/optimize-chrome).
+    allows videoconferencing up to 100 or thousands clients, and provides
+    [BlueJeans Apps](https://support.bluejeans.com/knowledge/bluejeans-app)
+    for Mac OS, Windows, and Linux, and
+    [android](https://support.bluejeans.com/knowledge/bluejeans-android)
+    and a [Chrome plugin](https://support.bluejeans.com/knowledge/optimize-chrome).
     It has free time limited trials but _no free plan_.
 
 # Other P2P software
 
 -   {{< wp "Bitcoin" >}}
-    is a decentralized P2P electronic cash system without a central
-    server or trusted parties. Users hold the cryptographic keys to
-    their own money and make transactions directly with each other.
-    -   [ArchWiki: Bitcoin]
+    is a decentralized P2P electronic cash system without a central server or trusted
+    parties. Users hold the cryptographic keys to their own money and make transactions
+    directly with each other.
+
+    As "Mining" for the cryptocurrency is heavily power-hungry, it is a _dirty
+    currency_. There are many references and study on the web, no need to reference them
+    here.
+
+    -   [ArchWiki: Bitcoin](https://wiki.archlinux.org/title/Bitcoin).
     -   [BitCoin Home](https://bitcoin.org/en/)
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
 <!-- ispell-local-dictionary: "english" -->
+<!-- eval: (org-link-minor-mode 1) -->
 <!-- End: -->
