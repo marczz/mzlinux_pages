@@ -3,12 +3,14 @@ Title: File Sharing
 ---
 
 # Temporary File storage services{#temporary_storage}
-See also {{< iref "p2p#p2p_file_sharing" "P2P File sharing" >}},
+See also {{< iref "p2p#p2p_file_sharing" "P2P File sharing" >}}
+and  {{< iref "p2p#p2p_file_transfer" "P2P file transfer" >}},
 {{< iref "task_management" "Task Management" >}},
 {{< iref "task_management#note_taking" "Notes Taking" >}}.
 
-_I list only services with a password protection and/or encryption._
+<!-- [[file:/share/sync_folders/misc/mznotes/content/docs/mzlinux/network/p2p.md::{#p2p_file_sharing}][P2P file sharing]], [[file:/share/sync_folders/misc/mznotes/content/docs/mzlinux/network/p2p.md::P2P file transfer {#p2p_file_transfer}][P2P file transfer]] -->
 
+_I list only services with a password protection and/or encryption._
 
 <a name="android_web_upload"></a>
 For the web interface android browsers you cannot use drag & drop, but
@@ -196,18 +198,6 @@ _They are self-hosted solutions._
     -   [Lutim Wiki](https://framagit.org/luc/lutim/wikis/).
 -  [TeDomum / TedImg](https://forge.tedomum.net/tedomum/tedimg) (Beer-ware License)
    a flask image server, written in python, Node.js
-
-## Codepad {#codepad}
--   <a name="codepad.org">[codepad.org](http://codepad.org/)
-    ([closed source](http://codepad.org/about))
-    is an online compiler/interpreter, and a simple collaboration tool. It's
-    a pastebin that executes code for you. It can interpret code in C, C++, D, haskell,
-    lua, ocaml, php, perl, python, ruby, scheme, Tcl.
--   [LaKing/codepad](https://github.com/LaKing/codepad) (MIT License) is a
-    collaborative online code editor and project written in node.js manager running
-    online in the browser. It relies on a MongoDB database.
--   [Ideone.com](https://ideone.com/) (proprietary software)
-    is an online codepad compiler/interpreter and IDE for many languages.
 
 # Pastebin {#pastebin}
 
@@ -647,6 +637,21 @@ Some pastebin offer encryption
 
     -   [PrivateBin - GitHub](https://github.com/PrivateBin/PrivateBin/).
     -   [PrivateBin Instance Directory](https://privatebin.info/directory/)
+-   [PBinCLI](https://github.com/r4sas/PBinCLI)
+    is a Python 3 private bin client.
+
+
+## Codepad {#codepad}
+-   <a name="codepad.org">[codepad.org](http://codepad.org/)
+    ([closed source](http://codepad.org/about))
+    is an online compiler/interpreter, and a simple collaboration tool. It's
+    a pastebin that executes code for you. It can interpret code in C, C++, D, haskell,
+    lua, ocaml, php, perl, python, ruby, scheme, Tcl.
+-   [LaKing/codepad](https://github.com/LaKing/codepad) (MIT License) is a
+    collaborative online code editor and project written in node.js manager running
+    online in the browser. It relies on a MongoDB database.
+-   [Ideone.com](https://ideone.com/) (proprietary software)
+    is an online codepad compiler/interpreter and IDE for many languages.
 
 # Collaborative services
 See also voice and video calling {{< iref "sip#jitsi" "Jitsi" >}},
