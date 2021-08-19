@@ -892,14 +892,13 @@ But some alternative status are window manager independant.
 ## Menu system
 ### menus from shell
 -   [qmenu](https://github.com/teopost/qmenu/)
-    Features include options to format the menu, bindings to function
-    keys, possibility to include submenus, show help messages and
-    launch shell sessions.  package in Debian.
--   _9menu_ from plan9, [9menu Debian package
-    ](https://packages.debian.org/testing/9menu)
+    Features include options to format the menu, bindings to function keys, possibility
+    to include submenus, show help messages and launch shell sessions.  package in
+    Debian.
+-   _9menu_ from plan9,
+    [9menu Debian package](https://packages.debian.org/testing/9menu)
 -   _ratmenu_ forked from 9menu for ratpoison wm
-    [ratmenu Debian package
-    ](https://packages.debian.org/testing/ratmenu)
+    [ratmenu Debian package](https://packages.debian.org/testing/ratmenu)
 -   [Zrajm’s programs](http://zrajm.org/programs/) provide _ratmen_ a
     _ratmenu_ alternative, and _termmen_ a zsh menu.
 
@@ -1259,11 +1258,11 @@ A list is in [Archwiki Clipboard/Managers
     is a lightweight GTK3 clipboard manager forked from
     {{< iref "#parcellite" "parcellite" >}}.
 
-    Clipit seat in your tray, and allow to select clipboard history.
-    It can also be used from the command line.  Clipit has preferences to manage
+    _Clipit_ seat in your tray, and allow to select clipboard history.
+    It can also be used from the command line.  _Clipit_ has preferences to manage
     _CLIPBOARD_ and _PRIMARY_ selections and synchronize them.
 
-     ClipIt is no longer supported. and is replaced by {{< iref "#diodon" "Diodon" >}}.
+    _ClipIt_ is no longer supported. and is replaced by {{< iref "#diodon" "Diodon" >}}.
 -   [clipman for xfce4](https://docs.xfce.org/panel-plugins/xfce4-clipman-plugin/)
     is a clipboard manager for Xfce. It keeps the clipboard contents around while it is
     usually lost when you close an application.
@@ -1305,8 +1304,9 @@ A list is in [Archwiki Clipboard/Managers
     It does not support wayland, since Haskell ecosystem does not have a wayland
     package.
 
-[redguardtoo/cliphist](https://github.com/redguardtoo/cliphist)
-is an emacs package by [Chen Bin (reguardtoo)](https://github.com/redguardtoo) to paste from clipboard manager into Emacs
+-  [redguardtoo/cliphist](https://github.com/redguardtoo/cliphist)
+   is an emacs package by [Chen Bin (reguardtoo)](https://github.com/redguardtoo)
+   to paste from clipboard manager into Emacs
 
 ### Clipboard sharing {#clipboard_share}
 
@@ -1319,11 +1319,22 @@ You can also use any {{< iref "file_sharing#pastebin" "pastebin" >}}.
 
 -   [megahertz/clipboard-share](https://github.com/megahertz/clipboard-share)
     is a node.js server and client to share clipboard between two
-    computers.
+    computers.  It works on Linux, Mac OS X and Windows.
+-   [coralw/share-clipboard](https://github.com/coralw/share-clipboard) (MIT License)
+    is a node.js server and client to share clipboard between across different
+    platforms, including Mac OS X, Windows and Linux.
+
+    The [Share Clipboard Home | Langui.net](https://langui.net/share-clipboard/)
+    propose also ios application (proprietary, paid).
 -   [wincent/clipper](https://github.com/wincent/clipper)
     linux daemon that provide a service exposing the local clipboard
     to local or remote processes. It is meant to be used with
     {{< iref "checkpointing#tmux" "tmux" >}} running both locally and remotely.
+-   [pgcopy](https://github.com/nakabonne/pbgopy) (MIT License)
+    lets you share data across devices like you copy and paste.
+    _pbgopy_ comes with a built-in ability to encrypt/decrypt with symetric key,
+    public/private key-pair or gpg. Binary are provided for linux and Mac OS, including
+    a deb package.
 -   [Exposing your clipboard over SSH](https://gist.github.com/dergachev/8259104)
     explains how to copy clipboard to local and remote machines with
     `netcat`, `xclip`, and a reverse ssh session. In this article the
