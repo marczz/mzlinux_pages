@@ -2,7 +2,6 @@
 title: Proxy
 ---
 
-{{% toc /%}}
 
 # HTTP Proxies {#http_proxies}
 Wikipedia: {{< wp "Proxy server" >}} review the different types of proxy
@@ -79,7 +78,9 @@ settings to be changed.
 -   [PHP Web Proxy](http://sourceforge.net/projects/php-proxy/) (GPL)
     php proxy script not updated since 2002.
 
-# Socks Proxy servers
+# Socks Proxy servers {#socks_proxy}
+
+-   Wikipedia: {{< wp "SOCKS" >}}
 -   [Antinat SOCKS server](http://www.malsmith.net/antinat/)
     is a SOCKS 4, SOCKS 4a, SOCKS 5 proxy with authentication, CHAP,
     XML firewalling, server chaining, and UDP.
@@ -197,7 +198,7 @@ settings to be changed.
         ](https://www.irif.fr/~jch//software/polipo/faq.html).
     -   [ArchWiki: Polipo
         ](https://wiki.archlinux.org/index.php/Polipo)
--   <a name="privoxy"></a>[[Privoxy](http://www.privoxy.org/) (GPL)
+-   <a name="privoxy"></a>[Privoxy](http://www.privoxy.org/) (GPL)
     a filtering web proxy.
     It is an improvement of the now obsolete Internet Junkbuster .
     It is in Debian. _active in 2018_.
