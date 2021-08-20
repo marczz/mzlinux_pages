@@ -34,19 +34,20 @@ title: MarkDown
     documents like letters, invoices, orders, slides. _2013_
 
 # Markdown Editing
-[Emacs Markdown Mode](http://jblevins.org/projects/markdown-mode/)
-by Jason Blevinsis the standard major mode for editing Markdown
-formatted text with Emacs.
+[Emacs Markdown Mode](http://jblevins.org/projects/markdown-mode/) by Jason Blevins is
+the standard major mode for editing Markdown formatted text with Emacs.
 
-Markdown Mode can export the buffer to html and preview it (key
-`C-c C-c v`). Live Export (`C-c C-c l`) turn on
-markdown-live-preview-mode to view the exported output side-by-side
-with the source Markdown. By default the preview is done in Emacs eww
-mode.
+Markdown Mode can export the buffer to html and preview it (key `C-c C-c v`).
+
+Live Export (`C-c C-c l`) turn on markdown-live-preview-mode to view the exported output
+side-by-side with the source Markdown. By default the preview is done in Emacs eww mode.
 
 There are also packages to preview the saved buffer like
-[Markdown preview mode
-](https://github.com/ancane/markdown-preview-mode) in melpa.
+[Markdown preview mode](https://github.com/ancane/markdown-preview-mode) in melpa.
+
+You can nicely renders all basic CommonMark syntax with highlighted code blocks in your
+terminal with [mdcat](https://github.com/lunaryorn/mdcat) (MPL-2.0) by Sebastian Wiesner
+_lunaryorn_.
 
 Some browser extensions allow to copy links as markdown or/and
 to capture markdown from a displayed page in the browser:
@@ -204,11 +205,11 @@ table of content, you can control its depth with `--toc-depth`.
     GitHub Flavored Markdown files.
 -   [mdtoc](https://github.com/tallclair/mdtoc) (Apache License)
     is a go utility to generate a toc
--   <a name="#markdown-content"></a>
+-   <a name="markdown-content"></a>
     [markdown-contents](https://github.com/gajus/markdown-contents)  (MIT License)
     a _node.js_ application to  generate table of contents for a markdown document.
     It is used by {{< iref "#gitdown" "GitDown" >}}.
--   <a name="#markdown-toc"></a>
+-   <a name="markdown-toc"></a>
     [markdown-toc](https://github.com/jonschlinkert/markdown-toc) (MIT Licence)
     a _node.js_ application to generate a markdown TOC
     It uses {{< iref "#remarkable" "remarkable" >}} and is also used by it to generate
@@ -407,9 +408,9 @@ table of content, you can control its depth with `--toc-depth`.
     in the browser, and on the server using Node.js. , a Markdown
     editor with realtime preview of the generated HTML, and a few
     useful plugins.
--   [Prettier](https://github.com/prettier/prettier) (MIT License)
-    is a code formatter for JavaScript · TypeScript · Flow · JSX · JSON CSS · SCSS ·
-    Less HTML · Vue · Angular GraphQL · Markdown · YAML
+-   {{< iref "source_code#prettier" "Prettier" >}} (MIT License)
+    is a source code formatter wich support Markdown (CommonMark, GitHub-Flavored
+    Markdown, MDX), YAML and many other languages.
 -   <a name="remarkable"></a>[jonschlinkert/remarkable
     ](https://github.com/jonschlinkert/remarkable) (MIT License)
     a node.js parser used by Facebook, Docusaurus and  others. It support
@@ -561,7 +562,7 @@ See {{< iref "#pandoc" "Pandoc" >}} below.
     an {{< iref "#hoedown" "hoedown" >}} binding for Python.
 -   [python-hoedown](https://github.com/hhatto/python-hoedown)
     an {{< iref "#hoedown" "hoedown" >}} binding for Python.
--   <a name="#markdown-pp"></a>[Markdown Preprocessor
+-   <a name="markdown-pp"></a>[Markdown Preprocessor
     ](http://noswap.com/projects/markdownpp/) (BSD like licence)
     is a Python module designed to add a preprocessor on top of  Markdown.
     It is aimed at creating larger technical documents.
