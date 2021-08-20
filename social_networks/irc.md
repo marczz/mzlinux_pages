@@ -38,7 +38,7 @@ connect to irc from any jabber client.
     ](https://en.wikibooks.org/wiki/Internet_Technologies/IRC),
 
 -   RFC:
-    -   [RFC 1459](http://www.faqs.org/rfcs/rfc1459.html) Original IRC Protocol,
+    -   [RFC 1459](http://www.faqs.org/rfcs/rfc1459.html) - Original IRC Protocol,
     -   [RFC 2810](http://www.faqs.org/rfcs/rfc2810.html) - Updated IRC Architecture,
     -   [RFC 2811](http://www.faqs.org/rfcs/rfc2811.html) - Channel Management,
     -   [RFC 2812](http://www.faqs.org/rfcs/rfc2812.html) - IRC Client Protocol,
@@ -52,7 +52,7 @@ connect to irc from any jabber client.
     -   [IRCHelp.org — Privacy on IRC](http://www.irchelp.org/security/privacy.html).
 -   [Libera Chat](https://libera.chat/)
     IRC network for FOSS projects collaboration. It replaced
-    [freenode](http://freenode.net/) after the takeover by the businessman Andrew Lee,
+    {{< wp "Freenode" >}} after the takeover by the businessman Andrew Lee,
     and the staff of Freenode and all the FOSS projects moved from frenode to
     libera.chat.
     -   Wikipedia {{<wp "Libera Chat" >}} and   {{<wp "Freenode" >}}
@@ -78,7 +78,7 @@ and also available in the help of most clients.
 # IRC Clients {#irc_clients}
 -   Wikipedia:
     {{< wp "Comparison of instant messaging clients" >}},
-    {{< wp "Comparison of Internet Relay Chat clients" >}},
+    {{< wp "Comparison of Internet Relay Chat clients" >}}
 -   {{< iref "xmpp#bitlbee" "bitlbee" >}} is an IRC to other chat networks gateway, such
     as AIM, ICQ, Microsoft Messenger, Yahoo!, Jabber and Google Talk, and Facebook
     Messenger, Twitter, Identi.ca, and status.net.  Iit allows you to browse other chat
@@ -92,11 +92,17 @@ and also available in the help of most clients.
 ## Console IRC clients {#console_irc_clients}
 See {{< iref "#weechat" "Weechat" >}} below.
 
--   [CenterIm](http://www.centerim.org/) (GPL) is a ncurses
+-   [CenterIm5](https://github.com/petrpavlu/centerim5) (GPL) is a ncurses
     ICQ/Yahoo!/AIM/IRC/MSN/Jabber/GaduGadu/RSS/LiveJournal Client,
     which replaced {{< wp "Centericq" >}} dead since 2007.
--   [epic](http://www.epicsol.org/) programmable irc-II client, and
-    online [EPIC Help Pages](http://help.epicsol.org)
+
+    _Centerim is an old client, which seems to have now a low activity, it
+    [was in Debian but is no longer since wheezy
+    ](https://tracker.debian.org/pkg/centerim)._
+
+-   [epic](http://www.epicsol.org/) programmable irc-II client.
+    -   [epic5.git](http://git.epicsol.org/epic5.git/)
+    -   [EPIC 5 Help Pages](http://www.epicsol.org/help_root)
 -   <a name=irssi></a>[irssi](https://irssi.org/)
     is a terminal based IRC client for UNIX systems. It also supports
     {{< iref "xmpp#otr" "OTR" >}}
@@ -105,6 +111,7 @@ See {{< iref "#weechat" "Weechat" >}} below.
     [RobustIRC](robustirc.net)) via  [modules](https://irssi.org/modules/).
     _irssi_ can be scripted in Perl, and via modules in python, lua, tcl.  _irssi_ and
     it's plugins are in Debian.
+    -   [Irssi documentation](https://irssi.org/documentation/)
     -   [ArchWiki: Irssi](https://wiki.archlinux.org/index.php/Irssi)
         and [Irssi-otr](https://wiki.archlinux.org/index.php/Irssi-otr).
 
@@ -144,17 +151,16 @@ There are sveral emacs iRC clients _under  GPL License_.
 -   [Circe](https://github.com/jorgenschaefer/circe/wiki).
 -   [EmacsIRCClient
     ](http://www.emacswiki.org/cgi-bin/wiki/EmacsIRCClient)
-    aka ERC.,
-    [IrChat](http://www.emacswiki.org/cgi-bin/wiki/IrChat),
--   [LieceIrcClient
-    ](http://www.emacswiki.org/cgi-bin/wiki/LieceIrcClient),
--   [rcirc](http://www.emacswiki.org/cgi-bin/wiki/rcirc),
--   [RieceIrcClient
-    ](http://www.emacswiki.org/cgi-bin/wiki/RieceIrcClient),
+    aka _ERC_ is included in Emacs.
+    -   [ZNC.el](https://github.com/sshirokov/ZNC.el) (MIT License)
+        is an _ERC_ module to manage IRC connections through one or many ZNC servers.
+-   [IrChat](http://www.emacswiki.org/cgi-bin/wiki/IrChat) _obsolete since 2017_
+-   [Riece]( http://www.nongnu.org/riece/) is the continuation of _Liece_ is obsolete _2012_.
+-   [rcirc](http://www.emacswiki.org/cgi-bin/wiki/rcirc) part of GNU Emacs
 -   [weechat.el (Emacs)](https://github.com/the-kenny/weechat.el) is a client for the
     {{< iref "#weechat_relay" "WeeChat protocol" >}}.
--   [ZenIRC](http://www.zenirc.org/) (
-    [ZenIRC emacswiki links](http://www.emacswiki.org/cgi-bin/wiki/ZenIRC)).
+-   [ZenIRC](http://www.zenirc.org/)  is a scriptable IRC client for EMACS.
+    -   [ZenIRC - EmacsWiki](http://www.emacswiki.org/cgi-bin/wiki/ZenIRC)).
 
 It is uneasy to compare the size of these client to other clients, if you have to launch
 emacs only to chat, it cost you 18M, it is my mean emacs size, that is 13M bare size +
@@ -322,15 +328,17 @@ The available remote interfaces are
         ](https://github.com/prawnsalad/KiwiIRC)
     -   [KiwiIRC live client](https://kiwiirc.com/nextclient/).
     -   [Kiwi IRC - libera.chat](https://kiwiirc.com/nextclient/irc.libera.chat/)
+-   [The Lounge IRC web client](https://thelounge.chat/)
 -   [qwebirc](http://www.qwebirc.org/) (GPL-2.0)
     is a python AJAX irc client for web.
     -   [qwebirc - GitHub](https://github.com/qwebirc/qwebirc/).
 
+
 # IRC Bots
--   Wikipedia: {{< wp "Internet Relay Chat bot" >}} and
-    {{< wp "Comparison of Internet Relay Chat bots" >}}
--   [Eggdrop](http://www.eggheads.org/) (GPL] is an IRC bot written in the C language
-    and has plugins in C and TCL.
+-   Wikipedia: {{< wp "IRC bot" >}} with a comprehensive
+    {{< wp "IRC_bot#Comparison" "Comparison of IRC bots" >}}
+-   [Eggdrop](http://www.eggheads.org/) (GPL-2.0) is an IRC bot written in the C
+    language and has plugins in C and TCL.
     -   [eggdrop - GitHub](https://github.com/eggheads/eggdrop)
     -   [Eggdrop's documentation](https://docs.eggheads.org/)
     -   Wikipedia: {{< wp "Eggdrop" >}}
@@ -339,41 +347,34 @@ The available remote interfaces are
     It is lighter than _Eggdrop_ and is scriptable in Perl, TCL,
     Python.
     -   [Comparison of EnergyMech and Eggdrop features
-        ](http://www.energymech.net/features.html).
+        ](http://www.energymech.net/features.html) _the comparison uses an old version
+        of Eggdrop_.
     -   [EnergyMech GitHub repo](https://github.com/EnergyMech/energymech)
 -   [EmacsWiki: Er Bot](https://www.emacswiki.org/emacs/ErBot)
     is an emacs-lisp irc bot. Main instances are fsbot on #emacs the
     [Emacs Channel](https://www.emacswiki.org/emacs/EmacsChannel).
--   [Gozerbot](http://gozerbot.org/) (BSD License) is an IRC and
-    Jabber bot written in python. It is in Debian.
-    -   [Pypi:Gozerbot](https://pypi.python.org/pypi/gozerbot)
 -   [LogBot](https://freenode.logbot.info/) (MIT License)
     is an IRC logging bot, it logs many freenode channels.
 -   [Sopel](https://sopel.chat/)
     ([Eiffel Forum License](http://opensource.org/licenses/EFL-2.0))
-    formerly [Willie](http://willie.dftba.net/)
-    is a python IRC bot with a lot of features: SSL Support, user and
-    channel settings database using MySQL or SQLite, can run as
-    daemon, meetbot, YouTube, Reddit, movie information, list RSS,
-    google calculator, Searches Google, Bing, and Duck Duck Go and a
+    formerly [Willie](http://willie.dftba.net/) is a python IRC bot with a lot of
+    features: SSL Support, user and channel settings database using MySQL or SQLite, can
+    run as daemon, meetbot, YouTube, Reddit, movie information, list RSS, google
+    calculator, Searches Google, Bing, and Duck Duck Go and a
     [lot more](https://github.com/embolalia/willie/wiki/Commands).
-    It is in Debian.
+    In 2021 [Debian package](https://tracker.debian.org/pkg/sopel) is only in unstable.
     -   [Sopel GitHub repository](https://github.com/sopel-irc/sopel)
     -   [Sopel documentation](https://sopel.chat/docs/)
     -   [Sopel GitHub repositories](https://github.com/sopel-irc)
         contains several plugins: weather _with DarkSky_, channel logging, Twitter,
         youtube, Github _print details of posted URLs_.
--   [Tiny Tiny IRC](http://tt-rss.org/redmine/projects/tt-irc/wiki)
-     (GPL) is an AJAX-powered IRC client allowing to stay connected to
-     IRC without a dedicated software or even stable network
-     connection. There is also an android client.
 
 ### Limnoria and Supybot forks {#limnoria}
 -   [limnoria](https://github.com/ProgVal/Limnoria) (BSD License)
     by Valentin Lorentz is the continuation of Supybot with Python 3 and IRCv3 support
     including SASL, localisation, GPG authentication, TLS, and other
     enhancements and bug fixes.  This project is active in 2020. It is
-    in Debian.
+    [in Debian](https://tracker.debian.org/pkg/limnoria).
     -   [Limnoria’s documentation](https://docs.limnoria.net/).
     -   [ProgVal/Supybot-plugins](https://github.com/ProgVal/Supybot-plugins)
         Valentin Lorentz Collection of plugins for Limnoria.
@@ -382,15 +383,15 @@ The available remote interfaces are
 -   [SupyBot](http://sourceforge.net/projects/supybot/) (BSD License)
     is the predecesor of Limnoria, the last final version was 0.84 in 2018, but the
     core project is from  2009. SupyBot is now replaced by
-    {{< iref "#limnoria" "limnoria" >}} the 0.84 release is still in Debian Buster.
+    {{< iref "#limnoria" "limnoria" >}}.
     -   [GitHub Supybot git repository](https://github.com/Supybot/Supybot/)
 -   [Gribble](https://sourceforge.net/projects/gribble/)
     is a modified supybot written for for the Freenode IRC channel,
     #sourceforge. _last commit 2014._
     -   [Gribble plugins and enhancements
         ](https://sourceforge.net/p/gribble/wiki/Gribble_Project_Git_Repository/)
--   [Gribble: SupyBot Resources
-    ](https://sourceforge.net/p/gribble/wiki/Supybot_Resources/) _outdated_.
+    -   [Gribble: SupyBot Resources
+        ](https://sourceforge.net/p/gribble/wiki/Supybot_Resources/) _outdated_.
 -   [MeetBot](http://wiki.debian.org/MeetBot)
     is a plugin to the IRC bot Supybot to facilitate taking of notes
     during IRC meetings.
