@@ -507,6 +507,7 @@ Jabber and GnuPG](https://box.matto.nl/gnupgjabber.html).
     -   [jabber.org FAQ](http://www.jabber.org/faq.html)
 -   [Blog • How to choose you Jabber service?
     ](https://mov.im/?blog/debacle%40movim.eu/1646bb0e-8d18-4fb9-8b1a-46a1b40e0143)
+
 # Xmpp  console clients
 
 -   Wikipedia:
@@ -523,11 +524,8 @@ Jabber and GnuPG](https://box.matto.nl/gnupgjabber.html).
     IRC, and Twitter protocols; forked and extended from the old Owl
     irc client. Seems to be no more maintained since 2019.
     -   [BarnOwl Wiki](https://barnowl.mit.edu/wiki)
--   [centerim](http://www.centerim.org/) is a ncurses IM client
-    program that supports ICQ2000, Yahoo!, AIM, MSN, IRC and Jabber
-    protocols. _centerim was in Debian but is no longer since wheezy._
--   {{< iref "#finch" "Finch" >}} the libpurple based client
-    is in the {{< iref "#pidgin" "pidgin entry" >}}
+-   {{< iref "#finch" "Finch" >}} the libpurple based client is in the
+    {{< iref "#pidgin" "pidgin entry" >}}
 -   {{< iref "irc#irssi" "Irssi" >}} support XMPP through a
     plugin, but if you want an Irssi like interface, and a more
     complete interface to XMPP you may prefer
@@ -1092,17 +1090,15 @@ to remote Xmpp clients.
     is a java bot providing a  a Jabber-Twitter-bridge.
 
 
-## Bitlbee{#bitlbee}
+## Bitlbee {#bitlbee}
 
-[//]: ( [[file:/share/sync_folders/misc/mznotes/content-org/notes/im_notes.org::#bitlbee_notes][Bitlbee Notes]] )
+<!-- [[file:/share/sync_folders/misc/mznotes/content-org/notes/im_notes.org::#bitlbee_notes][Bitlbee Notes]]  -->
 
-{{< wp "bitlbee" >}} (GPL) is an IRC to other chat
-networks gateway, such as AIM, ICQ, Microsoft Messenger, Yahoo!,
-Jabber, Facebook Messenger, Twitter, Identi.ca,
-and status.net.  It allows you to browse other chat protocols with
-your irc client. Bitlbee can be usefull if you want to use only a
-light irc client to take part in chats from many protocols
-including jabber/ssl as in gmail accounts.
+{{< wp "bitlbee" >}} (GPL) is an IRC to other chat networks gateway, such as AIM, ICQ,
+Microsoft Messenger, Yahoo!, Jabber, Facebook Messenger, Twitter, Identi.ca, and
+status.net.  It allows you to browse other chat protocols with your irc client. Bitlbee
+can be usefull if you want to use only a light irc client to take part in chats from
+many protocols including jabber/ssl as in gmail accounts.
 
 Bitlbee has support for {{< iref "#otr" "OTR" >}}
 with _libotr_.
@@ -1115,36 +1111,28 @@ daemon is tiny 1.2M res./0.8M shared. _in Debian_.
     ](http://www.bitlbee.org//user-guide.html)
 -   [Bitlbee Wiki](https://wiki.bitlbee.org/)
     offer on-line searchable BitlBee documentation.
+
     There is a list of supported protocols in the first page.
--   [list of public bitlbee servers
-    ](http://www.bitlbee.org/main.php/servers.html)
-    they allow to use Bitlbee without installing
-    it.
--   [ArchLinux BitlBee Tutorial
-    ](http://wiki.archlinux.org/index.php/Bitlbee)
+-   [list of public bitlbee servers](http://www.bitlbee.org/main.php/servers.html)
+    they allow to use Bitlbee without installing it.
+-   [ArchLinux BitlBee Tutorial](http://wiki.archlinux.org/index.php/Bitlbee)
     explains how to connect to the basic jabber, and th private services
     {{< iref "#telegram" "Telegram" >}}, {{< iref "sip#discord" "Discord" >}}, twitter.
 -   [ArchLinux Screen Irssi Bitlbee and SSH
     ](http://wiki.archlinux.org/index.php/Screen_Irssi_Bitlbee)
     explains how to have a persistent connection to messaging
     services.
--   [Emacs and BitlBee
-    ](http://www.emacswiki.org/cgi-bin/wiki?BitlBee)
+-   [Emacs and BitlBee](http://www.emacswiki.org/cgi-bin/wiki?BitlBee)
 -   [bitlbee-otr](https://wiki.bitlbee.org/bitlbee-otr) add
     support for {{< iref "#otr" "Off-the-Record Messaging (OTR)" >}} either by a plugin
-    _bitlbee-plugin-otr is in Debian_ or Bitlbee has an
-    optional native support for OTR since 3.0, which can be
-    enabled at compile time.
--   [Bitlbee development daily package
-    ](https://wiki.bitlbee.org/Packages) may be fresher then the
-    Debian standard one.
--   [BitlBee native support to Twitter
-    ](https://wiki.bitlbee.org/HowtoTwitter) partly [deprecated
-    ](https://wiki.bitlbee.org/HowtoTwitter/StreamDeprecation).
--   [BitlBee native support for Gnu Social
-    ](https://wiki.bitlbee.org/HowtoStatusNet).
--   [BitlBee support for Facebook
-    ](https://wiki.bitlbee.org/HowtoFacebookMQTT).
+    _bitlbee-plugin-otr is in Debian_ or Bitlbee has an optional native support for OTR
+    since 3.0, which can be enabled at compile time.
+-   [Bitlbee development daily package](https://wiki.bitlbee.org/Packages)
+    may be fresher then the Debian standard one.
+-   [BitlBee native support to Twitter](https://wiki.bitlbee.org/HowtoTwitter) partly
+    [deprecated](https://wiki.bitlbee.org/HowtoTwitter/StreamDeprecation).
+-   [BitlBee native support for Gnu Social](https://wiki.bitlbee.org/HowtoStatusNet).
+-   [BitlBee support for Facebook](https://wiki.bitlbee.org/HowtoFacebookMQTT).
 -   [BitlBee plugin for Mastodon](https://github.com/kensanata/bitlbee-mastodon),
     [How to Mastodon - BitlBee Wiki](https://wiki.bitlbee.org/HowtoMastodon).
     this plugin does not need libpurple and  is also available from Debian.
@@ -1152,21 +1140,18 @@ daemon is tiny 1.2M res./0.8M shared. _in Debian_.
         ](https://alexschroeder.ch/cgit/bitlbee-mastodon/tree/doc/HELP.md)
         commands for the mastodon plugin, also available from bitlbee help.
 
-[BitlBee can be compiled to use libpurple
-](https://wiki.bitlbee.org/HowtoPurple)
-instead of the built-in code. It offers a few extra features
-(like file transfers on all IM networks) and
-support more networks protocols.  It
-adds a lot of dependencies (around 100MBytes of extra
-packages), and it makes the program more resource-hungry at
-runtime.
+[BitlBee can be compiled to use libpurple](https://wiki.bitlbee.org/HowtoPurple)
+instead of the built-in code. It offers a few extra features (like file transfers on all
+IM networks) and support more networks protocols.  It adds a lot of dependencies (around
+100MBytes of extra packages), and it makes the program more resource-hungry at runtime.
 
 But _bitlbee-libpurple_ allow to use some more protocols
 like [Skype with skypeweb](https://wiki.bitlbee.org/HowtoSkypeWeb),
 GaduGadu, SIPE, Microsoft's OCS, Lync (on Office 365 as well), Skype for Business,
 {{< iref "#telegram" "Telegram" >}} through
 [telegram-purle plugin](https://github.com/majn/telegram-purple),
-Slack, Rocket.Chat, {{< iref "microblogging#mattermost" "Mattermost" >}}, Google Hangout through
+Slack, Rocket.Chat, {{< iref "microblogging#mattermost" "Mattermost" >}},
+Google Hangout through
 [purple hangout plugin](https://bitbucket.org/EionRobb/purple-hangouts),
 WhatsApp no longer work due to whatsapp forbidding libpurple access.
 
@@ -1176,7 +1161,7 @@ _bitlbee-libpurple_ is in debian. See also the
     ](https://wiki.bitlbee.org/HowtoPurple)
 
 
-## MatterBrigde{#matterbridge}>
+## MatterBrigde {#matterbridge}
 [Matterbridge](https://github.com/42wim/matterbridge) (Apache License)
 is a bridge written in go between
 {{< iref "microblogging#mattermost" "Mattermost" >}}, IRC, Gitter, xmpp,
@@ -1188,18 +1173,25 @@ is a bridge written in go between
 Hipchat (via xmpp), Steam,
 Twitch, ssh-chat and  {{< iref "microblogging#matrix" "Matrix" >}} with REST API.
 
-## Spectrum2{#spectrum2}
-[Spectrum2](http://spectrum.im/) (GPL)
-is a proxy  allowing to connect from Xmpp or
-{{< iref "microblogging#slack" "Slack" >}} to many protocols. We can choose the
-backend we use with {{< iref "#libpurple" "libPurple" >}} we can all the lipurple plugins
-: AIM, Jabber, ICQ, MSN, Yahoo, Skype, {{< iref "#telegram" "Telegram" >}}, Facebook;
-with _LibCommuni_ we bridge to IRC; Twitter backend is for Twitter (!); Swiften
-backend allows XMPP; [Transwhat backend](https://github.com/stv0g/transwhat) is used
-for WhatsApp.
+## Spectrum2 {#spectrum}
 
-The repository offer an apt repo with source deb packages,
-and a Docker image.
+[Spectrum2](http://spectrum.im/) (GPL)
+is a proxy  allowing to connect from Xmpp or {{< iref "microblogging#slack" "Slack" >}}
+to many protocols.
+
+[Several backends](https://spectrum.im/documentation/backends/backends.html)
+are available:
+
+-   {{< iref "#libpurple" "libPurple" >}}: AIM, Jabber, ICQ, MSN, Yahoo, Skype,
+    {{< iref "#telegram" "Telegram" >}}, Facebook.
+-   LibCommuni:	IRC
+-   Frotz:  Allows playing interactive-fiction games
+-   SMSTools3:	SMS using connected mobile phone
+-   Twitter: Twitter
+-   Swiften: XMPP
+-   [Transwhat](https://github.com/stv0g/transwhat): WhatsApp.
+
+The repository offers an apt repo with source deb packages, and a Docker image.
 -   [Spectrum2 GitHub repository](https://github.com/hanzz/spectrum2)
 
 # Xmpp servers software
@@ -1802,4 +1794,5 @@ and
 <!-- Local Variables: -->
 <!-- mode: markdown -->
 <!-- ispell-local-dictionary: "english" -->
+<!-- eval: (org-link-minor-mode 1) -->
 <!-- End: -->
