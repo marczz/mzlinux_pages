@@ -59,8 +59,12 @@ connect to irc from any jabber client.
     -   [Guides | Libera Chat](https://libera.chat/guides)
          explain _Choosing a client_, _Connecting to libera.chat_, _Connecting with
          SASL_,  _Nickname Registration_, _Channels use and administration_.
--   Channel discovery:
-   -  In a client connected to a server you can do `/list *keyword*`.
+    -   [Libera Chat Web client](https://web.libera.chat/) is an instance of
+        {{< iref "#kiwiirc" "KiwiIRC" >}}.
+    -   [Libera Chat - gamja web client](https://web.libera.chat/gamja/) is an instance
+        of {{< iref "#gamja" "Gamja" >}}.
+-   IRC Channel discovery:
+   -   In a client connected to a server you can do `/list *keyword*`.
    -   [Search Irc](https://search.mibbit.com/) for channels or servers.
    -   [IRC Chat Rooms Search - netsplit.de](https://netsplit.de/channels/)
        Search chat rooms among 500 IRC networks.
@@ -320,19 +324,70 @@ The available remote interfaces are
 
 # IRC Web clients
 
--   [Libera Chat Web client](https://web.libera.chat/)
--   [gamja - libera.chat](https://web.libera.chat/gamja/) a ligther IRC web client.
--   [KiwiIRC](https://kiwiirc.com/) (Affero GPL)
-    is a node.js irc client.
-    -   [KiwiIRC GitHub repository
-        ](https://github.com/prawnsalad/KiwiIRC)
-    -   [KiwiIRC live client](https://kiwiirc.com/nextclient/).
-    -   [Kiwi IRC - libera.chat](https://kiwiirc.com/nextclient/irc.libera.chat/)
--   [The Lounge IRC web client](https://thelounge.chat/)
+-   <a name="kiwiirc"></a>[KiwiIRC](https://kiwiirc.com/) (Affero GPL)
+    is a node.js web irc client. It supports ssl, user scripts, plugins; and is themable.
+    -   [KiwiIRC GitHub repository](https://github.com/prawnsalad/KiwiIRC)
+    -   [KiwiIRC Wiki](https://github.com/kiwiirc/kiwiirc/wiki)
+    -   [KiwiIRC - ArchWiki](https://wiki.archlinux.org/title/KiwiIRC)
+    -   <a name="webircgateway"></a>KiwiIrc
+        [webircgateway](https://github.com/kiwiirc/webircgateway) (Apache-2.0 License)
+        A go language Websocket gateway to IRC networks
+    -   [KiwiIRC live client](https://kiwiirc.com/nextclient/):
+        [Kiwi IRC - libera.chat](https://kiwiirc.com/nextclient/irc.libera.chat/) is
+        also available as a Libera.chat instance
+        [Libera Chat Web client](https://web.libera.chat/).
+    -   [Kiwi IRC - mobile](https://github.com/kiwiirc/kiwiirc-mobile) (Apache-2.0 License)
+        An open source IRC client for iOS and Android built using
+        [NativeScript-Vue](http://nativescript-vue.org/).
+-   <a name="gamja"></a>[gamja](https://sr.ht/~emersion/gamja/) (AGPL-3.0)
+    by [Simon Ser (emersion)](https://emersion.fr/) is a light node.js irc web server.
+    -   _gamja_ can use the {{< iref "#webircgateway" "KiwiIRC webgateway" >}}.
+    -   Libera.chat hosts an instance :
+        [Libera Chat - gamja web client](https://web.libera.chat/gamja/)
+-   <a name="thelounge"></a>[The Lounge](https://thelounge.chat/) (MIT License)
+    A self-hosted web IRC client an bouncer.
+    It has two mode of operations:
+
+    In private mode, The Lounge acts like a bouncer and a client combined.
+
+    In public mode, it acts as an open chat available to anyone without
+        registration.
+
+    -  [Documentation — The Lounge](https://thelounge.chat/docs)
+    -  [The Lounge - GitHub](https://github.com/thelounge/thelounge)
+    -  [The Lounge Demo](https://demo.thelounge.chat/#/connect)
+-   {{< wp "Mibbit" >}} (proprietary)
+    is a web IRC, Yahoo! Messenger, and Twitter client.
+
+    Firefox 3.5 and beyond support Mibbit as the default IRC protocol handler with
+    support for encrypted SSL/TLS connections with the ircs:// URI.
+
+   -   [mibbit.com](https://mibbit.com/)
+   -   [Mibbit client](https://chat.mibbit.com)
 -   [qwebirc](http://www.qwebirc.org/) (GPL-2.0)
     is a python AJAX irc client for web.
     -   [qwebirc - GitHub](https://github.com/qwebirc/qwebirc/).
 
+# IRC bouncers
+-   [KiwiBNC](https://github.com/kiwiirc/kiwibnc) (Apache-2.0 License)
+    a Node.js irc bouncer, with javascript plugins, websocket support for direct web
+    clients, built in web client.
+-   [Soju](https://sr.ht/~emersion/soju/) (AGPL-3.0)
+    by Simeon Ser _emersion_, is a bouncer written in Go language, accepting multiple
+    users, and multiple clients.
+    -   [soju Manual](https://soju.im/doc/soju.1.html)
+    -   Soju IRC channel is #sxsoju on libera.chat.
+-   [ZNC](https://wiki.znc.in/ZNC) (Apache-2.0 License)
+    is a bouncer written in C
+    -   [ZNC - GitHub](https://github.com/znc/znc)
+    -   [ZNC Wiki](https://wiki.znc.in/)
+    -   List of all [Configuration items](https://wiki.znc.in/Configuration)
+        The configuration file can only be edited manually when znc is stopped, on a
+        live server you can use the [Webadmin](https://wiki.znc.in/Webadmin) module.
+        The [ControlPanel](https://wiki.znc.in/Controlpanel) allows you to
+        add/remove/edit users and settings on the fly via IRC messages.
+    -   [Modules](https://wiki.znc.in/Modules) are used to extend and modify
+        the way ZNC functions.
 
 # IRC Bots
 -   Wikipedia: {{< wp "IRC bot" >}} with a comprehensive
@@ -342,10 +397,9 @@ The available remote interfaces are
     -   [eggdrop - GitHub](https://github.com/eggheads/eggdrop)
     -   [Eggdrop's documentation](https://docs.eggheads.org/)
     -   Wikipedia: {{< wp "Eggdrop" >}}
--   [EnergyMech](http://www.energymech.net/) (GPL) is a fork of Eggdrop
-    is also programmed in C language,
-    It is lighter than _Eggdrop_ and is scriptable in Perl, TCL,
-    Python.
+-   [EnergyMech](http://www.energymech.net/) (GPL) is a fork of Eggdrop is also
+    programmed in C language, It is lighter than _Eggdrop_ and is scriptable in Perl,
+    TCL, Python.
     -   [Comparison of EnergyMech and Eggdrop features
         ](http://www.energymech.net/features.html) _the comparison uses an old version
         of Eggdrop_.
