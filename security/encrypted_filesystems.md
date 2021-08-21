@@ -221,7 +221,27 @@ Gocryptfs is in Debian.
 <a name="keybase">[keybase](https://keybase.io/) (BSD Licence)
 is a security app for mobile phones and computers powered by
 public-key cryptography.
+-   [Keybase Book](https://book.keybase.io/) documentation for Keybase.
+-   [Keybase server documentation](https://book.keybase.io/docs/server).
 
+Keybase group several services
+
+Keybase Chat
+:   see the {{< iref "xmpp#keybase_chat" "entry in the messaging page" >}}
+
+[Keybase for Files](https://book.keybase.io/files)
+:   store and share end-to-end encrypted and signed files from any device you use
+    Keybase on. You can store up to 250 GB.
+
+    Keybase files are served in a fuse mounted directory under `/keybase` hierarchy.
+
+    -   [Introducing the Keybase Filesystem](https://book.keybase.io/docs/files).
+    -   [In depth description of the Filesystem
+        ](https://book.keybase.io/docs/files/details)
+    -   [Crypto spec: the Keybase filesystem](https://book.keybase.io/docs/crypto/kbfs).
+
+[Keybase Git](https://book.keybase.io/git)
+:   Keybase supports free, encrypted, authenticated, and private Git repositories.
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
