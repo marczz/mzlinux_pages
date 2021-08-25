@@ -201,7 +201,8 @@ Weechat has an extensive documentation:
 -   [User Manual
     ](http://www.weechat.org/files/doc/stable/weechat_user.en.html) (
     [dev
-    ](http://www.weechat.org/files/doc/devel/weechat_user.en.html)).
+    ](http://www.weechat.org/files/doc/devel/weechat_user.en.html),
+    [ascidoc source](https://github.com/weechat/weechat/blob/master/doc/en/weechat_user.en.adoc)).
 -   [Scripting Guide
     ](http://www.weechat.org/files/doc/stable/weechat_scripting.en.html)
     ([dev
@@ -269,6 +270,10 @@ Plugins for other protocols:
     supplemental features only available in the web/mobile clients such as synchronizing
     read markers, typing notification, threads (and more)!.
 
+    Wee-slack prints URLs for things like attachments and calls, they may be then
+    handled directly by your terminal if you configure it to open the attachments in the
+    proper application.
+
 In addition to these plugins we can use a bridge IRC to other protocol
 via {{< iref "xmpp#bitlbee" "BitlBee" >}},
 {{< iref "xmpp#spectrum2" "Spectrum2" >}},
@@ -289,9 +294,9 @@ Plugins for secure messaging:
 -   [weechat-fish](https://github.com/freshprince/weechat-fish) provides
     {{< iref "xmpp#fish" "FiSH encryption" >}}.
 
-<a name=weechat_relay"></a>Weechat has a [relay plugin
-](https://weechat.org/files/doc/stable/weechat_user.en.html#relay_plugin)
-with which has two variants
+<a name="weechat_relay"></a>Weechat has a
+[relay plugin](https://weechat.org/files/doc/stable/weechat_user.en.html#relay_plugin)
+which has two variants
 -   [IRC proxy
     ](https://weechat.org/files/doc/stable/weechat_user.en.html#relay_irc_proxy)
     used to share connections to IRC servers with one or many other IRC clients
@@ -362,6 +367,9 @@ The available remote interfaces are
     Firefox 3.5 and beyond support Mibbit as the default IRC protocol handler with
     support for encrypted SSL/TLS connections with the ircs:// URI.
 
+    In july 2021 «Access to Libera.Chat via Mibbit is not available due to
+    repeated abuse.»
+
    -   [mibbit.com](https://mibbit.com/)
    -   [Mibbit client](https://chat.mibbit.com)
 -   [qwebirc](http://www.qwebirc.org/) (GPL-2.0)
@@ -377,17 +385,19 @@ The available remote interfaces are
     users, and multiple clients.
     -   [soju Manual](https://soju.im/doc/soju.1.html)
     -   Soju IRC channel is #sxsoju on libera.chat.
--   [ZNC](https://wiki.znc.in/ZNC) (Apache-2.0 License)
-    is a bouncer written in C
-    -   [ZNC - GitHub](https://github.com/znc/znc)
-    -   [ZNC Wiki](https://wiki.znc.in/)
-    -   List of all [Configuration items](https://wiki.znc.in/Configuration)
-        The configuration file can only be edited manually when znc is stopped, on a
-        live server you can use the [Webadmin](https://wiki.znc.in/Webadmin) module.
-        The [ControlPanel](https://wiki.znc.in/Controlpanel) allows you to
-        add/remove/edit users and settings on the fly via IRC messages.
-    -   [Modules](https://wiki.znc.in/Modules) are used to extend and modify
-        the way ZNC functions.
+
+## ZNC {#znc}
+[ZNC](https://wiki.znc.in/ZNC) (Apache-2.0 License)
+is a bouncer written in C
+-   [ZNC - GitHub](https://github.com/znc/znc)
+-   [ZNC Wiki](https://wiki.znc.in/)
+-   List of all [Configuration items](https://wiki.znc.in/Configuration)
+    The configuration file can only be edited manually when znc is stopped, on a
+    live server you can use the [Webadmin](https://wiki.znc.in/Webadmin) module.
+    The [ControlPanel](https://wiki.znc.in/Controlpanel) allows you to
+    add/remove/edit users and settings on the fly via IRC messages.
+-   [Modules](https://wiki.znc.in/Modules) are used to extend and modify
+    the way ZNC functions.
 
 # IRC Bots
 -   Wikipedia: {{< wp "IRC bot" >}} with a comprehensive
