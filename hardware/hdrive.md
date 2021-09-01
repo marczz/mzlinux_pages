@@ -1,7 +1,9 @@
 ---
 title: Hard Drive
 ---
-
+<!--
+See also [[file:filesystem.md][Files Sytems]]
+-->
 
 See also {{< iref "filesystems" "File Systems" >}}.
 
@@ -561,4 +563,5 @@ of the Linux kernel and the writeout of dirty data to disk.
 <!-- Local Variables: -->
 <!-- mode: markdown -->
 <!-- ispell-local-dictionary: "english" -->
+<!-- eval: (org-link-minor-mode 1) -->
 <!-- End: -->
