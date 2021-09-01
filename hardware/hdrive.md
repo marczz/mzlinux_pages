@@ -224,6 +224,80 @@ where you find {{< iref "filesystems#lvm" "LVM" >}}.
     -   [gnome-disk-utility git repository
         )(https://git.gnome.org/browse/gnome-disk-utility/)
 
+## Bootable SD Card
+-   [Gentoo Wiki SD card](https://wiki.gentoo.org/wiki/SDCard)
+    explain how to format a SD card for io speed, and compare the
+    speed of diferent file system.
+-   When using a filesystem on a sd card, we should avoid  wearing it
+    off by disabling swap, or in raspberry remove `dphys-swapfile`.
+    using the `noatime` option, highly used directories such as
+    `/var/tmp/` can be put in RAM _tmpfs_, putting /var/log in RAM is
+    also an option, but we can no longer examine the logs after a crash.
+    It is also possible to disable journaling, but any unwanted
+    dismount will result in data loss. On Raspberry 3 we can
+    [boot from external USB device
+    ](https://www.raspberrypi.org/documentation/hardware/raspberrypi/bootmodes/msd.md)
+    but this option is not available with earlier releases.
+    Using a bigger sd card also augment the wear levelling capacity,
+    and so increase the lifetime of sd cards.
+-   [F3](http://oss.digirati.com.br/f3/) (GPL)
+    is used to test sdcards.  it uses the same algorithm than
+    [h2testhw](https://www.heise.de/download/product/h2testw-50539).
+    that is [used to detect counterfeit flash cards
+    ](https://sosfakeflash.wordpress.com/2008/09/02/h2testw-14-gold-standard-in-detecting-usb-counterfeit-drives/)
+    (see also [Fighting flash fraud on Ebay
+    ](https://fightflashfraud.wordpress.com/2008/11/24/h2testw-gold-standard-in-detecting-fake-capacity-flash/).
+
+    [Armbian recommend to verify SD cards with F3
+    ](https://docs.armbian.com/User-Guide_Getting-Started/#how-to-prepare-a-sd-card).
+    F3 is packaged in Debian.
+    -   [F3 Documentation
+        ](https://fight-flash-fraud.readthedocs.io/en/latest/).
+    -   [F3 github repository](https://github.com/AltraMayor/f3).
+-   [Etcher](https://github.com/resin-io/etche) (Apache2 License)
+    is an OS image flasher built on electron which run on any platform supported by
+    Electron includinx linux, windoze, mac OS.
+    It checks that every byte of data was written correctly.
+
+    The software is provided as an app image, It also provides a Debian repository to
+    install the node application.
+
+    This tool, and _usbimager_ are [recommended by armbian
+    ](https://docs.armbian.com/User-Guide_Getting-Started/#how-to-prepare-a-sd-card)
+    for writing images.
+
+    There was previously a CLI version which did not
+    require the electron stuff, but it was removed _without explanation_ at version
+    1.5.0 - 2019-02-16.
+-   [mkusb](https://help.ubuntu.com/community/mkusb)
+    is a wrapper around _dd_ to flash or clone an iso image or a compressed image file
+    to a mass storage device, either an USB drive, an internal drive or an eSATA drive.
+    _Mkusb_ is the recommended ubuntu tool to create a bootable drive. It exists in
+    several flavors. The GUI version named _mkusb_, a text only interface _mkusb-nox_, a
+    simple shell script _mkusb-min_.
+    -   [mkusb PPA](https://launchpad.net/~mkusb/+archive/ubuntu/ppa)
+    -   [How to make usb boot drive](https://ubuntuforums.org/showthread.php?t=1958073)
+        is an ubuntu mkusb tutorial.
+    -   [mkusb quick start manual (pdf)
+        ](https://phillw.net/isos/linux-tools/mkusb/mkUSB-quick-start-manual-12.pdf)
+    -   [How to install mkusb in Debian
+        ](https://help.ubuntu.com/community/mkusb/install-to-debian).
+    -   _mkusb-min_, minimal shell script can be downloaded and used following the
+        [mkusb-min manual](https://help.ubuntu.com/community/mkusb/min).
+-   [usbimager](https://gitlab.com/bztsrc/usbimager) (MIT Licence)
+    is a GUI application that writes compressed disk images to USB drives and creates
+    backups. It is lighter than _balena-etcher_. The repository provides Debian and
+    Raspbian packages
+-   [Ventoy](https://github.com/ventoy/Ventoy) (GPL 3.0)
+    creates bootable USB drive for ISO/WIM/IMG/VHD(x)/EFI files. 86 Legacy BIOS, IA32
+    UEFI, x86_64 UEFI, ARM64 UEFI and MIPS64EL UEFI with  MBR or GPT partition are
+    supported.
+
+An advice given by _mkusb_ manual is if you want to re-use a USB drive previously used
+for a booting image, you should wipe the first megabyte it with dd (overwrite with
+zeros), otherwise grub-install doesn't want to write into the mbr area, because it
+recognizes the CD file system
+
 # Disk Cloning {#disk_cloning}
 There are many ways of cloning a disk. We can clone the disk sector by sector; by doing
 so the tool has no need to know about the underlying file system. It is nevertheless

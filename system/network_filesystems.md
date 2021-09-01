@@ -19,9 +19,11 @@ See also the companion pages on
     drive devices. They use technology such:
     -   {{< wp "Fibre Channel" >}}
         a gigabit-speed network technology.
-    -   {{< wp "ISCSI" >}}
-        or scsi over IP. [Open-iSCSI](http://www.open-iscsi.org/)
-        GPL is an implementation of iSCSI protocol for linux. [iSCSI Target](http://iscsitarget.sourceforge.net/) is a GPL iSCSI target for linux.
+    -   {{< wp "ISCSI" >}} or scsi over IP.
+        -   [Open-iSCSI](http://www.open-iscsi.org/) (GPL)
+            is an implementation of iSCSI protocol for linux.
+        -   [iSCSI Target](http://iscsitarget.sourceforge.net/) (GPL)
+            iSCSI target for linux.
     -   {{< wp "ATA over Ethernet" >}} (AoE)
         is an ethernet protocol (on the same layer than IP) to access ATA
         devices. AoE is simpler and cheaper than ISCSI, being independant
