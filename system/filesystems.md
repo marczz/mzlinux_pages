@@ -2,7 +2,10 @@
 title: File Systems
 ---
 
-{{% toc /%}}
+<!--
+See also [[file:/share/sync_folders/misc/mznotes/content/docs/mzlinux/hardware/hdrive.md][Hard Drive]] ([[file:/share/sync_folders/misc/mznotes/content/docs/mzlinux/hardware/hdrive.md:: #partition_table][Partition Tables]], [[file:/share/sync_folders/misc/mznotes/content/docs/mzlinux/hardware/hdrive.md #partionning][Partitionning]]),
+[[file:/share/sync_folders/misc/mznotes/content/docs/mzlinux/hardware/network_filesystems.md][network filesystems]] , [[file:/share/sync_folders/misc/mznotes/content/docs/mzlinux/hardware/encrypted_filesystems.md][encrypted Filesystems]]
+-->
 
 See also the companion pages on
 {{< iref "network_filesystems" "network filesystems" >}},
@@ -837,4 +840,5 @@ _Bibilop_ is packaged in Debian.
 <!-- Local Variables: -->
 <!-- mode: markdown -->
 <!-- ispell-local-dictionary: "english" -->
+<!-- eval: (org-link-minor-mode 1) -->
 <!-- End: -->
