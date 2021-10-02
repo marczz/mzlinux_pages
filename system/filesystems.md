@@ -34,10 +34,10 @@ and {{< iref "hdrive#partitioning" "partitioning" >}}.
         _2003_
 -   Wikipedia:
     {{< wp "List of file systems" >}},
-    {{< wp "Comparison of file systems" >}}, {{< wp "Fat" >}}, {{< wp "ext2" >}}, {{< wp "ext3" >}},
-    {{< wp "ext4" >}}, {{< wp "XFS" >}}, {{< wp "Reiser4" >}}, {{< wp "ZFS" >}}, {{< wp "Btrfs" >}}, {{< wp "NTFS" >}},
-    {{< wp "Network File System" >}},
-    {{< wp "Andrew file system" >}},
+    {{< wp "Comparison of file systems" >}}, {{< wp "Fat" >}}, {{< wp "ext2" >}},
+    {{< wp "ext3" >}}, {{< wp "ext4" >}}, {{< wp "XFS" >}}, {{< wp "Reiser4" >}},
+    {{< wp "ZFS" >}}, {{< wp "Btrfs" >}}, {{< wp "NTFS" >}},
+    {{< wp "Network File System" >}}, {{< wp "Andrew file system" >}},
     {{< wp "Server Message Block" >}} (SMB), {{< wp "Samba software" >}},
     [fuse](http://en.wikipedia.org/wiki/FUSE_%28Linux%29),
     {{< wp "JFFS2" >}}, {{< wp "UBIFS" >}}, {{< wp "SquashFS" >}}, {{< wp "UnionFS" >}},
@@ -761,6 +761,44 @@ When the lockfs feature is enabled filesystems in /etc/fstab are set read-only e
 for those that have been whitelisted, or for the encrypted swap devices.
 
 _Bibilop_ is packaged in Debian.
+
+# Filesystem Deduplication {#dedup}
+
+-   Wikipedia: {{< wp "List of duplicate file finders" >}}
+
+-   [bedup](https://github.com/g2p/bedup) Deduplication for Btrfs.
+    _bedup_ looks for new and changed files, making sure that multiple copies of
+    identical files share space on disk.
+    -   [Btrfs Wiki: deduplication
+        ](https://btrfs.wiki.kernel.org/index.php/Deduplication)
+-   [Duff](http://duff.dreda.org/)
+    is a C command-line utility for quickly finding duplicates in a given set of
+    files.
+-   [fslint](http://www.pixelbeat.org/fslint/)
+    a python app which finds duplicate files, problematic filenames, temporary files,
+    bad symlinks, empty directories. It includes a GTK+ GUI as well as a command line
+    interface. _It is in Debian._
+-   [fdupes](https://github.com/adrianlopezroche/fdupes) c-program
+    (there is also a perl alias!) that uses md5sums and then a byte by byte comparison to
+    find duplicate, it is in Debian. See also the {{<iref "#jdupes" "jdupes" >}} fork
+    below.
+-   <a name="jdupes"></a>[jdupes](https://github.com/jbruchon/jdupes)
+    is a fork of {{< iref "#fdupes" "fdupes" >}}.  It is not binary compatible with
+    _fdupes_, it enhanced the search speed, and is seven time quicker. It include btrfs
+    block-level deduplication. _jdupes_ is packaged in Debian.
+-   [rdfind](https://github.com/pauldreik/rdfind) (GPL)
+    is a program that finds duplicate files. The benchmark on the rdfind page, show that
+    it is a lot quicker than _fdupes_ and _fslint_, but it is slower than _rmlint_.
+    _rdfind_ supports btrfs filesystems. It is in debian.
+-   [rmlint](https://rmlint.readthedocs.io/en/latest/)
+    finds duplicate files & directories, nonstripped binaries, broken symlinks, empty
+    files, recursive empty directories, files with broken user or group id.
+
+    It has [Benchmarks
+    ](https://rmlint.readthedocs.io/en/latest/benchmarks.html?highlight=fast#benchmarks)
+    showing it is quicker than fdupes, rdfind, dupd ... but no comparison with _jdupes_
+    or _duff_.
+
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
