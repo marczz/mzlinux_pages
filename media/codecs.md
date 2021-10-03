@@ -26,21 +26,19 @@ signals into digital signals for transmission and storage.
 
 # Audio Coding and Libraries
 
--   [Audio File Format FAQ](http://sox.sourceforge.net/AudioFormats.html)
+-   [Audio File Format FAQ - sox](http://sox.sourceforge.net/AudioFormats.html)
 -   [ccrma guides](http://ccrma.stanford.edu/guides/planetccrma/)
 -   [Dilettante's Dictionary](http://www.dilettantesdictionary.com/)
     an audio terminology dictionary
--   The Jason Woodard
-    [Audio File Formats page of the AudioCodingWiki](http://www.audiocoding.com/modules/wiki/)
+-   The Jason Woodard [Audio File Formats page of the AudioCodingWiki
+    ](http://www.audiocoding.com/modules/wiki/)
     gives a description ao each coding format.
 
-    The
-    [Speech Coding](http://www-mobile.ecs.soton.ac.uk/speech_codecs/)
-    page give an idea of the principles involved in speech coding, and
-    details of commonly used coders.
+    The [Speech Coding](http://www-mobile.ecs.soton.ac.uk/speech_codecs/)
+    page give an idea of the principles involved in speech coding, and details of
+    commonly used coders.
 -   lecture notes from Dr David Marshall _2003_:
-    [Multimedia Data
-    ](http://www.cs.cf.ac.uk/Dave/Multimedia/node141.html),
+    [Multimedia Data](http://www.cs.cf.ac.uk/Dave/Multimedia/node141.html),
     [Video and Audio Compression
     ](http://www.cs.cf.ac.uk/Dave/Multimedia/node200.html#SECTION04200000000000000000)
 -   Wikipedia pages:
@@ -419,13 +417,11 @@ Refs:
 {{< wp "Opus_(audio_format)" "Opus" >}} is a lossy audio coding format developed by the
 Internet Engineering Task Force (IETF).
 
-Opus has a very low algorithmic delay or latency, 26.5 ms by default,
-and even by trading-off quality or bitrate it achieves very low delay,
-down to 5 ms.  It is better than the 30ms of Speex, and MP3, Ogg
-Vorbis and HE-AAC use a delay well over 100 ms.  The inherently low
-delay in Opus makes it possible to be used in the same real-time
-applications required by telephony, Voice over IP and
-videoconferencing.
+Opus has a very low algorithmic delay or latency, 26.5 ms by default, and even by
+trading-off quality or bitrate it achieves very low delay, down to 5 ms.  It is better
+than the 30ms of Speex, and MP3, Ogg Vorbis and HE-AAC use a delay well over 100 ms.
+The inherently low delay in Opus makes it possible to be used in the same real-time
+applications required by telephony, Voice over IP and videoconferencing.
 
 Opus codec support is implemented in the reference implementation
 _opus-tools_ and in  {{< iref "streaming#gstreamer" "GStreamer" >}},
@@ -692,8 +688,8 @@ sndfile-info
     *(mainly lossless encoding formats)*
 
 soxi
-:   is part of {{< iref "sound_edit#sox" "sox" >}}
-    [soxi(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=soxi)
+:   is part of {{< iref "sound_edit#sox" "sox" >}}.
+    -   [soxi(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=soxi)
 
 sndinfo
 :   `sndinfo` wich comes with the {{< iref "sound_edit#snd" "Snd" >}} editor gives
