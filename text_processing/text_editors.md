@@ -128,8 +128,10 @@ and a can communicate with external processes, lua, ruby, python.
 -   [python-client](https://github.com/neovim/python-client)
 -   [Moving to Neovim from Vim
     ](https://jacky.wtf/weblog/moving-to-neovim/)
+-   [neovim-qt](https://github.com/equalsraf/neovim-qt)
+    Neovim client library and GUI, in Qt5. _in Debian_.
 
-## vim regular expressions
+## vim regular expressions {#vim_regexps}
 
 -   __Vim documentation__: [Search commands and patterns
     ](http://vimhelp.appspot.com/usr_27.txt.html),
