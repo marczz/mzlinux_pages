@@ -2,6 +2,8 @@
 title: Social Networks
 ---
 
+We include also in this section the collaborative software.
+
 We try to categorize social networks in several sections:
 -   Messenging applications are in {{< iref "xmpp" "xmpp"  >}},
 -   {{< iref "irc" "IRC" >}} has its own page.
