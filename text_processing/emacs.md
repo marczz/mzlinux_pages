@@ -6,9 +6,8 @@ title: Emacs
 
 # Emacs references
 
--   [gnu.emacs.sources
-    ](https://groups.google.com/forum/?hl=en#!forum/gnu.emacs.sources)
-    thru Google,
+-   [gnu.emacs.sources](https://groups.google.com/forum/?hl=en#!forum/gnu.emacs.sources)
+    through Google,
     [gmane.emacs.sources](http://news.gmane.org/gmane.emacs.sources),
     [Gmame list of emacs groups](http://news.gmane.org/search.php?match=emacs)
 -   [EmacsWiki](http://www.emacswiki.org/cgi-bin/wiki.pl):
@@ -19,6 +18,7 @@ title: Emacs
     ](http://www.emacswiki.org/emacs/CategoryModes),
     [Category Programming
     ](http://www.emacswiki.org/emacs/CategoryProgramming),
+    [Emacs Client](https://www.emacswiki.org/emacs/EmacsClient).
 -   [Emacs Manual](http://www.gnu.org/software/emacs/manual/html_node/emacs/),
     [Emacs Lisp Intro
     ](http://www.gnu.org/software/emacs/manual/html_node/eintr/index.html),
@@ -57,7 +57,7 @@ title: Emacs
     by 陈斌 Chen bin.
 -   [Ergo Emacs tutorials](http://ergoemacs.org/emacs/emacs.html)
 
-# Emacs Blogs
+# Emacs Blogs {#emacs_blogs}
 
 -   [Planet Emacsen](http://planet.emacsen.org/) is an aggregation of
     emacs blogs.
@@ -405,7 +405,7 @@ It seems that only few themes support [Markup Faces][markup-faces], among them y
 -   <a name="prelude"></a>[Prelude](https://github.com/bbatsov/prelude)
     is an emacs distribution configuration systems.
     -   [Prelude Manual](https://prelude.emacsredux.com/en/latest/).
-
+        is a complete manualwith a section for each module.
     It use a [list of packages
     ](https://github.com/bbatsov/prelude/blob/master/core/prelude-packages.el)
     in beginning 2020 it was:
