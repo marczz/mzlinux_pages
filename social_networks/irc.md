@@ -365,16 +365,22 @@ The available remote interfaces are
     is a web IRC, Yahoo! Messenger, and Twitter client.
 
     Firefox 3.5 and beyond support Mibbit as the default IRC protocol handler with
-    support for encrypted SSL/TLS connections with the ircs:// URI.
+    support for encrypted SSL/TLS connections with the `ircs://` URI.
 
-    In july 2021 «Access to Libera.Chat via Mibbit is not available due to
-    repeated abuse.»
+    In july 2021 «Access to Libera.Chat via Mibbit is not available due to repeated
+    abuse.»
 
    -   [mibbit.com](https://mibbit.com/)
    -   [Mibbit client](https://chat.mibbit.com)
 -   [qwebirc](http://www.qwebirc.org/) (GPL-2.0)
     is a python AJAX irc client for web.
     -   [qwebirc - GitHub](https://github.com/qwebirc/qwebirc/).
+
+# Mobile Clients
+-   [HoloIRC](https://github.com/holoirc/HoloIRC) (GPL-3.0 License)
+    IRC client for Android.
+-   [Revolution IRC](https://github.com/MCMrARM/revolution-irc) (GPL-3.0)
+    for Android. It is [on f-droid](
 
 # IRC bouncers
 -   [KiwiBNC](https://github.com/kiwiirc/kiwibnc) (Apache-2.0 License)
@@ -398,6 +404,56 @@ is a bouncer written in C
     add/remove/edit users and settings on the fly via IRC messages.
 -   [Modules](https://wiki.znc.in/Modules) are used to extend and modify
     the way ZNC functions.
+-   [#znc on Libera.Chat](ircs://irc.libera.chat:6697/#znc) is the irc channel.
+
+### Some modules
+I list mainly modules for a
+[Multiple clients usage](https://wiki.znc.in/Multiple_clients).
+
+
+#### Included module {#included-module}
+
+-   [route replies](https://wiki.znc.in/Route%5Freplies)
+    Send replies only to the client who requested them and not to all clients.
+    Without it a ZNC user with multiple clients, you may see a lot of useless stuff
+    like /who replies, it is an essential module if you have multiple clients.
+
+    ```nil
+    /znc loadmod route_replies
+    ```
+-   [savebuff module](https://wiki.znc.in/Savebuff)
+    saves your channel buffers into an encrypted file so they can survive restarts and reboots.
+-   [simple\_away](https://wiki.znc.in/Simple%5Faway)
+    is part of ZNC set you away on IRC while you are disconnected from the
+    bouncer.
+
+    The argument can be `-notimer` or `-timer x`.
+    Commands:
+    -   `settimer x` x is a number of seconds.  `settimer` display the current timer or if
+        it is disabled.
+    -   `reason <reason why you are away>`,- `reason` without argument display the current
+        reason.
+
+
+### External modules {#external-modules}
+
+-   [The backlog module](https://wiki.znc.in/Backlog) request backlog,
+-   [Chanfilter module](https://wiki.znc.in/Chanfilter)
+    maintains client specific channel lists for identified clients. A typical use case
+    is to have a subset of channels visible to a mobile client.
+-   [Clientbuffer module](https://wiki.znc.in/Clientbuffer)
+    maintains client specific buffers for identified clients. It is the buffer playback
+    ZNC offers, but it keeps track of which client has received the buffer and which
+    client hasn't.
+-   [The Playback module](https://wiki.znc.in/Playback)
+    allows IRC clients to request the module to send a partial buffer
+    playback starting from and ending to a certain point of time. It is recommended for
+    a multiple client configuration.
+    To use it we need to disable `AutoClearChanBuffer` and `AutoClearQueryBuffer`
+-   The __ControlPanel module__ allows you to add/remove/edit users and settings on the
+    fly via IRC messages.
+
+
 
 # IRC Bots
 -   Wikipedia: {{< wp "IRC bot" >}} with a comprehensive
