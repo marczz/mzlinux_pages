@@ -24,6 +24,7 @@ See also {{< iref "file_managers#console" "console file managers" >}}
 -   [cli.fan — Showcasing the best command-line tools](https://cli.fan/posts/).
 -   [suckless.org software that sucks less](https://suckless.org/rocks/)
     many cli among these applications.
+-   [Awesome CLI Apps](https://github.com/agarrharr/awesome-cli-apps).
 
 # Command line WEB search
 
