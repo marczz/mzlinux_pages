@@ -4,6 +4,7 @@ title: Sound and Video Players
 
 See also  {{< iref "codecs" "Codecs" >}} and it's subsection
 {{< iref "codecs#media_info" "Media Info" >}},
+{{< iref "tag_management" "Tag Management" >}},
 {{< iref "streaming" "Streaming" >}}, {{< iref "ffmpeg" "FFmpeg section" >}},
 {{< iref "sound_edit" "Sound Edit" >}},
 {{< iref "video_edit" "Video Edit" >}},
@@ -57,7 +58,7 @@ See also {{< iref "dvd_cd_recording" "DVD and CD recording" >}}
 
 # Sound Players {#sound_players}
 
-Some Media players can handle both video and audio, the following
+Most Video players can handle both video and audio, the following
 players are refered to in the
 {{< iref "#video_players" "Video players section" >}}:
 {{< iref "#gnash" "Gnash" >}}
@@ -127,16 +128,17 @@ Wikipedia: {{< wp "Comparison of audio player software" >}},
 
     -   Wikipedia: {{< wp "Guayadeque Music Player" >}}.
 
-<a name=muine"></a>{{< wp "Muine" >}}
+<a name="muine"></a>{{< wp "Muine" >}}
 :   An other music player using {{< iref "streaming#Gstreamer" "GStreamer" >}}
     framework, but built upon Mono and Gtk# (like _Banshee_), not used on my systems.
 
-<a name="parlatype"<a>[Parlatype](https://www.parlatype.org/)
 <a name="juk"></a>[Juk](https://juk.kde.org/) (GPL-2.0)
-is an audio jukebox application, supporting collections of MP3, Ogg Vorbis, and FLAC
+is a KDE audio jukebox application, supporting collections of MP3, Ogg Vorbis, and FLAC
 audio files. It's main focus, is on music management.
 
 For playing media it uses {{< iref "streaming#Gstreamer" "GStreamer" >}}.
+
+_Juk_ has many KDE libraries dependencies, making it heavy to use on non KDE Desktop.
 
 -   [JuK · GitLab](https://invent.kde.org/multimedia/juk)
 
@@ -180,7 +182,7 @@ For playing media it uses {{< iref "streaming#Gstreamer" "GStreamer" >}}.
 
     -   [ExFalso/Quodlibet manual](https://quodlibet.readthedocs.org/en/latest/)
 
-<a name="rhythmnbox"></a>[Rhythmbox](http://en.wikipedia.org/wiki/Rhythmbox) (GPL)
+<a name="rhythmbox"></a>[Rhythmbox](http://en.wikipedia.org/wiki/Rhythmbox) (GPL)
 :   Rhythmbox is a gnome audio player using the
     {{< iref "streaming#gstreamer" "GStreamer" >}} media framework.
 
@@ -409,9 +411,6 @@ For playing media it uses {{< iref "streaming#Gstreamer" "GStreamer" >}}.
 
 <a name="qmmp"></a>[Qmmp](http://qmmp.ylsoftware.com/) (GPL)
 :   _Qmmp_ is a C++/QT audio player. Qmmp is in Debian.
-    On amd64 _Qmmp_ footprints are 70M res / 50M shr when playing an
-    ogg file_in may 2018 with _Qmmp 1.2.0_.
-
 
     Features:
 
@@ -421,13 +420,18 @@ For playing media it uses {{< iref "streaming#Gstreamer" "GStreamer" >}}.
         tracker modules (mod, s3m, it, xm, etc), ADTS AAC, CD Audio,
         WMA, Monkey's Audio, PCM WAVE, Midi, SID, Chiptune formats.
     -   DSP effects with LADSPA
-    -   Output to OSS4, Alsa, Pulse Audio, Jack, QtMultimedia,
-        Icecast
-    -   MPRIS (1.0 and 2.0)
+    -   Output to OSS4, Alsa, {{< iref "streaming#pulseaudio" Pulse Audio >}},
+        {{<iref "streaming#pipewire" "Pipewire" >}},
+        {{<iref "streaming#jack" "Jack" >}}, QtMultimedia,
+        {{<iref "streaming#icecast" "Icecast" >}}
+    -   {{< iref "#mpris" "MPRIS" >}} (1.0 and 2.0)
     -   Cue sheet
     -   Lyrics
     -   [Extra plugins](http://qmmp.ylsoftware.com/links.php)
 
+    On amd64 _Qmmp v1.4.4 (2021)_ memory footprints are 100M res / 83M shr idle
+    or playing an opus file. It incrase whan you play more files, and is dependent of
+    the enabled plugins.
 
 [RealPlayer](http://www.real.com/linux) and [Helix Player](https://helixcommunity.org/)
 :   Helix player is an open source media player, with support for the proprietary format
@@ -501,16 +505,14 @@ For playing media it uses {{< iref "streaming#Gstreamer" "GStreamer" >}}.
     to play previews of audio and video files, and internet streams. It can also be used
     as a regular media player. It is no longer in Debian since jessie, and the home page
     went away.
-
-cdtool
-:
-    _cdtool_ contains several programs for playing audio CDs and controlling a CD-ROM
+__
+[cdtool](https://hinterhof.net/cdtool/)
+:   _cdtool_ contains several programs for playing audio CDs and controlling a CD-ROM
     drive from the command line:
     -   [cdtool(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=cdtool%281%29)
     -   [cdplay](http://www.x-paste.de/cdplay/) is an interactive
         text-mode program for playing audio CDs. ref:
-        [cdplay(1)
-        ](http://manpages.debian.org/cgi-bin/man.cgi?query=cdplay%281%29)
+        [cdplay(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=cdplay%281%29)
     -   The _cdinfo_ command, with no option used, will print out the
         audiostatus.
     -   The _cdstop_ command stops the compact disc.
@@ -757,33 +759,42 @@ __ogg123__, __oggdec__
     internet stream broadcasts and files in MP3 and Vorbis OGG format. It is in debian.
 
 [Radiotray-NG](https://github.com/ebruck/radiotray-ng) (GPL-3.0)
-:   is a simple music streaming player that lives on the system
-    tray. By clicking on the RadioTray icon, you'll be presented with
-    a list of pre-configured online radios. By selecting one of those
-    radios, it will start playing.
+:   is a simple music streaming player that lives on the system tray. By clicking on the
+    RadioTray icon, you'll be presented with a list of pre-configured online radios. By
+    selecting one of those radios, it will start playing.
 
-    This project is the continuation of [Radiotray
-    ](https://sourceforge.net/projects/radiotray/files/releases/).
-
-
+    This project is the continuation of
+    [Radiotray](https://sourceforge.net/projects/radiotray/files/releases/).
 
 ## Emacs controlled Players {#emacs_players}
+
+All these packages are in Melpa.
 
 See also [EmacsWiki: MusicPlayers](http://www.emacswiki.org/emacs/MusicPlayers)
 
 [Bongo](https://github.com/dbrock/bongo/) (GPL)
 :   Bongo is a music player for emacs that was developped in parallel
-    with EMMS. Bongo it can use VLC,
+    with EMMS. Bongo can use VLC,
     mpg321, ogg123, speexdec. Bongo has an
     [emacswiki page](http://www.emacswiki.org/emacs/Bongo).
 
+<a name="emms"></a>[EMMS](http://www.emacswiki.org/cgi-bin/emacs.pl/EMMS) (GPL)
+:   EMMS (GPLv3) is the Emacs Multi-Media System, a small application to play multimedia
+    files from Emacs using external players. It can use mpg321, ogg123, mplayer, xine or
+    {{< iref "#mpd" "mpd" >}}, {{< iref "streaming#mpv" "mpv" >}} with the help of the
+    [mpv extension of emms](https://github.com/momomo5717/emms-player-simple-mpv),
+    or any simple player available as unix command line client.
 
-[EMMS](http://www.emacswiki.org/cgi-bin/emacs.pl/EMMS) (GPL)
-:   EMMS (GPLv3) is the Emacs Multi-Media System, a small
-    application to play multimedia files from Emacs using external
-    players. It can use mpg321, ogg123, mplayer, xine or
-    {{< iref "#mpd" "mpd" >}}, or any simple player available as unix command
-    line client.
+[ffmpeg-mplayer](https://github.com/jcs-elpa/ffmpeg-player) (GPL-3.0)
+:   Play video from emacs using ffmpeg.
+
+[playerctl.el](https://github.com/thomasluquet/playerctl.el)
+:   Use {{< iref "#playerctl" "playerctl" >}} from emacs to control any
+     {{< iref "#mpris" "MPRIS"  >}} enabled player.
+
+[vlc.el](https://github.com/xuchunyang/vlc.el)
+:   control VLC through VLC HTTP interface.
+
 
 #### mpd control from emacs
 
@@ -1062,8 +1073,9 @@ a [Category: Linux Media Players
 ](https://en.wikipedia.org/wiki/Category:Linux_media_players)
 and a page {{< wp "List of Linux audio software" >}}.
 
+## Gstreamer based video players {#gstreamer_video_apps}
 
-## Gstreamer {#gstreamer}
+### Gstreamer
 
 {{< iref "streaming#gstreamer" "GStreamer" >}} (LGPL) is a streaming-media framework,
 based on graphs of filters which operate on media data. Applications using this library
@@ -1078,7 +1090,7 @@ can be run standalone, as well as as a plugin for several browsers. Gnash can us
 {{< iref "streaming#gstreamer" "GStreamer" >}} or ffmpeg as codec support library.
 
 ### Gnome Videos {#gnome_videos}
-{{< wp "GNOME_Videos" >}} (GPL) previously named <a name="#totem"></a> _Totem_ is a GTK+
+{{< wp "GNOME_Videos" >}} (GPL) previously named <a name="totem"></a> _Totem_ is a GTK+
 media player (audio and video) for GNOME based on
 {{< iref "streaming#gstreamer" "GStreamer" >}}, it can play all mainstream media formats
 supported by {{< iref "streaming#gstreamer" "GStreamer" >}}.
@@ -1086,9 +1098,9 @@ supported by {{< iref "streaming#gstreamer" "GStreamer" >}}.
 It also understands numerous playlist formats, including SHOUTcast, M3U, XML Shareable
 Playlist Format (XSPF), SMIL, Windows Media Player playlists and RealAudio playlists.
 
-While _Videos_ offers a gnome desktop integration, it's gnome
-dependencies are moderate, wich allow to install it in lighter GTK
-environments. _Videos_ is in the Debian package _Totem_.
+While _Videos_ offers a gnome desktop integration, it's gnome dependencies are moderate,
+wich allow to install it in lighter GTK environments. _Videos_ is in the Debian package
+_Totem_.
 
 On an Amd64 in may 2018 Totem take 82M res / 46shr for a single ogg
 track; 116M res / 57M shr for a tv broadcast on DLNA.
@@ -1102,6 +1114,8 @@ track; 116M res / 57M shr for a tv broadcast on DLNA.
     Movie Player.
 -   [Totem Gitlab repository](https://gitlab.gnome.org/GNOME/totem).
 
+Totem can play UpNP, DAAP, Jamendo, Youtube, vimeo and more through the
+[Grilo](https://developer.gnome.org/grilo/) plugin.
 
 ### Kaffeine {#kaffeine}
 [Kaffeine](https://apps.kde.org/kaffeine/) (GPL-2.0+)
@@ -1113,7 +1127,7 @@ in an other QT desktop.
 -   [Multimedia / Kaffeine · GitLab](https://invent.kde.org/multimedia/kaffeine)
 
 
-### Other Video players
+## Other Video players
 ### Lightspark {#lightspark}
 [Lightspark](https://github.com/lightspark/lightspark) (GPL) is a Flash player
 implementation that run as a web browser plugin or as a standalone application.
@@ -1252,10 +1266,9 @@ _Streamlink_ was forked from the now dead _Livestreamer_ project.
 MPEG-2,MPEG-4 and DivX files, DVDs, digital satellite and terrestial
 television channels, and live videos on IP network
 
-[VLC](http://www.videolan.org/vlc/) media player is a cross-platform
-media player, and streamin server. Supported video formats and streaming
-protocols are given in the [VLC features list
-](http://www.videolan.org/vlc/features.html)
+[VLC](http://www.videolan.org/vlc/) media player is a cross-platform media player, and
+streamin server. Supported video formats and streaming protocols are given in the
+[VLC features list](http://www.videolan.org/vlc/features.html)
 
 Since version 3.0.1 VLC support {{< iref "streaming#chromecast" "Chromecast" >}}.
 
@@ -1269,6 +1282,7 @@ Since version 3.0.1 VLC support {{< iref "streaming#chromecast" "Chromecast" >}}
     [HowTo/Receive and Save a Stream - VideoLAN Wiki
     ](https://wiki.videolan.org/Documentation:Streaming_HowTo/Receive_and_Save_a_Stream/)
 -   [VLC FAQ](https://wiki.videolan.org/Frequently_Asked_Questions/)
+-   [VLC Extensions](https://addons.videolan.org/)
 -   [ArchWiki - VLC](https://wiki.archlinux.org/index.php/VLC_media_player)
 
 ### VLC memory footprints.
@@ -1300,8 +1314,6 @@ It is an old project, but still maintained and packaged in Debian.
     [aaxine(1)](http://man.cx/aaxine(1)),
     [xine-remote(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=xine-remote(1)).
 
-
-
 # MPRIS {#mpris}
 
 The [Media Player Remote Interfacing Specification (MPRIS)
@@ -1309,38 +1321,66 @@ The [Media Player Remote Interfacing Specification (MPRIS)
 interface which aims to provide a common programmatic API for
 controlling media players.
 
+-   [Features for MPRIS 3.0 - KDE Wiki
+    ](https://community.kde.org/MPRIS#Features_for_MPRIS_3.0)
+
 The players supporting MPRIS include
+{{< iref "#amarok" "Amarok" >}},
 {{< iref "#audacious" "Audacious" >}},
+{{< iref "#banshee" "Banshee" >}},
+{{< iref "#bmpx" "BMPx" >}},
 {{< iref "#clementine" "Clementine" >}},
+{{< iref "#cmus" "Cmus" >}},
+{{< iref "#deadbeef" "Deadbeef" >}}with the
+[DeaDBeeF-MPRIS-plugin](https://kernelhcy.github.io/DeaDBeeF-MPRIS-plugin/),
 , Dragon Player,
 {{< iref "#exaile" "Exaile" >}},
 {{< iref "#guayadeque" "Guayadeque" >}},
-{{< iref "#bmpx" "BMPx" >}},
-{{< iref "streaming#mopidy" "Mopidy" >}} with mopidy-mpris,
-{{< iref "#mpd" "MPD" >}} via
-{{< iref "#mpdris2" "mpDris2" >}},
+{{< iref "#juk" "Juk" >}},
+{{< iref "#moc" "Moc" >}} via [moc-pris](https://github.com/progwolff/moc-mpris),
+{{< iref "streaming#mopidy" "Mopidy" >}}
+via [mopidy-mpris](https://github.com/mopidy/mopidy-mpris),
+{{< iref "#mpd" "MPD" >}} via {{< iref "#mpdris2" "mpDris2" >}},
 {{< iref "#mpv" "mpv" >}} with the help of
-[lua-mpris](https://github.com/dodo/lua-mpris#mpv),
+[lua-mpris](https://github.com/dodo/lua-mpris#mpv)
+or [mpv-mpris](https://github.com/hoyon/mpv-mpris),
+{{< iref "#musikcube" "MusikCube" >}},
 {{< iref "#qmmp" "Qmmp" >}},
-Songbird via a plugin,
+{{< iref "#rhythmbox" "RhythmBox" >}},
+{{< iref "#totem" "Totem" >}},
 {{< iref "#vlc" "VLC" >}} when launched with
 `vlc --control dbus`,
 {{< iref "#xmms2" "Xmms2" >}} via xmms2-mpris-bridge.
 
-This
-[shell script](https://gist.github.com/exic/1d051e3a15f61e06caf4), is
-an example of MPRIS control of a player.
+This [shell script](https://gist.github.com/exic/1d051e3a15f61e06caf4), is an example of
+MPRIS control of a player.
 
 Other control tools are:
 
-[playerctl](https://github.com/altdesktop/playerctl) (LGPL-3.0)
+<a name="playerctl"></a>[playerctl](https://github.com/altdesktop/playerctl) (LGPL-3.0)
 :   is an mpris command-line controller and library for vlc, mpv, RhythmBox, web
-    browsers, cmus, mpd, spotify and others. _active in 2020_.
+    browsers, cmus, mpd, spotify and others. _In Debian and active in 2021_.
+    -   You can use _playerctl from emacs with
+        [playerctl.el](https://github.com/thomasluquet/playerctl.el)
+    -   [tmux-plugin-playerctl](https://github.com/richin13/tmux-plugin-playerctl) (MIT
+        License) a tmux plugin or using playerctl to display MPRIS meta-data about the
+        music currently playing.
 
 [mpris-remote](http://incise.org/mpris-remote.html)
 :   is a utility that controls an MPRIS-capable music player.
     [GitHub: mpris-remote](http://github.com/mackstann/mpris-remote/).
-    mpris-remote is in debian.
+    mpris-remote is in Debian.
+
+[mpris-ctl](https://git.sr.ht/~mariusor/mpris-ctl) (MIT License)
+:   by Marius Orcsik is a C lang cli mpris control for keyboard music control. Its only
+    dependency is on the C dbus library.
+
+[mpris-scrobbler](https://git.sr.ht/~mariusor/mpris-scrobbler)
+:   by Marius Orcsik is a C lang user daemon which submits the currently playing song to
+    libre.fm, listenbrainz, and compatible services.
+
+[GitHub - un-def/i3blocks-mpris](https://github.com/un-def/i3blocks-mpris)
+:   A persistent i3blocks blocklet for the MPRIS D-Bus interface.
 
 # Mixers
 [aumix](http://jpj.net/~trevor/aumix.html)
@@ -1351,24 +1391,28 @@ Other control tools are:
     interactively at the console or terminal with an ncurses-based
     interface, or with a X11 interface named **aumix-X11**.
 
-amixer, alsamixer from {{< iref "sound_libs#alsa" "alsa" >}} utilities.
-:   amixer is the alsa text based mixer
+__amixer__
+:   _amixer_ from {{< iref "sound_libs#alsa" "alsa" >}} utilities is the alsa text based mixer
 
     refs: [amixer(1)
     ](http://manpages.debian.org/cgi-bin/man.cgi?query=amixer(1))
 
-:   alsamixer is a curse text mixer tool.
+__alsamixer__
+:   _alsamixer_ is a curse text mixer tool  from {{< iref "sound_libs#alsa" "alsa" >}}
+    utilities.
 
     refs:  [alsamixer(1)
     ](http://manpages.debian.org/cgi-bin/man.cgi?query=alsamixer(1))
 
-[SDL\_mixer](http://www.libsdl.org/projects/SDL_mixer/)
+[SDL mixer](http://www.libsdl.org/projects/SDL_mixer/) (zlib license)
 :   A simple multi-channel audio mixer for SDL. It supports 4 channels
     of 16 bit stereo audio, plus a single channel of music, mixed by
     {{< iref "#item_mikmod" "MikMod" >}} MOD, Timidity MIDI and SMPEG MP3 libraries.
     The command line utilities are **playmus** and **playwave**
-:   [SDL Mixer documentation
-    ](http://jonatkins.org/SDL_mixer/SDL_mixer.html)
+    -   [SDL Mixer documentation
+        ](https://www.libsdl.org/projects/SDL_mixer/docs/index.html)
+    -   [SDL mixer - Github](https://github.com/libsdl-org/SDL_mixer)
+
 
 # Media centers and distributions {#media_centers}
 
@@ -1393,18 +1437,20 @@ amixer, alsamixer from {{< iref "sound_libs#alsa" "alsa" >}} utilities.
     music files, use your TV and a web camera as a video-telephone over
     the Internet, retrieve weather forecasts, and many other functions.
 
-    -       [MythTV main page](http://www.mythtv.org/)
-    -       [MythTV HowTo](http://www.mythtv.org/wiki/MythTV-HOWTO)
-    -       [MythTV User Manual](http://www.mythtv.org/wiki/User_Manual:Index)
-    -       [MythTV UPnP](http://www.mythtv.org/wiki/UPnP):
-             MythTV has a built-in UPnP server.
-    -       [ArchWiki: MythTV](https://wiki.archlinux.org/index.php/MythTV)
-    -       Wikipedia: {{< wp "MythTV" >}}
+    -   [MythTV main page](http://www.mythtv.org/)
+    -   [MythTV HowTo](http://www.mythtv.org/wiki/MythTV-HOWTO)
+    -   [MythTV User Manual](http://www.mythtv.org/wiki/User_Manual:Index)
+    -   [MythTV UPnP](http://www.mythtv.org/wiki/UPnP):
+        MythTV has a built-in UPnP server.
+    -   [ArchWiki: MythTV](https://wiki.archlinux.org/index.php/MythTV)
+    -   Wikipedia: {{< wp "MythTV" >}}
 
-    In 2018 no prepackged _MythTV_ exists for Debian you have to build
+    No prepackaged _MythTV_ exists for Debian (_in 2021_) you have to build
     your package from the source as described in
     [Installing MythTV on Debian
     ](https://www.mythtv.org/wiki/Installing_MythTV_on_Debian).
+    But there are Debian packages _kodi-pvr-mythtv_ a MythTV PVR Addon for Kodi,
+    _mythtv-status_ status of a MythTV backend.
 
 [rockbox](http://www.rockbox.org/)
 :   is an open source replacement firmware for mp3 players. It runs on
@@ -1488,6 +1534,16 @@ Kodi can be used in wayland, _kodi-wayland is packaged in Debian_.
     ([GitHub Repository](https://github.com/komet/mediaelch)) is a MediaManager for Kodi,
     which manage the ``nfo`` files used by Kodi. It is a C++ application, an appimage is
     provided (no package).
+
+-   <a name="omxplayer">[OMXPlayer](https://github.com/popcornmix/omxplayer/)
+    is the command line OMX player for the Raspberry PI.
+
+    Omxplayer is deprecated and should be replaced by vlc , his is due to: omxplayer
+    uses openvg for OSD and subtitles which isn't supported on Pi4. omxplayer uses
+    openmax which has been deprecated for a long time and isn't supported with 64-bit
+    kernels. omxplayer does not support software decode omxplayer does not support
+    advanced subtitles omxplayer does not support playback from ISO files. omxplayer
+    does not integrate with the X desktop.
 
 <!--  Local Variables: -->
 <!--  ispell-local-dictionary: "english" -->
