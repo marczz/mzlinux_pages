@@ -22,7 +22,8 @@ See also {{< iref "input_methods" "Input method" >}} where you find
 -   [Debian Reference Chapter 7. The X Window System
     ](https://www.debian.org/doc/manuals/debian-reference/ch07.en.html)
 -   [ArchWiki - Xorg](http://wiki.archlinux.org/index.php/Xorg)
--   [Gentoo Xorg Guide](https://wiki.gentoo.org/wiki/Xorg/Guide),
+-   [Xorg - Gentoo Wiki](https://wiki.gentoo.org/wiki/Xorg),
+    [Xorg Guide - Gentoo Wiki](https://wiki.gentoo.org/wiki/Xorg/Guide),
     [Hardware 3D acceleration guide
     ](https://wiki.gentoo.org/wiki/Xorg/Hardware_3D_acceleration_guide)
 -   [FreeBSD Handbook -  Xorg Configuration
@@ -152,6 +153,20 @@ QT 5 support wayland using the QtWayland module. More information in
 ](https://wayland.freedesktop.org/extras.html)
 gives a list of debugging tools, including protocol dumpers.
 
+## Libinput {#libinput}
+libinput is an input device driver for Wayland compositors and X.org window system.
+
+-   [libinput - freedesktop](https://freedesktop.org/wiki/Software/libinput/)
+-   [libinput documentation](https://wayland.freedesktop.org/libinput/doc/latest/)
+-   [libinput - ArchWiki](https://wiki.archlinux.org/title/Libinput)
+-   [libinput - Gentoo Wiki](https://wiki.gentoo.org/wiki/Libinput)
+
+For wayland and modern Xorg release
+{{< wp "Evdev" >}} is managed by libinput.
+
+In a wayland compositor libinput is configured by the compositor. For Sway it is in
+[sway-input(5)](https://manpages.debian.org/testing/sway/sway-input.5.en.html)
+
 # Framebuffer
 See also {{< iref "xterminals#framebuffer_terminals" "Framebuffer terminals" >}},
 {{< iref "console_applications#framebuffer_applications" "Framebuffer Applications" >}}.
@@ -159,12 +174,26 @@ See also {{< iref "xterminals#framebuffer_terminals" "Framebuffer terminals" >}}
 X.org _xf86-video-fbdev_ driver module provides framebuffer under
 Xorg. It is in the package _xserver-xorg-video-fbdev_.
 
-# Synaptics Touchpad
+# Touchpad {#touchpad}
+## Synaptics
+In wayland and for recent Xorg release the touchpad is managed by
+{{< iref "#libinput" >}} and synaptics is no more necssary. In Debian we install
+`xserver-xorg-input-libinput`, `xserver-xorg-input-evdev`, `xserver-xorg-input-mouse`
+and not synaptics.
 
--   [Ubuntu: Synaptics Touchpad
-    ](https://help.ubuntu.com/community/SynapticsTouchpad)
+But some features are still missing for touchpads in synaptics, according to
+[Debian Wiki: SynapticsTouchpad](https://wiki.debian.org/SynapticsTouchpad)
+we make ynaptics driver take precedence over libinput by copying
+`/usr/share/X11/xorg.conf.d/50-synaptics.conf` into `/etc/X11/xorg.conf.d`, so as to
+make it take precendence over the libinput configuration file found at
+`/usr/share/X11/xorg.conf.d/90-libinput.conf`.
+
+
 -   [ArchLinux: Touchpad Synaptics
     ](https://wiki.archlinux.org/index.php/Touchpad_Synaptics)
+-   [Debian Wiki: SynapticsTouchpad](https://wiki.debian.org/SynapticsTouchpad)
+-   [Ubuntu: Synaptics Touchpad](https://help.ubuntu.com/community/SynapticsTouchpad)
+-   [synaptics - Gentoo Wiki](https://wiki.gentoo.org/wiki/Synaptics)
 
 # Display Managers
 See also the {{< iref "#xdmcp" "XDMCP section" >}}
@@ -176,16 +205,15 @@ See also the {{< iref "#xdmcp" "XDMCP section" >}}
 -   [CDM](https://github.com/evertiro/cdm/) (GPL)
     is a miminimal display manager for the console, written in bash.
     -   [CDM - ArchWiki](https://wiki.archlinux.org/index.php/CDM).
--   [Gnome Display Manager
-    ](http://en.wikipedia.org/wiki/GNOME_Display_Manager)
-    (GPL) is an alternative to {{< iref "#xdm" "XDM" >}}
-    and newer implementation using gtk libraries.
-    GDM has numerous added features, but is dependent of gtk. Despite
-    his name, you can use it without a full gnome environment, and he is
-    appropriate with any gtk desktop. GDM has a nice configuration tool,
-    that make its use a lot less painful than xdm. Although his virtual
-    memory size is three or four time the xdm one *(14M against 4 on one
-    of my desktop)* its resident size is quite close *(1.6M/1.1M)*.
+-   [Gnome Display Manager](http://en.wikipedia.org/wiki/GNOME_Display_Manager)
+    (GPL) is an alternative to {{< iref "#xdm" "XDM" >}} and newer implementation using
+    gtk libraries.  GDM has numerous added features, but is dependent of gtk.
+
+    Despite his name, you can use it without a full gnome environment, and he is
+    appropriate with any gtk desktop. GDM has a nice configuration tool, that make its
+    use a lot less painful than xdm. Although his virtual memory size is three or four
+    time the xdm one *(14M against 4 on one of my desktop)* its resident size is quite
+    close *(1.6M/1.1M)*.
     -   [GDM Home Page](https://wiki.gnome.org/Projects/GDM)
     -   [GDM Reference Manual
         ](https://help.gnome.org/admin/gdm/stable/)
