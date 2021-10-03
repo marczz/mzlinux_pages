@@ -1116,12 +1116,11 @@ daemon is tiny 1.2M res./0.8M shared. _in Debian_.
 -   [list of public bitlbee servers](http://www.bitlbee.org/main.php/servers.html)
     they allow to use Bitlbee without installing it.
 -   [ArchLinux BitlBee Tutorial](http://wiki.archlinux.org/index.php/Bitlbee)
-    explains how to connect to the basic jabber, and th private services
+    explains how to connect to the basic jabber, and the private services
     {{< iref "#telegram" "Telegram" >}}, {{< iref "sip#discord" "Discord" >}}, twitter.
 -   [ArchLinux Screen Irssi Bitlbee and SSH
     ](http://wiki.archlinux.org/index.php/Screen_Irssi_Bitlbee)
-    explains how to have a persistent connection to messaging
-    services.
+    explains how to have a persistent connection to messaging services.
 -   [Emacs and BitlBee](http://www.emacswiki.org/cgi-bin/wiki?BitlBee)
 -   [bitlbee-otr](https://wiki.bitlbee.org/bitlbee-otr) add
     support for {{< iref "#otr" "Off-the-Record Messaging (OTR)" >}} either by a plugin

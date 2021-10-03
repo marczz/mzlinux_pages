@@ -94,8 +94,7 @@ There are examples of use of these libraries in
     -   [httpx Documentation](https://www.python-httpx.org/)
 
 # CGI
-See also the [CGI protocol references
-](internet_application#web_protocols "internal reference")
+See also the  {{< iref "IP#web_protocols" "CGI protocol references" >}}
 
 See also the {{< iref "#http_libraries" "http libraries section" >}},
 {{< iref "#urllib_request" "urllib.request" >}},
@@ -373,6 +372,7 @@ is a  high-performance web framework for building APIs with Python based on stan
 Python type hints. It has a CLI sibbling {{< iref "python_libraries#typer" "Typer" >}}.
 
 -   [FastApi - GitHub](https://github.com/tiangolo/fastapi).
+-   [Comparison with FastApi alternatives](https://fastapi.tiangolo.com/alternatives/).
 
 ## Flask {#flask}
 [Flask](https://www.palletsprojects.com/p/flask/) (BSD License)

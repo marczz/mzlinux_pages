@@ -226,7 +226,7 @@ _live preview_ synchronization library. This include
     bookmarking, and text search. It is not in Debian but in an
     unofficial repository [notesalexp.org](http://notesalexp.org/).
     -   [ArchWiki: Llpp](https://wiki.archlinux.org/index.php/Llpp)
--    <a name="mupdf"></a>[Mupdf](http://mupdf.com/) (GPL)
+-   <a name="mupdf"></a>[Mupdf](http://mupdf.com/) (GPL)
     is a C-based PDF parsing library. MuPDF has a small footprint and
     has support for all non-interactive PDF 1.7 features.
     The toolkit provides a simple API for accessing the internal structures of the

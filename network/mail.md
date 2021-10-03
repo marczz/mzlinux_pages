@@ -169,14 +169,14 @@ title: Mail
     -   [GNOME/Evolution - ArchWiki](https://wiki.archlinux.org/title/GNOME/Evolution)
 -   <a name="thunderbird"></>[Mozilla Thunderbird
     ](http://en.wikipedia.org/wiki/Mozilla_Thunderbird) (MPL/GPL/LGPL),
-    cross-platform e-mail and {{< iref "feed#nntp"" "news client" >}}.
+    cross-platform e-mail and {{< iref "feed#nntp" "news client" >}}.
 
     {{< wp "SeeMonkey" >}} is an other Mozilla / Gecko mail and nntp client.
     -   [Thunderbird Home](http://www.mozilla.com/thunderbird/)
     -   [ArchWiki: Thunderbird](https://wiki.archlinux.org/index.php/Thunderbird).
 -   <a name="sylpheed"></a>{{< wp "Sylpheed" >}} (GPL/LGPL)
     is an e-mail client written in C / GTK2 (no GTK3 as far as 2021).
-    Is is also an {{< iref "feed#nntp"" "Usenet client" >}}.
+    Is is also an {{< iref "feed#nntp" "Usenet client" >}}.
 
     {{< iref "#claws" "Claws" >}} is a _Sylpheed_ fork.
     _Sylpheed_ is packaged in Debian.

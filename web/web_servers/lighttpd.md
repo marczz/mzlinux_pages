@@ -115,7 +115,7 @@ The failure to recognize it is the [bug 1427](http://redmine.lighttpd.net/issues
    ](http://www.howtoforge.com/how-to-set-up-webdav-with-lighttpd-on-debian-squeeze)
 -   [CML aka Cache Meta Language
      ](http://trac.lighttpd.net/trac/wiki/CacheMetaLanguage)
-     is an implementation of {{< iref "nginw#memcached" "Memcached" >}} for lighttpd.
+     is an implementation of {{< iref "nginx#memcached" "Memcached" >}} for lighttpd.
 
 ## Common modules
 that require options but no complicated    configuration

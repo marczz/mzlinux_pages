@@ -212,8 +212,8 @@ re-formatting, and higlighting._
     is a node.js code formatter with support for:
     JavaScript, JSX, Angular, Vue, Flow, TypeScript, CSS, Less, and SCSS, HTML, JSON,
     GraphQL, Markdown _including GFM and MDX_, YAML.
-    It removes all original styling* and ensures that all outputted code conforms to a
-    consistent style. It disregards the original styling* by parsing it away and
+    It removes all original styling and ensures that all outputted code conforms to a
+    consistent style. It disregards the original styling by parsing it away and
     re-printing the parsed AST with its own rules that take the maximum line length into
     account, wrapping code when necessary.
 

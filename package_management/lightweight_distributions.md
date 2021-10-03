@@ -119,7 +119,7 @@ Debian Live and GRML are in the main {{< iref "distributions" "Distributions sec
     but there is still an open source branch
     {{< wp "Maemo#Maemo_Leste" "Maemo Leste" >}} , {{< wp "MeeGo" >}} was a Linux project
     by Intel and Nokia that merge Moblin from Intel and Maemo from
-    Nokia. Meego is now merged in {{< iref "Tizen" >}}.
+    Nokia. Meego is now merged in {{< wp "Tizen" >}}.
     {{< wp "Mer_(software_distribution)" "Mer" >}} is a fork of MeeGo trying to recover
     a more open (source) mind.
 -   {{< wp "OpenEmbedded" >}} is a tool which allows developers to create a fully usable
