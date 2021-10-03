@@ -28,6 +28,8 @@ title: Booting
     -   [OpenIPMI](http://openipmi.sourceforge.net/)
 -    [Archwiki:Unified Extensible Firmware Interface
     ](https://wiki.archlinux.org/index.php/Unified_Extensible_Firmware_Interface)
+-   [Firmware - Debian Wiki](https://wiki.debian.org/Firmware) describe the loading of
+    device drivers. Firmwares are loaded from udev from ``/lib/firmware``.
 -   [CmosPwd](https://www.cgsecurity.org/wiki/CmosPwd) (GPL)
     is a  password recovery tool, which decrypts password stored in cmos used to access
     BIOS SETUP.
