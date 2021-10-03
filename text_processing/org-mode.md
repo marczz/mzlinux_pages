@@ -48,12 +48,16 @@ title: Org Mode
     The source repository is [GitHub - Emacs-Elisp-Programming
     ](https://github.com/caiorss/Emacs-Elisp-Programming)
 
-# Articles and Blogs
+# Articles and Blogs {#org_blogs}
 -   [Sacha Chua
     ](http://sachachua.com):
     [last posts category org](http://sachachua.com/blog/category/org/)
 -   [emacs-fu: nice-looking pdfs with org-mode and xetex
     ](http://emacs-fu.blogspot.com/2011/04/nice-looking-pdfs-with-org-mode-and.html)
+-   [Karlicoss](https://github.com/karlicoss?tab=repositories) many org-mode
+    repositories, and a [Blog](https://beepb00p.xyz/):
+    [karlicoss/orgparse](https://github.com/karlicoss/orgparse) :
+    Python module for reading Emacs org-mode files.
 -   [Kitchin Group at CMU - category orgmode
     ](http://kitchingroup.cheme.cmu.edu/blog/category/orgmode/)
     -   [New link features in org 9
