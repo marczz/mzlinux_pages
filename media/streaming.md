@@ -28,12 +28,11 @@ See also {{< iref "ffmpeg" "FFmpeg section" >}},
 -   <a name="esound"></a>{{< wp "ESound" >}}
     the Enlightened Sound Daemon, is a server process that mixes
     several audio streams for playback by a single audio device.
-    Now esd is largely replaced by
-    {{< iref "#pulseaudio" "PulseAudio" >}}.
+    Now _esd_ is largely replaced by {{< iref "#pulseaudio" "PulseAudio" >}}.
 -   <a name="jack"><a>[Jack](http://jackit.sourceforge.net)
-    JACK is a low-latency audio server. It can connect a number of
-    different applications to an audio device, as well as allowing them
-    to share audio between themselves.
+    JACK is a low-latency audio server. It can connect a number of different
+    applications to an audio device, as well as allowing them to share audio between
+    themselves.
     -   Wikipedia {{< wp "JACK Audio Connection Kit" >}}
     -   [ArchWiki: JACK Audio Connection Kit
         ](https://wiki.archlinux.org/index.php/JACK_Audio_Connection_Kit)
@@ -232,7 +231,7 @@ the following are refered in these pages:
 {{< iref "media_players#quodlibet" "Quod Libet" >}},
 {{< iref "media_players#rhytmnbox" "RhytmnBox" >}},
 {{< iref "#rygel" "Rygel" >}},
-{{< iref "soundconverter" "SoundConverter" >}},
+{{< iref "sound_edit#soundconverter" "SoundConverter" >}},
 {{< iref "media_players#sayonara" "Sayonara" >}},
 {{< iref "media_players#strawberry" "Strawberry" >}},
 {{< iref "video_edit#thoggen" "Thoggen" >}},
@@ -384,7 +383,7 @@ Icecast has tiny memory footprints.
     number of listeners. Streams can then be played using a favorite media player,
     or recorded using streamripper. It is in Debian.
 
-Icecast source clients:
+### Icecast source clients
 -    [official list of source clients](http://icecast.org/apps/) contains approximately
     twenty five clients.
 -   _Icecast_ can be used to [stream from MPD
@@ -411,6 +410,12 @@ Icecast source clients:
     is a minimalist audio encoder for IceCast and Shoutcast as well as HTTP Live
     Streaming (HLS). It can stream from ALSA, Jack, and files.
     It is in Debian as well as the gui _glassgui_.
+    -{{< iref "#gstreamer" "Gstreamer" >}} with the plugin [shout2send
+    ](https://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-good/html/gst-plugins-good-plugins-shout2send.html)
+    pushes a media stream to an icecast server.
+
+Some media players like  {{< iref "media_players#mpd" "MPD" >}},
+{{< iref "media_players#qmmp" "Qmmp" >}}  can output to icecast.
 
 ### Jinzora {#jinzora}
 <a name="jinzora"></a>[Jinzora](https://sourceforge.net/projects/jinzora/) (GPL)
@@ -526,6 +531,8 @@ and broadcasting of digital media which is used by {{< wp "DLNA" >}} devices.
     home media, as well as play back on other devices. It supports DLNA and can send to
     chromecast.
     Emby provides Debian packages for amd64 and armhf.
+
+    The GitHub repository is no more updated since 2018 version 3.5.2.
     -   [GitHub - Emby](https://github.com/MediaBrowser/Emby).
 -   [FreeMi](http://freemiupnp.fr/) (Open Source License)
     FreeMi is an C#/Mono UPnP Media Server audio/video for the FreeBox.
@@ -535,18 +542,29 @@ and broadcasting of digital media which is used by {{< wp "DLNA" >}} devices.
     transcoding from ogg/vorbis, musepack/mpc, FLAC and AAC/MP4 to mp3, mp2, wav or pcm,
     image conversion/rescaling and video transcoding.
     -   [Fuppes sourceforge Page](http://sourceforge.net/projects/fuppes/).
--   <a name="gerbera"></a>[Gerbera](https://gerbera.io/)
+-   <a name="gerbera"></a>[Gerbera](https://gerbera.io/)  (GPL)
     is an upnp media server written in C++, the continuation of
-    {{< iref "#mediatomb" "MediaTomb" >}}.
-    It is packaged in Debian.
+   [MediaTomb](https://sourceforge.net/projects/mediatomb/)
+    which is no longer maintained since 2010. It allows transcoding via plugins and
+    scripts.  It is active in 2021 and packaged in Debian.
     -   [Gerbera Documention](http://docs.gerbera.io/en/latest/).
--   <a name="gmediaserver"></a>[GMediaServer
-    ](http://www.gnu.org/software/gmediaserver/) (GPL)
-    was an UPnP compatible media server for the GNU system.(GPL) _Not
-    updated since 2007 but still packaged in Debian._
--   <a name="mediatomb"></a>[MediaTomb](http://mediatomb.cc/) (GPL)
-    is an UPnP AV Mediaserver for Linux. It is not updated since 2010,
-    and continued by {{< iref "#gerbera" "Gerbera" >}}.
+    -   [GitHub - Gerbera](https://github.com/gerbera/gerbera).
+-   {{< iref "media_players#mythtv" "MythTV" >}}
+    has a [builtin UPnP server](https://www.mythtv.org/wiki/UPnP).
+-   <a name="pulseaudio-dlna"></a>__Pulseaudio-DLNA__ (GPL-3.0)
+    is a lightweight streaming server which brings DLNA / UPNP and Chromecast support to
+    PulseAudio. It can stream your current PulseAudio playback to different UPNP devices
+    (UPNP Media Renderers) or Chromecasts in your network.
+    It is packaged in Debian.
+    -   [GitHub - masmu/pulseaudio-dlna](https://github.com/masmu/pulseaudio-dlna)
+        The repository of the author of pulseaudio DLNA, no longer maintained since 2018, still in
+        python 2.
+    -   [GitHub - joecksma/pulseaudio-dlna](https://github.com/joecksma/pulseaudio-dlna)
+        python 3 fork on which are based the recent debian packages.
+    -   [How to stream audio to chromecast or dlna / upnp device using pulseaudio-dnla
+        ](http://www.webupd8.org/2016/03/how-to-stream-audio-to-chromecast-or.html)
+    -   [How To Use pulseaudio-dlna To Stream Audio To Chromecast Devices
+        ](https://www.linuxuprising.com/2020/10/how-to-use-pulseaudio-dlna-to-stream.html)
 -   [ReadyMedia previously MiniDLNA](http://sourceforge.net/projects/minidlna/) (GPL)
     is server software with the aim of being fully compliant with DLNA/UPnP-AV
     clients. It is developed by a NETGEAR employee for the ReadyNAS product
@@ -557,27 +575,28 @@ and broadcasting of digital media which is used by {{< wp "DLNA" >}} devices.
         ](http://sourceforge.net/p/minidlna/git/ci/master/tree/NEWS)
     -   [Webmin plugin for miniDLNA
         ](http://sourceforge.net/projects/minidlnawebmin/)
--   {{< iref "media_players#mythtv" "MythTV" >}}
-    has a [builtin UPnP server](https://www.mythtv.org/wiki/UPnP).
--   <a name=pulseaudio-dlna"></a>
-    [pulseaudio-dlna](https://github.com/masmu/pulseaudio-dlna)
-    is a lightweight streaming server which brings DLNA / UPNP and Chromecast support to
-    PulseAudio. It can stream your current PulseAudio playback to different UPNP devices
-    (UPNP Media Renderers) or Chromecasts in your network.
-    It is packaged in Debian.
-    -   [How to stream audio to chromecast or dlna / upnp device using pulseaudio-dnla
-        ](http://www.webupd8.org/2016/03/how-to-stream-audio-to-chromecast-or.html)
--   [PS3 Media Server](https://github.com/ps3mediaserver/ps3mediaserver)
-    is an UPnP server written in java, and initially targeted to the
-    PS3 renderer.  This is a big java application (495M resident).
--   [Universal Media Player](http://www.universalmediaserver.com/)
-    is a fork of _PS3 Media Server_, It is written in Java.
-    It has support for Chromecast, they gives a
+
+    _ReadyMedia_ is a tiny server on an arm v6 I have footprint of 2 MB and on an arm64 7MB
+    resident / 3M shared.
+-   [Universal Media Sever](http://www.universalmediaserver.com/) (GPL-2.0)
+    is a  Java UpNP server which was forked and is the continuation of
+    [PS3 Media Server]((https://github.com/ps3mediaserver/ps3mediaserver), which is not
+    maintained since 2016.
+
+    It allows transcoding using
+    FFmpeg, MediaInfo, OpenSubtitles, Crowdin, MEncoder, tsMuxeR, AviSynth, VLC.
+    It has support for Chromecast. The site gives a
     [comparaison of features](http://www.universalmediaserver.com/comparison/)
     with _PS3 Media server_, _Serviio_, _KooRaRoo_, _Plex_.
+
+    _It is a very active project in 2021._
 -   [uShare _GeexBox page_](http://ushare.geexbox.org/) (GPL)
     is an Upnp (TM) A/V Media Server based on
-    {{< iref "#gmediaserver" "GmediaServer" >}}.
+    <a name="gmediaserver"></a>[GMediaServer
+    ](http://www.gnu.org/software/gmediaserver/)
+    which is no longer maintained since 2007.
+
+    _uShare_ itself does not seem to be active since 2010.
 -   {{< iref "media_players#kodi" "Kodi (Xbmc)" >}}
     has a [builtin UPnP server](https://kodi.wiki/view/UPnP).
 
@@ -593,7 +612,7 @@ _Rygel_ is in debian, the renderer plugin is in _rygel-playbin_, `rygel-gst-laun
 gst-launch plugin that enables using a a DLNA service/UPnP device in a gst pipeline; and
 a configuration gui in _rygel-preferences_.
 
-_rygel_, _rygel-playbin_, and severall plugins are in Debian.
+_rygel_, _rygel-playbin_, and several plugins are in Debian.
 
 Rygel with the playbin plugin takes on amd64 47M res / 17M shr on may 2018 for rygel
 0.36.1, when playing a TV stream I got 56M / 26M.
@@ -648,16 +667,16 @@ Taken from the [Rygel Wiki - features
     it was in debian until stretch._
 
     A newer fork of _djmount_ is [djmount - GitHub](https://github.com/mwilck/djmount/),
-    this fork has severall fixes including the transition from libupnp3 to libupnp6.
+    this fork has several fixes including the transition from libupnp3 to libupnp6.
+    _This fork has no commit since 2017 (checked in 2021)_.
 -   [eezpnp](http://www.eezupnp.de/) (Free but not open source ?)
     is a control point written in Java.
--   [GMediaRender](http://gmrender.nongnu.org/) (GPL)
+-   [gmrender-resurrect](https://github.com/hzeller/gmrender-resurrect)  (GPL)
     is an UPnP media renderer for Linux, It provides UPnP controllers to render media
-    content from a UPnP media server. _Like {{< iref "#gmediaserver" "GMediaServer" >}}
-    this project is no longer maintained and is not updated since 2007_.
-    -   [gmrender-resurrect](https://github.com/hzeller/gmrender-resurrect)
-        is a newer fork of gmediarender _active in 2021_, it is in the Debian package
-        _gmediarender_.
+    content from a UPnP media server.  It is a fork of
+    [GMediaRender](http://gmrender.nongnu.org/) which was no longer maintained
+    since 2007.  _gmrender-resurrect_ is in the Debian package _gmediarender_, _it is
+    active in 2021_.
 -   _rygel-playbin_ is a media renderer par of the {{< iref "#rygel" "Rygel" >}}
     upnp media server.
 -   [simple-dlna-browser
@@ -671,22 +690,21 @@ These streaming server acts as  UPnP media renderers.
     can [play UPnP / DLNA streams
     ](https://userbase.kde.org/Amarok/Manual/Organization/Collection/RemoteCollections/UPnP)
     this feature is not shared by the Clementine or Exaile forks.
--   {{< iref "media_players#banshee" "Banshee" >}} a mono
-    player.
+-   {{< iref "media_players#banshee" "Banshee" >}} a mono  player.
 -   {{< iref "media_players#kodi" "Kodi (Xbmc)" >}}
     can [act as an UPnP client](https://kodi.wiki/view/UPnP)
     that can be controlled by an UPnP control point.
--   {{< iref "media_players#mpd" "MPD" >}}
-    can natively read UPnP streams on the local network with the native upnp plugin but
-    there is also a frontend to serve UPnP content _upmdcli_.  The difference between the
-    two approaches are described in [Libupnpp, Upmpdcli and Sc2mpd Documentation
+-   {{< iref "media_players#mpd" "MPD" >}} can natively read UPnP streams on the local
+    network with the native upnp plugin but there is also a frontend to serve UPnP
+    content _upmdcli_.  The difference between the two approaches are described in
+    [Libupnpp, Upmpdcli and Sc2mpd Documentation
     ](https://www.lesbonscomptes.com/upmpdcli/pages/docs.html)
     -   [upmpdcli](https://www.lesbonscomptes.com/upmpdcli/) (GPL)
         is a UPnP Media Renderer front-end for MPD written in C++, It supports UPnP
         gapless track transitions and the OpenHome Media services (including a Radio
         service to listen to Internet streams).
     -   [Upmpdcli downloads](https://www.lesbonscomptes.com/upmpdcli/downloads.html).
--   {{< iref "media_players#rhythmnbox" "Rhythmnbox" >}} can play UPnP medias, and DAAP
+-   {{< iref "media_players#rhythmbox" "Rhythmbox" >}} can play UPnP medias, and DAAP
     via a plugin which uses _libdmapsharing_.
 -   {{< iref "media_players#totem" "Totem" >}} has a [DLNA plugins
     ](https://help.gnome.org/users/totem/stable/totem-plugins.html.en#totem-plugins-coherence)
@@ -759,14 +777,14 @@ More control points and server are in the
 -   The {{< wp "Digital Audio Access Protocol" >}} (DAAP) is a proprietary
     protocol by Apple that does the same job than UPnP but being
     proprietary. As Itunes is quite popular, it is widespread, so
-    there are also opensource software to play DAAP.  Daap is also
+    there are also opensource software to play DAAP.  DAAP is also
     used by {{< wp "Roku" >}} products.
 
 ### DAAP Clients {#daap_clients}
 -   a DAAP client _i.e. players_ os [on Wikipedia - DAAP Clients
     ](https://en.wikipedia.org/wiki/Digital_Audio_Access_Protocol#DAAP_clients).
 
-    They include: {{< iref "media_players#rhythmnbox" "Rhythmnbox" >}},
+    They include: {{< iref "media_players#rhythmbox" "Rhythmbox" >}},
     {{< iref "media_players#amarok" "Amarok" >}},
     {{< iref "media_players#exaile" "Exaile" >}}
     {{< iref "media_players#exaile" "Banshee" >}},
@@ -783,7 +801,7 @@ More control points and server are in the
     _Owntone_ is a daemon which serve your music library with the DAAP protocol,
     the MPD protocol, and the RSP protocol used by {{< wp "Roku" >}} devices.
 
-    _Owntone_ can output through daap clients, {{< wp "Itunes" >}} clients like
+    _Owntone_ can output through DAAP clients, {{< wp "Itunes" >}} clients like
     _Apple Remote_, MPD Clients, Airplay or Chromecast devices _audio only_,
     the computer sound card with alsa, or PulseAudio, or to an http mp3 stream.
 
@@ -794,7 +812,7 @@ More control points and server are in the
 
     -   [owntone server - Raspberry Pi Forums
         ](https://www.raspberrypi.org/forums/viewtopic.php?t=49928)
-        E Jurgensen propose a Raspbian repository for _Owntone_.
+        E. Jurgensen proposes a Raspbian repository for _Owntone_.
 
 -   [canary](http://code.woong.org/canary)
     is a DAAP server written in Node js.
