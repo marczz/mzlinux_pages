@@ -156,6 +156,43 @@ shrink or move online. Lvm allow to use pvmove.
 Using subvolumes instead of LV will increase performances and avoid dupliacate data
 storage, but a single subvolume can use all space.
 
+## Btrfs deduplication {#btrfs_dedupe}
+Block deduplication ib btrfs is done when we use the `cp --reflink` command when doing a
+snapshot. Some program may inspect files to find common block between them and
+deduplicate them.
+
+The currnt known program are listed in
+[Deduplication - btrfs Wiki](https://btrfs.wiki.kernel.org/index.php/Deduplication).
+
+Some file deduplication programs listed in the
+{{< iref "#dedupe" "section below" >}} have support for btrfs, this include
+{{< iref "#jdupes" "jdupes" >}} and {{< iref "#rmlint" "rmlint" >}}.
+
+
+-   [Bees](https://github.com/Zygo/bees) (GPL-3.0)
+    bees is a block-oriented userspace deduplication daemon agent designed for large
+    btrfs filesystems. It is an offline dedupe combined with an incremental data scan
+    capability .
+-   [dduper](https://github.com/lakshmipathi/dduper) (GPL-2.0)
+    dduper is a block-level out-of-band BTRFS dedupe tool. This works by fetching
+    built-in checksum from BTRFS csum-tree, instead of reading file blocks and computing
+    checksum itself. This hugely improves the performance.
+
+-   [Duperemove](http://markfasheh.github.io/duperemove/) (GPL-2.0)
+    finds duplicated extents and submits them to the kernel for deduplication.
+    When given a list of files it will hash their contents on a block by block basis and
+    compare those hashes to each other, finding and categorizing blocks that match each
+    other. When given the -d option, duperemove will submit those extents for deduplication using the Linux kernel extent-same ioctl.
+
+    Duperemove can store the hashes it computes in a 'hashfile', then it will only
+    compute hashes for those files which have changed since the last run.
+
+    _duperemove_ is in Debian.
+
+    -   [duperemove - Github](https://github.com/markfasheh/duperemove)
+    -   [duperemove(8)](http://markfasheh.github.io/duperemove/duperemove.html)
+    -   [duperemove Wiki · GitHub](https://github.com/markfasheh/duperemove/wiki)
+
 
 # Flash memory and ssd filesystems
 -   Wikipedia: {{< wp "Secure Digital" >}}
@@ -764,16 +801,42 @@ _Bibilop_ is packaged in Debian.
 
 # Filesystem Deduplication {#dedup}
 
+See {{< #btrfs_dedupe" "above" >}} for btrfs block deduplication.
+
 -   Wikipedia: {{< wp "List of duplicate file finders" >}}
 
--   [bedup](https://github.com/g2p/bedup) Deduplication for Btrfs.
-    _bedup_ looks for new and changed files, making sure that multiple copies of
-    identical files share space on disk.
-    -   [Btrfs Wiki: deduplication
-        ](https://btrfs.wiki.kernel.org/index.php/Deduplication)
--   [Duff](http://duff.dreda.org/)
+There are a lot of benchmarking, each software shows it is quicker than the previous
+ones, we cn also take care that often these benchmarking are flawed by different way of
+comparing files, either only hashsum, and here the hash algorithm mater, or hashsum and
+byte to byte comparison when the hash is the same.
+
+The functionalities differ also greatly, and are important if you want more than a list
+of duplicate files.
+
+To summarize benchmarks on the quicker side we find _fclone_, _yadf_ (on ssd only),
+_ffdf_, _rdfind_ (on hdd only).
+
+Medium speed: _czkawka_, _rmlint_
+
+Slower: _jdupes_, _rdupes_, _ddf_, _fdupes (C)_ _yadf_ (on hdd), _rdfind_ (on sdd)
+
+Very slow: _fdudes-java_, _duff_, _fslint_,
+
+I don't include in my list the basic rust duplicate finders, that have no active
+development like [yadf](https://github.com/jRimbault/yadf),
+[fddf](https://github.com/birkenfeld/fddf), for these type of quick basic duplicate
+finders _fclone_ may be preferred.
+
+
+-   [czkawka](https://qarmin.github.io/czkawka/) (MIT license)
+    is a rewrite of _fslint_ in rust. It has a GTK3 GUI and a command line
+    interface.
+ -  [Duff](https://github.com/elmindreda/duff)
     is a C command-line utility for quickly finding duplicates in a given set of
-    files.
+    files. It is no longer developed.
+-   [fclones](https://github.com/pkolaczk/fclones) (MIT License) is a rust command line
+    duplicate file finder and remover.  the benchmark shows it as a lot faster than
+    _czkawka_, _rmlint_, _jdupes_, _fdupes_, rdfind_.
 -   [fslint](http://www.pixelbeat.org/fslint/)
     a python app which finds duplicate files, problematic filenames, temporary files,
     bad symlinks, empty directories. It includes a GTK+ GUI as well as a command line
@@ -781,7 +844,9 @@ _Bibilop_ is packaged in Debian.
 -   [fdupes](https://github.com/adrianlopezroche/fdupes) c-program
     (there is also a perl alias!) that uses md5sums and then a byte by byte comparison to
     find duplicate, it is in Debian. See also the {{<iref "#jdupes" "jdupes" >}} fork
-    below.
+    below. There is also a java fork
+    [fdupes-java](https://github.com/cbismuth/fdupes-java), no more developed since
+    2017, slower than the C version.
 -   <a name="jdupes"></a>[jdupes](https://github.com/jbruchon/jdupes)
     is a fork of {{< iref "#fdupes" "fdupes" >}}.  It is not binary compatible with
     _fdupes_, it enhanced the search speed, and is seven time quicker. It include btrfs
@@ -790,15 +855,27 @@ _Bibilop_ is packaged in Debian.
     is a program that finds duplicate files. The benchmark on the rdfind page, show that
     it is a lot quicker than _fdupes_ and _fslint_, but it is slower than _rmlint_.
     _rdfind_ supports btrfs filesystems. It is in debian.
--   [rmlint](https://rmlint.readthedocs.io/en/latest/)
+-   <a name="rmlint"></a>[rmlint](https://github.com/sahib/rmlint)
     finds duplicate files & directories, nonstripped binaries, broken symlinks, empty
     files, recursive empty directories, files with broken user or group id.
 
+    _rmlint_ has an option `rmlint --dedupe` to deduplicate blocks on btrfs filesystems.
+    you use it by first looking at duplicates with
+    ``` sh
+    rmlint --types="duplicates" --config=sh:handler=clone [paths...]
+    ```
+    the handler _clone_  free up duplicate extents, it is usable even with a read only
+    btrfs filesystem.  if reflinking read-only snapshots, `rmlint.sh` must be run with
+    -r option and with root privileges.
+
+    The handler _reflink_ creates reflinks to the original for identical files.
+
     It has [Benchmarks
     ](https://rmlint.readthedocs.io/en/latest/benchmarks.html?highlight=fast#benchmarks)
-    showing it is quicker than fdupes, rdfind, dupd ... but no comparison with _jdupes_
-    or _duff_.
+    showing it is quicker than fdupes, rdfind, dupd ... but no comparison with _jdupes_.
 
+    -   [rmlint tutorial](https://github.com/sahib/rmlint/blob/master/docs/tutorial.rst).
+    -   [rmlint documentation](https://rmlint.readthedocs.io/en/latest/)
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
