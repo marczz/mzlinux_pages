@@ -106,6 +106,8 @@ and {{< iref "hdrive#partitioning" "partitioning" >}}.
         ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/ch-xfs),
         [Tuning XFS
         ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html-single/performance_tuning_guide/index#sect-Red_Hat_Enterprise_Linux-Performance_Tuning_Guide-Configuring_file_systems_for_performance-Tuning_XFS)
+-  {{< wp "Stratis (configuration daemon)" >}} is a rust userland daemon provides ZFS/Btrfs-style features by
+   integrating LVM and XFS. RedHat deprecated Btrfs in favor of Stratis.
 
 ## Btrfs
 {{< wp "Btrfs" >}} (GPL) is a copy-on-write file system which is an improvement of
@@ -118,12 +120,12 @@ compresssion.
     it holds on the Home page a [list of Guides and articles
     ](https://btrfs.wiki.kernel.org/index.php/Main_Page#Guides_and_usage_information)
     and the [Btrfs FAQ](https://btrfs.wiki.kernel.org/index.php/FAQ).
--   [Red Hat Storage Administration Guide - Chapter 6. Btrfs
-    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/ch-btrfs)
 -   [Suse storage administration: Btrfs filesystem
-    ](https://www.suse.com/documentation/sles-12/stor_admin/data/sec_filesystems_major_btrfs.html),
-    [Btrfs Error: No space is left on device
-    ](https://www.suse.com/documentation/sles11/stor_admin/data/trbl_btrfs_volfull.html).
+    ](https://documentation.suse.com/sles/15-SP3/html/SLES-all/cha-filesystems.html#sec-filesystems-major-btrfs)
+    -   [Troubleshouting filesystems
+        ](https://documentation.suse.com/sles/15-SP3/html/SLES-all/cha-filesystems.html#sec-filesystems-trouble)
+    -   [OpenSuse Support Data Base: BTRFS](https://en.opensuse.org/SDB:BTRFS)
+        covers important diagnostic and repair steps for btrfs.
 -   [Oracle Linux -  The Btrfs File System
     ](https://docs.oracle.com/cd/E37670_01/E37355/html/ol_btrfs.html)
 -   [Debian Wiki: Btrfs](https://wiki.debian.org/Btrfs)
@@ -137,10 +139,15 @@ compresssion.
     {{< man "btrfs-show(8)" >}}, {{< man "mkfs.btrfs(8)" >}} and other in brtfs-tools.
 -   [Ubuntu Community Help: Btrfs
     ](https://help.ubuntu.com/community/btrfs).
+-   [Btrfs Maintenance](https://github.com/kdave/btrfsmaintenance/blob/master/)
+    (GPL-2.0)
+    a set of scripts to automate scrub, balance, trim or defragmentation.
 -   Marc Merlin [Btrfs overview, LinuxCon 2014
     ](http://marc.merlins.org/linux/talks/Btrfs-LC2014-JP/Btrfs.pdf)
     _(pdf)_
     and [Linux Btrfs posts](http://marc.merlins.org/perso/btrfs/)
+-   [Btrfs: Subvolumes and snapshots [LWN.net]](https://lwn.net/Articles/579009/)
+    explains quotas.
 -   [compsize](https://github.com/kilobyte/compsize) (GPL)
      takes a list of files (given as arguments) on a btrfs filesystem and measures used
      compression types and effective compression ratio.
@@ -155,6 +162,84 @@ To summarize: a raw partition has a light performance benefit, but you can no lo
 shrink or move online. Lvm allow to use pvmove.
 Using subvolumes instead of LV will increase performances and avoid dupliacate data
 storage, but a single subvolume can use all space.
+
+### Btrfs backup
+
+-   [Snapper](https://en.opensuse.org/Portal:Snapper) (GPL-2.0)
+    is the most popular btrfs backup tool.
+    -   [Snapper documentation](http://snapper.io/documentation.html),
+        [Snapper FAQ](http://snapper.io/faq.html)
+    -   [Snapper - Github](https://github.com/openSUSE/snapper) (GPL-2.0).
+    -   [System Recovery and Snapshot Management with Snapper | SUSE Administration
+        Guide](https://documentation.suse.com/sles/12-SP4/html/SLES-all/cha-snapper.html)
+
+We use {{< man "btrfs-send" >}} and {{< man "btrfs-receive" >}} for transferring
+snapshots.
+
+This is described in
+[Incremental Backup - btrfs Wiki](https://btrfs.wiki.kernel.org/index.php/Incremental_Backup)
+
+The wiki gives also few of the scripts created to implement an incremental backup.
+
+
+-   [btrbk](https://digint.ch/btrbk/) (GPL-3.0)
+    is a single perl script, which allows creation of backups from multiple sources to
+    multiple destinations at once, with ssh and configurable retention support
+    (daily/weekly/monthly). _brtbk_ is packaged in Debian.
+    -   [btrbk - README](https://digint.ch/btrbk/doc/readme.html)
+    -   [btrbk - GitHub](https://github.com/digint/btrbk)
+-   [btrfs-backup](https://github.com/bob1de/btrfs-backup) (MIT License)
+    incremental atomic backups for btrfs using snapshots with local and/or remote storage.
+    written in python.
+-   [GitHub - nachoparker/btrfs-snp](https://github.com/nachoparker/btrfs-snp) and
+    [GitHub - nachoparker/btrfs-sync](https://github.com/nachoparker/btrfs-sync)
+    Automatic BTRFS snapshots and sync of BTRFS snapshots, locally or through SSH
+    written in bash _active, but few commits_.
+    -   [Easy sync BTRFS snapshots with btrfs-sync
+        ](https://ownyourbits.com/2018/03/09/easy-sync-of-btrfs-snapshots-with-btrfs-sync/)
+        by nachoparker.
+    -   [Schedule BTRFS snapshots with btrfs-snp
+        ](https://ownyourbits.com/2017/12/27/schedule-btrfs-snapshots-with-btrfs-snp/)
+        by nachoparker.
+-   [btrfs-sxbackup](https://github.com/masc3d/btrfs-sxbackup) (GPL-2.0)
+    a python Btrfs snapshot backup utility with push/pull support via ssh, retention,
+    email notifications, compression of transferred data, syslog logging.
+-   [buttersink](https://github.com/AmesCornish/buttersink) (GPL-3.0)
+    a python script to synchronize btrfs snapshots like rsync. last activity 2018.
+
+     Sources and destinations can be local btrfs file systems, remote btrfs file systems
+     over SSH, or S3 buckets.
+-   [snapbtrex](https://github.com/yoshtec/snapbtrex) (BSD-2-Clause License)
+    a python script which is an extended version of
+    [SnapBtr](https://btrfs.wiki.kernel.org/index.php/SnapBtr)
+    capable of transferring snapshots to remote systems.
+-   [snap-sync ](https://github.com/wesbarnett/snap-sync) (GPL-2.0)
+    a script to backup snapper snapshots to external drive;
+    -   [Backup Snapper Snapshots With snap-sync - JWillikers
+        ](https://www.jwillikers.com/backup-snapper-snapshots-with-snap-sync).
+    -   [rzerres/dsnap-sync](https://github.com/rzerres/dsnap-sync)
+        is a fork of wesbarnett/snap-sync.
+-   [baksnapper](https://github.com/plattfot/baksnapper) (GPL-3.0)
+    a bash script for backing up snapper snapshots on a drive or through ssh on a remote
+    server, using btrfs send and receive.
+-   [UrBackup - Client/Server](https://www.urbackup.org/)
+    save backups as btrfs sub-volumes. Incremental backups are created using btrfs
+    snapshots. Blocks which are not changed in files in incremental backups are stored
+    only once using cross-device reflinks. This is also explained in the
+    [UrBackup Developer Blog](https://blog.urbackup.org/) where you find
+    [File Backup Storage with Btrfs Snapshots
+    ](https://blog.urbackup.org/83/file-backup-storage-with-btrfs-snapshots).
+
+    Urbackup propose binaries for windows and packages for main Linux distribution
+    including [Debian](https://www.urbackup.org/download.html#server_debian).
+
+Tutorials on how to make backup using btrfs send/receive:
+
+-   [Marc's Blog: Doing Fast Incremental Backups With Btrfs Send and Receive
+    ](http://marc.merlins.org/perso/btrfs/post_2014-03-22_Btrfs-Tips_-Doing-Fast-Incremental-Backups-With-Btrfs-Send-and-Receive.html)
+    _2014_.
+-   [NAS Backups, Part 2: Btrfs send / receive
+    ](https://starbeamrainbowlabs.com/blog/article.php?article=posts%2F472-nas-backups-part-2-btrfs-send-recieve.html)
 
 ## Btrfs deduplication {#btrfs_dedupe}
 Block deduplication ib btrfs is done when we use the `cp --reflink` command when doing a
@@ -178,7 +263,10 @@ Some file deduplication programs listed in the
     built-in checksum from BTRFS csum-tree, instead of reading file blocks and computing
     checksum itself. This hugely improves the performance.
 
--   [Duperemove](http://markfasheh.github.io/duperemove/) (GPL-2.0)
+    To use dduper you need to patch `btrfs-progs` with a patch included in the
+    repository.
+-   <a name="duperemove"></a>
+    [Duperemove](http://markfasheh.github.io/duperemove/) (GPL-2.0)
     finds duplicated extents and submits them to the kernel for deduplication.
     When given a list of files it will hash their contents on a block by block basis and
     compare those hashes to each other, finding and categorizing blocks that match each
@@ -801,7 +889,7 @@ _Bibilop_ is packaged in Debian.
 
 # Filesystem Deduplication {#dedup}
 
-See {{< #btrfs_dedupe" "above" >}} for btrfs block deduplication.
+See {{< iref "#btrfs_dedupe" "above" >}} for btrfs block deduplication.
 
 -   Wikipedia: {{< wp "List of duplicate file finders" >}}
 
@@ -811,7 +899,10 @@ comparing files, either only hashsum, and here the hash algorithm mater, or hash
 byte to byte comparison when the hash is the same.
 
 The functionalities differ also greatly, and are important if you want more than a list
-of duplicate files.
+of duplicate files, program like {{< iref "#czkwaka" "czkwaka" >}},
+{{< iref "#fslint" "fslint"  >}}, {{< iref "#rmlint" "rmlint" >}} can detect a lot of
+other anomalies on your filesystem like  non-stripped binaries. broken symlinks, empty
+files or directories, broken user or group ID.
 
 To summarize benchmarks on the quicker side we find _fclone_, _yadf_ (on ssd only),
 _ffdf_, _rdfind_ (on hdd only).
@@ -828,7 +919,7 @@ development like [yadf](https://github.com/jRimbault/yadf),
 finders _fclone_ may be preferred.
 
 
--   [czkawka](https://qarmin.github.io/czkawka/) (MIT license)
+-   <a name="czkwaka"></a>[czkawka](https://qarmin.github.io/czkawka/) (MIT license)
     is a rewrite of _fslint_ in rust. It has a GTK3 GUI and a command line
     interface.
  -  [Duff](https://github.com/elmindreda/duff)
@@ -837,7 +928,7 @@ finders _fclone_ may be preferred.
 -   [fclones](https://github.com/pkolaczk/fclones) (MIT License) is a rust command line
     duplicate file finder and remover.  the benchmark shows it as a lot faster than
     _czkawka_, _rmlint_, _jdupes_, _fdupes_, rdfind_.
--   [fslint](http://www.pixelbeat.org/fslint/)
+-   <a name="fslint"></a>[fslint](http://www.pixelbeat.org/fslint/)
     a python app which finds duplicate files, problematic filenames, temporary files,
     bad symlinks, empty directories. It includes a GTK+ GUI as well as a command line
     interface. _It is in Debian._
@@ -858,17 +949,29 @@ finders _fclone_ may be preferred.
 -   <a name="rmlint"></a>[rmlint](https://github.com/sahib/rmlint)
     finds duplicate files & directories, nonstripped binaries, broken symlinks, empty
     files, recursive empty directories, files with broken user or group id.
+    _It is packaged in Debian._
 
     _rmlint_ has an option `rmlint --dedupe` to deduplicate blocks on btrfs filesystems.
     you use it by first looking at duplicates with
     ``` sh
     rmlint --types="duplicates" --config=sh:handler=clone [paths...]
     ```
-    the handler _clone_  free up duplicate extents, it is usable even with a read only
+    the handler _clone_  free up duplicate extents, using
+    {{< man "ioctl_fideduperange" >}} it is usable even with a read only
     btrfs filesystem.  if reflinking read-only snapshots, `rmlint.sh` must be run with
     -r option and with root privileges.
 
-    The handler _reflink_ creates reflinks to the original for identical files.
+    According to this [post](https://unix.stackexchange.com/a/428253)
+    > The handler _reflink_ creates reflinks to the original for identical files.
+    > Reflink deletes the duplicate file and creates a new file in its place which
+    > is a clone of the original file. The metadata of the duplicate is lost,
+    > although rmlint does its best to preserve the metadata via some trickery with touch -mr.
+    >
+    > Clone uses the BTRFS_IOC_FILE_EXTENT_SAME ioctl (or, in the latest version,
+    > the FIDEDUPERANGE ioctl) which asks the kernel to check if the files are
+    > identical, if so then make them share the same data extents. They keep their
+    > original metadata. It's arguably safer than reflink because it's done atomically
+    > by the kernel, and because it checks that the files are still identical.
 
     It has [Benchmarks
     ](https://rmlint.readthedocs.io/en/latest/benchmarks.html?highlight=fast#benchmarks)
@@ -876,6 +979,15 @@ finders _fclone_ may be preferred.
 
     -   [rmlint tutorial](https://github.com/sahib/rmlint/blob/master/docs/tutorial.rst).
     -   [rmlint documentation](https://rmlint.readthedocs.io/en/latest/)
+
+    The [btrfs Wiki](https://btrfs.wiki.kernel.org/index.php/Deduplication)
+    gives an example of deduplicating with _rmlinT_:
+    ``` sh
+    $ rmlint --types="duplicates" --config=sh:handler=clone [paths...]
+    $ ./rmlint.sh
+    ```
+    `rmlint.sh` must be done as root if reflinking read-only snapshots.
+
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
