@@ -91,25 +91,57 @@ title: Emacs
 -   [Jonas Bernoulli: EmacsAir](https://emacsair.me/).
 
 # Emacs compatibles terminal editors {#terminal_editors_emacslike}
--   [John E. Davis (JED)](http://space.mit.edu/home/davis/)
+-   [Getting started with lightweight alternatives to GNU Emacs
+    ](https://opensource.com/article/20/3/lightweight-emacs)
+    is a comparison of MicroEmacs, Zile, Jove,
+
+
+-   [jed](https://www.jedsoft.org/jed/)
+    a small text editor that can be configured and extended in the S-Lang scripting
+    language.
+    It comes with an emulation of Emacs, an provides many
+    [editing modes](https://jedmodes.sourceforge.io/modes/). _It is packaged in Debian._
+    -   [Jed Quick Reference](https://www.guidogonzato.it/jed/jed-quickref.html).
+    -   [The Home Page of John E. Davis (JED)](http://space.mit.edu/home/davis/)
 -   [Vimacs](http://www.algorithm.com.au/code/vimacs/about/index.html)
     is an emulation of Emacs inside the insert mode of Vim.
 -   [e3](https://sites.google.com/site/e3editor/)
-    a tiny editor (225k) written in asm for x86 linux optional emacs
-    key bindings (e3vm).
--   [Jasspa's microEmacs](http://www.jasspa.com) (GPL)
-    light Emacs clone written in C _Maintenance stopped in 2009_
+    a tiny editor (225k, 10k binary) written in asm for x86/amd64 linux, optional emacs,
+    vi, wordstar, pico, nedit key bindings. _Packaged in Debian._
+-   [jEdit](http://www.jedit.org/) (GPL-2.0)
+    a java small editor with support for syntax highlighting in more than 140 languages.
+    It has a predefined keymap for Emacs. _Packaged in Debian_
 -   [Joe](http://joe-editor.sourceforge.net/) (GPL)
     is a terminal-based screen editor written in C. Joe can be
     customized to emulate pico, emacs _under the name jmacs_,
     wordstar. Joe is utf-8 compliant and has mouse support. The
     resident size for joe 3.7 with no buffer loaded is 2MB with 1.1M
     shared for whatever interface you use joe, jmacs, jpico, jstar.
--   [jupp]() (GPL) is the portable version of joe. It can be linked
-    with dietlibc or klibc for rescue systems and with µClibc for ARM
+    _It is packaged in Debian as well as the jupp version jor-jupp._
+-   [jove](https://github.com/jonmacs/jove)
+    a compact,  Emacs compatible text-editor. _packaged in Debian._
+-   [jupp](http://www.mirbsd.org/jupp.htm) (GPL)
+    is the portable version of joe. It can be linked with dietlibc or klibc for rescue
+    systems and with µClibc for ARM _packaged in Debian as joe-jupp._
+    It has UTF-8 support.
+-   [mg](https://github.com/hboetes/mg) (BSD License)
+    an emacs compatible micro editor, It does not support UTF-8. _Packaged in Debian_.
+    -   [mg tutorial](https://raw.githubusercontent.com/hboetes/mg/master/tutorial)
 -   [remacs](https://github.com/Wilfred/remacs) (GPL 3.0)
     is a port to Rust of emacs. In 2020 it is a very active project. It provides a
     docker file to run the development version.
+-   [uemacs](https://git.kernel.org/pub/scm/editors/uemacs/uemacs.git)
+    known also as micro emacs. The software was ritten by Dave Conroy in 1985, and
+    further developed by Daniel M. Lawrence. This version is customized by Linus
+    Torvalds from the version 3.9 of original authors. uemacs has UTF-8 support.
+    -   [Uemacs - GitHub](https://github.com/torvalds/uemacs)
+    -   [uemacs 4.0 manual](https://www.aquest.com/emacs.pdf)
+        by Daniel M. Lawrence.
+    -   [Jasspa's microEmacs](http://www.jasspa.com) (GPL)
+        is an other fork of micro emacs. _Maintenance stopped in 2009_
+-   [Zile](https://www.gnu.org/software/zile/) (GPL)
+    a small Emacs clone. Zile is a customizable, self-documenting real-time display
+    editor. Zile has no UTF-8 support. _Packaged in Debian._
 
 # Elisp {#elisp}
 -   [gnu: An Introduction to Programming in Emacs Lisp
