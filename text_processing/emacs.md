@@ -38,18 +38,21 @@ title: Emacs
 -   [Emacs Stack Exchange](https://emacs.stackexchange.com/)
 -   [r/emacs - reddit](https://www.reddit.com/r/emacs/) (
     ([rss](http://www.reddit.com/r/emacs.rss))
+-   [Official Emacs reference card (pdf)
+    ](https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf)
 
 # Emacs tutorials
 -   [Emacs Wiki: EmacsNiftyTricks
     ](http://www.emacswiki.org/emacs/EmacsNiftyTricks)
 -   [WikEmacs](http://wikemacs.org/wiki/Main_Page)
+-   [A Tutorial Introduction to Emacs
+    ](https://www2.lib.uchicago.edu/keith/tcl-course/emacs-tutorial.html)
 -   [comp.emacs at rtfm.mit.edu
     ](ftp://rtfm.mit.edu/pub/usenet/comp.emacs/)
 -   [Emacs Mini Manual
     ](https://boruch-baum.github.io/emacs_mini_manual/)
     contains a short emacs manual and an helm and projectile tutorial.
-    The [org-mode source reository
-    ](https://github.com/Boruch-Baum/emacs_mini_manual/)
+    The [org-mode source](https://github.com/Boruch-Baum/emacs_mini_manual/)
     is on GitHub.
 -   [Emacs Rocks!](http://emacsrocks.com/) a serie of emacs videos.
 -   [Master Emacs in one year
@@ -158,248 +161,49 @@ title: Emacs
     ](http://nic.ferrier.me.uk/blog/2012_07/tips-and-tricks-for-emacslisp)
 -   [Xah Emacs Lisp Tutorial](http://ergoemacs.org/emacs/elisp.html)
 
-# Emacs color themes {#emacs_themes}
-See also {{< iref "desktop#color_themes" "Desktop Color themes" >}}.
+# Emacs native-compile
+Emacs' branch feature/native-comp support native compilation which adds support for
+compiling EmacsLisp to native code using libgccjit.
 
-There are a lot of color themes provided with emacs, in the
-`/usr/share/emacs/<version>/etc/themes` you find _as far of emacs 26_:
-adwaita, deeper-blue, dichromacy, [leuven], light-blue, manoj-dark, misterioso,
-tango-dark, tango, tsdh-dark, tsdh-light, wheatgrass, whiteboard.
+The native compilation branch is now merged into Emacs’s master branch and is slated for
+inclusion in Emacs 28.
 
+-   [EmacsWiki: Gcc Emacs](https://www.emacswiki.org/emacs/GccEmacs)
+-   [EmacsWiki: Emacs Snapshot And Debian
+    ](https://www.emacswiki.org/emacs/EmacsSnapshotAndDebian)
+-   [Bringing GNU Emacs to Native Code - GCCEMACS_proceeding.pdf
+    ](https://zenodo.org/record/3736363/files/GCCEMACS_proceeding.pdf)
 
-in elpa you find more than 260
-packages with themes, and in github there are around 70 packages with
-[emacs-theme topic](https://github.com/topics/emacs-theme).
+-   [Speed up Emacs with libjansson and native elisp compilation
+    ](https://www.masteringemacs.org/article/speed-up-emacs-libjansson-native-elisp-compilation)
+    Emacs 27 now supports libjansson, a C library for working with JSON.
+-   [GNU Emacs snapshot packages](http://emacs.secretsauce.net/)
+    Debian sid package with native compilation and X, no Pure GTK. Only for X11 (and
+    Xwayland).
+-   [Emacs NG](https://emacs-ng.github.io/emacs-ng/)
+    includes  native compilation, typescript, threading, async I/O, and WebRender.
+    -   [emacs-ng - GitHub](https://github.com/emacs-ng/emacs-ng)
 
-In emacs version ≥ 24 you use [custom themes
-](https://www.gnu.org/software/emacs/manual/html_node/emacs/Custom-Themes.html#Custom-Themes).
+## Emacs pgtk
+Emacs has had a GTK port for many years, but that port still uses X11 directly for many
+things, so you can not use it in Wayland without Xwayland.
 
-To use a theme you use `customize theme` or `load-theme` you have there the possibility
-to enable a theme, that was not previously enabled.
-To disable a theme use `disable-theme`.
+The Emacs _Pure GTK_ port, drop x11 dependencies it allows Emacs to run directly on
+Wayland.
 
-All the enabled themes are in the
-list `custom-enabled-themes`. If you always want to enable only one theme you can
-advertise this function as indicated in [this stack overflow answer
-](https://stackoverflow.com/a/15595000):
+The branch pgtk-nativecomp can be found in
+[GitHub - flatwhatson/emacs](https://github.com/flatwhatson/emacs).
 
-``` elisp
-(defadvice load-theme
-  (before theme-dont-propagate activate)
-  (mapcar #'disable-theme custom-enabled-themes))
-```
-
-
-All the themes should be in a directory from the list `custom-theme-load-path`, for which
-you can define a custom value. Note that themes installed from MELPA use to add
-themselves to `custom-theme-load-path` in their autoloads
-
-The legacy way of setting a color theme was with the package `color-thes.el`, it was
-providing many themes that are now moved in the package [replace-colorthemes
-](https://github.com/emacs-jp/replace-colorthemes).
-
-
-The [use of legacy color themes](https://www.emacswiki.org/emacs/ColorThemes) is
-described in EmacsWiki along additionals
-[color theme questions](https://www.emacswiki.org/emacs/ColorThemeQuestions).
-
-To conceive, or customize a color theme you will have to change faces, so you need to
-change the palette, for that packages like _rainbow-mode_ which colorize color names in
-buffers, or [palette and facemenu+](https://www.emacswiki.org/emacs/ColorPalette) are
-very usefull. _palette_ provides a general color palette that you can use to examine
-color properties or choose colors and and _faceMenu+_ gives point-and-click access to
-faces and their colors, including access to the color palette.
-
-On GitHub the theme first by numbers of stars is the _dark_ theme [zenburn]. It is also
-the first by [popularity on MELPA](https://emacsthemes.com/popular/index.html).
-[zenburn] is a low contrast color themes port of the popular
-[zenburn for vim](http://kippura.org/zenburnpage/). Some [zenburn screen shots
-](https://emacsthemes.com/themes/zenburn-theme.html) are available here and also in
-[emacs theme gallery].
-
-The author of [zenburn][], Bozhidar Batsov who authored and maintain also
-{{< iref "#prelude" "Emacs distribution Prelude" >}}; also maintain an other theme
-second by popularity, and first _light_ theme, [solarized][]. [solarized][] is a port
-of  [solarized for vim].
-
-Some screenshots are
-[available here](https://emacsthemes.com/themes/solarized-themes.html).
-
-One of the more popular set of themes, not only in emacs but on the desktop is
-base16. In [base16 collection of themes for emacs][base16].
-Screenshots of different variants of base16 are
-[in emacsthemes](https://emacsthemes.com/pages/search.html?search=base16) and also
-in [base16 theme previews](https://belak.github.io/base16-emacs/).  you find support for
-auctex, centaur-tabs, circe, avy, clojure, diff-hl, diff, dired+, doom, ediff, erc,
-eshell, flycheck, flymake, flyspell, git-gutter, gnus, helm, ido, idris-mode, imenu,
-ivy, jabber, js2, js3, magit, org-mode, rainbow-delimiters, erb,
-[telephone-line](https://github.com/dbordak/telephone-line), w3m, whitespace-mode.
-
-[Gruvbox is a port to emacs of the
-[vim theme Gruvbox](https://github.com/morhetz/gruvbox) there are three light and three
-dark versions. It has a large support for packages, see below the
-[support table](#package_support2)
-
-
-## Colorless Themes
-"Colorless themes" are designed to reduce the visual impact of syntax highlighting
-some are themes based on the plan9 editor acme, like the vim themes
-[vacme](https://github.com/olivertaylor/vacme),
-[nofrils][nofrils for vim]
-[parchment] is also available for both vim and emacs.
-
-In emacs we have:
-
--   [parchment][] is derived from [nofrils] and [leuven] but avoid the agressive white
-    background of [leuven].  It has support for markdown, org mode, show-paren,
-    whitespace, diff, [rainbow-delimiters], rst, calendar, company, dired, [diredfl][],
-    elfeed, emms, eshell, evil, [geiser]( http://www.nongnu.org/geiser/), gnus, [guix](
-    https://emacs-guix.gitlab.io/website/), helm,
-    [hi-lock](https://github.com/emacs-mirror/emacs/blob/master/lisp/hi-lock.el), ido,
-    info, ivy, git-gutter, magit, mu4e, [rainbow-delimiters], swiper, term,
-    [undo-tree](https://github.com/apchamberlain/undo-tree.el), transient, which-key.
--   [nofrils](https://gitlab.com/esessoms/nofrils-theme), a port to emacs from
-    [nofril for vim] with
-    Minimal syntax highlighting to reduce distractions. Some coloring is still available, to
-    attenuate comments and enhance errors.  with dark, light, and sepia variations.
-    [nofrils] has no support for packages font locking.
--   [emacs acme theme](https://github.com/tarrsalah/emacs-acme-theme)
-    _no support for packages._
--   [eink](https://github.com/maio/eink-emacs)  support for gnus, helm, ido, js2, org
-    mode, magit, dired, evil.
--   The members of the set of
-    [colorless-themes.el](https://git.sr.ht/~lthms/colorless-themes.el)
-
-    -   `nordless`, dark and blue, inspired by [nord].
-    -   `hydrangealess`, dark and magenta, inspired by [hydrangea].
-    -   `seagreenless`, light and seagreen.
-    -   `lavenderless`, purple and mint, inspired by [Lavender]
-    -   `nofrils-darkless`, a clone of [nofrils-dark][nofrils].
-    -   `darkless`, dark and white, inspired by nofrils, but with less colours
-    -   `chocolateless`, chocolate taste, inspired by [chocolate].
-    -   `einkless`, light theme, inspired by [eink].
-    -   `broceliande`, green and cyan.
-
-    They support powerline, whitespace, compilation, rst, org mode, magit, markdown, helm,
-    company, tuareg.
--   [plan9 theme](https://github.com/john2x/plan9-theme.el) which support compilation,
-    grep, ag, isearch, table, [ledger](https://www.ledger-cli.org/), clojure, diff,
-    diff-hl, dired/dired+/dired-subtree, elfeed, erc, company, flycheck, git-gutter,
-    hl-line/hl-sexp, ido, ivy, js2, lsp-mode, magit, sml-mode-line, web-mode, org mode,
-    mue4, message.
--   [punpun](https://github.com/wasamasa/punpun-theme) .
--   [tao][] a two uncoloured color themes for Emacs: tao-yin and tao-yang (dark and
-    sepia). It support compilation, grep, make, isearch, newsticker, ace, ack, auctex,
-    [auto-complete](https://www.emacswiki.org/emacs/AutoComplete), android mode,
-    [bm (visual bookmarks)][bm], clojure-test-mode, diff,
-    dired+, ediff, elfeed, ert, eshell, flycheck, flymake, flyspell, erc, git-gutter,
-    gnus, guide-key, helm, hl-line-mode, ido, js2, jsx, jabber, ledger,
-    [macrostep](https://github.com/joddie/macrostep), magit, egg, message, mew,
-    mic-paren, mingus, nav, mu4e, [mumamo][], org
-    mode, outline, p4, proofgeneral, [rainbow delimiters], rcirc, rpm mode, rst-mode,
-    sh-mode, show-paren, [slime][], speedbar,
-    [tabbar](https://www.emacswiki.org/emacs/TabBarMode), term,
-    [undo-tree](https://github.com/apchamberlain/undo-tree.el), w3m, web mode,
-    whitespace, wanderlust, markdown, [swoop][],
-    company, neotree, geiser, tuareg, avy, ace-window, ivy, hideshow, circe, lui,
-    racket.
--   [leuven] is a theme in an color theme on white background, with also a dark variant. It has
-    been conceived also for org-mode highlighting. Some [screenshots are in emacsthemes
-    ](https://emacsthemes.com/themes/leuven-theme.html) some others in
-    [emacs-theme-gallery] and also in [leuven] readme page.
-
-    It has support for markdown, gnus,
-    message, diff, smerge, ediff, flyspell, semantic,
-    [anzu](https://github.com/syohex/emacs-anzu), bbdb, calendar, calfw,
-    change-log, circe, company, compilation, diff-hl, dircolors, dired, dired+, flycheck,
-    google-translate, helm, info, js2-mode, magit, nxml,
-    [rainbow-delimiters],
-    showparen, svn, vc-annotate, w3m, [ztree
-    ](https://github.com/manateelazycat/lazycat-emacs/tree/master/site-lisp/extensions/ztree).
-
-    [leuven] also instigates [eziam] and [parchment].
-
--   [eziam]
-    draw from [leuven] and [tao]. It provides
-    _light_,_dusk_, and _dark_ variants. Unlike [tao] it keeps some very minimal color
-    indications, while remaining mainly grayscale, with no color for syntax.
-    The package support is nearly same than [tao].
-
--   [eink] is a minimalistic color theme for Emacs emulating reading on E Ink devices.
-
-
-
-## Org aware color themes
-
-
-Worg has a page on [org color themes](https://orgmode.org/worg/org-color-themes.html)
-which contain a list of color themes that are aware of Org. There is also a page of
-[screenshots of some of these themes
-](https://orgmode.org/worg/color-themes-screenshot.html).
-
-
-## Markdown aware themes
-
-Many theme packages have _some_ support for Markdown mode, alas very often this support
-is only partial or down for a previous version of the mode.
-
-Among the havocs of this theme support, I noticed
-
--   Very often `markdown-inline-face` is not defined, so it takes it's value in
-    `markdown-mode.el`, so it inherit of `markdown-code-face` and
-    `font-lock-constant-face`. `markdown-code-face` derive from `fixed-pitch` that takes
-    the family monospace, `font-lock.el` define a default for
-    `font-lock-constant-face`: `dark cyan` on light background; and `Aquamarine` on
-    dark backgrounds.
-
-    So if nothing else is defined we end up with `dark cyan`, `monospace`, or
-    `Aquamarine`, `monospace` which may be convenient on many backgrounds, light or
-    dark.
-
-    Among the themes defining `markdown-inline-face` value I have noted [parchment],
-    [leuven], [tao]
-
--   The list are initiated by the character `*` or `-` and colored with
-    `markdown-list-face`, inheriting from ` markdown-markup-face` inheriting from
-    `shadow`. In `faces.el` a default foreground is specified depending of the
-    background grey70, grey50, green or yellow.
-
-    When the theme has a black or very dark background, and you use the default this
-    _shadow_ face don't catch the eye.
-
-
-## Asciidoc Aware Themes
-
-[Asciidoc Mode][adoc] don't define faces, but rely on [Markup Faces][markup-faces] which
-is a face package tailored for markup languages, as [font-lock][] is used for programming
-language.
-
-
-It seems that only few themes support [Markup Faces][markup-faces], among them you find
-[zenburn][].
-
-<!---------------------------- Themes ---------------------------------->
-[emacs theme gallery]: https://pawelbx.github.io/emacs-theme-gallery/
-[base16]:  https://github.com/belak/base16-emacs
-[chocolate]: https://github.com/SavchenkoValeriy/emacs-chocolate-theme
-[eink]: https://github.com/maio/eink-emacs
-[emacs theme gallery]: https://pawelbx.github.io/emacs-theme-gallery/
-[eziam]: https://github.com/thblt/eziam-theme-emacs
-[gruvbox]: https://github.com/Greduan/emacs-theme-gruvbox
-[interaction-log]: https://github.com/michael-heerdegen/interaction-log.el
-[hydrangea]: https://github.com/yuttie/hydrangea-emacs
-[leuven]: https://github.com/fniessen/emacs-leuven-theme
-[nord]: https://github.com/arcticicestudio/nord
-[Lavender]: https://github.com/emacsfodder/emacs-lavender-theme/
-[manoj]: https://github.com/emacs-mirror/emacs/blob/master/etc/themes/manoj-dark-theme.el
-[nofrils]: https://gitlab.com/esessoms/nofrils-theme
-[nofrils for vim]: https://github.com/robertmeta/nofrils
-[parchment]: https://github.com/ajgrf/parchment
-[solarized]: https://github.com/bbatsov/solarized-emacs
-[tao]: https://github.com/11111000000/tao-theme-emacs
-[zenburn]: https://github.com/bbatsov/zenburn-emacs
-[Zenburn for vim]: http://kippura.org/zenburnpage/
-
+-   [Native compilation and "pure" GTK in Emacs
+    ](http://www.cesarolea.com/posts/emacs-native-compile/).
+-   [Building GNU Emacs with pure GTK and native compilation
+    ](https://deathwish.info/2020/08/01/pgtk-nativecomp/)    .
+-   [GitHub - konstare/emacs-gcc-pgtk](https://github.com/konstare/emacs-gcc-pgtk)
+    Dockerfile for building emacs  pgtk-nativecomp for Ubuntu.
+-   [GitHub - mpsq/emacs-gcc-wayland-devel-builder
+    ](https://github.com/mpsq/emacs-gcc-wayland-devel-builder)
+    Emacs with native compilation ("gcc") and Wayland support ( pgtk-nativecomp ), aur package.
+-
 
 # Emacs configuration
 -   [EmacsWiki: Dot Emacs Structuring
@@ -911,6 +715,248 @@ https://emacs.stackexchange.com/questions/12235/edit-file-as-root-over-when-alre
 -   Multihops is also commented in this [stack exchange answer
     ](http://stackoverflow.com/a/16408592/965798)
 -->
+# Emacs color themes {#emacs_themes}
+See also {{< iref "desktop#color_themes" "Desktop Color themes" >}}.
+
+There are a lot of color themes provided with emacs, in the
+`/usr/share/emacs/<version>/etc/themes` you find _as far of emacs 26_:
+adwaita, deeper-blue, dichromacy, [leuven], light-blue, manoj-dark, misterioso,
+tango-dark, tango, tsdh-dark, tsdh-light, wheatgrass, whiteboard.
+
+
+in elpa you find more than 260
+packages with themes, and in github there are around 70 packages with
+[emacs-theme topic](https://github.com/topics/emacs-theme).
+
+In emacs version ≥ 24 you use [custom themes
+](https://www.gnu.org/software/emacs/manual/html_node/emacs/Custom-Themes.html#Custom-Themes).
+
+To use a theme you use `customize theme` or `load-theme` you have there the possibility
+to enable a theme, that was not previously enabled.
+To disable a theme use `disable-theme`.
+
+All the enabled themes are in the
+list `custom-enabled-themes`. If you always want to enable only one theme you can
+advertise this function as indicated in [this stack overflow answer
+](https://stackoverflow.com/a/15595000):
+
+``` elisp
+(defadvice load-theme
+  (before theme-dont-propagate activate)
+  (mapcar #'disable-theme custom-enabled-themes))
+```
+
+
+All the themes should be in a directory from the list `custom-theme-load-path`, for which
+you can define a custom value. Note that themes installed from MELPA use to add
+themselves to `custom-theme-load-path` in their autoloads
+
+The legacy way of setting a color theme was with the package `color-thes.el`, it was
+providing many themes that are now moved in the package [replace-colorthemes
+](https://github.com/emacs-jp/replace-colorthemes).
+
+
+The [use of legacy color themes](https://www.emacswiki.org/emacs/ColorThemes) is
+described in EmacsWiki along additionals
+[color theme questions](https://www.emacswiki.org/emacs/ColorThemeQuestions).
+
+To conceive, or customize a color theme you will have to change faces, so you need to
+change the palette, for that packages like _rainbow-mode_ which colorize color names in
+buffers, or [palette and facemenu+](https://www.emacswiki.org/emacs/ColorPalette) are
+very usefull. _palette_ provides a general color palette that you can use to examine
+color properties or choose colors and and _faceMenu+_ gives point-and-click access to
+faces and their colors, including access to the color palette.
+
+On GitHub the theme first by numbers of stars is the _dark_ theme [zenburn]. It is also
+the first by [popularity on MELPA](https://emacsthemes.com/popular/index.html).
+[zenburn] is a low contrast color themes port of the popular
+[zenburn for vim](http://kippura.org/zenburnpage/). Some [zenburn screen shots
+](https://emacsthemes.com/themes/zenburn-theme.html) are available here and also in
+[emacs theme gallery].
+
+The author of [zenburn][], Bozhidar Batsov who authored and maintain also
+{{< iref "#prelude" "Emacs distribution Prelude" >}}; also maintain an other theme
+second by popularity, and first _light_ theme, [solarized][]. [solarized][] is a port
+of  [solarized for vim].
+
+Some screenshots are
+[available here](https://emacsthemes.com/themes/solarized-themes.html).
+
+One of the more popular set of themes, not only in emacs but on the desktop is
+base16. In [base16 collection of themes for emacs][base16].
+Screenshots of different variants of base16 are
+[in emacsthemes](https://emacsthemes.com/pages/search.html?search=base16) and also
+in [base16 theme previews](https://belak.github.io/base16-emacs/).  you find support for
+auctex, centaur-tabs, circe, avy, clojure, diff-hl, diff, dired+, doom, ediff, erc,
+eshell, flycheck, flymake, flyspell, git-gutter, gnus, helm, ido, idris-mode, imenu,
+ivy, jabber, js2, js3, magit, org-mode, rainbow-delimiters, erb,
+[telephone-line](https://github.com/dbordak/telephone-line), w3m, whitespace-mode.
+
+[Gruvbox is a port to emacs of the
+[vim theme Gruvbox](https://github.com/morhetz/gruvbox) there are three light and three
+dark versions. It has a large support for packages, see below the
+[support table](#package_support2)
+
+
+## Colorless Themes
+"Colorless themes" are designed to reduce the visual impact of syntax highlighting
+some are themes based on the plan9 editor acme, like the vim themes
+[vacme](https://github.com/olivertaylor/vacme),
+[nofrils][nofrils for vim]
+[parchment] is also available for both vim and emacs.
+
+In emacs we have:
+
+-   [parchment][] is derived from [nofrils] and [leuven] but avoid the agressive white
+    background of [leuven].  It has support for markdown, org mode, show-paren,
+    whitespace, diff, [rainbow-delimiters], rst, calendar, company, dired, [diredfl][],
+    elfeed, emms, eshell, evil, [geiser]( http://www.nongnu.org/geiser/), gnus, [guix](
+    https://emacs-guix.gitlab.io/website/), helm,
+    [hi-lock](https://github.com/emacs-mirror/emacs/blob/master/lisp/hi-lock.el), ido,
+    info, ivy, git-gutter, magit, mu4e, [rainbow-delimiters], swiper, term,
+    [undo-tree](https://github.com/apchamberlain/undo-tree.el), transient, which-key.
+-   [nofrils](https://gitlab.com/esessoms/nofrils-theme), a port to emacs from
+    [nofril for vim] with
+    Minimal syntax highlighting to reduce distractions. Some coloring is still available, to
+    attenuate comments and enhance errors.  with dark, light, and sepia variations.
+    [nofrils] has no support for packages font locking.
+-   [emacs acme theme](https://github.com/tarrsalah/emacs-acme-theme)
+    _no support for packages._
+-   [eink](https://github.com/maio/eink-emacs)  support for gnus, helm, ido, js2, org
+    mode, magit, dired, evil.
+-   The members of the set of
+    [colorless-themes.el](https://git.sr.ht/~lthms/colorless-themes.el)
+
+    -   `nordless`, dark and blue, inspired by [nord].
+    -   `hydrangealess`, dark and magenta, inspired by [hydrangea].
+    -   `seagreenless`, light and seagreen.
+    -   `lavenderless`, purple and mint, inspired by [Lavender]
+    -   `nofrils-darkless`, a clone of [nofrils-dark][nofrils].
+    -   `darkless`, dark and white, inspired by nofrils, but with less colours
+    -   `chocolateless`, chocolate taste, inspired by [chocolate].
+    -   `einkless`, light theme, inspired by [eink].
+    -   `broceliande`, green and cyan.
+
+    They support powerline, whitespace, compilation, rst, org mode, magit, markdown, helm,
+    company, tuareg.
+-   [plan9 theme](https://github.com/john2x/plan9-theme.el) which support compilation,
+    grep, ag, isearch, table, [ledger](https://www.ledger-cli.org/), clojure, diff,
+    diff-hl, dired/dired+/dired-subtree, elfeed, erc, company, flycheck, git-gutter,
+    hl-line/hl-sexp, ido, ivy, js2, lsp-mode, magit, sml-mode-line, web-mode, org mode,
+    mue4, message.
+-   [punpun](https://github.com/wasamasa/punpun-theme) .
+-   [tao][] a two uncoloured color themes for Emacs: tao-yin and tao-yang (dark and
+    sepia). It support compilation, grep, make, isearch, newsticker, ace, ack, auctex,
+    [auto-complete](https://www.emacswiki.org/emacs/AutoComplete), android mode,
+    [bm (visual bookmarks)][bm], clojure-test-mode, diff,
+    dired+, ediff, elfeed, ert, eshell, flycheck, flymake, flyspell, erc, git-gutter,
+    gnus, guide-key, helm, hl-line-mode, ido, js2, jsx, jabber, ledger,
+    [macrostep](https://github.com/joddie/macrostep), magit, egg, message, mew,
+    mic-paren, mingus, nav, mu4e, [mumamo][], org
+    mode, outline, p4, proofgeneral, [rainbow delimiters], rcirc, rpm mode, rst-mode,
+    sh-mode, show-paren, [slime][], speedbar,
+    [tabbar](https://www.emacswiki.org/emacs/TabBarMode), term,
+    [undo-tree](https://github.com/apchamberlain/undo-tree.el), w3m, web mode,
+    whitespace, wanderlust, markdown, [swoop][],
+    company, neotree, geiser, tuareg, avy, ace-window, ivy, hideshow, circe, lui,
+    racket.
+-   [leuven] is a theme in an color theme on white background, with also a dark variant. It has
+    been conceived also for org-mode highlighting. Some [screenshots are in emacsthemes
+    ](https://emacsthemes.com/themes/leuven-theme.html) some others in
+    [emacs-theme-gallery] and also in [leuven] readme page.
+
+    It has support for markdown, gnus,
+    message, diff, smerge, ediff, flyspell, semantic,
+    [anzu](https://github.com/syohex/emacs-anzu), bbdb, calendar, calfw,
+    change-log, circe, company, compilation, diff-hl, dircolors, dired, dired+, flycheck,
+    google-translate, helm, info, js2-mode, magit, nxml,
+    [rainbow-delimiters],
+    showparen, svn, vc-annotate, w3m, [ztree
+    ](https://github.com/manateelazycat/lazycat-emacs/tree/master/site-lisp/extensions/ztree).
+
+    [leuven] also instigates [eziam] and [parchment].
+
+-   [eziam]
+    draw from [leuven] and [tao]. It provides
+    _light_,_dusk_, and _dark_ variants. Unlike [tao] it keeps some very minimal color
+    indications, while remaining mainly grayscale, with no color for syntax.
+    The package support is nearly same than [tao].
+
+-   [eink] is a minimalistic color theme for Emacs emulating reading on E Ink devices.
+
+
+
+## Org aware color themes
+
+
+Worg has a page on [org color themes](https://orgmode.org/worg/org-color-themes.html)
+which contain a list of color themes that are aware of Org. There is also a page of
+[screenshots of some of these themes
+](https://orgmode.org/worg/color-themes-screenshot.html).
+
+
+## Markdown aware themes
+
+Many theme packages have _some_ support for Markdown mode, alas very often this support
+is only partial or down for a previous version of the mode.
+
+Among the havocs of this theme support, I noticed
+
+-   Very often `markdown-inline-face` is not defined, so it takes it's value in
+    `markdown-mode.el`, so it inherit of `markdown-code-face` and
+    `font-lock-constant-face`. `markdown-code-face` derive from `fixed-pitch` that takes
+    the family monospace, `font-lock.el` define a default for
+    `font-lock-constant-face`: `dark cyan` on light background; and `Aquamarine` on
+    dark backgrounds.
+
+    So if nothing else is defined we end up with `dark cyan`, `monospace`, or
+    `Aquamarine`, `monospace` which may be convenient on many backgrounds, light or
+    dark.
+
+    Among the themes defining `markdown-inline-face` value I have noted [parchment],
+    [leuven], [tao]
+
+-   The list are initiated by the character `*` or `-` and colored with
+    `markdown-list-face`, inheriting from ` markdown-markup-face` inheriting from
+    `shadow`. In `faces.el` a default foreground is specified depending of the
+    background grey70, grey50, green or yellow.
+
+    When the theme has a black or very dark background, and you use the default this
+    _shadow_ face don't catch the eye.
+
+
+## Asciidoc Aware Themes
+
+[Asciidoc Mode][adoc] don't define faces, but rely on [Markup Faces][markup-faces] which
+is a face package tailored for markup languages, as [font-lock][] is used for programming
+language.
+
+
+It seems that only few themes support [Markup Faces][markup-faces], among them you find
+[zenburn][].
+
+<!---------------------------- Themes ---------------------------------->
+[emacs theme gallery]: https://pawelbx.github.io/emacs-theme-gallery/
+[base16]:  https://github.com/belak/base16-emacs
+[chocolate]: https://github.com/SavchenkoValeriy/emacs-chocolate-theme
+[eink]: https://github.com/maio/eink-emacs
+[emacs theme gallery]: https://pawelbx.github.io/emacs-theme-gallery/
+[eziam]: https://github.com/thblt/eziam-theme-emacs
+[gruvbox]: https://github.com/Greduan/emacs-theme-gruvbox
+[interaction-log]: https://github.com/michael-heerdegen/interaction-log.el
+[hydrangea]: https://github.com/yuttie/hydrangea-emacs
+[leuven]: https://github.com/fniessen/emacs-leuven-theme
+[nord]: https://github.com/arcticicestudio/nord
+[Lavender]: https://github.com/emacsfodder/emacs-lavender-theme/
+[manoj]: https://github.com/emacs-mirror/emacs/blob/master/etc/themes/manoj-dark-theme.el
+[nofrils]: https://gitlab.com/esessoms/nofrils-theme
+[nofrils for vim]: https://github.com/robertmeta/nofrils
+[parchment]: https://github.com/ajgrf/parchment
+[solarized]: https://github.com/bbatsov/solarized-emacs
+[tao]: https://github.com/11111000000/tao-theme-emacs
+[zenburn]: https://github.com/bbatsov/zenburn-emacs
+[Zenburn for vim]: http://kippura.org/zenburnpage/
+
 
 <!---------------------------- Packages ------------------------->
 
