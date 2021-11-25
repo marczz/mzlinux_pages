@@ -34,7 +34,7 @@ see also {{< iref "clouds" "Clouds" >}},
     _cachedir_s with the same option `--exclude-caches`. Most new backup program should
     also offer an option.
 
-    With programs like {{< iref "clouds#Rclone" "Rclone" >}}
+    With programs like {{< iref "clouds#rclone" "Rclone" >}}
     there is no specific option to exclude cache directories, but you can nevertheless
     exclude all directories containing a `CACHEDIR.TAG` file with
     `--exclude-if-present CACHEDIR.TAG`, but it will not verify that the signature is
@@ -91,7 +91,7 @@ files based increments or rsync backups would save again the full file
 even when only few bites have changed, chunk based increments will
 save only the changed data blobs.
 
--    <a name="borg"></a>[Borg](https://github.com/borgbackup/borg/)
+-   <a name="borg"></a>[Borg](https://github.com/borgbackup/borg/)
     is a fork of <a name="attic"></a>[Attic](https://github.com/jborg/attic/) which has
     no commit since 2015.  Borg is a deduplicating backup program, written in Python.
     The main features of Borg _and previously Attic_ are:
@@ -102,14 +102,13 @@ save only the changed data blobs.
     -   __Optional data encryption__: All data can be protected using 256-bit AES
         encryption and data integrity and authenticity is verified using HMAC-SHA256.
     -   __Backup over ssh__: if possible with Attic also installed on the remote host.
-    -   __Backups mountable as filesystems__
+    -   __Backup mountable as fuse filesystem__ with
+        [borg mount](https://borgbackup.readthedocs.io/en/stable/usage/mount.html).
 
     _BorgBackup is in Debian._
 
-    -   [Borg documentation
-        ](http://borgbackup.readthedocs.io/en/stable/).
-    -   [Borg Community resources
-        ](https://github.com/borgbackup/community/)
+    -   [Borg documentation](http://borgbackup.readthedocs.io/en/stable/).
+    -   [Borg Community resources](https://github.com/borgbackup/community/)
 
     The backup programs closer to Borg  by its features was [Obnam](http://obnam.org/)
     a snapshot backup program written in C and python 2, _obnam_ was closed In August
