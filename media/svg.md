@@ -19,22 +19,34 @@ See also the {{< iref "ps_pdf_djvu" "postscript, pdf, djvu Page" >}}.
 -   [svg wiki](http://wiki.svg.org/)
 -   [jan.kollhof.net svg pages](http://jan.kollhof.net/projects/svg/)
 
-# Software
-{{<iref "images#imagemagick" "Image Magick" >}} and
+# Software {#svg_software}
+{{<iref "images#imagemagick" "Image Magick" >}},
+{{<iref "images#graphicsmagick" "Graphics Magick" >}} and
 {{<iref "images#exactimage" "ExactImage" >}} are in the
-{{< iref "images" "Images Section" >}}.
+{{< iref "images" "Images Section" >}}, they can work also with svg.
 
--   [Aafigure](http://packages.python.org/aafigure/)
+-   [Aafigure](https://pythonhosted.org/aafigure/)
     is used to convert drawings in plain text documents to HTML, PDF,
     SVG,png. It can be integrated with
     {{< iref "rest#docutils" "docutils" >}},
     {{< iref "rest#sphinx" "Sphinx" >}},
     [MoinMoin](http://moinmo.in/).
--   [Autotrace](http://autotrace.sourceforge.net/) (GPL) is a bitmaps
+
+    Th Debian package is _python3-aafigure_.
+-   [Autotrace](https://github.com/autotrace/) (GPL) is a bitmaps
     to vector graphics converter. It was and may be still the more
-    achieved open source vectorisation program. but don't seem any
-    longer developped since 2004. [potracegui](http://potracegui.sourceforge.net)
-    is a gui frontend that support potrace and autotrace.
+    achieved open source vectorisation program.
+
+    The [Autotrace source forge project](http://autotrace.sourceforge.net/) is no
+    longer developped since 2002 and the last version in sourceforge is 0.31.1 yer 2002.
+    It was [packaged in Debian](https://tracker.debian.org/pkg/autotrace), but the last
+    31.1 version has been removed since 2017. But the
+    [Autotrace fork on GitHub](https://github.com/autotrace/) continued the maintenance.
+
+    [autotrace Releases](https://github.com/autotrace/autotrace/releases) contains a deb
+    package.
+
+    -   [Online vectorizer](https://online-converting.com/autotrace/) uses autotrace and imagemagick.
 -   [Blockdiag](http://blockdiag.com/en/index.html) is a set of graph generators
     from text source similar to {{< iref "#graphviz" "graphviz" >}}’s `dot` format.
     It includes  block diagrams, sequence diagrams,  activity diagrams, and network diagrams.<br />
@@ -43,18 +55,22 @@ See also the {{< iref "ps_pdf_djvu" "postscript, pdf, djvu Page" >}}.
 -   [Dia](http://live.gnome.org/Dia) (GPL) a GTK+ based diagram
     creation program that save diagrams to a custom XML format and can
     export them to EPS, SVG, XFIG, WMF and PNG, ...
--   [Ditaa](http://ditaa.sourceforge.net/)
-    ([Github](https://github.com/stathissideris/ditaa))
-    is a java tool that convert ascii art to bitmap diagram (or EPS
-    with a plugin), _no vector graphic presently_. It can be used
-    in DocuWiki, in Sphinx through the extension
-    [sphinxcontrib-ditaa](https://pypi.org/project/sphinxcontrib-ditaa/),
-    in Pandoc with the [imagine](https://github.com/hertogp/imagine) filter,
-    and in {{< iref "org-mode" "Org Mode" >}}
-    see the syntax in [Worg - Ditaa Source Code Blocks in Org Mode
-    ](https://www.orgmode.org/worg/org-contrib/babel/languages/ob-doc-ditaa.html)
-    and [this example](http://doc.norang.ca/org-mode.html#playingwithditaa).
--   [Gnuplot](http://www.gnuplot.info/)
+    Dia is packaged in Debian.
+-   [Ditaa](http://ditaa.sourceforge.net/) (LGPL-3.0)
+    is a command-line utility written in Java, that convert diagrams
+    drawn using ascii art into bitmap graphics in _png_ format, the newer version can
+    also output svg.
+    -   _Ditaa_ can be used with _asciidoc_, _dokuwiki_.
+    -   _Ditaa_ can be used  in Sphinx through the extension
+        [sphinxcontrib-ditaa](https://pypi.org/project/sphinxcontrib-ditaa/),
+    -   _Ditaa_ can be used in Pandoc with the
+        [imagine](https://github.com/hertogp/imagine) filter.
+    -   _Ditaa_ can be used in {{< iref "org-mode" "Org Mode" >}}
+        see the syntax in [Worg - Ditaa Source Code Blocks in Org Mode
+        ](https://www.orgmode.org/worg/org-contrib/babel/languages/ob-doc-ditaa.html)
+        and [this example](http://doc.norang.ca/org-mode.html#playingwithditaa).
+    -   [Ditaa - Github](https://github.com/stathissideris/ditaa)
+ -   [Gnuplot](http://www.gnuplot.info/)
     [ad-hoc Open Source License
     ](http://gnuplot.cvs.sourceforge.net/gnuplot/gnuplot/Copyright)
     is a portable command-line driven interactive data and function plotting utility
@@ -84,65 +100,110 @@ See also the {{< iref "ps_pdf_djvu" "postscript, pdf, djvu Page" >}}.
     -   When you install the _inskape package it places in the
         directory `/usr/share/inkscape` a directory of `examples` and
         `tutorials`
--   [ivtools](http://www.ivtools.org/ivtools/) drawing editors for
+-   [ivtools](http://ivtools.sourceforge.net/ivtools/) (BSD-like license)
+    X Windows drawing editors for
     PostScript, TeX, and web graphics and vector graphic shell
-    _no longer developed, since 2009_.
+
+    It is packaged in Debian as the package _ivtools-bin_ which includes
+    idraw, a basic vector graphics editor, graphdraw, flipbook, a vector graphics
+    animation tool, a vector graphics server,
+
+    -   [ivtools GitHub](https://github.com/vectaport/ivtools)
 -   {{< wp "libsrvg" >}}
     is the gnome SVG rendering library  The  command-line _rsvg_
     part of the package _librsvg2-bin_ convert SVG files into
     raster images.
--   [Mscgen](http://www.mcternan.me.uk/mscgen/) is a  program that
+-   [Mscgen](http://www.mcternan.me.uk/mscgen/) (GPL)
+    _no longer maintained since 2011_ is a  program that
     parses Message Sequence Chart descriptions and produces PNG, SVG, EPS
     or server side image maps (as the output.
     Mscgen integrates with _Asciidoc_, _Doxygen_, _Sphinx_, _Org Mode_, _Latex_.
--   [OpenClipArt](http://www.openclipart.org/) is a library of public domain clipart in vector format.
+-   [OpenClipArt](http://www.openclipart.org/) is a library of public domain clipart
+    in vector format.
 -   [potrace](http://potrace.sourceforge.net/) (GPL) is a vector conversion program
     that can transform bitmaps in PBM, PGM, PPM, or BMP format to vector
     graphics in EPS, PostScript, PDF, SVG, Xfig, Gimppath, and PGM.
+
     potrace is now embedded in inkscape, you find it in the menu
     `Path/Trace Bitmap` see also the
-    [inkscape wiki](http://wiki.inkscape.org/wiki/index.php/Potrace "/wiki.inkscape.org Potrace").<br />
-    [potracegui](http://potracegui.sourceforge.net) (GPL) is a gui frontend
-    for potrace and autotrace.
--   [pstoedit](http://www.pstoedit.net/pstoedit "pstoedit.net")
+    [inkscape wiki](http://wiki.inkscape.org/wiki/index.php/Potrace).
+
+    Potrace is packaged in Debian.
+
+    -   Wikipedia {{< wp "Potrace" >}}
+    -   [Online SVG Converter by Potrace](https://svg-converter.com/potrace).
+    -   [Online Image Vectorizer](https://www.vectorization.org/) powered by potrace.
+    -   [SVGcode—Convert](https://svgco.de/)
+        (GPL-2.0)  convert raster images to SVG vector graphics with potrace.
+
+        [SVGcode -GitHub](https://github.com/tomayac/SVGcode).
+-   [pstoedit](http://www.pstoedit.net/pstoedit)
     (GPL) translates PostScript and PDF graphics into other vector
     formats: tgif, xfig, pdf, gnuplot, dxf-cad, hpgl, wmf, pic (troff),
     latex picture, kontour, plotutils, skencil, swf, svg, ...
-    [pstoedit manual](http://www.helga-glunz.homepage.t-online.de/pstoedit/pstoedit.htm)
--   [Skencil](http://www.skencil.org/) (LGPL)
-    is a vector drawing program. The development of Skencil stopped in
-    2010, but the sK1 team gave a new start to the project, you find
-    the new 1.x release on
-    [sK1 page for Skencil
-    ](http://sk1project.org/viewpage.php?page_id=21).
--   [sK1](http://sk1project.org/)
+    -   [pstoedit manual
+        ](http://www.helga-glunz.homepage.t-online.de/pstoedit/pstoedit.htm)
+-   [sK1](https://sk1project.net/) (GPL-3.0)
     is an open source vector graphics editor similar to CorelDRAW.  It
-    is a fork of Sketch/Skencil, but while Skencil is developped
-    against GTK+, sK1 uses TK. It also aim to be compatible with Corel
-    Draw and Adobe Illustrator. It is packaged for main distributions.
+    is a fork of Sketch/Skencil. The development of Skencil stopped in
+    2010 and the sk1 fork was launched and uses TK replacing GTK+ used by Skencil, but
+    the newer version uses wxWidgets toolkit.
+
+    Sk1 aims to be compatible with Corel Draw and Adobe Illustrator.
+
+    The author and lead developper of Sk1 hor Novikov passed away at the age of 49 in
+    March 2021, due to COVID-19.
+
+    This application still uses only Python 2.x version.
+
+    Packages for sk1 are available in
+    [sk1 downloads](https://sk1project.net/sk1/download/).
+
+    -   [SK1-wx - GitHub](https://github.com/sk1project/sk1-wx).
 -   [tgif](http://bourbon.usc.edu:8001/tgif/) (Q public license
     *trolltech*) drawing Program for the X Window System.
--   [Uniconvertor](http://sk1project.org/modules.php?name=Products&product=uniconvertor)
-    is a universal vector graphics translator.<br />
+    It supports PostScript formats suitable for LaTeX, as well as X11 bitmap or (version 1)
+    pixmap formats. Other vector and raster image formats such as SVG and PNG can be
+    handled via filters.
+-   [Uniconvertor](https://sk1project.net/uc2/)  (AGPL-3.0) from the
+    {{< iref "#sk1" "Sk1 project" >}}
+    is a universal vector graphics translator.
+
     It can convert from:
     CorelDRAW, Adobe Illustrator, Postscript, Encapsulated Postscript,
     Computer Graphics Metafile, Windows Metafile (WMF), XFIG,
     Scalable Vector Graphics, Skencil/Sketch/sK1, Acorn Draw;
     to:
     Adobe Illustrator, Postscript, Computer Graphics Metafile, Windows Metafile,
-    PDF, Sketch/Skencil, sK1, SVG.<br />
-    It is available in Debian as _python-uniconvertor_.
--   [VectorMagic](http://vectormagic.com "/vectormagic.com")
-    (proprietary closed license), convert bitmap images in
-    JPEGs, GIFs and PNGs formats to EPS, SVG, and PDF
-    It is a piece software  expensive to purchase, they also propose
-    a 3 month subscription to online conversion, with a free trial.
--   [Veusz](http://home.gna.org/veusz/) (GPL)
-    is a scientific plotting package written in python, PyQt and NumPy.
-    Veusz produces plots in PNG, PDF, Encapsulated PostScript and SVG.
--   [XFig](http://www.xfig.org/ "xfig.org") A menu-driven tool to
+    PDF, Sketch/Skencil, sK1, SVG.
+
+    This application still uses only Python 2.x version.
+
+    The Debian package
+    [python-uniconvertor](https://tracker.debian.org/pkg/python-uniconvertor)
+    was packaging the older version 1 and is removed since 2017.
+    New packages can be found in [sk1 downloads
+    ](https://sk1project.net/sk1/download/).
+
+-   [Veusz](https://veusz.github.io/) (GPL-2.O)
+    is a scientific plotting package written in python, PyQt and NumPy.  Veusz produces
+    plots in PNG, PDF, Encapsulated PostScript and SVG.  Veusz is packaged in Debian.
+    -   [Veusz -GitHub](https://github.com/veusz/veusz)
+-   {{< wp "Xfig"g >}}
+    A menu-driven tool to
     draw and manipulate objects interactively in an X window, with
     output to latex graphic formats or raster files thru *transfig.*
+    It can also  embed images in formats
+    such as GIF, JPEG, EPS (PostScript), etc.
+
+    It export figures in the navive fig formatvector formats Postscript, EPS, PDF,
+    Tex/Latex, PIC, Metafont, SVG ... and raster bitmap formats like png, gif, ppm, xbm,
+    jpeg, tiff ... see the
+    [list in the User Manual](http://mcj.sourceforge.net/frm_printing.html).
+
+    Xfig is packaged in Debian.
+
+    -   [Xfig Home and User Manual](http://mcj.sourceforge.net/).
 
 ## Online Web software
 -   [draw.io](https://www.draw.io/) is an online free tool to edit
