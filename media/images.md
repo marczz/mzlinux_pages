@@ -38,6 +38,10 @@ Compressed lossless formats
 :
 
 -   [GIF](http://en.wikipedia.org/wiki/Graphics_Interchange_Format),
+    is a LZW lossless data compression bit image format, LZW was covered by patents, but
+    they expired in 2004. PNG developped to overcome the LZW patents largely replace GIF
+    but [Animated GIF](https://en.wikipedia.org/wiki/GIF#Animated_GIF)
+    are still widely used.
 -   {{< iref "#jxr" "JPEG XR" >}}  can do lossless or lossy compression.
 -   {{< iref "#openexr" "openEXR" >}}  can do lossless or lossy compression.
 -   [PNG](http://en.wikipedia.org/wiki/Portable_Network_Graphics),
@@ -282,8 +286,7 @@ exif, gexif,  exiv2, and exiftools.
     provide a command to display images. `gm display`.
 -   {{< iref "#imagemagick" "ImageMagick" >}} display images
     with its command `display`.
--   <a name="imview"></a>[imview
-    ](http://hugues.zahlt.info/software_imview.html)
+-   <a name="imview"></a>[imview](http://hugues.zahlt.info/software_imview.html)
     is an X11 image viewer, with limited editing capabilities.  It can
     display multiple pages tiff files. It uses no desktop environment,
     only bare X. The 1.1.9h version is from 2009, Debian use 1.1.9C
@@ -312,8 +315,7 @@ exif, gexif,  exiv2, and exiftools.
     compared to gthumb, on my test image directory it grows to
     100M/31M.
 
-    -   [Mirage Documentation
-        ](http://mirageiv.sourceforge.net/docs.html)
+    -   [Mirage Documentation](http://mirageiv.sourceforge.net/docs.html)
 
 -   <a name="pqiv"></a>[PQIV](https://github.com/phillipberndt/pqiv)
     is the continuation of {{< iref "#qiv" "QIV" >}}.
@@ -325,8 +327,7 @@ exif, gexif,  exiv2, and exiftools.
     (GPL) is a gdk/Imlib2 image viewer. it is in Debian.
     Development of _qiv_ stopped in 2013, but it continues in
     {{< iref "#pqiv" "PQIV" >}}.
--   [Ristretto
-    ](http://goodies.xfce.org/projects/applications/ristretto)
+-   [Ristretto](http://goodies.xfce.org/projects/applications/ristretto)
     is a fast and lightweight picture-viewer for the Xfce desktop environment.
 -   <a name="sxiv"></a>[sxiv](https://github.com/muennich/sxiv)
     is a lightweight and scriptable image viewer written in C.
@@ -374,6 +375,9 @@ _Notes_
 
 ## Raster software
 
+_see also Dia, Ditaa, Gnuplot, ivtools, xfig, veusz in the
+{{< iref "svg#svg_software" "SVG Software section" >}}.
+
 -   [Aafigure](http://packages.python.org/aafigure/)
     is a python utility that convert diagrams drawn using ascii
     art into bitmap graphics in _png_ format.
@@ -386,10 +390,7 @@ _Notes_
     It is packaged in Debian.
     -   [Converseen - GitHub](https://github.com/Faster3ck/Converseen)
 -   [CoolText online graphics generator](http://www.cooltext.com/)
--   [Ditaa](http://ditaa.sourceforge.net/)
-    is a command-line utility written in Java, that convert diagrams
-    drawn using ascii art into bitmap graphics in _png_ format.
-    _Ditaa_ can be used with _asciidoc_, _dokuwiki_, _org mode_.
+
 -   <a name="exactimage"></a>[ExactImage](https://exactcode.com/opensource/exactimage/)
     is a fork of {{< iref "#Imagemagick" "ImageMagic" >}}, coded for speed in C++.
     It supports BMP, Digital Camera RAW, GIF, JPEG, JPEG2000, OpenEXR,
@@ -425,7 +426,10 @@ _Notes_
     [Graphics Magick](http://www.graphicsmagick.org/)
     ([bunch of MIT like licenses](http://www.graphicsmagick.org/Copyright.html))
     is a fork of {{< iref "#imagemagick" "ImageMagick" >}}
-    with roughly the same capabilities. GraphicsMagick provides a
+    with roughly the same capabilities and supporting also [many formats
+    ](http://www.graphicsmagick.org/formats.html)
+
+    GraphicsMagick provides a
     [command line utility
     ](http://www.graphicsmagick.org/utilities.html)
     which may be used to access all GraphicsMagick functions.
@@ -535,14 +539,25 @@ _Notes_
     A _node.js_ tool for generation of sequence diagrams, class diagrams,
     state diagrams, Gantt diagrams, pie charts, and flowchart from text in a similar
     manner as markdown.
--   [sam2p](https://code.google.com/archive/p/sam2p/) (GPL)
+-   [sam2p](https://github.com/pts/sam2p) (GPL)
     is a command line utility that converts many raster (bitmap)
     image formats like GIF, JPG/JPEG, and PNG into PostScript or PDF
     files.
+
+    It was [removed from Debian](https://tracker.debian.org/pkg/sam2p) in 2016,
+    but there is a request to reintroduce it.
 -   [tgif(1)](http://man.cx/tgif(1)) interactive 2-D drawing
     facility under X11.
--   [Trimage](http://trimage.org/) is a tool for losslessly
-    optimizing PNG and JPG files. Trimage is in Debian.</br />
+
+    It supports PostScript formats suitable for LaTeX, as well as X11 bitmap or (version
+    1) pixmap formats. Other vector and raster image formats such as SVG and PNG can be
+    handled via filters.
+-   [Trimage](http://trimage.org/) (MIT License)
+    is a tool for losslessly
+    optimizing PNG and JPG files. Trimage is in Debian.
+
+    -   [Trimage - GitHub](https://github.com/Kilian/Trimage)
+
     It is a frontend to three tools:
     -   [Optipng](http://optipng.sourceforge.net/) (zlib license)
          a PNG optimizer and BMP, GIF, PNM and TIFFconverter.
