@@ -823,7 +823,7 @@ Oracle Cloud Storage, ownCloud, pCloud, premiumize.me, put.io, QingStor, Rackspa
 files, Scaleway, StackPath, SugarSync Wasabi, Yandex Disk, HTTP (read only), FTP, SFTP,
 WebDav, the local filesystem.
 
-Features:  MD5SUMs checking, preserve timestamps, partial syncs,
+Features:  hashsums (many algorithms) checking, preserve timestamps, partial syncs,
 Copy mode to just copy new/changed files, full sync including beetween
 two cloud instances. See the
 [Overview of cloud storage systems](https://rclone.org/overview/)
@@ -843,9 +843,27 @@ the providers. Rclone is in Debian.
     ](https://github.com/rclone/rclone/wiki/Third-Party-Integrations-with-rclone)
 -   _Rclone_ itself allow only one way synchronization, there are several python
     applications that provide bidirectional synchronisation with _Rclone_:
-    [rclonesync-V2](https://github.com/cjnaz/rclonesync-V2),
-    [rsinc](https://github.com/ConorWilliams/rsinc),
-    [PyFiSync](https://github.com/Jwink3101/PyFiSync).
+    -   [rclonesync-V2](https://github.com/cjnaz/rclonesync-V2)  (MIT License),
+    -   [rsinc](https://github.com/ConorWilliams/rsinc) (MIT License),
+    -   [PyFiSync](https://github.com/Jwink3101/PyFiSync) (MIT License) can use rsync or
+        rclone..
+    -   [syncrclone](https://github.com/Jwink3101/syncrclone)  (MIT License)
+        written in Python by Justin Winokur _Jwink3101_ the author of PyFiSync, read
+        [PyFiSync vs. syncrclone
+        ](https://github.com/Jwink3101/syncrclone#differences-from-pyfisync).
+
+        It features: fully non-interactive actions, backups before anything destructive,
+        extensive test suite, configurable file comparison and conflict resolution, use of
+        past sync state to accelerate checksum computation,  uses rclone's powerful filtering,
+        configurable rename tracking even for remotes with incompatible hashes,
+        robust to interruption, locking system, dry-Run mode.
+
+        Documentation: [configuration tips
+        ](https://github.com/Jwink3101/syncrclone/blob/master/docs/config_tips.md),
+        [algorithm](https://github.com/Jwink3101/syncrclone/blob/master/docs/algorithm.md),
+        [miscellaneous details](https://github.com/Jwink3101/syncrclone/blob/master/docs/misc.md),
+        [testing](https://github.com/Jwink3101/syncrclone/blob/master/docs/tests.md).
+
 -   _Rclone_ is supported by _emacs tramp_ since version 2.4.1.
 
 ## Command Line, ftp, dav clients
@@ -1073,8 +1091,8 @@ only a fraction of what you paid, for Mega for 200G, I take a price that is vali
 | [Wasabi]        |     (mini 1T) $.0059$ |           free | no              |  (1T mini) 6.00$ |   6.00$ |   08/20 |
 | [Amazon S3]     |               0.023 $ |           0.09 | yes             |            6.40$ |  22.60$ |    3/17 |
 | [Azure]         |               0.0184$ |           free | yes             |            3.68$ |   3.68$ |    3/17 |
-| [OneDrive]      |        (<1T)  0.04  $ |           free | no              |            5.83$ |   5.83$ |    3/17 |
-| -               |         (1T)  0.006 $ |           free | no              |                  |         |         |
+| [OneDrive]      |        (100G) 0.024 $ |           free | no              |            4.80$ |   4.80$ |   11/21 |
+| -               |         (1T)  0.0069$ |           free | no              |                  |         |         |
 | [Google One]    |       (200G)  0.015 € |           free | no              |            3.00€ |   3.00€ |   08/20 |
 | -               |         (2T)  0.005 € |           free | no              |                  |         |         |
 | [Mega]          |       (400G)  0.0125€ |     (<2T) free | no              | (400 mini) 5.00€ |   5.00€ |   08/20 |
