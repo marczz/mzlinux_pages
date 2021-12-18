@@ -5,7 +5,7 @@ title: Images
 Among {{< wp " image file formats" >}}.
 this section deals with _raster_ or _bitmap_ file formats, the _vector_
 file formats are in the
-{{< iref "#svg" "SVG section" >}},
+{{< iref "svg" "SVG section" >}},
 and the {{< iref "ps_pdf_djvu" "PDF and Postscript section" >}}. They are
 compared in the Wikipedia page {{< wp "Comparison of graphics file formats" >}}.
 
@@ -166,43 +166,64 @@ The [IPTC core shema specification
 ](http://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata-201007_1.pdf)
 describe the name and role of tags used in IPTC.
 
-## Metatada manipulation programs Some general image manipulation
-program can access the exif data stored in jpeg images, like GIMP,
-ImageMagic and GraphicksMagic. Number of viewers can also display exif
-data: geekie, eog, fbi, gtkam, gphoto2, ristretto.... .
+## Metatada manipulation programs
+
+Some general image manipulation program can access the exif data stored in jpeg images,
+like GIMP, ImageMagic and GraphicksMagic. Number of viewers can also display exif data:
+geekie, eog, fbi, gtkam, gphoto2, ristretto.... .
 
 But  only few program that can __write exif__ , among them GIMP,
 {{< iref "#imagemagick" "ImageMagic" >}},
-{{< iref "#graphicsmagick" "GraphicsMagic" >}},
-exif, gexif,  exiv2, and exiftools.
+{{< iref "#graphicsmagick" "GraphicsMagic" >}}, {{< iref "#exif" "exif" >}},
+{{< iref "#gexif" "gexif" >}}, {{< iref "#exiv2" "exiv2" >}},
+and {{< iref "#exiftool" "exiftool" >}}.
 
+-   <a name="exif"></a>[Exif](https://github.com/libexif/exif) (LGPL-2.1)
+    is the command-line utility from the [libexif](https://libexif.github.io/) library,
+    to show and writes EXIF metainformation in JPEG files. exif is in Debian
 -   [Exiftags](http://johnst.org/sw/exiftags/) (BSD Licence)
--   [exiftran](http://linux.bytesex.org/fbida/)
-    is an utility to rotate jpeg images without re-encoding and
-    without losing exif information.
--   [Exiftool](http://www.sno.phy.queensu.ca/~phil/exiftool/)
+    shows exif metadata in jpeg files.
+-   <a name="exiftrans"></a></a>[exiftrans](http://linux.bytesex.org/fbida/)
+    is an utility  part of the [fbida project](http://linux.bytesex.org/fbida/)
+    which provides also fbi viewer for the linux framebuffer console and da - This is a
+    Motif application for viewing images.
+
+    _exiftrans_ allows to rotate jpeg images without re-encoding and
+    without losing exif information, in contrast to jpegtran.
+-   <a name="exiftool"></a>[ExifTool](http://www.sno.phy.queensu.ca/~phil/exiftool/
+    (Perl License)
     is a perl library plus a command-line application for reading,
     and writing many metadata  in  image, audio and video files.
+
+    The Debian package is _libimage-exiftool-perl_.
+
+    The [Supported file types](https://exiftool.org/#supported) give the huge list of
+    format supported with support levels for EXIF, IPTC, XMP, ICC_Profile and other
+    metadata types for each file format.
+
     The [wikimedia commons: Exif
     ](http://commons.wikimedia.org/wiki/Commons:EXIF)
     page contains information of use of exif at Commons with exemple
     showing how to set a copyright and licensing information
-    with _exiftools_.
--   [Exiv2](http://www.exiv2.org/) (GPL)
+    with _exiftool_.
+-   <a name="exiv2"></a>[Exiv2](http://www.exiv2.org/) (GPL)
     is a C++ library and a command line utility to manage image
     metadata. It can read and __write__ Exif,
-    IPTC and XMP metadata.<br />
-    [Exiv2 examples](http://www.exiv2.org/sample.html),
-    [Exiv2 metadata reference tables
-    ](http://www.exiv2.org/metadata.html).
+    IPTC and XMP metadata.
+    -   [Exiv2 examples](http://www.exiv2.org/sample.html),
+    -   [Exiv2 metadata reference tables](http://www.exiv2.org/metadata.html).
+-   <a name="gexif"></a>[gexif](https://github.com/libexif/exif) (LGPL-2.1)
+    gexif is a GTK3 GUI application which shows the EXIF tags contained in JPG
+    and TIFF files. It is packaged in Debian.
 -   [Jhead](http://www.sentex.net/~mwandel/jhead/)
     (public domain)  is a command line driven program for
     manipulating the non image parts of Exif flavour
-    JPEG files that most digital cameras produce.
--   [libexif](http://libexif.sourceforge.net/)
-    has one command line utilities  __exif__, and a GTK gui
-    __gexif__.
--   [Metacam](http://www.cheeseplant.org/~daniel/pages/metacam.html)
+    JPEG files that most digital cameras produce. It is in Debian.
+-   [libexif](https://libexif.github.io/) (LGPL-2.1)
+    has one command line utilities {{< iref "#exif" "exif" >}}, and a GTK3 gui
+    {{< iref "#gexif" "gexif" >}}.
+-   [Metacam](http://www.cheeseplant.org/~daniel/pages/metacam.html) (GPL)
+    extract EXIF information from digital camera files. It is packaged in Debian.
 
 
 # Image display
@@ -216,7 +237,7 @@ exif, gexif,  exiv2, and exiftools.
     contains __fbi__ an image viewer for framebuffer console, _ida_ a
     small motif-based image viewer. _fbgs_ is a wrapper script to
     display PostScript or pdf using _fbi_ on a framebuffer
-    console. __Exiftran__ does lossless transformations of JPEG
+    console. {{< iref "#exiftran" "Exiftran" >}} does lossless transformations of JPEG
     images, preserving exif data.  (`jpegtran` instead ignore them)
 -   <a name="feh"></a>[feh](http://feh.finalrewind.org/)
     is a CLI-based X11 image viewer using the imlib2 library.  It is
@@ -256,15 +277,15 @@ exif, gexif,  exiv2, and exiftools.
         ](https://github.com/BestImageViewer/geeqie)
 -   [Gpicview](http://wiki.lxde.org/en/GPicView) (GPL)
     is a lightweight and fast image viewer for GTK+ 2.x. It has
-    minimal dependencies and is quite lean 16M resident / 14M shared
-    (without loaded image), it has no directory browsing capability
-    and the version tested (0.2.5) has a bug that prevent to load all the jpeg
-    of my test directory, so I cannot compare on my image directory, displaying
-    only one jpeg of this directory it takes 32M/19M. By its
-    footprints it is in the top range of GTK viewers, of course with
-    an interface less user friendly than bigger viewer software.
-    It is the standard picture viewer of LXDE, but has minimal
+    minimal dependencies and is quite lean, it has no directory browsing capability,
+    has some bugs.  It was in the top range of GTK viewers by its
+    footprints. But the interface is less user friendly than bigger viewer software.
+
+    It was the standard picture viewer of LXDE, and has minimal
     dependencies using only GTK2 and glib2, and is desktop independant.
+
+    GpicView is no longer developped since 2013, has several bugs, and uses obsolete
+    libraries.  It is in Debian.
 -   <a name="gthumb"></a>{{< wp "Gthumb" >}} (GPL) is an image viewer and
     organizer. It belongs to gnome but it has very mild gnome
     dependencies and is more a GTK+ software. Its features include
@@ -318,21 +339,19 @@ exif, gexif,  exiv2, and exiftools.
     -   [Mirage Documentation](http://mirageiv.sourceforge.net/docs.html)
 
 -   <a name="pqiv"></a>[PQIV](https://github.com/phillipberndt/pqiv)
-    is the continuation of {{< iref "#qiv" "QIV" >}}.
-    It is an image viewer written in C using GTK 2 or GTK 3 and
-    GLIB 2. It is actively maintained in 2020, and is in Debian.
-    It start at 26M resident / 21M shared on a small thumbnail,
-    and browsing my image test directory 64M / 21M.
+    is the continuation of {{< iref "#qiv" "QIV" >}}.  It is an image viewer written in
+    C using GTK 2 or GTK 3 and GLIB 2. It is actively maintained in 2020, and is in
+    Debian.  It start at 26M resident / 21M shared on a small thumbnail, and browsing my
+    image test directory 64M / 21M.
 -   <a name="qiv"></a>[QIV - Quick Image Viewer](http://spiegl.de/qiv/)
-    (GPL) is a gdk/Imlib2 image viewer. it is in Debian.
-    Development of _qiv_ stopped in 2013, but it continues in
-    {{< iref "#pqiv" "PQIV" >}}.
+    (GPL) is a gdk/Imlib2 image viewer. it is in Debian.  Development of _qiv_ stopped
+    in 2013, but it continues in {{< iref "#pqiv" "PQIV" >}}.
 -   [Ristretto](http://goodies.xfce.org/projects/applications/ristretto)
     is a fast and lightweight picture-viewer for the Xfce desktop environment.
 -   <a name="sxiv"></a>[sxiv](https://github.com/muennich/sxiv)
-    is a lightweight and scriptable image viewer written in C.
-    Its only dependency besides xlib is imlib2. It is in Debian.
-    Iis an alternative to {{< iref "#feh" "feh" >}},
+    is a lightweight and scriptable image viewer written in C.  Its only dependency
+    besides xlib is imlib2. It is in Debian.  Iis an alternative to {{< iref "#feh"
+    "feh" >}},
     {{< iref "#qiv" "qiv" >}} or
     {{< iref "#pqiv" "pqiv" >}}.
 
@@ -346,8 +365,8 @@ exif, gexif,  exiv2, and exiftools.
 
 
 _Notes_
-:   _The memory footprints comparisons in this section are done by
-    loading in the viewer a 4K png icon (emblem-debian.png 128x128)_
+:   _The memory footprints comparisons in this section are done by loading in the viewer
+    a 4K png icon (emblem-debian.png 128x128)_
 
 :   _The test image directory contains 23 jpegs of around 1MB for a
     total of 19MB_
@@ -379,9 +398,8 @@ _see also Dia, Ditaa, Gnuplot, ivtools, xfig, veusz in the
 {{< iref "svg#svg_software" "SVG Software section" >}}.
 
 -   [Aafigure](http://packages.python.org/aafigure/)
-    is a python utility that convert diagrams drawn using ascii
-    art into bitmap graphics in _png_ format.
-    Aafigure can be used with _asciidoc_, _Restructured Text_,
+    is a python utility that convert diagrams drawn using ascii art into bitmap graphics
+    in _png_ format.  Aafigure can be used with _asciidoc_, _Restructured Text_,
     _MoinMoin_, _Sphinx_
 -   [Converseen](http://converseen.fasterland.net/) (GPL-3.0)
     Converseen is a batch image processor for Windows and Linux that
@@ -393,10 +411,9 @@ _see also Dia, Ditaa, Gnuplot, ivtools, xfig, veusz in the
 
 -   <a name="exactimage"></a>[ExactImage](https://exactcode.com/opensource/exactimage/)
     is a fork of {{< iref "#Imagemagick" "ImageMagic" >}}, coded for speed in C++.
-    It supports BMP, Digital Camera RAW, GIF, JPEG, JPEG2000, OpenEXR,
-    PNG, PBM, RAW, TIFF, XPM, SVG PDF, PS, EPS, PCX, Targa, TGA. More
-    formats are planed. It has utilities similar to those of
-    {{< iref "#Imagemagick" "ImageMagic" >}}
+    It supports BMP, Digital Camera RAW, GIF, JPEG, JPEG2000, OpenEXR, PNG, PBM, RAW,
+    TIFF, XPM, SVG PDF, PS, EPS, PCX, Targa, TGA. More formats are planed. It has
+    utilities similar to those of {{< iref "#Imagemagick" "ImageMagic" >}}:
     `econvert`, `edisplay`, `edentify`.
 
     It has also {{< man "hocr2pdf" >}} to create a searchable PDF from hOCR input.
@@ -407,7 +424,7 @@ _see also Dia, Ditaa, Gnuplot, ivtools, xfig, veusz in the
     -   The [Gimp site](http://www.gimp.org ) references the
         [Gimp documentation](http://www.gimp.org/docs/) with
         [tutorials](http://www.gimp.org/tutorials/),
-        and [books](http://www.gimp.org/books/).<br />
+        and [books](http://www.gimp.org/books/).
     -   The main references are the
         [Gimp User Manual](http://docs.gimp.org/en/) and
         [FAQ](http://www.gimp.org/docs/userfaq.html).
@@ -419,19 +436,17 @@ _see also Dia, Ditaa, Gnuplot, ivtools, xfig, veusz in the
 -   [Google Chart Tools](http://code.google.com/apis/chart/)
     or _Google Chart API_ lets you dynamically generate charts with a
     URL string.  You can embed these charts on your web page, or
-    download the image for local or offline use.<br />
-    [Graphy](http://graphy.googlecode.com/)
-    is a  Python library for generating charts with _Google Chart API_.
--   <a name="graphicsmagick"></a>
-    [Graphics Magick](http://www.graphicsmagick.org/)
+    download the image for local or offline use
+    -   [Graphy](http://graphy.googlecode.com/)
+        is a  Python library for generating charts with _Google Chart API_.
+-   <a name="graphicsmagick"></a>[Graphics Magick](http://www.graphicsmagick.org/)
     ([bunch of MIT like licenses](http://www.graphicsmagick.org/Copyright.html))
     is a fork of {{< iref "#imagemagick" "ImageMagick" >}}
     with roughly the same capabilities and supporting also [many formats
     ](http://www.graphicsmagick.org/formats.html)
 
     GraphicsMagick provides a
-    [command line utility
-    ](http://www.graphicsmagick.org/utilities.html)
+    [command line utility](http://www.graphicsmagick.org/utilities.html)
     which may be used to access all GraphicsMagick functions.
     -   [display](http://www.graphicsmagick.org/display.html)
         display an image on an X window.
@@ -466,40 +481,34 @@ _see also Dia, Ditaa, Gnuplot, ivtools, xfig, veusz in the
     [animate](http://www.imagemagick.org/script/animate.php)
     :   animate an image sequence on an X server.
     [compare](http://www.imagemagick.org/script/compare.php)
-    :   annotate the difference between an image
-        and its reconstruction.
+    :   annotate the difference between an image and its reconstruction.
     [composite](http://www.imagemagick.org/script/composite.php)
     :   overlap one image over another.
     [conjure](http://www.imagemagick.org/script/conjure.php)
-    :   interpret and execute scripts written in the Magick Scripting
-        Language (MSL).
+    :   interpret and execute scripts written in the Magick Scripting Language (MSL).
     [convert](http://www.imagemagick.org/script/convert.php)
-    :   convert between image formats as well as resize an image, blur,
-        crop, despeckle, dither, draw on, flip, join, re-sample, and
-        more.
+    :   convert between image formats as well as resize an image, blur, crop, despeckle,
+        dither, draw on, flip, join, re-sample, and more.
     [display](http://www.imagemagick.org/script/display.php)
     :   display an image or image sequence on an X server.
     [identify](http://www.imagemagick.org/script/identify.php)
-    :   describe the format and characteristics of one or more
-        image files.
+    :   describe the format and characteristics of one or more image files.
     [import](http://www.imagemagick.org/script/import.php)
-    :   save any visible window on an X server as an image file. You can
-        capture a single window, the entire screen, or any rectangular
-        portion of the screen.
+    :   save any visible window on an X server as an image file. You can capture a
+        single window, the entire screen, or any rectangular portion of the screen.
     [mogrify](http://www.imagemagick.org/script/mogrify.php)
-    :   resize an image, blur, crop, despeckle, dither, draw on, flip, join,
-        re-sample, and much more. Mogrify overwrites the original image
-        file, whereas _convert_ writes to a different image file.
+    :   resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample,
+        and much more. Mogrify overwrites the original image file, whereas _convert_
+        writes to a different image file.
     [montage](http://www.imagemagick.org/script/montage.php)
-    :   create a composite image by combining several separate images.
-        The images are tiled on the composite image optionally adorned
-        with a border, frame, image name, and more.
+    :   create a composite image by combining several separate images.  The images are
+        tiled on the composite image optionally adorned with a border, frame, image
+        name, and more.
     [stream](http://www.imagemagick.org/script/stream.php)
-    :   stream one or more pixel components of the image or portion of
-        the image to your choice of storage formats. It writes the
-        pixel components as they are read from the input image a row
-        at a time making `stream` desirable when working with large
-        images or when you require raw pixel components.
+    :   stream one or more pixel components of the image or portion of the image to your
+        choice of storage formats. It writes the pixel components as they are read from
+        the input image a row at a time making `stream` desirable when working with
+        large images or when you require raw pixel components.
 
     -   _ImageMagick_ API is [available for numerous languages
         ](https://imagemagick.org/script/develop.php) C, C++, [GO
@@ -507,29 +516,25 @@ _see also Dia, Ditaa, Gnuplot, ivtools, xfig, veusz in the
         lisp, node, lua, perl, PHP, Python, R, Ruby, Rust, TCL/TK .....
         The C++, node, php, perl, java, ruby, the python  _PythonMagick_ are availables
         in Debian.
-    -   [ImageMagick Common Image Formats
-        ](http://www.imagemagick.org/Usage/formats/)
-        describe how ImageMagick works with different image formats,
-        and what are the options.
+    -   [ImageMagick Common Image Formats](http://www.imagemagick.org/Usage/formats/)
+        describe how ImageMagick works with different image formats, and what are the
+        options.
 
 -   [Hugin](http://hugin.sourceforge.net/)
-    is a panorama photo stitching program.  Stitching is
-    accomplished by using several overlapping photos taken from the
-    same location, and using control points to align and transform
-    the photos so that they can be blended together to form a larger
+    is a panorama photo stitching program.  Stitching is accomplished by using several
+    overlapping photos taken from the same location, and using control points to align
+    and transform the photos so that they can be blended together to form a larger
     image.
--   <a name="libtiff-tools"></a> [libtiff-tools
-    ](http://libtiff.maptools.org)
+-   <a name="libtiff-tools"></a> [libtiff-tools](http://libtiff.maptools.org)
     includes command line tools for converting TIFF images to and from
     other formats and tools for doing simple manipulations of TIFF
     images.
 -   [ImageJ](https://en.wikipedia.org/wiki/ImageJ)
     (public domain see [license details](http://imagej.net/Licensing))
-    is an image processing program written in Java.
-    It isinspired by NIH Image for the Macintosh.
-    It can display, edit, analyze, process, save and print
-    8-bit, 16-bit and 32-bit images. It can read many image formats
-    including TIFF, GIF, JPEG, BMP, DICOM, FITS and "raw".
+    is an image processing program written in Java.  It isinspired by NIH Image for the
+    Macintosh.  It can display, edit, analyze, process, save and print 8-bit, 16-bit and
+    32-bit images. It can read many image formats including TIFF, GIF, JPEG, BMP, DICOM,
+    FITS and "raw".
 
     -   [ImageJ Home](https://imagej.nih.gov/)
     -   [ImageJ Wiki](http://imagej.net/)
@@ -540,9 +545,8 @@ _see also Dia, Ditaa, Gnuplot, ivtools, xfig, veusz in the
     state diagrams, Gantt diagrams, pie charts, and flowchart from text in a similar
     manner as markdown.
 -   [sam2p](https://github.com/pts/sam2p) (GPL)
-    is a command line utility that converts many raster (bitmap)
-    image formats like GIF, JPG/JPEG, and PNG into PostScript or PDF
-    files.
+    is a command line utility that converts many raster (bitmap) image formats like GIF,
+    JPG/JPEG, and PNG into PostScript or PDF files.
 
     It was [removed from Debian](https://tracker.debian.org/pkg/sam2p) in 2016,
     but there is a request to reintroduce it.
@@ -567,7 +571,6 @@ _see also Dia, Ditaa, Gnuplot, ivtools, xfig, veusz in the
     -   [jpegoptim](http://www.kokkonen.net/tjko/projects.html) (GPL)
         lossless optimization and "lossy" optimization based on setting
         maximum quality factor for jpeg files.
-
 
 -   [Guy Rutenberg – Separating Colors
     ](https://www.guyrutenberg.com/2012/10/12/scanning-lecture-notes-separating-colors/)
