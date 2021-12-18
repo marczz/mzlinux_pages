@@ -19,7 +19,7 @@ See also the {{< iref "ps_pdf_djvu" "postscript, pdf, djvu Page" >}}.
 -   [svg wiki](http://wiki.svg.org/)
 -   [jan.kollhof.net svg pages](http://jan.kollhof.net/projects/svg/)
 
-# Software {#svg_software}
+# SVG Software {#svg_software}
 {{<iref "images#imagemagick" "Image Magick" >}},
 {{<iref "images#graphicsmagick" "Graphics Magick" >}} and
 {{<iref "images#exactimage" "ExactImage" >}} are in the
@@ -222,7 +222,7 @@ See also the {{< iref "ps_pdf_djvu" "postscript, pdf, djvu Page" >}}.
 
 
 
-# Graphviz {#graphviz}
+## Graphviz {#graphviz}
 
 [Graphviz](http://www.graphviz.org/) (Common Public License) is a
 graph Visualization Software. It includes _dot_ for drawing directed
@@ -293,6 +293,105 @@ graphs, and _neato_ for drawing undirected graphs.
     is a Perl module which can convert between many formats including
     _dot_ and render graphs.  You can use it to output to formats not
     supported by the graphviz suite, such as ASCII art.
+
+# SVG icons {#svg_icons}
+
+## SVG Sprite
+-   [The power of sprites
+    ](https://www.creativebloq.com/features/the-complete-guide-to-svg/6)
+-   [SVG Sprites: Embed flexible, stylable, fast-loading SVG icons
+    ](https://atendesigngroup.com/articles/svg-sprites-embed-flexible-stylable-fast-loading-svg-icons).
+    describe how to generate, and use SVG sprite.
+-   [SVG sprite generator online](https://svgsprite.com/tools/svg-sprite-generator/)
+    from [svgsprite utilities](https://svgsprite.com/#utilities).
+-   [sprity - npm](https://www.npmjs.com/package/sprity) (MIT License)
+    is a modular image sprite generator which generates sprites and proper style files
+    out of a directory of images.
+-   [svg-sprite](https://github.com/svg-sprite/svg-sprite) (MIT License)
+    a low-level Node.js module that takes a bunch of SVG files, optimizes them and bakes
+    them into SVG sprites.
+
+## Icon tools and search
+-   <a name="fontello">[Fontello
+    ](https://github.com/fontello/fontello) (MIT License)
+    is an icon font scissors or generator.
+    The [Fontello web page](http://fontello.com/) regroup icons fonts
+    from many sources. The home page allow to search by name.
+-   [Icon finder](https://www.iconfinder.com/)
+    search for icons _graphical not fonts_. may help to find svg icons.
+-   [ICONSVG](https://iconsvg.xyz/)
+    is a simple tool to find, customize and generate common SVG icons
+    based on _Feather Icons_.
+
+## Icons collections
+-   [Bootstrap icons](https://icons.getbootstrap.com/) (MIT License)
+    SVGs and SVG Sprite icons dowloadable as npm or on GitHub or from a CDN.
+    -  [Bootstrap icons - GitHub](https://github.com/twbs/icons)
+-   [Dripicons](http://demo.amitjakhu.com/dripicons/) (CC by ca)
+    SVG icons.
+-   [Dripicons - GitHub](https://github.com/amitjakhu/dripicons).
+-   [Feather icons](https://feathericons.com/) (MIT License)
+    -   [Feather icons - GitHub](https://github.com/feathericons/feather)
+-   [Font Awesome](https://fontawesome.com/) (fonts: SIL License, icons: CC BY 4.0,
+    Code: MIT License) is a font conceived for bootstrap theme. It contains iconic SVG,
+    font, and CSS toolkit.
+
+    The icons are in the unicode block _Private use_ beginning at
+    F000 and ending F2E0
+    -   [Font-Awesome - Github](https://github.com/FortAwesome/Font-Awesome)
+    -   [Font Awesome: using svg sprites
+        ](https://fontawesome.com/v5.15/how-to-use/on-the-web/advanced/svg-sprites)
+    -   [Bootstrap Font Awesome cheatsheet
+        ](https://fontawesome.bootstrapcheatsheets.com/)
+    -   [Fontawesome.com cheatsheet
+        ](https://fontawesome.com/cheatsheet)
+    -   [Fontawesome.com gallery by categories
+        ](https://fontawesome.com/icons?d=gallery)
+    -   [rofi-fontawesome]( https://github.com/wstam88/rofi-fontawesome)
+        fontawesome icon list for rofi dmenu.
+
+    [Line Awesome](https://icons8.com/line-awesome/) consists of ~1380 flat line
+    icons that offer an alternative to the main Font Awesome icon set.
+
+-   [Foundation icons font 3
+    ](https://zurb.com/playground/foundation-icon-fonts-3) (Freemium)
+    a font of 283 icons, free download, unclear license ([previous version
+    ](https://github.com/zurb/foundation-icons) was MIT licenced)
+-   [Heroicons](https://heroicons.dev/) (MIT License)
+    A set of 450+ SVG icons.
+    -   [Heroicons - GitHub](https://github.com/tailwindlabs/heroicons).
+-   [Ionicons for Ionic](http://ionicons.com/) (MIT License)
+    -   [Ionicons - GitHub]( https://github.com/ionic-team/ionicons)
+-   [linearicons free](https://linearicons.com/free)
+    a set of 170 svg icons.
+-   [Material Design icons](https://fonts.google.com/icons?selected=Material+Icons)
+    (Apache License) from google fonts.
+
+    The 2000 Material Design icons are built as components in 5 variants: Filled,
+    Outlined, Sharp, Rounded, Two-tone.
+
+    The materialdesign font contains 900+ icons. It is in the debian package
+    _fonts-materialdesignicons-webfont_.
+
+    -   [Material Design icons - GitHub](https://github.com/google/material-design-icons)
+    -   [Material Icons Guide](http://google.github.io/material-design-icons/)
+    -   [Material Icons Guide |  Google Developers
+        ](https://developers.google.com/fonts/docs/material_icons)
+    -   [Material Icons - GitHub](https://github.com/google/material-design-icons)
+    -   [Material design with community suplementary fonts
+        ](https://materialdesignicons.com/) (Apache License)
+-   [Microns](https://www.s-ings.com/projects/microns-icon-font/) (CC by ca and SIL
+    license) is a tiny (less than 5kb) set of icons, provided as svg icons or a font.
+    -   [Microns - GitHub](https://github.com/stephenhutchings/microns).
+-   [Simple line icons](https://simplelineicons.github.io/) (MIT License)
+    Simple line icons with CSS, SASS, LESS & Web-fonts files. _no individual svg_
+    -   [simple-line-icon - GitHub](https://github.com/thesabbir/simple-line-icons/)
+-   [Typicons](http://s-ings.com/typicons/) (SIL Open Font License)
+    provided as svg icons or a font. the designer Stephen Hutchings authored also
+    Micron.
+    -   [Typicons - GitHub](https://github.com/stephenhutchings/typicons.font)
+-   [Elusive](https://github.com/reduxframework/elusive-iconfont)
+    icons webfont, optimized for use with twitter's bootstrap.
 
 
 <!-- Local Variables: -->
