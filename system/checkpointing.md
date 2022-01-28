@@ -22,18 +22,13 @@ process, but from an Xorg session to another, they are put in the
     (LGPL and GPL)
     can checkpoint both single- and multithreaded (pthreads) programs linked with
     the NPTL implementation of pthreads. It is  is implemented within kernel modules.
-    It is in active development in 2013 (but nothing in 2014, 2015)
-    and packaged in debian.
+    It was abandonned in 2013, but is still
+    [packaged in Debian](https://tracker.debian.org/pkg/blcr).
 -   [CRIU](http://criu.org/) (GPL)
     is an userspace applications  to freeze a running application (or part of it)
     and checkpoint it to persistent storage. {{< wp "CRIU"  "Wikipedia: CRIU" >}} is in Debian
-    and in active development in 2019. There are many HOW-TOs and uses cases rreferences
+    and in active development in 2022. There are many HOW-TOs and uses cases references
     in the [CRIU Home Page](http://criu.org/). It is in Debian.
--   [cryopid](http://sourceforge.net/projects/cryopid2/) (BSD license)
-    allows you to capture the state of a running process in Linux and
-    save it to a file that can then be used to resume the process
-    later on after a reboot or even on another machine.  _Last release
-    2009_.
 -   <a name="dtach"></a>[dtach](https://github.com/crigler/dtach) (GPL)
     emulates the detach feature of screen. Dtach is in Debian. The
     [repository README](https://raw.githubusercontent.com/crigler/dtach/master/README)
@@ -43,20 +38,15 @@ process, but from an Xorg session to another, they are put in the
     is a fork of {{< iref "#dtach" "dtach" >}} with some
     [improvements](http://www.brain-dump.org/projects/abduco/#dtach)
     [Git Repository](https://github.com/martanne/abduco)
--   [DMTCP: Distributed MultiThreaded CheckPointing
-    ](http://dmtcp.sourceforge.net/) (LGPL)
-    checkpoint the state of multiple simultaneous applications,
-    including multi-threaded and distributed applications.
-    It operates directly on the user binary executable.
-    _Active development in 2019_.
--   [reptyr](https://github.com/nelhage/reptyr) (BSD like license)
+-   [DMTCP: Distributed MultiThreaded CheckPointing](http://dmtcp.sourceforge.net/) (LGPL)
+    checkpoint the state of multiple simultaneous applications, including multi-threaded
+    and distributed applications.  It operates directly on the user binary executable.
+    _Active in 2022 last release 2019_.
+    [GitHub DMCTP](https://github.com/dmtcp/dmtcp)
+-   [reptyr](https://github.com/nelhage/reptyr) (MIT license)
     is a recent utility for taking an existing running program and
     attaching it to a new terminal. It is in Debian.
-    Active development in 2019.
--   [ITP: retty](http://pasky.or.cz/~pasky/dev/retty/) (GPL)
-    by Petr Baudiš lets you attach processes running on other terminals]
-    [retty git repo](http://repo.or.cz/w/retty.git) _developed in
-    2006, last change 2012_ It is in Debian.
+    _Active development in 2022._
 
 # Terminal multiplexors {#terminal_multiplexors}
 
