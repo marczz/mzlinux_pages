@@ -62,6 +62,8 @@ title: Mail
         [aerc/doc](https://git.sr.ht/~sircmpwn/aerc/tree/master/item/doc).
     -   [aerc mailing list](https://lists.sr.ht/~sircmpwn/aerc), the irc is `#aerc2` on
         libra.chat.
+    -   [step by step guide for setting up Gmail with aerc
+        ](https://oren.github.io/articles/text-based-gmail/)
 -   <a name="alpine"></a>[Alpine](http://www.washington.edu/alpine/) (apache license)
     from Washington University is the successor of
     [Pine](http://www.washington.edu/pine/)(free software with half-closed license!).
@@ -484,7 +486,7 @@ how to deal with root mails sent by cron with the smtp relay agents.
     (MTA). It accepts mails from local Mail User Agents (MUA) and
     delivers the mails either locally or to a remote smtp server it
     features TLS/SSL support and SMTP authentication.
-    _active in 2017_.
+    _active in 2021_.
 
     -   [Using the DragonFly Mail Agent as default MTA in Debian
         ](https://wiki.debian.org/Debate/DefaultMTA/DMA)
@@ -517,7 +519,7 @@ how to deal with root mails sent by cron with the smtp relay agents.
     Openssl or GnuTLS.  _msmtp_ allow to use multiple smtp
     accounts. Debian has a _msmtp_ package, a _mstp-gnome_ package
     which is compiled with gnome-keyring support, and the MTA is in a
-    separate package _msmtp-mta_. _A new release in 2019._
+    separate package _msmtp-mta_. _A new release in 2021._
     -   [msmtp manual](http://msmtp.sourceforge.net/doc/msmtp.html).
     -   [ArchWiki: msmtp](https://wiki.archlinux.org/index.php/Msmtp).
     -   [Configuring msmtp on Ubuntu
@@ -531,22 +533,21 @@ how to deal with root mails sent by cron with the smtp relay agents.
         ](https://www.emacswiki.org/emacs/MultipleSMTPAccounts).
     -   [Command Line Gmail Using msmtp/mailx
         ](http://www.klenwell.com/is/UbuntuCommandLineGmail)
--       [OAuth2 authentication for offline email clients
+    -   [OAuth2 authentication for offline email clients
         ](https://jrvcomputing.wordpress.com/2016/11/21/oauth2-authentication-for-offline-email-clients/)
         uses [cscorley/send.py](https://github.com/cscorley/send.py) _2014_
-         to access gmail with Oauth2 authentication.
+        to access gmail with Oauth2 authentication.
     -   [mir.msmtpq](https://github.com/darkfeline/mir.msmtpq)
         is a python drop-in  replacement for sendmail or msmtp. Unlike
         sendmail or msmtp, msmtpq will only queue messages. It is in
-        PyPi.
+        PyPi._last commit 2017, release 2016_.
 -   [nbsmtp](https://wiki.archlinux.org/index.php/NBSMTP)
     (archwiki page) is a relay-only Mail Transfer Agent with ssl and
     tls support. _stopped in 2015, home page unreachable._
--   [nullmailer
-    ](http://untroubled.org/nullmailer/)
+-   [nullmailer](http://untroubled.org/nullmailer/)
      is a sendmail/qmail/etc replacement MTA for hosts which relay to
      a fixed set of smart relays. _packaged in Debian an is active in
-     2018_.
+     2020_.
     -   [GitHub:  bruceg/nullmailer
         ](https://github.com/bruceg/nullmailer)
     -   [Nullmailer, Mutt, and Automated Email: The Tiny Mail Transfer
