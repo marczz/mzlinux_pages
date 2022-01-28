@@ -3,16 +3,17 @@ title: PDF, djvu, OCR, Postscript
 ---
 
 You may also be interested by the
-{{< iref "images" "Image section" >}}
-
-# Postscript {#postscript}
+{{< iref "images" "Image section" >}} and the
+{{< iref "svg" "SVG Section" >}}.
 
 The pieces of software that handle both SVG and postscript or PDF are
-in the {{< iref "images#svg" "SVG section" >}} it
+in the {{< iref "svg" "SVG section" >}} it
 includes the PDF to SVG conversion programs as Autotrace, Potrace,
 pstoedit.  All SVG editors have a PDF and postscript export feature.
 See also the {{< iref "cups" "Cups Page" >}}.
 
+
+# Postscript {#postscript}
 
 -   {{< wp "PostScript" >}} is a {{< wp "page description language" >}},
     {{< wp "Encapsulated PostScript" >}} or eps is a self contained graphics
@@ -378,7 +379,7 @@ _November 2006 - 31M_.
 
 -   <a name="cpdf"></a>[CPDF](https://community.coherentpdf.com/)
     ([Non-Commercial Use License
-    ](https://github.com/coherentgraphics/cpdf-binaries/blob/master/LICENSE)
+    ](https://github.com/coherentgraphics/cpdf-binaries/blob/master/LICENSE))
     _Coherent PDF Command Line Tools Community Release_
     allow you to manipulate existing PDF files in a variety of ways.
     merge, or split, encrypt and decrypt, scale, crop, rotate pages,
@@ -391,10 +392,10 @@ _November 2006 - 31M_.
     -   [CPDF Examples](http://www.coherentpdf.com/usage-examples.html)
     -   [Binaries for Linux, OSX, Windows (Github)
         ](https://github.com/coherentgraphics/cpdf-binaries)
--   [ExactImage](http://exactcode.com/opensource/exactimage/)
+-   {{< iref "images#exactimage" "Exact Image" >}} in the Image section
     is a fast C++ image processing library. it contains some pdf
     processing tools:
-    -   {{< man " hocr2pdf" >}} is an hOCR to PDF converter. It can use the
+    -   {{< man "hocr2pdf" >}} is an hOCR to PDF converter. It can use the
         {{< iref "#hocr" "hocr" >}} output of
         {{< iref "#tesseract" "Tesseract" >}}.
 -   <a name="fpdf"></a>[FPDF](http://www.fpdf.org/)
@@ -430,14 +431,12 @@ _November 2006 - 31M_.
     [How to Edit PDF Files in Linux Using GIMP
     ](http://www.wikihow.com/Edit-PDF-Files-in-Linux-Using-GIMP)
 -   [gpdftext](https://github.com/codehelp/gpdftext) (GPL)
-    by Neil Williams is a C/GTK+ program that
-    loads a PDF file, extracts the text, reformats the paragraphs into
-    single long lines and then puts the text into a standard GTK+
-    editor where you can make other adjustments.<br/>
-    On the ebook reader, the plain text file then has no unwanted line
-    breaks and can be zoomed to whatever text size you prefer.</b>
-    The manual is in docbook and provided in the package it can be
-    opened with yelp. _gpdftext_ is in Debian.
+    by Neil Williams is a C/GTK+ program that loads a PDF file, extracts the text,
+    reformats the paragraphs into single long lines and then puts the text into a
+    standard GTK+ editor where you can make other adjustments.<br/> On the ebook reader,
+    the plain text file then has no unwanted line breaks and can be zoomed to whatever
+    text size you prefer.</b> The manual is in docbook and provided in the package it
+    can be opened with yelp. _gpdftext_ is in Debian.
 -   <a name="jbig2"></a>{{< wp "jbig2" >}} is a patent protected format from IBM and
     Mitsubishi. JBIG2 is designed for lossy or lossless encoding of
     'bilevel' (1-bit monochrome) images at moderately high resolution, and
@@ -590,10 +589,13 @@ _November 2006 - 31M_.
     is no more developed since _2012_, it was previously in Debian,
     but has been removed.
 -   [pdfjam](http://www2.warwick.ac.uk/fac/sci/statistics/staff/academic/firth/software/pdfjam)
-    is a collection of shell scripts using
-    {{< iref "#pdfpages" "pdfpages" >}}
-    they allow to rearrange and combine pages of a PDF document.
+    is a collection of shell scripts using {{< iref "#pdfpages" "pdfpages" >}}
+    to rearrange and combine pages of a PDF document.
     A  drawback of pdfjam  is that any hyperlinks in the source PDF are lost.
+
+    The functionalities of pdfjam are similar to those of
+    {{< iref "#pdfsak""pdfSAK" >}} which also uses LaTeX.
+
     The provided script are:
 
     -   _pdfjam_ is the main script. This is the core of the
@@ -660,6 +662,19 @@ _November 2006 - 31M_.
         is a tutorial by Michael Goerz to use a combination of
         _pdfpages_, _hyperref_, and _bookmark_ to add an outline to an
         existing pdf file.
+
+-   <a name="pdfsak"></a>[pdfSAK](https://pdfsak.readthedocs.io/) (MIT License)
+    previously named _pdftools_ is an utility using LaTeX.
+    It allows to Merge PDF files, N-up pages, trim pages, extract pages,
+    rotate pages, swap pages, delete pages, create handouts, add text (like page
+    numbers), Remove owner protection which forbid to print/annotate document from PDF
+    files, remove metadata from PDF file, simulate Adobe Acrobat clearscan.
+
+    It requires a distribution of LaTeX like  TexLive or MikTex with the packages:
+    pdfpages, lastpage, grffile, forloop, fancyhdr textpos, changepage.
+
+    The functionalities of pdfsak are similar to those of
+    {{< iref "#pdfjam""pdfjm" >}} which also uses LaTeX.
 
 -   [PdfParser](https://github.com/smalot/pdfparser)
     is a standalone PHP library that provides various tools to extract
@@ -751,29 +766,28 @@ _November 2006 - 31M_.
 -   <a name="pypdf"></a>[pyPDF2](https://github.com/mstamy2/PyPDF2/) (BSD License)
     is the continuation of the  python librariy [pyPDF](http://pybrary.net/pyPdf/)
     by Mathieu Fenniak,  whose development stopped in 2010.
-    It has a new fork   [pyPDF2](https://github.com/mstamy2/PyPDF2/)
-    They allow working on a PDF document: extracting info, splitting, merging, cropping,
+    Thew fork [pyPDF2](https://github.com/mstamy2/PyPDF2/)
+    allows working on a PDF document: extracting info, splitting, merging, cropping,
     encrypting and decrypting PDF files. _PyPDF_ and  _pyPDF2_ have
     similar functionalities than {{< iref "#pdfk" "pdftk" >}}
-    but are pure python with no module dependency.<br/>
-    _pyPDF_ is distinct from the nearly homophone
-    {{< iref "#pyfpdf" "pyfpdf" >}}.
+    but are pure python with no module dependency.
+
+    _pyPDF_ is distinct from the nearly homophone {{< iref "#pyfpdf" "pyfpdf" >}}.
+
     -   The [pyPDF Documentation](http://pybrary.net/pyPdf/pythondoc-pyPdf.pdf.html)
         is also usable for _pyPDF2_.
     -   [Pypi: pypdf2](https://pypi.python.org/pypi/PyPDF2).
-    -    _PyPDF_ is packaged in Debian as _python-pypdf_. Since jessie
-        there is also two packages _python-pypdf2_ and _python3-pypdf2_.
+    -    _PyPDF_ is packaged in Debian as _python3-pypdf2_.
     -   Tim Arnold [Manipulating PDFs with Python
         ](https://www.binpress.com/tutorial/manipulating-pdfs-with-python/167)
-        includes a tutorial to use pypdf2 in python to merge a layer
-        on pages of a pdf file, to merge the pages of two files,
-        to append a set of pages building a new pdf, to delete some
-        page, to split a pdf file, to modify metadata.
+        includes a tutorial to use pypdf2 in python to merge a layer on pages of a pdf
+        file, to merge the pages of two files, to append a set of pages building a new
+        pdf, to delete some page, to split a pdf file, to modify metadata.
 
     The following scripts are wrapper around pypdf/pypdf2:
 
     -   [pdfsplit](http://pypi.python.org/pypi/pdfsplit) (GPL) _2008_
-    -   [pdfshuffler](http://pdfshuffler.sf.net)(GPL) <a name="pdfshuffler"></a>
+    -    <a name="pdfshuffler"></a>[pdfshuffler](http://pdfshuffler.sf.net)(GPL)
         allows one to merge, split, rotate, crop and rearrange their
         pages using a graphical interface. It is in debian.
     -   [pdfposter](http://pythonhosted.org/pdftools.pdfposter/)
@@ -825,13 +839,14 @@ python script,
         ](https://www.mobileread.com/forums/showthread.php?t=83053)
 -   <a name="pdfcrop-python"></a>[pdfcrop (python)](https://github.com/pboehm/pdfcrop)
     is a python script that uses _pypdf_  to crop pdf pages. _last update 2011._
--   <a name="pdfcrop-perl"></a>[pdfcrop (perl)](http://pdfcrop.sourceforge.net/)
-    is a perl script from _texlive_
-    utilities that uses _ghostscript_ and _pdftex_ to crop pdf pages.
-    PDFCrop should preserve the input file's fonts, bookmarks and
-    hyperlinks when generating the output file, but it may increase
-    the file size during the pdf to postscript decoding/reencoding
-    process.  _last update 2011._
+-   <a name="pdfcrop-perl"></a>[pdfcrop (perl) - GitHub](https://github.com/ho-tex/pdfcrop)
+    (LaTeX Project Public License) is a perl script from _texlive_ utilities that uses
+    _ghostscript_ and _pdftex_ to crop pdf pages.  PDFCrop should preserve the input
+    file's fonts, bookmarks and hyperlinks when generating the output file, but it may
+    increase the file size during the pdf to postscript decoding/reencoding process.
+
+    [pdfcrop source forge project](http://pdfcrop.sourceforge.net/) contains the old
+    version 0.4b 2011.
 -   <a name="pdfcrop-pdftk"></a>The script
     [pdfcrop2.sh](https://www.entorb.net/wickie/Modifying_PDFs#pdfcrop2.sh)
     from the
@@ -993,6 +1008,15 @@ note and the colour can be modified from _pdf-tool_ even if, _of course_, the sh
 cannot be changed, but they don't appear in the list of annotation.
 
 The main drawback of pdf-tools is the lack of documentation.
+
+-   [Xournal++](https://xournalpp.github.io/) (GPL-2.0)
+    is a handwriting notetaking software with PDF annotation support.
+    It is written in C++ with GTK3.
+
+    The [releases Page](https://github.com/xournalpp/xournalpp/releases/tag/nightly)
+    contains a Debian package.
+
+    -   [Xournal++ - GitHub](https://github.com/xournalpp/xournalpp)
 
 # OCR {#ocr}
 
