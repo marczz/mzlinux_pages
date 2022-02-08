@@ -71,8 +71,18 @@ title: Shell
 -   Nathaniel Landau [Boilerplate Shell Script Template
     ](https://natelandau.com/boilerplate-shell-script-template/)
     is a template for writing shell scripts.
--   {{< iref "python_libraries#docopt" "Docopt" >}}
-    is a python utilities, that is also suited to parsing bash command line arguments.
+-   [docopt](http://docopt.org/)
+    is a command-line interface description language which allows you to define the
+    interface for your command-line app, and automatically generate a parser for it.
+
+    It has [implementations for many languages](https://github.com/docopt):
+    {{< iref "python_libraries#docopt" "Docopt for Python" >}}, go, C, cpp, php, rust,
+    nim, ruby, cofee script, clojure, lua,
+
+    The [Shell interpreter for docopt](https://github.com/docopt/docopts) is a command
+    line wrapper for bash written in go.
+    [doctops.sh](https://github.com/docopt/docopts/blob/master/docs/README.md)
+    is a library companion of doctops binary.
 
 # Ash
 
@@ -213,6 +223,10 @@ Bash (without my big init) is 3.8M/3.2M; zsh (without user init)
 -   [Bashdoc](https://github.com/ajdiaz/bashdoc)
     is a bash documentation processor similar to javadoc
     but use reStructuredText to provide the final document.
+-   [Starship: Cross-Shell Prompt](https://starship.rs/) (ISC License)
+    customizable prompt for any shell. A fast prompt written in Rust for many shells
+    bash, fish, zsh
+    -   [starship - GitHub](https://github.com/starship/starship)
 
 To proofread a bash script It is often very useful to remember how,
 and in what order expansion is done. It is given in section
@@ -289,6 +303,32 @@ expansion, nor process substitution)
 -   [zplugin](https://github.com/zdharma/zplugin) (MIT License)
     A flexible Zsh plugin manager.
 
+# Other shells
+-   [Elvish Shell](https://elv.sh/)
+     is an expressive programming language and a versatile interactive shell.
+     Elvish uses Pipelines whish can carry structured data, not just text. You can
+     stream lists, maps and even functions through the pipeline.
+     _Elvish_ is in Debian and Alpine.
+-   [Ion](https://gitlab.redox-os.org/redox-os/ion/)
+    an unix shell written in rust.
+-   [Nushell](https://www.nushell.sh/) (MIT License)
+    _Nushell_ is in Alpine.
+-   [Oil](https://www.oilshell.org/) (Apache License 2.0)
+    is a new POSIX & bash compatible shell written in Python.
+    While written in Python it is  translated to C++, so the  executable doesn't depend
+    on Python.
+
+    The bash compatible layer is
+    [OSH Langage](https://www.oilshell.org/cross-ref.html#osh-language),
+    which runs real shell programs while adding reliable error handling, safe processing
+    of user-supplied data, lack of "quoting hell", and better error messages and tools.
+
+    You can add some [Global Shell Options
+    ](https://www.oilshell.org/release/latest/doc/options.html)
+    to _OSH_, they allow more powerful langage constructs at the price of breaking bash
+    compatibility. When you add all option to _OSH_ you get _OIL_.
+    _Oil_ is in Alpine.
+
 # Shell Utilities
 -   [GNU Coreutils](https://www.gnu.org/software/coreutils/manual/html_node/index.html)
 -   [Shell and Utilities volume of POSIX.1-2017
@@ -328,7 +368,7 @@ expansion, nor process substitution)
 # Sed
 -   [Wikipedia: Sed](http://en.wikipedia.org/wiki/Sed),
     you may find there references to many tutorials.
--   [sed manual](http://www.gnu.org/software/sed/manual/html_node/index.htm)
+-   [sed manual](http://www.gnu.org/software/sed/manual/html_node/)
 -   [Sed by example, Part 1
     ](http://www.ibm.com/developerworks/linux/library/l-sed1.html),
     [Part 2](http://www.ibm.com/developerworks/linux/library/l-sed2.html),
@@ -429,9 +469,6 @@ expansion, nor process substitution)
 -   [goto](https://github.com/sitaramc)
     by Sitaram Chamarty combine cd and find and complements
     _apparix_.
--   [Ondir](http://swapoff.org/OnDir) from
-    [Alex Thomas](http://swapoff.org/) s a program that automatically
-    executes scripts as you traverse directories at a terminal.
 -   [Wcd](http://waterlan.home.xs4all.nl) (GPL)
     is a command-line program to change directory fast
     modeled after Norton Change Directory (NCD)..
@@ -442,6 +479,57 @@ expansion, nor process substitution)
     most used directory that matches all of the regexes given on the command line.
     It is an [alternative to _autojump_](http://un.ix.io/bash%20directory%20jump)
     that avoids to launch python on every call.
+
+# Change environment
+-   [direnv](https://direnv.net/) (MIT License)
+    unclutter your .profile by loading and unloading environment variables depending
+    on the current directory.
+    It is in Debian and Alpine.
+-   [Ondir](http://swapoff.org/OnDir)
+    from [Alex Thomas](http://swapoff.org/) is a program that automatically
+    executes scripts as you traverse directories at a terminal.
+
+# Bulk file renamers
+-   [GPRename](http://gprename.sourceforge.net/) (GPL)
+    is a perl/perl GTK2 GUI batch renamer. GPRename easily can replace, remove, insert,
+    delete and number consecutively files and directorys.
+-   _rename_ or [File-Rename](https://metacpan.org/dist/File-Rename)
+    is a perl extension for renaming multiple files. Available n any distribution
+    including Debian.
+    -   a [rename tutorial
+        ](https://www.howtogeek.com/423214/how-to-use-the-rename-command-on-linux/)
+-   [renameutils](https://www.nongnu.org/renameutils/) (GPL)
+    The file renaming utilities are a set of CLI programs designed to make renaming of
+    files faster and less cumbersome.
+    It  consists of five programs - qmv, qcp, imv, icp and deurlname..
+    -   `qmv` ("quick move") allows file names to be edited in a text editor.
+        The names of all files in a directory are written to a text file,
+        which is then edited by the user. The text file is read and parsed,
+        and the changes are applied to the files.
+    -   `qcp` ("quick cp") program works like qmv, but copies files instead of moving
+        them.
+    -   `imv` ("interactive move") allows a file name to be edited in the terminal using
+        the GNU Readline library.
+    -   `icp` is similar but copies files.
+    -    `deurlname` removes URL encoded characters (such as %20 representing space)
+         from file names.
+    _renameutils_ is in Debian.
+
+The [Github topic _renamer_](ttps://github.com/topics/renamer) point out more renamer
+software.
+
+In emacs we can [rename file in Dired
+](https://ftp.gnu.org/old-gnu/Manuals/emacs-21.2/html_chapter/emacs_31.html#SEC405)
+the use of [dired editable buffer (WDired)](https://www.emacswiki.org/emacs/WDired)
+is very convenient for renaming files in bulk.
+
+## prefix files to put them in order
+-   [autorenamer](https://marcin.owsiany.pl/autorenamer-page) (BSD License)
+    A PyGTK2 GUI to rename files in order, by draging them at the wanted order.
+    It is in Debian.
+-   _mrename_ or Mass Rename is a simple pair of shell scripts giving an automatic and
+    simple way to rename multiple files with a customizable prefix and a progressive
+    number. It is in Debian.
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
