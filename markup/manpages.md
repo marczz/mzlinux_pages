@@ -238,8 +238,9 @@ the [git Repository
 
 # Cheat sheets
 
--   [awesome cheatsheet](https://github.com/detailyang/awesome-cheatsheet)
+-   [awesome cheatsheet](https://github.com/detailyang/awesome-cheatsheetp)
     list of cheatsheet resources.
+-   [Github topic cheatsheet](https://github.com/topics/cheatsheets)
 -   <a name="tdlr"></a>The [TLDR pages](https://tldr.sh/) are a community effort to
     simplify the man pages with practical examples.
     -   [GitHub - tldr-pages/tldr](https://github.com/tldr-pages/tldr).
@@ -249,15 +250,28 @@ the [git Repository
 -   [bro pages](http://bropages.org/) is a web site with community driven
     concise examples for command line programs. There is a ruby CLI
     [bro](https://github.com/hubsmoke/bro).
--   [GitHub - chubin/cheat.sh](https://github.com/chubin/cheat.sh)
+-   [GitHub - chubin/cheat.sh](https://github.com/chubin/cheat.sh) (MIT License)
     is a repository of cheat sheets that can be queried on the command line with curl or
     with a provided client. It covers 56 programming languages, several DBMSes, and more
-    than 1000 most important UNIX/Linux commands. It has integration with emacs and vim.
-    It can access many big style sheet repositories like {{< iref "#tdlr" "TDLR" >}},
-    chrisallenlane cheat,
-    [learnxinyminutes-docs](https://github.com/adambard/learnxinyminutes-docs),
-    stackoverflow.
--   [Rico Sta. Cruz](https://github.com/rstacruz) has written
+    than 1000 most important UNIX/Linux commands. It has integration [with emacs
+    ](https://github.com/chubin/cheat.sh#emacs) and [within vim
+    ](https://github.com/chubin/cheat.sh#vim).
+
+    In addition of its own [cheatsheets repository
+    ](https://github.com/chubin/cheat.sheets)
+    it can access many big style sheet repositories like {{< iref "#tdlr" "TDLR" >}},
+    {{< iref "#chrisallenlane_cheat" "Chris Allen Lane cheat" >}},
+    {{< iref "#learnxinyminutes" "learnxinyminutes" >}} and  stackoverflow.
+    -   [cheat.sh web interface](https://cheat.sh/)
+    -   [cheat.sh command line client](https://github.com/chubin/cheat.sh#installation)
+    -   Use with curl without installing a client:
+        ``` console
+        curl cheat.sh/tar
+        curl cht.sh/curl
+        curl https://cheat.sh/rsync
+        curl https://cht.sh/tr
+        ```
+    -   [Rico Sta. Cruz](https://github.com/rstacruz) has written
     more than 380 cheat sheets that you can find on [devhints.io](https://devhints.io/).
 
     They are written in markdown, with a
@@ -270,12 +284,18 @@ the [git Repository
     ](https://github.com/dennyzhang/cheatsheet.dennyzhang.com)
     is a collection of Cheat sheets. They are written in org with export to PDF.
     Some are very rudimentary, and don't give much information, other more complete.
+-    <a name="learnxinyminutes">[learnxinyminutes-docs
+    ](https://github.com/adambard/learnxinyminutes-docs)
+    _Learn X in Y minutes_ are codes examples for numerous languages.
 -   [Commande line Fu API](https://www.commandlinefu.com/site/api)
     allow to download the text of the command pages.
 -   [Dan’s Cheat Sheets](https://cheat.readthedocs.io/en/latest/index.html)
     is a collection of Cheatsheets published as a Sphinx document from Dan Poirier.
     the RST source is in [poirier/cheat](https://github.com/poirier/cheat) GitHub
     repository.
+-   [Lecoupa/awesome cheatsheets](https://github.com/LeCoupa/awesome-cheatsheets)
+    _not an awesome list_ but a repository of cheatsheets for popular programming
+    languages, frameworks and development tools.
 
 ## CheatSheet software
 -   [alhassy/CheatSheet](https://github.com/alhassy/CheatSheet)
@@ -283,14 +303,18 @@ the [git Repository
     They support source code colouring, equational support, unicode characters support.
 -   [pbellon/cheat](https://github.com/pbellon/cheat) (GPL)
     is an Emacs package to register and open cheatsheets.
--   [GitHub - cheat/cheat](https://github.com/cheat/cheat) by Chris Allen Lane is
-    a python program to create and view interactive cheatsheets on the command-line.
+-   <a name="chrisallenlane_cheat">[GitHub - cheat/cheat](https://github.com/cheat/cheat)
+    by Chris Allen Lane is a go program _which was previously written in python_ to
+    create and view interactive cheatsheets on the command-line.
+    -   [communauty cheatsheets](https://github.com/cheat/cheatsheets)
     -   [Related Projects](https://github.com/cheat/cheat/wiki/Related-Projects)
-        list implementatations in other languages:
+    -   implementatations in other languages:
         [lucaswerkmeister/cheats](https://github.com/lucaswerkmeister/cheats) and
         [jahendrie/cheat](https://github.com/jahendrie/cheat) in bash,
         [weakish/cheat](https://github.com/weakish/cheat) in sh store the cheat sheets
-        in a git repo, [dufferzafar/cheat](https://github.com/dufferzafar/cheat) in go.
+        in a git repo, [dufferzafar/cheat](https://github.com/dufferzafar/cheat) in go,
+        [srsudar/eg](https://github.com/srsudar/eg) in python, with pre-loaded examples
+        and a way to modify them.
 
 # Dash Docsets {#dash_docsets}
 [Dash](https://kapeli.com/dash) is an offline documentation browser created and maintained by
