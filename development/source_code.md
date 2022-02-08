@@ -156,6 +156,14 @@ re-formatting, and higlighting._
     _Chroma_ includes translators for Pygments lexers and styles.
     _Chroma_ formatters can output HTML, as well as terminal output in 8/256/true
     colour. Chroma has also a command line client.
+    -   [chroma supported langages
+        ](https://github.com/alecthomas/chroma#supported-languages)
+    -   [Chroma Style Gallery - short examples
+        ](https://xyproto.github.io/splash/docs/all.html)
+    -   [Chroma Style Gallery - longer examples
+        ](https://xyproto.github.io/splash/docs/longer/all.html)
+    -   You can test a combination of langage examples and style in the
+        [Chroma Playground](https://swapoff.org/chroma/playground/).
 
     _Chroma_ can be used with the {{< iref "markdown#goldmark" "Goldmark" >}}
     Markdown renderer using the
