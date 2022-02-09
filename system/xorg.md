@@ -219,18 +219,21 @@ See also the {{< iref "#xdmcp" "XDMCP section" >}}
         ](https://help.gnome.org/admin/gdm/stable/)
     -   [ArchWiki: GDM](https://wiki.archlinux.org/index.php/GDM).
 -   <a name="greetd"></a>[greetd](https://git.sr.ht/~kennylevinsen/greetd) (GPL-3.0)
-    minimal, and flexible login manager daemon
-    It can launch many greeters:
+    minimal, and flexible login manager daemon. It is in Alpine.
+    -   [greetd - ArchWiki](https://wiki.archlinux.org/title/Greetd)
 
+    Greetd can launch many greeters:
 
     -   agreety - text-based default greeter, provided with _greetd_.
     -   [gtkgreet](https://git.sr.ht/~kennylevinsen/gtkgreet)  GTK based greeter
         using xdg-shell or wlr-layer-shell, to be used with something like `cage`.
-    -   [dlm](https://git.sr.ht/~kennylevinsen/dlm) Dumb Login Manager using fbdev.
+        It is in Alpine.
+    -   [dlm](https://git.sr.ht/~kennylevinsen/dlm) Dumb Login Manager using fbdev, or
+        the enhanced [ddlm](https://github.com/deathowl/ddlm).
     -   [wlgreet](https://git.sr.ht/~kennylevinsen/wlgreet) Wayland greeter using
         wlr-layer-shell, used for wayland compositors like  `sway`.
     -   [tuigreet](https://github.com/apognu/tuigreet) Console UI greeter using tui-rs
-
+        It is in Alpine.
 -   <a name="lightdm"></a>[LightDM](http://en.wikipedia.org/wiki/LightDM) (GPL)
     is a window manager with same functionalities than _GDM_ but without Gnome
     dependencies.  LightDM is the default display manager for LXDE including lxubuntu,
