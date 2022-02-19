@@ -2,9 +2,19 @@
 title: Org Mode
 ---
 
+See also {{< iref "emacs" "Emacs" >}}, including
+{{< iref "emacs#templates" "Yasnippet and other template systems" >}}.
+
 # Org Mode References
 -   [Org Mode Home](http://orgmode.org/).
--   [org-mode Git Repository](https://code.orgmode.org/bzg/org-mode.git)
+-   [org-mode Git Repository](https://git.savannah.gnu.org/cgit/emacs/org-mode.git/)
+    [org mode mirror at GitHub](https://github.com/bzg/org-mode) _seems to be behind the
+    origin_.
+-   [Hello Worg, the Org-Mode Community!](https://orgmode.org/worg/)
+    contains Org-Mode Resources.
+    -   [Worg git repository (sourcehut)](https://git.sr.ht/~bzg/worg/)
+        [Worg mirror at Gihub](https://github.com/bzg/worg) _seems to be behind the
+        origin_.
 -   mailing list
     [emacs-orgmode Archives](https://lists.gnu.org/archive/html/emacs-orgmode/)
     also available at gmame.
@@ -15,6 +25,9 @@ title: Org Mode
 
 -   [Org Manual](https://orgmode.org/manual/)
 -   [last release org manual](http://orgmode.org/org.html),
+-   [Org-Mode Reference Card (html)](https://orgmode.org/worg/orgcard.html),
+    [Org-Mode Reference Card (org source)
+    ](https://git.sr.ht/~bzg/worg/tree/master/item/orgcard.org).
 -   [The compact Org-mode Guide](http://orgmode.org/guide/)
 -   [Emacswiki: OrgMode](http://www.emacswiki.org/emacs/OrgMode)
 -   [Org-mode Frequently Asked Questions](https://orgmode.org/worg/org-faq.html)
@@ -48,6 +61,7 @@ title: Org Mode
     The source repository is [GitHub - Emacs-Elisp-Programming
     ](https://github.com/caiorss/Emacs-Elisp-Programming)
 
+
 # Articles and Blogs {#org_blogs}
 -   [Sacha Chua
     ](http://sachachua.com):
@@ -69,6 +83,30 @@ title: Org Mode
 -   [Karl Voit blog series: Using Org Mode Features (UOMF)
     ](https://karl-voit.at/2019/09/25/using-orgmode/).
 
+## Org Capture
+-   [Capture (The Org Manual)](https://orgmode.org/manual/Capture.html)
+    [Capture in the compact guide](https://orgmode.org/guide/Capture.html#Capture).
+-   {{< "emacs#sacha_chua" "Sacha Chua" >}}
+    [Learn how to take notes more efficiently in Org Mode
+    ](https://sachachua.com/blog/2015/02/learn-take-notes-efficiently-org-mode)
+        is a four steps tutorial :
+    -   Set up a keyboard shortcut to go to your main Org file
+    -   Use org-refile to file or jump to headings
+    -   Use org-capture to write notes quickly
+    -   Define your own org-capture templates for greater convenience
+    -   Pull in additional information
+-   {{< iref "emacs#howardism" "Howard Abrams" >}}
+    [Org Capturing Introduction
+    ](http://howardism.org/Technical/Emacs/capturing-intro.html),
+    [Capturing Content for Emacs
+    ](http://howardism.org/Technical/Emacs/capturing-content.html),
+    and the [capture templates in his emacs configuration
+    ](https://gitlab.com/howardabrams/hamacs/-/blob/main/ha-capturing-notes.org).
+-   [Karl Voit Capture configuration
+    ](https://github.com/novoid/dot-emacs/blob/master/config.org#capture)
+-   [Org capture tricks - Storax
+    ](http://storax.github.io/blog/2016/05/02/org-capture-tricks/)
+
 # Org Babel {#babel}
 
 -   [The Org Manual: Working with source code
@@ -87,9 +125,15 @@ title: Org Mode
 ## Org-Babel literate programming
 
 See also {{< iref "source_code#literate_programming" "Literate Programming" >}}
--   [Introduction to Literate Programming
+-   A nice and complete introduction[Introduction to Literate Programming
     ](http://www.howardism.org/Technical/Emacs/literate-programming-tutorial.html)
-    _with Org Babel_.
+    _with Org Babel_ by {{< iref "emacs#howardism" "Howard Abrams" >}}.
+
+    His [emacs configuration _hamacs_](https://gitlab.com/howardabrams/hamacs) uses org
+    init files and literal programming, and his
+    [Getting Boxes Done Part 2
+    ](http://howardism.org/Technical/Emacs/getting-more-boxes-done.html), is also
+    an example of literate programming.
 -   [Babel Introduction - Code Blocks
     ](https://orgmode.org/worg/org-contrib/babel/intro.html#source-code-blocks)
     and
@@ -110,6 +154,8 @@ See also {{< iref "source_code#literate_programming" "Literate Programming" >}}
 -   [Formatting tangled output in org-mode
     ](https://jamesaimonetti.com/fr/posts/formatting-tangled-output-in-org-mode/)
     explains _org-babel-post-tangle-hook_.
+
+## Org Mode and Jupyter notebooks
 -   [ob-ipython](https://github.com/gregsexton/ob-ipython)
     org-babel integration with {{< iref "python_libraries#jupyter" "Jupyter" >}} for
     evaluation of (Python by default) code blocks. It is also possible to use an other
@@ -141,27 +187,28 @@ See also {{< iref "source_code#literate_programming" "Literate Programming" >}}
 
 # Org mode parsing
 
-[Org Mode tools: Org-mode parsers](http://orgmode.org/worg/org-tools/#sec-1)
+[Org Mode tools](https://orgmode.org/worg/org-tools/) has as section
+[Org-mode parsers](https://orgmode.org/worg/org-tools/#orgc5b2497).
 
 -   [CL-org-mode](http://common-lisp.net/project/cl-org-mode/)
     is a parser for org-mode files that uses an extensible CLOS-based
     recursive descent parser to create a tree of org-mode nodes. _2009_
--   [PyOrgMode](https://github.com/bjonnh/PyOrgMode)
-    by Jonathan Bisson is a python library for creating and parsing
-    Org files. _up to date in may 2015_
 -   [Neo - No Emacs Org](http://chadok.info/darcs/neo/)
-    by Olivier Schwander is another Python tool for parsing org mode
-    files. _2012_
+    by Olivier Schwander is a Python tool for parsing org mode
+    files. _2012_; You may prefer the newer _orgparse_.
 -   [org-mode-parser](https://github.com/daitangio/org-mode-parser)
-    by Giovanni Giorgi is a Node.js parser for org mode.
--   [Orgile](http://toshine.org/etc/orgile-emacs-org-mode-file-html-parser-php-publishing-tool/)
-    is a PHP  Org-mode  parser.
+    by Giovanni Giorgi is a Node.js parser for org mode. _2018_
+-   [Orgile](https://github.com/mashdot/orgile)
+    is a PHP  Org-mode  parser. _2012_
     [Orgile GiHub repository](https://github.com/mashdot/orgile). _2012_
 -   [orgnode](http://members.optusnet.com.au/~charles57/GTD/orgnode.html) (MIT)
     by [Charles Cave](http://members.optusnet.com.au/~charles57/GTD/)
-    is a python program to read org-mode files. _2010_
--  [org.js](http://mooz.github.io/org-js/)
-    JavaScript Parser and converter for org-mode. _updated in 2014_
+    is a python program to read org-mode files. _2010_ You should prefer _orgparse_.
+-   [org.js](http://mooz.github.io/org-js/)
+    JavaScript Parser and converter for org-mode. _updated in 2015_
+-   [orgparse](https://github.com/karlicoss/orgparse) (BSD 2 clauses)
+    is a Python module for reading Emacs org-mode files. _active 2022_
+    -   [orgparse documentation](https://orgparse.readthedocs.io/en/latest/)
 
 # Org mode libraries
 -   [alhassy/CheatSheet](https://github.com/alhassy/CheatSheet)
