@@ -4,6 +4,8 @@ title: Emacs
 
 <!-- see also [[file:/share/sync_folders/misc/mznotes/content-org/notes/text_processing_notes/emacs_notes.org][emacs_notes]] -->
 
+See also {{< iref "org-mode" "Org Mode >}}.
+
 # Emacs references
 
 -   [gnu.emacs.sources](https://groups.google.com/forum/?hl=en#!forum/gnu.emacs.sources)
@@ -68,21 +70,55 @@ title: Emacs
 -   [Bozhidar Batsov: Emacs Redux](http://emacsredux.com/)
     ([Emacs Redux rss](http://emacsredux.com/atom.xml) by the authorof _projectile_,
     _emacs prelude_, _solarized-emacs_, _zenburn_ and numerous packages.
--   Artur Malabarba's [Endless Parentheses
-    ](http://endlessparentheses.com/)
+-   Artur Malabarba's [Endless Parentheses](http://endlessparentheses.com/)
     a blog about Emacs. He has also a
     [github repository](https://github.com/Malabarba).
 -   Dirk-Jan Binnema (djcb) [emacs-fu](http://emacs-fu.blogspot.fr/).
--   Howard Abrams [Howardism](http://www.howardism.org/) a blog with many emacs post:
-    [Index of /Technical/Emacs](http://www.howardism.org/Technical/Emacs/),
--   Mickey Petersen blog [Mastering Emacs](http://www.masteringemacs.org/)
+-   <a name="howardism"></a>Howard Abrams [Howardism](http://www.howardism.org/)
+    a blog with mainly emacs posts, the individual pages are in the repository
+    [Index of /Technical/Emacs](http://www.howardism.org/Technical/Emacs/).
+    I list some tutorials:
+    -   [Yasnippet Tutorial
+        ](http://howardism.org/Technical/Emacs/templates-tutorial.html)
+    -   [Demystifying Regular Expressions](http://howardabrams.com/regexp/frames.html)
+    -   [Org as a Word Processor
+        ](http://howardism.org/Technical/Emacs/orgmode-wordprocessor.html)
+    -   [Introduction to Literate Programming
+        ](http://howardism.org/Technical/Emacs/literate-programming-tutorial.html)
+    -   [TMUX: My Getting Started Guide](http://howardism.org/Technical/Linux/tmux.html)
+    -   [Org Tables as Spreadsheet
+        ](http://howardism.org/Technical/Emacs/spreadsheet.html)
+    -   [Getting Boxes Done
+        ](http://howardism.org/Technical/Emacs/getting-boxes-done.html)
+        explains how the author organize its note in a pseudo GTD mode, the technicall
+        aspects are in [Part 2
+        ](http://howardism.org/Technical/Emacs/getting-more-boxes-done.html), it is also
+        an example of literate programming.
+    -   [Beep For Emacs](http://howardism.org/Technical/Emacs/beep-for-emacs.html).
+    -   [Org Capturing Introduction
+        ](http://howardism.org/Technical/Emacs/capturing-intro.html),
+        [Capturing Content for Emacs
+        ](http://howardism.org/Technical/Emacs/capturing-content.html)
+
+    He has [gitlab repositories](https://gitlab.com/howardabrams) including
+    [emacs configuration _hamacs_](https://gitlab.com/howardabrams/hamacs) which uses org
+    init files and literal programming.
+-   Mickey Petersen blog [Mastering EMACS](http://www.masteringemacs.org/)
 -   Oleh Krehel  blog  [oremacs](http://oremacs.com/). Oleh Krehel is the author
     of {{< iref "#ivy" "ivy" >}}, {{< iref "#hydra" "Hydra" >}}, _ace-link_,
     [ace-window][], {{< iref "#avy" "avy">}}, {{< iref "#define-word" "define-word" >}},
     _lispy_, _org-download_, _worf_, {{< iref "#pamparam" "pamparam" >}}
     and many packages in his [GitHub repository](https://github.com/abo-abo/).
--   [Sacha Chua's blog](http://sachachua.com/blog/) (
+-   <a name="sacha_chua"></a>[Sacha Chua's blog](http://sachachua.com/blog/) (
     [RSS feed](http://feeds.sachachua.com/sachac)
+    -   [Learn how to take notes more efficiently in Org Mode
+        ](https://sachachua.com/blog/2015/02/learn-take-notes-efficiently-org-mode)
+        a four steps tutorial :
+    -   Set up a keyboard shortcut to go to your main Org file
+    -   Use org-refile to file or jump to headings
+    -   Use org-capture to write notes quickly
+    -   Define your own org-capture templates for greater convenience
+    -   Pull in additional information
 -   Sebastian Wiesner
     [Emacs posts](http://www.lunaryorn.com/pages/emacs.html) and
     [Emacs Spotlight
@@ -92,6 +128,17 @@ title: Emacs
 -   [Toby 'qubit' Cubitt - Blog](http://www.dr-qubit.org/tags/all.html), he is the
     author of [many packages](http://www.dr-qubit.org/tags/computing-code-emacs.html).
 -   [Jonas Bernoulli: EmacsAir](https://emacsair.me/).
+-   [Karl Voit](https://karl-voit.at/tags/emacs/) has an emacs blog, with many org-mode
+    articles.
+    -    Karl Voit Emacs configuration uses
+        [Elisp in Org-mode](https://karl-voit.at/2017/06/03/emacs-org/)
+        it is available [in its GitHub repository
+        ](https://github.com/novoid/dot-emacs/blob/master/config.org).
+    -   [OrgDown](https://gitlab.com/publicvoit/orgdown/) is a restricted Org-mode
+        syntax, which allow the use of numerous external tools.
+    -   [Memacs](https://github.com/novoid/Memacs) extracts metadata (subjects,
+        timestamps, contact information, …) from many different existing data sources
+        (file names, emails, tweets, bookmarks, …) generates Org mode files.
 
 # Emacs compatibles terminal editors {#terminal_editors_emacslike}
 -   [Getting started with lightweight alternatives to GNU Emacs
@@ -161,7 +208,7 @@ title: Emacs
     ](http://nic.ferrier.me.uk/blog/2012_07/tips-and-tricks-for-emacslisp)
 -   [Xah Emacs Lisp Tutorial](http://ergoemacs.org/emacs/elisp.html)
 
-# Emacs native-compile
+# Emacs native-compile {#emacs_native_compile}
 Emacs' branch feature/native-comp support native compilation which adds support for
 compiling EmacsLisp to native code using libgccjit.
 
@@ -184,7 +231,7 @@ inclusion in Emacs 28.
     includes  native compilation, typescript, threading, async I/O, and WebRender.
     -   [emacs-ng - GitHub](https://github.com/emacs-ng/emacs-ng)
 
-## Emacs pgtk
+## Emacs pgtk {#emacs_pgtk}
 Emacs has had a GTK port for many years, but that port still uses X11 directly for many
 things, so you can not use it in Wayland without Xwayland.
 
@@ -241,7 +288,7 @@ The branch pgtk-nativecomp can be found in
 -   <a name="prelude"></a>[Prelude](https://github.com/bbatsov/prelude)
     is an emacs distribution configuration systems.
     -   [Prelude Manual](https://prelude.emacsredux.com/en/latest/).
-        is a complete manualwith a section for each module.
+        is a complete manual with a section for each module.
     It use a [list of packages
     ](https://github.com/bbatsov/prelude/blob/master/core/prelude-packages.el)
     in beginning 2020 it was:
@@ -250,8 +297,8 @@ The branch pgtk-nativecomp can be found in
     >    discover-my-major, [diff-hl][], diminish, easy-kill, editorconfig, epl,
     >    expand-region, [flycheck][], gist, git-timemachine, gitconfig-mode,
     >    gitignore-mode, guru-mode, imenu-everywhere, hl-todo, projectile, magit,
-    >    move-text, operate-on-number, [smart-mode-line][sml], [smartparens], smartrep,
-    >    supersave, [undo-tree][], volatile-highlights, [which-key][]
+    >    move-text, operate-on-number, [smart-mode-line][sml], [smartparens][], smartrep,
+    >    supersave, [undo-tree][], volatile-highlights, [which-key][],
     >    [zenburn-theme][zenburn], zop-to-char
 
 -   [Oleh Krehel _abo-abo_ oremacs
@@ -263,9 +310,8 @@ The branch pgtk-nativecomp can be found in
 
     Oremacs uses {{< iref "straight"  "Straight" >}}
     and many [snippets](https://github.com/abo-abo/oremacs/tree/github/snippets),
-    there is an init file for each [mode]
-    that contains few hydra snippets for avy, buffer-menu, dired, helm, info,
-    org-roam, projectile,  search.
+    there is an init file for each mode that contains few hydra snippets for avy,
+    buffer-menu, dired, helm, info, org-roam, projectile, search.
 -   [Spacemacs](https://www.spacemacs.org/)
     is a configuration kit focused on Evil
     -   [spacemacs - GitHub](https://github.com/syl20bnr/spacemacs)
@@ -325,9 +371,10 @@ The branch pgtk-nativecomp can be found in
         ](https://systemcrafters.cc/advanced-package-management/using-straight-el/)
         a tutorial with a section on Converting an existing packages.el configuration
         to straight.el.
--   <a name="use-package"></a>[use-package](https://github.com/jwiegley/use-package) add a
-    macro which allows you to isolate each emacs package
-    configuration.
+-   <a name="use-package"></a>[use-package](https://github.com/jwiegley/use-package) add
+    a macro which allows you to isolate each emacs package configuration.
+    -   [A Quick Tutorial on Use-package for Emacs | Ian Y.E. Pan
+        ](https://ianyepan.github.io/posts/setting-up-use-package/).
 
 # Emacs Packages
 
@@ -535,6 +582,10 @@ _   [EmacsWiki: Category Frames](https://www.emacswiki.org/emacs/CategoryFrames)
     It was forked and now replaces [guide-key][] which is no longer maintained.
 
 ## Programming, Projects
+-   [Format all the code](https://github.com/lassik/emacs-format-all-the-code) (MIT License)
+    Lets you auto-format source code in many languages using the same command for all
+    languages, instead of learning a different Emacs package and formatting command for
+    each language.
 -   [flycheck][] (GPL-3.0)
     is a syntax checking extension for GNU Emacs.
     It has a long list of [supported Languages
@@ -594,19 +645,45 @@ _   [EmacsWiki: Category Frames](https://www.emacswiki.org/emacs/CategoryFrames)
     by Oleh Krehel _abo-abo_ group common group of command by prefix, with an
     interactive chooser for the bindings.
     See {{< iref "#hercules" "hercules" >}} for an automatic hydra menu builder.
--   [yasnippet](https://github.com/joaotavora/yasnippet)
-    is a template system for Emacs. It allows you to type an abbreviation and
-    automatically expand it into function templates.
 
-    Yasnippet is packaged in elpa, many snippets are in the snippet directory, this is
-    the[collection of snippets of Andre Cotti
-    ](https://github.com/AndreaCrotti/yasnippet-snippets/tree/master/snippets/org-mode)
-    also in the elpa package yasnippet-snippets, for many specific languages there is an
-    additional snippet collections in an elpa package.
+## Templates {#templates}
+There are many templates languages for Emacs, most of them are listd in
+[EmacsWiki: Category Templates](https://www.emacswiki.org/emacs/CategoryTemplates).
 
-    -   [Yasnippet Manual](http://joaotavora.github.io/yasnippet/)
-    -   [EmacsWiki: Yasnippet](https://www.emacswiki.org/emacs/Yasnippet)
+Two are bundled with emacs [Skeleton](https://www.emacswiki.org/emacs/SkeletonMode) and
+[Tempo](https://www.emacswiki.org/emacs/TempoMode) which can be extended with
+the [Tempo Snippets](https://www.emacswiki.org/emacs/TempoSnippets) front end
 
+Tempo is used with org-mode by the library `org-tempo.el`. Org Tempo reimplements
+completions of structure template before point For example, strings like `<e` at the
+beginning of the line will be expanded to an example block. The block templetes are in
+the `org-structure-template-alist` and `org-keyword-template-alist` alist. You can add there other sblock types.
+They are inserted by typing '<' 'key' 'TAB', you cn also choose them with a menu by
+typing `C-c C,` (`org-insert-structure-template`).
+
+[yasnippet](https://github.com/joaotavora/yasnippet)
+is a template system for Emacs. It allows you to type an abbreviation and automatically
+expand it into function templates.
+
+Yasnippet is packaged in elpa, many snippets are in the snippet directory, this is
+the[collection of snippets of Andre Cotti
+](https://github.com/AndreaCrotti/yasnippet-snippets/tree/master/snippets/org-mode)
+also in the elpa package yasnippet-snippets, for many specific languages there is an
+additional snippet collections in an elpa package.
+
+-   {{< iref "emacs#howardism" "Howard Abrams" >}}  [Yasnippet Tutorial
+    ](http://howardism.org/Technical/Emacs/templates-tutorial.html)
+-   [Yasnippet Manual](http://joaotavora.github.io/yasnippet/)
+-   [EmacsWiki: Yasnippet](https://www.emacswiki.org/emacs/Yasnippet)
+-   [doom-snippets](https://github.com/hlissner/doom-snippets).
+
+[yankpad](https://github.com/Kungsgeten/yankpad) keeps snippets in an org mode file, and
+you don't have to define a shortcut like in Yasnippet. But you can choose the snippet to
+insert, optionaly with a keyword.
+It allows to have different sets of text snippets for different situations while
+Yasnippet defines a set of snippets for each mode.
+
+-   [Introduction to Yankpad](https://kungsgeten.github.io/yankpad.html)
 
 ## Other packages
 
