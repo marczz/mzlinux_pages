@@ -72,15 +72,15 @@ homonym Wayland terminal {{< iref "#wterm" "wterm" >}}.
 multilingual terminal with support for input-methods.
 
 
-# List of  vte terminal emulators
-<a name="vte"></a> [vte](https://live.gnome.org/VTE) is a library for
-terminal emulators build upon gtk2 or gtk3, pango,
-libatk,libcairo2... It is desktop agnostic, as it doesn't depend
-directly on Xorg it can even be compiled against directfb. A bunch of
-terminal emulator use this __vte__ library and they add their on
-dependencies they all share some common characteristics comming from
-__vte__, and use multiple tabs they are more ressource greedy than
-__xterm__.
+# List of  vte terminal emulators {#vte}
+<a name="vte"></a> [vte](https://live.gnome.org/Apps/Terminal/VTE) is a library for
+terminal emulators build upon gtk3, pango, libatk,libcairo2...
+
+It is desktop agnostic, as it doesn't depend directly on Xorg, and is also available on
+Wayland it can even be compiled against directfb. A bunch of terminal emulator use this
+__libvte__ library and they add their on dependencies they all share some common
+characteristics comming from __libvte__, and can use multiple tabs, some uses a single
+server for multiple windows.
 
 Most of them have support for UTF-8 , tabbing,
 coloring and reordering tabs, manage tabs through keybindings,
@@ -271,6 +271,9 @@ See also the {{< iref "xorg#wayland" "Wayland Section" >}},
     is an _st_ fork for wayland.
 
 ## Terminals that work on both Wayland and X11
+The {{< "#vte" "VTE Terminals" >}} as well of all terminals based on GTK3, GTK4, QT5,
+QT6 don't depend on Xorg and can run on both Xorg and Wayland.
+
 
 -   [Alacritty](https://github.com/alacritty/alacritty) (Apache License)
     A Rust cross-platform, GPU-accelerated terminal emulator, with a strong focus on
@@ -287,6 +290,13 @@ See also the {{< iref "xorg#wayland" "Wayland Section" >}},
     -   The POP_OS fork add a [debian package configuration
         ](https://github.com/pop-os/alacritty/tree/master/debian).
 
+-   [Kitty](https://sw.kovidgoyal.net/kitty/) (GPL)
+    a scriptable OpenGL based terminal emulator with tiling capabilities, TrueColor,
+    ligatures support and protocol extensions for keyboard input and image rendering.
+
+    I tried in 2020 Kitty on Linux X11, but it let my window manager, in an
+    unrecoverable state.
+
 -   The Kde/Qt terminal is {{< wp "Konsole" >}} it has heavy KDE dependencie.
 
 -   <a name="qterminal"></a>[qterminal](https://github.com/lxqt/qterminal/)
@@ -298,13 +308,6 @@ See also the {{< iref "xorg#wayland" "Wayland Section" >}},
     You can have multiple tabs but it does not allow to share a process
     between multiple windows
 
--   [Kitty](https://sw.kovidgoyal.net/kitty/) (GPL)
-    a scriptable OpenGL based terminal emulator with tiling capabilities, TrueColor,
-    ligatures support and protocol extensions for keyboard input and image rendering.
-
-    I tried in 2020 Kitty on Linux X11, but it let my window manager, in an
-    unrecoverable state.
-
 -   [Terminology](https://www.enlightenment.org/about-terminology)
     is a terminal emulator created for the Enlightenment desktop.  it allows: Multiple
     copy and paste selections, multiple tabs and split into multiple panes, inline
@@ -315,6 +318,11 @@ See also the {{< iref "xorg#wayland" "Wayland Section" >}},
     -   [GitHub: Terminology](https://github.com/billiob/terminology)
     -   Terminology uses 27M resident memory / 17 shared.
     -   Wikipedia: {{< wp "terminology" >}}
+
+-   [Wayst](https://github.com/91861/wayst)
+    is a simple terminal emulator for Wayland and X11 with OpenGL rendering and minimal
+    dependencies (OpenGL, fontconfig, freetype).
+
 
 # Javascript Terminals
 -   [terminal javascript Library](http://www.masswerk.at/termlib/)
