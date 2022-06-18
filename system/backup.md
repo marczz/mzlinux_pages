@@ -454,26 +454,26 @@ See also the {{< iref "#rsync" "rsync section" >}}
     [Back In Time](https://github.com/bit-team/backintime) (GPL)
     is a python frontend  for rsync. It uses hard-links as usual for
     rsync snapshots. It comes up with a QT4 gui.
-    This is an active project in 2018 that is packaged in Debian.
-    -   [[Back In Time Documentation
-        ](http://backintime.readthedocs.io/en/latest/).
+    This is an active project in 2022 that is packaged in Debian.
+    -   [Back In Time Documentation](http://backintime.readthedocs.io/en/latest/).
 -   [casync](https://github.com/systemd/casync) (LGPL)
-    A combination of the rsync algorithm and content-addressable storage.
+    is not a rsync frontend, but a combination of the rsync algorithm and content-addressable storage.
     The difference with rsync is that it remove file boundaries before chunking things
     up; which permits us to recognize similarities in files and directories beyond file
-    boundaries _In Debian._
+    boundaries.
+    
+    _Casync_ is a software from Lennart Poettering, who present it [in his blog
+    ](http://0pointer.net/blog/casync-a-tool-for-distributing-file-system-images.html)
+    
+    _In Debian, last release 2017, active 2021._
 -   [Dirvish](http://www.dirvish.org/) (Open Software License)
-    written in Perl.
-    [Configuring and Using Dirvish for Snapshot  Backups
-    ](http://wiki.edseek.com/howto:dirvish).
-    it is no longer an active project since 2008, but still packaged in Debian in 2022.
+    written in Perl, is no longer an active project since 2008, but still packaged in 
+    Debian in 2022.
+    -   [Configuring and Using Dirvish for Snapshot  Backups
+        ](http://wiki.edseek.com/howto:dirvish).
 -   [luckyBackup](http://luckybackup.sourceforge.net/) (GPL)
     is an rsync-based GUI data backup utility that uses snapshots.
     It comes with a QT gui and is available as Debian package.
--   [rlbackup (remote linked backup)
-    ](http://www.math.ualberta.ca/imaging/rlbackup/)
-    written in shell (year 2004) make backups with `rsync
-    --link-dest.`
 -   [rsbackup](http://www.greenend.org.uk/rjk/rsbackup/) (GPL)
     uses rsync with hardlinks. It is written in C++, actively
     maintained _in 2022_, and is in Debian.
@@ -491,10 +491,10 @@ See also the {{< iref "#rsync" "rsync section" >}}
         ](https://blog.karssen.org/2013/01/04/comparing-rsnapshot-and-obnam-for-scheduled-large-backups/)
 -   [RsyncIncr](http://colas.nahaboo.net/Software/RsyncIncr) (GPL)
     by Colas Nahaboo is a bash script that implement the maximilien Rubel
-    idea with rsync. _last release 2008_.
+    idea with rsync. _last release 2021_.
     -   [RsyncIncr - GitHub](https://github.com/ColasNahaboo/rsync-incr)
 -   [Rybackup](http://git.sysphere.org/rybackup/)
-    (git repository) from Adrian C. (anrxc) is a small (200 LOCs)
+    (git repository) from Adrian C. (anrxc) is a small (200 LOCs 2012)
     python script based on rsync and rotating backup-snapshots.  It
     uses hard links copy but not the `--link-dest` option of rsync.
     <br /> Adrian
@@ -513,12 +513,11 @@ See also the {{< iref "#rsync" "rsync section" >}}
     {{< iref "#backintime" "BackInTime" >}} and
     {{< iref "#timevault" "TimeVault" >}}
     but is designed to protect only system files and
-    settings .o backup user data we should use
+    settings. To backup user data we should use
     {{< iref "#backintime" "BackInTime" >}}. It comes with a
     GTK GUI frontend.
     TimeShift is an active project _in 2022_, it is available in Debian.
-    -   [TimeShift source repository
-        ](https://github.com/linuxmint/timeshift)
+    -   [TimeShift source repository](https://github.com/linuxmint/timeshift)
 
 
 #  file based backups {#backup}
