@@ -466,7 +466,7 @@ See also the {{< iref "#rsync" "rsync section" >}}
     written in Perl.
     [Configuring and Using Dirvish for Snapshot  Backups
     ](http://wiki.edseek.com/howto:dirvish).
-    _No longer an active project since 2008_
+    it is no longer an active project since 2008, but still packaged in Debian in 2022.
 -   [luckyBackup](http://luckybackup.sourceforge.net/) (GPL)
     is an rsync-based GUI data backup utility that uses snapshots.
     It comes with a QT gui and is available as Debian package.
@@ -476,15 +476,9 @@ See also the {{< iref "#rsync" "rsync section" >}}
     --link-dest.`
 -   [rsbackup](http://www.greenend.org.uk/rjk/rsbackup/) (GPL)
     uses rsync with hardlinks. It is written in C++, actively
-    maintained _in 2018_, and is in Debian.
+    maintained _in 2022_, and is in Debian.
     -   [rsbackup GitHub repository
         ](https://github.com/ewxrjk/rsbackup).
--   [rsync-backup](http://code.google.com/p/rsync-backup/) and
-    [snapback2](http://www.perusion.com/misc/Snapback2) are
-    perl scripts for rsync backup,
--   [Rsnap](http://web.chad.org/projects/rsnap/)
-    is a backup and snapshot python utility based on rsync.
-    _last release 2008_
 -   <a name="rsnapshot"></a>[Rsnapshot](https://rsnapshot.org/) (GPL)
     written in Perl can take incremental snapshots of local and
     remote filesystems using of hard links following M Rubel
@@ -497,9 +491,9 @@ See also the {{< iref "#rsync" "rsync section" >}}
         ](https://blog.karssen.org/2013/01/04/comparing-rsnapshot-and-obnam-for-scheduled-large-backups/)
 -   [RsyncIncr](http://colas.nahaboo.net/Software/RsyncIncr) (GPL)
     by Colas Nahaboo is a bash script that implement the maximilien Rubel
-    idea with rsync. _last release 2018_.
-    [RsyncIncr mercurial repository](http://hg.colas.nahaboo.net/rsync-incr/).
--   [Rybackup](http://git.sysphere.org/rybackup/tree/)
+    idea with rsync. _last release 2008_.
+    -   [RsyncIncr - GitHub](https://github.com/ColasNahaboo/rsync-incr)
+-   [Rybackup](http://git.sysphere.org/rybackup/)
     (git repository) from Adrian C. (anrxc) is a small (200 LOCs)
     python script based on rsync and rotating backup-snapshots.  It
     uses hard links copy but not the `--link-dest` option of rsync.
@@ -510,7 +504,7 @@ See also the {{< iref "#rsync" "rsync section" >}}
     is an  example script  that demonstrates  how to  set up  a simple
     backup solution on amazon S3 using
     [S3QL](http://code.google.com/p/s3ql/) and rsync.
--   [TimeShift](https://github.com/teejee2008/timeshift)
+-   [TimeShift](https://github.com/linuxmint/timeshift)
     is an application written in vala that provides functionality
     similar to the System Restore feature in Windows and the Time
     Machine tool in Mac OS. Snapshots are taken using rsync and
@@ -522,9 +516,9 @@ See also the {{< iref "#rsync" "rsync section" >}}
     settings .o backup user data we should use
     {{< iref "#backintime" "BackInTime" >}}. It comes with a
     GTK GUI frontend.
-    TimeShift is an active project _in 2020_, it is available in Debian.
+    TimeShift is an active project _in 2022_, it is available in Debian.
     -   [TimeShift source repository
-        ](https://github.com/teejee2008/timeshift)
+        ](https://github.com/linuxmint/timeshift)
 
 
 #  file based backups {#backup}
@@ -676,8 +670,9 @@ See also the {{< iref "#rsync_backup" "Section on rsync backup" >}}
     a light-weight live mirror, written in LUA and C languages. It uses
     {{< iref "schedulers#inotify" "inotify" >}} to watch files
     and rsync and ssh to synchronize them. [Lsyncd is packaged in Debian
-    ](https://tracker.debian.org/pkg/lsyncd). The source repository seems to be sleeping
-    since 2018, the issues and pull request are unanswered.
+    ](https://tracker.debian.org/pkg/lsyncd). The source repository was sleeping
+    since 2018, but seems to have new activity in 2022, the issues and pull request 
+    are still mainly unanswered.
 
     See also {{< iref "#clsync" "clsync" >}} which was conceived as an enhancement of
     _lsyncd_.
