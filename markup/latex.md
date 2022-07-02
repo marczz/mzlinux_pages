@@ -83,41 +83,42 @@ See also {{< iref "ps_pdf_djvu" "Ps, PDF, DjVu" >}}.
 
 
 ## Latex online manuals {#latex_manuals}
--   [Arclinux: LaTeX
-    ](https://wiki.archlinux.org/index.php/LaTeX)
--   [ArchWiki: Ooolatex
-    ](https://wiki.archlinux.org/index.php/Ooolatex)
-    is a set of macros designed to bring the power of LaTeX into OpenOffice.
+-   [TeX FAQ: LaTeX tutorials](https://texfaq.org/FAQ-tutbitslatex)
+-   [Learn LaTeX](https://www.learnlatex.org/) A complete tutorial in many 
+    languages.
 -   [LaTeX WikiBook (en)](http://en.wikibooks.org/wiki/LaTeX)
     and [Wikibook: Programmation LaTeX (fr)](http://fr.wikibooks.org/wiki/LaTeX)) ,
-    are guides to
-    the LaTeX markup language intended to new users as well as old
+    are guides to the LaTeX markup language intended to new users as well as old
     hands who need a quick reference.
 -   [Web based LaTeX help](http://www.personal.ceu.hu/tex/latex.htm),
     based on George D. Greenwade's LaTeX help for VMS machines.
 -   [NASA GISS: Hypertext Help with LaTeX](http://www.giss.nasa.gov/tools/latex/ltx-2.html)
--   The [Indian TEX Users Group](http://tug.org.in/)
-    has a complete set of [tutorials](http://tug.org.in/tutorials.html),
+    _Obsolete 1997_
+-   The Indian TEX Users Group has a complete set of 
+    [tutorials](https://www.tug.org/tutorials/tugindia/),
     which expand the _Latex Primer_ of C. V. Radhakrishnan
-    also available on their site. I often use the chapter 7
-    on _longtable_, 8 _colortable_, 9 _figures_ and 13 _Layout_;
-    _the original title hide these contents_.
+    also available on their site. 
+    
+    I often use the chapter 7 on _longtable_, 8 _colortable_, 9 _figures_ and 13
+    _Layout_; _the original title hide these contents_.
+    
     These chapters are not in the downloadable book.
--   Andrew Roberts offers [ Getting to grips with LaTeX
-    ](, a set of online
-    tutorials [ _Setting up Latex, Absolute Beginners, Document Structure,
+-   Andrew Roberts offers 
+    [Getting to grips with LaTeX](https://www.andy-roberts.net/writing/latex)
+    a set of online tutorials [
+    _Setting up Latex, Absolute Beginners, Document Structure,
     Bibliographies, Tables part 1 and part 2, Importing Images, Floats, Figures
     and Captions, Page Layout, Mathematics - Part I and Part II, PDFs, Contents
     and Indices_ ].
--   [A Simplified Introduction to LaTeX (pdf)](http://mirrors.ctan.org/info/simplified-latex/simplified-intro.pdf)
+-   [A Simplified Introduction to LaTeX (pdf)
+    ](http://mirrors.ctan.org/info/simplified-latex/simplified-intro.pdf)
     by Harvey J. Greenberg _1990_
 -   [LaTeX Cookbook]( http://www.personal.ceu.hu/tex/cookbook.html)
     a cheatsheet for math in LaTeX.
--   [Aide mémoire LaTeX (pdf)](http://www.math.jussieu.fr/~goutet/latex/aide-memoire.pdf)
-     by [Philippe Goutet](http://pgoutet.free.fr/latex/index.html).
--   [CTAN info directory](http://mirrors.ctan.org/info/) has many pdf
-    docs that are often mirored in your local TeX system directory,
-    including
+-   [Aide mémoire LaTeX (pdf)](http://pgoutet.free.fr/latex/aide-memoire.pdf)
+    by [Philippe Goutet](http://pgoutet.free.fr/latex/index.html).
+-   [CTAN info directory](https://texlive.mycozy.space/info/) has many pdf
+    docs that are often mirored in your local TeX system directory, including
     [Latex doc pointers - pdf
     ](http://mirrors.ctan.org/info/latex-doc-ptr/latex-doc-ptr.pdf),
 -   [Text Processing using Latex
@@ -226,11 +227,12 @@ converters
     The [Plastex documentation](http://tiarno.github.io/plastex/)
     is available online, as well as a tutorial
     [Getting Started with plasTeX](http://tiarno.github.io/plastex/tutorials/)
--   [TeX4ht](http://tug.org/applications/tex4ht/mn.html)
-    (LaTeX public license) by Eitan M. Gurari. TeX4ht is configurable system for producing
+-   [TeX4ht](https://tug.org/tex4ht/) (LaTeX public license) 
+    by Eitan M. Gurari. TeX4ht is configurable system for producing
     hypertext from TEX-based sources. It can be used to convert LaTeX
-    inputs to HTML, MathML, OpenOffice, and DocBook targets.<br />
-    Since the death of Eitan M. Gurari in 2009, this package has not evolved.
+    inputs to HTML, MathML, OpenOffice, and DocBook targets.
+    
+    Since the death of Eitan M. Gurari in 2009, development of TeX4ht slowed down.
 -   [Tth](http://hutchinson.belmont.ma.us/tth/) (GPL)
     is an TeX and LaTeX to html converter.
     -   [Tth Manual](http://hutchinson.belmont.ma.us/tth/manual/)
@@ -238,21 +240,20 @@ converters
 
 ## Spreadsheet to LaTeX
 
--   [calc2latex](http://calc2latex.sourceforge.net/) is a plugin to
-    openoffice 1 and 2. It is no more developped since 2005. But the
-    [installation on OpenOffice.org 2.0](http://calc2latex.sourceforge.net/install_oo20/)
-    is said to still work in LibreOffice 1.3.
+-   [Writer2LaTeX](https://extensions.libreoffice.org/en/extensions/show/writer2latex-1)
+    is a LaTeX/BibTeX export filter and front end for Writer
 -   [V A Knight cvs2latex](https://github.com/drvinceknight/csv2LaTeX),
     [Finbarr Timbers  cvs2latex](https://github.com/timbers/CSV2LaTeX),
     and
     [Martin Ueding cvs2latex](https://github.com/martin-ueding/csv2latex/)
     are python scripts that Converts CSV files into a LaTeX table body.
--   [csv2latex (launchpad page)](https://launchpad.net/ubuntu/+source/csv2latex)
+-   [csv2latex](http://brouits.free.fr/csv2latex/)
     (GPL) is a C program that can write a LaTeX file with or without LaTeX headers.
     Several options allow csv2latex to format the style of the table
     or detect an exotic kind of csv. It is packaged in Debian/Ubuntu.
     It is not to be confused with the ruby program for Mac OsX of the
     same name.
+    -   [csv2latex launchpad](https://launchpad.net/ubuntu/+source/csv2latex)
 -   [Gnumeric](http://www.gnumeric.org/) can
     [output LaTeX format
     ](https://help.gnome.org/users/gnumeric/stable/gnumeric.html#file-format-latex)
@@ -262,7 +263,7 @@ converters
     [csv2latex](http://www.ctan.org/pkg/csv2latex) that need
     applescript on Mac Os X, _but the name is also shared by the C
     utility above_.
--   [matrix2latex](https://code.google.com/p/matrix2latex/) can output
+-   [matrix2latex](https://github.com/TheChymera/matrix2latex) can output
     latex from a python or mathlab matrix.
 
 ## Something to LaTeX
