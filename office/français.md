@@ -41,15 +41,9 @@ Pour la conjugaison on peut utiliser les {{< iref "#dictionnaires" "dictionnaire
 -   [verb2verb](http://www.verb2verbe.com/) conjugue les verbes français et anglais.
 -   [conjugaison française](http://conjugueur.reverso.net/conjugaison-francais.html)
     du [portail d'outils linguistiques Reverso](http://www.reverso.net/)
+-   [le conjugueur du figaro](https://leconjugueur.lefigaro.fr/).
 -   [Petit mémento de 40 règles orthographiques de base](http://www.abord-ch.org/info/memento.htm)
     par Marie-Louise Carrera et Violaine Spichiger.
--   [Du Féminin](http://atilf.atilf.fr/gsouvay/scripts/feminin.exe?REGLE=S)
-    règles de féminisation de la langue française (ressource
-    linguistique de [atilf](http://www.atilf.fr/)). Le livre
-    [Femme, j'écris ton nom...
-    ](https://www.vie-publique.fr/rapport/25339-guide-daide-la-feminisation-des-noms-de-metiers)
-    est consultable en ligne en [format pdf
-    ](https://www.vie-publique.fr/sites/default/files/rapport/pdf/994001174.pdf)
 -   Le [Larousse Français](http://www.larousse.com/fr/dictionnaires/francais-monolingue)
     comprend les difficultés et les conjugaisons.
 -   L'[Espace Français](http://www.espacefrancais.com/) a une
@@ -58,6 +52,45 @@ Pour la conjugaison on peut utiliser les {{< iref "#dictionnaires" "dictionnaire
     et une d'[orthographe](http://www.espacefrancais.com/orthographe/)
 -   Le [portail lexical du CNRTL](http://www.cnrtl.fr/portail/) comprend
     un formulaire de morphologie, qui donne la conjugaison des verbes.
+
+## Language Inclusif
+-   Le {{< wp "langage inclusif en français" >}} est un ensemble de moyens linguistiques
+    visant à assurer une égalité de genres dans la langue française.a
+-   Le langage épicène désigne différentes règles et pratiques qui cherchent à éviter 
+    toute discrimination sexiste par le langage, à travers le choix des mots, la syntaxe,
+    la grammaire ou la typographie.    
+-   Le {{< wp "point médian" >}}, ou point milieu, est un signe typographique semblable
+    au point mais placé au-dessus de la ligne de base.
+    
+    Le point médian a le code unicode `00B7` il s'obtient sur le clavier français Linux
+    avec Altgr+Maj+; ou Altgr+Maj+1 et bien sur comme tout charactère unicode avec
+    Ctrl+Shit+u 00B7 espace ou sous emacs Ctl+x RET 00B7 ou Ctrl+x RET middle dot.
+-   [Petit guide pratique de l’écriture inclusive
+    ](https://lessalopettes.wordpress.com/2017/09/27/petit-guide-pratique-de-lecriture-inclusive/) 
+    par _Les Salopettes_ de l'ENS Lyon.
+-   [Guide Romand d'écriture épicène](https://egalite.ch/projets/le-langage-epicene/)
+    à télécharger en pdf.
+-   [manuel d'écriture inclusive
+    ](https://www.univ-tlse3.fr/medias/fichier/manuel-decriture_1482308453426-pdf)
+    _Mots Clés_ (pdf)
+-   [Guide de grammaire inclusive
+    ](https://divergenres.org/wp-content/uploads/2021/04/guide-grammaireinclusive-final.pdf)
+    _diver genres_ (pdf).
+-   [Recommandations pour une écriture inclusive et accessible
+    ](https://legothequeabf.wordpress.com/2017/11/07/recommandations-pour-une-ecriture-inclusive-et-accessible/)
+-   [Du Féminin](http://atilf.atilf.fr/gsouvay/scripts/feminin.exe?REGLE=S)
+    règles de féminisation de la langue française (ressource
+    linguistique de [atilf](http://www.atilf.fr/)). Le livre
+    [Femme, j'écris ton nom...
+    ](https://www.vie-publique.fr/rapport/25339-guide-daide-la-feminisation-des-noms-de-metiers)
+    est consultable en ligne en [format pdf
+    ](https://www.vie-publique.fr/sites/default/files/rapport/pdf/994001174.pdf)
+-   [La rédaction non-sexiste et inclusive dans la recherche : enjeux et modalités pratiques
+    ](https://www.ined.fr/fr/publications/editions/document-travail/redaction-non-sexiste-inclusive-recherche/)
+    par Mathieu Arbogast, publication de l'INED à télécharger.
+-   [Le langage inclusif est politique : une spécificité française ?
+    ](https://www.cairn.info/revue-cahiers-du-genre-2020-2-page-5.htm)
+    par Marie Loison, Gwenaëlle Perrier, Camille Noûs Dans Cahiers du Genre 2020/2 (n° 69).
 
 # Typographie
 
@@ -81,24 +114,7 @@ donne l'orthographe, précise ses difficultés, la conjugaison ...
 <p><form action="http://fr.wiktionary.org/wiki/Special:Recherche" id="searchform"><a href="http://fr.wiktionary.org/wiki" title="fr.wiktionary.org">Wiktionnaire</a>: <input id="searchInput" name="search" type="text" title="Chercher dans ce wiki [f]" accesskey="f" value="" /> <input type='submit' name="go" id="searchGoButton" value="Consulter" title="Aller vers une page portant exactement ce nom si elle existe." /> <input type='submit' name="fulltext" id="mw-searchButton" value="Rechercher" title="Rechercher les pages comportant ce texte." /></form>
 Ce site donne aussi les traductions dans ne nombreuses langues. En annexe la <a href="http://fr.wiktionary.org/wiki/Annexe:Conjugaison_fran%C3%A7aise" title="fr.wiktionary.org Annexe:Conjugaison_française">Conjugaison Française</a></p></li>
 <li>
-<p>Le <a href="http://www.crisco.unicaen.fr/">CRISCO de université de Caen</a>
-offre un <a href="http://elsap1.unicaen.fr/dicosyn.html">Dictionnaire des synonymes</a> :
-<form action="http://elsap1.unicaen.fr/cgi-bin/trouvebis2" method="get">
-<input type="text" size="30" name="requete" maxlength="50" />
-<input type="hidden" value="#" name="refer" />
-<input type="submit" value="chercher" />
-</form>
-</p></li>
-<li>
 <form action="http://www.pomme.ualberta.ca/devoir/FMPro" method="post"><a href="http://www.pomme.ualberta.ca/devoir/">Le Devoir conjugal</a><input type="hidden" name="-DB" value="verbe.fp5" /> <input type="hidden" name="-lay" value="Layout #1" /> <input type="hidden" name="-Format" value="devoir2.htm" /> <input type="hidden" name="-error" value="devoir2.htm" /> <input type="hidden" name="-Max" value="50" /> <input type="hidden" name="-token" value="tous" /> <input type="hidden" name="-sortfield" value="verbe" /> <input type="hidden" name="-find" value="" /> <input type="hidden" name="-op" value="cn" /> <input type="hidden" name="mode" /> <input type="text" name="trouve" size="15" maxlength="40" /> <input type="submit" name="-find" value="Conjugue/Recherche" /> un verbe ou partie de verbe.</form>
-</li>
-<li>
-<form action="http://www.leconjugueur.com/php/newconjugue.php" method="post">
-<p><a href="http://www.leconjugueur.com/frindex.php">le conjugueur</a> <input type="hidden" name="lang" value="fr" /> <input type="hidden" name="oblige" value="N" /> <input type="text" name="verbe" /> <input type="submit" value="Conjuguer" /></p>
-</form>
-</li>
-<li>
-<form name="conjug" action="http://bach.arts.kuleuven.be/cgi-bin/conjugfr2.pl" method="get" id="conjug"><a href="http://bach.arts.kuleuven.be/pmertens/morlex/conjug.html">Morlex</a>: <input type="hidden" name="command" value="generate_paradigm" />Donnez l'infinitif: <input type="text" name="infinitive" size="20" /> <input type="submit" value="Conjuguer" /></form>
 </li>
 </ul>
 
@@ -223,9 +239,9 @@ offre un <a href="http://elsap1.unicaen.fr/dicosyn.html">Dictionnaire des synony
 # English Use
 
 -   WikiBook: [English in Use](http://en.wikibooks.org/wiki/English_in_Use) and
-     other [English language WikiBooks](http://en.wikibooks.org/wiki/English)
+    other [English language WikiBooks](http://en.wikibooks.org/wiki/English)
 -   [Modern English Grammar](http://papyr.com/hypertextbooks/grammar/)
-     by Daniel Kies. Look at the section: _Some Common Usage Errors_.
+    by Daniel Kies. Look at the section: _Some Common Usage Errors_.
 -   [Technical Writing](http://www.rbs0.com/tw.htm) by Ronald B. Standler.
 -   [Common Errors in English Usage](https://brians.wsu.edu/common-errors/)
     by Paul Brians.
