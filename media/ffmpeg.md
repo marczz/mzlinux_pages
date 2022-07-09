@@ -71,6 +71,26 @@ The following references can be used for both projects.
     ](http://howto-pages.org/ffmpeg/) by Howard Pritchett _2012_.
 -   [HOWTO Convert video files](http://en.linuxreviews.org/HOWTO_Convert_video_files)
     using ffmpeg.
+-   [20+ FFmpeg Commands For Beginners](https://ostechnix.com/20-ffmpeg-commands-beginners/)
+-   [Corpie write](https://write.corbpie.com/) has a lot of
+    [ffmpeg posts](https://write.corbpie.com/tag/ffmpeg/) incuding:
+    -   H264 encoding comparison of `preset` and `crf`
+        [part 1](https://write.corbpie.com/ffmpeg-h264-preset-crf-comparison-2020-pt1/),
+        [2](https://write.corbpie.com/ffmpeg-h264-preset-crf-comparison-2020-pt2/),
+        [3](https://write.corbpie.com/ffmpeg-h264-preset-crf-comparison-2020-pt3/) and
+        [4](https://write.corbpie.com/ffmpeg-h264-preset-crf-comparison-2020-pt4/);
+    -   H265 encoding comparison of `preset` and `crf`
+        [Part 1](https://write.corbpie.com/ffmpeg-h265-preset-crf-comparison-2020-pt1/),
+        [part 2](https://write.corbpie.com/ffmpeg-h265-preset-crf-comparison-2020-pt2/),
+        [part 3](https://write.corbpie.com/ffmpeg-h265-preset-crf-comparison-2020-pt3/).
+    -   FFmpeg h265 to WebM VP9 encoding comparison:
+        [Part 1 h264 `-deadline good`
+        ](https://write.corbpie.com/ffmpeg-h264-to-webm-vp9-encoding-comparison-part-1/),
+        [Part 2  h264 `-deadline realtime`](https://write.corbpie.com/ffmpeg-h264-to-webm-vp9-encoding-comparison-part-2/)
+        [Part 3 h264  `-deadline good` compared to `-deadline realtime`
+        ](https://write.corbpie.com/ffmpeg-h264-to-webm-vp9-encoding-comparison-part-3/)
+        [part 4 `-deadline good` with `-crf` values 15-30 and `-cpu-used` 0-5
+        ](https://write.corbpie.com/ffmpeg-hevc-to-webm-vp9-encoding-comparison-part-4/).
 
 # Debian packages
 
@@ -173,6 +193,92 @@ In the same way to change a video from a webm container to a mkv one without tra
 ffmpeg -i  input.webm -acodec copy -vcodec copy output.mkv
 ~~~
 
+# reducing video size
+There are many way of reducing video size, we can change resolution, we can use a more
+lossy encoding, at the price of degrading quality, and we can try a more efficient
+ancoding scheme.
+
+# Using a sample to test our reencoding
+There are number parameters for reencoding, you can change the audio and video codec,
+ach codec has numerous parameters, that influence the video quality when this is a lossy
+encoding, the size of the file and the transcoding time. Some of these parameter are
+better tested visually or audibly, to check if the degradation due to lossy encoding is
+perceptible, or even satisfy your needs.
+
+As it would be too long to reencode multiple time a whole movie, it is better to test
+your encoding on a sample, you can rxtract it with:
+~~~
+ffmpeg -ss 00:30:00 -t 00:02:00 -i movie.mp4 -acodec copy -vcodec copy sample.mp4
+~~~
+
+Which extract without reencoding a sample of the movie beginning at 30mn and a lenght of
+2mn; which make a test file of 3000 frames.
+
+But you may want to experiment separately the video and the audio, you can extract them
+with command like:
+~~~
+ffmpeg -ss 00:30:00 -t 00:02:00 -i movie.mp4 -map 0:a -c:a copy sample.aac
+ffmpeg -ss 00:30:00 -t 00:02:00 -i movie.mp4 -map 0:v -c:v copy sample_muted.mp4
+~~~
+
+# reencoding video in av1
+The `av1` encoding is known to be the most efficient but also the most cpu demanding,
+and so the longer, we can use it with:
+~~~
+ffmpeg -i h264_movie.mp4 -c:v libaom-av1 -crf 30 -b:v 0 av1_movie.mp4
+~~~
+`crf` is for constant quality, it implies `-b:v 0`, `-crf` is the quality from the
+lossless 0 to 63. More details on the page
+[Encode/AV1](https://trac.ffmpeg.org/wiki/Encode/AV1).
+
+But if you have not a powerfull CPU it may take days, for only one movie.
+
+# reencoding in H265/H264
+
+{{< wp "High_Efficiency_Video_Coding" "H265" >}} is more efficient than `H264`. But H265 is
+enencumbered with patents and not so widely available, neither firefox nor chrome
+support it, but VLC or mpv do support it as android and ios, safari.
+
+You have to choose a `CRF` quality from the lossless 0 to the worst 51, 18 is visually
+lossless. You double or lower the bitrate by augmenting or lowering CRF of +6/-6.
+
+The quality 28 of x265 correspond to quality 23 of x264
+
+I have benchmarked a 2mn sample of pure video (no sound) encoded in H264 tht
+|   size | CRF | speed     |   time |      |
+|-------:|----:|-----------|-------:|------|
+|  6364k |   - | -         |      - | 514  |
+| 49408k |   0 | medium    | 15mn35 | 3367 |
+|  2612k |  23 | medium    |  3mn33 | 177  |
+|   672k |  29 | ultrafast |  1mn05 | 45   |
+|   836k |  29 | superfast |  1mn14 | 56   |
+|   944k |  29 | veryfast  |  1mn60 | 64   |
+|   944k |  29 | faster    |  2mn02 | 64   |
+|  1076k |  29 | fast      |  4mn02 | 73   |
+|  1080k |  29 | medium    |  2mn26 | 73   |
+|   1288 |  29 | slow      |  7mn16 | 87   |
+|   412k |  35 | ultrafast |  0mn57 | 27   |
+|   500k |  35 | superfast |  1mn04 | 34   |
+|   492k |  35 | veryfast  |  1mn53 | 33   |
+|   496k |  35 | faster    |  1mn41 | 33   |
+|   580k |  35 | fast      |  3mn08 | 39   |
+|   544k |  35 | medium    |  2mn09 | 36   |
+|   624k |  35 | slow      |  6mn30 | 42   |
+|   644k |  35 | slower    | 26mn52 | 43   |
+|        |     |           |        |      |
+
+
+# Reencoding in VP9
+{{< wp "VP9" >}} is royalty free (but not completely patent free) and has an
+encoding efficiency comparable to H265 _see wikipedia for comparison_.
+
+It has a wider opensource support than H265. all browsers chromium, firefox, safari,
+opera, microoft dge support it. VP9 is supported open source media playesr, including
+VLC, MPlayer/MPlayer2/MPV, Kodi, FFplay. It is supported by android.
+It has also a good hadware support  in CPUs, see {{< wp "VP9" "wikipedia VP9" >}}
+for a list.
+
+
 # screencasting with ffmpeg
  * Distribution version does not support many format
    and you may have to compile ffmpeg.
@@ -214,7 +320,10 @@ ffmpeg -i scast-temp.mp4 -vcodec libx264 -pass 2 -b 240000 \
 -f mp4 -y scast.mp4
 ~~~~~~~~~~~~~~~
 
- * to Convert other video format to FLV (ar: audio samping rate in Hz , ab: audio bit rate in kbit/s, f: output format) _the influence on size of dividing by 2 default ar and ab seems minor_ but addin a video rate of -r 10 (def 25) gain 1/3 of size.
+ * to Convert other video format to FLV (`ar`: audio samping rate in Hz ,
+   `ab`: audio bit rate in kbit/s, f: output format) _the influence on size of dividing
+   by 2 default `ar` and `ab` seems minor_ but addinG a video rate of -r 10 (def 25)
+   gain 1/3 of size.
 ~~~~~~~~~~~~~~~
  ffmpeg -i video.avi -ar 22050 -ab 32 -f flv -s 320x240 video.flv
 ~~~~~~~~~~~~~~~
@@ -235,7 +344,10 @@ ffmpeg -i video.ogg -y -vcodec flv -b 300k -s 320x240 -r 6 -croptop 6 -cropbotto
     ffmpeg -i video.flv -vcodec png -vframes 1 -an -f rawvideo -s 320×240 video.jpg
 ~~~~~~~~~~~~~~~
 
- * We can easily transcode mpeg to flv or swf using ffmpeg. On mozilla the flash player (adobe) give a result not clear with the produced swf, we have a better one with mplayer
+ * We can easily transcode mpeg to flv or swf using ffmpeg. On mozilla the flash player
+   (adobe) give a result not clear with the produced swf, we have a better one with
+   mplayer
+
 
 
 <!-- Local Variables: -->
