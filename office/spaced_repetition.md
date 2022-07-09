@@ -20,6 +20,12 @@ title: Spaced Repetition
 -   An other application is {{< wp "Incremental reading" >}} only available in
     SuperMemo and Org-drill _and in alpha state in an Anki plugin_.
 
+## Incremental reading
+ {{< wp "Incremental reading" >}} is  available in
+    SuperMemo, Org-drill, and
+    [incremental-reading](https://github.com/luoliyan/incremental-reading)
+    Anki add-on.
+
 # Flashcard principles.
 -   [SuperMemo Twenty rules of formulating knowledge
     ](http://www.supermemo.com/articles/20rules.htm)
@@ -69,44 +75,81 @@ users or from adds_.
 -   [Flashcard Exchange](http://www.flashcardexchange.com/) _Paid
     service, 20$ to use main features_ see
     [WikiPedia: Flashcard Exchange](http://en.wikipedia.org/wiki/Flashcard_Exchange)
--   {{< wp "Quizlet" >}}, [Quilet Home](http://quizlet.com/) _Adds powered_.
+-   {{< wp "Quizlet" >}}, [Quilet Home](http://quizlet.com/) _Freemium Adds powered_.
 -   [FlashCard Machine](http://www.flashcardmachine.com/)
--   [FlashCardDb](http://flashcarddb.com/)
+-   [Cram.com](https://www.cram.com/)
 
-## {{< wp "Anki" >}}
--   [Anki 2 Home](http://ankisrs.net/anki2.html)
--   [Anki 2 Manual](http://ankisrs.net/docs/dev/manual.html)
--   [AnkiWeb: the online web interface to Anki 2](https://ankiweb.net/)
--   [Anki 2 plugin API](http://ankisrs.net/docs/dev/addons.html)
+## Anki
+-   [Anki Home](https://apps.ankiweb.net/)
+-   [AnkiWeb](https://ankiweb.net/) the online web interface to Anki 2.
+-   [Anki Manual](https://docs.ankiweb.net/)
+-   [Anki FAQ](https://faqs.ankiweb.net/)
+-   [Anki 2 Addons](https://ankiweb.net/shared/addons/) _or Plugins_
 -   [Anki 2 plugins library](https://ankiweb.net/shared/addons/)
+-   [Anki 2 shared Decks](https://ankiweb.net/shared/decks/)
 -   The sources of Anki are on GitHub:
-    [Anki Plugins](https://github.com/dae/ankiplugins),
-    [Libanki](https://github.com/dae/libanki),
-    [Anki Docs](https://github.com/dae/ankidocs).
+    -   [anki](https://github.com/ankitects/anki) (AGPL3 and other opensource licenses)
+    -   [anki-addons](https://github.com/ankitects/anki-addons),
+        [addons-doc](https://github.com/ankitects/addon-docs).
+    -   [Anki Manual](https://github.com/ankitects/anki-manual).
+    -   [ankimobile-docs](https://github.com/ankitects/ankimobile-docs)
 
-Out of the plugin library you can find many scripts, helpers and
-plugins for Anki. Many of them are in [GitHub](https://github.com).
+-   [Anki - ArchWiki](https://wiki.archlinux.org/title/Anki)
+-    Wikipedia: {{< wp "Anki" >}}
+-   [awesome-anki](https://github.com/tianshanghong/awesome-anki)
+    A curated list of awesome Anki add-ons, decks and resources
 
--   [AnkiMini](https://github.com/typerlc/ankimini)
-    A small webserver for mobile devices, _not updated to Anki 2_.
--   [Anking](https://github.com/muflax/anking)
-    A custom interface for anki and the related
-    [anki tcp server](https://github.com/muflax/anki-server).
-    The goals of Anking are
-    [explained in the _muflax_ Blog](http://daily.muflax.com/log/105/).
 -   [subs2srs](http://subs2srs.sourceforge.net/)
     allows you to create import files for Anki or other Spaced
     Repetition Systems (SRS) based on your favorite foreign
     language movies and TV shows.
--   [poem2anki](https://github.com/quentinsf/poem2anki)
+
+-   [anki-sync-server](https://github.com/tsudoko/anki-sync-server)
+    Self-hosted Anki sync server.
+    -   [ankisyncd – A Custom Sync Server for Anki 2.1 | Gene Dan's Blog
+        ](https://genedan.com/no-127-ankisyncd-a-custom-sync-server-for-anki-2-1/).
+
+Out of the plugin library you can find many scripts, helpers for Anki in
+[GitHub](https://github.com/search?q=%23anki&type=Repositories).
+
+_   [poem2anki](https://github.com/quentinsf/poem2anki)
     Convert a text file contain lines of poetry into Anki flash cards.
+    _Last release 2017_
 -   [ankilyrics](https://github.com/sobjornstad/ankilyrics)
     A script for generating Anki cards out of lyrics and poetry.
+-   [anki-templates-superlist](https://github.com/Troyciv/anki-templates-superlist)
+    A collection of Anki card styles
+-   [AnkiVim](https://github.com/MFreidank/AnkiVim) (MIT License)
+    Use vim (or your favorite editor) to write anki cards quickly in plain text or latex.
+-   [anki-connect](https://github.com/FooSoft/anki-connect) (GPL)
+    Anki plugin to expose a remote API for creating flash cards.
+-   [mdanki](https://github.com/ashlinchak/mdanki)
+    Markdown to Anki converter.
+-   [Obsidian_to_Anki](https://github.com/Pseudonium/Obsidian_to_Anki)
+    Script to add flashcards from text/markdown files to Anki.
+    Built with [Obsidian](https://obsidian.md/) markdown syntax in mind.
+
+### Incremental Reading add-ons {#incremental_reading_addons}
+-   [incremental-reading](https://github.com/luoliyan/incremental-reading) (ISC License)
+    Anki add-on providing incremental reading features
+### Dictionary add-ons
+-   [ODH](https://github.com/ninja33/ODH)
+    A chrome extension to show online dictionary content.
+-   [FastWordQuery](https://github.com/sth2018/FastWordQuery) (GPL-3.0 License)
+    Query words definitions or examples etc. from local or web dictionaries to fill
+    into Anki cards.
+-   [dictionariez](https://github.com/pnlpal/dictionariez) (GPL-2.0 License)
+    a browser extension to look up words in all kinds of dictionaries and export
+    your look-up words to Anki. Work with Firefox or Chromium, on android with
+    [Kiwi](https://kiwibrowser.com/) or
+    [Flow](https://play.google.com/store/apps/details?id=org.flow.browser).
+-   [WordQuery](https://github.com/finalion/WordQuery)
+    word fast-querying addon for anki
 
 ## Other software
 Org Mode provide several
-{{ iref "org-mode#spaced_repetition" "spaced repetition packages" >}}.
+{{< iref "org-mode#spaced_repetition" "spaced repetition packages" >}}.
 
 
--   [Learning with Texts (LWT)](http://lwt.sourceforge.net/) (Public Domain)
+-   [Learning with Texts (LWT)](https://sourceforge.net/projects/learning-with-texts/)
     is a spaced repetition software aimed at language learning.
