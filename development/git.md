@@ -1147,8 +1147,18 @@ When used as a git mergetool you get the following windows:
     and tutorials on dotfile management.
 -   [ArchWiki: Dotfiles](https://wiki.archlinux.org/index.php/Dotfiles)
     give multiple options of dotfile management.
--   See also the list of software related to _myrepos_
-    at the end of the  [myrepos Home Page](http://myrepos.branchable.com/)
+-   [chezmoi](https://www.chezmoi.io/)  
+    is a dotfile manager written in go. It uses 
+    [templating](https://www.chezmoi.io/user-guide/templating/) with
+    [go templates](https://pkg.go.dev/text/template).
+    -    [chezmoi user guide](https://www.chezmoi.io/user-guide)   
+-   [dotbot - GitHub](https://github.com/anishathalye/dotbot).
+    -   [dotbot wiki](https://github.com/anishathalye/dotbot/wiki)
+        dotbot is installed as a submodule in your repository.
+-   [dotdrop](https://deadc0de.re/dotdrop/)
+    is a python script to manage dotfiles in a single git repository.
+    -   [dotdrop GitHub repository](https://github.com/deadc0de6/dotdrop)
+    -   [dotdrop documentation](https://dotdrop.readthedocs.io/)
 -   [GNU Stow](http://www.gnu.org/software/stow/)
     is a Perl symlink farm manager which takes distinct packages of
     software and/or data located in separate directories on the
@@ -1159,19 +1169,6 @@ When used as a git mergetool you get the following windows:
         ](http://blog.xero.nu/managing_dotfiles_with_gnu_stow)
     -   [mr plugin for stow
         ](https://github.com/aspiers/kitenet-mr/blob/master/lib/stow).
--   [Graft](http://peters.gormand.com.au/Home/tools/graft/graft.html)
-    is a stow replacement. This introduction compare many stow
-    alternatives.
--   [dotdrop](https://deadc0de.re/articles/dotfiles.html)
-    is a bash script to manage dotfiles in a single git repository.
-    -   [dotdrop GitHub repository](https://github.com/deadc0de6/dotdrop)
--   [Yet Another Dotfiles Manager - yadm
-    ](https://thelocehiliosan.github.io/yadm/)
-    is a git wrapper like vcsh but targeted to manage dotfiles for
-    multiple hosts in a single directory.
--   [dotbot - GitHub](https://github.com/anishathalye/dotbot).
-    -   [dotbot wiki](https://github.com/anishathalye/dotbot/wiki)
-        dotbot is installed as a submodule in your repository.
 -   [VCSH](https://github.com/RichiH/vcsh) (GPL)
     manage multiple Git repositories in $HOME
 
@@ -1194,7 +1191,10 @@ When used as a git mergetool you get the following windows:
         then martin f krafft (madduck) added
         [some more git for etc tweaking
         ](http://lists.madduck.net/pipermail/vcs-home/2007-November/000107.html)
-
+-   [Yet Another Dotfiles Manager - yadm
+    ](https://thelocehiliosan.github.io/yadm/)
+    is a git wrapper like vcsh but targeted to manage dotfiles for
+    multiple hosts in a single directory.
 
 # Git Workflow {#git_worflow}
 ## What are git workflows
@@ -1445,6 +1445,8 @@ Some other tools to act on a group of repositories
     by Joey Hess is a perl script that can checkout, update, or
     perform other actions on a set of repositories. _mr_ is a Debian
     Package.
+    -   See also the list of software related to _myrepos_
+        at the end of the  [myrepos Home Page](http://myrepos.branchable.com/)
 -   [fgit (Folder Git)](https://github.com/l0b0/fgit) (GPL)
     by Victor Engmark is a small shell script that run a Git command
     in several repositories.
