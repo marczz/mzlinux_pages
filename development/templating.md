@@ -28,8 +28,8 @@ that contains some blocks that child templates can override.
 You find more explanation in [Flask: Template Inheritance
 ](https://flask.palletsprojects.com/en/1.1.x/patterns/templateinheritance/).
 
--   The {{< wp "Template_engine_(web)"  "Wikipedia template engines page" >}}
-    includes a comparison of templates engines, it is accompanied by a
+-   The Wikipedia page {{< wp "Template_engine_(web)"  >}}
+    includes a list of templates engines, it is accompanied by a
     {{< wp "Comparison of web template engines" >}}.
 -   [Comparing  node.js template engines: Jade, Mustache, Dust, Nunjucks, EJS
     ](https://developer.ibm.com/node/2014/11/11/compare-javascript-templates-jade-mustache-dust/)
@@ -87,7 +87,35 @@ You find more explanation in [Flask: Template Inheritance
 
 # main logic templating engines
 
--   <a name="pug"></a>[Pug](https://pugjs.org/)  (MIT License) _
+-   <a name="jinja2"></a>[Jinja2](https://www.palletsprojects.com/jinja/)
+    (BSD license) is a Python template engine similar to the
+    {{< iref "python/python_web#django" "Django" >}}
+    template engine.  It can be used to generate any markup as well as
+    sourcecode.
+   
+    -   [jinja2 documentation](https://jinja.palletsprojects.com/)
+   
+    There are many jinja2/django derived processors:
+    -   The web framework [Django](http://www.djangoproject.com/) (BSD
+        License) includes a template language similar to
+        {{< iref "#jinja2" "jinja2" >}}.
+    -   [jinja2-cli](https://github.com/mattrobenolt/jinja2-cli) (BSD License)a
+        is a CLI interface to Jinja2.
+    -   [j2-cli](https://github.com/kolypto/j2cli)  (BSD License)
+        is a command-line tool for templating in shell-scripts, leveraging the Jinja2 library.a
+    -   [pongo2](https://github.com/flosch/pongo2)  (MIT License)
+        is a Django-syntax like template-engine for Go. 
+    -   [tera](https://github.com/Keats/tera) (MIT License)
+        is a  template engine for Rust based on Jinja2/Django. 
+    -   <a name="nunjucks"></a>[Nunjucks](http://mozilla.github.io/nunjucks/)
+        is a javascript templating engine inspired by {{< iref "#jinja2" "Jinja2" >}}.
+        Nunjucks support [template inheritance
+        ](http://mozilla.github.io/nunjucks/templating.html#template-inheritance).
+        -   [Nunjucks templating Doc](http://mozilla.github.io/nunjucks/templating.html)
+        -   [Nunjuck GitHub](https://github.com/mozilla/nunjucks)
+-   [Go text template](https://pkg.go.dev/text/template) and
+    [Go html template](https://pkg.go.dev/html/template) are in the standard go library.
+-   <a name="pug"></a>[Pug](https://pugjs.org/) (MIT License)
     _formerly known as Jade_ is a _node.js_, _tag-free_ template
     engine derived from Haml.  It is similar to
     {{< iref "#slim" "Slim" >}}.
@@ -103,28 +131,11 @@ You find more explanation in [Flask: Template Inheritance
         is the python port of Pug. _PyPugjs_ can
         convert any Pug source to Django, Jinja2, Mako or
         {{< iref "#tornado" "Tornado template" >}}.
-    [GitHub: eknc/pug](https://github.com/eknkc/pug)
-    is a port of Pug template engine, it compiles templates to
-    standard [go templates](https://golang.org/pkg/html/template/)
--   <a name="jinja2"></a>[Jinja2](https://www.palletsprojects.com/p/jinja/)
-    (BSD license) is a Python template engine similar to the
-    {{< iref "python/python_web#django" "Django" >}}
-    template engine.  It can be used to generate any markup as well as
-    sourcecode.
-    -   The web framework [Django](http://www.djangoproject.com/) (BSD
-        License) includes a template language similar to
-        {{< iref "#jinja2" "jinja2" >}}.
-    -   [swig](https://github.com/paularmstrong/swig)
-        was a Node.js and browser-based JavaScript template engine
-        similar to Jinja2; but it is no longer maintained.
--   <a name="nunjucks"></a>[Nunjucks
-    ](http://mozilla.github.io/nunjucks/)
-    is a javascript templating engine inspired by {{< iref "#jinja2" "Jinja2" >}}.
-    Nunjucks support [template inheritance
-    ](http://mozilla.github.io/nunjucks/templating.html#template-inheritance).
-    -   [Nunjucks templating Doc
-        ](http://mozilla.github.io/nunjucks/templating.html)
-    -   [Nunjuck GitHub](https://github.com/mozilla/nunjucks)
+    -   [GitHub: eknc/pug](https://github.com/eknkc/pug) (MIT License)
+        is a port to Go of Pug template engine, it compiles templates to
+        standard [go templates](https://golang.org/pkg/html/template/).
+        _no longer developed since 2018, in this repo, but continued in
+        [knaka/pug](https://github.com/knaka/pug)._
 -   <a name="slim"></a>[Slim](http://slim-lang.com/) (MIT license)
     is a _tag-free_ Ruby templating language, derived from _HAML_. There are also port
     to _Python_, _javascript_ with _Coffee script_, _Clojure_. _Slim_ is similar to
