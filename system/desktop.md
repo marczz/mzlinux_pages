@@ -876,8 +876,14 @@ But some alternative status are window manager independant.
 -   <a name="polybar"></a>[polybar](https://github.com/polybar/polybar) (MIT License)
     highly customizable status bar, written in c++. It has built-in functionality to
     display information about the most commonly used services.
-    _polybar_ has no wayland support (except xwayland!) waybar is a wayland bar with
-    similar functionalities. _polybar_ is in Debian.
+
+    _polybar_ has no wayland support (except xwayland!) {{< iref "#waybar" "waybar" >}}
+    and {{< iref "#yambar" "yambar" >}} are wayland bars with similar functionalities.
+
+    _polybar_ is in Debian.
+-   <a name="waybar"></a>[waybar](https://github.com/Alexays/Waybar) (MIT license)
+    is a customizable Wayland bar for Sway and Wlroots based compositors. It is in Debian.
+    -   [waybar wiki](https://github.com/Alexays/Waybar/wiki).
 -   <a name="xmobar"</a>[xmobar](http://projects.haskell.org/xmobar/) (BSD License)
     written in haskell, is a lightweight, text-based, status.  It was originally
     designed to work with xmonad, but it's actually usable with any window-manager. It
@@ -957,6 +963,9 @@ Rofi is written by Dave Davenport alias _Qball_ it is in Debian.
     dmenu for wayland (wlroots) compositors.
 -   [lbonn/rofi](https://github.com/lbonn/rofi) (MIT License)
     a rofi fork with wayland support.
+-   [tofi](https://github.com/philj56/tofi) (MIT License)
+    fast and simple dmenu / rofi replacement for wlroots-based Wayland compositors.
+    _tofi_ is in Debian.
 -   [wofi](https://hg.sr.ht/~scoopta/wofi) (GPL-3.0)
     a launcher/menu program for wlroots based wayland compositors such as sway.
     The documentation is in the man pages. There are packages for most distribution
