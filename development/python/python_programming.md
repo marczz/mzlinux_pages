@@ -76,10 +76,33 @@ See the references to Cog, pyreport , pyWeb, PyLit in the
     or _Python Code Quality Authority_ is an organization which group
     projects in the domain of automatic style and quality reporting.
     -   [GitHub - PyCQA](https://github.com/PyCQA)
+
+-   [Black](https://github.com/ambv/black) (MIT Licence)
+    is a Python code formatter. It intentionally does not allow to
+    choose your own rules, its ensure that all black formatted code
+    have a common look.
+-   <a name="flake8"><a>[Flake8](https://github.com/pycqa/flake8) (MIT License)
+    is a python tool that glues together {{< iref "#pycodestyle" "pycodestyle" >}},
+    {{< iref "#pyflakes"  "pycodestyle"  >}},{{< iref "#mccabe"  "mccabe" >}},
+    and optionally plugins.
+
+    Flake8 runs all the tools by launching the single flake8 command.
+    -   [flake8 documentation](https://flake8.pycqa.org/en/latest)
+    -   [flake8-docstrings](https://pypi.org/project/flake8-docstrings/) adds a check for
+        [PEP 257](https://peps.python.org/pep-0257/).
+-   <a name="mccabe"></a>[McCabe](https://github.com/PyCQA/mccabe) (Expat License)
+    is a complexity checker which integrates as a {{< iref "#flake8" "Flake8" >}} plugin.
+-   [PEP257.py]( https://github.com/halst/pep257)
+    is a docstring style checker by Vladimir Keleshev.
 -   [PyChecker](http://pychecker.sourceforge.net/) (BSD License)
     was a python syntax checker for python 2.x. PyChecker has a faster
     alternative  {{< iref "#pyflakes" "Pyflakes" >}}.
     Pychecker was limited to Python 2.
+-   <a name="pycodestyle">/a>[pycodestyle](https://github.com/PyCQA/pycodestyle)
+    (MIT _Expat_ Licence)
+    formerly pep8.py is a Python PEP 8 code style checker
+    that can be used both for Python 2.x and Python 3.x.
+    -   [pycodestyle documentation](http://pycodestyle.pycqa.org/en/latest/)
 -   <a name=pylint></a>[PyLint](http://www.pylint.org/) (GPL)
     includes PyChecker checks, plus checking line-code's
     length, checking if variable names are well-formed, checking if declared
@@ -92,19 +115,6 @@ See the references to Cog, pyreport , pyWeb, PyLit in the
     Pylint import the analyzed module but Pyflakes only parse the source file,
     so it is safe to use on modules with side effects.
     It supports Python: 2.7 and > 3.4
--   [pycodestyle](https://github.com/PyCQA/pycodestyle)
-    (MIT _Expat_ Licence)
-    formerly pep8.py is a Python PEP 8 code style checker
-    that can be used both for Python 2.x and Python 3.x.
-    -   [pycodestyle documentation
-        ](http://pycodestyle.pycqa.org/en/latest/)
--   [PEP257.py]( https://github.com/halst/pep257)
-    is a docstring style checker by Vladimir Keleshev.
--   [Black](https://github.com/ambv/black) (MIT Licence)
-    is a Python code formatter. It intentionally does not allow to
-    choose your own rules, its ensure that all black formatted code
-    have a common look.
-
 
 
 # Encoding
