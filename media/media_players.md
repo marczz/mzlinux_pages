@@ -1360,11 +1360,14 @@ Other control tools are:
 <a name="playerctl"></a>[playerctl](https://github.com/altdesktop/playerctl) (LGPL-3.0)
 :   is an mpris command-line controller and library for vlc, mpv, RhythmBox, web
     browsers, cmus, mpd, spotify and others. _In Debian and active in 2021_.
-    -   You can use _playerctl from emacs with
-        [playerctl.el](https://github.com/thomasluquet/playerctl.el)
+
+    -   [playerctl.el](https://github.com/thomasluquet/playerctl.el) uses _playerctl_ from emacs
     -   [tmux-plugin-playerctl](https://github.com/richin13/tmux-plugin-playerctl) (MIT
         License) a tmux plugin or using playerctl to display MPRIS meta-data about the
         music currently playing.
+    -   Inside [Waybar](https://github.com/Alexays/Waybar/) _playerctl_ is used in the python script
+        [mediaplayer.py
+        ](https://github.com/Alexays/Waybar/blob/master/resources/custom_modules/mediaplayer.py).
 
 [mpris-remote](http://incise.org/mpris-remote.html)
 :   is a utility that controls an MPRIS-capable music player.
