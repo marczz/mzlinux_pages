@@ -11,7 +11,7 @@ See also {{< iref "security" "Security" >}},
 
 # Authentication references
 -   Wikipedia:
-    [Authentication](http://en.wikipedia.org/wiki/Authentication) and the ,
+    [Authentication](http://en.wikipedia.org/wiki/Authentication) and the
     [numerous related pages
     ](http://en.wikipedia.org/wiki/Authentication#See_also)
 -   [Open Web Application Security Project (OWASP)
@@ -32,8 +32,7 @@ See also {{< iref "security" "Security" >}},
     ](http://www.tldp.org/HOWTO/User-Authentication-HOWTO/index.html)
     that explains how user and group information is stored and how users are
     authenticated on a Linux system (PAM) and
-    [Authentication Gateway HOWTO
-    ](http://tldp.org/HOWTO/Authentication-Gateway-HOWTO/)
+    [Authentication Gateway HOWTO](http://tldp.org/HOWTO/Authentication-Gateway-HOWTO/)
     An authentication gateway forces the user to authenticate in order
     to use the network. It can be used for wireless networks and public
     access areas.
@@ -84,7 +83,7 @@ So OTP is not vulnerable to replay attacks.
 The OTP may be calculated on a time basis (TOTP) or derived by a
 mathematical algorithm or {{< wp "Hash chain" >}} among wich  HOTP.
 
-The OTP may be delivered by SMS, mobile phose, prprietary tokens,
+The OTP may be delivered by SMS, mobile phose, proprietary tokens,
 web-based methods, or hardcopy on paper or plastic card.
 
 One-time passwords are vulnerable to phtising and  man-in-the-middle
@@ -118,35 +117,202 @@ secret key will be equal.
     _2009_.
     There is also an  android client
     [android-ppp](http://code.google.com/p/android-ppp/) _updated 2013_.
+-   [OTPW](https://www.cl.cam.ac.uk/~mgk25/otpw.html)
+    is a one-time password login package.It consists of the one-time-password generator
+    otpw-gen plus two verification routine that can
+    be added to programs such as login or ftpd,  a PAM wrapper is also included.
+    The user uses a previously printed list of one time password. The scheme is designed
+    to be robust against theft of the paper list and race-for-the-last-letter attacks.
+    A detailed description is found
+    [in OTPW Home Page](https://www.cl.cam.ac.uk/~mgk25/otpw.html).
+    The password generator _otpw-bin_ and _libpam-otpw_ are provided in Debian.
 
-### Google Authenticator
-{{< wp "Google Authenticator" >}} (proprietary)
-is a client for Android, iOS, and BlackBerry, and also PAM module
-for the server side, that uses TOTP and HOTP. Authenticator
-provides a six- to eight-digit one-time password which in addition
-to the username and password allow log in to Google services or
-third-party applications, such as password managers or file
-hosting services. It has
-{{< wp "Google_Authenticator#Implementations"  "numerous implementations" >}}.
+### TOTP authentificator
+
+-   [OATH Toolkit](https://www.nongnu.org/oath-toolkit/)
+    contains shared C libraries, command line tools and a PAM module. It supports many
+    protocols, event-based HOTP algorithm (RFC 4226), the time-based TOTP algorithm (RFC
+    6238), and Portable Symmetric Key Container (PSKC, RFC 6030) to manage secret key
+    data.
+
+    The components included in the package is
+    -   liboath and libpskc: two shared and static C library for OATH and PSKC handling.
+    -   [oathtool](https://www.nongnu.org/oath-toolkit/man-oathtool.html):
+        A command line tool for generating and validating OTPs.
+    -   [pskctool](https://www.nongnu.org/oath-toolkit/man-pskctool.html):
+        Portable Symmetric Key Container (PSKC) tool
+    -   [pam_oath](https://www.nongnu.org/oath-toolkit/pam_oath.html):
+        A PAM module for pluggable login authentication for OATH.
+    These components are packaged in Debian.
+    -   [OATH Documentation](https://www.nongnu.org/oath-toolkit/docs.html) with
+        _previously listed_ manuals for liboath, pskctool.
+    -   [pyoath-toolkit](https://github.com/malept/pyoath-toolkit)
+        Python bindings for the OATH Toolkit.
+    -   [pam_oath - ArchWiki](https://wiki.archlinux.org/title/Pam_oath)
+    -   [Two-factor time based (TOTP) SSH authentication with pam_oath and Google
+        Authenticator](https://spod.cx/blog/two-factor-ssh-auth-with-pam_oath-google-authenticator.shtml)
+-   <a name="google_authenticator"></a>{{< wp "Google Authenticator" >}}
+    is a free proprietary, or Apache2 licensed client for Android, iOS, and BlackBerry, and
+    also PAM module for the server side, that uses TOTP and HOTP.
+
+    Authenticator provides a six- to eight-digit one-time password which in addition to the
+    username and password allow log in to Google services or third-party applications, such
+    as password managers or file hosting services.
+
+    It has few open source implementations.
 
 -   [Archwiki: Google Authenticator
     ](https://wiki.archlinux.org/index.php/Google_Authenticator)
+-   [google-authenticator-libpam](https://github.com/google/google-authenticator-libpam)
+    (Apache-2.0 License)
+    is a PAM module demonstrating two-factor authentication for logging into servers via
+    SSH, OpenVPN, etc…
+    -   {{< man "google-authenticator" >}} command creates a new secret key in the
+        current user's home directory.
 -   [google-authenticator Home](http://code.google.com/p/google-authenticator/)
 -   [Android App: Google Authenticator
     ](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2)
--   [FreeOTP](https://fedorahosted.org/freeotp/) (Apache Licence)
-    is a two-factor authentication applicationwith support for ​Android
-    and ​iOS.
+-   [OTP Authenticator | F-Droid
+    ](https://f-droid.org/en/packages/net.bierbaumer.otp_authenticator/) (MIT License)
+    an open source TOTP authenticator compatible with Google Authenticator, with
+    encrypted storage
+    -   [OTP Authenticator - GitHub](https://github.com/0xbb/otp-authenticator)
+-   [FreeOTP](https://freeotp.github.io/) (Apache Licence)
+    implements open standards: HOTP and TOTP. Tokens can be added by scanning a QR code.
+    There are application for ​Android on Google Play or F-Droid and ​iOS.
+    -   [FreeOTP - GitHub](https://github.com/freeotp/freeotp-android).
+    -   [FreeOTP](https://f-droid.org/en/packages/org.fedorahosted.freeotp/)
+    -   [FreeOTP+ | F-Droid
+        ](https://f-droid.org/en/packages/org.liberty.android.freeotpplus/)
+         a fork of FreeOTP with enhancements including exporting and importing settings.
 
 ## Security Token
 
 -   Wikipedia: {{< wp "Security Token" >}}
--   {{< wp "YubiKey" >}} implement HOTP and TOTP
--   [U2F — FIDO Universal 2nd Factor
+-   {{< wp "YubiKey" >}} are USB tokens that act like
+    keyboards and generate one-time passwords, they  implement HOTP and TOTP.
+
+-   <a name="nitrokey"></a>[Nitrokey](https://www.nitrokey.com/)
+    both hardware and software are open-source.  price start at 29€.
+
+    Nitrokey series:
+    -    Nitrokey _storage_, _start_ (29€), and the _nirokey3_ serie support
+         OpenPGP/GnuPG _with Gnuk_, S/MIME and can store 3 ECC and 3 RSA key pairs.
+    -    Nitrokey _storage_ and _pro_ (49€), _fido2_ (29€) support OTP and FIDO2.
+    -    Nitrokey _storage_ (109€ 16GB, 199€ 64GB) has a storage encryption with AES-256
+    _   _Nitrokey3_ (49€) supports FIDO2 and FIDO2 UF;
+    -   _Nitrokey HSM_ (69€) support S/MIME, and can store 38 RSA pairs and 300 ECC pairs.
+
+    Nitrokey references:
+    -   [Nitrokey Documentation](https://docs.nitrokey.com/index.html)
+    -   [Nitrokey App](https://github.com/Nitrokey/nitrokey-app)
+        is a QT application created to manage Nitrokey Pro and storagedevices, it
+        supports TOTP and HOTP.
+        Debian contains the package _nitokey-app_.
+        -   [Nitrokey Pro, Linux — Nitrokey Documentation
+            ](https://docs.nitrokey.com/pro/linux/index.html)
+    -   [Nitrokey Encryption Tool](https://github.com/Nitrokey/nitrokey-encryption-tool)
+        is a command line interface application which uses on-device RSA keys.
+        we use it with Nitrokey HSM.
+        -   [Nitrokey HSM with GNU/Linux — Nitrokey Documentation
+            ](https://docs.nitrokey.com/hsm/linux/index.html)
+    -   For nitrokey start we use {{< iref "#psclite" "psclite" >}} in the Debian
+        package _pcscd_. We can also use the {{< iref "#psc-tools" "psc-tools" >}}.
+        -   [Nitrokey Start, Linux — Nitrokey Documentation
+            ](https://docs.nitrokey.com/start/linux/index.html).
+    -   [FIDO2 with Linux — Nitrokey Documentation
+        ](https://docs.nitrokey.com/fido2/linux/index.html) is for the nitrokey fido2
+        and [Nitrokey FIDO U2F with Linux — Nitrokey Documentation
+        ](https://docs.nitrokey.com/u2f/linux/index.html).
+
+-   <a name="yubikey"></a>[YubiKeys](https://www.yubico.com/products/)
+    are small USB Security tokens, with a panel of features and a price Which vary from
+    25€ to 90€.
+
+    Yubikey 5 and YubiKey FIPS serie support; FIDO2/WebAuthn, U2F, Smart card, OpenPGP,
+    OTP, with varying connectors USB-A, USB-C, Lightning, NFC. Price from 45€ to 70€.
+
+    YubiKey Bio Series supports FIDO2/WebAuthn, FIDO U2F, with biometric authentication
+    with a price of 85€.
+
+    Security Key Series supports FIDO2/WebAuthn, U2F. they connect through NFC and
+    either USB-A or USB-C.
+
+    YubiHSM 2 and YubiHSM 2 FIPS are {{< wp "Hardware security module" >}}
+    with {{< wp "PKCS 11" >}} protocol with prices of 650€ and 950€.
+
+    -   [YubiKey - ArchWiki](https://wiki.archlinux.org/title/YubiKey).
+    -   [yubioath-desktop](https://developers.yubico.com/yubioath-desktop/)
+        the Yubico Authenticator is a cross-platform application for generating Open
+        Authentication (OATH) time-based TOTP and event-based HOTP one-time password
+        codes using a Yubikey.
+    -   [yubikey-manager-qt](https://developers.yubico.com/yubikey-manager-qt/)
+        is a cross-platform application for configuring any YubiKey over all USB
+        interfaces. A command line client is available in the
+        [YubiKey Manager CLI](https://developers.yubico.com/yubikey-manager/).
+-   [Solo](https://solokeys.com/collections/all)
+    is a small USB Security token supporting Universal 2nd Factor (U2F) requests and
+    the newer FIDO2 standard. In contrast to Yubikeys the software is open-source.
+    The solo price go from 25€ to 45€. They do not support OPENPGP.
+    -   [Solo - ArchWiki](https://wiki.archlinux.org/title/Solo)
+-   The [Tomu](https://tomu.im/) is a family of FIDO2 security key, with an open-source
+    hardware and firmware.
+    -   [Tomu - ArchWiki](https://wiki.archlinux.org/title/Tomu)
+-   [How to set up 2FA TOTP with KeepassXC, Aegis and Authy. | Linux.org
+    ](https://www.linux.org/threads/in-depth-tutorial-how-to-set-up-2fa-totp-with-keepassxc-aegis-and-authy.36577/).
+
+### PAM authentication {#fido_pam}
+-   [YubiKey and SSH via PAM
+    ](https://developers.yubico.com/yubico-pam/YubiKey_and_SSH_via_PAM.html)
+    -   [Pam-U2F module](https://developers.yubico.com/pam-u2f/) which is in the Debian
+        package _libpam-yubico_.
+    -   [yubico-pam](https://developers.yubico.com/yubico-pam/)
+    -   [pam_yubico(8)](https://man.archlinux.org/man/pam_yubico.8)
+
+### FIDO / U2F
+
+-   {{< wp "Universal 2nd Factor" >}} (U2F)
+    is an open standard for two-factor authentication (2FA) using USB or NFC, it is
+    based on the {{< wp "Client to Authenticator Protocol" >}} (CTAP) and
+    {{< wp "WebAuthn" >}} _Wev authentication".
+
+    U2F has a successor FIDO2 which is a standard of the {{< wp "FIDO Alliance" >}}.
+
+    The  CTAP1/U2F protocol is the reference for U2F while CTAP2 protocol is used in
+    FIDO2. An authenticator that implements CTAP2 often r implements CTAP1/U2F as well
+    to provide backward compatibility with U2F.
+
+    An authenticator may be used in either single-factor mode or multi-factor mode. In
+    single-factor mode, the authenticator is activated by a button push.  In
+    multi-factor mode, the authenticator is activated by checking  a secret such as a
+    PIN, passcode or swipe pattern, or a biometric data.
+
+    The authenticator performs user verification locally on the device, data is not sent
+    to the network.
+
+    WebAuthn is supported by Google Chrome, Mozilla Firefox, Microsoft Edge, Apple
+    Safari and the Opera web browser.
+
+    Many services support U2F, among which Google, Azure, Dropbox, GitHub, GitLab,
+    Bitbucket, Nextcloud, Facebook (supported by Github), Dropbox, Gitlab, Bitbucket,
+    it
+
+-   [FIDO Alliance](https://fidoalliance.org/)
+    -   [How FIDO Works](https://fidoalliance.org/how-fido-works/)
+    -   [Inside the FIDO2 Specifications](https://fidoalliance.org/fido2/)
+    -   [FIDO Authentication Specifications
+        ](https://fidoalliance.org/specifications/download/)
+    -   [FIDO® Certified
+        ](https://fidoalliance.org/certification/fido-certified-products/)
+        gives products (authenticator, client, server) compliant with the FIDO UAF,
+        FIDO U2F and FIDO2 specifications.
+    -   [FIDO Certified Showcase](https://fidoalliance.org/fido-certified-showcase/)
+        is an other search form which show results by company, with selectable criteria.
+-   [Universal 2nd Factor - ArchWiki
+    ](https://wiki.archlinux.org/title/Universal_2nd_Factor)
+-   [FIDO Universal 2nd Factor (U2F) - yubico
     ](https://www.yubico.com/about/background/fido/)
-    is supported by Github, Dropbox, Gitlab, Bitbucket, it can be used
-    in Linux with the
-    [Pam-U2F module](https://developers.yubico.com/pam-u2f/).
+    can be used in Linux with {{< iref "fido_pam" "PAM U2F module" >}}
     -   [What is U2F
         ](https://developers.yubico.com/U2F/Libraries/Using_a_library.html)
     -   [U2F Technical Overview
@@ -156,22 +322,139 @@ hosting services. It has
 -   [Extension adding support for U2F standard to Firefox
     ](https://developers.yubico.com/U2F/Libraries/Using_a_library.html)
     U2f is also supported by Chrome.
--   [Nitrokey](https://www.nitrokey.com/)
--   [The OpenPGP card](http://www.g10code.com/p-card.html)
+-   [StrongKey/fido2](https://github.com/StrongKey/fido2) (LGPL-2.1)
+    Open-source FIDO server, featuring the FIDO2 standard.
+    -   [FIDO2 Server API and Demo
+        ](https://demo4.strongkey.com/getstarted/#/openapi/fido)
+
+There are many other FIDO/U2F and FIDO2 authenticators listed in the [FIDO® Certified
+](https://fidoalliance.org/certification/fido-certified-products/) page. They should
+work on linux but they rarely mention it.
+
+I list some keys only selected by their availability and price in addition to
+{{< iref "#nitrokey" "Nitrokey" >}} and {{< iref "#yubikey" "Yubikey" >}} _price
+begining 2022_.
+
+-   [HyperFIDO by Hypersecu](https://www.hypersecu.com/hyperfido)
+    cheap FIDO2/HOTP keys available on amazon.
+-   [FIDO range - NEOWAVE](https://neowave.fr/en/products/fido-range/) includes Keydo
+    FIDO U2F _not fido2_ 10€,Winkeo FIDO U2F _not fido2_ 20€, Winkeo FIDO2 25€, Winkeo-C
+    FIDO2 _USB C_, Badgeo FIDO2 _a dual interface contact and contactless fido2
+    smartcard_ 20€. Neowave is a french industry.
+
+    The fido2 keys are sold on amazon and in their online shop
+    [Authentification web](https://authentification-web.fr/).
+
+    Neowave has also a serie of Contact and / or contactless
+    [Smart card readers](https://neowave.fr/en/products/smart-card-readers/)
+    and USB Micro-SIM card reader; and [USB and smartcard ID 2.0 solutions
+    ](https://neowave.fr/en/products/id-2-0-solutions/).
+
+-   [FEITIAN Technologies Co., Ltd.](https://www.ftsafe.com/),the shop is at
+    [FEITIAN Store](https://www.ftsafe.com/store/), som product are in the shop
+    [Feitian — StakeBox](https://www.stakebox.org/collections/vendors?q=Feitian),
+    you can also find some on amazon.
+    -   [MultiPass FIDO® Series Multi-interface Security Keys
+        ](https://www.ftsafe.com/products/fido/multi) a FIDO-U2F/FIDO2 key with USB, NFC
+        and bluetooth. 35€.
+    -   [ePass FIDO-NFC Security Key
+        ](https://www.ftsafe.com/store/product/epass-fido-nfc-security-key/)
+         FIDO U2F & FIDO2 & HOTP, FC & USB-A/USB-C 25€.
+-   [TOKEN2 Switzerland](https://www.token2.com/home) have cheap FIDO2 tokens,
+    the token with  HOTP, U2F, and FIDO2 cost USB-A  10€ (19€ pack of two) USB-C 12€,
+    minikey 18€
+
+    A key adding TOTP with a companion app for iphone, ios or in linux or OSX by using
+    the tools integrated into Chromium costs 14€ USB-A, with apped fingerprint
+    protection 35€. An USB-A to USB-C adapter cost 2€.
+
+    A key with only U2F (no fido2) is sold 5€.
+
+    _Token2_ produces also non programable TOTP tokens (many models hardware token or display
+    card 18€) or programmable TOTP tokens from 22€ to 32€ for pin protected multiple
+    profile token.
+
+    There is a comprehensive documentation on companion apps and use including in Linux.
+    The shop for EU customers is [TOKEN2 France](https://www.token2.eu/home).
+
+-   [Crayonic KeyVault](https://www.crayonic.com/keyvault) is a FIDO2/HOTP/TOTP/PGPkey
+    produced in netherland with micro-usb, nfc, bluetooth and figerprint sensor.
+
+
+
+
+## OpenPGP/GnuPG Key {#gnupg_key}
+Debian has the package _scdaemon_ which is used by gpg-agent to access& OpenPGP smart
+cards.
+
+-   [GNUK - Debian Wiki](https://wiki.debian.org/GNUK)  is an implementation of USB
+    cryptographic token for GNU Privacy Guard. Gnuk supports OpenPGP card protocol
+    version 3.
+
+    Hardware requirement for Gnuk is the micro controller STM32F103
+-   [YubiKeys](https://www.yubico.com/products/) serie 5 or 5 FIPS series support OPENPGP.
+-   {{< iref "#nitrokey" "Nitrokey" >}} start, pro 2, storage 2 support openpgp, with
+    Gnuk opensource software.
+-   [Olimex - STM32-H103](https://www.olimex.com/Products/ARM/ST/STM32-H103/).
+-   [Gnuk on STM32 Blue Pill
+    ](https://blog.dan.drown.org/gnuk-open-source-gpg-ssh-hardware-key-storage/).
+-   [Development boards | STM32-base project](https://stm32-base.org/boards/):
+    [STM32F051C8T6 - F0 Blue Pill](https://stm32-base.org/boards/STM32F051C8T6-Blue-Pill)
+-   The {{< wp "OpenPGP card" >}} is a  smart card[2] that is integrated with many
+    OpenPGP function, It allows secure storage of private/public OpenPGP key pair;
+    Several mutually compatible JavaCard implementations of the OpenPGP Card's interface
+    protocol are available as open source software and can be installed on generic
+    JavaCard smart cards.  Some Nitrokey and Yubico keys emulate this protocol.
 
 ## Smart cards
--   [Smartcards - Debian Wiki
-    ](https://wiki.debian.org/Smartcards),
-    [fr/Smartcards - Debian Wiki
-    ](https://wiki.debian.org/fr/Smartcards)
--   [Ludovi Rousseau blog](http://ludovicrousseau.blogspot.fr/)
-    and [GitHub repository](https://github.com/LudovicRousseau).
-    -   [GitHub - LudovicRousseau/CCID: CCID driver
-        ](https://github.com/LudovicRousseau/CCID)
--   [Smartcard resources](https://thesmartcard.org/resource/)
--   [PCSClite project](http://pcsclite.alioth.debian.org/ccid.html)
+{{< wp "Smart card" >}} is a plastic credit often card-sized card with an embedded
+integrated circuit chip.
 
-## SSH and OTP
+{{< wp "Smart_card#Identification" "Cryptographic smart cards" >}} are used for single
+sign-on. The most common way to access cryptographic smart card functions on a computer
+is to use a vendor-provided {{< wp "PKCS 11" >}} library.
+
+{{v wp "CCID" >}} (chip card interface device) protocol is a USB protocol that allows a
+smartcard to be connected to a computer via a card reader using a standard USB
+interface, without the need for each manufacturer of smartcards to provide its own
+reader or protocol. This allows the smartcard to be used as a security token for
+authentication and data encryption.
+
+-   [Smartcards - Debian Wiki](https://wiki.debian.org/Smartcards),
+    [fr/Smartcards - Debian Wiki](https://wiki.debian.org/fr/Smartcards)
+-   [MUSCLE](https://muscle.apdu.fr/) Movement for the Use of Smart Cards in a Linux
+    Environment. Contains:
+    -   <a name="psclite"></a>[PCSClite project](https://pcsclite.apdu.fr/)
+        Middleware to access a smart card using SCard API ({{< wp "PC/SC" >}}) which
+        Handles smart card reader communications and forwarding requests over message
+        queues.. It is in the Debian package _pcscd_.
+    -   [CCID driver](https://ccid.apdu.fr/) a generic
+        {{< wp "CCID_(protocol)" "USB CCID" >}}  (Chip/Smart Card
+        Interface Devices) driver and ICCD (Integrated Circuit(s) Card Devices).
+    -   [Reader Selection](https://ccid.apdu.fr/select_readers/)
+    -   [Ludovic Rousseau's blog](https://ludovicrousseau.blogspot.com/)and
+        [GitHub repository](https://github.com/LudovicRousseau).
+    -   [GitHub - LudovicRousseau/CCID: CCID driver.](https://github.com/LudovicRousseau/CCID)
+    -   <a name="psc-tool"></a>[pcsc-tools
+        ](http://ludovic.rousseau.free.fr/softwares/pcsc-tools/) (GPL-2)
+        are used to test a PC/SC driver, card or reader or send commands with a CLI or
+        GUI. It has a Debian package. It includes:
+        -   pcsc_scan: scans every PC/SC reader connected to the host if a card is
+            inserted or removed a "line" is printed.
+        -   ATR_analysis: is a Perl script used to parse the smart card ATR. This
+            script is called (by default) by pcsc_scan.
+        -   scriptor: is a Perl script to send commands to a smart card using a batch
+            file or stdin.
+        -   gscriptor: the same idea as scriptor.pl but with a Perl-Gtk3 GUI.
+-   [Online Smart card ATR parsing](https://smartcard-atr.apdu.fr/)
+    uses [pyscard - Python for smart cards](https://pyscard.sourceforge.io/).
+-   [Feitan card readers](http://www.pcscreader.com/product.html)
+    uses the {{< wp "CCID_(protocol)" "CCID protocol" >}} so can be used with
+    {{< iref "#psclite" "psclite" >}} {{< iref "#psc-tools" "psc-tools" >}}.
+    You can by them on [Smart Card Reader – FEITIAN Store
+    ](https://www.ftsafe.com/store/product-category/smart-card-reader/#productCategory))
+
+## SSH
 
 # Kerberos
 -   [Kerberos Infrastructure HOWTO
