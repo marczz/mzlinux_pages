@@ -33,7 +33,32 @@ See also Wikipedia {{< wp "Comparison of machine translation applications" >}}.
     adding utf-8 support.
 -   Emacs as numerous [spelling modes](http://www.emacswiki.org/emacs/CategorySpelling)
     including [Wcheck Mode](http://www.emacswiki.org/emacs/WcheckMode)
-    that can use most of spelling software.
+    that can use most spelling software.
+-   {{< wp " Hunspell" >}} (GPL) is the spell checker of LibreOffice,
+    OpenOffice.org and Mozilla Firefox 3 & Thunderbird, Google
+    Chrome. Hunspell is backward-compatible with MySpell dictionaries
+    but can also use utf-8 encoded dictionaries.
+
+
+    To use hunspell in emacs you can put in your startup file:
+
+        (if (file-exists-p "/usr/bin/hunspell")
+          (progn
+             (setq ispell-program-name "hunspell")
+             (eval-after-load "ispell"
+                '(progn (setq  ispell-extra-args '("-a" "-i" "utf-8"))))))
+
+    -   [hunspell Home](http://hunspell.sourceforge.net/)
+    -   [Les dictionnaires Français sous Hunspell
+        ](https://www.dicollecte.org/documentation.php?prj=fr).
+-   [LibreOffice Dictionaries extensions
+    ](http://extensions.libreoffice.org/extension-center?getCategories=Dictionary)
+-   [OpenOffice spell checkers](http://www.openoffice.org/lingucomponent/)
+    and hunspell [Dictionaries](http://wiki.openoffice.org/wiki/Dictionaries).
+-   [verbiste]( http://sarrazip.com/dev/verbiste.html) (GPL)
+    is a French conjugation system, it has an Emacs interface.
+
+## Grammatical checkers
 -   [Grammalecte](https://dicollecte.org/)(GPL)
     est un correcteur grammatical open source dédié à la
     langue française, pour Writer (LibreOffice, OpenOffice), Firefox,
@@ -49,49 +74,22 @@ See also Wikipedia {{< wp "Comparison of machine translation applications" >}}.
         is a wrappers for Grammalecte with emacs flycheck.
     -   [vim-Grammalecte](https://github.com/dpelle/vim-Grammalecte)
         A vim plugin for Grammalecte.
-
--   {{< wp " Hunspell" >}} (GPL) is the spell checker of LibreOffice,
-    OpenOffice.org and Mozilla Firefox 3 & Thunderbird, Google
-    Chrome. Hunspell is backward-compatible with MySpell dictionaries
-    but can also use utf-8 encoded dictionaries.<br />
-
-
-    To use hunspell in emacs you can put in your startup file:
-
-        (if (file-exists-p "/usr/bin/hunspell")
-          (progn
-             (setq ispell-program-name "hunspell")
-             (eval-after-load "ispell"
-                '(progn (setq  ispell-extra-args '("-a" "-i" "utf-8"))))))
-
-    -     [hunspell Home](http://hunspell.sourceforge.net/)
-    -   [Les dictionnaires Français sous Hunspell
-        ](https://www.dicollecte.org/documentation.php?prj=fr).
-
--   [LangageTool](https://languagetool.org/) (private license)
+-   <a name="langagetool"></a>[LangageTool](https://languagetool.org/) (private license)
     LanguageTool offers spell and grammar checking. It is Free for 20,000 characters per
-    check. a premium license cost 60€/year.
+    check. A premium license cost 60€/year.
 
-    It support [numerous languages](https://languagetool.org/languages)
+    It supports [numerous languages](https://languagetool.org/languages)
     like English, German, Italian, Portuguese, Esperanto, Breton, Japanese, Russian, and
     many other; see the [language table](https://languagetool.org/languages) for the
     level of support of each language.
 
     There are addons for Firefox, Chromium,
-    Libre Office, Google docs, [Emacs](https://github.com/mhayashi1120/Emacs-langtool),
+    LibreOffice, Google Docs, [Emacs](https://github.com/mhayashi1120/Emacs-langtool),
     [vim](http://www.vim.org/scripts/script.php?script_id=3223),
     [vim-grammarous](https://github.com/rhysd/vim-grammarous), Atom,
     [android](https://play.google.com/store/apps/details?id=org.softcatala.corrector)
     and [other software
     ](http://wiki.languagetool.org/software-that-supports-languagetool-as-a-plug-in-or-add-on).
--   [LibreOffice Dictionaries extensions
-    ](http://extensions.libreoffice.org/extension-center?getCategories=Dictionary)
--   [OpenOffice spell checkers
-    ](http://www.openoffice.org/lingucomponent/)
-    and hunspell [Dictionaries
-    ](http://wiki.openoffice.org/wiki/Dictionaries).
--   [verbiste]( http://sarrazip.com/dev/verbiste.html) (GPL)
-    is a french conjugation system, it has an emacs interface.
 
 # Other desktop dictionary software
 -   [Babiloo](https://code.google.com/p/babiloo/) (GPL) written in python
@@ -101,7 +99,7 @@ See also Wikipedia {{< wp "Comparison of machine translation applications" >}}.
     Babiloo is now inactive and they recommend using
     {{< iref "#goldendict" "GoldenDict" >}}
 -   [Fantasdic](http://projects.gnome.org/fantasdic/)
-    is a gnome dictionary application writen in ruby/gtk it supports DICT
+    is a gnome dictionary application written in ruby/gtk it supports DICT
     dictionary server, edict or cedict, Google Translate, Dictd files,
     {{< iref "#stardict" "StarDict" >}} files,
     EPWING dictionaries (popular format in Japan).
@@ -177,19 +175,19 @@ See also Wikipedia {{< wp "Comparison of machine translation applications" >}}.
 -   [Sdictionary](http://swaj.net/sdict/index.html)
     is a Perl/TK dictionary project that uses own Sdict dictionary
     format.
--   {{< wp "StarDict"  "Stardict _Wikipedia_" >}} <a name="stardict"></a>
-    developed by Hu Zheng (胡正) introduce a dictionary format that is much used, not only by the _Stardict_
-    application but by numerous applications on all OS.
-    Stardict has been removed from sourceforge and is now found on its
-    developper site.
-    It is packaged in debian with a GTK+ interface as weel as
+-   { <a name="stardict"></a>{< wp "StarDict"  "Stardict _Wikipedia_" >}}
+    developed by Hu Zheng (胡正) introduce a dictionary format that is much used, not
+    only by the _Stardict_ application but by numerous applications on all OS.  Stardict
+    has been removed from Sourceforge and is now found on its developper site.
+
+    It is packaged in Debian with a GTK+ interface as well as
     _qstardict_ which use a QT4 interface; _stardict-plugin-spell_ is
     a spell plugin that give spelling suggestion when looking for a
     word in Stardict.
     For dictionaries in stardict format look at the {{< iref "#stardict" "following section" >}}
     -   [Stardict Home](http://www.huzheng.org/stardict/).
     -   [Stardict Wiki](https://code.google.com/p/stardict-3/wiki/index)
-        is still on google code.
+        is still on Google code.
     -   [sdcv](http://sdcv.sourceforge.net/)
         is the console version of StarDict program.
     -   [Stardict File Format
@@ -206,15 +204,13 @@ See also Wikipedia {{< wp "Comparison of machine translation applications" >}}.
 
 # e-dicts
 
--   [English Wiktionary in StarDict format
-    ](http://www.dictinfo.com/)
--   [FreeDict - for free bilingual dictionaries
-    ](http://www.freedict.org/) contains may GPL licensed
-    dictionaries. The databases are available in XMLand support the
-    conversion ro dictd format. They are available in debian with a
-    name _dict-freedict-la1-la2_ where  _la1_ and _la2_ are the 3-letter
-    language codes from ISO 639-2.
--   {{< wp "XDXF" >}} is an  universal XML-based format, convertible from and
+-   [English Wiktionary in StarDict format](http://www.dictinfo.com/)
+-   [FreeDict - for free bilingual dictionaries](http://www.freedict.org/)
+    contains many GPL licensed dictionaries. The databases are available in XMLand
+    support the conversion to dictd format. They are available in debian with a name
+    _dict-freedict-la1-la2_ where _la1_ and _la2_ are the three letters language codes from
+    ISO 639-2.
+-   {{< wp "XDXF" >}} is an universal XML-based format, convertible from and
     to other popular formats like
     {{< iref "#ptkdic" "PtkDic" >}},
     {{< iref "#stardict" "StarDict" >}}.
@@ -224,24 +220,23 @@ See also Wikipedia {{< wp "Comparison of machine translation applications" >}}.
     -   [Fora](http://ng-comp.com/fora/index.html)
          an android/linux/windows/OSX/iOs dictionary understand XDXF
          (and {{< iref "#stardict" "StarDict" >}}, DSL, and Dictd)
-    -   [XDXF Format](https://github.com/soshial/xdxf_makedict/blob/master/format_standard/xdxf_description.md
-    -   [XDXF sourceforge site
-        ](http://sourceforge.net/projects/xdxf/files/)
+    -   [XDXF Format
+        ](https://github.com/soshial/xdxf_makedict/blob/master/format_standard/xdxf_description.md
+    -   [XDXF sourceforge site](http://sourceforge.net/projects/xdxf/files/)
         host XDXF coded dictionaries, there is no index of
-        dictionaries and you may prefer the next site.
+        dictionaries, and you may prefer the next site.
     -   [XDXF dictionary downloads](http://dicto.org.ru/xdxf.html)
-        host all xdxf dictionaries, a lot of them from or to russian.
--   [Babylon free dictionaries
-    ](http://www.babylon.com/free-dictionaries/), a large offer
-    in `.bgl` format that is understood by numerous applications,
-    or can be converted easily. Some dictionaries come with a `.exe`
-    suffix it is a `7zip` compressed archive that contain the `.bgl` file.
+        host all xdxf dictionaries, a lot of them from or to Russian.
+-   [Babylon free dictionaries](http://www.babylon.com/free-dictionaries/),
+    a large offer in `.bgl` format that is understood by numerous applications, or can
+    be converted easily.
+
+    Some dictionaries come with a `.exe` suffix it is a `7zip` compressed archive that
+    contain the `.bgl` file.
 -   {{< wp "Lingvo" >}} (private software) is a product of Russian software company ABBYY.
     It has a huge list of dictionnaries
     see [lingvo list of english monolingual dictionaries
     ](http://lingvodics.com/dics/view/English+Monolingual)
-    and the extensive list of
-    [lingvo dictionary languages](http://translate.google.com/translate?sl=ru&tl=en&js=n&prev=_t&hl=en&ie=UTF-8&layout=2&eotf=1&u=http%3A%2F%2Flingvodics.com%2Fpages%2Flanguages%2F).
     -   The [lingoes site](http://www.lingoes.net/) has also a
         [dictionary download page](http://www.lingoes.net/en/dictionary/).
     -   Lingvo dictionnaries can be read by _GoldenDict_
@@ -268,7 +263,7 @@ See also Wikipedia {{< wp "Comparison of machine translation applications" >}}.
     -   [lingvo dictionaries
         ](http://abloz.com/huzheng/stardict-dic/lingvo/)
 
-For english two big free dictionaries available in many formats
+For English, two big free dictionaries available in many formats
 [including Kobo](http://www.mobileread.com/forums/showthread.php?t=196925)
 and originally in project Gutenberg are:
 
@@ -296,12 +291,13 @@ and originally in project Gutenberg are:
 
 # Translation
 
--   [Translate Shell](https://www.soimort.org/translate-shell)
+-   [Translate Shell](https://www.soimort.org/translate-shell) (public domain)
     is a command-line translator powered by
     _[Google Translate](https://translate.google.com/)_,
     _[Bing Translator](https://www.bing.com/translator)_,
     _[Yandex.Translate](https://translate.yandex.com/)_, and
     _[Apertium](https://www.apertium.org/)_. It is in Debian.
+    -  [Translate-shell - GitHub](https://github.com/soimort/translate-shell)
 -   [Google Translate](http://translate.google.com/)
 
 
