@@ -2,7 +2,6 @@
 title: ARM Single Board Computers
 ---
 
-{{% toc /%}}
 
 # Arm Architectures
 -   Wikipedia: {{< wp "ARM architecture" >}},
@@ -19,88 +18,55 @@ Recent arm architectures includes
     in older SBC like the Plug computers (sheevaplug, todido,
     guruplug, dreamplug ...)
 -   ARMv6: provided by {{< wp "ARM11" >}} and some {{< wp "Cortex-M" >}}.
--   ARMv7: provided by {{< wp "Cortex-M" >}}, {{< wp "Cortex-R" >}}, and {{< wp "Cortex-A" >}} 5
-    to 17.
+-   <a name="armv7"></a>ARMv7: provided by {{< wp "Cortex-M" >}}, {{< wp "Cortex-R" >}},
+    and {{< wp "Cortex-A" >}} 5 to 17.
     -   Wikipedia: {{< wp "Comparison of ARMv7-A cores" >}}
-    -   {{< wp "ARM_Cortex-A7" >}} is a popular processor that has many
+    -   {{< wp "ARM_Cortex-A7" >}} is a popular processor launched in 2011, that has many
         system-on-chips (SoC) by {{< wp "Allwinner_Technology"  "Allwinner" >}}
-        (A20, A31, A83T ,H3, H8), {{< wp "Broadcom" >}},
-        {{< wp "Freescale_Semiconductor"  "Freescale" >}},
+        ([A20](https://en.wikipedia.org/wiki/Allwinner_A20, A31, A83T ,H3, H8),
+        {{< wp "Broadcom" >}}, {{< wp "Freescale_Semiconductor"  "Freescale" >}},
         {{< wp "Marvell_Technology_Group"  "Marvell" >}}, Mediatek, Qualcomm,
-        Samsung.
+        Samsung _list on {{< wp "ARM_Cortex-A7" "Wikipedia">}}.
      -  {{< wp "ARM Cortex-A9 MPCore" >}} is a 32-bit multicore processor
         providing up to 4 cores, each implementing the ARM v7 instruction set.
         {{< wp "Cortex-A9" >}} is provided by [Texas Instrument OMAP4
-        ](http://en.wikipedia.org/wiki/Texas_Instruments_OMAP#OMAP4),
+        ](https://en.wikipedia.org/wiki/Texas_Instruments_OMAP#OMAP4),
         [Nvidia Tegra 2 series
-        ](http://en.wikipedia.org/wiki/Nvidia_Tegra#Tegra_2_series)
+        ](https://en.wikipedia.org/wiki/Nvidia_Tegra#Tegra_2_series)
         and
         [Freescale i.MX6x series (Wikipedia)
-        ](http://en.wikipedia.org/wiki/I.MX#i.MX6x_series),
+        ](https://en.wikipedia.org/wiki/I.MX#i.MX6x_series),
         [Freescale i.MX6x Home Page
-        ](http://www.freescale.com/webapp/sps/site/taxonomy.jsp?code=IMX6X_SERIES).
+        ](https://www.freescale.com/webapp/sps/site/taxonomy.jsp?code=IMX6X_SERIES).
     -   <a name=armada38x"></a>[Marvell ARMADA 38X
         ](https://www.marvell.com/embedded-processors/armada/armada-38x)
         is a family of ARMv7 multicore Socs with DDR3/DDR3L/DDR4 Ram
         (including ECC), PCI-e2.0, 2 or 3 Gigabits internets, 1 OSB
         3.0, 1 to 4 SATA, and a TDP of 3W to 4W.
--   ARMv8: provided by {{< wp "Cortex-A32" >}} _32 bits only_ and for
+-   <a name="arm-v8"></a>ARMv8: provided by {{< wp "Cortex-A32" >}} _32 bits only_ and for
     32bits/64bits {{< wp "Cortex-A" >}} > 35 among which the most used in SBC
     is {{< wp "Cortex-A53" >}}, and Qualcom {{< wp "Snapdragon" >}}.
-    -   ARMv8-A _2011_ also named ARMv8.0-A introduce 64 bits AArch64,
+    -   ARMv8-A _2011_ also named ARMv8.0-A introduce 64 bits AArch64
+        [Arm64](https://linux-sunxi.org/Arm64) architecture.
         ARMv8-A allows 32-bit applications to be executed in a 64-bit
         OS.
     -   Then it was improved in ARMv8.1-A _2014_, {{< wp "ARMv8.2-A" >}}_2016_
         supported by  {{< wp "Cortex-A55" >}} and {{< wp "Cortex-A75" >}} ,
         ARMv8.3-A _2016_.
     -   Wikipedia: {{< wp "Comparison of ARMv8-A cores" >}}
-    -   {{< wp "Cortex-A53" >}} is the architecture of
-        [Marvell’s ARMADA 3700
-        ](https://www.marvell.com/embedded-processors/armada-3700/)
-        found in EspressoBin,  and
-        [Actions SOC S700
-        ](http://www.actions-semi.com/en/productview.aspx?id=225)
+    -   <a name="cortex-a53"></a>{{< wp"Cortex-A53" >}} launched in 2012 is the
+        successor of the Cortex-A7. It is the architecture of
+        [Marvell’s ARMADA 3700](https://www.marvell.com/embedded-processors/armada-3700/)
+        found in EspressoBin,
+        Broadcom BCM2837B0  used in Raspberry B-3+ and
+        [Actions SOC S700](https://www.actions-semi.com/en/productview.aspx?id=225)
         found in Cubieboard 7, and AllWinner
-        [H64](http://linux-sunxi.org/H64),
-        [H5](http://linux-sunxi.org/H5),
-        [H6](http://linux-sunxi.org/H6).
+        [H64](https://linux-sunxi.org/H64),
+        [H5](https://linux-sunxi.org/H5),
+        [H6](https://linux-sunxi.org/H6),
+        [A64](https://linux-sunxi.org/A64).
 -       [ArchWiki - Armv8 Platforms
         ](https://archlinuxarm.org/platforms/armv8)
-
-## Linux Arm support
-
--   [Debian ARM port](http://www.debian.org/ports/arm/):
-    -   [Intel IOP support](http://www.cyrius.com/debian/iop/)
-        like the Thecus NAS,
-    -   [Marvell's Kirkwood Debian Support
-        ](http://www.cyrius.com/debian/kirkwood/)
-        like {{< wp "SheevaPlug" >}}, {{< wp "Guruplug" >}}, [D2Plug
-        ](http://www.globalscaletechnologies.com/p-43-d2-plug.aspx)
-    -   [Marvell's Orion Debian Support
-        ](http://www.cyrius.com/debian/orion/) like
-        {{< iref "#qnap" "Debian on QNAP" >}},
--   [Debian Cheap ServerBox Hardware
-    ](https://wiki.debian.org/CheapServerBoxHardware).
-    is a list of arm small boxes that we can consider for open source
-    project development.
--   [Ubuntu support ARM](https://wiki.ubuntu.com/ARM/),
-    including [Ubuntu OMAP/OMAP4 support](https://wiki.ubuntu.com/ARM/OMAP).
-    [Ubuntu ARM  device support](https://wiki.ubuntu.com/ARM/DeviceSupport).
--   [Arch Linux ARM](http://archlinuxarm.org/),
--   [Arm Platforms comparison](https://archlinuxarm.org/platforms).
--   [Bitkistl: Linux on ARM powered Devices](http://bitkistl.blogspot.fr/)
--   [elinux: RaspberryPi Comparison](http://elinux.org/RaspberryPi_Comparison)
-    give a comparison of arm-linux development boards.
--   [Neil William](http://linux.codehelp.co.uk/) the previous leader
-    of the project _Embedian_ has a
-    [blog about ARMMP](http://linux.codehelp.co.uk/?s=armmp)
-    the  Debian kernel for [armhf - Arm Hard Float
-    ](https://wiki.debian.org/ArmHardFloatPort).
-    Software are in [CodeHelp Github Repository
-    ](https://github.com/codehelp).
--   [OmapPedia](http://www.omappedia.org/wiki/)
-    reference the support across the miscellaneous distributions
-    of the {{< wp "Omap" >}} arm processors developed by Texas Instruments
 
 ## Allwinner Technology
 
@@ -111,25 +77,25 @@ It produces the A1x serie of {{< wp "Cortex-A8" >}} ArmV7 SoC;
 the A2x and A3x serie of {{< wp " Cortex-A7" >}} ArmV7 SoC; the A8x family
 of  {{< wp " Cortex-A7" >}} and {{< wp "Cortex-A15" >}} ArmV7 SoC; The Hx family where
 H2, H3, H8 are {{< wp " Cortex-A7" >}} ArmV7 SoCs and  AllWinner
-[H64](http://linux-sunxi.org/H64), [H5](http://linux-sunxi.org/H5),
-[H6](http://linux-sunxi.org/H6)are {{< wp "Cortex-A53" >}} armV8-A Socs.
+[H64](https://linux-sunxi.org/H64), [H5](https://linux-sunxi.org/H5),
+[H6](https://linux-sunxi.org/H6)are {{< iref "#cortex-A53" "Cortex-A53" >}} armV8-A Socs.
 
 -   Wikipedia: {{< wp "Allwinner_Technology"  "Allwinner" >}}
 -   [AllWinner - A series
-    ](http://www.allwinnertech.com/index.php?c=product&a=index&pid=2)
+    ](https://www.allwinnertech.com/index.php?c=product&a=index&pid=2)
 -   [AllWinner - H series
-    ](http://www.allwinnertech.com/index.php?c=product&a=index&pid=6)
+    ](https://www.allwinnertech.com/index.php?c=product&a=index&pid=6)
 -   [Installing Debian On Allwinner
    ](https://wiki.debian.org/InstallingDebianOn/Allwinner)
--   [linux-sunxi](http://linux-sunxi.org/Main_Page)
+-   [linux-sunxi](https://linux-sunxi.org/Main_Page)
     is an open source software community dedicated to Allwinner SoC
     based devices.
 -   [ArchLinux AllWinner armv7 platform comparison
-    ](http://archlinuxarm.org/platforms/armv7/allwinner)
+    ](https://archlinuxarm.org/platforms/armv7/allwinner)
 -   {{< wp "Allwinner A1X" >}} can boot GNU/Linux distributions such as Debian,
     Ubuntu, Fedora, from an SD card, in addition to the Android OS
     installed on the flash memory.
--   [Allwinner A10 CPU](http://elinux.org/Allwinner_A1X)
+-   [Allwinner A10 CPU](https://elinux.org/Allwinner_A1X)
     is an 1.5ghz ARM Cortex A8 with a MALI400 GPU,
     2160p Hardware-accelerated Video playback with  HDMI out up to
     1080p, USB 2.0 Host
@@ -138,13 +104,13 @@ H2, H3, H8 are {{< wp " Cortex-A7" >}} ArmV7 SoCs and  AllWinner
     output, DDR3 512MB / 1GB, 4GB NAND storage,
     SDHC card slot supporting up to 32GB. <br />
     It run Linux or Android. It powers up
-    [many tablets](http://elinux.org/A10_tablets) and
-    [boards and minipc](http://elinux.org/A10_boards_and_minipc)
+    [many tablets](https://elinux.org/A10_tablets) and
+    [boards and minipc](https://elinux.org/A10_boards_and_minipc)
     on the Chinese market.
     The A10 can update the firmware from USB, so it can not be
     bricked, and it can be securely
-    [hacked](http://elinux.org/Hack_A10_devices).
--   [Allwinner A20](http://elinux.org/Allwinner_A20)
+    [hacked](https://elinux.org/Hack_A10_devices).
+-   [Allwinner A20](https://elinux.org/Allwinner_A20)
     contains an {{< wp "Cortex-A7" >}} dual core, GPU – ARM Mali400 MP2, DDR3
     ram, 10/100 Ethernet, 4Gb Nand Flash, HDMI 1080p Output with
     3840×1080@30fps 3D decoding, 2 USB Host, 1 micro SD slot, 1 SATA,
@@ -155,25 +121,55 @@ H2, H3, H8 are {{< wp " Cortex-A7" >}} ArmV7 SoCs and  AllWinner
 
 -   [H2+/H3/H5 boards overview
     ](https://forum.armbian.com/topic/1351-h3-board-buyers-guide/?do=findComment&comment=44979).
-    by [T Kaiser in armbian forum
-    ](https://forum.armbian.com/profile/7-tkaiser/).
+    by [T Kaiser in armbian forum](https://forum.armbian.com/profile/7-tkaiser/).
 -   [Raspberry vs Banana vs A10-OLinuXino : powering and SATA performance
-    ](http://hardware-libre.fr/2014/06/raspberry-vs-banana-vs-a10-olinuxino-powering-and-sata-performance/)
--   [OpenBenchmarking.org - ARM-SBC-Benchmark
-    ](http://openbenchmarking.org/result/1408120-GLND-140706967&obr_sor%3Dy&obr_hgv%3DBanana%2BPi%2BSSD/)
-    Comparison of Raspberry, Banana PI, Banana PI SSD
--   [Raspberry vs Banana : hardware duel | Hardware-Libre
-    ](http://hardware-libre.fr/2014/06/raspberry-vs-banana-hardware-duel/) performance
--   [loverpi](https://www.loverpi.com/blogs/) comparisons
-    -   [Raspberry Pi 3, Banana Pi M3, Orange Pi Plus 2, ODROID C2 Spec
-        Comparison
-        ](https://cdn.shopify.com/s/files/1/1098/4826/files/comparisonupdate.png),
-    -   [CPU Performance Review of SBCs
-        ](https://www.loverpi.com/blogs/news/95250433-cpu-performance-review-of-sbcs)
-        includes banana pi (pi/m2/m3), odroid (odroid/c1+/c2/xu4), orange pi, orange
-        pi/one/pc/plus, raspberry pi 2/pi 3, see also [the full test
-        on openbenchmarking
-        ](http://openbenchmarking.org/result/1604016-GA-MERGE757555)
+    ](https://hardware-libre.fr/2014/06/raspberry-vs-banana-vs-a10-olinuxino-powering-and-sata-performance/).
+-   [OpenBenchmarking.org](https://openbenchmarking.org/)  contains tests of many
+    platforms and comparisons, including SBC. Search for your preferred product.
+
+# Linux Arm support
+
+-   [Debian ARM port](https://www.debian.org/ports/arm/):
+    -   [Intel IOP support](https://www.cyrius.com/debian/iop/)
+        like the Thecus NAS,
+    -   [Marvell's Kirkwood Debian Support
+        ](https://www.cyrius.com/debian/kirkwood/)
+        like {{< wp "SheevaPlug" >}}, {{< wp "Guruplug" >}}, [D2Plug
+        ](https://www.globalscaletechnologies.com/p-43-d2-plug.aspx)
+    -   [Marvell's Orion Debian Support
+        ](https://www.cyrius.com/debian/orion/) like
+        {{< iref "#qnap" "Debian on QNAP" >}},
+-   [Debian Cheap ServerBox Hardware](https://wiki.debian.org/CheapServerBoxHardware)
+    is a list of arm small boxes that we can consider for open source
+    project development.
+-   [Ubuntu support ARM](https://wiki.ubuntu.com/ARM/),
+    including [Ubuntu OMAP/OMAP4 support](https://wiki.ubuntu.com/ARM/OMAP).
+    [Ubuntu ARM  device support](https://wiki.ubuntu.com/ARM/DeviceSupport).
+-   [Arch Linux ARM](https://archlinuxarm.org/),
+-   [Arm Platforms comparison](https://archlinuxarm.org/platforms).
+-   [Bitkistl: Linux on ARM powered Devices](https://bitkistl.blogspot.fr/)
+-   [elinux: RaspberryPi Comparison](https://elinux.org/RaspberryPi_Comparison)
+    give a comparison of arm-linux development boards.
+-   [Neil William](https://linux.codehelp.co.uk/) the previous leader
+    of the project _Embedian_ has a
+    [blog about ARMMP](https://linux.codehelp.co.uk/?s=armmp)
+    the  Debian kernel for [armhf - Arm Hard Float
+    ](https://wiki.debian.org/ArmHardFloatPort).
+    Software are in [CodeHelp Github Repository
+    ](https://github.com/codehelp).
+-   [OmapPedia](https://www.omappedia.org/wiki/)
+    reference the support across the miscellaneous distributions
+    of the {{< wp "Omap" >}} arm processors developed by Texas Instruments
+
+## Freedom Box
+-   [FreedomBox - Debian Wiki](https://wiki.debian.org/FreedomBox)
+    is a self-hosting server. It can be used as a private Cloud, a NAS, or a router.
+-   The Freedom box supports
+    [many applications](https://wiki.debian.org/FreedomBox/Features).
+-   The are many FreedomBox
+    [compatible Hardware](https://wiki.debian.org/FreedomBox/Hardware).
+-   [FreedomBox Manual](https://wiki.debian.org/FreedomBox/Manual).
+
 
 
 #  Raspberry
@@ -186,29 +182,29 @@ H2, H3, H8 are {{< wp " Cortex-A7" >}} ArmV7 SoCs and  AllWinner
 -   version 2 uses a ArmV7 Broadcom BCM2836 SoC with a 900 MHz 32-bit
     quad-core ARM {{< wp "Cortex-A7" >}} processor, 1Gb RAM
 -   version 3 uses a ArmV8-A Broadcom BCM2837 SoC with a 1.2 GHz
-    64-bit quad-core ARMv8-A {{< wp "Cortex-A53" >}} processor, 1Gb RAM
+    64-bit quad-core ARMv8-A {{< iref "#cortex-A53" "Cortex-A53" >}} processor, 1Gb RAM
 -   The B-3+ launched in march 2018 has a Broadcom BCM2837B0 SoC with
-    1.4 GHz 64-bit quad-core ARMv8-A {{< wp "Cortex-A53" >}}, 1Gb RAM,
+    1.4 GHz 64-bit quad-core ARMv8-A {{< iref "#cortex-A53" "Cortex-A53" >}}, 1Gb RAM,
     4xUSB-2.0, HDMI, analog audio I/O, MicroSDHC, 10/100/1000 Mbit/s
     Ethernet (real speed ~300 Mbit/s), 802.11ac dual band 2.4/5 GHz
     wireless, Bluetooth 4.2, 17× GPIO, power from 2.3W idle to 5.7w
 
 ## Refs
--   [raspberrypi.org](http://www.raspberrypi.org/).
--   [The Pi Hut](http://thepihut.com/) sells Raspberry and accessories.
--   [MagPi](http://www.themagpi.com/) is a magazine for Raspberry Pi
+-   [raspberrypi.org](https://www.raspberrypi.org/).
+-   [The Pi Hut](https://thepihut.com/) sells Raspberry and accessories.
+-   [MagPi](https://www.themagpi.com/) is a magazine for Raspberry Pi
     users.
--   [The Embedded Linux Wiki (elinux.org)](http://elinux.org/Main_Page)
+-   [The Embedded Linux Wiki (elinux.org)](https://elinux.org/Main_Page)
     host the Raspberry Pi wiki
-    [RPi Hub](http://elinux.org/R-Pi_Hub).
+    [RPi Hub](https://elinux.org/R-Pi_Hub).
     You find there
-    [Tutorials](http://elinux.org/RPi_Tutorials),
-    [liste of Guides](http://elinux.org/RPi_Guides),
+    [Tutorials](https://elinux.org/RPi_Tutorials),
+    [liste of Guides](https://elinux.org/RPi_Guides),
     [RPi Troubleshooting](https://elinux.org/R-Pi_Troubleshooting),
-    [Hardware specification](http://elinux.org/RPi_Hardware),
-    [Expansion Boards](http://elinux.org/RPi_Expansion_Boards),
-    [Cases](http://elinux.org/RPi_Cases),
-    [VerifiedPeripherals](http://elinux.org/RPi_VerifiedPeripherals),
+    [Hardware specification](https://elinux.org/RPi_Hardware),
+    [Expansion Boards](https://elinux.org/RPi_Expansion_Boards),
+    [Cases](https://elinux.org/RPi_Cases),
+    [VerifiedPeripherals](https://elinux.org/RPi_VerifiedPeripherals),
     [RPiconfig](https://elinux.org/RPiconfig),
     [RPi Software](https://elinux.org/RPi_Software),
     [RPi Distributions](https://elinux.org/RPi_Distributions),
@@ -221,10 +217,10 @@ H2, H3, H8 are {{< wp " Cortex-A7" >}} ArmV7 SoCs and  AllWinner
 -   [ArchWiki: Raspberry Pi](https://wiki.archlinux.org/index.php/Raspberry)
 -   [raspberry-pi Questions - Stack Overflow
     ](https://stackoverflow.com/questions/tagged/raspberry-pi),
--   [RaspBerry Pi Stack Exchange](http://raspberrypi.stackexchange.com/)
--   [Raspbian](http://www.raspbian.org/) is a  Debian  variant optimized for
-    the Raspberry Pi hardware. The [Raspbian FAQ](http://www.raspbian.org/RaspbianFAQ)
-    and [Raspbian Documentation](http://www.raspbian.org/RaspbianDocumentation)
+-   [RaspBerry Pi Stack Exchange](https://raspberrypi.stackexchange.com/)
+-   [Raspbian](https://www.raspbian.org/) is a  Debian  variant optimized for
+    the Raspberry Pi hardware. The [Raspbian FAQ](https://www.raspbian.org/RaspbianFAQ)
+    and [Raspbian Documentation](https://www.raspbian.org/RaspbianDocumentation)
     give hints on package compiling.
 -   <a name="omxplayer">[OMXPlayer](https://github.com/popcornmix/omxplayer/)
     is the command line OMX player for the Raspberry PI.
@@ -245,19 +241,19 @@ H2, H3, H8 are {{< wp " Cortex-A7" >}} ArmV7 SoCs and  AllWinner
     -   [OMXPlayer - Raspbian
         ](https://www.raspberrypi.org/documentation/raspbian/applications/omxplayer.md)
 -   [Gentoo Wiki: Raspberry Pi Cross building
-    ](http://wiki.gentoo.org/wiki/Raspberry_Pi_Cross_building)
+    ](https://wiki.gentoo.org/wiki/Raspberry_Pi_Cross_building)
 -   There are many expansion boards for Raspberries most are listed
     in [RPIHub: Expansion Boards
-    ](http://elinux.org/RPi_Expansion_Boards),
+    ](https://elinux.org/RPi_Expansion_Boards),
     you find also some sata expansion cards (by
     [SupTronics
-    ](http://www.suptronics.com/Xseries.html),
+    ](https://www.suptronics.com/Xseries.html),
     or [WDLabs
-    ](http://wdlabs.wd.com/products/sata-adapter-board/))
+    ](https://wdlabs.wd.com/products/sata-adapter-board/))
     but they use an usb to sata bridge, so you cannot expect better
     performances than the usb provide.
 -   [Ducky Pond Raspberry-pi tutorials
-    ](http://www.ducky-pond.com/tag/raspberry-pi.html)
+    ](https://www.ducky-pond.com/tag/raspberry-pi.html)
 -   [HiFiBerry DAC/Digi/Amp products](https://www.hifiberry.com/) allow to build
     an high-quality and affordable audio distribution systems, based on RaspBerry.
     -   [DLNA/UPnP Server + Renderer – HiFiBerry
@@ -268,9 +264,9 @@ H2, H3, H8 are {{< wp " Cortex-A7" >}} ArmV7 SoCs and  AllWinner
 {{< iref "media_players#kodi" "Kodi" >}}
 [run on Raspberry](https://kodi.wiki/index.php?title=Raspberry_Pi)
 either with a choice of specific distributions, like the minimal
-[Xbian](http://wiki.xbmc.org/index.php?title=XBian),[osmc](https://osmc.tv/),
+[Xbian](https://wiki.xbmc.org/index.php?title=XBian),[osmc](https://osmc.tv/),
 or on a modern Raspbian or following the
-[Raspbian build recipe](http://www.raspbian.org/RaspbianXBMC).
+[Raspbian build recipe](https://www.raspbian.org/RaspbianXBMC).
 
 -   [HOW-TO:Install Kodi on Raspberry Pi - Kodi Wiki
     ](https://kodi.wiki/view/HOW-TO:Install_Kodi_on_Raspberry_Pi),
@@ -281,33 +277,43 @@ or on a modern Raspbian or following the
 the information on the bananapi devices are on Wikipedia {{< wp "Banana Pi" >}}
 and on the [Banana Pi gitbook](https://www.gitbook.com/book/bananapi/).
 
--   Bananapi M1 has an ArmV7 {{< wp "Allwinner A20" >}} {{< wp "ARM Cortex-A7" >}}
-    Dual-Core 1GB DDR3, 10/100/1000 Ethernet, HDMI, CVBS, LVDS/RGB
-    Video output, 3.5mm jack and HDMI Audio output, SATA 2.0 (quite
-    slow 36MB/s) , 2 x USB
-    2.0 ports, the same GPIO headers as the Raspberry Pi 1 Model A &
-    B.
+-   [Bananapi M1](https://wiki.banana-pi.org/Banana_Pi_BPI-M1)
+    launched in 2014 has an ArmV7 {{< wp "Allwinner A20" >}} {{< wp "ARM Cortex-A7" >}}
+    Dual-Core 1GB DDR3, 10/100/1000 Ethernet, HDMI, CVBS, LVDS/RGB Video output, 3.5mm
+    jack and HDMI Audio output, SATA 2.0, 2 x USB 2.0 ports, the same GPIO headers as
+    the Raspberry Pi 1 Model A & B.
 
-    Note That the allwinner A20 was a nice improvement over the first
-    single-core Raspberry Pis few years ago but is pretty slow by
-    today’s standards. The native SATA is very slow, and the gigabit
-    is not fully capable of 940 Mbits/sec in both directions.
-    So Armbian suggest now to replace it with better alternatives like
-    those listed in [This T. Kaiser post
-    ](https://forum.armbian.com/topic/1351-h3-board-buyers-guide/?tab=comments#comment-28169).
-
+    Note That the allwinner A20 was a nice improvement over the first single-core
+    Raspberry Pis few years ago but is pretty slow by today’s standards. The native SATA
+    was very slow until Kernel 5.3 but it improved from 35MB/s to 100MB/s with a [patch
+    ](https://www.phoronix.com/news/Faster-Allwinner-SATA-Patch) see also the
+    [discussion on ArmBian Forum
+    ](https://forum.armbian.com/topic/10352-a20-sata-write-speed-improvement/).
+    The gigabit is not fully capable of 940 Mbits/sec in both
+    directions.  Armbian suggested to replace it with better alternatives like
+    the H3 socs listed in [This T. Kaiser post
+    ](https://forum.armbian.com/topic/1351-h3-board-buyers-guide/?tab=comments#comment-28169)
+    but it may be obsoleted by the new software.
+-   [Banana Pro](https://linux-sunxi.org/LeMaker_Banana_Pro) launched in 2014 uses the
+    same A20 soc than Bananapi M1. It's an updated version of M1, using a microSD slot,
+    onboard WiFi (AP6181) and a 40 pin GPIO header.
+    -   [FreedomBox BananaPro](https://wiki.debian.org/FreedomBox/Hardware/BananaPro)
+        we can suppose that it applies also to Bananapi M1, as wifi is unused, even if
+        we cannot use the microSD.
 -   Bananapi M2 improve CPU with an Allwinner A31S {{< wp "ARM Cortex-A7" >}}
     Quad-Core 1GHz, 4 x USB 2, but drop SATA.
 -   Bananapi M2+ CPU is H3 Quad-core {{< wp "ARM Cortex-A7" >}} Quad-Core, one
     USB 2.0 HOST, NO SATA, Wifi,
 -   [Bananapi M2 Ultra
     ](https://www.gitbook.com/book/bananapi/bpi-m2-ultra-open-source-single-board-computer/details)
-    _November 2016_ has an [Allwinner R40
-    ](https://en.wikipedia.org/wiki/Allwinner_Technology#R-Series)
+    _November 2016_ has an
+    [Allwinner R40](https://en.wikipedia.org/wiki/Allwinner_Technology#R-Series)
     {{< wp "ARM Cortex-A7" >}} Quad-Core 2GHz, 2GB DDR3 SDRAM, 8G eMMC flash on
     board, bluetooth 4.0 and SATA interface. The Allwinner R40’s
     advantage over the H3 and A31 is the addition of eMMC flash and
     native SATA support.
+    -   [Banana Pi M2 Ultra Allwinner R40  with SATA & GbE - CNX Software
+        ](https://www.cnx-software.com/2016/11/16/banana-pi-m2-ultra-allwinner-r40-development-board-with-sata-gbe-sells-for-46/).
 -   [Banana PI BPI-M2 Berry
     ](https://www.gitbook.com/book/bananapi/bpi-m2-ultra-open-source-single-board-computer/details)
     has the same [Allwinner R40
@@ -323,23 +329,38 @@ and on the [Banana Pi gitbook](https://www.gitbook.com/book/bananapi/).
 -   Banana Pi M3 _2015_ is an octa-core version of Banana Pi, it
     supports onboard Wi-Fi and SATA Port, but SATA is via an
     innefficient USB to SATA bridge.
+-   [Bananapi-M5](https://wiki.banana-pi.org/Banana_Pi_BPI-M5)
+    is powered by Amlogic S905X3 quad-core armV8 Cortex-A55 (2.0 XXGHz) processor.Onboard 4GB
+    LPDDR4 memory and 16GB EMMC storage, and supports 4 USB 3.0 interface, a gigabit
+    network port.
 
--   [Banana Pi - Wikipedia](http://en.wikipedia.org/wiki/Banana_Pi)
--   [Banana Pro | Banana Pi - LeMaker](http://www.lemaker.org/):
-    [Banana Pi Quick Start Guide
-    ](http://www.lemaker.org/resources/9-39/banana_pi_quick_start_guide.html),
-    [Banana Pi Wiki - lemaker.org](http://wiki.lemaker.org/Main_Page),
-    [FAQ](http://wiki.lemaker.org/FAQ),
+    It is very close to Banana Pi BPI-M2 Pro and Odroid C4 since these platforms uses the
+    same  Amlogic S905X3 soc. A comparison is given in the banana-pi.org, on this page
+    you find the system support which includes Debian, and numerous Linux distributions.
+    in the [Bananapi-M5](https://wiki.banana-pi.org/Banana_Pi_BPI-M5) page.
+
+    T. Kaiser indicates [in armbian forum
+    ](https://forum.armbian.com/topic/15228-banana-pi-bpi-m5-with-amlogic-s905x3-chip-design/#comment-109756)
+    that Odroid C4 is to be preferred, because banana-pi power circuitry suffer from
+    the usual Banana undervoltage.
+
+    In 2022 it is priced 92€ at reichelt store. _10% more than Odroid C4_.
+
+-   [Banana Pi - Wikipedia](https://en.wikipedia.org/wiki/Banana_Pi)
+-   [LeMaker Banana Pi - linux-sunxi.org](https://linux-sunxi.org/LeMaker_Banana_Pi)
+    gives the differences between [bananapi variants
+    ](https://linux-sunxi.org/LeMaker_Banana_Pi#Variants).
+-   [Banana Pi Wiki - lemaker.org](https://wiki.lemaker.org/Main_Page),
+    [FAQ](https://wiki.lemaker.org/FAQ),
     [GitHub: LeMaker resources](https://github.com/LeMaker).
-    Banana Pro is  an update version of Banana PiTM,
-    designed by LeMaker Team.
--   [bananapi.org - Banana Pi](http://www.bananapi.org/): site officiel (?) du Banana Pi
+-   [bananapi.org - Banana Pi](https://www.bananapi.org/): site officiel (?) du Banana Pi
     [Banana Pi specifications and layout diagrams
-    ](http://www.bananapi.org/p/product.html),
+    ](https://www.bananapi.org/p/product.html),
 -   [BananaPi - Google Groups
     ](https://groups.google.com/forum/#!forum/bananapien)
 -   [Banana Pi - ArchWiki](https://wiki.archlinux.org/index.php/Banana_Pi)
-
+-   [SATA - linux-sunxi.org](https://linux-sunxi.org/SATA) describes the sata interface
+    available on Allwinner A10, A20 and R40 SoCs.
 
 ## Banana Pi development
 -   Banana dev - GitHub  allow to [Build Banana Pi Image
@@ -347,44 +368,37 @@ and on the [Banana Pi gitbook](https://www.gitbook.com/book/bananapi/).
 -   Instruction to get a cross dev platform, build kernel and uboot
     and set the sdcard is in lemaker wiki at:
     [Building u-boot, script.bin and linux-kernel - Banana Pi
-    ](http://wiki.lemaker.org/Building_u-boot,_script.bin_and_linux-kernel),
+    ](https://wiki.lemaker.org/Building_u-boot,_script.bin_and_linux-kernel),
     [Setting up the bootable SD card - Banana Pi
-    ](http://wiki.lemaker.org/Setting_up_the_bootable_SD_card)
+    ](https://wiki.lemaker.org/Setting_up_the_bootable_SD_card)
 -   The linux-sunxi site has also
-    [Linux Kernel - linux-sunxi.org](http://linux-sunxi.org/Linux#A20), and
-    [Toolchain - linux-sunxi.org](http://linux-sunxi.org/Toolchain)
+    [Linux Kernel - linux-sunxi.org](https://linux-sunxi.org/Linux#A20), and
+    [Toolchain - linux-sunxi.org](https://linux-sunxi.org/Toolchain)
 
 ## Vente du Banana Pi
 
--   [banana-pi.com](http://www.banana-pi.com/)
-    a la [liste des revendeurs](http://www.banana-pi.com/egsjj.asp?id=12)
--   [lextronic.fr
-    ](http://www.lextronic.fr/), principallement raspberry et
+-   [banana-pi.com](https://www.banana-pi.com/)
+    a la [liste des revendeurs](https://www.banana-pi.com/egsjj.asp?id=12)
+-   [lextronic.fr](https://www.lextronic.fr/), principallement raspberry et
     alternatives mais a le  Banana Pi et nombreux modèles de modules.
--   [BananaPi.fr (vente)
-    ](http://e.banana-pi.fr/) et [BananaPiFr | Facebook
-    ](https://www.facebook.com/BananaPiFrance?ref%3Dhl)
+-   [BananaPi.fr (vente)](https://e.banana-pi.fr/) et
+    [BananaPiFr | Facebook](https://www.facebook.com/BananaPiFrance?ref%3Dhl)
     _Site assez cher avec peu d'accessoires, mais livraison bon marché._
--   [reichelt.de - Banana PI](http://www.reichelt.de/)
+-   [reichelt.de - Banana PI](https://www.reichelt.de/)
     un des meilleurs sites européens, a le BananaPi, RaspberryPi et
     beaucoup de materiels.
--   [Amazon.fr : banana-pi
-    ](https://www.amazon.fr/s/ref=nb_sb_noss?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&url=search-alias%3Daps&field-keywords=bananapi)
-    ](http://www.amazon.fr/Banana-Wireless-power-cable-Antenne/dp/B00MWUIA4Y/ref%3Dsr_1_5?ie%3DUTF8&qid%3D1419784076&sr%3D8-5&keywords%3Dbanana-pi)
--   [New It : Banana Pi
-    ](https://www.newit.co.uk/shop/All-Banana-Pi/BananaPiBoard)
+-   [Amazon.fr : banana-pi](https://www.amazon.fr/s?k=bananapi)
+-   [New It : Banana Pi](https://www.newit.co.uk/shop/All-Banana-Pi)
 -   China banana PI, orange Pi, Suppliers  Aliexpress.com
-    [banana Pi](http://www.aliexpress.com/wholesale?SearchText=banana+pi).
+    [banana Pi](https://www.aliexpress.com/wholesale?SearchText=banana+pi).
 
 # ESPRESSObin
 
 Specifications:
 
--   [Marvell’s ARMADA 3700
-    ](https://www.marvell.com/embedded-processors/armada-3700/)
-    {{< wp "Cortex-A53" >}} dual-core  up to 1.2 GHz.
--   1x [Topaz Networking Switch
-    ](http://wiki.espressobin.net/tiki-index.php?page=Topaz+Switch)
+-   [Marvell’s ARMADA 3700](https://www.marvell.com/embedded-processors/armada-3700/)
+    {{< iref "#cortex-A53" "Cortex-A53" >}} dual-core  up to 1.2 GHz.
+-   1x [Topaz Networking Switch](https://wiki.espressobin.net/tiki-index.php?page=Topaz+Switch)
     _The Marvell® Link Street®-88E6341 device is single-chip, 6-Port
     Ethernet Switch with four integrated 10/100/1000Mbps Ethernet
     transceivers and one high speed SerDes interfaces supporting
@@ -405,30 +419,30 @@ Specifications:
 -   Power supply 12V DC jack or 5V via micro USB port
 -   Power consumption: less than 1W thermal dissipation at 1 GHz
 
--   [ESPRESSObin Wiki](http://wiki.espressobin.net/).
+-   [ESPRESSObin Wiki](https://wiki.espressobin.net/).
 -   [I/O ports and connectors
-    ](http://wiki.espressobin.net/tiki-index.php?page=Quick+User+Guide#I_O_ports_and_connectors),
+    ](https://wiki.espressobin.net/tiki-index.php?page=Quick+User+Guide#I_O_ports_and_connectors),
     and [hardware brief outline
-    ](http://espressobin.net/espressobin-hardware-brief-outline/)
+    ](https://espressobin.net/espressobin-hardware-brief-outline/)
 -   [ESPRESSObin Quick User Guide
-    ](http://wiki.espressobin.net/tiki-index.php?page=Quick+User+Guide).
+    ](https://wiki.espressobin.net/tiki-index.php?page=Quick+User+Guide).
 -   [Software How To
-    ](http://wiki.espressobin.net/tiki-index.php?page=Software+HowTo)
+    ](https://wiki.espressobin.net/tiki-index.php?page=Software+HowTo)
     many pages on building and bootin a kernel image and how to
     [update the bootloader
-    ](http://wiki.espressobin.net/tiki-index.php?page=Update+the+Bootloader)
+    ](https://wiki.espressobin.net/tiki-index.php?page=Update+the+Bootloader)
 -   [Getting Started Tutorials
-    ](http://wiki.espressobin.net/tiki-index.php?page=Getting+Started+Tutorials)
+    ](https://wiki.espressobin.net/tiki-index.php?page=Getting+Started+Tutorials)
 -   [Running OpenSSL speed test on ESPRESSObin
-    ](http://wiki.espressobin.net/tiki-index.php?page=Running+OpenSSL+speed+test+on+ESPRESSObin).
+    ](https://wiki.espressobin.net/tiki-index.php?page=Running+OpenSSL+speed+test+on+ESPRESSObin).
 
 
 The ESPRESSObin is unbrickable you can always do
 [boot ESPRESSObin from SATA drive
-](http://wiki.espressobin.net/tiki-index.php?page=Boot+ESPRESSObin+from+SATA+drive)
+](https://wiki.espressobin.net/tiki-index.php?page=Boot+ESPRESSObin+from+SATA+drive)
 
 
--   [Marvell ESPRESSObin Forum](http://espressobin.net/forums/)
+-   [Marvell ESPRESSObin Forum](https://espressobin.net/forums/)
 -   [Debian Wiki - Installing debian on Marvell ESPRESSOBin
     ](https://wiki.debian.org/InstallingDebianOn/Marvell/ESPRESSOBin)
 
@@ -437,9 +451,9 @@ The ESPRESSObin is unbrickable you can always do
     -   [armbian - Espressobin](https://www.armbian.com/espressobin/)
     -   [Espressobin support development efforts
         ](https://forum.armbian.com/topic/4089-espressobin-support-development-efforts/)
-    -   [ESPRESSObin Forum](http://espressobin.net/forums/) :
+    -   [ESPRESSObin Forum](https://espressobin.net/forums/) :
         [Armbian Ubuntu / Debian
-        ](http://espressobin.net/forums/topic/armbian-ubuntu-debian/),
+        ](https://espressobin.net/forums/topic/armbian-ubuntu-debian/),
     -   [Real Time preemptible kernels
         ](https://wiki.linuxfoundation.org/realtime/documentation/technical_details/start)
         are available in armbian and support ESPRESSObin
@@ -452,11 +466,11 @@ The ESPRESSObin is unbrickable you can always do
 
 ## Hardware
 -   [Howto: set up your ESPRESSObin as a home router
-    ](http://indietech.rocks/howto/espressobin-home-router.html)
+    ](https://indietech.rocks/howto/espressobin-home-router.html)
 -   [My EspressoBIN board is up
-    ](http://upon2020.com/blog/2017/05/my-espressobin-board-is-up/)
+    ](https://upon2020.com/blog/2017/05/my-espressobin-board-is-up/)
 -   [Molex to SATA power adapter - Marvell ESPRESSObin
-    ](http://espressobin.net/forums/topic/molex-to-sata-power-adapter/)
+    ](https://espressobin.net/forums/topic/molex-to-sata-power-adapter/)
 
 ## Resellers
 -   [Amazon.com: ESPRESSObin
@@ -508,96 +522,103 @@ It features
 -   There is an eSata type II model
 
 -   Martin Michlmayr [Debian support
-    ](http://www.cyrius.com/debian/kirkwood/sheevaplug/) and
+    ](https://www.cyrius.com/debian/kirkwood/sheevaplug/) and
     [Plug Computer models and how well they are supported in Debian
-    ](http://www.cyrius.com/debian/kirkwood/sheevaplug/plugs.html)
+    ](https://www.cyrius.com/debian/kirkwood/sheevaplug/plugs.html)
 -   [Martin Michlmayr review of SheevaPlug
-    ](http://www.cyrius.com/journal/debian/kirkwood/sheevaplug/nslu2-killer)
+    ](https://www.cyrius.com/journal/debian/kirkwood/sheevaplug/nslu2-killer)
 -   Distributed by [globalscaletechnologies.com
-    ](http://www.globalscaletechnologies.com/p-26-sheevaplug-dev-kit-europe.aspx)
+    ](https://www.globalscaletechnologies.com/p-26-sheevaplug-dev-kit-europe.aspx)
     and [NewIt](https://www.newit.co.uk/shop/All-SheevaPlug/) (~120€)
 -   [ArchLinux Platforms](https://archlinuxarm.org/platforms)
     support some plug computers.
 
-[Tonido Plug 2](http://www.tonidoplug.com/tonido_plug.html)
+[Tonido Plug 2](https://www.tonidoplug.com/tonido_plug.html)
 is a variant of SheevaPlug, with 512 MB of DDR3, 512 MB of Flash, USB
 2.0, Gigabit Ethernet, WiFi, 2.5 inch SATA.
-It run Ubuntu to provide
-a nas and media streaming. It costs 78€ now discounted 32€ at
+It runs Ubuntu to provide a nas and media streaming. It is discounted 59€
+_2022_ at
 [NewIT](https://www.newit.co.uk/shop/All-TonidoPlug/TonidoPlug2).
 
 {{< wp "GuruPlug" >}} is the successor of Sheevaplug.  with 1.2 GHz ARM Marvell
 Kirkwood 6281 (ARM9E i.e. ARM-v5), 512MB SDRAM, 512MB NAND, USB 2.0,
 Gigabit Ethernet, JTAG, Bluetooth 2.1, Wi-Fi 802.11 b/g
+It is [supported in Debian](https://www.cyrius.com/debian/kirkwood/sheevaplug/plugs/).
 
-[DreamPlug
-](http://www.globalscaletechnologies.com/p-41-dreamplug-devkit.aspx)
-is the successor of GuruPlug. Its specifications are: 71.2 GHz ARM
+{{< wp "DreamPlug" >}} is the successor of GuruPlug. Its specifications are: 71.2 GHz ARM
 Marvell Kirkwood 88F6281 SoC (ARM9 i.e. ARM-v5), 2MB Flash for uboot, 2
 GB Flash, 512MB SDRAM, 1xMicro-SD system + 1SD Slot,2xUSB 2.0
 Microphone in, Headphone out, 2xgibabits Ethernet,1xeSata, SP/DIF out,
-WiFi /BT, Jtag and Uart. It costs 176€ [at NewIt
-](https://www.newit.co.uk/shop/All-DreamPlug/).
-
-[D2Plug](http://www.globalscaletechnologies.com/p-43-d2-plug.aspx)
-Specifications: a Marvell PXA510 – 800MHz, 1GB 1GB DDR3 Ram,
-Powered eSATA, USB 2.0 Host and USB 2.0 device, SD card slot,
-1 xGb ethernet, VGA and and HDMIoutput, mic in, audio out and s/pdif,
-usb console, jtag.  200$.
-
-[SmilePlug](http://www.globalscaletechnologies.com/p-57-smileplug.aspx)
-specifications are:
-Marvell ARMv7 ARMADA 370 CPU, WiFi, 2x USB 3.0, 2x Gigabit Ethernet
-1x Microsd, 1GB NAND Flash / 512MB DDR3, TAG.
-It run ArchLinux ARM and cost 200$.
+WiFi /BT, Jtag and Uart. It costs 188€ /2022/
+[at NewIt](https://www.newit.co.uk/shop/DreamPlug-Multi-Boot).
+It is [supported in Debian](https://www.cyrius.com/debian/kirkwood/sheevaplug/plugs/).
 
 
 #  BeagleBoard
 
-[BeagleBoard](http://en.wikipedia.org/wiki/BeagleBoard) and BeagleBone
+[BeagleBoard](https://en.wikipedia.org/wiki/BeagleBoard) and BeagleBone
 There is two _BeagleBones_
 they both adhere to the same standard for expansion and interfacing.
-[beagleboard.org](http://beagleboard.org/) is the Beagleboard Home
+[beagleboard.org](https://beagleboard.org/) is the Beagleboard Home
 page where you can find technical and commercial information on
 these boards.
--    BeagleBone has 720 MHz superscalar ARM Cortex-A8 AM3358/9,
-     256 MB DDR2 RAM, MicroSD slot, USB 2.0 host, USB mini OTG,
-     Storage-over-USB or Ethernet-over-USB on other USB device
-     port, Power consumption of 300-500mA at 5V
--    BeagleBone Black is a 1 GHz superscalar ARM Cortex-A8 AM3359,
-     with 512 MB DDR3 RAM, 2 GB eMMC flash, MicroSD slot,
-     USB 2.0 host, mini-USB 2.0 client, HDMI output,
-     power consumption of 210-460 mA at 5V
--    [Embedded Linux Wiki (elinux): BeagleBoard
-    ](http://elinux.org/BeagleBoard)
-     is related to BeagleBoard and BeagleBoard-xM that both use
-     {{< wp "Texas instrument OMAP" >}} Single-board computer (ARM
-     architecture). A distinct SoC is used for the following _BeagleBone]_.
--    [Embedded Linux Wiki (elinux): BeagleBone
-    ](http://elinux.org/BeagleBone)
-     gives a description of the two boards the original _BeagleBone_
-     and the new _BeagleBone Black_ .
-     The _BeagleBone_ has support in Angstrom,
-     [Debian](http://elinux.org/BeagleBoardDebian), Ubuntu,
-     [ArchLinux](http://archlinuxarm.org/platforms/armv7/beaglebone),
-     Gentoo, and more ...
--    [digikey sell beagleboards and BeagleBones
-     ](http://dkc1.digikey.com/us/mkt/beagleboard.html).
-     A BeagleBone black card costs 45$ shipping from US and taxes not included.
--    [Adafruit](http://www.adafruit.com/) sell BeagleBones and
-     accessories enclosure (20$), power supply _5VDC, 1A, 2.1mm,
-     center positive_ (10$),..
--    [Farnel element14.com
-     ](http://www.element14.com/community/community/knode/dev_platforms_kits/element14_dev_kits/next-gen_beaglebone)
-     is a reseller network with numerous agents in many EU and asian countries.
--    [BeagleBoneBlack Wiki
-     ](http://circuitco.com/support/index.php?title=BeagleBoneBlack)
-     has also an [accessories page
-     ](http://circuitco.com/support/index.php?title=BeagleBone_Black_Accessories).
+
+The {{< wp "BeagleBoard" "Wikipedia BeagleBoard page" >}} gives the specification of the
+different models of BeagleBoard and BeagleBone.
+
+The BeagleBoards/BeagleBones don't have SATA support.
+
+## Beagle Bone
+-    BeagleBone had 720 MHz superscalar ARM Cortex-A8 AM3358/9, 256 MB DDR2 RAM, MicroSD
+     slot, USB 2.0 host, USB mini OTG, Storage-over-USB or Ethernet-over-USB on other
+     USB device port, Power consumption of 300-500mA at 5V.
+-   [Embedded Linux Wiki (elinux): BeagleBoard ](https://elinux.org/BeagleBoard) is
+    related to BeagleBoard and BeagleBoard-xM that both use {{< wp "Texas instrument
+    OMAP" >}} Single-board computer (ARM architecture). A distinct SoC is used for the
+    following _BeagleBone]_.
+-   [Embedded Linux Wiki (elinux): BeagleBone](https://elinux.org/BeagleBone)
+    gives a description of the two boards the original _BeagleBone_ and the new
+    _BeagleBone Black_ .
+
+    The _BeagleBone_ has support in Angstrom,
+    [Debian](https://elinux.org/BeagleBoardDebian), Ubuntu,
+    [ArchLinux](https://archlinuxarm.org/platforms/armv7/beaglebone),
+    Gentoo, and more ...
+
+## BeagleBone Black
+-   [System Reference Manual · beagleboard/beaglebone-black Wiki · GitHub
+    ](https://github.com/beagleboard/beaglebone-black/wiki/System-Reference-Manual)
+
+-    BeagleBone Black in original version is a 1 GHz superscalar ARM Cortex-A8 AM3359,
+     with 512 MB DDR3 RAM, 2 GB eMMC flash, MicroSD slot, USB 2.0 host, mini-USB 2.0
+     client, HDMI output, power consumption of 210-460 mA at 5V. _no SATA_.
+-   [Farnell - BeagleBone
+    ](https://uk.farnell.com/seeed-studio/102110420/beaglebone-black/dp/3520081)
+    42€ from UK.
+-   [FreedomBox BeagleBone](https://wiki.debian.org/FreedomBox/Hardware/BeagleBone)
+
+## BeagleBone Black C
+-   The BeagleBone Black C revision C3 was delivered in August 2021, it is described
+    in the [System Reference Manual
+    ](https://github.com/beagleboard/beaglebone-black/wiki/System-Reference-Manual).
+    It features a Sitara AM3358BZCZ100 1GHz, 2000 MIPS processor,
+    SGX530 3D, 20M Polygons/S Graphics Engine, SDRAM Memory: 512MB DDR3L 606MHZ,
+    4GB, 8bit Embedded MMC, Power Source: miniUSB USB or DC Jack, 5VDC External Via
+    Expansion Header, miniUSB USB 2.0 Client Port, USB A 2.0 Host Port, Serial Port
+    UART0, Ethernet 10/100, RJ45, SD/MMC Connector microSD,
+    Video Out: 16b HDMI, 1280x1024 (MAX), Audio Via HDMI Interface, Stereo.
+-   [Adafruit - BeagleBone Black C with preinstalled Debian
+    ](https://www.adafruit.com/product/1996) 80$ with a starter pack 90$, and enclosure
+    at 10$. They have
+    [Distributors in many countries](https://www.adafruit.com/distributors/).
+-   [digikey - BeagleBone Black C
+    ](https://www.digikey.fr/fr/products/detail/ghi-electronics-llc/BBB01-SC-505/6210999).
+    96€.
+-   [BeagleBoneBlack - eLinux.org](https://www.elinux.org/Beagleboard:BeagleBoneBlack)
 
 # CubieBoard
 {{< wp "Cubieboard" >}} is a single-board computer manufacured by
-[cubietech.com](http://www.cubietech.com/).
+[cubietech.com](https://www.cubietech.com/).
 
 The processors goes from  AllWinner A10 {{< wp "Cortex-A8" >}} for cubieboard
 1,  AllWinner A20 2x{{< wp "Cortex-A7" >}} for CubieBoard 2 and 3, Allwinner A80
@@ -609,42 +630,42 @@ The {{< wp "Cubieboard"  "Cubieboard Wikipedia Page" >}} lists the specification
 of the models. A lot of the actual platforms are on sell on
 [NewIt](https://www.newit.co.uk/shop/All_Cubieboard).
 
--   [CubieBoard.org](http://cubieboard.org/)
--   [Cubie Forums](http://www.cubieforums.com/)
+-   [CubieBoard.org](https://cubieboard.org/)
+-   [Cubie Forums](https://www.cubieforums.com/)
 -   [Debian CubieBoard Page](https://wiki.debian.org/CubieBoard)
--   [Cubian](http://cubian.org/),
+-   [Cubian](https://cubian.org/),
     [GitHub Cubian](https://github.com/cubieplayer/Cubian) is a
     Debian distribution for CubieBoard 1 and 2 based on Debian wheezy.
     _Not updated since 2014_
--   [sunxi: Cubieboard wiki](http://linux-sunxi.org/Cubieboard)
+-   [sunxi: Cubieboard wiki](https://linux-sunxi.org/Cubieboard)
 -   ArchLinux: [Cubieboard
-    ](http://archlinuxarm.org/platforms/armv7/allwinner/cubieboard),
+    ](https://archlinuxarm.org/platforms/armv7/allwinner/cubieboard),
     [Cubieboard 2
-    ](http://archlinuxarm.org/platforms/armv7/allwinner/cubieboard-2),
+    ](https://archlinuxarm.org/platforms/armv7/allwinner/cubieboard-2),
     [CubieBoard3 / Cubietruck
     ](https://archlinuxarm.org/platforms/armv7/allwinner/cubietruck);
 
 -   [Cubieboard2 - Wikipedia
-    ](http://en.wikipedia.org/wiki/Cubieboard#Cubieboard2)
+    ](https://en.wikipedia.org/wiki/Cubieboard#Cubieboard2)
     is based on the A20 board; the newer improved models are the
     _Cubieboard 3_ and _Cubieboard 6_.
     _Cubieboard 6_
 
--   [CubieBoard3 / CubieTruck](http://cubieboard.org/tag/cubietruck/)
+-   [CubieBoard3 / CubieTruck](https://cubieboard.org/tag/cubietruck/)
     also called CubieBoard3 is an improvement of
     CubieBoard2 with VGA, SPDIF, Gigabit ethernet, and 2Gb
     RAM. It support an 2"5 sata disk or a
     [3"5 sata witn an HDD adon board
-    ](http://cubieboard.org/2013/09/24/how-to-support-3-5-inch-hdd-on-cubieboard/)
+    ](https://cubieboard.org/2013/09/24/how-to-support-3-5-inch-hdd-on-cubieboard/)
 
 -   [Cubieboard 4
-    ](http://www.cubietech.com/product-detail/cubieboard4/)
+    ](https://www.cubietech.com/product-detail/cubieboard4/)
     _8 cores, 2GB DDR3, HDMI&VGA, 1GB ethernet, wifi,
     4 x USB HOST, 1 x OTG_, [On NewIt
     ](https://www.newit.co.uk/shop/All_Cubieboard/Cubieboard4) 133€.
 
 -   [Cubietruck Plus (Cubieboard 5)
-    ](http://www.cubietech.com/product-detail/cubieboard5/)
+    ](https://www.cubietech.com/product-detail/cubieboard5/)
     has the same PCB layout and almost the same features as the CubieTruck.
     Specifications: Allwinner H8 Cortex-A7 @ 2 GHz octa-core,
     GPU: PowerVR SGX544 @ 700 MHz, HDMI 1.4 1080p and DisplayPort,
@@ -655,7 +676,7 @@ of the models. A lot of the actual platforms are on sell on
     antenna
 
     In [this release note
-    ](http://cubieboard.org/2016/03/15/cubietruck-pluscubieboard5-released-now/)
+    ](https://cubieboard.org/2016/03/15/cubietruck-pluscubieboard5-released-now/)
     CubieTruck Plus can be connected directly to the SATA hard disk,
     but also can be built to a dual hard disk array by HDD-RAID
     subboard which transformed from USB3.0/SATA III to Dual SATA III
@@ -665,12 +686,12 @@ of the models. A lot of the actual platforms are on sell on
     ](https://www.newit.co.uk/shop/All_Cubieboard/Cubieboard5) 133€
 
 -   [CubieBoard 6
-    ](http://www.cubietech.com/product-detail/cubieboard6/)
+    ](https://www.cubietech.com/product-detail/cubieboard6/)
     is an enhencement of _CubieBoards 2 and 3_ with a distinct chip
     _S500_ instead of _A20_ and sata 3 instead of sata 2.
 
     Specifications: [Actions SOC S500
-    ](http://www.actions-semi.com/en/productview.aspx?id=209)，
+    ](https://www.actions-semi.com/en/productview.aspx?id=209)，
     ARM Cortex-A9 Quad-Core CPU,Imagination PowerVR SGX544 GPU 2GB
     LPDDR3, 8GB eMMC, Micro SD card slot, up to 32GB, SATA3 support
     2.5 inch HDD/SSD up to 4TB, 2xUSB HOST Port, 1xUSB Device port,
@@ -684,10 +705,10 @@ of the models. A lot of the actual platforms are on sell on
     83€
 
 -   [CubieBoard 7
-    ](http://www.cubietech.com/product-detail/cubieboard7/)
+    ](https://www.cubietech.com/product-detail/cubieboard7/)
     Specifications: [Actions SOC S700
-    ](http://www.actions-semi.com/en/productview.aspx?id=225)
-    {{< wp "Cortex-A53" >}} Quad-Core CPU, Mali450 MP4 GPU, 2GB LPDDR3, 8GB
+    ](https://www.actions-semi.com/en/productview.aspx?id=225)
+    {{< iref "#cortex-A53" "Cortex-A53" >}} Quad-Core CPU, Mali450 MP4 GPU, 2GB LPDDR3, 8GB
     eMMC, micro SD card slot, up to 32GB, Support 2.5 inch HDD/SSD up
     to 4TB, USB HOST Port x2, and USB Device port x1, HDMI V1.4a,
     1080P@60Hz, 10M/100M RJ45, Wifi, Bluetooth, IR, audio jack in and
@@ -696,50 +717,125 @@ of the models. A lot of the actual platforms are on sell on
     It costs 98€ on amazon.
 
 -   They are many
-    [CubieBoard Resellers](http://cubieboard.org/buy/)
+    [CubieBoard Resellers](https://cubieboard.org/buy/)
     -   [NewIt](https://www.newit.co.uk/shop/All_Cubieboard)
         Cubieboard2 (53€ vat included), Cubieboard 3 / CubieTruck 91€,
         Cubieboard 4 133€, Cubieboard 5 137€, Cubieboard 6 86€.
 
 # ODROID
--   [ODROID-XU4
-    ](http://www.hardkernel.com/main/products/prdt_info.php)
-    Samsung Exynos5422 Cortex™-A15 2Ghz and Cortex™-A7 Octa core CPUs,
+-   <a name="odroid-C4"></a>
+    [ODROID-C4 – ODROID](https://www.hardkernel.com/shop/odroid-c4/)
+    is powered by Amlogic S905X3 quad-core armV8 Cortex-A55 (2.0 XXGHz) processor.Onboard 4GB
+    LPDDR4 memory and 16GB EMMC storage, and supports 4 USB 3.0 interface, a gigabit
+    network port.
+
+    It is the same soc than {{< iref "#bananapi-m5" "Banana pi M5" >}}
+    see this entry for a comparison.
+
+    It is priced 54€ _2022_ at
+    [HardKernel Site](https://www.hardkernel.com/shop/odroid-c4/)
+    where you find also accessories like a 5€4€ case, 5€50 power supply and EMMC modules
+    from 15€ for 16G to 45€ for 128G.
+-   [ODROID-XU4](https://www.hardkernel.com/shop/odroid-xu4q-special-price/)
+    Samsung Exynos5422 Cortex-A15 2Ghz and Cortex-A7 Octa core CPUs,
     Mali-T628 MP6, 2Gbyte LPDDR3 RAM, eMMC5.0 HS400 Flash Storage,
     2 x USB 3.0 Host, 1 x USB 2.0 Host, Gigabit Ethernet, HDMI 1.4a,
     Power: 5V/4A input,
-    -   [Sold on amazon
-        ](https://www.amazon.fr/odroid-xu4/s?ie=UTF8&page=1&rh=i%3Aaps%2Ck%3Aodroid%20xu4).
-        for 80€ including shipping.
+    -   On [hardKernel](https://www.hardkernel.com/shop/odroid-xu4q-special-price/)
+        it is sold for 53$ _2022_, you find there accessories case, emmc modules, power
+        supply ...
+    -   [ ] In europe reichelt.de sell it a 89€ _2022_.
+     A close sbc, with a different soc but with close functionalities is
+    [ODROID-N2+](https://www.hardkernel.com/shop/odroid-n2-with-4gbyte-ram-2/)
+     with similar USB-3 throughput but a slightly better GPU, it costs on hardkernel 84$
+    and reichtel.de 136€ _2022_.
+-   [Odroid-M1](https://www.hardkernel.com/shop/odroid-m1-with-8gbyte-ram/)
+    features:
+    Rockchip RK3568B2 CPU,
+    LPDDR4 RAM,
+    Micro USB2.0 Device only, 2 x USB 2.0, 2 x USB 3.0,
+    Gb RJ45 Ethernet Port,
+    HDMI 2.0,
+    eMMC Module Socket,
+    SPI Flash 16MiB,
+    __M.2 NVMe M-Key PCIe3.0 2-Lane__,
+    __SATA3__, SATA power.
+    four-lane MIPI-DSI port,
+    two-lane MIPI-CSI port.
+
+
+    The four-lane MIPI-DSI port can be directly connected to a LCD panel like the
+    [ODROID-Vu8M kit](https://www.hardkernel.com/shop/odroid-vu8m/).
+
+    The two-lane MIPI-CSI port can be directly connected to a camera sensor like the
+    [M1 MIPI-CSI Camera Kit](https://www.hardkernel.com/shop/m1-mipi-csi-camera-kit/).
+
+    he M1 power consumption is about 4.5Watt with a very heavy computing load and
+    1.3Watt in the idle state.
+
+    On hardkernel Odroid-M1 with 8GB memory costs /in 2022/ 90$ the vU7A 7 inch display 73$,
+    MIPI-CSI camera 20$, a metal case 9$40,  and EMMC modules
+    from 15€ for 16G to 45€ for 128G power supply 9$40,  and EMMC modules from 15€ for
+    16G to 45€ for 128G.
+
+    On reichtel.de ODROID M1 8GB is priced 140€40 /in 2022/.
 
 # OLinuXino
 {{< wp "OLinuXino" >}} is an open hardware single-board computer capable of
 running Android or Linux designed by OLIMEX Ltd in Bulgaria.
 
 There are products based on i.MX233 ARM926J, Allwinner A13, A10S
-Cortex-A8, Allwinner A20, Allwinner A64 - 1.2 GHz Quad-Core ARM
-Cortex-A53.
+Cortex-A8, Allwinner A20, Allwinner A64 - 1.2 GHz Quad-Core ARM-V8A
+{{< iref "#cortex-a53" "Cortex-A53" >}}.
 
-See {{< wp "Wikipedia OLinuXino" >}} for a list of all products
+See {{< wp "OLinuXino" "Wikipedia OLinuXino" >}} for a list of all products
 
--   [OLimex OLinuxxino products
-    ](https://www.olimex.com/Products/OLinuXino/)
+-   [OLimex OLinuxxino products](https://www.olimex.com/Products/OLinuXino/)
 -   [GitHub  OLIMEX / OLINUXINO](https://github.com/OLIMEX/OLINUXINO)
 
-[OlinuXino A64
-](https://www.olimex.com/Products/OLinuXino/A64/A64-OLinuXino/open-source-hardware)
-CPU: Allwinner A64 - 1.2 GHz Quad-Core ARM Cortex-A53 64-bit,
-Memory: 1GB or 2GB RAM DDR3L @ 672Mhz,
-0/4/16GB eMMC flash memory,
-MicroSD  up to 32GB,
-serial UART debug header,
-10/100/1000Mbps GbE Ethernet,
-on-board WIFI and bluetooth 4.0 BLE module (only in  A64-OLinuXino-1G4GW),
-HDMI output, LCD output and MIPI DSI,
-jack headphone output and microphone input,
-power jack for 5V exeternal power. 50€ for 1G ram 4G emmc; 75€ for 2G
-ram, 16G emmc.
+-   [OlinuXino A64
+    ](https://www.olimex.com/Products/OLinuXino/A64/A64-OLinuXino/open-source-hardware)
+    CPU: [Allwinner A64](https://linux-sunxi.org/A64) 1.2 GHz Quad-Core
+    {{< iref "#arm-v8" "ARM-V8" >}} {{< iref "#cortex-a53" "Cortex-A53" >}} 64-bit
+    [Arm64](https://linux-sunxi.org/Arm64) architecture,
+    Memory: 1GB or 2GB RAM DDR3L @ 672Mhz,
+    0/4/16GB eMMC flash memory,
+    MicroSD  up to 32GB,
+    serial UART debug header,
+    10/100/1000Mbps GbE Ethernet,
+    on-board WIFI and bluetooth 4.0 BLE module (only in  A64-OLinuXino-1G4GW),
+    HDMI output, LCD output and MIPI DSI,
+    jack headphone output and microphone input,
+    power jack for 5V external power. 50€ for 1G ram 4G emmc; 75€ for 2G
+    ram, 16G emmc.
 
+    This board has no SATA.
+-   [A20-OLinuXino-LIME2
+    ](https://www.olimex.com/Products/OLinuXino/A20/A20-OLinuXino-LIME2/)
+    Allwinner A20/T2 dual core Cortex-A7 processor _same as bananapi M1/Pro_
+    dual-core Mali 400 GPU,
+    1GB DDR3 RAM memory,
+    8GB NAND flash memory option,
+    4GB or 16GB eMMC flash memory option,
+    16MB SPI flash option,
+    Native SATA support with connector and 5V SATA power jack,
+    FullHD (1080p) video,
+    HDMI support with connector,
+    2 x USB High-speed host,
+    USB-OTG,
+    1000MBit Ethernet.
+
+    Sold 40€ in 2022 on olimex site, 48€ with 4GB nand, 53€ with 16G emmc flash mem.,
+
+    -   [FreedomBox A20-OLinuXino-Lime2
+        ](https://wiki.debian.org/FreedomBox/Hardware/A20-OLinuXino-Lime2)
+    -   [FreedomBox PioneerEdition
+        ](https://wiki.debian.org/FreedomBox/Hardware/PioneerEdition)
+        includes all the hardware needed for launching a FreedomBox home server on an
+        Olimex A20-OLinuXino-LIME2 board.
+        It is sold [on Olimex site
+        ](https://www.olimex.com/Products/OLinuXino/Home-Server/Pioneer-FreedomBox-HSK/)
+        at 69€. _2022_.
 
 # SolidRun products
 [SolidRun](https://www.solid-run.com/) produces many sbc based on
@@ -775,11 +871,11 @@ Marvell's Armada, NXP i.MX6 & i.MX8, and Intel Braswell (atom not ARM)
         ](https://www.solid-run.com/marvell-armada-family/com-express-7-a8040/cex7-a8040-%20specifications/)
 
 -  {{< wp "CuBox" >}} is a fan-less cube-shaped at 2 × 2 × 2 inches arm
-   computer. It is produced by [Solid Run](http://imx.solid-run.com/),
+   computer. It is produced by [Solid Run](https://imx.solid-run.com/),
    it is powered by an Freescale
    {{< wp "https://en.wikipedia.org/wiki/I.MX#i.MX_6_series"  "I.MX6" >}}
    Cortex A-9 processor.
-   It is produced by [Solid Run](http://imx.solid-run.com/)
+   It is produced by [Solid Run](https://imx.solid-run.com/)
    where you find [Cubox-i Home page
     ](https://www.solid-run.com/freescale-imx6-family/cubox-i/)
     -   Cubox I2 model It has an [i.MX6 Freescale ARM Cortex-A9
@@ -809,11 +905,11 @@ Marvell's Armada, NXP i.MX6 & i.MX8, and Intel Braswell (atom not ARM)
         ](https://www.newit.co.uk/shop/All-CuBox-i/Cubox-i's/) 144€.
     -   There is an [ArmBian](https://www.armbian.com/] distribution
         [for Cubox-i](https://www.armbian.com/cubox-i/Cubox),
-        the [Xbian distribution](http://www.xbian.org/) which is a
+        the [Xbian distribution](https://www.xbian.org/) which is a
         minimal distribution based on Debian support Cubox and provide
         the Kodi Media center.
         We find also an [ArchLinux support
-        ](http://archlinuxarm.org/platforms/armv7/marvell/cubox)
+        ](https://archlinuxarm.org/platforms/armv7/marvell/cubox)
     -   [NewIt: CuBox-i4Pro
         ](https://www.newit.co.uk/shop/All-CuBox-i/CuBox-i4Pro)
 
@@ -836,83 +932,72 @@ Marvell's Armada, NXP i.MX6 & i.MX8, and Intel Braswell (atom not ARM)
 
 # Misc Socs
 
--   [UDOO](http://www.udoo.org/) is a single-board computer with a dual or quad core
+-   [UDOO NEO](https://www.udoo.org/udoo-neo/) and
+    [UDOO DUAL](https://www.udoo.org/udoo-quad-dual/)
+    are single-board computers with a dual or quad core
     ARM Freescale {{< wp "Cortex-A9" >}}  and an {{< wp "Arduino" >}} board.
-    The UDOO Quad
-    features a Freescale i.MX 6 ARM Cortex-A9 Quad core 1GHz, GPU,
-    Arduino compatible ARM Cortex-M3 CPU, RAM DDR3 1GB, HDMI and LVDS,
-    2 Micro USB (1 OTG type a+b), 2 USB type A, analog audio/mic,
-    micro SD card, RJ45 (10/100/1000 MBit), WiFi Module, SATA for
-    135$ + taxes.<br />
-    The first distribution provided are Ubuntu and Yocto.
--   [Utilite 2](http://www.compulab.co.il/utilite-computer/web/utilite2-models)
-    is a Qualcomm Snapdragon 600 (APQ8064) ARMv7 quad-core @1.7GHz
-    2GB DDR3, eMMC 4GB, mSATA socket, HDMI 1.4a, Gb Ethernet,
-    WiFi 802.11b/g/n + Bluetooth 4.0, 4x USB2.0 host + USB OTG
-    200$ + VAT + shipping.
-    -   [Utilite run either Ubuntu or Android](http://utilite-computer.com/web/utilite-software).
--   [Trim-Slice](http://utilite-computer.com/web/models)
-    is a fanless ARM desktop in an 0.6" thin metal
-    case. It is based on NVIDIA {{< wp "Tegra" >}} 2 a dual-core ARM Cortex A9 at 1 GHz,
-    it has 1 GB DDR2 RAM soldered on-board, either 32GB SSD
-    or 2.5″ SATA hard disk, one Sd and one micro-SD both up to 32 GB.
-    HDMI 1.3a 1080p and a DVI-D up to 1680 x 1050, stereo line-out and
-    line-in, Gigabit Ethernet, 4 USB 2 ports, 2-6W power consumption.
-    <br />
-    The price of Trim-Slice range from 170€+VAT for a computer with
-    Micro-SD 4 GB H costs, 250€+vat for H(arddisk) model with a 250GB
-    sata, 300€+vat for a SATA SSD 32 GB. They are sold by
-    [Tiny-Green store
-    ](https://store.tinygreenpc.com/tiny-green-pcs/trim-slice.html)
-    -   [TrimSlice on Debian](https://wiki.debian.org/TrimSlice)
+-   [UDOO X86 II ADVANCED PLUS](https://shop.udoo.org/en/udoo-x86-ii-advanced-plus.html)
+    uses an CPU Intel Celeron N3160 2.24 Ghz 4 corzs, 4 GB DDR3L Dual Channel, 32GB eMMC
+    storage, GPU Intel HD Graphics 400, 1x HDMI 2x miniDP++ connectors, Standard SATA
+    connector, M.2 Key B SSD slot, Micro SD card slot, Gigabit Ethernet, 3 x USB 3.0
+    type-A sockets. In 2022 it costs $242 + tva and shipping.
+-   [UDOO X86 II ULTRA](https://shop.udoo.org/en/udoo-x86-ii-ultra.html) is similar to
+    the advanced plus model but with a 4 cores CPU Intel Pentium N3710 2.56 GHz,
+    and a RAM 8 GB DDR3L Dual Channel. In 2022 it costs $368 + tva and shipping.
+-   [Unas](https://shop.udoo.org/en/projects/unas/) is a project of  creating a
+    Network Attached Storage (NAS) with UDOO. It is also commented in this
+    forum thread [x86 Used as NAS, Read Write Speeds
+    ](https://www.udoo.org/forum/threads/x86-used-as-nas-read-write-speeds.6975/).
 -   [MiraBox
     ](https://www.newit.co.uk/shop/All-MiraBox/MiraBox)
     1.2Ghz Marvell Armada CPU ARMADA 370 ARM v7, 1GB DDR3, 1 GB NAND
-    Flash, 2 X 1GB ethernet, 2 x USB 3.0 host_ 163€.
+    Flash, 2 X 1GB ethernet, 2 x USB 3.0 host_ 122£.
 
 
 # QNAP
 
-[Debian is supported for Qnap orion TS109, TS-209, TS 409](http://www.cyrius.com/debian/orion/qnap/)
-and [Qnap Kirkwood 11x, 12x, 21x, 22x, 41x, 42x
-](http://www.cyrius.com/debian/kirkwood/qnap/).
+[Debian is supported for Qnap orion TS109, TS-209, TS 409](https://www.cyrius.com/debian/orion/qnap/)
+and [Qnap Kirkwood 11x, 12x, 21x, 22x, 41x, 42x](https://www.cyrius.com/debian/kirkwood/qnap/).
 
 With a QNAP 109 you have first to check you have
-[recovery mode](http://www.cyrius.com/debian/orion/qnap/ts-109/recovery.html) then you will find the installation procedure in the page
-[Installing Debian on the QNAP TS-109](http://www.cyrius.com/debian/orion/qnap/ts-109/install.html).
+[recovery mode](https://www.cyrius.com/debian/orion/qnap/ts-109/recovery.html)
+then you will find the installation procedure in the page
+[Installing Debian on the QNAP TS-109](https://www.cyrius.com/debian/orion/qnap/ts-109/install.html).
 You can also look at some
-[Debian installation screenshoots](http://wiki.qnap.com/wiki/Debian_Installation_On_QNAP "wiki.qnap.com Debian_Installation_On_QNAP" )
+[Debian installation screenshoots](https://wiki.qnap.com/wiki/Debian_Installation_On_QNAP)
 on the Qnap wiki or in the
-[Harryd's blog](http://harryd71.blogspot.com/2008/09/installing-debian-on-qnap-ts-209.htm "harryd71.blogspot.com installing-debian-on-qnap-ts-209.htm").
+[Harryd's blog](https://harryd71.blogspot.com/2008/09/installing-debian-on-qnap-ts-209.htm).
 
 
-Once we can ssh to the box we can continue following the [Debian GNU/Linux Installation Guide for arm](http://www.debian.org/releases/lenny/arm/) by using the orion5x build.
+Once we can ssh to the box we can continue following the
+[Debian GNU/Linux Installation Guide for arm](https://www.debian.org/releases/lenny/arm/)
+by using the orion5x build.
 
-For my Qnap I use a lvm formatted disk. Lvm support is missing in the Qnap provided kernel..
+For my Qnap I use a lvm formatted disk. Lvm support is missing in the Qnap provided kernel.
 
 # Debian on Buffalo Nas
 
 Linkstation Pro and Live and KuroBox are based on an Orion chip, like are Qnap TS109, TS-209, TS 409.
 
 -   [Intalling Debian on Buffalo KuroBox Pro
-    ](http://www.cyrius.com/debian/orion/buffalo/kuroboxpro/)
+    ](https://www.cyrius.com/debian/orion/buffalo/kuroboxpro/)
     by Per Andersson and Martin Michlmayr .
 -   [Install Debian on the Linkstation Pro/Live
-    ](http://buffalo.nas-central.org/wiki/Install_Debian_on_the_Linkstation_Pro/Live)
+    ](https://buffalo.nas-central.org/wiki/Install_Debian_on_the_Linkstation_Pro/Live)
     on *nas-central*.
 
 Linkstation are now based on Marvell ARMADA 370 processor (1.2GH, 512M DDR3)
 which is like a Kirkwood but with ARMv6/v7 (instead of ARMv5).Synology
 use the same processor for its NAS, and we can at least
 [run in a chroot
-](http://www.rooot.net/fr/geek-stuff/synology/39-chroot-debian-sur-synology-avec-debootstrap.html).
+](https://www.rooot.net/fr/geek-stuff/synology/39-chroot-debian-sur-synology-avec-debootstrap.html).
 
 # Excito Bubba
 
 Excito Bubba line of NAS were running  Debian Squeeze
 
 [Excito Bubba 3
-](http://www.excito.com/bubba/products/technical-specifications.html)
+](https://www.excito.com/bubba/products/technical-specifications.html)
 features 1.2GHz ARM processor, 512MB RAM, 1 x internal 2"5 or 3"5 sata
 drive bay, 2 Gigabit Ethernet, 2x USB2, 1 e-sata, optional wifi, 115 x
 45 x 185 mm, 5-13W power consumption, fanless, run Debian Squeeze.
@@ -923,20 +1008,20 @@ Development of Bubba software is stalled to a squeeze release with a
 2.6 Kernel;
 
 
-[Excito wiki](http://wiki.excito.org/wiki/index.php/Main_Page)
+[Excito wiki](https://wiki.excito.org/wiki/index.php/Main_Page)
 is the primary source for Bubba related tutorials and how-tos.
 
 The members of Excito that were developping this line of product have
-moved to [OpenProduct](http://openproducts.se/) which is prepping a
+moved to [OpenProduct](https://openproducts.se/) which is prepping a
 tiny (105x105x25mm) Ubuntu-based private file and email server called
 OPI ([technical specifications
-](http://media.openproducts.com/tech_spec.pdf))
+](https://media.openproducts.com/tech_spec.pdf))
 with Cortex A8 processor, 512MB RAM, LUKS-based microSD encryption,
 and optional USB or cloud backup
 
 
 # Arm distributions
--   [Armbian](http://www.armbian.com/) by Igor Pečovnik is a
+-   [Armbian](https://www.armbian.com/) by Igor Pečovnik is a
     lightweight Debian squeeze, Jessie or Ubuntu  based Linux
     distribution for arm platforms.
 
@@ -951,61 +1036,52 @@ and optional USB or cloud backup
 
     -   [Armbian on twitter](https://twitter.com/armbian)
 
--   [Bananian Linux](https://www.bananian.org/) distribution for
-    Debian on Banana Pi; it stopped at Jessie and should now be
-    replaced by Armbian
-    -   [GitHub: Bananian Linux](https://github.com/Bananian) has
-        development repositories,
-    -   [bananian](https://github.com/Bananian/bananian)
-        Bananian Linux tools and config files.
-
-
 # Software
 
 ## Monitoring
 -   [rpi monitor
-    ](http://rpi-experiences.blogspot.fr/p/rpi-monitor.html)
+    ](https://rpi-experiences.blogspot.fr/p/rpi-monitor.html)
     is a self monitoring application designed to run on Raspberry Pi.
     It gives the status: version, uptime, cpu, temperature, memory,
     swap, SD card usage, network traffic.
     -   [GitHub Rpi-monitor
         ](https://github.com/XavierBerger/RPi-Monitor)
-    -   [my raspberry RPI Monitor](http://192.168.1.8:8888/)
+    -   [my raspberry RPI Monitor](https://192.168.1.8:8888/)
     Rpimonitord uses 3 daemons processes in perl 7.6M/1.9M 6.8M/1.5M
     6.6M/1.2M ~ $7.6 + 6.8 - 1.5 + 6.6 - 1.2 => 18.3  $
 -   {{< iref "monitoring#conky" "conky" >}} can be used with raspberry.
     [Conky for the Raspberry Pi
-    ](http://jeffskinnerbox.me/posts/2012/Nov/02/conky-for-the-raspberry-pi/)
+    ](https://jeffskinnerbox.me/posts/2012/Nov/02/conky-for-the-raspberry-pi/)
 -   {{< wp "Raspcontrol" >}}
     is a web control centre written in PHP for Raspberry Pi.
     It has numerous forks on GitHub.
 -   {{< iref "monitoring#monitorix" "monitorix" >}} can be used with
     raspberry, as explained in
     [How to set up a web-based lightweight system monitor on Linux
-    ](http://xmodulo.com/2014/05/web-based-lightweight-system-monitor-linux.html)
+    ](https://xmodulo.com/2014/05/web-based-lightweight-system-monitor-linux.html)
 -   I use {{< iref "monitoring#monit" "monit" >}} on bananapi.
--   [Banoffee Pi Server](http://banoffeepiserver.com/):
+-   [Banoffee Pi Server](https://banoffeepiserver.com/):
     [web based monitoring
-    ](http://banoffeepiserver.com/server-monitoring/simple-web-based-monitoring-tools.html)
+    ](https://banoffeepiserver.com/server-monitoring/simple-web-based-monitoring-tools.html)
     with _linux-dash_, _phpsysinfo_, _Linfo_ or
-    [Ganglia](http://banoffeepiserver.com/server-monitoring/ganglia/).
+    [Ganglia](https://banoffeepiserver.com/server-monitoring/ganglia/).
 
 ## Network monitoring.
 -   [Monitor your LAN with Raspberry Pi
     ](https://sites.sas.upenn.edu/kleinkeane/blog/2013/07/monitor-your-lan-raspberry-pi)
 -   [Network Monitoring with MRTG on Raspberry Pi
-    ](http://resources.intenseschool.com/network-monitoring-with-mrtg-on-raspberry-pi/)
+    ](https://resources.intenseschool.com/network-monitoring-with-mrtg-on-raspberry-pi/)
 
 
 ## Cluster
 
--   [Banoffee Pi Server](http://banoffeepiserver.com/): a Bananapi
+-   [Banoffee Pi Server](https://banoffeepiserver.com/): a Bananapi
     cluster with Mysql,
-    [Glusterfs](http://banoffeepiserver.com/glusterfs/),
+    [Glusterfs](https://banoffeepiserver.com/glusterfs/),
     [web based monitoring
-    ](http://banoffeepiserver.com/server-monitoring/simple-web-based-monitoring-tools.html)
+    ](https://banoffeepiserver.com/server-monitoring/simple-web-based-monitoring-tools.html)
     with _linux-dash_, _phpsysinfo_, _Linfo_ or
-    [Ganglia](http://banoffeepiserver.com/server-monitoring/ganglia/).
+    [Ganglia](https://banoffeepiserver.com/server-monitoring/ganglia/).
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
