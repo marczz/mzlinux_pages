@@ -366,59 +366,24 @@ Some tools integrate bandwidth control as
     curl --limit-rate 10k
     rsync --bwlimit=10.
 
--   [Linux Advanced Routing & Traffic Control HOWTO
+-   See also [Linux Advanced Routing & Traffic Control HOWTO
     ](http://lartc.org/howto/)
 -   [Trickle](http://monkey.org/~marius/pages/?page=trickle)
     by Marius A. Eriksen allow traffic control when launching a process.
-    _Trickle_ runs entirely in userspace
+    _Trickle_ runs entirely in userspace. Trickle is packaged in Debian.
     -   [ArchWiki: Trickle](https://wiki.archlinux.org/index.php/Trickle)
     -   [Trickle: A Userland Bandwidth Shaper for Unix-like sytems
         ](http://monkey.org/~marius/trickle/trickle.pdf)
         by the _Trickle_ author.
     -   [Control your bandwidth with Trickle
         ](http://www.tuxradar.com/content/control-your-bandwidth-trickle)
--   [Wonder Shaper](http://lartc.org/wondershaper/)
-    is a traffic shaping script.
--   [ip_relay](http://www.stewart.com.au/ip_relay/)
-    is a perl user-space bandwidth shaping TCP proxy daemon. _named
-    iprelay in Debian_.
--   [pyshaper](http://freenet.mcnabhosting.com/python/pyshaper/)
-    is a python shaper script.
--   [Linux Advanced Routing & Traffic Control HOWTO
-    ](http://lartc.org/howto/)
-    by Bert Hubert deals with iproute2, GRE, ipv6 tunneleing, IPSEC, multicast,
-    queueing disciplines, netfilter packet marking/classifying,
-    Kernel network parameters, proxyarp, OSPF and BGP.
--   [rfc 1256 ICMP Router Discovery Messages
-    ](http://www.ietf.org/rfc/rfc1256.txt)
-    describe the router discovery protocol, you can use
-    as the command line utility {{< man "rdisc" >}}.
--   DNS service providers:
-    [zoneedit.com](http://www.zoneedit.com/),
-    [NoIP
-    ](http://www.no-ip.com/services/managed_dns/free_dynamic_dns.html),
-    [dyndns.org](//www.dyndns.org "dyndns.org"), or more generally the
-    providers listed in the
-    [Google directory list of dynamic DNS services
-    ](http://www.google.com/Top/Computers/Software/Internet/Servers/Address_Management/Dynamic_DNS_Services/ "google directory Dynamic DNS Services")
-    alias an IP address to a static hostname.
--   [rollernet.us](http://rollernet.us/) provides mail redirection
--   [ipcheck](http://ipcheck.sourceforge.net/)
-    (python), and
-    [DynIP](http://www.zikkurat.net/DynIP/) (sh),
-    or
-    [other clients](https://www.dyndns.org/services/dyndns/clients.html)
-    are used to link the DHCP IP adress with the static hostname.
--   [GNU Zebra](http://www.zebra.org/) GPLed routing software
--   [Ports number list](http://www.iana.org/assignments/port-numbers)
-    from
-    [iana (internet assigned numbers authority)](http://www.iana.org/)
--   [GRC](http://www.grc.com/ "grc;com") Port Info Database:
--   [DSHIELD](https://secure.dshield.org/myisc.html)
-    port/ip lookup/search:
--   [faq-modems-ppp](http://www.chez.com/epsylon2/modem.html) an old
-    faq for an old technology!
-
+-   [Wonder Shaper](https://github.com/magnific0/wondershaper/) (GPL-2.0)
+    is a script that allows the user to limit the bandwidth of one or more network
+    adapters by using iproute's tc command.
+-   [Advanced traffic control - ArchWiki
+    ](https://wiki.archlinux.org/title/Advanced_traffic_control.
+    shows how to shape the traffic by using queueing disciplines using the iproute2 `tc`
+    command, and optionally ip tables.
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
