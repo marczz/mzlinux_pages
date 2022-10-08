@@ -405,20 +405,23 @@ are in the {{< iref "netconf" "Network Configuration Section" >}}._
     multicast, queueing disciplines, netfilter packet
     marking/classifying, Kernel network parameters, proxyarp, OSPF and
     BGP.
--   [rfc 1256 ICMP Router Discovery Messages
-    ](http://www.ietf.org/rfc/rfc1256.txt)
-    describe the router discovery protocol, you can use
-    [as a command line utility.
-    ](http://www.die.net/doc/linux/man/man8/rdisc.8.html)
+-   [rfc 1256 ICMP Router Discovery Messages](http://www.ietf.org/rfc/rfc1256.txt)
+    describe the router discovery protocol, you can use it
+    as the command line utility {{< man "rdisc" >}}.
 -   [rollernet.us](http://rollernet.us/) provides mail redirection
--   [GNU Zebra](http://www.zebra.org/) GPLed routing software
--   [Ports number list](http://www.iana.org/assignments/port-numbers)
+-   [Quagga Software Routing Suite](https://www.nongnu.org/quagga/)
+    provides implementations of OSPFv2, OSPFv3, RIP v1 and v2, RIPng and BGP-4 for Unix
+    Quagga is a fork of Quagga is a fork of [GNU Zebra](http://www.zebra.org/).
+-   [Service Name and Transport Protocol Port Number Registry
+    ](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)
     from
     [iana (internet assigned numbers authority)](http://www.iana.org/)
--   [GRC](http://www.grc.com/) Port Info Database:
+-   [GRC Port Info Database](https://www.grc.com/PortDataHelp.htm).
 -   [DSHIELD](https://secure.dshield.org/) port/ip lookup/search:
 -   [Debian: Network Configuration](https://wiki.debian.org/NetworkConfiguration)
 -   [ArchWiki: Router](https://wiki.archlinux.org/index.php/Router).
+-   [Advanced traffic control - ArchWiki
+    ](https://wiki.archlinux.org/title/Advanced_traffic_control).
 
 # IP V6 {#ipv6}
 
