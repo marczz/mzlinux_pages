@@ -39,6 +39,9 @@ in the {{< iref "../security/security" "Security chapter" >}}.
     _2003_
 -   [Linux Advanced Routing & Traffic Control HOWTO
     ](http://en.tldp.org/HOWTO/Adv-Routing-HOWTO/index.html) _2002_
+    by Bert Hubert deals with iproute2, GRE, ipv6 tunneleing, IPSEC, multicast,
+    queueing disciplines, netfilter packet marking/classifying,
+    Kernel network parameters, proxyarp, OSPF and BGP.
 -   [TCP/IP Tutorial and Technical Overview (HTML)
     ](http://www.redbooks.ibm.com/redbooks/GG243376/)
     or ([pdf](http://www.redbooks.ibm.com/redbooks/pdfs/gg243376.pdf))
