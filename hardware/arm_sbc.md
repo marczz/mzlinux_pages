@@ -22,7 +22,7 @@ Recent arm architectures includes
     and {{< wp "Cortex-A" >}} 5 to 17.
     -   Wikipedia: {{< wp "Comparison of ARMv7-A cores" >}}
     -   {{< wp "ARM_Cortex-A7" >}} is a popular processor launched in 2011, that has many
-        system-on-chips (SoC) by {{< wp "Allwinner_Technology"  "Allwinner" >}}
+        system-on-chips (SoC) by {{< iref "Allwinner_Technology"  "Allwinner" >}}
         ([A20](https://en.wikipedia.org/wiki/Allwinner_A20, A31, A83T ,H3, H8),
         {{< wp "Broadcom" >}}, {{< wp "Freescale_Semiconductor"  "Freescale" >}},
         {{< wp "Marvell_Technology_Group"  "Marvell" >}}, Mediatek, Qualcomm,
@@ -68,7 +68,7 @@ Recent arm architectures includes
 -       [ArchWiki - Armv8 Platforms
         ](https://archlinuxarm.org/platforms/armv8)
 
-## Allwinner Technology
+## Allwinner Technology {#allwinner_technology}
 
 {{< wp "Allwinner_Technology"  "Allwinner" >}} is one of the more popular
 manufacturer of arm SoC.
@@ -90,8 +90,27 @@ H2, H3, H8 are {{< wp " Cortex-A7" >}} ArmV7 SoCs and  AllWinner
 -   [linux-sunxi](https://linux-sunxi.org/Main_Page)
     is an open source software community dedicated to Allwinner SoC
     based devices.
+-   [SATA - linux-sunxi.org](https://linux-sunxi.org/SATA) describes the sata interface
+    available on Allwinner A10, A20 and R40 SoCs.
 -   [ArchLinux AllWinner armv7 platform comparison
     ](https://archlinuxarm.org/platforms/armv7/allwinner)
+-   [How to make a bootable sunxi SD-card - linux-sunxi.org
+    ](https://github.com/linux-sunxi/u-boot-sunxi/wiki).
+-    [Powering the boards and accessories - linux-sunxi.org
+    ](https://linux-sunxi.org/Powering_the_boards_and_accessories)
+    is a set of advices to avoid under-power failures which are common.
+    -   [SATA drives](https://linux-sunxi.org/Powering_the_boards_and_accessories#SATA)
+        can use up to 1-4W when spinning up and 0.5-2W when idle. SSD drives use a lot
+        less power.
+
+        SATA 3.5" drives typically require 12V DC instead of 5V, and need to be powered
+        externally with a SATA-DC/SATA Y-shaped cable.
+    -   The [soc power consumption
+        ](https://linux-sunxi.org/Powering_the_boards_and_accessories#Power_consumption)
+        is the sum of the board and electronics usually 1-2A when busy, each USB device
+        may use from 100 to 500mA.
+
+## Allwinner Socs
 -   {{< wp "Allwinner A1X" >}} can boot GNU/Linux distributions such as Debian,
     Ubuntu, Fedora, from an SD card, in addition to the Android OS
     installed on the flash memory.
@@ -115,7 +134,6 @@ H2, H3, H8 are {{< wp " Cortex-A7" >}} ArmV7 SoCs and  AllWinner
     ram, 10/100 Ethernet, 4Gb Nand Flash, HDMI 1080p Output with
     3840×1080@30fps 3D decoding, 2 USB Host, 1 micro SD slot, 1 SATA,
     1 IR.
-
 
 ## Platform comparison.
 
@@ -153,10 +171,21 @@ H2, H3, H8 are {{< wp " Cortex-A7" >}} ArmV7 SoCs and  AllWinner
 -   [Neil William](https://linux.codehelp.co.uk/) the previous leader
     of the project _Embedian_ has a
     [blog about ARMMP](https://linux.codehelp.co.uk/?s=armmp)
-    the  Debian kernel for [armhf - Arm Hard Float
-    ](https://wiki.debian.org/ArmHardFloatPort).
-    Software are in [CodeHelp Github Repository
-    ](https://github.com/codehelp).
+    Software are in [CodeHelp Github Repository](https://github.com/codehelp).
+-   [ArmPorts - Debian Wiki](https://wiki.debian.org/ArmPorts)
+    includes:
+    -   Arm Port  using the obsolete ABI (OABI) for Arm v3 last released with 5.0
+        (lenny).
+    -   [ArmEabiPort](https://wiki.debian.org/ArmEabiPort) _arm-linux-gnu_ for ARM
+        architecture versions 4T, 5T, and 6, but from Debian 10 (buster), 4T is no
+        longer supported.  For this reason the support of Debian for orion processors
+        like those found in Qnap TS-109, TS-209, TS-409 stopped at Debian buster.
+
+        Arm 4T and 5T is tills supported in Debian.
+    -   [armhf - Arm Hard Float](https://wiki.debian.org/ArmHardFloatPort)
+        _arm-linux-gnueabi_ using the hard-float version of EABI, targeting Arm v7.
+    -   [Arm64Port](https://wiki.debian.org/Arm64Port)
+        for the 64-bit Armv8 architecture 64-bit arm64 also called AArch64.
 -   [OmapPedia](https://www.omappedia.org/wiki/)
     reference the support across the miscellaneous distributions
     of the {{< wp "Omap" >}} arm processors developed by Texas Instruments
@@ -166,11 +195,31 @@ H2, H3, H8 are {{< wp " Cortex-A7" >}} ArmV7 SoCs and  AllWinner
     is a self-hosting server. It can be used as a private Cloud, a NAS, or a router.
 -   The Freedom box supports
     [many applications](https://wiki.debian.org/FreedomBox/Features).
+    Ths page list the role of FreedomBox applications, and their use case.
 -   The are many FreedomBox
     [compatible Hardware](https://wiki.debian.org/FreedomBox/Hardware).
 -   [FreedomBox Manual](https://wiki.debian.org/FreedomBox/Manual).
+-   [FreedomBox Clients](https://wiki.debian.org/FreedomBox/Clients)
+    list the Debian packages with clients for freedombox service.
+-   [Install Freedombox in the Cloud](https://wiki.debian.org/FreedomBox/Cloud)
+    gives an example with AWS.
+-   [list of configuration of each service](https://wiki.debian.org/FreedomBox/Backups).
+-   [FreedomBox Forum](https://discuss.freedombox.org).
+-   [Joseph Nuthalapati Wiki](https://njoseph.me/mediawiki/Main_Page) has
+    [notes about using FreedomBox](https://njoseph.me/mediawiki/FreedomBox)
 
+    -   In the [Tips and Trick](https://njoseph.me/mediawiki/FreedomBox/Tips_and_Tricks)
+        you find [how to increase storage
+        ](https://njoseph.me/mediawiki/FreedomBox/Tips_and_Tricks#Increase_Storage_with_Additional_Volumes)
+    -   If you want not only to increase storage but replace the partition on sdcard by
+        the partition on sate drive, rather than a _btrfs balance_ you can use a
+        _btrfs replace stated in [this post
+        ](https://discuss.freedombox.org/t/move-file-system-onto-another-drive/2150/14).
 
+        ~~~ console
+        $ sudo btrfs replace start -B /dev/mmcblk0p2 /dev/sda1 /
+        $ sudo btrfs filesystem resize max /
+        ~~~
 
 #  Raspberry
 {{< wp "Raspberry Pi" >}} is a single-board computer
@@ -276,7 +325,22 @@ or on a modern Raspbian or following the
 # Banana Pi
 the information on the bananapi devices are on Wikipedia {{< wp "Banana Pi" >}}
 and on the [Banana Pi gitbook](https://www.gitbook.com/book/bananapi/).
+## Documentation
+-   [Banana Pi - Wikipedia](https://en.wikipedia.org/wiki/Banana_Pi)
+-   [LeMaker Banana Pi - linux-sunxi.org](https://linux-sunxi.org/LeMaker_Banana_Pi)
+    gives the differences between [bananapi variants
+    ](https://linux-sunxi.org/LeMaker_Banana_Pi#Variants).
+-   [Banana Pi Wiki - lemaker.org](https://wiki.lemaker.org/Main_Page),
+    [FAQ](https://wiki.lemaker.org/FAQ),
+    [GitHub: LeMaker resources](https://github.com/LeMaker).
+-   [bananapi.org - Banana Pi](https://www.bananapi.org/): site officiel (?) du Banana Pi
+    [Banana Pi specifications and layout diagrams
+    ](https://www.bananapi.org/p/product.html),
+-   [BananaPi - Google Groups
+    ](https://groups.google.com/forum/#!forum/bananapien)
+-   [Banana Pi - ArchWiki](https://wiki.archlinux.org/index.php/Banana_Pi)
 
+## Bananapi Models
 -   [Bananapi M1](https://wiki.banana-pi.org/Banana_Pi_BPI-M1)
     launched in 2014 has an ArmV7 {{< wp "Allwinner A20" >}} {{< wp "ARM Cortex-A7" >}}
     Dual-Core 1GB DDR3, 10/100/1000 Ethernet, HDMI, CVBS, LVDS/RGB Video output, 3.5mm
@@ -346,21 +410,6 @@ and on the [Banana Pi gitbook](https://www.gitbook.com/book/bananapi/).
 
     In 2022 it is priced 92€ at reichelt store. _10% more than Odroid C4_.
 
--   [Banana Pi - Wikipedia](https://en.wikipedia.org/wiki/Banana_Pi)
--   [LeMaker Banana Pi - linux-sunxi.org](https://linux-sunxi.org/LeMaker_Banana_Pi)
-    gives the differences between [bananapi variants
-    ](https://linux-sunxi.org/LeMaker_Banana_Pi#Variants).
--   [Banana Pi Wiki - lemaker.org](https://wiki.lemaker.org/Main_Page),
-    [FAQ](https://wiki.lemaker.org/FAQ),
-    [GitHub: LeMaker resources](https://github.com/LeMaker).
--   [bananapi.org - Banana Pi](https://www.bananapi.org/): site officiel (?) du Banana Pi
-    [Banana Pi specifications and layout diagrams
-    ](https://www.bananapi.org/p/product.html),
--   [BananaPi - Google Groups
-    ](https://groups.google.com/forum/#!forum/bananapien)
--   [Banana Pi - ArchWiki](https://wiki.archlinux.org/index.php/Banana_Pi)
--   [SATA - linux-sunxi.org](https://linux-sunxi.org/SATA) describes the sata interface
-    available on Allwinner A10, A20 and R40 SoCs.
 
 ## Banana Pi development
 -   Banana dev - GitHub  allow to [Build Banana Pi Image
@@ -573,9 +622,9 @@ The BeagleBoards/BeagleBones don't have SATA support.
      slot, USB 2.0 host, USB mini OTG, Storage-over-USB or Ethernet-over-USB on other
      USB device port, Power consumption of 300-500mA at 5V.
 -   [Embedded Linux Wiki (elinux): BeagleBoard ](https://elinux.org/BeagleBoard) is
-    related to BeagleBoard and BeagleBoard-xM that both use {{< wp "Texas instrument
-    OMAP" >}} Single-board computer (ARM architecture). A distinct SoC is used for the
-    following _BeagleBone]_.
+    related to BeagleBoard and BeagleBoard-xM that both use
+    {{< wp "Texas instrument OMAP" >}} Single-board computer (ARM architecture).
+    A distinct SoC is used for the following _BeagleBone.
 -   [Embedded Linux Wiki (elinux): BeagleBone](https://elinux.org/BeagleBone)
     gives a description of the two boards the original _BeagleBone_ and the new
     _BeagleBone Black_ .
