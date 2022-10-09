@@ -171,7 +171,26 @@ area
     -   [archlinux: fan speed control
         ](http://wiki.archlinux.org/index.php/Fan_speed_control)
 
-[Nfswatch](http://sourceforge.net/projects/nfswatch/) (BSD License)
+[Netdata](https://github.com/netdata/) (GPL-3.0)
+:   Netdata is distributed, real-time, performance and health monitoring for systems and
+    applications. It provides insights of everything happening on the systems it runs
+    using interactive web dashboards.
+
+    It can run autonomously without any third party components or it can be integrated
+    to existing monitoring tool chains (Prometheus, Graphite, OpenTSDB, Kafka, Grafana,
+    etc).
+
+    It is packaged in multiple Debian packages.
+
+    The [Netdata Site](https://www.netdata.cloud) present the open source edition and
+    paid extensions.
+
+    For using Netdata on small sbc refer to the [Armbian discussion
+    ](https://forum.armbian.com/topic/9785-netdata-is-awesome/)
+    including the [advices of the Netdata author
+    ](https://forum.armbian.com/topic/9785-netdata-is-awesome/?do=findComment&comment=73978).
+
+.  [Nfswatch](http://sourceforge.net/projects/nfswatch/) (BSD License)
 :   Nfswatch is a command-line tool for monitoring NFS traffic. It can
     monitor NFS requests and reply and measure the response time for
     each RPC on a particular network interface or on all interfaces.
