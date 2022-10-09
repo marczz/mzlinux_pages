@@ -87,16 +87,36 @@ H2, H3, H8 are {{< wp " Cortex-A7" >}} ArmV7 SoCs and  AllWinner
     ](https://www.allwinnertech.com/index.php?c=product&a=index&pid=6)
 -   [Installing Debian On Allwinner
    ](https://wiki.debian.org/InstallingDebianOn/Allwinner)
+-   [AllWinner armv7 platform comparison - ArchLinux
+    ](https://archlinuxarm.org/platforms/armv7/allwinner)
 -   [linux-sunxi](https://linux-sunxi.org/Main_Page)
     is an open source software community dedicated to Allwinner SoC
     based devices.
--   [SATA - linux-sunxi.org](https://linux-sunxi.org/SATA) describes the sata interface
-    available on Allwinner A10, A20 and R40 SoCs.
--   [ArchLinux AllWinner armv7 platform comparison
-    ](https://archlinuxarm.org/platforms/armv7/allwinner)
--   [How to make a bootable sunxi SD-card - linux-sunxi.org
-    ](https://github.com/linux-sunxi/u-boot-sunxi/wiki).
--    [Powering the boards and accessories - linux-sunxi.org
+    -   [Sunxi devices as NAS - linux-sunxi.org
+        ](https://linux-sunxi.org/Sunxi_devices_as_NAS).
+    -   [SATA - linux-sunxi.org](https://linux-sunxi.org/SATA) describes the sata interface
+        available on Allwinner A10, A20 and R40 SoCs.It contains a performance tuning
+        section, and it considers the support of port multipliers. A list of devices
+        with SATA is also provided but not updated since 2019, the previous ArchLinux
+        list may be also considered.
+
+        A SATA speed comparison is in [this T. Kaiser armbian post
+        ](https://forum.armbian.com/topic/1917-armbian-running-on-pine64-and-other-a64h5-devices/?do=findComment&comment=20316).
+    -   [How to make a bootable sunxi SD-card - linux-sunxi.org
+        ](https://github.com/linux-sunxi/u-boot-sunxi/wiki),
+        this is also described on the following LeMaker resource.
+-   LeMaker development documentation:
+    -   [BananaPro/Pi:Building u-boot, script.bin and linux-kernel
+        ](http://wiki.lemaker.org/BananaPro/Pi:Building_u-boot,_script.bin_and_linux-kernel)
+         contains instructions to get a cross dev platform, build kernel and uboot
+         and set the sdcard. It also link to sunxi.org documentation.
+    -   [BananaPro/Pi:Making a bootable .img image file
+        ](http://wiki.lemaker.org/BananaPro/Pi:Making_a_bootable_.img_image_file)
+    -   [BananaPro/Pi:Setting up the bootable SD card
+        ](http://wiki.lemaker.org/BananaPro/Pi:Setting_up_the_bootable_SD_card).
+    -   [BananaPro/Pi:Setting up the Linux distribution root file system
+        ](http://wiki.lemaker.org/BananaPro/Pi:Setting_up_the_Linux_distribution_root_file_system)
+-   [Powering the boards and accessories - linux-sunxi.org
     ](https://linux-sunxi.org/Powering_the_boards_and_accessories)
     is a set of advices to avoid under-power failures which are common.
     -   [SATA drives](https://linux-sunxi.org/Powering_the_boards_and_accessories#SATA)
@@ -109,6 +129,11 @@ H2, H3, H8 are {{< wp " Cortex-A7" >}} ArmV7 SoCs and  AllWinner
         ](https://linux-sunxi.org/Powering_the_boards_and_accessories#Power_consumption)
         is the sum of the board and electronics usually 1-2A when busy, each USB device
         may use from 100 to 500mA.
+-   The linux-sunxi site has also instructions for building the kernel.
+    [Linux Kernel - linux-sunxi.org](https://linux-sunxi.org/Linux#A20), and
+    [Toolchain - linux-sunxi.org](https://linux-sunxi.org/Toolchain)
+-   Banana dev - GitHub  allow to [Build Banana Pi Image
+    ](https://github.com/bananapi-dev/BPi/blob/master/HowToBuild_BPi_image.en.txt)
 
 ## Allwinner Socs
 -   {{< wp "Allwinner A1X" >}} can boot GNU/Linux distributions such as Debian,
@@ -221,6 +246,29 @@ H2, H3, H8 are {{< wp " Cortex-A7" >}} ArmV7 SoCs and  AllWinner
         $ sudo btrfs filesystem resize max /
         ~~~
 
+## Armbian {#armbian}
+[Armbian](https://www.armbian.com/)
+by Igor Pečovnik is a lightweight Debian or Ubuntu based Linux distribution for arm
+platforms.
+
+It supports many platforms you can find the list [on the download section
+](https://www.armbian.com/download/) and inthe [boards directory in GitHub
+](https://github.com/armbian/build/tree/master/config/boards).
+They are classified a _general purpose_, _iot_, _nas_, networking_, _desktop_
+to facilitate the choice of a board.
+<--! unfinished list
+Banana Pi(M1, M2+, Pro, M64), ClearFog (base, pro), DevTerm A06, Espressobin,
+Firefly RK3399, Helios4, JetHub (D1, H1), Jetson Nano, Khadas (edge, vim1, vim2,
+vim3, vim4), La Frite, Le Potato, Nanopc T4, NanoPi (M4 v2, Neo/core, Neo2, neo2
+black, neo plus 4, Duo, R1, R2s, R4s), Odroid (C2, C4, HC4, N2, N2, N2+, XU4,HCx),
+Olimex (Lime 2, Lime A64), Orange Pi (Plus 2E, 3, 4, Lite, Lite2, One, One, Pc, PC2,
+PC+, Prime, R1, R1+, Zero Zero +2H3, Zero2 Zero+) Pine H64 B, Pine64, Pinebook pro,
+pcDuino2/3, Raxda zero ...
+-->
+-   [Armbian Documentation](https://docs.armbian.com/).
+-   [Armbian Community Forums](https://forum.armbian.com/).
+-   [Armbian on twitter](https://twitter.com/armbian)
+
 #  Raspberry
 {{< wp "Raspberry Pi" >}} is a single-board computer
 
@@ -323,16 +371,23 @@ or on a modern Raspbian or following the
 -   [Raspberry Pi FAQ - Kodi Wiki](https://kodi.wiki/view/Raspberry_Pi_FAQ)
 
 # Banana Pi
-the information on the bananapi devices are on Wikipedia {{< wp "Banana Pi" >}}
-and on the [Banana Pi gitbook](https://www.gitbook.com/book/bananapi/).
+All the development and tecnical documentation is above in the
+{{< iref "#allwinner_technology" "AllWinner Section" >}}.
+
 ## Documentation
 -   [Banana Pi - Wikipedia](https://en.wikipedia.org/wiki/Banana_Pi)
 -   [LeMaker Banana Pi - linux-sunxi.org](https://linux-sunxi.org/LeMaker_Banana_Pi)
     gives the differences between [bananapi variants
     ](https://linux-sunxi.org/LeMaker_Banana_Pi#Variants).
--   [Banana Pi Wiki - lemaker.org](https://wiki.lemaker.org/Main_Page),
-    [FAQ](https://wiki.lemaker.org/FAQ),
-    [GitHub: LeMaker resources](https://github.com/LeMaker).
+-   [Banana Pi gitbook](https://www.gitbook.com/book/bananapi/).
+-   [LeMaker](http://www.lemaker.org/):
+    -   [Banana Pi Home Page](http://www.lemaker.org/product-bananapi-index.html).
+    -   [Banana Pi Wiki - lemaker.org](https://wiki.lemaker.org/Main_Page),
+    -   [LeMaker Banana Pro/Pi](http://wiki.lemaker.org/LeMaker_Banana_Pro/Pi)
+        includes an extensive [Documentation
+        ](http://wiki.lemaker.org/LeMaker_Banana_Pro/Pi#Documentation).
+    -   [FAQ](https://wiki.lemaker.org/FAQ),
+    -   [GitHub: LeMaker resources](https://github.com/LeMaker).
 -   [bananapi.org - Banana Pi](https://www.bananapi.org/): site officiel (?) du Banana Pi
     [Banana Pi specifications and layout diagrams
     ](https://www.bananapi.org/p/product.html),
@@ -412,17 +467,6 @@ and on the [Banana Pi gitbook](https://www.gitbook.com/book/bananapi/).
 
 
 ## Banana Pi development
--   Banana dev - GitHub  allow to [Build Banana Pi Image
-    ](https://github.com/bananapi-dev/BPi/blob/master/HowToBuild_BPi_image.en.txt)
--   Instruction to get a cross dev platform, build kernel and uboot
-    and set the sdcard is in lemaker wiki at:
-    [Building u-boot, script.bin and linux-kernel - Banana Pi
-    ](https://wiki.lemaker.org/Building_u-boot,_script.bin_and_linux-kernel),
-    [Setting up the bootable SD card - Banana Pi
-    ](https://wiki.lemaker.org/Setting_up_the_bootable_SD_card)
--   The linux-sunxi site has also
-    [Linux Kernel - linux-sunxi.org](https://linux-sunxi.org/Linux#A20), and
-    [Toolchain - linux-sunxi.org](https://linux-sunxi.org/Toolchain)
 
 ## Vente du Banana Pi
 
@@ -552,7 +596,22 @@ The ESPRESSObin is unbrickable you can always do
     -   [Helios4 disk benchmarks  - Armbian forum
         ](https://forum.armbian.com/topic/3045-support-of-helios4-intro/?page=2&tab=comments#comment-39582)
 
+# Raxda
+-   [Single Board Computers from Radxa](https://rockpi.org/)
+-   [Rock Pi 4](https://rockpi.org/rockpi4)
+    model C based on a Rockchip RK3399 processor that features two ARM Cortex-A72 cores
+    and four ARM Cortex-A53 cores. This is supplemented by an ARM Mali-T864 GPU that
+    supports modern APIs like OpenGL ES 3.2 and Vulkan 1.0. The Rock Pi 4 Model C also
+    has 4 GB of RAM, a micro HDMI 2.0a port and a mini DP 1.2 port for high-resolution
+    video output.
 
+    It provides a NVMe port in a M2 socket factor. The socket supports 4-lane NVMe SSDs
+    and is complemented by 4 MB of SPI flash for booting NVMe drives.
+    The SBC requires an expansion board for connecting NVMe drives.
+
+    It is compatible with existing Rock Pi 4 accessories.
+
+    -   [Rock Pi 4 documentation](https://rockpi.eu/Rockpi4)
 # Plug Computers
 Wikipedia {{< wp "Plug computer" >}}.
 
@@ -962,7 +1021,7 @@ Marvell's Armada, NXP i.MX6 & i.MX8, and Intel Braswell (atom not ARM)
     -   [NewIt: CuBox-i4Pro
         ](https://www.newit.co.uk/shop/All-CuBox-i/CuBox-i4Pro)
 
--   [HumminBoard
+-   [HummingBoard
     ](https://www.solid-run.com/nxp-family/hummingboard/hummingboard-specifications/)
     are low cost [NXP i.MX6
     ](https://www.solid-run.com/nxp-family/imx6-som/imx6-som-specifications/)
@@ -1069,21 +1128,6 @@ with Cortex A8 processor, 512MB RAM, LUKS-based microSD encryption,
 and optional USB or cloud backup
 
 
-# Arm distributions
--   [Armbian](https://www.armbian.com/) by Igor Pečovnik is a
-    lightweight Debian squeeze, Jessie or Ubuntu  based Linux
-    distribution for arm platforms.
-
-    It supports
-    Banana Pi(M1, M2, M2+, Pro, Plus A20,), Orange Pi (One, 2, PC,
-    PC2, PC plus, Plus 2E, Plus 1 & 2, mini A20, Lite, Prime, Win,
-    A31S), NanoPi (M1, M1+, Neo, Neo2, Duo), Olimex ( Lime 1, Lime
-    A10, Micro, Lime 2), Odroid C0/C1/C1+/C2/XU4/HC1, pcDuino2/3,
-    Cubieboard 1/2, Roseapple Pi, Beelink X2, Le Potato, Espressobin,
-    Pine64, soPine64, Pinebook A64, Hummingboard, Lamobo R1, pcDuino3
-    nano, Udoo quad, Cubox-i, Cubietruck, Tinker Board, Miqi, Rock64.
-
-    -   [Armbian on twitter](https://twitter.com/armbian)
 
 # Software
 
