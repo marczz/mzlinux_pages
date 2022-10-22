@@ -4,7 +4,7 @@ title: Terminal emulators
 
 See also {{< iref "desktop" "Desktop" >}}, {{< iref "checkpointing#tmux" "Tmux" >}}.
 
-# XTerminals
+# Terminals emulators
 -   Wikipedia has an _incomplete_ {{< wp "List of terminal emulators" >}}.
 -   [ArchWiki: List of terminal emulators
     ](https://wiki.archlinux.org/index.php/List_of_applications#Terminal_emulators)
@@ -13,9 +13,15 @@ See also {{< iref "desktop" "Desktop" >}}, {{< iref "checkpointing#tmux" "Tmux" 
     _2007_
 
 The terminal with smaller footprint are built whithout the desktop rendering libraries
-like GTK or KDE, but when you want support for complex scripts you need a
+like GTK or KDE. They directly bind to libx11 or libwayland.
+
+When you want support for complex scripts you need a
 layout library like {{< wp "pango" >}} for GTK or libxrender1 for qt.
 
+The new GTK3 or QT6 terminals can be used in both X11 and Wayland.
+
+
+# X11 terminals
 Even if we look for a simple support of unicode our choice reduce to
 {{< iref "#xterm" "xterm" >}}, {{< iref "#st" "st" >}},
 {{< iref "#rxvt" "rxvt-unicode" >}}, _mlterm_.
@@ -31,8 +37,8 @@ There are many web applications to help to configure
 {{< iref "desktop#color_themes" color themes  >}} for xterm, st or other terminal
 emulators that don't have a graphic interface to configure colors.
 
-You can use [terminal sexy](http://terminal.sexy/),
-or  [4bit Terminal Color Scheme Designer](http://ciembor.github.io/4bit/).
+You can use
+[4bit Terminal Color Scheme Designer](http://ciembor.github.io/4bit/).
 
 
 ## xterm {#xterm}
@@ -271,7 +277,7 @@ See also the {{< iref "xorg#wayland" "Wayland Section" >}},
     is an _st_ fork for wayland.
 
 ## Terminals that work on both Wayland and X11
-The {{< "#vte" "VTE Terminals" >}} as well of all terminals based on GTK3, GTK4, QT5,
+The {{< iref "#vte" "VTE Terminals" >}} as well of all terminals based on GTK3, GTK4, QT5,
 QT6 don't depend on Xorg and can run on both Xorg and Wayland.
 
 
@@ -280,7 +286,14 @@ QT6 don't depend on Xorg and can run on both Xorg and Wayland.
     performance.  Wayland is also supported.
 
     Many {{<  iref "desktop#color_themes" "color themes" >}} are available for
-    _Alacritty_.
+    _Alacritty_.:
+
+    /In 2022 Alacritty 0.8.0 crash in sway wayland./
+
+    In 2022 there is no recent Debian package for alacritty 0.8.0 and 0.11.O crash in
+    sway wayland. There is an
+    [alacritty-debian repository](https://github.com/barnumbirr/alacritty-debian)
+    which gives new package releases.
 
     -   [Alacritty features
         ](https://github.com/alacritty/alacritty/blob/master/docs/features.md)
@@ -295,7 +308,11 @@ QT6 don't depend on Xorg and can run on both Xorg and Wayland.
     ligatures support and protocol extensions for keyboard input and image rendering.
 
     I tried in 2020 Kitty on Linux X11, but it let my window manager, in an
-    unrecoverable state.
+    unrecoverable state. In 2022 kitty works well in Wayland; it uses 4.5M resident /
+    3.0M shared.
+
+    The [Kitty Page](https://sw.kovidgoyal.net/kitty/) has configuration and usage
+    documentation.
 
 -   The Kde/Qt terminal is {{< wp "Konsole" >}} it has heavy KDE dependencie.
 
@@ -365,6 +382,11 @@ like eterm, gnome terminal, Konsole,  guake, nautilus terminal,
 terminator, xfce4 terminal, st (called also stterm), xterm, and all
 {{< iref "#vte" "vte" >}} terminals support 256 colors.
 
+For xterm _the reference for control codes_ the color modifying control sequence are
+described among the [Functions using CSI - Xterm ctlseqs)
+](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h3-Functions-using-CSI-_-ordered-by-the-final-character_s_)
+they are the CSI sequences ending with `m`.
+
 There are lists of ansi escape sequences in [ascii-table
 ](http://ascii-table.com/ansi-escape-sequences.php), in
 [bash-hackers: terminal codes
@@ -382,7 +404,44 @@ The ArchWiki [Prompt customization - ANSI_escape_sequences
 ](https://wiki.archlinux.org/index.php/Bash/Prompt_customization#ANSI_escape_sequences)
 describe also their use in shell.
 
-In 256-color mode (ESC{{< iref "checkpointing#terminal_multiplexors" "38;5;<fgcode>m and ESC[48;5;<bgcode>m), the color-codes are the following:  -   0x00-0x07:  standard colors (as in ESC [ 30–37 m) -   0x08-0x0F:  high intensity colors (as in ESC [ 90–97 m) -   0x10-0xE7:  6 × 6 × 6 = 216 colors: 16 + 36 × r + 6 × g + b (0 ≤ r, g, b ≤ 5) -   0xE8-0xFF:  grayscale from black to white in 24 steps  See also [Terminal multiplexers section" >}}.
+In 256-color mode the color-codes are the following:
+-   `0x00-0x07`:  standard colors (as in `ESC [ 30–37 m`)
+-   `0x08-0x0F`:  high intensity colors (as in `ESC [ 90–97 m`)
+-   `0x10-0xE7`:  6 × 6 × 6 = 216 colors: 16 + 36 × r + 6 × g + b (0 ≤ r, g, b ≤ 5)
+-   `0xE8-0xFF`:  grayscale from black to white in 24 steps
+
+## Operating System Command (OSC) {#osc}
+
+Xterm supports also [OSC ctlseqs
+](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h3-Operating-System-Commands)
+
+Among them the OSC 52 code allow to manipulate selection data and the clipboard, primary,
+secondary, select, or cut-buffers.
+It may be used to communicate between tmux or vim selection and the clipboard, or to use
+a remote clipboard in ssh.
+
+The support of OSC 52 in terminals is given in [vim oscyank Readme
+](https://github.com/ojroques/vim-oscyank) in June 2022 it is:
+
+| Terminal | OSC52 support |
+|----------|:-------------:|
+| [Alacritty](https://github.com/alacritty/alacritty) | **yes** |
+| [foot](https://codeberg.org/dnkl/foot) | **yes** |
+| [GNOME Terminal](https://github.com/GNOME/gnome-terminal) (and other VTE-based terminals) | [not yet](https://bugzilla.gnome.org/show_bug.cgi?id=795774) |
+| [hterm (Chromebook)](https://chromium.googlesource.com/apps/libapps/+/master/README.md) | [**yes**](https://chromium.googlesource.com/apps/libapps/+/master/nassh/doc/FAQ.md#Is-OSC-52-aka-clipboard-operations_supported) |
+| [iTerm2](https://iterm2.com/) | **yes** |
+| [kitty](https://github.com/kovidgoyal/kitty) | **yes** |
+| [Konsole](https://konsole.kde.org/) | [not yet](https://bugs.kde.org/show_bug.cgi?id=372116) |
+| [QTerminal](https://github.com/lxqt/qterminal#readme) | [not yet](https://github.com/lxqt/qterminal/issues/839)
+| [screen](https://www.gnu.org/software/screen/) | **yes** |
+| [st](https://st.suckless.org/) | **yes** (but needs to be enabled, see [here](https://git.suckless.org/st/commit/a2a704492b9f4d2408d180f7aeeacf4c789a1d67.html)) |
+| [Terminal.app](https://en.wikipedia.org/wiki/Terminal_(macOS)) | no, but see [workaround](https://github.com/roy2220/osc52pty) |
+| [tmux](https://github.com/tmux/tmux) | **yes** |
+| [Windows Terminal](https://github.com/microsoft/terminal) | **yes** |
+| [rxvt](http://rxvt.sourceforge.net/) | **yes** (to be confirmed) |
+| [urxvt](http://software.schmorp.de/pkg/rxvt-unicode.html) | **yes** (with a script, see [here](https://github.com/ojroques/vim-oscyank/issues/4)) |
+| [xterm.js](https://xtermjs.org/) (Hyper terminal) | [not yet](https://github.com/xtermjs/xterm.js/issues/3260) |
+| [wezterm](https://github.com/wez/wezterm) | [**yes**](https://wezfurlong.org/wezterm/escape-sequences.html#operating-system-command-sequences) |
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
