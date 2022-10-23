@@ -8,9 +8,6 @@ See also {{< iref "desktop" "Desktop" >}}, {{< iref "checkpointing#tmux" "Tmux" 
 -   Wikipedia has an _incomplete_ {{< wp "List of terminal emulators" >}}.
 -   [ArchWiki: List of terminal emulators
     ](https://wiki.archlinux.org/index.php/List_of_applications#Terminal_emulators)
--   [Comprehensive Linux Terminal Performance Comparison | Martin Ankerl
-    ](http://martin.ankerl.com/2007/09/01/comprehensive-linux-terminal-performance-comparison/)
-    _2007_
 
 The terminal with smaller footprint are built whithout the desktop rendering libraries
 like GTK or KDE. They directly bind to libx11 or libwayland.
@@ -29,54 +26,38 @@ Even if we look for a simple support of unicode our choice reduce to
 The smaller foot print are for  {{< iref "#xterm" "xterm" >}}, {{< iref "#st" "st" >}},
 {{< iref "#rxvt" "rxvt" >}}.
 
- The footprints of _xterm_ are 9.5M resident with 5.6M shared, for _st_
-it is 7.3M/6.3M. This has not changed between {{< iref "#oldtest" "old test (1)" >}}
-and {{< iref "#newtest15" "new 2015 test (2)" >}}.
-
 There are many web applications to help to configure
-{{< iref "desktop#color_themes" color themes  >}} for xterm, st or other terminal
+{{< iref "desktop#color_themes" color themes >}} for xterm, st or other terminal
 emulators that don't have a graphic interface to configure colors.
 
-You can use
-[4bit Terminal Color Scheme Designer](http://ciembor.github.io/4bit/).
+You can use [4bit Terminal Color Scheme Designer](http://ciembor.github.io/4bit/).
 
+-   <a name="xterm"></a>[xterm](http://invisible-island.net/xterm/xterm.html).
+    is the standard X {{< wp "terminal emulator" >}}.
+    -   [ArchWiki: xterm](https://wiki.archlinux.org/index.php/Xterm)
+    -   [list of xterm control sequences
+        ](http://invisible-island.net/xterm/ctlseqs/ctlseqs.html).
+-   [suckless st](http://st.suckless.org/),
+    is intended to serve as a lightweight replacement for {{< iref "#xterm" "xterm" >}}
+    or rxvt-unicode. It currently supports 256 colors, most VT10X escape sequences,
+    UTF-8, X11 copy/paste, anti-aliased fonts (using fontconfig), fallback fonts,
+    resizing, shortcuts via config.h, and line drawing. The configuration is explained
+    in [Archwiki: st](https://wiki.archlinux.org/index.php/St).
 
-## xterm {#xterm}
-The standard X {{< wp "terminal emulator" >}} is
-[xterm](http://invisible-island.net/xterm/xterm.html).
--   [ArchWiki: xterm](https://wiki.archlinux.org/index.php/Xterm)
--   [list of xterm control sequences
-    ](http://invisible-island.net/xterm/ctlseqs/ctlseqs.html).
+    There is also a fork for Wayland named {{< iref "#wterm" "wterm" >}}.
+    In Debian _st_ is packaged a _stterm_.
 
-## St {#st}
-[suckless st](http://st.suckless.org/),
-is intended to serve as a lightweight replacement for {{< iref "#xterm" "xterm" >}} or
-rxvt-unicode. It currently supports 256 colors, most VT10X escape sequences, UTF-8, X11
-copy/paste, anti-aliased fonts (using fontconfig), fallback fonts, resizing, shortcuts
-via config.h, and line drawing. The configuration is explained in
-[Archwiki: st](https://wiki.archlinux.org/index.php/St).
-There is also a fork for Wayland named {{< iref "#wterm" "wterm" >}}.
-In Debian _st_ is packaged a _stterm_.
-
-One benefit of _st_ over _xterm_ is the support of fontconfig and
-24bits colour scheme. So it matches the
-[powerline terminal requirements
-](https://powerline.readthedocs.org/en/latest/usage.html#terminal-emulator-requirements).
-
-## rxvt and friends
-There are also
-a lot of alternate terminals like {{< wp "rxvt" >}},
-[rxvt-unicode](https://wiki.archlinux.org/index.php/Rxvt-unicode)
-[eterm](http://www.eterm.org) _replaced by terminology_,
-[mrxvt](http://materm.sourceforge.net/wiki/pmwiki.php) _stopped in
-2008_,
-_wterm_ Wterm is a fork of rxvt designed for  Window Maker, it is distinct from the
-homonym Wayland terminal {{< iref "#wterm" "wterm" >}}.
-
-
-[mlterm](http://mlterm.sourceforge.net/) _active in 2019_ is a
-multilingual terminal with support for input-methods.
-
+    One benefit of _st_ over _xterm_ is the support of fontconfig and
+    24bits colour scheme. So it matches the
+    [powerline terminal requirements
+    ](https://powerline.readthedocs.org/en/latest/usage.html#terminal-emulator-requirements).
+-   [rxvt-unicode](https://wiki.archlinux.org/index.php/Rxvt-unicode)
+    It is the only surviving member in the  {{< wp "rxvt" >}} family.
+-   [mlterm](http://mlterm.sourceforge.net/) _active in 2022_ is a
+    multilingual terminal for X11
+    [and wayland](ttps://github.com/arakiken/mlterm/blob/master/doc/en/README.wayland)
+    with support for input-methods.
+    -   [mlterm - GitHub](https://github.com/arakiken/mlterm).
 
 # List of  vte terminal emulators {#vte}
 <a name="vte"></a> [vte](https://live.gnome.org/Apps/Terminal/VTE) is a library for
@@ -99,10 +80,6 @@ gnome, xfce, KT some lighter terminals are also build on _vte_ but rely
 only on Gtk and xfreedesktop and avoid heavy desktop bindings like:
 
 
--   [evilvte](http://www.calno.com/evilvte/) (GPL)
-    a light {{< iref "#vte" "vte" >}} terminal, but you have to
-    recompile it to change the configuration. _It is no more
-    developped since 2013 and no more in debian_
 -   <a name="gnome-terminal"></a>{{< wp "gnome terminal" >}} (GPL)  build
     upon {{< iref "#vte" "vte" >}}
     with gnome dependencies but not too heavy (no gnome specific
@@ -112,49 +89,44 @@ only on Gtk and xfreedesktop and avoid heavy desktop bindings like:
     is lighter than many. Gnome Terminal or its fork
     {{< iref "#mate" "Mate Terminal" >}}
     are a good choice for a vte terminal supporting dbus, pango and
-    advanced preferences.
-    33M res / 25M shr {{< iref "#newtest17" "3" >}}. _in
-    Debian_.
+    advanced preferences. _in Debian_.
+
+    gnome-terminal v 3.46.2 uses 70m res / 70m shr.
+
     -   [Gnome Terminal Help
         ](https://help.gnome.org/users/gnome-terminal/stable/index.html.en)
     -   [gnome-terminal-colors-solarized
         ](https://github.com/Anthony25/gnome-terminal-colors-solarized)
         script to set the Solarized color set with Gnome Terminal.
-    -   [askununtu - How can I create a “built-in” color scheme for
-        GNOME Terminal?
+    -   [askununtu - How can I create a “built-in” color scheme for GNOME Terminal?
         ](https://askubuntu.com/questions/218930/how-can-i-create-a-built-in-color-scheme-for-gnome-terminal/236229)
 -   [Guake](https://github.com/Guake/guake)
-    is a python based drop-down terminal,similar to Yakuaka (KDE)
-    and Tilda, but programmed in python for the GNOME Desktop.
-    Footprints: 49M / 32M shr {{< iref "#newtest17" "3" >}}.
-    _in Debian_.
+    is a python based drop-down terminal,similar to Yakuaka (KDE) and Tilda, but
+    programmed in python for the GNOME Desktop.
     -   [ArchWiki: Guake](https://wiki.archlinux.org/index.php/Guake)
 -   [lilyterm](http://lilyterm.luna.com.tw/) (GPL)
     a terminal with easy and complete configurations options, it
     supports multiple profiles and dbus._in Debian_.
-    Memory footprints:  34M / 28 M shr
-    {{< iref "#newtest17" "3" >}}
--   [lxterminal](http://lxde.org) (GPL) from lxde which is quite light.
-    but with a very limited configuration menu.  We can change the
-    foreground and backgroun colour but I found no way of customizing
-    colour scheme, it is confirmed by [Ubuntu Help
+-   [lxterminal](http://lxde.org) (GPL)
+    from lxde which is quite light.  but with a very limited configuration menu.  We can
+    change the foreground and backgroun colour but I found no way of customizing colour
+    scheme, it is confirmed by [Ubuntu Help
     ](https://help.ubuntu.com/community/Lubuntu/Documentation/LXTerminal/Customising)
     even if the lxde wiki page state this is a feature of lxterminal.
-    23M / 19M shr {{< iref "#newtest17" "3" >}}.<br />
-    The lxterminal process act as a server so whenyou launch a new
-    instance you reuse the same process for a new window, but compared
-    to the other dbus powered applications it seems you have no way to
-    move a tab from a window to an other, or specifying from the
-    command line to reuse an open window.<br />
-    Compared to gnome-terminal you have lighter footprint but no
-    profile preferences nor the possibility to launch new tabs through
-    dbus.
+
+    The lxterminal process act as a server so when you launch a new instance you reuse
+    the same process for a new window, but compared to the other dbus powered
+    applications it seems you have no way to move a tab from a window to an other, or
+    specifying from the command line to reuse an open window.
+
+    Compared to gnome-terminal you have lighter footprint of 54m res / 41m shr for
+    version 0.4.0 in 2022 but no profile preferences nor the possibility to launch new
+    tabs through dbus.
 -   <a name="mate-terminal"></a>__Mate Terminal__ (GPL)
     is a fork of
     {{< iref "#gnome" "Gnome Terminal" >}}
     for the [Mate Desktop](http://mate-desktop.org/) and have the same
-    charecteristics, its memory footprint seems slightly lighter
-    33M / 25M shr {{< iref "#newtest17" "3" >}},
+    characteristics, and similar memory footprint.
 -   [mt](https://github.com/mutantturkey/mt/) (GPL) is a fork of
     _sakura_,
 -   [Pangoterm](http://www.leonerd.org.uk/code/pangoterm/)
@@ -162,103 +134,61 @@ only on Gtk and xfreedesktop and avoid heavy desktop bindings like:
     [libvterm](http://www.leonerd.org.uk/code/libvterm/)
     an abstract C99 library which implements a VT220 or xterm-like
     terminal emulator without using any particular graphics toolkit or
-    output system. _It does not seems to be anymore developped since
-    2015 but is in debian experimental_<br/>
-    Memory footprints: 18M res. / 16M shared {{< iref "#newtest15" "(2)" >}}.
--   [roxterm](http://roxterm.sourceforge.net/) (GPL) heavier than
-    lxterminal but easier to customize, it allows colour schemes.
-    It is no more developped since 2016, and no more available in Debian.
+    output system. _The source repository of the library does not seem available, but
+    libvterm0 is packaged in Debian_.
+
+    [emacs-libvterm](https://github.com/akermu/emacs-libvterm) (GPL-3.0)
+    s fully-fledged terminal emulator inside GNU Emacs based on libvterm.
 -   [Sakura](http://www.pleyades.net/david/projects/sakura) (GPL),
     has many tabs and configurable keybindings,  a
     contextual menu with some basic options but no preference profile.
-    Footprints: 24M res / 27M shr {{< iref "#newtest17" "3" >}},
-    _in Debian_
     -   [Sakura launchpad page](https://launchpad.net/sakura)_
--   [terminator](http://www.tenshu.net/p/terminator.html) build upon
-    _python-vte_ arrange many {{< iref "#vte" "vte" >}}
-    terminals in a grid. It has advanced customizable profile options,
-    you can change the size, colour, give different shapes to the
-    terminal.  With the embedded python it is has large memory
-    footprints, but as you probably have some python app running in
-    your desktop (look under ibus the gtk ui!)  some libraries are
-    probably truly shared. _in debian_ It is quite big since it embeds
-    python-vte terminator 55M / 33M shr
-    {{< iref "#newtest17" "3" >}}.
+-   [terminator](http://www.tenshu.net/p/terminator.html)
+    built upon _python-vte_ arrange many {{< iref "#vte" "vte" >}} terminals in a
+    grid. It has advanced customizable profile options, you can change the size, colour,
+    give different shapes to the terminal.  With the embedded python it is has large
+    memory footprints, but as you probably have some python app running in your desktop
+    (look under ibus the gtk ui!)  some libraries are probably truly shared. _in debian_
 -   [Termit](http://github.com/nonstop/termit/wiki) (GPL)
-    has many tabs and configurable keybindings, it allows switching
-    encodings, sessions, and embedded Lua. _in debian_<br/>
-    It has configurable colors and font by tab but no _profile_
-    notion. It has no command line option to reuse a window process,
-    every call from the command line open a window in a new process,
-    and so you cannot move a tab from a window to an other
-    window. _in Debian_<br/>
-    Memory footprints: 34M/26M {{< iref "#newtest17" "3" >}}
-    for 2 tabs.
+    has many tabs and configurable keybindings, it allows switching encodings, sessions,
+    and embedded Lua. _in debian_.
+
+    It has configurable colors and font by tab but no _profile_ notion. It has no
+    command line option to reuse a window process, every call from the command line open
+    a window in a new process, and so you cannot move a tab from a window to an other
+    window. _in Debian_.
 -   [Termite](https://github.com/thestinger/termite)
     [Archwiki: Termite](https://wiki.archlinux.org/index.php/Termite)
     is a minimal {{< iref "#vte" "vte" >}} terminal emulator
     designed for use with tiling window managers. It has a similar
     look and feel to rxvt-unicode.
--   [Tilda](https://github.com/lanoxx/tilda) is a drop down
-    terminal,  it can be pulled up and down from the top of the screen
-    with a special hotkey _default F1_.
-    It has a customizable colour shemes.
-    There is a {{< wp "Tilda_(software)"  "Wikipedia page" >}}.
-    Footprints: 44M / 29M {{< iref "#newtest17" "3" >}},
-    _in Debian_
+-   [Tilda](https://github.com/lanoxx/tilda)
+    is a drop down terminal, it can be pulled up and down from the top of the screen
+    with a special hotkey _default F1_.  It has a customizable colour shemes.  There is
+    a {{< wp "Tilda_(software)" "Wikipedia page" >}}.  _in Debian_
     -   [ArchWiki: Tilda](https://wiki.archlinux.org/index.php/Tilda)
 -   [xfce-terminal](http://www.xfce.org/projects/terminal/) (GPL)
     _xfce dependencies_, _in debian_
 
-A list of {{< iref "#vte" "vte" >}} terminals is on the
-[evilvte Home Page](http://www.calno.com/evilvte/) along with a
-comparison of dependencies and binary sizes _wich is not so much a
-criteria as it is quite disconnected from the true memory footprint of
-the application._.
+I made some test terminal with two open tabs running the bash shell when they are multi
+tabs.
 
-I made some <a name="oldtest">older test (1)</a>, with terminal with
-two open tabs running the bash shell; and a
-<a name="newtest15">new test in 2015 (2)</a>  and
-checked in <a name="newtest17">2017 (3)</a>
-the new measurement report
-gives for most pieces of software an increased memory footprint.
+| terminal       | res  | shr | version | date |
+| alacritty      | 98m  | 64m | 0.11.0  | 2022 |
+| foot           | 25m  | 24m | 1.13.1  | 2022 |
+| gnome-terminal | 70m  | 49m | 3.46.2  | 2022 |
+| kitty          | 34m  | 29m | 0.21.2  | 2022 |
+| lxterminal     | 54m  | 41m | 0.4.0   | 2022 |
+| qterminal      | 102M | 83m | 0.16.1  | 2022 |
+| st             | 13   | 11  | 0.8.5   | 2022 |
+| xterm          | 13m  | 6m  | 373     | 2022 |
 
-All light terminals have comparable footprints 15M resident 10M shared
-{{< iref "#oldtest" "old test (1)" >}} with only one tab;
-we can expect if we use a Gtk desktop that a big ratio of
-the shared libraries are truly shared. Adding a new tab add only 1M
-_of course without adding memory footprint of the shell you launch in
-the tab!_. If we go in details for 2 tabs for the {{< iref "#oldtest" "old test (1)" >}} terminator use 40M since it
-embeds python-vte; tilda, roxterm, gnome terminal use 16-18M, lilyterm
-and sakura 14M lxterminal and evilvte 12M.
-
-For the  {{< iref "#newtest15" "new test (2)" >}} or
-{{< iref "#newtest17" "3" >}}:
-gnome-terminal 33M res / 25M shr {{< iref "#newtest17" "3" >}},
-guake 49M / 32M shr {{< iref "#newtest17" "3" >}},
-lilyterm 34M / 28M shr {{< iref "#newtest17" "3" >}},
-lxterminal  24M / 20M shr {{< iref "#newtest17" "3" >}},
-mate-terminal 42M / 30M shr {{< iref "#newtest17" "3" >}},
-pangoterm 18M res. / 16M shared.
-qterminal 34M / 29M shr {{< iref "#newtest17" "3" >}},
-roxterm 21M res / 14M shr {{< iref "#newtest17" "3" >}},
-sakura 24M res / 27M shr {{< iref "#newtest17" "3" >}},
-st 7.7M/6.7M {{< iref "#newtest17" "3" >}},
-terminator 55M / 33M shr {{< iref "#newtest17" "3" >}},
-terminology 27.5M/18.6M {{< iref "#newtest15" "2" >}},
-termit 21M/18M {{< iref "#newtest15" "2" >}} 34M/26M
-{{< iref "#newtest17" "3" >}},
-tilda 44M / 29M {{< iref "#newtest17" "3" >}},
-xterm 9.7M/5.8M {{< iref "#newtest17" "3" >}}.
-
-Some terminal emulators like _Roxterm_, _gnome terminal_,
-_mate terminal_, _terminator_, _guake_, _lilyterm_
-have dbus support, and allow to launch a new tab or a new window in
+Some terminal emulators like _Roxterm_, _gnome terminal_, _mate terminal_, _terminator_,
+_guake_, _lilyterm_ have dbus support, and allow to launch a new tab or a new window in
 the same process from the command line and move tabs between windows.
 
-Other terminal emulators open a new process for each window, of course they
-support multiple tabs, but it seems they need to be opened from the
-window.
+Other terminal emulators open a new process for each window, of course they support
+multiple tabs, but it seems they need to be opened from the window.
 
 [tdrop](https://github.com/noctuid/tdrop/) (BSD License)
 is a bash script to allow dropdown for a an independent terminal, it is also
@@ -269,12 +199,22 @@ WM-Independent. _tdrop_ is compatible with many terminal software and window man
 See also the {{< iref "xorg#wayland" "Wayland Section" >}},
 {{< iref "desktop#wayland_compositors" "Wayland Compositors" >}}.
 
-
 -   [foot](https://codeberg.org/dnkl/foot) (MIT License)
+    a fast, lightweight and minimalistic Wayland terminal emulator.
+
+    The [benchmark](https://codeberg.org/dnkl/foot/src/branch/master/doc/benchmark.md)
+    shows it is faster than alacritty and both are a lot faster than urxvt and xterm,
+    with a big gap when drawing unicode characters.
+
+    The documentation of foot is in the manuals {{< man "foot(1)" >}},
+    {{< man "footclient(1)" >}}, {{< man "footini(5)" >}}, {{< man "foot-ctlseqs(7)" >}}
+    and:
+    -   [foot REABME](https://codeberg.org/dnkl/foot/src/branch/master/README.md)
     -   [foot Wiki](https://codeberg.org/dnkl/foot/wiki)
-    fast, lightweight and minimalistic Wayland terminal emulator.
--   [wterm](https://github.com/majestrate/wterm) (MIT Licee)
-    is an _st_ fork for wayland.
+
+-   [Wayst](https://github.com/91861/wayst) (MIT license)
+    is a simple terminal emulator for Wayland and X11 with OpenGL rendering and minimal
+    dependencies (OpenGL, fontconfig, freetype).
 
 ## Terminals that work on both Wayland and X11
 The {{< iref "#vte" "VTE Terminals" >}} as well of all terminals based on GTK3, GTK4, QT5,
@@ -288,12 +228,11 @@ QT6 don't depend on Xorg and can run on both Xorg and Wayland.
     Many {{<  iref "desktop#color_themes" "color themes" >}} are available for
     _Alacritty_.:
 
-    /In 2022 Alacritty 0.8.0 crash in sway wayland./
-
-    In 2022 there is no recent Debian package for alacritty 0.8.0 and 0.11.O crash in
-    sway wayland. There is an
+    In 2022 there is no recent Debian package for alacritty. There is an
     [alacritty-debian repository](https://github.com/barnumbirr/alacritty-debian)
     which gives new package releases.
+
+    Alacritty footprints are 98m res / 65m shr _2022 v. 0.11_
 
     -   [Alacritty features
         ](https://github.com/alacritty/alacritty/blob/master/docs/features.md)
@@ -308,8 +247,8 @@ QT6 don't depend on Xorg and can run on both Xorg and Wayland.
     ligatures support and protocol extensions for keyboard input and image rendering.
 
     I tried in 2020 Kitty on Linux X11, but it let my window manager, in an
-    unrecoverable state. In 2022 kitty works well in Wayland; it uses 4.5M resident /
-    3.0M shared.
+    unrecoverable state. In 2022 kitty works well in Wayland; Version 0.21.2 uses 34M
+    resident / 29M shared.
 
     The [Kitty Page](https://sw.kovidgoyal.net/kitty/) has configuration and usage
     documentation.
@@ -319,8 +258,8 @@ QT6 don't depend on Xorg and can run on both Xorg and Wayland.
 -   <a name="qterminal"></a>[qterminal](https://github.com/lxqt/qterminal/)
     is a light Qt terminal which is part
     of [lxqt](https://lxqt.org/) The Lightweight Qt Desktop Environment (previously
-    _Razor-qt_) It has no dependencies but its own qtwidget library and use on
-    X11 34M / 29M shr {{< iref "#newtest17" "3" >}} with 2 tabs.
+    _Razor-qt_) It has no dependencies but its own qtwidget librar. Qterminal version
+    0.16.1 (2022) uses on wayland 102m res / 83m shr wit 2 tabs.
 
     You can have multiple tabs but it does not allow to share a process
     between multiple windows
@@ -333,12 +272,7 @@ QT6 don't depend on Xorg and can run on both Xorg and Wayland.
     framebuffer (fbcon).  It is usable out of Enlightenment desktop, but its
     installation will pull all the enlightenement libraries.
     -   [GitHub: Terminology](https://github.com/billiob/terminology)
-    -   Terminology uses 27M resident memory / 17 shared.
     -   Wikipedia: {{< wp "terminology" >}}
-
--   [Wayst](https://github.com/91861/wayst)
-    is a simple terminal emulator for Wayland and X11 with OpenGL rendering and minimal
-    dependencies (OpenGL, fontconfig, freetype).
 
 
 # Javascript Terminals
