@@ -104,6 +104,17 @@ only on Gtk and xfreedesktop and avoid heavy desktop bindings like:
     is a python based drop-down terminal,similar to Yakuaka (KDE) and Tilda, but
     programmed in python for the GNOME Desktop.
     -   [ArchWiki: Guake](https://wiki.archlinux.org/index.php/Guake)
+-   [libvterm](http://www.leonerd.org.uk/code/libvterm/)
+    an abstract C99 library which implements a VT220 or xterm-like
+    terminal emulator without using any particular graphics toolkit or
+    output system. _The source repository of the library does not seem available, but
+    libvterm0 is packaged in Debian_.
+
+    [Pangoterm](http://www.leonerd.org.uk/code/pangoterm/) is
+    a GTK-2 and Pango-based terminal that uses libvterm, it does not seem to be yet
+    developed, there is no upgrade to GTK 3/4, but it is yet packaged in Debian 11.
+-   [emacs-libvterm](https://github.com/akermu/emacs-libvterm) (GPL-3.0)
+    is a fully-fledged terminal emulator inside GNU Emacs based on libvterm.
 -   [lilyterm](http://lilyterm.luna.com.tw/) (GPL)
     a terminal with easy and complete configurations options, it
     supports multiple profiles and dbus._in Debian_.
@@ -129,16 +140,6 @@ only on Gtk and xfreedesktop and avoid heavy desktop bindings like:
     characteristics, and similar memory footprint.
 -   [mt](https://github.com/mutantturkey/mt/) (GPL) is a fork of
     _sakura_,
--   [Pangoterm](http://www.leonerd.org.uk/code/pangoterm/)
-    A GTK/Pango-based terminal that uses
-    [libvterm](http://www.leonerd.org.uk/code/libvterm/)
-    an abstract C99 library which implements a VT220 or xterm-like
-    terminal emulator without using any particular graphics toolkit or
-    output system. _The source repository of the library does not seem available, but
-    libvterm0 is packaged in Debian_.
-
-    [emacs-libvterm](https://github.com/akermu/emacs-libvterm) (GPL-3.0)
-    s fully-fledged terminal emulator inside GNU Emacs based on libvterm.
 -   [Sakura](http://www.pleyades.net/david/projects/sakura) (GPL),
     has many tabs and configurable keybindings,  a
     contextual menu with some basic options but no preference profile.
@@ -148,10 +149,10 @@ only on Gtk and xfreedesktop and avoid heavy desktop bindings like:
     grid. It has advanced customizable profile options, you can change the size, colour,
     give different shapes to the terminal.  With the embedded python it is has large
     memory footprints, but as you probably have some python app running in your desktop
-    (look under ibus the gtk ui!)  some libraries are probably truly shared. _in debian_
+    (look under ibus the gtk ui!)  some libraries are probably truly shared. _in Debian_
 -   [Termit](http://github.com/nonstop/termit/wiki) (GPL)
     has many tabs and configurable keybindings, it allows switching encodings, sessions,
-    and embedded Lua. _in debian_.
+    and embedded Lua. _in Debian_.
 
     It has configurable colors and font by tab but no _profile_ notion. It has no
     command line option to reuse a window process, every call from the command line open
@@ -168,7 +169,7 @@ only on Gtk and xfreedesktop and avoid heavy desktop bindings like:
     a {{< wp "Tilda_(software)" "Wikipedia page" >}}.  _in Debian_
     -   [ArchWiki: Tilda](https://wiki.archlinux.org/index.php/Tilda)
 -   [xfce-terminal](http://www.xfce.org/projects/terminal/) (GPL)
-    _xfce dependencies_, _in debian_
+    _xfce dependencies_, _in Debian_
 
 I made some test terminal with two open tabs running the bash shell when they are multi
 tabs.
@@ -225,10 +226,13 @@ QT6 don't depend on Xorg and can run on both Xorg and Wayland.
     A Rust cross-platform, GPU-accelerated terminal emulator, with a strong focus on
     performance.  Wayland is also supported.
 
-    Many {{<  iref "desktop#color_themes" "color themes" >}} are available for
+    Many {{< iref "desktop#color_themes" "color themes" >}} are available for
     _Alacritty_.:
 
-    In 2022 there is no recent Debian package for alacritty. There is an
+    In 2022 there is no recent Debian package for Alacritty.
+    [Alacritty Ubuntu PPA](https://launchpad.net/~mmstick76/+archive/ubuntu/alacritty)
+    is [not up to date with last releases
+    ](https://github.com/alacritty/alacritty/pull/3983) but there is an
     [alacritty-debian repository](https://github.com/barnumbirr/alacritty-debian)
     which gives new package releases.
 
@@ -236,19 +240,16 @@ QT6 don't depend on Xorg and can run on both Xorg and Wayland.
 
     -   [Alacritty features
         ](https://github.com/alacritty/alacritty/blob/master/docs/features.md)
-    -   [Alacritty Ubuntu PPA](https://launchpad.net/~mmstick76/+archive/ubuntu/alacritty)
-        is [not up to date with last releases
-        ](https://github.com/alacritty/alacritty/pull/3983).
-    -   The POP_OS fork add a [debian package configuration
-        ](https://github.com/pop-os/alacritty/tree/master/debian).
+    -   [Alacritty Wiki](https://github.com/alacritty/alacritty/wiki)
+        contains a list of color scheme.
+    -   [Alacritty - Gentoo Wiki](https://wiki.gentoo.org/wiki/Alacritty).
 
 -   [Kitty](https://sw.kovidgoyal.net/kitty/) (GPL)
     a scriptable OpenGL based terminal emulator with tiling capabilities, TrueColor,
     ligatures support and protocol extensions for keyboard input and image rendering.
 
-    I tried in 2020 Kitty on Linux X11, but it let my window manager, in an
-    unrecoverable state. In 2022 kitty works well in Wayland; Version 0.21.2 uses 34M
-    resident / 29M shared.
+    In 2022 kitty 0.21.2 works well in Wayland; Version 0.21.2 uses 34M resident / 29M
+    shared.
 
     The [Kitty Page](https://sw.kovidgoyal.net/kitty/) has configuration and usage
     documentation.
@@ -274,6 +275,9 @@ QT6 don't depend on Xorg and can run on both Xorg and Wayland.
     -   [GitHub: Terminology](https://github.com/billiob/terminology)
     -   Wikipedia: {{< wp "terminology" >}}
 
+-   [wezterm](https://wezfurlong.org/wezterm/)
+    WezTerm is a GPU-accelerated cross-platform terminal emulator and multiplexer
+    implemented in Rust.
 
 # Javascript Terminals
 -   [terminal javascript Library](http://www.masswerk.at/termlib/)
@@ -308,7 +312,7 @@ QT6 don't depend on Xorg and can run on both Xorg and Wayland.
     authentication, SSL and TLS encryption, logging, IPV6 prorocol.
     -   [GitHub:Gate One](https://github.com/liftoff/GateOne)
 
-# Ansi Code support
+# Ansi Codes support
 
 Most terminals, both console and X support {{< wp "ANSI escape code" >}}
 and characters color. While the console support 16 colors, X terminals
@@ -338,6 +342,9 @@ The ArchWiki [Prompt customization - ANSI_escape_sequences
 ](https://wiki.archlinux.org/index.php/Bash/Prompt_customization#ANSI_escape_sequences)
 describe also their use in shell.
 
+For more documentation on Ansi Codes look at the Alacritty list of
+[ANSI References](https://github.com/alacritty/alacritty/wiki/ANSI-References).
+
 In 256-color mode the color-codes are the following:
 -   `0x00-0x07`:  standard colors (as in `ESC [ 30–37 m`)
 -   `0x08-0x0F`:  high intensity colors (as in `ESC [ 90–97 m`)
@@ -357,25 +364,25 @@ a remote clipboard in ssh.
 The support of OSC 52 in terminals is given in [vim oscyank Readme
 ](https://github.com/ojroques/vim-oscyank) in June 2022 it is:
 
-| Terminal | OSC52 support |
-|----------|:-------------:|
-| [Alacritty](https://github.com/alacritty/alacritty) | **yes** |
-| [foot](https://codeberg.org/dnkl/foot) | **yes** |
-| [GNOME Terminal](https://github.com/GNOME/gnome-terminal) (and other VTE-based terminals) | [not yet](https://bugzilla.gnome.org/show_bug.cgi?id=795774) |
-| [hterm (Chromebook)](https://chromium.googlesource.com/apps/libapps/+/master/README.md) | [**yes**](https://chromium.googlesource.com/apps/libapps/+/master/nassh/doc/FAQ.md#Is-OSC-52-aka-clipboard-operations_supported) |
-| [iTerm2](https://iterm2.com/) | **yes** |
-| [kitty](https://github.com/kovidgoyal/kitty) | **yes** |
-| [Konsole](https://konsole.kde.org/) | [not yet](https://bugs.kde.org/show_bug.cgi?id=372116) |
-| [QTerminal](https://github.com/lxqt/qterminal#readme) | [not yet](https://github.com/lxqt/qterminal/issues/839)
-| [screen](https://www.gnu.org/software/screen/) | **yes** |
-| [st](https://st.suckless.org/) | **yes** (but needs to be enabled, see [here](https://git.suckless.org/st/commit/a2a704492b9f4d2408d180f7aeeacf4c789a1d67.html)) |
-| [Terminal.app](https://en.wikipedia.org/wiki/Terminal_(macOS)) | no, but see [workaround](https://github.com/roy2220/osc52pty) |
-| [tmux](https://github.com/tmux/tmux) | **yes** |
-| [Windows Terminal](https://github.com/microsoft/terminal) | **yes** |
-| [rxvt](http://rxvt.sourceforge.net/) | **yes** (to be confirmed) |
-| [urxvt](http://software.schmorp.de/pkg/rxvt-unicode.html) | **yes** (with a script, see [here](https://github.com/ojroques/vim-oscyank/issues/4)) |
-| [xterm.js](https://xtermjs.org/) (Hyper terminal) | [not yet](https://github.com/xtermjs/xterm.js/issues/3260) |
-| [wezterm](https://github.com/wez/wezterm) | [**yes**](https://wezfurlong.org/wezterm/escape-sequences.html#operating-system-command-sequences) |
+| Terminal                                                                                  | OSC52 support                                                                                                                    |
+|-------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------:|
+| [Alacritty](https://github.com/alacritty/alacritty)                                       | **yes**                                                                                                                          |
+| [foot](https://codeberg.org/dnkl/foot)                                                    | **yes**                                                                                                                          |
+| [GNOME Terminal](https://github.com/GNOME/gnome-terminal) (and other VTE-based terminals) | [not yet](https://bugzilla.gnome.org/show_bug.cgi?id=795774)                                                                     |
+| [hterm (Chromebook)](https://chromium.googlesource.com/apps/libapps/+/master/README.md)   | [**yes**](https://chromium.googlesource.com/apps/libapps/+/master/nassh/doc/FAQ.md#Is-OSC-52-aka-clipboard-operations_supported) |
+| [iTerm2](https://iterm2.com/)                                                             | **yes**                                                                                                                          |
+| [kitty](https://github.com/kovidgoyal/kitty)                                              | **yes**                                                                                                                          |
+| [Konsole](https://konsole.kde.org/)                                                       | [not yet](https://bugs.kde.org/show_bug.cgi?id=372116)                                                                           |
+| [QTerminal](https://github.com/lxqt/qterminal#readme)                                     | [not yet](https://github.com/lxqt/qterminal/issues/839)                                                                          |
+| [screen](https://www.gnu.org/software/screen/)                                            | **yes**                                                                                                                          |
+| [st](https://st.suckless.org/)                                                            | **yes** (but needs to be enabled, see [here](https://git.suckless.org/st/commit/a2a704492b9f4d2408d180f7aeeacf4c789a1d67.html))  |
+| [Terminal.app](https://en.wikipedia.org/wiki/Terminal_(macOS))                            | no, but see [workaround](https://github.com/roy2220/osc52pty)                                                                    |
+| [tmux](https://github.com/tmux/tmux)                                                      | **yes**                                                                                                                          |
+| [Windows Terminal](https://github.com/microsoft/terminal)                                 | **yes**                                                                                                                          |
+| [rxvt](http://rxvt.sourceforge.net/)                                                      | **yes** (to be confirmed)                                                                                                        |
+| [urxvt](http://software.schmorp.de/pkg/rxvt-unicode.html)                                 | **yes** (with a script, see [here](https://github.com/ojroques/vim-oscyank/issues/4))                                            |
+| [xterm.js](https://xtermjs.org/) (Hyper terminal)                                         | [not yet](https://github.com/xtermjs/xterm.js/issues/3260)                                                                       |
+| [wezterm](https://github.com/wez/wezterm)                                                 | [**yes**](https://wezfurlong.org/wezterm/escape-sequences.html#operating-system-command-sequences)                               |
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
