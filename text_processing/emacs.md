@@ -4,7 +4,7 @@ title: Emacs
 
 <!-- see also [[file:/share/sync_folders/misc/mznotes/content-org/notes/text_processing_notes/emacs_notes.org][emacs_notes]] -->
 
-See also {{< iref "org-mode" "Org Mode >}}.
+See also {{< iref "org-mode" "Org Mode" >}}.
 
 # Emacs references
 
@@ -67,9 +67,12 @@ See also {{< iref "org-mode" "Org Mode >}}.
 -   [Planet Emacsen](http://planet.emacsen.org/) is an aggregation of
     emacs blogs.
 
--   [Bozhidar Batsov: Emacs Redux](http://emacsredux.com/)
-    ([Emacs Redux rss](http://emacsredux.com/atom.xml) by the authorof _projectile_,
-    _emacs prelude_, _solarized-emacs_, _zenburn_ and numerous packages.
+-   <a name="bbatsov"></a> Bozhidar Batsov write [Emacs Redux](http://emacsredux.com/)
+    ([Emacs Redux rss](http://emacsredux.com/atom.xml)) he is the author of
+    _projectile_, {{< iref "#prelude" "emacs prelude" >}}, _solarized-emacs_, _zenburn_
+    and numerous packages.
+
+    They are in [Github: bbatsov](https://github.com/bbatsov).
 -   Artur Malabarba's [Endless Parentheses](http://endlessparentheses.com/)
     a blog about Emacs. He has also a
     [github repository](https://github.com/Malabarba).
@@ -128,9 +131,10 @@ See also {{< iref "org-mode" "Org Mode >}}.
 -   [Toby 'qubit' Cubitt - Blog](http://www.dr-qubit.org/tags/all.html), he is the
     author of [many packages](http://www.dr-qubit.org/tags/computing-code-emacs.html).
 -   [Jonas Bernoulli: EmacsAir](https://emacsair.me/).
--   [Karl Voit](https://karl-voit.at/tags/emacs/) has an emacs blog, with many org-mode
-    articles.
-    -    Karl Voit Emacs configuration uses
+-   <a name="karl_voit"></a>[Karl Voit](https://karl-voit.at/tags/emacs/)
+    has an emacs blog, with many org-mode articles.
+    -    Karl Voit Emacs has a literal
+        {{< iref "#org-init" "emacs configuration in Org-Mode" >}} described below.
         [Elisp in Org-mode](https://karl-voit.at/2017/06/03/emacs-org/)
         it is available [in its GitHub repository
         ](https://github.com/novoid/dot-emacs/blob/master/config.org).
@@ -139,6 +143,8 @@ See also {{< iref "org-mode" "Org Mode >}}.
     -   [Memacs](https://github.com/novoid/Memacs) extracts metadata (subjects,
         timestamps, contact information, …) from many different existing data sources
         (file names, emails, tweets, bookmarks, …) generates Org mode files.
+    -   [What App am I Using for What and How?](https://karl-voit.at/apps-I-am-using/)
+
 
 # Emacs compatibles terminal editors {#terminal_editors_emacslike}
 -   [Getting started with lightweight alternatives to GNU Emacs
@@ -207,6 +213,8 @@ See also {{< iref "org-mode" "Org Mode >}}.
 -   Nic Ferrier's [Tips on Emacs Lisp programming
     ](http://nic.ferrier.me.uk/blog/2012_07/tips-and-tricks-for-emacslisp)
 -   [Xah Emacs Lisp Tutorial](http://ergoemacs.org/emacs/elisp.html)
+-   [Introduction to Elisp | DummyHead](https://alphaalgorithms.github.io/tags/elisp/)
+-   [Emacs Lisp style guide](https://github.com/bbatsov/emacs-lisp-style-guide)
 
 # Emacs native-compile {#emacs_native_compile}
 Emacs' branch feature/native-comp support native compilation which adds support for
@@ -260,35 +268,29 @@ The branch pgtk-nativecomp can be found in
 
 
 ## Emacs configuration systems
--   [EmacsWiki: Starter Kits](https://www.emacswiki.org/emacs/StarterKits)
-    is a list and activity comparison of the various starter kits.
--   [Emacs Starter Kit](https://github.com/technomancy/emacs-starter-kit/tree/v3)
-    help to manage an emacs configuration, version v3
-    is a guide to various packages and settings. It consist mainly in
-    the marmelade package
-    [better-defaults](https://github.com/technomancy/better-defaults).
-    It recommands also installing magit, {{< iref "#smex" "smex" >}}, ido-ubiquitous,
-    paredit, idle-highlight-mode, find-file-in-project, scpaste.
--   [Emacs Starter Kit](http://eschulte.github.io/emacs24-starter-kit)
-    by [Eric Shulte](http://eschulte.github.io/)
-    was long time ago forked from the previous, but use
-    {{< iref "org-mode#babel" "Literate programming in Org Babel" >}}.
-    -   [GitHub - emacs24-starter-kit](https://github.com/eschulte/emacs24-starter-kit).
 -   <a name=chemacs2></a>[Chemacs2](https://github.com/plexus/chemacs2)
     is an Emacs profile switcher, it makes it easy to run multiple Emacs configurations
     side by side.
+
+### In elisp
+-   [EmacsWiki: Starter Kits](https://www.emacswiki.org/emacs/StarterKits)
+    is a list and activity comparison of the various starter kits.
+
+#### Without Evil
+-   [better-defaults](https://github.com/technomancy/better-defaults).
+    In elpa recommands also installing magit, {{< iref "#smex" "smex" >}}, ido-ubiquitous,
+    paredit, idle-highlight-mode, find-file-in-project, scpaste.
 -   <a name="doom"></a>[Doom](https://github.com/hlissner/doom-emacs/) (MIT License)
     is a configuration framework for emacs using {{< iref "#straight" "Straight" >}}.
-    It is like Spacemacs but lighter.
+        It is like{{< iref "#spacemacs" "Spacemacs" >}} but lighter.
     -   [Doom modules index
         ](https://github.com/hlissner/doom-emacs/blob/develop/docs/modules.org)
--   [emacs.d](https://github.com/purcell/emacs.d) by [Steve Purcell](https://github.com/purcell)
-    an emacs configuration used in Chen bin [Master Emacs in one year
-    ](https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-en.org).
+-   [emacs.d](https://github.com/purcell/emacs.d) by
+    [Steve Purcell](https://github.com/purcell)
 -   <a name="prelude"></a>[Prelude](https://github.com/bbatsov/prelude)
-    is an emacs distribution configuration systems.
-    -   [Prelude Manual](https://prelude.emacsredux.com/en/latest/).
-        is a complete manual with a section for each module.
+    is an emacs distribution by {{< iref "#bbatsov" "Bozhidar Batsov" >}}.
+-   [Prelude Manual](https://prelude.emacsredux.com/en/latest/).
+    is a complete manual with a section for each module.
     It use a [list of packages
     ](https://github.com/bbatsov/prelude/blob/master/core/prelude-packages.el)
     in beginning 2020 it was:
@@ -301,8 +303,19 @@ The branch pgtk-nativecomp can be found in
     >    supersave, [undo-tree][], volatile-highlights, [which-key][],
     >    [zenburn-theme][zenburn], zop-to-char
 
--   [Oleh Krehel _abo-abo_ oremacs
-    ](https://github.com/abo-abo/oremacs) by the author of
+-   [scimax](https://github.com/jkitchin/scimax)
+    from [John Kitchin](https://github.com/jkitchin)
+    (leader of  [Kitchin Group](https://kitchingroup.cheme.cmu.edu/))
+    An emacs starter kit for scientists and engineers.
+
+#### With Evil
+-   <a name=spacemacs"></a>[Spacemacs](https://www.spacemacs.org/)
+    is a configuration kit focused on Evil.
+    -   [Spacemacs documentation](https://www.spacemacs.org/doc/DOCUMENTATION.html)
+        is quite extensive.
+    -   [Spacemacs Layers](https://www.spacemacs.org/layers/LAYERS.html)
+    -   [Spacemacs - GitHub](https://github.com/syl20bnr/spacemacs)
+-   [Oleh Krehel _abo-abo_ oremacs](https://github.com/abo-abo/oremacs) by the author of
     [oremacs blog](http://oremacs.com/) and many packages
     {{< iref "#ivy" "Ivy" >}},
     {{< iref "#ivy" "swiper" >}},
@@ -312,9 +325,71 @@ The branch pgtk-nativecomp can be found in
     and many [snippets](https://github.com/abo-abo/oremacs/tree/github/snippets),
     there is an init file for each mode that contains few hydra snippets for avy,
     buffer-menu, dired, helm, info, org-roam, projectile, search.
--   [Spacemacs](https://www.spacemacs.org/)
-    is a configuration kit focused on Evil
-    -   [spacemacs - GitHub](https://github.com/syl20bnr/spacemacs)
+-   [redguardtoo/emacs.d](https://github.com/redguardtoo/emacs.d)
+    emacs configuration used by Chen bin _reguardtoo_ author of [Master Emacs in one year
+    ](https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-en.org).
+
+    He also recommands Speve Purcell configuration.
+
+### Literal configuration in Org Mode {#org-init}
+-   [vapniks/org-dotemacs](https://github.com/vapniks/org-dotemacs)
+    by Joe Bloggs _vapniks_ is a library to store your emacs config as an org file,
+    and load code snippets based on tag matches.
+    -   [EmacsWiki: Org Dotemacs](https://www.emacswiki.org/emacs/OrgDotemacs)
+        _reference an older version_.
+
+#### Without Evil
+-   Mike Zamansky has also an [emacs configuration file in org-babel
+    ](https://github.com/zamansky/dot-emacs/blob/main/config.org).
+    it is not commented inside the Org File but in his
+    [Using Emacs video Series - C'est la Z](https://cestlaz.github.io/stories/emacs/).
+
+#### With evil
+-   {{< iref "howardism" "Howard Abrams" >}} has his
+    [emacs configuration _hamacs_](https://gitlab.com/howardabrams/hamacs) which uses
+    org init files and literal programming.
+
+    It seems to be a continuation of
+    [his dot files](https://github.com/howardabrams/dot-files), he made an older
+    tutorial in
+    [Customizing Emacs](http://www.howardism.org/Technical/Emacs/emacs-init.html).
+-   İsa Mert Gürbüz _isamert_ [emacs org configuration
+    ](https://github.com/isamert/dotfiles/blob/master/emacs/index.org),
+    his [isamert Blog](https://isamert.net/) contains few emacs posts like
+    [Global interactive Emacs functions
+    ](https://isamert.net/2022/03/16/global-interactive-emacs-functions.html).
+-   [Emacs Starter Kit](http://eschulte.github.io/emacs24-starter-kit)
+    by [Eric Shulte](http://eschulte.github.io/)
+    was long time ago forked from the previous, but use
+    {{< iref "org-mode#babel" "Literate programming in Org Babel" >}}.
+    -   [GitHub - emacs24-starter-kit](https://github.com/eschulte/emacs24-starter-kit).
+-   {{< iref "#karl_voit" "Karl Voit" >}} : [My Emacs Configuration In Org-mode
+    ](https://karl-voit.at/2017/06/03/emacs-org/): which result
+    in [Karl Voit org-mode emacs configuration
+    ](https://github.com/novoid/dot-emacs/blob/master/config.org) ([raw file
+    ](https://raw.githubusercontent.com/novoid/dot-emacs/master/config.org))
+    in [novoid/dot-emacs](https://github.com/novoid/dot-emacs). It is
+    generated by his
+    [init.el](https://github.com/novoid/dot-emacs/blob/master/init.el)
+
+    He uses a tangle script from Holger explained in
+    [Efficient Emacs .org ➞ .el tangling
+    ](https://web.archive.org/web/20190617212948/http://www.holgerschurig.de/en/emacs-init-tangle/)
+    *archived*, but [Holger Shurig configuration
+    ](https://bitbucket.org/holgerschurig/emacsconf) has
+    changed, and he dropped his org configuration that was still
+    available in 2018 in [his old config.org
+    ](https://bitbucket.org/holgerschurig/emacsconf/src/05305bd12addf0dd09517200243edac6da81b47d/config.org).
+
+    Karl Voit has also blogs on his [Org Mode Files and Heading Structure
+    ](https://karl-voit.at/2020/05/03/current-org-files/) and
+    [Emacs Config Switch Depending on Hostname or Operating System
+    ](https://karl-voit.at/2017/02/11/my-system-is-foobar/).
+-   David Wilson [Emacs.org](https://github.com/daviwil/dotfiles/blob/master/Emacs.org)
+    extracted from his [literate dotfiles](https://github.com/daviwil/dotfiles).
+
+    He is also the author of the [emacs-from-scratch serie
+    ](https://github.com/daviwil/emacs-from-scratch)
 
 ## Emacs packaging
 -   [Emacs Wiki : Category Packaging](https://www.emacswiki.org/emacs/CategoryPackaging)
@@ -336,7 +411,9 @@ The branch pgtk-nativecomp can be found in
     allows you to install and manage elisp code for Emacs.
     It supports  different types of sources including elpa packages, git, privately hosted code ....
     El get  is able to install the packages, update them and remove them,
-    it will also init them for you. _el-get_ is less useful than previously, because
+    it will also init them for you.
+
+    _el-get_ is nowady less useful than previously, because
     newer package managers like {{< iref "#cask" "Cask" >}},
     {{< iref "#straight" "Straight" >}}, {{< iref "#borg" "Borg" >}},
     {{< iref "#quelpa"  "Quelpa" >}} allow the use of any git repository.
@@ -438,15 +515,58 @@ You find also nice packages in the
 -   [reStructuredText mode][rst]
     is used for {{< iref "rest" "reStructuredText" >}}.
 
+## Buffer management
+In the Emacs Manual you find a [Buffers Section
+](https://www.gnu.org/software/emacs/manual/html_node/emacs/Buffers.html).
+-   [BufferMenu
+](https://www.gnu.org/software/emacs/manual/html_node/emacs/Several-Buffers.html)
+is the standard buffer mnagement package included in emacs.
+    -   [EmacsWiki: Buffer Menu](https://www.emacswiki.org/emacs/BufferMenu)
+Two other package are provided with emacs but only [succintly presented in the Emacs
+Manual](https://www.gnu.org/software/emacs/manual/html_node/emacs/Buffer-Menus.html).
+-   [EmacsWiki: Buffer Selection](https://www.emacswiki.org/emacs/BufferSelection).
+-   [EmacsWiki: Ibuffer Mode](https://www.emacswiki.org/emacs/IbufferMode)
 
-## Editor
--   [Evil - Github](https://github.com/emacs-evil/evil) (GPL-3.0)
-    is an extensible vi layer for Emacs. It emulates the main features of Vim, and
-    provides facilities for writing custom extensions.
-    -   [EmacsWiki: Evil](https://www.emacswiki.org/emacs/Evil).
-    -   [Evil documentation](https://evil.readthedocs.io/en/latest/)
+## Keybindings
+-   [Mastering Key Bindings in Emacs
+    ](https://www.masteringemacs.org/article/mastering-key-bindings-emacs)
+-   [EmacsWiki: Category Keys](https://www.emacswiki.org/emacs/CategoryKeys)
+-   [general.el][] (GPL-3.0)
+    general.el provides a more convenient method for binding keys in emacs
+    (for both evil and non-evil users).
+-   <a name="hydra"></a>[Hydra][hydra]
+    by Oleh Krehel _abo-abo_ group common group of command by prefix, with an
+    interactive chooser for the bindings.
 
+    [hydra Wiki](https://github.com/abo-abo/hydra/wiki/): contains docs, many examples
+    and howtos:
+    -   [Hydras by Topic](https://github.com/abo-abo/hydra/wiki/Hydras-by-Topic)
+    -   [Nesting Hydras](https://github.com/abo-abo/hydra/wiki/Nesting-Hydras)
+    -   [The scimax Hydra
+        ](https://github.com/jkitchin/scimax/blob/master/scimax-hydra.el)
+        from [scimax](https://github.com/jkitchin/scimax) is an interesting method of
+        nesting hydras by pushing them in a stack, that the user can browse.
+    -   [Using context dependent Hydras in Emacs
+        ](https://dfeich.github.io/www/org-mode/emacs/2018/05/10/context-hydra.html).
+    -   [Making a hydra cheatsheet for Lispy :: Sacha Chua
+        ](https://sachachua.com/blog/2021/04/emacs-making-a-hydra-cheatsheet-for-lispy/)
+    -   [Search hydras on GitHub
+        ](https://github.com/search?q=defhydra++extension%3Ael+-filename%3Ahydra&type=Code&utf8=%E2%9C%93)
 
+    -   See {{< iref "#hercules" "hercules" >}} for an automatic hydra menu builder.
+
+## Evil
+[Evil - Github](https://github.com/emacs-evil/evil) (GPL-3.0)
+is an extensible vi layer for Emacs. It emulates the main features of Vim, and
+provides facilities for writing custom extensions.
+
+-   [EmacsWiki: Evil](https://www.emacswiki.org/emacs/Evil).
+-   [Evil documentation](https://evil.readthedocs.io/en/latest/)
+-   [evil-guide](https://github.com/noctuid/evil-guide)
+    a guide for using emacs with evil targeted to vim users.
+-   [Evil - WikEmacs](https://wikemacs.org/wiki/Evil)
+-   [evil-escape][] Customizable key sequence to escape from insert state and everything
+    else in Emacs.
 
 ## File explorers
 The Integrated Emacs file explorer is [Dired][dired]
@@ -476,7 +596,7 @@ The Integrated Emacs file explorer is [Dired][dired]
        provide a third pane at the bottom with buttons you can click to perform many
        basic operations.
 
-## Emacs Bookmarks
+## Bookmarks and navigation {#bookmarks}
 
 [Emacs Bookmarks
 ](https://www.gnu.org/software/emacs/manual/html_node/emacs/Bookmarks.html)
@@ -518,14 +638,20 @@ or a
 -   [button-lock][] provide visual navigation, with two-way movement within  local and
     global mark rings.
 -   [mark-tools][]  allow navigating the global and local mark rings in Emacs.;;
+-   [multiple-cursors.el](https://github.com/magnars/multiple-cursors.el) (GPL)
+    multiple cursors for emacs.
+
 
 ## Frames
 -   [Frames - Emacs Manual
     ](https://www.gnu.org/software/emacs/manual/html_node/emacs/Frames.html)
 _   [EmacsWiki: Category Frames](https://www.emacswiki.org/emacs/CategoryFrames),
     [Frame Modes](https://www.emacswiki.org/emacs/FrameModes)
--   [posframes][] pop a frame at point. It is used in [ivy-posframes][] and
+-   [posframes][] pop a frame at point. It is used in [ivy-posframes][],
+    [hydra-postframes][]
     [which-key-posframes][].
+
+
 
 ## Desktop integration
 -   [ewmctrl][] uses {{< man "wmctrl" >}} to manage desktop windows. It creates a buffer
@@ -579,10 +705,10 @@ _   [EmacsWiki: Category Frames](https://www.emacswiki.org/emacs/CategoryFrames)
     less polished than {{< iref "#hydra" "Hydra" >}} but does not need manual
     configuration of the completions.
 
-    It was forked and now replaces [guide-key][] which is no longer maintained.
+        It was  fork of [guide-key][]   which is no longer maintained.
 
 ## Programming, Projects
--   [Format all the code](https://github.com/lassik/emacs-format-all-the-code) (MIT License)
+-   [format-all-the-code][] (MIT License)
     Lets you auto-format source code in many languages using the same command for all
     languages, instead of learning a different Emacs package and formatting command for
     each language.
@@ -591,17 +717,16 @@ _   [EmacsWiki: Category Frames](https://www.emacswiki.org/emacs/CategoryFrames)
     It has a long list of [supported Languages
     ](https://www.flycheck.org/en/latest/languages.html)
     -   [Flycheck documentation](https://www.flycheck.org/en/latest/index.html)
--   [find-file-in-project
-    ](https://github.com/technomancy/find-file-in-project)
-    find a file in any project using find. It is in melpa and use
-    {{< iref "#ivy" "ivy" >}}.
--   [perspective](https://github.com/nex3/perspective-el)
-    provides multiple workspaces or "perspectives".  Each perspective
-    represent a separate project with a window configuration and a set
-    of buffers. In a perspective only its buffers are available by
-    default. Perspective is in melpa as well with a
-    perspective-projectile integration.
--   [Polymode](https://polymode.github.io/) is a framework for multiple major modes
+-   [find-file-in-project][] find a file in any project using find. It is in melpa and
+    use {{< iref "#ivy" "ivy" >}}.
+-   <a name="perspective"></a>[perspective][]
+    provides multiple workspaces or "perspectives".  Each perspective represent a
+    separate project with a window configuration and a set of buffers. In a perspective
+    only its buffers are available by default. Perspective is in melpa as well with a
+    [perspective-projectile integration][persp-projectile].
+-   [Language Server Protocol](https://en.wikipedia.org/wiki/Language_Server_Protocol)
+    has support for Emacs in [LSP Mode][lsp-mode]
+-   [Polymode][polymode] is a framework for multiple major modes
     (MMM) inside a single Emacs buffer. It is in elpa.
     -   [GitHub - Polymode](https://github.com/polymode/polymode)
     -   [Comparaison of Libraries providing multiple Major Modes - Emacswiki
@@ -616,35 +741,21 @@ _   [EmacsWiki: Category Frames](https://www.emacswiki.org/emacs/CategoryFrames)
     [EmacsWiki: Narrow Indirect](https://www.emacswiki.org/emacs/NarrowIndirect)
     the source code is [narrow-indirect.el
     ](https://github.com/emacsmirror/narrow-indirect/blob/master/narrow-indirect.el).
--   [Projectile](https://github.com/bbatsov/projectile)
-    is a project interaction library for Emacs.
-    It can manage git, mercurial, darcs, bazaar, lein, maven, sbt,
-    scons, rebar and bundler projects,; As well as any directory with
-    a `.projectile` file in it. It is in melpa. I use it with some
+-   [Projectile][projectile]
+    is a project interaction library for Emacs.  It can manage git, mercurial, darcs,
+    bazaar, lein, maven, sbt, scons, rebar and bundler projects,; As well as any
+    directory with a `.projectile` file in it. It is in melpa. I use it with some
     extensions
-    -   [counsel-projectile](https://github.com/ericdanan/counsel-projectile)
-        enhence projectile with {{< iref "#ivy" "counsel" >}},
+    -   [counsel-projectile][]
+        enhance projectile with {{< iref "#ivy" "counsel" >}},
         the [manual is in the README
         ](https://github.com/ericdanan/counsel-projectile/blob/master/README.md).
-    -   [persp-projectile
-            ](https://github.com/bbatsov/persp-projectile) (for
-            {{< iref "#perspective" "perspective" >}})
+    -   [persp-projectile][] (for {{< iref "#perspective" "perspective" >}})
     -   [Exploring large projects with Projectile and Helm Projectile
         ](http://tuhdo.github.io/helm-projectile.html)
 
 ## Search
 -   [ag][] allows you to search using ag from inside Emacs.
-
-## Keys
--   [Mastering Key Bindings in Emacs
-    ](https://www.masteringemacs.org/article/mastering-key-bindings-emacs).
-
--   [general.el](https://github.com/noctuid/general.el) (GPL-3.0)
-    provides an unified interface for key definitions.
--   <a name="hydra"></a>[Hydra][hydra]
-    by Oleh Krehel _abo-abo_ group common group of command by prefix, with an
-    interactive chooser for the bindings.
-    See {{< iref "#hercules" "hercules" >}} for an automatic hydra menu builder.
 
 ## Templates {#templates}
 There are many templates languages for Emacs, most of them are listd in
@@ -671,7 +782,7 @@ the[collection of snippets of Andre Cotti
 also in the elpa package yasnippet-snippets, for many specific languages there is an
 additional snippet collections in an elpa package.
 
--   {{< iref "emacs#howardism" "Howard Abrams" >}}  [Yasnippet Tutorial
+-   {{< iref "#howardism" "Howard Abrams" >}}  [Yasnippet Tutorial
     ](http://howardism.org/Technical/Emacs/templates-tutorial.html)
 -   [Yasnippet Manual](http://joaotavora.github.io/yasnippet/)
 -   [EmacsWiki: Yasnippet](https://www.emacswiki.org/emacs/Yasnippet)
@@ -684,6 +795,14 @@ It allows to have different sets of text snippets for different situations while
 Yasnippet defines a set of snippets for each mode.
 
 -   [Introduction to Yankpad](https://kungsgeten.github.io/yankpad.html)
+
+[auto-yasnippet](https://github.com/abo-abo/auto-yasnippet) (GPL)
+by _abo-abo_ Oleh Krehel create the snippet on the go, without leaving the current buffer.
+
+
+## Multimedia
+-   [isamert/empv.el](https://github.com/isamert/empv.el)
+    An Emacs media player, based on mpv.
 
 ## Other packages
 
@@ -919,8 +1038,8 @@ In emacs we have:
 -   [plan9 theme](https://github.com/john2x/plan9-theme.el) which support compilation,
     grep, ag, isearch, table, [ledger](https://www.ledger-cli.org/), clojure, diff,
     diff-hl, dired/dired+/dired-subtree, elfeed, erc, company, flycheck, git-gutter,
-    hl-line/hl-sexp, ido, ivy, js2, lsp-mode, magit, sml-mode-line, web-mode, org mode,
-    mue4, message.
+    hl-line/hl-sexp, ido, ivy, js2, [lsp-mode][], magit, sml-mode-line, web-mode, org
+    mode, mue4, message.
 -   [punpun](https://github.com/wasamasa/punpun-theme) .
 -   [tao][] a two uncoloured color themes for Emacs: tao-yin and tao-yang (dark and
     sepia). It support compilation, grep, make, isearch, newsticker, ace, ack, auctex,
@@ -1059,6 +1178,7 @@ It seems that only few themes support [Markup Faces][markup-faces], among them y
 [cua]: https://www.emacswiki.org/emacs/CuaMode "Cua Mode"
 [color-moccur]: https://www.emacswiki.org/emacs/color-moccur.el
 [comint]: https://www.emacswiki.org/emacs/ComintMode
+[counsel-projectile]: https://github.com/ericdanan/counsel-projectile
 [deadgrep]: https://github.com/Wilfred/deadgrep
 [debbugs]:  http://elpa.gnu.org/packages/debbugs.html
 [define-word]: https://github.com/abo-abo/define-word/blob/master/define-word.el
@@ -1075,12 +1195,16 @@ It seems that only few themes support [Markup Faces][markup-faces], among them y
 [elscreen]: https://github.com/knu/elscreen
 [enh-ruby]:  http://github.com/zenspider/Enhanced-Ruby-Mode "Enhanced ruby mode"
 [ERC]: https://www.emacswiki.org/emacs/ERC
+[evil-escape]: https://github.com/syl20bnr/evil-escape
 [ewmctrl]: https://github.com/flexibeast/ewmctrl
 [eww]: https://www.gnu.org/software/emacs/manual/html_node/eww/
-[font-lock]: https://www.gnu.org/software/emacs/manual/html_node/emacs/Font-Lock.html
+[find-file-in-project]: https://github.com/technomancy/find-file-in-project
 [fixme]: https://www.emacswiki.org/emacs/FixmeMode
 [flycheck]: https://www.flycheck.org/en/latest/
+[font-lock]: https://www.gnu.org/software/emacs/manual/html_node/emacs/Font-Lock.html
+[format-all-the-code]: https://github.com/lassik/emacs-format-all-the-code
 [geiser]: http://www.nongnu.org/geiser/
+[general.el]: https://github.com/noctuid/general.el
 [git-commit]: https://github.com/rafl/git-commit-mode
 [go-mode]: https://github.com/dominikh/go-mode.el
 [guide-key]: https://github.com/kai2nenobu/guide-key
@@ -1088,6 +1212,7 @@ It seems that only few themes support [Markup Faces][markup-faces], among them y
 [hercules]: https://gitlab.com/jjzmajic/hercules.el
 [hi-lock]: https://github.com/emacs-mirror/emacs/blob/master/lisp/hi-lock.el
 [hydra]: https://github.com/abo-abo/hydra
+[hydra-postframes]: https://github.com/Ladicle/hydra-posframe
 [imenu]: https://www.emacswiki.org/emacs/ImenuMode
 [info+]: https://www.emacswiki.org/emacs/InfoPlus
 [ivy]: https://github.com/abo-abo/swiper
@@ -1102,6 +1227,7 @@ It seems that only few themes support [Markup Faces][markup-faces], among them y
 [lui]: https://www.emacswiki.org/emacs/lui.el "Linewise User Interface"
 [linum-relative]: https://github.com/emacsmirror/linum-relative
 [lsp-ui]: https://github.com/emacs-lsp/lsp-ui
+[lsp-mode]: https://emacs-lsp.github.io/lsp-mode
 [lusty-explorer]: https://www.emacswiki.org/emacs/LustyExplorer
 [markup-faces]: https://github.com/sensorflo/markup-faces/blob/master/markup-faces.el
 [mark-tools]: https://github.com/stsquad/emacs-mark-tools
@@ -1113,7 +1239,10 @@ It seems that only few themes support [Markup Faces][markup-faces], among them y
 [pabbrev]: https://www.emacswiki.org/emacs/PredictiveAbbreviation
 [polymode]: https://polymode.github.io/
 [posframes]: https://github.com/tumashu/posframe
+[perspective]: https://github.com/nex3/perspective-el
+[persp-projectile]: https://github.com/bbatsov/persp-projectile
 [powerline]: http://github.com/milkypostman/powerline/
+[projectile]: https://github.com/bbatsov/projectile
 [rainbow-delimiters]: http://www.emacswiki.org/emacs/RainbowDelimiters
 [realgud]: https://github.com/realgud/realgud
 [rebuilder]: https://www.emacswiki.org/emacs/ReBuilder
