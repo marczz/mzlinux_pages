@@ -81,20 +81,12 @@ may be switched between sessions.
     ](http://blog.hawkhost.com/2010/06/28/tmux-the-terminal-multiplexer/),
     [Part II
     ](http://blog.hawkhost.com/2010/07/02/tmux-%E2%80%93-the-terminal-multiplexer-part-2/)
+-   [TMUX: My Getting Started Guide](http://howardism.org/Technical/Linux/tmux.html)
+    by {{< iref "emacs#howardism" "Howard Abrams" >}}.
 -   [tmux in practice
     ](https://medium.com/free-code-camp/tmux-in-practice-series-of-posts-ae34f16cfab0)
     a series of tutorials by Alexey Samoshkin. He also give his
     [tmux configuration](https://github.com/samoshkin/tmux-config).
--   [Tmuxinator](https://github.com/aziz/tmuxinator) (BSD like
-    Licence)
-    [Teamocil](https://github.com/remiprev/teamocil) (MIT license)
-    are sessions managers for tmux written in ruby with YAML
-    configuration.
-    _tmuxinator is in Debian_.
--   [tmuxp](https://tmuxp.git-pull.com/en/latest/)
-    is a _tmux_ session manager written in python with JSON or
-    YAML configuration. It is _in Debian_.
-    -   [ArchWiki: tmuxp](https://wiki.archlinux.org/index.php/Tmuxp).
 -   <a name="powerline"></a>[Powerline (GitHub)](https://github.com/powerline/powerline)
     is a statusline plugin for vim, zsh, bash, _tmux_, IPython,
     Awesome and Qtile.
@@ -119,6 +111,7 @@ may be switched between sessions.
 ### Tmux themes {#tmux_themes}
 See also {{< iref "desktop#color_themes" Deskto color themes >}}
 
+-   [awesome-tmux: Themes]https://github.com/rothgar/awesome-tmux#themes)
 -   [Dr. Bunsen / The Text Triumvirate (archive)
     ](https://web.archive.org/web/20200414221857/https://www.drbunsen.org/the-text-triumvirate/)
 -   [tmux themes - awesome-tmux
@@ -146,7 +139,46 @@ See also {{< iref "desktop#color_themes" Deskto color themes >}}
 -   [charlietag/tmux-themes](https://github.com/charlietag/tmux-themes)
     an plugin that applying the tmux themes maintened by the author.
 
+### Tmux session managers
+
+-   [Tmuxinator](https://github.com/aziz/tmuxinator) (BSD like Licence)
+    [Teamocil](https://github.com/remiprev/teamocil) (MIT license)
+    are sessions managers for tmux written in ruby with YAML
+    configuration.
+    _tmuxinator is in Debian_.
+-   [tmuxp](https://github.com/tmux-python/tmuxp) (MIT License)
+    is a _tmux_ session manager written in python with JSON or
+    YAML configuration. It is _in Debian_.
+    -   [tmuxp documentation](https://tmuxp.git-pull.com/)
+    -   [ArchWiki: tmuxp](https://wiki.archlinux.org/index.php/Tmuxp).
+-   [tmux-resurrect](https://github.com/tmux-plugins/tmux-resurrect) (MIT License)
+    restore tmux environment after system restart. It is compatible
+    with tmux plugin manager.
+
+    It is a bash script that is an alternative to the ruby program _tmuxinator_.
+
+    _tmux-resurrect_ can [save and restore tmux pane contents
+    ](https://github.com/tmux-plugins/tmux-resurrect/blob/master/docs/restoring_pane_contents.md).
+    It can also save vim/neovim session using
+    [vim-obsession](https://github.com/tpope/vim-obsession).
+
+    The list of [programs to be restored with the session
+    ](https://github.com/tmux-plugins/tmux-resurrect/blob/master/docs/restoring_programs.md)
+    can be configured to extend the minimal default program list.
+
+    The default key bindings are `<prefix> + Ctrl-s` to save and
+    `<prefix> + Ctrl-r` to restore the session.
+
+    The last session is restored by default but the last 5 [older session can be restored
+    ](https://github.com/tmux-plugins/tmux-resurrect/blob/master/docs/restoring_previously_saved_environment.md)
+    or any session of the last 30 days.
+
 ### Tmux addons
+-   [Tmux plugin  (TPM)](https://github.com/tmux-plugins/tpm) (MIT License)
+    installs and loads tmux plugins.
+    [Making a plugin tpm compatible
+    ](https://github.com/tmux-plugins/tpm/blob/master/docs/how_to_create_plugin.md)
+    is easy.
 -   [tmux plugins repository](https://github.com/tmux-plugins)
 -   [Battery](https://github.com/Goles/Battery) by Nicolas Goles
     is a little bash script that uses
