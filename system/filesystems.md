@@ -115,11 +115,15 @@ ext3/ext4 file system. It offers numerous {{< wp "Btrfs#Features" "new features"
 including copy-on-write snapshots of files and subvolumes, checksums, transparent
 compresssion.
 
--   The main site is the
-    [Kernel Brtfs Wiki](https://btrfs.wiki.kernel.org)
-    it holds on the Home page a [list of Guides and articles
-    ](https://btrfs.wiki.kernel.org/index.php/Main_Page#Guides_and_usage_information)
-    and the [Btrfs FAQ](https://btrfs.wiki.kernel.org/index.php/FAQ).
+-   [BTRFS documentation](https://btrfs.readthedocs.io/en/latest/)
+-   [Kernel Brtfs Wiki](https://btrfs.wiki.kernel.org)
+    reference  on the Home page
+    -   [list of Guides and articles
+        ](https://btrfs.wiki.kernel.org/index.php/Main_Page#Guides_and_usage_information)
+    -   [Btrfs FAQ](https://btrfs.wiki.kernel.org/index.php/FAQ).
+    -   [SysadminGuide - btrfs Wiki
+        ](https://btrfs.wiki.kernel.org/index.php/SysadminGuide)
+-   [Manual pages — BTRFS documentation](https://btrfs.readthedocs.io/en/latest/man-index.html)
 -   [Suse storage administration: Btrfs filesystem
     ](https://documentation.suse.com/sles/15-SP3/html/SLES-all/cha-filesystems.html#sec-filesystems-major-btrfs)
     -   [Troubleshouting filesystems
@@ -135,8 +139,6 @@ compresssion.
 -   [GentooWiki: Btrfs](https://wiki.gentoo.org/wiki/Btrfs),
     [Btrfs/System Root Guide - Gentoo Wiki
     ](https://wiki.gentoo.org/wiki/Btrfs/System_Root_Guide)
--   Manpages: {{< man "mkfs.btrfs(8)" >}}, {{< man "btrfsctl(8)" >}},
-    {{< man "btrfs-show(8)" >}}, {{< man "mkfs.btrfs(8)" >}} and other in brtfs-tools.
 -   [Ubuntu Community Help: Btrfs
     ](https://help.ubuntu.com/community/btrfs).
 -   [Btrfs Maintenance](https://github.com/kdave/btrfsmaintenance/blob/master/)
@@ -165,14 +167,6 @@ storage, but a single subvolume can use all space.
 
 ### Btrfs backup
 
--   [Snapper](https://en.opensuse.org/Portal:Snapper) (GPL-2.0)
-    is the most popular btrfs backup tool.
-    -   [Snapper documentation](http://snapper.io/documentation.html),
-        [Snapper FAQ](http://snapper.io/faq.html)
-    -   [Snapper - Github](https://github.com/openSUSE/snapper) (GPL-2.0).
-    -   [System Recovery and Snapshot Management with Snapper | SUSE Administration
-        Guide](https://documentation.suse.com/sles/12-SP4/html/SLES-all/cha-snapper.html)
-
 We use {{< man "btrfs-send" >}} and {{< man "btrfs-receive" >}} for transferring
 snapshots.
 
@@ -180,7 +174,7 @@ This is described in
 [Incremental Backup - btrfs Wiki](https://btrfs.wiki.kernel.org/index.php/Incremental_Backup)
 
 The wiki gives also few of the scripts created to implement an incremental backup.
-
+The most used tool is {{< iref "#snapper" "Snapper" >}} you find in next section.
 
 -   [btrbk](https://digint.ch/btrbk/) (GPL-3.0)
     is a single perl script, which allows creation of backups from multiple sources to
@@ -240,6 +234,20 @@ Tutorials on how to make backup using btrfs send/receive:
     _2014_.
 -   [NAS Backups, Part 2: Btrfs send / receive
     ](https://starbeamrainbowlabs.com/blog/article.php?article=posts%2F472-nas-backups-part-2-btrfs-send-recieve.html)
+
+## Snapper {#snapper}
+[Snapper](https://en.opensuse.org/Portal:Snapper) (GPL-2.0)
+is the most popular btrfs backup tool.
+-   [Snapper - Github](https://github.com/openSUSE/snapper) (GPL-2.0).
+-   [Snapper documentation](http://snapper.io/documentation.html),
+    [Snapper FAQ](http://snapper.io/faq.html)
+-   [Snapper Tutorial](http://snapper.io/tutorial.html)
+-   [Manpage: snapper](http://snapper.io/manpages/snapper.html)
+-   [Portal:Snapper - openSUSE](https://en.opensuse.org/Portal:Snapper):gives all
+    snapper related documents. It includes a tutorial, FAQ, System Recovery and Snapshot
+    Management with Snapper, and the manpages.
+-   [Snapper - ArchWiki](https://wiki.archlinux.org/index.php/Snapper)
+-   RedHat no longer use snapper since redhat 8.
 
 ## Btrfs deduplication {#btrfs_dedupe}
 Block deduplication ib btrfs is done when we use the `cp --reflink` command when doing a
