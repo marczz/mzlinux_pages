@@ -9,8 +9,11 @@ See also
 
 # References
 
--   [ArchWiki: Category Status monitoring and notification
-    ](https://wiki.archlinux.org/index.php/Category:Status_monitoring_and_notification)
+-   [ArchWiki](https://wiki.archlinux.org/index.php/):
+    -   [Category Status monitoring and notification
+        ](https://wiki.archlinux.org/index.php/Category:Status_monitoring_and_notification)
+    -   [Benchmarking](https://wiki.archlinux.org/title/Benchmarking)
+        refer to many tools to test Hdrives: __s__, __iozone__, __Bonnie++__, ...
 -   Wikipedia {{< wp "System monitor" >}}
 -   [Top 25 Best Linux Performance Monitoring and Debugging Tools
     ](http://www.thegeekstuff.com/2011/12/linux-performance-monitoring-tools/)
@@ -261,8 +264,6 @@ Is a fast, highly customizable system info bash script.
 ## I/O
 -   {{< man "iotop" >}} - simple top-like I/O monitor.
 
-## Network
--   [slurm](https://github.com/mattthias/slurm) command line network load monitor.
 
 ## Performance
 
@@ -281,7 +282,7 @@ I put here tools that are specifically aimed to network monitoring,
 the tools that monitor both system and network are in the section
 {{< iref "#system_monitoring" "System monitoring" >}}
 while command line tools are in
-{{< iref "#monitoring_tools" "Monitoring Tools" >}}..
+{{< iref "#monitoring_tools" "Monitoring Tools" >}}.
 
 Basic network monitoring tools like _netstat_, _ss_, _nmap_, _iptraf_,
 _tracepath_, _traceroute_, _mtr_ , _nethogs_ are in the section
@@ -289,6 +290,8 @@ _tracepath_, _traceroute_, _mtr_ , _nethogs_ are in the section
 
 See also the section {{< iref "nettools#traffic_shaping" "Traffic shaping" >}}
 
+-   [NetworkMonitoring - Debian Wiki](https://wiki.debian.org/NetworkMonitoring)
+    is a list of Servers Monitoring Softwares Implementation Guides and Tutorials.
 -   <a name="bwm-ng"></a>[Bwm-ng
     ](http://www.gropp.org/?id=projects&sub=bwm-ng)
     Bandwidth Monitor NG is a small and simple console-based live
@@ -334,7 +337,7 @@ See also the section {{< iref "nettools#traffic_shaping" "Traffic shaping" >}}
        [Chapter 22 Monitoring Server Performance
        ](http://www.linuxhomenetworking.com/wiki/index.php/Quick_HOWTO_:_Ch22_:_Monitoring_Server_Performance)
        deal with SNMP and with {{< iref "#mtrg" "MTRG" >}}
-
+-   [slurm](https://github.com/mattthias/slurm) command line network load monitor.
 -   [VnStat](http://humdi.net/vnstat/) is a console-based network
     traffic monitor. It has graphing capabilities and in included in
     Debian as vnstat and vnstati.
