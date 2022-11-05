@@ -75,9 +75,11 @@ and {{< iref "hdrive#partitioning" "partitioning" >}}.
 
 -   {{< wp "ReiserFS" >}} is a very fast journaled filesystem based on fast
     balanced tree (Reiser4 uses dancing trees).
--   {{< wp "ZFS" >}} ({{< wp "CDDL" >}} License) is a  file system and logical volume manager designed by Sun.
-     ZFS ihas data integrity verification, support for high storage capacities,
-    filesystem and volume management, snapshots and copy-on-write clones, continuous integrity checking and automatic repair, RAID-Z and native NFSv4 ACLs.
+-   {{< wp "ZFS" >}} ({{< wp "CDDL" >}} License) is a file system and logical volume
+     manager designed by Sun.  ZFS ihas data integrity verification, support for high
+     storage capacities, filesystem and volume management, snapshots and copy-on-write
+     clones, continuous integrity checking and automatic repair, RAID-Z and native NFSv4
+     ACLs.
     -   A blog from Richard Hartmann:
         [Raid Suck](http://richardhartmann.de/blog/posts/2012/02/RAID-sucks/)
         propose to turn from Raid to ZFS.
@@ -139,8 +141,7 @@ compresssion.
 -   [GentooWiki: Btrfs](https://wiki.gentoo.org/wiki/Btrfs),
     [Btrfs/System Root Guide - Gentoo Wiki
     ](https://wiki.gentoo.org/wiki/Btrfs/System_Root_Guide)
--   [Ubuntu Community Help: Btrfs
-    ](https://help.ubuntu.com/community/btrfs).
+-   [Ubuntu Community Help: Btrfs](https://help.ubuntu.com/community/btrfs).
 -   [Btrfs Maintenance](https://github.com/kdave/btrfsmaintenance/blob/master/)
     (GPL-2.0)
     a set of scripts to automate scrub, balance, trim or defragmentation.
@@ -155,9 +156,10 @@ compresssion.
      compression types and effective compression ratio.
 
 The use of subvolumes is explained in the
-[Btrfs FAQ](https://btrfs.wiki.kernel.org/index.php/FAQ) in the [Subvolume section
-](https://btrfs.wiki.kernel.org/index.php/FAQ#Subvolumes) the choice bteween using btrfs
-and subvolumes over a raw partition or over a LVM layer is discussed in
+[Btrfs FAQ](https://btrfs.wiki.kernel.org/index.php/FAQ) in the
+[Subvolume section](https://btrfs.wiki.kernel.org/index.php/FAQ#Subvolumes)
+the choice bteween using btrfs and subvolumes over a raw partition or over a LVM layer
+is discussed in
 [Interaction with partitions, device managers and logical volumes
 ](https://btrfs.wiki.kernel.org/index.php/FAQ#Interaction_with_partitions.2C_device_managers_and_logical_volumes).
 To summarize: a raw partition has a light performance benefit, but you can no longer
@@ -174,7 +176,7 @@ This is described in
 [Incremental Backup - btrfs Wiki](https://btrfs.wiki.kernel.org/index.php/Incremental_Backup)
 
 The wiki gives also few of the scripts created to implement an incremental backup.
-The most used tool is {{< iref "#snapper" "Snapper" >}} you find in next section.
+The most used tool is {{< iref "#snapper" "Snapper" >}} you find in next section.
 
 -   [btrbk](https://digint.ch/btrbk/) (GPL-3.0)
     is a single perl script, which allows creation of backups from multiple sources to
@@ -183,8 +185,8 @@ The most used tool is {{< iref "#snapper" "Snapper" >}} you find in next sectio
     -   [btrbk - README](https://digint.ch/btrbk/doc/readme.html)
     -   [btrbk - GitHub](https://github.com/digint/btrbk)
 -   [btrfs-backup](https://github.com/bob1de/btrfs-backup) (MIT License)
-    incremental atomic backups for btrfs using snapshots with local and/or remote storage.
-    written in python.
+    incremental atomic backups for btrfs using snapshots with local and/or remote
+    storage written in python.
 -   [GitHub - nachoparker/btrfs-snp](https://github.com/nachoparker/btrfs-snp) and
     [GitHub - nachoparker/btrfs-sync](https://github.com/nachoparker/btrfs-sync)
     Automatic BTRFS snapshots and sync of BTRFS snapshots, locally or through SSH
@@ -275,10 +277,11 @@ Some file deduplication programs listed in the
     repository.
 -   <a name="duperemove"></a>
     [Duperemove](http://markfasheh.github.io/duperemove/) (GPL-2.0)
-    finds duplicated extents and submits them to the kernel for deduplication.
-    When given a list of files it will hash their contents on a block by block basis and
+    finds duplicated extents and submits them to the kernel for deduplication.  When
+    given a list of files it will hash their contents on a block by block basis and
     compare those hashes to each other, finding and categorizing blocks that match each
-    other. When given the -d option, duperemove will submit those extents for deduplication using the Linux kernel extent-same ioctl.
+    other. When given the -d option, duperemove will submit those extents for
+    deduplication using the Linux kernel extent-same ioctl.
 
     Duperemove can store the hashes it computes in a 'hashfile', then it will only
     compute hashes for those files which have changed since the last run.
@@ -301,10 +304,8 @@ Some file deduplication programs listed in the
     system for
     [memory technology device](http://www.linux-mtd.infradead.org/)
     and
-    [not a block device
-    ](http://www.linux-mtd.infradead.org/faq/general.html#L_mtd_what)
-    nor a
-    [removable flash media
+    [not a block device](http://www.linux-mtd.infradead.org/faq/general.html#L_mtd_what)
+    nor a [removable flash media
     ](http://www.linux-mtd.infradead.org/faq/jffs2.html#L_stick_jffs2)
     usb key or flash card.
     -   [mtd.infradead.org jffs2 documentation](http://www.linux-mtd.infradead.org/doc/jffs2.html)
@@ -434,37 +435,29 @@ Some file deduplication programs listed in the
     -   [Tutorial: Mounting archives with FUSE and archivemount
         ](http://archive09.linux.com/articles/132196)
 -   [AVFS - A Virtual File System](http://avf.sourceforge.net/) (GPL)
-    (GPL) alow to look into archives.
-    it supports floppies, tar and gzip files, zip, bzip2, ar and rar
-    files, ftp sessions, http, webdav, rsh/rcp, ssh/scp.
-    It can be used on its own or as a fuse filesystem.
-    It is an old project but still maintained,
-    which is available in Debian packages.<br />
+    (GPL) alow to look into archives.  it supports floppies, tar and gzip files, zip,
+    bzip2, ar and rar files, ftp sessions, http, webdav, rsh/rcp, ssh/scp.  It can be
+    used on its own or as a fuse filesystem.  It is an old project but still maintained,
+    which is available in Debian packages.
+
     _avfs_ is used by midnight commander (mc) for opening archives.
-    -   [sourceforge AVF project page
-        ](http://sourceforge.net/projects/avf).
-    -   [AVFS git repository
-        ](http://sourceforge.net/p/avf/git/ci/master/tree/)
-    -   [AVFS README
-        ](http://sourceforge.net/p/avf/git/ci/master/tree/README)
--   [bindfs](http://bindfs.org/) (GPL)
-    is a FUSE filesystem for mounting a directory to another location,
-    similarly to `mount --bind` but the owner and permissions inside
+    -   [sourceforge AVF project page](http://sourceforge.net/projects/avf).
+    -   [AVFS git repository](http://sourceforge.net/p/avf/git/ci/master/tree/)
+    -   [AVFS README](http://sourceforge.net/p/avf/git/ci/master/tree/README)
+-   [bindfs](http://bindfs.org/) (GPL) is a FUSE filesystem for mounting a directory to
+    another location, similarly to `mount --bind` but the owner and permissions inside
     the mountpoint can be altered.  *bindfs* is packaged in Debian.
 -   [CurlFtpFs](http://curlftpfs.sourceforge.net/) (GPL)
-    there exist other fuse filesystem quicker and better maintained
-    than _CurlFtpFS_, nevertheless it is still useful for ftp. It is
-    in Debian.
-    -   [ArchWiki: CurlFtpFS
-        ](https://wiki.archlinux.org/index.php/CurlFtpFS)
+    there exist other fuse filesystem quicker and better maintained than _CurlFtpFS_,
+    nevertheless it is still useful for ftp. It is in Debian.
+    -   [ArchWiki: CurlFtpFS](https://wiki.archlinux.org/index.php/CurlFtpFS)
     -   {{< man "+curlftpfs(1)" >}} gives mount options.
 -   {{< wp "Davfs2" >}} is a fuse module for dav file system including https
     encrypted connection.
 -   [fuseiso](http://sourceforge.net/projects/fuseiso/)
-    mount optical disk image formats as .iso, .nrg, .bin, .mdf and
-    .img. It supports plain ISO9660 Level 1 and 2, Rock Ridge, Joliet,
-    and zisofs.  Debian provide a package _fuseiso_ and also a package
-    _fuseiso9660_ to mount ISO9660 file systems.
+    mount optical disk image formats as .iso, .nrg, .bin, .mdf and .img. It supports
+    plain ISO9660 Level 1 and 2, Rock Ridge, Joliet, and zisofs.  Debian provide a
+    package _fuseiso_ and also a package _fuseiso9660_ to mount ISO9660 file systems.
     -   [ArchWiki: fuseiso](https://wiki.archlinux.org/index.php/Fuseiso).
 -   [fusedav](http://0pointer.de/lennart/projects/fusedav/)
     transparently edit and manage files from a WebDAV share on a remote server.
@@ -474,25 +467,21 @@ Some file deduplication programs listed in the
     ](http://richard.jones.name/google-hacks/gmail-filesystem/gmail-filesystem.html)
 -   [jmtpfs](https://github.com/kiorky/jmtpfs) mount a
     [w:Media Transfer Protocol) (MTP) it uses libmtp, and is in debian.
--   [ntfs-3g
-    ](http://www.tuxera.com/community/ntfs-3g-advanced/http://linux-ntfs.org/)
+-   [ntfs-3g](http://www.tuxera.com/community/ntfs-3g-advanced/http://linux-ntfs.org/)
     is a FUSE module to mount NTFS filesystems.
 -   [pytagfs](http://sourceforge.net/projects/py-tag-fs/)
-    arranges media files in a virtual directory structure based
-    on the file tags.
-    -   [pytagfs on GitHub](https://github.com/dizel-by/pytagfs) _main
-        or fork?_
-    -   [sshfs](http://fuse.sourceforge.net/sshfs.html)<a name="sshfs">
+    arranges media files in a virtual directory structure based on the file tags.
+    -   [pytagfs on GitHub](https://github.com/dizel-by/pytagfs) _main or fork?_
+    -   <a name="sshfs">[sshfs](http://fuse.sourceforge.net/sshfs.html)
         is the _fuse_ access to ssh file systems.
-     -   [Ubuntu: sshfs](https://help.ubuntu.com/community/SSHFS)
+    -  [Ubuntu: sshfs](https://help.ubuntu.com/community/SSHFS)
        explains the usage, including mounting from fstab.
-     -   [ArchWiki: sshfs](https://wiki.archlinux.org/index.php/Sshfs)
-     -   [Gentoo Wiki: SSHFS](https://wiki.gentoo.org/wiki/SSHFS)
+    -  [ArchWiki: sshfs](https://wiki.archlinux.org/index.php/Sshfs)
+    -  [Gentoo Wiki: SSHFS](https://wiki.gentoo.org/wiki/SSHFS)
 -   [tagfs](https://github.com/marook/tagfs/wiki) _≠ Tagsistant_.
     is used to organize your documents using tags.
 -   [Tagasistant](http://www.tagsistant.net/) _previously tagfs_
-    turns directories into tags and lets you search your files by
-    tags.
+    turns directories into tags and lets you search your files by tags.
     -   [Tagsistant documentation
         ](http://www.tagsistant.net/documents-about-tagsistant/)
 -   [Yacufs](https://www.uitwisselplatform.nl/projects/yacufs)
@@ -501,12 +490,10 @@ Some file deduplication programs listed in the
 
 # Gvfs {#gvfs}
 
-{{< wp "Gvfs" >}} is a userspace virtual filesystem where mount runs as a
-separate processes which you talk to via D-Bus. It also contains a gio
-module that seamlessly adds gvfs support to all applications using the
-gio API. It also supports exposing the gvfs mounts to non-gio
-applications using fuse.
-The gvfs section is now in my
+{{< wp "Gvfs" >}} is a userspace virtual filesystem where mount runs as a separate
+processes which you talk to via D-Bus. It also contains a gio module that seamlessly
+adds gvfs support to all applications using the gio API. It also supports exposing the
+gvfs mounts to non-gio applications using fuse.  The gvfs section is now in my
 [unix-memo](http://unix-memo.readthedocs.org/vfs).
 
 # Media Transport Protocol (MTP)
@@ -516,9 +503,9 @@ The gvfs section is now in my
 #  Kernel filesystems {#kernel_fs}
 ## Procfs {#procfs}
 
--   [Procfs](http://en.wikipedia.org/wiki/Procfs) is a pseudo file
-    system used to access process information from the kernel. Linux
-    2.6 kernel moved many of the non-process-related files to sysfs .
+-   [Procfs](http://en.wikipedia.org/wiki/Procfs) is a pseudo file system used to access
+    process information from the kernel. Linux 2.6 kernel moved many of the
+    non-process-related files to sysfs .
 -   [The Proc filesystem
     ](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/4/html-single/Reference_Guide/#ch-proc)
     , [Top-level Files in the proc File System
@@ -530,29 +517,24 @@ The gvfs section is now in my
     proc filesystem.
 -   You find it also in the [Fedora 17 System Administrator's Guide
     ](https://docs.fedoraproject.org/en-US/Fedora/17/html/System_Administrators_Guide/index.html)
-    in html but also available in epub or pdf
-    as
+    in html but also available in epub or pdf as
     [The /proc filesystem documentation
     ](https://docs.fedoraproject.org/en-US/Fedora/17/html/System_Administrators_Guide/ch-proc.html)
--   The man page {{< man "proc(5)" >}}
-    and {{< man "procinfo(8)" >}}
+-   The man page {{< man "proc(5)" >}} and {{< man "procinfo(8)" >}}
 
 ### proc/sys {#sysctl}
 
-A very interesting part of /proc is
+A very interesting part of /proc is the
 [directory /proc/sys](http://www.linuxinsight.com/proc_sys_hierarchy.html)
 that allows you to see and to change parameters within the kernel.
 It is also partially documented in the
-[kernel syctl documentation
-](http://www.kernel.org/doc/Documentation/sysctl/).<br />
+[kernel syctl documentation](http://www.kernel.org/doc/Documentation/sysctl/).
 
-You find it also in the previous redhat or fedora guides as
-[ /proc/sys/ section
+You find it also in the previous redhat or fedora guides as [ /proc/sys/ section
 ](https://docs.fedoraproject.org/en-US/Fedora/17/html/System_Administrators_Guide/s2-proc-dir-sys.html)
 
-You can use it directly as a
-pseudo file system or thru the {{< man "sysctl(8)" >}} utility
-and {{< man "sysctl.conf(5)" >}} .
+You can use it directly as a pseudo file system or thru the {{< man "sysctl(8)" >}}
+utility and {{< man "sysctl.conf(5)" >}} .
 
 -   [ArchWiki: Sysctl](https://wiki.archlinux.org/index.php/Sysctl)
 -   `/proc/sys/net/ipv4` is for the network configuration it is documented in
@@ -564,8 +546,7 @@ and {{< man "sysctl.conf(5)" >}} .
 ## Sysfs {#sysfs}
 
 -   [Sysfs](http://en.wikipedia.org/wiki/Sysfs)
-    exports information about devices and drivers from the kernel to
-    userspace.
+    exports information about devices and drivers from the kernel to userspace.
 -   a comprehensive presentation of sysfs is in
     [kernel documentation: sysfs.txt
     ](http://kernel.org/doc/Documentation/filesystems/sysfs.txt)
@@ -573,11 +554,9 @@ and {{< man "sysctl.conf(5)" >}} .
     [The sysfs Filesystem (pdf)
     ](http://www.kernel.org/pub/linux/kernel/people/mochel/doc/papers/ols-2005/mochel.pdf)
     by Patrick Mochel.
--   [kernel documentation:
-    rules on how to access information in the Linux kernel sysfs
+-   [kernel documentation: rules on how to access information in the Linux kernel sysfs
     ](http://www.kernel.org/doc/Documentation/sysfs-rules.txt).
--   [kernel documentation:
-    Accessing PCI device resources through sysfs
+-   [kernel documentation: Accessing PCI device resources through sysfs
     ](https://www.kernel.org/doc/Documentation/filesystems/sysfs-pci.txt)
 -   {{< man "lspci(8)" >}} uses the `/proc/bus/pci/devices` and the
     `/sys/bus/pci` key as explained in
@@ -612,22 +591,20 @@ tmpfs has three mount options for sizing:
 size
 :   The limit of allocated bytes. The default is half of your the RAM.
     can be given with unit __b__ _(byte)_, __k__ _(kilo)_, __m__ or __g__
-nr\_blocks
+    nr\_blocks
 :   The same as size, but in blocks of PAGE\_CACHE\_SIZE.
-nr\_inodes
+    nr\_inodes
 :   The maximum number of inodes. The default  is half  the number of  RAM pages.
 
 The uses of _tmpfs_ differ from one distribution to an other, and in
 the same distribution change from one release to an other.
 
-_tmpfs_ is used for `/dev/shm` (or `/run/shm` in debian > 7.0
- (wheezy)), `/sys/fs/cgroup`, `/run` and some subdirs of `/run` like `/run/lock`
-the directory `/run/user/`_<uid>_ wich belong to each _<uid>_ of an
-active user.
+_tmpfs_ is used for `/dev/shm` (or `/run/shm` in debian > 7.0 (wheezy)),
+ `/sys/fs/cgroup`, `/run` and some subdirs of `/run` like `/run/lock` the directory
+ `/run/user/`_<uid>_ wich belong to each _<uid>_ of an active user.
 
-_tmpfs_ may also be used for `/tmp`, archlinux do so, but in 2015
-debian 8.0 seem to stick by default to keep /tmp on persistent memory, but
-you can adopt it if you want.
+_tmpfs_ may also be used for `/tmp`, archlinux do so, but in 2015 debian 8.0 seem to
+stick by default to keep /tmp on persistent memory, but you can adopt it if you want.
 
 You may configure _tmpfs_ in `/etc/default/tmpfs` in Debian.
 
@@ -646,22 +623,20 @@ The creation of tmpfiles by systemd is controled by
         ](https://www.kernel.org/doc/Documentation/filesystems/debugfs.txt)
 -   _devtmpfs_ is like _tmpfs_ but every device with a major/minor
     will provide a device node in devtmpfs.
-    -   Wikipedia {{< wp "device" >}} explain the device support in the kernel
-        evolution.
+    -   Wikipedia {{< wp "device" >}} explain the device support in the kernel evolution.
     -   [kernel commit creating devtmpfs
         ](http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/commit/?id=2b2af54a5bb6f7e80ccf78f20084b93c398c3a8b).
--   _devpts_ the `/dev/pts/*` entries are not created only in
-    _devtmpfs_ but in a _devpts_ filesystem.
+-   _devpts_ the `/dev/pts/*` entries are not created only in _devtmpfs_ but in a
+    _devpts_ filesystem.
     -   [Kernel documentation: devpts
         ](https://www.kernel.org/doc/Documentation/filesystems/devpts.txt).
--   [ramfs](https://wiki.debian.org/ramfs) is a dynamically resizable
-    ram-based filesystem, the two main uses of ramfs is the above
-    {{< iref "#tmpfs" "tmpfs" >}} that in contrast to original
-    ramfs is able to write to swap space and
-    [initramfs](https://wiki.debian.org/initramfs) that contain a
-    gzipped cpio archive attached to the kernel image.
+-   [ramfs](https://wiki.debian.org/ramfs) is a dynamically resizable ram-based
+    filesystem, the two main uses of ramfs is the above {{< iref "#tmpfs" "tmpfs" >}}
+    that in contrast to original ramfs is able to write to swap space and
+    [initramfs](https://wiki.debian.org/initramfs) that contain a gzipped cpio archive
+    attached to the kernel image.
 -   [kernel documentation: ramfs, rootfs and initramfs
-    ](
+    ](https://www.kernel.org/doc/html/latest/filesystems/ramfs-rootfs-initramfs.html).
 
 # Loop device
 
@@ -765,27 +740,23 @@ scripts which allows you to create own Live Linux from your installed Linux
 distribution.
 
 Debian provides the packages _aufs-dkms_ and _aufs-tools_.
-[Gentoo kernels can be compiled with aufs
-](https://wiki.gentoo.org/wiki/Aufs).
+[Gentoo kernels can be compiled with aufs](https://wiki.gentoo.org/wiki/Aufs).
 
 The basic use of aufs is
 
     # mount -t aufs -o br=/tmp/rw=rw:${HOME}=ro none /tmp/aufs
 
-you can see whole tree of your home dir through /tmp/aufs. If
-you modify a file under /tmp/aufs, the one on your home directory is
-not affected, instead the same named file will be newly created under
-/tmp/rw. And all of your modification to a file will be applied to
-the one under /tmp/rw.<br />
-The man page  is
-[aufs(5)](http://aufs.sourceforge.net/aufs2/man.html);
-it is the reference for all _aufs-utils_ _(Debian package:
-aufs-tools)_ i.e. `mount.aufs`, `umount.aufs`, `auplink` _(make
-pseudo links permanent)_, `auchk` _(aufs fsck tool)_, `aubrsync`
-_(synchronize files between two aufs branches)_.
+you can see whole tree of your home dir through /tmp/aufs. If you modify a file under
+/tmp/aufs, the one on your home directory is not affected, instead the same named file
+will be newly created under /tmp/rw. And all of your modification to a file will be
+applied to the one under /tmp/rw.
 
-A slightly longer example that stack three file systems a
-read_only and two read-write is:
+The man page [aufs(5)](http://aufs.sourceforge.net/aufs2/man.html);
+is the reference for all _aufs-utils_ _(Debian package: aufs-tools)_ i.e. `mount.aufs`,
+`umount.aufs`, `auplink` _(make pseudo links permanent)_, `auchk` _(aufs fsck tool)_,
+`aubrsync` _(synchronize files between two aufs branches)_.
+
+slightly longer example that stack three file systems a read_only and two read-write is:
 
     # cd /tmp
     # mkdir ro rw1 rw2
