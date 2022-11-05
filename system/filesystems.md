@@ -258,16 +258,24 @@ is the most popular btrfs backup tool.
 
 ## Btrfs deduplication {#btrfs_dedupe}
 Block deduplication ib btrfs is done when we use the `cp --reflink` command when doing a
-snapshot. Some program may inspect files to find common block between them and
-deduplicate them.
+snapshot.
 
-The currnt known program are listed in
+As explained in [Deduplication — BTRFS documentation
+](https://btrfs.readthedocs.io/en/latest/Deduplication.html)
+here are two main deduplication types:
+-   in-band (sometimes also called on-line) -- all newly written data are considered for
+    deduplication before writing
+-   out-of-band (sometimes also called offline) -- data for deduplication have to be
+    actively looked for and deduplicated by the user application
+
+Some program may inspect files to find common block between them and deduplicate them.
+
+The currently known program are listed in
 [Deduplication - btrfs Wiki](https://btrfs.wiki.kernel.org/index.php/Deduplication).
 
 Some file deduplication programs listed in the
 {{< iref "#dedupe" "section below" >}} have support for btrfs, this include
 {{< iref "#jdupes" "jdupes" >}} and {{< iref "#rmlint" "rmlint" >}}.
-
 
 -   [Bees](https://github.com/Zygo/bees) (GPL-3.0)
     bees is a block-oriented userspace deduplication daemon agent designed for large
