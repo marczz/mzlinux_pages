@@ -228,6 +228,11 @@ The most used tool is {{< iref "#snapper" "Snapper" >}} you find in next section
 
     Urbackup propose binaries for windows and packages for main Linux distribution
     including [Debian](https://www.urbackup.org/download.html#server_debian).
+-   [yabsnap](https://github.com/hirak99/yabsnap) ( Apache-2.0 license)
+    makes btrfs snapshots like snapper but with custom destination, allowing to change
+    the mandatory `.snapshots` directory for snapshots.
+
+    It is currently only tested and meant for Arch Linux.
 
 Tutorials on how to make backup using btrfs send/receive:
 
