@@ -12,8 +12,9 @@ See also the section {{< iref "file_managers" "File Managers" >}},
 
 # Desktop environments {#desktop_environments}
 
-A {{< wp "Desktop environment" >}} refers to a style of graphical user interface and also to a
-common set of libraries ({{< wp "Widget library" >}}) used to build the desktop components.
+A {{< wp "Desktop environment" >}} refers to a style of graphical user interface and
+also to a common set of libraries ({{< wp "Widget library" >}}) used to build the
+desktop components.
 
 Presently most desktop environment use either {{< wp "Qt_(framework)"  "QT" >}} or
 {{< wp "GTK+" >}}, they include various
@@ -921,24 +922,38 @@ the suckless-tools package in Debian.
     dmenu_edit, dmenu_menu, dmenu_mpc, dmenu_netctl, dmenu_raise, dmenu_raise_or_run,
     dmenu_run_recent.
 
-### Rofi {#Rofi}
-[Rofi](https://davedavenport.github.io/rofi/) (MIT License)
+### Rofi {#rofi}
+[Rofi](https://github.com/davatorium/rofi) (MIT License)
 is a popup window switcher requiring only xlib and pango.
+It was written by Sean Pringle and later expanded by [Dave Davenport
+](https://github.com/DaveDavenport) alias _Qball_.
+
 Rofi can act as a drop-in dmenu replacement and provides
 extra features, like a run-dialog, ssh-launcher, ....
-Rofi is written by Dave Davenport alias _Qball_ it is in Debian.
--    [GitHub - DaveDavenport/rofi
-    ](https://github.com/DaveDavenport/rofi)
--    [Rofi - manpage](https://github.com/DaveDavenport/rofi/blob/master/doc/rofi.1.markdown),
--    [Rofi wiki](https://github.com/DaveDavenport/rofi/wiki).
--    [Rofi scripts index](https://github.com/davatorium/rofi/wiki/User-scripts)
--    [reddit - Qball tools forum](https://reddit.com/r/qtools/)
+Rofi is in Debian.
+-   [GitHub - davatorium/rofi](https://github.com/davatorium/rofi)
+-   [Rofi - manpage](https://github.com/davatorium/rofi/blob/master/doc/rofi.1.markdown),
+-   [Rofi wiki](https://github.com/davatorium/rofi/wiki).
+-   [Rofi scripts index](https://github.com/davatorium/rofi/wiki/User-scripts)
+-   [Discussions · davatorium/rofi](https://github.com/davatorium/rofi/discussions)
+-   [Rofi - ArchWiki](https://wiki.archlinux.org/title/Rofi).
+-   [reddit - Qball tools forum](https://reddit.com/r/qtools/)
+    support channels for rofi, gmpc and other tools written by Qball.
+-   [Rofication](https://github.com/DaveDavenport/Rofication)
+    Dave Davenport notification system.
+-   [jluttine/rofi-power-menu](https://github.com/jluttine/rofi-power-menu)
+    Configurable power menu mode for Rofi and dmenu.
+-   [rofi-blezz](https://github.com/davatorium/rofi-blezz) is a plugin for rofi that
+    emulates [blezz](https://github.com/Blezzing/blezz) the guided Keystroke Launcher.
+
+[lbonn / rofi](https://github.com/lbonn/rofi) is a fork of rofi which adds
+[Wayland support](https://github.com/lbonn/rofi#wayland-support).
 
 
-### dmenu alternatives
--   You find {{< iref "#lemonbar" "lemonbar" >}} in the status bar section.
--   [pdmenu](https://joeyh.name/code/pdmenu/) full screen console
-    menuing system for Unix.
+### dmenu alter natives
+-   You find {{ < iref "#lemonbar" "lemonbar" >}} in the status bar section.
+-   [pdmenu](ht tps://joeyh.name/code/pdmenu/) full screen console
+    menuing sys tem for Unix.
 -   {{< iref "#yabar" "yabar" >}} in the status bar section.
 -   [Albert](https://albertlauncher.github.io/)
     is a keyboard launcher written in C++/Qt.
@@ -1218,10 +1233,8 @@ Some newer command line apps to manage selection in X11:
 -   [autocutsel](http://www.nongnu.org/autocutsel/).
     synchronize the three selections; _in debian_.
 -   [clipmenu](https://github.com/cdown/clipmenu)  (public domain)
-    is a simple clipboard manager using
-    {{< iref "#dmenu" "dmenu" >}}
-    (or {{< iref "#rofi" "rofi" >}}) and
-    {{< iref "#xsel" "xsel" >}};
+    is a simple clipboard manager using {{< iref "#dmenu" "dmenu" >}}
+    (or {{< iref "#rofi" "rofi" >}}) and {{< iref "#xsel" "xsel" >}};
     _clipmenud_ polls the clipboard every 0.5 seconds,  changes to the
     clipboard contents is writen to a cache; clipmenu reads the cache
     directory, and call dmenu to select one.
@@ -1304,8 +1317,7 @@ A list is in [Archwiki Clipboard/Managers
     In Gnome software suite _parcellite_ is replaced by {{< iref "#diodon" "Diodon" >}}.
     _in Debian_.
 -   [qlipper](https://github.com/pvanek/qlipper) (GPL-2.0)
-    is a QT5 clipboard history applet.
-    It depends on X11 and does not support wayland.
+    is a QT5 clipboard history applet.  It depends on X11 and does not support wayland.
 
     _It is packaged in Debian_.
 -   [greenclip](https://github.com/erebe/greenclip) (BSD License)
@@ -1327,8 +1339,8 @@ data among computers or mobile platforms like
 You can also use any {{< iref "file_sharing#pastebin" "pastebin" >}}.
 
 -   [megahertz/clipboard-share](https://github.com/megahertz/clipboard-share)
-    is a node.js server and client to share clipboard between two
-    computers.  It works on Linux, Mac OS X and Windows.
+    is a node.js server and client to share clipboard between two computers.  It works
+    on Linux, Mac OS X and Windows.
 -   [coralw/share-clipboard](https://github.com/coralw/share-clipboard) (MIT License)
     is a node.js server and client to share clipboard between across different
     platforms, including Mac OS X, Windows and Linux.
@@ -1338,7 +1350,7 @@ You can also use any {{< iref "file_sharing#pastebin" "pastebin" >}}.
 -   [wincent/clipper](https://github.com/wincent/clipper)
     linux daemon that provide a service exposing the local clipboard
     to local or remote processes. It is meant to be used with
-    {{< iref "checkpointing#tmux" "tmux" >}} running both locally and remotely.
+    {{< iref "tmux" "tmux" >}} running both locally and remotely.
 -   [pgcopy](https://github.com/nakabonne/pbgopy) (MIT License)
     lets you share data across devices like you copy and paste.
     _pbgopy_ comes with a built-in ability to encrypt/decrypt with symetric key,
@@ -1352,36 +1364,34 @@ You can also use any {{< iref "file_sharing#pastebin" "pastebin" >}}.
 
 ## Keyboard addons
 
--   [XbindKeys](http://www.nongnu.org/xbindkeys/) is a program that
-    allows you to launch shell commands with your keyboard or your
-    mouse under X Window. It links commands to keys or mouse buttons,
-    using a configuration file. It's independant of the window
-    manager and can capture all keyboard keys (ex: Power, Wake...).
-    XbindKeys is actively maintained and is in debian.
+-   [XbindKeys](http://www.nongnu.org/xbindkeys/)
+    is a program that allows you to launch shell commands with your keyboard or your
+    mouse under X Window. It links commands to keys or mouse buttons, using a
+    configuration file.
+
+    It is independant of the window manager and can capture all keyboard keys (ex:
+    Power, Wake...).  XbindKeys is actively maintained and is in debian.
     -   [Xbindkeys - ArchWiki](https://wiki.archlinux.org/index.php/Xbindkeys).
 -   [TrigerHappy](https://github.com/wertarbyte/triggerhappy)
-    Triggerhappy is a hotkey daemon developed with small and embedded
-    systems in mind. It attaches to the input device files and
-    interprets the event data received and executes scripts configured
-    in its configuration. It is in Debian.<br/>
+    Triggerhappy is a hotkey daemon developed with small and embedded systems in
+    mind. It attaches to the input device files and interprets the event data received
+    and executes scripts configured in its configuration. It is in Debian.
 
-    Unlike other hotkey daemons, it runs as a persistent, systemwide
-    service and therefore can be used even outside the context of a
-    user or X11 session It can handle any input device and might be
-    useful on a headless system to use input events generated by a
-    remote control (Ex. control an mpd server).
+    Unlike other hotkey daemons, it runs as a persistent, systemwide service and
+    therefore can be used even outside the context of a user or X11 session It can
+    handle any input device and might be useful on a headless system to use input events
+    generated by a remote control (Ex. control an mpd server).
 -   [Keynav](http://www.semicomplete.com/projects/keynav/)
     turns your keyboard into an fast pointer mover.
--   [Keylaunch (debian package)
-    ](https://packages.debian.org/jessie/keylaunch)
-    is a small utility for binding commands to a hot key. It reads a
-    configuration file in .keylaunchrc. KeyLaunch uses Ctrl, Alt and
-    Shift as modifier keys, the hotkey is up to the user.<br/>
-    There is a [Jerko Steiner fork of keylaunch
-    ](https://github.com/jeremija/keylaunch)
+-   [Keylaunch (debian package)](https://packages.debian.org/jessie/keylaunch)
+    is a small utility for binding commands to a hot key. It reads a configuration file
+    in .keylaunchrc. KeyLaunch uses Ctrl, Alt and Shift as modifier keys, the hotkey is
+    up to the user.
+
+    There is a [Jerko Steiner fork of keylaunch](https://github.com/jeremija/keylaunch)
     which enables binding of Mod4 (windows) key.
--   [Synergy](http://synergy2.sourceforge.net/) lets you share a
-    single mouse and keyboard between multiple computers with different
+-   [Synergy](http://synergy2.sourceforge.net/)
+    lets you share a single mouse and keyboard between multiple computers with different
     OS, each with its own display,
 
 ## desktop background
@@ -1391,7 +1401,7 @@ You can use the following programs to set the X desktop backgound:
 -   {{< man "fbsetbg" >}}
 -   Esetroot
 -   wmsetbg
--   feh
+-   {{< iref "images#feh" "feh" >}}
 -   hsetroot
 -   chbg
 -   {{< iref "images#imagemagick" "display" >}}
@@ -1402,56 +1412,51 @@ You can use the following programs to set the X desktop backgound:
 -   xsetbg
 
 
-feh, esetroot and wmsetbg support pseudo transparency
+{{< iref "images#feh" "feh" >}}, esetroot and wmsetbg support pseudo transparency
 
 
 ## Other components
 
--   [xgetc](http://code.google.com/p/xgetc/) print the pixel color (in
-    hexadecimal notation) and position to stdout.  When a selection is
-    made, xgetc will print the geometry of the selection.
+-   [xgetc](http://code.google.com/p/xgetc/)
+    print the pixel color (in hexadecimal notation) and position to stdout.  When a
+    selection is made, xgetc will print the geometry of the selection.
 
 # WM control {#wm_control}
-These tools allow to control windows from an
-[EWMH](# ewmh "internal reference") compliant manager.
-They complement the basic utilities that can only give informations on
-the window property like {{< man "xwininfo" >}} or {{< man "xprop" >}}.
+These tools allow to control windows from an [EWMH](#ewmh "internal reference")
+compliant manager.  They complement the basic utilities that can only give informations
+on the window property like {{< man "xwininfo" >}} or {{< man "xprop" >}}.
 
 
 -   [xdotool](https://github.com/jordansissel/xdotool/)
-    simulate keyboard input and mouse activity, move and resize
-    windows, etc.
+    simulate keyboard input and mouse activity, move and resize windows, etc. It is
+    packaged in Debian.
     [xdotool manpage ](https://github.com/jordansissel/xdotool/blob/master/xdotool.pod)
 -   [xwit](http://www.slack.com/sw/xwit-man.html)
-    resize, iconify, pop, and move windows given by name or id, change
-    an icon, title or name, set the screen saver going, and change
-    individual key autorepeat settings, move the mouse cursor, etc.
+    resize, iconify, pop, and move windows given by name or id, change an icon, title or
+    name, set the screen saver going, and change individual key autorepeat settings,
+    move the mouse cursor, etc. It is packaged in Debian.
 -   [wmctrl](http://tripie.sweb.cz/utils/wmctrl/) (GPL)
-    provides command line access to almost all the features defined in
-    the EWMH specification. For example it can maximize windows, make
-    them sticky, set them to be always on top. It can switch and
-    resize desktops and perform many other operations. The last release is 1.07 from
-    2005, but EWMH specification is still in use unchanged and this is a usefull program.
+    provides command line access to almost all the features defined in the EWMH
+    specification. For example it can maximize windows, make them sticky, set them to be
+    always on top. It can switch and resize desktops and perform many other
+    operations. The last release is 1.07 from 2005, but EWMH specification is still in
+    use unchanged and this is a usefull program which is packaged in Debian.
 -   [xautomation](http://hoopajoo.net/projects/xautomation.html)
-    control X from the command line, and find things on the screen The
-    control interface allows mouse movement, clicking, button up/down,
-    key up/down, etc.  The visgrep program find images inside of
-    images and reports the coordinates, allowing programs to find
-    buttons, etc, on the screen to click on.
--   [Devilspie2](http://www.gusnan.se/devilspie2/) (GPL)
-    is a a window matching utility, allowing the user to perform
-    scripted actions on windows as they are created. For example you
-    can script a terminal program to always be positioned at a
-    specific screen position, or automatically position a window on a
-    specific workspace.  window matching utility, allowing the user to
-    perform scripted actions on windows as they are created. For
-    example you can script a terminal program to always be positioned
-    at a specific screen position, or automatically position a window
-    on a specific workspace.  Devilspie2 is in Debian, _active in
-    2016_.
-    -   [Devilspie2 Home](http://www.gusnan.se/devilspie2/)
-    -   [devilspie2.git
-        ](http://git.savannah.gnu.org/cgit/devilspie2.git)
+    control X from the command line, and find things on the screen The control interface
+    allows mouse movement, clicking, button up/down, key up/down, etc.  The visgrep
+    program find images inside of images and reports the coordinates, allowing programs
+    to find buttons, etc, on the screen to click on.
+
+    It is packaged in Debian.
+-   [Devilspie2](https://www.nongnu.org/devilspie2) (GPL)
+    is a a window matching utility, allowing the user to perform scripted actions on
+    windows as they are created. For example you can script a terminal program to always
+    be positioned at a specific screen position, or automatically position a window on a
+    specific workspace.
+
+    Devilspie2 is in Debian, _active in 2022_.
+    -   [Devilspie2 Home](https://www.nongnu.org/devilspie2/).
+    -   [devilspie2 - GitHub](https://github.com/dsalt/devilspie2)
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
