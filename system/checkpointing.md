@@ -45,9 +45,13 @@ process, but from an Xorg session to another, they are put in the
     and distributed applications.  It operates directly on the user binary executable.
     _Active in 2022 last release 2019_.
     [GitHub DMCTP](https://github.com/dmtcp/dmtcp)
--   [reptyr](https://github.com/nelhage/reptyr) (MIT license)
+-   <a name=reptyr></a>[reptyr](https://github.com/nelhage/reptyr) (MIT license)
     is a recent utility for taking an existing running program and
-    attaching it to a new terminal. It is in Debian.
+    attaching it to a new terminal.
+
+    It is useful for moving a long-running process into a tmux session.
+
+    It is in Debian.
     _Active development in 2022._
 
 # Terminal multiplexors {#terminal_multiplexors}
