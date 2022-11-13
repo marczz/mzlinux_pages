@@ -54,6 +54,9 @@ may be switched between sessions.
     -   Wikipedia: {{< wp "Byobu_(software)" "Byobu" >}}
     -   [byobu(1)
         ](http://manpages.debian.org/cgi-bin/man.cgi?query=byobu&format=html&locale=en).
+-   {{< iref "checkpointing#reptyr" "reptyr" >}} can be used for moving a long-running
+    process into a tmux session.
+
 
 # Tmux themes {#tmux_themes}
 See also {{< iref "desktop#color_themes" Deskto color themes >}}
@@ -90,12 +93,11 @@ See also {{< iref "desktop#color_themes" Deskto color themes >}}
 
 -   [Tmuxinator](https://github.com/aziz/tmuxinator) (BSD like Licence)
     [Teamocil](https://github.com/remiprev/teamocil) (MIT license)
-    are sessions managers for tmux written in ruby with YAML
-    configuration.
+    are sessions managers for tmux written in ruby with YAML configuration.
     _tmuxinator is in Debian_.
 -   [tmuxp](https://github.com/tmux-python/tmuxp) (MIT License)
-    is a _tmux_ session manager written in python with JSON or
-    YAML configuration. It is _in Debian_.
+    is a _tmux_ session manager written in python with JSON or YAML configuration. It is
+    _in Debian_.
     -   [tmuxp documentation](https://tmuxp.git-pull.com/)
     -   [ArchWiki: tmuxp](https://wiki.archlinux.org/index.php/Tmuxp).
 -   [tmux-resurrect](https://github.com/tmux-plugins/tmux-resurrect) (MIT License)
