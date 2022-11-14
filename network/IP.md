@@ -469,6 +469,33 @@ are in the {{< iref "netconf" "Network Configuration Section" >}}._
     [Articles](https://www.si6networks.com/publications/articles/),
     and see below their {{< iref "#pv6toolkit" "[IPv6 Toolkit" >}}."
 
+
+## DNS64/NAT64
+{{< wp "NAT64" >}} is an IPv6 transition mechanism that allows ipv6 only systems to
+communicate with IPV4 only sytems. I uses network address translation mechanism
+to associates an IPV4 address to an IPV6 address with a prefix. The DNS64 server
+gives such AAAA record with a fake ipv6 address using a fixed prefix for an ipV4
+only domain.
+
+The associated NAT64 gateway route a NAT64 ipv6 encapsulated packet to the IPV4 host.
+
+-   [Public NAT64 Services - nat64.xyz](https://nat64.xyz/),
+    [NAT64 public servers status](https://stats.uptimerobot.com/GQ5RyTJLKZ).
+    Each of this service provides a DNS64 server which route packets encapsulated with a
+    specific prefix to a NAT64 gateway.
+-   Google has a [Google Public DNS64
+    ](https://developers.google.com/speed/public-dns/docs/dns64)
+    but it should be associated with a NAT64 relay server using the same prefix
+    `64:ff9b::/96`.
+-   [TAYGA - NAT64 for Linux](http://www.litech.org/tayga/)
+    a stateless {{< wp "NAT64" >}} implementation for Linux.
+-   [jool](https://www.jool.mx/en/index.html)
+    a statefull {{< wp "NAT64" >}} implementation for Linux.
+-   [TNAT64](https://github.com/andrewshadura/tnat64) (GPL-2.0)
+    is an interceptor which redirects outgoing TCPv4 connections through NAT64,
+    thus enabling an application running on an IPv6-only host to communicate with the
+    IPv4 world, even if that application does not support IPv6 at all.
+
 ## Ipv6 Tunnels
 ### 6to4 doc
 You find both the name {{< wp "6to4" >}}, and {{< wp "6in4" >}}. {{< wp "6to4" >}} is the
@@ -498,10 +525,6 @@ protocol {{< wp "6in4" >}}. BUt the two names are often used interchangeably.
         package.
 
 ### Tunnel Tools
--   [TAYGA - NAT64 for Linux](http://www.litech.org/tayga/)
-    a stateless {{< wp "NAT64" >}} implementation for Linux.
--   [jool](https://www.jool.mx/en/index.html)
-    a statefull {{< wp "NAT64" >}} implementation for Linux.
 -   [Miredo : Teredo for Linux and BSD](http://www.remlab.net/miredo/)
     used for terredo and packaged in Debian.
 
