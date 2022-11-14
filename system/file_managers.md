@@ -14,38 +14,36 @@ title: File Managers
     but there is still available build and even deb packages on the
     home page.
 -   The {{< wp "Midnight Commander" >}} (GPL) is a console application written with
-    Ncurses (or S-Lang) it is an old application still actively maintained in 2020.
+    Ncurses (or S-Lang) it is an old application still actively maintained in 2022.
     -   [Midnight Commander Development site](https://www.midnight-commander.org)
     -   [Midnight Commander's Github repository](https://github.com/MidnightCommander/mc).
     -   [Draft of documentation](https://www.midnight-commander.org/wiki/doc)
-    -   [Midnight Commander FAQ
-        ](https://www.midnight-commander.org/wiki/doc/faq).
-    -   [Midnight Commander GitHub repository
-        ](https://github.com/MidnightCommander/mc.git)
+    -   [Midnight Commander FAQ](https://www.midnight-commander.org/wiki/doc/faq).
     -   [ArchWiki: Midnight Commander
         ](https://wiki.archlinux.org/index.php/Midnight_Commander)
-    -   As for version 4.8.13  in 2015 mc uses 7.9M res / 6.5M shr.
+    -   As for version 4.8.28  in 2022 mc uses 12.9M res / 7.8M shr.
 -   The [emacs dired
     ](http://www.gnu.org/software/emacs/manual/html_node/emacs/Dired.html)
     is  a directory browser integrated in emacs.
--   [Worker](http://www.boomerangsworld.de/cms/worker)
-    (GPL) is a light c++ graphical two panels file manager that
-    has very low requirements  (X11, nO X toolkit).
-    Like MC it provides access to archives and remote file systems.
-    It is packaged in Debian and development is active in 2020.<br/>
-    As for version 3.4.1 in 2015 it uses 12.6M resident / 9.8M shr.
--   [ranger](http://nongnu.org/ranger/) (GPL-3.0)
+-   [ranger](https://ranger.github.io/) (GPL-3.0)
     a python file manager with VI key bindings _and optional
     emacs bindings_. It provides a curses interface with a view on the
     directory hierarchy. _in debian_ .
-    _ranger_ _development is active in 2020_.
+    _ranger_ _development is active in 2022_.
+
+    As ranger is python powered it has medium footprint, lighter than GUI file managers,
+    but heavier than console file manager like mc or n³. It uses 27M res / 11M shr.
     -   Wikipedia {{< wp "Ranger_(file_manager)"  "ranger" >}}.
     -   [ArchWiki: Ranger](https://wiki.archlinux.org/index.php/Ranger).
+    -   [ranger Wiki](https://github.com/ranger/ranger/wiki).
+    -   [ranger User Guide](https://github.com/ranger/ranger/wiki/Official-User-Guide).
 -   [nnn](https://github.com/jarun/nnn/)
     n³ a terminal file manager. _nnn_ can analyze disk usage, batch rename, launch apps
     and pick files. There are many plugins to extend the capabilities further
     e.g. preview, (un)mount disks, find & list, file/dir diff, upload files.
     _In Debian._
+
+    n³ has very low memory footprint 4.2M res. / 3.2 M shared.
     -   [nnn Wiki](https://github.com/jarun/nnn/wiki)
     -   [nnn - ArchWiki](https://wiki.archlinux.org/index.php/Nnn)
 
@@ -82,79 +80,61 @@ title: File Managers
         contains a usefull section on [Volume handling
         ](https://wiki.archlinux.org/index.php/PCManFM#Volume_handling),
         that can be done either with _udisks/udisks2_  or _gvfs_.
-    -   [Gentoo Wiki: PCManFM](http://wiki.gentoo.org/wiki/PCManFM).
+    -   [Gentoo Wiki: PCManFM](https://wiki.gentoo.org/wiki/PCManFM).
 -   [SpaceFM](http://ignorantguru.github.io/spacefm/) (GPL)
-    is a fork of PCManFM 0.5 that has been competing with pcmanfm for
-    years, but now since march 2015 it had only a minimal maintenance, and the last
-    commit is in 2018.
-    The fork of PCManFM 0.5 was did by developers that did not want the gvfs
-    bindings that were added to PCManFM, and rather preferred
-    the [udevil](http://ignorantguru.github.io/udevil/)
-    <a name="udevil"></a> mount program.
-    SpaceFM can use udevil, pmount or udisks/udisks2, and if PCManFM
-    has kept gvfs, it is no longer mandatory and can be replaced by
-    udisks/udisks2.<br />
-    The memory footprints of the two products is similar and they have
-    the same functionality of a tabbed File Manager and Desktop
-    manager.<br />
-    What distinguish SpaceFM is the extended configurations options
-    including an easy system of plugins, allowing easy shell plugins.
-    -   [SpaceFM GitHub repository
-        ](https://github.com/IgnorantGuru/spacefm)
-    -   [IgnorantGuru GitHub repositories
-        ](https://github.com/IgnorantGuru/spacefm)
-        [IgnorantGuru](http://igurublog.wordpress.com/)
-        is the main developer of SpaceFM, and his
-        [GitHub repositores
-        ](https://github.com/IgnorantGuru/spacefm)
-        includes SpaceFM and many
-        [system scripts](http://igurublog.wordpress.com/downloads/).
-    -   [udevil](http://ignorantguru.github.io/udevil/) (GPL)
-    -   [ArchWiki: SpaceFM
-        ](https://wiki.archlinux.org/index.php/SpaceFM)
-        <a name="udevil"></a>
-        is a command line Linux program which mounts and unmounts
-        removable devices without a password, shows device info, and
-        monitors device changes. It can also mount ISO files, nfs://,
-        smb://, ftp://, ssh:// and WebDAV URLs, and tmpfs/ramfs
-        filesystems.<br /> it includes a mounting daemon
-        _devmon_. _udevil_ has no dependency on udisks, gvfs, fuse,
-        policykit, consolekit, etc.<br />
+    is a fork of PCManFM 0.5 that has been competing with pcmanfm for years. The fork of
+    PCManFM 0.5 was did by developers that did not want the gvfs bindings that were
+    added to PCManFM, and rather preferred the
+    [udevil](http://ignorantguru.github.io/udevil/) mount program.  SpaceFM can use
+    udevil, pmount or udisks/udisks2, and if PCManFM has kept gvfs, it is no longer
+    mandatory and can be replaced by udisks/udisks2.
+
+    The memory footprints of the two products is similar and they have the same
+    functionality of a tabbed File Manager and Desktop manager.
+
+    What distinguish SpaceFM is the extended configurations options including an easy
+    system of plugins, allowing easy shell plugins.
+
+    Since march 2015 spacefm  had only a minimal maintenance, which completely stopped
+    in 2018.
+
+    There is a new fork on [thermitegod/spacefm](https://github.com/thermitegod/spacefm).
+    -   [SpaceFM legacy GitHub repository](https://github.com/IgnorantGuru/spacefm)
+    -   IgnorantGuru was the main developer of SpaceFM, and his
+        [GitHub repositories](https://github.com/IgnorantGuru/)
+        includes SpaceFM, many
+        [system scripts](http://igurublog.wordpress.com/downloads/)
+        and [udevil](http://ignorantguru.github.io/udevil/) (GPL)
+    -   [ArchWiki: SpaceFM](https://wiki.archlinux.org/index.php/SpaceFM)
+    -   <a name="udevil"></a>[udevil](http://ignorantguru.github.io/udevil/)
+        is a command line Linux program which mounts and unmounts removable devices
+        without a password, shows device info, and monitors device changes. It can also
+        mount ISO files, nfs://, smb://, ftp://, ssh:// and WebDAV URLs, and tmpfs/ramfs
+        filesystems.<br /> it includes a mounting daemon _devmon_. _udevil_ has no
+        dependency on udisks, gvfs, fuse, policykit, consolekit, etc.
+
         _udevil_ takes 1.5M resident / 1.2M shared; devmon add 1.9M
         resident / 1.3M shared.
     -   [SpaceFM User-Contributed Plugins
         ](https://github.com/IgnorantGuru/spacefm/wiki/plugins),
-        [IgnorantGuru SpaceFM plugins GitHub repository
-        ](https://github.com/IgnorantGuru/spacefm/wiki/plugins),
-        [trile7 script directory
-        ](http://code.google.com/p/bashscripts/source/browse/trunk/)
 -   {{< wp "Thunar" >}} (GPL) the [xfce](http://xfce.org/) window manager.
     -    [Thunar Home](http://docs.xfce.org/xfce/thunar/start)
-    -    Thunar project was publishing  a
-         _memory usage page_ (unavailable today?)
-         where there is a comparison between Konqueror, ROX, Nautilus and
-         Thunar memory footprints. They advocate that the data size of
-         thunar is only 3M which is roughly the overhead of the application.
-         It is also what I experience, when I launch Thunar I get an
-         Overhead of 3M. Note also that the amount of unshared memory is
-         of course what is meaningfull in these comparisons, but this
-         unshared memory is **not** the difference between resident and
-         shared memory, because what is named _shared_ is what is potentially
-         shared, to add a single Qt application on a gtk desktop is costly
-         even if most libraries are potentially shared.
--   [gentoo file manager](http://www.obsession.se/gentoo/)
-    Is a GTK3 2 panels, commander like, file manager, it is not
-    related to the Gentoo Linux distribution. Gentoo uses the
-    {{< wp "GIO_(GNOME)"  "GIO" >}} library. _Gentoo_ uses 18M resident / 12M shared.
--   [emelfm2](http://emelfm2.net/) is a two panels,
-    Norton commander (or Midnight commander)
-    like file manager for  Gtk3. Emlfm2 uses 16M resident memory / 12M shared.
-    Emelfm2 is no longer available in main Debian,but is still under
-    active development in 2014. It is [proposed in Ubuntu
-    ](http://packages.ubuntu.com/search?keywords=emelfm),
-    you can also find the latest
-    deb package on [emlfm2 PPA](https://launchpad.net/~emelfm2).
-    -   [Emelfm2 User Guide](http://emelfm2.net/wiki/UserGuide)
+    -    Thunar project was publishing  a _memory usage page_ (unavailable today?)
+         where there is a comparison between Konqueror, ROX, Nautilus and Thunar memory
+         footprints. They advocate that the data size of thunar is only 3M which is
+         roughly the overhead of the application.  It is also what I experience, when I
+         launch Thunar I get an Overhead of 3M. Note also that the amount of unshared
+         memory is of course what is meaningfull in these comparisons, but this unshared
+         memory is **not** the difference between resident and shared memory, because
+         what is named _shared_ is what is potentially shared, to add a single Qt
+         application on a gtk desktop is costly even if most libraries are potentially
+         shared.
+-   [Worker](http://www.boomerangsworld.de/cms/worker)
+    (GPL) is a light c++ X11 graphical two panels file manager that has very low
+    requirements (X11, no X toolkit).  It provides access to archives and remote file
+    systems.  It is packaged in Debian and development is active in 2022.
+
+    As for version 3.4.1 in 2015 it uses 12.6M resident / 9.8M shr.
 -   If you install kde you can do nothing but using the heavy
     [Konqueror](http://konqueror.kde.org/)
 -   A Gnome user can not avoid
@@ -177,15 +157,6 @@ title: File Managers
      common types of files like images, flash, text, audio, video and pdf.
     ElFinder integrates with _CKEditor_,
     _Tiny MCE_, _elRTE_,  Drupal, WordPress, web2py.
--   [eXtplorer](http://extplorer.sourceforge.net/) (GPL or MPL)
-     is a web-based File Manager.
-     You can use it to login to a local FTP server,
-     or it can be configured to use WebDav. _last release 2011_.
--   [MCFileManager](http://www.tinymce.com/wiki.php/MCFileManager)
-    (MIT and GPL licenses)
-    is an online file management utility, available as PHP and
-    .NET, that is integrated with
-    [TinyMCE](http://www.tinymce.com/index.php) or other similar editors.
 -   [KCFinder](http://kcfinder.sunhater.com/) (GPL)
     is a php/ajax web file manager which can be integrated into FCKeditor,
     CKEditor, and TinyMCE WYSIWYG web editors.
