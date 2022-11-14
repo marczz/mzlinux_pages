@@ -113,50 +113,52 @@ With {{< man "qdbus+1"  "qdbus" >}}
 # Dbus Notification {#dbus_notification}
 -   [ArchWiki Desktop notifications
     ](https://wiki.archlinux.org/index.php/Desktop_notifications)
-    explains how to display desktop notifications and information, with
-    _libnotify_, in each programming language.
--   [Desktop Notifications Specification
-    ](https://developer.gnome.org/notification-spec/)
-    gives all the components, you will find here the markup,
-    hyperlinks, url, image, categories (in the `category=` parameter
-    of `inotify-send`), urgency levels, hints, the dbus-protocol.
--   The icons used in notifications must follow the
-    [Icon Naming Specification
+    explains how to display desktop notifications and information, with _libnotify_, in
+    each programming language.
+-   [Desktop Notifications Specification](https://developer.gnome.org/notification-spec/)
+    gives all the components, you will find here the markup, hyperlinks, url, image,
+    categories (in the `category=` parameter of `inotify-send`), urgency levels, hints,
+    the dbus-protocol.
+-   The icons used in notifications must follow the [Icon Naming Specification
     ](http://standards.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html)
+-   A _notification daemon_ is provided by all desktop environments. In gnome the
+    _gnome-shell_ includes a notification daemon, in mate there is a specific package
+    _mate-notification-daemon_.
+-   [ayatana-indicator-notifications
+    ](https://github.com/AyatanaIndicators/ayatana-indicator-notifications)
+    (GPL-3.0) is the [Ayatana Indicators](https://ayatanaindicators.github.io/)
+    notification daemon.
+-   <a name="dunst"></a>[dunst](http://www.knopwob.org/dunst/) (BSD License)
+    is a lightweight notification daemon.  Dunst is designed
+    to fit nicely into minimalistic windowmanagers, and has minimal dependencies and
+    work in X11 as well as Wayland since version 1.6.0.
 
--   _notification daemon_ is the standard gnome a daemon to display
-    passive notifications, it binds to gtk3 libraries and takes 14.6M
-    resident/9.6M shared
--   <a name="dunst"></a>[dunst](http://www.knopwob.org/dunst/) (BSD License) is a
-    lightweight notification daemons for desktop notifications.  Dunst
-    is designed to fit nicely into minimalistic windowmanagers, and
-    has minimal dependencies. It takes only 3.3M resident with 2.7M
-    shared in my desktop.  It is in Debian.
--   [notify-osd](https://launchpad.net/notify-osd) is the Canonical's
-    on-screen-display notification agent, implementing the Desktop
-    Notifications Specification with semi-transparent click-through
-    bubbles. It has a smart non-obtrusive look.
-    It is programmed in c/gtk2 but requires also many
-    libraries, and so is heavier than _dunst_ or _statnot_ 23M res. :
-    18M shr. It is in Debian.
+    It takes only 3.3M resident with 2.7M shared in my desktop.  It is in Debian.
+    -   [Documentation · Dunst](https://dunst-project.org/documentation/)
+-   [lxqt-notifycationd](https://github.com/lxqt/lxqt-notificationd)  (LGPL-2.1)
+    is the LXQt notification daemon.
+-   [notify-osd](https://launchpad.net/notify-osd) is the Canonical's on-screen-display
+    notification agent, implementing the Desktop Notifications Specification with
+    semi-transparent click-through bubbles. It has a smart non-obtrusive look.
+
+    It is programmed in c/gtk2 but requires also many libraries, and so is heavier than
+    _dunst_ or _statnot_ 23M res. : 18M shr.
+
+    It is in Debian. The last stable version was released in 2012, the package
+    in Debian is dated 2015 and the last development commit is from 2019.
 -   [statnot](https://github.com/halhen/statnot) (GPL)
-    is a notification-daemon replacement for lightweight window
-    managers written in python/gtk.
+    is a notification-daemon replacement for lightweight window managers written in
+    python/gtk. the development stopped in 2011 except a recent port from python2 to
+    python3.
 -   <a name="mako"></a>[emersion/mako](https://github.com/emersion/mako)
-    (MIT License)
-    A lightweight Wayland notification daemon
--   [twmn](https://github.com/sboli/twmn)
-    is a notification system for tiling window managers build in
-    C++/QT.  Notifications are shown in a one-line bar called the
-    notification slide. They can be navigated through and activated
-    with shortcuts.
+    (MIT License) A lightweight Wayland notification daemon.
+    -   [mako Wiki](https://github.com/emersion/mako/wiki/)
+        includes the FAQ and example configuration.
+-   [twmn](https://github.com/sboli/twmn) (LGPL-3.0 license)
+    is a notification system for tiling window managers build in C++/QT.  Notifications
+    are shown in a one-line bar called the notification slide. They can be navigated
+    through and activated with shortcuts.
 
--   [Galago](http://www.galago-project.org/)
-    is a desktop presence framework for UNIX systems. It transmits
-    "presence" information on people between applications thru the dbus
-    system  following the
-    [Galago Desktop Notifications Specification
-    ](http://www.galago-project.org/specs/notification/0.9/index.html)..
 
 ## notification history
 
@@ -170,3 +172,8 @@ With {{< man "qdbus+1"  "qdbus" >}}
 -   There is also a package in PPA:
     [recent notification / indicator-notifications
     ](https://launchpad.net/~jconti/+archive/ubuntu/recent-notifications).
+
+<!-- Local Variables: -->
+<!-- mode: markdown -->
+<!-- ispell-local-dictionary: "english" -->
+<!-- End: -->
