@@ -249,44 +249,36 @@ There is also a _uncomplete and not up to date_ [Tutorial index on reddit r/unix
 
 ## Low resource Stacking WM
 
--   [aewm](http://www.red-bean.com/~decklin/aewm/) (MIT License)
-    _last release end 2007_, which is controlled entirely with the
-    mouse. It is {{< iref "#ewmh" "EWMH compliant" >}} and is in Debian.
--   [aewm++](http://sapphire.sourceforge.net/) (MIT License)
-    _active project packaged in Debian_
-    based on aewm but  written in C++.
-    -   aewm++ contains desktop utilities packaged in Debian as
-        aewm++-goodies, an apllication bar, a panel, and a session
-        manager.
+-   [aewm++](https://github.com/frankhale/aewmp) (MIT License)
+    _active project packaged in Debian_ is a minimal window manager, based on aewm which
+    stopped in 2007,  but written in C++.
+    -   aewm++ contains desktop utilities packaged in Debian as aewm++-goodies, an
+        apllication bar, a panel, and a session manager.
         It is {{< iref "#ewmh" "EWMH compliant" >}}.
 -   [evilwm](http://evilwm.sourceforge.net/) (Artistic licence)
-    _active project_, A minimal keyboard driven window manager. It
+    _active project in 2022_, A minimal keyboard driven window manager. It
     supports {{< iref "#ewmh" "EWMH" >}} and is packaged in
-    Debian.  _last release 2011_
--   [Icewm](http://www.icewm.org/) (LGPL)
-    a light {{< iref "#ewmh" "EWMH compliant" >}} wm,
-    fully usable with keyboard, with a task bar, multiple workspaces
-    and configuration tools.<br />
-    It uses few libraries outside of standard X11, and its own library
-    libice; so its real footprint is quite low: 6.2M resident/4.5M
-    shared without desktop addons icewmtray 3M/2.3M, icewmbg 2.7M/2.2M
-    _a background daemon is not mandatory_, icewm-session 1.7M/1.3M.
+    Debian.
+    -   [evilwm git repository](https://www.6809.org.uk/git/evilwm.git/).
+-   [Icewm](https://ice-wm.org/) (LGPL)
+    a light {{< iref "#ewmh" "EWMH compliant" >}} wm, fully usable with keyboard, with a
+    task bar, multiple workspaces and configuration tools _active in 2022_.
+
+    It uses few libraries outside of standard X11, and its own library libice; so its
+    real footprint is quite low: 6.2M resident/4.5M shared without desktop addons
+    icewmtray 3M/2.3M, icewmbg 2.7M/2.2M _a background daemon is not mandatory_,
+    icewm-session 1.7M/1.3M.
     -   [Gentoo IceWM HowTo](http://en.gentoo-wiki.com/wiki/IceWM)
--   [JWM (Joe's Window Manager)](http://www.joewing.net/programs/jwm/)
-    (GPL) _actively maintened__ is a low resource (half the memory
-    footprint of Fvwm95) Window manager using only Xlib and
-    (optionally) the shape extension and libXpm. It is said to be
-    one of the window managers with less dependencies, and smaller footprints.
-    It supports {{< iref "#ewmh" "EWMH" >}}
-    and is packaged in Debian.
--   [Oroborus](http://www.oroborus.org/) _minimal maintenance since
-    2005, but with bugfix in 2010_ minimalistic window manager.
-    It is packaged in Debian.
-    -   Oroborus comes with three small utilities _KeyLaunch_,
-        _DeskMenu_, and _DeskLaunch_ that are in separate debian packages.
--   [WindowMaker](http://www.windowmaker.org/ "windowmaker.org") (GPL)
-    a tiny (1.3M rsz) and fully functional wm
-        [Doc App Warehouse](http://www.bensinclair.com/dockapp/).
+-   [JWM (Joe's Window Manager)](https://joewing.net/projects/jwm) (GPL)
+    _actively maintened in 2022_ is a low resource (half the memory footprint of Fvwm95)
+    Window manager using only Xlib and (optionally) the shape extension and libXpm. It
+    is said to be one of the window managers with less dependencies, and smaller
+    footprints.  It supports {{< iref "#ewmh" "EWMH" >}} and is packaged in Debian.
+    -   [jwm - GitHub](https://github.com/joewing/jwm/).
+-  [WindowMaker](http://www.windowmaker.org/) (GPL)
+    a tiny (1.3M rsz) and fully functional wm. _active in 2021_.
+    -   [WidowMaker git repository](https://repo.or.cz/w/wmaker-crm.git)
+    -   [dockapps.net](https://www.dockapps.net/) archive of 211 Window Maker dockapps.
 
 
 ## i3 {#i3_wm}
