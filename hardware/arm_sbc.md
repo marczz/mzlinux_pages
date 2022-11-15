@@ -1131,50 +1131,28 @@ and optional USB or cloud backup
 
 # Software
 
+-   {{< wp "Zephyr_(operating_system" "Zephyr" >}} (Apache2 License)
+    is a real-time operating system (RTOS) for connected, resource-constrained and
+    embedded devices like {{< wp  "microcontrollers" >}}.
+    -   [Zephyr Project Documentation](https://docs.zephyrproject.org/latest/index.html).
+
 ## Monitoring
--   [rpi monitor
-    ](https://rpi-experiences.blogspot.fr/p/rpi-monitor.html)
+-   [rpi monitor](https://rpi-experiences.blogspot.fr/p/rpi-monitor.html)
     is a self monitoring application designed to run on Raspberry Pi.
     It gives the status: version, uptime, cpu, temperature, memory,
     swap, SD card usage, network traffic.
-    -   [GitHub Rpi-monitor
-        ](https://github.com/XavierBerger/RPi-Monitor)
-    -   [my raspberry RPI Monitor](https://192.168.1.8:8888/)
-    Rpimonitord uses 3 daemons processes in perl 7.6M/1.9M 6.8M/1.5M
-    6.6M/1.2M ~ $7.6 + 6.8 - 1.5 + 6.6 - 1.2 => 18.3  $
+    -   [GitHub Rpi-monitor](https://github.com/XavierBerger/RPi-Monitor)
 -   {{< iref "monitoring#conky" "conky" >}} can be used with raspberry.
-    [Conky for the Raspberry Pi
-    ](https://jeffskinnerbox.me/posts/2012/Nov/02/conky-for-the-raspberry-pi/)
 -   {{< wp "Raspcontrol" >}}
     is a web control centre written in PHP for Raspberry Pi.
-    It has numerous forks on GitHub.
+    It is no longer available but has numerous forks on GitHub.
+    -   [harmon25/raspcontrol](https://github.com/harmon25/raspcontrol)
+    -   [davidvuong/pyraspcontrol](https://github.com/davidvuong/pyraspcontrol)
+        Python port of the original RaspControl by Bioshox
 -   {{< iref "monitoring#monitorix" "monitorix" >}} can be used with
     raspberry, as explained in
     [How to set up a web-based lightweight system monitor on Linux
-    ](https://xmodulo.com/2014/05/web-based-lightweight-system-monitor-linux.html)
--   I use {{< iref "monitoring#monit" "monit" >}} on bananapi.
--   [Banoffee Pi Server](https://banoffeepiserver.com/):
-    [web based monitoring
-    ](https://banoffeepiserver.com/server-monitoring/simple-web-based-monitoring-tools.html)
-    with _linux-dash_, _phpsysinfo_, _Linfo_ or
-    [Ganglia](https://banoffeepiserver.com/server-monitoring/ganglia/).
-
-## Network monitoring.
--   [Monitor your LAN with Raspberry Pi
-    ](https://sites.sas.upenn.edu/kleinkeane/blog/2013/07/monitor-your-lan-raspberry-pi)
--   [Network Monitoring with MRTG on Raspberry Pi
-    ](https://resources.intenseschool.com/network-monitoring-with-mrtg-on-raspberry-pi/)
-
-
-## Cluster
-
--   [Banoffee Pi Server](https://banoffeepiserver.com/): a Bananapi
-    cluster with Mysql,
-    [Glusterfs](https://banoffeepiserver.com/glusterfs/),
-    [web based monitoring
-    ](https://banoffeepiserver.com/server-monitoring/simple-web-based-monitoring-tools.html)
-    with _linux-dash_, _phpsysinfo_, _Linfo_ or
-    [Ganglia](https://banoffeepiserver.com/server-monitoring/ganglia/).
+    ](https://www.xmodulo.com/web-based-lightweight-system-monitor-linux.html)
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
