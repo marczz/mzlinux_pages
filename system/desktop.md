@@ -510,21 +510,6 @@ if the chosen panel does not include one.
     [collection of gentoo bubble icons](http://bubbleicons.tuxfamily.org/)
     is appropiate.
 
-## icewm shortcuts
-These are the most common keyboard shortcuts used in icewm to make your life easier:
-
-- ctrl+esc opens the 'start menu'
-- alt+f11 (word key) full screens any active window/application
-- alt+f10 maximizes active window/application
-- alt+f9 minimizes active window/application
-- alt+f4 closes active window/application
-- ctrl+alt+h hides the taskbar
-- ctrl+alt+f1 from inside icewm brings you to console
-- ctrl+alt+f2 brings you back to icewm desktop
-- ctrl+alt+backspace kills X11 and brings you back to console
-- alt+f1 - f3 in console to switch between 3 virtual consoles
-- type 'reboot' in console to properly shut down the system, then pull the battery.
-
 # Wayland compositors {#wayland_compositors}
 
 See also the {{< iref "xorg#wayland" "Wayland Section" >}},
