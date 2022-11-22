@@ -2,7 +2,6 @@
 title: Git
 ---
 
-
 _I have also set a [git-memo](http://git-memo.mzlinux.org/)
 which gives some reminders and explanations on git use._
 
@@ -35,30 +34,21 @@ Git includes a live version of the documentation. You can access the manual for 
 command with ``git <command> --help`` or ``git help <command>``, to list the available
 commands do ``git help -a`` you can also get the guides with ``git help <concept>``
 where concept is one of:
-[attributes
-](https://www.kernel.org/pub/software/scm/git/docs/gitattributes)
-, [everyday
-](https://www.kernel.org/pub/software/scm/git/docs/giteveryday.html)
-, [glossary
-](https://www.kernel.org/pub/software/scm/git/docs/gitglossary.html)
-, [ignore
-](https://www.kernel.org/pub/software/scm/git/docs/gitignore.html)
-, [modules
-](https://www.kernel.org/pub/software/scm/git/docs/gitmodules.html)
-, [revisions
-](https://www.kernel.org/pub/software/scm/git/docs/gitrevisions.html)
-, [tutorial
-](https://www.kernel.org/pub/software/scm/git/docs/gittutorial.html)
-, [workflows
-](https://www.kernel.org/pub/software/scm/git/docs/gitworflows.html).
+[attributes](https://www.kernel.org/pub/software/scm/git/docs/gitattributes)
+, [everyday](https://www.kernel.org/pub/software/scm/git/docs/giteveryday.html)
+, [glossary](https://www.kernel.org/pub/software/scm/git/docs/gitglossary.html)
+, [ignore](https://www.kernel.org/pub/software/scm/git/docs/gitignore.html)
+, [modules](https://www.kernel.org/pub/software/scm/git/docs/gitmodules.html)
+, [revisions](https://www.kernel.org/pub/software/scm/git/docs/gitrevisions.html)
+, [tutorial](https://www.kernel.org/pub/software/scm/git/docs/gittutorial.html)
+, [workflows](https://www.kernel.org/pub/software/scm/git/docs/gitworflows.html).
 
 # Documentation references
 -   [git wiki - Git Documentation
     ](https://git.wiki.kernel.org/index.php/GitDocumentation)
     is a complete source of documentation but is not always up-to-date
     and some links are broken.
--   [git wiki - Git Links
-    ](https://git.wiki.kernel.org/index.php/GitLinks)
+-   [git wiki - Git Links](https://git.wiki.kernel.org/index.php/GitLinks)
     references articles, blogs, mailing lists, talks, git
     comparisons...
 -   [git-scm - Links to other material](https://git-scm.com/doc/ext)
@@ -88,8 +78,7 @@ where concept is one of:
 
     It is also mirrored at [marc: git](http://marc.info/?l=git) *(search form)*.
 
--   [users mailing list on google groups
-    ](http://groups.google.com/group/git-users)
+-   [users mailing list on google groups](http://groups.google.com/group/git-users)
 -   IRC  #git ([log](http://colabti.org/irclogger/irclogger_logs/git))
     or #git-devel ([log](http://colabti.org/irclogger/irclogger_logs/git-devel))
     channels on irc.libera.chat. #github #bitbucket and #gitlab have
@@ -112,8 +101,7 @@ where concept is one of:
 
 # manuals
 
--   [Git User Manual
-    ](https://www.kernel.org/pub/software/scm/git/docs/user-manual.html)
+-   [Git User Manual](https://www.kernel.org/pub/software/scm/git/docs/user-manual.html)
 -   [Git manual page
     ](https://www.kernel.org/pub/software/scm/git/docs/)
     which reference all other manual pages.
@@ -146,11 +134,9 @@ where concept is one of:
 # Tutorials, recipes, tips
 ## Official Tutorials
 
--   [git tutorial
-    ](https://www.kernel.org/pub/software/scm/git/docs/gittutorial.html)
+-   [git tutorial](https://www.kernel.org/pub/software/scm/git/docs/gittutorial.html)
     covers the basics.
--   [Everyday Git
-    ](https://www.kernel.org/pub/software/scm/git/docs/everyday.html)
+-   [Everyday Git](https://www.kernel.org/pub/software/scm/git/docs/everyday.html)
     handbook gives set of commands and the workflow for any developer.
 -   [A tutorial introduction to git: part two
     ](https://www.kernel.org/pub/software/scm/git/docs/gittutorial-2.html)
@@ -208,8 +194,7 @@ where concept is one of:
         ](https://github.com/MarkLodato/visual-git-guide)
         is an interesting use-case of latex-TkiZ.
 -   [Seth Robertson's tutorials](http://sethrobertson.github.io/):
-    -   [Git Best Practices
-        ](http://sethrobertson.github.io/GitBestPractices/)
+    -   [Git Best Practices](http://sethrobertson.github.io/GitBestPractices/)
         followed by
         [Post-Production Editing using Git
         ](http://sethrobertson.github.io/GitPostProduction/gpp.html)
@@ -227,14 +212,11 @@ with new commands what we did with some script using plumbing commands_
 -   [A tour of git: the basics](http://cworth.org/hgbook-git/tour/)
     a complete tutorial, more verbose and aimed at beginners,
     _2007_ by  Bryan O'Sullivan and Carl D. Worth.
-   [Kernel Hackers' Guide to git](http://linux.yyz.us/git-howto.html)
-    by Jeff Garzik is a short and easy *but not over-easy*, tutorial.
-    _2008_.
---   Denx [Basic git Commands
-    ](http://www.denx.de/en/Documents/GitBasicCommands) _2005_,
-    and [Using git (advanced commands)
-    ](http://www.denx.de/en/Documents/GitAdvancedUse) _2005_,
-    are tutorials coverring complex branch management
+    [Kernel Hackers' Guide to git](http://linux.yyz.us/git-howto.html)
+    by Jeff Garzik is a short and easy *but not over-easy*, tutorial. _2008_.
+--   Denx [Basic git Commands](http://www.denx.de/en/Documents/GitBasicCommands) _2005_,
+    and [Using git (advanced commands)](http://www.denx.de/en/Documents/GitAdvancedUse)
+    _2005_, are tutorials coverring complex branch management
     (*They are related to a previous state of git (2005)
     so they use more plumbing commands that it would be necessary today*).
 
@@ -246,9 +228,9 @@ with new commands what we did with some script using plumbing commands_
     by Sitaram Chamarty, _mainly maintenance fixes since 2014_ a set of various notes
     with a useful not so common documentation on
     commands like _reflog_, _grafting_, __pull --rebase__, ...
-    <br />
-    It includes a very useful [git as a deployment tool
-    ](http://gitolite.com/deploy.html).
+
+    It includes a very useful
+    [git as a deployment tool](http://gitolite.com/deploy.html).
     He is also author of a version of
     [git for computer scientists](http://gitolite.com/gcs.html).
 -   [Git cookbook](https://git.seveas.net/) _2016_ by Dennis Kaarsemaker is a collection
@@ -266,23 +248,17 @@ with new commands what we did with some script using plumbing commands_
 -   [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/).
 
 # Git cheatsheets
--   [Git Cheat Sheet & Git Flow
-    ](https://github.com/arslanbilal/git-cheat-sheet)
+-   [Git Cheat Sheet & Git Flow](https://github.com/arslanbilal/git-cheat-sheet)
 -   [Git Tips](https://github.com/git-tips/tips)
--   Zack Rusin's [git cheat sheet
-    ](http://zrusin.blogspot.com/2007/09/git-cheat-sheet.html)
-    [available in svg
-    ](http://byte.kde.org/~zrusin/git/git-cheat-sheet.svg)
-    ([saved copy
-    ](http://www.cheat-sheets.org/saved-copy/git-cheat-sheet.svg)),
+-   Zack Rusin's
+    [git cheat sheet](http://zrusin.blogspot.com/2007/09/git-cheat-sheet.html)
+    [available in svg](http://byte.kde.org/~zrusin/git/git-cheat-sheet.svg)
+    ([saved copy](http://www.cheat-sheets.org/saved-copy/git-cheat-sheet.svg)),
     [pdf](http://www.cheat-sheets.org/saved-copy/git-cheat-sheet.pdf),
-    [medium png
-    ](http://byte.kde.org/~zrusin/git/git-cheat-sheet-medium.png)
+    [medium png](http://byte.kde.org/~zrusin/git/git-cheat-sheet-medium.png)
     and
-    [large png
-    ](http://byte.kde.org/~zrusin/git/git-cheat-sheet-large.png)
-    ([saved copy
-    ](http://www.cheat-sheets.org/saved-copy/git-cheat-sheet-large.png));
+    [large png](http://byte.kde.org/~zrusin/git/git-cheat-sheet-large.png)
+    ([saved copy](http://www.cheat-sheets.org/saved-copy/git-cheat-sheet-large.png));
     -   Zack Rusin Git Cheat Sheet
         [expanded version by Pierre-Alexandre St-Jean (svg)
         ](https://rawgit.com/pastjean/git-cheat-sheet/master/git-cheat-sheet.svg)
@@ -296,8 +272,7 @@ with new commands what we did with some script using plumbing commands_
     reference some other cheat sheets and give a git memo.
 -   [Magit Cheatsheet](http://daemianmack.com/magit-cheatsheet.html)
     has its'
-    [org source in GitHub
-    ](https://github.com/daemianmack/magit-cheatsheet).
+    [org source in GitHub](https://github.com/daemianmack/magit-cheatsheet).
 -   [Alvin  Alexander: A Git cheat sheet
     ](http://alvinalexander.com/git/git-cheat-sheet-git-reference-commands)
     elementary cheatsheet
@@ -339,16 +314,15 @@ with new commands what we did with some script using plumbing commands_
     ](https://wiki.archlinux.org/index.php/Gitosis),
     -   [Pro Git v1: Gitosis
         ](https://git-scm.com/book/en/v1/Git-on-the-Server-Gitosis).
--   <a name="gitolite"></a>[Gitolite
-    ](https://github.com/sitaramc/gitolite) (GPL)
+-   <a name="gitolite"></a>[Gitolite](https://github.com/sitaramc/gitolite) (GPL)
     by Sitaram Chamarty is an enhancement of Gitosis. It add per-branch permissions.
     It is written entirely in perl, and doesn't require root access.<br />
     Tutorials:
     -   [Pro Git v1: Gitolite
-    ](https://git-scm.com/book/en/v1/Git-on-the-Server-Gitolite),
+        ](https://git-scm.com/book/en/v1/Git-on-the-Server-Gitolite),
     -   [Gitolite Tutorial
-    ](http://sites.google.com/site/senawario/home/gitolite-tutorial)
-    by Sena Wario,
+        ](http://sites.google.com/site/senawario/home/gitolite-tutorial)
+        by Sena Wario,
 -   [Gogs](https://gogs.io/) (MIT)
     is a self-hosted Git service written in Go.
     -   [GitHub - Gogs](https://github.com/gogits/gogs).
@@ -365,7 +339,6 @@ with new commands what we did with some script using plumbing commands_
     as Debian package, accompanied by other packages to enhance it's functionality.
     -   [pagure.io](https://pagure.io/) is an hosted pagure server.
     -   [pagure documentation](https://docs.pagure.org/pagure/).
-
 -   [RocketGit](https://rocketgit.com/) (Affero GPLv3+)
     A PHP server.
     -   [Git hosting solutions comparison - RocketGit](https://rocketgit.com/op/doc/compare)
@@ -374,16 +347,16 @@ with new commands what we did with some script using plumbing commands_
 
 # Git Hosting as a service
 There are some git free or *adware* or *{{< wp "Freeware"  "freemium" >}}*
-service hosting  they are [listed in the Git Wiki
-](https://git.wiki.kernel.org/index.php/GitHosting)
+service hosting  they are
+[listed in the Git Wiki](https://git.wiki.kernel.org/index.php/GitHosting)
 and in the Wikipedia
 {{< wp "Comparison of open-source software hosting facilities" >}}.
 
 ## GitHub {#github}
 See also {{< iref "#github_flow" "GitHub Flow" >}}.
 
-[GitHub](http://github.com/) gives you a free git
-repository for public _and now private_ projects.
+[GitHub](http://github.com/) gives you a free git repository for public _and now
+private_ projects.
 
 -   [Git Scm: GitHub Chapter
     ](https://git-scm.com/book/en/v2/GitHub-Account-Setup-and-Configuration).
@@ -689,20 +662,27 @@ versioning large files developped by GitHub and also Available on Bitbucket and 
 -   [BitBucket Git-lfs
     ](https://confluence.atlassian.com/bitbucket/git-large-file-storage-in-bitbucket-829078514.html)
     is available with 1GB free for free personnal account, and 10$/month for 100 GB.
--   [GitLab Git LFS
-    ](https://docs.gitlab.com/ee/workflow/lfs/manage_large_binaries_with_git_lfs.html),
+-   [GitLab Git LFS](hhttps://docs.gitlab.com/ee/topics/git/lfs/index.html),
     [GitLab Git LFS Administration
     ](https://docs.gitlab.com/ee/workflow/lfs/lfs_administration.html#storing-lfs-objects-in-remote-object-storage)
     allow storing lfs objects on external resources. If you use the hosted Gitlab.com
-    the [global repository size limit
-    ](https://docs.gitlab.com/ee/user/gitlab_com/index.html#repository-size-limit)
-    includes lfs and is 10 GB.
+    the [global repository size limiti
+    ](https://docs.gitlab.com/ee/user/gitlab_com/#account-and-limit-settings)
+    includes lfs and is 10 GB (but listed as 5GB in
+    but listed as 5GB in [Pricing | GitLab](https://about.gitlab.com/pricing/))
 -   There is an official [list of git-lfs implementation
-    ](https://github.com/git-lfs/git-lfs/wiki/Implementations), but most of them are
-    unmaintained or speak the deprecated v1 protocol. Among recent servers
-    [The reference LFS Test Server](https://github.com/git-lfs/lfs-test-server) in go
-    language, and [rudolfs](https://github.com/jasonwhite/rudolfs) a high-performance,
-    caching Git LFS server with an AWS S3 back-end, with a tiny (<10MB) Docker image.
+    ](https://github.com/git-lfs/git-lfs/wiki/Implementations), but some of them are
+    unmaintained or speak the deprecated v1 protocol. Among recent servers:
+    -   [The reference LFS Test Server](https://github.com/git-lfs/lfs-test-server) in go
+        language.
+    -   [rudolfs](https://github.com/jasonwhite/rudolfs) a high-performance, caching Git
+        LFS server with an AWS S3 back-end, with a tiny (<10MB) Docker image.
+    -   [datopian/giftless](https://github.com/datopian/giftless)
+        A plugable Git LFS server written in Python.
+
+        Giftless supports the basic Git LFS transfer mode with the following storage
+        backends: Local storage, Google Cloud Storage, Azure Blob Storage, Amazon S3
+        Storage.
 -   Alternatives to git-lfs: {{< iref "#git-annex" >}}, git-bigfiles _unmaintained_,
         [git-fat](https://github.com/jedbrown/git-fat), git-media _unmaintained_,
         [git-bigstore](https://github.com/lionheart/git-bigstore),
@@ -1147,11 +1127,11 @@ When used as a git mergetool you get the following windows:
     and tutorials on dotfile management.
 -   [ArchWiki: Dotfiles](https://wiki.archlinux.org/index.php/Dotfiles)
     give multiple options of dotfile management.
--   [chezmoi](https://www.chezmoi.io/)  
-    is a dotfile manager written in go. It uses 
+-   [chezmoi](https://www.chezmoi.io/)
+    is a dotfile manager written in go. It uses
     [templating](https://www.chezmoi.io/user-guide/templating/) with
     [go templates](https://pkg.go.dev/text/template).
-    -    [chezmoi user guide](https://www.chezmoi.io/user-guide)   
+    -    [chezmoi user guide](https://www.chezmoi.io/user-guide)
 -   [dotbot - GitHub](https://github.com/anishathalye/dotbot).
     -   [dotbot wiki](https://github.com/anishathalye/dotbot/wiki)
         dotbot is installed as a submodule in your repository.
@@ -1400,8 +1380,8 @@ See also my
     ](https://git.kernel.org/pub/scm/git/git.git/plain/contrib/subtree/git-subtree.txt)
     was first developed by Avery Pennarun and since april 2012 merged
     in git mainline and available in the contrib directory.
--   [Understanding Git Subtree
-    ](https://hpc.uni.lu/blog/2014/understanding-git-subtree/) _2014_.
+-   [Understanding Git Subtree](https://hpc.uni.lu/blog/2014/understanding-git-subtree/)
+    _2014_.
 -   Jakub Suder's [Sharing code between projects with git subtree
     ](http://psionides.eu/2010/02/04/sharing-code-between-projects-with-git-subtree/)
      is a tutorial to git-subtree _2010_.
@@ -1437,22 +1417,20 @@ See also my
 Some other tools to act on a group of repositories
 
 -   <a name="gitslave"></a>[GitSlave](http://gitslave.sourceforge.net/)
-    manage a superproject repository and a number of slave
-    repositories all of which are concurrently developed on and on
-    which all git operations should normally operate; Gitslave has no
-    new commit since 2012.
+    manage a superproject repository and a number of slave repositories all of which are
+    concurrently developed on and on which all git operations should normally operate;
+    Gitslave has no new commit since 2012.
 -   [mr alias _myrepos_](https://github.com/joeyh/myrepos) (GPL)
-    by Joey Hess is a perl script that can checkout, update, or
-    perform other actions on a set of repositories. _mr_ is a Debian
-    Package.
+    by Joey Hess is a perl script that can checkout, update, or perform other actions on
+    a set of repositories. _mr_ is a Debian Package.
     -   See also the list of software related to _myrepos_
         at the end of the  [myrepos Home Page](http://myrepos.branchable.com/)
 -   [fgit (Folder Git)](https://github.com/l0b0/fgit) (GPL)
     by Victor Engmark is a small shell script that run a Git command
     in several repositories.
 -   [metagit (GitHub)](https://github.com/stettberger/metagit) (GPL)
-    is a python tool for defining sets of git (or whatever scm)
-    repositories and perform actions like clone/pull/push on them.
+    is a python tool for defining sets of git (or whatever scm) repositories and perform
+    actions like clone/pull/push on them.
 
 ## Other Source Conf Management Software
 -   {{< wp "Revision_control"  "Wikipedia: Revision Control" >}}
@@ -1461,11 +1439,10 @@ Some other tools to act on a group of repositories
     comparing many SCM software but it is now tagged as _mostly irrelevant_ as Git
     established itself as the de-facto standard.
 -   [Semantic Versioning](http://semver.org/)
-    is a simple set of rules and requirements that dictate how version
-    numbers are assigned and incremented.  Under this scheme, version
-    numbers and the way they change convey meaning about the
-    underlying code and what has been modified from one version to the
-    next.
+    is a simple set of rules and requirements that dictate how version numbers are
+    assigned and incremented.  Under this scheme, version numbers and the way they
+    change convey meaning about the underlying code and what has been modified from one
+    version to the next.
 -   {{< wp "Concurrent Versions System" >}} more known as _CVS_ is the ancestor of
     modern source control management software since 1990. It is now obsolete and run
     only for old projects , no more developed or for few files history tracking.
@@ -1495,11 +1472,10 @@ Some other tools to act on a group of repositories
     -   [Mercurial: The Definitive Guide](http://hgbook.red-bean.com/read/)
     -   [Mercurial for Git users](http://mercurial.selenic.com/wiki/GitConcepts)
 -   [src](https://gitlab.com/esr/src)
-    from Eric Raymond is a *RCS reloaded* with a modern UI, designed
-    to manage single-file solo projects. It features sequential
-    revision numbers, lockless operation, embedded command help, and a
-    command set that familiar to users of Subversion, Mercurial, and
-    Git.
+    from Eric Raymond is a *RCS reloaded* with a modern UI, designed to manage
+    single-file solo projects. It features sequential revision numbers, lockless
+    operation, embedded command help, and a command set that familiar to users of
+    Subversion, Mercurial, and Git.
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
