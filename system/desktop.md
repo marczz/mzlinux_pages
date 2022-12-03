@@ -2,12 +2,16 @@
 title: Linux Desktops
 ---
 
-The lower level is {{< iref "xorg" "Xorg" >}}
+The lower level is {{< iref "xorg" "Xorg and Wayland" >}}
+
+In the {{< iref "dbus" "Dbus Section" >}} you find the
+{{< iref "dbus#dbus_notification" "notification daemons" >}}.
 
 See also the section {{< iref "file_managers" "File Managers" >}},
 {{< iref "xterminals" "X Terminals" >}},
 {{< iref "#desktop_components" "Desktop components" >}}.
 
+<!-- [[file:../../../../content-org/notes/system_notes/desktop_notes.org][Desktop Notes]] -->
 --------------
 
 # Desktop environments {#desktop_environments}
@@ -24,7 +28,7 @@ and a {{< iref "#file_manager" "file-manager" >}}.
 
 Some [window manager]((#window_manager "internal reference") are inseparable
 from the desktop environment they use as _i3_, _fluxbox_, _awesome_
- and many light window manager. You will find an entry for them in the
+and many light window manager. You will find an entry for them in the
 {{< iref "#window_manager" "window manager section" >}}
 
 You find a nice [comparison of memory footprints of  light linux desktops
@@ -508,7 +512,7 @@ if the chosen panel does not include one.
     icewmbg,  wmsetbg, xli xsetbg, xsri,
 -   fbdesk needs icons the
     [collection of gentoo bubble icons](http://bubbleicons.tuxfamily.org/)
-    is appropiate.
+    is appropriate.
 
 # Wayland compositors {#wayland_compositors}
 
@@ -642,6 +646,8 @@ The themes are the same than for i3 you find them in
     Screen locker for Wayland. _In Debian._
 
 ## Wayland desktop components {#wayland_desktop_components}
+I don't list here all the GTK and QT applications that run natively under Wayland
+
 
 _Sway_ has a long list of [Clients that use the wlr protocols
 ](https://github.com/swaywm/wlr-protocols/wiki).
@@ -649,13 +655,18 @@ _Sway_ has a long list of [Clients that use the wlr protocols
 The [wlr protocol](https://github.com/swaywm/wlr-protocols) is supported by
 many wlroots-based compositors.
 
+
+[Useful add ons for sway · Sway Wiki
+](https://github.com/swaywm/sway/wiki/Useful-add-ons-for-sway)
+is a extended list of apps and scripts for swaywm
+
 The Nix overlay [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)
 has built many wayland tools. _List in the Readme_
 
 See also {{< iref "#wayland_remote_desktop" "Wayland remote desktop" >}}
 
 See below the {{< iref "#wayland_menus" "dmenu/rofi alternatives" >}} and above the
-{{< iref "wayland_clipboard" "Wayland clipboard tools" >}}.
+{{< iref "#wayland_clipboard" "Wayland clipboard tools" >}}.
 
 -   [CuboCore](https://cubocore.gitlab.io/)
     develop _Coreapps_ alias _C suite_, a set of QT apps, which are Desktop Independent
@@ -690,14 +701,12 @@ See below the {{< iref "#wayland_menus" "dmenu/rofi alternatives" >}} and above 
 -   [grim](https://github.com/emersion/grim) (MIT Licence)
     Grab images from a Wayland compositor. Works with slurp and with sway.
     _In Debian and [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)._
--   [kanshi](https://github.com/emersion/kanshi) (MIT License)
+-   [kanshi](https://sr.ht/~emersion/kanshi/) (MIT License)
     Dynamic display configuration for wayland compositors. Kanshi allows you to define
     output profiles that are automatically enabled and disabled on hotplug. _in Debian._
 -   [slurp](https://github.com/emersion/slurp) (MIT License)
     Select a region in a Wayland compositor. Used by _grim_. _In Debian and
     [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)._
--   [imv](https://github.com/eXeC64/imv)  (MIT License)
-    is an image viewer for X11/Wayland. _In Debian_
 -   [wev](https://git.sr.ht/~sircmpwn/wev) (MIT License)
     wayland event viewer analagous to the X11 tool xev.
     _In Debian and [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)._
@@ -718,6 +727,17 @@ See below the {{< iref "#wayland_menus" "dmenu/rofi alternatives" >}} and above 
     xdotool type for wayland. _in Debian and
     [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)._
 
+### Wayland image viewers
+
+-   [imv](https://github.com/eXeC64/imv)  (MIT License)
+    is an image viewer for X11/Wayland. _In Debian_
+-   [mpv-image-viewer](https://github.com/occivink/mpv-image-viewer) (Unlicense license)
+    or _miv_ Configuration, scripts and tips for using mpv as an image viewer.
+-   [swayimg](https://github.com/artemsen/swayimg) (MIT license)
+    image viewer for Sway/Wayland.
+-   [vimiv-qt](https://github.com/karlch/vimiv-qt) (GPL-3.0)
+    a QT image viewer with vim-like keybindings.
+
 # Desktop components {#desktop_components}
 ## Color Themes {#color_themes}
 
@@ -726,9 +746,9 @@ See also {{< iref "emacs#emacs_themes" "Emacs Themes" >}}.
 -   <a name="base16"></a>[base16](https://github.com/chriskempson/base16)
     by Chris Kempson is the improvement of
     [tomorrow-theme](https://github.com/chriskempson/tomorrow-theme)
-    it is very actively maintained It has color schemes for:
-     _Xressources_, _i3_, _XFCE4 Terminal_, _mate terminal_, _termite_, _gnome
-     terminal_, _alacritty_, _shell_ (_bash_, _zsh_), _vim_, _emacs_, _gimp_, _dunst_,
+    it is very actively maintained It has color schemes for: _Xressources_, _i3_, _XFCE4
+     Terminal_, _mate terminal_, _termite_, _gnome terminal_, _alacritty_, _shell_
+     (_bash_, _zsh_), _vim_, _emacs_, _gimp_, _{{< iref "dbus#dunst" "dunst" >}}_,
      _zathura_, _rofi_, _st_, and _mac os_ apps.
 -   <a name="dracula"></a>[Dracula](https://draculatheme.com/) is a dark theme
     for a lot of apps (135!) including vim, zsh, emacs, gnome-terminal, alacritty,
@@ -742,9 +762,9 @@ See also {{< iref "emacs#emacs_themes" "Emacs Themes" >}}.
     {{< iref "checkpointing#tmux_themes" "tmux" >}}  st, alacritty, emacs.
 -   [lighthaus](https://github.com/lighthaus-theme/lighthaus)
     A focused dark color lighthouse inspired color scheme.  It supports alacritty,
-    Dunst, bottom system monitor, gnome-terminal, i3, iTerm, Kitty, Konsole, rofi,
-    terminator, termite, termux, tilix, vim, vim-airline status bar, xfce-terminal,
-    xresources, zathura, zsh.
+    {{< iref "dbus#Dunst" "Dunst" >}}, bottom system monitor, gnome-terminal, i3, iTerm,
+    Kitty, Konsole, rofi, terminator, termite, termux, tilix, vim, vim-airline status
+    bar, xfce-terminal, xresources, zathura, zsh.
 -   <a name="nord-theme"></a>[nord](https://github.com/arcticicestudio/nord)
     is an arctic, north-bluish color palette. It provides four palettes,
     but it seems that all port are using a dark one, and the light one
@@ -761,20 +781,19 @@ See also {{< iref "emacs#emacs_themes" "Emacs Themes" >}}.
 -   [Solarized](http://ethanschoonover.com/solarized)
     is a sixteen color palette. The same palette is used for dark or light themes. There
     are ports to vim, Xresources, emacs,  mutt,
-    {{< iref "checkpointing#tmux_themes" "tmux" >}}, GIMP Palette; and some Mac OS apps. It is
-    also [ported to gnome-terminal
+    {{< iref "checkpointing#tmux_themes" "tmux" >}}, GIMP Palette; and some Mac OS
+    apps. It is also [ported to gnome-terminal
     ](https://github.com/Anthony25/gnome-terminal-colors-solarized).
 -   [Smyck](https://github.com/hukl/Smyck-Color-Scheme),
     [Smyck Home](http://color.smyck.org/)
-    is no longer updated since 2012, but has many forks.
-    The ariejan fork has a [color scheme for roxterm
-    ](https://github.com/ariejan/Smyck-Color-Scheme/tree/roxterm)
--   [Zenburn](http://sysphere.org/~anrxc/j/articles/zenburn/index.html)
-    by [anrxc](http://sysphere.org/~anrxc/) are ports of the
-    [Zenburn vim theme](https://github.com/jnurmine/Zenburn). It
-    has scheme for [awsome](http://awesome.naquadah.org/wiki/Zenburn_Theme),
-    console, _Gajim_, _pidgin_, _emacs_, X apps thru _.Xdefaults _, [roxterm theme
-    ](http://git.sysphere.org/dotfiles/tree/config/roxtnerm.sourceforge.net/Colours/Zenburn).
+    is mainly aimed to OS X apps, it is no longer updated since 2017, but has many forks.
+-   The original Zenburn theme is
+    [Zenburn vim theme](https://github.com/jnurmine/Zenburn), Bozhidar Batsov ported it
+    to [zenburn-emacs](https://github.com/bbatsov/zenburn-emacs), and
+    [anrxc](http://sysphere.org/~anrxc/) gives [in his blog
+    ](http://sysphere.org/~anrxc/j/articles/zenburn/index.html)
+    schemes for [awsome](http://awesome.naquadah.org/wiki/Zenburn_Theme),
+    console, _Gajim_, _pidgin_, _emacs_, X apps thru _.Xdefaults _.
 
 -   There are many web applications to help to configure color themes
     -   [256 colors - cheat sheet](https://jonasjacek.github.io/colors/),
@@ -788,7 +807,7 @@ See also {{< iref "emacs#emacs_themes" "Emacs Themes" >}}.
         [termcolor library](https://github.com/stayradiated/termcolors) including
         Xresources, st, linux console, gnome ...
     -   [The 28 best tools for choosing a colour scheme (2014)
-    ](http://www.creativebloq.com/colour/tools-colour-schemes-12121430).
+        ](http://www.creativebloq.com/colour/tools-colour-schemes-12121430).
 -   For bash you can look at [ArchLinux: Color Bash Prompt
     ](https://wiki.archlinux.org/index.php/Color_Bash_Prompt)
 
@@ -874,22 +893,35 @@ But some alternative status are window manager independant.
     {{< iref "#polybar" "polybar" >}}.
 
 ## Menu system
-### menus from shell
+### terminal menus
+-   [pdmenu](https://joeyh.name/code/pdmenu/) full screen console
+    menuing sys tem for Unixs removed from Debian since 2017.
 -   [qmenu](https://github.com/teopost/qmenu/)
+    is a terminal menu creator.
     Features include options to format the menu, bindings to function keys, possibility
     to include submenus, show help messages and launch shell sessions.  package in
     Debian.
+-   [smenu](https://github.com/p-gen/smenu) (MPL-2.0 license)
+    is a command-line utility that allows you to use words coming from the
+    standard input to create a nice selection window just below the cursor. Your
+    selection will then be sent to standard output.
+
+### Window menus from shell
+-   Root menus are menus which popup when clicking on root window they are part of most
+    floating window managers, but there are some stand alone, for window managers which
+    do not provide a menu such as Oroborus.
+    -   [deskmenu (debian package)](https://packages.debian.org/sid/deskmenu).
 -   _9menu_ from plan9,
-    [9menu Debian package](https://packages.debian.org/testing/9menu)
--   _ratmenu_ forked from 9menu for ratpoison wm
-    [ratmenu Debian package](https://packages.debian.org/testing/ratmenu)
+    -   [9menu Debian package](https://packages.debian.org/testing/9menu)
+-   _ratmenu_ forked from 9menu for ratpoison wm.
+    -   [ratmenu Debian package](https://packages.debian.org/testing/ratmenu)
 -   [Zrajm’s programs](http://zrajm.org/programs/) provide _ratmen_ a
     _ratmenu_ alternative, and _termmen_ a zsh menu.
 
 ### dmenu {#dmenu}
 [dmenu](http://tools.suckless.org/dmenu/)
-is a dynamic menu for X, originally designed for dwm. part of
-the suckless-tools package in Debian.
+is a dynamic menu for X, originally designed for dwm. part of the suckless-tools package
+in Debian.
 -   [ArchWiki: dmenu](https://wiki.archlinux.org/index.php/dmenu),
 -   [Archlinux dmnenu hacking thread](https://bbs.archlinux.org/viewtopic.php?id=80145),
 -   [jukil/dmenu-scripts-collection](https://github.com/jukil/dmenu-scripts-collection)
@@ -927,10 +959,8 @@ Rofi is in Debian.
 [Wayland support](https://github.com/lbonn/rofi#wayland-support).
 
 
-### dmenu alter natives
--   You find {{ < iref "#lemonbar" "lemonbar" >}} in the status bar section.
--   [pdmenu](ht tps://joeyh.name/code/pdmenu/) full screen console
-    menuing sys tem for Unix.
+### dmenu alternatives
+-   You find {{< iref "#lemonbar" "lemonbar" >}} in the status bar section.
 -   {{< iref "#yabar" "yabar" >}} in the status bar section.
 -   [Albert](https://albertlauncher.github.io/)
     is a keyboard launcher written in C++/Qt.
@@ -982,7 +1012,7 @@ Rofi is in Debian.
 is a notification and menuing program for X11 that requires only X11.  It is designed to
 be scriptable in any language and integrate well with light window managers. A _dzen_
 daemon takes only 1.5M res/1.1M shr. It is no more developed since 2013,
-[nezd](https://github.com/telser/nezd) is a fork of dzen _2019_.
+[nezd](https://github.com/telser/nezd) is a fork of dzen _with last commit in 2019_.
 
 _dzen2_ is in Debian.
 
@@ -996,12 +1026,6 @@ _dzen2_ is in Debian.
     by Diego Souza has _systat2dzen_, a python script that gives hostname, date/time,
     sys statistics, meminfo, iostat, load ifo, disk status, battery status, check local
     or imap mailboxes, ethernet and wireless status; _Last commit 2013._
-
-### Root menu
-Root menus are parts of most floating window managers, but there are
-some stand alone,  for window managers which do not provide a menu such as Oroborus.
-
--   [deskmenu (debian package)](https://packages.debian.org/sid/deskmenu).
 
 ### Freedesktop (xdg) menus {#xdg_menus}
 
@@ -1234,10 +1258,18 @@ Some newer command line apps to manage selection in X11:
 -   [wl-clipboard-manager](https://github.com/maximbaz/wl-clipboard-manager) (ISC License)
     wrapper over {{< iref "#wl-clipboard" "#wl-clipboard" >}}
     that implements a clipboard manager.
+-   [cliphist](https://github.com/sentriz/cliphist) (GPL-3.0)
+    a Golang clipboard history “manager” for Wayland.
+    -   The [Releases](https://github.com/sentriz/cliphist/releases) includes
+        binaries for x386, amd64 and arm.
 -   [clipman](https://github.com/yory8/clipman) (GPL v3.0)
-    Golang clipboard manager for Wayland. It is in Debian.
+    is a basic Golang clipboard manager for Wayland, with support for persisting copy
+    buffers after an application exits. It is in Debian.
 
     _Don't confuse with xfce4 clipboard plugin also named clipman._
+-   [copypasta](https://github.com/alacritty/copypasta) (MIT and Apache2 License).
+    is a rust-clipboard fork. It is a library for getting and setting the
+    contents of clipboard. This fork adds support for the Wayland clipboard.
 
 Some clipboard managers in the following section have also a wayland support, but for
 most of them by using Xwayland.
@@ -1260,29 +1292,28 @@ A list is in [Archwiki Clipboard/Managers
     _Clipit_ seat in your tray, and allow to select clipboard history.
     It can also be used from the command line.  _Clipit_ has preferences to manage
     _CLIPBOARD_ and _PRIMARY_ selections and synchronize them.
+     native
 
     _ClipIt_ is no longer supported. and is replaced by {{< iref "#diodon" "Diodon" >}}.
 -   [clipman for xfce4](https://docs.xfce.org/panel-plugins/xfce4-clipman-plugin/)
     is a clipboard manager for Xfce. It keeps the clipboard contents around while it is
     usually lost when you close an application.
 -   [clipman](https://github.com/yory8/clipman) (GPL-3.0)
-    is a basic clipboard manager for Wayland, with support for persisting copy buffers
-    after an application exits.
 -   [CopyQ](https://github.com/hluk/CopyQ) (GPL-3.0)
     is a C++/QT  clipboard manager with editing, scripting and a
     command-line interface. _It is in Debian, along with a
     copyq-plugins package._
 
     CopyQ support wayland, but without global shortcuts, clipboard access from window
-    that is not active, and pasting.
-    If you want these features you can use it with Xwayland by launching it with
+    that is not active, and pasting.  If you want these features you can use it with
+    Xwayland by launching it with
 
         $ QT_QPA_PLATFORM=xcb copyq
 
 -   <a name="diodon"></a>[Diodon](https://github.com/diodon-dev/diodon) (GPL-2.0)
     is a vala / GTK3 clipboard manager for Gnome/unity.
 
-    In Wayland it needs to use Xwayland.
+     There is no native Wayland support, you need Xwayland.
 
     _It is in Debian._
 -   [gpaste](https://github.com/Keruspe/GPaste) (BSD-2-Clause License)
@@ -1301,6 +1332,9 @@ A list is in [Archwiki Clipboard/Managers
     is an haskell clipboard manager for {{< iref "#rofi" "rofi" >}}.
     It does not support wayland, since Haskell ecosystem does not have a wayland
     package.
+-   [rust-clipboard][https://github.com/aweinstock314/rust-clipboard)
+    (MIT and Apache2 License) is a cross-platform library for getting and setting the
+    contents of the OS-level clipboard. On Linux it uses the X11 library.
 
 -  [redguardtoo/cliphist](https://github.com/redguardtoo/cliphist)
    is an emacs package by [Chen Bin (reguardtoo)](https://github.com/redguardtoo)
