@@ -2,6 +2,7 @@
 title: Proxy
 ---
 
+See also {{< iref "vpn" "VPN and Tunelling" >}}.
 
 # HTTP Proxies {#http_proxies}
 Wikipedia: {{< wp "Proxy server" >}} review the different types of proxy
@@ -198,14 +199,17 @@ settings to be changed.
         ](https://www.irif.fr/~jch//software/polipo/faq.html).
     -   [ArchWiki: Polipo
         ](https://wiki.archlinux.org/index.php/Polipo)
--   <a name="privoxy"></a>[Privoxy](http://www.privoxy.org/) (GPL)
-    a filtering web proxy.
-    It is an improvement of the now obsolete Internet Junkbuster .
-    It is in Debian. _active in 2018_.
-    -   [freeedom-privoxy](https://github.com/jvasile/freedombox-privoxy)
-        _2012_,  is a mod of Privoxy
-        tailored for use on a
-        [Freedom Box](http://wiki.debian.org/FreedomBox)
+-   <a name="privoxy"></a>[Privoxy](http://www.privoxy.org/) (GPL v2)
+    a filtering web proxy, it is an improvement of the now obsolete Internet Junkbuster.
+
+    It is in Debian.
+
+    -   [Privoxy User Manual](https://www.privoxy.org/user-manual/index.html)
+    -   [Quickstart to Using Privoxy
+        ](https://www.privoxy.org/user-manual/quickstart.html).
+    -   It can be installed on a small home server like a
+        [Freedom Box](http://wiki.debian.org/FreedomBox). More details in
+        [FreedomBox/Manual - Privoxy](https://wiki.debian.org/FreedomBox/Manual/Privoxy)
 -   {{< wp "Tinyproxy" >}} (GPL) is a HTTP proxy server daemon for
     Unix. Designed to be fast and small, it is useful when the system
     resources for a larger proxy are unavailable. It has been put to
@@ -357,7 +361,37 @@ HTTP/HTTPS.
     which is unmaintained since 2004. It is an integrated penetration
     testing tool for finding vulnerabilities in web applications.
 
+# PageKite
+[Pagekite](https://pagekite.net/)  is an open-source tunneled reverse proxy that is
+capable of bypassing NATs (network address translation), firewalls and making local
+web servers and SSH servers visible to the public Internet.
 
+How Pagekite works:
+-   Your services, typically one or more HTTP servers, run on localhost.  You run
+    pagekite as a back-end connector, on the same machine.
+-   Another instance of pagekite runs as a front-end relay on a machine with a public IP
+    address, in “the cloud”.
+-   The back-end pagekite connects to the front-end, and creates a tunnel for the
+    configured services.
+-   Clients, typically web browsers, connect to the front-end and request service. The
+    front-end relays the request over the appropriate tunnel, where the back-end
+    forwards it to the actual server. Responses travel back the same way.
+_Quoting the Xiao Guoan article_
+
+The client [pagekite.py](https://github.com/pagekite/PyPagekite) is an AGPL software.
+But you need also relay to use it. [Pagekite.net](https://pagekite.net/) is a comercial
+pad service beginning at 4$/m for 2G/m traansfer _2022 price_. But you can run your own
+server following [Expose Localhost to Internet with PageKite on Ubuntu
+](https://www.linuxbabe.com/linux-server/expose-localhost-to-internet-pagekite-ubuntu)
+by  Xiao Guoan.
+
+-   [Pagekite collection of How-To](https://pagekite.net/wiki/HowTo/).
+-   [Pagekite - Sharing Files and Folders Securely
+    ](https://pagekite.net/wiki/Howto/ShareFilesSecurely/).
+-   [Tunneling SSH over PageKite](https://pagekite.net/wiki/Howto/SshOverPageKite/).
+
+Pagekite [can be used in Debian FreedomBox
+](https://wiki.debian.org/FreedomBox/Manual/#FreedomBox.2FManual.2FPageKite.PageKite_.28Public_Visibility.29).
 
 # Tor {#tor}
 {{< wp "Tor_(anonymity_network)"  "Tor" >}} routes Internet traffic through a
@@ -368,40 +402,31 @@ relay.
 This concept is also used in the {{< wp "I2P anonymous network" >}}.
 
 -   [Tor Project](https://www.torproject.org/).
--   [Tor documentation
-    ](https://www.torproject.org/docs/documentation).
--   [Tor ManPage](https://www.torproject.org/docs/tor-manual.html.en).
--   [Tor Wiki
-    ](https://trac.torproject.org/projects/tor/wiki/WikiStart).
--   [Torsocks
-    ](https://trac.torproject.org/projects/tor/wiki/doc/torsocks)
-    is a torifying wrapper that is primarily used to
-    redirect all the network traffic of individual SOCKS-friendly
-    applications through the Tor network. It also ensures DNS queries
-    are handled correctly and explicitly blocks all UDP traffic from
-    the application. Torsocks is the successor of tsocks
-    and is
-    actively maintained. It is in Debian.
--   [Tor Bridges](https://www.torproject.org/docs/bridges.html.en)
-    are Tor relays that aren't listed in the main Tor directory, and
-    the ISP may be unable to block.
--   [Tor Pluggable Transports
-    ](https://www.torproject.org/docs/pluggable-transports)
-    are used when
-    the censor can use DPI to recognize and filter Tor traffic flows
-    even when they connect to unexpected IP addresses like a Tor
-    Bridge.
--   [Tor list of Pluggable Transports
-    ](https://www.torproject.org/docs/pluggable-transports.html.en#list-of-pts)
+-   [The Tor Project / Wiki · GitLab](https://gitlab.torproject.org/tpo/team)
+-   [Tor_old_ documentation](hhttps://2019.www.torproject.org/docs/documentation).
+-   [Tor Browser User Manual](https://tb-manual.torproject.org/).
+-   [Tor Project Support](https://support.torproject.org/).
+-   [Onion Services](https://community.torproject.org/onion-services/).
+-   [Tor Relay Operations](https://community.torproject.org/relay/)
+-   [Torsocks](https://gitlab.torproject.org/legacy/trac/-/wikis/doc/torsocks)
+    is a torifying wrapper that is primarily used to redirect all the network traffic of
+    individual SOCKS-friendly applications through the Tor network. It also ensures DNS
+    queries are handled correctly and explicitly blocks all UDP traffic from the
+    application. Torsocks is the successor of tsocks and is actively maintained. It is
+    in Debian.
 -   [obfs4](https://github.com/Yawning/obfs4/)
-    is a pluggable transport for Tor written in _Go language_.  It is
-    in the Debian package _obfs4proxy_. Note that it improves and
-    replaces the Python Pluggable transport _ScrambleSuit_ that is in
-    the Debian package _obfsproxy_.  For use inside TorBrowser you
-    don't need an external package as it is already deployed inside
+    is a pluggable transport for Tor written in _Go language_.  It is in the Debian
+    package _obfs4proxy_. Note that it improves and replaces the Python Pluggable
+    transport _ScrambleSuit_ that is in the Debian package _obfsproxy_.  For use inside
+    TorBrowser you don't need an external package as it is already deployed inside
     TorBrowser Code
 -   [ArchWiki: Tor](https://wiki.archlinux.org/index.php/Tor)
 -   Tor provides a socksproxy.
+-   Debian FreedomBox [supports the use of Tor
+    ](https://wiki.debian.org/FreedomBox/Manual/#FreedomBox.2FManual.2FTor.Tor_.28Anonymity_Network.29).
+    it can be used for [SSH proxying
+    ](https://wiki.debian.org/FreedomBox/Manual/#FreedomBox.2FManual.2FSecureShell.Secure_Shell_.28SSH.29_Server)
+    _an alternative is using PageKite_.
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
