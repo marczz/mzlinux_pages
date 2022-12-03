@@ -2,7 +2,7 @@
 title: VPN and Tunneling
 ---
 
-{{% toc /%}}
+See also {{< iref "proxy" "Proxy" >}}, {{< iref "ssh" "ssh" >}}.
 
 # References
 -   Wikipedia: {{< wp "IP tunnel" >}}, {{< wp "Tunneling protocol" >}}, {{< wp "HTTP tunnel" >}}
@@ -16,19 +16,16 @@ title: VPN and Tunneling
 -   [VPN Masquerading HOWTO
     ](http://www.tldp.org/HOWTO/VPN-Masquerade-HOWTO.html) _2000_.
 -   [ip in ip tunneling](http://lartc.org/howto/lartc.tunnel.ip-ip.html) _in
--   [Linux Advanced Routing & Traffic Control HOWTO
-    ](http://lartc.org/howto/) _2012_ has chapters on _ip in ip
-    tunneling_, _GRE Tunneling_, _IPv6 Tunneling_, _IPSEC_
-
+-   [Linux Advanced Routing & Traffic Control HOWTO](http://lartc.org/howto/)
+    _2012_ has chapters on _ip in ip tunneling_, _GRE Tunneling_, _IPv6 Tunneling_,
+    _IPSEC_.
 -   [Linux IP Tunnel Mini-Mini HOWTO](http://linas.org/linux/iptunnel.html)
 -   [GRE tunneling](http://lartc.org/howto/lartc.tunnel.gre.html) _in
-    [Linux Advanced Routing & Traffic Control HOWTO](http://lartc.org/howto/)_.
+    [Linux Advanced Routing & Traffic Control HOWTO](http://lartc.org/howto/)__2002_.
 -   [tinc](http://www.tinc-vpn.org/) a Virtual Private Network (VPN)
     daemon that uses tunnelling and encryption.
--   [VTun - Virtual Tunnels over TCP/IP networks
-    ](http://vtun.sourceforge.net/) _2012_.
--   [The official IPsec Howto for Linux
-    ](http://www.ipsec-howto.org/) 2006
+-   [VTun - Virtual Tunnels over TCP/IP networks](http://vtun.sourceforge.net/) _2012_.
+-   [The official IPsec Howto for Linux](http://www.ipsec-howto.org/) 2006
 -   [ipsec tools](http://ipsec-tools.sourceforge.net/) _2011_
 -   [udpproxy](https://github.com/vincentbernat/udpproxy)
     is a Netfilter powered UDP proxy.  udpproxy allows to tunnel UDP
@@ -57,7 +54,7 @@ and Android
 -   [OpenVPN Documentation Page
     ](https://openvpn.net/index.php/open-source/documentation.html)
     has an extensive documentation.
--   [OpenVpn Wiki](https://community.openvpn.net/openvpn/wiki)
+    -   [OpenVpn Wiki](https://community.openvpn.net/openvpn/wiki)
 -   [OpenVPN HOW-TO](http://openvpn.net/index.php/documentation/howto.html)
     and [OpenVPN 2.3 man page
     ](https://community.openvpn.net/openvpn/wiki/Openvpn23ManPage)
@@ -87,6 +84,80 @@ and Microsoft {{< wp "Secure Socket Tunneling Protocol" >}}.
 
 -   [SoftEther VPN Project](https://www.softether.org/).
 
+# WireGuard
+[WireGuard](https://www.wireguard.com/) (GPLv2 for the Kernel)
+is an encrypted VPN. It is designed to be easy to use and features high speed
+performance, and low attack surface and better performance and more power than IPsec and
+OpenVP.
+
+The user manual is a  [Quick Start](https://www.wireguard.com/quickstart/)
+more details are in the third party articles bellow.
+
+-   Wikipedia {{< wp "Wireguard" >}}.
+-   [How to get started with WireGuard VPN - UpCloud
+    ](https://upcloud.com/resources/tutorials/get-started-wireguard-vpn).
+-   [The complete guide to setting up a multi-peer WireGuard VPN - Jeroen Baten
+    ](https://www.jeroenbaten.nl/the-complete-guide-to-setting-up-a-multi-peer-wireguard-vpn/).
+
+-   [Pro Custodibus](https://www.procustodibus.com/features/)
+    is a commercial frontend to manage Wireguard.  They publish many
+    [Wireguard articles](https://www.procustodibus.com/tags/wireguard/) many for the
+    basic wireguard use and some for their proprietary interface.
+    -   [WireGuard Terminology
+        ](https://www.procustodibus.com/blog/2020/12/wireguard-terminology/).
+    -   [WireGuard Endpoints and IP Addresses
+        ](https://www.procustodibus.com/blog/2021/01/wireguard-endpoints-and-ip-addresses/)
+        explains how a packet travel from host to host when going through a wireguard
+        tunnel.
+    -   [Wg-quick Default Firewall Rules
+        ](https://www.procustodibus.com/blog/2022/01/wg-quick-firewall-rules/)
+        explains the default firewall rules that wg-quick set with nftables or iptables.
+    -   [How to Use WireGuard With Firewalld
+        ](https://www.procustodibus.com/blog/2021/07/wireguard-firewalld/).
+    -   [How to Use WireGuard With Nftables
+        ](https://www.procustodibus.com/blog/2021/11/wireguard-nftables/).
+    -   [WireGuard Access Control With Iptables
+        ](https://www.procustodibus.com/blog/2021/04/wireguard-access-control-with-iptables/).
+    -   [Primary WireGuard Topologies
+        ](https://www.procustodibus.com/blog/2020/10/wireguard-topologies/#point-to-site)
+        describes the different topologies we can use. They are Point to Point, Hub and
+        Spoke, Point to Site, Site to Site. The corresponding wireguard settings is
+        covered in the following articles.
+    -   [WireGuard Point to Point Configuration
+        ](https://www.procustodibus.com/blog/2020/11/wireguard-point-to-point-config/).
+    -   [WireGuard Hub and Spoke Configuration
+        ](https://www.procustodibus.com/blog/2020/11/wireguard-hub-and-spoke-config/).
+        The configuration you’d use when you want to connect two endpoints running
+        WireGuard, but both endpoints are behind restrictive NAT or firewalls that do
+        not allow either endpoint to accept new connections from the other. This
+        requires using a third WireGuard host that can accept new connections from the
+        two endpoints.
+    -   [Multi-Hop WireGuard
+        ](https://www.procustodibus.com/blog/2022/06/multi-hop-wireguard/)
+        is similar to Hub and Spokes, but with a more rich configuration.
+    -   [WireGuard Point to Site Configuration
+        ](https://www.procustodibus.com/blog/2020/11/wireguard-point-to-site-config/).
+    -   [WireGuard Point to Site Routing
+        ](https://www.procustodibus.com/blog/2021/04/wireguard-point-to-site-routing/).
+    -   [WireGuard Point to Site With a Site Gateway
+        ](https://www.procustodibus.com/blog/2021/04/wireguard-point-to-site-gateway/).
+    -   [WireGuard Point to Site With Port Forwarding
+        ](https://www.procustodibus.com/blog/2021/04/wireguard-point-to-site-port-forwarding/).
+    -   [WireGuard Site to Site Configuration
+        ](https://www.procustodibus.com/blog/2020/12/wireguard-site-to-site-config/).
+    -   [DNS Updates to WireGuard Endpoints
+        ](https://www.procustodibus.com/blog/2021/06/dns-updates-to-wireguard-endpoints/)
+        explains the problem of DNS changing while running wireguard, here this is dealt
+        with their proprietary agent, but you can also use a script like
+        [reresolve-dns.sh
+        ](https://git.zx2c4.com/wireguard-tools/tree/contrib/reresolve-dns/reresolve-dns.sh)
+        in the [Wireguard Tools repository
+        ](https://git.zx2c4.com/wireguard-tools/).
+
+        A simple script is also in [Wireguard: Peer IP check
+        ](https://www.tech-blogger.net/en/wireguard-peer-ip-check/).
+    -   [Connecting WireGuard and OpenVPN
+        ](https://www.procustodibus.com/blog/2022/08/connecting-wireguard-and-openvpn/).
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
