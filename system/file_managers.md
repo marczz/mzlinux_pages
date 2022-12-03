@@ -5,7 +5,9 @@ title: File Managers
 # Reference
 -   Wikipedia: {{< wp "File manager" >}}, [Comparison of file managers].
 -   [ArchWiki: list of file managers
-    ](https://wiki.archlinux.org/index.php/List_of_applications#File_managers)
+    ](https://wiki.archlinux.org/index.php/List_of_applications#File_managers).
+-   [File manager functionality - ArchWiki
+    ](https://wiki.archlinux.org/title/File_manager_functionality).
 
 # Console File managers {#console}
 -   The ancestor of Ncurses file managers is
@@ -46,7 +48,15 @@ title: File Managers
     n³ has very low memory footprint 4.2M res. / 3.2 M shared.
     -   [nnn Wiki](https://github.com/jarun/nnn/wiki)
     -   [nnn - ArchWiki](https://wiki.archlinux.org/index.php/Nnn)
-
+    -   There are many [nnn plugins for neovim on GitHub
+        https://github.com/topics/neovim-plugin?q=nnn).
+-   [Vifm](https://vifm.info/) (GPL-2.0)
+    Vifm is a file manager with curses interface, which provides Vim-like environment.
+    It is packaged in Debian.
+    -   [Vifm - GitHub](https://github.com/vifm/vifm).
+    -   [Vifm Wiki](https://wiki.vifm.info/index.php/Main_Page).
+    -   [Vifm - ArchWiki](https://wiki.archlinux.org/title/Vifm).
+    -   Vifm version 0.12 _2022_ uses 8M res / 5M shared
 
 # Graphical file managers
 
@@ -151,15 +161,34 @@ title: File Managers
 
 # Web File managers
 
--   [elfinder](http://elfinder.org/) (BSD License)
-    elFinder is a file manager for web, written in JavaScript using jQuery UI.
-    It can create and extract archives. A QuickLook function allows to preview
-     common types of files like images, flash, text, audio, video and pdf.
-    ElFinder integrates with _CKEditor_,
-    _Tiny MCE_, _elRTE_,  Drupal, WordPress, web2py.
--   [KCFinder](http://kcfinder.sunhater.com/) (GPL)
-    is a php/ajax web file manager which can be integrated into FCKeditor,
-    CKEditor, and TinyMCE WYSIWYG web editors.
+-   [CKFinder](https://ckeditor.com/ckfinder/) is part of
+    [CKEditor 5](https://ckeditor.com/ckeditor-5/) (Open Source and commercial)
+-   [elfinder](https://github.com/Studio-42/elFinder) (BSD License)
+    elFinder is a file manager for web, written in JavaScript using jQuery UI.  It can
+    create and extract archives.
+
+    A QuickLook function allows to preview common types of files like images, flash,
+    text, audio, video and pdf.
+
+    ElFinder integrates with
+    [_CKEditor_, _Tiny MCE_, _elRTE_](https://github.com/studio-42/elFinder/wiki#howtos),
+    Drupal, Django, Laravel, Roundcube, Symfony, TikiWiki, WordPress, Yii,
+    [zenphoto](https://www.zenphoto.org/).
+-   [File Browser](https://filebrowser.org/)
+    is a GoLang web server giving users remote access to the filesystem.
+    -   [File Browser GitHub](https://github.com/filebrowser/filebrowser).
+-   [Pydio Cells](https://pydio.com/en/pydio-cells/overview) (AGPL and commercial)
+    is a Go language content sharing platform. It requires a MySQL/MariaDB database.
+    The open source [server is hosted on GitHub](https://github.com/pydio/cells)
+    as well as the
+    [client](https://github.com/pydio/cells-client).
+-   [Tiny File Manager](https://tinyfilemanager.github.io/) (GPL-3.0)
+    is a Web php based file manager in a single php file. It allows storing, uploading,
+    editing and managing files and folders online via web browser, and  upports syntax
+    highlighting for over 150+ languages and over 35+ themes.
+    -   [Tiny File Manager - GitHub](https://github.com/prasathmani/tinyfilemanager).
+
+
 
 <!-- Local Variables: -->
 <!-- ispell-local-dictionary: "english" -->
