@@ -1,7 +1,10 @@
 ---
-title: ARM Single Board Computers
+title: Single Board Computers
 ---
 
+<!-- [[file:../../../../content-org/notes/hardware_notes/sbc_notes.org][SBC notes]]  -->
+
+Most singleboard computers have an ARM soc.
 
 # Arm Architectures
 -   Wikipedia: {{< wp "ARM architecture" >}},
@@ -38,7 +41,7 @@ Recent arm architectures includes
         ](https://en.wikipedia.org/wiki/I.MX#i.MX6x_series),
         [Freescale i.MX6x Home Page
         ](https://www.freescale.com/webapp/sps/site/taxonomy.jsp?code=IMX6X_SERIES).
-    -   <a name=armada38x"></a>[Marvell ARMADA 38X
+    -   <a name="armada38x"></a>[Marvell ARMADA 38X
         ](https://www.marvell.com/embedded-processors/armada/armada-38x)
         is a family of ARMv7 multicore Socs with DDR3/DDR3L/DDR4 Ram
         (including ECC), PCI-e2.0, 2 or 3 Gigabits internets, 1 OSB
@@ -92,9 +95,8 @@ H2, H3, H8 are {{< wp " Cortex-A7" >}} ArmV7 SoCs and  AllWinner
 -   [linux-sunxi](https://linux-sunxi.org/Main_Page)
     is an open source software community dedicated to Allwinner SoC
     based devices.
-    -   [Sunxi devices as NAS - linux-sunxi.org
-        ](https://linux-sunxi.org/Sunxi_devices_as_NAS).
-    -   [SATA - linux-sunxi.org](https://linux-sunxi.org/SATA) describes the sata interface
+    -   [Sunxi devices as NAS](https://linux-sunxi.org/Sunxi_devices_as_NAS).
+    -   [SATA](https://linux-sunxi.org/SATA) describes the sata interface
         available on Allwinner A10, A20 and R40 SoCs.It contains a performance tuning
         section, and it considers the support of port multipliers. A list of devices
         with SATA is also provided but not updated since 2019, the previous ArchLinux
@@ -103,8 +105,21 @@ H2, H3, H8 are {{< wp " Cortex-A7" >}} ArmV7 SoCs and  AllWinner
         A SATA speed comparison is in [this T. Kaiser armbian post
         ](https://forum.armbian.com/topic/1917-armbian-running-on-pine64-and-other-a64h5-devices/?do=findComment&comment=20316).
     -   [How to make a bootable sunxi SD-card - linux-sunxi.org
-        ](https://github.com/linux-sunxi/u-boot-sunxi/wiki),
+        ](https://github.com/linux-sunxi/u-boot-sunxi/wiki) in the GitHub repo,
+        it is also in
+        [Bootable SD card](https://linux-sunxi.org/Bootable_SD_card),
         this is also described on the following LeMaker resource.
+    -   [U-Boot](https://linux-sunxi.org/U-Boot) describes U-Boot
+        support in sunxi devices.
+    -   [U-Boot/Tools](https://linux-sunxi.org/U-Boot/Tools).
+    -   [Powering the boards and accessories -
+        ](https://linux-sunxi.org/Powering_the_boards_and_accessories).
+    -   In [LeMaker Banana Pi - linux-sunxi.org
+        ](https://linux-sunxi.org/LeMaker_Banana_Pi) there are also some important
+        advices for using a SATA drive > 2T and also for powering the board.
+        >  many USB cables suffer from voltage drops due to the tiny connectors the
+        > Micro USB port dictates (max. 5 V / 1.8 A according to the USB specs) or
+        > insufficient cable diameters.
 -   LeMaker development documentation:
     -   [BananaPro/Pi:Building u-boot, script.bin and linux-kernel
         ](http://wiki.lemaker.org/BananaPro/Pi:Building_u-boot,_script.bin_and_linux-kernel)
@@ -215,12 +230,12 @@ H2, H3, H8 are {{< wp " Cortex-A7" >}} ArmV7 SoCs and  AllWinner
     reference the support across the miscellaneous distributions
     of the {{< wp "Omap" >}} arm processors developed by Texas Instruments
 
-## Freedom Box
+## Freedom Box {#freedombox}
 -   [FreedomBox - Debian Wiki](https://wiki.debian.org/FreedomBox)
     is a self-hosting server. It can be used as a private Cloud, a NAS, or a router.
 -   The Freedom box supports
     [many applications](https://wiki.debian.org/FreedomBox/Features).
-    Ths page list the role of FreedomBox applications, and their use case.
+    This page list the role of FreedomBox applications, and their use case.
 -   The are many FreedomBox
     [compatible Hardware](https://wiki.debian.org/FreedomBox/Hardware).
 -   [FreedomBox Manual](https://wiki.debian.org/FreedomBox/Manual).
