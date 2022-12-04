@@ -733,6 +733,9 @@ See below the {{< iref "#wayland_menus" "dmenu/rofi alternatives" >}} and above 
     is an image viewer for X11/Wayland. _In Debian_
 -   [mpv-image-viewer](https://github.com/occivink/mpv-image-viewer) (Unlicense license)
     or _miv_ Configuration, scripts and tips for using mpv as an image viewer.
+-   [swappy](https://github.com/jtheoof/swappy) (MIT license)
+    A Wayland native snapshot editing tool, inspired by Snappy on macOS,
+    it is used with =grim= and =slurp=.
 -   [swayimg](https://github.com/artemsen/swayimg) (MIT license)
     image viewer for Sway/Wayland.
 -   [vimiv-qt](https://github.com/karlch/vimiv-qt) (GPL-3.0)
