@@ -408,7 +408,9 @@ _see also Dia, Ditaa, Gnuplot, ivtools, xfig, veusz in the
     It is packaged in Debian.
     -   [Converseen - GitHub](https://github.com/Faster3ck/Converseen)
 -   [CoolText online graphics generator](http://www.cooltext.com/)
-
+-   [drawing](https://github.com/maoschanz/drawing)
+    python3 GTK simple image editor for Linux similar to MS Paint.
+    It is in many distributions including Debian, Alpine and on Flathub.
 -   <a name="exactimage"></a>[ExactImage](https://exactcode.com/opensource/exactimage/)
     is a fork of {{< iref "#Imagemagick" "ImageMagic" >}}, coded for speed in C++.
     It supports BMP, Digital Camera RAW, GIF, JPEG, JPEG2000, OpenEXR, PNG, PBM, RAW,
@@ -544,6 +546,8 @@ _see also Dia, Ditaa, Gnuplot, ivtools, xfig, veusz in the
     A _node.js_ tool for generation of sequence diagrams, class diagrams,
     state diagrams, Gantt diagrams, pie charts, and flowchart from text in a similar
     manner as markdown.
+-   [Pinta](https://github.com/PintaProject/Pinta) (MIT License)
+    is a Gtk# clone of Paint.Net 3.0 for drawing and image editing.
 -   [sam2p](https://github.com/pts/sam2p) (GPL)
     is a command line utility that converts many raster (bitmap) image formats like GIF,
     JPG/JPEG, and PNG into PostScript or PDF files.
