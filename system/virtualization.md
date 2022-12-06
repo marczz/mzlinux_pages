@@ -105,8 +105,16 @@ _not a true virtualization_
     creation_, _guest management_, _guest console access_, _FAQ_.
 -   [KVM - Debian Wiki](https://wiki.debian.org/KVM),
     [DebianKVMGuests - Debian Wiki](https://wiki.debian.org/DebianKVMGuests),
+-   [Winapps](https://github.com/Fmstrat/winapps)
+    run Windows apps such as Microsoft Office/Adobe in Linux  and
+    GNOME/KDE as if they were a part of the native OS, including Nautilus integration
+    for right clicking on files of specific mime types to open them.
 
-
+    It works by running Windows under KVM and communicating through a RDP server.
+-   [Creating a ]a Virtual Machine in KVM
+    ](https://github.com/Fmstrat/winapps/blob/main/docs/KVM.md)
+    is a tutorial aimed to Winapps, but can be used to set any KVM windows virtual
+    machine.
 
 # Linux-VServer / OpenVZ {#openvz}
 -   Os level virtualization is provided by
@@ -278,17 +286,12 @@ PowerPC, and S390 guests.
     [this other page](https://wiki.xenproject.org/wiki/DomU_Install_with_Virt-Install).
 
 # Other Virtualization systems
--   {{< wp "User-mode Linux" >}} (GPL)
-    gives a virtual linux machine under a linux system.
 -   [Virtual Square](http://wiki.virtualsquare.org/)
     create an unified environment that allows virtual machines,
     systems and networks to communicate and interact.
     -   The virtual networking is handled by _VDE_. A _vde2_ package is in Debian.
     -   _View-OS_ is an approach to the process/kernel interface.
         UMView is a user-mode implementation of View-OS. It is packaged in Debian.
--   {{< wp "Cooperative Linux" >}}, abbreviated as coLinux allows Microsoft
-    Windows and the Linux kernel to run simultaneously in parallel on the same machine.
-    -   [Cooperative Linux Home](http://colinux.org/) (GPL).
 -   <a name="vmware"></a>The harware emulation virtual machine
     [VMware](http://en.wikipedia.org/wiki/VMware) (Proprietary)
     provides a completely virtualized set of hardware to the guest
@@ -300,6 +303,21 @@ PowerPC, and S390 guests.
     -   [oVirt Home](http://www.ovirt.org/)
     -   [oVirt - GitHub](https://github.com/oVirt).
 
+# deprecated projects
+
+-   {{< wp "User-mode Linux" >}} (GPL) gives a virtual linux machine under a linux
+    system.
+   {{< wp "Cooperative Linux" >}}, abbreviated as coLinux allows Microsoft
+    Windows and the Linux kernel to run simultaneously in parallel on the same machine.
+    -   [Cooperative Linux Home](http://colinux.org/) (GPL).
+
+# Windows images
+We find on
+[Windows Software Download](https://www.microsoft.com/en-us/software-download/)
+([french page](https://www.microsoft.com/fr-fr/software-download/))
+image for all windows version 8.1, 10 and 11, as ISO disc images,  windows 7 is no more
+supported and there are [migration guidance
+](https://support.microsoft.com/en-us/windows/windows-7-support-ended-on-january-14-2020-b75d4580-2cc7-895a-2c9c-1466d9a53962).
 
 # Docker {#docker}
 
