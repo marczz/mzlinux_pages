@@ -212,16 +212,6 @@ and {{< iref "lightweight_distributions#remnux" "REMnux" >}}.
     belonging to packages, and analysis of local listening processes.
     Tiger is in Debian.
 
-# Policy Kit
-
-{{< wp "PolicyKit" >}} is a component for controlling system-wide privileges,
-it replaces _sudo_.
-
--   [PolicyKit Home at freedesktop.org
-    ](http://www.freedesktop.org/wiki/Software/PolicyKit)
--   [Polkit Documentation at freedesktop.org
-    ](http://hal.freedesktop.org/docs/polkit)
-
 # Hardened kernel and distribution.
 
 -   [grsecurity](http://grsecurity.net/) is a security enhancement to
