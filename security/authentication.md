@@ -729,6 +729,22 @@ For the new syntax:
 The configuration is in `/etc/pam.d/system-auth`
 and `/etc/nsswitch.conf`
 
+# Sudo
+[Sudo](https://www.sudo.ws/) llows a system administrator to delegate authority to give
+certain users (or groups of users) the ability to run some (or all) commands as root or
+another user.
+
+-   [Sudo Home](https://www.sudo.ws/)
+-   [sudo - GitHub](https://github.com/sudo-project/sudo)
+-   [Sudo - ArchWiki](https://wiki.archlinux.org/title/Sudo)
+-   [sudo - Debian Wiki](https://wiki.debian.org/sudo)
+
+__doas__ is a minimal replacement for sudo. It was written for OpenBSD to provide 95% of the
+features of sudo with a fraction of the codebase.
+
+-   [OpenDoas](https://github.com/Duncaen/OpenDoas) (BSD License)
+    is a portable fork of the OpenBSD `doas` command, it is packaged in Debian.
+
 # Polkit
 {{< wp "Polkit" >}}, previously known as Policy Kit is an application-level toolkit
 for defining and handling the policy that allows unprivileged
@@ -741,9 +757,10 @@ removable storage, etc.
 
 -   [polkit Reference Manual
     ](http://www.freedesktop.org/software/polkit/docs/latest/)
+-   [polkit · FreeDesktop GitLab](https://gitlab.freedesktop.org/polkit/polkit/)
 -   [polkit(8)
     ](http://www.freedesktop.org/software/polkit/docs/latest/polkit.8.html)
-    -   [ArchWiki: PolicyKit](https://wiki.archlinux.org/index.php/PolKit)
+-   [ArchWiki: PolKit](https://wiki.archlinux.org/index.php/PolKit)
 
 
 # Radius
