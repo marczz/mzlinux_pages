@@ -1,14 +1,17 @@
 ---
-title: Data Name Server
+title: Domain Name Server
 ---
+
+The network configuration guides are in the page
+ {{< iref "network" "Network references"  >}}.
+See also {{< iref "netconf" "Network configuration" >}}, {{< iref "vpn" "VPN" >}}.
 
 
 # References
--   [Domain Name System from Wikipedia
-    ](http://en.wikipedia.org/wiki/Domain_Name_System)
+-   [Domain Name System from Wikipedia](http://en.wikipedia.org/wiki/Domain_Name_System)
     (available also in
     [french](http://fr.wikipedia.org/wiki/Domain_Name_System)) explains
-    the basis of DNS and provide a lot of links including links to the
+    the basis of DNS and provides a lot of links including links to the
     RFCs
 -   Wikipedia: {{< wp "Category:Domain name system" >}},  {{< wp "BIND" >}},
     {{< wp "Dynamic DNS" >}}, {{< wp "Comparison of DNS server software" >}},
@@ -18,26 +21,23 @@ title: Data Name Server
     Domain Names - Concepts and Facilities and
     [RFC 1035](http://tools.ietf.org/html/rfc1035)
     Domain Names - Implementation and Specification
--   Fedora documentation: [NameResolution
-    ](https://fedoraproject.org/wiki/Networking/NameResolution),
-    [DNSSEC
-    ](https://fedoraproject.org/wiki/Networking/NameResolution/DNSSEC).
 -   [Archwiki: Domain name resolution
     ](https://wiki.archlinux.org/index.php/Domain_name_resolution).
+-   Fedora documentation:
+    [NameResolution](https://fedoraproject.org/wiki/Networking/NameResolution),
+    [DNSSEC](https://fedoraproject.org/wiki/Networking/NameResolution/DNSSEC).
 -   [ZoneEdit Web DNS lookup](http://www.zoneedit.com/lookup.html).
 -   {{< wp "OpenDNS" >}} is a free DNS  resolution service that offers phishing
     protection. [OpenDNS Home](http://www.opendns.com/)
 -   Daniel J. Bernstein [djbdns](http://cr.yp.to/djbdns.html),
     [Wikipedia page](http://en.wikipedia.org/wiki/Djbdns)
 -   the use of the SRV record (
-    [rfc 2782](http://tools.ietf.org/html/rfc2782)) for voip is
-    detailled in
-    [DNS SRV at voip-info.org](http://www.voip-info.org/wiki/view/DNS+SRV "voip-info.org: DNS+SRV")
+    [rfc 2782](http://tools.ietf.org/html/rfc2782)) for voip is detailled in
+    [DNS SRV at voip-info.org](http://www.voip-info.org/wiki/view/DNS+SRV)
 
 ## Zeroconf
 
-[Zeroconf](http://en.wikipedia.org/wiki/Zeroconf)
-allows automatic address selection
+[Zeroconf](http://en.wikipedia.org/wiki/Zeroconf) allows automatic address selection
 ([rfc 3927](http://tools.ietf.org/html/rfc3927),
 [rfc 2462](http://tools.ietf.org/html/rfc2462)
 for ipV6), name resolution by multicast DNS *mDNS*
@@ -52,36 +52,33 @@ and
 
 -   Wikipedia: {{< wp "[Zeroconf" >}}, {{< wp "Avahi_software)"  "Avahi" >}},
     {{< wp "Multicast DNS" >}} (mDNS),
--   [zeroconf.org: Zero Configuration Networking
-    ](http://www.zeroconf.org/).
+-   [zeroconf.org: Zero Configuration Networking](http://www.zeroconf.org/).
 -   The Zeroconf model is implemented in the
-    [Apple Bonjour *(Wikipedia)*
-    ](http://en.wikipedia.org/wiki/Bonjour_%28software%29)
+    [Apple Bonjour *(Wikipedia)*](http://en.wikipedia.org/wiki/Bonjour_%28software%29)
     *(apache license 2.0)* which is also available in linux and
     windoze; and
-    [Avahi *(Wikipedia)*
-    ](http://en.wikipedia.org/wiki/Avahi_%28software%29)
-    *(LGPL)*
+    [Avahi *(Wikipedia)*](http://en.wikipedia.org/wiki/Avahi_%28software%29) *(LGPL)*
 -   Avahi ([Avahi Home page](http://avahi.org/)
-    uses D-Bus for communication between user applications and a system
-    daemon.
+    uses D-Bus for communication between user applications and a system daemon.
 -   [Arch Wiki: Avahi](https://wiki.archlinux.org/index.php/Avahi)
--   [Debian Wiki: Zeroconf](https://wiki.debian.org/ZeroConf) gives
-    the current support of avahi by softwares.
+-   [Debian Wiki: Zeroconf](https://wiki.debian.org/ZeroConf)
+    gives the current support of avahi by software.
 
 # DNS Tools
--   Wikipedia: {{< wp "Category:DNS software" >}}, {{< wp "Dig_(command)"  "Dig" >}}
+-   Wikipedia: {{< wp "Category:DNS software" >}}, {{< wp "Dig_(command)"  "Dig" >}}.
+-   The Bind package includes dns lookup utilities:
+    {{< man "host(1)" >}}, {{< man "nslookup(1)" >}}, {{< man "dig(1)" >}}.
 -   [DIG HowTo](http://www.madboa.com/geek/dig/) by Paul Heinlein.
--   [host (1) manual](ftp://ftp.isc.org/isc/bind9/9.11.1/doc/arm/man.host.html)
+-   [LDNS](https://www.nlnetlabs.nl/projects/ldns/) library provides utilities in the package
+    ldns-utils, which includes {{< man "drill(1)" >}} a dig like dns lookup utility.
 -   {{< wp "Whois" >}} allows to determine the owner of a domain name or an IP address.
     You can learn about whois in the {{< wp "Whois"  "whois Wikipedia page" >}} or in the
     [whois overview](http://navigators.com/whois.html "navigators.com whois.html")
     and query it thru the commandline
     [whois(1)](http://man.cx/whois) or a web gateway such as
     [geektools whois gateway](http://www.geektools.com/whois.php)
--   [DNSd](https://github.com/behrooza/dnsd) is a daemon that provides
-    a local DNS backend to forward the queries/answers to/from
-    {{< wp "Google Public DNS" >}} over
+-   [DNSd](https://github.com/behrooza/dnsd) is a daemon that provides a local DNS
+    backend to forward the queries/answers to/from {{< wp "Google Public DNS" >}} over
     HTTPS.
 
 
@@ -186,6 +183,16 @@ RFC3011 subnet specifiers.
     and [dnsmasq setup](http://thekelleys.org.uk/dnsmasq/docs/setup.html), from
     the dnsmasq distribution.
 
+# Resolv.conf
+
+
+-   [resolv.conf - Debian Wiki](https://wiki.debian.org/resolv.conf).
+    describe the use of the two utilities _resolvconf_ and _openresolve_.
+-   [openresolv - ArchWiki](https://wiki.archlinux.org/title/Openresolv).
+-   [systemd-resolved - ArchWiki](https://wiki.archlinux.org/title/Systemd-resolved).
+-   `/etc/resolv.conf` is overwritten
+    [by NetworkManager][https://wiki.archlinux.org/title/NetworkManager#/etc/resolv.conf)
+    and [by dhcpd](https://wiki.archlinux.org/title/Dhcpcd#/etc/resolv.conf).
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
