@@ -193,6 +193,20 @@ In the same way to change a video from a webm container to a mkv one without tra
 ffmpeg -i  input.webm -acodec copy -vcodec copy output.mkv
 ~~~
 
+## Combining audio and Video
+
+~~~
+ffmpeg -i video_file -i audio_file -c:v copy -c:a copy out_file.mp4
+~~~
+
+If the video file contains also an audio track we have to tell ffmpeg which stream to
+use using the [Map Option](https://trac.ffmpeg.org/wiki/Map).
+
+~~~
+ffmpeg -i video.mp4 -i audio.wav -c:v copy -c:a aac -map 0:v:0 -map 1:a:0 output.mp4
+~~~
+
+
 # reducing video size
 There are many way of reducing video size, we can change resolution, we can use a more
 lossy encoding, at the price of degrading quality, and we can try a more efficient
