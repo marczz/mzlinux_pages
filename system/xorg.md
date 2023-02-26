@@ -11,6 +11,38 @@ See also {{< iref "input_methods" "Input method" >}} where you find
 
 # References
 
+-   [Debian Reference Chapter 7. - GUI System
+    ](https://www.debian.org/doc/manuals/debian-reference/ch07.en.html)
+
+## Backlight
+-   [ArchWiki: BackLight](https://wiki.archlinux.org/title/Backlight)
+-   [ArchWiki - list of backlight utilities
+    ](https://wiki.archlinux.org/title/Backlight#Backlight_utilities).
+
+For the main monitor the device is in a directory symlinked in `/sys/class/backlight/`.
+In the device directory you find `max_brightness` and `brightness`.
+
+If your brightness device is `intel_backlight` you can cat change the
+brightness with:
+
+``` sh
+# echo 160 >| /sys/class/backlight/intel_backlight
+```
+
+To control the external monitor backlight see
+[Archwiki - Backlight, External monitor
+](https://wiki.archlinux.org/title/Backlight#External_monitors)
+
+You can use the kernel module `ddcci-dkms` which provides a DDC/CI driver for compatible
+monitors, and integration into the backlight system class by exposing external monitors
+in sysfs.
+
+Then _ddcutil_ allow to control the backlight, there is also a QT5 GUI ddcui.
+
+-   [ddcutil and ddcui documentation](http://www.ddcutil.com/).
+
+
+# Xorg
 -   [Debian X Strike Force’s documentation](http://x.debian.net/)
     -   [X Strike Force’s General FAQ
         ](http://x.debian.net/faq/general.html)
@@ -19,8 +51,8 @@ See also {{< iref "input_methods" "Input method" >}} where you find
         and it's [Debian X Window System Frequently Asked Questions
         ](http://wiki.debian.org/XStrikeForce/FAQ)  may have still more
         _sometime obsolete_ content.
--   [Debian Reference Chapter 7. The X Window System
-    ](https://www.debian.org/doc/manuals/debian-reference/ch07.en.html)
+-   [DEbian Reference: X server Connection
+    ](https://www.debian.org/doc/manuals/debian-reference/ch07.en.html#_x_server_connection).
 -   [ArchWiki - Xorg](http://wiki.archlinux.org/index.php/Xorg)
 -   [Xorg - Gentoo Wiki](https://wiki.gentoo.org/wiki/Xorg),
     [Xorg Guide - Gentoo Wiki](https://wiki.gentoo.org/wiki/Xorg/Guide),
@@ -32,21 +64,25 @@ See also {{< iref "input_methods" "Input method" >}} where you find
     is a kdrive based X Server which targets a window on a host X
     Server as its framebuffer.
 -   [freedesktop DRI Wiki](https://dri.freedesktop.org/wiki/)
--   [sxhkd](https://github.com/baskerville/sxhkd)
-    is an X daemon that reacts to input events by executing commands.
--   [xannotate](http://furius.ca/xannotate/) opens a screen-size window
-    over whatever is present and allows you to scribble over it.
-    This is useful when you are doing a demo and you need to annotate
-    parts of what is on-screen.
 
-# Xresources
+## Xresources
 {{< wp "X resources" >}} are configuration parameters for X client applications.
 
 -   [X resources - ArchWiki](https://wiki.archlinux.org/index.php/X_resources)
 -   Utilities to manipulate X resources: {{< man "xrdb" >}}, {{< man "appres" >}},
     {{< man "editres" >}}.
 
-# Xrandr {#randr}
+## Xorg Utilities
+-   [xannotate](http://furius.ca/xannotate/) opens a screen-size window
+    over whatever is present and allows you to scribble over it.
+    This is useful when you are doing a demo and you need to annotate
+    parts of what is on-screen.
+-   [sxhkd](https://github.com/baskerville/sxhkd)
+    is an X only daemon that reacts to input events by executing commands.
+    It can be replaced n both Xorg and Wayland by {{< iref "#swhkd" "swhkd" >}}.
+
+
+## Xrandr {#randr}
 {{< wp "RandR" >}} is an extension to the X11. With Randr you can set the
 screen refresh rate, choose a monitor output, resize, rotate and
 reflect the root window of a screen.
@@ -125,6 +161,11 @@ with X. Wayland is a graphics multiplexer for a number of X servers,
     ](https://fedoraproject.org/wiki/How_to_debug_Wayland_problems)
 -   [hello-wayland](https://github.com/emersion/hello-wayland)
     A hello world Wayland client.
+-   <a name ="swhkd"></a>[swhkd _Simple Wayland HotKey Daemon_
+    ](https://git.sr.ht/~shinyzenith/swhkd) (BSD license)
+    is a display protocol-independent hotkey daemon made in Rust.  The config file is
+    compatible with _sxhkd_, and it is a drop-in replacement for _sxhkd_.
+    -   [swhkd GitHub Mirror](https://github.com/waycrate/swhkd).
 
 The applications are in
 {{< iref "desktop#wayland_compositors"  "Wayland Compositors" >}},
@@ -145,7 +186,7 @@ environment variable:
 $ export GDK_BACKEND=wayland
 ~~~
 
-QT 5 support wayland using the QtWayland module. More information in
+QT since QT 5 supports wayland using the QtWayland module. More information in
 [QtWayland - Qt Wiki](https://wiki.qt.io/QtWayland), and
 [Qt 5 on Wayland - Freedesktop](https://wayland.freedesktop.org/qt5.html).
 
@@ -229,13 +270,13 @@ See also the {{< iref "#xdmcp" "XDMCP section" >}}
         using xdg-shell or wlr-layer-shell, to be used with something like `cage`.
         It is in Alpine.
     -   [dlm](https://git.sr.ht/~kennylevinsen/dlm) Dumb Login Manager using fbdev, or
-        the enhanced [ddlm](https://github.com/deathowl/ddlm).
+        the enhanced fork [ddlm](https://github.com/deathowl/ddlm).
     -   [wlgreet](https://git.sr.ht/~kennylevinsen/wlgreet) Wayland greeter using
         wlr-layer-shell, used for wayland compositors like  `sway`.
     -   [tuigreet](https://github.com/apognu/tuigreet) Console UI greeter using tui-rs
         It is in Alpine.
 -   <a name="lightdm"></a>[LightDM](http://en.wikipedia.org/wiki/LightDM) (GPL)
-    is a window manager with same functionalities than _GDM_ but without Gnome
+    is a window manager for X11 with same functionalities than _GDM_ but without Gnome
     dependencies.  LightDM is the default display manager for LXDE including lxubuntu,
     and many minimal distributions. The memory footprint of lightdm are 3.6M resident /
     3M shared for each session mother and children (3 on my desktop).  It is truly light
@@ -287,7 +328,7 @@ See also the {{< iref "#xdmcp" "XDMCP section" >}}
 
 -   <a name="ldm"></a>[ldm
     ](http://wiki.ltsp.org/wiki/LTSPManual#The_LDM_display_manager)
-    is the {{< iref "#ltsp" "LTSP" >}} display manager, it is written in python
+    is the {{< iref "#ltsp" "LTSP" >}} X11 display manager, it is written in python
     and connect through an ssh tunnelconnect through an ssh tunnel instead of XDMCP. _It
     is in Debian with two packages ldm and ldm-server_.
 -   [Qingy](http://qingy.sourceforge.net/) (GPL)
@@ -299,10 +340,11 @@ See also the {{< iref "#xdmcp" "XDMCP section" >}}
 -   _Slim_ was a
     Desktop-independent graphical login manager for X11.
     The memory footprint for slim is 18M resident / 4M shared. Not so slim compared with
-    lightdm. _It is abandonned since 2013 but still in Debian as far of 2019 buster_.
+    lightdm. _It is abandonned since 2013 but still in Debian as far of 2022 bookworm_.
     -   [ArchWiki: SLIM](https://wiki.archlinux.org/index.php/Slim)
--   [Xdm (Wikipedia)
-    ](http://en.wikipedia.org/wiki/XDM_(display_manager)) (MIT License)
+-   [Seatd](https://git.sr.ht/~kennylevinsen/seatd)
+    A minimal seat and session management daemon. In Debian and Alpine.
+-   [Xdm (Wikipedia)](http://en.wikipedia.org/wiki/XDM_(display_manager)) (MIT License)
     manages a collection of X displays, which may be on the local host
     or remote servers. It implements
     {{< iref "#xdmcp" "XDMCP, the X Display Manager Control Protocol" >}}.
