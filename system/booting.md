@@ -2,6 +2,8 @@
 title: Booting
 ---
 
+<!-- [[file:../../../../content-org/notes/system_notes/booting_notes.org][Booting Notes]] -->
+
 # Boot Process
 -  [Debian reference: The system initialization
    ](https://www.debian.org/doc/manuals/debian-reference/ch03.en.html#_stage_4_the_normal_debian_system)
@@ -26,28 +28,32 @@ title: Booting
     -   [ipmiutil](http://ipmiutil.sourceforge.net/)
     -   [FreeIPMI](http://www.gnu.org/software/freeipmi/)
     -   [OpenIPMI](http://openipmi.sourceforge.net/)
--    [Archwiki:Unified Extensible Firmware Interface
+-   [Archwiki: Unified Extensible Firmware Interface (UEFI)
     ](https://wiki.archlinux.org/index.php/Unified_Extensible_Firmware_Interface)
--   [Firmware - Debian Wiki](https://wiki.debian.org/Firmware) describe the loading of
-    device drivers. Firmwares are loaded from udev from ``/lib/firmware``.
+-   [UEFI - Debian Wiki](https://wiki.debian.org/UEFI)
+-   [Firmware - Debian Wiki](https://wiki.debian.org/Firmware)
+    describes the loading of device drivers. Firmwares are loaded from udev from
+    `/lib/firmware`.
 -   [CmosPwd](https://www.cgsecurity.org/wiki/CmosPwd) (GPL)
     is a  password recovery tool, which decrypts password stored in cmos used to access
     BIOS SETUP.
+-   [Booting to the Boot Menu and BIOS](https://kb.wisc.edu/page.php?id=58779)
+    gives the key for entering bbot menu and Bios on various systems.
+
 
 # Grub
-{{< wp " GNU GRUB" >}} is a Multiboot
-{{< wp "Booting#Boot_loader"  "boot loader" >}}
+{{< wp " GNU GRUB" >}} is a Multiboot {{< wp "Booting#Boot_loader"  "boot loader" >}}.
 GRUB2 has support for LVM and RAID.
 
-The new generation of GRUB is _version 2_
-The old version is now refered as _GRUB Legacy_ and GRUB 2 is the
-default boot loader for distributions since 2009 (Ubuntu 9.10,
+The new generation of GRUB is _version 2_ The old version is now refered as _GRUB
+Legacy_ and GRUB 2 is the default boot loader for distributions since 2009 (Ubuntu 9.10,
 Debian Lenny) _the switch to v2 began in 2007_.
 
 -   [GRUB manual](http://www.gnu.org/software/grub/manual/html_node/index.html)
 -   [Debian Wiki: Grub2](https://wiki.debian.org/Grub2).
--   [Ubuntu Wiki: Grub2](https://help.ubuntu.com/community/Grub2).
--   [ArchWiki: Grub2](http://wiki.archlinux.org/index.php/GRUB2).
+-   [Ubuntu Wiki: Grub2](https://help.ubuntu.com/community/Grub2/ISOBoot).
+-   [ArchWiki: Grub2](http://wiki.archlinux.org/index.php/GRUB2)
+    [GRUB/Tips and tricks](https://wiki.archlinux.org/title/GRUB/Tips_and_tricks).
 -   [Gentoo Wiki: Grub2](http://wiki.gentoo.org/wiki/GRUB2).
 -   [GRUB 2 bootloader - Full tutorial](https://www.dedoimedo.com/computers/grub-2.html).
 -   [Super Grub2 Disk](http://www.supergrubdisk.org/wiki/SuperGRUB2Disk)
