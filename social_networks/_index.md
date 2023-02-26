@@ -1,5 +1,6 @@
 ---
 title: Social Networks
+bookCollapseSection: true
 ---
 
 We include also in this section the collaborative software.
@@ -8,7 +9,8 @@ We try to categorize social networks in several sections:
 -   Messenging applications are in {{< iref "xmpp" "xmpp"  >}},
 -   {{< iref "irc" "IRC" >}} has its own page.
 -   voice and video aimed applications are in the page {{< iref "sip" "SIP" >}}
--   {{< iref "microblogging" "Microblogging" >}} contains applications based on protocols like
+-   {{< iref "microblogging" "Microblogging" >}} contains applications based on
+    protocols like
     {< iref "social_networks#ostatus" "Ostatus" >}},
     {{< iref "social_networks#activitypub" "ActivityPub"  >}},
     {{< iref "social_networks#diaspora" "Diaspora" >}},
