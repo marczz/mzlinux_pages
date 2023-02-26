@@ -32,7 +32,7 @@ title: Freedesktop
 
 # XDG menus
 -   [XDG Menu in LXDE](http://wiki.lxde.org/en/Main_Menu)
--   [ArchLinux: xdg-menu](https://wiki.archlinux.org/index.php/Xdg-menu).
+-   [ArchLinux: xdg-menu](https://wiki.archlinux.org/title/Xdg-menu).
 -   [xdg-utils](https://www.freedesktop.org/wiki/Software/xdg-utils/)
     is a set of command line utilities for Free Desktop:  creating
     menus, opening files, setting mime types it includes the command
@@ -41,7 +41,7 @@ title: Freedesktop
     for freedesktop compatible environments.
 -   To build the full desktop menu many distribution use a command to browse the freedesktop
     menu hierarchy `xdg-menu` is decribed in
-    [Archlinux: XdgMenu](https://wiki.archlinux.org/index.php/Xdg-Menu).
+    [Archlinux: XdgMenu](https://wiki.archlinux.org/title/Xdg-Menu).
 -   In Debian the freedesktop menus are generated from
     [Debian Menus System
     ](http://www.debian.org/doc/packaging-manuals/menu.html/)
@@ -71,24 +71,37 @@ file, it is explained in Freedesktop
 [Mime Actions Specification
 ](http://standards.freedesktop.org/mime-apps-spec/latest/)
 
-The MIME Applications Associations define the default application. It is specipied in
+The MIME Applications Associations define the default application. It is specified in
 [Association between MIME types and applications
 ](https://specifications.freedesktop.org/mime-apps-spec/latest/).
 
-The user can override the default in `~/.config/$desktop-mimeapps.list` for a specfic
-desktop in the env variable `$XDG_CURRENT_DESKTOP` or  `~/.config/mimeapps.list`
-rmfor any desktop.
+Each application announce what mime type it support in the desktop file with the
+`MimeType` Key.
 
+You can see a list of these entries in the file `/usr/share/applications/mimeinfo.cache`.
+
+The default application used for opening a Mime Type can be specified in the into the
+group `[Default Applications]` in a file `mimeapps.list`.
+
+The user can also add or remove association in the groups `[Added Associations]` and
+`[Removed Associations]`.
+
+The system default is `/usr/share/applications/mimeapps.list` and the desktop specific
+association `/usr/share/applications/$desktop-mimeapps.list` where desktop is the value
+of the env variable `$XDG_CURRENT_DESKTOP` or take successively the colon-separated list
+of names in `$XDG_CURRENT_DESKTOP`.
+
+The user can override the system default in `~/.config/$desktop-mimeapps.list` for a
+specfic desktop or `~/.config/mimeapps.list` for any desktop.
 
 -   [ArchLinux: Default applications
-    ](https://wiki.archlinux.org/index.php/Default_Applications)
+    ](https://wiki.archlinux.org/title/Default_Applications)
     _describe mime database, xdg-open, xdg-mime, ect._
-    [Xdg user directories
-    ](https://wiki.archlinux.org/index.php/XDG_user_directories),
-    [Desktop Entries](https://wiki.archlinux.org/index.php/Desktop_entries)
+    [Xdg user directories](https://wiki.archlinux.org/title/XDG_user_directories),
+    [Desktop Entries](https://wiki.archlinux.org/title/Desktop_entries)
 
 Some [alternatives are available
-](https://wiki.archlinux.org/index.php/Default_Applications#Utilities),
+](https://wiki.archlinux.org/title/Default_Applications#Utilities),
 they try to provide more flexibility.
 
 # Freedesktop Directories
@@ -102,21 +115,20 @@ The Base Directories are used when looking for for user configuration.
     describe the unix file hierarchy used by freedesktop and systemd. You find ther the
     use of `XDG_RUNTIME_DIR`.
 -   [ArchWiki: XDG Base Directory support
-    ](https://wiki.archlinux.org/index.php/XDG_Base_Directory_support)
+    ](https://wiki.archlinux.org/title/XDG_Base_Directory_support)
     catalog software using the XDG Base Directory Specification.
 -   [GNOME Goal: XDG Base Directory Specification Usage
     ](https://wiki.gnome.org/Initiatives/GnomeGoals/XDGConfigFolders)
     explains why and how gnome siftware should implement XDG base
     directories, and list the present support in gnome programs.
 -   [ArchWiki: XDG user directories
-    ](https://wiki.archlinux.org/index.php/XDG_user_directories)
+    ](https://wiki.archlinux.org/title/XDG_user_directories)
 
 
 The [freedesktop base directories
 ](http://standards.freedesktop.org/basedir-spec/latest/)
-that follow is used by all freedesktop compatible application. They
-have a default that can be overrided by exporting in your environment
-the variables.
+that follow is used by all freedesktop compatible application. They have a default that
+can be overrided by exporting in your environment the variables.
 
 -   `$XDG_DATA_HOME` default `$HOME/.local/share` contains user-specific
     data files.
@@ -186,7 +198,7 @@ that use them. TMost of them are not yet following the XDG standard,
 many programs may be launched with a specific environment on command
 line option to make them comply with xdg satndard as explained in
 [ArchWiki: XDG Base Directory support
-](https://wiki.archlinux.org/index.php/XDG_Base_Directory_support).
+](https://wiki.archlinux.org/title/XDG_Base_Directory_support).
 You can also symlink many of these files or directories inside the
 corresponding XDG Base directory.
 
@@ -212,9 +224,9 @@ see also the Gnome:
 
 # Autostart applications
 -   [ArchWiki Autostarting
-    ](https://wiki.archlinux.org/index.php/Autostarting)
+    ](https://wiki.archlinux.org/title/Autostarting)
 -   [ArchWiki Desktop entries
-    ](https://wiki.archlinux.org/index.php/Desktop_entries#Autostart)
+    ](https://wiki.archlinux.org/title/Desktop_entries#Autostart)
 
 Applications referenced by a `.desktop` file in
 `$XDG_CONFIG_DIRS/autostart` and `$XDG_CONFIG_HOME`
