@@ -12,23 +12,38 @@ See also {{< iref "filesystems" "File Systems" >}}.
 -   Wikipedia: {{< wp "Hard_disk_drive" >}}, {{< wp "Solid-state drive" >}},
     {{< wp "Automatic acoustic management" >}}, {{< wp "S.M.A.R.T." >}},
     {{< wp "GNOME Disks" >}} _debian package: gnome-disk-utility_, {{< wp "RAID" >}}
--   [Red Hat Storage Administration Guide
-    ](https://access.redhat.com/site/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Storage_Administration_Guide/index.html)
--   [Red Hat LVM Administrator Guide
-    ](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Logical_Volume_Manager_Administration/index.html)
--   [Red Hat DM Multipath Configuration and Administration
-    ](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/DM_Multipath/index.html)
-    the utilities in Debian are in the package _multipath-tools_.
--   [Red Hat - Managing storage devices
-    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/managing_storage_devices/index)
--   [Red Hat - Online Storage Reconfiguration Guide
-    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/5/html/online_storage_reconfiguration_guide/index) :
-    [1.4. Removing a Storage Device
-    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/5/html/online_storage_reconfiguration_guide/removing_devices).
+-   [Red Hat
+    ](https://access.redhat.com/site/documentation/en-US/Red_Hat_Enterprise_Linux/):
+    -   [Storage Administration Guide
+        ](https://access.redhat.com/site/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Storage_Administration_Guide/index.html)
+    -   [LVM Administrator Guide
+        ](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Logical_Volume_Manager_Administration/index.html)
+    -   [DM Multipath Configuration and Administration
+        ](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/DM_Multipath/index.html)
+        the utilities in Debian are in the package _multipath-tools_.
+    -   [Managing storage devices
+        ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/managing_storage_devices/index)
+    -   [Online Storage Reconfiguration Guide
+        ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/5/html/online_storage_reconfiguration_guide/index) :
+        [1.4. Removing a Storage Device
+        ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/5/html/online_storage_reconfiguration_guide/removing_devices).
 -   [Fedora - Storage Administration Guide
     ](https://docs.fedoraproject.org/en-US/Fedora/14/html/Storage_Administration_Guide/index.html)
--   [ArchWiki - Filesystems
-    ](https://wiki.archlinux.org/index.php/File_systems).
+-   [ArchWiki](https://wiki.archlinux.org/index.php/):
+    -   [Filesystems](https://wiki.archlinux.org/index.php/File_systems).
+    -   [Benchmarking](https://wiki.archlinux.org/title/Benchmarking)
+        refer to many tools to test Hdrives: __s__, __iozone__, __Bonnie++__, ...
+    -   [Solid state drive](https://wiki.archlinux.org/title/Solid_state_drive).
+    -   [Solid state drive/Memory cell clearing
+        ](https://wiki.archlinux.org/title/Solid_state_drive/Memory_cell_clearing)
+    -   [Solid state drive/NVMe](https://wiki.archlinux.org/title/Solid_state_drive/NVMe)
+    -   [Flashcache](https://wiki.archlinux.org/title/Flashcache)
+        a module allowing to cache a rotational drive on a smaller solid-state drive for
+        improving performances.
+    -   [Bcache](https://wiki.archlinux.org/title/Bcache)
+        allows one to use an SSD as a read/write cache or read cache for a rotating HDD.
+        This can be also achieved with
+        [LVM Cache](https://wiki.archlinux.org/title/LVM#Cache)
 -   [linux-advanced-storage (pdf)
     ](https://oss.oracle.com/~mkp/docs/linux-advanced-storage.pdf)
     describes the low level disk driver access via ATA and SCSI commands.
@@ -226,20 +241,18 @@ where you find {{< iref "filesystems#lvm" "LVM" >}}.
 
 ## Bootable SD Card
 -   [Gentoo Wiki SD card](https://wiki.gentoo.org/wiki/SDCard)
-    explain how to format a SD card for io speed, and compare the
-    speed of diferent file system.
--   When using a filesystem on a sd card, we should avoid  wearing it
-    off by disabling swap, or in raspberry remove `dphys-swapfile`.
-    using the `noatime` option, highly used directories such as
-    `/var/tmp/` can be put in RAM _tmpfs_, putting /var/log in RAM is
-    also an option, but we can no longer examine the logs after a crash.
-    It is also possible to disable journaling, but any unwanted
-    dismount will result in data loss. On Raspberry 3 we can
+    explain how to format a SD card for io speed, and compare the speed of diferent file
+    system.
+-   When using a filesystem on a sd card, we should avoid wearing it off by disabling
+    swap, or in raspberry remove `dphys-swapfile`.  using the `noatime` option, highly
+    used directories such as `/var/tmp/` can be put in RAM _tmpfs_, putting /var/log in
+    RAM is also an option, but we can no longer examine the logs after a crash.  It is
+    also possible to disable journaling, but any unwanted dismount will result in data
+    loss. On Raspberry 3 we can
     [boot from external USB device
     ](https://www.raspberrypi.org/documentation/hardware/raspberrypi/bootmodes/msd.md)
-    but this option is not available with earlier releases.
-    Using a bigger sd card also augment the wear levelling capacity,
-    and so increase the lifetime of sd cards.
+    but this option is not available with earlier releases.  Using a bigger sd card also
+    augment the wear levelling capacity, and so increase the lifetime of sd cards.
 -   [F3](http://oss.digirati.com.br/f3/) (GPL)
     is used to test sdcards.  it uses the same algorithm than
     [h2testhw](https://www.heise.de/download/product/h2testw-50539).
@@ -254,7 +267,7 @@ where you find {{< iref "filesystems#lvm" "LVM" >}}.
     -   [F3 Documentation
         ](https://fight-flash-fraud.readthedocs.io/en/latest/).
     -   [F3 github repository](https://github.com/AltraMayor/f3).
--   [Etcher](https://github.com/resin-io/etche) (Apache2 License)
+-   <a href="etcher"></a>[Etcher](https://github.com/balena-io/etcher) (Apache2 License)
     is an OS image flasher built on electron which run on any platform supported by
     Electron includinx linux, windoze, mac OS.
     It checks that every byte of data was written correctly.
@@ -262,7 +275,7 @@ where you find {{< iref "filesystems#lvm" "LVM" >}}.
     The software is provided as an app image, It also provides a Debian repository to
     install the node application.
 
-    This tool, and _usbimager_ are [recommended by armbian
+    This tool, or {{< iref "#usbimager" "usbimager" >}} are [recommended by armbian
     ](https://docs.armbian.com/User-Guide_Getting-Started/#how-to-prepare-a-sd-card)
     for writing images.
 
@@ -272,26 +285,40 @@ where you find {{< iref "filesystems#lvm" "LVM" >}}.
 -   [mkusb](https://help.ubuntu.com/community/mkusb)
     is a wrapper around _dd_ to flash or clone an iso image or a compressed image file
     to a mass storage device, either an USB drive, an internal drive or an eSATA drive.
+
     _Mkusb_ is the recommended ubuntu tool to create a bootable drive. It exists in
-    several flavors. The GUI version named _mkusb_, a text only interface _mkusb-nox_, a
-    simple shell script _mkusb-min_.
+    several flavors. The GUI version named _mkusb_, a text only interface _mkusb-nox_,
+    two simple shell scripst _mkusb-min_and _mkusb-minp_.
     -   [mkusb PPA](https://launchpad.net/~mkusb/+archive/ubuntu/ppa)
     -   [How to make usb boot drive](https://ubuntuforums.org/showthread.php?t=1958073)
+
         is an ubuntu mkusb tutorial.
     -   [mkusb quick start manual (pdf)
         ](https://phillw.net/isos/linux-tools/mkusb/mkUSB-quick-start-manual-12.pdf)
     -   [How to install mkusb in Debian
         ](https://help.ubuntu.com/community/mkusb/install-to-debian).
-    -   _mkusb-min_, minimal shell script can be downloaded and used following the
-        [mkusb-min manual](https://help.ubuntu.com/community/mkusb/min).
--   [usbimager](https://gitlab.com/bztsrc/usbimager) (MIT Licence)
+    -   _[mkusb-min](https://help.ubuntu.com/community/mkusb/min).mkusb-min_, minimal
+        `dd` wrapper shell script which can create LiveUSBs without persistence.
+    -   [mskusb-minp](https://help.ubuntu.com/community/mkusb/minp) allows cloning plus
+        making persistent live drives from iso files of Debian.
+-   <a name="usbimager"></a>[usbimager](https://gitlab.com/bztsrc/usbimager) (MIT Licence)
     is a GUI application that writes compressed disk images to USB drives and creates
-    backups. It is lighter than _balena-etcher_. The repository provides Debian and
-    Raspbian packages
+    backups. It is lighter than {{< "#etcher" "balena-etcher" >}} and also
+    [recommended by armbian
+    ](https://docs.armbian.com/User-Guide_Getting-Started/#how-to-prepare-a-sd-card)
+    to prepare a sd-card.
+
+.   The repository provides Debian and Raspbian packages
 -   [Ventoy](https://github.com/ventoy/Ventoy) (GPL 3.0)
     creates bootable USB drive for ISO/WIM/IMG/VHD(x)/EFI files. 86 Legacy BIOS, IA32
     UEFI, x86_64 UEFI, ARM64 UEFI and MIPS64EL UEFI with  MBR or GPT partition are
     supported.
+
+    You can copy many image files at a time and ventoy will give you a boot menu to
+    select them.
+
+    -   [Ventoy Manual](https://www.ventoy.net/en/doc_start.html).
+    -   [FAQ . Ventoy](https://www.ventoy.net/en/faq.html).
 
 An advice given by _mkusb_ manual is if you want to re-use a USB drive previously used
 for a booting image, you should wipe the first megabyte it with dd (overwrite with
