@@ -37,11 +37,9 @@ title: Web Browsers
         protocols:
         [mozillaZine: Register protocol
         ](http://kb.mozillazine.org/Register_protocol)
--   There are many [about:addons](about:addons) the list
-    of installed plugins is at [about:plugins](about:plugins) an in the
-    `Tools/Add-on` menu entry.
--   Config options can be modified by opening
-    [about:config](about:config) in your browser.
+-   There are many [about:addons](about:addons) the list of installed plugins is at
+    [about:plugins](about:plugins) an in the `Tools/Add-on` menu entry.
+-   Config options can be modified by opening [about:config](about:config) in your browser.
     -   The edition of preferences is described in
         [Customizing Mozilla](http://www.mozilla.org/unix/customizing.html), and
         [mozillazine: Editing configuration
@@ -65,12 +63,11 @@ title: Web Browsers
         plugin for editing preferences. It can replace the *Chrome Edit*
         and the *preferential* plugin which has not been updated since
         end of year 2006.
-    -   For a linux programmer it is easier to modify with an editor the
-        file `prefs.js` inside `~/.mozilla/firefox/*.default/`. This
-        file is overwritten when firefox exits, to manage your own
-        persistent preferences it may be easier to create in the same
-        directory a file `user.js`, the preferences in this file
-        override `prefs.js`.
+    -   For a linux programmer it is easier to modify with an editor the file `prefs.js`
+        inside `~/.mozilla/firefox/*.default/`. This file is overwritten when firefox
+        exits, to manage your own persistent preferences it may be easier to create in
+        the same directory a file `user.js`, the preferences in this file override
+        `prefs.js`.
         (see also [mozillazine: user.js
         ](http://kb.mozillazine.org/User.js_file))
     -   You may need to adjust the maximum amount of time in seconds a script can run
@@ -82,11 +79,11 @@ title: Web Browsers
     I have written a bash script to decode the mailto url (
     [rfc2368](http://www.faqs.org/rfcs/rfc2368.html)) and call the mutt
     MUA.
--   [Dom inspector](http://www.mozilla.org/projects/inspector/) is a
-    very useful tool in mozilla/firefox, when you open it and select
-    under `Search` menu the item `Select Element by Click` you can when
-    clicking on an element in the page find its place in the DOM tree.
-    It is very usefull to find how to set your CSS for an effect.
+-   [Dom inspector](http://www.mozilla.org/projects/inspector/)
+    is a very useful tool in mozilla/firefox, when you open it and select under `Search`
+    menu the item `Select Element by Click` you can when clicking on an element in the
+    page find its place in the DOM tree.  It is very usefull to find how to set your CSS
+    for an effect.
 -   [Conkeror](http://conkeror.org/) is a keyboard-driven, Mozilla-based
     web browser. It is no longer packaged in Debian.
     _Not to be confused with the KDE browser Konqueror._
@@ -98,8 +95,7 @@ title: Web Browsers
 ## Firefox addons {#firefox_addons}
 
 -   [Browser extensions - ArchWiki](https://wiki.archlinux.org/index.php/Browser_extensions)
--   [Browser plugins - ArchWiki
-    ](https://wiki.archlinux.org/index.php/browser_plugins)
+-   [Browser plugins - ArchWiki](https://wiki.archlinux.org/index.php/browser_plugins)
     has informations about flash players.
 -   Wikipedia: {{< wp "List of Firefox extensions" >}}
 
@@ -125,10 +121,9 @@ You can also install
     ](https://wiki.debian.org/FlashPlayer)
     on Adobe SWF plugin on Debian.
 
-    Adobe announced in 2012 it would not make newer versions of its
-    NPAPI Flash player plugin available on Linux and would only
-    provide security updates for Flash Player 11.2 until 2017.
-    But in 2016 they began again to provide the NAPI plugin taht can
+    Adobe announced in 2012 it would not make newer versions of its NPAPI Flash player
+    plugin available on Linux and would only provide security updates for Flash Player
+    11.2 until 2017.  But in 2016 they began again to provide the NAPI plugin that can
     be used with Firefox.
 
     But only the PPAPI plugin used in peper flash on Chrome, support
@@ -172,19 +167,17 @@ You can also install
 
 # Ads Blocking
  will not discuss this controversial topic, but I adhere to
-[FiveFilters - Block Ads!
-](https://blockads.fivefilters.org/acceptable.html).
+[FiveFilters - Block Ads!](https://blockads.fivefilters.org/acceptable.html).
 
-Fivefilters has an [Ads Blocking Test page
-](https://blockads.fivefilters.org/index.html)
+Fivefilters has an [Ads Blocking Test page](https://blockads.fivefilters.org/index.html)
 The source is on
-[GitHub fivefilters/block-ads
-](https://github.com/fivefilters/block-ads).
+[GitHub fivefilters/block-ads](https://github.com/fivefilters/block-ads).
 
 For network level adds blocking see the page
 {{< iref "ads_blocking" "blocking advertisements" >}}, and for cleaning all
 the ininteresting stuff _it is more politicaly correct that «junk»!_
-that is cluttering web pages see {{< iref "documents#readability_software" "Readability Software" >}}.
+that is cluttering web pages see
+{{< iref "documents#readability_software" "Readability Software" >}}.
 
 We can use css to avoid displaying advertisements it is described in
 the [floppymoose.com page](http://www.floppymoose.com/) and in
@@ -352,11 +345,10 @@ With one tab no js
     and an other offspring:
     <a name="links2">[Twibright Labs: Links
     ](http://atrey.karlin.mff.cuni.cz/~clock/twibright/links/)(links-2)
-    offers both graphic and text browsing, it has no CSS, it do have
-    some javascript but is not very usable for javascript driven
-    sites.  Links is a minimal nice browser that can work in text
-    mode, or graphic mode with X11, fb or framebuffer; with unmatched
-    low footprints.
+    offers both graphic and text browsing, it has no CSS, it do have some javascript but
+    is not very usable for javascript driven sites.  Links is a minimal nice browser
+    that can work in text mode, or graphic mode with X11, fb or framebuffer; with
+    unmatched low footprints.
 -   [Lariza](https://www.uninformativ.de/git/lariza/file/README.html) (MIT License)
     ia a simple web browser using GTK+ 3, GLib and WebKit2GTK+.
     It is considered to be one of the lightest front-end GUI interfaces to webkit2gtk.
@@ -373,27 +365,26 @@ With one tab no js
     -   [Midori Home](https://astian.org/midori/)
     -   [Midori - ArchWiki](https://wiki.archlinux.org/index.php/Midori).
 -   [NetSurf](http://www.netsurf-browser.org/)
-    (GPL) is a fast small footprint web browser for RISC OS and UNIX
-    platforms. Netsurf can handle CSS but not javascript. A NetSurf
-    package is in Debian _named: netsurf-gtk_.
-    Netsurf is small but its main limitation is that it does not
-    provide Javascript.
+    (GPL) is a fast small footprint web browser for RISC OS and UNIX platforms. Netsurf
+    can handle CSS but not javascript. A NetSurf package is in Debian _named:
+    netsurf-gtk_.
+
+    Netsurf is small but its main limitation is that it does not provide Javascript.
 
     There is a frame buffer version of netsurf, it has no shortcuts, menu, tabs, but has
     minimal memory footprint.
 -   [Qutebrowser](https://www.qutebrowser.org/) (GPL-3.0)
-    is a keyboard-focused browser with a minimal GUI. It’s based on
-    Python and PyQt5. It was inspired by other browsers/addons like
-    {{< iref "#dwb" "dwb" >}}  and Vimperator/Pentadactyl. QuteBrowser is in Debian.
+    is a keyboard-focused browser with vim like bindings. It has a minimal GUI. It’s
+    based on Python and PyQt5. It was inspired by other browsers/addons like
+    {{< iref "#dwb" "dwb" >}} and Vimperator/Pentadactyl. QuteBrowser is in Debian.
     -   [Qutebrowser - GitHub](https://github.com/qutebrowser/qutebrowser)
-    -   [ArchWiki: Qutebrowser
-        ](https://wiki.archlinux.org/index.php/Qutebrowser).
+    -   [ArchWiki: Qutebrowser](https://wiki.archlinux.org/index.php/Qutebrowser).
 -   [servo](https://servo.org/) (Mozilla public License)
     is a new browser written in Rust.
     -   [servo - GitHub](https://github.com/servo/servo)
 -   [Surf](http://surf.suckless.org/) (GPL)
-    from suckless tools is a simple web browser based on
-    WebKit/GTK+. It supports the XEmbed protocol
+    from suckless tools is a simple web browser based on WebKit/GTK+. It supports the
+    XEmbed protocol
     -   [ArchWiki: Surf](https://wiki.archlinux.org/index.php/Surf)
     -   [surf extension scripts](http://surf.suckless.org/files/)
 -   [Web](https://wiki.gnome.org/Apps/Web)
@@ -411,17 +402,19 @@ With one tab no js
     process 94M res / 62M shr, 1 Webkit storage 31M / 24M, 1 Webkit
     network 60M / 34M, 1 Webkit Web 502M / 100M.
 
--   {{< wp "W3m" >}} (MIT License) is a console (and xterm) browser that can handle
-    images, it is very small 3.6M.
+-   {{< wp "W3m" >}} (MIT License) is a terminal browser that can handle
+    images, it is very small 3.6M. The development of w3m stopped in 2011.
+    A debian port is actively maintained in 2023.
     -   [W3m Home Page](http://w3m.sourceforge.net/),
+    -   [GitHub - tats/w3m: Debian's w3m](https://github.com/tats/w3m)
     -   [w3m-mee](http://pub.ks-and-ks.ne.jp/prog/w3mmee/)
         Multilingualization of w3m,
     -   [Emacs-w3m](http://emacs-w3m.namazu.org/) a simple Emacs interface
         to w3m. The development of w3m began in 1995, it has evolved a lot
-        until 2004, and slowed down since 0.5 release, even if new minor releases
-        have been delivered in 2007 and 2011.
-    -   [emacs Wiki: Emacs-w3m
-        ](https://www.emacswiki.org/emacs/emacs-w3m),
+        until 2004, and slowed down after 0.5 release, but then became again active and
+        the development is still active on GitHub repository in 2023.
+        -   [Emacs-W3m - GitHub](https://github.com/emacs-w3m/emacs-w3m).
+    -   [emacs Wiki: Emacs-w3m](https://www.emacswiki.org/emacs/emacs-w3m),
         [w3m](ttps://www.emacswiki.org/emacs/w3m).
 
 # Bookmarklet
