@@ -4,9 +4,7 @@ title: Linux Distributions
 
 See also the  {{< iref "lightweight_distributions" "Lightweight Linuxes" >}} section.
 
-A full state of distributions is given in
-[DistroWatch](http://distrowatch.com).
-
+A full state of distributions is given in [DistroWatch](http://distrowatch.com).
 
 # Ubuntu {#ubuntu}
 
@@ -61,10 +59,8 @@ A full state of distributions is given in
 
 
 # Debian derivatives
-_See the also sections:
-{{< iref "debian_admin" "Debian administration" >}} and
-[Package management
-](node/debian_admin#package_management "internal reference").
+_See the also sections: {{< iref "debian_admin" "Debian administration" >}} and
+{{< iref "debian_admin#package_management" "Package management" >}}
 
 -   [Debian](https://www.debian.org/),
     [Debian FAQ](https://www.debian.org/doc/FAQ/).
@@ -91,19 +87,15 @@ _See the also sections:
     is a Debian testing based Linux distribution, and Live CD
     with a set of slightly customized lightweight desktops like
     Enlightenment, OpenBox, LXDE.
--   <a name="tails">[Tails
-    is a live OS, derived from Debian that you can
-    start on almost any computer from a USB stick or a DVD.
-    It aims at preserving your privacy and anonymity.
-    It sends its traffic through
-    [Tor](node/proxy#tor "internal reference")
-    and contains applicrions for LUKS disk encryption, OpenPGP mail
-    encryption, messaging with OTR, and securely delete your files
-    with _Wipe_.
+-   <a name="tails">[Tails](https://tails.boum.org/)
+    is a live OS, derived from Debian that you can start on almost any computer from a
+    USB stick or a DVD.  It aims at preserving your privacy and anonymity.  It sends its
+    traffic through {{< iref "proxy#tor" "Tor" >}} and contains applications for LUKS
+    disk encryption, OpenPGP mail encryption, messaging with OTR, and securely delete
+    your files with _Wipe_.
 
-    Debian provides a package _tail-installer_ which is a
-    graphical tool to install or upgrade Tails on a USB stick from an
-    ISO image.
+    Debian provides a package _tail-installer_ which is a graphical tool to install or
+    upgrade Tails on a USB stick from an ISO image.
 
 ## Debian Live
 [Debian Live](https://wiki.debian.org/DebianLive)
