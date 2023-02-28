@@ -241,7 +241,7 @@ where you find {{< iref "filesystems#lvm" "LVM" >}}.
 
 ## Bootable SD Card
 -   [Gentoo Wiki SD card](https://wiki.gentoo.org/wiki/SDCard)
-    explain how to format a SD card for io speed, and compare the speed of diferent file
+    explain how to format a SD card for io speed, and compare the speed of different file
     system.
 -   When using a filesystem on a sd card, we should avoid wearing it off by disabling
     swap, or in raspberry remove `dphys-swapfile`.  using the `noatime` option, highly
@@ -297,13 +297,13 @@ where you find {{< iref "filesystems#lvm" "LVM" >}}.
         ](https://phillw.net/isos/linux-tools/mkusb/mkUSB-quick-start-manual-12.pdf)
     -   [How to install mkusb in Debian
         ](https://help.ubuntu.com/community/mkusb/install-to-debian).
-    -   _[mkusb-min](https://help.ubuntu.com/community/mkusb/min).mkusb-min_, minimal
+    -   [mkusb-min](https://help.ubuntu.com/community/mkusb/min), minimal
         `dd` wrapper shell script which can create LiveUSBs without persistence.
     -   [mskusb-minp](https://help.ubuntu.com/community/mkusb/minp) allows cloning plus
         making persistent live drives from iso files of Debian.
 -   <a name="usbimager"></a>[usbimager](https://gitlab.com/bztsrc/usbimager) (MIT Licence)
     is a GUI application that writes compressed disk images to USB drives and creates
-    backups. It is lighter than {{< "#etcher" "balena-etcher" >}} and also
+    backups. It is lighter than {{< iref "#etcher" "balena-etcher" >}} and also
     [recommended by armbian
     ](https://docs.armbian.com/User-Guide_Getting-Started/#how-to-prepare-a-sd-card)
     to prepare a sd-card.
