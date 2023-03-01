@@ -12,6 +12,15 @@ See also {{< iref "ffmpeg" "FFmpeg section" >}},
 # References
 -   Wikipedia {{< wp "Streaming media" >}} and
     {{< wp "List of streaming media systems" >}}.
+-   [List of applications/Multimedia - ArchWiki
+    ](https://wiki.archlinux.org/title/List_of_applications/Multimedia) in the sections
+    [Audio Players
+    ](https://wiki.archlinux.org/title/List_of_applications/Multimedia#Audio),
+    [Video players][https://wiki.archlinux.org/title/List_of_applications/Multimedia#Video),
+    [Music streaming clients
+    ](https://wiki.archlinux.org/title/List_of_applications/Multimedia#Music_streaming_clients),
+    [Media Servers
+    ](https://wiki.archlinux.org/title/List_of_applications/Multimedia#Media_servers)
 -   [Streaming Media With Linux part 1
     ](http://www.linuxdevcenter.com/pub/a/linux/2001/03/23/streaming_media.html)
     and
@@ -26,16 +35,16 @@ See also {{< iref "ffmpeg" "FFmpeg section" >}},
 
 # Sound Servers
 -   <a name="esound"></a>{{< wp "ESound" >}}
-    the Enlightened Sound Daemon, is a server process that mixes
-    several audio streams for playback by a single audio device.
-    Now _esd_ is largely replaced by {{< iref "#pulseaudio" "PulseAudio" >}}.
+    the Enlightened Sound Daemon, is a server process that mixes several audio streams
+    for playback by a single audio device.  Now _esd_ is largely replaced by
+    {{< iref "#pulseaudio" "PulseAudio" >}} or {{< iref "PipeWire" }}.
 -   <a name="jack"><a>[Jack](http://jackit.sourceforge.net)
     JACK is a low-latency audio server. It can connect a number of different
     applications to an audio device, as well as allowing them to share audio between
     themselves.
     -   Wikipedia {{< wp "JACK Audio Connection Kit" >}}
     -   [ArchWiki: JACK Audio Connection Kit
-        ](https://wiki.archlinux.org/index.php/JACK_Audio_Connection_Kit)
+
 
 ## PulseAudio {#pulseaudio}
 [PulseAudio](http://www.freedesktop.org/wiki/Software/PulseAudio/)
@@ -129,18 +138,22 @@ Wikipedia has a {{< wp "Pulseaudio" >}} page.
     autospawned session then start again with `pulseaudio -v` to get info messages,
     `pulseaudio -vv` to also get debugging messages.
 -   [pa-applet](https://github.com/fernandotcl/pa-applet)
-    is a systray-applet that allows you to control
-    the volume level of the default sink and mute or unmute it.
-    pa-applet is not a replacement to padevchooser and pavucontrol,
-    but offer basic functions for regular desktop usage.
+    is a systray-applet that allows you to control the volume level of the default sink
+    and mute or unmute it.  pa-applet is not a replacement to padevchooser and
+    pavucontrol, but offer basic functions for regular desktop usage.
 -   Pulseaudio can stream to UPnP / DLNA with
     {{< iref "#pulseaudio" "pulseaudio-dlna" >}}.
 
 ## PipeWire {#pipewire}
 -   [PipeWire Wiki - Freedesktop
     ](https://gitlab.freedesktop.org/pipewire/pipewire/-/wikis/home)
+    -   [Migrate PulseAudio
+        ](https://gitlab.freedesktop.org/pipewire/pipewire/-/wikis/Migrate-PulseAudio).
+    -   [Virtual devices
+        ](https://gitlab.freedesktop.org/pipewire/pipewire/-/wikis/Virtual-Devices)
 -   [PipeWire README
     ](https://gitlab.freedesktop.org/pipewire/pipewire/-/blob/master/README.md)
+-   [PipeWire - Debian Wiki](https://wiki.debian.org/PipeWire)
 -   [PipeWire - ArchWiki](https://wiki.archlinux.org/index.php/PipeWire),
     [PipeWire/Examples](https://wiki.archlinux.org/title/PipeWire/Examples)
 -   [Pipewire - Gentoo Wiki](https://wiki.gentoo.org/wiki/Pipewire#Replacing_PulseAudio)
@@ -209,9 +222,8 @@ experiment with gstreamer you need a command line tool like
 Gstreamer is appropriate for playing music and converting formats.
 The plugins are in the package gstreamer-plugins.
 
-Gstreamer is the basis of
-[numerous applications](http://gstreamer.freedesktop.org/apps/)
-the following are refered in these pages:
+Gstreamer is the basis of numerous applications the following are refered in these
+pages:
 {{< iref "media_players#audiopreview" "Audiopreview" >}},
 {{< iref "media_players#auditive" "Auditive" >}},
 {{< iref "media_players#banshee" "Banshee" >}},
@@ -238,7 +250,11 @@ the following are refered in these pages:
 {{< iref "media_players#gnome_videos" "Gnome Videos" >}}
 
 [GStreamer: Applications](https://gstreamer.freedesktop.org/apps/).
-is a larger list, but contains some obsolete applications.
+is a larger list, but contains some obsolete applications, in [ArchWiki list of
+Multimedia applications](https://wiki.archlinux.org/title/List_of_applications/Multimedia)
+you find also the [gsteamer based audio players
+](https://wiki.archlinux.org/title/List_of_applications/Multimedia#GStreamer-based) and
+[video players](https://wiki.archlinux.org/title/List_of_applications/Multimedia#GStreamer-based).
 
 [Gstreamer Documentation](http://gstreamer.freedesktop.org/documentation/):
 -   [Gstreamer tutorials
@@ -258,6 +274,9 @@ is a larger list, but contains some obsolete applications.
 
 
 # Stream servers {#streamservers}
+-   [ArchWiki list of media servers
+    ](https://wiki.archlinux.org/title/List_of_applications/Multimedia#Media_servers).
+
 ## Music only
 
 -   [AmpJuke](http://www.ampjuke.org/) (GPL) is a PHP+MySQL streaming
