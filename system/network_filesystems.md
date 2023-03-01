@@ -4,7 +4,8 @@ title: Network File Systems
 
 See also the companion pages on
 {{< iref "filesystems" "Filesystems" >}},
-{{< iref "encrypted_filesystems" "Encrypted Filesystems" >}}.
+{{< iref "encrypted_filesystems" "Encrypted Filesystems" >}},
+{{< iref "webdav" "WebDav >}}.
 
 ----
 
@@ -42,8 +43,6 @@ See also the companion pages on
 -   [Container storage for dummies
     ](https://www.redhat.com/en/resources/container-storage-dummies)
     a free ebook from RedHat.
-
-
 
 
 # NFS {#nfs}
@@ -193,14 +192,14 @@ is easier.
 
 # CIFS, Samba {#samba}
 
+<!-- [[file:../../../../content-org/notes/system_notes/filesystems_notes.org::#samba][Samba Notes]] -->
+
 ## CIFS references
 {{< wp "Samba_(software)"  "Wikipedia: Samba" >}} and {{< wp "Server_Message_Block"  "SMB/CIFS" >}}.
 
--   [Samba Home](http://www.samba.org/) and [Samba Wiki
-    ](http://wiki.samba.org/index.php)
--   [Samba Documentation](https://www.samba.org/samba/docs/) is mainly on the
-    in [Samba Wiki User Documentation
-    ](https://wiki.samba.org/index.php/User_Documentation).
+-   [Samba Home](http://www.samba.org/) and [Samba Wiki](http://wiki.samba.org/index.php)
+-   [Samba Documentation](https://www.samba.org/samba/docs/) is mainly on the in
+    [Samba Wiki User Documentation](https://wiki.samba.org/index.php/User_Documentation).
 -   [Samba man pages](https://www.samba.org/samba/docs/current/man-html/)
 -   [ArchLinux: Samba](https://wiki.archlinux.org/index.php/Samba) is
     a new complete howto.
@@ -208,20 +207,28 @@ is easier.
     [Samba/ServerSimple](https://wiki.debian.org/Samba/ServerSimple),
 -   [Gentoo Wiki: Samba](https://wiki.gentoo.org/wiki/Samba),
     [Samba/Samba 4 Migration](https://wiki.gentoo.org/wiki/Samba/Samba_4_Migration),
--   [The Unofficial Samba HOWTO
-    ](http://www.oregontechsupport.com/samba/)
+-   [The Unofficial Samba HOWTO](http://www.oregontechsupport.com/samba/) _2013_
+-   [SMB HOWTO](https://tldp.org/HOWTO/SMB-HOWTO.html) is old _2000_.
 -   [CIFS Explained](http://www.codefx.com/CIFS_Explained.htm)
+-   [KSMBD - SMB3 Kernel Server](https://docs.kernel.org//filesystems/cifs/ksmbd.html)
+    is a linux kernel server which implements SMB3 protocol in kernel space.
+    It is in Debian. KSMBD doesn't aim to be as comprehensive as well known Samba for
+    CIFS/SMB support in user-space but is focused on the performance.
 
 
 ## Samba tools
 -   [Samba.org: List of Samba Gui tools](http://www.samba.org/samba/GUI/)
+    is obsolete.
 -   [smbclient](https://www.samba.org/samba/docs/current/man-html/smbclient.1.html)
-    is a ftp-like samba client from the samba distribution,
+    is a ftp-like samba client from the samba distribution.
 -   [Samba Commander (SMBC)](http://sourceforge.net/projects/smbc/) (GPL)
     is a text mode SMB network commander that allows to browse the local network,
     search for files, download/upload files and directories and create them both
     locally and remotely. The last release is in 2005 and it is no longer packaged in
     Debian.
+-   [smb2www · Debian packaging GitLab](https://salsa.debian.org/debian/smb2www)
+     is a perl CGI extension to smbclient, the upstream package is dead since 1998, but
+     it is still maintained in Debian.
 -   [SMBNetFS](http://sourceforge.net/projects/smbnetfs/)
     (GPL) is a fuse filesystem that allows you to use samba/microsoft
     network in the same manner as the network eighbourhood in
@@ -229,8 +236,10 @@ is easier.
     -   [ArchWiki: samba - smbnetfs
         ](https://wiki.archlinux.org/index.php/samba#smbnetfs)
     -   [Gentoo Wiki: smbnetfs](https://wiki.gentoo.org/wiki/Smbnetfs)
+    -   [smbnetfs - ubuntu-fr Wiki](https://doc.ubuntu-fr.org/smbnetfs)
     -   [SMBNetFS - Git repository
-        ](https://sourceforge.net/p/smbnetfs/git/ci/master/tree/)
+        ](https://sourceforge.net/p/smbnetfs/git/ci/master/tree/).
+   <!-- [[file:../../../../content-org/notes/system_notes/filesystems_notes.org::#smbnetfs][smbnetfs notes]]  -->
 -   [Fusesmb](http://www.ricardis.tudelft.nl/~vincent/fusesmb/) is an
     older implementation of samba under fuse that allows you to create
     a folder that displays the available shares on a network. SMBNetFS
@@ -243,6 +252,29 @@ is easier.
     >> it leaves an empty directory with no contents, and that its "fusesmb.cache" file
     >> never gets written.
 
+### Netbios tools
+
+-   [NetBIOS Name Service (nmbd) tutorial
+    ](https://www.halolinux.us/network-servers/netbios-name-service.html)
+
+-   [nmblookup](https://www.samba.org/samba/docs/current/man-html/nmblookup.1.html)
+    is the basic tool in the smbclient suite to lookup NetBIOS names.
+-   [smbmap](https://github.com/ShawnDEvans/smbmap) (GPL 3.0)
+     allows users to enumerate samba share drives across an entire domain. List share
+     drives, drive permissions, share contents, upload/download functionality, file name
+     auto-download pattern matching, and even execute remote commands.
+     _smbmap_ is in Debian.
+-   [wsdd](https://github.com/christgau/wsdd) (MIT License)
+    is a python program which implements a Web Service Discovery host daemon. This
+    enables (Samba) hosts to be found by Web Service Discovery Clients like Windows.
+
+    It also implements the client side of the discovery protocol which allows to search
+    for Windows machines and other devices.
+
+    wsdd is in Debian.
+-  {wsdd2](https://github.com/Netgear/wsdd2) (GPL 3.0)
+   is a Netgear daemon which advertises and responds to probe requests from Windows clients
+   looking for File Shares. It is in Debian.
 
 ## Samba tips
 
