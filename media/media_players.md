@@ -836,36 +836,45 @@ playing music  and managing playlists.
 -   MPD can play MP3, Ogg Vorbis, Opus,FLAC, AAC, Mod, Musepack,
     Wavepack, wave files or anything produced by FFmpeg. More
     precisely it can play anything decoded with a [decoder plugin
-    ](https://www.musicpd.org/doc/user/decoder_plugins.html): adplug,
-    audiofile, faad, ffmpeg, flac, dsdiff, dsf, fluidsynth, mad,
-    mikmod, modplug, mpcdec, mpg123, opus, pcm, sidplay, sndfile,
+    ](https://mpd.readthedocs.io/en/latest/plugins.html#decoder-plugins)
+    set in plugin configuration
+    ](https://mpd.readthedocs.io/en/stable/user.html#configuring-decoder-plugins) : adplug,
+    audiofile, faad, ffmpeg, flac, dsdiff and dsf for
+    {{< wp "Direct Stream Digital" >}} `.dff` / `.dsf`,
+    fluidsynth (for midi), mad (mp3), mikmod (mod), modplug (mod), openmpt (mod), mpcdec
+    (musepack), mpg123 (mp3), opus, pcm, sidplay, sndfile (wav and aiff),
     vorbis, wavpack, wildmidi.
 -   The input are not limited to files but can also come from any
     [input plugin
-    ](https://www.musicpd.org/doc/user/input_plugins.html):
+    ](https://mpd.readthedocs.io/en/latest/plugins.html#input-plugins):
     alsa input from a soundcard, CD audio, HTTP stream with curl; rtp
-    / rtsp / rtmp / rtmpt / rtmps with ffmpeg; unmounted smb or nfs,
-    upnp servers on the local network, some commercial streaming services.
+    / rtsp / rtmp / rtmpt / rtmps with ffmpeg, mms; unmounted smb or nfs,
+    upnp servers on the local network, some commercial streaming services like qobuz.
 -   MPD can resample the input with a [resampler plugin
-    ](https://www.musicpd.org/doc/user/resampler_plugins.html) i.e.
+    ](https://mpd.readthedocs.io/en/latest/plugins.html#resampler-plugins) i.e.
     either the internal resampler of low quality, but low cpu load; or
     better with libsamplerate or soxr.
 -   MPD can then reencode the stream with an [encoder plugin
-    ](https://www.musicpd.org/doc/user/encoder_plugins.html)
+    ](https://mpd.readthedocs.io/en/latest/plugins.html#encoder-plugins)
     null _i.e. no rencoding_, flac, mp3 with lame or shine, mp2 with
     twolame, opus, or vorbis for ogg vorbis, wave.
 -   MPD can use any type of playlist with the [playlist plugins
-    ](https://www.musicpd.org/doc/user/playlist_plugins.html)
+    ](https://mpd.readthedocs.io/en/latest/plugins.html#playlist-plugins)
     .asx, .cue,  embedded {{< iref "tag_management#cuesheet" "Cue Sheets" >}} from the "CUESHEET" tag with the
     embcue plugin, .m3u, extm3u, cuesheet metablock from a FLAC file
     with the flac plugin, .pls, .rss, playlist from SoundCloud,  XSPF
     playlists.
--   Mpd can output to alsa, or Jack and can send
-    it's output thru network by using the {{< iref "sound_libs#libao" "libao" >}}
-    and {{< iref "streaming#item_esound" "esound" >}} or
-    {{< iref "streaming#pulseaudio" "use PulseAudio" >}}.
+-   Mpd can output to any [output plugin
+    ](https://mpd.readthedocs.io/en/latest/plugins.html#output-plugin) alsa, ao (
+    {{< iref "sound_libs#libao" "libao" >}}, sndio (on openBSD),
+    fifo, jack, httpd, null, oss, openal, osx (on MacOs)
+    {{< iref "streaming#pulseaudio" "pipewire" >}}, pulse
+    {{< iref "streaming#pulseaudio" "use PulseAudio" >}}, recorder, shout, sls (on
+    Android), [snapcast](https://github.com/badaix/snapcast).
     The choice is down by setting
-    [configuration options](https://www.musicpd.org/doc/user/config.html).
+    [configuration options](https://mpd.readthedocs.io/en/stable/user.html#configuration).
+-   By using {{< iref "streaming#pulseaudio" "pulseaudio-dlna" >}}
+    MPD.
 -   By using {{< iref "streaming#pulseaudio" "pulseaudio-dlna" >}}
     MPD can act as a UPnP / DLNA server.
 -   MPD has its own [HTTP streaming server
