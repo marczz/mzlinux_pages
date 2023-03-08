@@ -50,8 +50,8 @@ See also {{< iref "emacs" "Emacs" >}}, including
     ](http://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html)
 -   [Putting Your org Files Under Version Control
     ](http://orgmode.org/worg/org-tutorials/org-vcs.html)
--   Eric Neilsen's [Emacs org-mode examples and cookbook
-    ](http://home.fnal.gov/~neilsen/notebook/orgExamples/org-examples.html)
+-   Eric H. Neilsen, Jr. [Emacs org-mode examples and cookbook
+    ](http://ehneilsen.net/notebook/orgExamples/org-examples.html)
 -   Eric Schulte [collection of Org-mode snippets using code blocks
     ](https://eschulte.github.io/org-scraps/).
 -   [org2latex - a yasnippet](http://www.sharons.org.uk/org2latex.html)
@@ -86,7 +86,7 @@ See also {{< iref "emacs" "Emacs" >}}, including
 ## Org Capture
 -   [Capture (The Org Manual)](https://orgmode.org/manual/Capture.html)
     [Capture in the compact guide](https://orgmode.org/guide/Capture.html#Capture).
--   {{< "emacs#sacha_chua" "Sacha Chua" >}}
+-   {{< iref "emacs#sacha_chua" "Sacha Chua" >}}
     [Learn how to take notes more efficiently in Org Mode
     ](https://sachachua.com/blog/2015/02/learn-take-notes-efficiently-org-mode)
         is a four steps tutorial :
@@ -106,6 +106,15 @@ See also {{< iref "emacs" "Emacs" >}}, including
     ](https://github.com/novoid/dot-emacs/blob/master/config.org#capture)
 -   [Org capture tricks - Storax
     ](http://storax.github.io/blog/2016/05/02/org-capture-tricks/)
+-   <a name="fniessen"></a>Fabrice Niessen has written  [org mode refcard
+    ](https://github.com/fniessen/refcard-org-mode),
+    [Org Beamer refcard](https://github.com/fniessen/refcard-org-beamer),
+    [Org Babel refcard](https://github.com/fniessen/refcard-org-babel),
+    a [collection of org macros](https://github.com/fniessen/org-macros),
+    a [collection of HTML themes for exporting org files
+    ](https://github.com/fniessen/org-html-themes), a
+    [a suite of Bash scripts for converting  Org mode documents to HTML or PDF
+    ](https://github.com/fniessen/orgmk)
 
 # Org Babel {#babel}
 
@@ -115,16 +124,29 @@ See also {{< iref "emacs" "Emacs" >}}, including
     ](http://ehneilsen.net/notebook/orgExamples/org-examples.html#sec-15)
     from [Emacs org-mode examples and cookbook
     ](http://ehneilsen.net/notebook/orgExamples/org-examples.html)
+    by Eric H. Neilsen, Jr.
 -   [Babel: Introduction](http://orgmode.org/worg/org-contrib/babel/intro.html)
 -   [Index of babel/languages/
     ](https://orgmode.org/worg/org-contrib/babel/languages/)
 -   [GitHub - dfeich: org-babel examples
     ](https://github.com/dfeich/org-babel-examples)
     with different backend languages.
+-   {{< iref "#fniessen" "Fabrice Niessen" >}} [Org Babel refcard
+    ](https://github.com/fniessen/refcard-org-babel) (there is an older and badly
+    formatted version on _readthedocs_ [Org Babel reference card
+    ](https://org-babel.readthedocs.io/en/latest/)).
+-   [Working with Source Code | DummyHead
+    ](https://alphaalgorithms.github.io/2019/06/13/work-with-source-code/)
+    see also [other posts tagged orgmode
+    ](https://alphaalgorithms.github.io/tags/orgmode/)
+-   [Kevin Pavao literate config files](https://github.com/kwpav/dotfiles)
 
 ## Org-Babel literate programming
 
-See also {{< iref "source_code#literate_programming" "Literate Programming" >}}
+See also the {{< iref "emacs#org-init" "Emacs configuration with Org Babel" >}},
+{{< iref "source_code#literate_programming" "Literate Programming" >}}.
+The previous general Org-babel references are also relevant.
+
 -   A nice and complete introduction[Introduction to Literate Programming
     ](http://www.howardism.org/Technical/Emacs/literate-programming-tutorial.html)
     _with Org Babel_ by {{< iref "emacs#howardism" "Howard Abrams" >}}.
@@ -134,7 +156,7 @@ See also {{< iref "source_code#literate_programming" "Literate Programming" >}}
     [Getting Boxes Done Part 2
     ](http://howardism.org/Technical/Emacs/getting-more-boxes-done.html), is also
     an example of literate programming.
--   [Babel Introduction - Code Blocks
+-   Worg documenttion:  [Babel Introduction - Code Blocks
     ](https://orgmode.org/worg/org-contrib/babel/intro.html#source-code-blocks)
     and
     [Babel Introduction - Literate Programming
@@ -148,12 +170,14 @@ See also {{< iref "source_code#literate_programming" "Literate Programming" >}}
 -   [Org-mode - Literate Programming Recipes
     ](https://caiorss.github.io/Emacs-Elisp-Programming/Org-mode-recipes.html)
 -   [org-mode examples and cookbook -Writing literate python code
-    ](http://ehneilsen.net/notebook/orgExamples/org-examples.html#sec-25)
--   [Org-mode - Literate Programming Recipes
-    ](https://caiorss.github.io/Emacs-Elisp-Programming/Org-mode-recipes.html)
+    ](http://ehneilsen.net/notebook/orgExamples/org-examples.html#sec-25) in
+    [Emacs org-mode examples and cookbook
+    ](http://ehneilsen.net/notebook/orgExamples/org-examples.html).
 -   [Formatting tangled output in org-mode
     ](https://jamesaimonetti.com/fr/posts/formatting-tangled-output-in-org-mode/)
     explains _org-babel-post-tangle-hook_.
+-   [A few cases of literate configuration
+    ](https://sqrtminusone.xyz/posts/2022-02-12-literate/) applied to configuration files.
 
 ## Org Mode and Jupyter notebooks
 -   [ob-ipython](https://github.com/gregsexton/ob-ipython)
@@ -314,6 +338,13 @@ See also {{< iref "source_code#literate_programming" "Literate Programming" >}}
     [GitHub - thanhvg/ipa.el](https://github.com/thanhvg/ipa.el) is forked from
     [IdoMagal/ipa.el](https://github.com/IdoMagal/ipa.el) itself forked from the
     [EmacsWiki - ipa.el](https://www.emacswiki.org/emacs/ipa.el).
+-   [org-remark](https://github.com/nobiot/org-remark) (GPL-3.0)
+    Highlight and annotate any text file with using Org mode.
+-   [ov-highlight](https://github.com/jkitchin/ov-highlight)   (GPL-2.0)
+    from [John Kitchin](https://github.com/jkitchin)
+    highlight text and put notes on them using overlays with
+    [ov](https://github.com/ShingoFukuyama/ov.el). It saves the marker info
+    and comments directly within the Org file as Base64 encoded string.
 
 ## pdfmark annotations.
 
@@ -368,16 +399,30 @@ in Melpa.
 
 Spaced Repetition has its {{< iref "spaced_repetition" "own page" >}}.
 
--   [Org-drill](http://orgmode.org/worg/org-contrib/org-drill.html)
+-   [Org-drill](https://gitlab.com/phillord/org-drill/)
     is an extension for Org mode. Org-Drill uses a spaced repetition
-    is uses the [sm5 algorithm from SuperMemo](http://supermemo.com/english/ol/sm5.htm)
-    implemented in [org-learn
-    ](https://code.orgmode.org/bzg/org-mode/raw/master/contrib/lisp/org-learn.el).
+    is uses the sm2, [sm5 algorithm from SuperMemo
+    ](http://supermemo.com/english/ol/sm5.htm), or simple8 algorithm.
 -   [org-fc](https://github.com/l3kn/org-fc/) (GPL)
     by Leon Rische _i3kn_ the author of _org-zettelkasten_,
     is a spaced Repetition System for org-mode.
 -   <a name="pamparam"></a>[pamparam](https://github.com/abo-abo/pamparam) (GPL)
     by Oleh Krehel  is a spaced repetition package for emacs org-mode.
+
+## Anki {#org-anki}
+-   [anki-editor](https://github.com/louietan/anki-editor)
+    Emacs minor mode for making Anki cards with Org.
+    -   [Power up Anki with Emacs, Org mode, anki-editor and more
+        ](https://yiufung.net/post/anki-org/) gives a configuration for anki-editor
+        and an org-capture for anki flashcards.
+-   [org-anki](https://github.com/eyeinsky/org-anki)
+    Sync org notes to Anki via AnkiConnect.
+-   [anki.el](https://github.com/chenyanming/anki.el)
+    Emacs Anki Client.
+-   [org-to-anki](https://github.com/c-okelly/org_to_anki) (MIT License)
+    is a python module to convert org, txt or odt libre office files into Anki flashcards.
+    It uses [AnkiConnect](https://foosoft.net/projects/anki-connect).
+    Ut is also provided as [an Anki addon](https://ankiweb.net/shared/info/1029306148).
 
 # Slides with Org Mode {#org-mode_slides}
 There are many ways to produce slides with an org mode formatted text;
