@@ -44,9 +44,9 @@ See also
 -   {{< wp "Amazon S3" >}} (Wikipedia),
     [S3 Home Page](http://aws.amazon.com/s3).
 
-## S3 clients {#s3_clients}
-See also below the generic {{< iref "#cloud_frontends" "Cloud Frontends" >}}
-which include  {{< iref "#cloud_vfs" "Cloud  Virtual File systems" >}}.
+    ## S3 clients {#s3_clients}
+    See also below the generic {{< iref "#cloud_frontends" "Cloud Frontends" >}}
+    which include  {{< iref "#cloud_vfs" "Cloud  Virtual File systems" >}}.
 
 -   [AWS Command line interface
     ](https://aws.amazon.com/cli/)
@@ -72,22 +72,16 @@ which include  {{< iref "#cloud_vfs" "Cloud  Virtual File systems" >}}.
         ](https://github.com/eucalyptus/eucalyptus/wiki/HowTo-use-s3cmd-with-Eucalyptus).
     - _s3cmd_ is packaged in Debian.
 -   [s4cmd](https://github.com/bloomreach/s4cmd) (Apache Licence)
-    is a python alternative to _s3cmd_ tool, enhancing performance and support for large
-    files, and coming with a number of additional features and fixes.
-    It also supports S3 compatible storage services such as DreamHost and Cloudian.
-
+    is a python alternative to _s3cmd_ tool, enhancing performance and support for
+    large files, and coming with a number of additional features and fixes.  It also
+    supports S3 compatible storage services such as DreamHost and Cloudian.
+    _Packaged in Debian._
 -   [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)
     is the Amazon Web Services (AWS) SDK for Python.
     -   [Boto3 GitHub Repository](https://github.com/boto/boto3).
     -   _Boto3_ has [many frontends in Pypi
         ](http://pypi.python.org/pypi?%3Aaction=search&term=boto3&submit=search)
         but some are not compatible with the new _Boto3_.
--   [amazon-glacier-cmd-interface
-    ](https://github.com/uskudnik/amazon-glacier-cmd-interface)
-    (MIT Licence) use boto _last update 2016_. An example of use is
-    [Creating Long-Term Backups with Amazon Glacier on Linux
-    ](http://blog.tkassembled.com/326/creating-long-term-backups-with-amazon-glacier-on-linux/)
-    by TK Kocheran.
 -   [s3curl](https://github.com/rtdp/s3curl) (Apache License)
     is a perl wrapper around curl to work with s3 buckets.
     -   [Amazon S3 Authentication Tool for Curl - AWS Code
@@ -95,12 +89,15 @@ which include  {{< iref "#cloud_vfs" "Cloud  Virtual File systems" >}}.
     -   It can also be used on an {{< iref "#eucalyptus" "Eucalyptus" >}} instance.
     -   s3curl is packaged in Debian.
 -   [JetS3t](https://github.com/mondain/jets3t) (Apache License)
-     (pronounced "jet-set") is a Java toolkit and application suite
-     for Amazon S3, Amazon CloudFront, and Google Storage.
-     _JetS3t_ is packaged in Debian.
+    (pronounced "jet-set") is a Java toolkit and application suite
+    for Amazon S3, Amazon CloudFront, and Google Storage.
+    _JetS3t_ is packaged in Debian.
 -   [DragonDisk](http://www.dragondisk.com/) (proprietary software, free linux client)
     is a file manager for Amazon S3, Google Cloud Storage, and S3 compatibles cloud
     storage services. Debian packages are provided.
+-   [ ] [MinIO Client (mc)](https://docs.min.io/minio/baremetal/reference/minio-mc.html)
+    is an AWS S3 compatible command line client, it is also compatible with most S3
+compatible object storages.
 
 ## Eucalyptus {#eucalyptus}
 
@@ -123,8 +120,7 @@ environments,
 {{< wp "Minio" >}} (Apache Licence) is a cloud storage server written in golang
 compatible with Amazon S3. A docker image is provided.
 
--   [Minio Home](https://min.io/).
--   [Minio - GitHub](https://github.com/minio/minio).
+-  Minio - GitHub](https://github.com/minio/minio).
 -   [Minio Documentation](https://docs.min.io/).
 -   [MinIO Client (mc)](https://github.com/minio/mc)  (Apache Licence)
     provides a modern alternative to UNIX commands like ls, cat, cp, mirror, diff, find
@@ -145,20 +141,18 @@ _Personal backup_ is an online backup tool using AES encryption
 $60/Year by computer for unlimited data.  No linux client, and no
 open api.
 
-Backblaze _B2 Cloud Storage_ works similar to Amazon S3 or
-Microsoft Azure.
+Backblaze _B2 Cloud Storage_ works similar to Amazon S3 or Microsoft Azure.
 
 
 It has a very appealing price of $0.005/GB a month with 10 GB storage free, uploads are
 free, Download cost 0.01$/G first G/day free, _API Calls_ $0.004 per 10,000 transactions
-with 2500/day free (some transactions free). _August 2020 pricing_
+with 2500/day free (some transactions free). _September 2022 pricing_
 
 Previously blackblaze had a high download price, compared to some providers like OVH
 openstack the storage. But they have been cut off by two. Of course some provider offer
 free download until some amount, and it should be considered, depending of your needs.
 
-The [pricing page
-](https://www.backblaze.com/b2/cloud-storage-pricing.html)
+The [pricing page](https://www.backblaze.com/b2/cloud-storage-pricing.html)
 includes a cost calculator, for 1000G initial data upload, 100G/month
 upload, 5G/month delete, 10G/month download, it cost 98$/year three
 time less than S3 or Google cloud. If you download 200G/month 121$/year still a third of
@@ -233,9 +227,9 @@ free android, iphone,  ipad application.
         $ sudo mount -t davfs https://dav.box.com/dav /tmp/box\
         -o uid=myuserid,gid=mygroupid,noexec
 
-     Then it will ask for your username and password.
+    Then it will ask for your username and password.
 
-     You can also put in your fstab:
+    You can also put in your fstab:
 
         https://dav.box.com/dav/ /media/box davfs noauto,user  0  0
 
@@ -263,15 +257,15 @@ free android, iphone,  ipad application.
 -   [Box Developer Home](http://developers.box.com/) present the
     Box API.
 -   [Box technical blog](https://tech.blog.box.com/) has  also informations for developers.
-     There is an associated [Box technical blog GitHUb repository](https://github.com/box)
+    There is an associated [Box technical blog GitHUb repository](https://github.com/box)
 -   Note that the old box API V1, has been [replaced beginning 2012 with
     version 2](http://developers.blog.box.com/2012/04/25/introducing-the-v2-api/)
     and will  be [deprecated when the API V2 is generally available
     ](http://stackoverflow.com/a/10824276/965798) so the applications have to
     be updated or be obsoleted.
 -   [Boxfs2](https://github.com/drotiro/boxfs2) by Domenico Rotiroti seems the more stable
-     api V2 interface FUSE filesystem for box.com. There are some
-     updates in the repository forks.
+    api V2 interface FUSE filesystem for box.com. There are some
+    updates in the repository forks.
 -   [Box Python Library: boxdotcom](https://github.com/dvska/python-boxdotcom)
     (Apache License) allow to store and retrieve files from Box.net,
     organize files into folders, move, rename and delete files, share files
@@ -333,7 +327,8 @@ Google One is the storage shared beetwen
 Photos.  Gmail message can have attachments as big as 10G. The free plan is of 15G.
 
 The [Google one storages plans](https://one.google.com/storage) are _ 100GB 2€/month or
-20€/year, 200G 3€/month or 30€/year, and 2TB 10€/month 100€/year. _August 2020 Pricing_
+20€/year, 200G 3€/month or 30€/year, and 2TB 10€/month 100€/year. _September 2022
+Pricing._
 
 -   [Google developers: Publish Website Content
     ](https://developers.google.com/drive/publish-site)
@@ -373,20 +368,20 @@ The [Google one storages plans](https://one.google.com/storage) are _ 100GB 2€
         ](https://blog.notmyhostna.me/duplicity-with-pydrive-backend-for-google-drive/).
 
 -   [gcat](https://github.com/embr/gcat) a simple utility for grabbing
-     or putting Google Drive spreadsheets.
+    or putting Google Drive spreadsheets.
 -   [DAV-Pocket](http://dav-pocket.appspot.com/)
-     allow free WebDAV access to Google Drive
+    allow free WebDAV access to Google Drive
 
-         $ mount -t davfs https://dav-pocket.appspot.com/docso/ /media/gdrive/
+        $ mount -t davfs https://dav-pocket.appspot.com/docso/ /media/gdrive/
 -   {{< iref "#rclone" "rclone" >}} support Google Drive.
 
 # [Mega](https://mega.co.nz/) {#mega}
 
-This new-zealand company offer 50GB
-free, linux desktop sync client, android and iphone apps, a chrome and
-firefox extension. The paid plans are from 5€/month 400GB data, transfer 1TB  , 10€/month
-2TB data, transfer 2TB, 20€/month data 8TB transfer 8TB, 30€/month 16TB data transfer 16TB.
-_August 2020 pricing_
+This New-Zealand company offer 20GB free _previously 50G now unavailable_, linux
+desktop sync client, android and iphone apps, a chrome and firefox extension. The
+paid plans are from 5€/month 400GB data, transfer 1TB , 10€/month 2TB data, transfer
+2TB, 20€/month data 8TB transfer 8TB, 30€/month 16TB data transfer 16TB. _September
+2022 pricing_
 
 There is an official SDK and clients built upon the SDK:
 
@@ -500,8 +495,8 @@ There are also some third party tools:
     expensive compared to OVH_.
 -   <a name="ovh_openstack">{{< wp "OVH" >}} provides [openstack/swift object storage
     ](https://www.ovh.com/fr/public-cloud/storage/object-storage/)
-    at the price of 0.0112€ G/month inbound traffic free, outbound
-    traffic 0.011€/G _08/2020_ _If you use for backup you have few
+    at the price of 0.01€ G/month inbound traffic free, outbound
+    traffic 0.01€/G _09/2022_ _If you use for backup you have few
     outbound traffic, if you use it for distributing content you might
     have an heavy outbound traffic_
     Ovh has [documentation on object storage management
@@ -513,7 +508,6 @@ There are also some third party tools:
     makes storing 100G at 0.230/month + traffic _08/2020_.  In addition to
     openstack/swift API OVH offers SFTP, Rsync, SCP, HTTPS access to
     the storage.
-
 
 # [Owncloud](http://owncloud.org/) {#owncloud}
 
@@ -531,8 +525,8 @@ There are also some third party tools:
         has support for owncloud it offers plans beginning
         18€/year for 25GB, 60€ 1000GB, more until 20 TerraBytes.
 -    [Owncloud](http://owncloud.org/index.php/Main_Page)
-     has a webdav access
-     You can access webdav with cadaver with the following syntax
+    has a webdav access
+    You can access webdav with cadaver with the following syntax
 
         cadaver http://nas/owncloud/files/webdav.php
 
@@ -579,25 +573,35 @@ There is also an offer for [Attic or Borg backup
 since history is handled by Attic / Borg and the cost is 3$ G x month
 begining at 25G. So our example 100G plan is 36$/year. _2017 prices_
 
-### Scaleway Object storage {#scaleway_object}
+# Scaleway Object storage {#scaleway_object}
 
 {{< iref "#scaleway" "Scaleway" >}} provides S3 compatible object storage.
--   [S3-Compatible Object Storage](https://www.scaleway.com/en/object-storage/)
-    is free for first 75GB and 0,01 € per GB up to 500GB.
+-   [S3-Compatible Object Storage](https://www.scaleway.com/en/glacier-cold-storage/)
+    it comes in two variants One Zone is free for first 75GB and 0.01/month € HT per GB;
+    multi AZ, is replicated between regions and at a price of 0.013€/month HT per GB.
 
     Incomming trafic _internal and external_ as Internal outgoing traffic to other
     Elements products in the same region is free, external outgoing trafic is free for
-    first 75GB from 75GB to 500GB 0.01 € per GB/month.
--   [C14 Cold Storage](https://www.scaleway.com/en/c14-cold-storage/)
+    first 75GB the 0.01 € per GB/month.
+-   [Glacier Cold Storage](https://www.scaleway.com/en/c14-cold-storage/)
     75 GB is free then €0.002/GB/month. Archiving and recovering from C14 Cold
     Storage’s Glacier class to Object Storage’s Standard class is free of charge.
-
+Documentation from Scaleway:
+-   [Object Storage - Quickstart
+    ](https://www.scaleway.com/en/docs/storage/object/quickstart/).
+-   [Object Storage - Concepts
+    ](https://www.scaleway.com/en/docs/storage/object/concepts/).
+-   [How to restore an object from Glacier
+    ](https://www.scaleway.com/en/docs/storage/object/how-to/restore-an-object-from-glacier/).
 
 Most [S3 operations are supported
 ](https://www.scaleway.com/en/faq/object-storage/#-Which-S3-operations-are-supported)
-and most tools usable with S3 like _s3cmd_, _aws-cli_, _s3fs_, _cyberduck_ ... are also
-usable with Scaleway object storage. The are referenced in the
+and most tools usable with S3 like _s3cmd_, _aws-cli_, _s3fs_, _cyberduck_, _minio
+mc_…  are also usable with Scaleway object storage. The are referenced in the
 [object storage page](https://www.scaleway.com/en/object-storage/).
+
+To estimate your consumption you can look at the [storage metric
+](https://www.scaleway.com/en/docs/storage/object/how-to/monitor-consumption/).
 
 # Seafile
 [Seafile (GitHub)](https://github.com/haiwen/seafile) (GPL)
@@ -607,9 +611,9 @@ It provides a server that build on Linux, and clients for many OS.
 -   [Seafile.com Home Page](http://seafile.com/en/home/).
 
 # Wasabi {#wasabi}
-Is a cloud block storage S3 compatible. The minimum plan is 1TB. And it applies an
-uniform cost of 5.90$/TB/Month -August 2020 Pricing_, with free in and out trafic, and
-free api calls.
+[Wasabi](https://wasabi.com/) is a cloud block storage S3 compatible. The minimum
+plan is 1TB. And it applies an uniform cost 6$/TB/Month - _September 2020 Pricing_,
+with free in and out trafic, and free api calls.
 
 # Yandex.Disk
 
@@ -645,14 +649,19 @@ windows, android, iphone clients.
 
 -   <a name="azure_blob">[Microsoft Azure Blob storage
     ](https://azure.microsoft.com/en-us/pricing/details/storage/blobs/)
-    has blob storage _hot_ at a price going fro 0.0184$/GBxmonth to
-    0.021$ depending of the region. The downloads are free, and the
-    API as a cost (see their calculator). These price are for local
-    redundancy, they grow to 0.04$ if you want your data replicated in
-    different regions. There is also _cool_ storage at 0.01$/GBxmonth,
-    but here the downloads are also 0.01$/Gb and upload 0.0025$/Gb.
+    has blob storage _hot_ at a price going fro 0.0181€/GB*month to 0.021$ depending
+    of the region. The downloads are free, and the API as a cost (see their
+    calculator). These price are for local redundancy, they grow to 0.037€ if you
+    want your data replicated in different regions.
+
+    There is also _cool_ storage at 0.01€$/GB*month or 0.02€ when replicated among
+    regions for cool storage the downloads are also 0.01$/Gb. _checked 09/22_
     -   [Pricing calculator
         ](https://azure.microsoft.com/en-us/pricing/calculator/?service=managed-disks).
+
+    You can [s3 compatible tools
+    ](https://cloudblogs.microsoft.com/opensource/2017/11/09/s3cmd-amazon-s3-compatible-apps-azure-storage/)
+    by using {{< iref "#minio" "Minio" >}} as bridge.
 -   [BarracudaDrive](http://barracudaserver.com/products/BarracudaDrive/)
     self hosted cloud on private server or
     [low end box](http://www.lowendbox.com/).
@@ -760,30 +769,37 @@ compatible clouds or through a proxy like {{< iref "#s3proxy" "S3Proxy" >}}.
     -   [S3QL User’s Guide](http://www.rath.org/s3ql-docs/index.html)
     -   [s3ql Wiki](https://github.com/s3ql/s3ql/wiki) includes
         a comparison of S3QL and other S3 file systems.
--   [s3fs](https://github.com/s3fs-fuse/s3fs-fuse) (GPL)
+-   <a name="s3fs"></a>[s3fs](https://github.com/s3fs-fuse/s3fs-fuse) (GPL)
     is a C++ software which allows Linux and macOS to mount an S3 bucket via FUSE. s3fs
     preserves the native object format for files. It is also compatible with Google
     Cloud Storage, and other S3-based object stores. _S3Fs_ is packaged in Debian.
-    -   [PyFilesystem](https://docs.pyfilesystem.org/) (BSD License) is a Python module
+
+    See also the alternatives {{< iref "#yas3fs" "YAS3FS" >}} and
+    {{< iref "#goofys" "goofys" >}}.
+    -   {{< iref "python_libraries#pyfilesystem" "PyFilesystem" >}} is a Python module
         that provides a simplified common interface to many types of filesystem, like
         FTPfs, WebdavFs, tarFs, ZipFs,... including
-        [support for f3fs](https://www.pyfilesystem.org/page/s3fs/)
--   [YAS3FS](https://github.com/danilop/yas3fs) (MIT Licence)
+        [support for f3fs](https://www.pyfilesystem.org/page/s3fs/).
+-   <a name="yas3fs"></a>[YAS3FS](https://github.com/danilop/yas3fs) (MIT Licence)
     (Yet Another S3-backed File System) is a Filesystem in Userspace (FUSE) interface
-    to Amazon S3. It is a rewritting in python of s3fs which add a distributed cache
+    to Amazon S3. It is a rewritting in python of {{< iref "#s3fs" "s3fs" >}} which
+    adds a distributed cache
     synchronized by Amazon SNS notifications. A web console is provided to easily
     monitor the nodes of a cluster.
--   [goofys](https://github.com/kahing/goofys) (Apache License)
-    similar to s3fs but written in go, better performance, and less POSIX compiliance.
-    it works with Ceph (ex: Digital Ocean Spaces, DreamObjects, gridscale), EMC Atmos
-    Google Cloud Storage, OpenStack Swift, {{< iref "#s3proxy" "S3Proxy" >}},
-    {{< iref "#Minio" "Minio" >}} (limited),  Wasabi, Azure.
--   [s3backer](http://code.google.com/p/s3backer/) (GPL)
-    is a filesystem that contains a single file backed by Amazon S3.
-    The blocks of the file are stored as S3 objects.
-    It provides a single normal file having a fixed size which is
-    used to mount a loopback device then s3backer acts a virtual hard disk device.
-    _S3backer_ is packaged in Debian.
+-   <a name="goofys"></a>[goofys](https://github.com/kahing/goofys) (Apache License)
+    similar to {{< iref "#s3fs" "s3fs" >}} but written in gb. It features better
+    performance, and less POSIX compliance than {{< iref "#s3fs" "s3fs" >}}.
+
+    It works with Ceph (ex: Digital Ocean Spaces, DreamObjects, gridscale), EMC
+    Atmos Google Cloud Storage, OpenStack Swift, {{< iref "#s3proxy" "S3Proxy" >}},
+    {{< iref "#Minio" "Minio" >}} (limited), Wasabi,Scaleway, Azure.
+
+    Prebuilt binaries are available in the GitHub release page.
+-   [s3backer](https://github.com/archiecobbs/s3backer) (GPL)
+    is a filesystem that contains a single file backed by Amazon S3.  The blocks of
+    the file are stored as S3 objects.  It provides a single normal file having a
+    fixed size which is used to mount a loopback device then s3backer acts a virtual
+    hard disk device.  _S3backer_ is packaged in Debian.
 -   <a name="s3proxy"></a>[s3proxy](https://github.com/gaul/s3proxy) (Apache License)
     is a Java software that provides S3 API and proxies requests, from S3 to Backblaze
     B2, EMC Atmos, Google Cloud, Microsoft Azure, and OpenStack Swift, and on-disk
@@ -814,14 +830,14 @@ are replicated.
 ### Rclone {#rclone}
 
 [Rclone](http://rclone.org/)
-is a command line program to sync files and directories to and from
-Amazon Drive, Amazon S3, Backblaze B2, Box, Ceph, Citrix share files, DigitalOcean
-Spaces, Dreamhost, Dropbox, GetSky, Google Drive, Google Cloud Storage, Google Photos,
-Hubic, Jottacloud, IBM COS S3, Kiifr, Mail.ru cloud, Memset Memstore, Mega, Memory,
-Microsoft Azure, Microsoft OneDrive, {{< iref "#Minio" "Minio" >}}, NextCloud, OVH, OpenDrive, Openstack Swift,
-Oracle Cloud Storage, ownCloud, pCloud, premiumize.me, put.io, QingStor, Rackspace cloud
-files, Scaleway, StackPath, SugarSync Wasabi, Yandex Disk, HTTP (read only), FTP, SFTP,
-WebDav, the local filesystem.
+is a command line program to sync files and directories to and from Amazon Drive, Amazon
+S3, Backblaze B2, Box, Ceph, Citrix share files, DigitalOcean Spaces, Dreamhost,
+Dropbox, GetSky, Google Drive, Google Cloud Storage, Google Photos, Hubic, Jottacloud,
+IBM COS S3, Kiifr, Mail.ru cloud, Memset Memstore, Mega, Memory, Microsoft Azure,
+Microsoft OneDrive, {{< iref "#Minio" "Minio" >}}, NextCloud, OVH, OpenDrive, Openstack
+Swift, Oracle Cloud Storage, ownCloud, pCloud, premiumize.me, put.io, QingStor,
+Rackspace cloud files, Scaleway, StackPath, SugarSync Wasabi, Yandex Disk, HTTP (read
+only), FTP, SFTP, WebDav, the local filesystem.
 
 Features:  hashsums (many algorithms) checking, preserve timestamps, partial syncs,
 Copy mode to just copy new/changed files, full sync including beetween
@@ -914,15 +930,15 @@ There is a free Linux and
     also shared by URL.
 -   [The linux cloud tool package
     ](http://eu.storagemadeeasy.com/wiki/linuxcloudtools/)
-     contains the clients, wich provide a qt interface. They are:
-     -  _smeclient_ mount a virtual folder,  its footprint is  16M with 13M shared
+    contains the clients, wich provide a qt interface. They are:
+    -  _smeclient_ mount a virtual folder,  its footprint is  16M with 13M shared
         it launch the true workhorse wich is smemount a fuse client the daemon footprint
         is 18M/2M shared  a lot smaller that many cloud applications. After mounting the
         fuse filesystem you can exit the graphical client and use it again to unmount or
         use a simpler `fusermount -u`
-     -  _smeexplorer_ is a cloud browser with similar features than the web file manager,
+    -  _smeexplorer_ is a cloud browser with similar features than the web file manager,
         footprint: 43M/17M shared
-     - _smesynccenter_ The synchronization manager footprint: 38M/15M shared
+    - _smesynccenter_ The synchronization manager footprint: 38M/15M shared
 
 ## Cloud abstract interface libraries
 -   [Apache libcloud](http://libcloud.apache.org/) (apache licence)
@@ -992,12 +1008,11 @@ The supported Databases are  Azure, Rackspace.
     cloud server 1G ram 50G ssd 12€/month, virtual cloud server 512K
     ram 30G SSD  6€/month, 1G ram, 50G SSD 12€/month , 2 cpu  2G ram,
     80G SSD 18€/month; all plans unlimited traffic _2017_.
--   <a name="digital_ocean">[Digital Ocean
-    ](https://www.digitalocean.com/)
+-   <a name="digital_ocean">[Digital Ocean](https://www.digitalocean.com/)
     cloud hosting.  Pricing plans start
-    at $5/month  for 512MB of RAM, 20GB SSD, 1 CPU, and 1TB
-    Transfer or $10/month for 1GB RAM, 30GB SSD, 1 CPU, and 2TB
-    Transfer. For added SSD 100G for 10$/month _2017_.
+    at $4/month  for 512MB of RAM, 10GB SSD, 1 CPU, and 500GB
+    Transfer or $12/month for 2GB RAM, 50GB SSD, 1 CPU, and 2TB
+    Transfer. For added SSD 100G for 10$/month _September 2022_.
     Each box comes with full root access, a choice of Linux
     distributions, and the ability to customize the setup.
     -   [How To Use the GitLab One-Click Install Image
@@ -1021,8 +1036,8 @@ The supported Databases are  Azure, Rackspace.
         en serveur dédié _in october 2019_:
         -   KS-1 atom 1 core 4.80€/month 2G ram 500G disk
             illimité net.
-       -    KS-2 2cores 6€/month 4G ram 1TB disk, with 2TB 9.60€/month, raid 2x2TB
-           16.80€/month.
+    -    KS-2 2cores 6€/month 4G ram 1TB disk, with 2TB 9.60€/month, raid 2x2TB
+        16.80€/month.
     -   [Serveurs de stockages "So you Start"
         ](https://www.soyoustart.com/fr/serveurs-stockage).
         -   ARM2T armv7  cortex A9 2G ram 2TB disk,  network 2.5Gbps, 6€/month; with 4TB
@@ -1057,7 +1072,7 @@ The supported Databases are  Azure, Rackspace.
 -   [Image Hub](https://www.scaleway.com/imagehub/)
 -   [GitHub - Scaleway](https://github.com/scaleway)
     -   [scaleway-cli](https://github.com/scaleway/scaleway-cli)
-         a tool to pilot your Scaleway infrastructure from your terminal.
+        a tool to pilot your Scaleway infrastructure from your terminal.
     -   [python-scaleway](https://github.com/scaleway/python-scaleway)
 -   [How to create an image from scratch
     ](https://www.scaleway.com/docs/create-an-image-from-scratch/)
@@ -1083,29 +1098,28 @@ only a fraction of what you paid, for Mega for 200G, I take a price that is vali
 400G, for Wasabi aprice allowing 1T.
 
 
-| provider        |            storage/GB | download&nbsp; |  API fees&nbsp; |     200/20&nbsp; | 200/200 | checked |
-|-----------------|----------------------:|---------------:|:---------------:|-----------------:|--------:|--------:|
-| [BlackBlaze B2] |       (>10G)  0.005 $ |   (>~20G) 0.01 | yes             |            0.95$ |   2.75$ |   08/20 |
-| [OVH openstack] |               0.0112$ |          0.011 | no              |            2.46€ |   4.44€ |   08/20 |
-| [Digital Ocean] |   (mini 250G) 0.02  $ |     (>1T) 0.01 | no              |            5.00$ |   5.00$ |    3/17 |
-| [Wasabi]        |     (mini 1T) $.0059$ |           free | no              |  (1T mini) 6.00$ |   6.00$ |   08/20 |
-| [Amazon S3]     |               0.023 $ |           0.09 | yes             |            6.40$ |  22.60$ |    3/17 |
-| [Azure]         |               0.0184$ |           free | yes             |            3.68$ |   3.68$ |    3/17 |
-| [OneDrive]      |        (100G) 0.024 $ |           free | no              |            4.80$ |   4.80$ |   11/21 |
-| -               |         (1T)  0.0069$ |           free | no              |                  |         |         |
-| [Google One]    |       (200G)  0.015 € |           free | no              |            3.00€ |   3.00€ |   08/20 |
-| -               |         (2T)  0.005 € |           free | no              |                  |         |         |
-| [Mega]          |       (400G)  0.0125€ |     (<2T) free | no              | (400 mini) 5.00€ |   5.00€ |   08/20 |
-| -               |          (2T) 0.005 € |     (<2T) free | no              |                  |         |         |
-| [Scaleway]      | (75GB<s<0.5T) 0.01  € |   (>75GB) 0.01 | no              |            1.25€ |   2.50€ |   08/20 |
-|                 |                       |                |                 |                  |         |         |
+| provider            |          storage/GB | download&nbsp; | API fees&nbsp; |     200/20&nbsp; | 200/200 | 1T/200 | checked |
+|---------------------|--------------------:|---------------:|:--------------:|-----------------:|--------:|--------|--------:|
+| [BlackBlaze B2]     |     (>10G)  0.005 $ |   (>~20G) 0.01 | yes            |            0.95$ |   2.75$ | 7.00€  |   08/22 |
+| [OVH openstack]     |             0.01  $ |           0.01 | no             |            2.20€ |   4.00€ | 12€    |   09/22 |
+| [Digital Ocean]     | (mini 250G) 0.02  $ |     (>1T) 0.01 | no             |            5.00$ |   5.00$ | 20€    |   09/22 |
+| [Wasabi]            |   (mini 1T) $.006 $ |           free | no             |  (1T mini) 6.00$ |   6.00$ | 6.00   |   09/22 |
+| [Amazon S3]         |             0.023 $ |           0.09 | yes            |            6.40$ |  22.60$ |        |    3/17 |
+| [Azure]             |             0.0181€ |           free | yes            |            3.62$ |   3.62$ | 18.10€ |   09/22 |
+|---------------------|--------------------:|---------------:|:--------------:|-----------------:|--------:|--------|--------:|
+| [Google One]        |     (200G)  0.015 € |           free | no             |            3.00€ |   3.00€ | 10€    |   09/22 |
+|---------------------|--------------------:|---------------:|:--------------:|-----------------:|--------:|--------|--------:|
+| [Mega]              |     (400G)  0.0125€ |     (<2T) free | no             | (400 mini) 5.00€ |   5.00€ | 10€    |   09/22 |
+|---------------------|--------------------:|---------------:|:--------------:|-----------------:|--------:|--------|--------:|
+| [Scaleway] OneZone  |   ( > 75GB) 0.01  € |   (>75GB) 0.01 | no             |            1.25€ |   2.50€ | 10.50€ |   09/22 |
+| [Scaleway] Multi-AZ |             O.013 € |   (>75GB) 0.01 | no             |             2.6€ |   3.80€ | 14.25€ |   09/22 |
+| [Scaleway] Glacier  |   ( > 75GB) 0.002 € |              X | no             |            0.25€ |         | 01.85  |   09/22 |
 
 [Amazon S3]: #aws "internal reference"
 [Azure]: #azure_blob "internal reference"
 [BlackBlaze B2]: #b2  "internal reference"
 [Digital Ocean]: #digital_ocean "internal reference"
 [Google One]: #google_one "internal reference"
-[OneDrive]: #onedrive "internal reference"
 [OVH openstack]: #ovh_openstack "internal reference"
 [Mega]: #mega "internal reference"
 [Scaleway]: #scaleway_object  "internal reference"
