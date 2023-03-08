@@ -450,8 +450,8 @@ Some file deduplication programs listed in the
 -   [AVFS - A Virtual File System](http://avf.sourceforge.net/) (GPL)
     (GPL) alow to look into archives.  it supports floppies, tar and gzip files, zip,
     bzip2, ar and rar files, ftp sessions, http, webdav, rsh/rcp, ssh/scp.  It can be
-    used on its own or as a fuse filesystem.  It is an old project but still maintained,
-    which is available in Debian packages.
+    used on its own or as a fuse filesystem.  It is an old project but still maintained
+    in 2023. It is available in Debian packages.
 
     _avfs_ is used by midnight commander (mc) for opening archives.
     -   [sourceforge AVF project page](http://sourceforge.net/projects/avf).
@@ -475,11 +475,10 @@ Some file deduplication programs listed in the
 -   [fusedav](http://0pointer.de/lennart/projects/fusedav/)
     transparently edit and manage files from a WebDAV share on a remote server.
 -   [Dave's IMAP Gmailfs](http://sr71.net/projects/gmailfs/)
-    replaces the unmaintened
-    [gmailfs
+    replaces the unmaintained [gmailfs
     ](http://richard.jones.name/google-hacks/gmail-filesystem/gmail-filesystem.html)
--   [jmtpfs](https://github.com/kiorky/jmtpfs) mount a
-    [w:Media Transfer Protocol) (MTP) it uses libmtp, and is in debian.
+-   The fuse filesystems for {{< iref "#mtp" "Media Transfer Protocol (MTP)" >}} are
+    listed in the {{< iref "#mtp" "corresponding section" >}}.
 -   [ntfs-3g](http://www.tuxera.com/community/ntfs-3g-advanced/http://linux-ntfs.org/)
     is a FUSE module to mount NTFS filesystems.
 -   [pytagfs](http://sourceforge.net/projects/py-tag-fs/)
@@ -509,9 +508,36 @@ adds gvfs support to all applications using the gio API. It also supports exposi
 gvfs mounts to non-gio applications using fuse.  The gvfs section is now in my
 [unix-memo](http://unix-memo.readthedocs.org/vfs).
 
-# Media Transport Protocol (MTP)
+# Media Transport Protocol (MTP) {#mtp}
+{{< wp "Media Transfer Protocol" >}} allows the transfer of  media files on portable
+media players, and is the standard transfer files protocol to and from Android.
 
--   [ArchWiki: MTP](https://wiki.archlinux.org/index.php/MTP)
+Some {{< iref "media_players" "media players" >}} use libmtp to provide a direct access
+to mtp devices, like cantata, clementine, rhytmbox, strawberry, vlc.
+
+-   [ArchWiki: MTP](https://wiki.archlinux.org/index.php/MTP)a
+-   [android file transfer for linux
+    ](https://github.com/whoozle/android-file-transfer-linux) (LGPL)
+    is a C++/QT5 mtp client.
+-   <a name="jmtpfs"></a>[jmtpfs](https://github.com/kiorky/jmtpfs)
+    written in C++ is a fuse MTP filesystem it uses libmtp, and is in debian.
+-   [gMTP](https://sourceforge.net/p/gmtp/code/ci/master/tree/)
+    is a light-weight  GTK-3 interface to the features provided by libmtp.
+    -    [gmtp Readme and FAQ](https://sourceforge.net/p/gmtp/code/ci/master/tree/README)(
+-   [go-mtpfs](https://github.com/hanwen/go-mtpfs) (new bsd license)
+    is a fuse filesystem written in go. Unlike _jmtpfs_ and _mtpfs_ it does not use
+    _libmtp_ but uses a pure Go implementation of MTP, based on libusb.
+
+    It only reads file metadata as needed, and don't require temporary cache to read
+    large files.
+-   {{< iref "#gvfs" "gvfs" >}} has an mtp backend.
+-   [mtpfs](https://github.com/cjd/mtpfs) (GPL-3.0)
+    written in C / glib is a fuse MTP filesystem it uses libmtp, it was dropped from
+    debian in 2017 and is replaced by _jmtpfs_ and _go-mtpfs_.
+-   libmtp is the base of mtpfs, jmtpfs, gmtp, gvfs mtp backend, and a set of command
+    line tools for
+    manipulating mtp devices they are grouped in Debian in the package _mtp-tools_
+
 
 #  Kernel filesystems {#kernel_fs}
 ## Procfs {#procfs}
