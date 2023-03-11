@@ -165,26 +165,25 @@ Bash (without my big init) is 3.8M/3.2M; zsh (without user init)
 
 # Bash
 
--   [Chet Ramey](http://cnswww.cns.cwru.edu/~chet):
-    [Bash page](http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html)
--   [Bash Reference Manual
-    ](http://cnswww.cns.cwru.edu/~chet/bash/bashref.html)
--   [BASH(1) Manual Page
-    ](http://cnswww.cns.cwru.edu/~chet/bash/bash.html)
--   [Chet Ramey official Bash FAQ
-    ](http://tiswww.case.edu/php/chet/bash/FAQ)
--   [Greg's Wiki Bash FAQ
-    ](http://mywiki.wooledge.org/BashFAQ)
+-   [Chet Ramey](https://tiswww.case.edu/php/chet):
+    [Bash page](https://tiswww.case.edu/php/chet/bash/bashtop.html)
+-   [Bash Reference Manual (gnu)](https://www.gnu.org/software/bash/manual/)
+    or you find it also at
+    [Bash Reference Manual (chet)](https://tiswww.case.edu/php/chet/bash/bashref.html),
+    it should be also installed as an info file.
+-   [BASH(1) Manual Page](https://tiswww.case.edu/php/chet/bash/bash.html)
+-   [Chet Ramey official Bash FAQ](http://tiswww.case.edu/php/chet/bash/FAQ)
+    is still useful but not updated since Bash version 5.1.
+-   [Greg's Wiki Bash FAQ](http://mywiki.wooledge.org/BashFAQ)
     _other material from Greg's Wiki are {{< iref "#gregs_wiki" "below" >}}
--   [Bash Reference Sheet](http://mywiki.wooledge.org/BashSheet)
+-   [Greg's Wiki Bash Reference Sheet](http://mywiki.wooledge.org/BashSheet)
 -   [Bash Hackers Wiki](http://bash-hackers.org/wiki/doku.php/)
     hold documentations about the GNU Bash.
 -   [Bash Guide for Beginners](http://www.tldp.org/LDP/Bash-Beginners-Guide/html/)
     _2008_.
 -   [Bash Programming Introduction](http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html)
     _for this elementary guide being old (2000) is not challenging_.
--   [Advanced Bash Scripting Guide
-    ](http://tldp.org/LDP/abs/html/index.html)
+-   [Advanced Bash Scripting Guide](http://tldp.org/LDP/abs/html/index.html)
 -   [Bash Hackers Wiki](http://wiki.bash-hackers.org/doku.php)
     hold documentations about the GNU Bash. The first page is an index of pages on
     commands, builtins, and expressions of bash.
@@ -195,8 +194,7 @@ Bash (without my big init) is 3.8M/3.2M; zsh (without user init)
         more than a Tutorial, a guide to nearly all bash constructs.
     -   [Bash Reference Sheet](http://mywiki.wooledge.org/BashSheet)
         a shorter manual page.
-    -   [BASH Frequently Asked Questions
-        ](http://mywiki.wooledge.org/BashFAQ)
+    -   [BASH Frequently Asked Questions](http://mywiki.wooledge.org/BashFAQ)
     -   [Bash Pitfalls](http://mywiki.wooledge.org/BashPitfalls)
         a long list of common bash errors and how to mend them.
     -   [Bash Weaknesses](http://mywiki.wooledge.org/BashWeaknesses)
@@ -335,6 +333,9 @@ expansion, nor process substitution)
     ](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/contents.html)
 -   [POSIX Shell and Utilities Quick Reference](http://shellhaters.org/)
     See also the [slides of Shell Hater's Handbook](http://shellhaters.org/deck/#1)
+-   [Core utilities - ArchWiki](https://wiki.archlinux.org/title/Core_utilities)
+    lists coreutils commands with link to their manual (man or info), and gives
+    alternatives to the commands.
 
 # Awk {#awk}
 
@@ -484,7 +485,11 @@ expansion, nor process substitution)
 -   [direnv](https://direnv.net/) (MIT License)
     unclutter your .profile by loading and unloading environment variables depending
     on the current directory.
-    It is in Debian and Alpine.
+
+    [emacs-direnv](https://github.com/wbolster/emacs-direnv) is direnv integration for
+    emacs.
+
+    _Direnv_is in Debian and Alpine.
 -   [Ondir](http://swapoff.org/OnDir)
     from [Alex Thomas](http://swapoff.org/) is a program that automatically
     executes scripts as you traverse directories at a terminal.
