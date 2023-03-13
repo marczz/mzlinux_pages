@@ -5,6 +5,8 @@ title: Input Methods
 See also
 {{< iref "i18n" "Localisation (I18N)" >}}, {{< iref "xorg" "Xorg" >}}.
 
+<!-- [[file:../../../../content-org/notes/system_notes/input_methods_notes.org][Input methods notes]] -->
+
 # References
 -   Wikipedia: {{< wp "Unicode input" >}}, {{< wp "Input Method" >}},
     {{< wp "List of input methods for Unix platforms" >}},
@@ -41,7 +43,7 @@ with ibus, SCIM and uim.
     _not scim specific_ from freedesktop pages.
 
 The different input method are [described in the m17n database
-](http://www.nongnu.org/m17n/manual-en/m17nDBData.html#mim-list).
+](https://www.nongnu.org/m17n/manual-en/m17nDBData.html#mim-list).
 Among them:<a name="tibetan_m17n"></a>
 
 -   bo-tcrc: Tibetan input method using the  [TCRC keyboard layout
@@ -188,6 +190,7 @@ System. It predates IBus, SCIM, uim and IIIMF.
 # Ibus {#ibus}
 -   [Ibus Home](https://github.com/ibus/ibus/wiki)
 -   [ArchWiki: Ibus](https://wiki.archlinux.org/index.php/IBus)
+-   [ArchWiki: Input Methods](https://wiki.archlinux.org/title/Input_method)
 -   [Gentoo: Ibus](https://wiki.gentoo.org/wiki/IBus)
 -   [EmacsWiki: IBus Mode](http://www.emacswiki.org/emacs/IBusMode)
 -   [I18n/ibus - Debian Wiki](https://wiki.debian.org/I18n/ibus)
@@ -253,13 +256,16 @@ input through _uim-fep_, Emacs with _uim.el_.
 # Keyboard Layout {#keyboard_layout}
 -   Wikipedia {{< wp "Keyboard layout" >}}, {{< wp "QWERTY" >}}, {{< wp "AZERTY" >}},
     {{< wp "Dvorak_Simplified_Keyboard"  "DVORAK" >}},
-    {{< wp "Dvorak_Simplified_Keyboard#One-handed_versions"  "DVORAK One Handed" >}}
+    {{< wp "Dvorak_Simplified_Keyboard#One-handed_versions"  "DVORAK One Handed" >}},
+   {{< wp "Colemak" >}}.
+    [Bépo](https://fr.wikipedia.org/wiki/B%C3%A9po)
 -   Keyboard images: [QWERTY
     ](https://upload.wikimedia.org/wikipedia/commons/3/3a/Qwerty.svg),
     [AZERTY
     ](https://upload.wikimedia.org/wikipedia/commons/c/ca/Azerty_fr.svg),
     [DVORAK
     ](https://upload.wikimedia.org/wikipedia/commons/2/25/KB_United_States_Dvorak.svg),
+    [Colemak](https://en.wikipedia.org/wiki/Colemak#/media/File:KB_US-Colemak.svg),
     [Bépo
     ](https://upload.wikimedia.org/wikipedia/commons/0/05/KB_French_Dvorak_b%C3%A9po_simplifi%C3%A9.svg).
 -   [Keyboard Layout Editor](http://www.keyboard-layout-editor.com/)
@@ -403,26 +409,38 @@ Among the [methods provided by m17n
     _It is not the same than {{< iref "#cns_keyboard" >}}.
 
 # Virtual Keyboard
--   [xvkbd](http://homepage3.nifty.com/tsato/xvkbd/)
-    is a virtual (graphical) keyboard program. This program
-    also has facility to send characters specified as the command line
-    option to another client.
--   [Sending Key Events
-    ](http://homepage3.nifty.com/tsato/xvkbd/events.html)
-    uses the API of the [XTEST extension
-    ]http://www.x.org/releases/X11R7.7-RC1/doc/xextproto/xtest.html)
--   [Input Pad
-    ](https://github.com/fujiwarat/input-pad/wiki)
+-   [Input Pad](https://github.com/fujiwarat/input-pad/wiki)
     is a tool to send characters to text applications by clicking
     various buttons. The command input-pad is a standalone application
     and ibus-input-pad provides input-pad on
     {{< iref "#ibus" "IBus input method" >}}.
--   [Florence](http://florence.sourceforge.net) is a virtual
-    keyboard,
-    [Florence documentation](http://florence.sourceforge.net/english/),
-    [How to Set Up a Virtual Keyboard in Linux - Make Tech Easier
-    ](http://www.maketecheasier.com/setup-virtual-keyboard-linux/)
-    (a Florence tutorial)
+-   [Florence](http://florence.sourceforge.net) is a virtual keyboard for Xorg.
+    It was in Debian buster, and still packaged in sid in 2023; but no more in stable
+    and testing.
+    -   [Florence documentation](http://florence.sourceforge.net/english/),
+    -   [How to Set Up a Virtual Keyboard in Linux - Make Tech Easier
+        ](http://www.maketecheasier.com/setup-virtual-keyboard-linux/)
+        (a Florence tutorial)
+-   [matchbox-keyboard · GitLab](https://gitlab.com/matchbox-ui/matchbox-keyboard)
+    an on-screen X11 virtual keyboard, designed for touch-screen devices running X.
+    _matchbox-keyboard_ is packaged in Debian.
+-   [Onboard](https://launchpad.net/onboard)
+    An onscreen keyboard for X11 with macros, easy layout creation and word suggestion,
+    useful for tablet PC users and for mobility impaired users. The last revision is
+    from 2017.
+    _onboard_ is packaged in debian.
+-   [Phosh/squeekboard · GitLab](https://gitlab.gnome.org/World/Phosh/squeekboard)
+    a keyboard-shaped input method supporting Wayland, built primarily for the Librem 5
+    phone.
+-   [wvkbd](https://git.sr.ht/~proycon/wvkbd) (GPL-3.0)
+    On-screen virtual keyboard for wlroots.
+-   [xvkbd](http://t-sato.in.coocan.jp/xvkbd)
+    is a virtual (graphical) keyboard for X11. This program
+    also has facility to send characters specified at the command line
+    option to another client. _xvkb_ is in Debian.
+    -   [Linux: xvkbd tutorial](http://xahlee.info/linux/linux_xvkbd_tutorial.html),
+        by Xah Lee.
+    -   [Sending Key Events](http://t-sato.in.coocan.jp/xvkbd/events.html)
 
 ## Web keyboard
 -   The [QWAZERTY online keyboard mapper](http://chezphil.org/qwazerty/)
