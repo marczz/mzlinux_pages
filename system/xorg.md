@@ -2,9 +2,11 @@
 title: Xorg and Wayland
 ---
 
-See also {{< iref "input_methods" "Input method" >}} where you find
-{{< iref "input_methods#xkb" "Xkb" >}},
-{{< iref "console" "Console section" >}}, {{< iref "desktop" "Desktop" >}} where is found the
+See also {{< iref "keyboard_input" "Input method" >}} where you find
+{{< iref "keyboard_input#xkb" "Xkb" >}} and i
+{{< iref "keyboard_input#libinput" "libinput" >}},
+{{< iref "console" "Console section" >}},
+{{< iref "desktop" "Desktop" >}} where is found the
 {{< iref "desktop#clipboard" "Clipboard managers" >}}.
 
 ---
@@ -193,20 +195,6 @@ QT since QT 5 supports wayland using the QtWayland module. More information in
 [Extras that work with Wayland - Freedesktop
 ](https://wayland.freedesktop.org/extras.html)
 gives a list of debugging tools, including protocol dumpers.
-
-## Libinput {#libinput}
-libinput is an input device driver for Wayland compositors and X.org window system.
-
--   [libinput - freedesktop](https://freedesktop.org/wiki/Software/libinput/)
--   [libinput documentation](https://wayland.freedesktop.org/libinput/doc/latest/)
--   [libinput - ArchWiki](https://wiki.archlinux.org/title/Libinput)
--   [libinput - Gentoo Wiki](https://wiki.gentoo.org/wiki/Libinput)
-
-For wayland and modern Xorg release
-{{< wp "Evdev" >}} is managed by libinput.
-
-In a wayland compositor libinput is configured by the compositor. For Sway it is in
-[sway-input(5)](https://manpages.debian.org/testing/sway/sway-input.5.en.html)
 
 # Framebuffer
 See also {{< iref "xterminals#framebuffer_terminals" "Framebuffer terminals" >}},

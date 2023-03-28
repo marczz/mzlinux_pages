@@ -2,10 +2,14 @@
 title: Keyboard Input
 ---
 
-The virual input methods are in the
+The virtual input methods are in the
 {{< iref "input_methods" "Input Methods Page" >}}.
 
-See also {{< iref "xorg" "Xorg" >}}.
+See also {{< iref "xorg" "Xorg and Wayland" >}}.
+
+<!--
+[[file:../../../../content-org/notes/system_notes/keyboard_notes.org][Keyboard Notes]]
+-->
 
 # XKB {#xkb}
 
@@ -67,13 +71,7 @@ _most entries target both console and Xorg_
 -   [How to configure input
     ](https://xorg-team.pages.debian.net/xorg/howto/configure-input.html)
     for an X server, keyboard, mouse,
--   [Keyboard input - ArchWiki
-    ](https://wiki.archlinux.org/index.php/Keyboard_input)
--   [libinput documentation
-    ](https://wayland.freedesktop.org/libinput/doc/latest/index.html)
-    libinput is a library that provides a full input stack for display servers and other
-    applications that need to handle input devices provided by the kernel.
--   [Peter Hutterer blog on libinput - Who-T](http://who-t.blogspot.com/)
+-   [Keyboard input - ArchWiki](https://wiki.archlinux.org/index.php/Keyboard_input)
 -   [Xbindkeys](https://wiki.archlinux.org/index.php/Xbindkeys)
     is a program that allows to bind commands to certain keys or key combinations on the
     keyboard. Xbindkeys is independent of the window manager and desktop environment.
@@ -87,6 +85,24 @@ _most entries target both console and Xorg_
 
     -   [How to Remap Keyboard / Gamepad  Easily with key-mapper | UbuntuHandbook
         ](https://ubuntuhandbook.org/index.php/2021/07/remap-keyboard-gamepad-ubuntu/)
+
+## Libinput {#libinput}
+libinput is an input device driver for Wayland compositors and X.org window system.
+
+libinput is a library that provides a full input stack for display servers and other
+applications that need to handle input devices provided by the kernel.
+
+-   [libinput - freedesktop](https://freedesktop.org/wiki/Software/libinput/)
+-   [libinput documentation](https://wayland.freedesktop.org/libinput/doc/latest/)
+-   [libinput - ArchWiki](https://wiki.archlinux.org/title/Libinput)
+-   [libinput - Gentoo Wiki](https://wiki.gentoo.org/wiki/Libinput)
+-   [Peter Hutterer blog on libinput - Who-T](http://who-t.blogspot.com/)
+
+For wayland and modern Xorg release
+{{< wp "Evdev" >}} is managed by libinput.
+
+In a wayland compositor libinput is configured by the compositor. For Sway it is in
+[sway-input(5)](https://manpages.debian.org/testing/sway/sway-input.5.en.html)
 
 ### Configuration notes
 -   The setxkbmap {{< man "setxkbmap(1)" >}} command configures the keyboard to
