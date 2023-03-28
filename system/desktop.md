@@ -701,9 +701,11 @@ See below the {{< iref "#wayland_menus" "dmenu/rofi alternatives" >}} and above 
 -   [grim](https://github.com/emersion/grim) (MIT Licence)
     Grab images from a Wayland compositor. Works with slurp and with sway.
     _In Debian and [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)._
--   [kanshi](https://sr.ht/~emersion/kanshi/) (MIT License)
+-   <a name="kanshi"></a>[kanshi](https://sr.ht/~emersion/kanshi/) (MIT License)
     Dynamic display configuration for wayland compositors. Kanshi allows you to define
     output profiles that are automatically enabled and disabled on hotplug. _in Debian._
+-   [nwg-shell](https://nwg-piotr.github.io/nwg-shell/)
+    a GTK3-based shell for sway.
 -   [slurp](https://github.com/emersion/slurp) (MIT License)
     Select a region in a Wayland compositor. Used by _grim_. _In Debian and
     [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)._
@@ -898,7 +900,8 @@ But some alternative status are window manager independant.
 ## Menu system
 ### terminal menus
 -   [pdmenu](https://joeyh.name/code/pdmenu/) full screen console
-    menuing sys tem for Unixs removed from Debian since 2017.
+    menuing sys tem for Unixs removed from Debian since 2017, but still active
+    [in Joey Hess git repository](https://git.joeyh.name/index.cgi/pdmenu.git/).
 -   [qmenu](https://github.com/teopost/qmenu/)
     is a terminal menu creator.
     Features include options to format the menu, bindings to function keys, possibility
