@@ -2,11 +2,13 @@
 title: Authentication
 ---
 
+<!-- [[file:../../../../content-org/notes/security_notes/authentication_notes.org][Authentication notes]] -->
+
 Apache authentication is in the
 {{< iref "apache" "Apache Page" >}},
 {{< iref "nginx" "Nginx Authentication" >}}.
 See also {{< iref "security" "Security" >}},
-{{< iref "password-managers" "Passwords Managers" >}},
+{{< iref "password_managers" "Passwords Managers" >}},
 {{< iref "network_security" "Network Security" >}}
 
 # Authentication references
@@ -220,10 +222,11 @@ secret key will be equal.
         package _pcscd_. We can also use the {{< iref "#psc-tools" "psc-tools" >}}.
         -   [Nitrokey Start, Linux — Nitrokey Documentation
             ](https://docs.nitrokey.com/start/linux/index.html).
-    -   [FIDO2 with Linux — Nitrokey Documentation
-        ](https://docs.nitrokey.com/fido2/linux/index.html) is for the nitrokey fido2
-        and [Nitrokey FIDO U2F with Linux — Nitrokey Documentation
-        ](https://docs.nitrokey.com/u2f/linux/index.html).
+    -   Nitro Key documentation [Desktop Login And Linux User Authentication
+        ](https://docs.nitrokey.com/fido2/linux/desktop-login.html) and
+        [FIDO2 with Linux](https://docs.nitrokey.com/fido2/linux/index.html) are
+        for the nitrokey fido2, u2F is explained in
+        [Nitrokey FIDO U2F with Linux](https://docs.nitrokey.com/u2f/linux/index.html).
 
 -   <a name="yubikey"></a>[YubiKeys](https://www.yubico.com/products/)
     are small USB Security tokens, with a panel of features and a price Which vary from
@@ -312,7 +315,7 @@ secret key will be equal.
     ](https://wiki.archlinux.org/title/Universal_2nd_Factor)
 -   [FIDO Universal 2nd Factor (U2F) - yubico
     ](https://www.yubico.com/about/background/fido/)
-    can be used in Linux with {{< iref "fido_pam" "PAM U2F module" >}}
+    can be used in Linux with {{< iref "#fido_pam" "PAM U2F module" >}}
     -   [What is U2F
         ](https://developers.yubico.com/U2F/Libraries/Using_a_library.html)
     -   [U2F Technical Overview
