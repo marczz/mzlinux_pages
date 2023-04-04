@@ -474,6 +474,16 @@ in the {{< iref "network_security" "network security section" >}}.
 {{< wp "Password Cracking" >}} is now mainly done by {{< wp "Rainbow tables" >}} and
 {{< wp "Brute-force attack" >}} There are many programs to apply these methods.
 
+-   <a name="john_the_ripper"></a>[John the Ripper](https://www.openwall.com/john/) (GPL)
+    from [Openwall](https://www.openwall.com/)
+    performs dictionary attacks and brute force cracking. The basic version is GPL and
+    available in Debian under the name _john_, there is also a private _Pro_ version.a
+    -   [GitHub - openwall/john](https://github.com/openwall/john)
+    -   An alternative opensource communauty verstion is available at
+        [magnumripper/JohnTheRipper](https://github.com/magnumripper/JohnTheRipper)
+    -   [Johnny - GUI for John the Ripper](https://openwall.info/wiki/john/johnny)
+        is a qt gui for John the Ripper.
+    -   [GitHub - openwall/johnny](https://github.com/openwall/johnny)
 -   <a name="hashcat">[Hashcat](https://hashcat.net/hashcat/) (MIT Licence)
     is a very fast brute-force attack program. It support many hash format including
     LM hashes, MD4, MD5, SHA-family, Unix Crypt format. It can use brute-force,
@@ -487,11 +497,6 @@ in the {{< iref "network_security" "network security section" >}}.
     is a parallelized login cracker which supports numerous protocols
     to attack. _hydra_ is packaged in Debian along with the GUI
     _hydra-gtk_.
--   [John the Ripper](https://www.openwall.com/john/) (GPL)
-    perform dictionary attacks and brute force cracking. The basic version is GPL and
-    available in Debian under the name _john_, there is also a private _Pro_ version.
-    An alternative opensource communauty verstion is available at
-    [magnumripper/JohnTheRipper](https://github.com/magnumripper/JohnTheRipper).
 -   [RainbowCrack](http://project-rainbowcrack.com/) (private licence)
     is a rainbow table hash craker, binary are  available for linux and window.
     -   [Découverte de RainbowCrack
