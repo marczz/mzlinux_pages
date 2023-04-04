@@ -32,11 +32,6 @@ See also
 -   [The Stanford SRP Authentication Project](http://srp.stanford.edu/) (BSD Licence)
     Secure Remote Password protocol integrates secure password authentication into new
     and existing networked applications.
--   [xkcd web commic](http://xkcd.com/) gave a popular
-    [password illustrated recipe](http://xkcd.com/936/) to choose a password
-    that both has a good [entropy
-    ](http://en.wikipedia.org/wiki/Password_strength#Entropy_as_a_measure_of_password_strength)
-    and easy to memorize.
 -   [Pwned Passwords](https://haveibeenpwned.com/Passwords) are hundreds of millions of
     real world passwords previously exposed in data breaches. They're searchable online
     as well as being downloadable.
@@ -109,6 +104,12 @@ try to guess the structure of the password, looking for dictionary words, and
 repeated characters before, engaging with a massive brute force cracking.
 
 ## Diceware
+Diceware passphrases was popularized by was by the [xkcd](http://xkcd.com/) comic
+[password illustrated recipe](http://xkcd.com/936/), it allows to choose a password
+that both has a good [entropy
+](http://en.wikipedia.org/wiki/Password_strength#Entropy_as_a_measure_of_password_strength)
+and easy to memorize.
+
 -   [The Diceware Passphrase Home Page](http://world.std.com/~reinhold/diceware.html)
     teach a method to generate strong passwords.
 -   Wikipedia: {{< wp "Diceware" >}}
@@ -141,15 +142,25 @@ repeated characters before, engaging with a massive brute force cracking.
     is a python program to, generate Diceware passwords. It can use the EFF wordlist,
     [Natural Language Passwords database for password generation
     ](https://github.com/NaturalLanguagePasswords/system) which has a separate list of
-    english names and adjectives, an improved version of  the list originally published
-    by A G Reinhold containing 8192 words
-    [heartsucker/diceware](https://github.com/heartsucker/diceware). It can use also any
+    english names and adjectives, and an improved version of the legacy list originally
+    published by A G Reinhold containing 8192 words
+    [heartsucker/diceware list](https://github.com/heartsucker/diceware). It can use also any
     wordlist that you provide. There are also many options to use a custom separator,
 
     Two Debian packages _diceware_ and _diceware-doc_ are provided.
 
     -   [diceware documentation](https://diceware.readthedocs.io/en/stable/readme.html).
+-   [goxkcdpwgen](https://github.com/martinhoefling/goxkcdpwgen) (MIT License)
+    xkcd style password generator library and cli tool written in Go language.
+    It uses the eff long or short word list, or a German short or long wordlist.
+    Packaged in Debian.
+-   [XKCD-password-generator](https://github.com/redacted/XKCD-password-generator)
+    (BSD Licence) is a diceware passphrase generator written in Pytho. Is has options to
+    choose an acrostic of the first letters of the words, the length of the passphrase
+    and the range of word length, and the range of valid characteres.
 
+    It can use the eff long list, the legacy word list, and additional word lists in
+    many languages. _xkcdpass_ is in Debian.
 
 ### liste française
 there are many french lists, the list [la liste diceware française - diceware.fr
@@ -209,25 +220,34 @@ Or to check the security of the passwords on your computer, you use an hash crac
 eliminate those who are the weaker. The
 {{< iref "hash_cracking" "Hash Cracking programs" >}} are below.
 
+The [Password Policy Testing Framework](http://password-policy-testing.wikidot.com/)
+compare some strength tests, it has been presented in a conference but the lack of
+documentatiopn, make it difficult to evaluate.
+
+-   [passwdqc](https://github.com/openwall/passwdqc)
+    Password/passphrase strength checking and policy enforcement
+    from [Openwall](https://www.openwall.com/) which also produces
+    {{< iref "authentication#john_the_ripper" "John the Ripper" >}}.
+
+    _passwdqc_ can be used as a pam module,  for
+     PAM-aware password changing programs, such as passwd(1).
+
+     The accepted password are configurable with many options.
+
+     _passwdqc_ is in Debian as the _passwqqc_ package which provides standalone password/passphrase
+    strength checking and random passphrase generator programs pwqcheck and pwqgen; and
+    the  libpam-passwdqc pam module.
+
+    -   [passwdqc OpenWall page](https://www.openwall.com/passwdqc/)
 -   [owasp-password-strength-test
     ](https://github.com/viaforensics/owasp-password-strength-test)
     is a password-strength tester, written in javascript,  based off of the
     OWASP Guidelines for enforcing secure passwords.
-    It can be used on the server (nodejs) or in-browser.
-    <!--script src='/js/owasp-password-strength-test.js'></script-->
--   [OWASP Passfault](http://www.passfault.com/)
+
+    It is no longer updated since 2015, and is replaced by zxcvbn.
+    It can be used on the server (nodejs) or in-browser..
+   [OWASP Passfault](https://passfault.appspot.com/)
     is another strength evaluator.
--   [Yet Another Password Meter](http://www.yetanotherpasswordmeter.com/).
--   [owasp-password-strength-test
-    ](https://github.com/viaforensics/owasp-password-strength-test)
-    is a password-strength tester, written in javascript,  based off of the
-    [OWASP Guidelines for enforcing secure passwords
-    ](https://www.owasp.org/index.php/Authentication_Cheat_Sheet#Implement_Proper_Password_Strength_Controls).
-    It can be used on the server (nodejs) or in-browser.
-    <!--script src='/js/owasp-password-strength-test.js'></script-->
--   [OWASP Passfault](https://passfault.appspot.com/)
-    is another strength evaluator.
--   [Yet Another Password Meter](http://www.yetanotherpasswordmeter.com/).
 
 ### zxcbvn
 [xzbcn (GitHub repo)](https://github.com/lowe/zxcvbn)
@@ -242,3 +262,10 @@ is a javascript application for testing the password strength.
 
     It is on-line at [zxcvbn-ts demo](https://zxcvbn-ts.github.io/zxcvbn/demo/).
     -  [zxcvbn-ts Guide](https://zxcvbn-ts.github.io/zxcvbn/guide/)
+
+
+
+<!-- Local Variables: -->
+<!-- mode: markdown -->
+<!-- ispell-local-dictionary: "english" -->
+<!-- End: -->
