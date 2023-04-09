@@ -2,12 +2,13 @@
 title: Tibetan
 ---
 
-{{% toc /%}}
+<!-- see also [[file:/share/sync_folders/misc/mznotes/content-org/weblinks/dharma/books.org]["Dharma books notes"]] -->
+<!-- [[file:/share/sync_folders/misc/mznotes/content-org/weblinks/dharma/_index.org]["Dharma links"]] -->
 
 See also {{< iref "input_methods" "Input Methods" >}},
 {{< iref "i18n" "Localization" >}}
 {{< iref "i18n#tibetan_fonts" "Tibetan fonts" >}},
-{{< iref "i18n#tibetan_encoding" "Tibetan unicode encoding" >}}],
+{{< iref "i18n#tibetan_encoding" "Tibetan unicode encoding" >}},
 {{< iref "input_methods#tibetan_keyboard" "Tibetan input methods and keyboard layouts" >}}
 
 # Language references
@@ -100,7 +101,7 @@ See also {{< iref "input_methods" "Input Methods" >}},
         [Kunleng webcasts](http://www.youtube.com/user/VOAKunleng)
 
 
-# Dharma Literature
+# Dharma virtual Libraries {#Dharma_libraries}
 -   [Access to Insight](http://www.accesstoinsight.org/)
     Readings in Theravada Buddhism:
     [tipitaka](http://www.accesstoinsight.org/tipitaka/)
@@ -519,4 +520,5 @@ See also the {{< iref "#tibetan_dictionaries" "Tibetan dictionaries section" >}}
 <!-- Local Variables: -->
 <!-- mode: markdown -->
 <!-- ispell-local-dictionary: "english" -->
+<!-- eval: (org-link-minor-mode 1) -->
 <!-- End: -->
