@@ -298,12 +298,58 @@ is a javascript application for testing the password strength.
 -   [OWASP Password Storage Cheat Sheet
     ](https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet)
 
+## Hashing Passwords {#hashing-passwords}
+
+A random password entropy is computed with the formula e=l*log<sub>2</sub>(r) where l is the
+number of characters and r the range of character. This means than you choose a random
+password among a set of 2<sup>e</sup> choices, or that a cracking program will need to crack an
+average of 2<sup>e</sup>/2 hashes to find your password.
+
+If we have a calculator with only log<sub>10</sub> or ln functions we can use
+e=l*log<sub>10</sub>(r)/log<sub>10</sub>(2) or e=l*ln(r)/ln(2)
+
+## Encrypting passwords on linux {#encrypting-passwords-on-linux}
+
+The password are hashed using one algorithm among
+
+{{< wp "md5" >}}, {{< wp "sha-2" >}} (sha256, sha512 ),
+
+Crypt is weak, and
+{{< wp "MD5#Security" "md5 is vulnerable to collision attacks" >}} so you may want
+to use sha256 or sha512.
+
+Previously we could use
+
+{{< wp "Crypt_(Unix)" "crypt" >}} and  {{< wp "sha1" >}}. but crypt is weak and there is
+a possibility of {{< wp "Sha1#Attacks" "sha1 attacks" >}}.
+
+sha512 is now the default under Debian, but if your conf is older it may
+differs.
+
+
+
+The password hashing algorithm is set in `/etc/login.defs` with the variable
+`ENCRYPT_METHOD` and in
+
+The options are explained in {{< man "pam_unix" >}}.
+
+If you want to change password hashes you must reenter the old passwords to
+rehash them.
+
 ## Hash cracking {#hash_cracking}
 See also {{< iref "network_security#brute_forcer" "Brute forcers" >}}
 in the {{< iref "network_security" "network security section" >}}.
 
 {{< wp "Password Cracking" >}} is now mainly done by {{< wp "Rainbow tables" >}} and
-{{< wp "Brute-force attack" >}} There are many programs to apply these methods.
+{{< wp "Brute-force attack" >}}.
+
+The easiest attacks are done using {{< wp "rainbow tables" >}}, because it doesn't need
+a lot of cpu power, but rather an important storage, which is cheap by today.
+
+The better protection against rainbow tables is
+[salt](https://en.wikipedia.org/wiki/Salt_(cryptography)).
+
+There are many programs to apply these two methods.
 
 -   <a name="john_the_ripper"></a>[John the Ripper](https://www.openwall.com/john/) (GPL)
     from [Openwall](https://www.openwall.com/)
@@ -328,6 +374,7 @@ in the {{< iref "network_security" "network security section" >}}.
     is a parallelized login cracker which supports numerous protocols
     to attack. _hydra_ is packaged in Debian along with the GUI
     _hydra-gtk_.
+-   {{< wp "Ophcrack" >}} is an rainbow table cracker.
 -   [RainbowCrack](http://project-rainbowcrack.com/) (private licence)
     is a rainbow table hash craker, binary are  available for linux and window.
     -   [Découverte de RainbowCrack
@@ -345,6 +392,7 @@ in the {{< iref "network_security" "network security section" >}}.
     QubesV3.1BackupDefaults.
     it also explain how to implement a secure
     [salted password hashing](https://crackstation.net/hashing-security.htm).
+-   [md5crack](http://www.md5crack.com/) crack md5 _unsalted_ hashes with rainbow tables.
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
