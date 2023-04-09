@@ -2,13 +2,21 @@
 title: Authentication
 ---
 
-<!-- [[file:../../../../content-org/notes/security_notes/authentication_notes.org][Authentication notes]] -->
+<!--
+[[file:../../../../content-org/notes/security_notes/authentication_notes.org][Authentication notes]]
+[[file:password_strength.md][Password Strength]]
+-->
+
+All password related topics are in the {{< iref "password_strength" "password page" >}}
+including {{< iref "password_strength#password_strength" "Password Strength" >}},
+{{< iref "password_strength#password_hashes" "Password Hashes" >}} and in the page
+{{< iref "password_managers" "Passwords Managers" >}}.
 
 Apache authentication is in the
-{{< iref "apache" "Apache Page" >}},
+{{< iref "apache" "Apache Page" >}}, and Nginx authentication
 {{< iref "nginx" "Nginx Authentication" >}}.
+
 See also {{< iref "security" "Security" >}},
-{{< iref "password_managers" "Passwords Managers" >}},
 {{< iref "network_security" "Network Security" >}}
 
 # Authentication references
