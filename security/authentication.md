@@ -467,53 +467,7 @@ authentication and data encryption.
     (PDF french) by Sebastien Varrette.
 
 
-## Hash cracking {#hash_cracking}
-See also {{< iref "network_security#brute_forcer" "Brute forcers" >}}
-in the {{< iref "network_security" "network security section" >}}.
 
-{{< wp "Password Cracking" >}} is now mainly done by {{< wp "Rainbow tables" >}} and
-{{< wp "Brute-force attack" >}} There are many programs to apply these methods.
-
--   <a name="john_the_ripper"></a>[John the Ripper](https://www.openwall.com/john/) (GPL)
-    from [Openwall](https://www.openwall.com/)
-    performs dictionary attacks and brute force cracking. The basic version is GPL and
-    available in Debian under the name _john_, there is also a private _Pro_ version.a
-    -   [GitHub - openwall/john](https://github.com/openwall/john)
-    -   An alternative opensource communauty verstion is available at
-        [magnumripper/JohnTheRipper](https://github.com/magnumripper/JohnTheRipper)
-    -   [Johnny - GUI for John the Ripper](https://openwall.info/wiki/john/johnny)
-        is a qt gui for John the Ripper.
-    -   [GitHub - openwall/johnny](https://github.com/openwall/johnny)
--   <a name="hashcat">[Hashcat](https://hashcat.net/hashcat/) (MIT Licence)
-    is a very fast brute-force attack program. It support many hash format including
-    LM hashes, MD4, MD5, SHA-family, Unix Crypt format. It can use brute-force,
-    dictionary or an hybrid mode. It is available in Debian.
-    -   [Découverte de Hashcat
-        ](https://www.supinfo.com/articles/single/6242-decouverte-hashcat)
-        par Adrien Flahaut.
-    -   [How to Hack KeePass Passwords using Hashcat
-        ](https://www.rubydevices.com.au/blog/how-to-hack-keepass).
--   [hydra](https://github.com/vanhauser-thc/thc-hydra)
-    is a parallelized login cracker which supports numerous protocols
-    to attack. _hydra_ is packaged in Debian along with the GUI
-    _hydra-gtk_.
--   [RainbowCrack](http://project-rainbowcrack.com/) (private licence)
-    is a rainbow table hash craker, binary are  available for linux and window.
-    -   [Découverte de RainbowCrack
-        ](https://www.supinfo.com/articles/single/6236-decouverte-rainbowcrack) par
-        Adrien Flahaut.
-
-### Online password crackers
--   [hashkiller](https://hashkiller.co.uk/md5-decrypter.aspx)
-    try to crack md5, sha1, ntlm.
--   [Online Hash Crack](https://www.onlinehashcrack.com/)
-    crack hashes in md4/md5/sha1/sha256, and WPA(2) crack.
--   [CrackStation Free Password Hash Cracker](https://crackstation.net/)
-    crack hashes in LM, NTLM, md2, md4, md5, md5(md5_hex), md5-half, sha1, sha224,
-    sha256, sha384, sha512, ripeMD160, whirlpool, MySQL 4.1+ (sha1(sha1_bin)),
-    QubesV3.1BackupDefaults.
-    it also explain how to implement a secure
-    [salted password hashing](https://crackstation.net/hashing-security.htm).
 
 ## Password Hashing
 Password hashing is a strategy that uses a single master password that is hashed with a
