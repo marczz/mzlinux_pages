@@ -1,7 +1,10 @@
 ---
 title: Password strength
 ---
-a
+<!--
+[[file:../../../../content-org/notes/security_notes/password_strength_notes.org::+hugo_front_matter_format: yaml][password strength notes]]
+[[file:authentication.md::---][Authentication]]
+-->
 See also
 {{< iref "authentication" "Authentication" >}},
 {{< iref "password_managers" "Passwords Managers" >}},
@@ -73,10 +76,38 @@ them claim that passwords like `D0g-----------------------` or
 `1234567890!Abcdefghij` or `We shall/overC0me` are strong passwords; while they are
 easily cracked.
 
-Taking a 10 billion guess per second
+
+Note yhat is is only an example, the number of cracked hases per second vary both
+depending of the computer and of the hash used.
+
+An hash cracking aray like those used by criminal or governemental institution is
+incomparably quicker than an home multiprocessor aray.
+
+The hash make also an huge difference, but if you can choose on your computer hashes
+that need more work, you don't master how your passwords are stored on the remote
+sites. This is why it is so important to never reuse a password, a breach on one site
+would compromise all your security.
+
+An idicative result on an home array is given in
+[8x Nvidia GTX 1080 Hashcat Benchmarks · GitHub
+](https://gist.github.com/epixoip/a83d38f412b4737e99bbef804a270c40)
+
+These 8 GTX 1080 may compute in one second 334 Giga NTLM, 200 Giga MD5, 179 Giga
+NetNTLMv1, 68 Giga SHA1, 13 Giga NetNTLMv2, 3 mega sha256crypt, 1 Mega sha512crypt, 1
+Mega Keepass AES, 4 mega scrypt, PBKDF2-HMAC-SHA512 or WPA2, 105 Kilo bcrypt Blowfish.
+
+It means that if a password is NTLM or md5 encoded, even random and long it can be
+cracked offline.
+
+It also means that giving a table of time to crack passwords offline, depending only of
+their entropy (i.e. length and complexity) is meaningless if you don' say how it is
+hashed, and if the hash is salted.
+
+Taking a 10 giga (10^10) guesses per second
 The compared estimate of _haystack_ and _zxcvbn_ are for these three passwords
 to which we add a 17 characters randomly generated passsword
 `]M:aEH+*v\kuz*9c}`
+
 
 | password | haystack    | zxcvbn   |
 |:---------|:----------- |:---------|
@@ -86,7 +117,7 @@ to which we add a 17 characters randomly generated passsword
 | ]M:aEH   | 10^16 years | 4 months |
 
 The [Haystack GRC calculator](https://www.grc.com/haystack.htm) gives for the weaker
-of these three ten billions of centuries to be cracked with a massive cracked array.
+of these three ten giga centuries to be cracked with a massive cracked array.
 
 While zxcvbn test estimate the first two to be cracked in less than a second.
 
@@ -155,7 +186,7 @@ and easy to memorize.
     It uses the eff long or short word list, or a German short or long wordlist.
     Packaged in Debian.
 -   [XKCD-password-generator](https://github.com/redacted/XKCD-password-generator)
-    (BSD Licence) is a diceware passphrase generator written in Pytho. Is has options to
+    (BSD Licence) is a diceware passphrase generator written in Python. Is has options to
     choose an acrostic of the first letters of the words, the length of the passphrase
     and the range of word length, and the range of valid characteres.
 
@@ -262,6 +293,10 @@ is a javascript application for testing the password strength.
 
     It is on-line at [zxcvbn-ts demo](https://zxcvbn-ts.github.io/zxcvbn/demo/).
     -  [zxcvbn-ts Guide](https://zxcvbn-ts.github.io/zxcvbn/guide/)
+
+# Password hashes {#password_hashes}
+-   [OWASP Password Storage Cheat Sheet
+    ](https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet)
 
 ## Hash cracking {#hash_cracking}
 See also {{< iref "network_security#brute_forcer" "Brute forcers" >}}
