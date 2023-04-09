@@ -84,6 +84,10 @@ and they will eat between 10M and 20M of your resident memory (less if
 you truly share the libraries). As they can stay open during a whole
 session the memory and swap protection is a primary concern.
 
+A comparison of main features of Password managers is givn in
+[Password Management Service - Software Comparison](https://wiki.koumbit.net/PasswordManagementService/SoftwareComparison).
+
+
 -   <a name="fpm2"></a>[Fpm2](http://als.regnet.cz/fpm2/)(GPL) is a GTK2 port from
     [Figaro's Password Manager](http://fpm.sourceforge.net/)
     Passwords are encrypted with the AES-256 algorithm. It can copy
@@ -211,7 +215,8 @@ and v4 i.e. keepass 2.x or {{< wp "Twofish" >}} only for v3.
 -   KeePass has a huge [list of plugins and extensions
     ](http://keepass.info/plugins.html) but most of them restricted to windoze.
 -   [keepass-diff](https://github.com/Narigo/keepass-diff) (MIT License)
-    is a A CLI-tool to diff Keepass (.kdbx) files.
+    is a A CLI-tool to diff Keepass (.kdbx) files. Useful, if syncing with some cloud
+    or *syncthing* and getting multiple files due to conflicts.
 
 ## Keepass alternative CLI
 -   <a name="keepassc">[KeePassC](https://github.com/raymontag/keepassc) (GPL)
@@ -318,7 +323,6 @@ and v4 i.e. keepass 2.x or {{< wp "Twofish" >}} only for v3.
 -   [lastpass2keepass](https://github.com/anirudhjoshi/lastpass2keepass)
     is a python script that allow you to convert the LastPass export
     to a KeePass XML import.
-
 
 ## Keepass database cracking
 
@@ -446,10 +450,9 @@ ancrypted with the Twofish algorithm.
         the name of  [Password Management System
         ](http://sourceforge.net/projects/passwordms/).
 -   [Keyringer](https://keyringer.pw/) (GPL)
-    lets you manage and share secrets using GnuPG and Git in
-    a distributed fashion. It has custom commands to encrypt, decrypt
-    and recrypt secrets as well as create key pairs and supports
-    encryption to multiple recipients and groups of different
+    lets you manage and share secrets using GnuPG and Git in a distributed fashion. It
+    has custom commands to encrypt, decrypt and recrypt secrets as well as create key
+    pairs and supports encryption to multiple recipients and groups of different
     recipients. Keyringer is in Debian.
     -   [keyringer source](https://git.fluxo.info/keyringer/)
 -   [Pass](http://zx2c4.com/projects/password-store/)
