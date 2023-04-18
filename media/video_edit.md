@@ -8,8 +8,7 @@ See also {{< iref "codecs" "Codecs" >}} and it's subsection
 {{< iref "streaming" "Streaming" >}}.
 
 The main utility
-{{< iref "ffmpeg" "ffmpeg alias libav" >}}
-has its own page.
+{{< iref "ffmpeg" "ffmpeg" >}} has its own page.
 
 ----------------------------
 
@@ -47,7 +46,6 @@ has its own page.
     ](https://wiki.archlinux.org/index.php/List_of_applications#DVD_authoring),
     [DVD ripping
     ](https://wiki.archlinux.org/index.php/List_of_applications#DVD_ripping).
-
 
 # Video Encoding
 
@@ -294,10 +292,20 @@ See also {{< iref "#webcam" "Webcam" >}}.
     ](https://wiki.archlinux.org/title/FFmpeg#Screen_capture).
 -   {{< iref "media_players#vlc" "VLC" >}} allows screen capture.
 
--   [istanbul](https://wiki.gnome.org/Projects/Istanbul)
-    (GPL) is a gnome project written in python. It is a desktop
-    session recorder for the Free Desktop. It records your session
-    into an Ogg Theora .
+-   [blue-recorder](https://github.com/xlmnxp/blue-recorder) (GPL-3.0)
+    is a screen recorder written in Rust built using GTK+ 3 and ffmpeg, based on Green
+    Recorder. It allows recording audio and video on Wayland and save them in mkv, avi,
+    mp4, wmv, gif and nut formats. A flatpak and a snap packages are available.
+-   [GNOME Screenshot](https://gitlab.gnome.org/GNOME/gnome-screenshot)
+     is a small GRK3 X11 utility that takes a screenshot of the whole desktop; the currently
+    focused window; or an area of the screen.
+-   [green-recorder](https://github.com/dvershinin/green-recorder)  i(GPL-3.0)
+    a simple screen recorder for Linux built using Python, GTK+ 3 and ffmpeg. Supports
+    Wayland & Xorg
+-   [Kooha](https://github.com/SeaDve/Kooha) (GPL-3.0)
+    is a GTK4 screen recorder using pipewire and gstreamer. _Koha_ can record
+    microphone, desktop audio, or both; it can save the stream in webm, gif, mp4 and
+    matroska; it supports both X11 and Wayland. A Flatpak package is available.
 -   [peek](https://github.com/phw/peek)  (GPL-3.0)
     is an animated GIF screen recorder with GUI .
     _Peek_ was built for the specific use case of recording screen areas, e.g. for
@@ -307,7 +315,7 @@ See also {{< iref "#webcam" "Webcam" >}}.
     WebM or MP4 if you prefer.
 
     Peek is [in Debian](https://packages.debian.org/search?keywords=peek).
--   [recordMyDesktop - Github](https://github.com/Enselic/recordmydesktop/)
+-   [recordMyDesktop](https://enselic.github.io/recordmydesktop/)
     is a CLI desktop session recorder written in C. It records theora video, and
     ogg vorbis audio.
 
@@ -317,6 +325,7 @@ See also {{< iref "#webcam" "Webcam" >}}.
     time of release 4.0, they have not yet been ported to the new code base.
 
     recordMyDesktop is in Debian.
+    -   [recordMyDesktop - Github](https://github.com/Enselic/recordmydesktop/)
     -   [Screencasts in Ubuntu, part 1: recordmydesktop
         ](http://polishlinux.org/linux/ubuntu/screencasts-in-ubuntu-part-1/)
         by Marcin Seredyński is a recordmydesktop tutorial.
@@ -327,7 +336,8 @@ See also {{< iref "#webcam" "Webcam" >}}.
     is a Python/GTK3  screencast tool to display your keys inspired by
     [Screenflick](http://www.araelium.com/screenflick/). for MacOS
 
-    The Gui is working in X11 and Xwayland. _not yet wayland._
+    Screenkey project is active in 2023 The Gui is working in X11 and Xwayland. _not yet
+    wayland._
 
     Screenkey is [in Debian](https://packages.debian.org/search?keywords=screenkey).
 
@@ -335,27 +345,33 @@ See also {{< iref "#webcam" "Webcam" >}}.
 -   [SimpleScreenRecorder](https://en.wikipedia.org/wiki/SimpleScreenRecorder) (GPL-3.0)
     is a Qt-based screencast software thar can record the entire screen or part of it,
     or record OpenGL applications directly. It uses libav/ffmpeg libraries for encoding,
-    so it supports many different codecs and file formats. _packaged in Debian_.
+    It is written with QT but also bound to libX11, and does not work in pure Wayland.
+    It supports many different codecs and file formats. _packaged in Debian_.
     -   [SimpleScreenRecorder Home](https://www.maartenbaert.be/simplescreenrecorder/)
 -   [vokoscreenNG](https://linuxecke.volkoh.de/vokoscreen/vokoscreen.html) (GPL-2.0)
-    vokoscreenNG is a QT5 screencasting software, to record the screen, an area or a
+    vokoscreenNG is a QT6 screencasting software, to record the screen, an area or a
     window; and audio from multiple sources. It has also built-in camera support.
-    _packaged in Debian_
+
+    _VokoscreenNG_ is X11 only and does not support Wayland. It is _packaged in Debian_.
     -   [vokoscreenNG - GitHub](https://github.com/vkohaupt/vokoscreenNG)
 -   [vnc2flv](http://www.unixuser.org/~euske/python/vnc2flv/index.html)
     is a screen recorder  build in python. The old 2010 Python 2 is obsolete, but
     [matthayes / vnc2flv - Github](https://github.com/matthayes/vnc2flv) is a port to
-    Python 3.
+    Python 3. _last release 2018_
 -   [xvidcap](http://xvidcap.sourceforge.net/)
     (GPL) is a screen recording utility using FFMPEG's libavcodec/libavformat.
-    _Obsolete, last release 2006._
+    _Obsolete, last release 2006 last commit 2009._
+-   [wayfarer](https://github.com/stronnag/wayfarer) (GPL-3.0)
+    GTK4 screen recorder for GNOME / Wayland / pipewire. Wayfarer official supporty is
+    for Gnome Desktop.
 
 # Video recording
 -   {{< wp "OBS Studio" >}} (GPL-2.0) is a streaming and recording program Written in C,
     C++ and Qt. _obs-studio_ is in Debian.
     -   [Open Broadcaster Software | OBS](https://obsproject.com/)
     -   [OBS studio - GitHub](https://github.com/obsproject/obs-studio).
-
+    -   [Open Broadcaster Software - ArchWiki
+        ](https://wiki.archlinux.org/title/Open_Broadcaster_Software).
 
 ## Television (DVB) and cameras
 ### DVB
