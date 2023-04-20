@@ -502,7 +502,7 @@ see also the {{< iref "python_web#wsgi" "xCGI stuff" >}}.
 -   <a name="mypy">[MyPi](http://www.mypy-lang.org/) (MIT License)
     static typing checker for Python.
     Mypi is included in _Vim_ _syntastic_ and _ALE_ in _emacs_ _Flycheck_, in _Atom_,
-    _Pycherm_, _Flake8_.
+    _Pychiarm_, _Flake8_.
     -   [MyPy - GitHub](https://github.com/python/mypy)
     -   [Mypy documentation](https://mypy.readthedocs.io/en/stable/)
 -   [PyTypes](https://github.com/Stewori/pytypes)) (Apache License)
@@ -759,7 +759,8 @@ Read first the
 -   <a name="pathtool"></a>[pathtools](https://github.com/gorakhargosh/pathtools) (MIT)
     Path utilities for Python, it allows pattern matching on paths.
     It is in pypi.
--   [pyfilesystem2](https://github.com/PyFilesystem/pyfilesystem2)  (MIT License)
+-   <a name="pyfilesystem"></a>
+    [pyfilesystem](https://github.com/PyFilesystem/pyfilesystem2)  (MIT License)
     Python's Filesystem abstraction which provides a common interface to any filesystem.
 
     It supports
@@ -767,7 +768,7 @@ Read first the
     like FTPFS, TarFS, ZIPFS, DropBoxFS, S3FS, WebDavFS, fs.dlna, fs.googledrivefs,
     fs.onedrivefs, fs.smbfs, fs.sshfs ....
 
-    -   [pyfilesystem2 documentation](https://docs.pyfilesystem.org/en/latest/).
+    -   [pyfilesystem documentation](https://docs.pyfilesystem.org/en/latest/).
 
 ### Filesystem Monitor
 
@@ -1274,28 +1275,27 @@ They are compared in two threads from 2014 and 2015 of _HackerNews_:
 [and here](https://news.ycombinator.com/item?id=8158976)
 
 -   [Pyp](https://github.com/hauntsaninja/pyp) (BSD License)
-    _active ib 2020_.
+    _active ib 2023_.
     based on the old _Pyed Piper_ no more developped since 2012.
 -   [Pyped](http://github.com/ksamuel/Pyped)
-    command that pipes data from bash to Python, and vice-versa  In _pypi_, _2014_.
+    command that pipes data from bash to Python, and vice-versa  In _pypi_, _2015_.
 -   [pythonpy](https://github.com/Russell91/pythonpy) (MIT License)
-    In _pypi_ and _Debian_, _active in 2016, but no longer
-    available in GitHub in 2020_.
+    In _pypi_ and _Debian_, _last release in 2016, no longer available in GitHub_.
 
     This [thread in _python-ideas_
     ](https://mail.python.org/pipermail/python-ideas/2015-January/030837.html)
-    give some evaluation / criticisms to the concepts of
-    *pythonpy*, the end of the thread compare it with _spy_.
+    give some evaluation / criticisms to the concepts of *pythonpy*, the end of the
+    thread compare it with _spy_.
 
     -   [pythonpy-clone](https://github.com/iomintz/pythonpy-clone)
         ([blueoakcouncil Licence](https://blueoakcouncil.org/license/1.0.0))
         is a rewrite of pythonpy using AST manipulations instead of regex.
-        _This project had commit only during one 2019 month, as far as jully 2020_.
+        _This project had commit only during one 2019 month, as far as  2023_.
 -   [pyin](https://github.com/geowurster/pyin) (BSD License)
-    aimed at replacing sed.  In _pypi_, _active in 2019_.
+    aimed at replacing sed.  In _pypi_, _last commit in 2019_.
 -   [spy](https://github.com/edk0/spy) (WFTPL)
-    derived from pythonpy and pyp. Only python3, In _pypi_ with
-    name _spy-cli_,_active in 2020_.
+    derived from pythonpy and pyp. Only python3, In _pypi_ with name _spy-cli_,_active
+    in 2022_.
 -   [pit](https://github.com/samzhang111/pit)
     Or Python as a stream filter, python3 _2015_.
 -   [pype](https://github.com/ircflagship2/pype)
@@ -1303,7 +1303,7 @@ They are compared in two threads from 2014 and 2015 of _HackerNews_:
 -   [mario](https://github.com/python-mario/mario) (GPL)
     Powerful Python pipelines for the shell. Mario can read and write csv, json, and
     yaml; traverse trees, and even do xpath queries, it supports async commands.
-    _active in 2020_.
+    _active in 2022_.
     -   [Mario Documentation](https://python-mario.readthedocs.io).
     -   [Mario Add-Ons](https://mario-addons.readthedocs.io)
 
