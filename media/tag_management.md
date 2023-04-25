@@ -29,6 +29,17 @@ title: Tag, playlist, lyrics Management
     Amazon Web Services and has a gtk2 interface or alternatively a command-line based
     batch tagger. Cowbell is written in _mono_ and is in Debian.
 
+[Demlo](https://gitlab.com/ambrevar/demlo) (MIT license)
+:   is a music library organizer and batch music tagger powered by Lua and FFmpeg.
+
+    It can transcode, fix case, generate cue sheets, onl tag with MusicBrainz, manual
+    edit tags with your favorite editor, download cover, change folder hierarchy
+    according to tags or file properties.
+
+    _Since 2018 the project is no longer active (as far as 2023)._
+
+    -   [Demlo - ArchWiki](https://wiki.archlinux.org/title/Demlo)
+
 <a name="easytag"></a>[EasyTag](https://wiki.gnome.org/Apps/EasyTAG/)
 :   EasyTAG is an GUI utility for viewing, editing and writing tags of MP3, MP2 files
     (ID3 tag), FLAC files (FLAC Vorbis tag), Ogg Opus, Ogg Speex and Ogg Vorbis files
@@ -501,10 +512,11 @@ Some media player have support for lyric display, like
     to display lyrics,
 
     Some mpd clients have support for lyrics:
-    -   [ncmpc++](http://unkart.ovh.org/ncmpcpp/),
+    -   [ncmpcpp](http://unkart.ovh.org/ncmpcpp/),
     -   [py-lyrics](https://github.com/tremby/py-lyrics) (GPL-3.0)
         Python CLI script making use of [LyricWiki](lyrics.wikia.com) to pull lyrics
         from the web.
+    -   {{< iref "media_players#mympd" "myMPD"a >}}.
 -   [emms-lyrics](https://www.gnu.org/software/emms/manual/Lyrics.html)
     allows to display lyrics with
     {{< iref "media_players#emms" "Emms The Emacs Multimedia System" >}}.
