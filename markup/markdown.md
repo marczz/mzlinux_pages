@@ -2,21 +2,21 @@
 title: MarkDown
 ---
 
-# {{< wp "Markdown" >}}
+# Markdown references
 
--   [Markdown](http://daringfireball.net/projects/markdown/)
-    (BSD style license) is a text-to-HTML conversion tool originaly
+
+-   [Markdown](http://daringfireball.net/projects/markdown/) (BSD style license)
+    is a text-to-HTML conversion tool originally
     written in perl, but that has also implementations in C, python, php,
-    haskell, lua. Markdown can be used in many CMS _often through plugins_
-    Instiki Wiki (ruby powered wiki), ikiwiki. dokuwiki,
-    [Moinmoin](http://moinmo.in/), [WolfCms](http://www.wolfcms.org/),
-    {{< iref  "content_management#gollum" "Gollum" >}}.
-    It is widely used in Django
-    powered applications _using the python implementation_.
+    haskell, lua. Markdown
 
-    It is the most usual syntax for
-    {{< iref  "static_sites" "Static site generators" >}}
+    It can be used in many CMS, blogg software, and Wiki _often through plugins_.
 
+    It is widely used in Django powered applications _using the python implementation_.
+
+    It is the most usual syntax for {{< iref  "static_sites" "Static site generators" >}}
+
+-   Wikipedia: {{< wp "Markdown" >}}.
 -   There is two lists of _Awesome Markdown_ references:
     [GitHub - mundimark/awesome-markdown](https://github.com/mundimark/awesome-markdown)
     seems the more complete and up to date, and
@@ -71,61 +71,51 @@ to capture markdown from a displayed page in the browser:
     -   [Markdown Here - GitHub](https://github.com/adam-p/markdown-here/)
 
 # Markdown Syntax
-The original [Markdown syntax
-](http://daringfireball.net/projects/markdown/syntax)
-is summarized in the
-[dingus - Markdown on-line converter
+Markdown has be conceived by John Grüber, et also wrote a Perl processor for it.
+
+The original [Markdown syntax](http://daringfireball.net/projects/markdown/syntax)
+is summarized in the [dingus - Markdown on-line converter
 ](http://daringfireball.net/projects/markdown/dingus),
+it is now referred as _Basic Markdown_ or _Vanilla Markdown_.
 
-As the syntax of markdown was only given by informal free text
-description, there are many ambiguities that are solved in a different
-way by each parser, and numerous extensions.
+As the syntax of markdown was only given by informal free text description, there are
+many ambiguities that are solved in a different way by each parser, and numerous
+extensions.
 
-There are many extensions to markdown such as tables, footnotes,
-definition lists,  Markdown inside HTML blocks, source code
-higlighting.
-Most extensions are bound to one parser and their syntax is given by
-the parser manual. See below for each parser. The
-{{< iref "#pandoc" "Pandoc" >}} extensions are widely used,
-but many are specific to Pandoc.
+Markdown  got a de facto standard when the {{< iref "#commonmark" "CommonMark" >}}
+formal specification was published by John Mac Farlane.
 
-At least three extensions are quite widespread and many parsers try to
-implement them
+{{< iref "#commonmark" "CommonMark" >}} gives the syntax for italic, emphasis (i.e
+bold), and strong emphasis, hard line break (both 2 spaces and backslash),backtick code
+span, ATX and Setext heading, link, image, block quote, indented, and fenced code
+block, html block.
 
--   The Older one is
-    {{< iref "#php" "php markdown extra" >}}
-    that add: Inline HTML, Markdown Inside HTML Blocks,
-    Special Attributes, Fenced Code Blocks with <code>~~~</code>,
-    Tables, Definition Lists,
-    Footnotes, Output, Abbreviations, Emphasis, Backslash Escapes.<br />
-    {{< iref "#python" "Python-markdown" >}}group the
-    same features in
-    {{< iref "#python" "python-markdown-extra" >}};
-    and add a rich set of custom extensions.
-    <br />
-    The other extensions use to build up on markdown extra and extend
-    it.
--   [Stack Overflow MarkDown](http://stackoverflow.com/editing-help)
-    is a very standard MarkDown with some additions whose main is
-    [Syntax highlighting for code
-    ](http://stackoverflow.com/editing-help#syntax-highlighting)
-    that uses [Google prettify
-    ](http://google-code-prettify.googlecode.com/svn/trunk/README.html)
--   <a name="gfm"></a>[Github Flavored Markdown - GFM](https://github.github.com/gfm/)
-    is a very popular extension. The main difference is that in Standard
-    Markdown newline are ignored and in GFM they are significative.
-    GFM disable also disable italicize parts of words, allow
-    strikethrough, fenced code block with <code>&#96;&#96;&#96;</code>
-    syntax higlighting with <code>&#96;&#96;&#96;python</code> like headers.
+Many extensions to the basic and commonmark syntax have been defined, the first one that
+predate CommonMark is {{< iref "#php-markdown-extra" "PHP Markdown Extra" >}}.
 
-    It also add a definition list and a
-    [table extension](https://github.github.com/gfm/#tables-extension-),
-    task lists, and few GitHub specific shortcuts.
+It adds : Inline HTML, Markdown Inside HTML Blocks, Special Attributes, Fenced Code Blocks
+with <code>~~~</code>, Tables, Definition Lists, Footnotes, Output, Abbreviations,
+Emphasis, Backslash Escapes.
 
-    -   [GitHub Help: Mastering markdown
-        ](https://guides.github.com/features/mastering-markdown/)
-        is an howto for
-        [Github Flavored Markdown](https://github.github.com/gfm/).
+From {{< iref "#php-markdown-extra" "PHP Markdown Extra" >}} extensions only emphasis,
+inline html, fenced code block, backslash escape are part of
+{{< iref "#commonmark" "CommonMark" >}}.
+
+Many extensions are added by markdown parsers to {{< iref "#commonmark" "CommonMark" >}}
+like tables, footnotes, definition lists, Markdown inside HTML blocks, source code
+highlighting.
+
+But the syntax of each construction is bound to one parser and only avilable in the
+parser manual (at best, or the source code at worse).
+
+{{< iref "#gfm" "GitHub Flavored  Markdown" >}} used first on GitHub, and later on on
+many other popular sites is a specification of markdown which extend
+{{< iref "#commonmark" "CommonMark" >}} which add a
+[table extension](https://github.github.com/gfm/#tables-extension-), strikethrough,
+syntax highlighting  of code,  task list.
+
+Many processors which extend  {{< iref "#commonmark" "CommonMark" >}} use the syntax
+which was used in {{< iref "#php-markdown-extra" "PHP Markdown Extra" >}}
 
 -   {{< iref "#pandoc_markdown" "Pandoc Markdown" >}}
     include a set of extensions for MarkDown.
@@ -140,8 +130,8 @@ implement them
 John Mac Farlane previously produced many markdown parsers like
 {{< iref "#pandoc" "pandoc" >}} or {{< iref "#peg" "peg-markdown" >}}.
 
-The [specification](http://spec.commonmark.org/) has its [source
-on GitHub](http://spec.commonmark.org/). There is also a
+The [specification](http://spec.commonmark.org/current) has its
+[source on GitHub](http://spec.commonmark.org/). There is also a
 [reference card](http://commonmark.org/help/) and an
 [interactive tutorial)(http://commonmark.org/help/tutorial/).
 
@@ -149,32 +139,126 @@ You can test and convert on line your CommonMark document on the
 [Dingus interactive translator](http://spec.commonmark.org/dingus/)
 powered by _commonmark.js_.
 
-John Mac Farlane also provide two implementations,
-[cmark](https://github.com/jgm/cmark) written in C, and
-[commonmark.js](https://github.com/jgm/commonmark.js)
-in javascript.
+John Mac Farlane also provide two implementations, [cmark](https://github.com/jgm/cmark)
+written in C, and [commonmark.js](https://github.com/jgm/commonmark.js) in javascript.
 
 [CommonMark-py](https://github.com/rtfd/CommonMark-py)
 is a pure Python port of jgm's _commonmark.js_,
 
 [recommonmark](http://recommonmark.readthedocs.io/en/latest/index.html) A
-docutils-compatibility bridge to CommonMark which allows you to write
-CommonMark inside of Docutils & Sphinx projects. recommonmark is
-written in python, it uses CommonMark-py, [recommonmark source
-](http://spec.commonmark.org/) is on GitHub.
+docutils-compatibility bridge to CommonMark which allows you to write CommonMark inside
+of Docutils & Sphinx projects. recommonmark is written in python, it uses CommonMark-py,
+[recommonmark source ](http://spec.commonmark.org/) is on GitHub.
 
-Using recommonmark you can [use Markdown in Sphinx
-](http://www.sphinx-doc.org/en/latest/markdown.html)
+Using recommonmark you can
+[use Markdown in Sphinx](http://www.sphinx-doc.org/en/latest/markdown.html).
 
-## Toc in markdown {#markdown_toc}
+## GitHub Flavored Markdown {#gfm}
+
+[Github Flavored Markdown - GFM](https://github.github.com/gfm/)
+add to  {{< iref "#commonmark" "CommonMark" >}} few extensions.
+
+One main difference is that newlines which are ignored in Standard
+Markdown  are significative in GFM.
+
+GFM disable also disable italicize parts of words, allow
+strikethrough, fenced code block with <code>&#96;&#96;&#96;</code>
+syntax higlighting with <code>&#96;&#96;&#96;python</code> like headers.
+
+It also add a [table extension](https://github.github.com/gfm/#tables-extension-),
+task lists, and few GitHub specific shortcuts.
+
+-   [GitHub Help: Mastering markdown
+    ](https://guides.github.com/features/mastering-markdown/)
+    is an howto for
+    [Github Flavored Markdown](https://github.github.com/gfm/).
+
+-   [GitLab Flavored Markdown (GLFM)](https://docs.gitlab.com/ee/user/markdown.html)
+    is the extension of CommonMark used in Gitlab.
+-   [Stack Overflow MarkDown](http://stackoverflow.com/editing-help)
+    is a standard MarkDown with some additions including
+    [GFM pipe tables](https://github.github.com/gfm/#tables-extension-) and
+    [Syntax highlighting for code
+    ](http://stackoverflow.com/editing-help#syntax-highlighting)
+    that uses [Google prettify
+    ](http://google-code-prettify.googlecode.com/svn/trunk/README.html)
+
+## MarkDown extensions
+
+### Definition list
+
+Definition list are not part of {{< iref "#commonmark" "Commonmark" >}} nor
+{{< iref "#gfm" "Github Flavored Markdown" >}} but this is a common extension
+which comes from {{< iref "#php-markdown-extra" "PHP Markdown Extra" >}}
+with the syntax [PHP_Markdown_Extra definition list
+](http://www.michelf.com/projects/php-markdown/extra/#def-list)
+
+```markdown
+definition list
+:   a type of list were the header is a work, and
+the body is the definition.
+```
+
+If you need to use only  {{< iref "#commonmark" "Commonmark" >}} or
+{{< iref "#gfm" "Github Flavored Markdown" >}} you can include definition list as html
+code with `<dl>`, `<dd>`, `<dt>` tags.
+
+### Fenced code block
+The syntax is [PHP Markdown Extra fenced code block
+](http://www.michelf.com/projects/php-markdown/extra/#fenced-code-blocks) and was also
+implemented in [Python Markdown fenced code blocks
+](https://python-markdown.github.io/extensions/fenced_code_blocks/)
+or [fenced code blocks for python markdown2
+](https://github.com/trentm/python-markdown2/wiki/fenced-code-blocks).
+
+Fenced code block are not truly _an extension_, they were not present in basic Markdown
+but they are [part of CommonMark](https://spec.commonmark.org/curent/#fenced-code-blocks).
+
+
+They are also
+[part of GFM specification*](https://github.github.com/gfm/#fenced-code-blocks)
+and described also in [Creating and highlighting code blocks - GitHub Docs
+](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks).
+
+You can delimit code blocks either with
+`~~~` or  <code>```</code>, instead of the four space indentation of code blocks in
+basic Markdown.
+
+Many processors allow highlighting of the code block by following the backticks or tildes
+with the code language like:
+
+```python
+if True:
+    print("hi")
+```
+
+The available languages and the library used to highlight the code depends on the
+Markdown processor used.
+
+GFM uses [linguist](https://github.com/github/linguist) with a huge
+[list of grammar](https://github.com/github/linguist/blob/master/vendor/README.md)
+and
+[corresponding languages](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml).
+
+Many markdown processors can render code highlight, including
+{{< iref "#pandoc" "pandoc" >}},
+{{< iref "#python-markdown" "Python MarkDown and python Markdown2" >}},
+{{< iref "#goldmark" "goldmark" >}}, {{< iref "#blackfriday" "BlackFriday" >}},
+{{< iref "#lowdown" "Lowdown" >}}, {{< iref "#cdiscount" "cdiscount" >}}
+Maruku, {{< iref "#kramdown" "Kramdown" >}},
+{{< iref "#markdown-it" "Markdown-It through a plugin" >}},
+{{< iref "#multimarkdown" "MultiMarkdown" >}}.
+
+### Toc  {#markdown_toc}
 
 Automatic Table of content are not part of
 [Common Mark Specification](https://spec.commonmark.org/current/)
 nor [GitHub Flavored Markdown Spec](https://github.github.com/gfm/).
 
-But many formatters can generate one
-In {{< iref "#kramdown" "Kramdown" >}} with
-[can generate a toc](https://kramdown.gettalong.org/converter/html.html#toc)
+But many formatters can generate one.
+
+In {{< iref "#kramdown" "Kramdown" >}} can
+[generate a toc](https://kramdown.gettalong.org/converter/html.html#toc)
 with the `{:toc}` construct.
 
 {{< iref "#redcarpet" "Redcarpet" >}} README explain that *Redcarpet::Render::HTML_TOC*
@@ -182,11 +266,12 @@ generate a table of content.
 
 In {{< iref "#markdown-python" "Python Markdown" >}}
 you generate toc with
-[Table of Contents extension
-](https://pythonhosted.org/Markdown/extensions/toc.html)
+[Table of Contents extension](https://pythonhosted.org/Markdown/extensions/toc.html)
 which is enabled by including:
 
-    [TOC]
+```
+[TOC]
+```
 
 {{< iref "#gitdown" "GitDown" >}} allow toc generation by including
 `{"gitdown": "contents"}`
@@ -194,7 +279,10 @@ which is enabled by including:
 {{< iref "#pandoc" "Pandoc" >}} used with `--toc` or `--table-of-contents` generate a
 table of content, you can control its depth with `--toc-depth`.
 
-## Toc generators for Markdown
+A toc can also be generated by {{< iref "#remarkable" "remarkable" >}},
+{{< iref "#remark" "remark" >}}
+
+#### Toc generators for Markdown
 
 -   [DocToc](https://github.com/thlorenz/doctoc)  (MIT License)
     is a _node.js_ application to generates table of contents for markdown files inside
@@ -216,6 +304,8 @@ table of content, you can control its depth with `--toc-depth`.
     TOCs.  Also used by assemble, [verb](https://github.com/verbose/verb), and other
     projects.
 
+    A CLI is also available.
+
 -   {{< iref "#markedpp" "Markedpp" >}} includes a toc generator.
 -   {{< iref "#markdown-pp" "Markdown-pp" >}} includes a toc generator.
 -   If you use vim you can use the plugin
@@ -226,7 +316,67 @@ table of content, you can control its depth with `--toc-depth`.
     [markdown-toc](https://github.com/ardumont/markdown-toc)
     generate a TOC in markdown file.
 
-# Markdown formatters and extensions
+
+
+## Markdown formatters and linters
+
+For Styling Markdown you can find some guides, which propose diverse conventions, often
+incompatible. Some want ATX headers other Setext headers, some want a 2 space
+indentation other 4 spaces, some accept indented code blocks, other only fenced code
+block; some want a big line without soft break, others impose a 8O columns limit ....
+
+-   [notslang/markdown-styleguide
+    ](https://github.com/notslang/markdown-styleguide)
+-   [Google Markdown style guide](https://google.github.io/styleguide/docguide/style.html).
+-   [Ciro Santilli Markdown Style Guide](https://cirosantilli.com/markdown-style-guide/)
+-   [Markdown style guide for about.gitlab
+    ](https://about.gitlab.com/handbook/markdown-guide/)
+    this is a style guide targeted to the use of {{< iref "#kramdown" "kramdown" >}}
+    which is used for about.GitLab.com. _GitLab.com use instead the format
+    [GitLab Flavored Markdown (GLFM)](https://docs.gitlab.com/ee/user/markdown.html)_
+
+The linters or reformatters force some style convention. but often the style depends
+on the underlying processor and is not even documented.
+
+-   [shurcool/markdownfmt](https://github.com/shurcooL/markdownfmt) (MIT License)
+    is a formatter for commonmark written in go. It does not support front matter
+    nor commonmark extensions. It has an emacs plugin
+    [emacs-markdownfmt](https://github.com/nlamirault/emacs-markdownfmt),
+    and a vim pluginTh
+    [vim-markdownfmt](https://github.com/moorereason/vim-markdownfmt).
+
+    The package does not provide any specification of the rules applied,
+    I just noticed that it does not allow ATX headers, and if reformat all my text in a
+    long line deleting any newline inside a paragraph.
+-   [Kunde21/markdownfmt](https://github.com/Kunde21/markdownfmt) (MIT License)
+    is a fork in 2018 of shurcool/mdformat that switched to Goldmark instead of
+    Blackfriday and support GFM, fenced code block, ATX Headers by default.
+    It provide an option to allow soft line break. It enforce a non configurable two
+    space indent.
+-   [mdfmt](https://github.com/moorereason/mdfmt) (MIT License)
+    add to shurcool markdownfmt the support of front matter.
+-   [mdformat](https://github.com/executablebooks/mdformat) 5MIT License)
+    is a CommonMark compliant Markdown formatter
+
+    -   [mdformat documentation](https://mdformat.readthedocs.io/en/stable/)
+-   [notslang/tidy-markdown](https://github.com/notslang/tidy-markdown)  (GPL 3.0)
+    a npm package for fixing formatting mistakes and converting basic HTML &
+    Unicode into their Markdown equivalents. It supports front matter.
+-   [markdownlint](https://github.com/DavidAnson/markdownlint)
+    a Node.js style checker and lint tool for Markdown/CommonMark files.
+
+    -   [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2)
+        is a command-line interface for linting Markdown/CommonMark files with the
+        markdownlint library
+-   [Prettier](https://github.com/prettier/prettier) (MIT License)
+    a node.js formatter for javaScript, TypeScript, Flow, JSX, JSON CSS, SCSS, Less
+    HTML, Vue, Angular GraphQL, Markdown, YAML. Prettier has a builtin
+    [CLI](https://prettier.io/docs/en/cli.html) and can be used with the emacs packages
+    [apheleia](https://github.com/radian-software/apheleia),
+    [prettier.el](https://github.com/jscheid/prettier.el),
+
+
+# Markdown processors
 
 [w3.org List of Markdown Implementations
 ](http://www.w3.org/community/markdown/wiki/MarkdownImplementations).
@@ -236,7 +386,7 @@ table of content, you can control its depth with `--toc-depth`.
     [txt2html.awk
     ](http://newsgroups.derkeiler.com/Archive/Comp/comp.lang.awk/2007-08/msg00089.html)
     or
-    [markdown.awk
+   cense) [markdown.awk
     ](http://lawker.googlecode.com/svn/fridge/gawk/text/markdown.awk)
     (2009 version) or
     [md2html.awk](https://github.com/wlangstroth/simple-static/blob/master/md2html.awk).
@@ -251,9 +401,22 @@ table of content, you can control its depth with `--toc-depth`.
 
 ## C
 
--   [cmark](https://github.com/jgm/cmark) by John MacFarlane is a
-    {{< iref "#Commonmark" "CommonMark" >}} markdown implementation in C.
--   [Discount](http://www.pell.portland.or.us/~orc/Code/discount/)
+-   <a name="cmark"></a>[cmark](https://github.com/jgm/cmark) (MIT License)
+    by John MacFarlane is the reference implementation of
+    {{< iref "#commonmark" "CommonMark" >}}  in C.
+
+    It is the reference implementation of cmark.
+    _cmark_ is in Debian, bindings for python are in the package _python3-cmark_.
+-   <a name="cmark-gfm></a>[cmark-gfm](https://github.com/github/cmark-gfm)
+    is a fork of {{< iref "#cmark" "cmark" >}} which add the support for
+    {{< iref "#gfm" "Github Flavored Markdown" >}}.
+    It is packaged in Debian.
+
+    TThere is a rust port {{< iref "comrak" "Comrak" >}}, and bindings for _cmark-gfm_
+    in haskell, and also in python
+    [cmarkgfm](https://github.com/theacodes/cmarkgfm) available in Debian under the name
+    _python3-cmarkgfm_.
+-   <a name="discount"></a>[Discount](http://www.pell.portland.or.us/~orc/Code/discount/)
     (BSD License) is a C library and comnand-line compiler for
     Markdown to html. Discount allow some Markdown extensions,
     smartypants-style substitutions, paragraph centering, images with
@@ -281,31 +444,45 @@ table of content, you can control its depth with `--toc-depth`.
         [Midnight Dynamite](https://github.com/gradha/midnight_dynamite) _(NIM)_,
         Node.JS, Perl 5, PHP, ([Hoep](https://github.com/Anomareh/Hoep) _( Python)_,
         [python-hoedown](https://github.com/hhatto/python-hoedown)),
-        [Misaka](https://github.com/FSX/misaka) _(Python)_,
-        [Rust](http://doc.rust-lang.org/rustdoc/html/markdown/),
+        {{< iref "#misaka" "misaka" >}} _(Python)_,
+        [Rust doc](http://doc.rust-lang.org/rustdoc/html/markdown/),
         Tcl {{< iref "markdown#redcarpet" "Redcarpet" >}} _(Ruby)_.
     -   [Hoextdown](https://github.com/jasharpe/hoextdown) (MIT License)
-         is an extension to Hoedown adding Special Attributes, Task Lists,
-         Line Continue, Header ID, Fenced Script, Script Tags, Meta Block.
+        is an extension to Hoedown adding Special Attributes, Task Lists,
+        Line Continue, Header ID, Fenced Script, Script Tags, Meta Block.
 
 -   <a name="lowdown">[lowdown](https://kristaps.bsd.lv/lowdown/) (ISC Licence)
     is a C markdown processor, it is a fork of {{< iref "#hoedown" "Hoedown" >}}, see
     the home page for differences. A major feature additions is the troff ouput format.
+
+    lowdown internally converts markdown to an AST. It allows complex treatments like
+    the [Diffing Engine](khttps://kristaps.bsd.lv/lowdown/diff.html) which shows the
+    difference between two markdown trees in markdown.
+
+    lowdown produces HTML5 output in XML mode with `-thtml`, LaTeX documents with
+    `-tlatex`, “flat” OpenDocument XML documentx with `-tfodt`, Gemini with `-tgemini`,
+    roff documents with `-tms` and `-tman1` outputs (via groff or mandoc), or directly
+    on ANSI terminals with `-tterm`.
+
+    The lowdown Markdown syntax includes extensions such as fenced code, tables,
+    superscript and subscript, typographer, mathematic, definition list, task list,
+    footnotes.  It is described in the man page
+    [lowdown(5)](https://manpages.debian.org/unstable/lowdown/lowdown.5.en.html).
+
+    A lowdown package is available in Debian.
+
     -   [GitHub - lowdown](https://github.com/kristapsdz/lowdown)
 -   <a name="mdp"></a>[mdp](https://github.com/visit1985/mdp)(GPL)
     is a command-line based markdown presentation tool. It renders
     markdown as text formated with ansi escape sequences.
     _mdp is in Debian._
 -   <a name="multimarkdown"></a>
-    [multimarkdown](http://fletcherpenney.net/multimarkdown/)
-    (GPL and MIT licenses)
-    is an extension to markdown. It is written in C and extend
-    {{< iref "#peg" "peg-markdown" >}} to work with complete documents and
-    convert them into other formats, including complete XHTML
-    documents, LaTeX, PDF, OpenDocument. It allows like php-markdown
-    tables and definition list and add metadata, header and footer,
-    footnotes, MathJax, attributes to links and images,
-    cross-references.
+    [multimarkdown](http://fletcherpenney.net/multimarkdown/) (GPL and MIT licenses)
+    is an extension to markdown. It is written in C and extend {{< iref "#peg"
+    "peg-markdown" >}} to work with complete documents and convert them into other
+    formats, including complete XHTML documents, LaTeX, PDF, OpenDocument. It allows
+    like php-markdown tables and definition list and add metadata, header and footer,
+    footnotes, MathJax, attributes to links and images, cross-references.
     -   [peg-multimarkdown GitHub Repository](https://github.com/fletcher/peg-multimarkdown)
     -   [Multimarkdown manual (pdf)](http://fletcher.github.com/peg-multimarkdown/mmd-manual.pdf)
     -   [MultiMarkdown CMS](http://fletcherpenney.net/multimarkdown/cms/)
@@ -313,10 +490,9 @@ table of content, you can control its depth with `--toc-depth`.
         is a CMS for markdown by Fletcher T. Penney.
         -   Wikipedia {{< wp "multimarkdown" >}}
 -   <a name="peg-markdown"></a>
-    [peg-markdown](https://github.com/jgm/peg-markdown)
-    (GPL) by  John MacFarlane _author of pandoc_
-    is an implementation of markdown in C, using a PEG grammar.
-    John MacFarlane has also written an haskell version
+    [peg-markdown](https://github.com/jgm/peg-markdown) (GPL)
+    by John MacFarlane _author of pandoc_ is an implementation of markdown in C, using a
+    PEG grammar.  John MacFarlane has also written an haskell version
     [markdown-peg](https://github.com/jgm/markdown-peg).
 -   <a name="sundown"></a>
     [Sundown](https://github.com/vmg/sundown) (BSD like license)
@@ -338,20 +514,17 @@ table of content, you can control its depth with `--toc-depth`.
     ](http://dailyjs.com/2011/01/13/framework-part-46/)
     tell us about converting markdown in javascript.
 -   [commonmark.js](https://github.com/jgm/commonmark.js)
-    by John MacFarlane is a  {{< iref "#Commonmark" "CommonMark" >}}
-    markdown implementation in javascript.  Instead of converting
-    Markdown directly to HTML, as most converters do, commonmark.js
-    parses Markdown to an AST (abstract syntax tree), and then renders
-    this AST as HTML. This opens up the possibility of manipulating
-    the AST between parsing and rendering.
--   <a name="dillinger"></a>[Dillinger](http://dillinger.io/)
-    (BSD like licence) is a node.js HTML5 Markdown editor. It is abled
-    to work with cloud services as Dropbox or GitHub but allow also to
-    export your document in source format and html to any local
-    location. It uses the
+    by John MacFarlane is a {{< iref "#Commonmark" "CommonMark" >}} markdown
+    implementation in javascript.  Instead of converting Markdown directly to HTML, as
+    most converters do, commonmark.js parses Markdown to an AST (abstract syntax tree),
+    and then renders this AST as HTML. This opens up the possibility of manipulating the
+    AST between parsing and rendering.
+-   <a name="dillinger"></a>[Dillinger](http://dillinger.io/) (MIT License)
+    (BSD like licence) is a node.js HTML5 Markdown editor. It is able to work with cloud
+    services as Dropbox or GitHub but allow also to export your document in source
+    format and html to any local location. It uses the
     {{< iref "#showdown" "showdown module" >}}.
-    -   [Dillinger GitHub repository
-        ](https://github.com/joemccann/dillinger)
+    -   [Dillinger GitHub repository](https://github.com/joemccann/dillinger)
 -   [Docter](https://github.com/alampros/Docter) is a _node.js_xs application
     to render Github Flavored Markdown by using github's own
     {{< iref "#redcarpet" "Redcarpet" >}} library. It has a big requirement list
@@ -368,13 +541,18 @@ table of content, you can control its depth with `--toc-depth`.
     with {{< iref "#markdown-content" "markdown-content" >}}, include documents, use
     variables, generate id for sections, generate bages.  Gitdown is designed to be run
     using build systems such as Gulp or Grunt.
--   <a name="markdown-it"></a>[markdown-it](https://npmjs.com/package/markdown-it)
+-   <a name="markdown-it"></a>[markdown-it](https://github.com/markdown-it/markdown-it)
     (MIT License)
-    A _node.js_ markdown formatter It support
-    {{< iref "#commonmark" "Commonmark" >}} with extensions through
-    [plugins](https://www.npmjs.com/search?q=keywords:markdown-it-plugin) including
-    {{< iref "#gfm" "GFM" >}} tables and definition lists, footnotes, task lists, Katex,
-    file inclusion, mathjax, typographer ...
+    A _node.js_ library providing a markdown formatter.
+
+    It supports {{< iref "#commonmark" "Commonmark" >}} and provides
+    [extensions](https://github.com/markdown-it/markdown-it#syntax-extensions)
+    and third party
+    [plugins](https://www.npmjs.com/search?q=keywords:markdown-it-plugin)
+    including {{< iref "#gfm" "GFM" >}} tables and definition lists, footnotes, task
+    lists, Katex, file inclusion, mathjax, typographer ...
+
+    _node-markdown-it_ package is in Debian.
     -   [markdown-it online demo](https://markdown-it.github.io/)
 -   <a name="marked"></a>[marked](https://github.com/chjj/marked)
     (MIT License) by Christopher Jeffrey is
@@ -382,6 +560,8 @@ table of content, you can control its depth with `--toc-depth`.
     quick as the C markdown compiler and implements
     {{< iref "#commonmark" "CommonMark" >}} and
     {{< iref "#gfm" "GitHub Flavored Markdown" >}} features.
+
+    _marked_ is packaged in Debian.
 -   [marked-man](https://github.com/kapouer/ronnjs) (BSD License)
     uses the javascxoript converter
     {{< iref "#marked" "marked" >}} to convert markdown to roff.
@@ -399,6 +579,8 @@ table of content, you can control its depth with `--toc-depth`.
     {{< iref "#pandoc" "pandoc" >}},
     [github.com](https://github.compare), [gitlab.com](https://gitlab.com),
     [bitbucket.org](https://bitbucket.org),  [ghost.org](https://ghost.org).
+
+    _node-marked-man_ is packaged in Debian.
 -   [mdx](https://github.com/mdx-js/mdx) (MIT License)
     allow to use {{< iref "javascript#jsx" "JSX" >}} in your markdown documents. You can
     import components, like interactive charts or notifications, and export metadata.
@@ -408,25 +590,20 @@ table of content, you can control its depth with `--toc-depth`.
     in the browser, and on the server using Node.js. , a Markdown
     editor with realtime preview of the generated HTML, and a few
     useful plugins.
--   {{< iref "source_code#prettier" "Prettier" >}} (MIT License)
-    is a source code formatter wich support Markdown (CommonMark, GitHub-Flavored
-    Markdown, MDX), YAML and many other languages.
+
+    The GitHub repository has no documentation, for the syntax we can refer to the
+    showdown project or the [StackExchange Editing help
+    ](https://stackoverflow.com/editing-help).
 -   <a name="remarkable"></a>[jonschlinkert/remarkable
     ](https://github.com/jonschlinkert/remarkable) (MIT License)
     a node.js parser used by Facebook, Docusaurus and  others. It support
     {{< iref "#commonmark" "Commonmark" >}} with extensions for
-    {{< iref "#gfm" "GFM" >}} tables, footnotes ..., typographer and URL autolinking
-    support.  It can to generate a table of contents with {{< iref "#markdown-toc" >}}
+    {{< iref "#gfm" "GFM" >}} tables, footnotes, abbreviations ..., typographer and URL autolinking
+    support.  It can to generate a table of contents with the
+    [markdown-toc](https://github.com/jonschlinkert/markdown-toc) from the same author.
+    {{< iref "#markdown-toc" "markdown-toc" >}}.
     Gulp and metalsmith plugins are available.
     -   [remarkable online demo](https://jonschlinkert.github.io/remarkable/demo/)
--   <a name="showdown"></a>[showdown](https://github.com/coreyti/showdown)
-    by  John Fraser is a javascript formatter for markdown.
-    It is used by
-    [wmd editor](http://wmd-editor.com/) and
-    {{< iref "#dillinger" "Dillinger" >}}.
-    [Showdown & Highlight.js - Markdown and syntax highlighting in Javascript
-    ](http://softwaremaniacs.org/playground/showdown-highlight/)
-    provides  _showdown_ on-line as markdown converter.
 -   <a name="remark"></a>[Remark](https://github.com/remarkjs/remark) (MIT License)
     is a markdown javascript parser and compiler.
     It is powered by the syntax tree transformer
@@ -438,6 +615,22 @@ table of content, you can control its depth with `--toc-depth`.
     [remark-man](https://github.com/remarkjs/remark-man).
     Plugins allow also to check Markdown code style, transform safely to React, add a
     table of contents.
+-   <a name="showdown"></a>[showdown](https://github.com/coreyti/showdown)
+    by  John Fraser is a javascript formatter for markdown.
+
+    Showdown implement a [markdown syntax
+    ](https://github.com/showdownjs/showdown/wiki/Showdown's-Markdown-syntax)
+    which extend the vanilla basic syntax, including fenced code block, pipe tables.
+
+    Showdown is compatible with vanilla John Gruber perl markdown, but it differs from
+    CommonMark on some point including the list breaking.
+
+    It is used by [wmd editor](http://wmd-editor.com/) and
+    {{< iref "#dillinger" "Dillinger" >}}.
+
+    [Showdown & Highlight.js - Markdown and syntax highlighting in Javascript
+    ](http://softwaremaniacs.org/playground/showdown-highlight/)
+    provides  _showdown_ on-line as markdown converter.
 -   [unified](https://unifiedjs.github.io/)
     is a syntax tree transformer
     -   [awesome-unified](https://github.com/unifiedjs/awesome-unified).
@@ -455,9 +648,8 @@ table of content, you can control its depth with `--toc-depth`.
 -   <a name="blackfriday"></a>[Blackfriday](https://github.com/russross/blackfriday)
     (BSD License)
     started as a translation from C of {{< iref "#sundown" "Sundown" >}}.
-    It contain extensions, including table support, fenced code blocks,
+    It contain extensions, including table support, definition lists, fenced code blocks,
     autolinks, strikethroughs, non-strict emphasis, etc.
-
 
     It is not completly compatible with {{< iref "#commonmark" "Commonmark" >}} and its
     lists are not compatible with GFM. It is one reason of Hugo switching to GoldMark.
@@ -467,6 +659,8 @@ table of content, you can control its depth with `--toc-depth`.
 
     -   [blackfriday-latex](https://gitlab.com/ambrevar/blackfriday-latex) (MIT License)
         is a LaTeX renderer for the Blackfriday Markdown processor (v2).
+    -   [Depado/bfchroma](https://github.com/Depado/bfchroma/)
+        integrates Chroma syntax highlighter as a Blackfriday renderer.
 
 -   <a name="goldmark"></a>[Goldmark](https://github.com/yuin/goldmark/) (MIT License)
     Goldmark is compatible with {{< iref "#commonmark" "CommonMark" >}}
@@ -549,6 +743,12 @@ See {{< iref "#pandoc" "Pandoc" >}} below.
     numerous features like: generating break on newline _like
     {{< iref "#gfm" "Github Markdown" >}}_, fenced code block with language support, it
     also support generation of HTML5 with support for figure and figcaption tags.
+-   [parsedown](https://github.com/erusev/parsedown) (MIT License)
+    a single file PHP parser without dependencies that understand GFM.
+    _parsedown_ is packaged in Debian.
+    -   [parsedown-extra](https://github.com/erusev/parsedown-extra)
+        Markdown Extra Extension for Parsedown. Packaged in Debian.
+    -   [Parsedown  Demo](https://parsedown.org/demo)
 
 ## Python {#markdown-python}
 
@@ -571,6 +771,14 @@ See {{< iref "#pandoc" "Pandoc" >}} below.
     create an index of references, and to expand
     latex code with
     [QuickLatex](http://www.holoborodko.com/pavel/quicklatex/)
+-   <a name="mardown-it-py"></a>
+    [markdown-it-py](https://github.com/executablebooks/markdown-it-py) (MIT License)
+    is a port of {{< iref "#mardown-it" "NodeJS markdown_it" >}} to python
+    It features CommonMark support, extensions, syntax plugins.
+
+    _markdown-it-py_ is the markdown processor used in
+    {{< iref "myst" "MyST" >}}.
+    -   [markdown-it-py documentation](https://markdown-it-py.readthedocs.io/en/latest/)
 -   [MarkLess](https://github.com/wiesmann/Markless)(BSD)
     is a small python script to render markdown as unicode text. That
     is the text decorations are rendered with unicode fonts, not with
@@ -581,6 +789,31 @@ See {{< iref "#pandoc" "Pandoc" >}} below.
     Misaka is written in Cython and C.  The source of
     [Misaka Manual](http://misaka.61924.nl/) are in the
     [docs directory of Misaka](https://github.com/FSX/misaka/tree/master/docs).
+-   <a name="mistletoe"></a>[mistletoe](https://github.com/miyuchina/mistletoe) (MIT License)
+    A fast, extensible and spec-compliant Markdown parser in pure Python.
+    Mistletoe if CommonMark compliant and provide Strikethrough and tables natively and
+    plugins for toc, GitHub wiki links, Pygment renderer, Mathjax, Jira Markdown,
+    scheme..
+
+    It provides a command line client and can output HTML, Latex and AST. It is the
+    fastest of fully CommonMark compliant python parser, even if mistune is three time
+    quicker.  The main drawback of mistletoe is the lack of documentation.
+
+    Debian has a _python3-mistletoe_ package.
+
+-   [mistune](https://github.com/lepture/mistune) (BSD-3 License)
+    the fastest Python Markdown parser. It provides three renderers HTML, ReST, Markdown.
+    builtin plugins allow strikethrough, footnotes,, table, url, task_lists, def_list,
+    abbr, mark, insert, superscript, subscript, math, ruby, spoiler.
+
+    mistune is not fully compliant with CommonMark, which allows it to go faster but it
+    cannot fully understand some complex embedded constructs. It is explained
+    [by Mi Yu the mistletooe author
+    ](https://github.com/miyuchina/mistletoe/blob/master/performance.md)
+
+    It provides a command line client and is packaged in Debian.
+
+    -   [Mistune  documentation](https://mistune.lepture.com/en/latest/)
 -   [Moo](https://github.com/pyrocat101/moo)
     is an editor-agnostic markdown live previewer.
     Write markdown in any editor, and view pretty HTML output in
@@ -596,11 +829,33 @@ See {{< iref "#pandoc" "Pandoc" >}} below.
 -   [Parm](http://limodou.github.io/parm/README.html)
     parse markdown syntax to html, supports semantic-ui and bootstrap
     css framework, disqus, and can be used to
-    [host your docs in github pages
-    ](http://limodou.github.io/parm/README.html#toc13).
+    [host your docs in github pages](http://limodou.github.io/parm/README.html#toc13).
     It includes also a rst to markdown converter.
     -   [GiThub Par](https://github.com/limodou/par).
     -   [GiThub Parm](https://github.com/limodou/parm).
+-   <a name="myst"></a>[MyST](https://myst-parser.readthedocs.io/en/latest/)a (MIT License)
+    A Sphinx and Docutils extension to parse the _MyST_ extended Markdown for technical
+    and scientific documentation.
+
+    Mostly all docutils roles, docutils directives, Sphinx roles, or Sphinx directives
+    can be used in MyST.
+
+    _MyST_ is part of
+    [The Executable Books Project](https://executablebooks.org/en/latest/)
+    which provide an environment to build
+    {{< iref "python_libraries#jupyter" "Jupyter" >}} books.
+
+    The markdown parsing in MyST is done by
+    {{< iref "#markdown-it-py" "markdown-it-pi" >}}.
+
+    -   [MyST-Parser - GitHub](https://github.com/executablebooks/MyST-Parser)
+    -   [RST-to-MyST](https://rst-to-myst.readthedocs.io/en/latest/)
+        is a ool for converting ReStructuredText to MyST Markdown.
+    -   [MySTyc - Online conversion from reStructuredText to MyST
+        ](https://astrojuanlu.github.io/mystyc/)
+    -   [mystjs](https://github.com/executablebooks/mystjs)
+        Parser and CLI for MyST Markdown, built in Javascript.
+
 -   <a name="python-zmarkdown"></a>
     [Python-ZMarkdown](https://github.com/zestedesavoir/Python-ZMarkdown)
     fork of Python-Markdown including somes improvements suitables for
@@ -608,9 +863,9 @@ See {{< iref "#pandoc" "Pandoc" >}} below.
     package {{< iref "#zmarkdown" >}}.
 
 ### Python-Markdown {#python-markdown}
-[Python-Markdown](https://pythonhosted.org/Markdown/) (BSD+GPL)
-is a python converter is, it allows many [extensions
-](https://pythonhosted.org/Markdown/extensions).
+[Python-Markdown](https://python-markdown.github.io) (BSD+GPL)
+is a python converter is, it allows many
+[extensions](https://python-markdown.github.io/extensions).
 
 See also the {{< iref "markdown_cheatsheet" "Mardown CheatSheet" >}} for python-markdown.
 
@@ -619,19 +874,17 @@ There is a [Python-Markdown version 2 or markdown2
 ](https://github.com/trentm/python-markdown2)
 also [in PyPi](https://pypi.python.org/pypi/markdown2).
 
--   [Python-Markdown Extra
-    ](https://pythonhosted.org/Markdown/extensions/extra.html)
-    or for markdown2: <a name="python-markdown-extra"></a>
+-   <a name="python-markdown-extra"></a>[Python-Markdown Extra
+    ](https://python-markdown.github.io/extensions/extra/)
+    or for markdown2:
     [Python Markdown2 Extra
     ](https://github.com/trentm/python-markdown2/wiki/Extras)
     regroup a set of extensions that imitate and extend
     {{< iref "#php" "php-markdown extra" >}}
     by adding :
 
-    -   [abbreviations
-        ](https://pythonhosted.org/Markdown/extensions/abbreviations.html),
-    -   [attribute lists
-        ](https://pythonhosted.org/Markdown/extensions//attr_list.html)
+    -   [abbreviations](https://python-markdown.github.io/extensions/abbreviations/),
+    -   [attribute lists](https://python-markdown.github.io/extensions/attr_list/)
         to define attributes on the various HTML elements in
         markdown’s output. It extend the
         [PHP Markdown Extra extension special attributes
@@ -649,10 +902,7 @@ also [in PyPi](https://pypi.python.org/pypi/markdown2).
         {: #attribute-list }
 
         Note that the extension [Table of Content
-        ](https://pythonhosted.org/Markdown/extensions/toc.html) and
-        the now obsolete
-        [headerId
-        ](https://pythonhosted.org/Markdown/extensions/header_id.html)
+        ](https://python-markdown.github.io/extensions/toc/)
         automatically generates id attributes for the header elements
         _(except those for which you define a specific header attribute)_.
         This is enabled by default;
@@ -662,66 +912,68 @@ also [in PyPi](https://pypi.python.org/pypi/markdown2).
         {{< iref "#attribute" "reference to attribute list" >}}.
 
     -   [definition lists
-        ](https://pythonhosted.org/Markdown/extensions/attr_list.html)
+        ](https://python-markdown.github.io/extensions/definition_lists/)
+        with the same syntax that [PHP_Markdown_Extrai
+        ](http://www.michelf.com/projects/php-markdown/extra/#def-list)
         like
 
-            definition list
-            :   a type of list were the header is a work, and
-                the body is the definition.
-
     -   [fenced code blocks
-        ](https://pythonhosted.org/Markdown/extensions/fenced_code_blocks.html)
+        ](https://python-markdown.github.io/extensions/fenced_code_blocks/)
         or [fenced code blocks for markdown2
         ](https://github.com/trentm/python-markdown2/wiki/fenced-code-blocks)
-        That can delimit code blocks either with the PHP-Markdown
-        syntax `~~~` or the GitHub GFM syntax <code>```</code>.  In
-        addition to PHP Extra’s syntax, you can define the
-        language of the code block and lines to emphasize for use
-        by syntax highlighters like this:
+        have the same syntax than [PHP Markdown Extra
+        ](http://www.michelf.com/projects/php-markdown/extra/#fenced-code-blocks)
+        or alternatively [GitHub Flavored Markdown
+        ](https://help.github.com/en/github/writing-on-github/creating-and-highlighting-code-blocks).
 
-            ```python
-            if True:
-                print "hi"
-            ```
+        They can delimit code blocks either with the PHP-Markdown
+        syntax `~~~` or the GitHub GFM syntax <code>```</code>.
 
-    -   [footnotes
-        ](https://pythonhosted.org/Markdown/extensions/footnotes.html)
+    -   [footnotes](https://python-markdown.github.io/extensions/footnotes/)
         or [footnotes for markdown2
-        ](https://github.com/trentm/python-markdown2/wiki/footnotes),
-        example:
+        ](https://github.com/trentm/python-markdown2/wiki/footnotes).
 
-            Footnotes[^1] have a label[^@#$%] and the footnote's content.
+        The syntax is the same than  [PHP Markdown Extra
+        ](http://michelf.com/projects/php-markdown/extra/#footnotes)
 
-            [^1]: This is a footnote content.
-            [^@#$%]: A footnote on the label: "@#$%".
+        Example:
 
-    -   [tables](https://pythonhosted.org/Markdown/extensions/tables.html)
+        ```markdown
+        Footnotes[^1] have a label[^@#$%] and the footnote's content.
+
+        [^1]: This is a footnote content.
+        [^@#$%]: A footnote on the label: "@#$%".
+        ```
+
+    -   [tables](https://python-markdown.github.io/extensions/tables/)
         or
         [tables for markdown2
         ](https://github.com/trentm/python-markdown2/wiki/tables)
-        or [wiki-table for markdown2
-        ](https://github.com/trentm/python-markdown2/wiki/wiki-tables)
-        and python-markdown third party extension
-        [Markdown GridTables
-        ](https://github.com/smartboyathome/Markdown-GridTables/)
-        that add grid tables as seen in ReSt.
-    -   [smart_strong ](https://pythonhosted.org/Markdown/extensions/smart_strong.html)
-        adds smarter handling of double underscores within words.
-        the default option _smart-emphasis_ do it for simple underscore.
+        have the same syntax than  [PHP Markdown Extra
+        ](https://michelf.ca/projects/php-markdown/extra/#table).
 
-        python-markdown2 does not have the _smart-strong_ nor the
-        _smart-emphasis_ extension instead it provides
-        [code-friendly
-        ](https://github.com/trentm/python-markdown2/wiki/code-friendly)
-        that disable all use of emphasis and strong with a simple or
-        double underscore.
+        -   [wiki-table for markdown2
+            ](https://github.com/trentm/python-markdown2/wiki/wiki-tables)
+            support Google Code wiki-style tables.
 
--   The other extensions to python-markdown are
-    [listed in the doc
-    ](http://pythonhosted.org/Markdown/extensions/index.html), the
+        -   python-markdown third party extension
+            [Markdown GridTables
+            ](https://github.com/smartboyathome/Markdown-GridTables/)
+            add grid tables as seen in ReSt.
+    -   The [PHP Markdown Extra Emphasis
+        ](https://michelf.ca/projects/php-markdown/extra/#em)
+        which treat internal underscore literally is the default in Python Markdown.
+
+        python-markdown2 add an extension
+        [code-friendly](https://github.com/trentm/python-markdown2/wiki/code-friendly)
+        that disable all use of emphasis and strong with a simple or double underscore.
+
+-   The other official extensions to python-markdown are
+    [listed in the doc](https://python-markdown.github.io/extensions/), the
     following ones are enabled by default:
 
-    -   The [CodeHilite extension](https://pythonhosted.org/Markdown/extensions/code_hilite.html)
+    -   The [CodeHilite extension
+        ](https://python-markdown.github.io/extensions/code_hilite/)
         adds code/syntax highlighting to standard Python-Markdown code blocks using
         {{< iref "source_code#pygments" "Pygments" >}}
         It can be used with fenced blocks, or by using
@@ -732,20 +984,21 @@ also [in PyPi](https://pypi.python.org/pypi/markdown2).
         [Pygments language list](http://pygments.org/languages/) and
         [Pygments lexers](http://pygments.org/docs/lexers/).
 
-    -   [headerId
-        ](https://pythonhosted.org/Markdown/extensions/header_id.html)
-        automatically generates id attributes for the header
-        elements.
-    -   [Meta-Data
-        ](https://pythonhosted.org/Markdown/extensions/meta_data.html)
+        Python-markdown has this separate extension to highlight fenced code blocks, in
+        Python-markdown2 when you have the pygment library a fenced code block with a
+        language attribute is highlighted.
+
+    -   [Meta-Data](https://python-markdown.github.io/extensions/meta_data/)
+        or [python-Markdown2 Metadata
+        ](https://github.com/trentm/python-markdown2/wiki/metadata)
         adds a syntax for defining meta-data about a document.
     -   [Sane Lists
-        ](https://pythonhosted.org/Markdown/extensions/sane_lists.html)
+        ](https://python-markdown.github.io/extensions/sane_lists/)
         allow the mixing of list types. In other words, an ordered
         list will not continue when an unordered list item is
         encountered and vice versa.
     -   [Table of Content
-        ](https://pythonhosted.org/Markdown/extensions/toc.html)
+        ](https://https://python-markdown.github.io/extensions/toc/)
         generates a Table of Contents from a Markdown document
         when encountering a `[TOC]` markup.
     -   [WikiLinks
@@ -754,30 +1007,62 @@ also [in PyPi](https://pypi.python.org/pypi/markdown2).
 
 -   There are also numerous
     [third party extensions of python-markdown
-    ](https://github.com/waylan/Python-Markdown/wiki/Third-Party-Extensions).
--   [markdown2latex](http://pypi.python.org/pypi/markdown2latex/)
-    by [Rufus Pollock](http://www.rufuspollock.org/)
-    is an extension to python-markdown to support LaTeX
-    (rather than html) output _not updated since 2009_.
+    ](https://github.com/waylan/Python-Markdown/wiki/Third-Party-Extensions),
+    and a list of
+    [python-marmkdown2 extensions](https://github.com/trentm/python-markdown2/wiki/)
+    in the Pyhton-Markdown2 wiki.
 
 ## Ruby
+-   <a name="commonmarker">[commonmarker](https://github.com/gjtorikian/commonmarker)
+    (MIT license) is a ruby wrapper for Rust's {{< iref "#comrak" "comrak" >}}
+    _CommonMark and GFM parser with extensions_, it is the
+    processor used in Gitlab.com an implement the [GitLab Flavored Markdown
+    (GLFM)](https://docs.gitlab.com/ee/user/markdown.html).
+
+    _ruby-commonmarker_ is in Debian.
 -   <a name="kramdown"></a>[kramdown](http://kramdown.gettalong.org/)
     a pure-Ruby Markdown-superset converter. It can parse
     {{< iref "#gfm" "GFM" >}} extensions. It replaces the now obsolete
     [Maruku](https://github.com/bhollis/maruku).
+
+    Kramdown is packaged in Debian.
 -   <a name="redcarpet"></a>[redcarpet](https://github.com/vmg/redcarpet) (MIT License)
     is a Ruby library for Markdown processing.
     It is based on {{< iref "#sundown" "sundown" >}} and accept the same extensions.
+
+    _ruby-redcarpet_ is a Debian package.
+-   [ronn](https://github.com/apjanke/ronn-ng) (MIT License)
+    is a ruby application to build a man page from markdown source.
+
+    The accepted syntax is defined in [ronn-format(7)
+    ](https://manpages.debian.org/unstable/ruby-ronn/ronn-format.7.en.html)
+    it includes basic markdown, a non standard variant of definition list, but
+    no table. The _ronn-format_  manpage also give a last of commonly used sections
+    in man pages.
 -   [word-to-markdown](https://github.com/benbalter/word-to-markdown)
     (MIT License)
     is a ruby gem to convert Microsoft Word documents to Markdown.
     It needs libreoffice, and can be used in command line. There is
     also a web service, an istance is at
-    [Online Word to Markdown converter
-    ](https://word-to-markdown.herokuapp.com/).
+    [Online Word to Markdown converter](https://word-to-markdown.herokuapp.com/).
 
 ## Rust
+
+-   <a name="comrak"><a>[comrak](https://github.com/kivikakk/comrak) (MIT like Licenses)
+    is a port in rust of {{< iref "cmark-gfm" "cmark-gfm" >}} it supports
+    {{< iref "#gfm" "Github Flavored Markdown" >}}, and add other extensions, which must
+    be explicitly enabled: _Superscript_, _Header IDs_, _Footnotes_,
+    _Description lists_, _Front matter_, _Shortcodes_.
+
+    It is used by GitLab.com through the ruby bindings
+    {{< irmef "#commonmarker" "Commonmarker" >}} to implement the
+    [GitLab Flavored Markdown (GLFM)](https://docs.gitlab.com/ee/user/markdown.html).
 -   [Rust Markdown Module](http://doc.rust-lang.org/rustdoc/html/markdown/).
+-   <a name="pulldown-cmark"></a>
+    [pulldown-cmark](https://github.com/raphlinus/pulldown-cmark) (MIT License)
+    is a rust pulldown parser for {{< iref "#commonmark" "CommonMark" >}} with
+    optional support of footnotes, Github flavored tables, task lists and strikethrough.
+    It is packaged in Debian.
 
 ## Pandoc {#pandoc}
 [Pandoc](http://pandoc.org/) (GPL v2)
@@ -791,7 +1076,8 @@ latex, markdown (Pandoc’s Markdown), markdown_mmd (MultiMarkdown), markdown_ph
 markdown_strict, mediawiki, man (roff man), muse, native (native Haskell), odt, opml,
 org (Emacs Org mode), rst, t2t (txt2tags), textile, tikiwiki, twiki, vimwiki
 
-To many formats:<br/>
+To many formats:
+
 asciidoc or asciidoctor, beamer, {{< iref "#commonmark" "CommonMark" >}}, context,
 docbook or docbook4, docbook5, docx, dokuwiki, epub or epub3, epub2, fb2, gfm, haddock
 (Haddock markup), html or html5, html4, icml (InDesign ICML), ipynb (Jupyter notebook),
