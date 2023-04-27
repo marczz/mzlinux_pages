@@ -686,10 +686,20 @@ List of build tools:
     Look at the {{< iref "org-mode#babel" "Org-Babel section" >}} for comparisons with
     org-babel, import/export to org-babel, org-babel interfaces ...
 
+    See also {{< iref "myst" "MyST" >}} a python tool that can be used for building
+    Jupiter books.
+
     -   [Project Jupyter - Wikipedia](https://en.wikipedia.org/wiki/Jupyter_notebook)
     -   [Jupyter Documentation](https://jupyter.readthedocs.io/en/latest/index.html)
     -   [NbViewer](https://nbviewer.org) take a URL to anotebook document, convert it to
         HTML on the fly and display it.
+    -   [Jupyter Book
+        ](https://executablebooks.org/en/latest/tools/#tools-jupyter-book)
+        which is part of
+        [The Executable Books Project](https://executablebooks.org/en/latest/)
+        is a distribution of Sphinx that allows you to write content in markdown and
+        Jupyter Notebooks, execute content and insert it into your book.
+-   [ ]
 -   [CodeMirror](http://codemirror.net/)
     is a JavaScript component that provides a code editor in the
     browser.
