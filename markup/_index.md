@@ -27,5 +27,5 @@ Wikipedia: {{< wp " Markup Languages" >}}, {{< wp "Category:Markup_languages" >}
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
-<!-- ispell-local-dictionary: english -->
+<!-- ispell-local-dictionary: "english" -->
 <!-- End: -->
