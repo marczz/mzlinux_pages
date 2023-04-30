@@ -822,14 +822,16 @@ See {{< iref "#pandoc" "Pandoc" >}} below.
   is a small python script to render markdown as unicode text. That
   is the text decorations are rendered with unicode fonts, not with
   escape sequence as does {{< iref "#mdp" "mdp" >}}.
-
+- <a name="md2man"></a>
+  [md2man.py](https://github.com/apenwarr/redo/blob/master/Documentation/md2man.py).
+  is a python script to convert markdown to man page included in the
+  [redo package](https://github.com/apenwarr/redo) *a make replacement*.
 - <a name="misaka"><a>[Misaka](https://github.com/FSX/misaka)) (BSD like license)
   by [Frank Smit (FSX)](https://github.com/FSX) provides the python bindings for
   {{< iref "#sundown" "Sundown" >}}.
   Misaka is written in Cython and C.  The source of
   [Misaka Manual](http://misaka.61924.nl/) are in the
   [docs directory of Misaka](https://github.com/FSX/misaka/tree/master/docs).
-
 - <a name="mistletoe"></a>[mistletoe](https://github.com/miyuchina/mistletoe) (MIT License)
   A fast, extensible and spec-compliant Markdown parser in pure Python.
   Mistletoe if CommonMark compliant and provide Strikethrough and tables natively and
@@ -841,13 +843,12 @@ See {{< iref "#pandoc" "Pandoc" >}} below.
   quicker.  The main drawback of mistletoe is the lack of documentation.
 
   Debian has a _python3-mistletoe_ package.
-
 - <a name="mistune"></a>[mistune](https://github.com/lepture/mistune) (BSD-3 License)
   the fastest Python Markdown parser. It provides three renderers HTML, ReST, Markdown.
   builtin plugins allow strikethrough, footnotes,, table, url, task_lists, def_list,
   abbr, mark, insert, superscript, subscript, math, ruby, spoiler.
 
-  mistune is not fully compliant with CommonMark, which allows it to go faster but it
+  *mistune* is not fully compliant with CommonMark, which allows it to go faster but it
   cannot fully understand some complex embedded constructs. It is explained
   [by Mi Yu the mistletooe author
   ](https://github.com/miyuchina/mistletoe/blob/master/performance.md)
@@ -855,11 +856,9 @@ See {{< iref "#pandoc" "Pandoc" >}} below.
   It provides a command line client and is packaged in Debian.
 
   - [Mistune  documentation](https://mistune.lepture.com/en/latest/)
-
 - [Moo](https://github.com/pyrocat101/moo)
   is an editor-agnostic markdown live previewer.  Write markdown in any editor, and view
   pretty HTML output in your browser instantly. It supports Github-flavored markdown.
-
 - [Meow](https://github.com/hhatto/meow) (MIT License)
   is a fork of _Moo_ and also an editor-agnostic markdown and reStructuredText live
   previewer. It add to _Moo_ a ReStructured text previewer.
@@ -867,16 +866,15 @@ See {{< iref "#pandoc" "Pandoc" >}} below.
   Meow is built on top of {{< iref "python_web#bottle" "Bottle" >}},
   {{< iref "python_web#cherrypy" "Cherrypy" >}} and can use
   {{< iref "#hoedown" "hoedown" >}}.
-
 - [Parm](http://limodou.github.io/parm/README.html)
-  parse markdown syntax to html, supports semantic-ui and bootstrap
-  css framework, disqus, and can be used to
+  parse markdown syntax to html, supports semantic-ui and bootstrap css framework,
+  disqus, and can be used to
   [host your docs in github pages](http://limodou.github.io/parm/README.html#toc13).
   It includes also a rst to markdown converter.
 
-  - [GiThub Par](https://github.com/limodou/par).
-  - [GiThub Parm](https://github.com/limodou/parm).
-
+  - [GiThub Par](https://github.com/limodou/par) (BSD License)
+    is a PEG parser for restructured text. _2016_.
+  - [GiThub Parm](https://github.com/limodou/parm) (BSD License) _2016_
 - <a name="myst"></a>[MyST](https://myst-parser.readthedocs.io/en/latest/)a (MIT License)
   A Sphinx and Docutils extension to parse the _MyST_ extended Markdown for technical
   and scientific documentation.
@@ -899,12 +897,11 @@ See {{< iref "#pandoc" "Pandoc" >}} below.
     ](https://astrojuanlu.github.io/mystyc/)
   - [mystjs](https://github.com/executablebooks/mystjs)
     Parser and CLI for MyST Markdown, built in Javascript.
-
 - <a name="python-zmarkdown"></a>
   [Python-ZMarkdown](https://github.com/zestedesavoir/Python-ZMarkdown)
   fork of Python-Markdown including somes improvements suitables for
   [Zeste de savoir](https://zestedesavoir.com/). It is now replaced by the Javascript
-  package {{< iref "#zmarkdown" >}}.
+  package {{< iref "#zmarkdown" "zmarkdown">}}.
 
 ### Python-Markdown {#python-markdown}
 
@@ -1245,9 +1242,6 @@ either targeted to documentation, or support it easily:
   [GitHub: DocumentUp](https://github.com/jeromegn/DocumentUp).
 - [mdoc](https://github.com/millermedeiros/mdoc) (MIT license)
   node.js markdown powered documentation generator
-- The [redo package](https://github.com/apenwarr/redo) *a make replacement*
-  includes a python script to convert markdown to man page
-  [md2man.py](https://github.com/apenwarr/redo/blob/master/Documentation/md2man.py).
 - [doctoc](https://github.com/thlorenz/doctoc) (MIT License)
   Generates table of contents for markdown files inside local git repository.
   Links are compatible with anchors generated by github or other sites.
