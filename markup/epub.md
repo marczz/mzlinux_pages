@@ -2,13 +2,15 @@
 title: Epub
 ---
 
-{{% toc /%}}
-
----
 
 See also the related {{< iref "html" "html section" >}}
 and the {{< iref "html#css" "css section" >}}
 since Epub uses css.
+<!-- Other pages
+[[file:../../../../content-org/weblinks/e-text.org::+hugo_front_matter_format: yaml][E-text in weblinks]],
+[[file:../../../../content-org/notes/text_processing_notes/ebookreaders.org::+hugo_front_matter_format: yaml][Ebook Readers in Weblinks]]
+
+-->
 
 # Epub Format
 The EPUB format Home is the {{< iref "#ipdf" "IPDF" >}}.
@@ -22,7 +24,8 @@ The EPUB format Home is the {{< iref "#ipdf" "IPDF" >}}.
     of information on the epub format and applications to deal with
     it.
 
-## IPDF - International Digital Publishing Forum](http://idpf.org) Pages {#ipdf}
+## IPDF - International Digital Publishing Forum {#ipdf}
+[IPDF - International Digital Publishing Forum](http://idpf.org) Pages:
 -   [EPUB Home](http://www.idpf.org/epub/)
 -   EPUB2 is now considered as obsolete and was superseded by  EPUB
     3.0 in October, 2011, the last specifications are
@@ -98,6 +101,8 @@ The EPUB format Home is the {{< iref "#ipdf" "IPDF" >}}.
 -   [DotEPUB](https://dotepub.com)
     is a bookmarklet for javascript able browser or an extension for
     firefox or chrome to convert any webpage into an e-book.
+-   [epubdiff](https://github.com/bencrowder/epubdiff)
+    A Python script to diff EPUBs.
 -   [EpubMaker](https://pypi.python.org/pypi/epubmaker/)
     is the python tool used for format conversion at Project
     Gutenberg. It builds EPUB2 and Kindle files from HTML and HTML4,
@@ -128,26 +133,36 @@ The EPUB format Home is the {{< iref "#ipdf" "IPDF" >}}.
 -   [Sigil](https://github.com/Sigil-Ebook/Sigil) (GPL)
     is an ebook editor. It supports EPUB2 and some features of EPUB3.
     -   [Sigil User Guide 0.7.2 (epub)
-        ](https://github.com/Sigil-Ebook/Sigil/blob/master/docs/Sigil_User_Guide_0_7_2.epub?raw=true).
-    -   Sigil has [imported the FlightCrew code vlidator
+        ](https://github.com/Sigil-Ebook/Sigil/blob/master/docs/Sigil_User_Guide_0_7_2.epub).
+    -   Sigil has [imported the FlightCrew code validator
         ](https://github.com/Sigil-Ebook/flightcrew) has plugin.
     -   [Sygil Plugin Index](http://www.mobileread.com/forums/showthread.php?t=247431).
     -   [Sygil Forum](https://www.mobileread.com/forums/forumdisplay.php?f=203).
+-   [Standard Ebooks](https://standardebooks.org/)
+    is a platform that takes ebooks from sources like Project Gutenberg,
+    formats and typesets them using a style manual, proofreads and corrects them,
+    and create a new edition aimed to ereader and browser technology.
+    -   [Producing an Ebook, Step by Step
+        ](https://standardebooks.org/contribute/producing-an-ebook-step-by-step)a
+        is a Guide to  the creation of a complete Standard Ebook.It uses their Linux Toolset.
+    -   [The Standard Ebooks Manual of Style](https://standardebooks.org/manual/)
+    -   [standardebooks/tools](https://github.com/standardebooks/tools) (GPLv3 license)
+        The Standard Ebooks python toolset for producing our ebook files.
+    -   [Standard Ebooks Hints and Tricks](https://b-t-k.github.io/)
 -   [Writer2ePub ](http://extensions.services.openoffice.org/en/project/Writer2ePub)
     is an OpenOffice.org extension that creates an ePub file from any
     document openable by the OOo Word Processor.
 
--   [How We Automated Our Ebook Builds With Pandoc and KindleGen |
-    Puppet Labs
+-   [Automated Ebook Builds With Pandoc and KindleGen | Puppet Labs
     ](https://puppetlabs.com/blog/automated-ebook-generation-convert-markdown-epub-mobi-pandoc-kindlegen)
     use Pandoc to convert Markdown into EPUB.
 
 ## Online services
 -   [pdfpocket](http://www.pdfpocket.com/)
     online service to convert from PDF to epub
-- [Docverter](https://www.docverter.com/)
-  Convert plain text documents written in HTML, Markdown, or LaTeX to
-  PDF, Docx, RTF or ePub with a simple HTTP API.
+-   [Docverter](https://www.docverter.com/)
+    Convert plain text documents written in HTML, Markdown, or LaTeX to
+    PDF, Docx, RTF or ePub with a simple HTTP API.
 
 # Epub libraries
 -   [EbookLib]( is a Python library for managing EPUB2/EPUB3 and Kindle
@@ -216,8 +231,10 @@ DZSlides, reveal.js or S5 HTML slide shows. It can also produce PDF .
     Python Markdown.
 -   [md2epub](https://github.com/bencrowder/md2epub)
     Python script that takes a list of Markdown files and generates an
-    EPUB out of them http://bencrowder.net/coding/md2epub/
-    It depends on python-markdown2 and smartypants.py.
+    EPUB out of them. It depends on python-markdown2 and smartypants.py.
+
+    _The repository is not updated since 2011._
+    -   [Initial presentation of md2epub](https://bencrowder.net/blog/2010/md2epub/).
 
 # EPUB 3 Audio-eBooks
 -   [Alberto Pettarin Pointers on Reading+Listening
