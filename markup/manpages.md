@@ -2,13 +2,15 @@
 title: Man Pages
 ---
 
+<!--
+
+-->
 
 # Man pages format
 
 -   {{< wp "Man page" >}} are written using {{< wp "Troff" >}} and {{< wp "Troff macros" >}}
-    or the Gnu {{< wp "Groff_(software)"  "Groff" >}} with macro packages.
-    Groff is used in Linux and FreeBSD, and OpenBSD replaced groff
-    with {{< wp "mandoc" >}}.
+    or the Gnu {{< wp "Groff_(software)" "Groff" >}} with macro packages.  Groff is used
+    in Linux and FreeBSD, and OpenBSD replaced groff with {{< wp "mandoc" >}}.
 -   [Linux Man Page Howto
     ](http://www.tldp.org/HOWTO/Man-Page/index.html) an old HOWTO
     _2002_, but still usefull, as man page format is very stable.
@@ -18,14 +20,13 @@ title: Man Pages
 -   [troff.org](http://www.troff.org/)
 -   [Gnu Groff](https://www.gnu.org/software/groff/groff.html)
     is the gnu implementation of troff. {{< man "groff"  "groff(1) man page" >}}.
--   [Richard Stevens](http://www.kohala.com/start/)' [Troff Resources
-    ](http://www.kohala.com/start/troff/troff.html).
+-   [Richard Stevens](http://www.kohala.com/start/):
+    [Troff Resources](http://www.kohala.com/start/troff/troff.html)..
 -   [mandoc](https://mdocml.bsd.lv/) (BSD License)
-    is the BSD manpage compiler toolset for *mdoc*, the BSD roff macro
-    language for BSD manual pages, and *man*, the language for UNIX
-    manuals. *mandoc* since march 2017 includes a new formatter
-    `-mdoc -Tmarkdown` which output markdown. This formatter work only
-    with *mdoc* input and not with *man* input.
+    is the BSD manpage compiler toolset for *mdoc*, the BSD roff macro language for BSD
+    manual pages, and *man*, the language for UNIX manuals. *mandoc* since march 2017
+    includes a new formatter `-mdoc -Tmarkdown` which output markdown. This formatter
+    work only with *mdoc* input and not with *man* input.
 -   [Guide for writing UNIX manuals in the mdoc language
     ](http://manpages.bsd.lv/mdoc.html)
 -   Manual pages {{< man "man" >}},
@@ -35,30 +36,29 @@ title: Man Pages
 -   [WritingManPages - HerzbubeWiki
     ](https://wiki.herzbube.ch/index.php/WritingManPages)
 -   [PolyglotMan i.e. rman](http://polyglotman.sourceforge.net/)
-    PolyglotMan is a *reverse man*. It takes man pages sources in
-    [tn]roff source and produce  ASCII, section
-    headers-only, HTML, LaTeX2e, RTF, Perl 5 POD. It is in Debian.
-    *See also above {{< iref "#mandoc" "mandoc" >}}
-    which can output markdown from mdoc.*
+    PolyglotMan is a *reverse man*. It takes man pages sources in [tn]roff source and
+    produce ASCII, section headers-only, HTML, LaTeX2e, RTF, Perl 5 POD. It is in
+    Debian.
+
+    *See also above {{< iref "#mandoc" "mandoc" >}} which can output markdown from
+    mdoc.*
     -   [rman manual](http://polyglotman.sourceforge.net/rman.html)
 -   [debiman](https://github.com/Debian/debiman)
     generates a static manpage HTML repository out of a Debian archive
 -   [doclifter](https://gitlab.com/esr/doclifter) (BSD license)
-    translates documents written in troff macros to DocBook, it
-    support *man*, *mdoc* and *troff*.  The
-    script *manlifter* convert an entire manual-page tree to
-    XML-Docbook.
-    While the docbook output workd well with xml tools, the use of
-    generated docbook with *pandoc* to convert a man page to
-    restructured text, has not the expected result.
+    translates documents written in troff macros to DocBook, it support *man*, *mdoc*
+    and *troff*.  The script *manlifter* convert an entire manual-page tree to
+    XML-Docbook.  While the docbook output workd well with xml tools, the use of
+    generated docbook with *pandoc* to convert a man page to restructured text, has not
+    the expected result.
     -   [doclifter manual
         ](http://www.catb.org/~esr/doclifter/doclifter.html)
     -   [manlifter manual
         ](http://www.catb.org/~esr/doclifter/manlifter.html)
 -   [man-to-md](https://github.com/mle86/man-to-md/)
-    convert nroff files to markdown but even if it works on samples
-    from test/samples/ directory, when trying to convert any standard
-    man page from my linux system (like man.1 or ls.1) give an error.
+    convert nroff files to markdown but even if it works on samples from test/samples/
+    directory, when trying to convert any standard man page from my linux system (like
+    man.1 or ls.1) give an error.
 -   Free desktop has a [Help Specification
     ](https://www.freedesktop.org/wiki/Specifications/help-spec/).
 -   [Gnome help system
@@ -79,22 +79,18 @@ NAME
 SYNOPSIS
 :   Calling syntax of the components.
 
-    A few conventions are used, particularly in the Commands
-    section. Underlined words are considered literals. Square brackets
-    ([]) around an argument indicate that the argument is optional. An
-    argument given as name refers to a file name. Ellipses ... are
-    used to show that the previous argument-prototype may be repeated.
-    An argument beginning with a minus sign - is often taken to mean
-    some sort of flag argument even if it appears in a position where
-    a file name could appear.
+    A few conventions are used, particularly in the Commands section. Underlined words
+    are considered literals. Square brackets ([]) around an argument indicate that the
+    argument is optional. An argument given as name refers to a file name. Ellipses
+    ... are used to show that the previous argument-prototype may be repeated.  An
+    argument beginning with a minus sign - is often taken to mean some sort of flag
+    argument even if it appears in a position where a file name could appear.
 
 DESCRIPTION
-:   Description of all components. This constitutes the bulk of the
-    manual.
+:   Description of all components. This constitutes the bulk of the manual.
 
 IMPLEMENTATION NOTES
-:   Specific notes on the implementation of a generic (e.g.,
-    standardised) component.
+:   Specific notes on the implementation of a generic (e.g., standardised) component.
 
 RETURN VALUES
 :   Return values, if the components are functions.
@@ -122,7 +118,7 @@ SEE ALSO
 
 STANDARDS
 :   Implemented or referenced standards.
-
+:w
 HISTORY
 :   A brief history of the components.
 
@@ -138,12 +134,12 @@ BUGS
 SECURITY CONSIDERATIONS
 :   Security precautions beyond the scope of the components.
 
-Only the NAME and DESCRIPTION sections are required in the document
-body, although a SYNOPSIS should appear for most manuals as well.
+Only the NAME and DESCRIPTION sections are required in the document body, although a
+SYNOPSIS should appear for most manuals as well.
 
-Other sections may be necessary depending on the category. For
-example, RETURN VALUES is found for most category 3 and 2 manuals;
-while EXIT STATUS is found for most category 1, 6, and 8 manuals.
+Other sections may be necessary depending on the category. For example, RETURN VALUES is
+found for most category 3 and 2 manuals; while EXIT STATUS is found for most category 1,
+6, and 8 manuals.
 
 The sections are:
 
@@ -161,51 +157,54 @@ The sections are:
 # Generate Man Pages from structured text
 -   [Latex2man
     ](http://ctan.tug.org/tex-archive/support/latex2man/latex2man.html)
-    is a tool to translate UNIX manual pages written with
-    LaTeX into man pages.
+    is a tool to translate UNIX manual pages written with LaTeX into man pages.
 -   [pod2man](http://perldoc.perl.org/pod2man.html)
     generate *roff* input from POD source.
--   DocBook XML can be processed to man pages with an xml
-    processor. We can use the *xmlto* front-end. See the
-    {{< iref "data_exchange#xml" "Xml Section" >}}.
+-   DocBook XML can be processed to man pages with an xml processor. We can use the
+    *xmlto* front-end. See the {{< iref "data_exchange#xml" "Xml Section" >}}.
 
 
-## Markdown
+## Markdown {#man_from_markdown}
 -   {{< iref "markdown#lowdown" "lowdown" >}}
-    ISC Licence) is a C markdown processor that process markdown to
-    troff.
+    ISC Licence) is a C markdown processor that process markdown to troff.
 -   [go-md2man](https://github.com/cpuguy83/go-md2man)
-    is a go language using *blackfriday* to process markdown into
-    man pages. It is in Debian.
+    is a go language using *blackfriday* to process markdown into man pages. It is in
+    Debian.
 -   {{< iref "markdown#lunamark" "lunamark" >}} is a lua converter to many
     formats including groff.
 -   [marked-man](https://github.com/kapouer/ronnjs) (BSD License)
-    uses the javascript converter
-    {{< iref "markdown#marked" "marked" >}}
+    uses the javascript converter {{< iref "markdown#marked" "marked" >}}
     to convert markdown to roff.
     The Debian package is *node-marked-man*.
--   {{< iref "markdown#pandoc" "pandoc" >}} allow to
-    convert fromall the input formats (Markdown, CommonMark, Textile,
-    reStructuredText, HTML, (subset of) LaTeX, MediaWiki, TWiki,
-    Haddock, OPML, Org-mode, DocBook, txt2tags, Word docx) to troff
+-   {{< iref "markdown#pandoc" "pandoc" >}} allow to convert fromall the input formats
+    (Markdown, CommonMark, Textile, reStructuredText, HTML, (subset of) LaTeX,
+    MediaWiki, TWiki, Haddock, OPML, Org-mode, DocBook, txt2tags, Word docx) to troff
     man format.
+    -   [Write Your Own Man Pages | g.p. Anders
+        ](https://gpanders.com/blog/write-your-own-man-pages/)
+        uses pandoc in a script.
 -   [remark-man](https://github.com/remarkjs/remark-man)
     compile markdown to man using the javascript translator
     {{< iref "markdown#remark" "remark" >}}.
+-   [ronn](https://github.com/apjanke/ronn-ng) (MIT License)
+    is a ruby application to build a man page from markdown source.
+
+    The accepted syntax is defined in [ronn-format(7)
+    ](https://manpages.debian.org/unstable/ruby-ronn/ronn-format.7.en.html)
+    it includes basic markdown, a non standard variant of definition list, but
+    no table. The _ronn-format_  manpage also give a last of commonly used sections
+    in man pages.
 -   [Ronn](https://github.com/rtomayko/ronn) (MIT License)
     is a ruby application that uses a markdown and
-    [additional man pages constructs
-    ](http://rtomayko.github.io/ronn/ronn-format.7.html)
+    [additional man pages constructs](http://rtomayko.github.io/ronn/ronn-format.7.html)
     to generate man pages and html.
 
 
 ## ReST
 See also the {{< iref "rest" "ReST page" >}}
 
--   [rst2man
-    ](http://docutils.sourceforge.net/sandbox/manpage-writer/rst2man.txt)
-    is the standard [ReST tool
-    ](ttp://svn.berlios.de/viewvc/docutils/trunk/docutils/tools/)
+-   [rst2man](http://docutils.sourceforge.net/sandbox/manpage-writer/rst2man.txt)
+    is the standard [ReST tool](https://docutils.sourceforge.io/docs/user/tools.htm)
     to produce manpages.
 -   {{< iref "rest#sphinx" "Sphinx" >}}
     has a manual page builder.
