@@ -23,10 +23,10 @@ More references on  Wikipedia:
 -   {{< wp "Category:Unix programming tools" >}}
 
 -   [Rosetta Code](http://rosettacode.org)
-    present solutions to the same task in as many different languages
-    as possible, Rosetta Code currently has 771 tasks, 163 draft
-    tasks, and is aware of 576 languages, though we do not (and
-    cannot) have solutions to every task in every language.
+    presents solutions to the same task in as many different languages as possible,
+    Rosetta Code currently has 771 tasks, 163 draft tasks, and is aware of 576
+    languages, though we do not (and cannot) have solutions to every task in every
+    language.
 -   Arch Wiki Categories:
     [Programing languages
     ](https://wiki.archlinux.org/index.php/Category:Programming_languages)
@@ -49,70 +49,63 @@ list.
 -   {{< wp "Category:Programming paradigms" >}}
 
 {{< wp "Constraint Programming" >}}
-:   is a form of declarative programming,
-    where relations between variables are stated in the form of
-    constraints. Constraints do not specify a step or sequence of
-    steps to execute, but rather the properties of a solution to be
-    found. Constraint programming can be expressed in the form of
-    {{< wp "constraint logic programming" >}} like in prolog, or realized in
-    imperative programming via a separate library. There are
-    constraints library for all major programming languages
-    ( [List in Wikipedia
-    ](https://en.wikipedia.org/wiki/Constraint_programming#Constraint_programming_libraries_for_imperative_programming_languages))
+:   is a form of declarative programming, where relations between variables are stated
+    in the form of constraints. Constraints do not specify a step or sequence of steps
+    to execute, but rather the properties of a solution to be found. Constraint
+    programming can be expressed in the form of
+    {{< wp "constraint logic programming" >}} like in prolog, or realized in imperative
+    programming via a separate library. There are constraints library for all major
+    programming languages
+    -    [Wikipedia: list of constraint programming libraries
+        ](https://en.wikipedia.org/wiki/Constraint_programming#Constraint_programming_libraries_for_imperative_programming_languages)
 
 {{< wp "Declarative programming" >}}
-:   is a style of building computer
-    programs, that expresses the logic of a computation without
-    describing its control flow. It is an umbrella for
-    many other paradigms, Constraint programming,
-    Domain-specific languages, Functional programming,
-    Hybrid languages, Logic programming, Modeling
+:   is a style of building computer programs, that expresses the logic of a computation
+    without describing its control flow. It is an umbrella for many other paradigms,
+    Constraint programming, Domain-specific languages, Functional programming, Hybrid
+    languages, Logic programming, Modeling
 
 {{< wp "Functional programming" >}}
-:   is a declarative programming which
-    treats computation as the evaluation of mathematical functions and
-    avoids changing-state and mutable data.
-    Among functional programming languages whe find Common Lisp,
-    Scheme, Clojure, Racket,Erlang, OCaml, Haskell.
+:   is a declarative programming which treats computation as the evaluation of
+    mathematical functions and avoids changing-state and mutable data.  Among functional
+    programming languages whe find Common Lisp, Scheme, Clojure, Racket,Erlang, OCaml,
+    Haskell.
+
     A language is {{< wp "purely functional" >}} if it guarantees the (weak)
     equivalence of {{< wp "call-by-name" >}}, {{< wp "call-by-value" >}} and
-    {{< wp "call-by-need" >}}, often by excluding updates of entities
-    in the program's {{< wp "runtime system" >}}.
-    Variables are used in a mathematical sense, with identifiers
-    referring to immutable, persistent values.
+    {{< wp "call-by-need" >}}, often by excluding updates of entities in the program's
+    {{< wp "runtime system" >}}.  Variables are used in a mathematical sense, with
+    identifiers referring to immutable, persistent values.
 
 {{< wp "Metaprogramming" >}}
-:   is the writing of computer programs with the
-    ability to treat programs as their data. It means that a program
-    could be designed to read, generate, analyse or transform other
-    programs, and even modify itself while running.
+:   is the writing of computer programs with the ability to treat programs as their
+    data. It means that a program could be designed to read, generate, analyse or
+    transform other programs, and even modify itself while running.
 
     It includes:
 
     -   {{< wp "Template metaprogramming" >}} like in C++ or D;
     -   {{< wp "Reflection_(computer_programming)"  "reflective programming" >}}
-        i.e. the ability of a computer program to examine _type
-        introspection_ and modify its' structure and behavior at runtime.
-        this feature is present in many languages like ECMAScript, clojure,
-        Java, lisp, Objective-C, Perl, PHP, Python, R, Ruby, scheme ...
+        i.e. the ability of a computer program to examine _type introspection_ and
+        modify its' structure and behavior at runtime.  this feature is present in many
+        languages like ECMAScript, clojure, Java, lisp, Objective-C, Perl, PHP, Python,
+        R, Ruby, scheme ...
 
 {{< wp "Object-oriented programming" >}} (OOP)
-:   is a paradigm based on the
-    concept of {{< wp "objects" >}}, which are {{< wp "data structures" >}} that contain
-    data, in the form of fields, known as attributes; and code, in the
-    form of procedures, known as methods.  An object's procedures can
-    access and often modify the attributes of the object with which
-    they are associated (objects have a notion of "this"). Most
-    popular OOP languages are {{< wp "class-based" >}}, meaning that objects are
-    instances of classes, which also determines their type.  Most OOP
-    language combines OOP with {{< wp "imperative" >}},
-    {{< wp "procedural programming" >}}.  Significant object-oriented languages
-    include Python, C++, Objective-C, Smalltalk, Delphi, Java, C#,
-    Perl, Ruby and PHP.
+:   is a paradigm based on the concept of {{< wp "objects" >}}, which are
+    {{< wp "data structures" >}} that contain data, in the form of fields, known as
+    attributes; and code, in the form of procedures, known as methods.  An object's
+    procedures can access and often modify the attributes of the object with which they
+    are associated (objects have a notion of "this").
+
+    Most popular OOP languages are {{< wp "class-based" >}}, meaning that objects are
+    instances of classes, which also determines their type.  Most OOP language combines
+    OOP with {{< wp "imperative" >}}, {{< wp "procedural programming" >}}.  Significant
+    object-oriented languages include Python, C++, Objective-C, Smalltalk, Delphi, Java,
+    C#, Perl, Ruby and PHP.
 
 {{< wp "Polymorphism (computer science)"  "Polymorphism" >}}
-:   is the provision
-    of a single interface to entities of different types.
+:   is the provision of a single interface to entities of different types.
     -   If a function denotes different and potentially heterogeneous
         implementations depending on a limited range of individually
         specified types and combinations, it is called
@@ -185,8 +178,7 @@ They compare {{< iref "#rust" "Rust" >}}, {{< iref "#golang" "Go" >}} and
     He thinks that Rust should replace C++ for system programming,
     compared to ocaml or haskell rust is s not full-blown functional
     language; he compares also Rust with Go and Erlang.
--   [Rust vs Go
-    ](https://jaredforsyth.com/posts/rust-vs-go/) _2014_
+-   [Rust vs Go](https://jaredforsyth.com/posts/rust-vs-go/) _2014_
     concludes that Go win on stability, active community and strong
     standard library. Rust win for the type system and the memory
     management and  functional programming.
@@ -220,8 +212,7 @@ They compare {{< iref "#rust" "Rust" >}}, {{< iref "#golang" "Go" >}} and
     algebraic types and type-safe failure modes, bad type inference,
     no support immutability declarations, Go is not suitable for
     programming embedded systems.
--   [How do Rust and Go compare?
-    ](https://www.quora.com/How-do-Rust-and-Go-compare-1).
+-   [How do Rust and Go compare?](https://www.quora.com/How-do-Rust-and-Go-compare-1).
 -   Göran Krampe [I missed Nim - Roads Less Taken
     ](http://goran.krampe.se/2014/10/20/i-missed-nim/) gives a
     comparison of Nim with Julia, Go, Rust _2014_
@@ -243,8 +234,7 @@ comparable to C cf. [The  benchmarks game](http://shootout.alioth.debian.org/)
     [C syntax](http://en.wikipedia.org/wiki/C_syntax),
     {{< wp "C preprocessor" >}}.
 -   A wikibook :
-    [C Programming](http://en.wikibooks.org/wiki/C_Programming)
-    (GNU FDL)
+    [C Programming](http://en.wikibooks.org/wiki/C_Programming) (GNU FDL)
 -   The book
     [The New C Standard](http://www.knosof.co.uk/cbook/cbook.html)
     available in pdf is a detailed analysis of the International
@@ -369,7 +359,7 @@ njamd
 efence
 :   An other malloc debugger {{< man "efence(3)" >}}
 
-# C++
+# Caml
 -   Wikipedia:  {{< wp "Caml" >}}
 -   [Objective Caml Home](http://ocaml.org/),
 -   [manual](http://caml.inria.fr/pub/docs/manual-ocaml/)
@@ -487,16 +477,12 @@ multithreaded programming.
     -   [The Go Programming Language Specification](https://golang.org/ref/spec).
     -   [Effective Go](https://golang.org/doc/effective_go.html)
         gives tips for writing clear, idiomatic Go code.
--   [awesome-go: list of tutorials](https://github.com/avelino/awesome-go#tutorials)
-    and [Ebooks](https://github.com/avelino/awesome-go#e-books).
 -   [A list of Golang books](https://github.com/dariubs/GoBooks), some are free.
--   [Go by Example](https://gobyexample.com/)  introduction to Go using annotated
-    example programs.
 -   [Golang cheat sheet](https://github.com/a8m/golang-cheat-sheet)
     by  Ariel Mashraki is an overview of Go syntax and features with examples taken from
-    [A Tour of Go](https://tour.golang.org/list). The [GitHub repository
-        ](https://github.com/a8m/golang-cheat-sheet) also contains a reference card in
-    _odt_ and _pdf_.
+    [A Tour of Go](https://tour.golang.org/list).
+    The [GitHub repository](https://github.com/a8m/golang-cheat-sheet)
+    also contains a reference card in _odt_ and _pdf_.
 -   [Golang CheatSheet](https://cheatsheet.dennyzhang.com/cheatsheet-golang-a4)
     from [GitHub - DennyZhang Cheat Sheets
     ](https://github.com/dennyzhang/cheatsheet.dennyzhang.com).
@@ -504,6 +490,18 @@ multithreaded programming.
     [devints.io](https://devhints.io/).
 -   [Golang Templates Cheatsheet
     ](https://curtisvermeeren.github.io/2017/09/14/Golang-Templates-Cheatsheet).
+
+# Go Tutorials
+
+-   [awesome-go: list of tutorials](https://github.com/avelino/awesome-go#tutorials)
+    and [Ebooks](https://github.com/avelino/awesome-go#e-books).
+-   [Go by Example](https://gobyexample.com/)  introduction to Go using annotated
+    example programs.
+-   [Getting started with GOLANG - GoLinuxCloud$
+    ](https://www.golinuxcloud.com/getting-started-with-golang/)
+
+## Go blogs
+-   [Jamie Tanna blog tagged #go](https://www.jvt.me/tags/go/).
 
 # Haskell {#haskell}
 -   Wikipedia {{< wp "Haskell_(programming_language)"  "Haskell" >}}
@@ -741,6 +739,14 @@ new bindings from C code.
     {{< wp "Category:Logic programming" >}}
 -   [SWI-Prolog: Edinburgh compatible Prolog compiler](http://www.swi-prolog.org/)
 
+# R
+
+[R](https://www.r-project.org/) is a language and environment for statistical computing
+and graphics.
+
+
+-   [R (programming language) - Wikipedia
+    ](https://en.wikipedia.org/wiki/R_(programming_language))
 
 # Ruby
 _Ruby is covered by GPL or the GPL compatible {{< wp "Ruby License" >}}_
@@ -919,6 +925,9 @@ speed in
 -   Wikipedia: {{< wp "Lisp_(programming_language)"  "Lisp" >}},
     {{< wp "Common Lisp" >}}.
 -   [CLISP](http://clisp.cons.org/)
+-   [Practical Common Lisp](https://gigamonkeys.com/book/)
+    book available for free.
+-   [Lisp cookbook](https://lispcookbook.github.io/cl-cookbook/).
 
 
 ## Scheme as preprocessor
