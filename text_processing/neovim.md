@@ -2,6 +2,10 @@
 title: Neovim and Vim
 ---
 
+<!--
+[[file:../../../../content-org/notes/text_processing_notes/neovim_notes.org][neovim_notes.org]]
+-->
+
 
 # vi
 -   Wikipedia {{< wp "vi" >}}
@@ -38,7 +42,7 @@ title: Neovim and Vim
 -   [A Slightly Advanced Introduction to Vim
     ](http://linuxgazette.net/152/srinivasan.html)
 -   [Wikibook: Learning the vi editor](https://en.wikibooks.org/wiki/Learning_the_vi_Editor)
-    [Seven habits of effective text editing  (with vi)
+-   [Seven habits of effective text editing  (with vi)
     ](http://www.moolenaar.net/habits.html)
 -   [Learn Vimscript the Hard Way](http://learnvimscriptthehardway.stevelosh.com/)
     by Steve Losh.
@@ -49,12 +53,38 @@ title: Neovim and Vim
         [english html](http://tnerual.eriogerg.free.fr/vimqrc.html),
         [french pdf](http://tnerual.eriogerg.free.fr/vimqrc-fr.pdf),
         [french html](http://tnerual.eriogerg.free.fr/vimqrc-fr.html)
--   Tutorials: [vim-201-an-intermediate-guide-to-vim
-    ](http://www.linux.com/learn/tutorials/243002-vim-201-an-intermediate-guide-to-vim),
+-   [A Vimlike Fluency: Bibliography and Next Steps – Terminally Undead
+    ](https://countvajhula.com/2021/02/23/a-vimlike-fluency-bibliography-and-next-steps/).
+
+## Vim tutorials
+
+-   [Learn Vim the Smart Way](https://learnvim.irian.to/)
+    comprehensive tutorial by [Igor Irianto](https://irian.to/).
+    -   [How to Learn Vim in 2020](https://irian.to/blogs/how-to-learn-vim-in-2020/)
+        index many [posts of Igor Irianto on dev.to](https://dev.to/iggredible/).
+-   [linux.com](https://www.linux.com/?s=vim) has a lot of
+    [vim tutorials](https://www.linux.com/?s=vim) *with often scarse content* :
+    [vim-201-an-intermediate-guide-to-vim
+    ](https://www.linux.com/training-tutorials/vim-201-intermediate-guide-vim/),
     [vim-301-getting-adept-at-vim
-    ](http://www.linux.com/learn/tutorials/262147-vim-301-getting-adept-at-vim),
+    ](https://www.linux.com/training-tutorials/vim-301-getting-adept-vim/),
     [vim-401-extending-vim-and-more
-    ](http://www.linux.com/learn/tutorials/264315-vim-401-extending-vim-and-more).
+    ](https://www.linux.com/training-tutorials/vim-401-extending-vim-and-more/).
+-   [Vim Text Objects: The Definitive Guide
+    ](https://blog.carbonfive.com/vim-text-objects-the-definitive-guide/).
+-   [A Vimlike Fluency: Daily Tips for Learning Vim – Terminally Undead
+    ](https://countvajhula.com/2021/01/21/vim-tip-of-the-day-a-series/)
+    a set of 17 tutorials.
+-   [Vim - DEV Community](https://dev.to/t/vim).
+-   [Neovim - DEV Community](https://dev.to/t/neovim).
+
+## Vim cheatsheets
+-   [Vim Cheat Sheet - rtorr.com](https://vim.rtorr.com/).
+-   [sudormrfbin/cheatsheet.nvim](https://github.com/sudormrfbin/cheatsheet.nvim)
+    A cheatsheet plugin for neovim with bundled cheatsheets for the editor, multiple
+    vim plugins, nerd-fonts, regex, etc. with a Telescope fuzzy finder interface.
+-   [rdvm/rofi-vim](https://github.com/rdvm/rofi-vim)
+    A Vim cheat sheet for Rofi.
 
 ## vim plugins
 -   [Vim Awesome](https://vimawesome.com/) list of vim plugins.
@@ -62,7 +92,11 @@ title: Neovim and Vim
     a Vim plugin shortlist.
 -   See in {{< iref "rest" "ReStructured Text page" >}} the
     {{< iref "rest#vim_rest" "list of ReSt support plugins" >}}.
--   [vim-markdown](http://github.com/plasticboy/vim-markdown/)
+-   [vim-markdown](http://github.com/plasticboy/vim-markdown/).
+-   [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)
+    A vim/neovim Git wrapper.a
+-   [junegunn/fzf.vim](https://github.com/junegunn/fzf.vim)
+    is not a Vim plugin, bu  is a bundle of fzf-based commands and mappings.
 -   [SpaceVim](https://spacevim.org/) is a preconfigured configuration for Vim and
     Neovim.
 
@@ -113,18 +147,49 @@ It has an [integrated terminal emulator
 ](https://neovim.io/doc/user/nvim_terminal_emulator.html)
 and a can communicate with external processes, lua, ruby, python.
 
-
+-   [Documentation - Neovim](https://neovim.io/doc/general/)
+-   [neovim Wiki](https://github.com/neovim/neovim/wiki)
 -   [neovim FAQ](https://github.com/neovim/neovim/wiki/FAQ)
 -   [online version of neovim help with hyperlinks
     ](https://neovim.io/doc/user/index.html)
--   [list of plugins that use neovim features
-    ](https://github.com/neovim/neovim/wiki/Related-projects#plugins)
--   [Why Neovim is Better than Vim
-    ](http://geoff.greer.fm/2015/01/15/why-neovim-is-better-than-vim/)
+    is an index of html rendered version of all the help files distributed with neovim
+    that you visualise with the `:help`command inside nvim.
 -   [python-client](https://github.com/neovim/python-client)
 -   [Moving to Neovim from Vim](https://jacky.wtf/weblog/moving-to-neovim/)
 -   [neovim-qt](https://github.com/equalsraf/neovim-qt)
     Neovim client library and GUI, in Qt5. _in Debian_.
+
+## Neovim lua engine
+
+-   [Lua Everywhere - What's New in Neovim 0.7
+    ](https://gpanders.com/blog/whats-new-in-neovim-0-7#lua-everywhere)
+-   [Lua - Neovim docs](https://neovim.io/doc/user/lua.html)
+    html formatted version of the help file lua.txt that you display in nvim with
+    `:help lua`.
+-   [Luaref - Neovim docs](https://neovim.io/doc/user/luaref.html)
+    html formatted version of the help file luaref.txt in nvim ≥ 0.8.
+-   [Lua-guide - Neovim docs](https://neovim.io/doc/user/lua-guide.html)
+    html formatted version of the help file lua-guide.txt in nvim ≥ 0.9.
+-   [Lua: reference manual - lua.org](https://www.lua.org/manual/)
+
+
+-   [FooSoft Productions - Saying Goodbye to Vimscript
+    ](https://foosoft.net/posts/saying-goodbye-to-vimscript/)
+    is a tutorial to use of lua in vim configuration.
+
+## Neovim configuration
+-   [LunarVim/Neovim-from-scratch](https://github.com/LunarVim/Neovim-from-scratch)
+    A Neovim config designed from scratch to be understandable.
+
+## Neovim Plugins.
+
+-   [list of plugins that use neovim features
+    ](https://github.com/neovim/neovim/wiki/Related-projects#plugins)
+-   [Why Neovim is Better than Vim
+-   [rockerBOO/awesome-neovim](https://github.com/rockerBOO/awesome-neovim/)
+    Collections of awesome Neovim plugins.
+-   [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+    extendable fuzzy finder over lists.
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
