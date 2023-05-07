@@ -2,8 +2,6 @@
 title: Calendar and Address Book
 ---
 
-{{% toc /%}}
-
 See also {{< iref "task_management" "Tasks Management" >}}
 and {{< iref "org-mode" "Org Mode" >}}
 
@@ -27,100 +25,103 @@ and {{< iref "org-mode" "Org Mode" >}}
 -   iCalendar Transport-Independent Interoperability Protocol
     (iTIP) Scheduling Events, BusyTime, To-dos and Journal Entries
     [RFC 2446](http://www.ietf.org/rfc/rfc2446.txt)
--   [hCalendar](http://microformats.org/wiki/hcalendar) and
-    [Hcard](http://microformats.org/wiki/hcard) are simple, open,
-    distributed calendaring and events and contact information formats,
-    based on the iCalendar and Vcard standards. There are parts of the
-    HTML5 extension [microformats](http://microformats.org), see also
-    [Microformats | HTML5 Doctor
-    ](http://html5doctor.com/microformats/).
--   [X2V](http://suda.co.uk/projects/X2V/) is an implementation of an
-    XSLT file to transform and hCard/hCalendar encoded XHTML file into
-    the corresponding vCard/iCalendar file.
+-   [CalConnect](https://www.calconnect.org/) The Calendaring and Scheduling Consortium
+    -   [Developer's Guide](https://devguide.calconnect.org/)
+-   [CalDAV](http://caldav.calconnect.org/)
+    is a calendaring and scheduling client/server protocol designed to allow users to
+    access calendar data on a server, and to schedule meetings with other users on that
+    server or other servers. -   The CalDAV Access protocol is an extension of
+    the {{< iref "webdav" "WebDAV Protocol" >}},
+    it has been published as
+    [RFC 4791](http://tools.ietf.org/html/rfc4791).
+-   [CardDAV](https://devguide.calconnect.org/CardDAV/) is an address book client/server
+    protocol designed to allow users to access and share contact data on a server.
+
+    It is published as [RFC 6352](); vCarda is published as
+    [RFC 6350](http://www.rfc-editor.org/rfc/rfc6350.txt),
+    and the XML Representation of vCard (xCard) as
+    [RFC 6351](http://www.rfc-editor.org/rfc/rfc6351.txt).
+-   [microformats](http://microformats.org) is an HTML5 extension for marking up people,
+    organizations, events, locations, blog posts, products, reviews, resumes, recipes
+    etc.
+    -   [Microformats | HTML5 Doctor](http://html5doctor.com/microformats/) an
+        introduction _2010_.
+    -   [microformats2 - Microformats Wiki](https://microformats.org/wiki/microformats2)
+        is the latest version of microformats.
+    -   [h-event](https://microformats.org/wiki/h-event) is open format for events on
+        the It provides web.distributed calendaring and events and contact information
+        formats, based on the iCalendar and Vcard standards. _h-event_ is the
+        microformats2 update to [hCalendar](http://microformats.org/wiki/hcalendar).
+    -   [h-card](https://microformats.org/wiki/h-card) open format for publishing
+        people and organisations on the web.
+
 -   [iCalShare](http://www.icalshare.com/) directory of shareable
     calendars on the web.
 -   [Calendar FAQ](http://www.tondering.dk/claus/calendar.html),
--   [Sources for Time Zone](http://www.twinsun.com/tz/tz-link.htm),
--   [éphémérides du bureau des longitudes](http://www.bdl.fr/ephemeride.html).
-
 
 
 # icalendar, CalDAV, CardDAV libraries
--   Wikipedia:
-    {{< wp "CalDAV" >}},
-    {{< wp "CardDAV" >}},
-    {{< wp "Comparison of CalDAV and CardDAV implementations" >}}.
 
+-   Wikipedia: {{< wp "CalDAV" >}}, {{< wp "CardDAV" >}},
+    {{< wp "Comparison of CalDAV and CardDAV implementations" >}}.
+-   [Calendar and Contacts Server](https://www.calendarserver.org/) (Apache 2 License)
+    server implementing the CalDAV and CardDAV protocols
+-   [caldav](https://github.com/python-caldav/caldav) (GPL-3.0 and Apache-2.0)
+    is a calDAV python library. _active in 2023_.
 -   [cardDAV PHP](https://github.com/graviox/CardDAV-PHP) (affero GPL)
-    by Christian Putzke,
-    is a simple CardDAV client library written in PHP + CURL. It is used
-    in the
+    by Christian Putzke _last commit 2012_, is a simple CardDAV client library written
+    in PHP + CURL. It is used in the
     [Roundcube CardDAV plugin](https://github.com/graviox/Roundcube-CardDAV).
-    _last commit 2012_.
--   [libical](https://github.com/libical/libical/) Open Source
-    implementation of the IETF's iCalendar Calendaring and Scheduling
-    _active in 2015_
--   The [PyPi: icalendar package
-    ](https://pypi.python.org/pypi/icalendar)
-    is a parser/generator of iCalendar files for use with Python.
-    [GitHub: Icalenda](https://github.com/collective/icalendar)).
-    _active in 2015_.
--   [Apple's Calendar Library](http://www.apple.com/ical/library/)
-    Apple's library of .ics files
--   [vobject](http://vobject.skyhouseconsulting.com/) (Apache
-    License) is a python icalendar library, intended to be a full
-    featured Python package for parsing and generating vCard and
-    vCalendar files. It is reviewed in
-    [VObject - An iCalendar and vCard Library (presentation at PyCon 2006)
-    ](http://www.python.org/pycon/2006/papers/53/) _last version 2009_
--   [vcard](https://github.com/l0b0/vcard) (GPL)
-    by Victor Engmark _l0b0_,
-    is a vCard validator, with a   python class and utility functions.
-    _active in 2015_.
--   [caldav](http://pythonhosted.org/caldav/) is a simple calDAV
-    python library. [pypi: caldav](https://pypi.python.org/pypi/caldav)
--   [CalDAV Clieent Library
-    ](http://trac.calendarserver.org/wiki/CalDAVClientLibrary)
-    (​Apache License) from the Apple calendar Server.
--   [dhtmlxScheduler](http://www.dhtmlx.com/docs/products/dhtmlxScheduler/)
-    (GPL, proprietary _PRO_ version) is a JavaScript event calendar
-    that allows you to add a Google-like scheduler to your web app or
-    website.
--   [FullCalendar](http://fullcalendar.io/) (MIT license)
-    is a jQuery plugin that provides a full-sized, drag & drop
-    calendar.
-    The author Adam Shaw has also produced
-    [XDate](http://arshaw.com/xdate/)
-    a JavaScript Date Library.
+    _last commit 2014_.
+-   [FullCalendar](http://fullcalendar.io/) (MIT license or commercial)
+    is a jQuery plugin that provides a full-sized, drag & drop calendar.
+
+    _It is an active project in 2023._
 
     -   FullCalendar has a [scheduler](http://fullcalendar.io/scheduler/)
-        plugin
     -   [FullCalendar GitHub](https://github.com/fullcalendar)
         where you find the FullCalendar and the Scheduler repositories.
+        plugin
 
-## CalDAV protocol and servers
+    The author Adam Shaw has also produced
+    [XDate](http://arshaw.com/xdate/) (GPL-2.0 and MIT)
+    a JavaScript Date Library, which he no more develops.
+    _last commit 2019, last release 2021_.
 
--   [CalDAV](http://caldav.calconnect.org/ "caldav.calconnect.org the CalDAV website")
-    is a calendaring and scheduling client/server protocol designed to
-    allow users to access calendar data on a server, and to schedule
-    meetings with other users on that server or other servers.
--   The CalDAV Access protocol is an extension of
-    the {{< iref "webdav" "WebDAV Protocol" >}},
-    it has been published as
-    [RFC 4791](http://tools.ietf.org/html/rfc4791 "ietf.org rfc4791").
--   [Apple calendar server](http://trac.calendarserver.org/)
+-   [libical](https://github.com/libical/libical/) (LPGL or MPL)
+    implementation of the IETF's iCalendar Calendaring and Scheduling
+    _active in 2023_
+-   [moment](https://github.com/moment/moment/) (MIT License)
+    Parse, validate, manipulate, and display dates in javascript.
+    _active in 2022_.
+-   [python icalendar](https://github.com/collective/icalendar)
+    is a parser/generator of iCalendar files for use with Python.
+    Debian package *python3-icalendar*, _active in 2023_.
+-   [vcard](https://gitlab.com/engmark/vcard) (AGPL-3.0)
+    by Victor Engmark, is a vCard validator, with a   python class and utility functions.
+    _active in 2023_.
+-   [vobject](https://eventable.github.io/vobject/) (Apache License)
+    is a python icalendar library, intended to be a full featured Python package for
+    parsing and generating vCard and vCalendar files. Debian package *python3-viobject*,
+    _last version 2018_.
+    -   [vobject - GitHub](https://github.com/eventable/vobject)
+    -   [VObject - An iCalendar and vCard Library (presentation at PyCon 2006)
+        ](http://www.python.org/pycon/2006/papers/53/)
+
+# CalDAV protocol and servers
+
+-   [Apple calendar server](https://github.com/apple/ccs-calendarserver) (Apache License)
     is a standards-compliant server implementing the CalDAV and CardDAV protocols.
-    It is in Debian and has heavy python dependencies.
--   [Bedework](https://www.apereo.org/bedework) is
-    an Open Source CalDav server written in java.
--   [Baïkal](http://baikal-server.com/) (GPL)
+
+    The project is no more longer developed and has been archived in 2020.
+-   [Bedework](https://bedework.github.io/) (Apache 2.0 License)
+    CalDav and CardDav java server.
+    -  [bedework - GitHub](https://github.com/Bedework/bedework)
+-   [Baïkal](https://sabre.io/baikal/) (GPL)
     a PHP+SQLite or MySQL CalDAV+CardDAV server.
     [Baikal GitHub](https://github.com/jeromeschneider/Baikal)
-    _active in 2015_
--   [Dingo](http://andrew.triumf.ca/dingo/ "andrew.triumf.ca dingo")
-    is a CalDAV compatible server using MySQL, written in Perl as a CGI
-    script. *Dingo is not fully RFC 4791 compliant*.
--   [Chandler server](http://chandlerproject.org/ "chandlerproject.org")
+    _active in 2023._
+-   [Chandler server](https://www.chandlerproject.org/project-wiki)
     (Apache License) is a CalDAV server written in java using Tomcat,
     and Derby an embedded database. Chandler also provides a client
     software: **Chandler Desktop** written in Python and C-based
@@ -132,42 +133,64 @@ and {{< iref "org-mode" "Org Mode" >}}
      written in python.  It is in Debian.
     -    [Radicale online documentation](http://www.radicale.org/documentation)
 
-# caldav client applications
+## caldav synchronization
 
--   [AgenDAV](http://agendav.org/) (GPL)
-    a CalDAV web client in PHP+AJAX  with shared calendars support.
-    [AgenDAV GitHub](https://github.com/adobo/agendav/),  _active in 2015_.
+-   <a name="vdirsyncer"></a>[vdirsyncer](https://github.com/pimutils/vdirsyncer)
+    (BSD License)
+    is a python command-line tool for synchronizing calendars and addressbooks between
+    a variety of CalDAV and CardDav servers and the local filesystem.
+
+    _vdirsyncer is packaged in Debain. _active in 2023_.
+
+    -   [vdirsyncer documentation](https://vdirsyncer.pimutils.org/en/stable/)
+
+
+## caldav/cardav client applications
+
+-   [AgenDAV](https://github.com/adobo/agendav/) (GPL)
+    a CalDAV web client in PHP+AJAX  with shared calendars support, similar to google
+    calendar. _active in 2022_.
 -   {{< iref "#asynk" "Asynk" >}} is a caldav client.
--   [CardDavMATE](http://www.inf-it.com/open-source/clients/carddavmate/)
-    (Affero GPL)
-    is a JavaScript+jQuery CardDAV web client.
--   [jqCalDAV](http://boxacle.net/jqcaldav/)
-    a jquery calDAV client for html5 browsers. _2012_
--   [jquery-week-calendar
-    ](https://github.com/themouette/jquery-week-calendar)
-    A weekly calendar plugin based on jquery and jquery-ui. [Demo
-    ](http://themouette.github.com/jquery-week-calendar/weekcalendar.html)
-    [Google Group](http://groups.google.com/group/jquery-week-calendar).
-    _2012_
--   [khal (GitHub)](https://github.com/geier/khal)
-    is a calendar program for the terminal for viewing,
-    adding and editing events and calendars. Khal is build on the
-    iCalendar and vdir (allowing the use of vdirsyncer for CalDAV
-    compatibility) standards.
-    -   [khal documentation](http://lostpackets.de/khal/)
+-   [khal] (GitHub)](https://github.com/pimutils/khal) (MIT License)
+    is a python calendar terminal program for viewing adding and editing events and
+    calendars. Khal is build on the iCalendar and vdir (allowing the use of vdirsyncer
+    for CalDAV compatibility) standards.
+
+    Packaged in Debian, _and active in 2023_.
+
+    -   [khal documentation](http://khal.readthedocs.org/)
+
+-   [khard](https://github.com/lucc/khard) (GPL 3.0)
+     is a python console vcard client. It creates, reads, modifies and removes vCard address book
+     entries at your local machine. Khard is also compatible to the email clients mutt
+     and alot and the SIP client twinkle.
+
+     _khard_ can use {{< iref "#vdirsyncer" "vdirsyncer" }} to synchronize with a
+     CardDAV server.
+
+     Khard is packaged in Debian,_and active in 2023_.
+
+     -   [khard documentation](https://khard.readthedocs.io/en/latest/)
+
 -   [PHP iCalendar](http://phpicalendar.net/) is a PHP-based iCal
     file viewer/parser.
     -   [Dreamhost Wiki: PhpIcalendar page
         ](http://wiki.dreamhost.com/PHPiCalendar)
--   [pycarddav (GitHub)](https://github.com/geier/pycarddav)
-    is a cli __carddav__ client (for use with mutt etc.)
--   [Sunbird](http://www.mozilla.org/projects/calendar/sunbird/) is
-    a cross platform standalone calendar application based on Mozilla's
-    XUL user interface language;
-    [Lightning](http://www.mozilla.org/projects/calendar/lightning/) is
-    a redesign of the Sunbird that integrates into Mozilla Thunderbird.
-    Sunbird/Lightning uses a SQLite based storage, iCal standard files
-    can be opened, imported, exported and subscribed to.
+-   [Lightning](https://www.thunderbird.net/en-US/calendar/) (	MPL 2.0)
+    is a redesign of the {{< wp "Mozilla Sunbird" >}} cross platform standalone calendar
+    application *obsolete since 2010* that integrates into Mozilla Thunderbird.
+
+    Lightning uses a SQLite based storage. iCal standard files can be opened, imported,
+    exported and subscribed to.
+
+    -   {{< wp "Lightning_(software)" "Wikipedia: Lightening" }}.
+
+-   [todoman](https://github.com/pimutils/todoman) (ISC License)
+     A simple python cli, standards-based, todo (aka: task) manager. Todos are stored
+     into icalendar files, which means you can sync them via CalDAV using, for example,
+     vdirsyncer.
+
+     _todoman- is in Debian. _active in 2023_.
 
 ## Synchronization to org
 -   [Worg: Google Calendar Synchronization
@@ -190,8 +213,7 @@ and {{< iref "org-mode" "Org Mode" >}}
     export and import vcards to org-mode.
 
 ## Asynk {#asynk}
--   [ASynK: Awesome Sync (by Karra): ASynK User Manual
-    ](http://karra-asynk.appspot.com/doc/asynk/asynk.html),
+-   [ASynK](https://asynk.io/)
     [ASynK GitHub](https://github.com/skarra/ASynK)
 -   I use the following profils gcbbfournisseurs, gcbbfriends,
     gcbbsante, gcbbdharma
