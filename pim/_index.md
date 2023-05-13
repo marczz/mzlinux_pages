@@ -1,4 +1,4 @@
 ---
-title: Office applications
+title:  Personal Information Management
 bookCollapseSection: true
 ---
