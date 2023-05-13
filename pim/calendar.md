@@ -5,6 +5,10 @@ title: Calendar and Address Book
 See also {{< iref "task_management" "Tasks Management" >}}
 and {{< iref "org-mode" "Org Mode" >}}
 
+<!--
+[[file:../../../../content-org/notes/pim_notes.org::#calendar_notes][Calendar Notes]]
+-->
+
 # Icalendar references
 
 -   Wikipedia: {{< wp "Calendaring_software" >}},
@@ -37,7 +41,7 @@ and {{< iref "org-mode" "Org Mode" >}}
 -   [CardDAV](https://devguide.calconnect.org/CardDAV/) is an address book client/server
     protocol designed to allow users to access and share contact data on a server.
 
-    It is published as [RFC 6352](); vCarda is published as
+    It is published as [RFC 6352](); vCards is published as
     [RFC 6350](http://www.rfc-editor.org/rfc/rfc6350.txt),
     and the XML Representation of vCard (xCard) as
     [RFC 6351](http://www.rfc-editor.org/rfc/rfc6351.txt).
@@ -144,14 +148,22 @@ and {{< iref "org-mode" "Org Mode" >}}
 
     -   [vdirsyncer documentation](https://vdirsyncer.pimutils.org/en/stable/)
 
+-   [ASynK](https://asynk.io/)
+    is a contacts synchronization program that works with Microsoft Outlook, Microsoft
+    Exchange Server, Google Contacts, Any standards compiant CardDAV server, and Emacs
+    BBDB.
+
+    The last release is from 2015, the development seem to be restricted to some quick
+    fix commits since 2018, no issue is closed since 2020,
+    -   [ASynK GitHub](https://github.com/skarra/ASynK)a
+    -   [Async Wiki](https://github.com/skarra/ASynK/wiki)
 
 ## caldav/cardav client applications
 
 -   [AgenDAV](https://github.com/adobo/agendav/) (GPL)
     a CalDAV web client in PHP+AJAX  with shared calendars support, similar to google
     calendar. _active in 2022_.
--   {{< iref "#asynk" "Asynk" >}} is a caldav client.
--   [khal] (GitHub)](https://github.com/pimutils/khal) (MIT License)
+-   [khal](https://github.com/pimutils/khal) (MIT License)
     is a python calendar terminal program for viewing adding and editing events and
     calendars. Khal is build on the iCalendar and vdir (allowing the use of vdirsyncer
     for CalDAV compatibility) standards.
@@ -165,7 +177,7 @@ and {{< iref "org-mode" "Org Mode" >}}
      entries at your local machine. Khard is also compatible to the email clients mutt
      and alot and the SIP client twinkle.
 
-     _khard_ can use {{< iref "#vdirsyncer" "vdirsyncer" }} to synchronize with a
+     _khard_ can use {{< iref "#vdirsyncer" "vdirsyncer" >}} to synchronize with a
      CardDAV server.
 
      Khard is packaged in Debian,_and active in 2023_.
@@ -183,7 +195,7 @@ and {{< iref "org-mode" "Org Mode" >}}
     Lightning uses a SQLite based storage. iCal standard files can be opened, imported,
     exported and subscribed to.
 
-    -   {{< wp "Lightning_(software)" "Wikipedia: Lightening" }}.
+    -   {{< wp "Lightning_(software)" "Wikipedia: Lightening" >}}.
 
 -   [todoman](https://github.com/pimutils/todoman) (ISC License)
      A simple python cli, standards-based, todo (aka: task) manager. Todos are stored
@@ -195,143 +207,154 @@ and {{< iref "org-mode" "Org Mode" >}}
 ## Synchronization to org
 -   [Worg: Google Calendar Synchronization
     ](http://orgmode.org/worg/org-tutorials/org-google-sync.html)
--   [ical2org.py
-    ](https://github.com/asoroa/ical2org.py) converts an ical calendar (for instance, as exported
-    from google calendar) into an org-mode
+-   [ical2org.py](https://github.com/asoroa/ical2org.py) (GPL-3.0)
+    converts an ical calendar (for instance, as exported from google calendar) into an
+    org-mode document.
     It is a replacement of the awk script `ical2org.awk`.
+
+    _It is maintained in 2023._
 -   [org-gcal](https://github.com/kidd/org-gcal.el)
     allow to  Fetch google calendar event,  Post/edit org element,  Sync between Org
-    and Gcal.
--   the script [vCard2org.rb
-    ](https://gist.github.com/simonthum/4145201)
-    creates org-contacts entries from vCard input.
-    Only telephone and name.
--   [org-caldav](https://github.com/dengste/org-caldav)
-    Caldav sync for Emacs Orgmode, work with owncloud (no longer
-    Google), it is in elpa.
--   [org-vcard](https://github.com/flexibeast/org-vcard)
-    export and import vcards to org-mode.
+    and Gcal. _in elpa, active in 2023._
+-   the script [vCard2org.rb](https://gist.github.com/simonthum/4145201)
+    creates org-contacts entries from vCard input. Only telephone and name.
+-   [org-caldav](https://github.com/dengste/org-caldav) (GPL-3.0)
+    Caldav sync for Emacs Orgmode, work with owncloud, nextcloud, radicale, baikal,
+    SOgo, colab and google with OAuth2 and a google application ID. It is in
+    elpa. _active in 2023_.
 
-## Asynk {#asynk}
--   [ASynK](https://asynk.io/)
-    [ASynK GitHub](https://github.com/skarra/ASynK)
--   I use the following profils gcbbfournisseurs, gcbbfriends,
-    gcbbsante, gcbbdharma
--   To sync we do:
+    The main author is no longer able to maintain the repo since 2021 as stated in
+    [issue #234](https://github.com/dengste/org-caldav/issues/234),
+    but *jackkamm* accept to push from
+    [his fork](https://github.com/jackkamm/org-caldav) and merge *some* bug fixes.
 
-        ~/share/software/ASynK/asynk.py --op=sync \
-        --name gcbbfournisseurs  --log debug
+-   [org-vcard](https://github.com/flexibeast/org-vcard) (GPL-3.0)
+    export and import vcards to org-mode. _in 2023 the project need a new maintainer._
 
 ## Google Calendar
 -   [Google Calendar](https://www.google.com/calendar/),
-    [google calendar (mobile)](https://www.google.com/calendar/m?source%3Dmobileproducts&pli%3D1),
-    are web clients with export/import to csv or vcard.
-
-### ics import {#gcal_ics_import}
-
-To import properly an icalendar ics file in google calendat, the
-header should set the encoding, otherwise it is supposed to be
-ascii and all UTF-8 characters are replaced by a question mark.
-
-We check the header with
-
-    curl -I http://url/to/icalendar.ics
-
-And it should answer:
-
-    Content-Type: text/calendar; charset=utf-8
-
-Otherwise you should modify the header, in apache it is done by adding
-in a `<Directory>` section or in the `.htaccess` file of the ical
-repository.
-
-    AddType 'text/calendar; charset=UTF-8' .ics
+    [google calendar (mobile)](https://support.google.com/calendar/answer/2465776),
+    are web clients  which allow [exporting clendars as ics files
+    ](ttps://support.google.com/calendar/answer/37111?hl=en) and [sharing your calendars
+    ](https://support.google.com/calendar/answer/37082?hl=en).
+    You can also [import](https://support.google.com/calendar/answer/37118?hl=en)
+    icalendar `.ics` files in your google calendar.
 
 # simple calendar applications
--   [BORG](http://borg.mbcsoft.com) (GPL)
-    is a calendar and and  scheduling application written in
-    Java. There is an ical  plugin.
-    _active in 2015_.
--   [calcurse](http://calcurse.org/)
-    (BSD License) is a text-based calendar and scheduling
-    application. It includes a configurable notification system and an
-    online help system. It can import and export _Icalendar_ format,
-    and export to _pcal_ appointments format.
-    It is an old project, but still actively maintained _in 2017_.
+-   [BORG](https://github.com/mikeberger/borg_calendar) (GPL)
+    is a calendar and and scheduling application written in Java. There is an ical
+    plugin.
+    _active in 2023_.
+
+    There is a [experimental CardDAV import only, an CalDAV synchronisation with _some_
+    servers](https://github.com/mikeberger/borg_calendar/discussions/153) and
+    an [experimental (partial) sync with google calendar / task
+    ](https://github.com/mikeberger/borg_calendar/discussions/155] in borg 1.10
+-   [calcurse](https://calcurse.org/) (BSD License)
+    is a text-based calendar and scheduling application. It includes a
+    configurable notification system and an online help system. It can import and export
+    _Icalendar_ format, and export to _pcal_ appointments format.  It is an old project,
+    but still actively maintained _in 2023_.
     -   [calcurse manual](http://calcurse.org/files/manual.html)
-    -   [calcurse git repository
-        ](http://git.calcurse.org/calcurse.git/tree/)
--   [clcal](http://www.hyborian.demon.co.uk/clcal/)
-    a basic command-line calendar written in C. The entries are in a custom format
-    and there is no import/export option. _The last resource file is 2008_.
--   {{< wp "Chandler_(software)"  "Chandler" >}}
-    a calendar sharing application  _dead since 2006_
+    -   [calcurse-caldav](https://calcurse.org/files/calcurse-caldav.html)
+    -   [calcurse git repository](http://git.calcurse.org/calcurse.git/tree/)
+    -   [calcurse - GitHub](https://github.com/lfos/calcurse) mirror of previous git
+        repo, include the issue tracker and pull requests.
 -   [DayPlanner](http://www.day-planner.org/) (GPL)
-    a Perl program that uses Icalendar format.
-    [DayPlanner GitHub repository
-    ](https://github.com/zerodogg/dayplanner)
-    _DayPlanner_ slowed developement in 2012, and stopped in 2015.
--   [etmtk -  event and task manager
-    ](http://people.duke.edu/~dgraham/etmtk/)
-    is a python-tk application that use free-form text entries to
-    store items in plain text files. It can import/export from
-    icalendar ics format.
-    [etmtk is stored in GitHub](https://github.com/dagraham/etm-tk),
-    where you also find the [etmtk Wiki
-    ](https://github.com/dagraham/etm-tk/wiki).
+    a Perl program that uses Icalendar format. _DayPlanner_ last release in 2012.
+    -   [DayPlanner Gitlab repository](https://gitlab.com/zerodogg/dayplanner)
+-   [etmtk -  event and task manager](http://people.duke.edu/~dgraham/etmtk/)
+    is a python-tk application that use free-form text entries to store items in plain
+    text files. It can import/export from icalendar ics format. _last release 2017_.
+
+    The Debian package is *etm*.
+    -   [etmtk - GitHub](https://github.com/dagraham/etm-tk),
+    -   [etmtk Wiki](https://github.com/dagraham/etm-tk/wiki).
+-   [etm](https://github.com/dagraham/etm-dgraham)
+    is a python event and task manager.
+
+    -   [etm user manual](https://dagraham.github.io/etm-dgraham/)
 -   [gcal](http://www.gnu.org/software/gcal/manual/html_node/index.html) (GPL)
     is a console-based utility that has many uses, as taught by
     [The many uses of gcal
     ](http://www.basicallytech.com/blog/index.php?/archives/97-The-many-uses-of-gcal.html)
-    by Rob Newcater.
-    It is quite complex but the resource file is in a custom format, and there is no import/export option.
--   [gcalcli](https://github.com/insanum/gcalcli)
-    (MIT License) is a Python application that allows you to access
-    your Google Calendar from a command line.
+    by Rob Newcater *2007*.
+
+    It is quite complex but the resource file is in a custom format, and there is no
+    import/export option.
+    -   [gcal git repository](https://git.savannah.gnu.org/cgit/gcal.git)
+-   [gcalcli](https://github.com/insanum/gcalcli) (MIT License)
+    is a Python CLI application that allows you to access your Google Calendar from
+    command line. _packaged in Debian; acttive in 2023._
     -   [Command-Line Cloud: gcalcli | Linux Journal
-        ](http://www.linuxjournal.com/content/command-line-cloud-gcalcli?page%3D0,1)
-    -   This [article teach you how to use gcalcli with Conky
+        ](https://www.linuxjournal.com/content/command-line-cloud-gcalcli)
+    -   [how to use gcalcli with Conky to display the google calendar on your desktop
         ](http://www.tux-planet.fr/afficher-le-calendrier-google-sur-votre-bureau-linux/).
-        to display the google calendar on your desktop by using a provided
-        configuration file.
     -   The same subject is presented in
         [How to integrate Google Calendar in Linux desktop - Xmodulo
-        ](http://xmodulo.com/integrate-google-calendar-linux-desktop.html)
--   [pal calendar](http://palcal.sourceforge.net/) a command-line
-    calendar program. It uses a custom event format (with no import),
-    and can generate a latex and html calendar. _last release 2008_
+        ](https://xmodulo.com/integrate-google-calendar-linux-desktop.html)
+-   [pal calendar](http://palcal.sourceforge.net/) (GPL-2.0)
+    a command-line calendar program. It uses a custom event format (with no import or
+    export), and can generate a latex and html calendar. Packaged in Debian. _last
+    release 2011_
 -   <a name="pcal"></a>[pcal and lcal](http://pcal.sourceforge.net/)
-    (Artistic License) _pcal_ generate monthly-format an yearly-format
-    postscript calendars with optional embedded text and images to
-    mark special events.  _lcal_ generates a postscript yearly _lunar
-    phase_ postscript calendar. _lcal_ is no more developed since
-    2007, and _pcal_ since 2011. _pal_ is in Debian.
+    (Artistic License) _pcal_ generate monthly-format an yearly-format postscript
+    calendars with optional embedded text and images to mark special events.  _lcal_
+    generates a postscript yearly _lunar phase_ postscript calendar. _lcal_ is no more
+    developed since 2007, and _pcal_ since 2011. In 2033 _pcal_ is in Debian.
+
+    The [Home Page](http://pcal.sourceforge.net/) list many third party programs.
 -   [Pear: Date and Time packages](http://pear.php.net/manual/en/package.datetime.php)
     in [Pear manual](http://pear.php.net/manual/en/)
--   [PHPIcalendar](http://phpicalendar.net/documentation/index.php/Main_Page)
-    <a name="PHPIcalendar"></a>(GPL) is a PHP-based iCal file viewer/parser.
+-   <a name="PHPIcalendar"></a>[PHPIcalendar
+    ](https://sourceforge.net/projects/phpicalendar/) (GPL)
+    is a PHP-based iCal file viewer/parser. The last release is in 2010 and the home
+    site `phpicalendar.net` is no longer available.
     The [Dreamhost Wiki: PhpIcalendar page
     ](http://wiki.dreamhost.com/PHPiCalendar#Setting_up_a_WebDAV-enabled_Calendar_Directory)
     explains how use PhpIcalendar as webdav client.
 -   [PyCalendarGen]](https://github.com/jwarlander/pycalendargen) (GPL)
     is a python application that uses  uses ReportLab and mxDateTime
     to generate customizable calendar pages in PDF format.
--   [remind](http://www.roaringpenguin.com/penguin/open_source_remind.php)
-    calendar and alarm program.
--   [SimpleAgenda](http://coyote.octets.fr/simpleagenda/)
-    is an objective-C Gnustep application, that can read Icalendar
-    format. _not updated since 2012_.
+-   [remind](https://dianne.skoll.ca/projects/remind/) (GPL-2.0)
+    calendar and alarm program. It is an old project that is packaged in Debian from
+    year 2000 until now, and it is still active in 2023.
+
+    Remind is a C program with no dependencies,as well as the old postscipt converter
+    *rem2ps* the companion programs *Rem2html* and
+    *Rem2PDF* are written in perl and have perl dependencies; the GUI is a Tcl/TK program.
+
+    There are many third party applications listed at the end of the
+    [Home Page](https://dianne.skoll.ca/projects/remind/); some of them allow exporting
+    and importing from/to icalendar and vcard.
+
+    Debian ha s a *remind*, *reùmind-tools* and a *tkremind* package.
+
+    -   [Remind Home Page](https://dianne.skoll.ca/projects/remind/)
+    -   [Dianne Skoll / remind · Debian Salsa GitLab
+        ](https://salsa.debian.org/dskoll/remind/)
+    -   {{< man "remind(1)" >}}
+    -   [Remind Wiki](https://dianne.skoll.ca/wiki/Remind)
+    -   [Remind FAQ](https://dianne.skoll.ca/wiki/Remind_FAQ)
+    -   [Remind - ArchWiki](https://wiki.archlinux.org/title/Remind)
+    -   [Wyrd](https://gitlab.com/wyrd-calendar/wyrd) (GPL-2.0)
+        is an ncurses-based frontend for remind written in ocaml.
+        It is packaged in Debian. *active in 2023.*
+        -   [Wyrd manual](https://wyrd-calendar.gitlab.io/wyrd/)
+
 -   [WebCalendar](http://www.k5n.us/webcalendar.php) is a PHP-based
-    calendar which relies on a sql DBMS. _Minimal maintenance - last release in 2013_
+    calendar which relies on a sql DBMS. _last release 2019 active in 2023_.
+    -   [webcalendar - GitHub](https://github.com/craigk5n/webcalendar)
 -   [wmcalendar](http://wmcalendar.sourceforge.net/) (GPL)
-     is a dockapp with monthly view and interface to iCal based
-     calendars.
+    is a dockapp with monthly view and interface to iCal based calendars.
+    _last release 2007_
 
 # Address Books
 
 -   Wikipedia {{< wp "Category:Personal information managers" >}},
     {{< wp "List of personal information managers" >}},
-    {{< wp "Comparison of notetaking software" >}}, {{< wp "Outliner" >}}, {{< wp "Outline Processor Markup Language" >}}
+    {{< wp "Comparison of notetaking software" >}}, {{< wp "Outliner" >}},
+    {{< wp "Outline Processor Markup Language" >}}
 -   <a name="abook"></a>[abook](http://abook.sourceforge.net/) (GPL)
     text-based addressbook program
     designed to use with mutt mail client. Abook is written in C + Ncurses.
@@ -399,35 +422,13 @@ repository.
     `M-x bbdb-vcard-import RET <filename> RET`.
     It looks for vCards within `begin:vcard` and `end:vcard` tags in the
     file.
--   [Lisp:bbdb-vcard-export.el
-    ](http://www.emacswiki.org/emacs/bbdb-vcard-export.el)
-    write your entire BBDB into a directory, one entry per line. Per
-    default `M-x bbdb-vcard-export-update-all` writes the data encoded
-    in UTF-16, because that’s what the Apple Addressbook in OSX seems
-    to expect. If you want to specify a different encoding, just use a
-    prefix argument: `C-u M-x bbdb-vcard-export-update-all` and you
-    will be asked for another encoding. The default BBDB file encoding,
-    ISO 2022 JP is probably not what you want.
-
-
-
-# Calendar Notes
-
-## Google calendar
--   [About the 'Quick Add' feature - Calendar Help
-    ](https://support.google.com/calendar/answer/36604?hl%3Den)
-    Example:
-
-        Language Class every Wednesday 7-8pm for 5 months
-        Mom's birthday June 19 yearly
-        Manicure on 9/1 every mont
-        Running w/ Pat 2:15 tomorrow for 45 minutes
-        Running w/ Pat 2:15 - 3 pm tomorro
-
-    If you enter a time with no date, Quick Add will create the event
-    on the earliest date that puts the event in the future; the present
-    day if the time is later, or the next day if the time has already
-    passed: `Volleyball at 5pm`
+-   [Lisp:bbdb-vcard-export.el](http://www.emacswiki.org/emacs/bbdb-vcard-export.el)
+    write your entire BBDB into a directory, one entry per line. Per default `M-x
+    bbdb-vcard-export-update-all` writes the data encoded in UTF-16, because that’s what
+    the Apple Addressbook in OSX seems to expect. If you want to specify a different
+    encoding, just use a prefix argument: `C-u M-x bbdb-vcard-export-update-all` and you
+    will be asked for another encoding. The default BBDB file encoding, ISO 2022 JP is
+    probably not what you want.
 
 
 <!--  Local Variables: -->
