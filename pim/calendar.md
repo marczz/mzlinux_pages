@@ -202,7 +202,7 @@ and {{< iref "org-mode" "Org Mode" >}}
      into icalendar files, which means you can sync them via CalDAV using, for example,
      vdirsyncer.
 
-     _todoman- is in Debian. _active in 2023_.
+     *todoman* is in Debian. _active in 2023_.
 
 ## Synchronization to org
 -   [Worg: Google Calendar Synchronization
@@ -241,6 +241,9 @@ and {{< iref "org-mode" "Org Mode" >}}
     icalendar `.ics` files in your google calendar.
 
 # simple calendar applications
+-   [List of Time Management  applications - ArchWiki
+    ](https://wiki.archlinux.org/title/List_of_applications/Other#Time_management)
+
 -   [BORG](https://github.com/mikeberger/borg_calendar) (GPL)
     is a calendar and and scheduling application written in Java. There is an ical
     plugin.
@@ -263,14 +266,8 @@ and {{< iref "org-mode" "Org Mode" >}}
 -   [DayPlanner](http://www.day-planner.org/) (GPL)
     a Perl program that uses Icalendar format. _DayPlanner_ last release in 2012.
     -   [DayPlanner Gitlab repository](https://gitlab.com/zerodogg/dayplanner)
--   [etmtk -  event and task manager](http://people.duke.edu/~dgraham/etmtk/)
-    is a python-tk application that use free-form text entries to store items in plain
-    text files. It can import/export from icalendar ics format. _last release 2017_.
-
-    The Debian package is *etm*.
-    -   [etmtk - GitHub](https://github.com/dagraham/etm-tk),
-    -   [etmtk Wiki](https://github.com/dagraham/etm-tk/wiki).
--   [etm](https://github.com/dagraham/etm-dgraham)
+.
+-   <a name="etm"></a>[etm](https://github.com/dagraham/etm-dgraham)
     is a python event and task manager.
 
     -   [etm user manual](https://dagraham.github.io/etm-dgraham/)
@@ -313,9 +310,9 @@ and {{< iref "org-mode" "Org Mode" >}}
     The [Dreamhost Wiki: PhpIcalendar page
     ](http://wiki.dreamhost.com/PHPiCalendar#Setting_up_a_WebDAV-enabled_Calendar_Directory)
     explains how use PhpIcalendar as webdav client.
--   [PyCalendarGen]](https://github.com/jwarlander/pycalendargen) (GPL)
+-   [PyCalendarGen](https://github.com/jwarlander/pycalendargen) (GPL)
     is a python application that uses  uses ReportLab and mxDateTime
-    to generate customizable calendar pages in PDF format.
+    to generate customizable calendar pages in PDF format. *updated in 2018*
 -   [remind](https://dianne.skoll.ca/projects/remind/) (GPL-2.0)
     calendar and alarm program. It is an old project that is packaged in Debian from
     year 2000 until now, and it is still active in 2023.
@@ -341,10 +338,24 @@ and {{< iref "org-mode" "Org Mode" >}}
         is an ncurses-based frontend for remind written in ocaml.
         It is packaged in Debian. *active in 2023.*
         -   [Wyrd manual](https://wyrd-calendar.gitlab.io/wyrd/)
-
+    -   [mail2rem](https://github.com/esovetkin/mail2rem)
+         a small bash script for converting ics file inside your Maildir to Remind
+         calendar.
 -   [WebCalendar](http://www.k5n.us/webcalendar.php) is a PHP-based
     calendar which relies on a sql DBMS. _last release 2019 active in 2023_.
     -   [webcalendar - GitHub](https://github.com/craigk5n/webcalendar)
+
+## graphical calendar applications
+-   [etmtk -  event and task manager](http://people.duke.edu/~dgraham/etmtk/)
+    is a python-tk application that use free-form text entries to store items in plain
+    text files. It can import/export from icalendar ics format. _last release 2017_.
+    See also {{< iref "#etm" "etm" >}} by the same author.
+
+    The Debian package is *etm*.
+    -   [etmtk - GitHub](https://github.com/dagraham/etm-tk),
+    -   [etmtk Wiki](https://github.com/dagraham/etm-tk/wiki)
+-   [gnome calendar](https://gitlab.gnome.org/GNOME/gnome-calendar)
+    is a GTK4 application for gnome desktop. In Debian and Flathub.
 -   [wmcalendar](http://wmcalendar.sourceforge.net/) (GPL)
     is a dockapp with monthly view and interface to iCal based calendars.
     _last release 2007_
@@ -355,80 +366,97 @@ and {{< iref "org-mode" "Org Mode" >}}
     {{< wp "List of personal information managers" >}},
     {{< wp "Comparison of notetaking software" >}}, {{< wp "Outliner" >}},
     {{< wp "Outline Processor Markup Language" >}}
--   <a name="abook"></a>[abook](http://abook.sourceforge.net/) (GPL)
-    text-based addressbook program
-    designed to use with mutt mail client. Abook is written in C + Ncurses.
-    It can import/export to ldif, csv,  palm csv
-    and export to html, vcard, plain text. _active in 2015._
-    - [gmail-abook-contact-converter](http://code.google.com/p/gmail-abook-contact-converter/)
-      is a short python script to convert a vCard file (.vcf) of exported Gmail contacts
-      into abook's addressbook format.
-    -   [python-vcf2abook](https://github.com/frankhjung/python-vcard2abook)
-        is a Python script to convert gmail addresses in vcard format to abook.
+-   [List of Contact Management applications - ArchWiki
+    ](https://wiki.archlinux.org/title/List_of_applications/Other#Contacts_management)
+
+-   <a name="abook"></a>[abook](http://abook.sourceforge.net/) (GPL-3.0)
+    text-based addressbook program designed to use with mutt mail client. Abook is
+    written in C + Ncurses.  It can import/export to ldif, csv, palm csv and export to
+    html, vcard, plain text.
+
+    The [source forge git repository](https://sourceforge.net/p/abook/git/)
+    has maintenance commits in December 2021 and a last release 0.6.1 in 2015.
+
+    The github [hhirsh/abook](https://github.com/hhirsch/abook/)
+    repository is forked from the previous at commit `5840fce` in 2014, and is active in
+    2023.
+
+    The patched abook from Debian in the
+    [abook - Salsa.debian](https://salsa.debian.org/rhonda/abook/)
+    repository is a debianized patched fork of the sourceforge repository, at time of
+    writing this note in 2023, the upstream version is 0.6.1.
+
+    -   [python-abook](https://github.com/jspricke/python-abook) (GPL-3.0)
+        is a Python script to convert betwen vcard and abook. _active in 2022_.
 -   [directory](http://geuz.org/directory/)
     is a macro package for LaTeX and BibTeX that facilitates the
     construction, the maintenance and the exploitation of an address
     book like database. _2004_
--   [Doneyet](http://code.google.com/p/doneyet/) (GPL) is an ncurses
-    based hierarchical todo list manager written in C++._not updated
-    since 2009_
--   The [GPE Palmtop Environment](http://gpe.linuxtogo.org/) includes a
-    PIM suite._It is no longer active_<br />
-    There is a
-    [Gpe synchronisation interface](http://www.handhelds.org/moin/moin.cgi/GpeSync)
-    via [Multisync](http://multisync.sourceforge.net/) or
-    [Opensync](http://www.opensync.org/).
--   [GooBook](http://pypi.python.org/pypi/goobook/) (GPL)
-    is a python program to use Google contacts from the command-line
+-   [Doneyet](https://github.com/gtaubman/doneyet) (MIT License) is an ncurses
+    based hierarchical todo list manager written in C++. *commits in 2020*
+-   [GooBook](https://gitlab.com/goobook/goobook) (GPL)
+    is a python program to access Google contacts from the command-line
     or mutt.
-    _A pypi release in 2014_.
+
+    Gobook is packaged in Debian, *and active in 2023, looking for a new maintainer*
 -   [hnb](http://hnb.sourceforge.net) _hierarchical notebook(hnb)_
     (GPL) is a curses program to structure in one
-    place, addresses, to-do lists, ideas, ... hnb is no longer maintened since 2003,
-    but is still available in debian/ubuntu.
--   [The Little Brother's Database (lbdb)](http://www.spinnaker.de/lbdb/) is a client program
-    written in shell that can query many information database on your computer.
-    You can query your _passwd_ file or any password source accepting _getent_,
-    your _pgp2_ or _gpg_ files, a _fido_ database,
-    an _NIS_ server, _Tk addressbook_ database, the mutt aliases, the pine address book,
-    the palm address book _if you have the perl module  Palm::PDB_, a _gnomecard_ datatbase,
-    the _emacs bbdb_, any _ldap server_, the _evolution_  address book, _vcf_ databases,
-    the _abook_ database.
+    place, addresses, to-do lists, ideas, ... hnb is no longer maintened since 2003, and
+    do not support UTF-8.
+
+    It is still available in debian/ubuntu but *though the current Debian maintainer
+    tries to keep hnb in a usable and releasable state he does not plan to add many new
+    features*.
+-   [The Little Brother's Database (lbdb)](http://www.spinnaker.de/lbdb/) (GPL-2.0)
+    is a client program written in shell that can query many information database on
+    your computer.
+    You can query your _passwd_ file or any password source accepting _getent_, your
+    _pgp2_ or _gpg_ files, a _fido_ database, an _NIS_ server, _Tk addressbook_
+    database, the mutt aliases, the pine address book, the palm address book _if you
+    have the perl module Palm::PDB_, a _gnomecard_ database, the _emacs bbdb_, any _ldap
+    server_, the _evolution_ address book, _vcf_ databases, the _abook_ database,
+    _goobook_ .
     It can also extract addresses from your mails,
--   [Osmo](http://clayo.org/osmo/) a GTK+ personal organizer, which
+    -   [lbdb - Github](https://github.com/RolandRosenfeld/lbdb)
+-   [Osmo](https://osmo-pim.sourceforge.net/)
+    a GTK+ personal organizer, which
     includes calendar, tasks manager and address book modules. It requires
-    only _GTK+_ and _LibXML 2_. To add more functionalities you may need _libnotify_,
-    _libgtkhtml2_, _libical_, _Libtar_, _libgringotts_,
-    _libsyncml_. It is packaged in Debian, _active in 2015_
--   [PHP Address Book | SourceForge.net
-    ](http://sourceforge.net/projects/php-addressbook/)
-    web-based address & phone book, contact manager, organizer.
-    vCards, LDIF, Excel, iPhone, Gmail & Google-Maps supported. PHP /
-    MySQL based.
-    [GitHub - php-addressbook](https://github.com/chatelao/php-addressbook)
+    only _GTK+_ and _LibXML 2_.
+
+    To add more functionalities the Debian package add _libnotify_,
+    *libwebkit2gtk*, _libical_, ...
+    It is packaged in Debian, _active in 2023_
+
+    -   [Osmo Documentation - Wikibooks](https://en.wikibooks.org/wiki/Osmo_Documentation)
+-   [PHP Address Book](http://sourceforge.net/projects/php-addressbook/) (AGPL-3)
+    web-based address & phone book, contact manager, organizer.  vCards, LDIF, Excel,
+    iPhone, Gmail & Google-Maps supported. PHP / MySQL based.
+    _last update 2016_.
+    -   [GitHub - php-addressbook](https://github.com/chatelao/php-addressbook)
 
 # BBdb {#bbdb}
--   [Insidious Big Brother Database User Manual
-    ](http://bbdb.sourceforge.net/bbdb.html)
--   [EmacsWiki Bbdb Importers
-    ](http://www.emacswiki.org/emacs/BbdbImporters),
-    [EmacsWiki Bbdb Exporters
-    ](http://www.emacswiki.org/emacs/BbdbExporters),
-    [EmacsWiki: Bbdb Export Import Sync
-    ](http://www.emacswiki.org/emacs/BbdbExportImportSync)
--   [bbdb-vcard-import.el
-    ](http://www-pu.informatik.uni-tuebingen.de/users/crestani/downloads/bbdb-vcard-import.el)
-    imports all vCards that are in a file, just do
-    `M-x bbdb-vcard-import RET <filename> RET`.
-    It looks for vCards within `begin:vcard` and `end:vcard` tags in the
-    file.
--   [Lisp:bbdb-vcard-export.el](http://www.emacswiki.org/emacs/bbdb-vcard-export.el)
-    write your entire BBDB into a directory, one entry per line. Per default `M-x
-    bbdb-vcard-export-update-all` writes the data encoded in UTF-16, because that’s what
-    the Apple Addressbook in OSX seems to expect. If you want to specify a different
-    encoding, just use a prefix argument: `C-u M-x bbdb-vcard-export-update-all` and you
-    will be asked for another encoding. The default BBDB file encoding, ISO 2022 JP is
-    probably not what you want.
+The old BBDB 2.x changed from maintainer and atransition to BBDB-3 started in 2010.
+
+Many scripts, importers, exporters for BBDB-2, have not been updated and are no longer
+usable with BBDB-3.
+
+-   [BBDB-3 Savannah Git repository
+    ](https://git.savannah.nongnu.org/cgit/bbdb.git/tree/)
+    _active in 2022_.
+-   [GNU ELPA - bbdb](https://elpa.gnu.org/packages/bbdb.html)
+    this page reproduce the current README of BBDB, there is not yet _in 2023_ a user
+    manual for BBDB-3.
+-   [BBDB-2 User Manual](http://bbdb.sourceforge.net/bbdb.html)
+-   [EmacsWiki: Category Bbdb](https://www.emacswiki.org/emacs/CategoryBbdb)
+    -   [EmacsWiki Bbdb Importers](http://www.emacswiki.org/emacs/BbdbImporters),
+    -   [EmacsWiki Bbdb Exporters](http://www.emacswiki.org/emacs/BbdbExporters),
+    -   [EmacsWiki: Bbdb Export Import Sync
+        ](http://www.emacswiki.org/emacs/BbdbExportImportSync)
+-   [tohojo/bbdb-vcard](https://github.com/tohojo/bbdb-vcard)
+    vCard Import and Export for The Insidious Big Brother Database (BBDB)
+
+    This is a fork works with BBDB-3, from a script for BBDB-2. _updates in 2021_.
+
 
 
 <!--  Local Variables: -->
