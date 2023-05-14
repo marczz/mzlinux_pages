@@ -13,6 +13,7 @@ See also Wikipedia {{< wp "Comparison of machine translation applications" >}}.
     [RFC 2229](http://tools.ietf.org/html/rfc2229).
 -   [links](http://www.dict.org/links.html) from
     [dict.org: The DICT Development Group](http://www.dict.org/)
+-   [dictd - ArchWiki](https://wiki.archlinux.org/title/Dictd).
 -   John Goerzen has written
     a [Dictclient](http://darcs.complete.org/dictclient) -- Python
     Client API for Dict protocol, and
@@ -92,6 +93,9 @@ See also Wikipedia {{< wp "Comparison of machine translation applications" >}}.
     ](http://wiki.languagetool.org/software-that-supports-languagetool-as-a-plug-in-or-add-on).
 
 # Other desktop dictionary software
+-   [List of Dictionary and thesaurus applications - ArchWiki
+    ](https://wiki.archlinux.org/title/List_of_applications/Documents#Dictionary_and_thesaurus)
+
 -   [Babiloo](https://code.google.com/p/babiloo/) (GPL) written in python
     supports dictionaries in SDictionary, and
     {{< iref "#stardict" "StarDict" >}}.
@@ -103,23 +107,20 @@ See also Wikipedia {{< wp "Comparison of machine translation applications" >}}.
     dictionary server, edict or cedict, Google Translate, Dictd files,
     {{< iref "#stardict" "StarDict" >}} files,
     EPWING dictionaries (popular format in Japan).
--   [GoldenDict](http://goldendict.org/) (GPL)
-    <a name="goldendict"></a>
-    is a dictionary reader in C/qt4/libwebkit4 with a very large
-    support of formats (see
-    [GoldenDict home page](http://goldendict.org/)).  It supports
-    multiple dictionary file formats: Babylon (.bgl) files with images
-    and resources, {{< iref "#stardict" "StarDict" >}}
-    (.ifo / .dict / .idx / .syn) dictionaries,
-    Dictd (.index / .dict / .dz) dictionary files, ABBYY Lingvo (.dsl)
-    source files, together with abbreviation files, ABBYY Lingvo (.lsa
-    /.dat) audio archives. It can also look up in remote Wikipedia,
-    Wiktionary, or any other MediaWiki-based sites.<br /> The android
-    application is not covered by the GPL and is proprietary.
+-   [<a name="goldendict"></a>GoldenDict](http://goldendict.org/) (GPL)
+    is a dictionary reader in C/qt4/libwebkit4 with a very large support of formats (see
+    [GoldenDict home page](http://goldendict.org/)).
+    It supports multiple dictionary file formats: Babylon (.bgl) files with images and
+    resources, {{< iref "#stardict" "StarDict" >}} (.ifo / .dict / .idx / .syn)
+    dictionaries, Dictd (.index / .dict / .dz) dictionary files, ABBYY Lingvo (.dsl)
+    source files, together with abbreviation files, ABBYY Lingvo (.lsa /.dat) audio
+    archives. It can also look up in remote Wikipedia, Wiktionary, or any other
+    MediaWiki-based sites.
+    The android application is not covered by the GPL and is proprietary.
     A GoldenDict package is in Debian.
     -   [GitHub: GoldenDict](https://github.com/goldendict).
-    -   [gcl (goldendict command line)
-        ](https://github.com/dohliam/gdcl)
+    -   [GoldenDict - ArchWiki](https://wiki.archlinux.org/title/GoldenDict)
+    -   [gcl (goldendict command line)](https://github.com/dohliam/gdcl)
         is a ruby  command-line interface for searching GoldenDict
         dictionaries.
 -   [lightlang](https://github.com/mdevaev/lightlang)
