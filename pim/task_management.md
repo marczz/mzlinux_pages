@@ -98,6 +98,9 @@ See also the sections {{< iref "org-mode" "Org Mode" >}} and
     ](https://en.wikipedia.org/wiki/Comparison_of_notetaking_software)
     [Category:Task management software
     ](https://en.wikipedia.org/wiki/Category:Task_management_software).
+-   [List of Task Management applications - ArchWiki
+    ](https://wiki.archlinux.org/title/List_of_applications/Other#Task_management)
+
 -   [VimOrganizer - An Emacs' Org-mode clone for Vim
     ](http://www.vim.org/scripts/script.php?script_id%3D3342),
     [GitHub VimOrganizer](https://github.com/hsitz/VimOrganizer)
@@ -144,6 +147,12 @@ See also the sections {{< iref "org-mode" "Org Mode" >}} and
     -   [Simpletask
         ](https://play.google.com/store/apps/details?id=nl.mpcjanssen.todotxtholo)
         is also using the same todo.txt format
+-   [todoman](https://github.com/pimutils/todoman) (ISC License)
+     A simple python cli, standards-based, todo (aka: task) manager. Todos are stored
+     into icalendar files, which means you can sync them via CalDAV using, for example,
+     vdirsyncer.
+
+     *todoman* is in Debian. _active in 2023_.
 -   {{< wp "WikidPad" >}} (BSD License) is a python-based wiki-like outliner
     for storing thoughts, ideas, to-do lists, contacts, and other notes
     with Wiki-like linking between pages.
