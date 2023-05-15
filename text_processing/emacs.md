@@ -14,20 +14,16 @@ See also {{< iref "org-mode" "Org Mode" >}}.
     [Gmame list of emacs groups](http://news.gmane.org/search.php?match=emacs)
 -   [EmacsWiki](http://www.emacswiki.org/cgi-bin/wiki.pl):
     [Site Map](http://www.emacswiki.org/cgi-bin/wiki/SiteMap),
-    [Category Templates
-    ](http://www.emacswiki.org/emacs/CategoryTemplates),
-    [Category Programming Modes
-    ](http://www.emacswiki.org/emacs/CategoryModes),
-    [Category Programming
-    ](http://www.emacswiki.org/emacs/CategoryProgramming),
+    [Category Templates](http://www.emacswiki.org/emacs/CategoryTemplates),
+    [Category Programming Modes](http://www.emacswiki.org/emacs/CategoryModes),
+    [Category Programming](http://www.emacswiki.org/emacs/CategoryProgramming),
     [Emacs Client](https://www.emacswiki.org/emacs/EmacsClient).
 -   [Emacs Manual](http://www.gnu.org/software/emacs/manual/html_node/emacs/),
     [Emacs Lisp Intro
     ](http://www.gnu.org/software/emacs/manual/html_node/eintr/index.html),
     [Emacs Lisp Manual
     ](http://www.gnu.org/software/emacs/manual/html_node/elisp/index.html),
-    [Emacs FAQ (html)
-    ](http://www.gnu.org/software/emacs/emacs-faq.html),
+    [Emacs FAQ (html)](http://www.gnu.org/software/emacs/emacs-faq.html),
     [List of other Emacs manuals
     ](http://www.gnu.org/software/emacs/manual/html_node/elisp/index.html).
 -   [Common Lisp HyperSpec
@@ -44,15 +40,12 @@ See also {{< iref "org-mode" "Org Mode" >}}.
     ](https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf)
 
 # Emacs tutorials
--   [Emacs Wiki: EmacsNiftyTricks
-    ](http://www.emacswiki.org/emacs/EmacsNiftyTricks)
+-   [Emacs Wiki: EmacsNiftyTricks](http://www.emacswiki.org/emacs/EmacsNiftyTricks)
 -   [WikEmacs](http://wikemacs.org/wiki/Main_Page)
 -   [A Tutorial Introduction to Emacs
     ](https://www2.lib.uchicago.edu/keith/tcl-course/emacs-tutorial.html)
--   [comp.emacs at rtfm.mit.edu
-    ](ftp://rtfm.mit.edu/pub/usenet/comp.emacs/)
--   [Emacs Mini Manual
-    ](https://boruch-baum.github.io/emacs_mini_manual/)
+-   [comp.emacs at rtfm.mit.edu](ftp://rtfm.mit.edu/pub/usenet/comp.emacs/)
+-   [Emacs Mini Manual](https://boruch-baum.github.io/emacs_mini_manual/)
     contains a short emacs manual and an helm and projectile tutorial.
     The [org-mode source](https://github.com/Boruch-Baum/emacs_mini_manual/)
     is on GitHub.
@@ -124,10 +117,9 @@ See also {{< iref "org-mode" "Org Mode" >}}.
     -   Pull in additional information
 -   Sebastian Wiesner
     [Emacs posts](http://www.lunaryorn.com/pages/emacs.html) and
-    [Emacs Spotlight
-    ](http://www.lunaryorn.com/series/emacs-spotlight.html)
-    a series of concise posts that cast a spotlight on notable Emacs
-    features and packages.
+    [Emacs Spotlight](http://www.lunaryorn.com/series/emacs-spotlight.html)
+    a series of concise posts that cast a spotlight on notable Emacs features and
+    packages.
 -   [Toby 'qubit' Cubitt - Blog](http://www.dr-qubit.org/tags/all.html), he is the
     author of [many packages](http://www.dr-qubit.org/tags/computing-code-emacs.html).
 -   [Jonas Bernoulli: EmacsAir](https://emacsair.me/).
@@ -155,6 +147,7 @@ See also {{< iref "org-mode" "Org Mode" >}}.
 -   [jed](https://www.jedsoft.org/jed/)
     a small text editor that can be configured and extended in the S-Lang scripting
     language.
+
     It comes with an emulation of Emacs, an provides many
     [editing modes](https://jedmodes.sourceforge.io/modes/). _It is packaged in Debian._
     -   [Jed Quick Reference](https://www.guidogonzato.it/jed/jed-quickref.html).
@@ -168,11 +161,13 @@ See also {{< iref "org-mode" "Org Mode" >}}.
     a java small editor with support for syntax highlighting in more than 140 languages.
     It has a predefined keymap for Emacs. _Packaged in Debian_
 -   [Joe](http://joe-editor.sourceforge.net/) (GPL)
-    is a terminal-based screen editor written in C. Joe can be
-    customized to emulate pico, emacs _under the name jmacs_,
-    wordstar. Joe is utf-8 compliant and has mouse support. The
-    resident size for joe 3.7 with no buffer loaded is 2MB with 1.1M
-    shared for whatever interface you use joe, jmacs, jpico, jstar.
+    is a terminal-based screen editor written in C. Joe can be customized to emulate
+    pico, emacs _under the name jmacs_, wordstar.
+
+    Joe is utf-8 compliant and has mouse
+    support. The resident size for joe 3.7 with no buffer loaded is 2MB with 1.1M shared
+    for whatever interface you use joe, jmacs, jpico, jstar.
+
     _It is packaged in Debian as well as the jupp version jor-jupp._
 -   [jove](https://github.com/jonmacs/jove)
     a compact,  Emacs compatible text-editor. _packaged in Debian._
@@ -321,7 +316,7 @@ The branch pgtk-nativecomp can be found in
     {{< iref "#ivy" "swiper" >}},
     {{< iref "#hydra" "hydra" >}} and others.
 
-    Oremacs uses {{< iref "straight"  "Straight" >}}
+    Oremacs uses {{< iref "#straight"  "Straight" >}}
     and many [snippets](https://github.com/abo-abo/oremacs/tree/github/snippets),
     there is an init file for each mode that contains few hydra snippets for avy,
     buffer-menu, dired, helm, info, org-roam, projectile, search.
@@ -345,7 +340,7 @@ The branch pgtk-nativecomp can be found in
     [Using Emacs video Series - C'est la Z](https://cestlaz.github.io/stories/emacs/).
 
 #### With evil
--   {{< iref "howardism" "Howard Abrams" >}} has his
+-   {{< iref "#howardism" "Howard Abrams" >}} has his
     [emacs configuration _hamacs_](https://gitlab.com/howardabrams/hamacs) which uses
     org init files and literal programming.
 
@@ -455,10 +450,9 @@ The branch pgtk-nativecomp can be found in
 
 # Emacs Packages
 
-The [EmacsWiki](http://www.emacswiki.org) is the more complete
-references on packages, I only list in the followings subsections some
-package that I use, mainly to remember what choice I have made for
-domains which are targeted by many packages.
+The [EmacsWiki](http://www.emacswiki.org) is the more complete references on packages, I
+only list in the followings subsections some package that I use, mainly to remember what
+choice I have made for domains which are targeted by many packages.
 
 You find also nice packages in the
 [awesome-emacs list](https://github.com/emacs-tw/awesome-emacs).
@@ -472,24 +466,17 @@ You find also nice packages in the
     targeted to org mode.
 
 -   Look at
-    -   {{< iref "git#emacs_git" "Git" >}}
-        for emacs git interface, and diff frontends.
-    -   {{< iref "irc#emacs_irc" "IRC" >}}
-        for emacs irc clients,
-    -   {{< iref "xmpp#emacs_jabber" "Xmpp" >}}
-        for emacs jabber client,
-    -   {{< iref "calendar#bbdb" "Calendar and PIM" >}}
-        for _bbdb_,
-    -   {{< iref "mail" "Mail" >}} for emacs MUA
-        {{< iref "mail#gnus" "Gnus" >}} and
-        {{< iref "mail#mu4e" "mu4e" >}})
-    -   {{< iref "feed" "RSS" >}}
-        for emacs rss readers like elffeed and newsticker.
-    -   {{< iref "dictionaries" "Dictionary Software" >}}
-        for emacs dictionary interface,
+    -   {{< iref "git#emacs_git" "Git" >}} for emacs git interface, and diff frontends.
+    -   {{< iref "irc#emacs_irc" "IRC" >}} for emacs irc clients,
+    -   {{< iref "xmpp#emacs_jabber" "Xmpp" >}} for emacs jabber client,
+    -   {{< iref "/docs/mzlinux/pim/calendar#bbdb" "Calendar and PIM" >}} for _bbdb_,
+    -   {{< iref "mail" "Mail" >}}, {{< iref "mail#gnus" "Gnus" >}} and
+        {{< iref "mail#mu4e" "mu4e" >}} for emacs MUA
+    -   {{< iref "feed" "RSS" >}} for emacs rss readers like elffeed and newsticker.
+    -   {{< iref "dictionaries" "Dictionary Software" >}} for emacs dictionary interface,
     -   {{< iref "latex" "LaTeX" >}} for emacs latex interface.
 -   Other applications are in their own section you can find them by
-    searching this site for <i>Emacs</i>.
+    searching this site for *Emacs*.
 
 
 ## Packages provided inside emacs distrib
@@ -505,23 +492,22 @@ You find also nice packages in the
 -   [eldav](http://www.emacswiki.org/emacs/ElDav)
     is an interface to the WebDAV servers for Emacs.
 -   [EWW Emacs Web Wowser][eww]
-    is a web browser for GNU Emacs.  It can load, parse, and display
-    various web pages using shr.el.
--   [ReBuilder][rebuilder]
-    enter `M-x re-builder` see also
-    [RegularExpressionHelp
-    ](http://www.emacswiki.org/emacs/RegularExpressionHelp),
+    is a web browser for GNU Emacs.  It can load, parse, and display various web pages
+    using shr.el.
+-   [ReBuilder][rebuilder] enter `M-x re-builder` see also
+    [RegularExpressionHelp](http://www.emacswiki.org/emacs/RegularExpressionHelp),
     [ReplaceRegexp Examples](http://www.emacswiki.org/emacs/ReplaceRegexp).
--   [reStructuredText mode][rst]
-    is used for {{< iref "rest" "reStructuredText" >}}.
+-   [reStructuredText mode][rst] is used for {{< iref "rest" "reStructuredText" >}}.
 
 ## Buffer management
-In the Emacs Manual you find a [Buffers Section
-](https://www.gnu.org/software/emacs/manual/html_node/emacs/Buffers.html).
+In the Emacs Manual you find a
+[Buffers Section](https://www.gnu.org/software/emacs/manual/html_node/emacs/Buffers.html).
+
 -   [BufferMenu
-](https://www.gnu.org/software/emacs/manual/html_node/emacs/Several-Buffers.html)
-is the standard buffer mnagement package included in emacs.
+    ](https://www.gnu.org/software/emacs/manual/html_node/emacs/Several-Buffers.html)
+    is the standard buffer mnagement package included in emacs.
     -   [EmacsWiki: Buffer Menu](https://www.emacswiki.org/emacs/BufferMenu)
+
 Two other package are provided with emacs but only [succintly presented in the Emacs
 Manual](https://www.gnu.org/software/emacs/manual/html_node/emacs/Buffer-Menus.html).
 -   [EmacsWiki: Buffer Selection](https://www.emacswiki.org/emacs/BufferSelection).
@@ -532,8 +518,8 @@ Manual](https://www.gnu.org/software/emacs/manual/html_node/emacs/Buffer-Menus.h
     ](https://www.masteringemacs.org/article/mastering-key-bindings-emacs)
 -   [EmacsWiki: Category Keys](https://www.emacswiki.org/emacs/CategoryKeys)
 -   [general.el][] (GPL-3.0)
-    general.el provides a more convenient method for binding keys in emacs
-    (for both evil and non-evil users).
+    general.el provides a more convenient method for binding keys in emacs (for both
+    evil and non-evil users).
 -   <a name="hydra"></a>[Hydra][hydra]
     by Oleh Krehel _abo-abo_ group common group of command by prefix, with an
     interactive chooser for the bindings.
@@ -696,16 +682,15 @@ _   [EmacsWiki: Category Frames](https://www.emacswiki.org/emacs/CategoryFrames)
     -   [counsel.el](https://github.com/abo-abo/swiper/blob/master/counsel.el).
         is a set of completion functions with Ivy. Melpa distribute it
         as a separate package.
--   <a name="smex"></a>[smex][]
-    is a M-x enhancement for Emacs. Built on top of Ido, it proposes
-    your most frequently used commands. A more recent fork is
+-   <a name="smex"></a>[smex][] is a M-x enhancement for Emacs. Built on top of Ido, it
+    proposes your most frequently used commands. A more recent fork is
     {{< iref "#amx" "amx" >}}. _in elpa_
 -   [which-key][] by Justin Burkett automatically pops up the keys following your
     favorite prefixes. It can also highlight particular commands choosen by regex. It is
     less polished than {{< iref "#hydra" "Hydra" >}} but does not need manual
     configuration of the completions.
 
-        It was  fork of [guide-key][]   which is no longer maintained.
+    It was  fork of [guide-key][]   which is no longer maintained.
 
 ## Programming, Projects
 -   [format-all-the-code][] (MIT License)
