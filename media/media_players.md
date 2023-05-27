@@ -29,25 +29,20 @@ See also  {{< iref "codecs" "Codecs" >}} and it's subsection
 -   [linux-sound.org](http://linux-sound.org/).
 -   [ArchWiki list of audio applications
     ](https://wiki.archlinux.org/index.php/List_of_applications/Multimedia#Audio).
--   [Music software written in Python
-    ](http://wiki.python.org/moin/PythonInMusic)
+-   [Music software written in Python](http://wiki.python.org/moin/PythonInMusic)
 -   The [Free Software Directory](http://directory.fsf.org/)
-    [Audio section
-    ](http://directory.fsf.org/audio/)
+    [Audio section](http://directory.fsf.org/audio/)
     gives a list of GPL sound applications.
 
 ## DVD/CD
 See also {{< iref "dvd_cd_recording" "DVD and CD recording" >}}
 
 -   ArchWiki:
-    -   [Optical disc drive
-        ](https://wiki.archlinux.org/index.php/Optical_disc_drive)
+    -   [Optical disc drive](https://wiki.archlinux.org/index.php/Optical_disc_drive)
         burning, playback, ripping, troubleshooting.
-    -   [DVD Backup
-        ](https://wiki.archlinux.org/index.php/Dvdbackup),
+    -   [DVD Backup](https://wiki.archlinux.org/index.php/Dvdbackup),
 -   Ubuntu Help:
-    -   [Cd/Dvd Burning
-        ](https://help.ubuntu.com/community/CdDvd/Burning)
+    -   [Cd/Dvd Burning](https://help.ubuntu.com/community/CdDvd/Burning)
     -   [How do I enable restricted codecs to play DVDs?
         ](https://help.ubuntu.com/stable/ubuntu-help/video-dvd-restricted.html)
     -   [RestrictedFormats/PlayingDVDs - Community Help Wiki
@@ -430,7 +425,7 @@ _Juk_ has many KDE libraries dependencies, making it heavy to use on non KDE Des
     -   [Extra plugins](http://qmmp.ylsoftware.com/links.php)
 
     On amd64 _Qmmp v1.4.4 (2021)_ memory footprints are 100M res / 83M shr idle
-    or playing an opus file. It incrase whan you play more files, and is dependent of
+    or playing an opus file. It increase when you play more files, and is dependent of
     the enabled plugins.
 
 [RealPlayer](http://www.real.com/linux) and [Helix Player](https://helixcommunity.org/)
@@ -768,6 +763,9 @@ __ogg123__, __oggdec__
 
 ## Emacs controlled Players {#emacs_players}
 
+The {{< iref "#mpd" "MPD" >}} players are referenced
+{{<iref "#mpd_emacs_clients" "in the mpd clients" >}}.
+
 All these packages are in Melpa.
 
 See also [EmacsWiki: MusicPlayers](http://www.emacswiki.org/emacs/MusicPlayers)
@@ -796,35 +794,6 @@ See also [EmacsWiki: MusicPlayers](http://www.emacswiki.org/emacs/MusicPlayers)
 :   control VLC through VLC HTTP interface.
 
 
-#### mpd control from emacs
-
-<a name="libmpdee"></a>[libmpdee](https://github.com/andyetitmoves/libmpdee) (GPL)
-:   LMibmpdee    is a client library for  {{< iref "#mpd" "mpd" >}}
-    in emacslisp, packaged in MELPA.
-
-[simple-mpc](https://github.com/jorenvo/simple-mpc) (GPL)
-:   A GNU Emacs frontend to mpc, packaged in MELPA.
-
-[Mingus](http://github.com/pft/mingus) (GPL).
-:   Mingus is an extension of {{< iref "#libmpdee" "LMibmpdee" >}}
-    by Niels Giesen, packaged in MELPA.  The interface resembles that of
-    {{< iref "#ncmpc" "ncmpc"  >}}, and it provides extensive playlist editing
-    facilities. It can be interfaced from emacs-w3m an dired.  _mingus stays home_ is
-    used to play any local sound files, it provides a cd-burning tool
-    and tag editing with [taggit]( https://github.com/ft/taggit).
-
-__MPC__
-:   is major mode providing an interface to MPD bundled with Emacs >= 23.2 .
-
-[mpdel](https://gitea.petton.fr/mpdel/mpdel) (GPL)
-:   Emacs user interface for Music Player Daemon, Available from melpa.
-    It provides an Emacs user interface including playlists, navigation in
-    the database and playback control. It can be controlled by ivy with
-    [ivy-mpdel](https://gitea.petton.fr/mpdel/ivy-mpdel).
-
-[simple-mpc](https://github.com/jorenvo/simple-mpc) (GPL)
-:   A GNU Emacs major mode that acts as a front end to mpc.
-    it is in Elpa.
 
 # Music Player Daemon {#mpd}
 ## MPD Server
@@ -845,8 +814,7 @@ playing music  and managing playlists.
     (musepack), mpg123 (mp3), opus, pcm, sidplay, sndfile (wav and aiff),
     vorbis, wavpack, wildmidi.
 -   The input are not limited to files but can also come from any
-    [input plugin
-    ](https://mpd.readthedocs.io/en/latest/plugins.html#input-plugins):
+    [input plugin](https://mpd.readthedocs.io/en/latest/plugins.html#input-plugins):
     alsa input from a soundcard, CD audio, HTTP stream with curl; rtp
     / rtsp / rtmp / rtmpt / rtmps with ffmpeg, mms; unmounted smb or nfs,
     upnp servers on the local network, some commercial streaming services like qobuz.
@@ -896,7 +864,8 @@ playing music  and managing playlists.
     ](https://github.com/MusicPlayerDaemon/MPD/blob/master/doc/mpdconf.example)
 -   [GitHub - MPD](https://github.com/MusicPlayerDaemon/MPD)
 -   [Music Player Daemon Wiki | Fandom
-    ](https://mpd.fandom.com/wiki/Music_Player_Daemon_Wiki).
+    ](https://mpd.fandom.com/wiki/Music_Player_Daemon_Wiki)
+    *old documentation, use first the manual and ArchWiki pages*.
 -   [ArchWiki: Music Player Daemon](https://wiki.archlinux.org/index.php/Mpd)
 -   [ArchWiki: MPD Tips and tricks
     ](https://wiki.archlinux.org/index.php/Music_Player_Daemon/Tips_and_tricks)
@@ -906,7 +875,7 @@ playing music  and managing playlists.
     gives the configuration for a Bluetooh headset.
     See also
     [Gentoo Wiki - Bluetooth Headset](https://wiki.gentoo.org/wiki/Bluetooth_Headset).
-    and the {{< iref "bluetooth" "Bluetooth section" >}}.
+    and the {{< iref "bluetooth_notes" "Bluetooth section" >}}.
 
 -   xmms2 team has published a
     [comparison of xmms2 and mpd](https://github.com/xmms2/wiki/wiki/XMMS2-vs-MPD),
@@ -920,13 +889,14 @@ playing music  and managing playlists.
 
 
 
-## Clients
-Mpd has some client libraries
-in C/C++, Java, lisp/scheme, haskell, perl, php, python, Ruby.
+## Clients {#mpd_clients}
+Mpd has some client libraries in C/C++, Java, lisp/scheme, haskell, perl, php, python,
+Ruby.
+
 -   [libmpdclient](https://www.musicpd.org/doc/libmpdclient/)
     is a client library for the Music Player Daemon, written in C.
 
-For python you fin two main libraries:
+For python you find two main libraries:
 
 -   [python-mpd](http://pypi.python.org/pypi/python-mpd/)
     is the older recommended library.
@@ -934,78 +904,136 @@ For python you fin two main libraries:
     is an improvement of python-mpd.
 
 
-The [MPD Manual](http://www.musicpd.org/doc/user/) has a a
+The [MPD Manual](https://mpd.readthedocs.io/en/stable/user.html) has a a
 [Configuration chapter](http://www.musicpd.org/doc/user/ch03.html).
+You find a list of
+[Clients for the Music Player Daemon](https://www.musicpd.org/clients/)
+in the mpd home site.
 
-You find a [long list of MPD clients in the mpd wiki
-](https://mpd.fandom.com/wiki/Clients), most of
-them are in the [mpd git repository](http://git.musicpd.org/),
-the list is not always up-to date and some software are obsoletes.
+The older
+[list of MPD clients in the mpd wiki](https://mpd.fandom.com/wiki/Clients)
+contains obsolete software.
 
-Some scripts are also in the page  [MPD Hacks
-](https://web.archive.org/web/20160414023836/http://mpd.wikia.com/wiki/Hacks)
-_(archive of the page which has not be transferred to new fandom wiki.)_
+[ArchWiki MPD page](https://wiki.archlinux.org/title/Music_Player_Daemon)
+has also a
+[list of MPD Clients](https://wiki.archlinux.org/title/Music_Player_Daemon#Clients).
+
+The officials clients are repositories in
+[Music Player Daemon project · GitHub](https://github.com/MusicPlayerDaemon).
 
 
-A selection of clients:
+I only list a selection of clients
 
--   {{< iref "streaming#ampache" "Ampache" >}}
-    A  stream server for (see the {{< iref "streaming#ampache" "Ampache entry" >}})
-    That can control many mpd instances for local play.
--   [Ario](http://ario-player.sourceforge.net/) a GTK2 client for _mpd_
-    and {{< iref "#xmms2" "xmms2" >}}  inspired by Rhythmbox.
-    _17M resident 10M shared_.
--   {{< iref "monitoring#conky" "Conky" >}}
-    the monitoring daemon has a plugin to display the mpd state.
--   [emms](http://www.gnu.org/software/emms)
-    the emacs multimedia player, can control mpd.
--   [fookebox](https://github.com/cockroach/fookebox/)
-    is a jukebox-style web-frontend to mpd written in python
-    with the pylons framework. It is in debian.
--   [Gimmix](https://github.com/cmende/gimmix) (GPL-2.0)
-    is a graphical client written in C using GTK+2. It supports playlist management and
-    ID3v2 Tag editing. _20M resident including 12M shared. The source repository has
-    only few bug fixes since 2012 (checked in 2021)_
--   [Guimup](http://www.coonsden.com/) a client
-    written in C++ and GTKmm.
--   [glurp](http://sourceforge.net/projects/glurp/)
-    Graphical interface written in GTK+ (10M resident, 8.5M shared
-    ).  [GitHub: glurp](http://git.musicpd.org/cgit/master/glurp.git/)
--   [gmpc](https://gmpc.fandom.com/wiki/Gnome_Music_Player_Client) (GPL-2.0)
-    Gnome Music Player Client with playlist and tag management. It is
-    a GTK client with light gnome dependencies (13M resident,10M, 3M
-    added on my sys. ).
-    -   [Github- gmpc](https://github.com/DaveDavenport/gmpc)
--   {{< iref "streaming#jinzora" "Jinzora" >}}
-    A web based streaming and media management system.
--   _mpc_ the reference (Scriptable) command
+### Console clients
+
+-   [mpc](https://github.com/MusicPlayerDaemon/mpc)_the reference (Scriptable) command
     line client provided with _mpd_.
-    Refs: [mpc(1)
-    ](http://manpages.debian.org/cgi-bin/man.cgi?query=mpc%281%29)
--   __MPC.el__ is major emacs mode providing an interface to MPD.
--   [MPDCon](http://www.nongnu.org/gap/mpdcon/index.html) - A
-    Graphical interface built with GNUstep SQLClient library.
--   [mpd remote](https://iprog.com/projects)  very basic PHP client
-    designed for a mobile phone's browser.
--   [Mpd WebAmp](http://cseickel.googlepages.com/mpdwebamp)
-    (GPL) is a web client for mpd based on turbogears.
--   <a name="mpdris2"></a>[mpDris2](https://github.com/eonpatapon/mpDris2) (GPL-3.0)
-    is a {{< iref "#mpris" "MPRIS" >}} client daemon that is run in the user session and
-    monitors a local or distant mpd server.
--   [musicpm](http://code.google.com/p/musicpm/)
-    is a firefox extension written with the xul library it communicates
-    with MPD over TCP sockets.
--   [ncmpc](http://git.musicpd.org/cgit/master/ncmpc.git/) -
-    ncurses console client (1.6M resident, 1.2 shared) Refs:
-    [ncmpc(1)
-    ](http://manpages.debian.org/cgi-bin/man.cgi?query=ncmpc%281%29)
+    -   [mpc documentation](https://www.musicpd.org/doc/mpc/html/)
+    -   [mpc(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=mpc%281%29)
+-   [ncmpc](https://github.com/MusicPlayerDaemon/ncmpc)
+    is the official C++ / ncurses console client (1.6M resident, 1.2 shared.)
+
+   _ncmpc_ is in Debian, the plugins to download lyrics are in the package =ncmpc-lirics=.
+    -   [ncmpc documentation](https://ncmpc.readthedocs.io/en/stable/)
+    -   [ncmpc(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=ncmpc%281%29)
 -   [ncmpcpp](http://ncmpcpp.rybczak.net/) is a rewrite in C++ and  of
-    ncmpc, with some added features. It is _in 2018_ a very actively
+    ncmpc, with some added features. It is _in 2023_ an actively
     maintained, and updated project.
+
+    _ncmpcpp_ is in Debian.
+    -   [ncmpcpp - GitHub](https://github.com/ncmpcpp/ncmpcpp)
     -   [ArchWiki: Ncmpcpp
         ](https://wiki.archlinux.org/index.php/ncmpcpp)
     -   [GitHub - jelly/ncmpcpp-cheatsheet
         ](https://github.com/jelly/ncmpcpp-cheatsheet)
+-   [vimpc](https://github.com/boysetsfrog/vimpc) (GPL)
+    A curses based client with vi like key bindings .
+    _Last commit 2020_.
+
+### Emacs clients {#mpd_emacs_clients}
+-   [emms](http://www.gnu.org/software/emms)
+    the emacs multimedia player, can control mpd.
+-   <a name="libmpdee"></a>[libmpdee](https://github.com/andyetitmoves/libmpdee) (GPL)
+    LMibmpdee    is a client library for  {{< iref "#mpd" "mpd" >}}
+    in emacslisp, packaged in MELPA.
+-   [Mingus](http://github.com/pft/mingus) (GPL).
+    Mingus is an extension of {{< iref "#libmpdee" "LMibmpdee" >}}
+    by Niels Giesen, packaged in MELPA.  The interface resembles that of
+    {{< iref "#ncmpc" "ncmpc"  >}}, and it provides extensive playlist editing
+    facilities. It can be interfaced from emacs-w3m an dired.  _mingus stays home_ is
+    used to play any local sound files, it provides a cd-burning tool
+    and tag editing with [taggit]( https://github.com/ft/taggit).
+-   [MPC.el](https://www.emacswiki.org/emacs/Mpc) is a major emacs mode providing an
+    interface to MPD. It is bundled with emacs.
+    -   [mpc.el - GitHub](https://github.com/emacs-mirror/emacs/blob/master/lisp/mpc.el).
+-   [mpdel](https://github.com/mpdel/mpdel) (GPL-3.0)
+    Emacs user interface for Music Player Daemon, Available from melpa.
+    It provides an Emacs user interface including playlists, navigation in
+    the database and playback control. It can be controlled by ivy with
+    [ivy-mpdel](https://gitea.petton.fr/mpdel/ivy-mpdel).
+-   [simple-mpc](https://github.com/jorenvo/simple-mpc) (GPL)
+    A GNU Emacs major mode that acts as a front end to mpc it focuses on simplicity, the
+    UI is inspired by Mingus. it is in Elpa.
+
+### Graphical clients
+
+-   {{< iref "monitoring#conky" "Conky" >}}
+    the monitoring daemon has a plugin to display the mpd state.
+-   <a name="cantata"></a>[cantata](https://github.com/CDrummond/cantata) (GPL-3.0)
+    graphical front-end for MPD. It provides many tools to view and manage the music
+    collection including:
+
+    library - sorted by album, artist, track, directory; albums with cover art, user
+    defined playlists, dynamic playlists, streams, Online services; Jamendo, Magnatune,
+    SoundCloud, and Podcasts. internet radio searchable from TuneIn, ShoutCast, or
+    Dirble., lyrics, artist information from Wikipedia, tag editor, device support for
+    USB mass storage, MTP and CDs, MPRISv2 DBUS interface.
+
+    The author support stopped in 2022, there are some forks, but a new maintainer is
+    yet to find.
+
+    Cantata is in DEbian.
+-   [MPDCon](http://www.nongnu.org/gap/mpdcon/index.html)
+    Graphical interface built in Objective C with GNUstep SQLClient library.
+    The development stopped in 2013, but it is still packaged in Debian testing and sid
+    in 2023.
+
+### Web Clients
+-   {{< iref "streaming#ampache" "Ampache" >}}
+    A  stream server for (see the {{< iref "streaming#ampache" "Ampache entry" >}})
+    That can control many mpd instances for local play.
+-   <a name="mpdris2"></a>[mpDris2](https://github.com/eonpatapon/mpDris2) (GPL-3.0)
+    is a {{< iref "#mpris" "MPRIS" >}} client daemon that is run in the user session and
+    monitors a local or distant mpd server.a
+-   <a name="mympd"></a>[myMPD](https://github.com/jcorporation/myMPD)  (GPL-3.0)
+    is a standalone and mobile friendly web mpd client with a tiny footprint and
+    advanced features.
+
+    The backend is written in C and has no dependencies to external databases or
+    webservers. The configuration is stored in plain text files and all the data is
+    pulled on demand from MPD. The MPD database is the only source of truth for myMPD.
+
+    The frontend is mobile friendly, written as a PWA and offers on all devices the same
+    functionality. It communicates over AJAX and websockets using the json-rpc 2
+    protocol.
+
+    myMPD is scriptable in LUA.The scripts may be activated by
+    [trigers](https://jcorporation.github.io/myMPD/references/trigger).
+
+    myMPD [supports lyrics](https://jcorporation.github.io/myMPD/references/lyrics)
+    embedded as USLT (unsynced) or SYLT (synced) tags in mp3 files (id3v2 tags) or in
+    configurable vorbis comments in flac and ogg files. As alternative myMPD tries to
+    get the lyrics from a file in the same directory as the song with a configurable
+    extension.  You can use the script [musicdb-scripts/lyrics.sh
+    ](https://github.com/jcorporation/musicdb-scripts/blob/master/lyrics.sh) to download
+    lyrics.
+
+    myMPD is packaged in some distributions including Termux.
+
+    -   [webradiodb](https://github.com/jcorporation/webradiodb)
+        is a webradio list for myMPD.
+    -   [musicdb-scripts](https://github.com/jcorporation/musicdb-scripts)
+        shell scripts to download images and lyrics for your music files.
 -   [phpMpReloaded](http://phpmpreloaded.sourceforge.net/) Group four
     Web interfaces  written in PHP with or without javascript:
     _PhpMp_ a simple web interface,  _PhpMp2_ add themes,
@@ -1015,6 +1043,81 @@ A selection of clients:
     driven by XMLHTTPRequest (AJAX) with a small php-backend, _iPodMp_ a
     php/ajax client, optimized for Apple's iPhone & iPod,
     _MPD-Web-Remote_  a mobile client for iPhone/iPad.
+
+    Last commit in 2018.
+    -   [phpMpReloaded Git Reository
+        ](https://sourceforge.net/p/phpmpreloaded/phpmpreloaded/ci/master/tree/)
+-
+-   [RompЯ](https://fatg3erman.github.io/RompR/)a ([alt-SpongWare license
+    ](https://github.com/fatg3erman/RompR/blob/master/LICENSE.txt))
+    a feature rich browser-based client for Mopidy and MPD,
+    _active project in 2023_.
+
+    Among the RompЯ features we find
+    -   [The Music Collection](https://fatg3erman.github.io/RompR/Music-Collection)
+        designed to sort your music by artist and album. it allows to select a tracck,
+        tag, rate, or bookmark it.
+    -   [Spoken Word Collection](https://fatg3erman.github.io/RompR/Spoken-Word)
+        is similar to the music collection, but applied to speech tracks.a
+    -   [Searching music, podcast, radio stattion
+        ](https://fatg3erman.github.io/RompR/Searching-For-Music)
+    -   [Internet Radio](https://fatg3erman.github.io/RompR/Internet-Radio).
+        [Podcasts | RompЯ](https://fatg3erman.github.io/RompR/Podcasts).
+    -   [Info Panel](https://fatg3erman.github.io/RompR/The-Info-Panel) and
+        [Play Queue](https://fatg3erman.github.io/RompR/The-Playlist).
+    -   [Playlists](https://fatg3erman.github.io/RompR/Using-Saved-Playlists);
+    -   [Metadata backup](https://fatg3erman.github.io/RompR/Backing-Up-Your-Metadata)
+    -   [OPML Importer](https://fatg3erman.github.io/RompR/OPML-Importer)
+        for an opml list of podcasts.
+    -   [Last.FM](https://fatg3erman.github.io/RompR/LastFM).
+
+    RompЯ is written in php, with some python for websockets.  By default, RompЯ uses
+    SQLite for its database, but if you have a running MySQL server, it can use it.
+
+    RompЯ uses Cookies and will store preferences in the local settings of your browser.
+    and the server settings are stored in plain text, No sensitive login information is
+    stored in your browser, they are saved to the web server backend.
+
+    RompЯ need a web server, instruction are given for Apache, Nginx,
+
+    -   [RompЯ - GitHub](https://github.com/fatg3erman/RompR).
+-   [Sonata](https://github.com/multani/sonata) is a
+    GTK+3 client, a continuation of the unmaintened *Pygmy* client with
+    playlist, tagediting, stream and Audioscrobbler (last.fm) support.
+    (21M resident, 11M shared).
+
+    Last commit August 2021, Sonata is looking for new maintainers.
+-   [ympd](https://github.com/notandy/ympd) (GPL-2.0) :
+    is a tiny web client written in C, using websockets and BootStrapJs, with no other
+    dependency than libmpdclient 2. _last commit 2018_
+
+
+### Unmaintained clients
+-   [Ario](http://ario-player.sourceforge.net/) a GTK2 client for _mpd_
+    and {{< iref "#xmms2" "xmms2" >}}  inspired by Rhythmbox.
+
+    The last release 1.6 is from 2018 and the project is sleeping.
+    _17M resident 10M shared_.
+-   [fookebox](https://github.com/cockroach/fookebox/)
+    is a jukebox-style web-frontend to mpd written in python
+    with the pylons framework. The project stopped in 2014 and it is no more in debian
+    since buster.
+-   [glurp](https://github.com/be1/glurp)
+    Graphical interface written in GTK+-2 (10M resident, 8.5M shared
+    ). last release 2010.
+-   [gmpc](https://github.com/DaveDavenport/gmpc) (GPL-2.0)
+    Gnome Music Player Client with playlist and tag management. It is
+    a GTK2 client with light gnome dependencies (13M resident,10M shr).
+    Last release 2011. It is still packaged in Debian testing and sid
+    in 2023.
+-   [Jinzora](https://sourceforge.net/projects/jinzora)
+    A web based streaming and media management system. Unmaintained since 2010.
+-   [Gimmix](https://github.com/cmende/gimmix) (GPL-2.0)
+    is a graphical client written in C using GTK+2. It supports playlist management and
+    ID3v2 Tag editing. _20M resident including 12M shared. The source repository has
+    only few bug fixes since 2012 (checked in 2023)_ The last Debian package is in strech.
+-   [mpd remote](https://iprog.com/projects)  very basic PHP client
+    designed for a mobile phone's browser. Unmaintained.
 -   [Pitchfork MPD client](http://sourceforge.net/projects/pitchforkmpd/)
     is an ajax/php webinterface to mpd with optional streaming with
     icecast. _last release 2009_. There are some fork _patchfork_ that
@@ -1023,35 +1126,13 @@ A selection of clients:
     the style of rhythmbox and itunes, written in python, with pygtk.
     (18M resident, 11M shared, on my system 7M truly
     added). _Unmaintained since 2007_.
--   [RDMPD](https://github.com/desfrenes/RMPDC) a simple PHP client
-    targeted to smartphone with a basic browser (no javascript).
-    _Last update 2010_
--   [Sonata](https://github.com/multani/sonata) is a e
-    GTK+ client, a continuation of the unmaintened *Pygmy* client with
-    playlist, tagediting, stream and Audioscrobbler (last.fm) support.
-    (21M resident, 11M shared)
--   [Theory](http://theory.steelbreeze.org/)
-    web based MPD client based on Python, pylons, and python-mpd.
--   [vimpc](https://github.com/boysetsfrog/vimpc) (GPL)
-    A curses based client with vi like key bindings .
--   [WMmp](http://git.musicpd.org/cgit/master/wmmp.git/) - Window Maker
-    dockapp
--   [wymypy](http://manatlan.infogami.com/wymypy)
-    an http wsgi server written in python featuring a mpd client.
-    It is an old unmaintained client with a fork in
-    [GitHub: 02strich/wymypy
-    ](https://github.com/02strich/wymypy).
--   [ympd
-    ](https://github.com/notandy/ympd)
-    is a tiny web client written in C with no other dependency than
-    libmpdclient 2.
 
 ## Mpd bookmarks
 
 To use bookmarks in mpd we can use
 
 -   Joey Hess has set
-    [mpdtoys](https://git.kitenet.net/index.cgi/mpdtoys.git/tree/), which is a
+    [mpdtoys](https://git.joeyh.name/index.cgi/mpdtoys.git), which is a
     collections of perl scripts for mpd. He
     [explains how he use them](https://joeyh.name/blog/entry/my_mpd_setup/).  _mpstore_,
     and _mpdload_ which dumps and restore the mpd daemon state can be used with
@@ -1187,14 +1268,12 @@ is the encoder included in the mplayer distribution.
 [Mpv](https://mpv.io/) (LGPLv2.1+ and GPLv2+)
 is a media player based on MPlayer and MPlayer2.
 
-_MPlayer2_ was a fork of mplayer, that  the internal gui
-_gmplayer_ and the encoder _mencoder_; and use shared libratries
-instead of embedding {{< iref "ffmpeg" "ffmpeg" >}}.
-It is dead and replaced with mpv.
+_MPlayer2_ was a fork of mplayer, that the internal gui _gmplayer_ and the encoder
+_mencoder_; and use shared libratries instead of embedding {{< iref "ffmpeg" "ffmpeg"
+>}}.  It is dead and replaced with mpv.
 
 Mpv also drop _mencoder_, but replace it with internal
-[encoding](https://mpv.io/manual/stable/#encoding) facilities.
-There are numerous other
+[encoding](https://mpv.io/manual/stable/#encoding) facilities.  There are numerous other
 [differences of mpv with mplayer and mplayer2
 ](https://github.com/mpv-player/mpv/blob/master/DOCS/mplayer-changes.rst).
 
@@ -1242,8 +1321,7 @@ see also the [list on Wikipedia
     -   [GitHub - celluloid](https://github.com/celluloid-player/celluloid)
 
 <a name="mpv_pseudo-gui"></a>pseudo-gui mode
-:   Mpv provides a _pseudo-gui mode_ that you get by starting it
-    with:
+:   Mpv provides a _pseudo-gui mode_ that you get by starting it with:
 
         $ mpv  --player-operation-mode=pseudo-gui
 
@@ -1254,7 +1332,7 @@ see also the [list on Wikipedia
 [Streamlink](https://streamlink.github.io/index.html) ( BSD-2-Clause License )
 is a command-line utility written in Python which allows you to watch online video
 streams in video players, such as {{< iref "#vlc" "VLC" >}},
-{{< iref "#mplayer" "Mplayer" >}}, {{< iref "arm_sbc#omxplayer" "OMXPlayer" >}} or
+{{< iref "#mplayer" "Mplayer" >}}, {{< iref "sbc#omxplayer" "OMXPlayer" >}} or
 {{< iref  "#mpv" "Mpv" >}}.
 
 Most of the big streaming services are supported, such as: Twitch, YouTube, Livestream,
