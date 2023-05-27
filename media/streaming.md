@@ -37,7 +37,7 @@ See also {{< iref "ffmpeg" "FFmpeg section" >}},
 -   <a name="esound"></a>{{< wp "ESound" >}}
     the Enlightened Sound Daemon, is a server process that mixes several audio streams
     for playback by a single audio device.  Now _esd_ is largely replaced by
-    {{< iref "#pulseaudio" "PulseAudio" >}} or {{< iref "PipeWire" }}.
+    {{< iref "#pulseaudio" "PulseAudio" >}} or {{< iref "#pipewire" "PipeWire" >}}.
 -   <a name="jack"><a>[Jack](http://jackit.sourceforge.net)
     JACK is a low-latency audio server. It can connect a number of different
     applications to an audio device, as well as allowing them to share audio between
@@ -145,6 +145,8 @@ Wikipedia has a {{< wp "Pulseaudio" >}} page.
     {{< iref "#pulseaudio" "pulseaudio-dlna" >}}.
 
 ## PipeWire {#pipewire}
+-   [PipeWire / pipewire · GitLab](https://gitlab.freedesktop.org/pipewire/pipewire)
+    contains the README top documentation.
 -   [PipeWire Wiki - Freedesktop
     ](https://gitlab.freedesktop.org/pipewire/pipewire/-/wikis/home)
     -   [Migrate PulseAudio
@@ -158,6 +160,10 @@ Wikipedia has a {{< wp "Pulseaudio" >}} page.
     [PipeWire/Examples](https://wiki.archlinux.org/title/PipeWire/Examples)
 -   [Pipewire - Gentoo Wiki](https://wiki.gentoo.org/wiki/Pipewire#Replacing_PulseAudio)
 -   [Fedora Switch to Pipewire](https://fedoraproject.org/wiki/Changes/DefaultPipeWire).
+-   [WirePlumber](https://pipewire.pages.freedesktop.org/wireplumber/index.html)
+    is a modular session / policy manager for PipeWire and a GObject-based high-level
+    library that wraps PipeWire’s API, providing convenience for writing the daemon’s
+    modules as well as external tools for managing PipeWire.
 
 The release 3.25 add pw-loopback tool and support module-loopback. pw-loopback
 Sends the captured data from a source directly to a sink.
@@ -460,6 +466,19 @@ by the following applications:
 -   [vobStreamer](http://www.live555.com/vobStreamer/)
     A network DVD player that allows to stream your DVD content over a LAN.
 
+## Red5
+[Red5 Server](https://github.com/Red5/red5-server)
+s an Open Source Flash Server written in Java that supports:
+
+-   Streaming Video (FLV, F4V, MP4, 3GP)
+-   Streaming Audio (MP3, F4A, M4A, AAC)
+-   Recording Client Streams (FLV and AVC+AAC in FLV container)
+-   Shared Objects
+-   Live Stream Publishing
+-   Remoting
+-   Protocols: RTMP, RTMPT, RTMPS, and RTMPE
+
+
 ## Subsonic and forks {#subsonic}
 [Subsonic](http://www.subsonic.org/) (closed source, previously GPL)
 is a streaming server written in Java.  _Subsonic_ supports any streamable media
@@ -544,15 +563,16 @@ and broadcasting of digital media which is used by {{< wp "DLNA" >}} devices.
     -   [Github: Cohen](https://github.com/unintended/Cohen).
     -   [Cohen manual](https://cohen.readthedocs.org/en/latest/)
     -   [Cohen](https://pypi.python.org/pypi/Cohen) is on Pypi.
--   [Emby](https://emby.media/) (GPL)
+-   <a name="emby"></a>[Emby](https://emby.media/) (GPL)
     is an personal media server written in C#. It has clients for many platforms like
     html5 server, android, ipad, windows and many more. It is used to organize personal
     home media, as well as play back on other devices. It supports DLNA and can send to
     chromecast.
     Emby provides Debian packages for amd64 and armhf.
 
-    The GitHub repository is no more updated since 2018 version 3.5.2.
-    -   [GitHub - Emby](https://github.com/MediaBrowser/Emby).
+    The [GitHub repository](https://github.com/MediaBrowser/Emby) is no more updated
+    since 2018 version 3.5.2, As of version 3.5.3 Emby has been relicensed and is now
+    closed-source, {{< iref "#jellyfin" "Jellyfin" >}} is an open source fork.
 -   [FreeMi](http://freemiupnp.fr/) (Open Source License)
     FreeMi is an C#/Mono UPnP Media Server audio/video for the FreeBox.
     the CLI can be used on Linux.
@@ -561,6 +581,21 @@ and broadcasting of digital media which is used by {{< wp "DLNA" >}} devices.
     transcoding from ogg/vorbis, musepack/mpc, FLAC and AAC/MP4 to mp3, mp2, wav or pcm,
     image conversion/rescaling and video transcoding.
     -   [Fuppes sourceforge Page](http://sourceforge.net/projects/fuppes/).
+-   <a name="jellyfin"></a>[Jellyfin](https://jellyfin.org/) (GPL)
+    is an open source fork of {{< iref "#emby " "Emby">}}.
+
+    It is an personal media server written in C#. It has clients for many platforms like
+    html5 server, android, ipad, windows and many more. It is used to organize personal
+    home media, as well as play back on other devices. It supports DLNA and can send to
+    chromecast. Jellyfin has clients for Desktop linux amd-64, MacOs, Windows; Android,
+    ios, IpadOs, Webos, Kodi plugin, Roku plugin, {{< iref "#mopidy" "Mopidy" >}}
+    extension. It has also a set of plugins listed below.
+
+    -   Wikipedia: {{< wp "Jellyfin" >}}.
+    -   [Jellyfin Documentation](https://jellyfin.org/docs/)
+    -   [Plugins | Jellyfin
+        ](https://jellyfin.org/docs/general/server/plugins/index.html)a
+    -   [Jellyfin - GitHub](https://github.com/jellyfin/jellyfin)
 -   <a name="gerbera"></a>[Gerbera](https://gerbera.io/)  (GPL)
     is an upnp media server written in C++, the continuation of
    [MediaTomb](https://sourceforge.net/projects/mediatomb/)
@@ -610,13 +645,12 @@ and broadcasting of digital media which is used by {{< wp "DLNA" >}} devices.
 
     _It is a very active project in 2021._
 -   [uShare _GeexBox page_](http://ushare.geexbox.org/) (GPL)
-    is an Upnp (TM) A/V Media Server based on
-    <a name="gmediaserver"></a>[GMediaServer
-    ](http://www.gnu.org/software/gmediaserver/)
-    which is no longer maintained since 2007.
+    is an Upnp (TM) A/V Media Server based on <a name="gmediaserver"></a>[GMediaServer
+    ](http://www.gnu.org/software/gmediaserver/) which is no longer maintained since
+    2007.
 
     _uShare_ itself does not seem to be active since 2010.
--   {{< iref "media_players#kodi" "Kodi (Xbmc)" >}}
+-   {{< iref "media_players#kodi" >}}
     has a [builtin UPnP server](https://kodi.wiki/view/UPnP).
 
 ### Rygel {#rygel}
