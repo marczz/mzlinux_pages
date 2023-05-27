@@ -8,6 +8,13 @@ The {{< iref "video_edit" "Video Encoders" >}} are often also audio encoders. In
 {{< iref "video_edit#mencoder" "Mencoder" >}} which are also audio  audio encoders.
 
 --------------
+# Refs
+-   [Comparison of free software for audio recording and editing - Wikipedia
+    ](https://en.wikipedia.org/wiki/Comparison_of_free_software_for_audio#Recording_and_editing).
+-   [List of audio converters - ArchWiki
+    ](https://wiki.archlinux.org/title/List_of_applications#Audio_converters).
+-   [List of audio editors - ArchWiki
+    ](https://wiki.archlinux.org/title/List_of_applications#Audio_editors).
 
 # Low level encoders
 
