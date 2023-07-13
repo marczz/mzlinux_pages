@@ -310,27 +310,35 @@ with new commands what we did with some script using plumbing commands_
     ](http://scie.nti.st/2007/11/14/hosting-git-repositories-the-easy-and-secure-way),
     2007 with a 2010 comment:
     >> For additional features not present in gitosis, check out gitolite.
-    -   [Arch Linux: Gitosis
-    ](https://wiki.archlinux.org/index.php/Gitosis),
-    -   [Pro Git v1: Gitosis
-        ](https://git-scm.com/book/en/v1/Git-on-the-Server-Gitosis).
+    Gitosis has no more development since 2015.
+    -   [Arch Linux: Gitosis](https://wiki.archlinux.org/index.php/Gitosis),
+    -   [Pro Git v1: Gitosis](https://git-scm.com/book/en/v1/Git-on-the-Server-Gitosis).
+    -   [GitHub - gitosis](https://github.com/tv42/gitosis)
 -   <a name="gitolite"></a>[Gitolite](https://github.com/sitaramc/gitolite) (GPL)
     by Sitaram Chamarty is an enhancement of Gitosis. It add per-branch permissions.
-    It is written entirely in perl, and doesn't require root access.<br />
+    It is written entirely in perl, and doesn't require root access.
+
     Tutorials:
     -   [Pro Git v1: Gitolite
         ](https://git-scm.com/book/en/v1/Git-on-the-Server-Gitolite),
     -   [Gitolite Tutorial
         ](http://sites.google.com/site/senawario/home/gitolite-tutorial)
         by Sena Wario,
+    -   [Gitolite - ArchWiki](https://wiki.archlinux.org/title/Gitolite)
 -   [Gogs](https://gogs.io/) (MIT)
     is a self-hosted Git service written in Go.
     -   [GitHub - Gogs](https://github.com/gogits/gogs).
     -   Demo site [try.gogs](https://try.gogs.io/).
     -   [ArchWiki - Gogs](https://wiki.archlinux.org/index.php/Gogs).
--   <a name="gitea"><a>[Gitea](https://gitea.io/) (MIT)
-    is a community managed fork of Gogs.
+-   <a name="gitea"><a><a name="forgejo">[Forgejo](https://forgejo.org/) (MIT) and
+    [Gitea](https://gitea.io/) (MIT)
+
+    Gitea is a Fork of Gogs.
+
+    Forgejo is a fork of Gitea in October 2022, following the  transfer to a for-profit
+    company of domain and trademark of Gitea. Forgejo is compatible with Gitea.
     -   [GitHub - Gitea](https://github.com/go-gitea/gitea)
+    -   [Codeberg - Forgejo](https://codeberg.org/forgejo/forgejo)
     -   [ArchWiki: Gitea](https://wiki.archlinux.org/index.php/Gitea)
 -   <a name="pagure"></a>[Pagure](https://pagure.io/pagure) (GPL)
     is a git-centered forge based on
@@ -776,19 +784,13 @@ provides a detailled description of the use of the following packages.
 -   [Git Wiki -  Filesystem interfaces
     ](https://git.wiki.kernel.org/index.php/Interfaces,_frontends,_and_tools#Filesystem_interfaces)
 
--   [figfs](http://www.qotw.net/~reillyeon/projects/figfs/) (GPL)
-    from Reilly Grant. _last update 2009_. A fuse fs written in Ocaml/sqlite3,
-    _figfs_ allows to browse branchs, tags, and revisions.
-    -   [GitHub Repository](https://github.com/reillyeon/figfs).
--   [pygitfs (GitHub)](https://github.com/tv42/pygitfs) (MIT License)
-    by Tommi Virtanen is a pythonic filesystem API to Git, allowing
-    you to access contents of bare git repositories, including
-    creating new commits.
-    It is a python library, exposing an API, with no command line frontend
-    included, the last release is from 2009.  [pygitfs is in Pypi
-    ](https://pypi.python.org/pypi/gitfs).
+-   [gitfs (GitHub)](https://github.com/presslabs/gitfs) (Apache License)
+    is a fuse filesystem written in Python.  It allows mounting a remote repository's
+    branch locally, and any subsequent changes made to the files will be automatically
+    committed to the remote.
+    -   [gitfs - ArchWiki](https://wiki.archlinux.org/title/Gitfs).
 -   [legitfs - GitHub](https://github.com/mbr/legitfs) (MIT License)
-    a read-only fuse filesystem written in python.
+    a read-only fuse filesystem written in python. *Last release 2017*.
     [legitfs is on pypi](https://pypi.python.org/pypi/legitfs/).
 
 ## Patch management
