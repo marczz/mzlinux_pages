@@ -857,10 +857,14 @@ the providers. Rclone is in Debian.
 -   [Rclone Wiki](https://github.com/rclone/rclone/wiki)
 -   [Third Party Integrations with rclone
     ](https://github.com/rclone/rclone/wiki/Third-Party-Integrations-with-rclone)
--   _Rclone_ itself allow only one way synchronization, there are several python
-    applications that provide bidirectional synchronisation with _Rclone_:
+-   _Rclone_ has a [bidirectional synchronizatrion option](https://rclone.org/bisync/)
+    since v1.58.0 in March 2022.
+
+    Previously it was featuring only only one way synchronization, and several python
+    applications that provide bidirectional synchronisation with _Rclone_ were developed.
     -   [rclonesync-V2](https://github.com/cjnaz/rclonesync-V2)  (MIT License),
-    -   [rsinc](https://github.com/ConorWilliams/rsinc) (MIT License),
+        deprecated since the addition of bidirectional synchronization to rclone.
+    -   [rsinc](https://github.com/ConorWilliams/rsinc) (MIT License), last commit 2020.
     -   [PyFiSync](https://github.com/Jwink3101/PyFiSync) (MIT License) can use rsync or
         rclone..
     -   [syncrclone](https://github.com/Jwink3101/syncrclone)  (MIT License)
@@ -879,6 +883,17 @@ the providers. Rclone is in Debian.
         [algorithm](https://github.com/Jwink3101/syncrclone/blob/master/docs/algorithm.md),
         [miscellaneous details](https://github.com/Jwink3101/syncrclone/blob/master/docs/misc.md),
         [testing](https://github.com/Jwink3101/syncrclone/blob/master/docs/tests.md).
+
+        The [algorithms of syncrclone and `rclone --bisync`  differs
+        ](https://github.com/Jwink3101/syncrclone/blob/master/docs/rclone_bisync_compare.md)
+        two differences make them work distinctly depending on the backend.
+            -   While rclone uses the modtime, syncrclone may use modtime or hashes,
+                which make it more adapted on backends where the modification time is
+                not available or not accurate.
+            -   Rclone uses [Differential Synchronization with dual shadow method
+                ](https://neil.fraser.name/writing/sync/)
+                syncrclone compare *current* state and use previous to resolve
+                conflicts.
 
 -   _Rclone_ is supported by _emacs tramp_ since version 2.4.1.
 
