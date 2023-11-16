@@ -43,8 +43,7 @@ See also the related {{< iref "javascript" "Javascript Page" >}}
 -   [Json in javascript](http://www.json.org/js.html)
 -   [libjson](http://sourceforge.net/projects/libjson/)
     (FreeBSD License)is a fast, lightweight JSON parser written in C++.
--   [Yet Another JSON Library. YAJL](http://lloyd.github.io/yajl/)
-    (ISC license)
+-   [Yet Another JSON Library. YAJL](http://lloyd.github.io/yajl/) (ISC license)
     is a small event-driven (SAX-style) JSON parser written in ANSI C,
     and a small validating JSON generator. It has binding in python,
     lua, node.js, perl, ...
@@ -74,10 +73,13 @@ See also the related {{< iref "javascript" "Javascript Page" >}}
     -   [jq tutorial](https://stedolan.github.io/jq/tutorial/)
     -   [manual](https://stedolan.github.io/jq/manual/)
     -   [jq questions tagged jq](https://stackoverflow.com/questions/tagged/jq)
-    -   [#jq](http://irc.lc/freenode/%23jq/) channel on
-        [Freenode](https://webchat.freenode.net/).
+    -   __#jq__ channel on [LiberaChat](https://web.libera.chat/)
     -   [jqplay.org](https://jqplay.org) an online A playground for jq.
-
+    -   [ijq](https://sr.ht/~gpanders/ijq/)
+        Interactive jq, like  [jqplay](https://jqplay.org) for the command line.
+        It is similar to the vim plugin [vim-jqplay](https://github.com/bfrg/vim-jqplay).
+    -   [Introducing ijq, an Interactive jq Tool | g.p. Anders
+        ](https://gpanders.com/blog/introducing-ijq/).
 -   [fx](https://github.com/antonmedv/fx) (MIT license)
     _fx_ is a command-line tool and terminal JSON viewer. Written in node js.
 -   [jo](https://github.com/jpmens/jo) (GPL)
