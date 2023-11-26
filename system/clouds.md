@@ -132,38 +132,34 @@ compatible with Amazon S3. A docker image is provided.
 
 
 # Cloud virtual filesystems
-# Blackblaze B2 {#b2}
+
+## Object Storage
+## Blackblaze B2 {#b2}
 {{< wp "BlackBlaze" >}} has many products available at
-[Backblaze Home](http://www.backblaze.com/)
-_Personal backup_ is an online backup tool using AES encryption
-([more on BlackBlaze encryption
+[Backblaze Home](http://www.backblaze.com/).
+
+[Personal backup](https://www.backblaze.com/cloud-backup/personal) is an online backup
+tool using AES encryption ([more on BlackBlaze encryption
 ](http://blog.backblaze.com/2008/11/12/how-to-make-strong-encryption-easy-to-use/))
-$60/Year by computer for unlimited data.  No linux client, and no
-open api.
+$99/Year by computer for unlimited data.  No linux client, and no open api.
 
 Backblaze _B2 Cloud Storage_ works similar to Amazon S3 or Microsoft Azure.
 
+It is among the cheapest price of S3 compatible object storage.
 
-It has a very appealing price of $0.005/GB a month with 10 GB storage free, uploads are
-free, Download cost 0.01$/G first G/day free, _API Calls_ $0.004 per 10,000 transactions
-with 2500/day free (some transactions free). _September 2022 pricing_
-
-Previously blackblaze had a high download price, compared to some providers like OVH
-openstack the storage. But they have been cut off by two. Of course some provider offer
-free download until some amount, and it should be considered, depending of your needs.
+$0.006/GB a month with 10 GB storage free, uploads are
+free, Download s free for 3x monthly storage then 0.01$/G, _API Calls_ $0.004 per 10,000 transactions
+with 2500/day free (some transactions free). _December 2023 pricing_
 
 The [pricing page](https://www.backblaze.com/b2/cloud-storage-pricing.html)
-includes a cost calculator, for 1000G initial data upload, 100G/month
-upload, 5G/month delete, 10G/month download, it cost 98$/year three
-time less than S3 or Google cloud. If you download 200G/month 121$/year still a third of
-S3. For all these examples
-microsoft azure and google cloud are more expansive than S3.
+includes a cost calculator with comparison with S3, microsoft azure and google cloud.
+but no comparison with cheap providers like Scaleway, Idrive or Wasabi.
 
 For 200G initial, 10G/month upload, 7G/month delete, 10G download/month 14$/year a third
 of S3, Azure, or Google cloud these Three are in the same range here 57$-67$.  _August 2020 pricing_
 
 The {{< iref "#comparison_table" "Comparison table" >}} below also add other low costs
-providers like  OVH openstack, or scaleway, compared to scaleway, under 140G scaleway is
+providers. As an example compared to scaleway, under 140G scaleway is
 less expensive, above 140G B2 win, but scaleway has also free internal trafic, that
 could give an advantage if you have a Scaleway server.
 
@@ -194,7 +190,9 @@ B2 Api is a web API like amazon S3. It was previously not compatible with S3,
 but now B2 offer an
 [S3 compatible API](https://www.backblaze.com/b2/docs/s3_compatible_api.htm)
 
-# Box {#box}
+# File System Storage
+
+## Box {#box}
 
 [Box](http://www.box.com/)(box.com or box.net)
 has  10 GB of free web-storage,
@@ -560,31 +558,33 @@ Cozy is a personal server, there are no user and account management.
 # Rsync.net
 [Rsync.net](http://www.rsync.net/) offer cloud storage on an Unix
 platform with ZFS file systems and an SSH access. The standard offer
-with 7 daily snapshots until 1TB 0.08$/ G x month, between 1T and 4T
-0.06$/G x month, and over 10 T 0.04$/G x month. So 100G cost 96$/year.
+with 7 daily snapshots from 800G to 9TB 1.2$/ G x month, between 10T and 99T
+O.O1$/G x month, and over 100 T 0.06$/G x month. *Prices from December 2023*
+So 1T costs 147$/year.
 
 As _Rsync.net_ is ssh based it can be used with
 rsync, sftp, scp, sshfs, duplicity, rdiff-backup, unison git, git-annex,
 subversion, or anything that could be piped to ssh.
 
 
-There is also an offer for [Attic or Borg backup
-](http://www.rsync.net/products/attic.html). It is without snapshots
-since history is handled by Attic / Borg and the cost is 3$ G x month
-begining at 25G. So our example 100G plan is 36$/year. _2017 prices_
+There is also an offer for [Borg backup](http://www.rsync.net/products/attic.html).  It
+is without snapshots since history is handled by Borg, it may be used on a lowest data
+limit than the ordinary plan as it begins at 100G instead of 800G. The cost is 0.015$ G x
+month between 100G and 999G, 0.008$ between 1T and 99T and 0.005$/G over 100T.
+So as example 100G plan is 18$/year. _December 2023 prices_
 
 # Scaleway Object storage {#scaleway_object}
 
 {{< iref "#scaleway" "Scaleway" >}} provides S3 compatible object storage.
 -   [S3-Compatible Object Storage](https://www.scaleway.com/en/glacier-cold-storage/)
-    it comes in two variants One Zone is free for first 75GB and 0.01/month € HT per GB;
-    multi AZ, is replicated between regions and at a price of 0.013€/month HT per GB.
+    it comes in two variants One Zone 12/month € HT per TB;
+    multi AZ, is replicated between regions and at a price 14€/month HT per TB.
 
     Incomming trafic _internal and external_ as Internal outgoing traffic to other
     Elements products in the same region is free, external outgoing trafic is free for
     first 75GB the 0.01 € per GB/month.
 -   [Glacier Cold Storage](https://www.scaleway.com/en/c14-cold-storage/)
-    75 GB is free then €0.002/GB/month. Archiving and recovering from C14 Cold
+    2€14/GB/month. Archiving and recovering from C14 Cold
     Storage’s Glacier class to Object Storage’s Standard class is free of charge.
 Documentation from Scaleway:
 -   [Object Storage - Quickstart
@@ -612,7 +612,7 @@ It provides a server that build on Linux, and clients for many OS.
 
 # Wasabi {#wasabi}
 [Wasabi](https://wasabi.com/) is a cloud block storage S3 compatible. The minimum
-plan is 1TB. And it applies an uniform cost 6$/TB/Month - _September 2020 Pricing_,
+plan is 1TB. And it applies an uniform cost 7$/TB/Month - _December 2023 Pricing_,
 with free in and out trafic, and free api calls.
 
 # Yandex.Disk
@@ -1129,6 +1129,14 @@ only a fraction of what you paid, for Mega for 200G, I take a price that is vali
 | [Scaleway] OneZone  |   ( > 75GB) 0.01  € |   (>75GB) 0.01 | no             |            1.25€ |   2.50€ | 10.50€ |   09/22 |
 | [Scaleway] Multi-AZ |             O.013 € |   (>75GB) 0.01 | no             |             2.6€ |   3.80€ | 14.25€ |   09/22 |
 | [Scaleway] Glacier  |   ( > 75GB) 0.002 € |              X | no             |            0.25€ |         | 01.85  |   09/22 |
+
+## Object storage
+
+| Provider           | fix quota | pricei y/TB |     outbound | API Fees | 1T/100G | checked |
+|--------------------|-----------|------------:|-------------:|:---------|--------:|--------:|
+| [Scaleway] Multi   | -         |        168€ | >75G/m 0.01€ | -        |    168€ |   12/23 |
+| [Scaleway] OneZone | -         |        144€ | >75G/m 0.01€ | -        |    168€ |   12/23 |
+| [Wasabi]           | 1T        |         84$ |            - | -        |     84$ |   12/23 |
 
 [Amazon S3]: #aws "internal reference"
 [Azure]: #azure_blob "internal reference"
