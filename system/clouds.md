@@ -54,6 +54,44 @@ See also
     services. The [file commands](http://docs.aws.amazon.com/cli/latest/reference/s3/)
     are file and directory commands ( cp, ls, mb, mv, presign, rb, rm, sync, website )
     to manage your buckets. It is packaged in Debian as _awscli_.
+-   [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)
+    is the Amazon Web Services (AWS) SDK for Python.
+    -   [Boto3 GitHub Repository](https://github.com/boto/boto3).
+    -   _Boto3_ has [many frontends in Pypi
+        ](http://pypi.python.org/pypi?%3Aaction=search&term=boto3&submit=search)
+        but some where developed in python2 for the previous Boto version and are not
+        compatible with the new _Boto3_.
+-   [DragonDisk](http://www.dragondisk.com/) (proprietary software, free linux client)
+    is a file manager for Amazon S3, Google Cloud Storage, and S3 compatibles cloud
+    storage services. Debian packages are provided.
+-   [Duck](https://docs.duck.sh/cli/)
+    the Cyberduck command line tool is available for Mac, Windows & Linux. A Deb
+    repository is available, *It is distinct from the homonym Debaian Duck package*. It
+    supports the following protocols: ftp, ftps, sftp, WebDAV (HTTP/SSL), Swift, Amazon
+    S3, Backblaze B2, Google Cloud Storage, Windows Azure Storage, Rackspace Cloud
+    Files, iPlant Data Store.
+
+    The desktop UI [CyberDuck](https://docs.duck.sh/), and the virtual fs MountainDuck
+    are available only on windows and Mac OSX. But there are alternatives for Linux like
+    {{< iref "#rclone" >}}
+-   [JetS3t](https://github.com/mondain/jets3t) (Apache License)
+    (pronounced "jet-set") is a Java toolkit and application suite
+    for Amazon S3, Amazon CloudFront, and Google Storage.
+
+    _JetS3t_ is packaged in Debian, but only the old version that is no more maintained,
+    as of 2023 the new fork which is stalled is not used.
+-   <a name="minio"></a>[MinIO Client (mc)](https://github.com/minio/mc)  (Apache Licence)
+    provides a modern alternative to UNIX commands like ls, cat, cp, mirror, diff, find
+    etc. It supports filesystems and Amazon S3 compatible cloud storage service.
+    Home.
+    -   [MinIO Client Complete Guide](https://docs.min.io/docs/minio-client-complete-guide).
+        and [QuickStart Guide](https://docs.min.io/docs/minio-quickstart-guide).
+    -   [MinIO-mc Linux reference
+        ](https://min.io/docs/minio/linux/reference/minio-mc.html)
+
+    The binary for Linux can be downloaded on Minio site, see the above documentation
+    for details.  You can also install the sid package `golang-github-minio-cli-dev`
+    which build it on your system. There is a snapcraft package for minio client,
 -   [s3tool](http://s3tools.org/) (GPL)
     provide _s3cmd_ a command line tools for Amazon S3 to uploade, retrieve and manage
     data. It .
@@ -65,7 +103,7 @@ See also
         [s3cmd encryption HowTo](http://s3tools.org/s3cmd-encryption).
     -   _s3cmd_ is built for S3 but it is also usable with s3 compatible object storage
         with a proper configuration file, like
-        {{< iref "#scaleway_object" "scaleway object storage" >}},
+        {{< iref "#scaleway_storage" "scaleway object storage" >}},
         {{< iref "#minio" "Minio" >}} or
         {{< iref "#eucalyptus" "Eucalyptus" >}} like explained in
         [how to use s3cmd with an eucalyptus instance
@@ -76,61 +114,12 @@ See also
     large files, and coming with a number of additional features and fixes.  It also
     supports S3 compatible storage services such as DreamHost and Cloudian.
     _Packaged in Debian._
--   [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)
-    is the Amazon Web Services (AWS) SDK for Python.
-    -   [Boto3 GitHub Repository](https://github.com/boto/boto3).
-    -   _Boto3_ has [many frontends in Pypi
-        ](http://pypi.python.org/pypi?%3Aaction=search&term=boto3&submit=search)
-        but some are not compatible with the new _Boto3_.
 -   [s3curl](https://github.com/rtdp/s3curl) (Apache License)
     is a perl wrapper around curl to work with s3 buckets.
     -   [Amazon S3 Authentication Tool for Curl - AWS Code
         ](https://aws.amazon.com/code/amazon-s3-authentication-tool-for-curl/)
     -   It can also be used on an {{< iref "#eucalyptus" "Eucalyptus" >}} instance.
     -   s3curl is packaged in Debian.
--   [JetS3t](https://github.com/mondain/jets3t) (Apache License)
-    (pronounced "jet-set") is a Java toolkit and application suite
-    for Amazon S3, Amazon CloudFront, and Google Storage.
-    _JetS3t_ is packaged in Debian.
--   [DragonDisk](http://www.dragondisk.com/) (proprietary software, free linux client)
-    is a file manager for Amazon S3, Google Cloud Storage, and S3 compatibles cloud
-    storage services. Debian packages are provided.
--   [ ] [MinIO Client (mc)](https://docs.min.io/minio/baremetal/reference/minio-mc.html)
-    is an AWS S3 compatible command line client, it is also compatible with most S3
-compatible object storages.
-
-## Eucalyptus {#eucalyptus}
-
-{{< wp "Eucalyptus_(software)" "Eucalyptus" >}} (MIT Like licence) is a software for
-building Amazon Web Services (AWS)-compatible private and hybrid cloud computing
-environments,
-
--   [GitHub: eucalyptus](https://github.com/eucalyptus/eucalyptus)
--   [Eucalyptus Wiki](https://github.com/eucalyptus/eucalyptus/wiki)
-    is the Home of Eucalyptus.
--   [AWS Tools compatibility · eucalyptus Wiki
-    ](https://github.com/eucalyptus/eucalyptus/wiki/AWS-Tools)
--   [Euca2ools](https://github.com/eucalyptus/euca2ools)
-    are command line tools used to interact with Amazon Web Services (AWS) as well as
-    other services that are compatible with AWS, such as Eucalyptus.
-    _euca2ools_ is packaged in Debian.
-    -   [euca2ools - Debian Wiki](https://wiki.debian.org/euca2ools)
-
-## Minio {#minio}
-{{< wp "Minio" >}} (Apache Licence) is a cloud storage server written in golang
-compatible with Amazon S3. A docker image is provided.
-
--  Minio - GitHub](https://github.com/minio/minio).
--   [Minio Documentation](https://docs.min.io/).
--   [MinIO Client (mc)](https://github.com/minio/mc)  (Apache Licence)
-    provides a modern alternative to UNIX commands like ls, cat, cp, mirror, diff, find
-    etc. It supports filesystems and Amazon S3 compatible cloud storage service.  There
-    is a snapcraft package for minio client, a go binary is also available on Minio
-    Home.
-    -   [MinIO Client Complete Guide](https://docs.min.io/docs/minio-client-complete-guide).
-        and [QuickStart Guide](https://docs.min.io/docs/minio-quickstart-guide).
-
-
 
 # Object Storage
 
@@ -192,6 +181,23 @@ is a S3 compatible storage by small data amount. 250GB, with 1TB outbound transf
 5$/month, additional storage is 0.02GB/month *the same rate than the first 250GB*, and
 additional transfer 0.01$/month.
 
+## Eucalyptus {#eucalyptus}
+
+{{< wp "Eucalyptus_(software)" "Eucalyptus" >}} (MIT Like licence) is a software for
+building Amazon Web Services (AWS)-compatible private and hybrid cloud computing
+environments,
+
+-   [GitHub: eucalyptus](https://github.com/eucalyptus/eucalyptus)
+-   [Eucalyptus Wiki](https://github.com/eucalyptus/eucalyptus/wiki)
+    is the Home of Eucalyptus.
+-   [AWS Tools compatibility · eucalyptus Wiki
+    ](https://github.com/eucalyptus/eucalyptus/wiki/AWS-Tools)
+-   [Euca2ools](https://github.com/eucalyptus/euca2ools)
+    are command line tools used to interact with Amazon Web Services (AWS) as well as
+    other services that are compatible with AWS, such as Eucalyptus.
+    _euca2ools_ is packaged in Debian.
+    -   [euca2ools - Debian Wiki](https://wiki.debian.org/euca2ools)
+
 ## Idrive e2 {#idrive_e2}
 
 [Idrive e2](https://www.idrive.com/object-storage-e2/) is an S3 compatible object
@@ -201,7 +207,13 @@ storage. It provides storage beginning at 1TB at a uniform price of 30$ 1T/y *De
 They have a [price comparator](https://www.idrive.com/object-storage-e2/pricing) with
 amazon S3, Microsoft Azure, and Google Cloud.
 
+## Minio {#minio}
+{{< wp "Minio" >}} (Apache Licence) is a cloud storage server written in golang
+compatible with Amazon S3. A docker image is provided.
 
+-  Minio - GitHub](https://github.com/minio/minio).
+-  [Minio Documentation](https://docs.min.io/).
+-  See {{< iref "#minio" "above" >}} for the minio client *mc*.
 
 ## Openstack {#openstack}
 
@@ -237,7 +249,8 @@ amazon S3, Microsoft Azure, and Google Cloud.
     upload/download or create containers.
     It is in Debian.
 
-    It is also used for [Sftp Cloudfs](https://github.com/Memset/sftpcloudfs).
+    It is also used for [Sftp Cloudfs](https://github.com/Memset/sftpcloudfs)
+    which acts as a proxy between a SFTP client and openstack storage .
 -   [OpenStack Swift on Raspberry Pi
     ](http://programmerthoughts.com/openstack/swift-on-pi/)
 -   [Swift Explorer](http://www.619.io/swift-explorer) (Apache License)
@@ -264,7 +277,7 @@ amazon S3, Microsoft Azure, and Google Cloud.
 
     *December 2023*.
 
-## Scaleway Object storage {#scaleway_object}
+## Scaleway Object storage {#scaleway_storage}
 
 {{< iref "#scaleway" "Scaleway" >}} provides S3 compatible object storage.
 -   [S3-Compatible Object Storage](https://www.scaleway.com/en/object-storage/)
@@ -278,6 +291,8 @@ amazon S3, Microsoft Azure, and Google Cloud.
 -   [Glacier Cold Storage](https://www.scaleway.com/en/c14-cold-storage/)
     0.002€ GB/month. Archiving and recovering from C14 Cold Storage’s Glacier class to
     Object Storage’s Standard class is free of charge.
+
+    *The prices are from December 2023*
 
 Documentation from Scaleway:
 -   [Object Storage - Quickstart
@@ -525,7 +540,7 @@ Private product *Infinite Scale*
 -   [Webo](https://webo.cloud/nextcloud/)
     has nextcloud plans, in the *single* category 3.05€/month 50G, 6.10€/month 100G,
     28.1€/month 500G.
-    In the *admin*category 37.8€/year 50GB, 75,6€/year 100GB ....
+    In the *admin* category 37.8€/year 50GB, 75,6€/year 100GB ....
     _prices December 2023_.
 
 
@@ -599,7 +614,7 @@ windows, android, iphone clients.
     ](http://api.yandex.com/disk/doc/dg/concepts/api-methods.xml)
 
 
-# Other clouds
+## Other clouds
 
 -   {{< wp "Adrive" >}} (Wikipedia) it has only a web interface, in java, and
     Linux compatible.
@@ -729,7 +744,7 @@ compatible clouds or through a proxy like {{< iref "#s3proxy" "S3Proxy" >}}.
     synchronized by Amazon SNS notifications. A web console is provided to easily
     monitor the nodes of a cluster.
 -   <a name="goofys"></a>[goofys](https://github.com/kahing/goofys) (Apache License)
-    similar to {{< iref "#s3fs" "s3fs" >}} but written in gb. It features better
+    similar to {{< iref "#s3fs" "s3fs" >}} but written in go. It features better
     performance, and less POSIX compliance than {{< iref "#s3fs" "s3fs" >}}.
 
     It works with Ceph (ex: Digital Ocean Spaces, DreamObjects, gridscale), EMC
@@ -838,16 +853,6 @@ the providers. Rclone is in Debian.
                 conflicts.
 
 -   _Rclone_ is supported by _emacs tramp_ since version 2.4.1.
-
-## Command Line, ftp, dav clients
-### Duck {#duck}
-[Duck the Cyberduck command line tool
-](https://trac.cyberduck.io/wiki/help/en/howto/cli)
-is available for Mac, Windows & Linux. A Deb repository is available. It supports the
-following protocols: ftp, ftps, sftp, WebDAV (HTTP/SSL), Swift, Amazon S3, Backblaze B2,
-Google Cloud Storage, Windows Azure Storage, Rackspace Cloud Files, iPlant Data
-Store. The desktop UI CyberDuck, and the virtual fs MountainDuck are available only on
-windows and Mac OSX. But there are alternatives for Linux like {{< iref "#rclone" >}}
 
 
 ## Cloud abstract interface libraries
@@ -966,7 +971,7 @@ The supported Databases are  Azure, Rackspace.
 
     Reserved IP will be billed €0.002/hr per IP.
 
-    See {{< iref "#scaleway_object" "above for object storage" >}}.
+    See {{< iref "#scaleway_storage" "above for object storage" >}}.
 
 -   [Tutorials and documentations
     ](https://www.scaleway.com/docs/)
@@ -1053,7 +1058,7 @@ competitive in front of other cold storage*
 [OVH openstack]: #ovh_openstack "internal reference"
 [Mega]: #mega "internal reference"
 [Rsync.net]: #rsync.net "internal reference"
-[Scaleway]: #scaleway_object  "internal reference"
+[Scaleway]: #scaleway_storage  "internal reference"
 [Wasabi]: #wasabi  "internal reference"
 [Yandex Disk]: #yandex_disk "internal reference"
 
@@ -1068,7 +1073,14 @@ geographically replicated, they may or may not have backups and versioning, some
 block storage, some file storage, some are encrypted on the server, and the latency and
 transfer throughput may largely vary.
 
-The cheapest kdrive is a swiss nextcloud, it is not convenient for every task.
+The price do not include taxes, in Europe Community all countries are subject to VAT
+with rates varying from 16% to 27% and for most of the countries between 19% and
+25%. Even not in EU Swiss has a 7.7% rate and Great Britain 20%. When buying some
+product from EU in a country outside EU, it is billed without taxes and the VAT is added
+by the carrier. I have no idea on what apply to some abroad computer service. It is
+still move complicated if we consider that the company can be outside of Europe but the
+Data center is located
+in EU.
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
