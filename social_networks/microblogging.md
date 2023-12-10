@@ -2,7 +2,6 @@
 title: Micro Blogging
 ---
 
-
 See also the related page {{< iref "xmpp" "XMPP" >}},
 {{< iref "irc" "IRC" >}},
 {{< iref "sip" "SIP" >}} and
@@ -51,7 +50,6 @@ to communicate using at best a status protocol or at least a messaging
 one like the open source IRC and XMPP, or the closed source
 {{< iref "#slack" "Slack" >}},
 twitter or {{< iref "#facebook" "Facebook messenger" >}}.
-
 
 ## Ostatus {#ostatus}
 Many opensource microblogging frameworks now use the {{< wp "Ostatus" >}}
@@ -235,11 +233,27 @@ standard web services via {{< wp "WebRTC" >}}.Matrix is not a pure peer-to-peer 
 instead each user has a well-defined homeserver which stores his data and that he can
 depend upon.
 
--   [The Faq](https://matrix.org/docs/guides/faq.html)
-    Explain the differences between Matrix and IM applications like Xmpp, Tox and other.
--   There are planty of [Matrix projects](https://matrix.org/docs/projects/).
--   <a name="element"></a>[Riot.im](https://riot.im/)
-    [Element](https://element.io/) (Apache License)
+-   The matrix Home is on [Matrix.org](https://matrix.org/).
+    -   [Matrix How To](https://matrix.org/docs/chat_basics/matrix-for-im/)
+    -   [Matrix Concepts](https://matrix.org/docs/matrix-concepts/elements-of-matrix/)
+    -   [Matrix Legacy Faq](https://matrix.org/docs/legacy/faq/)
+        Explain the differences between Matrix and IM applications like Xmpp, Tox and other.
+    -   [Matrix.org - Clients](https://matrix.org/ecosystem/clients/)
+    -   [Matrix.org - Bridges](https://matrix.org/ecosystem/bridges/)
+    -   [Matrix.org - Servers](https://matrix.org/ecosystem/servers/)y
+    -   [Matrix.org - Hosting](https://matrix.org/ecosystem/hosting/) list only some big
+        providers, many other community providers are available.
+-   [delightful-matrix](https://codeberg.org/yarmo/delightful-matrix)
+    A curated list of delightful Matrix resources, implementations and clients.
+-   [awesome-matrix](https://github.com/jryans/awesome-matrix)
+    A curated list of things related to the Matrix ecosystem, including software,
+    research, etc.
+
+### matrix Clients
+Alist of clients with their protocol support is on
+[Matrix.org - Clients](https://matrix.org/ecosystem/clients/)
+
+-   <a name="element"></a> [Element][] (Apache License)
     _formerly riot.im, formerly Vector_
     is an internet messaging app for group chat voip & video calling file transfer.  It
     is built on the top of Matrix. It has clients for Linux, Mac OS X, IOS, Android,
@@ -249,33 +263,113 @@ depend upon.
     Element has a Debian package _element-desktop_ in a deb repository.
 
     -   [Element Web interface](https://app.element.io/).
--   [weechat-matrix-protocol-script
+-   [FluffyChat][]   (AGPL-3.0)
+-   [Gomuks](https://github.com/tulir/gomuks) (AGPL-3.O)
+    A terminal based Matrix client written in Go.
+    -   [Gomuks documentation](https://docs.mau.fi/gomuks/index.html)
+        The discussion matrix room is `#gomuks:maunium.net`.
+-   [Iamb](https://github.com/ulyssa/iamb) (Apache-2.0 license)
+    A Matrix client for Vim addicts written in rust.
+    -   [Iamb documentation](https://iamb.chat/).
+-   [matrix-commander](https://github.com/8go/matrix-commander)
+    simple python CLI-based Matrix client app for sending and receiving
+-   [Nheko](https://github.com/Nheko-Reborn/nheko) (GPL-3.0)
+    Desktop client for Matrix using Qt and C++20.
+    -   Nheko [Shortcuts](https://github.com/Nheko-Reborn/nheko/wiki/Shortcuts) and
+        [Commands](https://github.com/Nheko-Reborn/nheko/wiki/Commands).
+
+    Nekho needs a `org.freedesktop.secrets.service`org.freedesktop.secrets.service`
+    which can be provided by gnome-keyring, kde-wallet, keepassXC.
+-   [Quaternion][] (GPL-3.0)
+    A Qt5/Qt6-based IM client for Matrix.
+    E2ee is available since 0.96.
+-   [Weechat-matrix-protocol-script
     ](https://github.com/torhve/weechat-matrix-protocol-script)
     is a {{< iref "irc#weechat" "WeeChat" >}} script in Lua that implements
-    the matrix.org chat protocol.
--   [weechat-matrix](https://github.com/poljar/weechat-matrix)
+    the matrix.org chat protocol. It is no more developed since 2019, and the puthon
+    script _weechat-matrix_ is an alternative which is more actively developed.
+-   [Weechat-matrix](https://github.com/poljar/weechat-matrix)
     a Weechat{{< iref "irc#weechat" "WeeChat" >}} Matrix protocol python script.
     _In Debian._
--   [Unofficial selection of public Matrix servers
-    ](https://www.hello-matrix.net/public_servers.php)
--   [Matrix Public Homeservers](https://www.anchel.nl/matrix-publiclist/)
--   [Matrix bridges](https://matrix.org/bridges/) the irc bridge is builtin,
-    some public servers provide a bridge like [Telegram at utwente.io
-    ](https://syscom.utwente.io/info/matrix/telegram/) or [t2bot.io
-    ](https://t2bot.io/telegram/). The server [t2bot.io
-    ](https://t2bot.io/) provides many bridges and bot: telegram, discord,
-    [Slack compatible webhooks
-    ](https://github.com/turt2live/matrix-appservice-webhooks),
-    and many bots. Other bridges must be self-installed, some have light
-    dependencies, some are quite heavy needing even yo have your own home server
-    like the WhatsApp bridge.
--   [mxtoot](https://github.com/ma1uta/mxtoot)    (Apache License)
-    is a Matrix <=> Mastodon bot written on java.
+
+Features of some clients extracted from [Matrix.org - Clients][]
+
+Terminal applications
+
+   | App        | E2ee | SSo | Multi Acc. | Spaces | Packaging |
+   | [Gomuks][] | Y    | Y   | N          | N      | Deb.      |
+   | [Iamb][]   | Y    | N   | Y          | N      |           |
+
+GUI apps
+
+
+| App            | E2ee | SSo | Multi Acc. | spaces | Packaging    | GUI     |   |
+| [Quaternion][] | Béta | Y   | Y          | N      | FlatHub, Deb | QT5/Qt6 |   |
+| [Nekho][]      | Y    | Y   | Y          | Y      | FlatHub, Deb | qt5     |   |
+| [FluffyChat][] | Y    | Y   | Y          | Y      | FlatHub      |         |   |
+
+#### Mobile clients
+Many clients are availables on all platforms, [Element][], [FluffyChat][], [Quadrix][],
+[SchildiChat][], [Syphon][] ...
+
+
 -    <a name= "zom"></a>[འཛོམས་](https://zom.im/)    or
     [Zom](https://zom.im/zomenglish.html) (Apache License)
     is an ios and android client for the Matrix protocol.
     -   [zom-android-matrix - GitHub](https://github.com/zom/zom-android-matrix)
     -   [zom-ios-matrix](https://github.com/zom/zom-ios-matrix)
+
+<!------------------------------------------->
+[Element]: https://element.io/
+[FluffyChat]: https://github.com/krille-chan/fluffychat
+[Gomuks]: https://github.com/tulir/gomuks
+[Quadrix]: https://github.com/alariej/quadrix
+[Quaternion]: https://github.com/quotient-im/Quaternion
+[SchildiChat]: https://github.com/SchildiChat
+[Syphon]: https://github.com/syphon-org/syphon
+
+### Matrix servers
+See [Matrix.org - Servers](https://matrix.org/ecosystem/servers/).
+
+-   [Unofficial selection of public Matrix servers
+    ](https://www.hello-matrix.net/public_servers.php)
+
+-   [Conduit](https://gitlab.com/famedly/conduit) (Apaché-2.0 license)
+    A matrix server written in Rust.
+
+### Matrix bridges
+Look at the list of [Matrix bridges](https://matrix.org/bridges/)
+
+-   the irc bridge is builtin, [Matrix IRC Bridge
+    ](https://matrix-org.github.io/matrix-appservice-irc/latest/introduction.html)
+    provides the manual and give a list of [Bridged Networks
+    ](https://matrix-org.github.io/matrix-appservice-irc/latest/bridged_networks.html).
+-   [matrix-hookshot](https://github.com/matrix-org/matrix-hookshot)
+    A bridge between Matrix and multiple project management services, such as GitHub,
+    GitLab, JIRA, Figma, RSS/Atom feeds, Generic Webhooks.
+    -   [Matrix Hookshot documentation
+        ](https://matrix-org.github.io/matrix-hookshot/latest/index.html)
+-   [matrix-org/matrix-appservice-slack
+    ](https://github.com/matrix-org/matrix-appservice-slack) (Apache-2.0 license)
+    A Matrix <--> Slack bridge.
+    -   Matrix.org provides a [Public Slack Bridge
+        ](https://ems-docs.element.io/books/element-cloud-documentation/page/public-slack-bridge)
+        which comes with some limitations:
+        -   You can bridge  only  to public channels and to a public room.
+        -   Matrix users cannot puppet themselves, or Direct Message other users.
+
+
+-   [Telegram at utwente.io](https://syscom.utwente.io/info/matrix/telegram/)
+-   The server [t2bot.io](https://t2bot.io/) provides many bridges and bot:
+    [Telegram at t2bot.io](https://t2bot.io/telegram/), discord, Gitlab, Trello, RSS,
+    Email notifications, reminders, translate bot, Echo / Ping Bot....
+
+
+Other bridges must be self-installed, some have light dependencies, some are quite heavy
+needing even you have your own home server like the WhatsApp bridge.
+
+-   [mxtoot](https://github.com/ma1uta/mxtoot)    (Apache License)
+    is a Matrix <=> Mastodon bot written on java.
 
 ## Mastodon {#mastodon}
 {{< wp "Mastodon_(software)" "Mastodon" >}} (AGPL) is a federated social network written
@@ -484,6 +578,47 @@ I group here _Slack like_ software. IRC-like features:
     -   [Framateam](https://framateam.org) is the mattermost instance
         of [Framasoft](https://framasoft.org/).
 
+-   <a name="reddit"></a>{{< wp "Reddit" >}} (private) is a content rating, discussion
+    and new aggregator website. Reddit was an open source project from June 18, 2008,
+    until 2017. On April 2023, Reddit announced that it intended to make changes to its
+    API service, including pricing changes—the API was previously free for most use
+    cases. See {{< wp "2023 Reddit API controversy" >}}. Due to this API shanges most
+    applications were shut off like _apollo_, _redplanet_, _rif is fun for Reddit (RIF)_,
+    and _BaconReader_ or became subscription only.
+
+    There was an exemption for _non-commercial accessibility-focused_ applications
+    _RedReader_ and _Dystopia_ have received exemption.
+
+    -   [teddit](https://codeberg.org/teddit/teddit) (AGPL 3.0)
+        is an alternative Reddit front-end focused on privacy.
+
+        Teddit needs no javascript, has no adds, it prevents Reddit from tracking your
+        IP or JavaScript fingerprint.
+
+        It is self hostable and around thirty communauty sites are available.
+
+        There are [many Teddit instances](https://codeberg.org/teddit/teddit#instances),
+        the official instance is [teddit.net](https://teddit.net/).
+     -  [reddio](https://gitlab.com/aaronNG/reddio) (MIT License)
+        is a command-line interface for Reddit written in POSIX sh.
+        -  [reddit dmenu/rofiœ script
+           ](https://gitlab.com/dwt1/dmscripts/-/blob/master/scripts/dm-reddit)
+           is a reddit viewer in dmenu/rofi using reddio.
+
+ -  <a name="lemmy"></a>[Lemmy](https://join-lemmy.org/)
+    Lemmy is a selfhosted social link aggregation and discussion platform.
+    Servers are federated, and connected to the same universe, called the
+    {{< wp "Fediverse" >}}.
+
+    -   [LemmyNet/lemmy - Lemmy server source repository
+        ](https://github.com/LemmyNet/lemmy)a (AGPL)
+    -   Lemmy has many [Apps and Libraries](https://join-lemmy.org/apps) for Web, IOS,
+        Android MacOs and Linux.
+    -   [neonmodem](https://github.com/mrusme/neonmodem) (GPL-3.0)
+        Neon Modem Overdrive is a BBS-style command line client, built in Go, that
+        supports Discourse, Lemmy, Lobsters and Hacker News as backends,
+    -   [lem.el](https://codeberg.org/martianh/lem.el)
+        emacs client library and interface for Lemmy instances.
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
