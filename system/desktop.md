@@ -457,7 +457,8 @@ if the chosen panel does not include one.
 
         fluxbox-generate_menu -h
 
--   there is (was?) a the script fluxbox-generate-menu is in /usr/share/doc/fluxbox/fluxbox-generate_menu.gz
+-   there is (was?) a the script fluxbox-generate-menu is in
+    `/usr/share/doc/fluxbox/fluxbox-generate_menu.gz`
 -   The user menu is in `~/.fluxbox/usermenu`
 -   fluxbox menu editors:
    [fluxmenu](http://sourceforge.net/projects/fluxmenu.berlios/),
@@ -625,10 +626,12 @@ _Sway_ has a long list of [Clients that use the wlr protocols
 The [wlr protocol](https://github.com/swaywm/wlr-protocols) is supported by
 many wlroots-based compositors.
 
+[awsome Wayland](https://github.com/natpen/awesome-wayland) list many wayland clients.
 
 [Useful add ons for sway · Sway Wiki
 ](https://github.com/swaywm/sway/wiki/Useful-add-ons-for-sway)
 is a extended list of apps and scripts for swaywm
+
 
 The Nix overlay [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)
 has built many wayland tools. _List in the Readme_
@@ -796,7 +799,10 @@ But some alternative status are window manager independant.
     Modular status panel for X11 and Wayland, inspired by
     {{< iref "#polybar" "polybar" >}}.
 
-## Menu system
+## Menu systems {#menus_systems}
+-   [List of applications  launchers - ArchWiki
+    ](https://wiki.archlinux.org/title/List_of_applications/Other#Application_launchers)
+
 ### terminal menus
 -   [pdmenu](https://joeyh.name/code/pdmenu/) full screen console
     menuing sys tem for Unixs removed from Debian since 2017, but still active
@@ -827,7 +833,9 @@ But some alternative status are window manager independant.
 [dmenu](http://tools.suckless.org/dmenu/)
 is a dynamic menu for X, originally designed for dwm. part of the suckless-tools package
 in Debian.
--   [ArchWiki: dmenu](https://wiki.archlinux.org/index.php/dmenu),
+-   [ArchWiki: dmenu](https://wiki.archlinux.org/index.php/dmenu).
+-   [dmenu-distrotube · GitLab](https://gitlab.com/dwt1/dmenu-distrotube) (MIT License)
+    Derek Taylor heavily-patched and customized build of the Suckless dmenu run launcher.
 -   [Archlinux dmnenu hacking thread](https://bbs.archlinux.org/viewtopic.php?id=80145),
 -   [jukil/dmenu-scripts-collection](https://github.com/jukil/dmenu-scripts-collection)
     collected from the hacking thread _until 2014, newer scripts are not here!_.
@@ -835,6 +843,15 @@ in Debian.
     A collection of scripts in the _dmenu_tools_ AUR package:
     dmenu_edit, dmenu_menu, dmenu_mpc, dmenu_netctl, dmenu_raise, dmenu_raise_or_run,
     dmenu_run_recent.
+-  John Sagotsky [dmenu toys](http://sagotsky.github.io/2013/10/11/dmenu-toys.html)
+   is a blog page from _2013_ some scripts using dmenu or rofi, described here, and many
+   others are available in his [dotfiles and scripts - GitHub
+   ](https://github.com/sagotsky/.dotfiles/).
+
+   Among them
+   -   `cli-board` reads in a directory as its input. Selecting a file will
+       either read or execute it, and copy its contents or output to the clipboard.
+   -   `cheat-sheet`is similar but select a text file and allow to copy selected lines.
 
 ### Rofi {#rofi}
 [Rofi](https://github.com/davatorium/rofi) (MIT License)
@@ -859,6 +876,8 @@ Rofi is in Debian.
     Configurable power menu mode for Rofi and dmenu.
 -   [rofi-blezz](https://github.com/davatorium/rofi-blezz) is a plugin for rofi that
     emulates [blezz](https://github.com/Blezzing/blezz) the guided Keystroke Launcher.
+-   [Derek Taylor  dmscripts](https://gitlab.com/dwt1/dmscripts) (GPL 3)
+    a collection of scripts for dmenu, fzf, rofi.
 
 [lbonn / rofi](https://github.com/lbonn/rofi) is a fork of rofi which adds
 [Wayland support](https://github.com/lbonn/rofi#wayland-support).
@@ -880,6 +899,9 @@ Rofi is in Debian.
         ](https://kupferlauncher.github.io/Documentation/).
 
 ### wayland dmenu/rofi alternatives {#wayland_menus}
+See also the list in [awsome Wayland - launchers
+](https://github.com/natpen/awesome-wayland#launchers).
+
 -   [bemenu](https://github.com/Cloudef/bemenu) (GPLv3 and LGPLv3)
     is an dynamic menu library and client program inspired by dmenu.
     It has a ncurses, x11, and wayland backend.
@@ -888,6 +910,9 @@ Rofi is in Debian.
     -   [bemenu API documentation](http://cloudef.pw/bemenu/).
 -   [dmenu-wl](https://github.com/nyyManni/dmenu-wayland) (MIT License)
     dmenu for wayland (wlroots) compositors.
+-   [fuzzel](https://codeberg.org/dnkl/fuzzel)
+    Application launcher for wlroots compositors, similar to rofi's `drun` mode.
+    *Packaged in Debian.*
 -   [lbonn/rofi](https://github.com/lbonn/rofi) (MIT License)
     a rofi fork with wayland support.
 -   [tofi](https://github.com/philj56/tofi) (MIT License)
@@ -939,6 +964,10 @@ The python programs use
 [PyXDG
 ](https://pyxdg.readthedocs.org/en/latest/_modules/xdg/Menu.html).
 
+Most often the menus are displayed by a menu launcher, the most popular being
+{{< iref "#dmenu" "dmenu" >}}, {{< iref "#rofi "rofi" >}} and all the rofi like menus
+sytems such as those referred in {{< iref "#wayland_menus" "dmenu/rofi alternatives" >}}.
+
 -   The Faq.i3wm forum [How can I use autostart .desktop files in i3?
     ](https://faq.i3wm.org/question/2155/how-can-i-use-autostart-desktop-files-in-i3/)
     teach how to use dex to test your autostart files.
@@ -974,82 +1003,79 @@ The python programs use
     is a python menu generation utility for: Blackbox, Deskmenu, FluxBox, IceWM, Jwm,
     OpenBox, Pekwm, WindowMaker ,XFce4 it can use both of Freedesktop.org's `.desktop`
     files and Debian application entries.
+-   [menutray](https://github.com/trizen/menutray) (GPL 3.0)
+    is a simple GTK+ application menu tray.
 -   [morc_menu](https://github.com/Boruch-Baum/morc_menu/) (GPL)
     is an categorized desktop application menu, independent of any window manager.
     it is an alternative for  i3-dmenu-desktop and
     {{< iref "#j4-dmenu-desktop" "j4-dmenu-desktop" >}}.
 -   [ArchLinux xdg-menu](https://wiki.archlinux.org/index.php/Xdg-menu)
-    generates menus for twm, ion3, WindowMaker, fvwm2, icewm,
+    is a perl scrip to generate menus for twm, ion3, WindowMaker, fvwm2, icewm,
     blackbox, fluxbox, openbox, awesome.
-    -   [xdgmenu](https://github.com/crichon/xdgmenu) (xdgMIT License)
-    is a python/ncurses application to launch a xdg menu.
--   [xdmenug
-    ](https://raw.githubusercontent.com/sagotsky/.dotfiles/master/scripts/xdmenug.py)
-    in [sagotsky dotfiles](https://github.com/sagotsky/.dotfiles)
-    referenced in [dmenu toys](http://sagotsky.github.io/2013/10/11/dmenu-toys.html)
--   [GitHub - xdgmenumaker](https://github.com/gapan/xdgmenumaker/) (GPL)
+-   [xdgmenu](https://github.com/crichon/xdgmenu) (xdgMIT License)
+    is a python/ncurses application to launch a xdg menu. _2016_.
+-   [xdgmenumaker](https://github.com/gapan/xdgmenumaker/) (GPL)
     is a command line tool, written in python, that generates application menus using
     xdg information, by scanning *.desktop files. It can generate menus for Fluxbox,
     IceWM, jwm, pekwm, Window Maker.
 
-## Launchers  {#launch_bars}
-Launchers are also named _taskbar_, _launchbar_, _dock_ ....
+## Launch Bars {#launch_bars}
+Launch Bars are also named _taskbar_, _dock_ or _launchers_, but _launchers_ refers also
+to launchers menus which are grouped in the previous entries.
 
 -   [i3status](http://i3.zekjur.net/i3status/)
--   _aewm++-appbar_ (MIT) is a minimal launchbar developped with aewm++, but it
-    does not depend on iT. It is in the debian package aewm++-goodies.
--   [tabble](http://www.rillion.net/tabble/) (GPL) is a small
-    rectangular widget written  in C/GTK2  which presents your
-    programs in tabs for easy launch. It can also be launched with
-    sudo to give an easy root access to some programs.The last release
-    is 2012. It is in  debian.
+-   _aewm++-appbar_ (MIT) is a minimal launchbar developped with aewm++, but it does not
+    depend on iT. It is in the debian package aewm++-goodies.
+-   [tabble](http://www.rillion.net/tabble/) (GPL)
+    is a small rectangular widget written in C/GTK2 which presents your programs in tabs
+    for easy launch. It can also be launched with sudo to give an easy root access to
+    some programs.The last release is 2012. It is in debian.
 -   [wbar](http://code.google.com/p/wbar/source/browse/trunk/README)
-    is a C++/gtk launch bar. It was initially developed for Fluxbox,
-    then tested on WindowMaker, Xfce, GNOME, etc. It is in Debian
-    -   _wbar-config_ is the recommended tool to customize Wbar. In
-        debian it is in a separate package.
--   [lxlauncher](http://wiki.lxde.org/en/LXLauncher) is a
-    launcher for application programs developed for the 7"-10.2"
-    screens (netbooks) it follows freedesktop.org
-    specs.
+    is a C++/gtk launch bar. It was initially developed for Fluxbox, then tested on
+    WindowMaker, Xfce, GNOME, etc. It is in Debian
+    -   _wbar-config_ is the recommended tool to customize Wbar. In debian it is in a
+        separate package.
+-   [lxlauncher](http://wiki.lxde.org/en/LXLauncher)
+    is a launcher for application programs developed for the 7"-10.2" screens (netbooks)
+    it follows freedesktop.org specs.
 -   [Cairo-Dock](http://www.glx-dock.org/)
-    is a highly customizable dock (_not light_) written in C. It is in
-    debian. It can be controlled from a terminal or another
-    application through the DBus interface.
+    is a highly customizable dock (_not light_) written in C. It is in debian. It can be
+    controlled from a terminal or another application through the DBus interface.
     Features can be added by plug-ins or applets.
     -   [Cairo-Dock - ArchWiki](https://wiki.archlinux.org/index.php/Cairo-Dock).
--   [Launchpad: Avant Window Navigator (Awn)
-    ](https://launchpad.net/awn)
-    is a dock-like bar which sits at the bottom of the screen. It is
-    for composite window managers and no longer in Debian.
+-   [Launchpad: Avant Window Navigator (Awn)](https://launchpad.net/awn)
+    is a dock-like bar which sits at the bottom of the screen. It is for composite
+    window managers and no longer in Debian.
     -   [Avant Window Navigator - ArchWiki
         ](https://wiki.archlinux.org/index.php/Avant_Window_Navigator)
 
 ## Pin boards
-Pin boards allow to create icons on your desktop and to associate
-some command or action to the icon.
+Pin boards allow to create icons on your desktop and to associate some command or action
+to the icon.
 
-Some desktop include a built in pin board as _Gnome_ through its file
-manager _Nautilus_.
+Some desktop include a built in pin board as _Gnome_ through its file manager
+_Nautilus_.
 
-_Pcmanfm _also has an option to manage the desktop, and you can then
-use desktop shortcuts.
+_Pcmanfm_ also has an option to manage the desktop, and you can then use desktop
+shortcuts.
 
-You can choose to not have a pinboard on your desktop. A pinboard is easily
-hidden by floating windows, and is a non-sense with tiling wm that use
-all the screen but to use a menu system or a
-{{< iref "#launch_bars" "Launch Bar" >}}.
+You can choose to not have a pinboard on your desktop. A pinboard is easily hidden by
+floating windows, and is a non-sense with tiling wm that use all the screen but to use a
+menu system or a {{< iref "#launch_bars" "Launch Bar" >}}.
 
 -   [fbdesk](http://fluxbox.sourceforge.net/fbdesk/) (3.8M) aimed at
     FluxBox/BlackBox, it is in debian.
--   [idesk](http://idesk.sourceforge.net) (9.2M) _last release 2005_.
-    If you want to fatten a thin window manager it's the way.
+-   [idesk](http://idesk.sourceforge.net) (9.2M)
+    _last release 2005, but [still in Debian](https://tracker.debian.org/pkg/idesk) as
+    far as 2023_.
 -   Desklaunch from the
-    [Oroborus Window Manager](http://www.oroborus.org/), but which can
+    [Oroborus Window Manager](http://www.oroborus.org/), which can
     be used with an other minimal wm.
     DeskLaunch is a small utility for creating desktop icons using pixmaps.
-    It is, as a
-    [separate package in debian](https://packages.debian.org/jessie/desklaunch).
+    Debian packages the three utilities *desklaunch*, *keylaunch*, *deskmenu* as three
+    separates packages, but *Oroborus* and the related package are no longer pushed in
+    versions after *Buster* see
+    [Debian Tracker; oroborus](https://tracker.debian.org/pkg/oroborus).
 
 
 ## System Trays {#systrays}
