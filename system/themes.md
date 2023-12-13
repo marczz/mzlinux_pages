@@ -6,6 +6,10 @@ title: Color Themes
 See also {{< iref "emacs#emacs_themes" "Emacs Themes" >}}.
 
 # Color Themes
+-   [arc-theme](https://github.com/jnsh/arc-theme)a (GPL-3.0)
+:   A flat theme with transparent element, designed for GTK based desktop environments.
+    -   [sachahjkl/wofi-arc-dark](https://github.com/sachahjkl/wofi-arc-dark)
+        A stylesheet recreating the arc-dark theme for wofi.
 -   <a name="base16"></a>[base16](https://github.com/chriskempson/base16)
     by Chris Kempson is the improvement of his own
     [tomorrow-theme](https://github.com/chriskempson/tomorrow-theme)
@@ -14,12 +18,15 @@ See also {{< iref "emacs#emacs_themes" "Emacs Themes" >}}.
     (_bash_, _zsh_), _vim_, _emacs_, _gimp_, _{{< iref "dbus#dunst" "dunst" >}}_,
     _zathura_, _rofi_, _st_, and _mac os_ apps.
 
-    See aldo {{< iref "#tinted-theming" "Tinted Theming" >}} which is a project based on Base16.
+    See also {{< iref "#tinted-theming" "Tinted Theming" >}} which is a community fork
+    of Base16.
 -   <a name="dracula"></a>[Dracula](https://draculatheme.com/) is a dark theme
     for a lot of apps (135!) including vim, zsh, emacs, gnome-terminal, alacritty,
     chrome, gitk, firefox, i3, rofi, termite, gtk, zathura, and many windows or OS X
     applications.
-    -   [dracula/i3](https://github.com/dracula/i3)  Dark theme for i3.
+    -   [dracula/i3](https://github.com/dracula/i3)  Dark Dracula theme for i3.
+    -   [dracula/wofi](https://github.com/dracula/wofi) (MIT License)
+        Dark Dracula theme for wofi.
 -   <a name="gruvbox"></a>[Gruvbox](https://github.com/morhetz/gruvbox-contrib)
     group ports on many application of the original
     [gruvbox vim theme](https://github.com/morhetz/gruvbox); a theme inspired by
@@ -61,15 +68,21 @@ See also {{< iref "emacs#emacs_themes" "Emacs Themes" >}}.
 -   <a name="tinted-theming">[tinted-theming](https://github.com/tinted-theming/home)
     Style systems and tooling for crafting color schemes and using them in many apps.
 
-    Tinted-Theming is an inspired by {{< iref "#base16" "Base16 from Chris Kempson" >}}.
--   The original Zenburn theme is
-    [Zenburn vim theme](https://github.com/jnurmine/Zenburn), Bozhidar Batsov ported it
-    to [zenburn-emacs](https://github.com/bbatsov/zenburn-emacs), and
-    [anrxc](http://sysphere.org/~anrxc/) gives [in his blog
-    ](http://sysphere.org/~anrxc/j/articles/zenburn/index.html)
-    schemes for [awsome](http://awesome.naquadah.org/wiki/Zenburn_Theme),
-    console, _Gajim_, _pidgin_, _emacs_, X apps thru _.Xdefaults _.
+    Tinted-Theming is a community fork of
+    {{< iref "#base16" "Base16 from Chris Kempson" >}}.
+-   [Zenburn vim theme](https://github.com/jnurmine/Zenburn) (GPL)
+    is original Zenburn theme.
 
+    It has been ported to multiple applications.
+    -    [zenburn-emacs](https://github.com/bbatsov/zenburn-emacs) (GPL-3.0)
+         by Bozhidar Batsov a port of ZenBurn to emacs.
+    -   [phha/zenburn.nvim](https://github.com/phha/zenburn.nvim) (MIT License)
+        improves the original Zenburn for vim, by including support for TreeSitter and
+        many other plugins.
+    -    [anrxc](http://sysphere.org/~anrxc/) gives [in his blog
+        ](http://sysphere.org/~anrxc/j/articles/zenburn/index.html)
+        gives ZenBurn schemes for [awsome](http://awesome.naquadah.org/wiki/Zenburn_Theme),
+        console, _Gajim_, _pidgin_, _emacs_, X apps thru _.Xdefaults _.
 -   There are many web applications to help to configure color themes
     -   [256 colors - cheat sheet](https://jonasjacek.github.io/colors/),
     -   [4bit Terminal Color Scheme Designer](http://ciembor.github.io/4bit/)
