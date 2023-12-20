@@ -16,15 +16,21 @@ Console applications are also called _terminal applications_
 See also {{< iref "file_managers#console" "console file managers" >}}
 {{< iref "text_editors#terminal_editors" "terminal text editors" >}}
 
--   The internet messaging clients are in the pages {{< iref "irc" "IRC" >}},
-    {{< iref "xmpp" "XMPP" >}},  {{< iref "social_networks" "Social Network" >}}.
+The internet messaging clients are in the pages {{< iref "irc" "IRC" >}},
+{{< iref "xmpp" "XMPP" >}},  {{< iref "social_networks" "Social Network" >}}.
 
+
+-   [Core utilities - ArchWiki](https://wiki.archlinux.org/title/Core_utilities)
+    list also the alternative to core utilities
 -   [incosolation blog](http://inconsolation.wordpress.com) is devoted
     to console applications, it stopped in 2015.
 -   [cli.fan — Showcasing the best command-line tools](https://cli.fan/posts/).
 -   [suckless.org software that sucks less](https://suckless.org/rocks/)
     many cli among these applications.
 -   [Awesome CLI Apps](https://github.com/agarrharr/awesome-cli-apps).
+-   [awesome-browserless](https://github.com/koalagang/awesome-browserless)
+    _awesome_ list of alternatives to apps traditionally used in the web browser.
+    _not only console_.
 
 # Command line WEB search
 
@@ -92,10 +98,13 @@ in this site, you can make a search to find the appropriate page.
 {{< wp "Irssi" >}}
 : IRC client
 
-[htop](http://htop.sourceforge.net)
-: ncurses-based process viewer.
-  It is similar to top, but allows to scroll the list vertically and horizontally to see all processes and their full command lines.
-  Tasks related to processes (killing,  renicing)  can  be  done with keyboards shortcuts
+[htop](http://htop.dev)
+: ncurses-based process viewer.  It is similar to top, but allows to scroll the list
+  vertically and horizontally to see all processes and their full command lines.  Tasks
+  related to processes (killing, renicing) can be done with keyboards shortcuts.
+
+  See the {<< man "htop" "manual page" >}} or the help menu (F1 or h inside htop) for a
+  list of supported key commands.
 
 [links2](http://atrey.karlin.mff.cuni.cz/~clock/twibright/links/)
 : browser that can work in text mode, or graphic mode with X11, fb or
@@ -127,6 +136,9 @@ in this site, you can make a search to find the appropriate page.
 :   reports the progress of file read/write operations for processes that have entries
     in `/proc`.
     -   [progress - cli.fan](https://cli.fan/posts/progress/).
+
+[reddio](https://gitlab.com/aaronNG/reddio)
+: a command-line interface for Reddit written in POSIX sh.
 
 [ripgrep](https://github.com/BurntSushi/ripgrep)
 : installed as _rggrep_, a line-oriented search tool that recursively searches the
