@@ -2,6 +2,9 @@
 title: Console configuration
 ---
 
+The keyboard settings of the console is in
+{{< iref "keyboard_input#console" "Console Keyboard Input" >}}
+
 See also {{< iref "booting" "Booting" >}}, {{< iref "xorg" "Xorg section" >}},
 {{< iref "checkpointing" "Checkpointing" >}}.
 
@@ -9,20 +12,10 @@ See also {{< iref "booting" "Booting" >}}, {{< iref "xorg" "Xorg section" >}},
 
 # References
 -   Wikipedia {{< wp "Linux Console" >}},
--   [ArchWiki: console
-    ](https://wiki.archlinux.org/index.php/Linux_console)
--   [The Linux keyboard and console HOWTO
-    ](http://tldp.org/HOWTO/Keyboard-and-Console-HOWTO.html) _2002_
-    by Andries Brouwer (
--   [Debian Wiki - Keyboard](https://wiki.debian.org/Keyboard)
+-   [Linux console - ArchWiki](https://wiki.archlinux.org/title/Linux_console)
 -   [Text-Terminal-HOWTO
     ](http://tldp.org/HOWTO/Text-Terminal-HOWTO.html) _new release in 2013_.
--   [Loadkeys, Dumpkeys Tutorial
-    ](http://www.developertutorials.com/tutorials/linux/loadkeys-dumpkeys-050518/)
     by Tony Lawrence.
--   [Linux console - ArchWiki](https://wiki.archlinux.org/index.php/Linux_console#Fonts)
--   [Linux console/Keyboard configuration - ArchWiki
-    ](https://wiki.archlinux.org/index.php/Linux_console/Keyboard_configuration)
 -   <a name="dvtm"></a>[dvtm](http://www.brain-dump.org/projects/dvtm/)
     ( MIT/X11 license) (dynamic virtual terminal manager) brings the concept of
     {{< iref "desktop#tiling_wm" "tiling window management" >}}
