@@ -955,75 +955,53 @@ See also the {{< iref "#ip_address_module" "ipaddress module" >}}
 
 
 ## Packaging - Installing {#packaging}
--   The <a name="pypa"></a>[Python packaging user guide
+-   The The
+    [Hitchhiker’s Guide to Python](https://docs.python-guide.org/),
+    has a chapter [packaging your code
+    ](https://docs.python-guide.org/shipping/packaging/).
+-   <a name="pypa"></a>[Python Packaging User Guide
+    ](https://packaging.python.org/en/latest/)
     ](https://python-packaging-user-guide.readthedocs.org/)
     is the official reference for python packages.
+
+    It provides Tutorials and Guides to packaging.
 -   <a name="setuptools"></a> The new
-    [Setuptools](http://pythonhosted.org/setuptools/index.html)
-    from version 1.x (2013) reconcile Setuptools with the
-    {{< iref "#distribute" "Distribute" >}} fork in a single
-    merge. By now we can use it on both Python 2.x and Python 3.x
-    where it replaces the two previous forks.
--   [PyPi: setuptools](http://pypi.python.org/pypi/setuptools)
--   [setuptools documentation](https://pythonhosted.org/setuptools/index.html):
-    -   [Building and Distributing Packages with Setuptools
-        ](https://pythonhosted.org/setuptools/setuptools.html),
-    -   [Easy Install](https://pythonhosted.org/setuptools/easy_install.html)
-    -   [Package Discovery and Resource Access using pkg_resources
-        ](https://pythonhosted.org/setuptools/pkg_resources.html)
--   <a name="distribute">[Distribute](http://pythonhosted.org/distribute/)
-    was a fork from the older version of
-    {{< iref "#setuptools" "Setuptools" >}}
-    project version 0.x, it is now deprecated after a merge with
-    {{< iref "#setuptools" "Setuptools" >}}.
-    It was  providing  a drop-in replacement for
-    {{< iref "#setuptools" "setuptools" >}} and offered Python
-    3 support with the same commands than
-    {{< iref "#setuptools" "Setuptools" >}}.<br >
-    [The Hitchhiker’s Guide to Packaging
-    ](http://guide.python-distribute.org/index.html)
-    (don't confuse with the [Hitchhiker’s Guide to Python
-    ](http://docs.python-guide.org/en/latest/) which is an up to date guide to all
-    python development)
-    was a guide to {{< iref "#distribute" "Distribute" >}}
-    and {{< iref "#pip" "Pip" >}}, which is the base of the present
-    {{< iref "#pypa" "Python Packaging Guide" >}}
+    [Setuptools](https://setuptools.pypa.io/en/latest/)
+    is a tool to  download, build, install, upgrade, and uninstall Python packages.
+    -   [PyPi: setuptools](https://pypi.python.org/pypi/setuptools)
+    -   [Setuptools User Guide
+        ](https://setuptools.pypa.io/en/latest/userguide/index.html):
 -   The {{< iref "#distutils" "module distutils" >}}
     is part of the standard library.
--   <a name="pip"></a>[PIP](http://www.pip-installer.org/en/latest/)
-    is an enhancement of setuptool and a replacement for easy_install,
+-   <a name="pip"></a>[PIP](https://pip.pypa.io/en/stable/)
+     is the package installer for Python.
     it is complementary with
     {{< iref "#virtualenv" "virtualenv" >}} and can be used
     inside virtualenv.
--    <a name="fabric"></a>[Fabric](http://docs.fabfile.org/)
-    (BSD License) is a library and command-line tool for streamlining
-    the use of SSH for application deployment or systems
-    administration tasks.  It is similar to Makefiles but with the
-    ability to execute commands on a remote server. <br />
-    Fabric uses {{< iref "#paramiko" "paramiko" >}}.<br/>
-    The [Fabric documentation](http://docs.fabfile.org/) provides a
-    [Tutorial](http://docs.fabfile.org/en/latest/tutorial.html),
-    [Recipes](http://wiki.fabfile.org/Recipes)
-    [UseCases](http://wiki.fabfile.org/UseCases) and a
-    [FAQ](http://docs.fabfile.org/en/latest/faq.html).
+-    <a name="fabric"></a>[Fabric](https://www.fabfile.org/)
+    (BSD License) is a library and command-line tool for streamlining the use of SSH for
+    application deployment or systems administration tasks.  It is similar to Makefiles
+    but with the ability to execute commands on a remote server.
+
+    Fabric uses {{< iref "#paramiko" "paramiko" >}}.
+
+    The [Fabric documentation](https://docs.fabfile.org/) provides
+    [Tutorial](https://docs.fabfile.org/en/latest/tutorial.html),
+    [Recipes](https://wiki.fabfile.org/Recipes)
+    [UseCases](https://wiki.fabfile.org/UseCases) and a
+    [FAQ](https://docs.fabfile.org/en/latest/faq.html).
     -   [GitHub: Fabric](https://github.com/fabric/fabric)
-    -   [Debian Administration: A simple introduction to fabric
-        ](http://www.debian-administration.org/articles/671).
     -   [Python For Beginners: How to use Fabric in Python
-        ](http://www.pythonforbeginners.com/systems-programming/how-to-use-fabric-in-python/).
-    -   [Using Fabric to manage your deployments
-        ](http://johan.beyers.co.za/2012/09/23/using_fabric_to_manage_your_deployments.html)
-        a tutorial by Joyan Beyers.
-    -   [Using Fabric for SSH](http://advanced-python.readthedocs.org/en/latest/fabric.html)
-        in [Curriculum for Advanced Python](http://advanced-python.readthedocs.org/en/latest/).
-    -   An example of use is  the [Flask site deployment with Fabric
-        ](https://flask.palletsprojects.com/en/1.1.x/patterns/fabric/) or also the
-        [Byte of python fabfile
-        ](https://github.com/swaroopch/byte_of_python/blob/develop/fabfile.py)
+        ](https://www.pythonforbeginners.com/systems-programming/how-to-use-fabric-in-python/).
+-   [pipx](https://pipx.pypa.io/stable/)  (MIT License)
+    install and Run Python Applications in Isolated Environment for each application
+    and its associated packages.
+    -   [pipx - GitHub](https://github.com/pypa/pipx)
+    -   [Comparison to Other Tools](https://pipx.pypa.io/stable/comparisons/)
+        compare with pip, poetry, pipenv, venv, pyenv, pipsi.
 
 ## Parsers
--   [Python Wiki: Language Parsing
-    ](https://wiki.python.org/moin/LanguageParsing)
+-   [Python Wiki: Language Parsing](https://wiki.python.org/moin/LanguageParsing)
 
 ### PEG Parsers
 They use {{< wp "Parsing expression grammar" >}}. They are introduced in the
