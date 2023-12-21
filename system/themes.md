@@ -2,8 +2,10 @@
 title: Color Themes
 ---
 
+See also {{< iref "emacs#emacs_themes" "Emacs Themes" >}},
+{{< iref "desktop" "Desktop" >}}.
 
-See also {{< iref "emacs#emacs_themes" "Emacs Themes" >}}.
+ <!-- see also [[file:../../../../content-org/notes/system_notes/themes_notes.org::+hugo_front_matter_format: yaml][Themes Notes]] -->
 
 # Color Themes
 -   [arc-theme](https://github.com/jnsh/arc-theme)a (GPL-3.0)
@@ -70,6 +72,29 @@ See also {{< iref "emacs#emacs_themes" "Emacs Themes" >}}.
 
     Tinted-Theming is a community fork of
     {{< iref "#base16" "Base16 from Chris Kempson" >}}.
+    -   [Base16 Gallery](https://tinted-theming.github.io/base16-gallery/)
+    -   [base16 styling guideline
+        ](https://github.com/chriskempson/base16/blob/main/styling.md)
+    -   Tinted Theming has many schemes templates for applications like
+        [shell](https://github.com/tinted-theming/base16-shell),
+        [rofi](https://github.com/tinted-theming/base16-rofi),
+        [hexchat](https://github.com/tinted-theming/base16-hexchat),
+        [polybar](https://github.com/tinted-theming/base16-polybar),
+        [qutebrowser](https://github.com/tinted-theming/base16-qutebrowser),
+        [foot](https://github.com/tinted-theming/base16-foot),
+        [xresources](https://github.com/tinted-theming/base16-xresources),
+        [fzf](https://github.com/tinted-theming/base16-fzf),
+        [i3](https://github.com/tinted-theming/base16-i3),
+        [tmux](https://github.com/tinted-theming/base16-tmux),
+        [dunst](https://github.com/tinted-theming/base16-dunst),
+        [emacs](https://github.com/tinted-theming/base16-emacs),
+        [helix](https://github.com/tinted-theming/base16-helix),
+        [vim](https://github.com/tinted-theming/base16-vim),
+        kakoune,
+    -   Tinted theming or Base16 have some builders like
+        [base16-builder-go](https://github.com/tinted-theming/base16-builder-go),
+        {{< iref "#flavours" flavour" >>}, {{< "#pywal16" "Pywal 16" >}}.
+
 -   [Zenburn vim theme](https://github.com/jnurmine/Zenburn) (GPL)
     is original Zenburn theme.
 
@@ -120,6 +145,7 @@ See also {{< iref "emacs#emacs_themes" "Emacs Themes" >}}.
     Pywal supports a [wide range of programs and applications
     ](https://github.com/dylanaraps/pywal/wiki/Customization)
     -   [Pywal Wiki](https://github.com/dylanaraps/pywal/wiki)
+    -   [Pywal cheatsheet](https://www.schotty.com/Cheatsheets/Pywal_cheatsheet/)
     -   [ewal](https://github.com/cyruseuros/ewal)(GPL-3.0)
         is a pywal based Emacs color-picker and theme generator.
 -   [pywal16](https://github.com/eylles/pywal16) (MIT License).
