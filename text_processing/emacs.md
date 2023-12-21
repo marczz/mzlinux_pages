@@ -897,7 +897,7 @@ https://emacs.stackexchange.com/questions/12235/edit-file-as-root-over-when-alre
     ](http://stackoverflow.com/a/16408592/965798)
 -->
 # Emacs color themes {#emacs_themes}
-See also {{< iref "desktop#color_themes" "Desktop Color themes" >}}.
+See also {{< iref "themes" "Desktop Color themes" >}}.
 
 There are a lot of color themes provided with emacs, in the
 `/usr/share/emacs/<version>/etc/themes` you find _as far of emacs 26_:
@@ -926,7 +926,6 @@ advertise this function as indicated in [this stack overflow answer
   (before theme-dont-propagate activate)
   (mapcar #'disable-theme custom-enabled-themes))
 ```
-
 
 All the themes should be in a directory from the list `custom-theme-load-path`, for which
 you can define a custom value. Note that themes installed from MELPA use to add
@@ -964,19 +963,29 @@ Some screenshots are
 [available here](https://emacsthemes.com/themes/solarized-themes.html).
 
 One of the more popular set of themes, not only in emacs but on the desktop is
-base16. In [base16 collection of themes for emacs][base16].
+base16.
+{{< iref "themes#tinted-theming" "Tinted Theming" >}} includes the package (in Melpa)
+[base16 themes for emacs][base16-emacs] which was developped by
+[Kaleb Elwert *belak*](https://github.com/belak).
+
 Screenshots of different variants of base16 are
 [in emacsthemes](https://emacsthemes.com/pages/search.html?search=base16) and also
-in [base16 theme previews](https://belak.github.io/base16-emacs/).  you find support for
-auctex, centaur-tabs, circe, avy, clojure, diff-hl, diff, dired+, doom, ediff, erc,
+[base16 theme previews](https://tinted-theming.github.io/base16-emacs/).
+
+This package supports auctex, centaur-tabs, circe, avy, clojure, diff-hl, diff, dired+, doom, ediff, erc,
 eshell, flycheck, flymake, flyspell, git-gutter, gnus, helm, ido, idris-mode, imenu,
 ivy, jabber, js2, js3, magit, org-mode, rainbow-delimiters, erb,
 [telephone-line](https://github.com/dbordak/telephone-line), w3m, whitespace-mode.
 
-[Gruvbox is a port to emacs of the
+<a name="emacs-gruvbox"></a>[Gruvbox][gruvbox] is a port to emacs of the
 [vim theme Gruvbox](https://github.com/morhetz/gruvbox) there are three light and three
-dark versions. It has a large support for packages, see below the
-[support table](#package_support2)
+dark versions. It has a large support for packages, ag, ace-jump, ace-window, auctex,
+anzu, auto-dim, cider, circe, company, custom, diff, diff-hl, dired, dired+, elfeed,
+elscreen, erc,eshell, flycheck, flyspell, font-lock, git-gutter, git-gutter+,
+git-gutter-fringe, gnus, helm, highlight, hi-lock, hydra, ido, indent, ivy, js2, latex,
+langtool, linum-relative, magit, markdown, message, mu4e, neotree, org-mode, org-habit,
+popup, powerline, rainbow-delimiter, shell-script, show-paren, smart-modeline,
+smartparens, smi, term, tool-tips, wgrep, widget, whitespace, widget-face.
 
 
 ## Colorless Themes
@@ -1118,7 +1127,7 @@ It seems that only few themes support [Markup Faces][markup-faces], among them y
 
 <!---------------------------- Themes ---------------------------------->
 [emacs theme gallery]: https://pawelbx.github.io/emacs-theme-gallery/
-[base16]:  https://github.com/belak/base16-emacs
+[base16-emacs]: https://github.com/tinted-theming/base16-emacs
 [chocolate]: https://github.com/SavchenkoValeriy/emacs-chocolate-theme
 [eink]: https://github.com/maio/eink-emacs
 [emacs theme gallery]: https://pawelbx.github.io/emacs-theme-gallery/
