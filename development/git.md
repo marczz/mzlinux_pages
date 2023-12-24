@@ -234,7 +234,14 @@ with new commands what we did with some script using plumbing commands_
     He is also author of a version of
     [git for computer scientists](http://gitolite.com/gcs.html).
 -   [Git cookbook](https://git.seveas.net/) _2016_ by Dennis Kaarsemaker is a collection
-    of recipes for using git.
+    of recipes for using git. They are categorized, and tagged, so it is easy to find a
+    peculiar subject.
+
+    [Dennis Kaarsemaker](https://github.com/seveas) is a staff software engineer
+    @github.
+    -   [Git Cookbook – Repairing and recovering broken git repositories
+        ](https://git.seveas.net/repairing-and-recovering-broken-git-repositories.html)
+
 -   Martin f. Krafft *(madduck)* has written
     [Packaging with Git](http://madduck.net/blog/2007.10.03:packaging-with-git/)
     followed by
@@ -282,10 +289,10 @@ with new commands what we did with some script using plumbing commands_
     ](https://github.com/git-tips/tips)
 
 # Git Server
--   On a server with Git you can set your own Git server, it is the simpler when you have
-    few users and not to manage authentication protocol, it is the
-    subject of
-    [Pro Git: Git on the server
+-   You can set your own Git server, You can keep it simpe when you have
+    few users and not to manage authentication protocol.
+
+-   [Pro Git: Git on the server
     ](https://git-scm.com/book/en/v2/Git-on-the-Server-The-Protocols)
 -   [GitWeb](https://git.wiki.kernel.org/index.php/Gitweb) distributed with Git,
     is a web interface written in Perl.
@@ -353,9 +360,9 @@ with new commands what we did with some script using plumbing commands_
     -   [RocketGit source repository
         ](https://rocketgit.com/user/catalinux/rocketgit/source/tree/branch/master)
 
-# Git Hosting as a service
+# Git Hosting  {#git-hosting}
 There are some git free or *adware* or *{{< wp "Freeware"  "freemium" >}}*
-service hosting  they are
+git hosting services they are
 [listed in the Git Wiki](https://git.wiki.kernel.org/index.php/GitHosting)
 and in the Wikipedia
 {{< wp "Comparison of open-source software hosting facilities" >}}.
