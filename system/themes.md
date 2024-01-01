@@ -5,7 +5,7 @@ title: Color Themes
 See also {{< iref "emacs#emacs_themes" "Emacs Themes" >}},
 {{< iref "desktop" "Desktop" >}}.
 
- <!-- see also [[file:../../../../content-org/notes/system_notes/themes_notes.org::+hugo_front_matter_format: yaml][Themes Notes]] -->
+<!-- see also [[file:../../../../content-org/notes/system_notes/themes_notes.org::+hugo_front_matter_format: yaml][Themes Notes]] -->
 
 # Color Themes
 -   [arc-theme](https://github.com/jnsh/arc-theme)a (GPL-3.0)
@@ -34,7 +34,8 @@ See also {{< iref "emacs#emacs_themes" "Emacs Themes" >}},
     [gruvbox vim theme](https://github.com/morhetz/gruvbox); a theme inspired by
     badwolf, jellybeans and solarized. It has a dark and light mode and covers many apps
     including xresources, shell, awesome wm, i3 wm, i3 status, conky,rofi,
-    {{< iref "checkpointing#tmux_themes" "tmux" >}}  st, alacritty, emacs.
+    {{< iref "checkpointing#tmux_themes" "tmux" >}}  st, alacritty,
+    -   {{< iref "themes#emacs-gruvbox" "emacs gruvbox theme" >}}.
     -   [a-schaefers/i3-wm-gruvbox-theme
         ](https://github.com/a-schaefers/i3-wm-gruvbox-theme)
         An i3-wm gruvbox theme implementation.
@@ -93,7 +94,7 @@ See also {{< iref "emacs#emacs_themes" "Emacs Themes" >}},
         kakoune,
     -   Tinted theming or Base16 have some builders like
         [base16-builder-go](https://github.com/tinted-theming/base16-builder-go),
-        {{< iref "#flavours" flavour" >>}, {{< "#pywal16" "Pywal 16" >}}.
+        {{< iref "#flavours" "flavour" >}}, {{< iref "#pywal16" "Pywal 16" >}}.
 
 -   [Zenburn vim theme](https://github.com/jnurmine/Zenburn) (GPL)
     is original Zenburn theme.
