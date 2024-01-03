@@ -1,5 +1,5 @@
 ---
-title: FFmpeg and Libav
+title: FFmpeg
 ---
 
 See also {{< iref "codecs" "Codecs" >}} and it's subsection
@@ -11,24 +11,23 @@ See also {{< iref "codecs" "Codecs" >}} and it's subsection
 
 # References
 
-There are two forks of {{< wp "FFmpeg" >}}, {{< wp "FFmpeg" >}} itself and and
-{{< wp "Libav" >}}. Most distributions like _Debian_ and _Ubuntu_ after the fork
-switched to _libav_ before comming back in july 2015 to _ffmeg_; while
-_Gentoo_ offer both and _Archlinux_ never adopted _libav_ and stick to _FFmpeg_.
+*{{< wp "FFmpeg" >}}  was forked in 2011 as
+{{< wp "Libav" >}}. Many distributions like _Debian_ and _Ubuntu_ after the fork
+switched to _libav_ before comming back in july 2015 to _ffmeg. The _libav fork was
+abandoned after a last version in 2018.*
 
+## FFmpeg Documentation
 
-[FFmpeg](http://www.ffmpeg.org/) documentation:
-
--   Official
-    [FFmpeg documentation](http://www.ffmpeg.org/documentation.html):
-    [FFmpeg general documentation](http://ffmpeg.org/general.html)
-    including [list of supported File Formats, Codecs or Features
+-   [FFmpeg Home](http://www.ffmpeg.org/).
+-   [FFmpeg documentation](http://www.ffmpeg.org/documentation.html):
+-   [FFmpeg general documentation](http://ffmpeg.org/general.html)
+-   [list of supported File Formats, Codecs or Features
     ](http://ffmpeg.org/general.html#Supported-File-Formats_002c-Codecs-or-Features),
-    [FFMPEG FAQ](http://ffmpeg.org/faq.html),
-    [ffmpeg](http://www.ffmpeg.org/ffmpeg.html),
-    [ffplay(1)](http://www.ffmpeg.org/ffplay.html),
-    [ffprobe](http://www.ffmpeg.org/ffprobe.html),
-    [ffserver](http://www.ffmpeg.org/ffserver.html)
+-   [FFMPEG FAQ](http://ffmpeg.org/faq.html),
+-   [ffmpeg](http://www.ffmpeg.org/ffmpeg.html),
+-   [ffplay(1)](http://www.ffmpeg.org/ffplay.html),
+-   [ffprobe](http://www.ffmpeg.org/ffprobe.html),
+-   [ffserver](http://www.ffmpeg.org/ffserver.html)
 -   [ffmpeg wiki](http://trac.ffmpeg.org/wiki)
     -   [Encoding pages](https://trac.ffmpeg.org/wiki#Encoding)
     -   [Encode/YouTube](https://trac.ffmpeg.org/wiki/Encode/YouTube)
@@ -50,20 +49,7 @@ _Gentoo_ offer both and _Archlinux_ never adopted _libav_ and stick to _FFmpeg_.
         ](http://trac.ffmpeg.org/wiki/HowToBurnSubtitlesIntoVideo).
 
 
-[libav](http://libav.org/) documentation:
-
--   [libav documentation](http://libav.org/documentation.html):
--   [libav general documentation](http://libav.org/general.html)
-    including [list of supported File Formats, Codecs or Features
-    ](http://libav.org/general.html#Supported-File-Formats-and-Codecs)
--   [libav FAQ](http://libav.org/faq.html),
--   [avconv](http://libav.org/avconv.html),
--   [avplay](http://libav.org/avplay.html),
--   [avprobe](http://libav.org/avprobe.html),
--   [avserver](http://libav.org/avserver.html)
-
-The following references can be used for both projects.
-
+## Other references
 -   [Debian Wiki: FFMPEG](https://wiki.debian.org/ffmpeg/).
 -   [ArchWiki: FFmpeg](https://wiki.archlinux.org/index.php/FFmpeg)
 -   [Ubuntu Help: FFmpeg](https://help.ubuntu.com/community/FFmpeg)
@@ -86,9 +72,9 @@ The following references can be used for both projects.
     -   FFmpeg h265 to WebM VP9 encoding comparison:
         [Part 1 h264 `-deadline good`
         ](https://write.corbpie.com/ffmpeg-h264-to-webm-vp9-encoding-comparison-part-1/),
-        [Part 2  h264 `-deadline realtime`](https://write.corbpie.com/ffmpeg-h264-to-webm-vp9-encoding-comparison-part-2/)
+        [Part 2  h264 `-deadline realtime`](https://write.corbpie.com/ffmpeg-h264-to-webm-vp9-encoding-comparison-part-2/),
         [Part 3 h264  `-deadline good` compared to `-deadline realtime`
-        ](https://write.corbpie.com/ffmpeg-h264-to-webm-vp9-encoding-comparison-part-3/)
+        ](https://write.corbpie.com/ffmpeg-h264-to-webm-vp9-encoding-comparison-part-3/),
         [part 4 `-deadline good` with `-crf` values 15-30 and `-cpu-used` 0-5
         ](https://write.corbpie.com/ffmpeg-hevc-to-webm-vp9-encoding-comparison-part-4/).
 
@@ -125,42 +111,38 @@ $ ffmpeg  -hide_banner -codecs
 ## Identify a stream:
 
     $ ffprobe -hide_banner "/path/to/input"
-    $ avprobe /path/to/input
 
 ## Transcode audio
 
--   to transcode from mp3 to ogg, and resample to 32k Hz
-
-        /usr/bin/ffmpeg -y -i "/path/to/input.mp3" \
-          -acodec libvorbis -aq 3 -vn -ac 2 -ar 32000 \
-          "/path/to/output.org"
-
+-   to transcode from mp3 to aac, and resample to 64k Hz
+    ``` sh
+    ffmpeg -y -i "/path/to/input.mp3" -c:a aac -ac 2 -ar 64k \
+      "/path/to/output.ogg"
+    ```
+    -   `-y` overwrite output without asking
     -   `-i input`: give input file
-    -   `-acodec libvorbis`: tells to use the codec libvorbis for
-        encoding.
-    -   `-aq 3`: Set the audio quality, here 3 as libvorbis (VBR)
-        quality. This is an alias for `-q:a 5`?
+    -   `-c:a aac`: tells to use the audio codec `aac` for encoding.
     -   `-ac 2`: Set the number of channels.
-    -   `-ar 32000`: Set the audio resampling frequency.
+    -   `-ar 64k`: Set the audio resampling frequency.
 
--   to transcode from mp3 to opus, and resample to 64k mono
+-   to transcode from mp3 to ogg opus, and resample to 64k mono
+    ``` sh
+    ffmpeg -i input.mp3 -c:a libopus -ac:a 1 -b:a 64k output.opus
+    ```
 
-        avconv -i input.mp3 -codec:a libopus \
-          -ac:a 1 -b:a 64k output.opus
+    We can also use `opusenc` with
+    ``` sh
+    ffmpeg -i input.mp3 -f wav | \
+      opusenc --bitrate 64 --downmix-mono - output.opus
+    ```
 
-    but it seems (in 2015) that the opus support is not perfect and
-    opusinfo gives warnings in the output file.
-
-    Better use:
-
-        avconv -i input.mp3 -f wav | \
-          opusenc --bitrate 64 --downmix-mono -  output.opus
-
-    This method can be used for any format understood by `avconv`
-    when there is an other known decoder we can prefer it like:
-
-        mpg123 --quiet --wav - input.mp3  | \
-          opusenc --bitrate 64 --downmix-mono - output.opus
+    This method can be used for any format understood by `ffmpeg`
+    when there is an other known decoder we can prefer it like
+    for transcoding mp3 to opus:
+    ``` sh
+    mpg123 --quiet --wav - input.mp3  | \
+      opusenc --bitrate 64 --downmix-mono - output.opus
+    ```
 
     Note that `opusenc` default for >=44.1kHz mono input is 64kbps, so
     you can also omit the bitrate parameter.
@@ -170,7 +152,7 @@ $ ffmpeg  -hide_banner -codecs
 `input.webm` is a 1h21 speech,stereo opus encoded stream at at 105 kb/s, giving a file
 of 62M, we downmix to mono, reencode in vbr at 32kb/s, and change container to ogg with:
 
-    $ ffmpeg -i input.webm -c:a libopus -vbr on -ac 1 -b:a 32k ouput.ogg
+    ffmpeg -i input.webm -c:a libopus -vbr on -ac 1 -b:a 32k ouput.ogg
 
 -   `-c:a libopus` give the audio codec encoder.
 -   `-ac 1` number of channel, here in output.
@@ -184,14 +166,49 @@ To change container  without transcoding an opus file from a webm container to a
 one.
 
 ~~~
-ffmpeg -i input.webm -acodec copy output.ogg
+ffmpeg -i input.webm -c:a copy output.ogg
 ~~~
 
 In the same way to change a video from a webm container to a mkv one without transcoding
 
 ~~~
-ffmpeg -i  input.webm -acodec copy -vcodec copy output.mkv
+ffmpeg -i  input.webm -c:a copy -c:v copy output.mkv
 ~~~
+
+In the two previous examples as we copy all the streams, we may use
+
+~~~
+ffmpeg -i  input.webm -c copy output.mkv
+~~~
+
+# Extracting some part of streams
+
+
+Extract the first 10 minutes of a container
+
+~~~
+ffmpeg -i input.webm -c copy -t 600 output.webm
+~~~
+
+Here 600 is 600 seconds.
+
+The `-time` option can appear both on input or output, to stop the input or output after
+this time so:
+
+~~~
+ffmpeg -i -t 600 input.webm -c copy -t 600 output.webm
+~~~
+
+Will extract the the stream from 10mn to 20mn.
+
+We can use also `-to` to give a position in the stream
+
+~~~
+ffmpeg -to 1:00:00 -i input.webm -c copy -to 10:00 output.ogg
+~~~
+
+Will extract the portion between 1h and 1h10mn of the webm container and put it in an
+ogg container.
 
 ## Combining audio and Video
 
@@ -294,26 +311,31 @@ for a list.
 
 
 # screencasting with ffmpeg
- * Distribution version does not support many format
+-   Distribution version does not support many format
    and you may have to compile ffmpeg.
- * [Archlinux: FFmpeg screencast example
+-   [Archlinux: FFmpeg screencast example
    ](https://wiki.archlinux.org/index.php/FFmpeg#Screen_cast)
- * Record high quality screencasts with:
-~~~~~~~~~~~~~~~
-ffmpeg -f oss -i /dev/dsp -f x11grab -s 1024x768 -r ntsc  -sameq -i :0.0 foo.avi
-~~~~~~~~~~~~~~~
- * an other command with bitrate 1000 (increase it to get better quality, but larger files); x11:0,0 tells FFmpeg to
- record from the top-left cornet of the screen.. 1280x1024" is your screen resolution, or that of the window you want to
- record. In that case, you can use xwininfo -frame
-~~~~~~~~~~~~~~~
-./ffmpeg -vcodec mpeg4 -b 1000 -r 10 -g 300 -vd x11:0,0 -s 1280x1024 test.avi
-~~~~~~~~~~~~~~~
+-   Record high quality screencasts with:
+    ~~~ sh
+    ffmpeg -f oss -i /dev/dsp -f x11grab -s 1024x768 -r ntsc  -sameq -i :0.0 foo.avi
+    ~~~
+
+-   an other command with bitrate 1000 (increase it to get better quality,
+    but larger files).
+    ~~~ sh
+    ffmpeg -vcodec mpeg4 -b 1000 -r 10 -g 300 -vd x11:0,0 -s 1280x1024 test.avi
+    ~~~
+   -    `x11:0,0` tells FFmpeg to record from the top-left cornet of the screen.
+   -    `s 1280x1024` is your screen resolution, or that of the window you want to
+         record. In that case, you can use `xwininfo -frame`
+
  * third with further postprocessing with libx264 from
  [Screencasts in Ubuntu, part 2: FFmpeg](http://polishlinux.org/linux/ubuntu/screencasts-in-ubuntu-part-2/). It uses the options
  -an to turn the sound recording off, <width>x<height> +<ox>,<oy>  - the size of the recorded area plus the upper left corner,
- <fps> is the number of frames per second, for example: 15, <quality-bps> is in bits/seconds you can add a k to have kbits/sec,
+ <fps> is the` number of frames per second, for example: 15, <quality-bps> is in bits/seconds you can add a k to have kbits/sec,
  -sameq  use the same quality as in the input so in the case of x11grab it is the maximal value,
-~~~~~~~~~~~~~~~
+
+~~~
 # The recording of the screen into a video
 ffmpeg [-an] -s <width>x<height> -r <fps> -f x11grab -i \
 :0.0[+<ox,oy>] -codec mpeg4 -sameq -y <temporary-file>.mp4
@@ -323,16 +345,16 @@ ffmpeg -i <temporary-file i> -vcodec libx264 -pass 1 \
 # The second processing into H.264
 ffmpeg -i <temporary-file> -vcodec libx264 -pass 2 \
 [<quality-bps>](-b) -f mp4 -y <final-file>.mp4
-~~~~~~~~~~~~~~~
+~~~
 
-~~~~~~~~~~~~~~~
+~~~
 ffmpeg -an -s 800x600 -r 15 -f x11grab -i :0.0+0,25 \
 -vcodec mpeg4 -sameq -y scast-temp.mp4
 ffmpeg -i scast-temp.mp4 -vcodec libx264 -pass 1 -b 240000 \
 -f mp4 -y /dev/null
 ffmpeg -i scast-temp.mp4 -vcodec libx264 -pass 2 -b 240000 \
 -f mp4 -y scast.mp4
-~~~~~~~~~~~~~~~
+~~~
 
  * to Convert other video format to FLV (`ar`: audio samping rate in Hz ,
    `ab`: audio bit rate in kbit/s, f: output format) _the influence on size of dividing
