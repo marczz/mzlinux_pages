@@ -662,37 +662,31 @@ most o them where primary aimed to blogging.
 
 -   [Fuse.js](https://github.com/krisk/fuse)(Apache License)
     fuzzy-search, in JavaScript
--   [lunr.js](https://lunrjs.com/) (MIT License)
+-   <a name="lunr"></a>[lunr.js](https://lunrjs.com/) (MIT License)
     -   [GitHub - lun.js](https://github.com/olivernn/lunr.js)
-    -   [hexo-generator-lunr
-        ](https://github.com/zllovesuki/hexo-generator-lunr)
+    -   [hugo-lunr - npm](https://www.npmjs.com/package/hugo-lunr)
+        generate lunr.js index files from
+        {{< iref "hugo" "Hugo static sites" >}}.
+    -   [hexo-generator-lunr](https://github.com/zllovesuki/hexo-generator-lunr)
         Lunr index generator plugin for Hexo.
     -   [metalsmith-lunr](https://github.com/CMClay/metalsmith-lunr)
         A Metalsmith plugin that integrates the Lunr.js client side
         search engine.
-    -   [jekyll_pages_api_search
-        ](https://github.com/18F/jekyll_pages_api_search).
+    -   [jekyll_pages_api_search](https://github.com/18F/jekyll_pages_api_search).
         Jekyll search plugin based on lunr.js and jekyll_pages_api
 -   [list.js](http://listjs.com/) (MIT License)
     library for adding search, sort, filters and flexibility to
     tables, lists and various HTML elements.
--   [tipue search](http://www.tipue.com/search/) (MIT License)XS
-    a site search jQuery plugin.
-    -   [tipue search -  documentation
-        ](http://www.tipue.com/search/docs/)
-    -   [Hexo-Tipue-Search-Json
-        ](https://github.com/zhouhao/Hexo-Tipue-Search-Json)
-        hexo plugin that generates JSON file for tipue search.
--   [How I implement static-site search
-     ](http://joevennix.com/2011/05/25/How-I-Implement-Static-Site-Search.html)
-     is a simple js script to search rss feeds.
--   [Site Search](http://www.markus-olbrich.de/javascript/sitesearch/doc.html)
-    is a Jquery plugin to search the XML sitemap.
--   [jekyll-dynamic-search
-    ](https://github.com/cobbler/jekyll-dynamic-search)
-    (MIT License)
-    use a jekyll plugin to generate a full-text index, and a js script
-    to search the index.
+    -   [GitHub - javve/list.js](https://github.com/javve/list.js)
+-   <a name="pagefind"></a>[PageFind](https://github.com/cloudcannon/pagefind) (MIT License)
+    is a static search library using as little of your users' bandwidth as possible.
+
+    PageFind run after you build your static site. After indexing, Pagefind adds a
+    static search bundle to your built files, which exposes a JavaScript search API that
+    can be used anywhere on your site.
+
+   -   [PageFind - GitHub](https://github.com/cloudcannon/pagefind)
+   -   [PageFind documentation](https://pagefind.app/docs/)
 
 ## Google site search
 
@@ -706,35 +700,18 @@ most o them where primary aimed to blogging.
     ](http://www.orangetreeweb.com/articles/installing-bing-site-search.html).
 
 ## Hosted search service
--   [Algolia](https://www.algolia.com/) (private)
+See also {{< iref "content_management#search_engines" "Search Engines" >}} where you can
+find hosted search engines {{< iref "content_management#bonsai" "Bonsai" >}}, and
+{{< iref "content_management#meilisearch" "Meilisearch" >}}.
+
+-   <a name="algolia"></a>[Algolia](https://www.algolia.com/) (private)
     is a search service, there are free plans for opensource.
     -   Hexo has to plugins for algolia search
         [hexo-algoliasearch
         ](https://github.com/LouisBarranqueiro/hexo-algoliasearch) and
-        [hexo-algolia
-        ](https://github.com/oncletom/hexo-algolia).
-    -   [metalsmith-algolia
-        ](https://github.com/stafyniaksacha/metalsmith-algolia)
+        [hexo-algolia](https://github.com/oncletom/hexo-algolia).
+    -   [metalsmith-algolia](https://github.com/stafyniaksacha/metalsmith-algolia)
         is a metalsmith plugin for indexing content on Algolia.
--  [Tapir](http://tapirgo.com)
-    is a hosted frontend to lucene.
--  [YaCi](http://www.yacy.net/en/index.html) (GPL)
-   is community hosted,  need to run a
-   java server component on your machine.
-
-## Separate dynamic search page.
-
--   A php custom solution for Jekyll is
-    [Jekyll Search : Ways to Search a Static Site
-    ](http://www.businessguide.co.uk/blog/jekyll-search-ways-to-search-a-static-site/).
-    It uses a ruby script to generate a sqlite Database, and a php hosted frontend to do the
-    search.
--   [Making search possible on a static site
-     ](http://www.static-eric.com/2011/10/making-search-possible-on-a-static-site.html)
-     Use Google appengine to index the rss feed, and a javascript frontend.
--   [Gabe Weatherhead uses Sphider on his Pelican site](http://www.macdrifter.com/2012/08/self-hosted-search.html), its sphider search is running at
-    [Nerd Query](http://nerdquery.com/).
-     _{{< iref "content_management.md#sphider" "Sphider reference" >}}_
 
 
 
