@@ -7,6 +7,7 @@ title: Shell
     [Comparison of computer shells
     ](http://en.wikipedia.org/wiki/Comparison_of_computer_shells),
     {{< wp "POSIX" >}}
+-   [Command-line shell - ArchWiki](https://wiki.archlinux.org/title/Command-line_shell)
 -   [uhub/awesome-shell](https://github.com/uhub/awesome-shell)
     long list of unclassified shell references. _so messy that is is unusable_.
 -   [alebcay/awesome-shell](https://github.com/alebcay/awesome-shell)
@@ -105,53 +106,53 @@ The more common flavour of ash are the
 {{< man "dash" >}} used as **sh** in debian and ubuntu, the new **yash**
 and the Busybox **ash**.
 
-The [dash git repository
-](http://git.kernel.org/cgit/utils/dash/dash.git)
-gives the source and a [changelog
-](http://git.kernel.org/cgit/utils/dash/dash.git)
+The [dash git repository](http://git.kernel.org/cgit/utils/dash/dash.git)
+gives the source and a [changelog](http://git.kernel.org/cgit/utils/dash/dash.git)
 
 The details of the [Ash (Almquist Shell) Variants
 ](http://www.in-ulm.de/~mascheck/various/ash/) is given in this page.
 
 
-[Bashism - How to make bash scripts work in dash
-](http://mywiki.wooledge.org/Bashism)
+[Bashism - How to make bash scripts work in dash](http://mywiki.wooledge.org/Bashism)
 list some of the most common bashisms, i.e. features not defined by
 POSIX and how to translate them to POSIX shells.
 
-It is also detailled in [Ubuntu - Dash as /bin/sh
-](https://wiki.ubuntu.com/DashAsBinSh).
+[Ubuntu - Dash as /bin/sh](https://wiki.ubuntu.com/DashAsBinSh), has the same goal
+than the previous reference
+detail how to convert a bash script to a posix one, examining the bash specific
+constructs, *the bashisms* and how to replace them by posix constructs.
 
 [checkbashism.pl
-](https://anonscm.debian.org/cgit/collab-maint/devscripts.git/plain/scripts/checkbashisms.pl)
-is a script in debian devscripts, which comes with a manual
-{{< man "checkbashisms(1)" >}} to check what in a script is not posix. It is
+](https://salsa.debian.org/debian/devscripts/-/blob/master/scripts/checkbashisms.pl)
+is a script in the debian package *devscripts*, it comes with a manual
+{{< man "checkbashisms(1)" >}}.
+
+The purpose of *checkbashism* is to check what in a script is not posix. It is
 used to convert your bash script to dash.
-There is a [slightly modified release in Sourceforge
+
+There is a [slightly different release in Sourceforge
 ](https://sourceforge.net/projects/checkbaskisms).
 
 To work with portable posix shell you can also use
 [Autoconf manual - Portable Shell Programming
 ](http://www.gnu.org/savannah-checkouts/gnu/autoconf/manual/autoconf-2.69/html_node/Portable-Shell.html)
 and
-[Rich’s sh (POSIX shell) tricks
-](http://www.etalabs.net/sh_tricks.html).
+[Rich’s sh (POSIX shell) tricks](http://www.etalabs.net/sh_tricks.html).
 
 [Yash](https://yash.osdn.jp/) (GPL)
-has a special status among the ash family. It is conceived to be the
-most POSIX-compliant shell, Yash fully supports POSIX.1-2008 (IEEE Std
-1003.1, 2013 Edition). Yash features exceed those of dash and busybox
-ash; and in contrast to dash it can be used as an interactive shell.
+has a special status among the ash family. It is conceived to be the most
+POSIX-compliant shell, Yash fully supports POSIX.1-2008 (IEEE Std 1003.1, 2013
+Edition). Yash features exceed those of dash and busybox ash; and in contrast to dash it
+can be used as an interactive shell.
 
-It features global aliases, arrays, socket redirection, pipeline
-redirection, and process redirection, brace expansion, extended
-globbing, fractional numbers in arithmetic expansion, prompt command
-and command-not-found handler, command line completion.
+It features global aliases, arrays, socket redirection, pipeline redirection, and
+process redirection, brace expansion, extended globbing, fractional numbers in
+arithmetic expansion, prompt command and command-not-found handler, command line
+completion.
 
 Yash is available in Debian, Ubuntu, Fedora.
 
-The manual is also [available online
-](https://yash.osdn.jp/doc/)
+The manual is also [available online](https://yash.osdn.jp/doc/).
 
 All these shell are tiny on an amd64 dash is 1.6M resident / 1.4M
 shared; yash 1.1M/1.0M; busybox 2.3M/2.1M.
@@ -162,9 +163,11 @@ Busybox seems a lot bigger but it includes all coreutils, awk, sed
 Bash (without my big init) is 3.8M/3.2M; zsh (without user init)
 4.4M/3.6M.
 
-
+:
 # Bash
 
+-   [awesome-bash](https://github.com/awesome-lists/awesome-bash)
+    A curated list of Bash scripts and resources.
 -   [Chet Ramey](https://tiswww.case.edu/php/chet):
     [Bash page](https://tiswww.case.edu/php/chet/bash/bashtop.html)
 -   [Bash Reference Manual (gnu)](https://www.gnu.org/software/bash/manual/)
@@ -177,18 +180,22 @@ Bash (without my big init) is 3.8M/3.2M; zsh (without user init)
 -   [Greg's Wiki Bash FAQ](http://mywiki.wooledge.org/BashFAQ)
     _other material from Greg's Wiki are {{< iref "#gregs_wiki" "below" >}}
 -   [Greg's Wiki Bash Reference Sheet](http://mywiki.wooledge.org/BashSheet)
--   [Bash Hackers Wiki](http://bash-hackers.org/wiki/doku.php/)
-    hold documentations about the GNU Bash.
 -   [Bash Guide for Beginners](http://www.tldp.org/LDP/Bash-Beginners-Guide/html/)
     _2008_.
 -   [Bash Programming Introduction](http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html)
     _for this elementary guide being old (2000) is not challenging_.
--   [Advanced Bash Scripting Guide](http://tldp.org/LDP/abs/html/index.html)
--   [Bash Hackers Wiki](http://wiki.bash-hackers.org/doku.php)
+-   [Advanced Bash Scripting Guide](http://tldp.org/LDP/abs/html/index.html) *2014*.
+-   [Bash Hackers Wiki
+    ](https://github.com/rawiriblundell/wiki.bash-hackers.org/blob/main/start.md)
     hold documentations about the GNU Bash. The first page is an index of pages on
     commands, builtins, and expressions of bash.
+    the original site.
+
+    `bash-hackers.org/wiki` went down but the last version from wayback machine has been
+    downloaded on [this Github repository
+    ](https://github.com/rawiriblundell/wiki.bash-hackers.org/).
 -   <a name="gregs_wiki"></a>[Greg Wooledge's Wiki, in short Greg's Wiki
-    ](http://mywiki.wooledge.org/)
+    ](https://mywiki.wooledge.org/)
     contains bash resources:
     -   [Bash Guide](http://mywiki.wooledge.org/BashGuide)
         more than a Tutorial, a guide to nearly all bash constructs.
@@ -213,14 +220,13 @@ Bash (without my big init) is 3.8M/3.2M; zsh (without user init)
     ](http://www.ibm.com/developerworks/linux/library/l-tip-prompt/index.html?dwzone=linux)
     Show how to customize the BASH prompt, and set the xterm title.
 -   [Commandline Fu](http://www.commandlinefu.com/)
-    is a repository for  sharing shell commands. The
-    [FAQ](http://www.commandlinefu.com/site/faq)
-    gives other accesses to it like RSS feeds.
--   [bashdb](http://bashdb.sourceforge.net/)
-    is a source code debugger for bash.
--   [Bashdoc](https://github.com/ajdiaz/bashdoc)
-    is a bash documentation processor similar to javadoc
-    but use reStructuredText to provide the final document.
+    is a repository for sharing shell commands. The
+    [FAQ](http://www.commandlinefu.com/site/faq) gives other accesses to it like RSS
+    feeds.
+-   [bashdb](http://bashdb.sourceforge.net/) is a source code debugger for bash.
+-   [Bashdoc](https://github.com/ajdiaz/bashdoc) (GPL-3.0)
+    is a bash documentation processor similar to javadoc but use reStructuredText to
+    provide the final document.
 -   [Starship: Cross-Shell Prompt](https://starship.rs/) (ISC License)
     customizable prompt for any shell. A fast prompt written in Rust for many shells
     bash, fish, zsh
@@ -258,16 +264,35 @@ of
     ](http://www.gnu.org/software/bash/manual/bashref.html#Quote-Removal)
     How and when quote characters are removed from words.
 
-Note that variable, and arithmetic expansion and command and
-process substitution are done in the same pass from left to right.
+Note that variable, and arithmetic expansion and command and process substitution are
+done in the same pass from left to right.
 
-A (double) quoted string and **a quoted command substitution** is
-not subject to word splitting and pathname expansion
+A (double) quoted string and **a quoted command substitution** is not subject to word
+splitting and pathname expansion
 
-After an assignment only a subset of these expansions hold, namely:
-tilde expansion, parameter expansion, command substitution,
-arithmetic expansion, and quote removal. (no pathname and brace
-expansion, nor process substitution)
+After an assignment only a subset of these expansions hold, namely: tilde expansion,
+parameter expansion, command substitution, arithmetic expansion, and quote removal. (no
+pathname and brace expansion, nor process substitution)
+
+## Bash development tools
+
+-   [explainshell](https://explainshell.com/)
+    is a is a web online tool capable of parsing man pages, extracting options and
+    explaining a given command-line by matching each argument to the relevant help text
+    in the man page.
+    -   [Github - explainshell](https://github.com/idank/explainshell) (GPL-3.0)
+-   [shellcheck](https://github.com/koalaman/shellcheck) (GPL-3.0)
+    A ssh/sh shell script static analysis tool written in haskell.
+
+
+    *Shellchek* is a unix command and can be used from emacs *flycheck* or *flymake* and from (neo)vim with
+     *ALE*, *Neomake*, or *Syntastic*.
+
+     It can be used online on the site [shellcheck.net](https://www.shellcheck.net/).
+
+    *shellcheck* is packaged in Debian.
+
+    -   [shellcheck Wiki · GitHub](https://github.com/koalaman/shellcheck/wiki)
 
 # Zsh {#zsh}
 
@@ -400,16 +425,29 @@ expansion, nor process substitution)
     describes gnu Extended Regexps.
 -   <a name="pcre"></a>[PCRE - Perl Compatible Regular Expressions](http://www.pcre.org/)
     is a set of C functions that implement regular expression pattern matching using the
-    same syntax and semantics as
+    a syntax and semantics derived from
     [Perl Regular Expressions](http://perldoc.perl.org/perlre.html).
     _PCRE_ are used in numerous languages and utilities.
     -   [PCRE2 HTML documentation
-        ](http://www.pcre.org/current/doc/html/):
-        [pcre2syntax - pcre2 expression syntax quick-reference
-        ](http://www.pcre.org/current/doc/html/pcre2syntax.html).
+        ](https://pcre2project.github.io/pcre2/doc/html/index.html):
+        -   [pcre2syntax - pcre2 expression syntax quick-reference
+            ](https://pcre2project.github.io/pcre2/doc/html/pcre2syntax.html).
     -   The [Wikipedia:  PCRE](http://en.wikipedia.org/wiki/PCRE)
         page details the features of pcre expressions and the differences
         with perl re.
+    -   [Search and replace tricks with ripgrep
+        ](https://learnbyexample.github.io/substitution-with-ripgrep/).
+    -   [ripgrep is faster than {grep, ag, git grep, ucg, pt, sift}
+        ](https://blog.burntsushi.net/ripgrep/)
+        in Andrew Gallant's Blog
+    -   [Regular-Expressions.info](https://www.regular-expressions.info/)
+        -   [Regex references](https://www.regular-expressions.info/refflavors.html)
+            and [Replacement Strings Reference
+            ](https://www.regular-expressions.info/refreplace.html)
+            contain tables where you can select your regex variant among a large list.
+        -   [Regex Tutorial](https://www.regular-expressions.info/tutorial.html) and
+            [Replacement Strings Tutorial
+            ](https://www.regular-expressions.info/replacetutorial.html)
     -   [Regular Expression HOWTO — Python documentation
         ](https://docs.python.org/dev/howto/regex.html)
         is for Python RE, which are close _but not identical_ to PCRE.
@@ -431,14 +469,21 @@ expansion, nor process substitution)
     The silver searcher_ like grep and ack but written in C and a lot
     quicker. [Emacs package ag](https://github.com/Wilfred/ag.el) s a front end to ag.
      _In debian._
--   [BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep)
+-   [ripgrep](https://github.com/BurntSushi/ripgrep) (Unlicense and MIT licenses)
     recursively searches directories for a regex pattern.  _In debian._
-    -   Ripgep_ use [Crate regexps](https://docs.rs/regex/1.4.2/regex/#syntax)
-        which are similar to Perl-style regular expressions, but lacks look around and
-        backreferences.
     -   [ripgrep User Guide](https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md)
+    -   *Ripgep* by default uses
+        [Crate regexps](https://docs.rs/regex/latest/regex/#syntax)
+        which are similar to Perl-style regular expressions, but lacks look around and
+        back-references.
+
+        If you need pcre2 additional features you can use the PCRE2 regex engine instead
+        of the default with the --pcre2 (-P for short) flag, but it will slow down
+        ripgrep. More details are [explained in the faq
+        ](https://github.com/BurntSushi/ripgrep/blob/master/FAQ.md#why-does-ripgrep-get-slower-when-i-enable-pcre2-regexes).
     -   [supplementary documentation
         ](https://github.com/BurntSushi/ripgrep/blob/master/README.md#documentation-quick-links).
+    -   [ripgrep FAQ](https://github.com/BurntSushi/ripgrep/blob/master/FAQ.md)
     -   [ripgrep is faster than {grep, ag, git grep, ucg, pt, sift}
         ](https://blog.burntsushi.net/ripgrep/)
         by the author of _ripgrep_ Andrew Gallant
