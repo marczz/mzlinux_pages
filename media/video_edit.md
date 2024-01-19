@@ -109,21 +109,20 @@ The main utility
     _Openshot-qt is packaged in Debian._
     -   [Openshot-qt - GitHub](https://github.com/OpenShot/openshot-qt)
 
-<a name="mencoder"></a>[Mencoder](http://www.mplayerhq.hu/) (GPL)
-:   [Mencoder](http://www.mplayerhq.hu/) is a simple movie encoder, associated with
+<a name="mencoder"></a>[Mencoder](http://www.mplayerhq.hu/design7/) (GPL)
+:   Mencoder is a simple movie encoder, associated with
     {{< iref "media_players#mplayer" "Mplayer" >}} and designed to encode
     MPlayer-playable movies. It encodes to DivX4, XviD, one of the
     libavcodec codecs and pcm/mp3/vbrmp3 audio in 1, 2 or 3 passes.
 
+    Mencoder is packaged in Debian.
+
     -   [Mplayer Home Page](http://www.mplayerhq.hu/design7/info.html),
-    -   [Basic usage of MEncoder
-        ](http://www.mplayerhq.hu/DOCS/HTML/en/mencoder.html)
-    -   [Encoding with MEncoder
-        ](http://www.mplayerhq.hu/DOCS/HTML/en/encoding-guide.html)
+    -   [Basic usage of MEncoder](http://www.mplayerhq.hu/DOCS/HTML/en/mencoder.html)
+    -   [Encoding with MEncoder](http://www.mplayerhq.hu/DOCS/HTML/en/encoding-guide.html)
         from
         [Mplayer Documentation](http://www.mplayerhq.hu/DOCS/HTML/en/).
-    -   [MEncoder - ArchWiki
-        ](https://wiki.archlinux.org/index.php/MEncoder)
+    -   [MEncoder - ArchWiki](https://wiki.archlinux.org/index.php/MEncoder)
     -   [HOWTO Convert video files](http://en.linuxreviews.org/HOWTO_Convert_video_files)
         using mencoder.
 
@@ -251,15 +250,44 @@ _low activity or obsolete projects._
 
     -   [Swiffy Home](https://developers.google.com/swiffy/)
 
-# Subtitles editors
+# Subtitles
+-   Wikipedia: {{< wp "Subtitles" >}},  {{< wp "Subtitles#Subtitle_format" >}},
+    {{< wp "WebVTT" >}} (`.vtt`), {{< wp "SubRip" >}} (`.srt`).
+-   ArchWiki: [subtitles
+    ](https://wiki.archlinux.org/index.php/List_of_applications#Subtitles),
+    [subtitles editors
+    ](https://wiki.archlinux.org/index.php/List_of_applications#Subtitle_editors).
 
+
+## Subtitle formats
+
+I give only the three more common formats:
+
+-   {{< wp "SubRip" "SRT (SubRip Text)" >}}:
+    is the most basic and widely used subtitle format. It stores the subtitle text and
+    timing information in plain text format. SRT files are relatively simple and easy to
+    create and edit, but they don't support advanced features like styling, positioning,
+    or special effects.
+
+-   VTT (WebVTT):
+    is a more advanced subtitle format that is optimized for web-based video
+    playback. It supports various features that extend the capabilities of SRT, such as
+    styling, positioning, and karaoke effects. VTT files are also more compatible with
+    various web browsers and video players.
+
+-  ASS (Advanced Substation Alpha):
+   is the most versatile and powerful subtitle format. It provides a wide range of
+   features, including advanced styling, positioning, effects, and animation.
+
+## Subtitles editors
 -   [Sam Hocevar: DVD Subtitles](http://sam.zoy.org/doc/dvd/subtitles/)
     explains the subtitle stream.
--   [Aegisub](http://www.aegisub.org/)
+-   [Aegisub](http://www.aegisub.org/) (BSD License)
     _Aegisub - Advanced Subtitle Editor_ is a tool for creating and modifying
     subtitles. It allows to time subtitles to audio, styling them, typesetting, editing
     and translating subtitles, as well as a powerful scripting environment. It includes
     a built-in real-time video preview. _Aegisub is packaged in Debian_.
+    -   [Aegisub - GitHub](https://github.com/Aegisub/Aegisub)
 -   [gaupol](https://github.com/otsaloma/gaupol) (GPL)
     is a gtk subtitle editor for text based files. _Gaupol is in Debian._
 -   [gnome-subtitle](http://gnomesubtitles.org/about/) (GPL)
@@ -274,6 +302,38 @@ _low activity or obsolete projects._
     It  also shows sound waves, which makes it easier to synchronise subtitles to
     voices._It is in Debian._
     -   [Subtitle Editor - GitHub](https://github.com/kitone/subtitleeditor).
+
+To extract subtitles from a video stream we can use {{< iref "ffmpeg" >}}.
+
+``` shell
+ffmpeg -i <input> -map 0:s:0 -c copy  output.txt
+```
+
+-   `map 0:s:0`: This maps the first subtitle stream `0:s` from the input file to the
+    first `0` and unique  output stream.
+-   `-c copy`give the output encoder `copy`. We could also write `c:s copy` to
+    tell to copy the subtitle stream.
+
+Here output.txt is in the same format than it was in the video stream.
+
+If we want to have an other format we do
+
+``` shell
+ffmpeg -i <input> -map 0:s:0 -c;s webvtt  output.vtt
+```
+
+You can also convert from a format to another one with
+
+``` shell
+ffmpeg -i <input> -i subtitle.srt  webvtt output.vtt
+```
+
+The format is optional here as ffmpeg can deduce it from the file suffix.
+  * [ ] to see all available codecs.
+
+``` shell
+ffmpeg -codecs | grep subtitle.
+```
 
 # Screencasting {#screencast}
 
