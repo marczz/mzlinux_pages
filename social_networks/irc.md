@@ -1,5 +1,6 @@
 ---
 title: IRC
+
 ---
 
 A page from{{< iref "social_networks" "Social Networks section" >}}.
@@ -46,10 +47,10 @@ connect to irc from any jabber client.
 -   [IRCv3 Specifications - IRCv3](https://ircv3.net/irc/)
 -   [Internet Relay Chat Help](http://www.irchelp.org/) or _irchelp_, comprehensive set
     of resources for IRC.
-    -   [The IRC Prelude](http://irchelp.org/irchelp/new2irc.html) basic IRC
+    -   [The IRC Prelude](https://www.irchelp.org/faq/new2irc.html) basic IRC
         documentation,
-    -   [An IRC Tutorial](http://www.irchelp.org/irchelp/irctutorial.html)
-    -   [IRCHelp.org — Privacy on IRC](http://www.irchelp.org/security/privacy.html).
+    -   [An IRC Tutorial](https://www.irchelp.org/irchelp/irctutorial.html)
+    -   [IRCHelp.org — Privacy on IRC](https://www.irchelp.org/security/privacy.html).
 -   [Libera Chat](https://libera.chat/)
     IRC network for FOSS projects collaboration. It replaced
     {{< wp "Freenode" >}} after the takeover by the businessman Andrew Lee,
@@ -68,16 +69,19 @@ connect to irc from any jabber client.
    -   [Search Irc](https://search.mibbit.com/) for channels or servers.
    -   [IRC Chat Rooms Search - netsplit.de](https://netsplit.de/channels/)
        Search chat rooms among 500 IRC networks.
+-      [IRC access from Matrix - Meta](https://meta.wikimedia.org/wiki/Matrix.org)
 
 ## IRC Commands
 A List of commands is givent in Wikipedia: {{< wp "List of IRC Commands" >}}
 and also available in the help of most clients.
 
--   [toxin](http://toxin.jottit.com/) has _obsolete_ documentation with
-    -   [General IRC Commands](http://toxin.jottit.com/irc_commands)
 -   [IRC - Wikibook: Basic commands
     ](https://en.wikibooks.org/wiki/Internet_Technologies/IRC#Basic_commands)
--   [IRC/Instructions - meta.wikimedia](https://meta.wikimedia.org/wiki/IRC/Instructions)
+-   [IRC/Instructions - meta.wikimedia
+    ](https://meta.wikimedia.org/wiki/IRC/Instructions)
+    explains how you connect to the libera.chat IRC network. It contains also the
+    commands to register your nickname, identify, and enforce it; and instructions for
+    channel ops.
 
 # IRC Clients {#irc_clients}
 -   Wikipedia:
@@ -151,11 +155,21 @@ See {{< iref "#weechat" "Weechat" >}} below.
 There are sveral emacs iRC clients _under  GPL License_.
 
 -   [Emacswiki: InternetRelayChat](http://www.emacswiki.org/emacs/InternetRelayChat)
-    give a list of clients and IRC references
--   [Circe](https://github.com/jorgenschaefer/circe/wiki).
--   [EmacsIRCClient
-    ](http://www.emacswiki.org/cgi-bin/wiki/EmacsIRCClient)
-    aka _ERC_ is included in Emacs.
+    give a list of clients and IRC references.
+-   [Circe](https://github.com/jorgenschaefer/circe/) (GPL-3.0)
+    uses standard Emacs key bindings and indicates activity in channels in the status
+    bar.
+
+    The complexity-wise of _circe_ is between the minimal _rcirc_  and _ERC_.
+    -   [Circe wiki](https://github.com/jorgenschaefer/circe/wiki).
+-   [ERC _EmacsIRCClient_
+    ](https://www.emacswiki.org/cgi-bin/wiki/EmacsIRCClient)
+    is included in Emacs.
+    -   [ERC Manual](https://www.gnu.org/software/emacs/manual/html_node/erc/index.html)
+        is distributed with emacs as an info manual.
+    -   [ERC - EmacsWiki](https://www.emacswiki.org/cgi-bin/wiki/EmacsIRCClient)
+        is the index if an extensive documentation on ERC, it includes a long list of
+        modules, bots and commands.
     -   [ZNC.el](https://github.com/sshirokov/ZNC.el) (MIT License)
         is an _ERC_ module to manage IRC connections through one or many ZNC servers.
 -   [IrChat](http://www.emacswiki.org/cgi-bin/wiki/IrChat) _obsolete since 2017_
@@ -166,14 +180,13 @@ There are sveral emacs iRC clients _under  GPL License_.
 -   [ZenIRC](http://www.zenirc.org/)  is a scriptable IRC client for EMACS.
     -   [ZenIRC - EmacsWiki](http://www.emacswiki.org/cgi-bin/wiki/ZenIRC)).
 
-It is uneasy to compare the size of these client to other clients, if you have to launch
-emacs only to chat, it cost you 18M, it is my mean emacs size, that is 13M bare size +
-5M packages. But if you have always an emacs running from the beginning of your session
-to the end, as I use to do on my main desktop, it costs you virtually nothing (circe is
-tiny and loading it is not perceptible when looking at res. mem. size).
+It is uneasy to compare the size of these client to other clients, if you have always an
+emacs running from the beginning of your session to the end, as I use to do on my main
+desktop, it costs you virtually nothing (circe is tiny and loading it is not perceptible
+when looking at res. mem. size).
 
 ## Weechat {#weechat}
-<!-- [[file:/share/sync_folders/misc/mznotes/content-org/notes/im_notes.org::#weechat][im_notes - weechat]] -->
+<!-- [[file:../../../../content-org/notes/social_networks_notes.org::#weechat][social_networks_notes - weechat]] -->
 
 [WeeChat](http://www.weechat.org/) (GPL)
 is an irc ncurses client, extensible by C plugins or script language (Perl, Python,
@@ -198,24 +211,18 @@ Weechat has an extensive documentation:
     ](http://www.weechat.org/files/doc/stable/weechat_quickstart.en.html)
     ([development version
     ](http://www.weechat.org/files/doc/devel/weechat_quickstart.en.html))
--   [User Manual
-    ](http://www.weechat.org/files/doc/stable/weechat_user.en.html) (
-    [dev
-    ](http://www.weechat.org/files/doc/devel/weechat_user.en.html),
+-   [User Manual](http://www.weechat.org/files/doc/stable/weechat_user.en.html) (
+    [dev](http://www.weechat.org/files/doc/devel/weechat_user.en.html),
     [ascidoc source](https://github.com/weechat/weechat/blob/master/doc/en/weechat_user.en.adoc)).
 -   [Scripting Guide
     ](http://www.weechat.org/files/doc/stable/weechat_scripting.en.html)
-    ([dev
-    ](http://www.weechat.org/files/doc/devel/weechat_scripting.en.html)).
+    ([dev](http://www.weechat.org/files/doc/devel/weechat_scripting.en.html)).
 -   [Plugin API Reference
     ](http://www.weechat.org/files/doc/stable/weechat_plugin_api.en.html)
-    ([dev](
-    ](http://www.weechat.org/files/doc/devel/weechat_plugin_api.en.html)).
-    [FAQ
-    ](http://www.weechat.org/files/doc/stable/weechat_faq.en.html) (
+    ([dev](](http://www.weechat.org/files/doc/devel/weechat_plugin_api.en.html)).
+    [FAQ](http://www.weechat.org/files/doc/stable/weechat_faq.en.html) (
     [dev](http://www.weechat.org/files/doc/devel/weechat_faq.en.html))
--   [Tester’s Guide
-    ](http://www.weechat.org/files/doc/stable/weechat_tester.en.html)
+-   [Tester’s Guide](http://www.weechat.org/files/doc/stable/weechat_tester.en.html)
     ([dev
     ](http://www.weechat.org/files/doc/devel/weechat_tester.en.html)).
     are available _with many translations_ on
@@ -278,8 +285,6 @@ In addition to these plugins we can use a bridge IRC to other protocol
 via {{< iref "xmpp#bitlbee" "BitlBee" >}},
 {{< iref "xmpp#spectrum2" "Spectrum2" >}},
 {{< iref "xmpp#matterbridge" "matterbrige" >}}
-
-
 
 Plugins for secure messaging:
 
