@@ -620,8 +620,8 @@ The themes are the same than for i3 you find them in
 I don't list here all the GTK and QT applications that run natively under Wayland
 
 
-_Sway_ has a long list of [Clients that use the wlr protocols
-](https://github.com/swaywm/wlr-protocols/wiki).
+_Sway_ has a long list of
+[Useful add ons for sway](https://github.com/swaywm/sway/wiki/Useful-add-ons-for-sway).
 
 The [wlr protocol](https://github.com/swaywm/wlr-protocols) is supported by
 many wlroots-based compositors.
@@ -704,15 +704,25 @@ See below the {{< iref "#wayland_menus" "dmenu/rofi alternatives" >}} and above 
 
 ### Wayland image viewers
 
--   [imv](https://github.com/eXeC64/imv)  (MIT License)
-    is an image viewer for X11/Wayland. _In Debian_
+-   [imv](https://sr.ht/~exec64/imv/)  (MIT License)
+    is an image viewer for X11/Wayland.
+    [![packaging](https://repology.org/badge/tiny-repos/imv.svg?header=packages)
+    ](https://repology.org/project/imv/versions)
+    including Debian which provides the wayland and X11 binaries.
 -   [mpv-image-viewer](https://github.com/occivink/mpv-image-viewer) (Unlicense license)
     or _miv_ Configuration, scripts and tips for using mpv as an image viewer.
+    -   [eugenesvk/mpv-image-viewer fork
+        ](https://github.com/eugenesvk/mpv-image-viewer)
+        has some improvements.
 -   [swappy](https://github.com/jtheoof/swappy) (MIT license)
     A Wayland native snapshot editing tool, inspired by Snappy on macOS,
-    it is used with =grim= and =slurp=.
+    it is used with grim and slurp.
 -   [swayimg](https://github.com/artemsen/swayimg) (MIT license)
     image viewer for Sway/Wayland.
+    [![Packaging status](https://repology.org/badge/tiny-repos/swayimg.svg)
+    ](https://repology.org/project/swayimg/versions)
+-   [ueberzugpp](https://github.com/jstkdng/ueberzugpp) (GPL-3.0)
+    is a command line utility which draws images on terminals using child windows.
 -   [vimiv-qt](https://github.com/karlch/vimiv-qt) (GPL-3.0)
     a QT image viewer with vim-like keybindings.
 
@@ -924,10 +934,6 @@ See also the list in [awsome Wayland - launchers
     including Debian.
     -   [wofi-scripts](https://github.com/tobiaspc/wofi-scripts)
         Scripts for wofi, Window switcher and SSH session launcher.
-    -   [dracula/wofi](https://github.com/dracula/wofi) (MIT License)
-        Dark {{< iref "#dracula" "Dracula" >}} theme for wofi.
-    -   [sachahjkl/wofi-arc-dark](https://github.com/sachahjkl/wofi-arc-dark)
-        : A stylesheet recreating the arc-dark theme for wofi.
 -   [sgtk-menu](https://github.com/nwg-piotr/sgtk-menu) (GPL-3.0)
     Python GTK launchers for sway & other WMs w/ menu, dmenu, application grid and
     button bar.  There is also a C++ version
@@ -965,7 +971,7 @@ The python programs use
 ](https://pyxdg.readthedocs.org/en/latest/_modules/xdg/Menu.html).
 
 Most often the menus are displayed by a menu launcher, the most popular being
-{{< iref "#dmenu" "dmenu" >}}, {{< iref "#rofi "rofi" >}} and all the rofi like menus
+{{< iref "#dmenu" "dmenu" >}}, {{< iref "#rofi" "rofi" >}} and all the rofi like menus
 sytems such as those referred in {{< iref "#wayland_menus" "dmenu/rofi alternatives" >}}.
 
 -   The Faq.i3wm forum [How can I use autostart .desktop files in i3?
