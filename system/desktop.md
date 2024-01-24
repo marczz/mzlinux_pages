@@ -702,30 +702,6 @@ See below the {{< iref "#wayland_menus" "dmenu/rofi alternatives" >}} and above 
     xdotool type for wayland. _in Debian and
     [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)._
 
-### Wayland image viewers
-
--   [imv](https://sr.ht/~exec64/imv/)  (MIT License)
-    is an image viewer for X11/Wayland.
-    [![packaging](https://repology.org/badge/tiny-repos/imv.svg?header=packages)
-    ](https://repology.org/project/imv/versions)
-    including Debian which provides the wayland and X11 binaries.
--   [mpv-image-viewer](https://github.com/occivink/mpv-image-viewer) (Unlicense license)
-    or _miv_ Configuration, scripts and tips for using mpv as an image viewer.
-    -   [eugenesvk/mpv-image-viewer fork
-        ](https://github.com/eugenesvk/mpv-image-viewer)
-        has some improvements.
--   [swappy](https://github.com/jtheoof/swappy) (MIT license)
-    A Wayland native snapshot editing tool, inspired by Snappy on macOS,
-    it is used with grim and slurp.
--   [swayimg](https://github.com/artemsen/swayimg) (MIT license)
-    image viewer for Sway/Wayland.
-    [![Packaging status](https://repology.org/badge/tiny-repos/swayimg.svg)
-    ](https://repology.org/project/swayimg/versions)
--   [ueberzugpp](https://github.com/jstkdng/ueberzugpp) (GPL-3.0)
-    is a command line utility which draws images on terminals using child windows.
--   [vimiv-qt](https://github.com/karlch/vimiv-qt) (GPL-3.0)
-    a QT image viewer with vim-like keybindings.
-
 # Desktop components {#desktop_components}
 
 ## Panels {#panels}
