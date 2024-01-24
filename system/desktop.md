@@ -516,7 +516,9 @@ See also the {{< iref "xorg#wayland" "Wayland Section" >}},
     When used on top of Xorg it acts as a X11 window manager and compositing manager.
 -   <a name=wayfire"></a>[Wayfire](https://wayfire.org/) (MIT License)
     a wayland compositor based on wlroots.
-    Wayfire is in [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland).
+   [![packaging](https://repology.org/badge/tiny-repos/wayfire.svg?header=packages)
+   ](https://repology.org/project/wayfire/versions).
+
     -   [Wayfire - GitHub](https://github.com/WayfireWM/wayfire)
     -   [Wayfire Wiki](https://github.com/WayfireWM/wayfire/wiki)
     -   The [WayfireWM - GitHub repository ](https://github.com/WayfireWM/)
@@ -531,8 +533,8 @@ See also the {{< iref "xorg#wayland" "Wayland Section" >}},
         [wf-mod2key](https://github.com/DankBSD/wf-mod2key),
         [wf-wallpaper](https://github.com/DankBSD/wf-wallpaper),
         [windecor](https://gitlab.com/marcusbritanicus/wayfire-plugins)
-    -  [Waysmoke](https://github.com/DankBSD/waysmoke)
-       is a desktop shell for _Wayfire_. _In alpha in end 2020._
+    -   [Waysmoke](https://github.com/DankBSD/waysmoke)
+        is a desktop shell for _Wayfire_. _In alpha in end 2020._
 -   [weston](https://gitlab.freedesktop.org/wayland/weston)
     Weston is the reference implementation of a Wayland compositor.
     -   [Weston Gitlab repository](https://gitlab.freedesktop.org/wayland/weston)
@@ -617,8 +619,12 @@ The themes are the same than for i3 you find them in
     Screen locker for Wayland. _In Debian._
 
 ## Wayland desktop components {#wayland_desktop_components}
-I don't list here all the GTK and QT applications that run natively under Wayland
 
+The wayland image viewers are in
+<a class="iref" href={{< relref "images#wayland_image_viewers" >}}
+title="internal reference">a section of the image Page</a>
+
+I don't list here all the GTK and QT applications that run natively under Wayland
 
 _Sway_ has a long list of
 [Useful add ons for sway](https://github.com/swaywm/sway/wiki/Useful-add-ons-for-sway).
@@ -626,12 +632,11 @@ _Sway_ has a long list of
 The [wlr protocol](https://github.com/swaywm/wlr-protocols) is supported by
 many wlroots-based compositors.
 
-[awsome Wayland](https://github.com/natpen/awesome-wayland) list many wayland clients.
+[awesome Wayland](https://github.com/natpen/awesome-wayland) list many wayland clients.
 
 [Useful add ons for sway · Sway Wiki
 ](https://github.com/swaywm/sway/wiki/Useful-add-ons-for-sway)
-is a extended list of apps and scripts for swaywm
-
+is a extended list of apps and scripts for swaywm.
 
 The Nix overlay [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)
 has built many wayland tools. _List in the Readme_
@@ -647,65 +652,68 @@ See below the {{< iref "#wayland_menus" "dmenu/rofi alternatives" >}} and above 
     sid packages.
 
     The current applications are:
-     -    CoreFm - A lightweight file-manager.
-     -    CoreAction - A side bar for showing widgets.
-     -    CoreStats - A system resource viewer.
-     -    CorePad - A document editor.
-     -    CoreRenamer - A batch file renamer.
-     -    CorePDF - A PDF viewer.
-     -    CoreInfo - Show file informations.
-     -    CorePaint - A paint app.
-     -    CoreStuff - An activity viewer.  -
-     -    CoreHunt - A file finder utility.
-     -    CoreTime - A time related task manager.
-     -    CoreTerminal - A terminal emulator.
-     -    CoreShot - A screen capture utility.
-     -    CorePins - A bookmarking app.
-     -    CoreKeyboard - A x11 based virtual keyboard(alpha).
-     -    CoreUniverse - Shows information about apps  from the CoreApps family.
-     -    CoreImage - An image viewer.
-     -    CoreArchiver - Archiver to create and extract archives.  -
-     -    CoreGarage - A settings manager.
+    -    CoreFm - A lightweight file-manager.
+    -    CoreAction - A side bar for showing widgets.
+    -    CoreStats - A system resource viewer.
+    -    CorePad - A document editor.
+    -    CoreRenamer - A batch file renamer.
+    -    CorePDF - A PDF viewer.
+    -    CoreInfo - Show file informations.
+    -    CorePaint - A paint app.
+    -    CoreStuff - An activity viewer.  -
+    -    CoreHunt - A file finder utility.
+    -    CoreTime - A time related task manager.
+    -    CoreTerminal - A terminal emulator.
+    -    CoreShot - A screen capture utility.
+    -    CorePins - A bookmarking app.
+    -    CoreKeyboard - A x11 based virtual keyboard(alpha).
+    -    CoreUniverse - Shows information about apps  from the CoreApps family.
+    -    CoreImage - An image viewer.
+    -    CoreArchiver - Archiver to create and extract archives.  -
+    -    CoreGarage - A settings manager.
 
-     _CuboCore_ also develop a desktop based on {{< iref "#wayfire" "WayFire" >}}:
-     <a name="paper"></a>[Paper](https://gitlab.com/cubocore/paper)
-     _still in alpha in end 2020._
+    _CuboCore_ also develop a desktop based on {{< iref "#wayfire" "WayFire" >}}:
+    <a name="paper"></a>[Paper](https://gitlab.com/cubocore/paper)
+    _still in alpha in end 2020._
 
 -   [grim](https://github.com/emersion/grim) (MIT Licence)
     Grab images from a Wayland compositor. Works with slurp and with sway.
-    _In Debian and [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)._
+    [![packaging](https://repology.org/badge/tiny-repos/grim.svg?header=packages)
+    ](https://repology.org/project/grim/versions).
 -   <a name="kanshi"></a>[kanshi](https://sr.ht/~emersion/kanshi/) (MIT License)
     Dynamic display configuration for wayland compositors. Kanshi allows you to define
     output profiles that are automatically enabled and disabled on hotplug. _in Debian._
 -   [nwg-shell](https://nwg-piotr.github.io/nwg-shell/)
     a GTK3-based shell for sway.
 -   [slurp](https://github.com/emersion/slurp) (MIT License)
-    Select a region in a Wayland compositor. Used by _grim_. _In Debian and
-    [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)._
+    Select a region in a Wayland compositor. Used by _grim_.
+    [![packaging](https://repology.org/badge/tiny-repos/slurp.svg?header=packages)
+    ](https://repology.org/project/slurp/versions).
 -   [wev](https://git.sr.ht/~sircmpwn/wev) (MIT License)
     wayland event viewer analagous to the X11 tool xev.
     _In Debian and [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)._
 -   [wshowkeys](https://git.sr.ht/~sircmpwn/wshowkeys)
-    Displays keypresses on screen on supported Wayland compositors.
+     Displays keypresses on screen on supported Wayland compositors.
 -   [wf-recorder](https://github.com/ammen99/wf-recorder) (MIT License)
     screen recorder for wlroots based compositors. _in Debian and
-    [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)._
+        [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)._
 -   [wdisplays](https://github.com/cyclopsian/wdisplays) (GPL-3.0)
     GUI display configurator for wlroots compositors. _In Debian._
 -   [wlr-randr](https://github.com/emersion/wlr-randr) (MIT License)
     An xrandr clone for wlroots compositors. _in Debian and
-    [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)_.
+        [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)_.
 -   [wlvncc](https://github.com/any1/wlvncc) (ISC License)
     A Wayland Native VNC Client. _In
-    [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)._
+        [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)._
 -   [wtype](https://github.com/atx/wtype) (MIT License)
     xdotool type for wayland. _in Debian and
-    [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)._
+        [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)._
+
 
 # Desktop components {#desktop_components}
 
 ## Panels {#panels}
-The distinction between taskbar, panel, and status bar is not clear, as some status bar
+The  distinction between taskbar, panel, and status bar is not clear, as some status bar
 offer menus, system tray, launcher, volume-control ... On the other side panels can also
 display the status. So you should also look at the
 {{< iref "#status_bar" "status bar section" >}}.
