@@ -677,7 +677,7 @@ List of build tools:
     {{< iref "rest" "ReStructuredText" >}},
     {{< iref "markdown" "Markdown" >}}, Python.
 
-    A Jupyter kernel is a program responsible for handling various types of request
+    A *Jupyter kernel* is a program responsible for handling various types of request
     (code execution, code completions, inspection), and providing a reply.
     Jupyter ships with IPython as a default kernel, and many kernels for various langage
     are available and listed in
@@ -686,8 +686,8 @@ List of build tools:
     Look at the {{< iref "org-mode#babel" "Org-Babel section" >}} for comparisons with
     org-babel, import/export to org-babel, org-babel interfaces ...
 
-    See also {{< iref "myst" "MyST" >}} a python tool that can be used for building
-    Jupiter books.
+    See also {{< iref "markdown#myst" "MyST" >}} a python Sphinx and Docutils extension
+    part of the *Executable Books Project* that can be used for building Jupyter books.
 
     -   [Project Jupyter - Wikipedia](https://en.wikipedia.org/wiki/Jupyter_notebook)
     -   [Jupyter Documentation](https://jupyter.readthedocs.io/en/latest/index.html)
@@ -699,10 +699,8 @@ List of build tools:
         [The Executable Books Project](https://executablebooks.org/en/latest/)
         is a distribution of Sphinx that allows you to write content in markdown and
         Jupyter Notebooks, execute content and insert it into your book.
--   [ ]
 -   [CodeMirror](http://codemirror.net/)
-    is a JavaScript component that provides a code editor in the
-    browser.
+    is a JavaScript component that provides a code editor in the browser.
     [CodeMirror GitHub repository](https://github.com/marijnh/CodeMirror).
 -   <a name="emacs_python"></a>__python in Emacs__:
     -    EmacsWiki gives many configuration recipes for editing python in emacs in the
@@ -714,28 +712,16 @@ List of build tools:
         ](http://tkf.github.io/emacs-jedi/)
     -   [Elpy](https://github.com/jorgenschaefer/elpy) (GPL)
         is an Emacs package to bring Python editing to Emacs.
--   [Eric](http://eric-ide.python-projects.org/) (GPL) is a Python and
-    Ruby editor and IDE, written in python/QT on the top of Scintilla.
+-   [Eric](http://eric-ide.python-projects.org/) (GPL) is a Python
+    editor and IDE, written in python/QT6 on the top of Scintilla.
     It is in Debian.
--   [Leo](http://webpages.charter.net/edreamleo/front.html) (MIT License)
+-   [Leo](https://leo-editor.github.io/leo-editor/) (MIT License)
     is a Python programmer's editor, scriptable in Python which requires either the
     Tkinter or PyQt._Leo_ provides an outline-oriented browser and project manager.
--   [Medit](https://bitbucket.org/medit/medit/) is a PyGTK programming editor,
+-   [Medit](https://projects.om-office.de/frans/medit) is a PyGTK programming editor,
     with python source support and pluginss in C, LUA, Python, shell.
-    _development stop in 2017_.
--   [Pida](https://bitbucket.org/aafshar/pida-main) (GPL)
-    is an integrated development environment written in PyGTK, that can be used
-    from an external editor like vim or the embedded Medit widget. Ali Afshar
-    the author of Pida has stopped contributing in 2010, some other contributors
-    have continued the development until begining 2012, and the project seems now dead.
--   [SPE](http://pythonide.blogspot.com/) (said GPL!)
-    is an Integrated Development Environment for python.
-
-    Even if _spe_ is GPL, there is no help, and the manual is not open-source nor
-    free. Of course it is not said you have to _pay_ for it, no you just _donate_ money,
-    and it is sent back to thank you.
-
-    The project seem dead since 2010.
+    _development stopped in 2017, the project reappears in the Gitlab reo, but does not
+    seem to be more developed_.
 
 ## Embedding Extending
 Read first the
@@ -974,11 +960,43 @@ See also the {{< iref "#ip_address_module" "ipaddress module" >}}
 -   The {{< iref "#distutils" "module distutils" >}}
     is part of the standard library.
 -   <a name="pip"></a>[PIP](https://pip.pypa.io/en/stable/)
-     is the package installer for Python.
-    it is complementary with
+     is the package installer for Python.  it is complementary with
     {{< iref "#virtualenv" "virtualenv" >}} and can be used
     inside virtualenv.
--    <a name="fabric"></a>[Fabric](https://www.fabfile.org/)
+-   [pipx](https://pipx.pypa.io/stable/)  (MIT License)
+    install and Run Python Applications in Isolated Environment for each application
+    and its associated packages.
+    -   [pipx - GitHub](https://github.com/pypa/pipx)
+    -   [Comparison to Other Tools](https://pipx.pypa.io/stable/comparisons/)
+        compare with pip, poetry, pipenv, venv, pyenv, pipsi.
+-   <a name="conda"></a>[conda](https://github.com/conda/conda)
+    is a cross-platform, language-agnostic binary package manager written in Python.
+    In conda, an environment can be thought of as a completely separate installation.
+    Conda installs packages into environments efficiently using hard links.
+
+    Conda is part of the [Anaconda Distribution
+    ](https://en.wikipedia.org/wiki/Anaconda_(Python_distribution)).
+    Anaconda distribution comes with over 250 packages automatically installed,
+    it uses the
+    [Anaconda installer](https://en.wikipedia.org/wiki/Anaconda_(installer)).
+
+    [Miniconda](https://docs.conda.io/projects/miniconda/en/latest/)
+    is a minimal installer for conda, that includes only conda, Python, the packages
+    they both depend on, and a small number of other useful packages
+    (like pip, zlib, and a few others).
+
+    -   [Conda Documentation](https://docs.conda.io/projects/conda/en/stable/).
+    -   [Anaconda Installers and Packages](https://repo.anaconda.com/).
+    -   [Miniconda documentation](https://docs.conda.io/projects/miniconda/en/latest/)
+-   <a name="mamba"></a> [Mamba](https://github.com/mamba-org/mamba)
+    is a reimplementation of the conda package manager in C++.
+
+    *micromamba* is a small, pure-C++ reimplementation of mamba/conda.
+    It strives to be a full replacement for mamba and conda.
+    -   [Mamba’s documentation](https://mamba.readthedocs.io/en/latest/index.html)
+    -   [Micromamba User Guide
+        ](https://mamba.readthedocs.io/en/latest/user_guide/micromamba.html)
+-   <a name="fabric"></a>[Fabric](https://www.fabfile.org/)
     (BSD License) is a library and command-line tool for streamlining the use of SSH for
     application deployment or systems administration tasks.  It is similar to Makefiles
     but with the ability to execute commands on a remote server.
@@ -993,12 +1011,6 @@ See also the {{< iref "#ip_address_module" "ipaddress module" >}}
     -   [GitHub: Fabric](https://github.com/fabric/fabric)
     -   [Python For Beginners: How to use Fabric in Python
         ](https://www.pythonforbeginners.com/systems-programming/how-to-use-fabric-in-python/).
--   [pipx](https://pipx.pypa.io/stable/)  (MIT License)
-    install and Run Python Applications in Isolated Environment for each application
-    and its associated packages.
-    -   [pipx - GitHub](https://github.com/pypa/pipx)
-    -   [Comparison to Other Tools](https://pipx.pypa.io/stable/comparisons/)
-        compare with pip, poetry, pipenv, venv, pyenv, pipsi.
 
 ## Parsers
 -   [Python Wiki: Language Parsing](https://wiki.python.org/moin/LanguageParsing)
