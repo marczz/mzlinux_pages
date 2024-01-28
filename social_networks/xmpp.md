@@ -1655,44 +1655,51 @@ Some libraries are available to encapsulate the protocol, there is also a
 {{< iref "#libpurple" "libpurple" >}} plugin.
 
 ## Telegram {#telegram}
-{{< wp "Telegram (software)"  "Telegram" >}} (GPL)
-is a cloud-based instant messaging service on Android, iOS, Windows
-Phone, Ubuntu Touch and Windows, OS X, Linux. Users can send with
-optional end-to-end encryption messages, photos, videos, stickers
+{{< wp "Telegram (software)" "Telegram" >}} (GPL) is a cloud-based instant messaging
+service on Android, iOS, Windows Phone, Ubuntu Touch and Windows, OS X, Linux. Users can
+send with optional end-to-end encryption messages, photos, videos, stickers
 _high-definition emoji_ and any file.
 
-Accounts are tied to telephone numbers and are verified by SMS or
-phone call.
+Accounts are tied to telephone numbers and are verified by SMS or phone call.
 
-Default messages are cloud-based and can be accessed on any of the
-user's connected devices. All data is stored heavily encrypted and the
-encryption keys in each case are stored in several other DCs in
-different jurisdictions. This way local engineers or physical
-intruders cannot get access to user data
+Default messages are cloud-based and can be accessed on any of the user's connected
+devices. All data is stored heavily encrypted and the encryption keys in each case are
+stored in several other DCs in different jurisdictions. This way local engineers or
+physical intruders cannot get access to user data
 
-Messages can also be sent with client-to-client encryption in
-secret chats.  Messages sent within a secret chat can be accessed only
-on one sender and one reiver device, they can optionally
-self-destruct.
+Messages can also be sent with client-to-client encryption in secret chats.  Messages
+sent within a secret chat can be accessed only on one sender and one reiver device, they
+can optionally self-destruct.
 
 There are some critisisms to the [Telegram security
 ](https://en.wikipedia.org/wiki/Telegram_(software)#Security)
 
-Official Telegram applications are provided for IOS, Android, and other mobile
-applications, and a [Desktop client
-](https://desktop.telegram.org/) for windows and Linux and OSX  ,  a
-[plugin for Chrome](https://chrome.google.com/webstore/detail/telegram),
-and [tg: telegram-cli](https://github.com/vysheng/tg) a CLI
-for linux.
+-   Official Telegram applications are provided for IOS, Android, and other mobile
+    applications.
+-   The [Desktop client](https://desktop.telegram.org/) run windows and Linux and OSX.
+-   [plugin for Chrome](https://chrome.google.com/webstore/detail/telegram),
+-   [tg: telegram-cli](https://github.com/vysheng/tg) a CLI for linux.
+    [![packaging](https://repology.org/badge/tiny-repos/telegram-cli.svg?header=packages)
+    ](https://repology.org/project/telegram-cli/versions).
 
-A third party [firefox extension
-](https://addons.mozilla.org/en-US/firefox/addon/telegram-web/)
-is also available.
-
-Users can also access Telegram's
-cloud-based messages via an official web browser interface called
-[Telegram Web](https://web.telegram.org/), the source are in the
-[GitHub repository Webogram](https://github.com/zhukov/webogram).
+    The repository has no commit since 2016, there are many forks, one of the most
+    active is [kernorb-contrib/tg](https://github.com/kenorb-contrib/tg).
+-   [telegram-send](https://github.com/rahiel/telegram-send) (GPL-3.0)
+    a python CLI Send messages and files over Telegram from the command-line.
+    [![packaging](https://repology.org/badge/tiny-repos/telegram-send.svg?header=packages)
+    ](https://repology.org/project/telegram-send/versions).
+-   Third party
+    [firefox extension](https://addons.mozilla.org/en-US/firefox/addon/telegram-web/).
+-   The older official web browser interface [Telegram Web](https://web.telegram.org/),
+    is updated in two new web interfaces
+    [Telegram Web K](https://web.telegram.org/k/) which is a rewrite in Typescript of
+    the original Webogram client,
+    and [Telegram Web A](https://web.telegram.org/a/) a lighter new client in Ajax based
+    on *Teact* and *Gramjs*.
+    -   [GitHub repository Webogram](https://github.com/zhukov/webogram) (GPL-3.0).
+        archived since october 2023.
+    -   [tweb: Telegram Web K](https://github.com/morethanwords/tweb) (GPL-3.0).
+    -   [telegram-tt: Telegram Web A](https://github.com/Ajaxy/telegram-tt) (GPL-3.0).
 
 There are bridges to IRC with [teleirc](https://github.com/FruitieX/teleirc)
 and  multiprotocol bridges including IRC and XMPP, using
