@@ -884,7 +884,7 @@ list plugins, _some of them are obsolete_, this list includes:
 -   Tox - [Tox protocol plugin](https://github.com/EionRobb/tox-prpl) (GPL) for
     {{< iref "#tox" "Tox protocol" >}}.
 -   Whatsapp Web - [purple-gowhatsapp](https://github.com/hoehermann/purple-gowhatsapp/)
-    Pidgin/libpurple plugin for WhatsApp __Web__.
+    (GPL-3.0) Pidgin/libpurple plugin for WhatsApp __Web__.
 
 Among the
 [Security and privacy plugins](https://pidgin.im/plugins/?type=Security+and+Privacy).
@@ -983,6 +983,7 @@ Whenever I'm on a foreign computer, a jabber client can be very useful.
     -   [Movim Wiki](https://github.com/movim/movim/wiki) Wiki of the movim server.
     -   [Movim.eu](https://movim.eu/) propose a jabber server, and
         [mov.im](https://mov.im/) movim service.
+    -   [Movim - ArchWiki](https://wiki.archlinux.org/title/Movim).
     -   [Movim community - Lemmy](https://lemmy.ml/c/movim).
     -   [XEP-0060: Publish-Subscribe](https://xmpp.org/extensions/xep-0060.html)
         describe the use of {{< wp "Publish–subscribe pattern" >}} in xmpp.
@@ -1674,16 +1675,25 @@ can optionally self-destruct.
 There are some critisisms to the [Telegram security
 ](https://en.wikipedia.org/wiki/Telegram_(software)#Security)
 
+-   [Telegram - ArchWiki](https://wiki.archlinux.org/title/Telegram).
 -   Official Telegram applications are provided for IOS, Android, and other mobile
     applications.
 -   The [Desktop client](https://desktop.telegram.org/) run windows and Linux and OSX.
+    -   [tdesktop - GitHub](https://github.com/telegramdesktop/tdesktop) (GPL-3.0)
+-   [telega.el](https://github.com/zevlg/telega.el) (GPL-3.0)
+    Emacs telegram client.
 -   [plugin for Chrome](https://chrome.google.com/webstore/detail/telegram),
--   [tg: telegram-cli](https://github.com/vysheng/tg) a CLI for linux.
+-   [ysheng/tg: telegram-cli](https://github.com/vysheng/tg) (GPL-2.0)
+    a CLI for linux.
     [![packaging](https://repology.org/badge/tiny-repos/telegram-cli.svg?header=packages)
     ](https://repology.org/project/telegram-cli/versions).
 
     The repository has no commit since 2016, there are many forks, one of the most
     active is [kernorb-contrib/tg](https://github.com/kenorb-contrib/tg).
+-   [paul-nameless/tg](https://github.com/paul-nameless/tg) ( Unlicense license )
+    a Python terminal telegram client. *Homonym but unrelated to ysheng/tg*.
+-   [nchat](https://github.com/d99kris/nchat)  (MIT license)
+    a c++ terminal-based Telegram / WhatsApp client for Linux and macOS.
 -   [telegram-send](https://github.com/rahiel/telegram-send) (GPL-3.0)
     a python CLI Send messages and files over Telegram from the command-line.
     [![packaging](https://repology.org/badge/tiny-repos/telegram-send.svg?header=packages)
@@ -1754,7 +1764,8 @@ loosing the interoperability,
 and
 {{< iref "#telegram" "Telegram" >}}.
 
--   <a name="eff_whatsapp"
+-   [WhatsApp - ArchWiki](https://wiki.archlinux.org/title/WhatsApp).
+-   <a name="eff_whatsapp"></a>
     [Electronic Frontier Foundation (EFF)](https://www.eff.org/) guide
     [Surveillance Self-Defense (SSD) HowTo
     ](https://ssd.eff.org/) :
@@ -1764,25 +1775,32 @@ and
     ](https://ssd.eff.org/en/module/how-use-whatsapp-ios).
     The EFF [don't recommend WhatsApp for secure communications
     ](https://www.eff.org/deeplinks/2016/10/where-whatsapp-went-wrong-effs-four-biggest-security-concerns)
--   <a name="yowsup"</a>[Yowsup](https://github.com/tgalal/yowsup)
-    (GPL) a python library that enables you build application which use WhatsApp
-    service. It includes a client application
-    [yowsupcli](https://github.com/tgalal/yowsup/wiki/yowsup-cli-2.0)
+-   <a name="yowsup"</a>[Yowsup](https://github.com/tgalal/yowsup) (GPL-3.0)
+    a python library that enables you build application which use WhatsApp service.
 
     _It seems that WhatsApp now detect Yowsup and  ban  your number, so don't use it
-    until they find a workaround_.
+        until they find a workaround_.
 
     Yowsup allows you to login and use the WhatsApp service, providing encryption of
     messages. This program can be used for multiple purposes as to send message to
     phones, receive messages from network servers or appliances, notifying about issues,
-    via direct command or by special agents. There is also a
-    {{< iref "irc#weechat" "WeeChat" >}} plugin using Yowsup library.
--   [Whatsapp-Desktop](https://github.com/Enrico204/Whatsapp-Desktop)
-    (GPL) Unofficial whatsapp web desktop client for OSX, Linux and
-    Windows. Build with Electron.
+    via direct command or by special agents.
+
+    YowSup is no longer developped since 2021, and has been dropped by many
+    distributions, in 2024 it seems obsolete.
 -   {{< iref "#franz5" "Franz5" >}} supports _Whatsapp_.
 -   {{< iref "#libpurple" "libpurple" >}} has a
     {{< iref "#pidgin_plugins" "plugin" >}} for WhatsApp.
+-   [whatsapp-for-linux](https://github.com/eneshecan/whatsapp-for-linux) (GPL-3.0)
+    An unofficial WhatsApp desktop application for Linux.written in C++ with gtkmm and
+    WebKitGtk.
+
+    [![packaging](https://repology.org/badge/tiny-repos/whatsapp-for-linux.svg?header=packages)
+    ](https://repology.org/project/whatsapp-for-linux/versions).
+    also available on SnapStore and FlatHub, a Debian package is available in the GitHub
+    releases.
+-   [nchat](https://github.com/d99kris/nchat) (MIT license)
+    a c++ terminal-based Telegram / WhatsApp client for Linux and macOS.
 
 ## Other secure messengers
 -   [surespot](https://www.surespot.me/)
