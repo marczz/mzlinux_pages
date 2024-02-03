@@ -962,7 +962,7 @@ Whenever I'm on a foreign computer, a jabber client can be very useful.
     {{< iref "#otr" "OTR" >}} and
     {{< iref "#omemo" "OMEMO" >}}
     created by the {{< iref "#chatsecure" "ChatSecure project" >}}.
-    But the new zom 2 version of འཛོམས་ is targeted to
+   But the new zom 2 version of འཛོམས་ is targeted to
     {{< iref "#matrix" "Matrix" >}} protocol.
 
 ## XMPP Ios Clients
@@ -1286,9 +1286,9 @@ needing even you have your own home server like the WhatsApp bridge.
 -   [mxtoot](https://github.com/ma1uta/mxtoot)    (Apache License)
     is a Matrix <=> Mastodon bot written on java.
 
-# Google Talk and Hangouts
+# Google Chat
 
-In 2013 Google closed Google Talk in favor of
+In 2013 Google closed Google Talk which was a Xmms client, in favor of
 {{< wp "Google Hangout" >}} which uses  a proprietary protocol.
 
 Google [announced
@@ -1296,32 +1296,14 @@ Google [announced
 that it will close hangout in 2021, it will be replaced by {{< wp "Google Meet" >}}
 and {{< wp "Google Chat" >}}.
 
-Google Chat is a product which is rerved to user of Google Worspace account (paid plan).
+Since 2021 Google meet and Google Chat can be used freely.
 
-In beginning 2021 Google meet can be used freely and it is announced that it will be
-also the case of Google Chat mid 2021, and the hangout accounts will be migrated to Chat.
+The hangout accounts have been migrated to Chat in november 2022, and Hangout was closed.
 
-There are attempts to provide access to the Hangout proprietary
-protocol.
-
--   [Hangup](https://github.com/tdryer/hangups) (MIT License)
-    is a third-party instant messaging client for Google Hangout written in python, it
-    is implemented by reverse-engineering the protocol.
-
-    It supports features like group messaging that aren't available in clients that
-    connect via XMPP.
-
-    There are many project using Hangup [see the project page
-    ](https://github.com/tdryer/hangups) among which many bots,
-    [hangups.el](https://github.com/jtamagnan/hangups.el) an Hangout client for emacs,
-    [pickups](https://github.com/mtomwing/pickups) an IRC to Hangout gateway,
-    [telepathy-hangups](https://github.com/davidedmundson/telepathy-hangups) telepathy
-    bindings for hangout,
-    [jabber-hangouts-transport](https://github.com/ZeWaren/jabber-hangouts-transport)
-    a XMPP transport/gateway for Google Hangouts.
-
--   [purple-hangouts](https://github.com/EionRobb/purple-hangouts) is an hangout plugin
-    for libpurple
+-   [purple-googlechat](https://github.com/EionRobb/purple-googlechat) (GPL-3.0)
+    A Google Chat protocol plugin for libpurple, Pidgin, bitlbee.
+-   [mautrix/googlechat](https://github.com/mautrix/googlechat) (AGPL-3.0)
+    A Matrix-Google Chat puppeting bridge.
 
 # Tox Protocol {#tox}
 
