@@ -874,7 +874,7 @@ list plugins, _some of them are obsolete_, this list includes:
 -   PulseSMS Android app - [purple-pulsesms](https://github.com/EionRobb/purple-pulsesms)
 -   Rocketchat - [purple-rocketchat](https://github.com/EionRobb/purple-rocketchat)
     for {{< iref "microblogging#rocketchat" "RocketChat" >}}.
--   Signal - [libpurple-signald](https://github.com/hoehermann/libpurple-signald/)
+-   Signal - [libpurple-signald](https://github.com/hoehermann/purple-signald)
     Pidgin libpurple bridge for the {{< iref "#signald" "Signal Daemon - signald" >}}.
 -   Slack - [slack-libpurple](https://github.com/dylex/slack-libpurple)
     for access to {{< iref "microblogging#slack" "Slack" >}}
@@ -1622,9 +1622,20 @@ the new [Signal fundation](https://signal.org/blog/signal-foundation/).
     [How to: Use Signal on Android
     ](https://ssd.eff.org/en/module/how-use-signal-android).
 
-The is an an alternate CLI
-[GitHub - AsamK/signal-cli](https://github.com/AsamK/signal-cli) (GPLv3).
-a commandline interface for libsignal-service-java. It supports registering, verifying,
+-   <a name=signald></a>[signald](https://gitlab.com/signald/signald) (GPL)
+    is a daemon that facilitates communication over Signal bu sending messages in the
+    signald protocol.
+-   [GitHub - thefinn93/signal-weechat](https://github.com/thefinn93/signal-weechat).
+    Weechat plugin using
+    <a class="iref" href="#signald" title="internal reference">signald</a>
+
+Some libraries are available to encapsulate the protocol, there is also a
+{{< iref "#libpurple" "libpurple" >}} plugin.
+
+### Signal-cli
+
+[signal-cli](https://github.com/AsamK/signal-cli) (GPLv3).
+is a commandline interface for libsignal-service-java. It supports registering, verifying,
 sending and receiving messages.
 
 To register you need a phone number where you can receive SMS or incoming
@@ -1639,21 +1650,13 @@ they need JRE 11.
 -   [signal-cli Wiki](https://github.com/AsamK/signal-cli/wiki) contains the man page,
     _Quck Start_, Dbus usage, examples, _Linking other devices_, trusted keys management.
 
-
 The _signal-cli_ client is used in many frontends listed [in the Wiki
 ](https://github.com/AsamK/signal-cli/wiki#signal-cli-scriptsexamples), among them
 
--   [GitHub - jwoglom/signal-curses](https://github.com/jwoglom/signal-curses)
+-   [signal-curses](https://github.com/jwoglom/signal-curses)
     netcurses interface.
--   [GitHub - thefinn93/signal-weechat](https://github.com/thefinn93/signal-weechat).
-    Weechat plugin.
-
-<a name=signald></a>[signald](https://git.callpipe.com/finn/signald) (GPL)
-is a daemon that facilitates communication over Signal bu sending messages in the signald
-protocol.
-
-Some libraries are available to encapsulate the protocol, there is also a
-{{< iref "#libpurple" "libpurple" >}} plugin.
+-   [scli](https://github.com/isamert/scli/) (GPL-3.0)
+    python terminal user interface for signal using signal-cli.
 
 ## Telegram {#telegram}
 {{< wp "Telegram (software)" "Telegram" >}} (GPL) is a cloud-based instant messaging
