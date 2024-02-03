@@ -266,9 +266,6 @@ Plugins for other protocols:
     There is also an older [weechat-matrix-protocol-script
     ](https://github.com/torhve/weechat-matrix-protocol-script)
     written in Lua.
--   [whatsapp.py](https://weechat.org/scripts/source/whatsapp.py.html/) is a plugin to
-    talk to {{< iref "xmpp#whatsapp" "WhatsApp" >}} using
-    {{< iref "xmpp#yowsup" "Yowsup" >}}. _Obsolete?_
 -   [weetweet.py](https://weechat.org/scripts/source/weetweet.py.html/)
     is a plugin for twitter messaging, it requires the python library twitter lib.
 -   [wee-slack](https://github.com/wee-slack/wee-slack)
@@ -296,8 +293,15 @@ Plugins for secure messaging:
     [ircrypt-weechat](https://github.com/IRCrypt/ircrypt-weechat)
     which use openpgp for IRC encryption with
     [IRCrypt ptotocol ](https://github.com/IRCrypt/documentation).
--   [weechat-fish](https://github.com/freshprince/weechat-fish) provides
-    {{< iref "xmpp#fish" "FiSH encryption" >}}.
+-   <a name="fish"></a>FiSH is an IRC plugin providing {{< wp "Blowfish" >}}.
+    encryption to IRC chat. It is an old protocol aimed to IRC, which was
+    [proposed in 2009
+    ](http://blog.bjrn.se/2009/01/proposal-for-better-irc-encryption.html)
+    and never adopted in a RFC.
+
+    You can find it in {{< iref "irssi" "irssi" >}}, {{< iref "hexchat" "HexChat" >}}
+    and for the windows client *mirc*, and
+    [weechat-fish](https://github.com/freshprince/weechat-fish).
 
 <a name="weechat_relay"></a>Weechat has a
 [relay plugin](https://weechat.org/files/doc/stable/weechat_user.en.html#relay_plugin)
