@@ -1,5 +1,5 @@
 ---
-title: XMPP
+title: Messaging
 ---
 
 We put here protocols and applications that mainly focus on messaging,
@@ -18,217 +18,6 @@ microblogging also often include messaging...
 {{< iref "p2p" "P2P Section" >}}.
 
 -----------------
-
-# References
--   Wikipedia: {{< wp "Xmpp"  "Extensible Messaging and Presence Protocol (Xmpp)" >}},
-    {{< wp "Comparison of instant messaging protocols" >}},
-    {{< wp "Comparison of instant messaging clients" >}},
-    {{< wp "Comparison of XMPP server software" >}},
-    {{< wp "Instant messaging" >}},
-    {{< wp "Jingle (protocol)"  "Jingle Protocol" >}},
-    {{< wp "SIMPLE_(instant_messaging_protocol)"  "Simple" >}}
-    an instant messaging (IM) and presence protocol suite based on SIP.
--   [ArchWiki: List of instant messaging software
-    ](https://wiki.archlinux.org/index.php/List_of_applications/Internet#Instant_messaging)
--   [XMPP Internet of Things](http://www.xmpp-iot.org/)
-    _The Internet of Things (or IoT) is what we get when we connect
-    Things, that are not operated by humans, to the Internet._
-    -   [XMPP.org introduction to Internet of Things
-        ](https://xmpp.org/uses/internet-of-things.html).
--   <a name="jabberfr"></a>[jabber.fr](http://www.jabberfr.org/):
-    -   [Jabber.fr wiki (french)](http://wiki.jabberfr.org/)
-        with plenty of _french_ jabber documentation, but quite outdated.<br />
-    -   [Presence service](http://presence.jabberfr.org/)
-    -   [Passerelles](http://wiki.jabberfr.org/Passerelles) _these bridges are mainly
-        with non longer used or deprecated protocols._
-    -   [Pages de la Catégorie:Fonctionnalité Jabber
-        ](http://wiki.jabberfr.org/Cat%C3%A9gorie:Fonctionnalit%C3%A9_Jabber)
-    -   [MUC](http://wiki.jabberfr.org/MUC)
-    -   [Jwchat tutorial](http://wiki.jabberfr.org/JWChat)
-    -   [linuxFR - xmpp](http://linuxfr.org/sections/xmpp)
--   The proprietary {{< wp "Yahoo! Messenger" >}} now closed was handled by many
-    open source client.
--   XMPP is used in {{< wp "Distributed social network" >}} Wikipedia gives a
-    {{< wp "Comparison of software and protocols for distributed social networking" >}}
--   [MucSearch](https://search.wensley.org.uk/) a conference web search service.
--   {{< wp "SIMPLE_(instant_messaging_protocol)"  "SIMPLE" >}} is IM over sip,
-    ietf has [rfc 3428 SIP Extension for Instant Messaging
-    ](http://www.ietf.org/rfc/rfc3428.txt)
-
-## XMPP Specification
-[XMPP Standards Foundation](http://www.xmpp.org/ ) references all xmmp standards and
-extensions.
-
-
--   [XMPP software : Clients Servers Libraries Projects](http://xmpp.org/software)
-
-[Technology Overview of XMPP](https://xmpp.org/about/technology-overview.html)
-present the specifications of XMPP.
-
-The core specification is defined in RFC:
-    [RFC 6120 - XMPP Protocol Core](https://tools.ietf.org/html/rfc6120),
-    [RFC 6121 - XMPP Instant Messaging and Presence](https://tools.ietf.org/html/rfc6121)
-    [RFC 7622 - XMPP Address Format](https://tools.ietf.org/html/rfc7622),
-    [RFC 7590 - Use of TLS in XMPP](https://tools.ietf.org/html/rfc7590).
-
-It is complemented by extensions whose full list is in
-the [table of XMPP extensions](https://xmpp.org/extensions/)
-
-
-These extensions can be divided in core extensions,
-{{< iref "#xmpp_muc" "MUC Multi user Chat" >}},
-{{< iref "#xmpp_jingle" "Jingle multimedia messaging" >}},
-{{< iref "#pubsub" "pubsub publish-subscribe functionality" >}},
-{{< iref "#bosh" "BOSH Bidirectional-streams Over Synchronous HTTP" >}}.
-
-And the extensions for secure messaging in {{< iref "#openpgp" "OpenPGP" >}},
-{{< iref "#omemo" "OMEMO" >}},
-{{< iref "#otr" "OTR" >}}.
-
-
-Core extensions can extend the RFCS, some core extensions are:
--   [XEP-0280: Message Carbons](https://xmpp.org/extensions/xep-0280.html)
-    In order to keep all IM clients for a user engaged in a conversation, outbound
-    messages are carbon-copied to all interested resources. It allows to be easily
-    simultaneously connected from many clients with the same account.  It is provided by
-    most of the recent clients from this page.  _but pidgin need the plugin carbons_.
--   [XEP-0313: Message Archive Management](https://xmpp.org/extensions/xep-0313.html)
-    and [XEP-0441: Message Archive Management Preferences
-    ](https://xmpp.org/extensions/xep-0441.html)
-    present in conversations, converse.js, gajim, xabber.
--   [XEP-0357: Push Notifications](https://xmpp.org/extensions/xep-0357.html).
-    works with chatsecure, conversation,
-
-### MUC - Multi user Chat{#xmpp_muc}
-MUC brings IRC like  functionalities to XMPP, and allow multiple XMPP users to exchange
-messages in the context of a room or channel.
-
-It is described in
-[MUC overview -xmpp.org](https://xmpp.org/about/technology-overview.html#muc)
-Specification is in the following XEPs:
--   [XEP-0045: Multi-User Chat](https://xmpp.org/extensions/xep-0045.html)
--   [XEP-0249: Direct MUC Invitations](https://xmpp.org/extensions/xep-0249.html)
--   [XEP-0272: Multiparty Jingle](https://xmpp.org/extensions/xep-0272.html)
-
-Most servers and Clients support MUC. The message encryption in MUC, is a more complex
-and is only implemented in few clients.
-
-### Jingle{#xmpp_jingle}
-<a name="jingle"></a>{{< wp "Jingle (protocol)"  "Jingle Protocol" >}}
-is an extension to XMPP which adds peer-to-peer (P2P) session
-control (signaling) for multimedia.  Interactions such as in voice
-over IP (VoIP) or videoconferencing communications, or also for
-p2p file transfer.  Jingle is supported by Xmpp software based on
-telepathy like empathy, minirc; software base on it like pidgin,
-Coccinella, Gajim, Macabber (file transfer only),
-Pidgin, Psi, Jabbin, Tapioca. It is also supported by telephony
-software like {{< wp "Yate_(telephony_engine)"  "Yate" >}} or
-{{< wp "Asterisk_(PBX)"  "Asterisk" >}}.
-
-It is defined in [several XEP documents
-](https://xmpp.org/about/technology-overview.html#jingle)
-(also listed on Wikipedia: {{< wp "Jingle (protocol)" >}}):
-
--   [XEP-0166: Jingle](http://www.xmpp.org/extensions/xep-0166.html)
-    defines a framework for initiating and managing peer-to-peer
-    multimedia sessions,
--   [XEPidiculously-0167: Jingle Audio via RTP
-    ](http://www.xmpp.org/extensions/xep-0167.html)
-    defines methods for negotiating Jingle audio sessions that use the Real-time
-    Transport Protocol (RTP) for media exchange.  provided by jitsi, pidgin.
--   [XEP-0234: Jingle File Transfer](http://xmpp.org/extensions/xep-0234.html)
--   [XEP-0176: Jingle ICE-UDP Transport Method
-    ](https://xmpp.org/extensions/xep-0176.html)
--   [XEP-0177: Jingle Raw UDP Transport Method
-    ](https://xmpp.org/extensions/xep-0177.html)
--   [XEP-0181: Jingle DTMF](https://xmpp.org/extensions/xep-0181.html)
--   [XEP-0272: Multiparty Jingle](https://xmpp.org/extensions/xep-0272.html)
-
-### BOSH {#bosh}
-[BOSH  “Bidirectional-streams Over Synchronous HTTP”
-](http://xmpp.org/about-xmpp/technology-overview/bosh/)
-is a technology for two-way communication over the HTTP. BOSH has been used mainly as a
-transport for traffic exchanged between Jabber/XMPP clients and servers. BOSH is more
-bandwidth-efficient and responsive than AJAX.  Bosh is supported by Xmpp servers and
-standalone XMPP connection managers;[Which BOSH Server Do You Need?
-](http://metajack.im/2008/09/08/which-bosh-server-do-you-need/)
-compare these two options.
-
-BOSH is defined in two XEP specifications:
--   [XEP-0124: Bidirectional-streams Over Synchronous HTTP
-    ](https://xmpp.org/extensions/xep-0124.html)
--   [XEP-0206: XMPP Over BOSH](https://xmpp.org/extensions/xep-0206.html)
-
-The following clients have support for BOSH
-{{< iref "#converse" "Converse" >}},
-{{< iref "#gajim" "Gajim" >}},
-{{< iref "#jwchat" "JWChat" >}},
-{{< iref "#jsxc" "jsxc" >}},
-{{< iref "#movim" "Movim" >}},
-{{< iref "#pidgin" "Pidgin" >}},
-{{< iref "#swift" "Swift" >}},
-{{< iref "#xmpp4js" "xmpp4js" >}} and Soashable,
-[Adium](https://adium.im/) _client for Mac OS X_.
-
-The following XMPP servers include built-in support for BOSH:
-{{< iref "#ejaberd" "ejabberd" >}},
-Jabber XCP, M-Link, MongooseIM,
-{{< iref "#openfire" "Openfire" >}},
-{{< iref "#prosody" "Prosody" >}},
-{{< iref "#tigasexmppserver" "Tigase" >}}.
-
-### PubSub
-[PubSub](https://xmpp.org/about/technology-overview.html#pubsub)
-is an extension for generic publish-subscribe functionality.It enables
-to publish information on nodes (topics) at a pubsub service.
-An event notification is then broadcasted to all
-entities that have subscribed to the node.
-
-PubSub is defined in several specifications:
--   [XEP-0060: Publish-Subscribe](https://xmpp.org/extensions/xep-0060.html)
--   [XEP-0163: Personal Eventing Protocol](https://xmpp.org/extensions/xep-0163.html)
--   [XEP-0248: PubSub Collection Nodes](https://xmpp.org/extensions/xep-0248.html)
-
-The {{< iref "#salutatoi" "Salut à Toi _Libervia_" >}} project has developed its own
-[XMPP PubSub service component (XEP-0060) - Sat Pubsub
-](https://salut-a-toi.org/documentation/sat%20pubsub). they have proposed
-[XMPP extensions for the Sat Pubsub protocol
-](https://salut-a-toi.org/__b/doc/sat/overview.html#xmpp-extension-protocols)
-
--   [XEP-0355](https://xmpp.org/extensions/xep-0355.html): Namespace Delegation -
-    allows the XMPP server to “delegate” some features management to a third party
-    service.
--   [XEP-0356](https://xmpp.org/extensions/xep-0356.html): Privileged Entity -
-    allows a “component” (which is more or less a server generic plugin) to gain some
-    privileged access to data such as presence information, roster or to send a message
-    like if it was sent by the server.
--   [XEP-0413](https://xmpp.org/extensions/xep-0413.html): Order-By -
-    to specify the sorting order in which a client wishes to retrieve some results.
-
-PubSub is also the base of the {{< iref "#movim" "Movim" >}} server component.
-
-### Server compliance test
-
--   [XMPP Compliance Tester](https://compliance.conversations.im/)
--   [IM Observatory](https://xmpp.net/) evaluate the security of servers.
-
-See also [How to choose you Jabber service?
-](https://mov.im/?blog/debacle@movim.eu/1646bb0e-8d18-4fb9-8b1a-46a1b40e0143).
-
-## Xmpp HowTo, comparison
--   [Secure Chat Guide](https://securechatguide.org/):
-    [Decentralized Apps](https://securechatguide.org/decentralizedapps.html),
-    [Centralized Apps](https://securechatguide.org/centralizedapps.html),
-    [Peer to Peer Apps](https://securechatguide.org/p2papps.html)
-    guides and detailed information on secure messaging apps for Android, iOS, Windows,
-    Mac and Linux.
--   [Better than WhatsApp — Free Software Foundation India
-    ](https://fsf.org.in/article/better-than-whatsapp/).
--   [Messagerie chiffrée. Pourquoi pas XMPP ? — echolib
-    ](https://www.echolib.space/utiliser-messagerie-chiffree-xmpp)
--   [Secure Messaging Apps Comparison | Privacy Matters
-    ](https://www.securemessagingapps.com/)
-    Aclear table of features, but many apps are missing; XMPP is not even mentioned.
 
 # Secure messaging
 Secure Messaging is an essential feature of IM, but these days it is a mainly used as a
@@ -496,7 +285,219 @@ You can find an _HOW TO_ in [Encrypted instant messaging with
 Jabber and GnuPG](https://box.matto.nl/gnupgjabber.html).
 
 
-# Xmpp public servers
+# XMPP
+## XMPP References
+-   Wikipedia: {{< wp "Xmpp"  "Extensible Messaging and Presence Protocol (Xmpp)" >}},
+    {{< wp "Comparison of instant messaging protocols" >}},
+    {{< wp "Comparison of instant messaging clients" >}},
+    {{< wp "Comparison of XMPP server software" >}},
+    {{< wp "Instant messaging" >}},
+    {{< wp "Jingle (protocol)"  "Jingle Protocol" >}},
+    {{< wp "SIMPLE_(instant_messaging_protocol)"  "Simple" >}}
+    an instant messaging (IM) and presence protocol suite based on SIP.
+-   [ArchWiki: List of instant messaging software
+    ](https://wiki.archlinux.org/index.php/List_of_applications/Internet#Instant_messaging)
+-   [XMPP Internet of Things](http://www.xmpp-iot.org/)
+    _The Internet of Things (or IoT) is what we get when we connect
+    Things, that are not operated by humans, to the Internet._
+    -   [XMPP.org introduction to Internet of Things
+        ](https://xmpp.org/uses/internet-of-things.html).
+-   <a name="jabberfr"></a>[jabber.fr](http://www.jabberfr.org/):
+    -   [Jabber.fr wiki (french)](http://wiki.jabberfr.org/)
+        with plenty of _french_ jabber documentation, but quite outdated.<br />
+    -   [Presence service](http://presence.jabberfr.org/)
+    -   [Passerelles](http://wiki.jabberfr.org/Passerelles) _these bridges are mainly
+        with non longer used or deprecated protocols._
+    -   [Pages de la Catégorie:Fonctionnalité Jabber
+        ](http://wiki.jabberfr.org/Cat%C3%A9gorie:Fonctionnalit%C3%A9_Jabber)
+    -   [MUC](http://wiki.jabberfr.org/MUC)
+    -   [Jwchat tutorial](http://wiki.jabberfr.org/JWChat)
+    -   [linuxFR - xmpp](http://linuxfr.org/sections/xmpp)
+-   The proprietary {{< wp "Yahoo! Messenger" >}} now closed was handled by many
+    open source client.
+-   XMPP is used in {{< wp "Distributed social network" >}} Wikipedia gives a
+    {{< wp "Comparison of software and protocols for distributed social networking" >}}
+-   [MucSearch](https://search.wensley.org.uk/) a conference web search service.
+-   {{< wp "SIMPLE_(instant_messaging_protocol)"  "SIMPLE" >}} is IM over sip,
+    ietf has [rfc 3428 SIP Extension for Instant Messaging
+    ](http://www.ietf.org/rfc/rfc3428.txt)
+
+## XMPP Specification
+[XMPP Standards Foundation](http://www.xmpp.org/ ) references all xmmp standards and
+extensions.
+
+
+-   [XMPP software : Clients Servers Libraries Projects](http://xmpp.org/software)
+
+[Technology Overview of XMPP](https://xmpp.org/about/technology-overview.html)
+present the specifications of XMPP.
+
+The core specification is defined in RFC:
+    [RFC 6120 - XMPP Protocol Core](https://tools.ietf.org/html/rfc6120),
+    [RFC 6121 - XMPP Instant Messaging and Presence](https://tools.ietf.org/html/rfc6121)
+    [RFC 7622 - XMPP Address Format](https://tools.ietf.org/html/rfc7622),
+    [RFC 7590 - Use of TLS in XMPP](https://tools.ietf.org/html/rfc7590).
+
+It is complemented by extensions whose full list is in
+the [table of XMPP extensions](https://xmpp.org/extensions/)
+
+
+These extensions can be divided in core extensions,
+{{< iref "#xmpp_muc" "MUC Multi user Chat" >}},
+{{< iref "#xmpp_jingle" "Jingle multimedia messaging" >}},
+{{< iref "#pubsub" "pubsub publish-subscribe functionality" >}},
+{{< iref "#bosh" "BOSH Bidirectional-streams Over Synchronous HTTP" >}}.
+
+And the extensions for secure messaging in {{< iref "#openpgp" "OpenPGP" >}},
+{{< iref "#omemo" "OMEMO" >}},
+{{< iref "#otr" "OTR" >}}.
+
+
+Core extensions can extend the RFCS, some core extensions are:
+-   [XEP-0280: Message Carbons](https://xmpp.org/extensions/xep-0280.html)
+    In order to keep all IM clients for a user engaged in a conversation, outbound
+    messages are carbon-copied to all interested resources. It allows to be easily
+    simultaneously connected from many clients with the same account.  It is provided by
+    most of the recent clients from this page.  _but pidgin need the plugin carbons_.
+-   [XEP-0313: Message Archive Management](https://xmpp.org/extensions/xep-0313.html)
+    and [XEP-0441: Message Archive Management Preferences
+    ](https://xmpp.org/extensions/xep-0441.html)
+    present in conversations, converse.js, gajim, xabber.
+-   [XEP-0357: Push Notifications](https://xmpp.org/extensions/xep-0357.html).
+    works with chatsecure, conversation,
+
+### MUC - Multi user Chat{#xmpp_muc}
+MUC brings IRC like  functionalities to XMPP, and allow multiple XMPP users to exchange
+messages in the context of a room or channel.
+
+It is described in
+[MUC overview -xmpp.org](https://xmpp.org/about/technology-overview.html#muc)
+Specification is in the following XEPs:
+-   [XEP-0045: Multi-User Chat](https://xmpp.org/extensions/xep-0045.html)
+-   [XEP-0249: Direct MUC Invitations](https://xmpp.org/extensions/xep-0249.html)
+-   [XEP-0272: Multiparty Jingle](https://xmpp.org/extensions/xep-0272.html)
+
+Most servers and Clients support MUC. The message encryption in MUC, is a more complex
+and is only implemented in few clients.
+
+### Jingle{#xmpp_jingle}
+<a name="jingle"></a>{{< wp "Jingle (protocol)"  "Jingle Protocol" >}}
+is an extension to XMPP which adds peer-to-peer (P2P) session
+control (signaling) for multimedia.  Interactions such as in voice
+over IP (VoIP) or videoconferencing communications, or also for
+p2p file transfer.  Jingle is supported by Xmpp software based on
+telepathy like empathy, minirc; software base on it like pidgin,
+Coccinella, Gajim, Macabber (file transfer only),
+Pidgin, Psi, Jabbin, Tapioca. It is also supported by telephony
+software like {{< wp "Yate_(telephony_engine)"  "Yate" >}} or
+{{< wp "Asterisk_(PBX)"  "Asterisk" >}}.
+
+It is defined in [several XEP documents
+](https://xmpp.org/about/technology-overview.html#jingle)
+(also listed on Wikipedia: {{< wp "Jingle (protocol)" >}}):
+
+-   [XEP-0166: Jingle](http://www.xmpp.org/extensions/xep-0166.html)
+    defines a framework for initiating and managing peer-to-peer
+    multimedia sessions,
+-   [XEPidiculously-0167: Jingle Audio via RTP
+    ](http://www.xmpp.org/extensions/xep-0167.html)
+    defines methods for negotiating Jingle audio sessions that use the Real-time
+    Transport Protocol (RTP) for media exchange.  provided by jitsi, pidgin.
+-   [XEP-0234: Jingle File Transfer](http://xmpp.org/extensions/xep-0234.html)
+-   [XEP-0176: Jingle ICE-UDP Transport Method
+    ](https://xmpp.org/extensions/xep-0176.html)
+-   [XEP-0177: Jingle Raw UDP Transport Method
+    ](https://xmpp.org/extensions/xep-0177.html)
+-   [XEP-0181: Jingle DTMF](https://xmpp.org/extensions/xep-0181.html)
+-   [XEP-0272: Multiparty Jingle](https://xmpp.org/extensions/xep-0272.html)
+
+### BOSH {#bosh}
+[BOSH  “Bidirectional-streams Over Synchronous HTTP”
+](http://xmpp.org/about-xmpp/technology-overview/bosh/)
+is a technology for two-way communication over the HTTP. BOSH has been used mainly as a
+transport for traffic exchanged between Jabber/XMPP clients and servers. BOSH is more
+bandwidth-efficient and responsive than AJAX.  Bosh is supported by Xmpp servers and
+standalone XMPP connection managers;[Which BOSH Server Do You Need?
+](http://metajack.im/2008/09/08/which-bosh-server-do-you-need/)
+compare these two options.
+
+BOSH is defined in two XEP specifications:
+-   [XEP-0124: Bidirectional-streams Over Synchronous HTTP
+    ](https://xmpp.org/extensions/xep-0124.html)
+-   [XEP-0206: XMPP Over BOSH](https://xmpp.org/extensions/xep-0206.html)
+
+The following clients have support for BOSH
+{{< iref "#converse" "Converse" >}},
+{{< iref "#gajim" "Gajim" >}},
+{{< iref "#jwchat" "JWChat" >}},
+{{< iref "#jsxc" "jsxc" >}},
+{{< iref "#movim" "Movim" >}},
+{{< iref "#pidgin" "Pidgin" >}},
+{{< iref "#swift" "Swift" >}},
+{{< iref "#xmpp4js" "xmpp4js" >}} and Soashable,
+[Adium](https://adium.im/) _client for Mac OS X_.
+
+The following XMPP servers include built-in support for BOSH:
+{{< iref "#ejaberd" "ejabberd" >}},
+Jabber XCP, M-Link, MongooseIM,
+{{< iref "#openfire" "Openfire" >}},
+{{< iref "#prosody" "Prosody" >}},
+{{< iref "#tigasexmppserver" "Tigase" >}}.
+
+### PubSub
+[PubSub](https://xmpp.org/about/technology-overview.html#pubsub)
+is an extension for generic publish-subscribe functionality.It enables
+to publish information on nodes (topics) at a pubsub service.
+An event notification is then broadcasted to all
+entities that have subscribed to the node.
+
+PubSub is defined in several specifications:
+-   [XEP-0060: Publish-Subscribe](https://xmpp.org/extensions/xep-0060.html)
+-   [XEP-0163: Personal Eventing Protocol](https://xmpp.org/extensions/xep-0163.html)
+-   [XEP-0248: PubSub Collection Nodes](https://xmpp.org/extensions/xep-0248.html)
+
+The {{< iref "#salutatoi" "Salut à Toi _Libervia_" >}} project has developed its own
+[XMPP PubSub service component (XEP-0060) - Sat Pubsub
+](https://salut-a-toi.org/documentation/sat%20pubsub). they have proposed
+[XMPP extensions for the Sat Pubsub protocol
+](https://salut-a-toi.org/__b/doc/sat/overview.html#xmpp-extension-protocols)
+
+-   [XEP-0355](https://xmpp.org/extensions/xep-0355.html): Namespace Delegation -
+    allows the XMPP server to “delegate” some features management to a third party
+    service.
+-   [XEP-0356](https://xmpp.org/extensions/xep-0356.html): Privileged Entity -
+    allows a “component” (which is more or less a server generic plugin) to gain some
+    privileged access to data such as presence information, roster or to send a message
+    like if it was sent by the server.
+-   [XEP-0413](https://xmpp.org/extensions/xep-0413.html): Order-By -
+    to specify the sorting order in which a client wishes to retrieve some results.
+
+PubSub is also the base of the {{< iref "#movim" "Movim" >}} server component.
+
+### Server compliance test
+
+-   [XMPP Compliance Tester](https://compliance.conversations.im/)
+-   [IM Observatory](https://xmpp.net/) evaluate the security of servers.
+
+See also [How to choose you Jabber service?
+](https://mov.im/?blog/debacle@movim.eu/1646bb0e-8d18-4fb9-8b1a-46a1b40e0143).
+
+## Xmpp HowTo, comparison
+-   [Secure Chat Guide](https://securechatguide.org/):
+    [Decentralized Apps](https://securechatguide.org/decentralizedapps.html),
+    [Centralized Apps](https://securechatguide.org/centralizedapps.html),
+    [Peer to Peer Apps](https://securechatguide.org/p2papps.html)
+    guides and detailed information on secure messaging apps for Android, iOS, Windows,
+    Mac and Linux.
+-   [Better than WhatsApp — Free Software Foundation India
+    ](https://fsf.org.in/article/better-than-whatsapp/).
+-   [Messagerie chiffrée. Pourquoi pas XMPP ? — echolib
+    ](https://www.echolib.space/utiliser-messagerie-chiffree-xmpp)
+-   [Secure Messaging Apps Comparison | Privacy Matters
+    ](https://www.securemessagingapps.com/)
+    Aclear table of features, but many apps are missing; XMPP is not even mentioned.
+
+## Xmpp public servers
 -   [xmpp.net Public XMPP Server Directory](https://xmpp.net/directory.php)
     gives a  list of jabber servers by country,
 -   [jabber.at: Public XMPP servers](https://list.jabber.at/) a larger list of servers.
@@ -508,7 +509,7 @@ Jabber and GnuPG](https://box.matto.nl/gnupgjabber.html).
 -   [Blog • How to choose you Jabber service?
     ](https://mov.im/?blog/debacle%40movim.eu/1646bb0e-8d18-4fb9-8b1a-46a1b40e0143)
 
-# Xmpp  console clients
+## Xmpp  console clients
 
 -   Wikipedia:
     {{< wp "Comparison of instant messaging clients" >}},
@@ -633,7 +634,7 @@ Jabber and GnuPG](https://box.matto.nl/gnupgjabber.html).
     (BSD Licence) is a golang XMPP client with  {{< iref "#otr" "OTR" >}}support.
     {{< iref "#coyim" "coy.im" >}} is a fork of _xmpp-client_.
 
-# Xmpp Graphical clients
+## Xmpp Graphical clients
 _I don't mention client with heavy desktop dependencies
 like_ gnome-jabber (gabber), gossip
 _(said to be lightweight but need libgnome and all bonobo framework)_ ...
@@ -808,103 +809,7 @@ _(said to be lightweight but need libgnome and all bonobo framework)_ ...
     -   [Tkabber contribs (3rd party plugins)
         ](https://chiselapp.com/user/sgolovan/repository/tkabber-contrib/).
 
-## Pidgin and Libpurple
-<a name="pidgin"></a>[Pidgin](http://pidgin.im/) (GPL)
-GTK2-based Instant Messaging (IM) application (50M res / 21
-shared).
-It uses {{< iref "#libpurple" "libpurple" >}} which ensure
-supports for AIM, Gadu-Gadu, Google Talk, iChat, ICQ, IRC, Jabber,
-{{< wp "Jingle (protocol)"  "Jingle" >}}, Lotus
-Sametime, MSN, Napster, SILC, Tlen.pl, Yahoo!,and Zephyr.
-
-To have a complete list of protocols look at
-[Pidgin Plugins list](https://pidgin.im/plugins/).
-
-Since version 2.6 pidgin support video and voice chat support over XMPP,
-i.e.  {{< wp "Jingle (protocol)"  "Jingle protocol" >}}.
-
-Pidgin is quite heavy, Pidgin without any extension is 46M res/24M shr.
-If you don't run gnome you can still compile it as long as you
-don't ask for evolution connectivity. *Pidgin was previously known
-as Gaim.*.  Pidgin is documented in:
-
--   [Pidgin Home](http://pidgin.im/)
--   [Pidgin wiki](http://developer.pidgin.im/wiki).
--   [Pidgin FAQ](https://pidgin.im/development/faq/)
--   [Voice and Video](https://pidgin.im/development/voice-and-video/)
--   {{< wp "/Pidgin_(instant_messaging_client)"  "Wikipedia: Pidgin" >}}
--   [ArchWiki: Pidgin](https://wiki.archlinux.org/index.php/Pidgin)
--   {{< wp "Pidgin_(software)"  "Wikipedia: Pidgin" >}}
--   <a name="finch"></a>**finch** is a curse client for pidgin,
-    finch allows to reuse your pidgin settings, and a great level
-    of compatibility with pidgin, but it is a heavy ncurses client
-    25M / 15M shared. It is in a separate Debian repository.
-
-### Libpurple {#libpurple}
-</a>[libpurple](https://developer.pidgin.im/wiki/WhatIsLibpurple)
-is a multi-protocol instant messaging library it supports AIM/ICQ,
-Yahoo!, MSN, IRC, Jabber/XMPP/Google Talk, Napster, Zephyr,
-Gadu-Gadu, Bonjour, Groupwise, Sametime, SIMPLE, MySpaceIM, and
-MXit, Facebook chat, Rocket.Chat, {{< iref "microblogging#mattermost" "Mattermost" >}},
-{{< iref "microblogging#matrix" "Matrix" >}}, Telegram, and more.
-
-_libpurple_ is part of {{< iref "#pidgin" "pidgin" >}} and
-used by
-{{< iref "#finch" "finch" >}},
-{{< iref "#minbif" "minbif" >}},
-{{< iref "#telepathy" "telepathy haze" >}} and through it
-by the telepathy clients,
-{{< iref "#spectrum" "Spectrum" >}},
-{{< iref "#bitlbee" "bitlbee-libpurple" >}}.
-
-### Pidgin/libpurple plugins {#pidgin_plugins}
-The [Pidgin Plugins list](https://pidgin.im/plugins/)
-includes numerous plugins to add features, support many protocols, ensure privacy.
-
-The [Additional protocols plugins](https://pidgin.im/plugins/?type=Protocol)
-list plugins, _some of them are obsolete_, this list includes:
-
--   Facebook messenger - [purple-facebook](https://github.com/dequis/purple-facebook).
--   Hangout - [purple-hangouts](https://github.com/EionRobb/purple-hangouts)
--   Instagram - [purple-instagram](https://github.com/EionRobb/purple-instagram)
--   Matrix - [purple-matrix](https://github.com/matrix-org/purple-matrix)
-    for {{< iref "microblogging#matrix" "Matrix" >}}.
--   Mattermost - [purple-mattermost](https://github.com/EionRobb/purple-mattermost)
-    connect to a {{< iref "microblogging#mattermost" "Mattermost" >}} server.
--   PulseSMS Android app - [purple-pulsesms](https://github.com/EionRobb/purple-pulsesms)
--   Rocketchat - [purple-rocketchat](https://github.com/EionRobb/purple-rocketchat)
-    for {{< iref "microblogging#rocketchat" "RocketChat" >}}.
--   Signal - [libpurple-signald](https://github.com/hoehermann/purple-signald)
-    Pidgin libpurple bridge for the {{< iref "#signald" "Signal Daemon - signald" >}}.
--   Slack - [slack-libpurple](https://github.com/dylex/slack-libpurple)
-    for access to {{< iref "microblogging#slack" "Slack" >}}
--   {{< iref "#telegram" "Telegram" >}} -
-    [telegram-purle plugin](https://github.com/majn/telegram-purple)
-    allow a bridge to {{< iref "#telegram" "Telegram" >}}
--   Tox - [Tox protocol plugin](https://github.com/EionRobb/tox-prpl) (GPL) for
-    {{< iref "#tox" "Tox protocol" >}}.
--   Whatsapp Web - [purple-gowhatsapp](https://github.com/hoehermann/purple-gowhatsapp/)
-    (GPL-3.0) Pidgin/libpurple plugin for WhatsApp __Web__.
-
-Among the
-[Security and privacy plugins](https://pidgin.im/plugins/?type=Security+and+Privacy).
--   [Pidgin encryption](http://pidgin-encrypt.sourceforge.net/),
-    transparently encrypts your instant messages with RSA encryption. _Obsolete__.
--   [GPG/OpenPGP Plugin for Pidgin
-    ](https://github.com/segler-alex/Pidgin-GPG/wiki)
-    works asynchronously and allows you to send an {{< iref "#openpgp" "GPG" >}}
-    encrypted message to peer even if she is offline.
-    (PGP does not allow {{< wp "Deniable authentication"  "deniability" >}}.)
-    _In Debian_.
--   [pidgin-OTR](https://bugs.otr.im/plugins/pidgin-otr) an
-    {{< iref "#otr" "OTR" >}} plugin for Pidgin _in Debian_.
-    See also [How to: Use OTR on Linux](https://ssd.eff.org/en/module/how-use-otr-linux)
-    by The Electronic Frontier Foundation.
--   [Lurch - OMEMO plugin for Pidgin](https://github.com/gkdr/lurch/)
-    for {{< iref "#omemo" "OMEMO" >}}. The Debian package is _purple-lurch_.
-    It is also used by {{< iref "#chatty" "Chatty" >}}.
-
-# Web clients
+## XMPP Web clients
 
 Web clients uses the {{< iref "#bosh" "Bosh Protocol" >}}.
 
@@ -1017,7 +922,7 @@ Whenever I'm on a foreign computer, a jabber client can be very useful.
     originally derived from
     [Soashable](http://soashable.sourceforge.net/)
 
-# Android clients
+## XMPP Android clients
 -   <a name="atalk"></a>[aTalk](https://cmeng-git.github.io/atalk/) (Apache License)
     is an android XMPP client with {< iref "#omemo" "OMEMO" >}} including OMEMO media
     file sharing and {{< iref "#otr" "OTR" >}}, and zrtp video call.
@@ -1060,7 +965,7 @@ Whenever I'm on a foreign computer, a jabber client can be very useful.
     But the new zom 2 version of འཛོམས་ is targeted to
     {{< iref "microblogging#matrix" "Matrix" >}} protocol.
 
-# Ios Clients
+## XMPP Ios Clients
 -   <a name="chatsecure"></a>[Chatsecure](https://chatsecure.org/) (GPL)
     is an Xmpp client for IOS supporting
     {{< iref "#otr" "OTR" >}} and
@@ -1083,13 +988,657 @@ Whenever I'm on a foreign computer, a jabber client can be very useful.
         ](https://docs.tigase.net/siskin-im/master-snapshot/Tigase_SiskinIM_Guide/html/)
     -   [Siskin IM - GitHub](https://github.com/tigase/siskin-im).
 
-# IRC to Xmpp gateways
-By IRC to Xmpp we mean here a software allowing an IRC Client to talk
-to remote Xmpp clients.
+## Xmpp servers software
+-   Wikipedia: {{< wp "Comparison of XMPP server software" >}} compare
+    RFC implementation and XEP implementation from each server software.
+-   [xmpp.org: Servers](http://xmpp.org/software/servers.html)
+-   [ArchWiki: xmpp servers
+    ](https://wiki.archlinux.org/index.php/List_of_applications/Internet#Servers)
 
--   [jatter](https://github.com/binfalse/jatter) (GPL)
-    is a java bot providing a  a Jabber-Twitter-bridge.
+-   [ejabberd](http://www.ejabberd.im/)
+    is an Erlang jabber server, looking at
+    [Xmpp.org Service page](http://xmpp.org/services/)
+    with Prosody they are the two most widely used server.
+-   [Jabberd2](http://jabberd2.org/)(GPL)
+    is a Xmpp server written in C. It is maintained by
+    [xiaoka](http://codex.xiaoka.com/wiki/)
+    which also maintain [Chrome.pl](http://www.chrome.pl/)
+    a polish XMPP/Jabber service with integrated e-mail accounts and
+    option to host own domain accounts.
+-   <a name=openfire"></a>[Openfire
+    ](http://www.igniterealtime.org/projects/openfire/index.jsp)
+    (Apache License) is a real time collaboration (RTC) XMPP server
+    written in Java, proposed by
+    [ignite realtime](http://igniterealtime.org/).
+    _Openfire_ provide a Debian package, the related client is
+    {{< iref "#spark" "Spark" >}}.
+    Openfire does not seem to be used by many public servers but
+    the french [ForumAnalogue](http://www.forumanalogue.fr/).
+    -   [Openfire Documentation
+        ](http://www.igniterealtime.org/projects/openfire/documentation.jsp).
+    -   [Openfire GitHub repo](https://github.com/igniterealtime/Openfire).
+-   <a name="prosody"></a>[Prosody](http://prosody.im/)
+    (MIT/X11 license) is a  Xmpp/Jabber server written in Lua.
+    with ejaberd they are the two most widely used server.
+    -   [ArchWiki: Prosody
+        ](https://wiki.archlinux.org/index.php/Prosody)
+    -   A french [prosody Tutorial
+        ](http://www.vanaryon.tk/2010/01/prosody-un-serveur-jabber-leger/)
+-   <a name="tigasexmppserver"></a>[Tigase Xmpp Server](https://tigase.net/xmpp-server)
+    (AGPL)
+    Is a java Xmpp web server.
+    It supports RFC 6120 - XMPP CORE and RFC 6121 - XMPP IM  along
+    with a [many extensions](http://www.tigase.net/server-features).
+    It is designed to run from very small machines, to standard
+    servers.
 
+    It is produced by  [Tigase Inc](https://tigase.net/), which also develop
+    [Tigase XMPP Client Apps](https://tigase.net/xmpp-clients)
+    {{< iref "#siskin" "Siskin" >}},  {{< iref "#stork" "Stork" >}} and _Beagle_.
+    -   [Tigase Server - GitHub](https://github.com/tigase/tigase-server).
+-   [IMSpector](http://www.imspector.org/wordpress/) (GPL)
+    is an Instant Messenger proxy written in C++ with monitoring,
+    blocking and content-filtering capabilities. It supports MSN,
+    Jabber/XMPP, AIM, ICQ, Yahoo, IRC and Gadu-Gadu.  IMSpector is
+    normally deployed on the network’s router. _It is in debian._
+
+
+## Xmpp Libraries
+### C or C++
+-   {{< iref "#libpurple" "Libpurple" >}}
+    is above with its main frontend {{< iref "#pidgin" "Pidgin" >}}.
+-   <a name="telepathy"></a>[Telepathy](http://telepathy.freedesktop.org/wiki/) is a
+    framework that provide communication as a desktop service by using a unified
+    [D-Bus](http://dbus.freedesktop.org/) API.
+
+    Telepathy provides protocol backends for Jabber/XMPP/Jingle, link-local XMPP, SIP,
+    Yahoo/AIM and IRC. It supports instant messaging, voice calls and video calls. The
+    gnome messaging clients are {{< iref "#empathy" "Empathy" >}} and
+    {{< iref "irc#polari" "Polary" >}}.
+    Telepathy and it's plugins are in Debian.
+
+    -   The [haze](https://telepathy.freedesktop.org/components/telepathy-haze/)
+        plugin is a Telepathy connection manager based on libpurple, this allows to
+        connect to all protocols supported by libpurple (Pidgin) including AIM, Windows
+        Live (MSN), Yahoo!, Gadu-Gadu, Groupwise and ICQ.
+    -   [rakia](https://telepathy.freedesktop.org/components/telepathy-rakia/)
+        is a SIP connection manager for Telepathy based on the
+        [SofiaSIP](http://sofia-sip.sourceforge.net/development.html)
+        stack.
+    -   [Gabble](https://telepathy.freedesktop.org/components/telepathy-gabble)
+        is a Jabber/XMPP connection manager for Telepathy, it handles Google Session and
+        Facebook Chat.
+    -   [Idle](https://telepathy.freedesktop.org/components/telepathy-idle)
+        is an IRC connection manager for the Telepathy.
+    -   [Morse](https://telepathy.freedesktop.org/components/telepathy-morse)
+        connection manager for {{< iref "#telegram" "Telegram" >}} network
+    -   [Nonsense](https://telepathy.freedesktop.org/components/telepathy-nonsense)
+        connection manager for the XMPP (Jabber) protocol, based on QXmpp
+    -   [Hanging](https://telepathy.freedesktop.org/components/telepathy-hanging)
+        connection manager for Hangouts
+
+
+
+### Python, Lua
+-   [jabberpy](http://jabberpy.sourceforge.net/)
+    python Xmpp library  _not maintained_.
+-   [pyxmpp2](https://github.com/Jajcus/pyxmpp2) (LGPL)
+    python Xmpp library  _based on libxml2 _,
+-   [Twisted Words](http://twistedmatrix.com/documents/current/words/)
+    (MIT License) python Xmpp library based on
+    {{< iref "python_libraries#twisted" "Twisted" >}}.
+-   [Verse](http://matthewwild.co.uk/projects/verse/home)
+    is a Jabber library in Lua.
+-   [Xmpp on Google App Engine
+    ](http://code.google.com/appengine/articles/using_xmpp.html)
+-   [xmpppy](http://xmpppy.sourceforge.net/) (GPL)
+    a python Xmpp library _aims to work with jabberd2_,
+
+### PHP
+-   [XmpPhp](http://code.google.com/p/xmpphp/)
+    is a Xmpp library, that supports TLS.
+
+### Javascript
+-   [Strophe](http://strophe.im/)
+    the library on which {{< iref "#converse" "Converse.js" >}}
+    is built
+-   [JSJaC - JavaScript Jabber Client Library
+    ](https://github.com/sstrigler/JSJaC) (GPL + LGPL +Mozilla )
+
+
+## Xmpp Bots
+-   Wikipedia: {{< wp "Internet bot" >}}
+-   [list of bots](http://xmppcomm.com/#!/page_jbots). _empty when
+    last consulted_.
+-   [jabber.fr: Robots](http://wiki.jabberfr.org/Robot).
+-   [Robopsychology - Jabber, XMPP & Chatbots
+    ](http://meta-guide.com/bots-agents-assistants/chatbots/jabber-xmpp-chatbots)
+    _outdated an unreliable list_.
+
+-   [Jabberbot](http://thp.io/2007/python-jabberbot/) (GPL)
+    is a simple framework for creating Jabber/XMPP bots and services
+    in Python.
+    -   [dvcs-autosync](http://mayrhofer.eu.org/dvcs-autosync)
+        an open source replacement for Dropbox, uses jabberbot to
+        synchronize remote directories with git.
+    -   [System status bot
+        ](http://www.uhoreg.ca/programming/jabber/systembot)
+        (public domain) use jabberbot to monitor system statistics, on
+        remote machines.
+-   [JabRSS](http://dev.cmeerw.org/jabrss/) (GPL)
+    is a simple RSS (RDF Site Summary) headline notification service
+    for Jabber.
+-   [rss2jabber](http://rss2jabber.berlios.de/)
+    is a PHP, MySQL application that gathers articles from RDF/RSS/Atom
+    feeds and sends them to an IM client.
+    It is available at `rss2jabber@jabber.fr`.
+-   [Talkfeed](http://code.google.com/p/talkfeed/) (Apache License)
+    is a tool to receive new posts from RSS and Atom feeds
+    directly in your Jabber client.
+    The application is
+    [hosted on Google App Engine](http://talkfeed.appspot.com)
+
+
+# Google Talk and Hangouts
+
+In 2013 Google closed Google Talk in favor of
+{{< wp "Google Hangout" >}} which uses  a proprietary protocol.
+
+Google [announced
+](https://blog.google/products/workspace/latest-google-hangouts-and-upgrade-google-chat/)
+that it will close hangout in 2021, it will be replaced by {{< wp "Google Meet" >}}
+and {{< wp "Google Chat" >}}.
+
+Google Chat is a product which is rerved to user of Google Worspace account (paid plan).
+
+In beginning 2021 Google meet can be used freely and it is announced that it will be
+also the case of Google Chat mid 2021, and the hangout accounts will be migrated to Chat.
+
+There are attempts to provide access to the Hangout proprietary
+protocol.
+
+-   [Hangup](https://github.com/tdryer/hangups) (MIT License)
+    is a third-party instant messaging client for Google Hangout written in python, it
+    is implemented by reverse-engineering the protocol.
+
+    It supports features like group messaging that aren't available in clients that
+    connect via XMPP.
+
+    There are many project using Hangup [see the project page
+    ](https://github.com/tdryer/hangups) among which many bots,
+    [hangups.el](https://github.com/jtamagnan/hangups.el) an Hangout client for emacs,
+    [pickups](https://github.com/mtomwing/pickups) an IRC to Hangout gateway,
+    [telepathy-hangups](https://github.com/davidedmundson/telepathy-hangups) telepathy
+    bindings for hangout,
+    [jabber-hangouts-transport](https://github.com/ZeWaren/jabber-hangouts-transport)
+    a XMPP transport/gateway for Google Hangouts.
+
+-   [purple-hangouts](https://github.com/EionRobb/purple-hangouts) is an hangout plugin
+    for libpurple
+
+# Tox Protocol {#tox}
+
+{{< wp "Tox_(protocol)"  "Tox" >}} (GPL)
+is a peer-to-peer instant messaging and video calling protocol that offers end-to-end
+encryption. All traffic over Tox is end-to-end encrypted, and provides
+{{< wp "authenticated encryption" >}} and {{< wp "forward secrecy" >}}. Tox clients aim
+to provide support for messaging, group messaging, voice and video calling, voice and
+video conferencing, typing indicators, message read-receipts, file sharing, profile
+encryption, and desktop sharing.
+
+-   [Tox Home](https://tox.chat/)
+-   [ArchWiki: Tox](https://wiki.archlinux.org/index.php/Tox).
+-   [GitHub: Tox core protocol](https://github.com/irungentoo/toxcore).
+
+There are many clients for Tox protocol you find a
+[comparison of their features in Tox wiki](https://wiki.tox.chat/clients#features):
+
+-   [Antidote](https://antidote.im/) (MIT License) for iOS.
+-   [Antox](https://wiki.tox.chat/clients/antox)
+    (Apache License) written in scala for Android.
+-   [gtox](https://github.com/KoKuToru/gTox) (GPL)
+    a C++/QT client for linux.
+-   Miranda Ng the windows messenger has a [plugin for Tox
+    ](http://forum.miranda-ng.org/index.php?topic=2502.0).
+-   [qtox](https://wiki.tox.chat/clients/qtox) (GPL)
+    a client in C++/QT for linux, windows, OS X. It has Debian
+    package in the project home.
+    -   [qtox GitHub repository](https://github.com/tux3/qTox).
+-   [RaTox](http://ratox.2f30.org/) (MIT Licence)
+    is a no-gui, Linux and BSD FIFO client that communicate
+    through named pipes. _unmaintained_
+-   [Ricin](https://ricin.im/) (GPL)
+    a VALA/GTK3 client for linux.It is in the Debian
+    repo of Tox.
+-   [Toxic](https://wiki.tox.chat/clients/toxic) (GPL)
+    a C/ncurses command-line Tox client for Linux, BSD, OS X.
+    It is in the Debian repo of Tox.
+-   [Toxygen](https://wiki.tox.chat/clients/toxygen) is a Linux, OSX
+    and Windoze Tox client written in Python3. It is in the Debian
+    repo of Tox.
+    -   [ToxygenGitHub repository
+        ](https://github.com/toxygen-project/toxygen)
+-   [tox-prpl](http://tox.dhs.org/) (GPL)
+    is a Tox Protocol Plugin For Pidgin / libpurple.
+-   *Toxy* for Windows
+-   [µTox](https://wiki.tox.chat/clients/utox) (GPL) It is in the
+    Debian repo of Tox.
+-   [XwinTox](https://wiki.tox.chat/clients/xwintox) (GPL or AGPL)
+    a C++/FLTK client for Linux and other unixes.
+
+
+# Cryptocat {#cryptocat}
+
+{{< wp "CryptocatCryptocat" >}} (GPL) is a javascript encrypted online chatting
+application created by {{< wp "Nadim Kobeissi" >}}.
+
+It uses end-to-end encrypted chat conversations, and allow to
+exchange one-to-one messages, encrypted files and audio/video
+recordings. All devices linked to Cryptocat accounts will receive
+messages, even when offline.
+
+For the transport layer encryption _Cryptocat_ uses the
+{{< iref "#omemo" "OMEMO Multi-End Message and Object Encryption" >}}.
+_Cryptocat_'s network uses XMPP over WebSockets and only relays encrypted messages and
+does not store any data. In addition to the Cryptocat client's end-to-end encryption
+protocol, client-server communication is protected by TLS. It provide
+{{< wp "forward secrecy" >}} of messages, that is protects past sessions against future
+compromises of secret keys or passwords.
+
+ _Cryptocat_ is available for Linux, windows, OSX.
+
+ {{< wp "Nadim Kobeissi" >}}
+ [answering to a request declared on 2016-04-28
+ ](https://github.com/cryptocat/cryptocat/issues/77)
+ «Cryptocat is no longer offered on mobile devices and will not be
+ offered on mobile devices in the forseeable future...»
+
+The main drawback of _Cryptocat_ is that even if it uses a combination of known open
+source protocols, you can not communicate with any other software and you can only
+encrypt messages between Cryptocat users, and use Cryptocat server..
+
+-   [Cryptocat Home](https://crypto.cat/)
+-   [Cryptocat Security](https://crypto.cat/security.html)
+-   [Cryptocat Help](https://crypto.cat/help.html)
+-   [Cryptocat GutHub repo](https://github.com/cryptocat/cryptocat)
+-   [Blog - Cryptocat, ou le piège du client magique
+    ](https://nl.movim.eu/?blog/edhelas@movim.eu/ebc3a98e-3a37-440f-8cb4-8de1fa7eed3b).
+
+# Keybase Chat{#keybase_chat}
+Is the {{<iref "encrypted_filesystems#keybase" "Keybase" >}} end-to-end encrypted chat.
+You can chat with other keybase users, you can chat with members of (one of) your team,
+organize chat by channels. Chat also support bots.
+-   [Keybase chat](https://book.keybase.io/chat).
+-   [Technical documentation for chat](https://book.keybase.io/docs/chat).
+-   [Keybase Managed Bots - GitHub](https://github.com/keybase/managed-bots).
+-   [technical documentation for bot development](https://book.keybase.io/docs/bots)
+
+# Retroshare {#retroshare}
+{{< wp "RetroShare" >}} (GPL) is a cross-platform decentralised
+{{< wp "Friend-to-Friend" >}} application that offers social networking and
+file sharing features. It uses Transport encryption with TLS, and
+authentication with PGP It offers secure chat, VoIP with video,
+multi-user chat, file search, file sharing file sharing, forums, link
+sharing, Retroshare mail.
+
+It is available on Windows, Linux, OS X, FreeBSD.  Retroshare is
+available for Linux (many distributions), Windows, Mac OS,
+Android. It is not in Debian but a Debian repository is provided.
+
+
+-   [RetroShare Home Page](http://retroshare.net)
+-   [Retroshare Documentation
+    ](https://retroshare.readthedocs.io/en/latest/)
+-   [Retroshare GitHub repo
+    ](https://github.com/RetroShare/RetroShare).
+-   [Retroshare Wiki
+    ](https://github.com/RetroShare/documentation/wiki)
+    seems partly replaced by the Documentation.
+-   [RetroShare development blog
+    ](https://retroshareteam.wordpress.com/).
+
+# Signal {#signal}
+{{< wp "Signal" >}} (GPL) is an encrypted voice calling and instant messaging
+application developed by {{< wp "Open Whisper Systems" >}} for Android and iOS
+taht uses end-to-end encryption to send instant messages, group
+messages, attachments and media messages. It uses a modified OTR
+protocol, however, without interopability with standard Xmpp networks.
+
+On Android, Signal can be used to send and receive unencrypted SMS
+messages in addition to the standard end-to-end encrypted Signal
+messages. Signal requires that the user has a phone number for
+verification not necessarily the same as on
+the device's SIM card; it can also be a VoIP number or a
+landline as long as the user can receive the verification code and
+have a separate device to set-up the software. A number can only
+be registered to one device at a time.
+
+Signal messages and calls are routed through Open Whisper Systems'
+servers (in more than 10 countries).
+
+All client-server communications are protected by TLS, but each
+message contains as metadata the phone number, which could, if
+disclosed, allow to know the time and recipient of call. Open
+Whisper Systems have asserted that their servers do not keep this
+metadata or any logs about who called who and when.
+
+__Signal Desktop__ is an  Electron  packaged app that links with the
+Signal-iOS or Signal-Android client.
+
+_Signal_ was previously called {{< wp "TextSecure" >}} in November 2015,
+_TextSecure_ was merged with an encrypted voice calling application
+called _RedPhone_ and was renamed as _Signal_.  The authors of _Signal_
+and _TexSecure_ _Whisper Systems_ partnered with _WhatsApp_ in
+November 2014 to encrypt users’ messages by default using their
+_TextSecure/Signal_ protocol.
+
+Since WhatsApps was sold to Facebook, {{< wp "Brian acton" >}}
+who co-founded WhatsApps with {{< wp "Jan Koum" >}}, gave $ 50,000,000 to launch
+the new [Signal fundation](https://signal.org/blog/signal-foundation/).
+
+-   [Signal Home](https://signal.org/)
+-   [Signal support](https://support.signal.org/hc/en-us):
+    [Getting Started on Android, iOS, and Desktop
+    ](https://support.signal.org/hc/en-us/categories/360000674771-Getting-Started),
+    [Signal Messenger Features
+    ](https://support.signal.org/hc/en-us/sections/360001602792-Signal-Messenger-Features),
+    [Security
+    ](https://support.signal.org/hc/en-us/categories/360000674811-Security),
+    [Troubleshooting FAQ
+    ](https://support.signal.org/hc/en-us/sections/360001602812-Troubleshooting-FAQ),
+    [General FAQ](https://support.signal.org/hc/en-us/sections/360001602832-General-FAQ).
+-   [Signal-Desktop GitHub repo
+    ](https://github.com/signalapp/Signal-Desktop)
+-   [EFF - Surveillance Self-Defense](https://ssd.eff.org/) :
+    [How to: Use Signal on iOS
+    ](https://ssd.eff.org/en/module/how-use-signal-ios),
+    [How to: Use Signal on Android
+    ](https://ssd.eff.org/en/module/how-use-signal-android).
+
+-   <a name=signald></a>[signald](https://gitlab.com/signald/signald) (GPL)
+    is a daemon that facilitates communication over Signal bu sending messages in the
+    signald protocol.
+-   [GitHub - thefinn93/signal-weechat](https://github.com/thefinn93/signal-weechat).
+    Weechat plugin using
+    <a class="iref" href="#signald" title="internal reference">signald</a>
+
+Some libraries are available to encapsulate the protocol, there is also a
+{{< iref "#libpurple" "libpurple" >}} plugin.
+
+## Signal-cli
+
+[signal-cli](https://github.com/AsamK/signal-cli) (GPLv3).
+is a commandline interface for libsignal-service-java. It supports registering, verifying,
+sending and receiving messages.
+
+To register you need a phone number where you can receive SMS or incoming
+calls. signal-cli is primarily intended to be used on servers to notify admins of
+important events. For this use-case, it has a dbus interface, that can be used to send
+messages from any programming language that has dbus bindings.
+
+Binaries are provided in the
+[releases repository](https://github.com/AsamK/signal-cli/releases/)
+they need JRE 11.
+
+-   [signal-cli Wiki](https://github.com/AsamK/signal-cli/wiki) contains the man page,
+    _Quck Start_, Dbus usage, examples, _Linking other devices_, trusted keys management.
+
+The _signal-cli_ client is used in many frontends listed [in the Wiki
+](https://github.com/AsamK/signal-cli/wiki#signal-cli-scriptsexamples), among them
+
+-   [signal-curses](https://github.com/jwoglom/signal-curses)
+    netcurses interface.
+-   [scli](https://github.com/isamert/scli/) (GPL-3.0)
+    python terminal user interface for signal using signal-cli.
+
+# Telegram {#telegram}
+{{< wp "Telegram (software)" "Telegram" >}} (GPL) is a cloud-based instant messaging
+service on Android, iOS, Windows Phone, Ubuntu Touch and Windows, OS X, Linux. Users can
+send with optional end-to-end encryption messages, photos, videos, stickers
+_high-definition emoji_ and any file.
+
+Accounts are tied to telephone numbers and are verified by SMS or phone call.
+
+Default messages are cloud-based and can be accessed on any of the user's connected
+devices. All data is stored heavily encrypted and the encryption keys in each case are
+stored in several other DCs in different jurisdictions. This way local engineers or
+physical intruders cannot get access to user data
+
+Messages can also be sent with client-to-client encryption in secret chats.  Messages
+sent within a secret chat can be accessed only on one sender and one reiver device, they
+can optionally self-destruct.
+
+There are some critisisms to the [Telegram security
+](https://en.wikipedia.org/wiki/Telegram_(software)#Security)
+
+-   [Telegram - ArchWiki](https://wiki.archlinux.org/title/Telegram).
+-   Official Telegram applications are provided for IOS, Android, and other mobile
+    applications.
+-   The [Desktop client](https://desktop.telegram.org/) run windows and Linux and OSX.
+    -   [tdesktop - GitHub](https://github.com/telegramdesktop/tdesktop) (GPL-3.0)
+-   [telega.el](https://github.com/zevlg/telega.el) (GPL-3.0)
+    Emacs telegram client.
+-   [plugin for Chrome](https://chrome.google.com/webstore/detail/telegram),
+-   [ysheng/tg: telegram-cli](https://github.com/vysheng/tg) (GPL-2.0)
+    a CLI for linux.
+    [![packaging](https://repology.org/badge/tiny-repos/telegram-cli.svg?header=packages)
+    ](https://repology.org/project/telegram-cli/versions).
+
+    The repository has no commit since 2016, there are many forks, one of the most
+    active is [kernorb-contrib/tg](https://github.com/kenorb-contrib/tg).
+-   [paul-nameless/tg](https://github.com/paul-nameless/tg) ( Unlicense license )
+    a Python terminal telegram client. *Homonym but unrelated to ysheng/tg*.
+-   [nchat](https://github.com/d99kris/nchat)  (MIT license)
+    a c++ terminal-based Telegram / WhatsApp client for Linux and macOS.
+-   [telegram-send](https://github.com/rahiel/telegram-send) (GPL-3.0)
+    a python CLI Send messages and files over Telegram from the command-line.
+    [![packaging](https://repology.org/badge/tiny-repos/telegram-send.svg?header=packages)
+    ](https://repology.org/project/telegram-send/versions).
+-   Third party
+    [firefox extension](https://addons.mozilla.org/en-US/firefox/addon/telegram-web/).
+-   The older official web browser interface [Telegram Web](https://web.telegram.org/),
+    is updated in two new web interfaces
+    [Telegram Web K](https://web.telegram.org/k/) which is a rewrite in Typescript of
+    the original Webogram client,
+    and [Telegram Web A](https://web.telegram.org/a/) a lighter new client in Ajax based
+    on *Teact* and *Gramjs*.
+    -   [GitHub repository Webogram](https://github.com/zhukov/webogram) (GPL-3.0).
+        archived since october 2023.
+    -   [tweb: Telegram Web K](https://github.com/morethanwords/tweb) (GPL-3.0).
+    -   [telegram-tt: Telegram Web A](https://github.com/Ajaxy/telegram-tt) (GPL-3.0).
+
+There are bridges to IRC with [teleirc](https://github.com/FruitieX/teleirc)
+and  multiprotocol bridges including IRC and XMPP, using
+{{< iref "#matterbridge" "Matterbrige" >}} or {{< iref "#libpurple"  "libpurple" >}}.
+
+
+# Whatsapp {#whatsapp}
+{{< wp "WhatsApp" >}} __proprietary__ cross-platform instant messaging client for
+smartphones.  It uses the Internet to send text messages, documents, images, video, user
+location and audio media messages to other users using standard cellular mobile numbers.
+_WhatsApp_ has been acquired by Facebook in 2014.
+
+There are applications for all kind of mobile phone systems, WhatsApp Web is a a client
+ used through a web browser by syncing with the mobile device's connection.
+
+A Pidgin plug-in called whatsapp-purple aimed to XMPP interoperability was blocked by
+whatsapp by blocking the phone itself that used this application.
+
+_WhatsApp_ uses a customized version of XMPP; Multimedia messages are sent by uploading
+the image, audio or video to be sent to an HTTP server and then sending a link to the
+content, all messages are first stored on _WhatsApp_ servers then poll the receiver to
+ask an ack, when the message is delivered it is dropped, there is a miximum time of 30
+days for delivery.
+
+_Whatsapp_ has shown [many security breaches
+](https://en.wikipedia.org/wiki/WhatsApp#Security) even since the
+adoption _but unpublished_ of encryption.
+
+As well _Whatsapp_ as displayed
+[many privacy problems ](https://en.wikipedia.org/wiki/WhatsApp#Privacy). In February
+2015, a Dutch university studen proved that anyone could track a _WhatsApp_ user's
+status and profile pictures, privacy settings or status messages regardless of their
+privacy settings.
+
+Sinxe _Whatsapps_ was acquired by Facebook it is sharing data with
+the rest of Facebook’s services. Look at
+[Data transfer from WHATSAPP to FACEBOOK: CNIL publicly serves formal notice for lack of legal basis
+](https://www.cnil.fr/en/data-transfer-whatsapp-facebook-cnil-publicly-serves-formal-notice-lack-legal-basis)
+_the CNIL is an independent administrative authority that exercises its functions with
+accordance to the French Data Protection Act_.
+
+if you have to use it read the
+{{< iref "#eff_whatsapp" "following guides of the Electronic Frontier Foundation" >}}.
+
+There are many opensource secure alternatives to _WhatsApp_ like
+all the {{< iref "#otr" "OTR" >}} and
+{{< iref "#omemo" "OMEMO" >}}
+clients and if you want some mere extension, at the price of
+loosing the interoperability,
+{{< iref "#cryptocat" "Cryptocat" >}},
+{{< iref "#signal" "Signal" >}},
+and
+{{< iref "#telegram" "Telegram" >}}.
+
+-   [WhatsApp - ArchWiki](https://wiki.archlinux.org/title/WhatsApp).
+-   <a name="eff_whatsapp"></a>
+    [Electronic Frontier Foundation (EFF)](https://www.eff.org/) guide
+    [Surveillance Self-Defense (SSD) HowTo
+    ](https://ssd.eff.org/) :
+    : [How to: Use WhatsApp on Android
+    ](https://ssd.eff.org/en/module/how-use-whatsapp-android),
+    [How to: Use WhatsApp on iOS
+    ](https://ssd.eff.org/en/module/how-use-whatsapp-ios).
+    The EFF [don't recommend WhatsApp for secure communications
+    ](https://www.eff.org/deeplinks/2016/10/where-whatsapp-went-wrong-effs-four-biggest-security-concerns)
+-   <a name="yowsup"</a>[Yowsup](https://github.com/tgalal/yowsup) (GPL-3.0)
+    a python library that enables you build application which use WhatsApp service.
+
+    _It seems that WhatsApp now detect Yowsup and  ban  your number, so don't use it
+        until they find a workaround_.
+
+    Yowsup allows you to login and use the WhatsApp service, providing encryption of
+    messages. This program can be used for multiple purposes as to send message to
+    phones, receive messages from network servers or appliances, notifying about issues,
+    via direct command or by special agents.
+
+    YowSup is no longer developped since 2021, and has been dropped by many
+    distributions, in 2024 it seems obsolete.
+-   {{< iref "#franz5" "Franz5" >}} supports _Whatsapp_.
+-   {{< iref "#libpurple" "libpurple" >}} has a
+    {{< iref "#pidgin_plugins" "plugin" >}} for WhatsApp.
+-   [whatsapp-for-linux](https://github.com/eneshecan/whatsapp-for-linux) (GPL-3.0)
+    An unofficial WhatsApp desktop application for Linux.written in C++ with gtkmm and
+    WebKitGtk.
+
+    [![packaging](https://repology.org/badge/tiny-repos/whatsapp-for-linux.svg?header=packages)
+    ](https://repology.org/project/whatsapp-for-linux/versions).
+    also available on SnapStore and FlatHub, a Debian package is available in the GitHub
+    releases.
+-   [nchat](https://github.com/d99kris/nchat) (MIT license)
+    a c++ terminal-based Telegram / WhatsApp client for Linux and macOS.
+
+# Other secure messengers
+-   <a name="fish"></a>FiSH is an IRC plugin providing {{< wp "Blowfish" >}}.
+    encryption to IRC chat. It is an old protocol aimed to IRC, which was
+    [proposed in 2009
+    ](http://blog.bjrn.se/2009/01/proposal-for-better-irc-encryption.html)
+    and never adopted in a RFC.
+    You can find it in
+    {{< iref "irc#irssi" "irssi" >}}, [FISHLIM
+    ](http://fishlim.kodafritt.se/) for
+    {{< iref "irc#hexchat" "HexChat" >}} or
+    {{< iref "irc#xchat" "XChat" >}},
+    {{< iref "irc#weechat" "WeeChat" >}},
+    the python package [pyIRCFiSH
+    ](https://pypi.python.org/pypi/pyIRCFiSH/),
+    the android
+    IRC client [AndroIRC](http://wiki.androirc.com/start).
+    It is also available in the windows IRC client _mirc_ through a
+    plugin.
+-   [surespot](https://www.surespot.me/)
+    is an encrypted messenger for Android and IOS, the Gihub repo has also a javascript
+    node server. _Surespot_ uses 256 bit AES-GCM encryption using keys created with 521
+    bit ECDH your key is not stored on the servers, and support voice messages, emoji,
+    pictures, multiple identities, multiple devices, authentication.
+
+    As many encryption software, one of its drawback is to allow only communication with
+    people holding the same software. One other havoc is the lack of perfect of forward
+    security.
+-   [Scuttlebut](https://scuttlebutt.nz/) is a p2p protocol; which allows you to send
+    messages, and share posts. It also works offline.
+
+# Multi Protocol Bridges {#bridges}
+## Libpurple {#libpurple}
+</a>[libpurple](https://developer.pidgin.im/wiki/WhatIsLibpurple)
+is a multi-protocol instant messaging library it supports AIM/ICQ,
+Yahoo!, MSN, IRC, Jabber/XMPP/Google Talk, Napster, Zephyr,
+Gadu-Gadu, Bonjour, Groupwise, Sametime, SIMPLE, MySpaceIM, and
+MXit, Facebook chat, Rocket.Chat, {{< iref "microblogging#mattermost" "Mattermost" >}},
+{{< iref "microblogging#matrix" "Matrix" >}}, Telegram, and more.
+
+_libpurple_ is part of {{< iref "#pidgin" "pidgin" >}} and
+used by
+{{< iref "#finch" "finch" >}},
+{{< iref "#minbif" "minbif" >}},
+{{< iref "#telepathy" "telepathy haze" >}} and through it
+by the telepathy clients,
+{{< iref "#spectrum" "Spectrum" >}},
+{{< iref "#bitlbee" "bitlbee-libpurple" >}}.
+
+## Pidgin/libpurple plugins {#pidgin_plugins}
+The [Pidgin Plugins list](https://pidgin.im/plugins/)
+includes numerous plugins to add features, support many protocols, ensure privacy.
+
+The [Additional protocols plugins](https://pidgin.im/plugins/?type=Protocol)
+list plugins, _some of them are obsolete_, this list includes:
+
+-   Facebook messenger - [purple-facebook](https://github.com/dequis/purple-facebook).
+-   Hangout - [purple-hangouts](https://github.com/EionRobb/purple-hangouts)
+-   Instagram - [purple-instagram](https://github.com/EionRobb/purple-instagram)
+-   Matrix - [purple-matrix](https://github.com/matrix-org/purple-matrix)
+    for {{< iref "microblogging#matrix" "Matrix" >}}.
+-   Mattermost - [purple-mattermost](https://github.com/EionRobb/purple-mattermost)
+    connect to a {{< iref "microblogging#mattermost" "Mattermost" >}} server.
+-   PulseSMS Android app - [purple-pulsesms](https://github.com/EionRobb/purple-pulsesms)
+-   Rocketchat - [purple-rocketchat](https://github.com/EionRobb/purple-rocketchat)
+    for {{< iref "microblogging#rocketchat" "RocketChat" >}}.
+-   Signal - [libpurple-signald](https://github.com/hoehermann/purple-signald)
+    Pidgin libpurple bridge for the {{< iref "#signald" "Signal Daemon - signald" >}}.
+-   Slack - [slack-libpurple](https://github.com/dylex/slack-libpurple)
+    for access to {{< iref "microblogging#slack" "Slack" >}}
+-   {{< iref "#telegram" "Telegram" >}} -
+    [telegram-purle plugin](https://github.com/majn/telegram-purple)
+    allow a bridge to {{< iref "#telegram" "Telegram" >}}
+-   Tox - [Tox protocol plugin](https://github.com/EionRobb/tox-prpl) (GPL) for
+    {{< iref "#tox" "Tox protocol" >}}.
+-   Whatsapp Web - [purple-gowhatsapp](https://github.com/hoehermann/purple-gowhatsapp/)
+    (GPL-3.0) Pidgin/libpurple plugin for WhatsApp __Web__.
+
+Among the
+[Security and privacy plugins](https://pidgin.im/plugins/?type=Security+and+Privacy).
+-   [Pidgin encryption](http://pidgin-encrypt.sourceforge.net/),
+    transparently encrypts your instant messages with RSA encryption. _Obsolete__.
+-   [GPG/OpenPGP Plugin for Pidgin
+    ](https://github.com/segler-alex/Pidgin-GPG/wiki)
+    works asynchronously and allows you to send an {{< iref "#openpgp" "GPG" >}}
+    encrypted message to peer even if she is offline.
+    (PGP does not allow {{< wp "Deniable authentication"  "deniability" >}}.)
+    _In Debian_.
+-   [pidgin-OTR](https://bugs.otr.im/plugins/pidgin-otr) an
+    {{< iref "#otr" "OTR" >}} plugin for Pidgin _in Debian_.
+    See also [How to: Use OTR on Linux](https://ssd.eff.org/en/module/how-use-otr-linux)
+    by The Electronic Frontier Foundation.
+-   [Lurch - OMEMO plugin for Pidgin](https://github.com/gkdr/lurch/)
+    for {{< iref "#omemo" "OMEMO" >}}. The Debian package is _purple-lurch_.
+    It is also used by {{< iref "#chatty" "Chatty" >}}.
+
+
+<!-- Local Variables: -->
+<!-- mode: markdown -->
+<!-- ispell-local-dictionary: "english" -->
+<!-- eval: (org-link-minor-mode 1) -->
+<!-- End: -->
 
 ## Bitlbee {#bitlbee}
 
@@ -1194,194 +1743,10 @@ are available:
 The repository offers an apt repo with source deb packages, and a Docker image.
 -   [Spectrum2 GitHub repository](https://github.com/hanzz/spectrum2)
 
-# Xmpp servers software
--   Wikipedia: {{< wp "Comparison of XMPP server software" >}} compare
-    RFC implementation and XEP implementation from each server software.
--   [xmpp.org: Servers](http://xmpp.org/software/servers.html)
--   [ArchWiki: xmpp servers
-    ](https://wiki.archlinux.org/index.php/List_of_applications/Internet#Servers)
+## Misc gateways
+-   [jatter](https://github.com/binfalse/jatter) (GPL)
+    is a java bot providing a  a Jabber-Twitter-bridge.
 
--   [ejabberd](http://www.ejabberd.im/)
-    is an Erlang jabber server, looking at
-    [Xmpp.org Service page](http://xmpp.org/services/)
-    with Prosody they are the two most widely used server.
--   [Jabberd2](http://jabberd2.org/)(GPL)
-    is a Xmpp server written in C. It is maintained by
-    [xiaoka](http://codex.xiaoka.com/wiki/)
-    which also maintain [Chrome.pl](http://www.chrome.pl/)
-    a polish XMPP/Jabber service with integrated e-mail accounts and
-    option to host own domain accounts.
--   <a name=openfire"></a>[Openfire
-    ](http://www.igniterealtime.org/projects/openfire/index.jsp)
-    (Apache License) is a real time collaboration (RTC) XMPP server
-    written in Java, proposed by
-    [ignite realtime](http://igniterealtime.org/).
-    _Openfire_ provide a Debian package, the related client is
-    {{< iref "#spark" "Spark" >}}.
-    Openfire does not seem to be used by many public servers but
-    the french [ForumAnalogue](http://www.forumanalogue.fr/).
-    -   [Openfire Documentation
-        ](http://www.igniterealtime.org/projects/openfire/documentation.jsp).
-    -   [Openfire GitHub repo](https://github.com/igniterealtime/Openfire).
--   <a name="prosody"></a>[Prosody](http://prosody.im/)
-    (MIT/X11 license) is a  Xmpp/Jabber server written in Lua.
-    with ejaberd they are the two most widely used server.
-    -   [ArchWiki: Prosody
-        ](https://wiki.archlinux.org/index.php/Prosody)
-    -   A french [prosody Tutorial
-        ](http://www.vanaryon.tk/2010/01/prosody-un-serveur-jabber-leger/)
--   <a name="tigasexmppserver"></a>[Tigase Xmpp Server](https://tigase.net/xmpp-server)
-    (AGPL)
-    Is a java Xmpp web server.
-    It supports RFC 6120 - XMPP CORE and RFC 6121 - XMPP IM  along
-    with a [many extensions](http://www.tigase.net/server-features).
-    It is designed to run from very small machines, to standard
-    servers.
-
-    It is produced by  [Tigase Inc](https://tigase.net/), which also develop
-    [Tigase XMPP Client Apps](https://tigase.net/xmpp-clients)
-    {{< iref "#siskin" "Siskin" >}},  {{< iref "#stork" "Stork" >}} and _Beagle_.
-    -   [Tigase Server - GitHub](https://github.com/tigase/tigase-server).
--   [IMSpector](http://www.imspector.org/wordpress/) (GPL)
-    is an Instant Messenger proxy written in C++ with monitoring,
-    blocking and content-filtering capabilities. It supports MSN,
-    Jabber/XMPP, AIM, ICQ, Yahoo, IRC and Gadu-Gadu.  IMSpector is
-    normally deployed on the network’s router. _It is in debian._
-
-
-# Xmpp Libraries
-## C or C++
--   {{< iref "#libpurple" "Libpurple" >}}
-    is above with its main frontend {{< iref "#pidgin" "Pidgin" >}}.
--   <a name="telepathy"></a>[Telepathy](http://telepathy.freedesktop.org/wiki/) is a
-    framework that provide communication as a desktop service by using a unified
-    [D-Bus](http://dbus.freedesktop.org/) API.
-
-    Telepathy provides protocol backends for Jabber/XMPP/Jingle, link-local XMPP, SIP,
-    Yahoo/AIM and IRC. It supports instant messaging, voice calls and video calls. The
-    gnome messaging clients are {{< iref "#empathy" "Empathy" >}} and
-    {{< iref "irc#polari" "Polary" >}}.
-    Telepathy and it's plugins are in Debian.
-
-    -   The [haze](https://telepathy.freedesktop.org/components/telepathy-haze/)
-        plugin is a Telepathy connection manager based on libpurple, this allows to
-        connect to all protocols supported by libpurple (Pidgin) including AIM, Windows
-        Live (MSN), Yahoo!, Gadu-Gadu, Groupwise and ICQ.
-    -   [rakia](https://telepathy.freedesktop.org/components/telepathy-rakia/)
-        is a SIP connection manager for Telepathy based on the
-        [SofiaSIP](http://sofia-sip.sourceforge.net/development.html)
-        stack.
-    -   [Gabble](https://telepathy.freedesktop.org/components/telepathy-gabble)
-        is a Jabber/XMPP connection manager for Telepathy, it handles Google Session and
-        Facebook Chat.
-    -   [Idle](https://telepathy.freedesktop.org/components/telepathy-idle)
-        is an IRC connection manager for the Telepathy.
-    -   [Morse](https://telepathy.freedesktop.org/components/telepathy-morse)
-        connection manager for {{< iref "#telegram" "Telegram" >}} network
-    -   [Nonsense](https://telepathy.freedesktop.org/components/telepathy-nonsense)
-        connection manager for the XMPP (Jabber) protocol, based on QXmpp
-    -   [Hanging](https://telepathy.freedesktop.org/components/telepathy-hanging)
-        connection manager for Hangouts
-
-
-
-## Python, Lua
--   [jabberpy](http://jabberpy.sourceforge.net/)
-    python Xmpp library  _not maintained_.
--   [pyxmpp2](https://github.com/Jajcus/pyxmpp2) (LGPL)
-    python Xmpp library  _based on libxml2 _,
--   [Twisted Words](http://twistedmatrix.com/documents/current/words/)
-    (MIT License) python Xmpp library based on
-    {{< iref "python_libraries#twisted" "Twisted" >}}.
--   [Verse](http://matthewwild.co.uk/projects/verse/home)
-    is a Jabber library in Lua.
--   [Xmpp on Google App Engine
-    ](http://code.google.com/appengine/articles/using_xmpp.html)
--   [xmpppy](http://xmpppy.sourceforge.net/) (GPL)
-    a python Xmpp library _aims to work with jabberd2_,
-
-## PHP
--   [XmpPhp](http://code.google.com/p/xmpphp/)
-    is a Xmpp library, that supports TLS.
-
-## Javascript
--   [Strophe](http://strophe.im/)
-    the library on which {{< iref "#converse" "Converse.js" >}}
-    is built
--   [JSJaC - JavaScript Jabber Client Library
-    ](https://github.com/sstrigler/JSJaC) (GPL + LGPL +Mozilla )
-
-
-# Xmpp Bots
--   Wikipedia: {{< wp "Internet bot" >}}
--   [list of bots](http://xmppcomm.com/#!/page_jbots). _empty when
-    last consulted_.
--   [jabber.fr: Robots](http://wiki.jabberfr.org/Robot).
--   [Robopsychology - Jabber, XMPP & Chatbots
-    ](http://meta-guide.com/bots-agents-assistants/chatbots/jabber-xmpp-chatbots)
-    _outdated an unreliable list_.
-
--   [Jabberbot](http://thp.io/2007/python-jabberbot/) (GPL)
-    is a simple framework for creating Jabber/XMPP bots and services
-    in Python.
-    -   [dvcs-autosync](http://mayrhofer.eu.org/dvcs-autosync)
-        an open source replacement for Dropbox, uses jabberbot to
-        synchronize remote directories with git.
-    -   [System status bot
-        ](http://www.uhoreg.ca/programming/jabber/systembot)
-        (public domain) use jabberbot to monitor system statistics, on
-        remote machines.
--   [JabRSS](http://dev.cmeerw.org/jabrss/) (GPL)
-    is a simple RSS (RDF Site Summary) headline notification service
-    for Jabber.
--   [rss2jabber](http://rss2jabber.berlios.de/)
-    is a PHP, MySQL application that gathers articles from RDF/RSS/Atom
-    feeds and sends them to an IM client.
-    It is available at `rss2jabber@jabber.fr`.
--   [Talkfeed](http://code.google.com/p/talkfeed/) (Apache License)
-    is a tool to receive new posts from RSS and Atom feeds
-    directly in your Jabber client.
-    The application is
-    [hosted on Google App Engine](http://talkfeed.appspot.com)
-
-
-
-# Google Talk and Hangouts
-
-In 2013 Google closed Google Talk in favor of
-{{< wp "Google Hangout" >}} which uses  a proprietary protocol.
-
-Google [announced
-](https://blog.google/products/workspace/latest-google-hangouts-and-upgrade-google-chat/)
-that it will close hangout in 2021, it will be replaced by {{< wp "Google Meet" >}}
-and {{< wp "Google Chat" >}}.
-
-Google Chat is a product which is rerved to user of Google Worspace account (paid plan).
-
-In beginning 2021 Google meet can be used freely and it is announced that it will be
-also the case of Google Chat mid 2021, and the hangout accounts will be migrated to Chat.
-
-There are attempts to provide access to the Hangout proprietary
-protocol.
-
--   [Hangup](https://github.com/tdryer/hangups) (MIT License)
-    is a third-party instant messaging client for Google Hangout written in python, it
-    is implemented by reverse-engineering the protocol.
-
-    It supports features like group messaging that aren't available in clients that
-    connect via XMPP.
-
-    There are many project using Hangup [see the project page
-    ](https://github.com/tdryer/hangups) among which many bots,
-    [hangups.el](https://github.com/jtamagnan/hangups.el) an Hangout client for emacs,
-    [pickups](https://github.com/mtomwing/pickups) an IRC to Hangout gateway,
-    [telepathy-hangups](https://github.com/davidedmundson/telepathy-hangups) telepathy
-    bindings for hangout,
-    [jabber-hangouts-transport](https://github.com/ZeWaren/jabber-hangouts-transport)
-    a XMPP transport/gateway for Google Hangouts.
-
--   [purple-hangouts](https://github.com/EionRobb/purple-hangouts) is an hangout plugin
-    for libpurple
 
 # Multiprotocols clients
 
@@ -1420,406 +1785,34 @@ protocol.
     -   [Franz 5 xmpp plugin
         ](https://github.com/alexander-schranz/franz-xmpp-client)
 
-
-# Other secure messaging clients
-
-## Other secure protocols
-
--   <a name="fish"></a>FiSH is an IRC plugin providing {{< wp "Blowfish" >}}.
-    encryption to IRC chat. It is an old protocol aimed to IRC, which was
-    [proposed in 2009
-    ](http://blog.bjrn.se/2009/01/proposal-for-better-irc-encryption.html)
-    and never adopted in a RFC.
-    You can find it in
-    {{< iref "irc#irssi" "irssi" >}}, [FISHLIM
-    ](http://fishlim.kodafritt.se/) for
-    {{< iref "irc#hexchat" "HexChat" >}} or
-    {{< iref "irc#xchat" "XChat" >}},
-    {{< iref "irc#weechat" "WeeChat" >}},
-    the python package [pyIRCFiSH
-    ](https://pypi.python.org/pypi/pyIRCFiSH/),
-    the android
-    IRC client [AndroIRC](http://wiki.androirc.com/start).
-    It is also available in the windows IRC client _mirc_ through a
-    plugin.
-
-## Tox Protocol {#tox}
-
-{{< wp "Tox_(protocol)"  "Tox" >}} (GPL)
-is a peer-to-peer instant messaging and video calling protocol that offers end-to-end
-encryption. All traffic over Tox is end-to-end encrypted, and provides
-{{< wp "authenticated encryption" >}} and {{< wp "forward secrecy" >}}. Tox clients aim
-to provide support for messaging, group messaging, voice and video calling, voice and
-video conferencing, typing indicators, message read-receipts, file sharing, profile
-encryption, and desktop sharing.
-
--   [Tox Home](https://tox.chat/)
--   [ArchWiki: Tox](https://wiki.archlinux.org/index.php/Tox).
--   [GitHub: Tox core protocol](https://github.com/irungentoo/toxcore).
-
-There are many clients for Tox protocol you find a
-[comparison of their features in Tox wiki](https://wiki.tox.chat/clients#features):
-
--   [Antidote](https://antidote.im/) (MIT License) for iOS.
--   [Antox](https://wiki.tox.chat/clients/antox)
-    (Apache License) written in scala for Android.
--   [gtox](https://github.com/KoKuToru/gTox) (GPL)
-    a C++/QT client for linux.
--   Miranda Ng the windows messenger has a [plugin for Tox
-    ](http://forum.miranda-ng.org/index.php?topic=2502.0).
--   [qtox](https://wiki.tox.chat/clients/qtox) (GPL)
-    a client in C++/QT for linux, windows, OS X. It has Debian
-    package in the project home.
-    -   [qtox GitHub repository](https://github.com/tux3/qTox).
--   [RaTox](http://ratox.2f30.org/) (MIT Licence)
-    is a no-gui, Linux and BSD FIFO client that communicate
-    through named pipes. _unmaintained_
--   [Ricin](https://ricin.im/) (GPL)
-    a VALA/GTK3 client for linux.It is in the Debian
-    repo of Tox.
--   [Toxic](https://wiki.tox.chat/clients/toxic) (GPL)
-    a C/ncurses command-line Tox client for Linux, BSD, OS X.
-    It is in the Debian repo of Tox.
--   [Toxygen](https://wiki.tox.chat/clients/toxygen) is a Linux, OSX
-    and Windoze Tox client written in Python3. It is in the Debian
-    repo of Tox.
-    -   [ToxygenGitHub repository
-        ](https://github.com/toxygen-project/toxygen)
--   [tox-prpl](http://tox.dhs.org/) (GPL)
-    is a Tox Protocol Plugin For Pidgin / libpurple.
--   *Toxy* for Windows
--   [µTox](https://wiki.tox.chat/clients/utox) (GPL) It is in the
-    Debian repo of Tox.
--   [XwinTox](https://wiki.tox.chat/clients/xwintox) (GPL or AGPL)
-    a C++/FLTK client for Linux and other unixes.
-
-
-## Cryptocat {#cryptocat}
-
-{{< wp "CryptocatCryptocat" >}} (GPL) is a javascript encrypted online chatting
-application created by {{< wp "Nadim Kobeissi" >}}.
-
-It uses end-to-end encrypted chat conversations, and allow to
-exchange one-to-one messages, encrypted files and audio/video
-recordings. All devices linked to Cryptocat accounts will receive
-messages, even when offline.
-
-For the transport layer encryption _Cryptocat_ uses the
-{{< iref "#omemo" "OMEMO Multi-End Message and Object Encryption" >}}.
-_Cryptocat_'s network uses XMPP over WebSockets and only relays encrypted messages and
-does not store any data. In addition to the Cryptocat client's end-to-end encryption
-protocol, client-server communication is protected by TLS. It provide
-{{< wp "forward secrecy" >}} of messages, that is protects past sessions against future
-compromises of secret keys or passwords.
-
- _Cryptocat_ is available for Linux, windows, OSX.
-
- {{< wp "Nadim Kobeissi" >}}
- [answering to a request declared on 2016-04-28
- ](https://github.com/cryptocat/cryptocat/issues/77)
- «Cryptocat is no longer offered on mobile devices and will not be
- offered on mobile devices in the forseeable future...»
-
-The main drawback of _Cryptocat_ is that even if it uses a combination of known open
-source protocols, you can not communicate with any other software and you can only
-encrypt messages between Cryptocat users, and use Cryptocat server..
-
--   [Cryptocat Home](https://crypto.cat/)
--   [Cryptocat Security](https://crypto.cat/security.html)
--   [Cryptocat Help](https://crypto.cat/help.html)
--   [Cryptocat GutHub repo](https://github.com/cryptocat/cryptocat)
--   [Blog - Cryptocat, ou le piège du client magique
-    ](https://nl.movim.eu/?blog/edhelas@movim.eu/ebc3a98e-3a37-440f-8cb4-8de1fa7eed3b).
-
-## Keybase Chat{#keybase_chat}
-Is the {{<iref "encrypted_filesystems#keybase" "Keybase" >}} end-to-end encrypted chat.
-You can chat with other keybase users, you can chat with members of (one of) your team,
-organize chat by channels. Chat also support bots.
--   [Keybase chat](https://book.keybase.io/chat).
--   [Technical documentation for chat](https://book.keybase.io/docs/chat).
--   [Keybase Managed Bots - GitHub](https://github.com/keybase/managed-bots).
--   [technical documentation for bot development](https://book.keybase.io/docs/bots)
-
-## Retroshare {#retroshare}
-{{< wp "RetroShare" >}} (GPL) is a cross-platform decentralised
-{{< wp "Friend-to-Friend" >}} application that offers social networking and
-file sharing features. It uses Transport encryption with TLS, and
-authentication with PGP It offers secure chat, VoIP with video,
-multi-user chat, file search, file sharing file sharing, forums, link
-sharing, Retroshare mail.
-
-It is available on Windows, Linux, OS X, FreeBSD.  Retroshare is
-available for Linux (many distributions), Windows, Mac OS,
-Android. It is not in Debian but a Debian repository is provided.
-
-
--   [RetroShare Home Page](http://retroshare.net)
--   [Retroshare Documentation
-    ](https://retroshare.readthedocs.io/en/latest/)
--   [Retroshare GitHub repo
-    ](https://github.com/RetroShare/RetroShare).
--   [Retroshare Wiki
-    ](https://github.com/RetroShare/documentation/wiki)
-    seems partly replaced by the Documentation.
--   [RetroShare development blog
-    ](https://retroshareteam.wordpress.com/).
-
-## Signal {#signal}
-{{< wp "Signal" >}} (GPL) is an encrypted voice calling and instant messaging
-application developed by {{< wp "Open Whisper Systems" >}} for Android and iOS
-taht uses end-to-end encryption to send instant messages, group
-messages, attachments and media messages. It uses a modified OTR
-protocol, however, without interopability with standard Xmpp networks.
-
-On Android, Signal can be used to send and receive unencrypted SMS
-messages in addition to the standard end-to-end encrypted Signal
-messages. Signal requires that the user has a phone number for
-verification not necessarily the same as on
-the device's SIM card; it can also be a VoIP number or a
-landline as long as the user can receive the verification code and
-have a separate device to set-up the software. A number can only
-be registered to one device at a time.
-
-Signal messages and calls are routed through Open Whisper Systems'
-servers (in more than 10 countries).
-
-All client-server communications are protected by TLS, but each
-message contains as metadata the phone number, which could, if
-disclosed, allow to know the time and recipient of call. Open
-Whisper Systems have asserted that their servers do not keep this
-metadata or any logs about who called who and when.
-
-__Signal Desktop__ is an  Electron  packaged app that links with the
-Signal-iOS or Signal-Android client.
-
-_Signal_ was previously called {{< wp "TextSecure" >}} in November 2015,
-_TextSecure_ was merged with an encrypted voice calling application
-called _RedPhone_ and was renamed as _Signal_.  The authors of _Signal_
-and _TexSecure_ _Whisper Systems_ partnered with _WhatsApp_ in
-November 2014 to encrypt users’ messages by default using their
-_TextSecure/Signal_ protocol.
-
-Since WhatsApps was sold to Facebook, {{< wp "Brian acton" >}}
-who co-founded WhatsApps with {{< wp "Jan Koum" >}}, gave $ 50,000,000 to launch
-the new [Signal fundation](https://signal.org/blog/signal-foundation/).
-
--   [Signal Home](https://signal.org/)
--   [Signal support](https://support.signal.org/hc/en-us):
-    [Getting Started on Android, iOS, and Desktop
-    ](https://support.signal.org/hc/en-us/categories/360000674771-Getting-Started),
-    [Signal Messenger Features
-    ](https://support.signal.org/hc/en-us/sections/360001602792-Signal-Messenger-Features),
-    [Security
-    ](https://support.signal.org/hc/en-us/categories/360000674811-Security),
-    [Troubleshooting FAQ
-    ](https://support.signal.org/hc/en-us/sections/360001602812-Troubleshooting-FAQ),
-    [General FAQ](https://support.signal.org/hc/en-us/sections/360001602832-General-FAQ).
--   [Signal-Desktop GitHub repo
-    ](https://github.com/signalapp/Signal-Desktop)
--   [EFF - Surveillance Self-Defense](https://ssd.eff.org/) :
-    [How to: Use Signal on iOS
-    ](https://ssd.eff.org/en/module/how-use-signal-ios),
-    [How to: Use Signal on Android
-    ](https://ssd.eff.org/en/module/how-use-signal-android).
-
--   <a name=signald></a>[signald](https://gitlab.com/signald/signald) (GPL)
-    is a daemon that facilitates communication over Signal bu sending messages in the
-    signald protocol.
--   [GitHub - thefinn93/signal-weechat](https://github.com/thefinn93/signal-weechat).
-    Weechat plugin using
-    <a class="iref" href="#signald" title="internal reference">signald</a>
-
-Some libraries are available to encapsulate the protocol, there is also a
-{{< iref "#libpurple" "libpurple" >}} plugin.
-
-### Signal-cli
-
-[signal-cli](https://github.com/AsamK/signal-cli) (GPLv3).
-is a commandline interface for libsignal-service-java. It supports registering, verifying,
-sending and receiving messages.
-
-To register you need a phone number where you can receive SMS or incoming
-calls. signal-cli is primarily intended to be used on servers to notify admins of
-important events. For this use-case, it has a dbus interface, that can be used to send
-messages from any programming language that has dbus bindings.
-
-Binaries are provided in the
-[releases repository](https://github.com/AsamK/signal-cli/releases/)
-they need JRE 11.
-
--   [signal-cli Wiki](https://github.com/AsamK/signal-cli/wiki) contains the man page,
-    _Quck Start_, Dbus usage, examples, _Linking other devices_, trusted keys management.
-
-The _signal-cli_ client is used in many frontends listed [in the Wiki
-](https://github.com/AsamK/signal-cli/wiki#signal-cli-scriptsexamples), among them
-
--   [signal-curses](https://github.com/jwoglom/signal-curses)
-    netcurses interface.
--   [scli](https://github.com/isamert/scli/) (GPL-3.0)
-    python terminal user interface for signal using signal-cli.
-
-## Telegram {#telegram}
-{{< wp "Telegram (software)" "Telegram" >}} (GPL) is a cloud-based instant messaging
-service on Android, iOS, Windows Phone, Ubuntu Touch and Windows, OS X, Linux. Users can
-send with optional end-to-end encryption messages, photos, videos, stickers
-_high-definition emoji_ and any file.
-
-Accounts are tied to telephone numbers and are verified by SMS or phone call.
-
-Default messages are cloud-based and can be accessed on any of the user's connected
-devices. All data is stored heavily encrypted and the encryption keys in each case are
-stored in several other DCs in different jurisdictions. This way local engineers or
-physical intruders cannot get access to user data
-
-Messages can also be sent with client-to-client encryption in secret chats.  Messages
-sent within a secret chat can be accessed only on one sender and one reiver device, they
-can optionally self-destruct.
-
-There are some critisisms to the [Telegram security
-](https://en.wikipedia.org/wiki/Telegram_(software)#Security)
-
--   [Telegram - ArchWiki](https://wiki.archlinux.org/title/Telegram).
--   Official Telegram applications are provided for IOS, Android, and other mobile
-    applications.
--   The [Desktop client](https://desktop.telegram.org/) run windows and Linux and OSX.
-    -   [tdesktop - GitHub](https://github.com/telegramdesktop/tdesktop) (GPL-3.0)
--   [telega.el](https://github.com/zevlg/telega.el) (GPL-3.0)
-    Emacs telegram client.
--   [plugin for Chrome](https://chrome.google.com/webstore/detail/telegram),
--   [ysheng/tg: telegram-cli](https://github.com/vysheng/tg) (GPL-2.0)
-    a CLI for linux.
-    [![packaging](https://repology.org/badge/tiny-repos/telegram-cli.svg?header=packages)
-    ](https://repology.org/project/telegram-cli/versions).
-
-    The repository has no commit since 2016, there are many forks, one of the most
-    active is [kernorb-contrib/tg](https://github.com/kenorb-contrib/tg).
--   [paul-nameless/tg](https://github.com/paul-nameless/tg) ( Unlicense license )
-    a Python terminal telegram client. *Homonym but unrelated to ysheng/tg*.
--   [nchat](https://github.com/d99kris/nchat)  (MIT license)
-    a c++ terminal-based Telegram / WhatsApp client for Linux and macOS.
--   [telegram-send](https://github.com/rahiel/telegram-send) (GPL-3.0)
-    a python CLI Send messages and files over Telegram from the command-line.
-    [![packaging](https://repology.org/badge/tiny-repos/telegram-send.svg?header=packages)
-    ](https://repology.org/project/telegram-send/versions).
--   Third party
-    [firefox extension](https://addons.mozilla.org/en-US/firefox/addon/telegram-web/).
--   The older official web browser interface [Telegram Web](https://web.telegram.org/),
-    is updated in two new web interfaces
-    [Telegram Web K](https://web.telegram.org/k/) which is a rewrite in Typescript of
-    the original Webogram client,
-    and [Telegram Web A](https://web.telegram.org/a/) a lighter new client in Ajax based
-    on *Teact* and *Gramjs*.
-    -   [GitHub repository Webogram](https://github.com/zhukov/webogram) (GPL-3.0).
-        archived since october 2023.
-    -   [tweb: Telegram Web K](https://github.com/morethanwords/tweb) (GPL-3.0).
-    -   [telegram-tt: Telegram Web A](https://github.com/Ajaxy/telegram-tt) (GPL-3.0).
-
-There are bridges to IRC with [teleirc](https://github.com/FruitieX/teleirc)
-and  multiprotocol bridges including IRC and XMPP, using
-{{< iref "#matterbridge" "Matterbrige" >}} or {{< iref "#libpurple"  "libpurple" >}}.
-
-
-## Whatsapp {#whatsapp}
-{{< wp "WhatsApp" >}} __proprietary__ cross-platform instant messaging client for
-smartphones.  It uses the Internet to send text messages, documents, images, video, user
-location and audio media messages to other users using standard cellular mobile numbers.
-_WhatsApp_ has been acquired by Facebook in 2014.
-
-There are applications for all kind of mobile phone systems, WhatsApp Web is a a client
- used through a web browser by syncing with the mobile device's connection.
-
-A Pidgin plug-in called whatsapp-purple aimed to XMPP interoperability was blocked by
-whatsapp by blocking the phone itself that used this application.
-
-_WhatsApp_ uses a customized version of XMPP; Multimedia messages are sent by uploading
-the image, audio or video to be sent to an HTTP server and then sending a link to the
-content, all messages are first stored on _WhatsApp_ servers then poll the receiver to
-ask an ack, when the message is delivered it is dropped, there is a miximum time of 30
-days for delivery.
-
-_Whatsapp_ has shown [many security breaches
-](https://en.wikipedia.org/wiki/WhatsApp#Security) even since the
-adoption _but unpublished_ of encryption.
-
-As well _Whatsapp_ as displayed
-[many privacy problems ](https://en.wikipedia.org/wiki/WhatsApp#Privacy). In February
-2015, a Dutch university studen proved that anyone could track a _WhatsApp_ user's
-status and profile pictures, privacy settings or status messages regardless of their
-privacy settings.
-
-Sinxe _Whatsapps_ was acquired by Facebook it is sharing data with
-the rest of Facebook’s services. Look at
-[Data transfer from WHATSAPP to FACEBOOK: CNIL publicly serves formal notice for lack of legal basis
-](https://www.cnil.fr/en/data-transfer-whatsapp-facebook-cnil-publicly-serves-formal-notice-lack-legal-basis)
-_the CNIL is an independent administrative authority that exercises its functions with
-accordance to the French Data Protection Act_.
-
-if you have to use it read the
-{{< iref "#eff_whatsapp" "following guides of the Electronic Frontier Foundation" >}}.
-
-There are many opensource secure alternatives to _WhatsApp_ like
-all the {{< iref "#otr" "OTR" >}} and
-{{< iref "#omemo" "OMEMO" >}}
-clients and if you want some mere extension, at the price of
-loosing the interoperability,
-{{< iref "#cryptocat" "Cryptocat" >}},
-{{< iref "#signal" "Signal" >}},
-and
-{{< iref "#telegram" "Telegram" >}}.
-
--   [WhatsApp - ArchWiki](https://wiki.archlinux.org/title/WhatsApp).
--   <a name="eff_whatsapp"></a>
-    [Electronic Frontier Foundation (EFF)](https://www.eff.org/) guide
-    [Surveillance Self-Defense (SSD) HowTo
-    ](https://ssd.eff.org/) :
-    : [How to: Use WhatsApp on Android
-    ](https://ssd.eff.org/en/module/how-use-whatsapp-android),
-    [How to: Use WhatsApp on iOS
-    ](https://ssd.eff.org/en/module/how-use-whatsapp-ios).
-    The EFF [don't recommend WhatsApp for secure communications
-    ](https://www.eff.org/deeplinks/2016/10/where-whatsapp-went-wrong-effs-four-biggest-security-concerns)
--   <a name="yowsup"</a>[Yowsup](https://github.com/tgalal/yowsup) (GPL-3.0)
-    a python library that enables you build application which use WhatsApp service.
-
-    _It seems that WhatsApp now detect Yowsup and  ban  your number, so don't use it
-        until they find a workaround_.
-
-    Yowsup allows you to login and use the WhatsApp service, providing encryption of
-    messages. This program can be used for multiple purposes as to send message to
-    phones, receive messages from network servers or appliances, notifying about issues,
-    via direct command or by special agents.
-
-    YowSup is no longer developped since 2021, and has been dropped by many
-    distributions, in 2024 it seems obsolete.
--   {{< iref "#franz5" "Franz5" >}} supports _Whatsapp_.
--   {{< iref "#libpurple" "libpurple" >}} has a
-    {{< iref "#pidgin_plugins" "plugin" >}} for WhatsApp.
--   [whatsapp-for-linux](https://github.com/eneshecan/whatsapp-for-linux) (GPL-3.0)
-    An unofficial WhatsApp desktop application for Linux.written in C++ with gtkmm and
-    WebKitGtk.
-
-    [![packaging](https://repology.org/badge/tiny-repos/whatsapp-for-linux.svg?header=packages)
-    ](https://repology.org/project/whatsapp-for-linux/versions).
-    also available on SnapStore and FlatHub, a Debian package is available in the GitHub
-    releases.
--   [nchat](https://github.com/d99kris/nchat) (MIT license)
-    a c++ terminal-based Telegram / WhatsApp client for Linux and macOS.
-
-## Other secure messengers
--   [surespot](https://www.surespot.me/)
-    is an encrypted messenger for Android and IOS, the Gihub repo has also a javascript
-    node server. _Surespot_ uses 256 bit AES-GCM encryption using keys created with 521
-    bit ECDH your key is not stored on the servers, and support voice messages, emoji,
-    pictures, multiple identities, multiple devices, authentication.
-
-    As many encryption software, one of its drawback is to allow only communication with
-    people holding the same software. One other havoc is the lack of perfect of forward
-    security.
--   [Scuttlebut](https://scuttlebutt.nz/) is a p2p protocol; which allows you to send
-    messages, and share posts. It also works offline.
-
-<!-- Local Variables: -->
-<!-- mode: markdown -->
-<!-- ispell-local-dictionary: "english" -->
-<!-- eval: (org-link-minor-mode 1) -->
-<!-- End: -->
+## Pidgin {#pidgin}
+[Pidgin](http://pidgin.im/) (GPL)
+GTK2-based Instant Messaging (IM) application (50M res / 21
+shared).
+It uses {{< iref "#libpurple" "libpurple" >}} which ensure
+supports for AIM, Gadu-Gadu, Google Talk, iChat, ICQ, IRC, Jabber,
+{{< wp "Jingle (protocol)"  "Jingle" >}}, Lotus
+Sametime, MSN, Napster, SILC, Tlen.pl, Yahoo!,and Zephyr.
+
+To have a complete list of protocols look at
+[Pidgin Plugins list](https://pidgin.im/plugins/).
+
+Since version 2.6 pidgin support video and voice chat support over XMPP,
+i.e.  {{< wp "Jingle (protocol)"  "Jingle protocol" >}}.
+
+Pidgin is quite heavy, Pidgin without any extension is 46M res/24M shr.
+If you don't run gnome you can still compile it as long as you
+don't ask for evolution connectivity. *Pidgin was previously known
+as Gaim.*.  Pidgin is documented in:
+
+-   [Pidgin Home](http://pidgin.im/)
+-   [Pidgin wiki](http://developer.pidgin.im/wiki).
+-   [Pidgin FAQ](https://pidgin.im/development/faq/)
+-   [Voice and Video](https://pidgin.im/development/voice-and-video/)
+-   {{< wp "/Pidgin_(instant_messaging_client)"  "Wikipedia: Pidgin" >}}
+-   [ArchWiki: Pidgin](https://wiki.archlinux.org/index.php/Pidgin)
+-   {{< wp "Pidgin_(software)"  "Wikipedia: Pidgin" >}}
+-   <a name="finch"></a>**finch** is a curse client for pidgin,
+    finch allows to reuse your pidgin settings, and a great level
+    of compatibility with pidgin, but it is a heavy ncurses client
+    25M / 15M shared. It is in a separate Debian repository.
