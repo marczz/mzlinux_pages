@@ -1668,23 +1668,6 @@ and
     a c++ terminal-based Telegram / WhatsApp client for Linux and macOS.
 
 # Other secure messengers
--   <a name="fish"></a>FiSH is an IRC plugin providing {{< wp "Blowfish" >}}.
-    encryption to IRC chat. It is an old protocol aimed to IRC, which was
-    [proposed in 2009
-    ](http://blog.bjrn.se/2009/01/proposal-for-better-irc-encryption.html)
-    and never adopted in a RFC.
-    You can find it in
-    {{< iref "irc#irssi" "irssi" >}}, [FISHLIM
-    ](http://fishlim.kodafritt.se/) for
-    {{< iref "irc#hexchat" "HexChat" >}} or
-    {{< iref "irc#xchat" "XChat" >}},
-    {{< iref "irc#weechat" "WeeChat" >}},
-    the python package [pyIRCFiSH
-    ](https://pypi.python.org/pypi/pyIRCFiSH/),
-    the android
-    IRC client [AndroIRC](http://wiki.androirc.com/start).
-    It is also available in the windows IRC client _mirc_ through a
-    plugin.
 -   [surespot](https://www.surespot.me/)
     is an encrypted messenger for Android and IOS, the Gihub repo has also a javascript
     node server. _Surespot_ uses 256 bit AES-GCM encryption using keys created with 521
@@ -1722,7 +1705,9 @@ includes numerous plugins to add features, support many protocols, ensure privac
 The [Additional protocols plugins](https://pidgin.im/plugins/?type=Protocol)
 list plugins, _some of them are obsolete_, this list includes:
 
+-   Discord - [purple-discord](https://github.com/EionRobb/purple-discord/).
 -   Facebook messenger - [purple-facebook](https://github.com/dequis/purple-facebook).
+-   Google Chat - [purple-googlechat](https://github.com/EionRobb/purple-googlechat).
 -   Hangout - [purple-hangouts](https://github.com/EionRobb/purple-hangouts)
 -   Instagram - [purple-instagram](https://github.com/EionRobb/purple-instagram)
 -   Matrix - [purple-matrix](https://github.com/matrix-org/purple-matrix)
@@ -1762,12 +1747,6 @@ Among the
     for {{< iref "#omemo" "OMEMO" >}}. The Debian package is _purple-lurch_.
     It is also used by {{< iref "#chatty" "Chatty" >}}.
 
-
-<!-- Local Variables: -->
-<!-- mode: markdown -->
-<!-- ispell-local-dictionary: "english" -->
-<!-- eval: (org-link-minor-mode 1) -->
-<!-- End: -->
 
 ## Bitlbee {#bitlbee}
 
@@ -1829,8 +1808,6 @@ GaduGadu, SIPE, Microsoft's OCS, Lync (on Office 365 as well), Skype for Busines
 {{< iref "#telegram" "Telegram" >}} through
 [telegram-purle plugin](https://github.com/majn/telegram-purple),
 Slack, Rocket.Chat, {{< iref "microblogging#mattermost" "Mattermost" >}},
-Google Hangout through
-[purple hangout plugin](https://bitbucket.org/EionRobb/purple-hangouts),
 WhatsApp no longer work due to whatsapp forbidding libpurple access.
 
 _bitlbee-libpurple_ is in debian. See also the
@@ -1867,14 +1844,9 @@ are available:
 -   SMSTools3:	SMS using connected mobile phone
 -   Twitter: Twitter
 -   Swiften: XMPP
--   [Transwhat](https://github.com/stv0g/transwhat): WhatsApp.
 
 The repository offers an apt repo with source deb packages, and a Docker image.
 -   [Spectrum2 GitHub repository](https://github.com/hanzz/spectrum2)
-
-## Misc gateways
--   [jatter](https://github.com/binfalse/jatter) (GPL)
-    is a java bot providing a  a Jabber-Twitter-bridge.
 
 
 # Multiprotocols clients
@@ -1945,3 +1917,9 @@ as Gaim.*.  Pidgin is documented in:
     finch allows to reuse your pidgin settings, and a great level
     of compatibility with pidgin, but it is a heavy ncurses client
     25M / 15M shared. It is in a separate Debian repository.
+
+<!-- Local Variables: -->
+<!-- mode: markdown -->
+<!-- ispell-local-dictionary: "english" -->
+<!-- eval: (org-link-minor-mode 1) -->
+<!-- End: -->
