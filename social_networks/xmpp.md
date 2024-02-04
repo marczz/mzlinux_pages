@@ -1680,13 +1680,88 @@ and
 -   [Scuttlebut](https://scuttlebutt.nz/) is a p2p protocol; which allows you to send
     messages, and share posts. It also works offline.
 
+# Team collaborative software
+I group here _Slack like_ software. IRC-like features:
+-   persistent and private chat rooms (channels) organized by topic, direct messaging
+-   Privacy organized by groups or _teams_.
+-   integratetion with third-party services
+
+
+-   <a name="slack"></a>{{< wp "Slack_(software)"  "Slack" >}}
+    is a cloud-based set of proprietary team collaboration tools and
+    and messaging system for teams, there are now many open sources
+    alternatives, see below.
+
+    Many gateways bridge slack with IRC and XMPP
+    after closing of old  official [IRC and XMPP gateway
+    ](https://get.slack.help/hc/en-us/articles/201727913-Connect-to-Slack-over-IRC-and-XMPP)
+    -   {{< iref "#weechat" "WeeChat" >}} has a
+        plugin using native Slack api.
+    -   {{< iref "#matterbridge" "matterbrige" >}}
+        support Slack.
+    -   {{< iref "#franz5" "Franz 5" >}}
+    -   a {{< iref "xmpp#pidgin_plugins" "libpurple plugin" >}} used by
+        Pidgin, {{< iref "#bitlbee" "BitlBee" >}} and
+        {{< iref "#spectrum2" "Spectrum2" >}}.
+    -   [slack-irc](https://github.com/ekmartin/slack-irc)
+        is a slack irc bridge.
+    -   {{< iref "#matterbridge" "matterbrige" >}} support Matrix.
+
+-   <a name="gitter"></a>{{< wp "Gitter" >}} (MIT License)
+    is an instant messaging and chat room system for developers and
+    users of GitHub repositories. Individual chat rooms can be created
+    for individual git repositories on GitHub private or public
+    depending of the privacyof the associated repository.
+    It automatically logs all messages in the cloud.
+    Official Gitter apps for Windows, Mac, Linux, iOS and Android are
+    available.
+    -   [Gitter.im](https://gitter.im/)
+    -   [Gitter IRC bridge](https://irc.gitter.im/)
+        Connect to Gitter using the IRC protocol. at:
+        host: irc.gitter.im, port: 6667 (or 6697).
+        -   [client configuration
+            ](https://github.com/gitterHQ/irc-bridge/wiki/Client-configuration)
+        -   [source of the gitter-irc bridge
+            ](https://github.com/gitterHQ/irc-bridge)
+        -   [gitter.el](https://github.com/xuchunyang/gitter.el)
+            is an Emacs Gitter client, with a partial support of the
+            protocol. It is in melpa. You can also use an emacs IRC
+            client with the gitter bridge.
+        -   {{< iref "#matterbridge" "matterbrige" >}} support Gitter.
+-   {{< iref "#element" "Element" >}} is above with the
+    {{< iref "#matrix" "Matrix protocol" >}}.
+-   <a name="rocketchat"></a>{{< wp "Rocket.Chat" >}} (MIT License)
+    is an instant messaging and chat room system. There are electron based desktop
+    application, ios, android, and web interfaces.  An xmpp access is under development.
+
+    There is a {{< iref "#pidgin_plugins" "purple plugin" >}} for Rocket.Chat,
+    {{< iref "#matterbridge" "matterbrige" >}}
+    support Rocket.Chat
+
+-   <a name="mattermost">[Mattermost](https://github.com/mattermost/mattermost-server)
+    (MIT License)
+    is an open source private cloud, Slack-alternative.  It's written in Golang and
+    React and runs as a single Linux binary with MySQL or PostgreSQL.
+    -   [Mattermost Inc.](https://about.mattermost.com/) run Mattermost Entreprise and
+        has a free plan for a for small teams.
+    -   There are many solutions of [Mattermost Integration
+        ](https://docs.mattermost.com/overview/integrations.html)
+    -   [Zapier](https://zapier.com/) allows to
+        [integrates to a huge list of Apps and Clouds
+        ](https://about.mattermost.com/community-applications/).
+    -   Several bridges provide XMPP/IRC access :  a
+        {{< iref "#pidgin_plugins" "purple plugin" >}},
+        {{< iref "#matterbridge" "matterbrige" >}}.
+    -   [Framateam](https://framateam.org) is the mattermost instance
+        of [Framasoft](https://framasoft.org/).
+
 # Multi Protocol Bridges {#bridges}
 ## Libpurple {#libpurple}
 </a>[libpurple](https://developer.pidgin.im/wiki/WhatIsLibpurple)
 is a multi-protocol instant messaging library it supports AIM/ICQ,
 Yahoo!, MSN, IRC, Jabber/XMPP/Google Talk, Napster, Zephyr,
 Gadu-Gadu, Bonjour, Groupwise, Sametime, SIMPLE, MySpaceIM, and
-MXit, Facebook chat, Rocket.Chat, {{< iref "microblogging#mattermost" "Mattermost" >}},
+MXit, Facebook chat, Rocket.Chat, {{< iref "#mattermost" "Mattermost" >}},
 {{< iref "#matrix" "Matrix" >}}, Telegram, and more.
 
 _libpurple_ is part of {{< iref "#pidgin" "pidgin" >}} and
@@ -1713,14 +1788,14 @@ list plugins, _some of them are obsolete_, this list includes:
 -   Matrix - [purple-matrix](https://github.com/matrix-org/purple-matrix)
     for {{< iref "#matrix" "Matrix" >}}.
 -   Mattermost - [purple-mattermost](https://github.com/EionRobb/purple-mattermost)
-    connect to a {{< iref "microblogging#mattermost" "Mattermost" >}} server.
+    connect to a {{< iref "#mattermost" "Mattermost" >}} server.
 -   PulseSMS Android app - [purple-pulsesms](https://github.com/EionRobb/purple-pulsesms)
 -   Rocketchat - [purple-rocketchat](https://github.com/EionRobb/purple-rocketchat)
-    for {{< iref "microblogging#rocketchat" "RocketChat" >}}.
+    for {{< iref "#rocketchat" "RocketChat" >}}.
 -   Signal - [libpurple-signald](https://github.com/hoehermann/purple-signald)
     Pidgin libpurple bridge for the {{< iref "#signald" "Signal Daemon - signald" >}}.
 -   Slack - [slack-libpurple](https://github.com/dylex/slack-libpurple)
-    for access to {{< iref "microblogging#slack" "Slack" >}}
+    for access to {{< iref "#slack" "Slack" >}}
 -   {{< iref "#telegram" "Telegram" >}} -
     [telegram-purle plugin](https://github.com/majn/telegram-purple)
     allow a bridge to {{< iref "#telegram" "Telegram" >}}
@@ -1807,7 +1882,7 @@ like [Skype with skypeweb](https://wiki.bitlbee.org/HowtoSkypeWeb),
 GaduGadu, SIPE, Microsoft's OCS, Lync (on Office 365 as well), Skype for Business,
 {{< iref "#telegram" "Telegram" >}} through
 [telegram-purle plugin](https://github.com/majn/telegram-purple),
-Slack, Rocket.Chat, {{< iref "microblogging#mattermost" "Mattermost" >}},
+Slack, Rocket.Chat, {{< iref "#mattermost" "Mattermost" >}},
 WhatsApp no longer work due to whatsapp forbidding libpurple access.
 
 _bitlbee-libpurple_ is in debian. See also the
@@ -1819,19 +1894,19 @@ _bitlbee-libpurple_ is in debian. See also the
 ## MatterBrigde {#matterbridge}
 [Matterbridge](https://github.com/42wim/matterbridge) (Apache License)
 is a bridge written in go between
-{{< iref "microblogging#mattermost" "Mattermost" >}}, IRC, Gitter, xmpp,
-{{< iref "microblogging#slack" "Slack" >}},
-{{< iref "microblogging#gitter" "Gitter"  >}},
+{{< iref "#mattermost" "Mattermost" >}}, IRC, Gitter, xmpp,
+{{< iref "#slack" "Slack" >}},
+{{< iref "#gitter" "Gitter"  >}},
 {{< iref "sip#discord" "Discord" >}},  {{< iref "#telegram" "Telegram" >}},
 {{< iref "#keybase_chat" "Keybase Chat" >}},
-{{< iref "microblogging#rocketchat" "Rocket.Chat" >}}
+{{< iref "#rocketchat" "Rocket.Chat" >}}
 Hipchat (via xmpp), Steam,
 Twitch, ssh-chat and  {{< iref "#matrix" "Matrix" >}} with REST API.
 
 ## Spectrum2 {#spectrum}
 
 [Spectrum2](http://spectrum.im/) (GPL)
-is a proxy  allowing to connect from Xmpp or {{< iref "microblogging#slack" "Slack" >}}
+is a proxy  allowing to connect from Xmpp or {{< iref "#slack" "Slack" >}}
 to many protocols.
 
 [Several backends](https://spectrum.im/documentation/backends/backends.html)
@@ -1875,8 +1950,8 @@ The repository offers an apt repo with source deb packages, and a Docker image.
     -   [GitHub Rambox](https://github.com/saenzramiro/rambox)
 -   <a name="franz5"></a>[Franz 5](https://meetfranz.com/)
     Franz is a Windows, OS X, and linux messaging app for Facebook
-    Messenger, Gitter, HipChat, {{< iref "microblogging#mattermost" "Mattermost" >}},
-    {{< iref "microblogging#rocketchat" "RocketChat" >}}, Skype, Slack,
+    Messenger, Gitter, HipChat, {{< iref "#mattermost" "Mattermost" >}},
+    {{< iref "#rocketchat" "RocketChat" >}}, Skype, Slack,
     {{< iref "#telegram" "Telegram" >}}, WhatsApp,and more.
     There is a Debian/Ubuntu package.
     -   [GitHub - meetfranz/franz
