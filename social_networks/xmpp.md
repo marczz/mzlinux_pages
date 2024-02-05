@@ -381,16 +381,16 @@ Most servers and Clients support MUC. The message encryption in MUC, is a more c
 and is only implemented in few clients.
 
 ### Jingle{#xmpp_jingle}
-<a name="jingle"></a>{{< wp "Jingle (protocol)"  "Jingle Protocol" >}}
-is an extension to XMPP which adds peer-to-peer (P2P) session
-control (signaling) for multimedia.  Interactions such as in voice
-over IP (VoIP) or videoconferencing communications, or also for
-p2p file transfer.  Jingle is supported by Xmpp software based on
-telepathy like empathy, minirc; software base on it like pidgin,
-Coccinella, Gajim, Macabber (file transfer only),
-Pidgin, Psi, Jabbin, Tapioca. It is also supported by telephony
-software like {{< wp "Yate_(telephony_engine)"  "Yate" >}} or
-{{< wp "Asterisk_(PBX)"  "Asterisk" >}}.
+
+<a name="jingle"></a>{{< wp "Jingle (protocol)" "Jingle Protocol" >}} is an extension to
+XMPP which adds peer-to-peer (P2P) session control (signaling) for multimedia.
+Interactions such as in voice over IP (VoIP) or videoconferencing communications, or
+also for p2p file transfer.
+
+Jingle is supported by Xmpp software based on telepathy like empathy, minirc; software
+base on it like pidgin, Coccinella, Gajim, Macabber (file transfer only), Pidgin, Psi,
+Jabbin, Tapioca. It is also supported by telephony software like
+  * [ ] {{< wp "Yate_(telephony_engine)"  "Yate" >}} or {{< wp "Asterisk_(PBX)"  "Asterisk" >}}.
 
 It is defined in [several XEP documents
 ](https://xmpp.org/about/technology-overview.html#jingle)
@@ -684,7 +684,7 @@ _(said to be lightweight but need libgnome and all bonobo framework)_ ...
     Empathy is currently no longer in development since 2017 the commits are only on
     improving the language translations.
 
-    _Empathy is still in Debian, as far as bullseye_
+    _Empathy no more iin Debian, since Bullseye._
     -   [empathy · GitLab](https://gitlab.gnome.org/Archive/empathy)
 
 -   <a name="gajim">[Gajim](http://www.gajim.org/) (GPL)
@@ -1053,29 +1053,35 @@ Whenever I'm on a foreign computer, a jabber client can be very useful.
 
     Telepathy provides protocol backends for Jabber/XMPP/Jingle, link-local XMPP, SIP,
     Yahoo/AIM and IRC. It supports instant messaging, voice calls and video calls. The
-    gnome messaging clients are {{< iref "#empathy" "Empathy" >}} and
-    {{< iref "irc#polari" "Polary" >}}.
+    gnome messaging clients was {{< iref "#empathy" "Empathy" >}} which is now obsolete,
+    and  the IRC client {{< iref "irc#polari" "Polary" >}}.
     Telepathy and it's plugins are in Debian.
+
+    The Telepathy project is no longer active (as year 2024) all subprojects
+    [repositories](https://cgit.freedesktop.org/telepathy/) are dead or sleeping.
 
     -   The [haze](https://telepathy.freedesktop.org/components/telepathy-haze/)
         plugin is a Telepathy connection manager based on libpurple, this allows to
         connect to all protocols supported by libpurple (Pidgin) including AIM, Windows
         Live (MSN), Yahoo!, Gadu-Gadu, Groupwise and ICQ.
+
+        The
+        [haze git repository](https://cgit.freedesktop.org/telepathy/telepathy-haze/)
+        has no activity since 2013.
     -   [rakia](https://telepathy.freedesktop.org/components/telepathy-rakia/)
         is a SIP connection manager for Telepathy based on the
         [SofiaSIP](http://sofia-sip.sourceforge.net/development.html)
-        stack.
+        stack. *obsolete abandoned since 2013*
     -   [Gabble](https://telepathy.freedesktop.org/components/telepathy-gabble)
         is a Jabber/XMPP connection manager for Telepathy, it handles Google Session and
         Facebook Chat.
     -   [Idle](https://telepathy.freedesktop.org/components/telepathy-idle)
         is an IRC connection manager for the Telepathy.
     -   [Morse](https://telepathy.freedesktop.org/components/telepathy-morse)
-        connection manager for {{< iref "#telegram" "Telegram" >}} network
+        connection manager for {{< iref "#telegram" "Telegram" >}} network, inactive
+        since 2020.
     -   [Nonsense](https://telepathy.freedesktop.org/components/telepathy-nonsense)
         connection manager for the XMPP (Jabber) protocol, based on QXmpp
-    -   [Hanging](https://telepathy.freedesktop.org/components/telepathy-hanging)
-        connection manager for Hangouts
 
 
 
@@ -1207,26 +1213,28 @@ Alist of clients with their protocol support is on
     a Weechat{{< iref "irc#weechat" "WeeChat" >}} Matrix protocol python script.
     _In Debian._
 
-Features of some clients extracted from [Matrix.org - Clients][]
-
-Terminal applications
-
-   | App        | E2ee | SSo | Multi Acc. | Spaces | Packaging |
-   | [Gomuks][] | Y    | Y   | N          | N      | Deb.      |
-   | [Iamb][]   | Y    | N   | Y          | N      |           |
-
-GUI apps
+Features of some clients extracted from
+[Matrix.org - Clients](https://matrix.org/ecosystem/clients/).
 
 
-| App            | E2ee | SSo | Multi Acc. | spaces | Packaging    | GUI     |   |
-| [Quaternion][] | Béta | Y   | Y          | N      | FlatHub, Deb | QT5/Qt6 |   |
-| [Nekho][]      | Y    | Y   | Y          | Y      | FlatHub, Deb | qt5     |   |
-| [FluffyChat][] | Y    | Y   | Y          | Y      | FlatHub      |         |   |
+Terminal applications:
+
+| App        | E2ee | SSo | Multi Acc. | Spaces | Packaging |
+|------------|------|-----|------------|--------|-----------|
+| [Gomuks][] | Y    | Y   | N          | N      | Deb.      |
+| [Iamb][]   | Y    | N   | Y          | N      |           |
+
+GUI apps:
+
+| App            | E2ee | SSo | Multi Acc. | spaces | Packaging    | GUI     |
+|----------------|------|-----|------------|--------|--------------|---------|
+| [Quaternion][] | Béta | Y   | Y          | N      | FlatHub, Deb | QT5/Qt6 |
+| [Nekho][]      | Y    | Y   | Y          | Y      | FlatHub, Deb | qt5     |
+| [FluffyChat][] | Y    | Y   | Y          | Y      | FlatHub      |         |
 
 ### Mobile clients
 Many clients are availables on all platforms, [Element][], [FluffyChat][], [Quadrix][],
 [SchildiChat][], [Syphon][] ...
-
 
 -    <a name= "zom"></a>[འཛོམས་](https://zom.im/)    or
     [Zom](https://zom.im/zomenglish.html) (Apache License)
@@ -1238,6 +1246,8 @@ Many clients are availables on all platforms, [Element][], [FluffyChat][], [Quad
 [Element]: https://element.io/
 [FluffyChat]: https://github.com/krille-chan/fluffychat
 [Gomuks]: https://github.com/tulir/gomuks
+[iamb]: https://github.com/ulyssa/iamb
+[Nekho]: https://github.com/Nheko-Reborn/nheko
 [Quadrix]: https://github.com/alariej/quadrix
 [Quaternion]: https://github.com/quotient-im/Quaternion
 [SchildiChat]: https://github.com/SchildiChat
@@ -1692,7 +1702,10 @@ I group here _Slack like_ software. IRC-like features:
     and messaging system for teams, there are now many open sources
     alternatives, see below.
 
-    Many gateways bridge slack with IRC and XMPP
+    -   [emacs-slack](https://github.com/yuya373/emacs-slack)
+        is a slack client for emacs
+ .
+ Many gateways bridge slack with IRC and XMPP
     after closing of old  official [IRC and XMPP gateway
     ](https://get.slack.help/hc/en-us/articles/201727913-Connect-to-Slack-over-IRC-and-XMPP)
     -   {{< iref "#weechat" "WeeChat" >}} has a
@@ -1705,7 +1718,7 @@ I group here _Slack like_ software. IRC-like features:
         {{< iref "#spectrum2" "Spectrum2" >}}.
     -   [slack-irc](https://github.com/ekmartin/slack-irc)
         is a slack irc bridge.
-    -   {{< iref "#matterbridge" "matterbrige" >}} support Matrix.
+    -   {{< iref "#matterbridge" "matterbrige" >}} support Slack.
 
 -   <a name="gitter"></a>{{< wp "Gitter" >}} (MIT License)
     is an instant messaging and chat room system for developers and
@@ -1768,8 +1781,6 @@ _libpurple_ is part of {{< iref "#pidgin" "pidgin" >}} and
 used by
 {{< iref "#finch" "finch" >}},
 {{< iref "#minbif" "minbif" >}},
-{{< iref "#telepathy" "telepathy haze" >}} and through it
-by the telepathy clients,
 {{< iref "#spectrum" "Spectrum" >}},
 {{< iref "#bitlbee" "bitlbee-libpurple" >}}.
 
@@ -1894,14 +1905,26 @@ _bitlbee-libpurple_ is in debian. See also the
 ## MatterBrigde {#matterbridge}
 [Matterbridge](https://github.com/42wim/matterbridge) (Apache License)
 is a bridge written in go between
-{{< iref "#mattermost" "Mattermost" >}}, IRC, Gitter, xmpp,
-{{< iref "#slack" "Slack" >}},
+{{< iref "sip#discord" "Discord" >}},
 {{< iref "#gitter" "Gitter"  >}},
-{{< iref "sip#discord" "Discord" >}},  {{< iref "#telegram" "Telegram" >}},
+{{< iref "irc" "IRC" >}},
 {{< iref "#keybase_chat" "Keybase Chat" >}},
-{{< iref "#rocketchat" "Rocket.Chat" >}}
-Hipchat (via xmpp), Steam,
-Twitch, ssh-chat and  {{< iref "#matrix" "Matrix" >}} with REST API.
+{{< iref "#matrix" "Matrix" >}},
+{{< iref "#mattermost" "Mattermost" >}},
+Microsoft Teams,
+{{< iref "sip#mumble" "Mumble" >}},
+{{< iref "clouds#nextcloud"  "NextCloud" >}} [Talk](https://nextcloud.com/talk/),
+{{< iref "#rocketchat" "Rocket.Chat" >}},
+{{< iref "#slack" "Slack" >}},
+[ssh-chat](https://github.com/shazow/ssh-chat),
+{{< wp "Twitch_(service)" "Twitch" >}},
+{{< iref "#telegram" "Telegram" >}},
+{{< wp "VK (service)" "VK" >}} *russian social networking*,
+{{< iref "#whatsapp" "WhatsApp" >}},
+{{< iref "#xmpp" "XMPP" >}},
+{{< wp "Zulip" >}}.
+
+There are also 3rd party services with matterbridge API.
 
 ## Spectrum2 {#spectrum}
 
@@ -1913,7 +1936,8 @@ to many protocols.
 are available:
 
 -   {{< iref "#libpurple" "libPurple" >}}: AIM, Jabber, ICQ, MSN, Yahoo, Skype,
-    {{< iref "#telegram" "Telegram" >}}, Facebook.
+    {{< iref "#mattermost" "Mattermost" >}},
+    {{< iref "#telegram" "Telegram" >}}, {{< iref "#whatsapp" "WhatsApp" >}}, Facebook.
 -   LibCommuni:	IRC
 -   Frotz:  Allows playing interactive-fiction games
 -   SMSTools3:	SMS using connected mobile phone
@@ -1977,9 +2001,8 @@ Since version 2.6 pidgin support video and voice chat support over XMPP,
 i.e.  {{< wp "Jingle (protocol)"  "Jingle protocol" >}}.
 
 Pidgin is quite heavy, Pidgin without any extension is 46M res/24M shr.
-If you don't run gnome you can still compile it as long as you
-don't ask for evolution connectivity. *Pidgin was previously known
-as Gaim.*.  Pidgin is documented in:
+
+*Pidgin was previously known as Gaim.*.
 
 -   [Pidgin Home](http://pidgin.im/)
 -   [Pidgin wiki](http://developer.pidgin.im/wiki).
@@ -1988,10 +2011,10 @@ as Gaim.*.  Pidgin is documented in:
 -   {{< wp "/Pidgin_(instant_messaging_client)"  "Wikipedia: Pidgin" >}}
 -   [ArchWiki: Pidgin](https://wiki.archlinux.org/index.php/Pidgin)
 -   {{< wp "Pidgin_(software)"  "Wikipedia: Pidgin" >}}
--   <a name="finch"></a>**finch** is a curse client for pidgin,
-    finch allows to reuse your pidgin settings, and a great level
-    of compatibility with pidgin, but it is a heavy ncurses client
-    25M / 15M shared. It is in a separate Debian repository.
+-   <a name="finch"></a>**finch** is a curse client for pidgin, finch allows to reuse
+    your pidgin settings, and a great level of compatibility with pidgin, but as it uses
+    also {{< iref "#libpurple" "libpurple" >}} it is an heavy ncurses client 25M / 15M
+    shared. It is in a separate Debian repository.
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
