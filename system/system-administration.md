@@ -2,6 +2,7 @@
 title: System Administration
 ---
 
+Se also  the {{< iref "monitoring" "Monitoring Section" >}}.
 
 # References
 -   For basic concepts it is always usefull to refer to the bible i.e.
@@ -59,18 +60,18 @@ title: System Administration
         package _certmonger_ D-Bus-based service which  simplify
         interaction with certifying authorities (CAs) on networks which
         use public-key infrastructure (PKI).
--   The new [Red Hat 8
-    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/]
+-   [Documentation for Red Hat Enterprise 9
+    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/)
     has also system administration documentation like
     -   [Managing Storage Devices
-        ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/managing_storage_devices/)
+        ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/managing_storage_devices/)
     -   [Managing Filesystems
-        ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/managing_file_systems/).
+        ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/managing_file_systems/).
     -   [Monitoring And Managing System Status And Performance
-        ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/monitoring_and_managing_system_status_and_performance/)
+        ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/monitoring_and_managing_system_status_and_performance/)
 -   [Fedora Documentation](http://docs.fedoraproject.org/en-US/index.html)
-    -   [Fedora 30 -  System Administrator's Guide
-        ](https://docs.fedoraproject.org/en-US/fedora/f30/system-administrators-guide/)
+    -   [Fedora -  System Administrator's Guide
+        ](https://docs.fedoraproject.org/en-US/fedora/latest/system-administrators-guide/):
         locales, keyboard, date and time, Users and Groups, Services
         and Daemons, OpenSSH, [TigerVNC](http://tigervnc.org/)
         _available [here for Debian](http://vnc.devloop.org.uk/)_,
@@ -79,9 +80,10 @@ title: System Administration
         System Monitoring Tools (ps, top, free), Block Devices and
         File Systems (lsblk, blkid, partx, findmnt, df, du),
         Hardware Information (lspci, lsusb, lspcmia, lscpu),
-        Net-SNMP, rsyslog, Cron (and Anacron, at, batch), oprofile
-        _no longer in debian but
-        [perf](https://perf.wiki.kernel.org/index.php/Main_Page) is in
-        linux-base, and there are alternatives in [pixelbeat:profiling
+        Net-SNMP, rsyslog, Cron (and Anacron, at, batch),
+        {{< wp  "oprofile" >}}
+        _which is no longer in debian but thre are alternative tools see the
+        {{< iref "monitoring" "Monitoring Section" >}}_
+         [pixelbeat:profiling
         ](http://www.pixelbeat.org/programming/profiling/), boot
         loaders (grub, yaboot, os/400), Kernel Modules.
