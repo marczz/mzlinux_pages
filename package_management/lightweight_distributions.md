@@ -25,17 +25,6 @@ Debian Live and GRML are in the main {{< iref "distributions" "Distributions sec
 -   [busybox](https://busybox.net/) combines many common UNIX
     utilities into a single small executable.
 -   [uClibc -- a C library for embedded systems](http://www.uclibc.org/)
-
--   {{< wp "Alpine Linux" >}},
-    [Alpine Linux Home](https://www.alpinelinux.org/)
-    is a security-oriented, lightweight Linux distribution based on musl libc and
-    busybox. A container requires no more than 8 MB and a minimal installation to disk
-    requires around 130 MB of storage.
-
-    Alpine Linux is used heavily in containers (e.g. docker images) on servers, so many
-    of its main packages are focused on server services.
-
-    -   [Alpine Linux Wiki](https://wiki.alpinelinux.org/wiki/Main_Page)
 -   <a name="bunsenlabs"></a>[BunsenLabs Linux](https://www.bunsenlabs.org/)
     is the continuation of {{< wp "Crunchbang_Linux" "CrunchBang" >}} which stopped
     in 2015. It is a derivative
@@ -104,15 +93,8 @@ Debian Live and GRML are in the main {{< iref "distributions" "Distributions sec
 -   [FreedomBox](http://wiki.debian.org/FreedomBox)
     is a Debian project to build cheap and simple computer system that
     serves internet services and preserve Freedom.
-    -   [FreedomBox TargetedHardware
-        ](http://wiki.debian.org/FreedomBox/TargetedHardware)
-    -   [FreedomBox Example Projects
-        ](http://wiki.debian.org/FreedomBox/ExampleProjects)
-    -   [FreedomBox LeavingTheCloud
-        ](http://wiki.debian.org/FreedomBox/LeavingTheCloud)
-        cloud related user-facing services replacement in Debian.
-    -   [Nick Daly Plug-Server](https://bitbucket.org/nickdaly/plugserver)
-        is a prototype of some Freedom Box services on a plug computer.
+
+    More in the {{< iref "sbc#freedombox" "FreedomBox main entry" >}}.
 -   [Gentoo Embedded Handbook
     ](https://gentoo-handbook.lugons.org/proj/en/base/embedded/handbook/index.xml)
 -   {{< wp "Maemo" >}} is a development platform, the project is abandonned by Nokia,
