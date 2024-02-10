@@ -95,7 +95,9 @@ _See the also sections: {{< iref "debian_admin" "Debian administration" >}} and
     your files with _Wipe_.
 
     Debian provides a package _tail-installer_ which is a graphical tool to install or
-    upgrade Tails on a USB stick from an ISO image.
+    upgrade Tails on a USB stick from an ISO image
+
+    Tail needs an usb stick with 8GB memory.
 
 ## Debian Live
 [Debian Live](https://wiki.debian.org/DebianLive)
@@ -108,6 +110,19 @@ allows to create your own customized Debian Live system.
 -   The index [installer images, live images, cloud images
     ](https://cdimage.debian.org/cdimage/) allow to know the packages installed on each
     standard Debian Live image.
+
+# Alpine Linux
+{{< wp "Alpine Linux" >}},
+[Alpine Linux Home](https://www.alpinelinux.org/)
+is a security-oriented, lightweight Linux distribution based on musl libc and
+busybox. A container requires no more than 8 MB and a minimal installation to disk
+requires around 130 MB of storage.
+
+Alpine Linux is used heavily in containers (e.g. docker images) on servers, so many
+of its main packages are focused on server services.
+
+-   [Alpine Linux Wiki](https://wiki.alpinelinux.org/wiki/Main_Page)
+
 
 # Gentoo
 <!-- See the {{< iref "portage_notes" "Portage Notes" >}} the
