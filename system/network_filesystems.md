@@ -5,7 +5,7 @@ title: Network File Systems
 See also the companion pages on
 {{< iref "filesystems" "Filesystems" >}},
 {{< iref "encrypted_filesystems" "Encrypted Filesystems" >}},
-{{< iref "webdav" "WebDav >}}.
+{{< iref "webdav" "WebDav" >}}.
 
 ----
 
@@ -338,6 +338,13 @@ See also {{< iref "clouds" "Cloud Storage" >}}.
 
 See also {{< iref "clouds" "Cloud Storage" >}}.
 
+-   Wikipedia:
+    {{< wp "Clustered file system" >}},
+    {{< wp "List_of_file_systems#Distributed_file_systems" "Distributed file systems" >}},
+    {{< wp "Comparison_of_distributed_file_systems" "Comparison of distributed file systems">}},
+    {{ wp "Filesystem_in_Userspace#Remote/distributed_file_system_clients" "Fuse Remote/distributed file system clients" >}}.
+-   [awesome-sysadmin] - Distributed Filesystem]i
+    (https://github.com/awesome-foss/awesome-sysadmin#distributed-filesystems)
 -   [awesome distributed systems
     ](https://github.com/theanalyst/awesome-distributed-systems).
 -   [Linux High Availability _HA_](http://linux-ha.org/wiki/Main_Page).
@@ -406,23 +413,26 @@ is a clustered file-system. It aggregates various storage bricks
 over Infiniband RDMA or TCP/IP.
 
 -   [GlusterFS Documentation](https://docs.gluster.org/en/latest/)
--   [Red Hat Gluster Storage: Overview, Use cases, Resources,
-    Get started
-    ](https://www.redhat.com/en/technologies/storage/gluster)
+-   [Red Hat Gluster Storage
+    ](https://access.redhat.com/documentation/en-us/red_hat_gluster_storage/)
 -   [GlusterFS Storage Cluster on CentOS 7
     ](https://wiki.centos.org/HowTos/GlusterFSonCentOS)
 -   [BTRFS as a GlusterFS storage back-end
     ](https://www.spinics.net/lists/linux-btrfs/msg64541.html).
--   [GlusterFS Tips
-    ](https://tipstricks.itmatrix.eu/category/glusterfs/)
+-   [GlusterFS – IT Tips and Tricks](https://tipstricks.itmatrix.eu/category/glusterfs/)
+-   [GlusterFS Tips](https://tipstricks.itmatrix.eu/category/glusterfs/)
     from Michel Bisson.
--   [Espace de stockage hautement disponible Partie 1
-    ](https://www.supinfo.com/articles/single/1184-espace-stockage-hautement-disponible-partie-1)
-    et [Partie 2
-    ](https://www.supinfo.com/articles/single/1185-espace-stockage-hautement-disponible-partie-2)
-    a tutorial on GlusterFs.
 -   [GlusterFS sur Ubuntu/Debian
     ](https://linuxfr.org/wiki/glusterfs-sur-ubuntu-debian).
+
+## GarageHQ
+[GarageHQ](https://garagehq.deuxfleurs.fr/) (AGPL v3)
+is a geo-distributed data store that implements the Amazon S3 object storage protocol.
+
+Note that the access to Garage is a pure S3 object storage protocol, it does not provide
+posix compatibility.
+
+-   [Deuxfleurs/garage Git repository](https://git.deuxfleurs.fr/Deuxfleurs/garage)
 
 ## GFS2 {#gfs2}
 {{< wp "Global File System 2" >}} (GFS2)  (GPL)
@@ -432,20 +442,170 @@ the same shared block storage and has no disconnected operating
 mode like other {{< wp "shared-disk file systems" >}} like {{< wp "OCFS2" >}}, {{< wp "Lustre" >}},
 {{< wp "Lizardfs" >}}.
 
-In contrast  {{< wp "distributed file systems" >}} like GlusterFS, Ceph, BeeGFS  do not share
-block level access to the same storage but use a network protocol
-and can have a disconnected operating mode.
+In contrast {{< wp "distributed file systems" >}} like GlusterFS, Ceph, BeeGFS do not
+share block level access to the same storage but use a network protocol and can have a
+disconnected operating mode.
+
 It uses Fibre Channel, iSCSI, AoE or DRDB in primary/primary mode devices as
 storage.
 
 _Not to be confused with {{< wp "Google File System" >}} a proprietary distributed
 fs also known by the acronym GFS or GoogleFS._
 
+
+## JuiceFs {#juicefs}
+[JuiceFs](https://juicefs.com/en/) (Apache2 License)
+is a GoLang distributed POSIX file system built on top of Redis (or another database)
+and S3 compatible object storage.
+
+JuiceFS comes in two versions: a Community Edition and an Enterprise Edition. The
+Enterprise Edition uses a proprietary metadata engine.
+
+-   [JuiceFs - GitHub](https://github.com/juicedata/juicefs).
+
+### JuiceFs documentation
+
+-   [JuiceFS documentation (community edition)
+    ](https://juicefs.com/docs/community/introduction/)
+-   [Distributed filesystem comparison - JuiceFS Blog
+    ](https://juicefs.com/en/blog/engineering/distributed-filesystem-comparison)
+-   [Comparing with others
+    ](https://juicefs.com/docs/community/comparison/juicefs_vs_alluxio/)
+    contains a detailled comparison with
+    Alluxio, Ceph, GlusterFs, S3FS, S3QL, Seaweedfs.
+-   [6 Essential Tips for JuiceFS Users - JuiceFS Blog
+    ](https://juicefs.com/en/blog/usage-tips/juicefs-user-tips-distributed-file-storage-system)
+-   [Guidance on selecting metadata engine in JuiceFS - JuiceFS Blog
+    ](https://juicefs.com/en/blog/usage-tips/juicefs-metadata-engine-selection-guide)
+-   [How to Set Up Metadata Engine
+    ](https://juicefs.com/docs/community/databases_for_metadata)
+    present the setup for each choice of metadata engine.
+-   [PostgreSQL Best Practices
+    ](https://juicefs.com/docs/community/postgresql_best_practices)
+-   [Metadata Backup & Recovery](https://juicefs.com/docs/community/metadata_dump_load/)
+-   [How to Set Up Object Storage](https://juicefs.com/docs/community/reference/how_to_set_up_object_storage)
+
+-   [Deploy WebDAV Server](https://juicefs.com/docs/community/deployment/webdav/)
+-   [Create Samba Shares](https://juicefs.com/docs/community/deployment/samba)
+-   [How to create a WebDAV share on JuiceFS? - JuiceFS Blog
+    ](https://juicefs.com/en/blog/usage-tips/setting-up-webdav-on-juicefs)
+-   [Create Samba Shares](https://juicefs.com/docs/community/deployment/samba)
+-   [Create NFS Shares](https://juicefs.com/docs/community/deployment/nfs)
+-   [Configuring Samba and NFS on JuiceFS - JuiceFS Blog
+    ](https://juicefs.com/en/blog/usage-tips/scalable-cloud-storage-samba-nfs-shares-juicefs)
+
+## Minio {#minio}
+{{< wp "Minio" >}} (AGPLv3) is a cloud storage server written in golang
+compatible with Amazon S3.
+
+Minio provide storage optimizations through erasure coding and POSIX/Filesystem
+compatibility.
+
+deb, rpm packages and docker image are provided.
+
+*Note: We put Minio in this section, because it is a s3compatible cloud storage,
+but Minio lack the "distributed" feature.*
+
+-  [MinIO Home](https://min.io/)
+-  [Minio - GitHub](https://github.com/minio/minio).
+-  [Minio Documentation](https://docs.min.io/).
+-  In the clouds section you find the S3 API clients including the
+   {{< iref "clouds#miniocli" "minio client *mc*" >}}.
+
 ## NBD {#nbd}
 {{< wp "Network_block_device"  "NBD (Network block device)" >}}
 ([nbd home](http://nbd.sourceforge.net/) )
 kernel module, allows remote servers to be used as local block
 devices
+
+## OpenDedup – SDFS {#opendedup}
+[OpenDedup – SDFS](https://opendedup.org/odd/) (GPL)
+is a POSIX compliant filesystem hat performs inline deduplication to local disk or
+cloud object storage. It works natively with the applications such as backup, when
+you do copy data, it dedupes, compresses, encrypts, and saves your data on disk or
+in the cloud. It can perform file level snapshots, and replication; with
+replication, only unique blocks  that are not shared between the two SDFS volumes
+are replicated.
+
+-   SDFS works with AWS S3, AWS Glacier, Azure, Google, and most S3 compliant backends.
+-   SDFS uses strong AES-CBC 256 bit encrytion, either when using local block
+    storage _in this case metadata is not encrypted_, or when data is sent to the
+    cloud all data, metadata, and hash table entries are encrypted before the data
+    is sent.
+-   [SDFS works with Backblaze B2
+    ](https://opendedup.org/odd/2018/04/04/backblaze-b2-enabled/)
+-   [Administration Guide – OpenDedup
+    ](https://opendedup.org/odd/administration-guide/)
+
+## SeaweedFs {#seaweedfs}
+[SeaweedFs](https://github.com/seaweedfs/seaweedfs) (Apache2 License)
+is a GoLang distributed file storage systems.
+
+The system consists of three components:
+
+-    The volume servers, which store files in the underlying layer (filesystem or S3
+     compatible object storage).
+-    The master servers, which manage the cluster
+-    The Filer, which provides the filesystem by using the metadata which is stored
+     separately in a database, like JuiceFs.
+
+
+-   [SeawedFS wiki](https://github.com/seaweedfs/seaweedfs/wiki/) contains the SeaweedFs
+    documentation.
+
+## S3FS {#s3fs}
+<a name="s3fs"></a>[s3fs](https://github.com/s3fs-fuse/s3fs-fuse) (GPL)
+is a C++ software which allows Linux and macOS to mount an S3 bucket via FUSE. s3fs
+preserves the native object format for files. It is also compatible with Google
+Cloud Storage, and other S3-based object stores. _S3Fs_ is packaged in Debian.
+
+See also the alternatives {{< iref "#yas3fs" "YAS3FS" >}} and
+{{< iref "#goofys" "goofys" >}}.
+
+-   {{< iref "python_libraries#pyfilesystem" "PyFilesystem" >}} is a Python module
+    that provides a simplified common interface to many types of filesystem, like
+    FTPfs, WebdavFs, tarFs, ZipFs,... including
+    [support for f3fs](https://www.pyfilesystem.org/page/s3fs/).
+-   <a name="yas3fs"></a>[YAS3FS](https://github.com/danilop/yas3fs) (MIT Licence)
+    (Yet Another S3-backed File System) is a Filesystem in Userspace (FUSE) interface
+    to Amazon S3. It is a rewritting in python of {{< iref "#s3fs" "s3fs" >}} which
+    adds a distributed cache
+    synchronized by Amazon SNS notifications. A web console is provided to easily
+    monitor the nodes of a cluster.
+-   <a name="goofys"></a>[goofys](https://github.com/kahing/goofys) (Apache License)
+    similar to {{< iref "#s3fs" "s3fs" >}} but written in go. It features better
+    performance, and less POSIX compliance than {{< iref "#s3fs" "s3fs" >}}.
+
+    It works with Ceph (ex: Digital Ocean Spaces, DreamObjects, gridscale), EMC
+    Atmos Google Cloud Storage, OpenStack Swift, {{< iref "#s3proxy" "S3Proxy" >}},
+    {{< iref "network_filesystems#Minio" "Minio" >}} (limited), Wasabi,Scaleway, Azure.
+
+    Prebuilt binaries are available in the GitHub release page.
+
+## S3Backer
+[s3backer](https://github.com/archiecobbs/s3backer) (GPL)
+is a filesystem that contains a single file backed by Amazon S3. The blocks of the file
+are stored as S3 objects. It provides a single normal file having a fixed size which is
+used to mount a loopback device then s3backer acts a virtual hard disk device.
+_S3backer_ is packaged in Debian.
+
+## S3QL {#s3ql}
+[S3QL](https://github.com/s3ql/s3ql/) (GPL3.0)
+is a file system that stores all its data online using storage services like Google
+Storage, Amazon S3 and S3 compatible, OpenStack, Blackblaze B2, local filesystem.
+
+S3QL is written in python and offers all posix features of a local file system, it
+supports hardlinks, symlinks, standard unix permissions, extended attributes.
+
+_S3QL_ deduplicate and compress data, it allows an optional AES encryption, It allows
+Copy-on-Write/Snapshotting.
+
+_S3QL_ is packaged in Debian.
+-   [S3QL User’s Guide](http://www.rath.org/s3ql-docs/index.html)
+-   [s3ql Wiki](https://github.com/s3ql/s3ql/wiki) includes an *incomplete* list of
+    alternatives to S3QL.
+-   [JuiceFS vs. S3QL | JuiceFS Documen
+    ](https://juicefs.com/docs/community/comparison/juicefs_vs_s3ql)
 
 ## Tahoe-LAFS
 {{< wp "Tahoe-LAFS" >}}
@@ -462,6 +622,8 @@ There is a Tahoe-LAFS Debian Package.
 
 
 # Cluster Management
+-   [Simple Linux Cluster - Tyler's Guides
+    ](https://tylersguides.com/guides/simple-linux-cluster/)
 
 ## Heartbeat and Pacemaker
 __Heartbeat__ i.e. {{< wp "Linux-HA" >}} is  a high-availability clustering
