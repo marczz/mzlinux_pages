@@ -46,44 +46,120 @@ Recent arm architectures includes
         is a family of ARMv7 multicore Socs with DDR3/DDR3L/DDR4 Ram
         (including ECC), PCI-e2.0, 2 or 3 Gigabits internets, 1 OSB
         3.0, 1 to 4 SATA, and a TDP of 3W to 4W.
--   <a name="arm-v8"></a>ARMv8: provided by {{< wp "Cortex-A32" >}} _32 bits only_ and for
+-   <a name="arm-v8"></a>[ARMv8
+    ](https://en.wikipedia.org/wiki/ARM_architecture_family#64/32-bit_architecture)
+    introduced in 2011 adds an optional 64-bit architecture named {{< wp "AArch64" >}}.
+    AArch64 provides user-space compatibility with Armv7-A, the 32-bit architecture.
+
+    This architectupe is described in Wikipedia {{< wp "AArch64" >}}, and
+    [Arm64 - Linux sunxi](https://linux-sunxi.org/Arm64). It allows 32-bit applications
+    to be executed in a 64-bit OS.
+     and for
     32bits/64bits {{< wp "Cortex-A" >}} > 35 among which the most used in SBC
-    is {{< wp "Cortex-A53" >}}, and Qualcom {{< wp "Snapdragon" >}}.
-    -   ARMv8-A _2011_ also named ARMv8.0-A introduce 64 bits AArch64
-        [Arm64](https://linux-sunxi.org/Arm64) architecture.
-        ARMv8-A allows 32-bit applications to be executed in a 64-bit
-        OS.
-    -   Then it was improved in ARMv8.1-A _2014_, {{< wp "ARMv8.2-A" >}}_2016_
-        supported by  {{< wp "Cortex-A55" >}} and {{< wp "Cortex-A75" >}} ,
-        ARMv8.3-A _2016_.
-    -   Wikipedia: {{< wp "Comparison of ARMv8-A cores" >}}
-    -   <a name="cortex-a53"></a>{{< wp"Cortex-A53" >}} launched in 2012 is the
-        successor of the Cortex-A7. It is the architecture of
-        [Marvell’s ARMADA 3700](https://www.marvell.com/embedded-processors/armada-3700/)
-        found in EspressoBin,
-        Broadcom BCM2837B0  used in Raspberry B-3+ and
-        [Actions SOC S700](https://www.actions-semi.com/en/productview.aspx?id=225)
-        found in Cubieboard 7, and AllWinner
-        [H64](https://linux-sunxi.org/H64),
-        [H5](https://linux-sunxi.org/H5),
-        [H6](https://linux-sunxi.org/H6),
-        [A64](https://linux-sunxi.org/A64).
--       [ArchWiki - Armv8 Platforms
-        ](https://archlinuxarm.org/platforms/armv8)
+    are {{< wp "Cortex-A53" >}} and
+    Qualcom {{< wp "Snapdragon" >}}.
+
+    ARMv8-A _2011_ includes [many processors
+        ](https://en.wikipedia.org/wiki/Comparison_of_ARM_processors#ARMv8-A), in the
+        successive versions of the ARMv8-A specification.
+
+    -   ARMv8.0-A  provided by {{< wp "Cortex-A32" >}} _32 bits only_ and for
+        {{< wp "AArch64" >}}  Cortex-A34, Cortex-A35, {{< wp "Cortex-A53" >}} *2014*,
+        {{< wp "Cortex-A57" >}} *2013*, {{<wp "Cortex-A72" >}} *2015*,
+        {{<wp "Cortex-A73" >}} *2016*. It is also used in the processors by Apple,
+        {{< wp "Qualcomm_Snapdragon" >}}, Nvidia...
+
+        See the [Wikipedia comparison of ArmV8-A processors
+        ](https://en.wikipedia.org/wiki/Comparison_of_ARM_processors#ARMv8-A)
+        -   <a name="cortex-a53"></a>{{< wp"Cortex-A53" >}} launched in 2012 is the
+            successor of the Cortex-A7. It is the architecture of
+            [Marvell’s ARMADA 3700](https://www.marvell.com/embedded-processors/armada-3700/)
+            found in EspressoBin,
+            Broadcom BCM2837B0  used in Raspberry B-3+ and
+            [Actions SOC S700](https://www.actions-semi.com/en/productview.aspx?id=225)
+            found in Cubieboard .
+    -   {{< wp "ARMv8.2-A" >}}_2016_
+        supported by  {{< wp "Cortex-A55" >}} *2017*, {{< wp "Cortex-A65" >}},
+        {{< wp "Cortex-A75" >}} *2017*, {{< wp "Cortex-A76" >}} 2018,
+        {{< wp "Cortex-A77" >}} *2019*, {{< wp "Cortex-A78" >}}, *2020*,
+        {{< wp "Cortex-X1" >}} *2020* *2020*
+   -    [ArchWiki - Armv8 Platforms](https://archlinuxarm.org/platforms/armv8)
+
+## RockShip {#rockship}
+
+-   [Rockchip Home](https://www.rock-chips.com/a/en/index.html).
+-   [Rockchip Products](https://www.rock-chips.com/a/en/products/index.html)
+-   Wikipedia: {{< wp "Rockship" >}} has a list of products.
+-   [rockchip-linux - GitHub](https://github.com/rockchip-linux) contains the kernel
+    source for RK3399.
+-   <a name="rk3588"></a>[RK3588
+    ](https://www.rock-chips.com/a/en/products/RK35_Series/2022/0926/1660.html) *2020*
+    is a {{< wp "Rockship" >}} product whose specifications include
+    4x {{< wp "Cortex-A76" >}}, and 4x {{< wp "Cortex-A55" >}}.
+
+    [RK3588](https://www.rock-chips.com/a/en/products/RK35_Series/2022/0926/1660.html)
+    features Ram: LPDDR4/4X & LPDDR5 2x32Bit, eMMC 5.1, Micro SD Card
+    3.0, 2x USB2.0 HOST, 2x USB3.1 + 2x USB2.0 OTG, 1 HDMI RX,  2x HDMI2.1,
+    camera/video input, 2x2 Lanes PCIe3.0, 3xPCIe2.0/ 3 SATA3.0/1xUSB3.0 MUX,
+    GPIO pin muxed devices *see the full list in thr following document*.
+
+    <a name="rk3588s"></a>**RK3588S** is a smaller version of *RK3588*, it has the same
+    8 core processor, RAM, eMMC, SD card but  2x USB2.0 HOST, 1x USB3.1 + 1x USB2.0 OTG,
+    no HDMI RX, 1x HDMI2.1, camera/video input, no PCIe3.0,
+    3xPCIe2.0/ 2 SATA3.0/1xUSB3.0 MUX, GPIO pin muxed devices
+     -   [Rock5/RK3588 vs RK3588S - Radxa Wiki](https://wiki.radxa.com/Rock5/RK3588_vs_RK3588S)
+-   <a name="rk3399"</a>[RK3399
+    ](https://www.rock-chips.com/a/en/products/RK33_Series/2016/0419/758.html)
+    is the predecessor of the *RK3588*.
+
+    features: Dual-core Cortex-A72  and Quad-core ARM Cortex-A53,
+    DDR3/DDR3L/LPDDR3/LPDDR4 RAM up to 4GB, eMMC 5.1, SD 3.0/MMC 4.51, HDMI, USBC 3.0,
+    pcm spdif, 10/100/1000M Ethernet,  2 USB OTG3.0, USB 2.0 Host, PCIe port,
+
+   -   [RK3399 Datasheet (pdf)](https://rockchip.fr/RK3399%20datasheet%20V1.8.pdf)
+
+-   <a name="rk3399-t"</a>**RK3399-T** is an enhancement pf *RK3399*
+   -   [RK3399-T Datasheet (pdf)
+       ](https://dl.radxa.com/rockpi4/docs/hw/datasheets/Rockchip%20RK3399-T%20Datasheet%20V1.0-20210818.pdf
+-   <a name="rk3399pro"</a>[RK3399 Pro
+    ](https://www.rock-chips.com/a/en/products/RK33_Series/2018/0130/874.html)
+    is a low power, high performance processor Based on Big.Little architecture, it
+    integrates dual-core Cortex-A72 and quad-core Cortex-A53 with separate NEON
+    coprocessor.
+
+    Equipped with one powerful neural network process unit(NPU), it supports mainstream
+    platforms in the market, such as caffe, tensor flow, and so on.
+
+    Embedded 3D GPU makes RK3399Pro completely compatible with OpenGL ES1.1/2.0/3.0/3.1,
+    OpenCL and DirectX 11.1.
+    -  [RK3399Pro Datasheet (pdf)
+       ](https://rockchip.fr/Rockchip%20RK3399Pro%20TRM%20V1.0%20Part1.pdf) .
+   -   [NPU in RK3399pro](https://wiki.radxa.com/RockpiN10/hardware/npu).
 
 ## Allwinner Technology {#allwinner_technology}
 
 {{< wp "Allwinner_Technology"  "Allwinner" >}} is one of the more popular
-manufacturer of arm SoC.
+manufacturer of arm SoC. *It seems that its leadership in the 2010-2015 years is now
+fading, compared to companies like Raxda*
+
+
+{{< wp "AllWinner Technology" >}} released over fifteen SoC processors for use in
+Android-based tablets, media players ...
+
 
 It produces the A1x serie of {{< wp "Cortex-A8" >}} ArmV7 SoC;
-the A2x and A3x serie of {{< wp " Cortex-A7" >}} ArmV7 SoC; the A8x family
-of  {{< wp " Cortex-A7" >}} and {{< wp "Cortex-A15" >}} ArmV7 SoC; The Hx family where
-H2, H3, H8 are {{< wp " Cortex-A7" >}} ArmV7 SoCs and  AllWinner
-[H64](https://linux-sunxi.org/H64), [H5](https://linux-sunxi.org/H5),
-[H6](https://linux-sunxi.org/H6)are {{< iref "#cortex-A53" "Cortex-A53" >}} armV8-A Socs.
+the A2x and A3x serie, and  H2, H3, H8 are {{< wp " Cortex-A7" >}} ArmV7 SoC; the A8x family
+of  {{< wp " Cortex-A7" >}} and {{< wp "Cortex-A15" >}},  ArmV7 SoC.
+
+
+In the 2015 they also proposed some armV8.0-A socs:
+[A64 - linux-sunxi.org](https://linux-sunxi.org/A64),
+    [H5](https://linux-sunxi.org/H5), [H6](https://linux-sunxi.org/H6),
+    [H64](https://linux-sunxi.org/H64)
+    features a ArmV8.0 Quad-Core Cortex-A53 ARM CPU, and a Mali400 MP2 GPU.
 
 -   Wikipedia: {{< wp "Allwinner_Technology"  "Allwinner" >}}
+-   [list of all documented sunxi devices](https://linux-sunxi.org/Category:Devices).
 -   [AllWinner - A series
     ](https://www.allwinnertech.com/index.php?c=product&a=index&pid=2)
 -   [AllWinner - H series
@@ -96,6 +172,11 @@ H2, H3, H8 are {{< wp " Cortex-A7" >}} ArmV7 SoCs and  AllWinner
     is an open source software community dedicated to Allwinner SoC
     based devices.
     -   [Sunxi devices as NAS](https://linux-sunxi.org/Sunxi_devices_as_NAS).
+    -   [A10](https://linux-sunxi.org/A10 "A10"), [A20](https://linux-sunxi.org/A20),
+        and [R40](https://linux-sunxi.org/R40) are armv7 SoCs which have support for
+        one SATA device, but it's only available on a [few devices
+        ](https://linux-sunxi.org/Category:Devices_with_SATA_port)
+        Cubbieboard/Cubitruck, Bananapi, Olimex OlinuXino.
     -   [SATA](https://linux-sunxi.org/SATA) describes the sata interface
         available on Allwinner A10, A20 and R40 SoCs.It contains a performance tuning
         section, and it considers the support of port multipliers. A list of devices
@@ -232,13 +313,23 @@ H2, H3, H8 are {{< wp " Cortex-A7" >}} ArmV7 SoCs and  AllWinner
 
 ## Freedom Box {#freedombox}
 -   [FreedomBox - Debian Wiki](https://wiki.debian.org/FreedomBox)
-    is a self-hosting server. It can be used as a private Cloud, a NAS, or a router.
+    is a Debian project to build cheap and simple computer system that serves internet
+    services and preserve Freedom.
+
+    FreedomBox is a self-hosting server. It can be used as a private Cloud, a NAS, or a
+    router.
+
+-   [FreedomBox TargetedHardware](http://wiki.debian.org/FreedomBox/TargetedHardware)
+-   [FreedomBox Example Projects](http://wiki.debian.org/FreedomBox/ExampleProjects)
+-   [FreedomBox LeavingTheCloud](http://wiki.debian.org/FreedomBox/LeavingTheCloud)
+    cloud related user-facing services replacement in Debian.
 -   The Freedom box supports
     [many applications](https://wiki.debian.org/FreedomBox/Features).
     This page list the role of FreedomBox applications, and their use case.
 -   The are many FreedomBox
     [compatible Hardware](https://wiki.debian.org/FreedomBox/Hardware).
 -   [FreedomBox Manual](https://wiki.debian.org/FreedomBox/Manual).
+-   [FreedomBox Manual: Networks](https://wiki.debian.org/FreedomBox/Manual/Networks)
 -   [FreedomBox Clients](https://wiki.debian.org/FreedomBox/Clients)
     list the Debian packages with clients for freedombox service.
 -   [Install Freedombox in the Cloud](https://wiki.debian.org/FreedomBox/Cloud)
@@ -481,9 +572,7 @@ All the development and tecnical documentation is above in the
     In 2022 it is priced 92€ at reichelt store. _10% more than Odroid C4_.
 
 
-## Banana Pi development
-
-## Vente du Banana Pi
+## Banana Pi european resellers
 
 -   [banana-pi.com](https://www.banana-pi.com/)
     a la [liste des revendeurs](https://www.banana-pi.com/egsjj.asp?id=12)
@@ -500,20 +589,23 @@ All the development and tecnical documentation is above in the
 -   China banana PI, orange Pi, Suppliers  Aliexpress.com
     [banana Pi](https://www.aliexpress.com/wholesale?SearchText=banana+pi).
 
-# ESPRESSObin
+# ESPRESSObin {#espressobin}
+<--!
+[[file:../../../../content-org/localconfig/espressobin.org][My espressobin config]]
+-->
 
 Specifications:
 
 -   [Marvell’s ARMADA 3700](https://www.marvell.com/embedded-processors/armada-3700/)
     {{< iref "#cortex-A53" "Cortex-A53" >}} dual-core  up to 1.2 GHz.
--   1x [Topaz Networking Switch](https://wiki.espressobin.net/tiki-index.php?page=Topaz+Switch)
-    _The Marvell® Link Street®-88E6341 device is single-chip, 6-Port
-    Ethernet Switch with four integrated 10/100/1000Mbps Ethernet
-    transceivers and one high speed SerDes interfaces supporting
-    2500-BaseX, 1000Base-X, and SGMII. The device also includes an
-    integrated 200MHz microprocessor with 60Kbytes of internal memory to
-    enable smart or lightly managed switches without the need of an
-    external CPU. On ESPRESSObin we find 1 2.5G and two 10/100/1000Mbps._
+-   1x [Topaz Networking Switch
+    ](https://wiki.espressobin.net/tiki-index.php?page=Topaz+Switch)
+    _The Marvell® Link Street®-88E6341 device is single-chip, 6-Port Ethernet Switch
+        with four integrated 10/100/1000Mbps Ethernet transceivers and one high speed
+        SerDes interfaces supporting 2500-BaseX, 1000Base-X, and SGMII. The device also
+        includes an integrated 200MHz microprocessor with 60Kbytes of internal memory to
+        enable smart or lightly managed switches without the need of an external CPU. On
+        ESPRESSObin we find 1 2.5G and two 10/100/1000Mbps._
 -   1x uSD card slot with footprint for an optional 4GB EMMC
 -   1GB DDR3 & 2GB DDR3 options
 -   2x Gb Ethernet LAN
@@ -564,13 +656,11 @@ The ESPRESSObin is unbrickable you can always do
         ](https://espressobin.net/forums/topic/armbian-ubuntu-debian/),
     -   [Real Time preemptible kernels
         ](https://wiki.linuxfoundation.org/realtime/documentation/technical_details/start)
-        are available in armbian and support ESPRESSObin
-        [
-        https://forum.armbian.com/topic/5576-fully-preemptible-kernels/
+        are available in armbian and [support ESPRESSObin
+        ](https://forum.armbian.com/topic/5576-fully-preemptible-kernels/)
 -   [ESPRESSObin | Arch Linux ARM
     ](https://archlinuxarm.org/platforms/armv8/marvell/espressobin)
--   [ESPRESSOBin - Gentoo Wiki
-    ](https://wiki.gentoo.org/wiki/ESPRESSOBin#What.27s_Required)
+-   [ESPRESSOBin - Gentoo Wiki](https://wiki.gentoo.org/wiki/ESPRESSOBin)
 
 ## Hardware
 -   [Howto: set up your ESPRESSObin as a home router
@@ -612,21 +702,72 @@ The ESPRESSObin is unbrickable you can always do
         ](https://forum.armbian.com/topic/3045-support-of-helios4-intro/?page=2&tab=comments#comment-39582)
 
 # Raxda
--   [Single Board Computers from Radxa](https://rockpi.org/)
--   [Rock Pi 4](https://rockpi.org/rockpi4)
-    model C based on a Rockchip RK3399 processor that features two ARM Cortex-A72 cores
-    and four ARM Cortex-A53 cores. This is supplemented by an ARM Mali-T864 GPU that
-    supports modern APIs like OpenGL ES 3.2 and Vulkan 1.0. The Rock Pi 4 Model C also
-    has 4 GB of RAM, a micro HDMI 2.0a port and a mini DP 1.2 port for high-resolution
-    video output.
+-   [Radxa Products](https://radxa.com/products/)
+-   [Radxa RockPi Products](https://rockpi.org/)
+    -   [Rock Pi 4](https://rockpi.org/rockpi4)
+        model C based on a Rockchip **RK3399** processor *the predecessor of the *RK3588*
+        that features two ARM Cortex-A72 cores and four ARM Cortex-A53 cores. This is
+        supplemented by an ARM Mali-T864 GPU that supports modern APIs like OpenGL ES
+        3.2 and Vulkan 1.0. The Rock Pi 4 Model C also has 4 GB of RAM, a micro HDMI
+        2.0a port and a mini DP 1.2 port for high-resolution video output.
 
-    It provides a NVMe port in a M2 socket factor. The socket supports 4-lane NVMe SSDs
-    and is complemented by 4 MB of SPI flash for booting NVMe drives.
-    The SBC requires an expansion board for connecting NVMe drives.
+        It provides a NVMe port in a M2 socket factor. The socket supports 4-lane NVMe SSDs
+        and is complemented by 4 MB of SPI flash for booting NVMe drives.
+        The SBC requires an expansion board for connecting NVMe drives.
 
-    It is compatible with existing Rock Pi 4 accessories.
+        It is compatible with existing Rock Pi 4 accessories.
 
-    -   [Rock Pi 4 documentation](https://rockpi.eu/Rockpi4)
+        -   [Rock Pi 4 documentation](https://rockpi.eu/Rockpi4)
+    -   [Rockpi N10](https://wiki.radxa.com/RockpiN10)  based on
+        {{< iref "#rk3399pro" "RK3399 Pro" >}}.
+-   [Radxa ZERO 3W](https://radxa.com/products/zeros/zero3w)
+    has a Rockchip RK3566 with 1G to 8G LPDDR4, Quad-Core Arm® Cortex™-A55,
+    Arm®Mali-G52 2EE which Support OpenGL® ES1.1/2.0/3.2, Vulkan® 1.1 and OpenCL™ 2.0,
+    WiFi 6 / BT 5.4,, port CSI, HDMI, USB2, USB3 and optional GPIO.
+
+    2G without GPIO is priced 31€, 8G with GPIO 70€ *2024*.
+    -   [ZERO 3 - Radxa Docs](https://docs.radxa.com/en/zero/zero3)
+
+    [Radxa ZERO 3E](https://radxa.com/products/zeros/zero3e) has a gigabit ethernet
+    instead of Wifi.
+
+-   [ROCK 4](https://wiki.radxa.com/Rock4) is a series of Rockchip RK3399 series SoC
+    based SBC. It is composed of
+
+    -   ROCK 4A and 4B Powered by RK3399- 2018
+    -   ROCK 4C Powered by RK3399 - 2020 51€ with 4GB (2024)
+    -   ROCK 4A Plus and 4B Plus Powered by OP1 - 2021
+    -   ROCK 4C Plus Powered by RK3399-T - 2022 ([product brief (pdf)
+        ](https://dl.radxa.com/rockpi4/docs/hw/rockpi4/rockpi4c_plus_product_brief.pdf)
+    -   ROCK 4 SE Powered by RK3399-T- 2022 67€ with 4GB (2024)
+
+-   [ROCK 5A](https://radxa.com/products/rock5/5a/)
+    is based on [rk3588S](#rk3588S) and features up to 32GB 64bit LPDDR4X ram, up to 8K@60
+    HDMI, MIPI DSI, MIPI CSI, 3.5mm jack with mic, USB Port, GbE LAN, PCIe 3.0 x4, PCIe
+    2.0, 40-pin color expansion header, RTC. Also, ROCK5 supports USB PD power with
+    display alt mode. With 16G Ram it is priced 160€, 8GB 120€ *2024*
+
+    -   [ROCK 5B](https://radxa.com/products/rock5/5b/) is based on
+        [rk3588](#rk3588) features an Octa core ARM
+        processor(4x Cortex-A76 + 4x Cortex-A55), up to 32G 64bit 3200Mb/s LPDDR4, up to 8K@60
+        HDMI, MIPI DSI, MIPI CSI, 3.5mm jack with mic, USB Port, 2.5 GbE LAN, PCIe 3.0,
+        PCIe 2.0, 40-pin color expansion header, RTC. Also, ROCK5 supports USB PD and QC
+        powering.
+
+        The build-in NPU supports INT4/INT8/INT16/FP16 hybrid operation and computing
+        power is up to 6TOPs. Network models based on a series of frameworks such as
+        TensorFlow/MXNet/PyTorch/Caffe can be converted.
+
+        A rock 5B card with 16G Ram is priced 175€, with 8GB 148€, 4GB 130€ *2024*.
+    -   [Rock5a and Rock5b hardware and accessories - Radxa Wiki
+        ](https://wiki.radxa.com/Rock5/hardware)
+    -   [Radxa Penta SATA HAT](https://radxa.com/products/accessories/penta-sata-hat)
+        provides 4 SATA + 1 eSATA  with powerInterface for up to 5 2.5"/3.5" HDD/SSD, and  has
+        a 12v DC power input and an ATX power interface. It can fit on Rock 5A, Rock
+        4a/4b/4a+/4b+/4se, raspberry Pi 5.
+
+        It utilizes two lanes of the PCIe 2.1 bus.v on Rock Pi 4.
+
 # Plug Computers
 Wikipedia {{< wp "Plug computer" >}}.
 
@@ -1172,4 +1313,5 @@ and optional USB or cloud backup
 <!-- Local Variables: -->
 <!-- mode: markdown -->
 <!-- ispell-local-dictionary: "english" -->
+<!-- eval: (org-link-minor-mode 1) -->
 <!-- End: -->
