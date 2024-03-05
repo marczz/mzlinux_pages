@@ -29,6 +29,17 @@ See also
     ](https://docs.fedoraproject.org/en-US/fedora/latest/system-administrators-guide/monitoring-and-automation/System_Monitoring_Tools/)
     describe many basics system commands: ps, top, free, lsblk, blkid, partx, findmnt,
     df, du, lspci, lsusb, lspcmia, lscpu, hw-probe, Net-SNMP.
+-   [System Monitoring Utilities - Suse Entreprise Server Documentation
+    ](https://documentation.suse.com/sles/12-SP5/html/SLES-all/cha-util.html)
+    exemple of basic utilities like vmstat, dstat, sar, iostat, mpstat, turbostat,
+    pidstat, dmesg, lsof, udevadm monitor, ipcs, ps, pstree, top, hyptop, iotop, nice,
+    renice, free, ip, nethog, ethtool, ss, procinfo, lspci, lsusb, tmon, file, mount,
+    df, du, stat, fuser, w, time, RRDtool,
+-   [Monitoring and managing system status and performance - Red Hat Enterprise Linux 9
+    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/monitoring_and_managing_system_status_and_performance/index)
+    describe many utilities, tuned, Performance Co-Pilot (PCP); poxertop, perf,numastat,
+    using the kernel cgroups, systemtap, ...
+
 
 ## CPU use
 For the cpu usage the standard criterias are load average, cpu user
@@ -117,16 +128,6 @@ area
         ](https://github.com/brndnmtthws/conky/wiki/Window-Configuration#gnu-screen)
     -   [MerkeX/conky-manager2](https://github.com/MerkeX/conky-manager2) Fork of GUI
         for managing Conky widget.
-
-[Glances](https://nicolargo.github.io/glances/)
-:   glances is a python ncurses program that replace and improve _top_ and _htop_. It
-    can also work in client/server mode for remote monitoring, and also provide a Web
-    interface. _Glances_ is in Debian.
-
-    -   [GitHub - Glances](https://github.com/nicolargo/glances)
-    -   [Glances documentation](https://glances.readthedocs.io/)
-    -   [Tecmint Glances tutorial
-        ](https://www.tecmint.com/glances-an-advanced-real-time-system-monitoring-tool-for-linux/)
 
 <a name="gkrellm"></a>[Gkrellm](http://www.gkrellm.net/) (GPL)
 :   Gkrellm is a gtk stack of system monitors that includes
@@ -253,7 +254,7 @@ There are many oprofile
 -   [OProfile :: Fedora Docs
     ](https://docs.fedoraproject.org/en-US/fedora/latest/system-administrators-guide/monitoring-and-automation/OProfile/)
 
-[perf](https://perf.wiki.kernel.org/index.php/Main_Page)
+<a name="perf"></a>[perf](https://perf.wiki.kernel.org/index.php/Main_Page)
 :   is a tool to instrument CPU performance counters, tracepoints, kprobes, and uprobes
     (dynamic tracing). It is capable of lightweight profiling, and is included in the
     Linux kernel. *It is in the Debian package linux-perf.*
@@ -261,7 +262,11 @@ There are many oprofile
         [Brendan Gregg](https://www.brendangregg.com/index.html),
         which has many [performance related material
         ](https://www.brendangregg.com/overview.html).
-
+    -   The section  Monitoring and managing system status and performance from the Red
+            Hat entreprise documentation has several chapters dedicated to perf,
+            [Chapter 16
+            ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/monitoring_and_managing_system_status_and_performance/getting-started-with-perf_monitoring-and-managing-system-status-and-performance)
+            to chapter 27.
 [Valgrind Massif](https://valgrind.org/docs/manual/ms-manual.html) (GPL-2)
 :   Massif is a heap profiler. It measures how much heap memory your program uses; it
     can allow you to reduce your program memory footprint.
@@ -270,6 +275,10 @@ There are many oprofile
 -   {{< man "top" >}} - real-time view of  system summary information as well as a list
     of processes or threads.
 -   {{< man "atop" >}} - AT Computing's System & Process Monitor
+-   [bottom](https://github.com/ClementTsang/bottom) (MIT License)
+    a rust graphical process/system monitor for the terminal.
+
+    A deb package is provided in the releases.
 -   [btop](https://github.com/aristocratos/btop#help-menu) (apache 2)
     A resource monitor that shows usage and stats for processor, memory, disks, network
     and processes. Packaged in Debian.
@@ -279,6 +288,19 @@ There are many oprofile
     The configuration is not externally documented, but *btop* place an auto-generated
     commented configuration in `$HOME/.config/btop`, `vim_keys=true` allow to move
     with "h,j,k,l,g,G" keys.
+-   [Glances](https://nicolargo.github.io/glances/)
+    glances is a python ncurses program that replace and improve _top_ and _htop_. It
+    can also work in client/server mode for remote monitoring, and also provide a Web
+    interface. _Glances_ is in Debian.
+
+    -   [GitHub - Glances](https://github.com/nicolargo/glances)
+    -   [Glances documentation](https://glances.readthedocs.io/)
+    -   [Tecmint Glances tutorial
+        ](https://www.tecmint.com/glances-an-advanced-real-time-system-monitoring-tool-for-linux/)
+-   [gotop](https://github.com/xxxserxxx/gotop) (MIT License)
+    A Golang terminal based graphical activity monitor.
+
+    A deb package is provided in the releases.
 -   [htop](http://htop.dev) (GPL-2)
     ncurses-based process viewer.  It is similar to top, but allows to scroll the
     list vertically and horizontally to see all processes and their full command
@@ -289,14 +311,6 @@ There are many oprofile
     for a list of supported key commands.
 
     -   [htop - Github](https://github.com/htop-dev/htop/).
--   [gotop](https://github.com/xxxserxxx/gotop) (MIT License)
-    A Golang terminal based graphical activity monitor.
-
-    A deb package is provided in the releases.
--   [bottom](https://github.com/ClementTsang/bottom) (MIT License)
-    a rust graphical process/system monitor for the terminal.
-
-    A deb package is provided in the releases.
 Many other alternatives are available, an incomplete list is inactive
 [Alternatives - Gotop](https://github.com/xxxserxxx/gotop#alternatives).
 
@@ -438,7 +452,16 @@ while command line tools are in
 -   [softpanorama](http://www.softpanorama.org/):
     [System Monitoring](http://www.softpanorama.org/Admin/system_monitoring.shtml)
 
+[Cockpit](https://cockpit-project.org/)
+:   is an interactive server admin interface.
 
+    Cockpit is the web administration interface of
+    -   [Cockpit Guide](https://cockpit-project.org/guide/latest/)
+    -   [Managing systems using the  web console - Red Hat Enterprise Linux
+        ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/managing_systems_using_the_rhel_9_web_console/index)
+        *Web Console is the name for Cockpit in RedHat entreprise.
+    -   [Administering SUSE ALP Dolomite using Cockpit
+        ](https://documentation.suse.com/alp/dolomite/html/cockpit-alp-dolomite/index.html)
 {{< wp "Collectd" >}} (GPL)
 :   is a UNIX-daemon which collects, transfers and stores performance data and provides
     mechanisms to store the values for example in {{< iref "#rrdtool" "RRDTool" >}}
