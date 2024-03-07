@@ -1283,14 +1283,24 @@ OPI ([technical specifications
 with Cortex A8 processor, 512MB RAM, LUKS-based microSD encryption,
 and optional USB or cloud backup
 
-
-
 # Software
 
 -   {{< wp "Zephyr_(operating_system" "Zephyr" >}} (Apache2 License)
     is a real-time operating system (RTOS) for connected, resource-constrained and
     embedded devices like {{< wp  "microcontrollers" >}}.
     -   [Zephyr Project Documentation](https://docs.zephyrproject.org/latest/index.html).
+
+## uboot {#uboot}
+{{< wp "Das U-Boot" >}} is an open-source boot loader used in embedded devices to
+perform low-level hardware initialization and boot the kernel.
+
+-   [U-Boot Documentation](https://docs.u-boot.org/en/latest/)
+-   [U-Boot · GitLab](https://source.denx.de/u-boot/u-boot)
+-   [U-Boot Environment Variables - Sachin Verma blog
+    ](https://www.vermasachin.com/posts/3-u-boot-environment-variables/)
+-   [U-boot - Debian Wiki](https://wiki.debian.org/U-boot) and
+    [Debian U-boot supported devices
+    ](https://wiki.debian.org/U-boot/Status).
 
 ## Monitoring
 -   [rpi monitor](https://rpi-experiences.blogspot.fr/p/rpi-monitor.html)
