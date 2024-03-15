@@ -14,10 +14,9 @@ See also the companion pages on
     allows also numerous network filesystems: _sshfs_,
     _smbNetfs_, _fusedav_, _nasfs_, ...
 -   A {{< wp "storage area network" >}} (SAN)
-    attach remote computer storage to servers in such a way that the
-    devices appear as locally attached devices. Most storage networks
-    use the SCSI protocol for communication between servers and disk
-    drive devices. They use technology such:
+    attach remote computer storage to servers in such a way that the devices appear as
+    locally attached devices. Most storage networks use the SCSI protocol for
+    communication between servers and disk drive devices. They use technology such:
     -   {{< wp "Fibre Channel" >}}
         a gigabit-speed network technology.
     -   {{< wp "ISCSI" >}} or scsi over IP.
@@ -30,13 +29,9 @@ See also the companion pages on
         devices. AoE is simpler and cheaper than ISCSI, being independant
         from IP it is not routable.
 -   {{< wp "Network Attached Storage" >}} (NAS)
-    are servers that provide file system storage on the network,at the
-    level of the file system, in contrast to SAN that work at the block
-    level. NAS use protocol like NFS, SMB (aka CIFS), Upnp ...
--   [Coda](http://www.coda.cs.cmu.edu/): a distributed file system,
-    it supports disconnected operation, i.e. full access to a cached
-    section of the file space during voluntary or involuntary network
-    or server outages.
+    are servers that provide file system storage on the network,at the level of the file
+    system, in contrast to SAN that work at the block level. NAS use protocol like NFS,
+    SMB (aka CIFS), Upnp ...
 -   {{< iref "webdav" "WebDav section" >}}
     has the references to the DAV oriented virtual file systems like
     davfs2, gvfs-dav, fusedav ...
@@ -44,6 +39,27 @@ See also the companion pages on
     ](https://www.redhat.com/en/resources/container-storage-dummies)
     a free ebook from RedHat.
 
+# Mounting Network Filesystems
+-   [Chapter 18. Mounting file systems on demand - Red Hat Enterprise Linux 9
+    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/managing_file_systems/mounting-file-systems-on-demand_managing-file-systems)
+    uses autofs which is also packaged in Debian.
+-   [Mount Remote Filesystems Using sshfs and systemd
+    ](https://www.buggycoder.com/mount-remote-fs-sshfs-systemd/)
+-   [Automount filesystems with systemd | Hetzner Community
+    ](https://community.hetzner.com/tutorials/automount-filesystems-with-systemd)
+-   [Automatic mounts with systemd · Blog | Tomáš Tomeček
+    ](https://blog.tomecek.net/post/automount-with-systemd/)
+-   [fstab Automount with systemd - ArchWiki
+    ](https://wiki.archlinux.org/title/Fstab#Automount_with_systemd)
+
+# SSHFS {#sshfs}
+
+[sshfs](http://fuse.sourceforge.net/sshfs.html) is the _fuse_ access to ssh file
+systems.
+-  [Ubuntu: sshfs](https://help.ubuntu.com/community/SSHFS)
+   explains the usage, including mounting from fstab.
+-  [ArchWiki: sshfs](https://wiki.archlinux.org/index.php/Sshfs)
+-  [Gentoo Wiki: SSHFS](https://wiki.gentoo.org/wiki/SSHFS)
 
 # NFS {#nfs}
 The references to use of a disc-less Linux workstation with root
@@ -409,8 +425,8 @@ Since Lenny DRDB is part of Debian.
 
 ## Glusterfs {#glusterfs}
 {{< wp "GlusterFS" >}} (GPL and LGPL)
-is a clustered file-system. It aggregates various storage bricks
-over Infiniband RDMA or TCP/IP.
+is a clustered file-system. It aggregates various storage bricks over Infiniband RDMA or
+TCP/IP.
 
 -   [GlusterFS Documentation](https://docs.gluster.org/en/latest/)
 -   [Red Hat Gluster Storage
@@ -586,7 +602,7 @@ See also the alternatives {{< iref "#yas3fs" "YAS3FS" >}} and
 [s3backer](https://github.com/archiecobbs/s3backer) (GPL)
 is a filesystem that contains a single file backed by Amazon S3. The blocks of the file
 are stored as S3 objects. It provides a single normal file having a fixed size which is
-used to mount a loopback device then s3backer acts a virtual hard disk device.
+used to mount a loopback device then *s3backer* acts a virtual hard disk device.
 _S3backer_ is packaged in Debian.
 
 ## S3QL {#s3ql}
