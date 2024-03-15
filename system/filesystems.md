@@ -484,12 +484,6 @@ Some file deduplication programs listed in the
 -   [pytagfs](http://sourceforge.net/projects/py-tag-fs/)
     arranges media files in a virtual directory structure based on the file tags.
     -   [pytagfs on GitHub](https://github.com/dizel-by/pytagfs) _main or fork?_
-    -   <a name="sshfs">[sshfs](http://fuse.sourceforge.net/sshfs.html)
-        is the _fuse_ access to ssh file systems.
-    -  [Ubuntu: sshfs](https://help.ubuntu.com/community/SSHFS)
-       explains the usage, including mounting from fstab.
-    -  [ArchWiki: sshfs](https://wiki.archlinux.org/index.php/Sshfs)
-    -  [Gentoo Wiki: SSHFS](https://wiki.gentoo.org/wiki/SSHFS)
 -   [tagfs](https://github.com/marook/tagfs/wiki) _≠ Tagsistant_.
     is used to organize your documents using tags.
 -   [Tagasistant](http://www.tagsistant.net/) _previously tagfs_
