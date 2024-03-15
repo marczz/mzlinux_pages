@@ -576,10 +576,12 @@ be fully functional
     status line for the i3 window manager. It handles clicks, signals
     and language-agnostic user scripts.
 
-    We can use [i3blocks](https://github.com/vivien/i3blocks) in _{{< iref "#i3bar" "i3bar" >}}_
-    to replace _i3status_ or inside {{< iref "#swaybar" "swaybar" >}}. With the standard configuration which
-    mimic i3status _i3blocks_ has a memory footprint of 0.7M/0.5M to
-    which are temporarily added the called programs to update status.
+    We can use [i3blocks](https://github.com/vivien/i3blocks) in _{{< iref "#i3bar"
+    "i3bar" >}}_ to replace _i3status_ or inside {{< iref "#swaybar" "swaybar" >}}.
+    With the standard configuration which mimic i3status.
+
+    _i3blocks_ has a memory footprint of 0.7M/0.5M to which are temporarily added the
+    called programs to update status.
     -   [i3blocks wiki](https://github.com/vivien/i3blocks/wiki)
         give example of _i3blocks_ scripts, and explain how to write
         your ownmp.
@@ -595,6 +597,11 @@ statusline generator for i3wm or sway
     -   [i3ipc-python Documentation](https://i3ipc-python.readthedocs.io/en/latest/).
     -   [i3ipc-python examples
         ](https://github.com/altdesktop/i3ipc-python/tree/master/examples)
+-   [i3-sway-switch-window](https://github.com/johanwiden/i3-sway-switch-window)
+    In i3wm, or sway, replace currently focused window with emacs buffer,
+    file from emacs recentf, browser window showing URL from a browser tab,
+    or another window.
+    *i3-sway-switch-window* uses [brotab](https://github.com/balta2ar/brotab).
 
 ### sway tools
 All wayland tools which accept _wlroots_ based compositors, work with sway, you find
@@ -896,7 +903,7 @@ Rofi is in Debian.
 See also the list in [awsome Wayland - launchers
 ](https://github.com/natpen/awesome-wayland#launchers).
 
--   [bemenu](https://github.com/Cloudef/bemenu) (GPLv3 and LGPLv3)
+-  <a name="bemenu"></a> [bemenu](https://github.com/Cloudef/bemenu) (GPLv3 and LGPLv3)
     is an dynamic menu library and client program inspired by dmenu.
     It has a ncurses, x11, and wayland backend.
     You can use it with {{< iref "#j4-menu-desktop" "j4-menu-desktop" >}} for a desktop
@@ -904,15 +911,15 @@ See also the list in [awsome Wayland - launchers
     -   [bemenu API documentation](http://cloudef.pw/bemenu/).
 -   [dmenu-wl](https://github.com/nyyManni/dmenu-wayland) (MIT License)
     dmenu for wayland (wlroots) compositors.
--   [fuzzel](https://codeberg.org/dnkl/fuzzel)
+-   <a name="fuzzel"></a>[fuzzel](https://codeberg.org/dnkl/fuzzel) (MIT License)
     Application launcher for wlroots compositors, similar to rofi's `drun` mode.
     *Packaged in Debian.*
--   [lbonn/rofi](https://github.com/lbonn/rofi) (MIT License)
+-  <a name="lbonn_rofi"></a> [lbonn/rofi](https://github.com/lbonn/rofi) (MIT License)
     a rofi fork with wayland support.
--   [tofi](https://github.com/philj56/tofi) (MIT License)
+-  <a name="tofi"></a> [tofi](https://github.com/philj56/tofi) (MIT License)
     fast and simple dmenu / rofi replacement for wlroots-based Wayland compositors.
     _tofi_ is in Debian.
--   [wofi](https://hg.sr.ht/~scoopta/wofi) (GPL-3.0)
+-   <a name="wofi"></a>[wofi](https://hg.sr.ht/~scoopta/wofi) (GPL-3.0)
     a launcher/menu program for wlroots based wayland compositors such as sway.
     The documentation is in the man pages. There are packages for most distribution
     including Debian.
