@@ -2,21 +2,18 @@
 title: Network Configuration
 ---
 
-{{% toc /%}}
 
 See also at readthedocs
 [Unix Memo](http://unix-memo.readthedocs.org/en/latest/):
-[Network Commands Memo
-](http://unix-memo.readthedocs.org/en/latest/net_commands.html)
-[Wpa Supplicant
-](http://unix-memo.readthedocs.org/en/latest/wpa.html),
+[Network Commands Memo](http://unix-memo.readthedocs.org/en/latest/net_commands.html)
+[Wpa Supplicant](http://unix-memo.readthedocs.org/en/latest/wpa.html),
 [Network Manager Memo
-](http://unix-memo.readthedocs.org/en/latest/commands.html#network-manager)
+](http://unix-memo.readthedocs.org/en/latest/net_commands.html#network-manager).
 
 
 The network configuration guides are in the page
  {{< iref "network" "Network references"  >}}.
-See also {{< iref "vpn" "VPN" >}}.
+See also {{< iref "dns" "Domain Name Server (DNS)" >}}, {{< iref "vpn" "VPN" >}}.
 
 # How to manage your network
 
@@ -74,15 +71,19 @@ manager.
 # Network management references
 
 -   [ArchWiki: Network Configuration
-    ](https://wiki.archlinux.org/index.php/Network_configuration)
--   [ArchWiki: Android tethering
-    ](https://wiki.archlinux.org/index.php/Android_tethering)
+    ](https://wiki.archlinux.org/index.php/Network_configuration).
+-   [Router - ArchWiki](https://wiki.archlinux.org/title/Router)
+    is a tutorial for turning a computer into an internet gateway/router.
 -   [Debian Reference: Network setup
-    ](http://www.debian.org/doc/manuals/reference/ch05.en.html).
--   [Debian Wiki: Network Configuration
-    ](http://wiki.debian.org/NetworkConfiguration).
--   [Debian Wiki: How to use a WiFi interface
-    ](https://wiki.debian.org/WiFi/HowToUse)
+    ](http://www.debian.org/doc/manuals/reference/ch05.en.html)
+    even if the manual is updated the chapter seems partially obsolete and uses old
+    tools, and a pre-systemd configuration _version 2.98 2022_.
+-   [Debian Handbook - 8.2. Configuring the Network
+    ](https://www.debian.org/doc/manuals/debian-handbook/sect.network-config.en.html).
+-   [Debian Wiki: Network Configuration](http://wiki.debian.org/NetworkConfiguration)
+    updated 2021.
+-   [Debian Wiki Network FAQ](https://wiki.debian.org/NetworkFAQ).
+-   [Debian Wiki: How to use a WiFi interface](https://wiki.debian.org/WiFi/HowToUse)
 
 # Network management Tools
 
@@ -96,30 +97,19 @@ manager.
         ](http://git.kernel.org/cgit/network/connman/connman.git/tree)
     -   [GitHub: connman-deb](https://github.com/pfl/connman-deb)
         unofficial packaging of the last connman.
-    -   [ArchLinux: connman
-        ](https://wiki.archlinux.org/index.php/Connman)
+    -   [ArchLinux: connman](https://wiki.archlinux.org/index.php/Connman)
     -   [Ubuntu Wiki:connman](https://wiki.ubuntu.com/ConnMan)
     -   [UnbuntuGeeks: Connection Manager (ConnMan)
         ](http://www.ubuntugeek.com/connection-manager-connman-managing-internet-connections-in-linux.html)
--   [Guessnet](http://guessnet.alioth.debian.org/) is a network
-    detection tool to use when moving a machine among networks which
-    don't necessarily provide DHCP.
--   {{< wp "Wicd" >}} (GPL): [Wicd Home](http://wicd.sourceforge.net/)
-    is a python network manager. there is a python-GTK client,
-    as well as command-line and an ncurses clients. Wicd
-    has no gnome dependency. It uses
-    wpa-supplicant
-    to manage wireless connections. Wicd being a python daemon is not
-    slim 13M/3M shared for the daemon, 10M/4M for the monitor.
-    -   [ArchLinux: Wicd](https://wiki.archlinux.org/index.php/Wicd)
-    -   [Debian Wiki: wicd usage](https://wiki.debian.org/WiFi/HowToUse#Wicd)
--   [wifi-radar](http://wifi-radar.tuxfamily.org/) (GPL)
-    is a Python/PyGTK2  utility for managing WiFi profiles on GNU/Linux.
+-   __Guessnet__ is a network detection tool to use when moving a machine among networks
+    which don't necessarily provide DHCP. _Still packaged in Debian, but source repo
+    seems unavailable_.
 -   [netctl](https://wiki.archlinux.org/index.php/Netctl)
     is the standard networking management for Archlinux since it
-    switched to systemd.
-    [Git repo](https://projects.archlinux.org/netctl.git/tree/)
-    and [GitHub mirror](https://github.com/joukewitteveen/netctl)
+        switched to systemds. It is also packaged in Debian.
+    -   [Git repo](http://guessnet.alioth.debian.org/)
+        and [GitHub mirror](https://github.com/joukewitteveen/netctl)
+-   [wpa_supplicant - ArchWiki](https://wiki.archlinux.org/title/Wpa_supplicant)
 -   **wpa_gui**  is a graphical frontend for *wpa_supplicant*
     using the *qt4* toolkit. It belongs to the
     [kernel.org WPA supplicant software
@@ -128,55 +118,44 @@ manager.
     the *wpa_supplicant* configuration.  It has a footprint of 20M
     resident/17M shared.
 
-# Systemd-networkd
+## Systemd-networkd
 
-From the [Manual
-](https://www.freedesktop.org/software/systemd/man/systemd-networkd.service.html)
+From the
+[Manual](https://www.freedesktop.org/software/systemd/man/systemd-networkd.service.html)
 _systemd-networkd is a system service that manages networks. It
 detects and configures network devices as they appear, as well as
-creating virtual network devices.
+creating virtual network devices_.
 
-Networks are configured in .network files, see [systemd.network
-](https://www.freedesktop.org/software/systemd/man/systemd.network.html)
+Networks are configured in .network files, see
+[systemd.network](https://www.freedesktop.org/software/systemd/man/systemd.network.html)
 and virtual network devices are configured in .netdev files, see
-[/systemd.netdev
-](https://www.freedesktop.org/software/systemd/man/systemd.netdev.html)
+[/systemd.netdev](https://www.freedesktop.org/software/systemd/man/systemd.netdev.html).
 
 You can use it instead of the _ifupdown_ scripts and Network manager.
 
-You don't have to install anything, it is included in  systemd
-since July 2014, systemd version 215.
+You don't have to install anything, it is included in systemd since July 2014, systemd
+version 215.
 
--   [ArchWiki: systemd-networkd
-    ](https://wiki.archlinux.org/index.php/Systemd-networkd)
-    is an extensive howto on the configuration and use of
-    _systemd-networkd_.
+-   [ArchWiki: systemd-networkd](https://wiki.archlinux.org/index.php/Systemd-networkd)
+    is an extensive howto on the configuration and use of _systemd-networkd_.
 
-There are many tutorial to explain how to switch in Debian from
+There are many tutorials to explain how to switch in Debian from
 {{< iref "#network" "Network-Manager" >}}
 to _systemd-networkd_:
 
 -   [How to switch from NetworkManager to systemd-networkd on Linux
     ](http://xmodulo.com/switch-from-networkmanager-to-systemd-networkd.html)
-    a Xmodulo tutorial.
+    a Xmodulo tutorial _updated 2020_.
 -   [Using systemd-networkd to work your net
     ](https://www.redpill-linpro.com/techblog/2016/08/17/systemd-network.html)
-    on Redpill Linpro Blog.
--   [Systemd based network setup on Debian Edu jessie workstations
-    ](https://sunweavers.net/blog/node/34) in  sunweaver's blog.
--   [Switching to systemd-networkd
-    ](https://www.joachim-breitner.de/blog/664-Switching_to_systemd-networkd)
-    in Joachim Breitner's Blog.
--   [systemd-networkd reseau filaire
-    ](https://debian-facile.org/doc:reseau:systemd:network)
-    a _Debian Facile_ tutorial.
+    on Redpill Linpro Blog _2016_.
 
 
-# Network Manager {#network-manager}
+## Network Manager {#network-manager}
 
 See my memo at readthedocs
 [nm memo
-](http://unix-memo.readthedocs.org/en/latest/commands.html#network-manager)
+](http://unix-memo.readthedocs.org/en/latest/net_commands.html#network-manager)
 
 {{< wp "NetworkManager" >}} ( GPL) is a networking configuration daemon which try to
 provide a painless and automatic network setup. It is part of the gnome project but
@@ -187,40 +166,35 @@ all the gnome desktop.<br /> NetworkManager by itself is a small daemon 13M/10M 
 nm-applet add 37M/30M shared _(vers 1.8.20 2019, and only ~10M added mem)_ and can fit
 in any systray, like the built-in systray in fluxbox, or i3.
 
--   [NetworkManager Home](http://projects.gnome.org/NetworkManager/)
--   [Network Manager Wiki
+-   [NetworkManager Reference Manual
+    ](https://networkmanager.dev/docs/api/latest/index.html)
+-   [NetworkManager  Gnome Home
     ](https://wiki.gnome.org/Projects/NetworkManager) references
     all the official man pages and documents. _But pages moves and
-    many links are broken in the gnome wiki._
+       many links are broken in the gnome wiki._
     -   [Network Manager Configuration plugins
         ](https://wiki.gnome.org/Projects/NetworkManager/SystemSettings)
     -   [Network Manager System Setting
         ](https://wiki.gnome.org/Projects/NetworkManager/SystemSettings).
--   [NetworkManager FAQ](https://wiki.gnome.org/DarrenAlbers/NetworkManagerFAQ)
--   [ArchWiki: Network Manager
-    ](https://wiki.archlinux.org/index.php/Network_manager)
-    is the most complete page on _nm_ settings.
+    -   [NetworkManager FAQ](https://wiki.gnome.org/DarrenAlbers/NetworkManagerFAQ)
+-   [ArchWiki: Network Manager](https://wiki.archlinux.org/index.php/NetworkManager)
+    after the Reference Manual Archwiki is the most complete page on _nm_ settings.
     It includes a [Command line section
     ](https://wiki.archlinux.org/index.php/NetworkManager#Command_line)
     with _nmcli_, _nmtui_, _nmcli-dmenu_.
--   [Debian Wiki: Network Configuration
-    ](https://wiki.debian.org/NetworkConfiguration),
+-   [Debian Wiki: Network Configuration](https://wiki.debian.org/NetworkConfiguration),
     [Network Manager](http://wiki.debian.org/NetworkManager)
--   [Ubuntu community help: NetworkManager
-    ](https://help.ubuntu.com/community/NetworkManager),
+-   [Ubuntu community help: NetworkManager](https://help.ubuntu.com/community/NetworkManager),
     [Roaming Profiles With NetworkManager
     ](https://help.ubuntu.com/community/RoamingProfilesWithNetworkManager).
--   [Gentoo: Network Manager
-    ](https://wiki.gentoo.org/wiki/NetworkManager)
--   [nmcli
-    ](http://fedoraproject.org/wiki/Features/NetworkManagerCmdline)
-    is a command line client included in Network Manager since
-    version 0.8.0
+-   [Gentoo: Network Manager](https://wiki.gentoo.org/wiki/NetworkManager)
+-   [nmcli](http://fedoraproject.org/wiki/Features/NetworkManagerCmdline)
+    is a command line client included in Network Manager since version 0.8.0
 -   [Configuring and managing networking - Red Hat Enterprise Linux 8
     ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_networking/index)
     :
     -   [Chapter 3. managing networking with NetworkManager Red Hat
-        ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_networking/getting-started-with-managing-networking-with-networkmanager_configuring-and-managing-networking)
+        ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_networking/)
     -   [Chapter 5. Configuring IP networking with nmtui
         ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_networking/configuring-ip-networking-with-nmtui_configuring-and-managing-networking)
     -   [Chapter 6. Configuring networking with nmcli
@@ -232,33 +206,42 @@ in any systray, like the built-in systray in fluxbox, or i3.
         ](https://docs.fedoraproject.org/en-US/Fedora/25/html/Networking_Guide/sec-Using_the_NetworkManager_Command_Line_Tool_nmcli.html)
     -   [4.5. Channel bonding using nmcli
         ](https://docs.fedoraproject.org/en-US/Fedora/25/html/Networking_Guide/sec-Network_Bonding_Using_the_NetworkManager_Command_Line_Tool_nmcli.html)
--   [Fedora Wiki: Network Manager
-    ](https://fedoraproject.org/wiki/Tools/NetworkManager),
+-   [Fedora Wiki: Network Manager](https://fedoraproject.org/wiki/Tools/NetworkManager),
     [Networking/CLI](https://fedoraproject.org/wiki/Networking/CLI),
     [Networking/Bridging Using NetworkManager
     ](https://fedoraproject.org/wiki/Networking/Bridging#Using_NetworkManager_.28permanent.29)
     [IPv6 tunnel via Hurricane Electric
     ](https://fedoraproject.org/wiki/IPv6_tunnel_via_Hurricane_Electric)
-
 -   In recent releases _greater than 0.9.10_ you find also a ncurses
     client _nmtui_ wich allows to connect/disconnect, choose
     connections and edit them.
--   [cnetworkmanager](http://vidner.net/martin/software/cnetworkmanager/)
-    (GPL) was a Python command line client for network manager, it
-    is no more developed since 2009 and no more in Debian. The
-    author Martin Vidner
-    [does not intend to develop it any more
-    ](http://gnome-networkmanager.2324886.n4.nabble.com/Migrating-from-cnetworkmanager-to-nmcli-td5841.html)
-    and encourage us to
-    [migrate to nmcli
-    ](http://repo.or.cz/w/cnetworkmanager.git/blob_plain/HEAD:/nmcli-migration.html).
--   [networkmanager-dmenu
-    ](https://github.com/firecat53/networkmanager-dmenu)
+-   [networkmanager-dmenu](https://github.com/firecat53/networkmanager-dmenu) (MIT License)
     is a python script to control network manager with
-    {{< iref "desktop#dmenu" "dmenu" >}}, it can
-    also be used with {{< iref "desktop#rofi" "rofi" >}}.
+    {{< iref "desktop#dmenu" "dmenu" >}}, {{< iref "desktop#rofi" "rofi" >}},
+    {{< iref "desktop#wofi" "wofi" >}},  {{< iref "desktop#bemenu" "bemenu" >}},
+    or {{< iref "desktop#fuzzel" "fuzzel" >}}.
+-   [nmstate](https://nmstate.io/)
+    is a  Declarative Network API which uses NetworkManager as backend.
+    -   [Quick start guide | nmstate](https://nmstate.io/user/quick_guide.html).
 
-# Low level Wireless Tools
+# Wireless configuration
+
+-   [Network configuration/Wireless - ArchWiki
+    ](https://wiki.archlinux.org/title/Network_configuration/Wireless)
+-   [ArchWiki: Android tethering](https://wiki.archlinux.org/index.php/Android_tethering)
+-   {{< wp "Wicd" >}} (GPL): [Wicd Home](http://wicd.sourceforge.net/)
+    is a python network manager. there is a python-GTK client,
+    as well as command-line and an ncurses clients. Wicd
+    has no gnome dependency. It uses
+    wpa-supplicant
+    to manage wireless connections. Wicd being a python daemon is not
+    slim 13M/3M shared for the daemon, 10M/4M for the monitor.
+    -   [ArchLinux: Wicd](https://wiki.archlinux.org/index.php/Wicd)
+    -   [Debian Wiki: wicd usage](https://wiki.debian.org/WiFi/HowToUse#Wicd)
+-   [wifi-radar](http://wifi-radar.tuxfamily.org/) (GPL)
+    is a Python/PyGTK2  utility for managing WiFi profiles on GNU/Linux.
+
+## Low level Wireless Tools
 
 -   [Linux Wireless LAN Howto
     ](http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/Wireless.html)
@@ -299,7 +282,7 @@ in any systray, like the built-in systray in fluxbox, or i3.
 
 
 
-# wifi analyzers
+## wifi analyzers
 
 -   [Kismet](http://www.kismetwireless.net/)
     is an 802.11 layer2 wireless network detector, sniffer, and
