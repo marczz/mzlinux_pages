@@ -5,7 +5,8 @@ title: Vector Graphic software
 The raster graphics are in the {{< iref "images" "Image Section" >}}, you find there also
 the software which can deal both which raster and vector graphic.
 
-See also the {{< iref "ps_pdf_djvu" "postscript, pdf, djvu Page" >}}.
+See also {{< iref "ps_pdf_djvu" "Postscript, Pdf, Djvu" >}},
+{{< iref "images" "Images" >}}.
 
 
 # Documentation
@@ -20,9 +21,9 @@ See also the {{< iref "ps_pdf_djvu" "postscript, pdf, djvu Page" >}}.
 -   [jan.kollhof.net svg pages](http://jan.kollhof.net/projects/svg/)
 
 # SVG Software {#svg_software}
-{{<iref "images#imagemagick" "Image Magick" >}},
-{{<iref "images#graphicsmagick" "Graphics Magick" >}} and
-{{<iref "images#exactimage" "ExactImage" >}} are in the
+{{< iref "images#imagemagick" "Image Magick" >}},
+{{< iref "images#graphicsmagick" "Graphics Magick" >}} and
+{{< iref "images#exactimage" "ExactImage" >}} are in the
 {{< iref "images" "Images Section" >}}, they can work also with svg.
 
 -   [Aafigure](https://pythonhosted.org/aafigure/)
@@ -54,7 +55,7 @@ See also the {{< iref "ps_pdf_djvu" "postscript, pdf, djvu Page" >}}.
     there is a {{< iref "rest#sphinx" "Sphinx" >}} extension for _Blockdiag_.
 -   [Dia](http://live.gnome.org/Dia) (GPL) a GTK+ based diagram
     creation program that save diagrams to a custom XML format and can
-    export them to EPS, SVG, XFIG, WMF and PNG, ...
+    export them to EPS, SVG, {{< iref "#xfig" "Xfig" >}}, WMF and PNG, ...
     Dia is packaged in Debian.
 -   [Ditaa](http://ditaa.sourceforge.net/) (LGPL-3.0)
     is a command-line utility written in Java, that convert diagrams
@@ -122,7 +123,7 @@ See also the {{< iref "ps_pdf_djvu" "postscript, pdf, djvu Page" >}}.
     in vector format.
 -   [potrace](http://potrace.sourceforge.net/) (GPL) is a vector conversion program
     that can transform bitmaps in PBM, PGM, PPM, or BMP format to vector
-    graphics in EPS, PostScript, PDF, SVG, Xfig, Gimppath, and PGM.
+    graphics in EPS, PostScript, PDF, SVG, {{< iref "#xfig" "Xfig" >}}, Gimppath, and PGM.
 
     potrace is now embedded in inkscape, you find it in the menu
     `Path/Trace Bitmap` see also the
@@ -171,7 +172,7 @@ See also the {{< iref "ps_pdf_djvu" "postscript, pdf, djvu Page" >}}.
 
     It can convert from:
     CorelDRAW, Adobe Illustrator, Postscript, Encapsulated Postscript,
-    Computer Graphics Metafile, Windows Metafile (WMF), XFIG,
+    Computer Graphics Metafile, Windows Metafile (WMF), {{< iref "#xfig" "Xfig" >}},
     Scalable Vector Graphics, Skencil/Sketch/sK1, Acorn Draw;
     to:
     Adobe Illustrator, Postscript, Computer Graphics Metafile, Windows Metafile,
@@ -189,7 +190,7 @@ See also the {{< iref "ps_pdf_djvu" "postscript, pdf, djvu Page" >}}.
     is a scientific plotting package written in python, PyQt and NumPy.  Veusz produces
     plots in PNG, PDF, Encapsulated PostScript and SVG.  Veusz is packaged in Debian.
     -   [Veusz -GitHub](https://github.com/veusz/veusz)
--   {{< wp "Xfig"g >}}
+-   <a name ="Xfig"></a>{{< wp "Xfig" "Xfig" >}}
     A menu-driven tool to
     draw and manipulate objects interactively in an X window, with
     output to latex graphic formats or raster files thru *transfig.*
