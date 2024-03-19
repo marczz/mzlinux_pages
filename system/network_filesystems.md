@@ -51,6 +51,7 @@ See also the companion pages on
     ](https://blog.tomecek.net/post/automount-with-systemd/)
 -   [fstab Automount with systemd - ArchWiki
     ](https://wiki.archlinux.org/title/Fstab#Automount_with_systemd)
+-   [Automounting SSHFS - ArchWiki](https://wiki.archlinux.org/title/SSHFS#Automounting)
 
 # SSHFS {#sshfs}
 
@@ -363,11 +364,6 @@ See also {{< iref "clouds" "Cloud Storage" >}}.
     (https://github.com/awesome-foss/awesome-sysadmin#distributed-filesystems)
 -   [awesome distributed systems
     ](https://github.com/theanalyst/awesome-distributed-systems).
--   [Linux High Availability _HA_](http://linux-ha.org/wiki/Main_Page).
--   [ Red Hat - Configuring and managing high availability clusters
-    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8-beta/html/configuring_and_managing_high_availability_clusters/)
--   [Cluster From Scratch - pdf HA Guide
-    ](http://www.clusterlabs.org/doc/Cluster_from_Scratch.pdf)
 -   Wikipedia: {{< wp " Comparison of distributed file systems" >}}
 -   [ArchWiki: list of distributed filesystems
     ](https://wiki.archlinux.org/index.php/List_of_applications#Distributed_file_systems).
@@ -638,20 +634,43 @@ There is a Tahoe-LAFS Debian Package.
 
 
 # Cluster Management
+-   [Debian-HA Clusters From Scratch - Debian Wiki
+    ](https://wiki.debian.org/Debian-HA/ClustersFromScratch)
+    *is tagged as obsolete*.
 -   [Simple Linux Cluster - Tyler's Guides
     ](https://tylersguides.com/guides/simple-linux-cluster/)
+-   [Linux High Availability _HA_](http://linux-ha.org/wiki/Main_Page).
 
-## Heartbeat and Pacemaker
-__Heartbeat__ i.e. {{< wp "Linux-HA" >}} is  a high-availability clustering
-solution for Linux, FreeBSD, OpenBSD, Solaris and Mac OS X.
-
--   [The Linux-HA User’s Guide
-    ](http://www.linux-ha.org/doc/users-guide/users-guide.html)
-    _2010_.
-
-
+## Pacemaker
 [Pacemaker](http://clusterlabs.org/pacemaker/) (GPL)
 is an open source high availability resource manager.
+
+-   [Cluster From Scratch, HA Guide - Cluster Labs
+    ](https://www.clusterlabs.org/pacemaker/doc/2.1/Clusters_from_Scratch/html/)
+    uses  Pacemaker with Corosync. The documentation is based on the use of the use of
+    the *AlmaLinux* opensource RH compatible distribution.
+
+    Cluster Labs is the home of Pacemaker.
+    -   [ClusterLabs > Ubuntu Quickstart
+        ](https://www.clusterlabs.org/quickstart-ubuntu.html)
+    -   [ClusterLabs Wiki](https://projects.clusterlabs.org/w/)
+-   [pacemaker - GitHub](https://github.com/ClusterLabs/pacemaker) (GPL 2)
+-   [corosync: The Corosync Cluster Engine] - GitHub
+    ](https://github.com/corosync/corosync) (BSD License)
+
+Documentation is also available at RedHat and Suse as the two companies developed
+pacemaker and corosync.
+
+-   [Configuring and managing high availability clusters Red Hat Enterprise Linux 9
+    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/configuring_and_managing_high_availability_clusters/index)
+    -   [Chapter 1. High Availability Add-On overview](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/configuring_and_managing_high_availability_clusters/assembly_overview-of-high-availability-configuring-and-managing-high-availability-clusters)
+        is the introductory chapter, the following chapters present the pacemaker usage.
+-   [Suse SLE HA 15 SP4 | Pacemaker Remote Quick Start
+    ](https://documentation.suse.com/sle-ha/15-SP4/single-html/SLE-HA-pacemaker-remote/index.html)
+-   [Suse SLE HA 15 SP5 | Highly Available NFS Storage with DRBD and Pacemaker
+    ](https://documentation.suse.com/sle-ha/15-SP5/html/SLE-HA-all/article-nfs-storage.html)
+-   [Suse SLE HA 15 SP5 | Administration Guide | Corosync QDevice and QNetd
+    ](https://documentation.suse.com/sle-ha/15-SP5/html/SLE-HA-all/cha-ha-qdevice.html)
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
