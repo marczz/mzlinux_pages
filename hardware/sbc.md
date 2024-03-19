@@ -367,9 +367,10 @@ Banana Pi(M1, M2+, Pro, M64), ClearFog (base, pro), DevTerm A06, Espressobin,
 Firefly RK3399, Helios4, JetHub (D1, H1), Jetson Nano, Khadas (edge, vim1, vim2,
 vim3, vim4), La Frite, Le Potato, Nanopc T4, NanoPi (M4 v2, Neo/core, Neo2, neo2
 black, neo plus 4, Duo, R1, R2s, R4s), Odroid (C2, C4, HC4, N2, N2, N2+, XU4,HCx),
-Olimex (Lime 2, Lime A64), Orange Pi (Plus 2E, 3, 4, Lite, Lite2, One, One, Pc, PC2,
-PC+, Prime, R1, R1+, Zero Zero +2H3, Zero2 Zero+) Pine H64 B, Pine64, Pinebook pro,
-pcDuino2/3, Raxda zero ...
+Olimex (Lime 2, Lime A64), Orange Pi (Plus 2E, 3, 3LTS, 3B, 4, 5, 5B, 5+, Lite, Lite2,
+mini, One, One+, Pc, PC2, PC+, Prime, R1, R1+, R1 LTS, RK3399, Win, Win+, Zero, Zero
++2H3, Zero +2H5, Zero2, Zero+, +2) Pine H64 B, Pine64, Pinebook pro,
+pcDuino2/3, Raxda zero,  ...
 -->
 -   [Armbian Documentation](https://docs.armbian.com/).
 -   [Armbian Community Forums](https://forum.armbian.com/).
@@ -590,7 +591,7 @@ All the development and tecnical documentation is above in the
     [banana Pi](https://www.aliexpress.com/wholesale?SearchText=banana+pi).
 
 # ESPRESSObin {#espressobin}
-<--!
+<!--
 [[file:../../../../content-org/localconfig/espressobin.org][My espressobin config]]
 -->
 
@@ -600,41 +601,41 @@ Specifications:
     {{< iref "#cortex-A53" "Cortex-A53" >}} dual-core  up to 1.2 GHz.
 -   1x [Topaz Networking Switch
     ](https://wiki.espressobin.net/tiki-index.php?page=Topaz+Switch)
-    _The Marvell® Link Street®-88E6341 device is single-chip, 6-Port Ethernet Switch
-        with four integrated 10/100/1000Mbps Ethernet transceivers and one high speed
-        SerDes interfaces supporting 2500-BaseX, 1000Base-X, and SGMII. The device also
-        includes an integrated 200MHz microprocessor with 60Kbytes of internal memory to
-        enable smart or lightly managed switches without the need of an external CPU. On
-        ESPRESSObin we find 1 2.5G and two 10/100/1000Mbps._
--   1x uSD card slot with footprint for an optional 4GB EMMC
--   1GB DDR3 & 2GB DDR3 options
--   2x Gb Ethernet LAN
--   1x Ethernet WAN
--   1x SATA interface for HDD storage
--   1x USB 3.0 and 1x USB 2.0, 1 1x micro USB port
--   1x MiniPCIe for Wireless/BLE peripherals
--   2x Row of 46-pin GPIO headers for accessories and shields
-    with I2C, GPIOs, PWM, UART, SPI, MMC, etc.
--   Reset button, JTAG interface
--   Power supply 12V DC jack or 5V via micro USB port
--   Power consumption: less than 1W thermal dissipation at 1 GHz
+    *The Marvell Link Street-88E6341 device is single-chip, 6-Port Ethernet Switch
+    with four integrated 10/100/1000Mbps Ethernet transceivers and one high speed
+    SerDes interfaces supporting 2500-BaseX, 1000Base-X, and SGMII. The device also
+    includes an integrated 200MHz microprocessor with 60Kbytes of internal memory to
+    enable smart or lightly managed switches without the need of an external CPU. On
+    ESPRESSObin we find 1 2.5G and two 10/100/1000Mbps.*
+    -   1x uSD card slot with footprint for an optional 4GB EMMC
+    -   1GB DDR3 & 2GB DDR3 options
+    -   2x Gb Ethernet LAN
+    -   1x Ethernet WAN
+    -   1x SATA interface for HDD storage
+    -   1x USB 3.0 and 1x USB 2.0, 1 1x micro USB port
+    -   1x MiniPCIe for Wireless/BLE peripherals
+    -   2x Row of 46-pin GPIO headers for accessories and shields
+        with I2C, GPIOs, PWM, UART, SPI, MMC, etc.
+    -   Reset button, JTAG interface
+    -   Power supply 12V DC jack or 5V via micro USB port
+    -   Power consumption: less than 1W thermal dissipation at 1 GHz
 
 -   [ESPRESSObin Wiki](https://wiki.espressobin.net/).
--   [I/O ports and connectors
-    ](https://wiki.espressobin.net/tiki-index.php?page=Quick+User+Guide#I_O_ports_and_connectors),
-    and [hardware brief outline
-    ](https://espressobin.net/espressobin-hardware-brief-outline/)
--   [ESPRESSObin Quick User Guide
-    ](https://wiki.espressobin.net/tiki-index.php?page=Quick+User+Guide).
--   [Software How To
-    ](https://wiki.espressobin.net/tiki-index.php?page=Software+HowTo)
-    many pages on building and bootin a kernel image and how to
-    [update the bootloader
-    ](https://wiki.espressobin.net/tiki-index.php?page=Update+the+Bootloader)
--   [Getting Started Tutorials
-    ](https://wiki.espressobin.net/tiki-index.php?page=Getting+Started+Tutorials)
--   [Running OpenSSL speed test on ESPRESSObin
-    ](https://wiki.espressobin.net/tiki-index.php?page=Running+OpenSSL+speed+test+on+ESPRESSObin).
+    -   [I/O ports and connectors
+        ](https://wiki.espressobin.net/tiki-index.php?page=Quick+User+Guide#I_O_ports_and_connectors),
+        and [hardware brief outline
+        ](https://espressobin.net/espressobin-hardware-brief-outline/)
+    -   [ESPRESSObin Quick User Guide
+        ](https://wiki.espressobin.net/tiki-index.php?page=Quick+User+Guide).
+    -   [Software How To
+        ](https://wiki.espressobin.net/tiki-index.php?page=Software+HowTo)
+        many pages on building and bootin a kernel image and how to
+        [update the bootloader
+        ](https://wiki.espressobin.net/tiki-index.php?page=Update+the+Bootloader)
+    -   [Getting Started Tutorials
+        ](https://wiki.espressobin.net/tiki-index.php?page=Getting+Started+Tutorials)
+    -   [Running OpenSSL speed test on ESPRESSObin
+        ](https://wiki.espressobin.net/tiki-index.php?page=Running+OpenSSL+speed+test+on+ESPRESSObin).
 
 
 The ESPRESSObin is unbrickable you can always do
@@ -677,7 +678,9 @@ The ESPRESSObin is unbrickable you can always do
 
 # Helios4
 
-[Helios4](https://kobol.io/helios4/) 200€
+[Helios4](https://kobol.io/helios4/)
+
+*Helios 4 and Helios 64 are no longer produced, kobol closed its doors.*
 
 -   Helios4 Datasheet
     -   {{< iref "#armada38x" "Marvell Armada 388" >}} (88F6828), Dual-core ARMv7 32b
@@ -700,6 +703,35 @@ The ESPRESSObin is unbrickable you can always do
         ](https://forum.armbian.com/topic/11536-helios4-ecc-cpu-freq-info-air-flow)
     -   [Helios4 disk benchmarks  - Armbian forum
         ](https://forum.armbian.com/topic/3045-support-of-helios4-intro/?page=2&tab=comments#comment-39582)
+
+# Orange PI
+-   <a name="orange_pi_5"></a>[Orange Pi 5
+    ](http://www.orangepi.org/html/hardWare/computerAndMicrocontrollers/details/Orange-Pi-5.html)
+    is a sbc based on the [Rockship RK3588S](#rk3588s).
+    Including 4GB/8GB/16GB (LPDDR4/4X), HDMI output, GPIO ports, 2*USB2.02**, 1*USB-3.0,
+    1*USB 3.1 type C, 1 type-C power supply,
+    headphone socket, Gigabit LAN port, M.2 M-key.
+-   <a name="orange_pi_5_pro"></a>[Orange Pi 5 Pro
+    ](http://www.orangepi.org/html/hardWare/computerAndMicrocontrollers/details/Orange-Pi-5-Pro.html)
+    is a sbc based on the [Rockship RK3588S](#rk3588s).
+    Including HDMI output, GPIO ports, 2*USB2.0*, 1*USB-3.0, 1*USB 3.1 type C, 1 type-C
+    power supply, , headphone socket, Gigabit LAN port with PoE+ support M.2 M-key slot
+    that supports NVMe SSD or SATA SSD, **Wi-Fi 5 + BT5.0 with BLE support**.
+-   <a name="orange_pi_5_plus"></a>[Orange Pi 5 Plus
+    ](http://www.orangepi.org/html/hardWare/computerAndMicrocontrollers/details/Orange-Pi-5-plus.html)
+    uses [Rockchip RK3588](#rk3388) *instead of RK388S found in Pi 5 and Pi 5 Pro
+    models* with 4GB/8GB/16/32GB LPDDR4/4X memory and eMMC
+    socket 16G-256G, two HDMl output ports, one HDMl input port , two PCIe extended 2.5G
+    Ethernet ports, an M.2 M-Key slot that supports NVMe SSDs, and an M.2 E-Key slot
+    that supports Wi-Fi6/BT modules, two USB 3.0, two USB 2.0, and two Type-C (one of
+    which is a power connector).
+-   [Orange Pi 5 Review - Powerful, No WiFi - James A. Chambers
+    ](https://jamesachambers.com/orange-pi-5-review/)
+-   [Orange Pi 5 NVMe/SATA SSD Boot Guide - James A. Chambers
+    ](https://jamesachambers.com/orange-pi-5-ssd-boot-guide/)
+-   [Using E-Key M.2 WiFi Adapters with Orange Pi 5
+    ](https://jamesachambers.com/using-m2-wifi-adapters-with-orange-pi-5/)
+-   [Aliexpress Orange PI](https://fr.aliexpress.com/w/wholesale-orange-pi.html)
 
 # Raxda
 -   [Radxa Products](https://radxa.com/products/)
@@ -767,6 +799,8 @@ The ESPRESSObin is unbrickable you can always do
         4a/4b/4a+/4b+/4se, raspberry Pi 5.
 
         It utilizes two lanes of the PCIe 2.1 bus.v on Rock Pi 4.
+
+
 
 # Plug Computers
 Wikipedia {{< wp "Plug computer" >}}.
