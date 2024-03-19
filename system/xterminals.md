@@ -37,14 +37,16 @@ You can use [4bit Terminal Color Scheme Designer](http://ciembor.github.io/4bit/
     -   [ArchWiki: xterm](https://wiki.archlinux.org/index.php/Xterm)
     -   [list of xterm control sequences
         ](http://invisible-island.net/xterm/ctlseqs/ctlseqs.html).
--   [suckless st](http://st.suckless.org/),
+-   [suckless st](http://st.suckless.org/) (MIT License)
     is intended to serve as a lightweight replacement for {{< iref "#xterm" "xterm" >}}
     or rxvt-unicode. It currently supports 256 colors, most VT10X escape sequences,
     UTF-8, X11 copy/paste, anti-aliased fonts (using fontconfig), fallback fonts,
     resizing, shortcuts via config.h, and line drawing. The configuration is explained
     in [Archwiki: st](https://wiki.archlinux.org/index.php/St).
 
-    There is also a fork for Wayland named {{< iref "#wterm" "wterm" >}}.
+    There is also a fork for Wayland named  [wterm](https://github.com/keithbowes/wterm)
+    but t is unmaintained.
+
     In Debian _st_ is packaged a _stterm_.
 
     One benefit of _st_ over _xterm_ is the support of fontconfig and
@@ -174,15 +176,16 @@ only on Gtk and xfreedesktop and avoid heavy desktop bindings like:
 I made some test terminal with two open tabs running the bash shell when they are multi
 tabs.
 
-| terminal       | res  | shr | version | date |
-| alacritty      | 98m  | 64m | 0.11.0  | 2022 |
-| foot           | 25m  | 24m | 1.13.1  | 2022 |
-| gnome-terminal | 70m  | 49m | 3.46.2  | 2022 |
-| kitty          | 34m  | 29m | 0.21.2  | 2022 |
-| lxterminal     | 54m  | 41m | 0.4.0   | 2022 |
-| qterminal      | 102M | 83m | 0.16.1  | 2022 |
-| st             | 13   | 11  | 0.8.5   | 2022 |
-| xterm          | 13m  | 6m  | 373     | 2022 |
+| terminal       | res  | shr  | version  | date |
+| alacritty      | 99m  | 69m  | 0.12.2   | 2024 |
+| foot           | 22m  | 17m  | 1.16.2   | 2024 |
+| gnome-terminal | 51m  | 36m  | 3.50.1   | 2024 |
+| kitty          | 120m | 77m  | 0.31.0   | 2024 |
+| lxterminal     | 57m  | 46m  | 0.4.0    | 2024 |
+| qterminal      | 134M | 112m | 1.4.0    | 2024 |
+| st             | 13m  | 11   | 0.9.1    | 2024 |
+| xterm          | 11m  | 6m   | 389      | 2024 |
+| wezterm        | 145m | 100m | 20240128 | 2024 |
 
 Some terminal emulators like _Roxterm_, _gnome terminal_, _mate terminal_, _terminator_,
 _guake_, _lilyterm_ have dbus support, and allow to launch a new tab or a new window in
@@ -229,30 +232,45 @@ QT6 don't depend on Xorg and can run on both Xorg and Wayland.
     Many {{< iref "desktop#color_themes" "color themes" >}} are available for
     _Alacritty_.:
 
-    In 2022 there is no recent Debian package for Alacritty.
-    [Alacritty Ubuntu PPA](https://launchpad.net/~mmstick76/+archive/ubuntu/alacritty)
-    is [not up to date with last releases
-    ](https://github.com/alacritty/alacritty/pull/3983) but there is an
-    [alacritty-debian repository](https://github.com/barnumbirr/alacritty-debian)
-    which gives new package releases.
+    [![packaging](https://repology.org/badge/tiny-repos/alacritty.svg?header=packages)
+    ](https://repology.org/project/alacritty/versions).
 
-    Alacritty footprints are 98m res / 65m shr _2022 v. 0.11_
+    The Debian package for Alacritty, may be behind the last version, if you need the
+    edge version there are [instructions for manual installation
+    ](https://github.com/alacritty/alacritty/blob/master/INSTALL.md) in the Github
+    repository.
+
+    Alacritty footprints are 99m res / 69m shr _2024 v. 0.12.2_
 
     -   [Alacritty features
         ](https://github.com/alacritty/alacritty/blob/master/docs/features.md)
     -   [Alacritty Wiki](https://github.com/alacritty/alacritty/wiki)
         contains a list of color scheme.
+    -   [Alacritty - ArchWiki](https://wiki.archlinux.org/title/Alacritty).
     -   [Alacritty - Gentoo Wiki](https://wiki.gentoo.org/wiki/Alacritty).
 
--   [Kitty](https://sw.kovidgoyal.net/kitty/) (GPL)
+    Alacritty dos not *yet* support sixel, and does not provide either a 24bit color
+    display.
+
+    The features seem significantly behind kitty or wezterm.
+
+-   <a name="kitty"></a>[Kitty](https://sw.kovidgoyal.net/kitty/) (GPL)
     a scriptable OpenGL based terminal emulator with tiling capabilities, TrueColor,
     ligatures support and protocol extensions for keyboard input and image rendering.
 
-    In 2022 kitty 0.21.2 works well in Wayland; Version 0.21.2 uses 34M resident / 29M
-    shared.
+    In 2024 kitty 0.31.0 works well in Wayland and uses 120M resident / 77M shared (2
+    tabs).
 
-    The [Kitty Page](https://sw.kovidgoyal.net/kitty/) has configuration and usage
-    documentation.
+    -   The [Kitty Page](https://sw.kovidgoyal.net/kitty/) has configuration and usage
+        documentation.
+    -   Kitty may be [extended with *kittens*
+        ](https://sw.kovidgoyal.net/kitty/kittens_intro/),
+        the [icat](https://sw.kovidgoyal.net/kitty/kittens/icat/) allows to display
+        images in kitty.
+    -   Many external toos [Integrates in Kitty
+        ](https://sw.kovidgoyal.net/kitty/integrations/)
+    -   [kitti3 Kitty drop-down service for sway & i3wm
+        ](https://github.com/LandingEllipse/kitti3)
 
 -   The Kde/Qt terminal is {{< wp "Konsole" >}} it has heavy KDE dependencie.
 
@@ -260,7 +278,7 @@ QT6 don't depend on Xorg and can run on both Xorg and Wayland.
     is a light Qt terminal which is part
     of [lxqt](https://lxqt.org/) The Lightweight Qt Desktop Environment (previously
     _Razor-qt_) It has no dependencies but its own qtwidget librar. Qterminal version
-    0.16.1 (2022) uses on wayland 102m res / 83m shr wit 2 tabs.
+    1.4.0 (2024) uses on Wayland 134M res / 112M shr wit 2 tabs.
 
     You can have multiple tabs but it does not allow to share a process
     between multiple windows
@@ -275,9 +293,27 @@ QT6 don't depend on Xorg and can run on both Xorg and Wayland.
     -   [GitHub: Terminology](https://github.com/billiob/terminology)
     -   Wikipedia: {{< wp "terminology" >}}
 
--   [wezterm](https://wezfurlong.org/wezterm/)
+-   <a name="#wezterm"></a>[wezterm](https://wezfurlong.org/wezterm/)
     WezTerm is a GPU-accelerated cross-platform terminal emulator and multiplexer
     implemented in Rust.
+
+   [![packaging](https://repology.org/badge/tiny-repos/wezterm.svg?header=packages)
+   ](https://repology.org/project/wezterm/versions).
+   Even if wezterm is not packaged in Debian and many distributions, there is a deb
+   build for stable and nightly, it is also on Flathub, and an appimage is provided.
+
+    Wezterm has a long [list of features](https://wezfurlong.org/wezterm/features.html),
+    which are close but not same than
+    <a class="iref" href="#kitty" title="internal reference">Kitty</a>
+    which is it's main contender in the category of GPU terminals.
+
+    One unshared feature is extended graphic support, including it's own client
+    [imgcat](https://wezfurlong.org/wezterm/imgcat.html), and the support for iterm2 and
+    kitty image protocol and
+    <a class="iref" href="images#sixel" title="internal reference">sixel graphics</a>
+
+    Wezterm 20240128 in year 2024 with 2 tabs uses 145M res / 100M shr.
+
 
 # Javascript Terminals
 -   [terminal javascript Library](http://www.masswerk.at/termlib/)
