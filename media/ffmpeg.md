@@ -129,6 +129,10 @@ $ ffmpeg  -hide_banner -codecs
     ``` sh
     ffmpeg -i input.mp3 -c:a libopus -ac:a 1 -b:a 64k output.opus
     ```
+    -   `-c:a libopus`: tells to use the audio codec `libopus` for encoding.
+    -   `-ac:a 1`: Set the number of channels for the audio stream, here `:a` is
+        optional, since the only stream is audio.
+    -   `-b:a 64k`: Gives the bitrate for the audio stream.
 
     We can also use `opusenc` with
     ``` sh
@@ -152,11 +156,11 @@ $ ffmpeg  -hide_banner -codecs
 `input.webm` is a 1h21 speech,stereo opus encoded stream at at 105 kb/s, giving a file
 of 62M, we downmix to mono, reencode in vbr at 32kb/s, and change container to ogg with:
 
-    ffmpeg -i input.webm -c:a libopus -vbr on -ac 1 -b:a 32k ouput.ogg
+    ffmpeg -i input.webm -c:a libopus -vbr on -ac:a 1 -b:a 32k ouput.ogg
 
--   `-c:a libopus` give the audio codec encoder.
--   `-ac 1` number of channel, here in output.
--   `-b:a 32k` bitrate
+-   `-c:a libopus` : the audio codec encoder.
+-   `-ac;a 1` : number of audio channels, here in output.
+-   `-b:a 32k`: audio bitrate
 
 The result is a 19M file.
 
@@ -180,6 +184,29 @@ In the two previous examples as we copy all the streams, we may use
 ~~~
 ffmpeg -i  input.webm -c copy output.mkv
 ~~~
+
+## Keep only audio stream
+Without re-encoding:
+
+```sh
+ffmpeg -i video.mp4 -map 0:a:0 -c:a copy audio.aac_
+```
+Note than some software, like apple Ipod, do not recognize the suffix `.aac`, and to
+make it usable you have to use the apple preferred `.m4a`, as it is a mp4 container you
+can also usem `.mp4`; but it does not show that it is an audio stream.
+
+
+Here the video stream in both the video and the audio has the same format, say a stereo
+48kHZ, 189 kb/s audio stream.
+
+Now we want to mix the channels in a mono audio, reduce the bitrate to 64k, and encode
+in opus rather than aac.
+
+```ssh
+ffmpeg -i video.mp4 -map 0:a:0 -c:a libopus -vbr on -ac:a 1 -b:a 64k audio.ogg
+```
+
+
 
 # Extracting some part of streams
 
@@ -325,8 +352,8 @@ for a list.
     ~~~ sh
     ffmpeg -vcodec mpeg4 -b 1000 -r 10 -g 300 -vd x11:0,0 -s 1280x1024 test.avi
     ~~~
-   -    `x11:0,0` tells FFmpeg to record from the top-left cornet of the screen.
-   -    `s 1280x1024` is your screen resolution, or that of the window you want to
+   -   `x11:0,0` tells FFmpeg to record from the top-left cornet of the screen.
+   -   `s 1280x1024` is your screen resolution, or that of the window you want to
          record. In that case, you can use `xwininfo -frame`
 
  * third with further postprocessing with libx264 from
