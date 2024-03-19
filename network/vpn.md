@@ -93,7 +93,17 @@ OpenVP.
 The user manual is a  [Quick Start](https://www.wireguard.com/quickstart/)
 more details are in the third party articles bellow.
 
+
+-   [WireGuard Home](https://www.wireguard.com/) contains the *Quick Start* and few
+    technical documents. For a full introduction to wireguard use and configuration look
+    at the following Archwiki and RedHat reference.
 -   Wikipedia {{< wp "Wireguard" >}}.
+-   [WireGuard - ArchWiki](https://wiki.archlinux.org/title/WireGuard),
+    with a complete example.
+-   [Setting up a WireGuard VPN - Red Hat Enterprise Linux 9
+    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/configuring_and_managing_networking/assembly_setting-up-a-wireguard-vpn_configuring-and-managing-networking)
+    is a complete guide that includes the {{< iref "firewall#firewalld" "Firewalld" >}}
+    configuration.
 -   [How to get started with WireGuard VPN - UpCloud
     ](https://upcloud.com/resources/tutorials/get-started-wireguard-vpn).
 -   [The complete guide to setting up a multi-peer WireGuard VPN - Jeroen Baten
@@ -148,16 +158,34 @@ more details are in the third party articles bellow.
     -   [DNS Updates to WireGuard Endpoints
         ](https://www.procustodibus.com/blog/2021/06/dns-updates-to-wireguard-endpoints/)
         explains the problem of DNS changing while running wireguard, here this is dealt
-        with their proprietary agent, but you can also use a script like
-        [reresolve-dns.sh
-        ](https://git.zx2c4.com/wireguard-tools/tree/contrib/reresolve-dns/reresolve-dns.sh)
-        in the [Wireguard Tools repository
-        ](https://git.zx2c4.com/wireguard-tools/).
-
-        A simple script is also in [Wireguard: Peer IP check
-        ](https://www.tech-blogger.net/en/wireguard-peer-ip-check/).
+        with their proprietary agent, but you can also use one of the script mentioned
+        below.
     -   [Connecting WireGuard and OpenVPN
         ](https://www.procustodibus.com/blog/2022/08/connecting-wireguard-and-openvpn/).
+
+## Wireguard tools
+
+
+-   [Wireguard Tools repository](https://git.zx2c4.com/wireguard-tools/) a contains the
+    two main commands used for managing wireguard {{< man "wg(8)" >}} and
+    {{< man "wg-quick(8)" >}} and the systemd service `wg-quick.
+
+    The [contrib](https://git.zx2c4.com/wireguard-tools/tree/contrib/) subdirectory
+    contains various scripts and examples.
+    -   The cron script [reresolve-dns.sh
+        ](https://git.zx2c4.com/wireguard-tools/tree/contrib/reresolve-dns/reresolve-dns.sh)
+        ensure that if, when using a dynamic DNS service, the DNS entry for a hosts
+        changes, the kernel will get the update to the DNS entry.
+    -   [wg-json](https://git.zx2c4.com/wireguard-tools/tree/contrib/json/wg-json)
+        is a bash script to dump all current WireGuard status as JSON output.
+-   [Wireguard: Peer IP check](https://www.tech-blogger.net/en/wireguard-peer-ip-check/)
+    present a script to update wireguard when the peer Ip change because it uses a dynamic DNS.
+-   [wg2nd](https://git.flu0r1ne.net/wg2nd/about/)
+    Convert wg-quick configs to systemd-networkd.
+
+    Networkd network manager offers more control over managing WireGuard tunnels.
+-   [wg-client](https://github.com/gene-git/wg-client) (MIT license)
+    A python  Wireguard client command line and gui.
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
