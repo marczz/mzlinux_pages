@@ -9,6 +9,7 @@ file formats are in the
 and the {{< iref "ps_pdf_djvu" "PDF and Postscript section" >}}. They are
 compared in the Wikipedia page {{< wp "Comparison of graphics file formats" >}}.
 
+<a class="iref" href="{{< relref "ps_pdf_djvu" >}}" title="internal reference">PDF Section</a>
 
 # Image formats
 
@@ -30,6 +31,7 @@ Uncompressed lossless formats
     [PGM](http://netpbm.sourceforge.net/doc/pgm.html) graymap,
     [PBM](http://netpbm.sourceforge.net/doc/pbm.html) bitmap,
     [PAM](http://netpbm.sourceforge.net/doc/pam.html) _Portable Arbitrary Map_ can
+
     replace  PBM,  PPM, PGM, PPM.
     [PNM](http://netpbm.sourceforge.net/doc/pam.html) anymap, not a true format but any
     of PBM,  PPM, PGM, PPM.
@@ -48,7 +50,7 @@ Compressed lossless formats
     [Portable Network Graphics (PNG) Specification
     ](https://www.w3.org/TR/2003/REC-PNG-20031110),
     [Portable Network Graphics Home Page](http://www.libpng.org/pub/png/)
--   <a name="tiff"></a>[TIFF](http://en.wikipedia.org/wiki/TIFF)
+-   [ ] <a name="tiff"></a>[TIFF](http://en.wikipedia.org/wiki/TIFF)
     The TIFF image format is widely used for scanning, faxing, word processing, optical
     character recognition.  It can save multi-page documents to a single TIFF file.
 
@@ -69,6 +71,32 @@ Compressed lossless formats
 -   [Multiple-image Network Graphics (MNG)
     ](http://www.libmng.com/pub/mng/index.html)
     A PNG-like Image Format Supporting Animation and Transparent JPEG
+
+-  <a name="sixel"></a><a class="WpRef" href="https://en.wikipedia.org/wiki/Sixel"
+   title="Wikipedia - Sixel">Sixel</a>
+   is a bitmap graphics format supported by terminals and printers from DEC. It consists
+   of a pattern six pixels high and one wide, resulting in 64 possible patterns. Each
+   possible pattern is assigned an ASCII character. (more
+   <a class="WpRef" href="https://en.wikipedia.org/wiki/Sixel"
+   title="Wikipedia - Sixel">on Wikipedia</a>).
+
+   Sixel was the format
+   [used in the dec vt320](https://www.vt100.net/dec/vt320/soft_characters)
+   to transmit glyphs.
+
+   Many terminal applications are supporting sixel, like blackbox, eat, foot, mlterm, st
+   with a patch, xfce-terminal, xterm (in vt340 mode since aout 2020), any web terminal
+   built upon xterm.js with the image add-on, wezterm, yaft (framebuffer terminal),
+   yakuake.
+
+   See [sixel for terminal graphics](https://konfou.xyz/posts/sixel-for-terminal-graphics/)
+   for how to set *xterm* and display sixel graphics.
+
+   In 2024 all the vte based terminals, i.e gnome-terminal and sisters, are not sixel
+   compatible, neither some popular terminals like alacrity, kitty, konsole, urxvt, ...
+
+   An up to date list is in the page
+   [Are We Sixel Yet?](https://www.arewesixelyet.com/).
 
 Lossy Formats
 :
@@ -371,8 +399,107 @@ _Notes_
 :   _The test image directory contains 23 jpegs of around 1MB for a
     total of 19MB_
 
-## Image Libraries
+### Wayland image viewers {#wayland_image_viewers}
 
+-   [imv](https://sr.ht/~exec64/imv/)  (MIT License)
+    is an image viewer for X11/Wayland.
+    [![packaging](https://repology.org/badge/tiny-repos/imv.svg?header=packages)
+    ](https://repology.org/project/imv/versions)
+    including Debian which provides the wayland and X11 binaries.
+-   [mpv-image-viewer](https://github.com/occivink/mpv-image-viewer) (Unlicense license)
+    or _miv_ Configuration, scripts and tips for using mpv as an image viewer.
+    -   [eugenesvk/mpv-image-viewer fork
+        ](https://github.com/eugenesvk/mpv-image-viewer)
+        has some improvements.
+-   [swappy](https://github.com/jtheoof/swappy) (MIT license)
+    A Wayland native snapshot editing tool, inspired by Snappy on macOS,
+    it is used with grim and slurp.
+    [![packaging](https://repology.org/badge/tiny-repos/swappy.svg?header=packages)
+    ](https://repology.org/project/swappy/versions)repos
+-   [swayimg](https://github.com/artemsen/swayimg) (MIT license)
+    image viewer for Sway/Wayland.
+    [![Packaging status](https://repology.org/badge/tiny-repos/swayimg.svg)
+    ](https://repology.org/project/swayimg/versions)
+-   [ueberzugpp](https://github.com/jstkdng/ueberzugpp) (GPL-3.0)
+    is a command line utility which draws images on terminals using child windows.
+    [![packaging](https://repology.org/badge/tiny-repos/ueberzugpp.svg?header=packages)
+    ](https://repology.org/project/ueberzugpp/versions).
+-   [vimiv-qt](https://github.com/karlch/vimiv-qt) (GPL-3.0)
+    a QT image viewer with vim-like keybindings.
+
+## Terminal image display
+On a <a class="iref" href="#sixel" title="internal reference">sixel enabled terminal</a>
+you can display sixel images by just using `cat img.six`.
+
+
+Terminal like Kitty, iTerm2, wezterm, konsole and vscode, offer high resolution
+images in 24bit colors.you will use an appropriate viewer. These terminal use each their
+own custom image protocol, and offer their own viewer.
+
+The MacOs terminal iterm2 implement a custom [Inline Images Protocol
+](https://iterm2.com/documentation-images.html) which extends the xterm protocol with a
+set of proprietary escape sequences. This specific protocol is also available on wezterm
+and konsole. Using this protocol we can display an image by
+```sh
+(printf "\e]1337;File=inline=1:" ; base64 -w0 image.jpg  ; printf "\a\n")
+```
+
+Kitty has also adopted a custom {Kitty terminal graphics protocol
+](https://sw.kovidgoyal.net/kitty/graphics-protocol/)
+which can also be used in wezterm, konsole, wayst.
+Many programs can use this protocol like timg, chafa, ranger, mpv, viu, some neovim
+plugins ect *see the list on the [protocol page
+](https://sw.kovidgoyal.net/kitty/graphics-protocol/)*.
+
+
+Some viewer like timg work with many protocol.
+
+-   [catimg](https://github.com/posva/catimg/) (MIT License)
+    is a C program that display jpeg, png, gif images in the terminal using ascii or
+    unicode characters.
+
+    The repository include also the [catimg bash script
+    ](https://github.com/posva/catimg/blob/master/catimg)
+    that use imagemagick convert to display the image. The script is more accurate
+    concerning colors but considerably slower, than the C version which is very fast.
+
+    The work of catimg is explained [in the author blog
+    ](https://posva.net/shell/retro/bash/2013/05/27/catimg).
+
+    I have not done a careful benchmark, but for some examples I found catimg 7.7 faster
+    than timg.
+
+-   [Chafa](https://hpjansson.org/chafa/) (LGPL-3.0)
+    is a terminal image viewer. It has support for the Sixels, Kitty, iTerm2 protocols,
+    and most popular image formats, including animated GIFs.
+    -   [Man page for Chafa](https://hpjansson.org/chafa/man/)
+    -   [chafa - GitHub](https://github.com/hpjansson/chafa)
+
+-   [timg](https://github.com/hzeller/timg) (GPL-2.0)
+    A C++ terminal image and video viewer.
+
+    It has support for half block characters, quarter block, sixel, kitty-protocol,
+    iTerm2 protocol
+
+    It uses sixel when it is available, but it I have noted that on *foot terminal*
+    timg do not use sixel by default and you have to use it with:
+    ```sh
+    timg -p sixel <image>
+    ```
+
+    On terminals with high resolution display like Kitty, iTerm2, konsole timg can use
+    the high res format.
+
+    timg can display animated gif, but not webp animations.
+
+    It can also display a pdf page, the result on a sixel enabled terminal, or kitty, is
+    very nice with a pdf containing images.
+
+    It can also display videos.
+
+    timg has many options to control the image display.
+
+## Image Libraries
 
 -   [libmng](http://gjuyn.xs4all.nl/libmng/) The MNG reference
     library
@@ -542,6 +669,16 @@ _see also Dia, Ditaa, Gnuplot, ivtools, xfig, veusz in the
     -   [ImageJ Wiki](http://imagej.net/)
     -   [ImageJ repository on GitHub](https://github.com/imagej/imagej)
 
+-   [img2pdf](https://gitlab.mister-muffin.de/josch/img2pdf) (GPL-3.0)
+    Lossless conversion of raster images to PDF.
+   [![packaging](https://repology.org/badge/tiny-repos/img2pdf.svg?header=packages)
+   ](https://repology.org/project/img2pdf/versions).
+
+    If we use<a class="iref" href="#imagemagick" title="internal reference">
+    ImageMagick</a> to convert a raster to pdf conversion is:
+    -   lossy re-encoding to JPEG
+    -   using wasteful flate encoding of raw pixel data
+    -   slow because input data gets re-encoded
 -   [mermaid](https://github.com/mermaid-js/mermaid) (MIT License)
     A _node.js_ tool for generation of sequence diagrams, class diagrams,
     state diagrams, Gantt diagrams, pie charts, and flowchart from text in a similar
