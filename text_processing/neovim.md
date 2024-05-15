@@ -55,6 +55,8 @@ title: Neovim and Vim
         [french html](http://tnerual.eriogerg.free.fr/vimqrc-fr.html)
 -   [A Vimlike Fluency: Bibliography and Next Steps – Terminally Undead
     ](https://countvajhula.com/2021/02/23/a-vimlike-fluency-bibliography-and-next-steps/).
+-   [lists of which programs support Vim-like keybindings natively, or how they can be
+    added with extensions](https://github.com/erikw/vim-keybindings-everywhere-the-ultimate-list)
 
 ## Vim tutorials
 
@@ -93,6 +95,8 @@ title: Neovim and Vim
 -   See in {{< iref "rest" "ReStructured Text page" >}} the
     {{< iref "rest#vim_rest" "list of ReSt support plugins" >}}.
 -   [vim-markdown](http://github.com/plasticboy/vim-markdown/).
+-   [GitHub - nvim-orgmode Orgmode clone written in Lua
+    ](https://github.com/nvim-orgmode/orgmode)
 -   [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)
     A vim/neovim Git wrapper.a
 -   [junegunn/fzf.vim](https://github.com/junegunn/fzf.vim)
