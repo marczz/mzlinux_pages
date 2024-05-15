@@ -609,40 +609,51 @@ _see also Dia, Ditaa, Gnuplot, ivtools, xfig, veusz in the
 
     [animate](http://www.imagemagick.org/script/animate.php)
     :   animate an image sequence on an X server.
+
     [compare](http://www.imagemagick.org/script/compare.php)
     :   annotate the difference between an image and its reconstruction.
+
     [composite](http://www.imagemagick.org/script/composite.php)
     :   overlap one image over another.
+
     [conjure](http://www.imagemagick.org/script/conjure.php)
     :   interpret and execute scripts written in the Magick Scripting Language (MSL).
+
     [convert](http://www.imagemagick.org/script/convert.php)
     :   convert between image formats as well as resize an image, blur, crop, despeckle,
         dither, draw on, flip, join, re-sample, and more.
+
     [display](http://www.imagemagick.org/script/display.php)
     :   display an image or image sequence on an X server.
+
     [identify](http://www.imagemagick.org/script/identify.php)
     :   describe the format and characteristics of one or more image files.
+
     [import](http://www.imagemagick.org/script/import.php)
     :   save any visible window on an X server as an image file. You can capture a
         single window, the entire screen, or any rectangular portion of the screen.
+
     [mogrify](http://www.imagemagick.org/script/mogrify.php)
     :   resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample,
         and much more. Mogrify overwrites the original image file, whereas _convert_
         writes to a different image file.
+
     [montage](http://www.imagemagick.org/script/montage.php)
     :   create a composite image by combining several separate images.  The images are
         tiled on the composite image optionally adorned with a border, frame, image
         name, and more.
+
     [stream](http://www.imagemagick.org/script/stream.php)
     :   stream one or more pixel components of the image or portion of the image to your
         choice of storage formats. It writes the pixel components as they are read from
         the input image a row at a time making `stream` desirable when working with
         large images or when you require raw pixel components.
 
-    -   _ImageMagick_ API is [available for numerous languages
-        ](https://imagemagick.org/script/develop.php) C, C++, [GO
-        ](https://github.com/gographics/imagick), Java, javascript,
+    -   _ImageMagick_ API is
+        [available for numerous languages](https://imagemagick.org/script/develop.php)
+        C, C++, [GO](https://github.com/gographics/imagick), Java, javascript,
         lisp, node, lua, perl, PHP, Python, R, Ruby, Rust, TCL/TK .....
+
         The C++, node, php, perl, java, ruby, the python  _PythonMagick_ are availables
         in Debian.
     -   [ImageMagick Common Image Formats](http://www.imagemagick.org/Usage/formats/)
