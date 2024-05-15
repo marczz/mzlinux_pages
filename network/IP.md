@@ -605,19 +605,31 @@ protocol {{< wp "6in4" >}}. BUt the two names are often used interchangeably.
 
 # IPv6 Address Scopes:
 
-    ::/128 unspecified address
-    ::1/128 localhost
-    fe80::/10 link local
-    fc00::/7 unique local unicast  (RFC 4193)
-    fc00::/8 centrally assigned by unkown, routed within a site (RFC 4193)
-    fd00::/8 free for all, global ID must be generated randomly, routed within a site (RFC 4193)
-    ff00::/8 multicast, ff=4bits flags+4 bits scope
-    ::ffff:0:0/96 IPv4 to IPv6 Address, eg: ::ffff:10.10.10.10 (RFC 4038)
-    2000::/3 global unicast
-    2001::/16 /32 subnets assigned to providers, they assign /48, /56 or /64 to the customer
-    2001:db8::/32 reserved for use in documentation
-    2001:678::/29 Provider Independent (PI) adresses and anycasting TLD nameservers
-    2002::/16 6to4 scope, 2002:c058:6301:: is the 6to4 public router anycast (RFC 3068)
+```example
+::/128 unspecified address
+::1/128 localhost
+fe80::/10 link local
+fc00::/7 unique local unicast  (RFC 4193)
+fc00::/8 centrally assigned by unkown, routed within a site (RFC 4193)
+fd00::/8 free for all, global ID must be generated randomly, routed within a site (RFC 4193)
+ff00::/8 multicast, ff=4bits flags+4 bits scope
+::ffff:0:0/96 IPv4 to IPv6 Address, eg: ::ffff:10.10.10.10 (RFC 4038)
+2000::/3 global unicast
+2001::/16 /32 subnets assigned to providers, they assign /48, /56 or /64 to the customer
+2001:db8::/32 reserved for use in documentation
+2001:678::/29 Provider Independent (PI) adresses and anycasting TLD nameservers
+2002::/16 6to4 scope, 2002:c058:6301:: is the 6to4 public router anycast (RFC 3068)
+```
+
+-   {{< wp "Unique local address" >}} are non-globally reachable ip v6 addresses. They
+    are routable only within the scope of private networks. ULAs are somewhat analogous
+    to IPv4 private network.
+
+    ULA locally assigned addresses use the prefix `fd00::/8`.
+
+    By following the two bytes `fd` by ten arbitrary bytes (i.e 40 arbitrary bits) we
+    obtain all the /48 prefixes. Within each prefix each of the following 4 bytes
+    i.e. 16 bits gives 65536 `/64`subnets.
 
 # Computing EUI-64
 This is MAC Address based IPv6 Address used in
