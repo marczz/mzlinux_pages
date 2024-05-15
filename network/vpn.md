@@ -84,8 +84,12 @@ and Microsoft {{< wp "Secure Socket Tunneling Protocol" >}}.
 
 -   [SoftEther VPN Project](https://www.softether.org/).
 
-# WireGuard
-[WireGuard](https://www.wireguard.com/) (GPLv2 for the Kernel)
+# WireGuard {#wireguard}
+<!--
+[[file:../../../../content-org/notes/network_notes/vpn_notes.org::#wireguard][Wireguard notes]]
+-->
+
+[WireGuard](https://www.wireguard.com/) (GPLv2 for the Kernel module)
 is an encrypted VPN. It is designed to be easy to use and features high speed
 performance, and low attack surface and better performance and more power than IPsec and
 OpenVP.
@@ -108,7 +112,10 @@ more details are in the third party articles bellow.
     ](https://upcloud.com/resources/tutorials/get-started-wireguard-vpn).
 -   [The complete guide to setting up a multi-peer WireGuard VPN - Jeroen Baten
     ](https://www.jeroenbaten.nl/the-complete-guide-to-setting-up-a-multi-peer-wireguard-vpn/).
-
+-   [Setting up Wireguard VPN with IPv6 | Frederik Himpe
+    ](https://blog.frehi.be/2022/06/11/setting-up-wireguard-vpn-with-ipv6/)
+-   [Wireguard VPN Setup: star topology - hacktobeer's website
+    ](https://hacktobeer.eu/posts/wireguard-startopology-101/#dnsmasq)
 -   [Pro Custodibus](https://www.procustodibus.com/features/)
     is a commercial frontend to manage Wireguard.  They publish many
     [Wireguard articles](https://www.procustodibus.com/tags/wireguard/) many for the
