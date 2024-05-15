@@ -219,7 +219,7 @@ network packets.
 -   [mtr(8)](http://man.cx/mtr(8)) combines _traceroute _and _ping_.
 
 # TCP /UDP tools {#tcp_udp_tools}
-## {{< wp " netcat" >}} {#netcat}
+## Netcat {#netcat}
 {{< wp " netcat" >}} is a C utility for reading from and writing to network
 connections using TCP or UDP; The features from the original _nc110_
 are:
@@ -377,11 +377,20 @@ Some tools integrate bandwidth control as
         by the _Trickle_ author.
     -   [Control your bandwidth with Trickle
         ](http://www.tuxradar.com/content/control-your-bandwidth-trickle)
+    -   [pv](https://github.com/a-j-wood/pv)
+        *pipe viewer* is a terminal-based tool for monitoring the progress of data
+        through a pipeline.
+
+        has an option `-L RATE, --rate-limit RATE` to limit the rate of the
+        transfer.
+
+        -   [pv manpage](https://www.ivarch.com/programs/quickref/pv.shtml).
+
 -   [Wonder Shaper](https://github.com/magnific0/wondershaper/) (GPL-2.0)
     is a script that allows the user to limit the bandwidth of one or more network
     adapters by using iproute's tc command.
 -   [Advanced traffic control - ArchWiki
-    ](https://wiki.archlinux.org/title/Advanced_traffic_control.
+    ](https://wiki.archlinux.org/title/Advanced_traffic_control).
     shows how to shape the traffic by using queueing disciplines using the iproute2 `tc`
     command, and optionally ip tables.
 
