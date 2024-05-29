@@ -126,35 +126,17 @@ See also Wikipedia {{< wp "Comparison of machine translation applications" >}}.
 -   [lightlang](https://github.com/mdevaev/lightlang)
     (GPL) is a program in python with interface either in PyGTK or
     PyQT, with its custom dictionary format.
--   [MDict](http://mdic.gnufolks.org/)
-    (GPL) is a QT4 dictionary software. It has its own dictionary
-    format but the dictionary formats
-    {{< iref "#stardict" "StarDict" >}} (.ifo) , Freedict
-    (.tei) and Sdictionary (.dct) can be converted via MDicConv
-    convertor or PyGlossary tool. MDic is no more developed since
-    2010.
 -   [Penelope  (GitHub)](https://github.com/pettarin/penelope)
     (MIT License)
-     is a python tool for creating, editing and converting
-     dictionaries, especially for eReader devices.
-     -   Penelope can convert from/to: Bookeen Cybook Odyssey (R/W),
-         CSV (R/W), EPUB (W only), MOBI (Kindle, W only),
-         Kobo (R index only, W unencrypted/unobfuscated only),
-         StarDict (R/W), XML (R/W)
+     is a python tool for creating, editing and converting dictionaries, especially for
+     eReader devices.
+     -   Penelope can convert from/to: Bookeen Cybook Odyssey (R/W), CSV (R/W), EPUB (W
+         only), MOBI (Kindle, W only), Kobo (R index only, W unencrypted/unobfuscated
+         only), StarDict (R/W), XML (R/W)
      -   [Projects page of Alberto Pettarin
          ](http://www.albertopettarin.it/projects.htmlhttp://www.albertopettarin.it/projects.html)
-         the developer of Penelope, and his
+         fromcthe developer of Penelope, which has also a
          [blog](http://www.albertopettarin.it/blog/)
--   [ppdict](https://github.com/luohao-brian/ppdict)
-    is a dictionary written in Python, it was previously
-    [on google code](https://code.google.com/p/ppdict/)
-    _but there is no ppdict source code on google code_
-    PPdict uses stardict data format and use of Webkit for text
-    representation; and GTK as UI representation.</br> The project is
-    inactive since 2011. Some python class interfacing with stardict
-    can still be usefull, like
-    [stardict.py](https://github.com/luohao-brian/ppdict/blob/master/stardict.py)
-    and others.
 -   [PtkDic and GTKDict](http://swaj.net/ptkdic/)<a name="ptkdic"></a>
     are Perl/GTK+ and GTK+/Tk  Dictionary that store dictionaries in a MySQL
     server.
@@ -163,7 +145,7 @@ See also Wikipedia {{< wp "Comparison of machine translation applications" >}}.
     -   [phpMyLingvo](https://gitlab.com/sergeygalin/phpMyLingvo)
         is a Web-based dictionary/glossary application.
         It is afront-end to PtkDicdictionaries.
--   [pyglossary](https://github.com/ilius/pyglossary)
+-   [pyglossary](https://github.com/ilius/pyglossary) (GPL-3.0)
     (GPL) is a python tool for creating and converting dictionary
     databases. It can use either PyGTK or TKinter for it's GUI.
     The [Pyglossary SourceForge Site
@@ -176,7 +158,7 @@ See also Wikipedia {{< wp "Comparison of machine translation applications" >}}.
 -   [Sdictionary](http://swaj.net/sdict/index.html)
     is a Perl/TK dictionary project that uses own Sdict dictionary
     format.
--   { <a name="stardict"></a>{< wp "StarDict"  "Stardict _Wikipedia_" >}}
+-   <a name="stardict"></a> {{< wp "StarDict"  "Stardict _Wikipedia_" >}}
     developed by Hu Zheng (胡正) introduce a dictionary format that is much used, not
     only by the _Stardict_ application but by numerous applications on all OS.  Stardict
     has been removed from Sourceforge and is now found on its developper site.
@@ -185,25 +167,25 @@ See also Wikipedia {{< wp "Comparison of machine translation applications" >}}.
     _qstardict_ which use a QT4 interface; _stardict-plugin-spell_ is
     a spell plugin that give spelling suggestion when looking for a
     word in Stardict.
-    For dictionaries in stardict format look at the {{< iref "#stardict" "following section" >}}
+    For dictionaries in stardict format look at the
+    {{< iref "#stardict-dicts" "following section" >}}
     -   [Stardict Home](http://www.huzheng.org/stardict/).
     -   [Stardict Wiki](https://code.google.com/p/stardict-3/wiki/index)
         is still on Google code.
-    -   [sdcv](http://sdcv.sourceforge.net/)
+    -   [stardict ubuntu french doc](http://doc.ubuntu-fr.org/stardict)
+    -   [sdcv](http://sdcv.sourceforge.net/) (GPL-2.0)
         is the console version of StarDict program.
-    -   [Stardict File Format
-        ](http://www.huzheng.org/stardict/StarDictFileFormat)
+    -   [Stardict File Format](http://www.huzheng.org/stardict/StarDictFileFormat)
         The file format has changed between 2.4 and 3.0 and some older
         applications can only read the old format.
-    -   [Note on Stardict Tools in Ubuntu
-        ](http://thanhsiang.org/faqing/node/181) by Hu Zheng
-        _2007_.
+    -   [Note on Stardict Tools in Ubuntu](http://thanhsiang.org/faqing/node/181)
+        by Hu Zheng _2007_.
     -   [Convert lingvo .dsl dictionaries for use in StarDict
         ](https://code.google.com/p/stardict-3/wiki/ConvertLingvo)
     -   [Verify and Repair broken StarDict dictionaries
         ](https://code.google.com/p/stardict-3/wiki/RepairStarDictDicts).
 
-# e-dicts
+# e-dicts {#edicts}
 
 -   [English Wiktionary in StarDict format](http://www.dictinfo.com/)
 -   [FreeDict - for free bilingual dictionaries](http://www.freedict.org/)
@@ -216,17 +198,21 @@ See also Wikipedia {{< wp "Comparison of machine translation applications" >}}.
     {{< iref "#ptkdic" "PtkDic" >}},
     {{< iref "#stardict" "StarDict" >}}.
     -   [xdxf-makedict](https://github.com/soshial/xdxf_makedict)
-        is for converting dictionary files many-to-many:
-        dictd/dsl/sdict/stardict/xdxf → dictd/stardict/xdxf
-    -   [Fora](http://ng-comp.com/fora/index.html)
-         an android/linux/windows/OSX/iOs dictionary understand XDXF
-         (and {{< iref "#stardict" "StarDict" >}}, DSL, and Dictd)
+        is for converting dictionary files many-to-many: dictd/dsl/sdict/stardict/xdxf →
+        dictd/stardict/xdxf
+    -   [Fora](http://ng-comp.com/fora/index.html) and
+        [Alpus](https://alpusapp.com/)
+        are two android/linux/windows/OSX/iOs dictionary software from *NG Computing*
+        that understand XDXF and {{< iref "#stardict" "StarDict" >}}, DSL, and Dictd.
     -   [XDXF Format
-        ](https://github.com/soshial/xdxf_makedict/blob/master/format_standard/xdxf_description.md
-    -   [XDXF sourceforge site](http://sourceforge.net/projects/xdxf/files/)
-        host XDXF coded dictionaries, there is no index of
+        ](https://github.com/soshial/xdxf_makedict/tree/master/format_standard)
+    -   [XDXF sourceforge site](https://sourceforge.net/projects/xdxf/files/)
+        host XDXF coded dictionaries.
+
+        The dictionaries are from year 2006 and
+        there is no index of
         dictionaries, and you may prefer the next site.
-    -   [XDXF dictionary downloads](http://dicto.org.ru/xdxf.html)
+    -   [XDXF dictionary downloads - dicto.org.ru](http://dicto.org.ru/xdxf.html)
         host all xdxf dictionaries, a lot of them from or to Russian.
 -   [Babylon free dictionaries](http://www.babylon.com/free-dictionaries/),
     a large offer in `.bgl` format that is understood by numerous applications, or can
@@ -246,9 +232,14 @@ See also Wikipedia {{< wp "Comparison of machine translation applications" >}}.
         it is even possible to
         [add sound to .dsl dictionaries
         ](http://code.google.com/p/stardict-3/wiki/DslSound).
--   [Stardict dictionaries from Hu Zheng (胡正) Site
-    ](http://abloz.com/huzheng/stardict-dic/)
-    <a name="stardict-dicts"></a>
+-   <a name="stardict-dicts"></a>Stardict Dicts:
+    -   [Stardict dictionaries from Hu Zheng (胡正) Site](https://huzheng.sourceforge.io/)
+        also available in [stardict-dic at SourceForge.net
+        ](https://sourceforge.net/projects/huzheng/files/stardict-dic/)
+    -   [Free StarDict dictionaries
+        ](https://tuxor1337.frama.io/firedict/dictionaries.html)
+        freely available dictionaries in StarDict format for offline use
+
     -   Dictionaries converted to
         {{< iref "#stardict" "StarDict" >}} from
         [dictd](http://abloz.com/huzheng/stardict-dic/dict.org/),
@@ -263,6 +254,8 @@ See also Wikipedia {{< wp "Comparison of machine translation applications" >}}.
         ](http://abloz.com/huzheng/stardict-dic/babylon/french/)
     -   [lingvo dictionaries
         ](http://abloz.com/huzheng/stardict-dic/lingvo/)
+-   [ubuntu-fr Dictionnaires et encyclopédies
+    ](https://doc.ubuntu-fr.org/dictionnaires_encyclopedies)
 
 For English, two big free dictionaries available in many formats
 [including Kobo](http://www.mobileread.com/forums/showthread.php?t=196925)
