@@ -244,12 +244,12 @@ The definitions lists are not part of [Common Mark](http://spec.commonmark.org/)
 
 But we find
 [Definition Lists extension
-](https://pythonhosted.org/Markdown/extensions/definition_lists.html)
+](https://python-markdown.github.io/extensions/definition_lists/)
 in the standard [Python Markdown][] library,
 [PHP markdown extra
 ](http://michelf.com/projects/php-markdown/extra/#def-list),
 [Pandoc](https://pandoc.org/MANUAL.html#definition-lists), [MultiMarkDown][],
-[Goldmark][], _Discount_, _Markdown-it_, etc.
+[Goldmark][], _Discount_, [Markdown-it][], etc.
 
 ```markdown
 Apple
@@ -307,22 +307,16 @@ Wen a _Markdown_ syntax for definition list is unvalailable we use [raw HTML
    <dd>Pomaceous fruit of plants of the genus _Malus_ in
     the family _Rosaceae_.</dd>
 
-Or leave it empty and use the [link text itself]
 <dt name="orange"></a>Orange</dt>
     <dd>The fruit of an evergreen tree of the genus _Citrus_.</dd>
 
-Some text to show that the reference links can follow later.
+<dt id="distraction">Distraction</dt>
     <dd>The fruit of lack of concentration.</dd>
 </dl>
 </dd>
 
-[arbitrary case-insensitive reference text]: https://www.mozilla.org
-[1]: http://slashdot.org  "The title is Slashdot!"
-[link text itself]: http://www.reddit.com
-```
 </div>
 
-[I'm an inline-style link](https://www.google.com)
 <a id="H_link"></a>
 ## Link
 
@@ -518,7 +512,7 @@ With [Python Markdown][] with _Extra_ extensions we get
 </div>
 ```
 
-With pandoc
+With [Pandoc][]
 ```html
 <h1 id="simple-test">Simple test</h1>
 <h2 id="first-section">first section</h2>
@@ -822,29 +816,32 @@ Tables aren't part of the core Markdown spec, but are one of
 has a [table extension](https://michelf.ca/projects/php-markdown/extra/#table) similar
 to the GFM one.
 
-This syntax is used in numerous formatters like:
+As many formatters are [GFM][] compatible, they allow the use of tables.
+
+It is supported in :
 
 -   {{< iref "markdown#hoedown" "Hoedown" >}},
     {{< iref "markdown#lowdown" "lowdown" >}} _(C)_,
 -   {{< iref "markdown#redcarpet" "Redcarpet" >}},
-    {{< iref "markdown#kramdown" "#kramdown" >}}   _(Ruby)_ ,
+    {{< iref "markdown#kramdown" "Kramdown" >}}   _(Ruby)_ ,
 -   {{< iref "markdown#blackfriday" "BlackFriday" >}},
-    {{< iref "markdown#goldmark" "GoldMark" >}} _(GO)_,
+    [GoldMark][]  _(GO)_,
 -   {{< iref "markdown#gfms" "gfms" >}},
     {{< iref "markdown#gitdown" "Gitdown" >}},
     {{< iref "markdown#node_gfm" "node gfm" >}},
-    {{< iref "markdown#marked" "Marked" >}},
+    [Marked][],
+    [Markdown-it][]
     {{< iref "markdown#remarkable" "Remarkable" >}}
     _(Node.js)_
 
 _and many others._
 
-[Markdown Here](https://markdown-here.com/), a browser extension to
+[Markdown Here][] is a _Node.js_ browser extension to
 help you to write email, supports them. It provides an easy way of adding
 tables to your email -- a task that would otherwise require
 copy-pasting from another application.
 
-In {{< iref "markdown#pandoc" "Pandoc" >}} there are many
+In {{< iref "markdown#pandoc" "Pandoc" >}} there are several
 [table extensions](https://pandoc.org/MANUAL.html#tables)
 including these GFM tables under the extension name `pipe_table`.
 
@@ -884,7 +881,7 @@ Markdown | Less | Pretty
 *Still* | `renders` | **nicely**
 1 | 2 | 3
 
-<a name="#H_blockquote"></a>
+<a name="H_blockquote"></a>
 
 ## Blockquote {#blockquote}
 
@@ -894,7 +891,7 @@ Markdown | Less | Pretty
 
 Quote break.
 
-> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.
+> You can *put* **Markdown** into a [blockquote](#blockquote). This very long line, that we fill with extra content  to make sure this is long enough to actually wrap for everyone will still be quoted properly when it wraps.
 ```
 <div class="example">
 
@@ -903,50 +900,255 @@ Quote break.
 
 Quote break.
 
-> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.
+> You can *put* **Markdown** into a [blockquote](#blockquote). This very long line, that we fill with extra content  to make sure this is long enough to actually wrap for everyone will still be quoted properly when it wraps.
 
 </div>
 
-## Inline HTML {#html}
+<a name="H_raw_html"></a>
 
-You can also use raw HTML in your Markdown, and it'll mostly work pretty well.
+## Inline HTML {#raw_html}
 
-```text
+You can use raw HTML in your Markdown, if your formatter does not disable it.
+
+```markdown
+-   If we use a Markdown list
+-   <a name="second_item"></a> we can put some <em>html</em> inside an item
+    <li> even mixing in the same list markdown list items with with HTML list item.</li>
+-   but [the reverse](#markdown_in_html) does not work.
+```
+<div class="example">
+
+-   If we use a Markdown list
+-   <a name="second_item"></a> we can put some <em>html</em> inside an item
+    <li> even mixing in the same list markdown list items with with HTML list item.</li>
+-   but [the reverse](#markdown_in_html) does not work.
+
+</div>
+
+We can use an html list, it is very useful when a markdown definition list is not available.
+But [html inside a Markdown construct](#markdown_in_html) is
+{{< iref "#markdown_in_html_block" "limited to block mode elements" >}}.
+
+```html
 <dl>
-  <dt>Definition list</dt>
-  <dd>Is something people use sometimes.</dd>
+  <dt>HTML definition list</dt>
+  <dd>is very useful when a markdown definition list is not available.</dd>
 
-  <dt>Markdown in HTML</dt>
-  <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
+  <a name="markdown_in_html"></a><dt>Using *Markdown* inside html</dt>
+  <dd>does *not* work, we should use <em>HTML</em> tags.</dd>
 </dl>
 ```
-
+<div class="example">
 <dl>
-  <dt>Definition list</dt>
-  <dd>Is something people use sometimes.</dd>
+  <dt>HTML definition list</dt>
+  <dd>is very useful when a markdown definition list is not available.</dd>
 
-  <dt>Markdown in HTML</dt>
-  <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
+  <a name="markdown_in_html"></a><dt>Using *Markdown* inside html</dt>
+  <dd>does *not* work, we should use <em>HTML</em> tags.</dd>
 </dl>
+</div>
 
+### Markdown inside an HTML block {#markdown_in_html_block}
+Even if Markdown does not work when embedded inside a list element, it is allowed to use
+it inside an HTML block element like &lt;span&gt; and &lt;div&gt;, when you separate
+the block tage and markdown with a blank line.
+
+``` html
+<div style="position: relative; border:medium solid black; width: 100%;  min-height: 10em">
+<div style="position: absolute; top: 10px; width: 25%; left: 1em; border:medium solid green;">
+
+-   <span style="color:red;">**Markdown**</span> in a _&lt;span&gt;_.
+-   works _flawessly_.
+</div>
+<div style="position: absolute; top: 10px; width: 33%; left: 31%;">
+
+~~~ python
+s = "Python syntax"
+print(s)
+~~~
+
+</div>
+<div style="position: absolute; top: 10px; width: 30%; right: 1em; border:medium solid yellow;">
+
+1. In a div you can also define a *style*
+2. To obtain *nice* formatting.
+
+</div>
+</div>
+```
+<div class="example">
+<div style="position: relative; border:medium solid black; width: 100%;  min-height: 10em">
+<div style="position: absolute; top: 10px; width: 25%; left: 1em; border:medium solid green;">
+
+-   <span style="color:red;">**Markdown**</span> in a _&lt;span&gt;_.
+-   works _flawessly_.
+</div>
+<div style="position: absolute; top: 10px; width: 33%; left: 31%;">
+
+~~~ python
+s = "Python syntax"
+print(s)
+~~~
+
+</div>
+<div style="position: absolute; top: 10px; width: 30%; right: 1em; border:medium solid yellow;">
+
+1. In a div you can also define a *style*
+2. To obtain *nice* formatting.
+
+</div>
+</div>
+</div>
+
+### Raw Html Limitations
+
+Raw Html only render in HTML, but markdown can be used to produce other formats like
+epub and postscript, moreover Pandoc allow to convert Makdown to many other formats.
+
+We take an example to illustrate conversion to different formats.
+
+``` markdown
+#### Simple test
+
+##### first section
+The next section is the [section](#second). It contains a
+[red paragraph](#red_paragraph) and a [green one](#green_paragraph).
+
+##### second section {#second}
+<div class="red" id=red_paragraph>
+First an useless red paragraph.
+</div>
+<p class="green" id="green_paragraph">and an useless green</p>
+```
+
+In Goldmark it renders as
+
+<div class="example">
+#### Simple test
+
+##### first section
+The next section is the [section](#second). It contains a
+[red paragraph](#red_paragraph) and a [green one](#green_paragraph).
+
+##### second section {#second}
+<div class="red" id=red_paragraph>
+First an useless red paragraph.
+</div>
+<p class="green" id="green_paragraph">and an useless green</p>
+</div>
+
+We get the same result by transforming with pandoc using the input format
+`gfm+attributes`. The result in html is
+``` html
+<h4 id="simple-test">Simple test</h4>
+<h5 id="first-section">first section</h5>
+<p>The next section is the <a href="#second">section</a>. It contains a <a href="#red_paragraph">red paragraph</a> and a <a href="#green_paragraph">green one</a>.</p>
+<h5 id="second">second section</h5>
+<div class="red" id=red_paragraph>
+First an useless red paragraph.
+</div>
+<p class="green" id="green_paragraph">and an useless green</p>
+```
+All classes and link targets are correct.
+
+
+If we want to transform our source with Pandoc, to be Goldmark compatible we use as
+format: `gfm+footnotes+attributes`
+
+Here we obtain for the transformation to ReStruredText
+``` rest
+Simple test
+^^^^^^^^^^^
+
+first section
+'''''''''''''
+
+The next section is the `section <#second>`__. It contains a `red
+paragraph <#red_paragraph>`__ and a `green one <#green_paragraph>`__.
+
+.. _second:
+
+second section
+''''''''''''''
+
+.. raw:: html
+
+   <div class="red" id=red_paragraph>
+   First an useless red paragraph.
+   </div>
+   <p class="green" id="green_paragraph">and an useless green</p>
+```
+
+The label _second_ is correctly converted, but *red_paragraph* and
+*green_paragraph* appear only in a raw html section making this part unusable with an
+other output than html.
+
+For the last sentence the we cannot
+
+If we want to have a proper output we should either use that div in pandoc AST with
+option *native_div*. We will then use as input format `markdown-phpextra+native_divs`
+because *native_divs* is not compatible with *gfm* or *commonmark*.
+
+Or we can use the extended _attributes_ extension of markdown and write our test as
+
+``` markdown
+#### Simple test
+
+##### first section
+The next section is the [section](#second). It contains a
+[red paragraph](#red_paragraph) and a [green one](#green_paragraph).
+
+##### second section {#second}
+
+{#red_paragraph class=red}
+First an useless red paragraph.
+
+{#green_paragraph class="green"}
+and an useless green.
+```
+
+With this format we obtain using the same command:
+
+```
+$
+```
+
+```
+Simple test
+^^^^^^^^^^^
+
+first section
+'''''''''''''
+
+The next section is the `section <#second>`__. It contains a `red
+paragraph <#red_paragraph>`__ and a `green one <#green_paragraph>`__.
+
+.. _second:
+
+second section
+''''''''''''''
+
+.. container:: red
+   :name: red_paragraph
+
+   First an useless red paragraph.
+
+.. container:: green
+   :name: green_paragraph
+
+   and an useless green.
+```
+
+Which is a proper way of rendering link targets and class in ReStructuredText, in the
+same way conversion to other markup like asciidoc or orgmode; or to html, epub, latex,
+latex+pdf is correct.
+
+But our input is no longer compatible with GoldMark, because this processor only handle
+header attibutes and not attributes attached to a block.
+
+
+<a name="H_hr"></a>
 ## Horizontal Rule {#hr}
-
-
-
-***
-
-Asterisks
-
-___
-
-Underscores
-```
-
-
-
-
-
-
 You can use Three or more hyphens or asterisks or underscore.
 
 ```markdown
@@ -965,28 +1167,137 @@ Three or more...
 Hyphens or asterisks or underscore.
 </div>
 
-## Youtube videos {#videos}
+## MathJax
 
-They can't be added directly but you can add an image with a link to
-the video like this:
+Mathjax is supported by Pandoc, [GoldMark Mathjax extension
+](https://github.com/litao91/goldmark-mathjax).
 
-```text
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=YOUTUBE_VIDEO_ID_HERE
-" target="_blank"><img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg"
-alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+<a name="H_footnote"></a>
+## Footnote
+
+Footnotes have been introduced in
+[Markdown Extra](https://michelf.ca/projects/php-markdown/extra/#footnotes)
+they are also supported by [Pandoc footnote extension
+](https://pandoc.org/MANUAL.html#footnotes),
+[python markdown footnopte extension
+](https://python-markdown.github.io/extensions/footnotes/),  Black Friday
+and [GoldMark][].
+
+The syntax in Pandoc and Python Markdown and GoldMark is:
+
+``` text
+Here is a footnote reference,[^1] and another.[^longnote]
+
+[^1]: Here is the footnote.
+
+[^longnote]:
+    another footnote.
+
+    That's the second paragraph of the note.
 ```
 
-Or, in pure Markdown, but losing the image sizing and border:
+Here is a footnote reference,[^1] and another.[^longnote]
 
-```text
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+[^1]: Here is the footnote.
+
+[^longnote]:
+    another footnote.
+
+    That's the second paragraph of the note.
+
+
+Pandoc has also:
+
+```
+Support for  inline notes.^[Inlines notes are easier to write.]
 ```
 
-<!- taken from
+
+
+<a name="H_video"></a>
+## Video {#video}
+
+
+You can use a pure markdown image with a link to a video.
+
+```text
+[![Git Merge and Rebase](https://img.youtube.com/vi/CRlGDDprdOQ/0.jpg)
+](https://www.youtube.com/watch?v=CRlGDDprdOQ)
+```
+
+If you want to give a position, and a size you can iclude it in a div:
+
+```html
+<div style="margin-left: auto; margin-right:auto; display: block; width:  240px; height: 180px;">
+
+[![Git Merge and Rebase](https://img.youtube.com/vi/CRlGDDprdOQ/0.jpg)
+](https://www.youtube.com/watch?v=CRlGDDprdOQ)
+
+</div>
+```
+
+<div style="margin-left: auto; margin-right:auto; display: block; width:  240px; height: 180px;">
+
+[![Git Merge and Rebase](https://img.youtube.com/vi/CRlGDDprdOQ/0.jpg)
+](https://www.youtube.com/watch?v=CRlGDDprdOQ)
+
+</div>
+
+
+You can also resort to raw html to add a size, a position, a border and ask to open in
+an other tab:
+
+
+```html
+<a href="http://www.youtube.com/watch?v=CRlGDDprdOQ/" target="_blank">
+<img src="https://img.youtube.com/vi/CRlGDDprdOQ/0.jpg" alt="Git Merge and Rebase"
+style="margin-left: auto; margin-right:auto; display: block; width:  240px;
+height: 180px; border: 7px solid DarkGreen;" /></a>
+```
+
+<a href="http://www.youtube.com/watch?v=CRlGDDprdOQ/" target="_blank">
+<img src="https://img.youtube.com/vi/CRlGDDprdOQ/0.jpg" alt="Git Merge and Rebase"
+style="margin-left: auto; margin-right:auto; display: block;; width:  240px;
+height: 180px; border: 7px solid DarkGreen;" /></a>
+
+To embed a video use and html _iframe_:
+
+``` html
+<iframe width="560" height="315" src="http://www.youtube.com/embed/CRlGDDprdOQ/"
+frameborder="15"></iframe>
+```
+
+<iframe width="560" height="315" src="http://www.youtube.com/embed/CRlGDDprdOQ/"
+frameborder="15"></iframe>
+
+
+_Note that the styles have been written inline in this subsection to help to read the
+examples, but should better be put in a separate css style sheet._
+
+<!-- link targets -->
+
+[Common Mark]: https://spec.commonmark.org/current/ "Common Mark specification"
+[John Gruber MarkDown]: http://daringfireball.net/projects/markdown/
+[JG Markdown]: http://daringfireball.net/projects/markdown/ "John Gruber's original Markdown"
+[GFM]: https://github.github.com/gfm/ "GitHub Flavored Markdown"
+[Pandoc]: https://pandoc.org/MANUAL.html "Pandoc User’s Guide"
+[Python Markdown]: https://python-markdown.github.io/
+[MultiMarkdown]: http://fletcherpenney.net/multimarkdown/
+[Goldmark]: https://github.com/yuin/goldmark/
+[GitLab GFM]: https://docs.gitlab.com/ee/user/markdown.html
+[KramDown]: https://kramdown.gettalong.org/
+[Hugo]: https://gohugo.io/
+[Pygment]: https://pygment.org
+[Marked]: https://github.com/markedjs/marked
+[Markdown Here]:https://github.com/adam-p/markdown-here
+[Markdown-it]: https://github.com/markdown-it/markdown-it
+
+<!-- adapted from
 https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet
 with some modification from
 https://github.com/dvidsilva/MarkdownReference/blob/master/README.md
 -->
+
 <!--  Local Variables: -->
 <!--  mode: markdown -->
 <!--  ispell-local-dictionary: "english" -->
