@@ -264,7 +264,7 @@ generate a table of content.
 
 In {{< iref "#markdown-python" "Python Markdown" >}}
 you generate toc with
-[Table of Contents extension](https://pythonhosted.org/Markdown/extensions/toc.html)
+[Table of Contents extension](https://python-markdown.github.io/extensions/toc/)
 which is enabled by including:
 
 ```
@@ -888,7 +888,7 @@ See {{< iref "#pandoc" "Pandoc" >}} below.
   {{< iref "python_libraries#jupyter" "Jupyter" >}} books.
 
   The markdown parsing in MyST is done by
-  {{< iref "#markdown-it-py" "markdown-it-pi" >}}.
+  {{< iref "#markdown-it-py" "markdown-it-py" >}}.
 
   - [MyST-Parser - GitHub](https://github.com/executablebooks/MyST-Parser)
   - [RST-to-MyST](https://rst-to-myst.readthedocs.io/en/latest/)
@@ -946,11 +946,9 @@ also [in PyPi](https://pypi.python.org/pypi/markdown2).
     _(except those for which you define a specific header attribute)_.
     This is enabled by default;
 
-  - [definition lists
-    ](https://python-markdown.github.io/extensions/definition_lists/)
+  - [definition lists](https://python-markdown.github.io/extensions/definition_lists/)
     with the same syntax that [PHP_Markdown_Extrai
     ](http://www.michelf.com/projects/php-markdown/extra/#def-list)
-    like
 
   - [fenced code blocks
     ](https://python-markdown.github.io/extensions/fenced_code_blocks/)
@@ -982,8 +980,7 @@ also [in PyPi](https://pypi.python.org/pypi/markdown2).
 
   - [tables](https://python-markdown.github.io/extensions/tables/)
     or
-    [tables for markdown2
-    ](https://github.com/trentm/python-markdown2/wiki/tables)
+    [tables for markdown2](https://github.com/trentm/python-markdown2/wiki/tables)
     have the same syntax than  [PHP Markdown Extra
     ](https://michelf.ca/projects/php-markdown/extra/#table).
 
@@ -992,12 +989,10 @@ also [in PyPi](https://pypi.python.org/pypi/markdown2).
       support Google Code wiki-style tables.
 
     - python-markdown third party extension
-      [Markdown GridTables
-      ](https://github.com/smartboyathome/Markdown-GridTables/)
+      [Markdown GridTables](https://github.com/smartboyathome/Markdown-GridTables/)
       add grid tables as seen in ReSt.
 
-  - The [PHP Markdown Extra Emphasis
-    ](https://michelf.ca/projects/php-markdown/extra/#em)
+  - The [PHP Markdown Extra Emphasis](https://michelf.ca/projects/php-markdown/extra/#em)
     which treat internal underscore literally is the default in Python Markdown.
 
     python-markdown2 add an extension
@@ -1029,19 +1024,16 @@ also [in PyPi](https://pypi.python.org/pypi/markdown2).
     ](https://github.com/trentm/python-markdown2/wiki/metadata)
     adds a syntax for defining meta-data about a document.
 
-  - [Sane Lists
-    ](https://python-markdown.github.io/extensions/sane_lists/)
+  - [Sane Lists](https://python-markdown.github.io/extensions/sane_lists/)
     allow the mixing of list types. In other words, an ordered
     list will not continue when an unordered list item is
     encountered and vice versa.
 
-  - [Table of Content
-    ](https://https://python-markdown.github.io/extensions/toc/)
+  - [Table of Content](https://https://python-markdown.github.io/extensions/toc/)
     generates a Table of Contents from a Markdown document
     when encountering a `[TOC]` markup.
 
-  - [WikiLinks
-    ](https://pythonhosted.org/Markdown/extensions/wikilinks.html)
+  - [WikiLinks](https://python-markdown.github.io/extensions/wikilinks/)
     converts any `[[bracketed]]` word in a link.
 
 - There are also numerous
