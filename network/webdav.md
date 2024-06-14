@@ -64,15 +64,16 @@ such as _nautilus_, and the [Emacs tramp package
 The kde stuff as _konqueror_  use the _libkio_ library.
 
 # Virtual file systems
--  [davfs2](http://savannah.nongnu.org/projects/davfs2) (GPL)
-   is a Linux file system driver that allows you to mount a WebDAV
-   resource into your file system. Applications can use the file
-   system without knowing about WebDAV.
-   [davfs2 README
-   ](http://cvs.savannah.gnu.org/viewvc/davfs2/README?root=davfs2&view=markup)
--  [fusedav](http://0pointer.de/lennart/projects/fusedav/) is an user
-   space file system using _fuse_ that access _webdav_ shares thru the
-   [neon library](http://www.webdav.org/neon/doc/html/)
+-   [davfs2](http://savannah.nongnu.org/projects/davfs2) (GPL)
+    is a Linux file system driver that allows you to mount a WebDAV
+    resource into your file system. Applications can use the file
+    system without knowing about WebDAV.
+    [davfs2 README
+    ](http://cvs.savannah.gnu.org/viewvc/davfs2/README).
+-   [davfs2 - ArchWiki](https://wiki.archlinux.org/title/Davfs2).
+-   [fusedav](http://0pointer.de/lennart/projects/fusedav/) is an user
+    space file system using _fuse_ that access _webdav_ shares thru the
+    [neon library](http://www.webdav.org/neon/doc/html/)
 
 # command line or graphics clients
 
