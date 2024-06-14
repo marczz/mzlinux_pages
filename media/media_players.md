@@ -1231,7 +1231,9 @@ _LightSpark_ is in Debian.
 ### MPlayer  {#mplayer}
 
 [Mplayer](http://www.mplayerhq.hu/) (GPL) is a movie player. It plays most video formats
-as well as DVDs.  Its big feature is the wide range of supported output drivers.
+as well as DVDs.  Its big feature is the wide range of supported output drivers.a
+
+Mplayer is compatible with{{< iref "ffmpeg" "FFmpeg" >}}
 
 The supported codecs are:
 
@@ -1254,11 +1256,10 @@ is the encoder included in the mplayer distribution.
 
 **References:**
 
--   [MPlayer Home page](http://www.MPlayerHQ.hu/),
--   [Mplayer documentation](http://www.mplayerhq.hu/DOCS/HTML/en/),
--   [MPlayer Features](http://www.mplayerhq.hu/design7/info.html).
--   [mplayer(1)
-    ](http://manpages.debian.org/cgi-bin/man.cgi?query=mplayer(1))
+-   [MPlayer Home page](https://www.MPlayerHQ.hu/design7/),
+-   [Mplayer documentation](https://www.mplayerhq.hu/DOCS/HTML/en/),
+-   [MPlayer Features](https://www.mplayerhq.hu/design7/info.html).
+-   [mplayer(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=mplayer(1))
 -   Wikipedia {{< wp "MPlayer" >}}
 -   [ArchWiki: Mplayer](https://wiki.archlinux.org/index.php/MPlayer)
 
