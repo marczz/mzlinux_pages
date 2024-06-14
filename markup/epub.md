@@ -2,14 +2,12 @@
 title: Epub
 ---
 
-
 See also the related {{< iref "html" "html section" >}}
 and the {{< iref "html#css" "css section" >}}
 since Epub uses css.
 <!-- Other pages
 [[file:../../../../content-org/weblinks/e-text.org::+hugo_front_matter_format: yaml][E-text in weblinks]],
-[[file:../../../../content-org/notes/text_processing_notes/ebookreaders.org::+hugo_front_matter_format: yaml][Ebook Readers in Weblinks]]
-
+[[file:../../../../content-org/notes/text_processing_notes/ebookreaders.org::+hugo_front_matter_format: yaml][Ebook Readers in Notes]]
 -->
 
 # Epub Format
@@ -91,9 +89,8 @@ The EPUB format Home is the {{< iref "#ipdf" "IPDF" >}}.
     -   [Calibre Manual](http://manual.calibre-ebook.com/).
     -   Calibre support importing and exporting to
         {{< iref "markdown" "Markdown" >}}
-        using python-markdown, you can use
-        [markdown extensions
-        ](http://pythonhosted.org/Markdown/extensions/index.html).
+        using [python-markdown](https://python-markdown.github.io/), you can use
+        [markdown extensions](https://python-markdown.github.io/extensions/).
 -   [Booktype](https://github.com/sourcefabric/Booktype/) (AGPL)
     <a name="booktype"></a>
     is a Django, Web platform to produces books formatted in PDF
@@ -183,6 +180,7 @@ The EPUB format Home is the {{< iref "#ipdf" "IPDF" >}}.
     is a linux, and android program that
     read epub, part of epub3, mobi and fb2 (2.0).. It uses
     [libunibreak](http://vimgadgets.sourceforge.net/libunibreak//).
+-   [Calibre E-book Viewer](https://manual.calibre-ebook.com/viewer.html)
 -   [CoolReader](http://sourceforge.net/projects/crengine/) (GPL)
     is a android and linux ebook reader. It support the following
     formats: FB2, TXT, RTF, DOC, TCR, HTML, EPUB, CHM, PDB, MOBI. , it
