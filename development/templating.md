@@ -94,6 +94,9 @@ You find more explanation in [Flask: Template Inheritance
     sourcecode.
    
     -   [jinja2 documentation](https://jinja.palletsprojects.com/)
+    -   [Jinja Tutorial
+        ](https://ttl255.com/jinja2-tutorial-part-1-introduction-and-variable-substitution/)
+        in 6 parts by Przemek Rogala.
    
     There are many jinja2/django derived processors:
     -   The web framework [Django](http://www.djangoproject.com/) (BSD
