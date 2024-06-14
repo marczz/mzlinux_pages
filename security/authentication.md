@@ -205,12 +205,16 @@ secret key will be equal.
     both hardware and software are open-source.  price start at 29€.
 
     Nitrokey series:
-    -    Nitrokey _storage_, _start_ (29€), and the _nirokey3_ serie support
-         OpenPGP/GnuPG _with Gnuk_, S/MIME and can store 3 ECC and 3 RSA key pairs.
-    -    Nitrokey _storage_ and _pro_ (49€), _fido2_ (29€) support OTP and FIDO2.
-    -    Nitrokey _storage_ (109€ 16GB, 199€ 64GB) has a storage encryption with AES-256
-    _   _Nitrokey3_ (49€) supports FIDO2 and FIDO2 UF;
-    -   _Nitrokey HSM_ (69€) support S/MIME, and can store 38 RSA pairs and 300 ECC pairs.
+    -    Nitrokey _storage_, _start_ (29€) and pro2 (49€) have S-Mime and openpgp, and
+         OTP for pro2.
+    -    Nitrokey _storage_ 2 (109€ 16GB, 199€ 64GB) has a storage encryption with
+         AES-256, OTP, S-MIME and OpenPGP.
+    -    Nitrokey passkey is an USB-A key is dedicated to FIDO2 only  and costs 29€.
+    -   _Nitrokey3_ (49€) supports FIDO2 and FIDO2 UF OpenPGP/GnuPG _with Gnuk_, S/MIME
+         and can store 3 ECC and 3 RSA key pairs the usb A model cost 49€, usb A + NFC
+         55€ usb C +NFC 59€.  ;
+    -   _Nitrokey HSM 2_ (99€) support S/MIME, and can store 55 RSA pairs and 55 ECC pairs.
+        *2024 prices, add 20% TVA in Europe, and 15€ shipping*
 
     Nitrokey references:
     -   [Nitrokey Documentation](https://docs.nitrokey.com/index.html)
@@ -240,13 +244,15 @@ secret key will be equal.
     25€ to 90€.
 
     Yubikey 5 and YubiKey FIPS serie support; FIDO2/WebAuthn, U2F, Smart card, OpenPGP,
-    OTP, with varying connectors USB-A, USB-C, Lightning, NFC. Price from 45€ to 70€.
+    OTP, with varying connectors USB-A, USB-C, Lightning, NFC. Price from 55€ to 75€
+    *2024*.œ
 
     YubiKey Bio Series supports FIDO2/WebAuthn, FIDO U2F, with biometric authentication
-    with a price of 85€.
+    with a price of 90€/95€ *2024*. There is no support for openPGP, OTP and the
+    cryptographic support is limited to ecc p256.
 
     Security Key Series supports FIDO2/WebAuthn, U2F. they connect through NFC and
-    either USB-A or USB-C.
+    either USB-A or USB-C, and cost 25€/29€ *2024*.
 
     YubiHSM 2 and YubiHSM 2 FIPS are {{< wp "Hardware security module" >}}
     with {{< wp "PKCS 11" >}} protocol with prices of 650€ and 950€.
@@ -260,16 +266,29 @@ secret key will be equal.
         is a cross-platform application for configuring any YubiKey over all USB
         interfaces. A command line client is available in the
         [YubiKey Manager CLI](https://developers.yubico.com/yubikey-manager/).
+-   [OnlyKey](https://onlykey.io/) is an open source security key with support to Google
+    Authenticator (TOTP), Yubikey® compatible OTP, FIDO2 and FIDO Universal 2nd Factor
+    (U2F), and OpenPGP. It can be used with KeepassXC as a secondary authentication
+    factor.c
+
+    OnlyKey has two models, OnlyKey the USB-A security key with a 6 buttons pin
+    protection 48€ *2024*, and OnlyKey DUO - Dual USB-C and USB-A mini key with optional
+    3 buttons pin at the same 48€ price (shipping 10€).
+
+    -   [OnlyKey Docs](https://docs.onlykey.io/)
+
 -   [Solo](https://solokeys.com/collections/all)
-    is a small USB Security token supporting Universal 2nd Factor (U2F) requests and
-    the newer FIDO2 standard. In contrast to Yubikeys the software is open-source.
-    The solo price go from 25€ to 45€. They do not support OPENPGP.
+    is a small USB Security token supporting FIDO2 and FIDO Universal 2nd Factor (U2F)
+    requests and. The software is open-source.  The solo price go from 25€ to 45€. They
+    do not support OPENPGP.
     -   [Solo - ArchWiki](https://wiki.archlinux.org/title/Solo)
 -   The [Tomu](https://tomu.im/) is a family of FIDO2 security key, with an open-source
-    hardware and firmware.
+    hardware and firmware. 34€ USB-A or 44€ usb-C with NFC. *2024*
     -   [Tomu - ArchWiki](https://wiki.archlinux.org/title/Tomu)
 -   [How to set up 2FA TOTP with KeepassXC, Aegis and Authy. | Linux.org
     ](https://www.linux.org/threads/in-depth-tutorial-how-to-set-up-2fa-totp-with-keepassxc-aegis-and-authy.36577/).
+
+
 
 ### PAM authentication {#fido_pam}
 -   [YubiKey and SSH via PAM
