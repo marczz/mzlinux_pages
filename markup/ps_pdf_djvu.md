@@ -268,17 +268,6 @@ synchronization library. This include
     is a PDF viewer with a focus on textbooks and research papers.
     -   [Sioyek Documentation](https://sioyek-documentation.readthedocs.io/en/latest/)
 
--   <a name="xpdf"></a>{{< wp "Xpdf" >}} (GPL)
-    is a light pdf viewer with minimal dependencies. {{< iref "#poppler" "Poppler" >}}
-    was forked from _Xpdf_. _Xpdf_ is user configurable; you can even set unusal, but
-    very usefull options like the paper color; and of course you can set all the key
-    bindings.
-
-    _xpdf_ is in Debian, the derived {{< iref "#popler-utils" "popler-utils" >}}
-    utilities are in the package _popler-utils_  except
-    {{< iref "#pdftosrc" "pdftosrc"  >}} which is in the package _texlive-binaries_.
-
-    See [this recipe](https://stackoverflow.com/a/11241095) to use vim keys in xpdf.
 
 
 ## Poppler based viewers {#poppler}
@@ -330,6 +319,22 @@ referenced below.
         Comic Book, Plucker, EPub, Fax
     -   Sidebar with contents, thumbnails, reviews and bookmarks
     -   Annotations support
+-   <a name="xpdf"></a>{{< wp "Xpdf" >}} (GPL)
+    is a light pdf viewer with minimal dependencies. {{< iref "#poppler" "Poppler" >}}
+    was forked from _Xpdf_.
+
+    The present package `xpdf` is [xpopple](https://offog.org/code/xpopple/), which is
+    the original `xpdf` but now built against the poppler library.
+
+    _Xpdf_ is user configurable; you can even set unusal, but
+    very usefull options like the paper color; and of course you can set all the key
+    bindings.
+
+    _xpdf_ is in Debian, the derived {{< iref "#popler-utils" "popler-utils" >}}
+    utilities are in the package _popler-utils_  except
+    {{< iref "#pdftosrc" "pdftosrc"  >}} which is in the package _texlive-binaries_.
+
+    See [this recipe](https://stackoverflow.com/a/11241095) to use vim keys in xpdf.
 -   <a name="zathura"></a> [Zathura](http://zathura.pwmt.org/projects/zathura) (GPL)
     is a pdf viewer with minimal memory footprints and focus on control through
     keyboard interaction.  In addition of common viewer features Zathura can display
@@ -365,25 +370,26 @@ I used as test documents_lualatex-doc.pdf_ a 14p luatex generated pdf, 160K
 without image, but an index. *You find it in TeX Live lua-latex package.*
 
 All start very quickly, but _evince_ is a lot more slower, even a little slower
-than its young brother _epdfview_. _Acrobat reader_ is also a lot more slower.
+than its young brother _epdfview_.
 They all allow to follow pdf links but_mupdf_ and _gv_ don't have
 a pane showing the index,which is available in all other readers.
 
-| name     | res | shr |
-|:---------|----:|----:|
-| corepdf  | 212 | 138 |
-| koreader | 175 |  72 |
-| apvlv    | 162 | 121 |
-| katarakt | 155 | 120 |
-| evince   | 148 |  66 |
-| qpdfview | 148 | 126 |
-| okular   | 145 | 103 |
-| sioyek   | 141 | 102 |
-| zathura  | 126 |  64 |
-| mupdf-gl |  77 |  59 |
-| gv       |  44 |  21 |
-| xpdf     |  27 |  15 |
-| mupdf    |  14 |   8 |
+| name     | res | shr | wln | bk | ind | bkm | mk | ann | rot | epub |
+|:---------|----:|----:|-----|----|-----|-----|----|-----|-----|------|
+| corepdf  | 212 | 138 | Y   | Y  | N   | N   | N  | N   | Y   |      |
+| koreader | 175 |  72 |     |    |     |     |    |     |     | Y    |
+| apvlv    | 162 | 121 | Y   | N  | Y   | N   | Y  | Y   | Y   | Y    |
+| katarakt | 155 | 120 | Y   | Y  | Y   | N   | Y  | N   | Y   | Y    |
+| evince   | 148 |  66 |     |    |     |     |    |     |     | N    |
+| qpdfview | 148 | 126 |     |    |     |     |    |     |     | N    |
+| okular   | 145 | 103 |     |    |     |     |    |     |     | Y    |
+| sioyek   | 141 | 102 |     |    |     |     |    |     |     |      |
+| zathura  | 126 |  64 |     |    |     |     |    |     |     | N    |
+| mupdf-gl |  77 |  59 | N   | N  | N   | N   | Y  | N   | Y   | Y    |
+| gv       |  44 |  21 |     |    |     |     |    |     |     | N    |
+| xpdf     |  27 |  15 |     |    |     |     |    |     |     | N    |
+| mupdf    |  14 |   8 | N   | N  | N   | N   | Y  | N   | Y   | Y    |
+|          |     |     |     |    |     |     |    |     |     |      |
 
 # PDF Editing
 
@@ -825,7 +831,7 @@ If you want to adapt pdf to e-readers, smartphones, small tablets you can refer 
 
     The following scripts are wrapper around pypdf/pypdf2:
 
-    -   [pdfposter](http://pythonhosted.org/pdftools.pdfposter/)
+    -   [pdfposter](https://pdfposter.readthedocs.io/en/stable/index.html)
         scale and tile PDF images/pages to print on multiple pages.  in Debian.
 
 -   [qpdf](http://qpdf.sourceforge.net/) (Artistic License)
