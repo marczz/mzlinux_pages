@@ -224,6 +224,12 @@ where you find {{< iref "filesystems#lvm" "LVM" >}}.
     -   {{< iref "#gparted_live" "GParted Live" >}}
         is a small bootable GNU/Linux distribution for x86 based computers.
 
+    Gparted as far as 2023 does not support wayland, to use it in Xwayland, as you need
+    to launch it as root, you have to add access to your X server with :
+    ``` shell
+    xhost +SI:localuser:root
+    ```
+
 -   [ArchWiki: fdisk and gdisk
     ](https://wiki.archlinux.org/index.php/Fdisk)
 -   [GPT fdisk Tutorial](http://www.rodsbooks.com/gdisk/),
