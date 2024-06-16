@@ -1,6 +1,7 @@
 ---
 title: Barcode/QRcode software
 ---
+<!-- [[file:../../../../content-org/notes/pim_notes.org::#barcode][Qrcodes and barcodes notes]] -->
 
 # Barcode  and QRcode References
 -   Wikipedia: {{< wp "Barcode" >}} look at this article to find cross references to
@@ -183,11 +184,11 @@ give an overview and analysis of code quality of QRcode libraries.
 
    *zint* support many type of QR codes, including Micro QR codes, and rMQR.
 
-    *zint* and *zint-qt* are packaged in Debian.
-    -   [Zint  Manual](https://zint.org.uk/manual)
-        -   [Zint CLI documentation](https://zint.org.uk/manual/chapter/4)
-        -   [zint-qt documantation](https://zint.org.uk/manual/chapter/3)
-    -   [GitHub - zint](https://github.com/zint/zint).
+   *zint* and *zint-qt* are packaged in Debian.
+   -   [Zint  Manual](https://zint.org.uk/manual)
+       -   [Zint CLI documentation](https://zint.org.uk/manual/chapter/4)
+       -   [zint-qt documantation](https://zint.org.uk/manual/chapter/3)
+   -   [GitHub - zint](https://github.com/zint/zint).
 -   [ZXing](https://github.com/zxing/zxing) (Apache-2.0 license)
     ("Zebra Crossing") barcode scanning library for Java, Android, is no longer
     developed, but has many offspring, few of them are still alive.
@@ -218,6 +219,21 @@ give an overview and analysis of code quality of QRcode libraries.
     a python library to read difficult and tricky QR codes.
 
 # Barcode/QRcode online services
+All online services which are hosted externally are insecure; your data is sent to the
+site and can be read there. This can be acceptable for generation of QR code, because it
+you can use them only for non critical data. But for scanning this should be avoided.
+Moreover if you want a live scan the app ask for controlling your camera; which is very
+dangerous.
+
+It does not apply to javascript applications which run in the browser, If the browser
+does not leak information.
+
+So for scanner I refer only to in-browser javascript application, if you want something
+else a web search for "QR Code scan" gives a lot of results.
+
+At least for scanning it is easy and more convenient to do it on either a mobile android
+or ios, or on linux.
+
 -   [QR Code Generator - Thonky.com](https://www.thonky.com/qrcode/) let you choose the
     error correction level, the mask pattern, and the version *i.e. the size*.
 -   [QR code generator library live demo
@@ -260,6 +276,13 @@ give an overview and analysis of code quality of QRcode libraries.
 -   [QRStuff QR Code Generator](https://www.qrstuff.com/) yet an other online QR code
     generator, seems containing more advertisements.
 
+-  [Webqr Qr code scanner](https://webqr.com/index.html)
+   provides a QR Code scanner directly in the browser, implemented in JavaScript using
+   ZXing java multi-format 1D/2D barcode image library.
+-  [QR Code Scanner - ScanApp](https://scanapp.org/) in browser scan, it is an instance
+   of [mebjas / html5-qrcode](https://github.com/mebjas/html5-qrcode).
+
+
 # Mobile Barcode readers
 There are many barcode readers on android and ios, the support for different symbologies
 is an important criteria, an other mandatory feature is that the barcode reader don't
@@ -274,30 +297,32 @@ which is available on Android and IOS.
 
 
 # How to redact a QR code
-url:
-   ```text
+url
+:  ```text
    https://www.example.com
     ```
-sms:
-    ```text
+sms
+:   ```text
     SMSTO:+33456789712:some text
     ```
 
-wifi:
-    ```text
+wifi
+:   ```text
     WIFI:S:access-point-123;T:WPA;P:somepasswd;;
     ```
 
-email:
-    ```text
-   mailto:donald.duck@yahoo.com?subject=fly or swim&body=some text
-   ```
-location:
-    ```text
+email
+:   ```text
+    mailto:donald.duck@yahoo.com?subject=fly or swim&body=some text
+    ```
+
+location
+:   ```text
     https://maps.google.com/local?q=48.397244,-4.504738
     ```
-vcard:
-    ```text
+
+vcard
+:   ```text
     BEGIN:VCARD
     VERSION:3.0
     FN;CHARSET=UTF-8:M John Doe
@@ -313,7 +338,136 @@ vcard:
     END:VCARD
     ```
 
+# how to refer to a location
+## geo URI scheme
+Among the URI types we find {{< wp "Geo URI scheme" >}}
+
+A geo URI look like *For Ouessant*
+```text
+geo:48.4569,-5.0963
+```
+
+you can open the geo with any application that understand this scheme, like on android
+openstreetmap, mapy.cz, google map, sygic ....
+
+
+More details on applications which support geo uri scheme is given in
+[Geo URI scheme - OpenStreetMap Wiki](https://wiki.openstreetmap.org/wiki/Geo_URI_scheme).
+
+
+On Linux firefox by itself does not handle geo uri scheme, there is an extension
+[geo -handler](https://github.com/Andrew67/geo-handler) (MIT Licene) which allow to open
+geo uris, the list of map service is outdated but you can choose openstreetmap or google
+maps, bing maps, or geoHack (ie [geohaktoolforge.org](https://geohack.toolforge.org/))
+which offer a choice of online map service, or mapCompare (i.e
+[tools.geofabrik.de]https://tools.geofabrik.de/)) which compare popular maps service.
+
+On Linux Chrome does not handle geo uri.
+
+## Geo URI android extensions
+On android some additional parameters are available, you can refer toa search around a
+point with an URI like
+```text
+geo:48.4569,-5.0963?q=église
+```
+
+If you use google maps on android you can use some [specific intents
+](https://developers.google.com/maps/documentation/urls/android-intents); but they are
+not always supported by other application than google map.
+
+The *organicmap* or *maps.me* application does not handle them, *sygic* partially,
+*mapy.cz* seems more compliant.
+
+On google maps you can also give a zoom factor from 0 for whole world to 21 for building
+view with `z` parameter
+```text
+geo:48.4569,-5.0963?z=15
+```
+
+If you use google map only the map of the area is displayed, to show the pin you have to
+use:
+```text
+geo:0,0,q=48.4569,-5.0963
+```
+
+You can display a label at some point with:
+```text
+geo:0,0,?q=Église+Saint+Pol@48.457414,-5.095798
+```
+
+# Plus Codes
+{{< wp "Open Location Code" >}} also named **Plus Code** is a geocode based in a system
+of regular grids.
+
+Plus Codes can be written in both global and local form. A full Plus Code is a "Global
+Code" has 8 characters before the “+” sign, if you drop the 4 first characters you get
+the short Plus Code, which is a "Local Code" to give a close locality to uniquely
+identify the coordinates.
+
+Google maps give the short plus code for a location, and it can open the location
+associated to a plus code. But it it is not the case of other applications, on Android
+*mapy.cz* can also find a plus code. But other application or openstreetmap ang apple
+maps ignore them.
+
+An easy way to display a plus code location in the browser is duckduckgo maps, which is
+available in the duckduckgo search banner under the *maps* tab. Duckduckgo maps preserve
+your privacy in contrast with google maps.
+
+The algorithm to code coordinate is explained in the wikipedia page
+{{< wp "Open Location Code" >}}.
+
+An example of short plus code given by Google is
+```text
+FW43+XJ Ushant, France
+```
+
+To obtain a global code from a local code, you look at the code of the associated city;
+then you prefix the local code with the first 4 characters of the city.
+
+[plus.codes map](https://plus.codes/map) also gives both the local plus code and the
+global plus code. When you know the coordinate you can easily find the two plus codes;
+and if you know only one of them you can enter it in the search box to get the two codes.
+
+
+
+-   [Google maps Plus Codes Home](https://maps.google.com/pluscodes/)
+-   [plus.codes map](https://plus.codes/map) is a page from ggogle maps, which allow to
+    find a plus code for a location. This page display the grid used, so if you zoom in
+    you can have a precise code.
+-   [open-location-code](https://github.com/google/open-location-code) (Apache-2.0 license)
+    Open Location Code is a library to generate plus codes.
+-   [coordinate converters](https://coordinates-converter.com/) s an online service to
+    convert between many coordinate systems. It includes the global plus code.
+    You can use it when knowing the local plus code, by using the two steps method
+    outlined above.
+
+    You can also use the included map to get a global plus code.
+
+# Using an html link to a location
+Using a html link is always more restrictive than a geo uri, because it is tied to a
+specific provider.
+Openstreetmap uses:
+```text
+https://www.openstreetmap.org/#map=19/48.45740/-5.09630
+```
+which correspond to:
+```text
+geo:48.45740,-5.09630?z=19
+```
+
+Google maps either in the browser or the android app will use
+```
+https://maps.app.goo.gl/4MjPbcMPp57yEjz18
+```
+This url will only open google maps, it is not understood by other applications.
+
+
+
+
+
+
+
 <!-- Local Variables: -->
-<!-- mode: markdown -->
+<!-- mode: mpaul+markdown -->
 <!-- ispell-local-dictionary: "english" -->
 <!-- End: -->
