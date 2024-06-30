@@ -743,19 +743,24 @@ _   [EmacsWiki: Category Frames](https://www.emacswiki.org/emacs/CategoryFrames)
 -   [ag][] allows you to search using ag from inside Emacs.
 
 ## Templates {#templates}
-There are many templates languages for Emacs, most of them are listd in
+There are many templates languages for Emacs, most of them are listed in
 [EmacsWiki: Category Templates](https://www.emacswiki.org/emacs/CategoryTemplates).
 
 Two are bundled with emacs [Skeleton](https://www.emacswiki.org/emacs/SkeletonMode) and
 [Tempo](https://www.emacswiki.org/emacs/TempoMode) which can be extended with
-the [Tempo Snippets](https://www.emacswiki.org/emacs/TempoSnippets) front end
+the [Tempo Snippets](https://www.emacswiki.org/emacs/TempoSnippets) front end.
 
 Tempo is used with org-mode by the library `org-tempo.el`. Org Tempo reimplements
 completions of structure template before point For example, strings like `<e` at the
 beginning of the line will be expanded to an example block. The block templetes are in
-the `org-structure-template-alist` and `org-keyword-template-alist` alist. You can add there other sblock types.
-They are inserted by typing '<' 'key' 'TAB', you cn also choose them with a menu by
-typing `C-c C,` (`org-insert-structure-template`).
+the `org-structure-template-alist` and `org-keyword-template-alist` alist.
+
+You can add there other sblock types.  They are inserted by typing '<' 'key' 'TAB', you
+cn also choose them with a menu by typing `C-c C,` (`org-insert-structure-template`).
+
+A modern extension of tempo is [tempel](https://github.com/minad/tempel)
+written by [David Mendler _minad_](https://github.com/minad) who is also author of
+vertico, consult, corfu, marginalia, cape.
 
 [yasnippet](https://github.com/joaotavora/yasnippet)
 is a template system for Emacs. It allows you to type an abbreviation and automatically
