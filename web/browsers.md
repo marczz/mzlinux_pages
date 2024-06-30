@@ -91,6 +91,20 @@ title: Web Browsers
 -   The [compatibility of desktop and mobile browsers with HTML5, CSS3, SVG
     ](http://caniuse.com/)
     is summarized in these tables.
+-  <a class="WpRef" href="https://en.wikipedia.org/wiki/Flash_Video"
+   title="Wikipedia - Flash_Video">Flash Video</a>
+   is a format from Adobe, with file extension `.flv` or `.swf`.
+   <a class="WpRef" href="https://en.wikipedia.org/wiki/SWF"
+   title="Wikipedia - SWF">SWF</a> is the Adobe flash file format. Adobe distributed a
+   proprietary plugin for browsers <a class="WpRef"
+   href="https://en.wikipediia.org/Adobe_Flash_Player
+   title="Wikipedia - Adobe_Flash_Player">Adobe Flash Player</a>.
+   It was widely used on the web, and many open source alternative players were
+   proposed.
+
+   Flash player's support has ended of December 31 2020, and the plugin doesn't work anymore.
+
+
 
 ## Firefox addons {#firefox_addons}
 
@@ -99,70 +113,6 @@ title: Web Browsers
     has informations about flash players.
 -   Wikipedia: {{< wp "List of Firefox extensions" >}}
 
-### Flash plugins {#flash_plugins}
-For playing swf you can use
-{{< iref "media_players#gnash" "Gnash" >}},
-{{< iref "#adobe_swf" "Adobe Flash plugin non free" >}},
-{{< iref "media_players#lightspark" "Lightspark" >}},
-{{< iref "#pepperflash" "Pepper Flash Player" >}}
-or {{< iref "#shumway" "Shumway" >}}.
-
-But you can replace Flash by other formats following recipes of
-[Triskell Wiki: Play Videos Without Using Flash
-](https://trisquel.info/en/wiki/play-videos-without-using-flash)
-
-You can also install
-[Freshplayerplugin to use the Chromium PeperFlash plugin with Iceweasel
-](https://wiki.debian.org/Freshplayerplugin).
-
--   [Debian Wiki: Flash](https://wiki.debian.org/Flash) gives the
-    status of Flash support on Debian. _not up to date_.
--   <a name="adobe_swf"></a>[Debian Wiki: FlashPlayer
-    ](https://wiki.debian.org/FlashPlayer)
-    on Adobe SWF plugin on Debian.
-
-    Adobe announced in 2012 it would not make newer versions of its NPAPI Flash player
-    plugin available on Linux and would only provide security updates for Flash Player
-    11.2 until 2017.  But in 2016 they began again to provide the NAPI plugin that can
-    be used with Firefox.
-
-    But only the PPAPI plugin used in peper flash on Chrome, support
-    DRM, GPU acceleration, Stage 3D, etc.
-
--   <a name="pepperflash"></a>[Debian Wiki: Pepper Flash Player
-    ](https://wiki.debian.org/PepperFlashPlayer) can be used with
-    Chromium.
-    We can also use it with Firefox with the
-    [Freshplayer plugin
-    ](https://wiki.debian.org/Freshplayerplugin).
-    The package is [browser-plugin-freshplayer-pepperflash
-    ](https://packages.debian.org/sid/browser-plugin-freshplayer-pepperflash).
--   {{< wp "Google Swiffy" >}} is a web-based tool developed by Google that
-    converts SWF files to HTML5. Its main goal is to display Flash
-    contents on devices that do not support Flash.
-    -   [Swiffy Home](https://developers.google.com/swiffy/)
--   <a name="shumway"></a>[Shumway
-    ](https://github.com/mozilla/shumway/)
-    is a Flash VM and runtime written in JavaScript. It replaces the
-    adobe flash plugin that is no longer maintained in linux.
-    _But Shumway itself don't seem to be anymore developped since 2015_.
-    -   [Shumway Home page](https://mozilla.github.io/shumway/).
-    -   [Debugging and Configuring Shumway - using the extension
-        ](https://github.com/mozilla/shumway/wiki/Debugging-and-Configuring-Shumway#using-the-extension).
-    -   [Mozilla: Test the Shumway SWF player
-        ](https://oneanddone.mozilla.org/en-US/tasks/24/)
-    -   To test use any of the
-        [Shumway/Flash video sites
-        ](https://wiki.mozilla.org/Shumway/Flash_video_sites)
--   YouTube can use Webm instead of swf you have only to opt for html5
-    in the page
-    [YouTube HTML5 Video Player](https://www.youtube.com/html5).
-
--   Some plugins try to get force the use of html5 or open video
-    codecs instead of swf: [YouTube ALL HTML5
-    ](https://addons.mozilla.org/en-US/firefox/addon/youtube-all-html5/),
-    [Video WithOut Flash
-    ](https://addons.mozilla.org/en-US/firefox/addon/video-without-flash/).
 
 
 # Ads Blocking
@@ -482,6 +432,73 @@ definitions (ddd), google (go), qwant (qw), reddit (re), wikipedia
     a golanguage program to open a web search from terminal,
     I provides a Docker file and a snap package.
 
+<!-- No longer appropriate Flash Video is dead
+### Flash plugins {#flash_plugins}
+For playing swf you can use
+{{< iref "media_players#gnash" "Gnash" >}},
+{{< iref "#adobe_swf" "Adobe Flash plugin non free" >}},
+{{< iref "media_players#lightspark" "Lightspark" >}},
+{{< iref "#pepperflash" "Pepper Flash Player" >}}
+or {{< iref "#shumway" "Shumway" >}}.
+
+But you can replace Flash by other formats following recipes of
+[Triskell Wiki: Play Videos Without Using Flash
+](https://trisquel.info/en/wiki/play-videos-without-using-flash)
+
+You can also install
+[Freshplayerplugin to use the Chromium PeperFlash plugin with Iceweasel
+](https://wiki.debian.org/Freshplayerplugin).
+
+-   [Debian Wiki: Flash](https://wiki.debian.org/Flash) gives the
+    status of Flash support on Debian. _not up to date_.
+-   <a name="adobe_swf"></a>[Debian Wiki: FlashPlayer
+    ](https://wiki.debian.org/FlashPlayer)
+    on Adobe SWF plugin on Debian.
+
+    Adobe announced in 2012 it would not make newer versions of its NPAPI Flash player
+    plugin available on Linux and would only provide security updates for Flash Player
+    11.2 until 2017.  But in 2016 they began again to provide the NAPI plugin that can
+    be used with Firefox.
+
+    But only the PPAPI plugin used in peper flash on Chrome, support
+    DRM, GPU acceleration, Stage 3D, etc.
+
+-   <a name="pepperflash"></a>[Debian Wiki: Pepper Flash Player
+    ](https://wiki.debian.org/PepperFlashPlayer) can be used with
+    Chromium.
+    We can also use it with Firefox with the
+    [Freshplayer plugin
+    ](https://wiki.debian.org/Freshplayerplugin).
+    The package is [browser-plugin-freshplayer-pepperflash
+    ](https://packages.debian.org/sid/browser-plugin-freshplayer-pepperflash).
+-   {{< wp "Google Swiffy" >}} is a web-based tool developed by Google that
+    converts SWF files to HTML5. Its main goal is to display Flash
+    contents on devices that do not support Flash.
+    -   [Swiffy Home](https://developers.google.com/swiffy/)
+-   <a name="shumway"></a>[Shumway
+    ](https://github.com/mozilla/shumway/)
+    is a Flash VM and runtime written in JavaScript. It replaces the
+    adobe flash plugin that is no longer maintained in linux.
+    _But Shumway itself don't seem to be anymore developped since 2015_.
+    -   [Shumway Home page](https://mozilla.github.io/shumway/).
+    -   [Debugging and Configuring Shumway - using the extension
+        ](https://github.com/mozilla/shumway/wiki/Debugging-and-Configuring-Shumway#using-the-extension).
+    -   [Mozilla: Test the Shumway SWF player
+        ](https://oneanddone.mozilla.org/en-US/tasks/24/)
+    -   To test use any of the
+        [Shumway/Flash video sites
+        ](https://wiki.mozilla.org/Shumway/Flash_video_sites)
+-   YouTube can use Webm instead of swf you have only to opt for html5
+    in the page
+    [YouTube HTML5 Video Player](https://www.youtube.com/html5).
+
+-   Some plugins try to get force the use of html5 or open video
+    codecs instead of swf: [YouTube ALL HTML5
+    ](https://addons.mozilla.org/en-US/firefox/addon/youtube-all-html5/),
+    [Video WithOut Flash
+    ](https://addons.mozilla.org/en-US/firefox/addon/video-without-flash/).
+
+-->
 <!-- Local Variables: -->
 <!-- mode: markdown -->
 <!-- ispell-local-dictionary: "english" -->
