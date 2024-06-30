@@ -272,39 +272,46 @@ basis.
 -   [SQLite](http://www.sqlite.org/) (public domain)
     - [SQLite FAQ](http://www.sqlite.org/faq.html)
     - [SQL As Understood By SQLite](http://www.sqlite.org/lang.html)
+-   [Litestream](https://litestream.io/) (Apache-2.0 license)
+    is a standalone disaster recovery tool for SQLite written in GoLang.
+    It runs as a background process and safely replicates changes incrementally to
+    another file or S3.
+    -   [litestream - GitHub](https://github.com/benbjohnson/litestream).
 
 ## SQLite tutorials
--   [SQLite Tutorial I
-    ](http://linuxgazette.net/109/chirico1.html) and
-    [SQLite Tutorial I|
-    ](http://souptonuts.sourceforge.net/) by Mike Chirico.
+-   [SQLite Tutorial](http://linuxgazette.net/109/chirico1.html) by Mike Chirico,
+    also found as [SQLite Tutorial in souptonuts collection
+    ](https://souptonuts.sourceforge.net/readme_sqlite_tutorial.html).
 
 ## SQLite administration
 -   [phpLiteAdmin](https://bitbucket.org/phpliteadmin/public/) (GPL)
-     is a web-based SQLite database admin tool written in PHP._active in 2015_.
--   [SQLite Database Browser]( http://sqlitebrowser.sourceforge.net/) (public domain)
+    is a web-based SQLite database admin tool written in PHP.
+-   [DB Browser for SQLite](https://sqlitebrowser.org/)
     is a visual tool in QT, used to create, design and edit SQLite databases.
--   [SQLiteManager](http://www.sqlitemanager.org/) (GPL)
-    PHP web tool to manage SQLite databases. SQLiteManager is now
-    managed by a french company, it is still GPL but take care to have
-    a working adds blocker before visiting their site.
--   [sqlite-manager firefox plugin](https://code.google.com/p/sqlite-manager/)
-    ([downloads](https://addons.mozilla.org/fr/firefox/addon/sqlite-manager/))
-     (Mozilla Public License) manage any SQLite database on your computer.
--   [TkSQLite](http://reddog.s35.xrea.com/wiki/TkSQLite.html)
-    (BSD license) is a GUI database manager for SQLite implemented by
-    Tcl/Tk. It can manage SQLite version2.8 and SQLite version3.x. database.
+
+    It is packaged in Debian.
+    -   [sqlitebrowser - GitHub](https://github.com/sqlitebrowser/sqlitebrowser)
+-   [sqlite-manager firefox plugin](https://github.com/lazierthanthou/sqlite-manager)
+    (Mozilla Public License) manage any SQLite database on your computer.
+    *Last release 2015, no longer on Mozilla addons*
+-   [sqlite manager firefox plugin](https://github.com/lunu-bounir/sqlite-manager) (MPL)
+    an other firefox extension, but more recent and available
+    [on Mozilla Addons](https://addons.mozilla.org/fr/firefox/addon/sqlite-manager-webext).
+-   [TkSQLite](http://reddog.s35.xrea.com/wiki/?TkSQLite) (BSD License)
+    is a GUI database manager for SQLite implemented by Tcl/Tk. It can manage SQLite
+    version2.8 and SQLite version3.x database.
+-   [TkSQLite-Cipher](https://github.com/yyamasak/TkSQLite-Cipher) (BSD License)
+    TkSQLite with multiple encryptions based on
+    [3MultipleCiphers](https://github.com/utelle/SQLite3MultipleCiphers).
 
 ## SQLite bindings
--   [pysqlite](https://pypi.python.org/pypi/pysqlite) (MIT License)
+-   [pysqlite](https://github.com/ghaering/pysqlite) (MIT License)
     is a sqlite binding for Python that complies to the Database
     API 2.0. It is integrated into python under the module name of
     [sqlite3](http://docs.python.org/py3k/library/sqlite3.html)
 
 ## SQLite conversion
--   [ sqlite - Converter Tools
-    ](http://www.sqlite.org/cvstrac/wiki?p=ConverterTools)
--   [SQL-Translator](http://search.cpan.org/dist/SQL-Translator/) is a
+-   [SQL-Translator](https://metacpan.org/dist/SQL-Translator) is a
     perl package.
 -   To translate SQLite to MySQL ou find on stackoverflow a
     [perl conversion script](http://stackoverflow.com/a/1070463/965798)
