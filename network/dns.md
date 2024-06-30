@@ -2,6 +2,9 @@
 title: Domain Name Server
 ---
 
+<!--
+[[file:../../../../content-org/notes/network_notes/netconf_notes.org::#dns][DNS notes]]
+-->
 The network configuration guides are in the page
  {{< iref "network" "Network references"  >}}.
 See also {{< iref "netconf" "Network configuration" >}}, {{< iref "vpn" "VPN" >}}.
@@ -16,16 +19,23 @@ See also {{< iref "netconf" "Network configuration" >}}, {{< iref "vpn" "VPN" >}
 -   Wikipedia: {{< wp "Category:Domain name system" >}},  {{< wp "BIND" >}},
     {{< wp "Dynamic DNS" >}}, {{< wp "Comparison of DNS server software" >}},
     {{< wp "Category:DNS server software for Linux" >}}.
--   The two main RFC are
+-   The two main DNS RFC are
     [RFC 1034](http://tools.ietf.org/html/rfc1034)
     Domain Names - Concepts and Facilities and
     [RFC 1035](http://tools.ietf.org/html/rfc1035)
     Domain Names - Implementation and Specification
--   [Archwiki: Domain name resolution
-    ](https://wiki.archlinux.org/index.php/Domain_name_resolution).
--   Fedora documentation:
-    [NameResolution](https://fedoraproject.org/wiki/Networking/NameResolution),
-    [DNSSEC](https://fedoraproject.org/wiki/Networking/NameResolution/DNSSEC).
+-   [DNS over TLS](https://en.wikipedia.org/wiki/DNS_over_TLS "wikipedia:DNS over TLS")
+    ([RFC 7858](https://tools.ietf.org/html/rfc7858 "rfc:7858")),
+-   [DNS over HTTPS](https://en.wikipedia.org/wiki/DNS_over_HTTPS "wikipedia:DNS over HTTPS")
+    ([RFC 8484](https://tools.ietf.org/html/rfc8484 "rfc:8484")), or
+-   [DNSCrypt](https://en.wikipedia.org/wiki/DNSCrypt "wikipedia:DNSCrypt").
+-   [DNSSEC
+    ](https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions "wikipedia:Domain Name System Security Extensions")
+    is a set of extensions to DNS which provide to DNS clients (resolvers) origin
+    authentication of DNS data, authenticated denial of existence, and data integrity,
+    but not availability or confidentiality.
+    -   [DNSSEC - ArchWiki](https://wiki.archlinux.org/title/DNSSEC)
+    -   [DNSSEC - Fedoraproject](https://fedoraproject.org/wiki/Networking/NameResolution/DNSSEC).
 -   [ZoneEdit Web DNS lookup](http://www.zoneedit.com/lookup.html).
 -   {{< wp "OpenDNS" >}} is a free DNS  resolution service that offers phishing
     protection. [OpenDNS Home](http://www.opendns.com/)
@@ -34,8 +44,12 @@ See also {{< iref "netconf" "Network configuration" >}}, {{< iref "vpn" "VPN" >}
 -   the use of the SRV record (
     [rfc 2782](http://tools.ietf.org/html/rfc2782)) for voip is detailled in
     [DNS SRV at voip-info.org](http://www.voip-info.org/wiki/view/DNS+SRV)
+-   {{< iref "web_servers" "Polipo" >}} does not use
+    `gethostbyname` but use its own resolve code, and it does not look at
+    `/etc/hosts`, so we have to disable polypo for the domains where we
+    want to use `/etc/hosts` or use the dns cache itself.
 
-## Zeroconf
+# Zeroconf {#zeroconf} {#avahi}
 
 [Zeroconf](http://en.wikipedia.org/wiki/Zeroconf) allows automatic address selection
 ([rfc 3927](http://tools.ietf.org/html/rfc3927),
@@ -70,83 +84,103 @@ and
     {{< man "host(1)" >}}, {{< man "nslookup(1)" >}}, {{< man "dig(1)" >}}.
 -   [DIG HowTo](http://www.madboa.com/geek/dig/) by Paul Heinlein.
 -   [LDNS](https://www.nlnetlabs.nl/projects/ldns/) library provides utilities in the package
-    ldns-utils, which includes {{< man "drill(1)" >}} a dig like dns lookup utility.
+    ldnsutils, which includes {{< man "drill(1)" >}} a dig like dns lookup utility.
 -   {{< wp "Whois" >}} allows to determine the owner of a domain name or an IP address.
     You can learn about whois in the {{< wp "Whois"  "whois Wikipedia page" >}} or in the
     [whois overview](http://navigators.com/whois.html "navigators.com whois.html")
-    and query it thru the commandline
+    and query it thru the command line
     [whois(1)](http://man.cx/whois) or a web gateway such as
     [geektools whois gateway](http://www.geektools.com/whois.php)
 -   [DNSd](https://github.com/behrooza/dnsd) is a daemon that provides a local DNS
     backend to forward the queries/answers to/from {{< wp "Google Public DNS" >}} over
     HTTPS.
 
+## DNS performances
+-   [dnsperf](https://github.com/DNS-OARC/dnsperf) (Apache2 License)
+    is a DNS Performance Testing Tools, it reports latency and throughput metrics for
+    Domain Name Service, the companion application resperf systematically increases the
+    query rate and monitors the response rate to simulate caching DNS services.
+    [![packaging](https://repology.org/badge/tiny-repos/dnsperf.svg?header=packages)
+    ](https://repology.org/project/dnsperf/versions).
+-   [dnsperftest - GitHub](https://github.com/cleanbrowsing/dnsperftest) (GPL 3.0)
+    Shell script to test the performance of the most popular DNS resolvers from your
+    location.
 
-# Useful Registrars
+    There is a predefined list of popular providers, but it is easy to add your
+    preferred one.
+-   [DNS Performance  - DNSPerf](https://www.dnsperf.com/)
+    is a site that provide measures of DNS performance and uptime.
+    -   [Benchmark your DNS provider with DNSPerfi
+        ](https://www.dnsperf.com/dns-speed-benchmark/)
+-  [DNS-OARC](https://www.dns-oarc.net/)
+   The DNS Operations, Analysis, and Research Center.
 
+   It provides many [online services](https://www.dns-oarc.net/index.php/oarc/services).
+-  [DNS-OARC: Check My DNS](https://cmdns.dev.dns-oarc.net/)
+   is an online service to analyze how you use DNS as a client by testing your
+   configured resolvers using your browser and special crafted domain names.
+-  [OARC's DNS Privacy Resolver
+   ](https://www.dns-oarc.net/index.php/oarc/services/dnsprivacy)
+   is a dual-stack (IPv4 and IPv6), open DNS Privacy resolvers that anyone can use to
+   experiment with secured DNS over TLS services
+
+   `tls-dns-u.odvr.dns-oarc.net` is available at `184.105.193.78` and
+   `2620:ff:c000:0:1::64:25`.
+
+#  DNS Servers
+
+The DNS query may imply many [Security and Privacy risks
+](https://wiki.archlinux.org/title/Domain_name_resolution#Privacy_and_security).
+So we may want to use DNS over TLS, DNS over HTTPS, or DNSCrypt.
+
+-   [Public recursive name server - Wikipedia
+    ](https://en.wikipedia.org/wiki/Public_recursive_name_server#List_of_public_DNS_service_operators)
+    a list which includes the security and privacy options offered by the servers.
+
+    It includes providers which implement a filter against adds, trackers, malwares.
+-   [Archwiki list of DNS servers
+    ](https://wiki.archlinux.org/title/Domain_name_resolution#DNS_servers) .
 -   [Archwiki: Alternative DNS servers
     ](https://wiki.archlinux.org/index.php/Resolv.conf#Alternative_DNS_servers).
--    Google provide free dns at `8.8.8.8` and `8.8.4.4`.
+-   Google provide free dns at `8.8.8.8` and `8.8.4.4`, it support IPV6 and delete IP
+    information after 24h.
+
+# Dynamic DNS
+-   [Dyn](https://help.dyn.com/) is a commercial service to
+    alias an IP address to a static hostname. It is priced in 2024 55$/year
+    -   Dyn [Remote Access Update API](https://help.dyn.com/remote-access-api/)
+    -  [CheckIP Tool](https://help.dyn.com/remote-access-api/checkip-tool/)
+-   [ipcheck](http://ipcheck.sourceforge.net/)
+    is an obsolete *2013* python script,
+    [ddclient](https://help.dyn.com/ddclient/) perl script,
+    are used to link the DHCP IP adress with the static hostname.
+-   [no.ip](http://www.noip.com/) offer [free dyndns for one hostname
+    ](http://www.noip.com/remote-access), and 5 hostnames for 48$/year *2024*.
+
+
+# Registrars
 -   [internic](http://www.internic.net/) has a list of registrars
--   registrar: <https://www.gandi.net/>
--   [zoneedit.com](http://zoneedit.com/) *have had* free DNS.
+-   [NameCheap](https://www.namecheap.com/)
+    -   [How to use ddclient with Namecheap
+        ](http://www.ducky-pond.com/posts/2014/Feb/how-to+-use-ddclient-with-namecheap/).
+-   [Domain name - Gandi.net](https://www.gandi.net/en-US/domain)
 -   DNS service providers:
     [zoneedit.com](http://www.zoneedit.com/),
-    [NoIP](http://www.no-ip.com/services/managed_dns/free_dynamic_dns.html),
-    [dyndns.org](//www.dyndns.org), [DynIP](https://www.dynip.com/),
-    [Dyn](https://help.dyn.com/)
-    alias an IP address to a static hostname.
--   Dyn [Remote Access Update API
-    ](https://help.dyn.com/remote-access-api/) and
-    [CheckIP Tool
-    ](https://help.dyn.com/remote-access-api/checkip-tool/)
--   [ipcheck](http://ipcheck.sourceforge.net/)
-    (python),  [ddclient](https://help.dyn.com/ddclient/) and
-    [other clients](https://www.dyndns.org/services/dyndns/clients.html)
-    are used to link the DHCP IP adress with the static hostname.
--   [dyndns](http://www.dyndns.com/) was previously
-    free.  Now dyn is 25$/year. See also
-    [dyndns Developers’ Connection](https://dyn.com/developers).<br />
--   [no.ip](http://www.noip.com/) offer [free dyndns for 3 hostnames
-    ](http://www.noip.com/remote-access).
-    -   [Dynamic DNS with No-IP on Debian tutorial
-        ](http://www.ducky-pond.com/posts/2012/Jul/dynamic-dns-with-no-ip-on-debian/)
-    -   [How to use ddclient with No-IP
-        ](http://www.ducky-pond.com/posts/2014/Feb/how-to-use-ddclient-with-no-ip/)
--   [ddclient](http://sourceforge.net/p/ddclient/wiki/Home/)
-    is a Perl client used to update dynamic DNS entries.
--   [NameCheap](https://www.namecheap.com/) is cheap!  €8,44/year for
-    an *org* domain,  €6,24/year for *us*,  €7,04/year for *eu*,
-    €4,33/year for *org.uk* or *me.uk*, €6,89/year for *fr*
-    -   [How to use ddclient with Namecheap
-        ](http://www.ducky-pond.com/posts/2014/Feb/how-to-use-ddclient-with-namecheap/).
--   {{< iref "web_servers" "Polipo" >}} does not use
-    `gethostbyname` but use its own resolve code, and it does not look at
-    `/etc/hosts`, so we have to disable polypo for the domains where we
-    want to use `/etc/hosts` or use the dns cache itself.
 
-# Systemd-resolved
-systemd-resolved is a system service that provides network name resolution to local
-applications via a D-Bus interface. It implements a caching and validating DNS/DNSSEC
-stub resolver, as well as an LLMNR and MulticastDNS resolver and responder.
--   [systemd-resolved.service - Freedesktop Manual
-    ](https://www.freedesktop.org/software/systemd/man/systemd-resolved.service.html)
--   [systemd-resolved - ArchWiki](https://wiki.archlinux.org/index.php/Systemd-resolved)
-
-# Unbound
+# Unbound {#unbound}
 [unbound](https://unbound.net/) (BSD license) is a validating,
 recursive, and caching DNS resolver. Along {{< wp "Unbound (DNS server)"  "Wikipedia" >}}
 > Unbound has supplanted the Berkeley Internet
 > Name Daemon (BIND) as the default, base-system name server in several
 > open source projects, where it is perceived as smaller, more modern,
->  and more secure for most applications.
+> and more secure for most applications.
 
 Unbound is packaged in Debian.
 
 -   Wikipedia: {{< wp "Unbound (DNS server)"  "unbound" >}}
 -   [ArchWiki: unbound](https://wiki.archlinux.org/index.php/Unbound).
 
-# Bind
+# Bind {#bind}
 -   Wikipedia: {{< wp "BIND" >}}
 -   Paul Vixie Bind
     [Internet Systems Consortium official Page](http://www.isc.org/index.pl?/sw/bind/)
@@ -160,8 +194,11 @@ Unbound is packaged in Debian.
 
 
 # Dnsmasq {#dnsmask}
+<!--
+[[file:../../../../content-org/notes/network_notes/netconf_notes.org::#dnsmask][Dnsmasq notes]]
+-->
 
-DNSMASQ (GPL) is a a lightweight tftp, DHCP and caching DNS server.
+Dnsmasq (GPL) is a a lightweight tftp, DHCP and caching DNS server.
 
 As DNS cache dnsmasq accepts DNS queries and either answers them from a
 small, local, cache or forwards them to a real, recursive, DNS server.
@@ -175,6 +212,8 @@ RFC3011 subnet specifiers.
 -   [Dnsmasq FAQ](http://thekelleys.org.uk/dnsmasq/docs/FAQ)
 -   [Dnsmasq french tutorial](http://www.drazzib.com/docs-dnsmasq.html)
 -   [ArchWiki: Dnsmasq](https://wiki.archlinux.org/index.php/Dnsmasq)
+-   [Setting up dnsmasq - a lightweight DHCP and DNS server :: Fedora Docs
+    ](https://docs.fedoraproject.org/en-US/fedora-server/administration/dnsmasq/)
 -   [extensive example of configuration file for dnsmasq
     ](http://thekelleys.org.uk/dnsmasq/docs/dnsmasq.conf.example)
     You find there some otherwise *secret options* as how to configure
@@ -182,17 +221,56 @@ RFC3011 subnet specifiers.
 -   Man pages: [dnsmasq.8](http://thekelleys.org.uk/dnsmasq/docs/dnsmasq-man.html),
     and [dnsmasq setup](http://thekelleys.org.uk/dnsmasq/docs/setup.html), from
     the dnsmasq distribution.
+-   [Using dnsmasq in NetworkManager to send DNS requests for a specific domain to a
+    selected DNS server Red Hat Enterprise Linux 9
+    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/configuring_and_managing_networking/using-different-dns-servers-for-different-domains_configuring-and-managing-networking#using-dnsmasq-in-networkmanager-to-send-dns-requests-for-a-specific-domain-to-a-selected-dns-server_using-different-dns-servers-for-different-domains)
 
-# Resolv.conf
+# Host Name Resolution
+-   [Archwiki: Domain name resolution
+    ](https://wiki.archlinux.org/index.php/Domain_name_resolution)
+-   Fedora documentation:
+    [NameResolution](https://fedoraproject.org/wiki/Networking/NameResolution),
+-   [GNU/Linux host name resolution - /dev/posts/
+    ](https://www.gabriel.urdhr.fr/2020/04/20/linux-host-name-resolution/)
+-   [Using different DNS servers for different domains Red Hat Enterprise Linux 9
+    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/configuring_and_managing_networking/using-different-dns-servers-for-different-domains_configuring-and-managing-networking#doc-wrapper)
 
+## Resolv.conf {#resolvconf}
+{{< wp "resolvconf" >}} is a middleman between the network configuration services and
+`/etc/resolv.conf`, It allows to manage the nameserver informations provided by
+some network clients like
+[dhcpd](https://wiki.archlinux.org/title/Dhcpcd#/etc/resolv.conf),
+[NetworkManager](https://wiki.archlinux.org/title/NetworkManager#/etc/resolv.conf)
+or a vpn.
+
+`resolvconf` is either a stand alone script, or is provided by `openresolv` or
+{{< iref "#systemd-resolved" "system-resolved" >}}.
+
+When `resolvconf` is installed, the `/etc/resolv.conf` file is replaced by a symbolic
+link, and the resolver instead uses the dynamically generated linked file.
 
 -   [resolv.conf - Debian Wiki](https://wiki.debian.org/resolv.conf).
-    describe the use of the two utilities _resolvconf_ and _openresolve_.
--   [openresolv - ArchWiki](https://wiki.archlinux.org/title/Openresolv).
--   [systemd-resolved - ArchWiki](https://wiki.archlinux.org/title/Systemd-resolved).
--   `/etc/resolv.conf` is overwritten
-    [by NetworkManager][https://wiki.archlinux.org/title/NetworkManager#/etc/resolv.conf)
-    and [by dhcpd](https://wiki.archlinux.org/title/Dhcpcd#/etc/resolv.conf).
+    describe the use of the two utilities _resolvconf_ and _openresolve.
+-   [openresolv](https://roy.marples.name/projects/openresolv)
+    is a resolvconf implementation. It supports the libc resolver,
+    {{< iref "#bind" "Bind" >}}, {{< iref "#dnsmasq" "dnsmasq" >}},
+    {{< iref "#unbound" "Unbound" >}}.
+    -   [openresolv - ArchWiki](https://wiki.archlinux.org/title/Openresolv).
+
+## Systemd-resolved {#systemd-resolved}
+systemd-resolved is a system service that provides network name resolution to local
+applications via a D-Bus interface. It implements a caching and validating DNS/DNSSEC
+stub resolver, as well as an LLMNR and MulticastDNS resolver and responder.
+
+-   [systemd-resolved.service - Freedesktop Manual
+    ](https://www.freedesktop.org/software/systemd/man/systemd-resolved.service.html)
+-   [systemd-resolved - ArchWiki](https://wiki.archlinux.org/index.php/Systemd-resolved)
+-   [systemd-resolved and VPNs - systemd.io](https://systemd.io/RESOLVED-VPNS/)
+-   [Systemd-resolved DNS configuration for VPN - /dev/posts/
+    ](https://www.gabriel.urdhr.fr/2020/03/17/systemd-revolved-dns-configuration-for-vpn/)
+-   [Using systemd-resolved in NetworkManager to send DNS requests for a specific domain
+    to a selected DNS serve rRed Hat Enterprise Linux 9
+    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/configuring_and_managing_networking/using-different-dns-servers-for-different-domains_configuring-and-managing-networking#using-systemd-resolved-in-networkmanager-to-send-dns-requests-for-a-specific-domain-to-a-selected-dns-server_using-different-dns-servers-for-different-domains)
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
