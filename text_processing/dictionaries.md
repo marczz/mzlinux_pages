@@ -96,18 +96,7 @@ See also Wikipedia {{< wp "Comparison of machine translation applications" >}}.
 -   [List of Dictionary and thesaurus applications - ArchWiki
     ](https://wiki.archlinux.org/title/List_of_applications/Documents#Dictionary_and_thesaurus)
 
--   [Babiloo](https://code.google.com/p/babiloo/) (GPL) written in python
-    supports dictionaries in SDictionary, and
-    {{< iref "#stardict" "StarDict" >}}.
-    There are Debian and Ubuntu Packages.</br >
-    Babiloo is now inactive and they recommend using
-    {{< iref "#goldendict" "GoldenDict" >}}
--   [Fantasdic](http://projects.gnome.org/fantasdic/)
-    is a gnome dictionary application written in ruby/gtk it supports DICT
-    dictionary server, edict or cedict, Google Translate, Dictd files,
-    {{< iref "#stardict" "StarDict" >}} files,
-    EPWING dictionaries (popular format in Japan).
--   [<a name="goldendict"></a>GoldenDict](http://goldendict.org/) (GPL)
+-   <a name="goldendict"></a>[GoldenDict](http://goldendict.org/) (GPL)
     is a dictionary reader in C/qt4/libwebkit4 with a very large support of formats (see
     [GoldenDict home page](http://goldendict.org/)).
     It supports multiple dictionary file formats: Babylon (.bgl) files with images and
@@ -123,20 +112,39 @@ See also Wikipedia {{< wp "Comparison of machine translation applications" >}}.
     -   [gcl (goldendict command line)](https://github.com/dohliam/gdcl)
         is a ruby  command-line interface for searching GoldenDict
         dictionaries.
--   [lightlang](https://github.com/mdevaev/lightlang)
-    (GPL) is a program in python with interface either in PyGTK or
-    PyQT, with its custom dictionary format.
--   [Penelope  (GitHub)](https://github.com/pettarin/penelope)
-    (MIT License)
-     is a python tool for creating, editing and converting dictionaries, especially for
-     eReader devices.
-     -   Penelope can convert from/to: Bookeen Cybook Odyssey (R/W), CSV (R/W), EPUB (W
-         only), MOBI (Kindle, W only), Kobo (R index only, W unencrypted/unobfuscated
-         only), StarDict (R/W), XML (R/W)
-     -   [Projects page of Alberto Pettarin
-         ](http://www.albertopettarin.it/projects.htmlhttp://www.albertopettarin.it/projects.html)
-         fromcthe developer of Penelope, which has also a
-         [blog](http://www.albertopettarin.it/blog/)
+-   <a name="goldendict-ng"></a>[GoldenDict
+    ](https://xiaoyifang.github.io/goldendict-ng/) (GPL)
+    is a fork of {{< iref "#goldendict" "GoldenDict" >}}.
+    It [supports many dictionary format
+    ](https://xiaoyifang.github.io/goldendict-ng/dictformats/)
+
+    local dictionaries:
+    -   [MDict](https://www.mdict.cn/) (.mdx/.mdd)
+    -   [StarDict](http://www.huzheng.org/stardict/) (.ifo/.dict./.idx/.syn)
+    -   [DSL](https://lingvoboard.ru/store/html/DSLReference_HTML/index.html) (ABBYY Lingvo source files .dsl(.dz))
+    -   [XDXF](https://github.com/soshial/xdxf_makedict) (.xdxf(.dz))
+    -   [Zim](https://wiki.openzim.org/wiki/OpenZIM) (.zim)
+    -   [Slob (Aard 2)](https://aarddict.org/) (.slob) and Aard (.aar)
+    -   [DictD](https://en.wikipedia.org/wiki/DICT#Dict_file_format) (.index/.dict(.dz))
+    -   [Epwing](https://ja.wikipedia.org/wiki/EPWING)
+    -   [SDictionary](http://swaj.net/sdict/index.html) (.dct)
+    -   [Babylon glossary builder](https://www.babylon-software.com/glossary-builder/) source files (.gls(.dz))
+    -   Babylon dictionaries, complete support with images and resources (.BGL)
+    -   ABBYY Lingvo sound archives (.lsa/.dat)
+    -   Sound files in separate folders. File names are used as word
+    -   Zipped sound pack. Sound files zipped, but with extension changed from .zip to (.zips)
+
+    Network Sources:
+    -   Wikipedia and Wiktionary
+    -   [DICT](https://en.wikipedia.org/wiki/DICT) protocol
+    -   LinguaLibre/Forvo pronunciations
+
+    Compared to GoldenDict the GoldenDict-ng fork brings many enhancements: webengine
+    with latest html/css feature support, >4GB dictionary, xapian as fulltext engine,
+    Qt6, performance optimization,
+    [anki integration](https://xiaoyifang.github.io/goldendict-ng/topic_anki/).
+
+    A GoldenDict-ng package is in Debian.
 -   [PtkDic and GTKDict](http://swaj.net/ptkdic/)<a name="ptkdic"></a>
     are Perl/GTK+ and GTK+/Tk  Dictionary that store dictionaries in a MySQL
     server.
@@ -148,10 +156,10 @@ See also Wikipedia {{< wp "Comparison of machine translation applications" >}}.
 -   [pyglossary](https://github.com/ilius/pyglossary) (GPL-3.0)
     (GPL) is a python tool for creating and converting dictionary
     databases. It can use either PyGTK or TKinter for it's GUI.
-    The [Pyglossary SourceForge Site
-    ](http://sourceforge.net/projects/pyglossary/) is not updated
-    since 2011, the [Pyglossary GiHub Repository
-    ](https://github.com/ilius/pyglossary) is up-to-date.
+    */Don't use the [Pyglossary SourceForge Site
+        ](http://sourceforge.net/projects/pyglossary/) which not updated
+        since 2011, but the [Pyglossary GiHub Repository
+        ](https://github.com/ilius/pyglossary) which is up-to-date.*
 -   [pystardict](https://github.com/lig/pystardict)
     is a Python library for manipulating StarDict dictionaries. _
     main code _2009_ last release _2010_.
@@ -169,17 +177,16 @@ See also Wikipedia {{< wp "Comparison of machine translation applications" >}}.
     word in Stardict.
     For dictionaries in stardict format look at the
     {{< iref "#stardict-dicts" "following section" >}}
-    -   [Stardict Home](http://www.huzheng.org/stardict/).
+    -   [Stardict 3 - GitHub](https://github.com/huzheng001/stardict-3).
     -   [Stardict Wiki](https://code.google.com/p/stardict-3/wiki/index)
         is still on Google code.
     -   [stardict ubuntu french doc](http://doc.ubuntu-fr.org/stardict)
-    -   [sdcv](http://sdcv.sourceforge.net/) (GPL-2.0)
+    -   [sdcv](https://github.com/Dushistov/sdcv) (GPL-2.0)
         is the console version of StarDict program.
-    -   [Stardict File Format](http://www.huzheng.org/stardict/StarDictFileFormat)
+    -   [Stardict File Format
+        ](https://github.com/huzheng001/stardict-3/blob/master/dict/doc/StarDictFileFormat)
         The file format has changed between 2.4 and 3.0 and some older
         applications can only read the old format.
-    -   [Note on Stardict Tools in Ubuntu](http://thanhsiang.org/faqing/node/181)
-        by Hu Zheng _2007_.
     -   [Convert lingvo .dsl dictionaries for use in StarDict
         ](https://code.google.com/p/stardict-3/wiki/ConvertLingvo)
     -   [Verify and Repair broken StarDict dictionaries
@@ -254,8 +261,14 @@ See also Wikipedia {{< wp "Comparison of machine translation applications" >}}.
         ](http://abloz.com/huzheng/stardict-dic/babylon/french/)
     -   [lingvo dictionaries
         ](http://abloz.com/huzheng/stardict-dic/lingvo/)
+    -   [GoldenDict. Logiciel et dictionnaires unilingues français
+        ](https://archive.org/details/goldendict.logicieletdictionnairesunilinguesfrancais)
+        Académie française de 1935, CD Universalis 3.0, Larousse Multidico,
+        Le Grand Robert, Le Littré, Le petit Robert 2007,
+        Le Trésor de la langue française
 -   [ubuntu-fr Dictionnaires et encyclopédies
     ](https://doc.ubuntu-fr.org/dictionnaires_encyclopedies)
+-   [XMLittre.dict directory listing](https://archive.org/download/XMLittre.dict)
 
 For English, two big free dictionaries available in many formats
 [including Kobo](http://www.mobileread.com/forums/showthread.php?t=196925)
