@@ -9,6 +9,8 @@ title: Documents management.
 -   Wikipedia {{< wp "Comparison of reference management software" >}}
 
 # Applications
+-   [List of Bibliographic reference managers applications - ArchWiki
+    ](https://wiki.archlinux.org/title/List_of_applications/Documents#Bibliographic_reference_managers)
 -   {{< wp "Referencer" >}} is a GNOME application to organize documents or
     references, and generate a BibTeX file. It is tagetet to pdf
     papers more than books, so it uses
