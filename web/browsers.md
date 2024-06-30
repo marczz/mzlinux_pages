@@ -16,6 +16,12 @@ title: Web Browsers
     ](https://developer.mozilla.org/en-US/docs/Mozilla/Command_Line_Options),
     [geolocation
     ](https://www.mozilla.org/en-US/firefox/geolocation/).
+-   [Firefox - Debian Wiki](https://wiki.debian.org/Firefox)
+    explains how to install the diverse versions of firefox from the different package
+    sources.
+
+    There is  also a section on [Hardware Video Acceleration in Firefox
+    ](https://wiki.debian.org/Firefox#Hardware_Video_Acceleration)
 -   ArchWiki pages: [Firefox](https://wiki.archlinux.org/index.php/Firefox),
     [Firefox/Privacy](https://wiki.archlinux.org/index.php/Firefox/Privacy),
     [Firefox/Profile on RAM](https://wiki.archlinux.org/index.php/Firefox/Profile_on_RAM),
@@ -84,10 +90,6 @@ title: Web Browsers
     menu the item `Select Element by Click` you can when clicking on an element in the
     page find its place in the DOM tree.  It is very usefull to find how to set your CSS
     for an effect.
--   [Conkeror](http://conkeror.org/) is a keyboard-driven, Mozilla-based
-    web browser. It is no longer packaged in Debian.
-    _Not to be confused with the KDE browser Konqueror._
-    -   Wikipedia {{< wp "Conkeror" >}}.
 -   The [compatibility of desktop and mobile browsers with HTML5, CSS3, SVG
     ](http://caniuse.com/)
     is summarized in these tables.
@@ -112,7 +114,11 @@ title: Web Browsers
 -   [Browser plugins - ArchWiki](https://wiki.archlinux.org/index.php/browser_plugins)
     has informations about flash players.
 -   Wikipedia: {{< wp "List of Firefox extensions" >}}
-
+-   [Tridactyl](https://github.com/tridactyl/tridactyl) (Apache License)
+    brings vim keybindings to Firefox.
+-   [brotab](https://github.com/balta2ar/brotab)
+    control your browser's tabs from the command line, it is a python CLI and
+    accompanied by a firefox and Chromium add-on.
 
 
 # Ads Blocking
@@ -159,7 +165,7 @@ the Adblock Plus filter syntax. *EasyList*, *Peter Lowe's Adservers*,
 install uBlock₀. uBlock₀ is leaner in memory and CPU than Adblock
 Plus, and can block more ads.
 
--   [uBlock₀ Wiki](https://github.com/gorhill/uBlock/wiki)
+-   [uBlock Wiki](https://github.com/gorhill/uBlock/wiki)
 
 Most of them don't block tracking and among it this _Google
 Analytics_ that track most of the site we visite. To block it you
@@ -176,6 +182,22 @@ Google has deleted add blockers from Google Play, but you can
 still download from the site
 [Addblock Plus for android ](http://adblockplus.org/en/android-about)
 
+# Nyxt
+[Nyxt](https://nyxt.atlas.engineer/) is a keyboard-oriented, infinitely extensible web
+browser designed for power users. Conceptually inspired by Emacs and Vim, it has
+familiar key-bindings (Emacs, vi, CUA), and is fully configurable in Lisp.
+
+Nyxt is web engine agnostic, currently WebKit and WebEngine (Blink) are supported.
+
+Nyxt comes with a built-in ad blocker and supports extensions written in Common Lisp.
+
+Currently precompiled download are available as a flatpack on flathub.
+
+-   [Nyxt browser: Documentation
+    ](https://nyxt.atlas.engineer/documentation#keybindings-and-commands)
+-   [Keybindings are copnfigurable
+    ](https://nyxt.atlas.engineer/documentation#keybinding-configuration)
+        emacs and vi keybindings are provided by default.
 
 # Alternate browsers
 I have down some memory comparisons on the alternate browsers, each
@@ -259,7 +281,6 @@ With one tab no js
 
 -  Netsurf-gtk 46M/31M only 15M of increased used memory
 
-
 -   [Wikipedia: Comparaison of web browsers
     ](http://en.wikipedia.org/wiki/Comparison_of_web_browsers)n
     gives a complete comparison of web browsers features, but not of
@@ -274,10 +295,10 @@ With one tab no js
     -   [Chromium - ArchWiki](https://wiki.archlinux.org/index.php/Chromium),
         [Chromium/Tips and tricks - ArchWiki
         ](https://wiki.archlinux.org/index.php/Chromium/Tips_and_tricks).
--   <a name="dwb"></a>[dwb](https://portix.bitbucket.io/dwb/)
-    is a lightweight webkit/gtk browser based. The page
-    [dwb - ArchWiki](https://wiki.archlinux.org/index.php/Dwb), flag it as
-    insecure and outdated. _dwb_ is in Debian.
+-   [Conkeror](http://conkeror.org/) is a keyboard-driven, Mozilla-based
+    web browser. It is no longer developed since 2019  and has been dropped by Debian.
+    _Not to be confused with the KDE browser Konqueror._
+    -   Wikipedia {{< wp "Conkeror" >}}.
 -   {{< wp "Lynx (web browser)" "Lynx" >}} (GPL) is a text browser.
 -   [elinks](http://elinks.or.cz/) (GPL) Enhanced Links is a web browser
     in text mode with lua, guile, perl scripting; others features
@@ -303,7 +324,7 @@ With one tab no js
     ia a simple web browser using GTK+ 3, GLib and WebKit2GTK+.
     It is considered to be one of the lightest front-end GUI interfaces to webkit2gtk.
     -   [lariza - ArchWiki](https://wiki.archlinux.org/index.php/Lariza).
--   [Luakit](https://luakit.github.io/) (GPL)
+-   [Luakit](https://luakit.github.io/) (GPL-3.0)
     Luakit is a highly-configurable browser framework based on WebKitGTK+. It is very
     fast and extensible by Lua. Luakit is packaged in Debian.
     -   [luakit - GitHub](https://github.com/luakit/luakit)
