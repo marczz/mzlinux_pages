@@ -16,6 +16,17 @@ title: Web Browsers
     ](https://developer.mozilla.org/en-US/docs/Mozilla/Command_Line_Options),
     [geolocation
     ](https://www.mozilla.org/en-US/firefox/geolocation/).
+-   [ ] We can to [Diagnose Firefox issues using Troubleshoot Mode
+    ](https://support.mozilla.org/en-US/kb/diagnose-firefox-issues-using-troubleshoot-mode#w_how-to-start-firefox-in-troubleshoot-mode)
+    in Troubleshoot Mode, add-ons and some other features and customizations are
+    disabled.
+
+    We can either restart the session in troubleshot mode by choosing in the menu Help,
+    then select *Troubleshoot Mode* and click *Restart*.
+    Or you can start a new session from the command line with `firefox -safe-mode`.
+
+    To then look for an [issue in extensions, themes and hardware acceleration
+    ](https://support.mozilla.org/en-US/kb/troubleshoot-extensions-themes-to-fix-problems).
 -   [Firefox - Debian Wiki](https://wiki.debian.org/Firefox)
     explains how to install the diverse versions of firefox from the different package
     sources.
