@@ -2,8 +2,6 @@
 title: Firewall
 ---
 
-{{% toc /%}}
-
 See also {{< iref "IP" "IP" >}}
 
 # References
@@ -53,6 +51,21 @@ See also {{< iref "IP" "IP" >}}
         ](https://wiki.archlinux.org/index.php/Firehol).
     -   _FireHol_ also produce the
         {{< iref "monitoring#netdata" "netdata monitoring application" >}}.
+
+## Firewalld {#firewalld}
+[Firewalld](https://firewalld.org/)
+provides a dynamically managed firewall with support for network/firewall zones that
+define the trust level of network connections or interfaces. It has support for
+IPv4, IPv6 firewall settings, ethernet bridges and IP sets.
+-   [Firewalld Documentation](https://firewalld.org/documentation/)
+-   [Firewalld - ArchWiki](https://wiki.archlinux.org/title/Firewalld)
+-   [Firewalld - Fedora Project Wiki](https://fedoraproject.org/wiki/Firewalld)
+-   [Firewalld Rich Language - Fedora Project Wiki
+    ](https://fedoraproject.org/wiki/Features/FirewalldRichLanguage)
+-   [How to Use WireGuard With Firewalld
+    ](https://www.procustodibus.com/blog/2021/07/wireguard-firewalld/)
+-   [Using and configuring firewalld Red Hat Enterprise Linux 9
+    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/securing_networks/using-and-configuring-firewalld_securing-networks)
 
 # Firewall distributions {#firewall_distributions}
 There are many Open Source Linux distributions that run as
@@ -191,7 +204,7 @@ of different flavours (IPsec, OpenVpn, PPTP),
     -   [ArchWiki - PeerGuardian
         ](https://wiki.archlinux.org/index.php/PeerGuardian_Linux).
 
-# Nftable
+# Nftables {#nftables}
 
 _Nftables_ is the successor of _iptables_ first released in 2009. It
 is also [developed by Netfilter
@@ -200,28 +213,42 @@ _Nftables_ replaces the existing _iptables_, _ip6tables_, _arptables_,
 and _ebtables_ framework. It uses the Linux kernel and a new userspace
 utility called _nft_.
 
--   [Nftables Wiki
-    ](https://wiki.nftables.org/wiki-nftables/index.php/Main_Page)
+-   [Nftables Wiki](https://wiki.nftables.org/wiki-nftables/index.php/Main_Page)
     -   [Moving from iptables to nftables
         ](https://wiki.nftables.org/wiki-nftables/index.php/Moving_from_iptables_to_nftables).
--   [nft man page
-    ](https://www.netfilter.org/projects/nftables/manpage.html)
+-   [nft man page](https://www.netfilter.org/projects/nftables/manpage.html)
 -   [Wikipedia: Nftables](https://en.wikipedia.org/wiki/Nftables).xs
--   [Nftables quick howto
-    ](https://home.regit.org/netfilter-en/nftables-quick-howto/).
--   [ArchWiki: Nftables
-    ](https://wiki.archlinux.org/index.php/Nftables).
--   [Debian Wiki: Nftables
-    ](https://wiki.debian.org/nftables).
--   [Gentoo Wiki: Nftables
-    ](https://wiki.gentoo.org/wiki/Nftables).
+-   [Nftables quick howto](https://home.regit.org/netfilter-en/nftables-quick-howto/).
+-   [ArchWiki: Nftables](https://wiki.archlinux.org/index.php/Nftables).
+-   [Debian Wiki: Nftables](https://wiki.debian.org/nftables).
+-   [Gentoo Wiki: Nftables](https://wiki.gentoo.org/wiki/Nftables).
+-   [Getting started with nftables Red Hat Enterprise Linux 9
+    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/configuring_firewalls_and_packet_filters/getting-started-with-nftables_firewall-packet-filters)
+
+# xdp-filter
+XDP-filter is a simple packet filtering utility. It does not have the same matching
+capabilities as, e.g., netfilter but can achieve very high drop rates: tens of millions
+of packets per second on a single CPU core.
+
+[![packaging](https://repology.org/badge/tiny-repos/xdp-tools.svg?header=packages)
+](https://repology.org/project/xdp-tools/versions).
+
+
+-   [xdp-tools - GitHub](https://github.com/xdp-project/xdp-tools)
+    ( GPL-2.0, LGPL-2.1 and BSD-2-Clause licenses )
+    Utilities and example programs for use with XDP
+-   [XDP tutorial](https://github.com/xdp-project/xdp-tutorial)
+-   {{< man "xdf-filter(8)" >}}
+-   [Using xdp-filter for high-performance traffic filtering to prevent DDoS attacks
+    Red Hat Enterprise Linux 9
+    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/configuring_firewalls_and_packet_filters/using-xdp-filter-for-high-performance-traffic-filtering-to-prevent-ddos-attacks_firewall-packet-filters)
+
 
 #   Packet Filter
 [Packet Filter (PF)](https://en.wikipedia.org/wiki/PF_(firewall))
 is a  stateful packet filter, a central piece of software for
 firewalling. It is comparable to iptables, {{< wp "ipfw" >}}, and
 {{< wp "ipfilter" >}}. This is an OpenBSD project.
-
 
 
 # Types of NAT
