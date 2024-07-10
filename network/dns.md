@@ -258,9 +258,13 @@ link, and the resolver instead uses the dynamically generated linked file.
     -   [openresolv - ArchWiki](https://wiki.archlinux.org/title/Openresolv).
 
 ## Systemd-resolved {#systemd-resolved}
-systemd-resolved is a system service that provides network name resolution to local
+*systemd-resolved* is a system service that provides network name resolution to local
 applications via a D-Bus interface. It implements a caching and validating DNS/DNSSEC
 stub resolver, as well as an LLMNR and MulticastDNS resolver and responder.
+
+Local applications may submit network name resolution requests via three interfaces: a
+dbus API, the glibc getaddrinfo API, a local DNS stub listener on the IP addresses
+127.0.0.53 and 127.0.0.54 on the local loopback interface.
 
 -   [systemd-resolved.service - Freedesktop Manual
     ](https://www.freedesktop.org/software/systemd/man/systemd-resolved.service.html)
@@ -271,6 +275,16 @@ stub resolver, as well as an LLMNR and MulticastDNS resolver and responder.
 -   [Using systemd-resolved in NetworkManager to send DNS requests for a specific domain
     to a selected DNS serve rRed Hat Enterprise Linux 9
     ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/configuring_and_managing_networking/using-different-dns-servers-for-different-domains_configuring-and-managing-networking#using-systemd-resolved-in-networkmanager-to-send-dns-requests-for-a-specific-domain-to-a-selected-dns-server_using-different-dns-servers-for-different-domains)
+
+
+The command line client is {{< man "resolvectl" >}} and the configuration is explained
+in {{< man "systemd-resolved" >}}.
+
+Systemd-resolved works with a {{< iref "netconf#syqtemd-networkd" "systemd-networkd" >}}
+configuration, but you can also use
+{{< iref "netconf#network-manager" "network manager" >}} and have systemd-resolved
+manage you DNS resolution as explained in the [NetworkManager Reference Manual
+](https://networkmanager.dev/docs/api/latest/index.html)
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
