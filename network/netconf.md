@@ -118,7 +118,7 @@ manager.
     the *wpa_supplicant* configuration.  It has a footprint of 20M
     resident/17M shared.
 
-## Systemd-networkd
+## Systemd-networkd {#systemd-networkd}
 
 From the
 [Manual](https://www.freedesktop.org/software/systemd/man/systemd-networkd.service.html)
@@ -160,11 +160,18 @@ See my memo at readthedocs
 {{< wp "NetworkManager" >}} ( GPL) is a networking configuration daemon which try to
 provide a painless and automatic network setup. It is part of the gnome project but
 communicate thru dbus and has no gnome dependencies by itself. The gnome front-end add
-some more dependencies.  In Debian you can install `gnome-network-manager` with few
-package dependencies if you disable all _recommended_ packages.  Otherwise you will pull
-all the gnome desktop.<br /> NetworkManager by itself is a small daemon 13M/10M shared,
-nm-applet add 37M/30M shared _(vers 1.8.20 2019, and only ~10M added mem)_ and can fit
-in any systray, like the built-in systray in fluxbox, or i3.
+some more dependencies.  In Debian you can install `network-manager` with few
+package dependencies if you disable unused _recommended_ packages.
+
+NetworkManager by itself is a small daemon 13M/10M shared.
+
+If you want the systray *nm-applet* you have to add the package `gnome-network-manager`.
+The applet itself adds 37M/30M shared _(vers 1.8.20 2019, and only ~10M added mem)_
+
+
+Network Manager allow to manage DNS with
+{{< iref "dns#dnsmasq" "dnsmasq" >}} or
+{{ iref "dns#systemd-resolved" "Systemd-Resolved" >}}.
 
 -   [NetworkManager Reference Manual
     ](https://networkmanager.dev/docs/api/latest/index.html)
