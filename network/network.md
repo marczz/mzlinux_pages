@@ -102,14 +102,14 @@ in the {{< iref "../security/security" "Security chapter" >}}.
 -   [Multicast Technology links](http://www.infres.enst.fr/~dax/multicast.html)
     from [Philippe Dax's Home Page](http://www.infres.enst.fr/~dax/)
     (see also lectures on IP, IPv6, ...)
--   [Configuring and managing networking - Red Hat Enterprise Linux 8
-    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_networking/index)
+-   [Debian Reference Chapter 5. Network setup
+    ](https://www.debian.org/doc/manuals/debian-reference/ch05.en.html)
+-   [Configuring and managing networking - Red Hat Enterprise Linux 9
+    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/configuring_and_managing_networking/index)
     update most of content of the
     [Red Hat Networking Guide -- Red Hat Enterprise Linux 7
     ](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Networking_Guide)
     but some chapter like configuration of DNS and DHCP servers, Squid, InfiniBand and
     RDMA are still only in this guide.
--   [Securing networks - Red Hat Enterprise Linux 8
-    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/securing_networks/index)
--   [Networking Guide Fedora 25
-    ](https://docs.fedoraproject.org/en-US/Fedora/25/html/Networking_Guide/index.html)
+-   [Securing networks - Red Hat Enterprise Linux 9
+    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/securing_networks)
