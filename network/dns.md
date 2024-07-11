@@ -3,10 +3,10 @@ title: Domain Name Server
 ---
 
 <!--
-[[file:../../../../content-org/notes/network_notes/netconf_notes.org::#dns][DNS notes]]
+[[file:../../../../content-org/notes/network_notes/dns_notes.org][DNS notes]]
 -->
 The network configuration guides are in the page
- {{< iref "network" "Network references"  >}}.
+{{< iref "network" "Network references"  >}}.
 See also {{< iref "netconf" "Network configuration" >}}, {{< iref "vpn" "VPN" >}}.
 
 
@@ -49,7 +49,11 @@ See also {{< iref "netconf" "Network configuration" >}}, {{< iref "vpn" "VPN" >}
     `/etc/hosts`, so we have to disable polypo for the domains where we
     want to use `/etc/hosts` or use the dns cache itself.
 
-# Zeroconf {#zeroconf} {#avahi}
+# Zeroconf {#zeroconf}
+<a name="avahi"></a>
+<!--
+[[file:../../../../content-org/notes/network_notes/dns_notes.org::#avahi][Avahi notes]]
+-->
 
 [Zeroconf](http://en.wikipedia.org/wiki/Zeroconf) allows automatic address selection
 ([rfc 3927](http://tools.ietf.org/html/rfc3927),
@@ -64,15 +68,21 @@ also implemented in the Service Location Protocol (SLP) (
 and
 [rfc 3224](http://tools.ietf.org/html/rfc3224)).
 
--   Wikipedia: {{< wp "[Zeroconf" >}}, {{< wp "Avahi_software)"  "Avahi" >}},
-    {{< wp "Multicast DNS" >}} (mDNS),
+-   Wikipedia: {{< wp "Zeroconf" >}}, {{< wp "Avahi_software)"  "Avahi" >}},
+    {{< wp "Multicast DNS" >}} (mDNS), {{< wp "LLMNR" >}}.
 -   [zeroconf.org: Zero Configuration Networking](http://www.zeroconf.org/).
 -   The Zeroconf model is implemented in the
     [Apple Bonjour *(Wikipedia)*](http://en.wikipedia.org/wiki/Bonjour_%28software%29)
     *(apache license 2.0)* which is also available in linux and
     windoze; and
-    [Avahi *(Wikipedia)*](http://en.wikipedia.org/wiki/Avahi_%28software%29) *(LGPL)*
--   Avahi ([Avahi Home page](http://avahi.org/)
+    [Avahi *(Wikipedia)*](http://en.wikipedia.org/wiki/Avahi_%28software%29) *(LGPL)*,
+    {{< iref "#systemd-resolved" "Systemd-Resolved" >}} also implements both mDNS and
+    LLMNR.
+
+    {{< wp "LLMNR" >}} is a windows protocol that Microsoft is phasing out, as well than
+    {{< wp "NetBIOS" >}} since 2022, in  favour of {{< wp "Multicast DNS" "mDNS">}}.
+
+-   Avahi ([Avahi Home page](http://avahi.org/))
     uses D-Bus for communication between user applications and a system daemon.
 -   [Arch Wiki: Avahi](https://wiki.archlinux.org/index.php/Avahi)
 -   [Debian Wiki: Zeroconf](https://wiki.debian.org/ZeroConf)
@@ -80,17 +90,18 @@ and
 
 # DNS Tools
 -   Wikipedia: {{< wp "Category:DNS software" >}}, {{< wp "Dig_(command)"  "Dig" >}}.
--   The Bind package includes dns lookup utilities:
-    {{< man "host(1)" >}}, {{< man "nslookup(1)" >}}, {{< man "dig(1)" >}}.
+-   [Bind](hpttps://www.isc.org/downloads/bind/) in the *bind-dnsutils* package includes
+    dns lookup utilities: {{< man "nslookup(1)" >}}, {{< man "dig(1)" >}} and in the
+    *bind-host* package the {{< man "host(1)" >}} utility.
 -   [DIG HowTo](http://www.madboa.com/geek/dig/) by Paul Heinlein.
 -   [LDNS](https://www.nlnetlabs.nl/projects/ldns/) library provides utilities in the package
-    ldnsutils, which includes {{< man "drill(1)" >}} a dig like dns lookup utility.
+    *ldnsutils*, which includes {{< man "drill(1)" >}} a dig like dns lookup utility.
 -   {{< wp "Whois" >}} allows to determine the owner of a domain name or an IP address.
     You can learn about whois in the {{< wp "Whois"  "whois Wikipedia page" >}} or in the
-    [whois overview](http://navigators.com/whois.html "navigators.com whois.html")
+    [whois overview](http://navigators.com/whois.html)
     and query it thru the command line
     [whois(1)](http://man.cx/whois) or a web gateway such as
-    [geektools whois gateway](http://www.geektools.com/whois.php)
+    [ICANN Lookup](https://lookup.icann.org/en).
 -   [DNSd](https://github.com/behrooza/dnsd) is a daemon that provides a local DNS
     backend to forward the queries/answers to/from {{< wp "Google Public DNS" >}} over
     HTTPS.
