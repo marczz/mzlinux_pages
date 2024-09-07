@@ -6,7 +6,7 @@ The keyboard input methods are in the
 {{< iref "keyboard_input" "Keyboard Input Page" >}}.
 
 See also
-{{< iref "i18n" "Localisation (I18N)" >}}, {{< iref "xorg" "Xorg" >}}.
+{{< iref "i18n" "Localisation (I18N)" >}}.
 
 <!-- [[file:../../../../content-org/notes/system_notes/input_methods_notes.org][Input methods notes]] -->
 
@@ -145,6 +145,24 @@ input through _uim-fep_, Emacs with _uim.el_.
     [uim official user document
     ](https://github.com/uim/uim/wiki/OfficialUserDocument).
 
+# Fcitx
+[Fcitx 5](https://fcitx-im.org/wiki/Fcitx_5)
+is an input method framework with extension support.
+
+Fcitx has support through plugins for numerous input methods including Chinese,
+Japanese, Vietnamese, Korean, Sinhalese, Thai.
+
+It has also support for multilingual methods through m17n, keyman, table, and the
+builtin keyboard layout support.
+
+*fcitx5-configtool* allows to configure the input methods, as well as the command line
+client *fcitx5*.
+
+-   [Fcitx5 - ArchWiki](https://wiki.archlinux.org/title/Fcitx5)
+-   [Using Fcitx 5 on Wayland](https://fcitx-im.org/wiki/Using_Fcitx_5_on_Wayland)
+    gives a detailled configuration under wayland, including what are the proper value
+    for the input method, and how to configure the GTK v 1, 2, 3 ,4 and the QT 4, 5, 6
+    applications.
 
 # SCIM
 -   [Smart Common Input Method platform SCIM](https://github.com/scim-im/scim) (LGPL)
