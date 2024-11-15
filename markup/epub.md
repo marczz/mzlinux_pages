@@ -2,9 +2,8 @@
 title: Epub
 ---
 
-See also the related {{< iref "html" "html section" >}}
-and the {{< iref "html#css" "css section" >}}
-since Epub uses css.
+See also the related {{< iref "html" "html section" >}} and the
+J{{< iref "html#css" "css section" >}} since Epub uses css.
 <!-- Other pages
 [[file:../../../../content-org/weblinks/e-text.org::+hugo_front_matter_format: yaml][E-text in weblinks]],
 [[file:../../../../content-org/notes/text_processing_notes/ebookreaders.org::+hugo_front_matter_format: yaml][Ebook Readers in Notes]]
@@ -80,59 +79,31 @@ The EPUB format Home is the {{< iref "#ipdf" "IPDF" >}}.
 
 # Epub Formatters, Conversion, tools
 -   <a name="calibre"></a>[Calibre](http://calibre-ebook.com/),
-    the ebook platform, is a frontend that uses internal code and many
-    tools to convert any ebook format to another one, including epub
-    which is the reference format used by calibre. It allows also
-    library Management, syncing to e-book reader devices, editing
-    e-books, viewing ebook on the computer and in a built-in web
-    server.
+    the ebook platform, is a frontend that uses internal code and many tools to convert
+    any ebook format to another one, including epub which is the reference format used
+    by calibre.
+
+    It allows also library Management, syncing to e-book reader devices,
+    editing e-books, viewing ebook on the computer and in a built-in web server.
     -   [Calibre Manual](http://manual.calibre-ebook.com/).
-    -   Calibre support importing and exporting to
-        {{< iref "markdown" "Markdown" >}}
+    -   Calibre support importing and exporting to {{< iref "markdown" "Markdown" >}}
         using [python-markdown](https://python-markdown.github.io/), you can use
         [markdown extensions](https://python-markdown.github.io/extensions/).
--   [Booktype](https://github.com/sourcefabric/Booktype/) (AGPL)
-    <a name="booktype"></a>
-    is a Django, Web platform to produces books formatted in PDF
-    (screen and printer), epub, mobi, xhtml.
+    <!-- [[file:../../../../content-org/notes/text_processing_notes/ebookreaders.org::#calibre][Calibre notes]] -->
+-   <a name="booktype"></a>[Booktype](https://github.com/booktype/Booktype) (AGPL)
+    is a Django, Web platform to produces books formatted in PDF (screen and printer),
+    epub, mobi, xhtml.*The repository is inactive since 2019.*
 -   [DotEPUB](https://dotepub.com)
-    is a bookmarklet for javascript able browser or an extension for
-    firefox or chrome to convert any webpage into an e-book.
+    is a bookmarklet for javascript able browser or an extension for firefox or chrome
+    to convert any webpage into an e-book.
 -   [epubdiff](https://github.com/bencrowder/epubdiff)
     A Python script to diff EPUBs.
--   [EpubMaker](https://pypi.python.org/pypi/epubmaker/)
-    is the python tool used for format conversion at Project
-    Gutenberg. It builds EPUB2 and Kindle files from HTML and HTML4,
-    EPUB2, Kindle, and PDF files from reST sources.
 -   [glyphIgo](https://github.com/pettarin/glyphIgo)  MIT License
     is a tool by Alberto Pettarin aimed to deal with fonts
-    in EPUB eBooks.
-    It can:
-    -   check whether a given font file contains all the glyphs
-        needed to display an EPUB or plain text file,
-    -   convert a font file from/to TTF/OTF/WOFF format,
-    -   count the number of characters in an EPUB or a plain text
-        UTF-8 file,
-    -   list all Unicode characters used in an EPUB or a plain text
-        UTF-8 file, or all Unicode glyphs present in a TTF/OTF/WOFF
-        font file,
-    -   lookup for information about a given Unicode character,
-        including heuristic name matching,
-    -   (de)obfuscate a font, with either the IDPF or the Adobe
-        algorithm,
-    -   subset a given font file, to the glyphs that are contained in
-        a EPUB or plain text file.
--   [Grab My Books](http://www.grabmybooks.com/)
-    is a Firefox or Chrome plugin that create an ePub file from a web
-    sites. It can also feed its output to Calibre for conversion.
-    It can be used for offline reading e.g. for Wikipedia.<br/>
-    An android app is also available for 1€.
+    in EPUB eBooks.*The last release is from 2015*
 -   [Sigil](https://github.com/Sigil-Ebook/Sigil) (GPL)
-    is an ebook editor. It supports EPUB2 and some features of EPUB3.
-    -   [Sigil User Guide 0.7.2 (epub)
-        ](https://github.com/Sigil-Ebook/Sigil/blob/master/docs/Sigil_User_Guide_0_7_2.epub).
-    -   Sigil has [imported the FlightCrew code validator
-        ](https://github.com/Sigil-Ebook/flightcrew) has plugin.
+    is an ebook editor. It supports EPUB2 and EPUB3.
+    -   [Sigil User Guide (epub)](https://sigil-ebook.com/sigil-user-guide).
     -   [Sygil Plugin Index](http://www.mobileread.com/forums/showthread.php?t=247431).
     -   [Sygil Forum](https://www.mobileread.com/forums/forumdisplay.php?f=203).
 -   [Standard Ebooks](https://standardebooks.org/)
@@ -146,10 +117,6 @@ The EPUB format Home is the {{< iref "#ipdf" "IPDF" >}}.
     -   [standardebooks/tools](https://github.com/standardebooks/tools) (GPLv3 license)
         The Standard Ebooks python toolset for producing our ebook files.
     -   [Standard Ebooks Hints and Tricks](https://b-t-k.github.io/)
--   [Writer2ePub ](http://extensions.services.openoffice.org/en/project/Writer2ePub)
-    is an OpenOffice.org extension that creates an ePub file from any
-    document openable by the OOo Word Processor.
-
 -   [Automated Ebook Builds With Pandoc and KindleGen | Puppet Labs
     ](https://puppetlabs.com/blog/automated-ebook-generation-convert-markdown-epub-mobi-pandoc-kindlegen)
     use Pandoc to convert Markdown into EPUB.
@@ -162,42 +129,48 @@ The EPUB format Home is the {{< iref "#ipdf" "IPDF" >}}.
     PDF, Docx, RTF or ePub with a simple HTTP API.
 
 # Epub libraries
--   [EbookLib]( is a Python library for managing EPUB2/EPUB3 and Kindle
-    files. It's capable of reading and writing EPUB files
-    programmatically.
-    There is a Debian package.
+-  [Ebooklib](https://github.com/aerkalov/ebooklib) is a Python library for managing
+   EPUB2/EPUB3 and Kindle files. It's capable of reading and writing EPUB files
+   programmatically.  There is a Debian package.
     -   EbookLib is used in {{< iref "#booktype" "Booktype 2.0" >}}
     -   [EBookLib Documentation
         ](http://ebooklib.readthedocs.org/en/latest/)
--   [Exirel/Epub](https://bitbucket.org/exirel/epub)
-    is a python library for Epub2, it does not seem to include an
-    Epub3 support. It is in PyPi.
 
 # Epub Readers
+-   [Baca](https://github.com/wustho/baca) (GPL-3.0)
+    a TUI ebook reader  built in
+    {{< iref "python_libraries#textualize" "Python Textualize" >}}
+    wich supports Epub, Epub3, Mobi & Azw and features regexp search and hyperlinks.
 -   [EPUBReader](http://www.epubread.com/en/) is a Firefox addon to
     read epub in the browser.
--   [FBReader](https://fbreader.org/)
-    is a linux, and android program that
-    read epub, part of epub3, mobi and fb2 (2.0).. It uses
-    [libunibreak](http://vimgadgets.sourceforge.net/libunibreak//).
+-   [FBReader](https://fbreader.org/) (private source since 2015)
+    is a linux, ios, and android program that read epub, part of epub3, mobi and fb2
+    (2.0).. It uses
+    [libunibreak]https://github.com/adah1972/libunibreak).
 -   [Calibre E-book Viewer](https://manual.calibre-ebook.com/viewer.html)
--   [CoolReader](http://sourceforge.net/projects/crengine/) (GPL)
-    is a android and linux ebook reader. It support the following
-    formats: FB2, TXT, RTF, DOC, TCR, HTML, EPUB, CHM, PDB, MOBI. , it
-    is ported to e-ink devices.  On linux this is a QT package, as the
-    build on sourceforge is for an old version and is not updated
-    since 2012 it depends on old libraries. The git repository
-    describe the requirement and process to build a newer release.
-    There is a PPA on ubuntu, but it don't seem to be updated, and
-    does not install on Debian Jessie.
--   [crengine git repository
-    ](http://sourceforge.net/p/crengine/crengine/ci/master/tree/)
+    is the ebook viewer from the {{< iref "#calibre" "Calibre suite" >}}.
+    *Calibre-viewer" supports bookmrks and allow to add notes to highlights, and export
+    them to the Calibre library.
+-   [CoolReader](https://github.com/buggins/coolreader) (GPL)
+    is a android and linux ebook reader. It support the following formats: FB2, TXT,
+    RTF, DOC, TCR, HTML, EPUB, CHM, PDB, MOBI. , it is ported to e-ink devices.  On
+    linux this is a QT package.
+
+    Android apk are available in the release directory, and also in F-Droid store.
+
+    The git repository
+    describe the requirement and process to build a release from a provided Debian
+    source package.
+
+    The sourceforge project is obsolete, and not updated since 2012.
+-   [koreader](https://github.com/koreader/koreader) (AGPL 3.0)
+    An ebook reader application supporting PDF, DjVu, EPUB, FB2, running on e-readers,
+    Linux  and Android devices
 -   [Lucidor](http://lucidor.org/lucidor/)
-    is a xul Epub reader, it neads either Firefox or XULRunner.
-    it can also convert web feeds and web pages into e-books.
-    The lucidor site provide a Debian package.
-    There is also a Firefox plugin named [LuciFox
-    ](http://lucidor.org/lucifox/) (GPL).
+    is a xul Epub reader, it neads either Firefox or XULRunner.  it can also convert web
+    feeds and web pages into e-books.  The lucidor site provide a Debian package.  There
+    is also a Pale *no longer Firefox* plugin named
+    [LuciFox](http://lucidor.org/lucifox/) (GPL).
 
 # Structured text to EPUB {#structured_to_epub}
 {{< iref "rest#sphinx" "Sphinx" >}} can output to epub.
