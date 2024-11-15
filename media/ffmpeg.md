@@ -195,47 +195,81 @@ Note than some software, like apple Ipod, do not recognize the suffix `.aac`, an
 make it usable you have to use the apple preferred `.m4a`, as it is a mp4 container you
 can also usem `.mp4`; but it does not show that it is an audio stream.
 
-
 Here the video stream in both the video and the audio has the same format, say a stereo
 48kHZ, 189 kb/s audio stream.
 
 Now we want to mix the channels in a mono audio, reduce the bitrate to 64k, and encode
 in opus rather than aac.
 
-```ssh
+``` sh
 ffmpeg -i video.mp4 -map 0:a:0 -c:a libopus -vbr on -ac:a 1 -b:a 64k audio.ogg
 ```
-
-
 
 # Extracting some part of streams
 
 
 Extract the first 10 minutes of a container
 
-~~~
-ffmpeg -i input.webm -c copy -t 600 output.webm
+~~~ sh
+ffmpeg -t 600 -i input.webm -c copy  output.webm
 ~~~
 
 Here 600 is 600 seconds.
 
-The `-time` option can appear both on input or output, to stop the input or output after
-this time so:
+The `-t` option can appear both on input or output, to stop the input or output after
+this time, the argument of this option is a
+[time duration](https://www.ffmpeg.org/ffmpeg-utils.html#time-duration-syntax) it can be
+like above a number of second, or expressed in milliseconds `600000ms` or in hours
+minutes, seconds `00:01:00`
 
 ~~~
 ffmpeg -i -t 600 input.webm -c copy -t 600 output.webm
 ~~~
 
+Instead of `-t`  we can use `-to` to give a position in the input or output stream:
+
+~~~
+ffmpeg -to 1:00:00 -i input.webm -c copy  output.webm
+~~~
+
+To cut the beginning of a stream we use `-ss` with a stream position.
+
+~~~ sh
+ffmpeg -ss 10:00 -to 20:00 -i input.webm -c copy outtput webm
+~~~
+
+or
+
+~~~ sh
+ffmpeg -ss 10:00  -i input.webm -c copy -t 10:00 output.webm
+~~~
+
 Will extract the the stream from 10mn to 20mn.
 
-We can use also `-to` to give a position in the stream
+If we use `-to` in the output we should know that a seek with `-ss` reset by default the
+timestamps in the output to zero.
 
-~~~
-ffmpeg -to 1:00:00 -i input.webm -c copy -to 10:00 output.ogg
+so while
+~~~ sh
+ffmpeg -ss 10:00 --to 20:00 -i input.webm -c copy output.webm
 ~~~
 
-Will extract the portion between 1h and 1h10mn of the webm container and put it in an
-ogg container.
+will extract the the stream from 10mn to 20mn, the command
+
+~~~ sh
+ffmpeg -ss 10:00  -i input.webm -c copy -to 20:00 output.webm
+~~~
+
+will extract the the stream from 10mn to 30mn,
+
+if we want to keep the original timestamps, we can use `-copyts` and
+
+~~~ sh
+ffmpeg -copyts -ss 10:00  -i input.webm -c copy -to 20:00 output.webm
+~~~
+
+will also extract the the stream from 10mn to 20mn.
+
 
 ## Combining audio and Video
 
@@ -337,11 +371,31 @@ It has also a good hadware support  in CPUs, see {{< wp "VP9" "wikipedia VP9" >}
 for a list.
 
 
-# screencasting with ffmpeg
--   Distribution version does not support many format
-   and you may have to compile ffmpeg.
--   [Archlinux: FFmpeg screencast example
-   ](https://wiki.archlinux.org/index.php/FFmpeg#Screen_cast)
+# screencasting with ffmpeg {#screencasting}
+-   [Capture/Desktop – FFmpeg](https://trac.ffmpeg.org/wiki/Capture/Desktop)
+-   [Capture/PulseAudio – FFmpeg](https://trac.ffmpeg.org/wiki/Capture/PulseAudio)
+    uses the [pulse input device](https://www.ffmpeg.org/ffmpeg-devices.html#toc-pulse).
+-   [Capture/ALSA – FFmpeg](https://trac.ffmpeg.org/wiki/Capture/ALSA)
+    uses [alsa input device](https://www.ffmpeg.org/ffmpeg-devices.html#toc-alsa)
+-   [Capture/Webcam – FFmpeg](https://trac.ffmpeg.org/wiki/Capture/Webcam).
+-   [Archlinux: FFmpeg Screen capture
+    ](https://wiki.archlinux.org/title/FFmpeg#Screen_capture)
+-   [Screencasts in Ubuntu, part 2: FFmpeg
+    ](https://web.archive.org/web/20140929122118/http://polishlinux.org/linux/ubuntu/screencasts-in-ubuntu-part-2/)
+    *Archive 2014* by Marcin Seredyńskyi.
+
+-   Record the audio output of your monitor using the pipewire - pulseaudio compatibility
+    layer
+    ~~~ sh
+    ffmpeg -f pulse -i 54 -ac 1 /tmp/recording.m4a
+    ~~~~
+
+    - `pulse` is the pulseaudio input device *provided by pipewire-pulse*,
+    - `54` is the pulse input device number, you get it with `pactl list short sources`
+      and it is an alsa output device, `sofhdadsp__sink.monitor` labelled as *RUNNING*;
+    - `-ac 1` ask for mono audio recording, the codec is deduced by ffmpeg from the
+      output name suffix which indicates an aac mp4 stream.
+
 -   Record high quality screencasts with:
     ~~~ sh
     ffmpeg -f oss -i /dev/dsp -f x11grab -s 1024x768 -r ntsc  -sameq -i :0.0 foo.avi
@@ -349,18 +403,18 @@ for a list.
 
 -   an other command with bitrate 1000 (increase it to get better quality,
     but larger files).
-    ~~~ sh
-    ffmpeg -vcodec mpeg4 -b 1000 -r 10 -g 300 -vd x11:0,0 -s 1280x1024 test.avi
+    ~~~sh
+    ffmpeg i-f x11grab -vcodec mpeg4 -b 1000 -r 10 -g 300 -i 0,0+1280x1024 test.avi
     ~~~
-   -   `x11:0,0` tells FFmpeg to record from the top-left cornet of the screen.
-   -   `s 1280x1024` is your screen resolution, or that of the window you want to
+   -   `-i 0,0` tells FFmpeg to record from the top-left cornet of the screen.
+   -   `+1280x1024` is your screen resolution, or that of the window you want to
          record. In that case, you can use `xwininfo -frame`
 
- * third with further postprocessing with libx264 from
- [Screencasts in Ubuntu, part 2: FFmpeg](http://polishlinux.org/linux/ubuntu/screencasts-in-ubuntu-part-2/). It uses the options
- -an to turn the sound recording off, <width>x<height> +<ox>,<oy>  - the size of the recorded area plus the upper left corner,
- <fps> is the` number of frames per second, for example: 15, <quality-bps> is in bits/seconds you can add a k to have kbits/sec,
- -sameq  use the same quality as in the input so in the case of x11grab it is the maximal value,
+- It can be postprocessed with libx264, we use the options
+ `-an` to turn the sound recording off, <width>x<height> +<ox>,<oy> the size of the
+ recorded area plus the upper left corner, <fps> is the number of frames per second,
+ for example: 15, <quality-bps> is in bits/seconds you can add a k to have kbits/sec,
+ `-sameq`  use the same quality as in the input so in the case of x11grab it is the maximal value,
 
 ~~~
 # The recording of the screen into a video
@@ -383,35 +437,33 @@ ffmpeg -i scast-temp.mp4 -vcodec libx264 -pass 2 -b 240000 \
 -f mp4 -y scast.mp4
 ~~~
 
- * to Convert other video format to FLV (`ar`: audio samping rate in Hz ,
+- to Convert other video format to FLV (`ar`: audio samping rate in Hz ,
    `ab`: audio bit rate in kbit/s, f: output format) _the influence on size of dividing
    by 2 default `ar` and `ab` seems minor_ but addinG a video rate of -r 10 (def 25)
    gain 1/3 of size.
 ~~~~~~~~~~~~~~~
  ffmpeg -i video.avi -ar 22050 -ab 32 -f flv -s 320x240 video.flv
 ~~~~~~~~~~~~~~~
- * idem with metadata
+- idem with metadata
 ~~~~~~~~~~~~~~~
 ffmpeg -i video.avi -ar 22050 -ab 32 -f flv -s 320x240 - | flvtool2 -U stdin video.flv
 ~~~~~~~~~~~~~~~
- * or this one has a slow frame rate 6 (def 30) and high bitrate 300 (def 25)
+- or this one has a slow frame rate 6 (def 30) and high bitrate 300 (def 25)
 ~~~~~~~~~~~~~~~
 ffmpeg -i video.ogg -y -vcodec flv -b 300k -s 320x240 -r 6 -croptop 6 -cropbottom 6 -f flv video.flv
 ~~~~~~~~~~~~~~~
- * Return one particular jpeg image of the frame based on start (ss)
+- Return one particular jpeg image of the frame based on start (ss)
 ~~~~~~~~~~~~~~~
     ffmpeg -i video.flv -an -ss 00:00:03  -vframes 1 -an -f rawvideo- -s 320×240 video.jpg
 ~~~~~~~~~~~~~~~
- * Return first frame of video as jpeg image, you can replace -s by  -sameq
+- Return first frame of video as jpeg image, you can replace -s by  -sameq
 ~~~~~~~~~~~~~~~
     ffmpeg -i video.flv -vcodec png -vframes 1 -an -f rawvideo -s 320×240 video.jpg
 ~~~~~~~~~~~~~~~
 
- * We can easily transcode mpeg to flv or swf using ffmpeg. On mozilla the flash player
+- We can easily transcode mpeg to flv or swf using ffmpeg. On mozilla the flash player
    (adobe) give a result not clear with the produced swf, we have a better one with
    mplayer
-
-
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
