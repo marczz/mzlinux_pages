@@ -23,6 +23,11 @@ title: Neovim and Vim
 
 # Vim {#vim}
 -   [Vim Home Page](http://www.vim.org/)
+-   [lists of which programs support Vim-like keybindings
+    ](https://github.com/erikw/vim-keybindings-everywhere-the-ultimate-list)
+     natively, or how they can be added with extensions
+
+# (Neo)Vim documentation
 -   [vim documentation](http://vimdoc.sourceforge.net/)
     -   [vim user manual](http://vimdoc.sourceforge.net/htmldoc/)
     -   [vim faq](http://vimdoc.sourceforge.net/htmldoc/vimfaq.html)
@@ -38,28 +43,19 @@ title: Neovim and Vim
     is a free vim ebooks, whose sources are
     [on GitHub.](https://github.com/vjousse/vim-for-humans-book).
     The sources are in Sphinx RST.
--   [Getting Started with Vi](http://www.linuxjournal.com/article/6542) (Linux Journal)
--   [A Slightly Advanced Introduction to Vim
-    ](http://linuxgazette.net/152/srinivasan.html)
--   [Wikibook: Learning the vi editor](https://en.wikibooks.org/wiki/Learning_the_vi_Editor)
 -   [Seven habits of effective text editing  (with vi)
     ](http://www.moolenaar.net/habits.html)
 -   [Learn Vimscript the Hard Way](http://learnvimscriptthehardway.stevelosh.com/)
     by Steve Losh.
     -   [GitHub repository](https://github.com/sjl/learnvimscriptthehardway).
--   [vim ref card by command (pdf)](http://utools.com/vimrefcard.pdf)
--   [Vim quick reference cards](http://tnerual.eriogerg.free.fr/vim.html):
-        [english pdf](http://tnerual.eriogerg.free.fr/vimqrc.pdf),
-        [english html](http://tnerual.eriogerg.free.fr/vimqrc.html),
-        [french pdf](http://tnerual.eriogerg.free.fr/vimqrc-fr.pdf),
-        [french html](http://tnerual.eriogerg.free.fr/vimqrc-fr.html)
 -   [A Vimlike Fluency: Bibliography and Next Steps – Terminally Undead
     ](https://countvajhula.com/2021/02/23/a-vimlike-fluency-bibliography-and-next-steps/).
--   [lists of which programs support Vim-like keybindings natively, or how they can be
-    added with extensions](https://github.com/erikw/vim-keybindings-everywhere-the-ultimate-list)
 
 ## Vim tutorials
-
+-   [Getting Started with Vi](http://www.linuxjournal.com/article/6542) (Linux Journal)
+-   [A Slightly Advanced Introduction to Vim
+    ](http://linuxgazette.net/152/srinivasan.html)
+-   [Wikibook: Learning the vi editor](https://en.wikibooks.org/wiki/Learning_the_vi_Editor)
 -   [Learn Vim the Smart Way](https://learnvim.irian.to/)
     comprehensive tutorial by [Igor Irianto](https://irian.to/).
     -   [How to Learn Vim in 2020](https://irian.to/blogs/how-to-learn-vim-in-2020/)
@@ -80,13 +76,23 @@ title: Neovim and Vim
 -   [Vim - DEV Community](https://dev.to/t/vim).
 -   [Neovim - DEV Community](https://dev.to/t/neovim).
 
-## Vim cheatsheets
+## Vim cheatsheets, quick refs
+-   [vim ref card by command (pdf)](http://utools.com/vimrefcard.pdf)
+-   [Vim quick reference cards](http://tnerual.eriogerg.free.fr/vim.html):
+        [english pdf](http://tnerual.eriogerg.free.fr/vimqrc.pdf),
+        [english html](http://tnerual.eriogerg.free.fr/vimqrc.html),
+        [french pdf](http://tnerual.eriogerg.free.fr/vimqrc-fr.pdf),
+        [french html](http://tnerual.eriogerg.free.fr/vimqrc-fr.html)
 -   [Vim Cheat Sheet - rtorr.com](https://vim.rtorr.com/).
 -   [sudormrfbin/cheatsheet.nvim](https://github.com/sudormrfbin/cheatsheet.nvim)
     A cheatsheet plugin for neovim with bundled cheatsheets for the editor, multiple
     vim plugins, nerd-fonts, regex, etc. with a Telescope fuzzy finder interface.
 -   [rdvm/rofi-vim](https://github.com/rdvm/rofi-vim)
     A Vim cheat sheet for Rofi.
+-   [Vim Reference Guide](https://learnbyexample.github.io/vim_reference)
+    by Sundeep Agarwal, the markdown source is available in
+    [GitHub - learnbyexample](https://github.com/learnbyexample/vim_reference)
+    like a cheatsheet with examples.
 
 ## vim plugins
 -   [Vim Awesome](https://vimawesome.com/) list of vim plugins.
