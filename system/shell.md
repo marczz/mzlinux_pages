@@ -435,11 +435,6 @@ pathname and brace expansion, nor process substitution)
     -   The [Wikipedia:  PCRE](http://en.wikipedia.org/wiki/PCRE)
         page details the features of pcre expressions and the differences
         with perl re.
-    -   [Search and replace tricks with ripgrep
-        ](https://learnbyexample.github.io/substitution-with-ripgrep/).
-    -   [ripgrep is faster than {grep, ag, git grep, ucg, pt, sift}
-        ](https://blog.burntsushi.net/ripgrep/)
-        in Andrew Gallant's Blog
     -   [Regular-Expressions.info](https://www.regular-expressions.info/)
         -   [Regex references](https://www.regular-expressions.info/refflavors.html)
             and [Replacement Strings Reference
@@ -469,6 +464,11 @@ pathname and brace expansion, nor process substitution)
     The silver searcher_ like grep and ack but written in C and a lot
     quicker. [Emacs package ag](https://github.com/Wilfred/ag.el) s a front end to ag.
      _In debian._
+-   [txt2regex](http://txt2regex.sourceforge.net/) is a regular expression
+    wizard written in bash that converts human sentences to regexps
+    (gnu prce or more formats ...).
+
+### Ripgrep {#ripgrep}
 -   [ripgrep](https://github.com/BurntSushi/ripgrep) (Unlicense and MIT licenses)
     recursively searches directories for a regex pattern.  _In debian._
     -   [ripgrep User Guide](https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md)
@@ -484,12 +484,11 @@ pathname and brace expansion, nor process substitution)
     -   [supplementary documentation
         ](https://github.com/BurntSushi/ripgrep/blob/master/README.md#documentation-quick-links).
     -   [ripgrep FAQ](https://github.com/BurntSushi/ripgrep/blob/master/FAQ.md)
+    -   [Search and replace tricks with ripgrep
+        ](https://learnbyexample.github.io/substitution-with-ripgrep/).
     -   [ripgrep is faster than {grep, ag, git grep, ucg, pt, sift}
         ](https://blog.burntsushi.net/ripgrep/)
-        by the author of _ripgrep_ Andrew Gallant
--   [txt2regex](http://txt2regex.sourceforge.net/) is a regular expression
-    wizard written in bash that converts human sentences to regexps
-    (gnu prce or more formats ...).
+        in Andrew Gallant's Blog
 
 # Browse, bookmark and change directory {#dir_bookmarks}
 
