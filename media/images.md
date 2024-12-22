@@ -218,7 +218,7 @@ and {{< iref "#exiftool" "exiftool" >}}.
 
     _exiftrans_ allows to rotate jpeg images without re-encoding and
     without losing exif information, in contrast to jpegtran.
--   <a name="exiftool"></a>[ExifTool](http://www.sno.phy.queensu.ca/~phil/exiftool/
+-   <a name="exiftool"></a>[ExifTool](http://www.sno.phy.queensu.ca/~phil/exiftool/)
     (Perl License)
     is a perl library plus a command-line application for reading,
     and writing many metadata  in  image, audio and video files.
@@ -290,30 +290,22 @@ and {{< iref "#exiftool" "exiftool" >}}.
     display images on framebuffer, it can resize, zoom, rotate and
     scroll your images.
 -   <a name="geekie"></a>[Geeqie](http://geeqie.org/) (GPL)
-    is a fork of the older
-    [gqview](http://gqview.sourceforge.net/),
-    is a gtk (2 or 3) based image viewer, it does not requires gnome as many of
+    is a fork of the older [gqview](http://gqview.sourceforge.net/),
+    It is a gtk3 based image viewer, it does not requires gnome as many of
     its concurrent gtk browsers like **eog**. It is
     suited for photo collection maintenance: raw format, Exif/IPTC/XMP
-    has a medium footprint less than
-    {{< iref "#gthumb" "Gthumb" >}} and above the lighter
-    {{< iref "#feh" "feh" >}} or
+
+    It has a medium footprint less than {{< iref "#gthumb" "Gthumb" >}}
+    and above the lighter {{< iref "#feh" "feh" >}} or
     _Gpicview_.  30 M resident/25 M shared at start moving to 93M/27M
     on my image test directory. Like gthumb it does not garbage
     collect and the footprints are always increasing during a session.
-    -   [Geeqie github repository
-        ](https://github.com/BestImageViewer/geeqie)
+    -   [Geeqie github repository](https://github.com/BestImageViewer/geeqie)
+    -   [The Geeqie User Manual](https://www.geeqie.org/help/GuideIndex.html)
 -   [Gpicview](http://wiki.lxde.org/en/GPicView) (GPL)
-    is a lightweight and fast image viewer for GTK+ 2.x. It has
-    minimal dependencies and is quite lean, it has no directory browsing capability,
-    has some bugs.  It was in the top range of GTK viewers by its
-    footprints. But the interface is less user friendly than bigger viewer software.
-
-    It was the standard picture viewer of LXDE, and has minimal
-    dependencies using only GTK2 and glib2, and is desktop independant.
-
+    was a lightweight and fast image viewer for GTK+ 2.x.
     GpicView is no longer developped since 2013, has several bugs, and uses obsolete
-    libraries.  It is in Debian.
+
 -   <a name="gthumb"></a>{{< wp "Gthumb" >}} (GPL) is an image viewer and
     organizer. It belongs to gnome but it has very mild gnome
     dependencies and is more a GTK+ software. Its features include
@@ -351,24 +343,22 @@ and {{< iref "#exiftool" "exiftool" >}}.
     Shows thumbnails of images in a directory in terminal using {{< wp "Sixel" >}}
     graphics.  It is a bash script that uses {{< iref "#imagemagick" "ImageMagick" >}}
     for displaying images.
+-   [lximage-qt](https://github.com/lxqt/lximage-qt) (GPL-2.0)
+    is the image viewer and screenshot tool for lxqt. Its features include:
+    Zoom, rotate, flip and resize images
+    -   Slideshow
+    -   Thumbnail bar (left, top or bottom); different thumbnail sizes
+    -   Exif data bar
+    -   Inline image renaming
+    -   Custom shortcuts
+    -   Image annotations (arrow, rectangle, circle, numbers)
+    -   Take screenshots
 -   [Mirage](http://mirageiv.sourceforge.net/)
-    is a Python/GTK  image viewer. It allow also simple image
-    manipulation: rotating at 90-degree, flipping
-    horizontally/vertically, resizing, cropping, and saturation.
-    We can also define custom actions using shell commands and
-    external executables.
-
-    As every interpreted software the
-    footprints are including the interpreter load so it
-    weight 43M resident / 28M shared. This is still mild requirement
-    compared to gthumb, on my test image directory it grows to
-    100M/31M.
-
+    was a Python/GTK  image viewer, no longer maintained since 2011.
     -   [Mirage Documentation](http://mirageiv.sourceforge.net/docs.html)
-
 -   <a name="pqiv"></a>[PQIV](https://github.com/phillipberndt/pqiv)
     is the continuation of {{< iref "#qiv" "QIV" >}}.  It is an image viewer written in
-    C using GTK 2 or GTK 3 and GLIB 2. It is actively maintained in 2020, and is in
+    C using GTK 3 and GLIB 2. It is actively maintained in 2024, and is in
     Debian.  It start at 26M resident / 21M shared on a small thumbnail, and browsing my
     image test directory 64M / 21M.
 -   <a name="qiv"></a>[QIV - Quick Image Viewer](http://spiegl.de/qiv/)
@@ -383,11 +373,10 @@ and {{< iref "#exiftool" "exiftool" >}}.
     {{< iref "#qiv" "qiv" >}} or
     {{< iref "#pqiv" "pqiv" >}}.
 
-    It start at 5.7M / 4.7M on a small png thumbnail and 20M /5M
-    browsing my test image directory (34M / 5M when also making
-    thumbnails). For those who want a very lean image viewer, it is
-    the only contender to {{< iref "#feh" "feh" >}} among the
-    viewer I tested.
+    It start at 5.7M / 4.7M on a small png thumbnail and 20M /5M browsing my test image
+    directory (34M / 5M when also making thumbnails). For those who want a very lean
+    image viewer, it is the only contender to {{< iref "#feh" "feh" >}} among the viewer
+    I tested.
 
     -   [ArchWiki: sxiv](https://wiki.archlinux.org/index.php/Sxiv)
 
@@ -529,10 +518,12 @@ _see also Dia, Ditaa, Gnuplot, ivtools, xfig, veusz in the
     in _png_ format.  Aafigure can be used with _asciidoc_, _Restructured Text_,
     _MoinMoin_, _Sphinx_
 -   [Converseen](http://converseen.fasterland.net/) (GPL-3.0)
-    Converseen is a batch image processor for Windows and Linux that
-    allows you to convert, resize, rotate and flip an infinite number of images with a
-    mouse click. It is written in C++ with Qt5 libraries and uses the Magick++ library.
-    It is packaged in Debian.
+    Converseen is a batch image processor for Windows and Linux written in C++ with Qt5
+    libraries using ImageMagick through the  Magick++ library.
+    It allows you to convert, resize, rotate and flip an infinite number of images with a
+    mouse click. It can also convert a pdf into a set of images.
+
+    Converseen is packaged in Debian.
     -   [Converseen - GitHub](https://github.com/Faster3ck/Converseen)
 -   [CoolText online graphics generator](http://www.cooltext.com/)
 -   [drawing](https://github.com/maoschanz/drawing)
@@ -729,22 +720,31 @@ _see also Dia, Ditaa, Gnuplot, ivtools, xfig, veusz in the
     deals with generating 1bit depth image from coloured images.
 
 # Static Images gallery
--   [Sigal](http://sigal.saimon.org/en/latest/)
-    a python static gallery generator that uses the javascript libraries
+-   [Sigal](http://sigal.saimon.org/en/latest/) (MIT License)
+    a python static gallery generator that uses the for theming a javascript library, either
     [colorbox](http://www.jacklmoore.com/colorbox),
-    [galleria](http://galleria.io/) and [photoswipe ](http://photoswipe.com/)
+    [galleria](http://galleria.io/) or [photoswipe ](http://photoswipe.com/)
+
+    Sigal process directories recursively, generate HTML pages using Jinja2 templates,
+    use relative links, and support themes, videos, EXIF tags, zip download.
+
+    Dependencies: Blinker, Click, Jinja2, natsort, Pilkit, Pillow, Python Markdown
+
+    Sigal is actively maintained in 2025.
+
+    -   [GitHub - sigal](https://github.com/saimn/sigal/)
 -   [lazygal](https://sml.zincube.net/~niol/repositories.git/lazygal/about/) (GPL)
     is a static web gallery generator written in Python. It is in Debian.
 -   [Gallery](https://github.com/horgh/gallery) (GPL)
     is a go language program to create a static photo gallery website.
-    _don't confuse with the dead php program [Gallery](http://galleryproject.org/)._kee
--   [photon](https://www.saillard.org/programs/photon/) (GPL)
-    A python 2 image gallery generator. It is in Debian, I have not found the source
-    repository.
+    *Gallery is no longer updated since 2018.*
 -   __Pictor__ [github](https://github.com/dustinkirkland/pictor),
     [launchpad](https://launchpad.net/pictor) is a web application for viewing and
     sharing your pictures online. Pictures are organized hierarchically in folders and
     sub-folders.
+
+    **Pictor** still have release updates to keep it compatible to ubuntu development,
+    but it has no new features since 2015.
 
 # Image Recovery
 
