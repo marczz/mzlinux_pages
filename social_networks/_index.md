@@ -11,8 +11,8 @@ We try to categorize social networks in several sections:
 -   voice and video aimed applications are in the page {{< iref "sip" "SIP" >}}
 -   {{< iref "microblogging" "Microblogging" >}} contains applications based on
     protocols like
-    {< iref "social_networks#ostatus" "Ostatus" >}},
-    {{< iref "social_networks#activitypub" "ActivityPub"  >}},
+    {{< iref "social_networks#ostatus" "Ostatus" >}},
+    {{< iref "social_networks#activitypub" "ActivityPub" >}},
     {{< iref "social_networks#diaspora" "Diaspora" >}},
     {{< iref "social_networks#pumpio" "Pump.io" >}};
 
