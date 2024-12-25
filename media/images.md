@@ -293,36 +293,40 @@ and {{< iref "#exiftool" "exiftool" >}}.
     is a fork of the older [gqview](http://gqview.sourceforge.net/),
     It is a gtk3 based image viewer, it does not requires gnome as many of
     its concurrent gtk browsers like **eog**. It is
-    suited for photo collection maintenance: raw format, Exif/IPTC/XMP
+    suited for photo collection maintenance: it allows viewing tags Exif/IPTC/XMP, it is
+    feature we harly find in other image viewers, for which you have to rely on an
+    external tool to view tags.
 
     It has a medium footprint less than {{< iref "#gthumb" "Gthumb" >}}
     and above the lighter {{< iref "#feh" "feh" >}} or
     _Gpicview_.  30 M resident/25 M shared at start moving to 93M/27M
     on my image test directory. Like gthumb it does not garbage
     collect and the footprints are always increasing during a session.
+
+    It seems than on wayland, it does not autodetect the gdk backend, so you have to
+    make sure that the environment variable `GDK_BACKEND=wayland` is set.
     -   [Geeqie github repository](https://github.com/BestImageViewer/geeqie)
     -   [The Geeqie User Manual](https://www.geeqie.org/help/GuideIndex.html)
 -   [Gpicview](http://wiki.lxde.org/en/GPicView) (GPL)
     was a lightweight and fast image viewer for GTK+ 2.x.
     GpicView is no longer developped since 2013, has several bugs, and uses obsolete
 
--   <a name="gthumb"></a>{{< wp "Gthumb" >}} (GPL) is an image viewer and
-    organizer. It belongs to gnome but it has very mild gnome
-    dependencies and is more a GTK+ software. Its features include
-    filesystem browsing, slide show, image catalogs, web album
-    creation, camera import, image CD burning, batch file operations
-    and quick image editing features like metadata display and
-    edition, transformation and color manipulationColor Adjustments,
-    resizing and cropping, rotations and flips.
+-   <a name="gthumb"></a>{{< wp "Gthumb" >}} (GPL)
+    is an image viewer and organizer. It belongs to gnome but it has very mild gnome
+    dependencies and is more a GTK+ software. Its features include filesystem browsing,
+    slide show, image catalogs, web album creation, camera import, image CD burning,
+    batch file operations and quick image editing features like metadata display and
+    edition, transformation and color manipulationColor Adjustments, resizing and
+    cropping, rotations and flips.
     -   [Gthumb Home](https://wiki.gnome.org/action/show/Apps/gthumb)
     -   [Gthumb Help](https://help.gnome.org/users/gthumb/stable/)
-    -   Gthumb start at 70M resident / 49M like geeqie, it grows fast
-        depending of the images displayed, but I have observed a
-        better garbage collection than in the case of geeqie, for the
-        same image directory gthumb grow to 151M/70M and it doesn't
-        seem to shrink when moving to small or even empty directory.
-        _I noticed garbage collection on a previous version, but with
-        the new one tested 3.4.4 it does no more happen._
+    -   [gThumb - Ubuntu Community Help Wiki](https://help.ubuntu.com/community/gThumb)
+    -   Gthumb start at 70M resident / 49M like geeqie, it grows fast depending of the
+        images displayed, but I have observed a better garbage collection than in the
+        case of geeqie, for the same image directory gthumb grow to 151M/70M and it
+        doesn't seem to shrink when moving to small or even empty directory.
+        _I noticed garbage collection on a previous version, but with the new one tested
+        3.4.4 it does no more happen._
 -   {{< iref "#graphickmagick" "Graphics Magick" >}}
     provide a command to display images. `gm display`.
 -   {{< iref "#imagemagick" "ImageMagick" >}} display images
