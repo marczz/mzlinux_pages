@@ -356,47 +356,48 @@ the client or bridges powered by
 {{< iref "xmpp#minbif" "minbif" >}}.
 
 
--   <a name="reddit"></a>{{< wp "Reddit" >}} (private) is a content rating, discussion
-    and new aggregator website. Reddit was an open source project from June 18, 2008,
-    until 2017. On April 2023, Reddit announced that it intended to make changes to its
-    API service, including pricing changes—the API was previously free for most use
-    cases. See {{< wp "2023 Reddit API controversy" >}}. Due to this API shanges most
-    applications were shut off like _apollo_, _redplanet_, _rif is fun for Reddit (RIF)_,
-    and _BaconReader_ or became subscription only.
+## Reddit [#reddit}
+{{< wp "Reddit" >}} (private) is a content rating, discussion
+and new aggregator website. Reddit was an open source project from June 18, 2008,
+until 2017. On April 2023, Reddit announced that it intended to make changes to its
+API service, including pricing changes—the API was previously free for most use
+cases. See {{< wp "2023 Reddit API controversy" >}}. Due to this API shanges most
+applications were shut off like _apollo_, _redplanet_, _rif is fun for Reddit (RIF)_,
+and _BaconReader_ or became subscription only.
 
-    There was an exemption for _non-commercial accessibility-focused_ applications
-    _RedReader_ and _Dystopia_ have received exemption.
+There was an exemption for _non-commercial accessibility-focused_ applications
+_RedReader_ and _Dystopia_ have received exemption.
 
-    -   [teddit](https://codeberg.org/teddit/teddit) (AGPL 3.0)
-        is an alternative Reddit front-end focused on privacy.
+-   [teddit](https://codeberg.org/teddit/teddit) (AGPL 3.0)
+    is an alternative Reddit front-end focused on privacy.
 
-        Teddit needs no javascript, has no adds, it prevents Reddit from tracking your
-        IP or JavaScript fingerprint.
+    Teddit needs no javascript, has no adds, it prevents Reddit from tracking your
+    IP or JavaScript fingerprint.
 
-        It is self hostable and around thirty communauty sites are available.
+    It is self hostable and around thirty communauty sites are available.
 
-        There are [many Teddit instances](https://codeberg.org/teddit/teddit#instances),
-        the official instance is [teddit.net](https://teddit.net/).
-     -  [reddio](https://gitlab.com/aaronNG/reddio) (MIT License)
-        is a command-line interface for Reddit written in POSIX sh.
-        -  [reddit dmenu/rofiœ script
-           ](https://gitlab.com/dwt1/dmscripts/-/blob/master/scripts/dm-reddit)
-           is a reddit viewer in dmenu/rofi using reddio.
+    There are [many Teddit instances](https://codeberg.org/teddit/teddit#instances),
+    the official instance is [teddit.net](https://teddit.net/).
+ -  [reddio](https://gitlab.com/aaronNG/reddio) (MIT License)
+    is a command-line interface for Reddit written in POSIX sh.
+    -  [reddit dmenu/rofi script
+       ](https://gitlab.com/dwt1/dmscripts/-/blob/master/scripts/dm-reddit)
+       is a reddit viewer in dmenu/rofi using reddio.
 
- -  <a name="lemmy"></a>[Lemmy](https://join-lemmy.org/)
-    Lemmy is a selfhosted social link aggregation and discussion platform.
-    Servers are federated, and connected to the same universe, called the
-    {{< wp "Fediverse" >}}.
+## Lemmy {#lemmy}
+[Lemmy](https://join-lemmy.org/) is a selfhosted social link aggregation and discussion
+platform.  Servers are federated, and connected to the same universe, called the
+{{< wp "Fediverse" >}}.
 
-    -   [LemmyNet/lemmy - Lemmy server source repository
-        ](https://github.com/LemmyNet/lemmy)a (AGPL)
-    -   Lemmy has many [Apps and Libraries](https://join-lemmy.org/apps) for Web, IOS,
-        Android MacOs and Linux.
-    -   [neonmodem](https://github.com/mrusme/neonmodem) (GPL-3.0)
-        Neon Modem Overdrive is a BBS-style command line client, built in Go, that
-        supports Discourse, Lemmy, Lobsters and Hacker News as backends,
-    -   [lem.el](https://codeberg.org/martianh/lem.el)
-        emacs client library and interface for Lemmy instances.
+-   [LemmyNet/lemmy - Lemmy server source repository
+    ](https://github.com/LemmyNet/lemmy)a (AGPL)
+-   Lemmy has many [Apps and Libraries](https://join-lemmy.org/apps) for Web, IOS,
+    Android MacOs and Linux.
+-   [neonmodem](https://github.com/mrusme/neonmodem) (GPL-3.0)
+    Neon Modem Overdrive is a BBS-style command line client, built in Go, that
+    supports Discourse, Lemmy, Lobsters and Hacker News as backends,
+-   [lem.el](https://codeberg.org/martianh/lem.el)
+    emacs client library and interface for Lemmy instances.
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
