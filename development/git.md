@@ -5,18 +5,19 @@ title: Git
 _I have also set a [git-memo](http://git-memo.mzlinux.org/)
 which gives some reminders and explanations on git use._
 
--   [Git](http://git-scm.com) is a
-    GPL distributed source code management tool.
-    Git is born following the withdraw of free use of
-    BitKeeper for free software, it has been developped by the Linux
-    Kernel team to replace BitKeeper for the kernel source Management,
-    this and more is explained in the very detailled
+-   [Git](http://git-scm.com) (GPL)
+    is a distributed source code management tool.  Git is born following the withdraw of
+    free use of BitKeeper for free software, it has been developped by the Linux Kernel
+    team to replace BitKeeper for the kernel source Management, this and more is
+    explained in the very detailled
     [Wikipedia: Git](http://en.wikipedia.org/wiki/Git_%28software%29)
     article.
--   [Git Home page](http://git-scm.com/) at [git-scm.com
-    ](http://git-scm.com/).
--   [Git Wiki](http://git.wiki.kernel.org/index.php) cross-reference
-    Main Git resources.
+-   [Git Home page](http://git-scm.com/) at [git-scm.com](http://git-scm.com/)
+    contain mainly two knowledge source:
+    -   [Git - Reference](https://git-scm.com/docs) which group all git manuals.
+    -   [Pro Git Book](https://git-scm.com/book/en/v2) written by Scott Chacon in 2014.
+-   [Git Wiki](http://git.wiki.kernel.org/index.php) is no longer updated, and tagged
+    *obsolete*; we can still find some resources not moved to the new documentation.
     -   [Git FAQ](https://git.wiki.kernel.org/index.php/GitFaq)
     -   [Git Documentation
         ](https://git.wiki.kernel.org/index.php/GitDocumentation)
@@ -26,8 +27,8 @@ which gives some reminders and explanations on git use._
         ](https://git.wiki.kernel.org/index.php/GitLinks);
 -   [Awesome Git](https://github.com/dictcp/awesome-git)
     list of Git resources
-    -   [Git Add-ons](https://github.com/stevemao/awesome-git-addons)
-        to enhance the `git` CLI.
+-   [Awesome Git Add-ons](https://github.com/stevemao/awesome-git-addons)
+    to enhance the `git` CLI.
 
 # Git Documentation
 Git includes a live version of the documentation. You can access the manual for any
@@ -44,15 +45,15 @@ where concept is one of:
 , [workflows](https://www.kernel.org/pub/software/scm/git/docs/gitworflows.html).
 
 # Documentation references
+-   [Git - Reference](https://git-scm.com/docs) which group all git manuals.
 -   [git wiki - Git Documentation
     ](https://git.wiki.kernel.org/index.php/GitDocumentation)
-    is a complete source of documentation but is not always up-to-date
-    and some links are broken.
--   [git wiki - Git Links](https://git.wiki.kernel.org/index.php/GitLinks)
-    references articles, blogs, mailing lists, talks, git
-    comparisons...
+    obsolete source of documentation, some links are broken.
 -   [git-scm - Links to other material](https://git-scm.com/doc/ext)
--   [Git FAQ](https://git.wiki.kernel.org/index.php/GitFaq)
+    some older dreferences articles, blogs, mailing lists, talks, git
+    comparisons... are still on the obsolete
+    [git wiki - Git Links](https://git.wiki.kernel.org/index.php/GitLinks)
+-   [Git FAQ](https://git.wiki.kernel.org/index.php/GitFaq) *no longer updated*
 -   And to get a fresh view of what is coming up, you can search
     the web for Git
     [tutorials](http://www.google.com/search?q=git+tutorial),
@@ -115,10 +116,9 @@ where concept is one of:
 -   [Git Reference](https://git.github.io/git-reference/)  by GitHub.
 -   [Git magic](http://www-cs-students.stanford.edu/~blynn/gitmagic/)
     by Ben Lynn is a Git Manual, lighter than the official manual. The
-    [asciidoc source is available in GitHub
-    ](https://github.com/blynn/gitmagic) or
+    [asciidoc source is available in GitHub](https://github.com/blynn/gitmagic) or
     [repo.or.cz](http://repo.or.cz/w/gitmagic.git)
--   [Pro Git](http://git-scm.com/book) by Scott Schacon and als
+-   [Pro Git](http://git-scm.com/book) by Scott Schacon and als *2014*
     is a very complete book. It covers many new features of git.
     The previous _Git Community Book_ has been merged with
     _Pro Git_ in 2012, and is now deprecated..
@@ -277,9 +277,6 @@ with new commands what we did with some script using plumbing commands_
     [GitHub : git cheat sheet (pdf)
     ](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf)
     reference some other cheat sheets and give a git memo.
--   [Magit Cheatsheet](http://daemianmack.com/magit-cheatsheet.html)
-    has its'
-    [org source in GitHub](https://github.com/daemianmack/magit-cheatsheet).
 -   [Alvin  Alexander: A Git cheat sheet
     ](http://alvinalexander.com/git/git-cheat-sheet-git-reference-commands)
     elementary cheatsheet
@@ -403,12 +400,9 @@ private_ projects.
     the access to GitHub. It  is physically a proxy of GitHub, and you need only to
     replace the URL `github.com` by `hub.fastgit.org`.
     -   [FastGit - ArchWiki](https://wiki.archlinux.org/index.php/FastGit).
--   [MagitHub](https://github.com/vermiculus/magithub/) (GPL)
-    a collection of interfaces to GitHub integrated into Magit workflows.
 -   [Forge](https://github.com/magit/forge) (GPL)
     by Jonas Bernoulli _tarsius_. Work with Git forges, such as Github and Gitlab, from
-    the comfort of MagitWork with Git forges, such as Github and Gitlab, from the
-    comfort of Magit.
+    the comfort of {{< Iref "#Magit" "Magit" >}}
     -   [Forge User and Developer Manual](https://magit.vc/manual/forge/)
 
 ### Gist {#gist}
@@ -727,29 +721,22 @@ provides a detailled description of the use of the following packages.
     The use of _vc_ is described in the
     [Version Control chapter of the Emacs manual
     ](http://www.gnu.org/software/emacs/manual/html_node/emacs/Version-Control.html)
--   [git-emacs](http://files.taesoo.org/git-emacs/git-emacs.html)
-    has almost the same functionality, as the git.el package, and it add some improvements.
-    -   [git-emacs repository](https://github.com/tsgates/git-emacs) at [github](https://github.com/)
 -   <a name="magit"></a>[Magit](http://philjackson.github.com/magit)
     by Marius Voller and Phil Jackson has an online
-    -   [Magit Manual](http://magit.github.io/master/magit.html),
-    -   [Magit Cheatsheet](http://daemianmack.com/magit-cheatsheet.html)
-        has its'
-        [org source in GitHub](https://github.com/daemianmack/magit-cheatsheet).
--   [Egg](http://github.com/byplayer/egg) (GPL) is a fork of magit. An
-    [introduction to Egg](http://bogolisk.blogspot.com/2009/01/introduction-to-egg.html)
-    _2009_. _Egg_ in _2020_ support support 2.5.x, but seems to have a low activity
-    compared to magit.
+    -   [Magit Manual](https://magit.vc/manual/),
+    -   [Magit Cheatsheet](https://github.com/magit/magit/wiki/Cheatsheet)
+    -   [Magit Reference Card (pdf)](https://magit.vc/manual/magit-refcard.pdf).
 -   <a name="git-wip"></a>[git-wip](https://github.com/bartman/git-wip) (GPL)
     by Bart Trojanowski  is a script that will manage Work
     In Progress (or WIP) branches. It includes hooks for vim and
     emacs.
--   [magit-wip
-    ](https://github.com/magit/magit/blob/master/magit-wip.el)
+-   [magit-wip](https://github.com/magit/magit/blob/main/lisp/magit-wip.el)
     is a magit plugin included in {{< iref "#magit" "magit distribution" >}}
     which add two modes to emacs.  The global mode _magit-wip-mode_ provides
-    highlighting of wip refs in Magit buffers while the local mode _magit-wip-save-mode_
-    commits to such a ref when saving a file-visiting buffer.
+    highlighting of wip refs in Magit buffers.
+
+    *magit-wip* modes are decribed [in a section of the magit manual
+    ](https://magit.vc/manual/magit/Wip-Modes.html),
 -   <a name="ediff"></a>[Ediff (UserManual)
     ](http://www.gnu.org/software/emacs/manual/html_node/ediff/)
     is an emacs visual interface to Unix diff and patch utilities.
@@ -763,7 +750,7 @@ provides a detailled description of the use of the following packages.
 -   <a name="vdiff"></a>[vdiff](https://github.com/justbur/emacs-vdiff)
     by Justin Burkett, is a diff tool that display diff information in
     buffers as you edit them, like vimdiff does.
-    It has also a magit interface which replace ediff by vdiff in
+    It has also a {{< iref "#magit" "Magit" >}} interface which replace ediff by vdiff in
     magit: [vdiff-magit](https://github.com/justbur/emacs-vdiff-magit).
     vdiff and vdiff-magit are in melpa.
 
@@ -948,13 +935,6 @@ See also {{< iref "../system/backup#synchronization" "Synchronization" >}} in th
     python and dbus services) to monitor files so it has quite heavy dependencies.
     [Source code](http://github.com/SparkleShare/),
     [SparkleShare Wiki](http://github.com/hbons/SparkleShare/wiki/).
--   [DVCS-Autosync](http://mayrhofer.eu.org/dvcs-autosync)
-    is a lighter alternative to SparkleShare.  It watch files and folders in specified
-    paths and sync them in a git or mercurial repository.  It needs pynotify (python),
-    xmppy and a provided patched JabberBot. The project has a very low activity _last
-    release november 2019_, nevertheless the maintainer indicates it can accept pull
-    requests.
-    -   [dvdautosync - GitHub](https://github.com/rmayr/dvcs-autosync).
 -   [git-sync](https://github.com/ianb/git-sync)
     by Ian Bicking is a git deployement script.
 -   Tychoish _Sam Kleinman_ uses [a script to synchronize git repositories
