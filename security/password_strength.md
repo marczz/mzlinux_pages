@@ -76,8 +76,12 @@ them claim that passwords like `D0g-----------------------` or
 `1234567890!Abcdefghij` or `We shall/overC0me` are strong passwords; while they are
 easily cracked.
 
+Some sites give an estimate on how long it is to crack a password depending of the
+character set and number of character, but it is only meaningful if you give also the
+hashing algorithm used and the hardware running the hash cracker. See more on this
+subject in the following  hash cracking section.
 
-Note yhat is is only an example, the number of cracked hases per second vary both
+Note that is is only an example, the number of cracked hases per second vary both
 depending of the computer and of the hash used.
 
 An hash cracking aray like those used by criminal or governemental institution is
@@ -298,7 +302,7 @@ is a javascript application for testing the password strength.
 -   [OWASP Password Storage Cheat Sheet
     ](https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet)
 
-## Hashing Passwords {#hashing-passwords}
+## Hashing Passwords {#hashing_passwords}
 
 A random password entropy is computed with the formula e=l*log<sub>2</sub>(r) where l is the
 number of characters and r the range of character. This means than you choose a random
@@ -308,30 +312,84 @@ average of 2<sup>e</sup>/2 hashes to find your password.
 If we have a calculator with only log<sub>10</sub> or ln functions we can use
 e=l*log<sub>10</sub>(r)/log<sub>10</sub>(2) or e=l*ln(r)/ln(2)
 
-## Encrypting passwords on linux {#encrypting-passwords-on-linux}
+## hashing passwords on linux {#hashing_passwords_on_linux}
 
-The password are hashed using one algorithm among
+The passwords on linux are primarily managed with the  {{< man "crypt(3)" >}},
+the format and algorithms supported are described in {{< man "crypt(5)" >}}.
 
-{{< wp "md5" >}}, {{< wp "sha-2" >}} (sha256, sha512 ),
+Hashed passphrase consists of four components: _prefix_, _options_, _salt_, and _hash_.
 
-Crypt is weak, and
-{{< wp "MD5#Security" "md5 is vulnerable to collision attacks" >}} so you may want
-to use sha256 or sha512.
+The prefix control which hashing method is used, the _options_ are method specific, the
+_hash_ also is provided by the selected method but is encoded in a base 64 encoding
+which uses only printable asccii character and avoid a set of reserved characters
+symbols. The components are separated by the character `$`.
 
-Previously we could use
+The methods are:
 
-{{< wp "Crypt_(Unix)" "crypt" >}} and  {{< wp "sha1" >}}. but crypt is weak and there is
-a possibility of {{< wp "Sha1#Attacks" "sha1 attacks" >}}.
+| prefix | method        | hash size | salt size | cpu cost             | obsolete |
+|:-------|---------------|:----------|:----------|:---------------------|:--------:|
+| $y$    | [yescript]    | 256       | ≤512     | 1-11 (log)           |          |
+| $gy$   | gost-yescript | 256       | ≤512     | 1-11 (log)           |          |
+| $7$    | [scrypt]      | 256       | ≤512     | 6-11 (log)           |          |
+| $2b$   | [bcrypt]      | 184       | 128       | 4-31 (log)           |          |
+| $6$    | [sha512crypt] | 512       | 6-96      | 10³-10<sup>10</sup>  |          |
+| $5$    | [sha256crypt] | 256       | 6-96      | 10³- 10<sup>10</sup> |          |
+| $sha1$ | [sha1crypt]   | 160       | 6-384     | 4-10⁹                | O        |
+| $md5$  | [md5crypt]    | 128       | 6-48      | 10³                  | O        |
+| ""     | [DEScrypt]    | 64        | 12        | 25                   | O        |
+| $3$    | [NTLM]          | 256       | 9         | 1                    | O        |
+|        |               |           |           |                      |          |
 
-sha512 is now the default under Debian, but if your conf is older it may
-differs.
+
+[NTLM]: https://en.wikipedia.org/wiki/NTLM
+[sha512crypt]: https://en.wikipedia.org/wiki/SHA-2
+[sha256crypt]: https://en.wikipedia.org/wiki/SHA-2
+[sha1crypt]: https://en.wikipedia.org/wiki/SHA-1
+[bcrypt]: https://en.wikipedia.org/wiki/Bcrypt
+[scrypt]: https://en.wikipedia.org/wiki/Scrypt
+[md5crypt]: https://en.wikipedia.org/wiki/MD5
+[DEScrypt]: https://en.wikipedia.org/wiki/MD5
+[yescrypt]: https://github.com/openwall/yescrypt
+
+[NTLM] has many weakness and vulnerabilities, as it is one of the more easily exploited
+hash it is the primary target of hash crackers,
+{{< wp "Crypt_(Unix)" "crypt" >}} is weak,
+{{< wp "MD5#Security" "md5 is vulnerable to collision attacks" >}},
+for [sha1crypt] there is a possibility of {{< wp "Sha1#Attacks" "sha1 attacks" >}}.
+
+[sha512crypt] was the default under Debian until Debian 11, but the CPU cost of
+[sha512crypt] and [sha256crypt] is too low for modern hardware.
+
+The old methods was made supposing than an attacker will hash passwords using an array
+of classic processors where the limiting factor is CPU speed. But we can now also use
+GPU that can be a lot more efficient at cracking the previous known hashes including
+some which was considered as secyre like sha256crypt and sha512crypt. The price of
+{{< iref "Application-specific_integrated_circuit" "AICs" >}}, and
+{{< iref "Field-programmable_gate_array" "FGPAs" >}} allow cracking at a speed which was
+previously reserved to supercomputers.
 
 
+
+The newer hashing method are enginered to be slow and costly not only in CPU but also in
+memory to avoid fast cracking with GPU hardware. The CPU cost can be adjusted with the
+_CPU time cost_ parameter of {{< man  "crypt_gensalt(3)" >}}.
+
+In {{< man "pam_unix(8)" >}} you can adjust the number of rounds used by SHA256, SHA512,
+blowfish, gost-yescrypt, and yescrypt by setting the paramater `round=n`.
+
+The login password settings in Debian are explained in
+[Debian reference Chapter 4. Authentication and access controls
+](https://www.debian.org/doc/manuals/debian-reference/ch04.en.html#_configuration_files_accessed_by_pam_and_nss)
+more details are given i
+[Securing Debian Manual - 4.11. Providing secure user access
+](https://www.debian.org/doc/manuals/securing-debian-manual/ch04s11.en.html).
 
 The password hashing algorithm is set in `/etc/login.defs` with the variable
-`ENCRYPT_METHOD` and in
+`ENCRYPT_METHOD`  for the group passwords see {{< man "login.defs(5)" >}}.
 
-The options are explained in {{< man "pam_unix" >}}.
+For the user it is configured in `/etc/pam.d//common-password`.
+
+The options are explained in {{< man "pam_unix(8)" >}}.
 
 If you want to change password hashes you must reenter the old passwords to
 rehash them.
