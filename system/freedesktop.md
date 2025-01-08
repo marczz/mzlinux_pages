@@ -242,6 +242,25 @@ additional keys:
 -   `TryExec`: Tha application is started only when the named exec
     exist. It can be an absolute path or a name to be looked for in `$PATH`.
 
+# Portals
+From Archwiki: Portals are the framework for securely accessing resources from outside
+an application sandbox.
+
+[XDG Desktop Portal - ArchWiki](https://wiki.archlinux.org/title/XDG_Desktop_Portal)
+
+Portals were designed for use with applications sandboxed through
+{{< iref "virtualization#flatpak" "Flatpak" >}}, but any application can
+use portals to provide uniform access to features independent of desktops and
+toolkits. This is commonly used, for example, to allow screen sharing on
+{{< iref "xorg#wayland" "Wayland" >}} via {{<iref "streaming#pipewire" "Pipewire" >}},
+or to use file open and save dialogs on Firefox.
+
+-   [XDG Desktop Portal](https://flatpak.github.io/xdg-desktop-portal/)
+-   [XDG Desktop Portal - ArchWiki](https://wiki.archlinux.org/title/XDG_Desktop_Portal)
+-   [emersion/xdg-desktop-portal-wlr](https://github.com/emersion/xdg-desktop-portal-wlr)
+    xdg-desktop-portal backend for wlroots.
+    -   [Screencast Compatibility
+        ](https://github.com/emersion/xdg-desktop-portal-wlr/wiki/Screencast-Compatibility)
 
 <!-- Local Variables: -->
 <!-- mode: markdown -->
