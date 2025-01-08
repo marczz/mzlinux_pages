@@ -22,8 +22,9 @@ device application are also available.
 -   [FreeDeskop Secret Service API
     ](https://specifications.freedesktop.org/secret-service/)
     allows client applications to store secrets securely in a service running in the
-    user's login session.  gnome-keyring and ksecretservice are both
-    implementations of a Secret Service.
+    user's login session.  *gnome-keyring* and *ksecretservice* are both
+    implementations of a Secret Service; {{< iref "#keepassxc" "KeepassXC" >}} can also be
+    configured to provide the secret service API.
 
     Each secret is stored together with lookup attributes and a label. These together
     form an item.  A group of items together form a collection wich is what used to be
@@ -48,13 +49,13 @@ device application are also available.
 
         /org/freedesktop/secrets/aliases/default
 
-
     -   [Libsecret](https://wiki.gnome.org/Projects/Libsecret) is a library for storing
         and retrieving passwords and other secrets. It communicates with the "Secret
         Service" using D-Bus. It [replaces the old libgnome-keyring
         ](https://wiki.gnome.org/Initiatives/GnomeGoals/LibsecretMigration).
     -   [Libsecret Library Reference Manual
-        ](https://developer.gnome.org/libsecret/).
+        ](https://gnome.pages.gitlab.gnome.org/libsecret/).
+    -   [GNOME / libsecret · GitLab](https://gitlab.gnome.org/GNOME/libsecret)
     -   The utility [secret-tool
         ](https://manpages.debian.org/unstable/libsecret-tools/secret-tool.1.en.html)
         is a command line tool to store and retrieve passwords. It is in its own package
@@ -178,6 +179,11 @@ and v4 i.e. keepass 2.x or {{< wp "Twofish" >}} only for v3.
     -   [KeePassXC: User Guide](https://keepassxc.org/docs/KeePassXC_UserGuide.html).
     -   [EFF - Surveillance Self-Defense](https://ssd.eff.org/) :
         [How to: Use KeePassXC](https://ssd.eff.org/en/module/how-use-keepassxc).
+    -   KeepassXC support `org.freedesktop.secrets.service` which can also be provided
+        by gnome-keyring, kde-wallet.
+
+        The configuration is explained in [KeepassXC and secret service, a small
+        walk-through.](https://avaldes.co/2020/01/28/secret-service-keepassxc.html).
     -   __keepassxc-cli__ is the command line client for Keypassx, it allows to do many
         operation _including the XML export_ with a command line client.
 
