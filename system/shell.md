@@ -212,25 +212,13 @@ Bash (without my big init) is 3.8M/3.2M; zsh (without user init)
     some additional explanations in this [Stack Overflow answer
     ](https://stackoverflow.com/a/45386798/965798).
 -   Bash by example by Daniel Robbins:
-    [Part 1](http://www.ibm.com/developerworks/linux/library/l-bash/index.html),
-    [Part 2](http://www.ibm.com/developerworks/linux/library/l-bash2/index.html),
-    [Part 3](http://www.ibm.com/developerworks/library/l-bash3/index.html).
-
-    From the same author: [Tip: Prompt magic
-    ](http://www.ibm.com/developerworks/linux/library/l-tip-prompt/index.html?dwzone=linux)
-    Show how to customize the BASH prompt, and set the xterm title.
+    [Part 1](https://www.funtoo.org/Bash_by_Example,_Part_1),
+    [Part 2](https://www.funtoo.org/Bash_by_Example,_Part_2),
+    [Part 3](https://www.funtoo.org/Bash_by_Example,_Part_3).
 -   [Commandline Fu](http://www.commandlinefu.com/)
     is a repository for sharing shell commands. The
     [FAQ](http://www.commandlinefu.com/site/faq) gives other accesses to it like RSS
     feeds.
--   [bashdb](http://bashdb.sourceforge.net/) is a source code debugger for bash.
--   [Bashdoc](https://github.com/ajdiaz/bashdoc) (GPL-3.0)
-    is a bash documentation processor similar to javadoc but use reStructuredText to
-    provide the final document.
--   [Starship: Cross-Shell Prompt](https://starship.rs/) (ISC License)
-    customizable prompt for any shell. A fast prompt written in Rust for many shells
-    bash, fish, zsh
-    -   [starship - GitHub](https://github.com/starship/starship)
 
 To proofread a bash script It is often very useful to remember how,
 and in what order expansion is done. It is given in section
@@ -274,8 +262,62 @@ After an assignment only a subset of these expansions hold, namely: tilde expans
 parameter expansion, command substitution, arithmetic expansion, and quote removal. (no
 pathname and brace expansion, nor process substitution)
 
+## Bash Prompt
+
+-   [Prompt Magic](https://www.funtoo.org/Prompt_Magic) is an introductory article by
+    Daniel Robbins, which shows how to customize the BASH prompt, and set the xterm title.
+-   [Bash/Prompt customization - ArchWiki
+    ](https://wiki.archlinux.org/title/Bash/Prompt_customization),
+    the Git page also includes a description of the [Git prompt
+    ](https://wiki.archlinux.org/title/Git#Git_prompt)
+-   [Bash Prompt HOWTO](https://tldp.org/HOWTO/Bash-Prompt-HOWTO/) tldp HowTo *2003*,
+    outdated document, but still useful, with a chapter on [ANSI Escape Sequences  for
+    Colours and Cursor Movement](https://tldp.org/HOWTO/Bash-Prompt-HOWTO/c327.html).
+
+    The author Gilles Orr has also written
+    [bash Prompts examples](https://gilesorr.com/bashprompt/prompts/index.html).
+
+    [ANSI escape code - Wikipedia](https://en.wikipedia.org/wiki/ANSI_escape_code), give
+    a detailled overwiew of ASCII escape sequences, and list numerous references.
+
+    [bash:tip_colors_and_formatting
+    ](https://misc.flogisoft.com/bash/tip_colors_and_formatting) gives a compact summary
+    of ANSI Escape sequences.
+
+### Shell Prompt systems
+Presently I list only some bash prompt systems; for zsh only prompt systems see the
+following comparison.
+
+An extensive [comparison of prompt systems
+](https://liquidprompt.readthedocs.io/en/latest/overview.html#competitors)
+by Liquid Prompt.
+
+-   [awesome-bash: customization
+    ](https://github.com/awesome-lists/awesome-bash?tab=readme-ov-file#customization)
+    contain a list of prompt systems.
+-   [Liquid Prompt](https://liquidprompt.readthedocs.io/en/stable/) (AGPL 3.0)
+    is an adaptive prompt for Bash & Zsh, written in portable Shell.a
+
+    It can display [many information in the prompt
+    ](https://liquidprompt.readthedocs.io/en/stable/overview.html#features-overview),
+    including version control status. It provides many Themes.
+    -   [liquidprompt - GutHub
+        ](https://github.com/liquidprompt/liquidprompt?tab=readme-ov-file)
+-   [Starship: Cross-Shell Prompt](https://starship.rs/) (ISC License)
+    customizable prompt for any shell. A fast prompt written in Rust for many shells
+    bash, fish, zsh
+    -   [starship - GitHub](https://github.com/starship/starship)
+-   [bash-git-prompt](https://github.com/magicmonty/bash-git-prompt) (CC0-1.0 license)
+    An informative bash prompt for Git users.:w
+
 ## Bash development tools
 
+-   [awesome-bash: Shell Script Development
+    ](https://github.com/awesome-lists/awesome-bash?tab=readme-ov-file#shell-script-development).
+-   [bashdb](http://bashdb.sourceforge.net/) is a source code debugger for bash.
+-   [Bashdoc](https://github.com/ajdiaz/bashdoc) (GPL-3.0)
+    is a bash documentation processor similar to javadoc but use reStructuredText to
+    provide the final document.
 -   [explainshell](https://explainshell.com/)
     is a is a web online tool capable of parsing man pages, extracting options and
     explaining a given command-line by matching each argument to the relevant help text
@@ -285,8 +327,8 @@ pathname and brace expansion, nor process substitution)
     A ssh/sh shell script static analysis tool written in haskell.
 
 
-    *Shellchek* is a unix command and can be used from emacs *flycheck* or *flymake* and from (neo)vim with
-     *ALE*, *Neomake*, or *Syntastic*.
+    *Shellchek* is a unix command and can be used from emacs *flycheck* or *flymake* and
+     from (neo)vim with *ALE*, *Neomake*, or *Syntastic*.
 
      It can be used online on the site [shellcheck.net](https://www.shellcheck.net/).
 
@@ -372,6 +414,10 @@ pathname and brace expansion, nor process substitution)
     ](http://www.gnu.org/software/gawk/manual/html_node/Regexp.html)
     is a good reference on gnu Regexps.
 -   [Awk Faq](http://www.faqs.org/faqs/computer-lang/awk/faq/)
+-   [Awk by Example, Part 1](https://www.funtoo.org/Awk_by_Example,_Part_1),
+-   [Part 2](https://www.funtoo.org/Awk_by_Example,_Part_2),
+-   [Part 3](https://www.funtoo.org/Awk_by_Example,_Part_3
+    by Daniel Robbins.
 -   [Awk in 20 Minutes](https://ferd.ca/awk-in-20-minutes.html) by Fred Hebert.
 -   [Getting started with awk](http://www.cs.hmc.edu/tech_docs/qref/awk.html)
 -   [Steve's Awk Acadamy](http://www.troubleshooters.com/codecorn/awk/index.htm)
@@ -572,7 +618,9 @@ In emacs we can [rename file in Dired
 the use of [dired editable buffer (WDired)](https://www.emacswiki.org/emacs/WDired)
 is very convenient for renaming files in bulk.
 
-## prefix files to put them in order
+## Reorder files
+These script prefix files to put them in order.
+
 -   [autorenamer](https://marcin.owsiany.pl/autorenamer-page) (BSD License)
     A PyGTK2 GUI to rename files in order, by draging them at the wanted order.
     It is in Debian.
