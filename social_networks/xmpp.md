@@ -220,10 +220,11 @@ Begining 2021 this list include for Linux,
     {{< iref "#jsxc" "jsxc" >}},
     {{< iref "#gajim" "Gajim" >}}
     through the plugin [gajim-omemo](https://github.com/omemo/gajim-omemo),
+    {{< iref "kaidan" "kaidan" >}},
     {{< iref "#pidgin" "pidgin" >}} through the plugin _lurch_,
     {{< iref "#psi" "PSI" >}},
     {{< iref "#psi_plus" "PSI+" >}},
-    {{< iref "#salutatoi" "Salut à Toi" >}},
+    {{< iref "#libervia" "Libervia" >}},
 -   Web clients:
     {{< iref "#xabber_web" "Xabber for Web"  >}},
     {{< iref "#converse" "Converse.js" >}}
@@ -231,7 +232,7 @@ Begining 2021 this list include for Linux,
     {{< iref "#pidgin" "Finch" >}} (pidgin curse)  through the plugin _lurch_
     {{< iref "#poezio"  >}} _in progress_,
     {{< iref "#profanity" "profanity" >}},
-    {{< iref "#salutatoi" "primitivus" >}},
+    {{< iref "#libervia" "primitivus" >}},
 
 For mobiles
 -   ios client
@@ -455,13 +456,6 @@ PubSub is defined in several specifications:
 -   [XEP-0060: Publish-Subscribe](https://xmpp.org/extensions/xep-0060.html)
 -   [XEP-0163: Personal Eventing Protocol](https://xmpp.org/extensions/xep-0163.html)
 -   [XEP-0248: PubSub Collection Nodes](https://xmpp.org/extensions/xep-0248.html)
-
-The {{< iref "#salutatoi" "Salut à Toi _Libervia_" >}} project has developed its own
-[XMPP PubSub service component (XEP-0060) - Sat Pubsub
-](https://salut-a-toi.org/documentation/sat%20pubsub). they have proposed
-[XMPP extensions for the Sat Pubsub protocol
-](https://salut-a-toi.org/__b/doc/sat/overview.html#xmpp-extension-protocols)
-
 -   [XEP-0355](https://xmpp.org/extensions/xep-0355.html): Namespace Delegation -
     allows the XMPP server to “delegate” some features management to a third party
     service.
@@ -471,6 +465,16 @@ The {{< iref "#salutatoi" "Salut à Toi _Libervia_" >}} project has developed it
     like if it was sent by the server.
 -   [XEP-0413](https://xmpp.org/extensions/xep-0413.html): Order-By -
     to specify the sorting order in which a client wishes to retrieve some results.
+-   [XEP-0277: Microblogging over XMPP](https://xmpp.org/extensions/xep-0277.html)
+
+The {{< iref "#libervia" "Libervia" >}} project also proposes PubSub protoXEPs
+(proposals for XMPP extensions) to implement features present in ActivityPub but not yet
+in XMPP. For instance, it includes support for XMPP blogging (XEP-0277: Microblogging
+over XMPP), allowing any client that implements this feature to access ActivityPub
+publications.
+
+See [SàT PubSub documentation](https://libervia.org/__b/doc/pubsub/index.html)
+
 
 PubSub is also the base of the {{< iref "#movim" "Movim" >}} server component.
 
@@ -516,14 +520,14 @@ See also [How to choose you Jabber service?
 -   [Jabber.fr: Clients](http://wiki.jabberfr.org/Clients)
 -   [xmpp.org: Clients](http://xmpp.org/xmpp-software/clients/)
 -   [ArchWiki: xmpp console clients
-    ](https://wiki.archlinux.org/index.php/List_of_applications/Internet#Console_6)
+    ](https://wiki.archlinux.org/title/List_of_applications/Internet#XMPP_clients)
 -   [ArchWiki: multiprotocol console clients
-    ](https://wiki.archlinux.org/index.php/List_of_applications/Internet#Console_7)
+    ](https://wiki.archlinux.org/title/List_of_applications/Internet#Multi-protocol_clients_2).
 
--   [BarnOwl](https://github.com/barnowl/barnowl)
+-   [BarnOwl](https://github.com/barnowl/barnowl) (GPL 2.0)
     Ncurses-based chat client with support for the Zephyr, Jabber,
     IRC, and Twitter protocols; forked and extended from the old Owl
-    irc client. Seems to be no more maintained since 2019.
+    irc client. No more maintained since 2019.
     -   [BarnOwl Wiki](https://barnowl.mit.edu/wiki)
 -   {{< iref "#finch" "Finch" >}} the libpurple based client is in the
     {{< iref "#pidgin" "pidgin entry" >}}
@@ -546,20 +550,19 @@ See also [How to choose you Jabber service?
     -   [OTR support for jabber.el](https://github.com/legoscia/emacs-jabber-otr)
         _alpha stage and no commit since 2017_.
 
--   [jp](https://salut-a-toi.org/__b/doc/sat/jp/index.html)
-    is the CLI frontend of {{< iref "#salutatoi" "Salut à Toi" >}}. With it you can send
-    chat messages, share files, retrieve avatars, write blog entries, etc.
+-   [Libervia-cli](https://libervia.org/__b/doc/backend/libervia-cli/index.html)
+    previously *jp* is the CLI frontend of {{< iref "#libervia" "Libervia" >}} With it
+    you can send chat messages, share files, retrieve avatars, write blog entries, etc.y
+-   [Primitivus](https://libervia.org/__b/doc/backend/libervia-tui/index.html) also
+    named *libervia-tui* is a curses console client for {{< iref "#libervia" "Libervia" >}}.
 -   [Licq](http://licq.org/) (GPL)
     is a multiprotocol client supporting ICQ, MSN and XMPP.
     _no more maintained since 2014._
--   <a name="mcabber"></a>[Mcabber
-    ](https://mcabber.com/)
-    (GPL) by Mikael Berthe is a small Jabber console client that
-    support ssl,  history logging, commands completion,   muc (multi
-    user chat), external actions triggers
-    [Xep 0146: client remote control
-    ](http://xmpp.org/extensions/xep-0146.html); and encryption with
-    {{< iref "#openpgp" "OpenPGP" >}} and
+-   <a name="mcabber"></a>[Mcabber](https://mcabber.com/)
+    (GPL) by Mikael Berthe is a small Jabber console client that support ssl, history
+    logging, commands completion, muc (multi user chat), external actions triggers
+    [Xep 0146: client remote control](http://xmpp.org/extensions/xep-0146.html);
+    and encryption with {{< iref "#openpgp" "OpenPGP" >}} and
     {{< iref "#otr" "OTR (Off-the-Record Messaging)" >}}, but no OMEMO support.
     It uses a memory footprint of 13M res/8M shared.
     It that can connect only to one account.
@@ -581,16 +584,14 @@ See also [How to choose you Jabber service?
     conversations, {{< iref "#otr" "OTR" >}}, {{< iref "#openpgp" "OpenPGP" >}},
     and {{< iref "#omemo" "OMEMO" >}} support is [in progress
     ](https://lab.louiz.org/poezio/poezio/-/issues/3280) _but don't seem to come-in
-    quickly!_  through the plugin
-    [poezio-OMEMO](https://lab.louiz.org/poezio/poezio-omemo).
+    quickly!_  through the plugin [poezio-OMEMO](https://lab.louiz.org/poezio/poezio-omemo).
     Poezio support only one account.
     Being a python3 client the memory footprints of poezio are quite heavy for a console
     client 37M res / 9.5M shr.
     -   [Poezio documentation](https://doc.poez.io/)
     -   Debian packages are provided by the
-        [jabber.at apt repository
-        ](https://jabber.at/p/apt-repository/).
-    -   [poezio · GitLab](https://lab.louiz.org/poezio/poezio)
+        [jabber.at apt repository](https://jabber.at/p/apt-repository/).
+    -   [poezio · Codeberg](https://codeberg.org/poezio/poezio)
 -   <a name="profanity">[profanity](https://profanity-im.github.io/) (GPL)
     is a C-ncurses console based client for XMPP,
     inspired by {{< iref "irc#irssi" "irssi" >}}.  It
@@ -617,22 +618,27 @@ See also [How to choose you Jabber service?
         ](https://profanity-im.github.io/plugins.html)
     -   [Profanity OMEMO plugin](https://github.com/ReneVolution/profanity-omemo-plugin)
     -   profanity xmpp room: `profanity@rooms.dismail.de`
--   {{< iref "#salutatoi" "Primitivus now called Libervia CLI" >}}
-    is a console client for {{< iref "#salutatoi" "Salut à Toi" >}} the Debian package
-        is _sat-xmpp-primitivus_. To run primitivus you have first to launch the sat
-    backend which is shared with all {{< iref "#salutatoi" "Salut à Toi" >}} frontends.
-    On my amd64 laptop the sat daemon v 0.8.0 backend uses 81M res / 19M shr; to this
-    you add  the primitivus frontend of 40M res / 14M shr (the shared memory should be
-    effectively shared between thes two!)
+-   {{< iref "#libervia" "Libervia CLI" >}} previously Primitivus,
+    is a console client for {{< iref "#libervia" "Libervia" >}}.
+
+    There is also a curse console client libervia-tui.
+
+    They are packaged in
+   [![packaging](https://repology.org/badge/tiny-repos/libervia-backend.svg?header=packages)
+   ](https://repology.org/project/libervia-backend/versions), including Debian.
+
+    To run libervia-cli you have first to launch the libervia
+    backend which is shared with all {{< iref "#libervia" "Libervia" >}} frontends.
+
+    As a python software, it takes up space; on my amd64 laptop the libervia daemon v
+    0.8.0 backend uses 81M res / 19M shr; to this you add the libervia-cli frontend of
+    40M res / 14M shr (the shared memory should be effectively shared between thes two!)
 -   {{< iref "irc#weechat" "Weechat" >}} has an
     [xmpp plugin](https://github.com/weechat/scripts/blob/master/python/jabber.py)
     but it does not handle anonymous authentication nor chatrooms,
     but you can use a proxy like {{< iref "#bitlbee" "Bitlbee" >}}
     or bitlbee-purple.
     You find it {{< iref "irc#weechat" "weechat on IRC section" >}}.
--   <a name="xmpp-client"></a>[xmpp-client](https://github.com/agl/xmpp-client)
-    (BSD Licence) is a golang XMPP client with  {{< iref "#otr" "OTR" >}}support.
-    {{< iref "#coyim" "coy.im" >}} is a fork of _xmpp-client_.
 
 ## Xmpp Graphical clients
 _I don't mention client with heavy desktop dependencies
@@ -656,10 +662,11 @@ _(said to be lightweight but need libgnome and all bonobo framework)_ ...
     -   [ayttm git repo
         ](https://sourceforge.net/p/ayttm/git/ci/master/tree/)
 -   <a name="coyim"></a>[coyIM](https://coy.im) (GPL)
-    is a Go language / GTK3  xmpp client based on {{< iref "#xmpp" "xmpp-client" >}} and
+    is a Go language / GTK3  xmpp client based on
     [otr3](https://github.com/twstrike/otr3) a Go implementation of the
     OTR 3 protocol.  {{< iref "#otr" "OTR" >}} is enabled by default, as Tor when it is
-    available.  coyIM is in Debian. _very active development as far as 2021, OMEMO planed_
+    available.  coyIM is in Debian. _OMEMO planed, very active until end 2023, then
+    nothing in 2024_
     -   [GitHub - coyim](https://github.com/coyim/coyim/).
 -   <a name="dino"></a>[Dino](https://dino.im/) (GPL 3.0)
     is a GTK+/Vala xmpp client with {{< iref "#omemo" "OMEMO" >}}
@@ -671,21 +678,18 @@ _(said to be lightweight but need libgnome and all bonobo framework)_ ...
     -   [Dino Wiki](https://github.com/dino/dino/wiki)
     -   [Supported XEPs](https://github.com/dino/dino/wiki/Supported-XEPs)
 
--   <a name="empathy"></a> [Empathy](https://wiki.gnome.org/action/show/Attic/Empathy)
-    is a messaging program which uses {{< iref "#telepathy" "Telepathy" >}} for
+-   <a name="empathy"></a> {{< wp "Empathy_(software)"  "Empathy" >}}
+    was a messaging program which uses {{< iref "#telepathy" "Telepathy" >}} for
     protocol support and inherit from the large  Voice and Video
     protocol support from {{< iref "#telepathy" "Telepathy" >}},
     Look at {{< wp "Empathy_(software)"  "Wikipedia: Empathy" >}} for a
-    full list of protocol, note that empathy support SIP and
-    {{< wp "Jingle (protocol)"  "Jingle" >}} allowing Google Talk, on the other
-    hand it does not support OTR and lack the privacy support of Pidgin.  It is based on
+    full list of protocol, empathy was supporting SIP and
+    {{< wp "Jingle (protocol)"  "Jingle" >}},
+    it had not support OTR and lack the privacy support of Pidgin.  It was based on
     __gossip__ for the user interface, and inherit from gossip gnome
 
-    Empathy is currently no longer in development since 2017 the commits are only on
-    improving the language translations.
-
-    _Empathy no more iin Debian, since Bullseye._
-    -   [empathy · GitLab](https://gitlab.gnome.org/Archive/empathy)
+    Empathy is no longer in development since 2017, and is an abandoned gnome project.
+    _Empathy  isno more iin Debian, since Bullseye._
 
 -   <a name="gajim">[Gajim](http://www.gajim.org/) (GPL)
     Jabber client written in PyGTK.  Gajim handle ssl connections and connect to google
@@ -711,6 +715,32 @@ _(said to be lightweight but need libgnome and all bonobo framework)_ ...
     {{< wp "Jingle (protocol)" "Jingle" >}} allowing video calls.  It has also sip
     support. As usual for java apps, it is an heavy software, ~300M resident,
     {{< iref "sip#jitsi" "Jitsi entry in the Sip Section" >}}.
+-   <a name="kaidan">[Kaidan](https://www.kaidan.im/) (GPL 3)
+    is a C++/QT 5.x xmpp client built with the Qt-based XMPP library QXmpp.
+    It supports OMEMO encryption, and audio / video calls, and is packaged in Debian.
+
+    -   [Kaidan · GitLab](https://invent.kde.org/network/kaidan).
+    -   [Kaidan support for XEPs, RFCs
+        ](https://invent.kde.org/network/kaidan/-/wikis/xeps-rfcs)
+-   <a name="libervia"></a>[Libervia](https://libervia.org/) (AGPL)
+    previously _Salut à Toi_ is a Xmpp multi-frontends python tools wich allow in
+    addition to jabber microblogging, file sharing, irc access, email client access. It
+    has desktop, android, web server and client, console, and cli frontends.
+    -   [Libervia Documentation](https://libervia.org/documentation)
+    -   [Libervia Backend documentation](https://libervia.org/__b/doc/backend/index.html#)
+    -   [Encryption in Libervia/XMPP](https://libervia.org/__b/doc/backend/encryption.html)
+    -   [Primitivus](https://libervia.org/__b/doc/backend/libervia-tui/index.html) also
+        named *libervia-tui* is a curses console client for Libervia.
+    -   the Debian package is *libervia-tui*.
+    -   [Libervia-cli](https://libervia.org/__b/doc/backend/libervia-cli/index.html)
+        previously *jp* is the CLI frontend of Libervia With it you can send chat
+        messages, share files, retrieve avatars, write blog entries, etc.y
+    -   [Kivy](https://libervia.org/documentation/desktop-mobile) alias _Libervia
+        Desktop_, previously _cagou_ is the desktop/mobile frontend of Libervia. It
+        is not yet in Debian _because of blocking bugs_, but a flatpack package is
+        available.
+    -   [Libervia Web](https://libervia.org/documentation/web) Libervia is the
+        web frontend for _Libervia_, that allow notifications via web push.
 -   <a name="psi"></a>[Psi](http://psi-im.org/) (GPL)
     QT 5.x Jabber Client(26M/20M shared). Psi
     can handle ssl connections and [connect to google talk service
@@ -737,39 +767,10 @@ _(said to be lightweight but need libgnome and all bonobo framework)_ ...
             ](http://psi-plus.com/wiki/en:plugins)
         -   [GitHub repository with snapshots for Psi+
             ](https://github.com/psi-plus/psi-plus-snapshots).
-    -   [Psimedia](https://github.com/psi-plus/psimedia)
+    -   [Psimedia](https://github.com/psi-im/psimedia)
         is an abstraction layer for providing audio and video RTP services to Psi-like
-        IM clients.  The implementation is based on GStreamer. _In the Debian package
-        psi-plus-plugin-psimedia_.
--   <a name="salutatoi"></a>[Salut à Toi](https://salut-a-toi.org/) (AGPL) now
-    renamed _Libervia_
-    is a Xmpp multi-frontends python tools wich allow in addition to
-    jabber microblogging, file sharing, irc access, email client
-    access. It has desktop, android, web server and client, console,
-    and cli frontends.
-    -   [Salut à Toi Documentation](https://salut-a-toi.org/documentation)
-    -   [primitivus](https://salut-a-toi.org/__b/doc/backend/libervia-tui/index.html)
-        also named _libervia TUI_
-        is a console client for _Salut à Toi_ the Debian package is
-        _sat-xmpp-primitivus_.
-    -   [jp](https://salut-a-toi.org/__b/doc/backend/libervia-cli/index.html)
-        alias _Libervia CLI_ is the CLI frontend of Salut à Toi. With it you can send
-        chat messages, share files, retrieve avatars, write blog entries, etc.  The
-        Debian package is _sat-xmpp-jp_.
-    -   [cagou](https://salut-a-toi.org/documentation/cagou) alias _Libervia Desktop_ is
-        the desktop/mobile frontend of Salut à Toi. It is not yet in Debian _because
-        of blocking bugs_, but a flatpack package is available.
-    -   [Libervia Web](https://salut-a-toi.org/__b/doc/backend/overview.html#libervia-web) Libervia is the
-        web frontend for _Salut à Toi_, that allow notifications via web push.
--   [Kaidan](https://www.kaidan.im/) (GPL 3)
-    is a C++/QT 5.x xmpp client built with the Qt-based XMPP library QXmpp.
-    As far as v 0.7, it dos not support encryption, OMEMO is planned.
-
-    _Kaidan_ supports audio / video calls, and is packaged in Debian.
-
-    -   [Kaidan · GitLab](https://invent.kde.org/network/kaidan).
-    -   [Kaidan support for XEPs, RFCs
-        ](https://invent.kde.org/network/kaidan/-/wikis/xeps-rfcs)
+        IM clients (presently Psi and PsiPlus) The implementation is based on
+        GStreamer. _In the Debian package psi-plus-plugin-psimedia_.
 -   <a name="spark"></a>[Spark](http://www.igniterealtime.org/projects/spark/index.jsp)
     (Apache License) is a java based client proposed by
     [ignite realtime](http://igniterealtime.org/) the authors of
@@ -781,7 +782,7 @@ _(said to be lightweight but need libgnome and all bonobo framework)_ ...
     It is an heavy software but with {{< wp "Jingle (protocol)"  "Jingle" >}}
     support.
     -   [Spark GitHub repository](https://github.com/igniterealtime/Spark)
--    <a name=swift"></a>[Swift](https://swift.im/) (GPL) is a C++ / QT Xmpp client.
+-    <a name="swift"></a>[Swift](https://swift.im/) (GPL) is a C++ / QT Xmpp client.
      Swift uses{{< iref "#bosh" "BOSH" >}}
     for connecting to servers over HTTP
     where network conditions prohibit standard connection methods.
@@ -867,16 +868,15 @@ Whenever I'm on a foreign computer, a jabber client can be very useful.
     [own managed virtual XMPP server](https://www.jsxc.org/managed.html)
     with a nextcloud app.
     -   [GitHub jsxc](https://github.com/jsxc/jsxc)
--   <a name=jwchat></a>[Jwchat](http://stefan-strigler.de/jwchat/)
+-   <a name=jwchat></a> [JWChat](https://jwchat.org/) (GPL-2.0).
     is a XMPP web client. It supports communication over
     {{< iref "#bosh" "BOSH" >}} and MUC. _Jwchat is in Debian_.
     Jwchat is  discontinued since 2011, but you can still find a live
     client
-    -   [JWChat at jwchat.org](https://jwchat.org/).
     -   [Jwchat tutorial](http://wiki.jabberfr.org/JWChat).
     -   [Jwchat GitHub repo](https://github.com/sstrigler/jwchat)
--   {{< iref "#salutatoi" "Libervia Web" >}} is the web frontend of
-    {{< iref "#salutatoi" "Salut à Toi alias Libervia" >}}, that allow notifications via
+-   {{< iref "#libervia" "Libervia Web" >}} is the web frontend of
+    {{< iref "#libervia" "Libervia " >}}, that allow notifications via
     web push.
     -   [Libervia demo](https://www.libervia.org/)
 -   <a name="movim"></a>{{< wp "Movim" >}}
@@ -943,14 +943,11 @@ Whenever I'm on a foreign computer, a jabber client can be very useful.
     {{< iref "#openpgp" "OpenPGP" >}}.
     See the [homepage](https://github.com/siacs/Conversations)
     for a list of features and supported XEP.
--   {{< iref "#salutatoi" "Salut à Toi alias Libervia" >}} (AGPL) is developing
-    an Android client.
+-   {{< iref "#libervia" "Libervia" >}} (AGPL) is developing an Android client.
 -   <a name="stork"></a>[Stork](https://github.com/tigase/stork) (AGPL) by
     [Tigase Inc.](https://tigase.net/) is a XMPP client. It supports all XMPP specifications RFC
     6120 - XMPP COR, RFC 6121 - XMPP IM ,and many extensions including Multi-User Chat
     XEP-0045, and {{< iref "#omemo" "OMEMO" >}}.
--   [Beem](http://beem-project.com/projects/beem/) (GPL)
-    _last release 2013_
 -   [Xabber](https://www.xabber.com/)  (GPL) Xmpp client for
     Android, it supports {{< iref "#otr" "OTR" >}}.
 -   [yaxim - Github](https://github.com/yaxim-org/yaxim)
@@ -962,8 +959,8 @@ Whenever I'm on a foreign computer, a jabber client can be very useful.
     {{< iref "#otr" "OTR" >}} and
     {{< iref "#omemo" "OMEMO" >}}
     created by the {{< iref "#chatsecure" "ChatSecure project" >}}.
-   But the new zom 2 version of འཛོམས་ is targeted to
-    {{< iref "#matrix" "Matrix" >}} protocol.
+    -   [zom projects - Github](https://github.com/zom)
+        /Seems to be abandoned projects./
 
 ## XMPP Ios Clients
 -   <a name="chatsecure"></a>[Chatsecure](https://chatsecure.org/) (GPL)
@@ -976,10 +973,10 @@ Whenever I'm on a foreign computer, a jabber client can be very useful.
     -   [ChatSecure, Conversations and Zom — ChatSecure
         ](https://chatsecure.org/blog/chatsecure-conversations-zom/), in the
         {{< wp "The_Guardian_Project_(software)"  "The Guardian Project" >}} Blog.
--   <a name="monal"></a>[Monal](https://monal.im/) ( BSD License)
+-   <a name="monal"></a>[Monal](https://monal-im.org/) ( BSD License)
     an IOS and Mac OS xmpp client with
     [OMEMO and Jingle support](https://monal.im/supported-xeps/).
-    -   [Monal - Github](https://github.com/anurodhp/Monal/).
+    -   [Monal - Github](https://github.com/monal-im/Monal).
 -   <a name="siskin"></a>[Siskin IM](https://siskin.im/) ( GPL-3.0 )
     by [Tigase Inc](https://tigase.net/) is an XMMP client for ios with
     {{< iref "#omemo" "OMEMO" >}} support. _Tigase_ has also a MacOS client
@@ -1005,7 +1002,7 @@ Whenever I'm on a foreign computer, a jabber client can be very useful.
     which also maintain [Chrome.pl](http://www.chrome.pl/)
     a polish XMPP/Jabber service with integrated e-mail accounts and
     option to host own domain accounts.
--   <a name=openfire"></a>[Openfire
+-   <a name="openfire"></a>[Openfire
     ](http://www.igniterealtime.org/projects/openfire/index.jsp)
     (Apache License) is a real time collaboration (RTC) XMPP server
     written in Java, proposed by
@@ -1036,12 +1033,6 @@ Whenever I'm on a foreign computer, a jabber client can be very useful.
     [Tigase XMPP Client Apps](https://tigase.net/xmpp-clients)
     {{< iref "#siskin" "Siskin" >}},  {{< iref "#stork" "Stork" >}} and _Beagle_.
     -   [Tigase Server - GitHub](https://github.com/tigase/tigase-server).
--   [IMSpector](http://www.imspector.org/wordpress/) (GPL)
-    is an Instant Messenger proxy written in C++ with monitoring,
-    blocking and content-filtering capabilities. It supports MSN,
-    Jabber/XMPP, AIM, ICQ, Yahoo, IRC and Gadu-Gadu.  IMSpector is
-    normally deployed on the network’s router. _It is in debian._
-
 
 ## Xmpp Libraries
 ### C or C++
@@ -1082,7 +1073,6 @@ Whenever I'm on a foreign computer, a jabber client can be very useful.
         since 2020.
     -   [Nonsense](https://telepathy.freedesktop.org/components/telepathy-nonsense)
         connection manager for the XMPP (Jabber) protocol, based on QXmpp
-
 
 
 ### Python, Lua
@@ -1619,7 +1609,7 @@ As well _Whatsapp_ as displayed
 status and profile pictures, privacy settings or status messages regardless of their
 privacy settings.
 
-Sinxe _Whatsapps_ was acquired by Facebook it is sharing data with
+Since _Whatsapps_ was acquired by Facebook it is sharing data with
 the rest of Facebook’s services. Look at
 [Data transfer from WHATSAPP to FACEBOOK: CNIL publicly serves formal notice for lack of legal basis
 ](https://www.cnil.fr/en/data-transfer-whatsapp-facebook-cnil-publicly-serves-formal-notice-lack-legal-basis)
@@ -1642,15 +1632,14 @@ and
 -   [WhatsApp - ArchWiki](https://wiki.archlinux.org/title/WhatsApp).
 -   <a name="eff_whatsapp"></a>
     [Electronic Frontier Foundation (EFF)](https://www.eff.org/) guide
-    [Surveillance Self-Defense (SSD) HowTo
-    ](https://ssd.eff.org/) :
+    [Surveillance Self-Defense (SSD)](https://ssd.eff.org/) :
     : [How to: Use WhatsApp on Android
     ](https://ssd.eff.org/en/module/how-use-whatsapp-android),
     [How to: Use WhatsApp on iOS
     ](https://ssd.eff.org/en/module/how-use-whatsapp-ios).
     The EFF [don't recommend WhatsApp for secure communications
     ](https://www.eff.org/deeplinks/2016/10/where-whatsapp-went-wrong-effs-four-biggest-security-concerns)
--   <a name="yowsup"</a>[Yowsup](https://github.com/tgalal/yowsup) (GPL-3.0)
+-   <a name="yowsup"></a>[Yowsup](https://github.com/tgalal/yowsup) (GPL-3.0)
     a python library that enables you build application which use WhatsApp service.
 
     _It seems that WhatsApp now detect Yowsup and  ban  your number, so don't use it
@@ -1670,10 +1659,11 @@ and
     An unofficial WhatsApp desktop application for Linux.written in C++ with gtkmm and
     WebKitGtk.
 
+    There are packages for some distribution
     [![packaging](https://repology.org/badge/tiny-repos/whatsapp-for-linux.svg?header=packages)
-    ](https://repology.org/project/whatsapp-for-linux/versions).
-    also available on SnapStore and FlatHub, a Debian package is available in the GitHub
-    releases.
+    ](https://repology.org/project/whatsapp-for-linux/versions),
+    it is also available on SnapStore and FlatHub, a Debian package is available in the
+    GitHub releases.
 -   [nchat](https://github.com/d99kris/nchat) (MIT license)
     a c++ terminal-based Telegram / WhatsApp client for Linux and macOS.
 
