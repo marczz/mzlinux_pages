@@ -11,13 +11,11 @@ see also {{< iref "clouds" "Clouds" >}},
     {{< wp "List of backup software" >}},
     {{< wp "Comparison of online backup services" >}},
     {{< wp "Synchronization and backup programs" >}}
--   [Debian Wiki: Backup And Recovery
-    ](https://wiki.debian.org/BackupAndRecovery)
+-   [Debian Wiki: Backup And Recovery](https://wiki.debian.org/BackupAndRecovery)
     gives a list of backup related Debian Packages.
 -   [Debian Reference Manual §10.2: Backup and recovery
     ](https://www.debian.org/doc/manuals/debian-reference/ch10.en.html#_backup_and_recovery)
--   [Debian Help: category backup
-    ](http://www.debianhelp.co.uk/backup.htm)
+-   [Debian Help: category backup](http://www.debianhelp.co.uk/backup.htm)
     [Debian Help: tools Available for Linux Backup
     ](http://www.debianhelp.co.uk/backuptools1.htm)
 -   [Arch Wiki: Synchronization and backup programs
@@ -461,28 +459,29 @@ See also the {{< iref "#rsync" "rsync section" >}}
     The difference with rsync is that it remove file boundaries before chunking things
     up; which permits us to recognize similarities in files and directories beyond file
     boundaries.
-    
+
     _Casync_ is a software from Lennart Poettering, who present it [in his blog
     ](http://0pointer.net/blog/casync-a-tool-for-distributing-file-system-images.html)
-    
+
     _In Debian, last release 2017, active 2021._
 -   [Dirvish](http://www.dirvish.org/) (Open Software License)
-    written in Perl, is no longer an active project since 2008, but still packaged in 
+    written in Perl, is no longer an active project since 2008, but still packaged in
     Debian in 2022.
     -   [Configuring and Using Dirvish for Snapshot  Backups
         ](http://wiki.edseek.com/howto:dirvish).
 -   [luckyBackup](http://luckybackup.sourceforge.net/) (GPL)
-    is an rsync-based GUI data backup utility that uses snapshots.
-    It comes with a QT gui and is available as Debian package.
+    is an rsync-based GUI data backup utility that uses snapshots.  It comes with a QT
+    gui and is available as Debian package.
+-   [mrb](https://packages.debian.org/sid/mrb) _Debian package_
+    is a single, self-documenting, executable makefile, to  maintain a set of compact,
+    incremental, rsync mirrors of your data.
 -   [rsbackup](http://www.greenend.org.uk/rjk/rsbackup/) (GPL)
-    uses rsync with hardlinks. It is written in C++, actively
-    maintained _in 2022_, and is in Debian.
-    -   [rsbackup GitHub repository
-        ](https://github.com/ewxrjk/rsbackup).
+    uses rsync with hardlinks. It is written in C++, actively maintained _in 2022_, and
+    is in Debian.
+    -   [rsbackup GitHub repository](https://github.com/ewxrjk/rsbackup).
 -   <a name="rsnapshot"></a>[Rsnapshot](https://rsnapshot.org/) (GPL)
-    written in Perl can take incremental snapshots of local and
-    remote filesystems using of hard links following M Rubel
-    idea.
+    written in Perl can take incremental snapshots of local and remote filesystems using
+    of hard links following M Rubel idea.
      _Rsnapshot is packaged in Debian_
      -  [rsnapshot - GitHub](https://github.com/rsnapshot/rsnapshot)
     -   [Using Rsnapshot and SSH](http://troy.jdmz.net/rsnapshot/)
@@ -501,20 +500,18 @@ See also the {{< iref "#rsync" "rsync section" >}}
     [introduces his backup solution in his Blog
     ](http://sysphere.org/~anrxc/j/archives/2010/05/31/introducing_rybackup_again/index.html).
 -   [S3_backup.sh](http://www.rath.org/s3ql-docs/contrib.html#s3-backup-sh)
-    is an  example script  that demonstrates  how to  set up  a simple
-    backup solution on amazon S3 using
+    is an example script that demonstrates how to set up a simple backup solution on
+    amazon S3 using
     [S3QL](http://code.google.com/p/s3ql/) and rsync.
 -   [TimeShift](https://github.com/linuxmint/timeshift)
-    is an application written in vala that provides functionality
-    similar to the System Restore feature in Windows and the Time
-    Machine tool in Mac OS. Snapshots are taken using rsync and
-    hard-links. TimeShift is similar to applications like
+    is an application written in vala that provides functionality similar to the System
+    Restore feature in Windows and the Time Machine tool in Mac OS. Snapshots are taken
+    using rsync and hard-links. TimeShift is similar to applications like
     {{< iref "#rsnapshot" "rsnapshot" >}},
     {{< iref "#backintime" "BackInTime" >}} and
     {{< iref "#timevault" "TimeVault" >}}
-    but is designed to protect only system files and
-    settings. To backup user data we should use
-    {{< iref "#backintime" "BackInTime" >}}. It comes with a
+    but is designed to protect only system files and settings. To backup user data we
+    should use {{< iref "#backintime" "BackInTime" >}}. It comes with a
     GTK GUI frontend.
     TimeShift is an active project _in 2022_, it is available in Debian.
     -   [TimeShift source repository](https://github.com/linuxmint/timeshift)
@@ -670,7 +667,7 @@ See also the {{< iref "#rsync_backup" "Section on rsync backup" >}}
     {{< iref "schedulers#inotify" "inotify" >}} to watch files
     and rsync and ssh to synchronize them. [Lsyncd is packaged in Debian
     ](https://tracker.debian.org/pkg/lsyncd). The source repository was sleeping
-    since 2018, but seems to have new activity in 2022, the issues and pull request 
+    since 2018, but seems to have new activity in 2022, the issues and pull request
     are still mainly unanswered.
 
     See also {{< iref "#clsync" "clsync" >}} which was conceived as an enhancement of
