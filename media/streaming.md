@@ -164,6 +164,7 @@ Wikipedia has a {{< wp "Pulseaudio" >}} page.
     is a modular session / policy manager for PipeWire and a GObject-based high-level
     library that wraps PipeWire’s API, providing convenience for writing the daemon’s
     modules as well as external tools for managing PipeWire.
+-   [PipeWire Guide](https://github.com/mikeroyal/PipeWire-Guide) by Michael Royal.
 
 The release 3.25 add pw-loopback tool and support module-loopback. pw-loopback
 Sends the captured data from a source directly to a sink.
@@ -198,8 +199,9 @@ The Debian package _gstreamer1.0-tools_ include the basic
 command-line tools provided with GStreamer
 
 
-_Gstreamer_ provides some [Command line tools
-](https://gstreamer.freedesktop.org/documentation/tools/index.html)
+_Gstreamer_ provides some
+[Command line tools](https://gstreamer.freedesktop.org/documentation/tools/index.html):
+
 gst-inspect
 :   [gst-inspect-1.0
     ](https://gstreamer.freedesktop.org/documentation/tools/gst-inspect.html)
@@ -221,12 +223,12 @@ gst-typefind
 :   uses  the  GStreamer type finding system to determine the relevant
     GStreamer plugin to parse or decode a file, and the corresponding media type.
 
-They are many clients available, some listed below, but to
-experiment with gstreamer you need a command line tool like
+They are many clients available, some listed below, but to experiment with gstreamer you
+need a command line tool like
 [gst123](http://space.twc.de/~stefan/gst123.php).
 
-Gstreamer is appropriate for playing music and converting formats.
-The plugins are in the package gstreamer-plugins.
+Gstreamer is appropriate for playing music and converting formats.  The plugins are in
+the package gstreamer-plugins.
 
 Gstreamer is the basis of numerous applications the following are refered in these
 pages:
@@ -622,16 +624,16 @@ and broadcasting of digital media which is used by {{< wp "DLNA" >}} devices.
 -   [ReadyMedia previously MiniDLNA](http://sourceforge.net/projects/minidlna/) (GPL)
     is server software with the aim of being fully compliant with DLNA/UPnP-AV
     clients. It is developed by a NETGEAR employee for the ReadyNAS product
-    line. _active in 2020_
+    line. _active in 2023_
     -   [ReadyMedia git repository
         ](https://sourceforge.net/p/minidlna/git/ci/master/tree/)
-    -   [ReadyMedia news
-        ](http://sourceforge.net/p/minidlna/git/ci/master/tree/NEWS)
-    -   [Webmin plugin for miniDLNA
-        ](http://sourceforge.net/projects/minidlnawebmin/)
+    -   [ReadyMedia news](http://sourceforge.net/p/minidlna/git/ci/master/tree/NEWS)
+    -   [Webmin plugin for miniDLNA](http://sourceforge.net/projects/minidlnawebmin/)
+    -   [ReadyMedia - ArchWiki](https://wiki.archlinux.org/title/ReadyMedia)
 
-    _ReadyMedia_ is a tiny server on an arm v6 I have footprint of 2 MB and on an arm64 7MB
-    resident / 3M shared.
+    _ReadyMedia_ is a tiny server on the memory footprint on an armhd is 20M res / 15M
+    shared, with 50G of media indexed.
+
 -   [Universal Media Sever](http://www.universalmediaserver.com/) (GPL-2.0)
     is a  Java UpNP server which was forked and is the continuation of
     [PS3 Media Server]((https://github.com/ps3mediaserver/ps3mediaserver), which is not
@@ -861,7 +863,8 @@ More control points and server are in the
     _Owntone_ can transcode a stream with ffmpeg, when the format is not understood by
     the client. It also supports  M3U and PLS playlists.
 
-    _forked-daapd_ is in Debian.
+    _forked-daapd_ was in Debian until buster, a debian package is [available in the
+    GitHub repository](https://owntone.github.io/owntone-server/installation/).
 
     -   [owntone server - Raspberry Pi Forums
         ](https://www.raspberrypi.org/forums/viewtopic.php?t=49928)
