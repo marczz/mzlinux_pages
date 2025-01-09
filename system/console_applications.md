@@ -31,6 +31,8 @@ The internet messaging clients are in the pages {{< iref "irc" "IRC" >}},
 -   [awesome-browserless](https://github.com/koalagang/awesome-browserless)
     _awesome_ list of alternatives to apps traditionally used in the web browser.
     _not only console_.
+-   [Modern Rust Alternatives of Command-Line Tools
+    ](https://zaiste.net/posts/shell-commands-rust/)
 
 # Command line WEB search
 
@@ -49,7 +51,7 @@ The internet messaging clients are in the pages {{< iref "irc" "IRC" >}},
         ](http://surfraw.alioth.debian.org/#elvilist)
 
 # List of applications
-See also {{< iref "#shell#grep" "Grep and other tools" >}}
+See also {{< iref "shell#grep" "Grep and other tools" >}}
 
 
 The applications below are not cross-referenced with their main entry
