@@ -62,7 +62,7 @@ Compressed lossless formats
 
     Multiple  images tiff files can be splited or combined with
     {{< iref "#libtiff" "libtiff-tools" >}}, or even by
-    {{< iref "#graphicsmagick" "GraphicsMagick" >}}/{{< iref "#Imagemagick" "ImageMagic" >}}
+    {{< iref "#graphicsmagick" "GraphicsMagick" >}}/{{< iref "#imagemagick" "ImageMagic" >}}
     but these two last will use a lot of memory by loading all pages.
 
     Multiple  images tiff can be displayed only by some viewers like
@@ -129,7 +129,7 @@ Lossy Formats
         browsers as _Chromium_, _Opera_, and an implementation is going on for
         _WebKit_ and _Mozilla_ based browsers.
     -   Image editors as _Gimp_ and
-        _{{< iref "#Imagemagick" "ImageMagic" >}}_, _but not yet GraphicsMagick_
+        _{{< iref "#imagemagick" "ImageMagic" >}}_, _but not yet GraphicsMagick_
         have also support for _WebP_
     -   Among viewers _Gthumb_ supports _WebP_. There is a
         [WebP plugin for imlib2](https://github.com/gawen947/imlib2-webp)
@@ -393,6 +393,7 @@ _Notes_
     total of 19MB_
 
 ### Wayland image viewers {#wayland_image_viewers}
+See also  {{< iref "desktop#wayland_desktop_components" "Wayland Desktop Components" >}}
 
 -   [imv](https://sr.ht/~exec64/imv/)  (MIT License)
     is an image viewer for X11/Wayland.
@@ -406,7 +407,8 @@ _Notes_
         has some improvements.
 -   [swappy](https://github.com/jtheoof/swappy) (MIT license)
     A Wayland native snapshot editing tool, inspired by Snappy on macOS,
-    it is used with grim and slurp.
+    it is used with {{< iref "desktop#grim" "grim" >}} and
+    {{< iref "desktop#slurp" "slurp" >}}.
     [![packaging](https://repology.org/badge/tiny-repos/swappy.svg?header=packages)
     ](https://repology.org/project/swappy/versions)repos
 -   [swayimg](https://github.com/artemsen/swayimg) (MIT license)
@@ -514,7 +516,7 @@ Some viewer like timg work with many protocol.
 
 ## Raster software
 
-_see also Dia, Ditaa, Gnuplot, ivtools, xfig, veusz in the
+*see also Dia, Ditaa, Gnuplot, ivtools, xfig, veusz in the*
 {{< iref "svg#svg_software" "SVG Software section" >}}.
 
 -   [Aafigure](http://packages.python.org/aafigure/)
@@ -534,10 +536,10 @@ _see also Dia, Ditaa, Gnuplot, ivtools, xfig, veusz in the
     python3 GTK simple image editor for Linux similar to MS Paint.
     It is in many distributions including Debian, Alpine and on Flathub.
 -   <a name="exactimage"></a>[ExactImage](https://exactcode.com/opensource/exactimage/)
-    is a fork of {{< iref "#Imagemagick" "ImageMagic" >}}, coded for speed in C++.
+    is a fork of {{< iref "#imagemagick" "ImageMagic" >}}, coded for speed in C++.
     It supports BMP, Digital Camera RAW, GIF, JPEG, JPEG2000, OpenEXR, PNG, PBM, RAW,
     TIFF, XPM, SVG PDF, PS, EPS, PCX, Targa, TGA. More formats are planed. It has
-    utilities similar to those of {{< iref "#Imagemagick" "ImageMagic" >}}:
+    utilities similar to those of {{< iref "#imagemagick" "ImageMagic" >}}:
     `econvert`, `edisplay`, `edentify`.
 
     It has also {{< man "hocr2pdf" >}} to create a searchable PDF from hOCR input.
@@ -591,7 +593,10 @@ _see also Dia, Ditaa, Gnuplot, ivtools, xfig, veusz in the
     (Open Source free [custom license](http://www.imagemagick.org/script/license.php))
     is an image display and manipulation tool for the X Window System.
 
-    ImageMagick can read and write
+    In 2025 it seems that neither Image Magick, nor Graphics Magick can use wayland,
+    which means that *display* uses XWayland, and import cannot import wayland windows.
+
+    Image Magick can read and write
     [many format](https://imagemagick.org/script/formats.php#supported) among which:
     BPM, EPS, EXR, FAX (G3, G4), GIF, JBIG, JPEG, JPEG-2000 (PGX), JXR i.e. _JPEG-XR_,
     MPEG (M2V, M4V, MKV, MOV, MPG, WMV), Photo CD (PCD), PDF, PNG, PNM (PBM, PPM, PGM,
@@ -722,6 +727,43 @@ _see also Dia, Ditaa, Gnuplot, ivtools, xfig, veusz in the
 -   [Guy Rutenberg – Separating Colors
     ](https://www.guyrutenberg.com/2012/10/12/scanning-lecture-notes-separating-colors/)
     deals with generating 1bit depth image from coloured images.
+
+## Wayland Screenshot {#wayland-screenshot}
+
+-   [Screen capture in wayland - Archwiki](https://wiki.archlinux.org/title/Screen_capture#Wayland)
+-   [grimshot](https://github.com/OctopusET/sway-contrib/blob/master/grimshot) -
+    script to grab regions from the window, by using *grim*, *slurp*, *wl-copy* and *jq*.
+
+    *Packaged in Debian*
+-   [screenshot-bash
+    ](https://codeberg.org/Scrumplex/screenshot-bash/src/branch/master/screenshot-bash) (GPL)
+    screenshot - upload - copy-url pipeline using *grim*, *slurp*, *wl_copy*.
+-   [snag](https://github.com/b0o/snag) (MIT License)
+    bash script to snag screenshots and screencasts with Rofi
+-   [swappy](https://github.com/jtheoof/swappy) (MIT Licence)
+    A Wayland native snapshot and editor tool, works grim, slurp and sway.
+-   [swayshot](https://gitlab.com/vitalijr2/swayshot) (GPL-3.0)
+    adds sway keyboard shortcuts for screenshots of the full screen, focused window,
+    or selected region. Optionally upload them to 0x0.st.
+
+    It uses *grim*, *slurp*, *jq* and *wl-clipboard*.
+-   [shotman](https://git.sr.ht/~whynothugo/shotman) (ISC License)
+    rust program to take a screenshot and shows a small thumbnail with actions to copy,
+    delete, dismiss.
+-   [taiga](https://hg.sr.ht/~scoopta/taiga) (GPL-3.0)
+    an animated waylan screenshot program written in C.
+-   [wayshot](https://git.sr.ht/~shinyzenith/wayshot)
+    A native screenshot tool for wlroots based compositors such as sway
+    and river written in Rust.
+-   [flameshot](https://github.com/flameshot-org/flameshot) (GPL-3.0)
+    screenshot software, with customizable appearance, in-app screenshot editing, D-Bus
+    interface, experimental GNOME/KDE Wayland support, integration with Imgur and
+    support for both GUI and CLI interface.
+
+    *Packaged in Debian*
+-   [sway-screenshot](https://github.com/Gustash/sway-screenshot) (GPL-3.0)
+    bash script to take screenshot in swaywm using your mouse, using
+    *grim*, *slurp*, *wl_clipboard*, *jq*, *imagemacick*.
 
 # Static Images gallery
 -   [Sigal](http://sigal.saimon.org/en/latest/) (MIT License)
