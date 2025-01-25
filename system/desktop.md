@@ -223,7 +223,7 @@ There is also a _uncomplete and not up to date_ [Tutorial index on reddit r/unix
     and is extensible using Lua. It is packaged in Debian.
     -   [Alberto Pettarin: awesome is awesome!
         ](http://www.albertopettarin.it/blog/2015/07/07/awesome-is-awesome.html)
--   <a name=dwm"></a>[dwm](http://dwm.suckless.org/)
+-   <a name="dwm"></a>[dwm](http://dwm.suckless.org/)
     is a minimalistic window manager. It manages windows in tiling,
     monocle -i.e. stacked_ and floating modes. It is part of the
     [suckless software](http://dwm.suckless.org/) and is packaged in
@@ -293,7 +293,7 @@ floating, on an individual window base.
 
 -   [i3 documentation](http://i3wm.org/docs/):
 -   [i3 doc](https://github.com/i3/i3/tree/next/docs) contain tools,
-    the userguide, the refcard &#x2026;
+    the userguide, the refcard.
     -   [user guide](http://i3wm.org/docs/userguide.html).
 -   [i3: IPC interface (interprocess communication)
     ](http://i3wm.org/docs/ipc.html)
@@ -318,19 +318,11 @@ The window manager alone uses 5.9M/4.8M, the {{< iref "#i3bar" "i3bar" >}} 5M/4.
     [i3lock](https://github.com/i3/i3lock) lockscreen for i3.
     -   [i3lock-solarized](https://github.com/parsiad/i3lock-solarized)
         Solarized theme for i3lock-color.
--   [GitHub: i3-py](https://github.com/ziberna/i3-py)
-    contains python tools for i3. No new commit since 2012 there are many forks, but
-    nobody seems to maintain the repository.<br /> The script _winmenu.py_ launches
-    {{< iref "#dmenu" "dmenu" >}} (with vertical patch) with a list of clients, sorted
-    after workspaces. Selecting a client jumps to that window.
--   [GitHub: quickswitch-for-i3
-    ](https://github.com/proxypoke/quickswitch-for-i3)
+-   [GitHub: quickswitch-for-i3](https://github.com/proxypoke/quickswitch-for-i3)
     ( [WFPT Licence](http://sam.zoy.org/wtfpl/COPYING))
     is a python script using _i3-py_ that allows you to quickly switch to and locate
     windows on all your workspaces, using an interactive {{< iref "#dmenu" "dmenu" >}}
-    prompt.
-    A more recent fork is [Oliver Uvman - quickswitch-for-i3
-    ](https://github.com/OliverUv/quickswitch-for-i3)
+    prompt. The last commit is from 2017, there were some forks, but no recent one.
 -   [GitHub: i3-wm-scripts](https://github.com/MicahChambers/i3-wm-scripts)
     is a collection of python scripts that contains:
     -   _nextmatch.py_ to jump to a window by matching a title regex.
@@ -339,7 +331,7 @@ The window manager alone uses 5.9M/4.8M, the {{< iref "#i3bar" "i3bar" >}} 5M/4.
         window chhosen from the target list; _unmark_ to delete from
         the list.
 -   [GitHub: i3-emacs](https://github.com/vava/i3-emacs) is an emacs
-    package for i3-emacs integration.
+    package for i3-emacs integration. *Last commit 2020*
 -   [raiseorlaunch](https://github.com/open-dynaMIX/raiseorlaunch) (MIT License)
     A run-or-raise-application-launcher for i3 window manager.
 
@@ -514,7 +506,7 @@ See also the {{< iref "xorg#wayland" "Wayland Section" >}},
     using Xwayland.
 
     When used on top of Xorg it acts as a X11 window manager and compositing manager.
--   <a name=wayfire"></a>[Wayfire](https://wayfire.org/) (MIT License)
+-   <a name="wayfire"></a>[Wayfire](https://wayfire.org/) (MIT License)
     a wayland compositor based on wlroots.
    [![packaging](https://repology.org/badge/tiny-repos/wayfire.svg?header=packages)
    ](https://repology.org/project/wayfire/versions).
@@ -627,9 +619,9 @@ The themes are the same than for i3 you find them in
 
 ## Wayland desktop components {#wayland_desktop_components}
 
-The wayland image viewers are in
-<a class="iref" href={{< relref "images#wayland_image_viewers" >}}
-title="internal reference">a section of the image Page</a>
+In the {{iref "images" "Image page" >}} you can find the
+{{< iref "images#wayland_image_viewers" "wayland image viewers" >}}
+and {{< iref "images#wayland-screeshot" "wayland screenshot tools" >}}
 
 I don't list here all the GTK and QT applications that run natively under Wayland
 
@@ -683,7 +675,7 @@ See below the {{< iref "#wayland_menus" "dmenu/rofi alternatives" >}} and above 
     <a name="paper"></a>[Paper](https://gitlab.com/cubocore/paper)
     _still in alpha in end 2020._
 
--   [grim](https://github.com/emersion/grim) (MIT Licence)
+-   <a name=grim"></a>[grim](https://github.com/emersion/grim) (MIT Licence)
     Grab images from a Wayland compositor. Works with slurp and with sway.
     [![packaging](https://repology.org/badge/tiny-repos/grim.svg?header=packages)
     ](https://repology.org/project/grim/versions).
@@ -692,8 +684,9 @@ See below the {{< iref "#wayland_menus" "dmenu/rofi alternatives" >}} and above 
     output profiles that are automatically enabled and disabled on hotplug. _in Debian._
 -   [nwg-shell](https://nwg-piotr.github.io/nwg-shell/)
     a GTK3-based shell for sway.
--   [slurp](https://github.com/emersion/slurp) (MIT License)
-    Select a region in a Wayland compositor. Used by _grim_.
+-   <a name="slurp"></a>[slurp](https://github.com/emersion/slurp) (MIT License)
+    Select a region in a Wayland compositor. Used by {{< iref "#grim" "grim" >}},
+    {{< iref "#wf-recorder" "wf-recorder" >}}, and other capture tools.
     [![packaging](https://repology.org/badge/tiny-repos/slurp.svg?header=packages)
     ](https://repology.org/project/slurp/versions).
 -   [wev](https://git.sr.ht/~sircmpwn/wev) (MIT License)
