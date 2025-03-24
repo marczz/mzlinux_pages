@@ -88,8 +88,10 @@ Wikipedia: {{< wp "Comparison of audio player software" >}},
     be controlled from android phone, and many
     [features](http://www.clementine-player.org/about), playing
     main formats included opus, and can read all playlists including
-    {{< iref "tag_management#cuesheet" "Cue Sheets" >}} but has no bookmark nor access
-    to chapters. With one ogg file loaded it uses 85M resident / 60M shared.
+    {{< iref "tag_management#cuesheet" "Cue Sheets" >}} it has no chapter support and
+    no bookmarking.
+
+    With one ogg file loaded clementine 1.4.0 (2024) uses 182M resident / 146M shared.
 
     {{< iref "#strawberry" "Strawberry" >}} is a fork of clementine written in C++, QT5
     or QT6.
@@ -105,21 +107,27 @@ Wikipedia: {{< wp "Comparison of audio player software" >}},
     allow: {{< iref "#mpris" "MPRIS" >}} control
     ([mpris plugin](https://github.com/exaile/exaile/tree/master/plugins/mpris)),
     bidirectional last.fm support, a shoutcast directory browser, tag
-    editing thru an
-    {{< iref "tag_management#mutagen" "ExFalso" >}}
-    plugin, {{< iref "streaming#daap" "DAAP protocol" >}}
-    _client and server_ support.  As a PyGTK player you can expect a memory footprint of
-    81M/39M shared (one ogg file loaded). Exaile is no longer in Debian since _jessie_.
+    editing thru an {{< iref "tag_management#mutagen" "ExFalso" >}} plugin,
+    {{< iref "streaming#daap" "DAAP protocol" >}}
+    _client and server_ support.
+
+    Exaile do not support cue sheet, nor chapters, and has no bookmarking.
+
+    Exaile 4.1.3 has a memory footprint of 137M/78M shared (one ogg file loaded).
+
+    Exaile was removed from Debian since 2015, and came back in 2023 (trixie).
 
     -   [GitHub - Exaile](https://github.com/exaile/exaile)
     -   [Exaile Documentation](http://exaile.readthedocs.io/en/stable/)
     -   [ArchWiki - Exaile](https://wiki.archlinux.org/index.php/Exaile)
 
-<a name="guayadeque"></a>[Guayadeque](http://guayadeque.org/) (GPL)
+<a name="guayadeque"></a>[Guayadeque](https://github.com/anonbeat/guayadeque) (GPL)
 :   Guayadeque is an audio player with database written in C++. It uses
     {{< iref "streaming#gstreamer" "GStreamer" >}}
     and _wxWidgets_ for the UI. It can play Ogg Vorbis, FLAC, MP3 or anything supported
-    by _gstreamer_.  It can be interfaced through {{< iref "#mpris" "MPRIS" >}} D-Bus interface.  _in Debian_.
+    by _gstreamer_.  It can be interfaced through {{< iref "#mpris" "MPRIS" >}} D-Bus interface.
+
+    Development ceased as of September 29, 2023, it is no more in Debian since 2015.
 
     -   Wikipedia: {{< wp "Guayadeque Music Player" >}}.
 
@@ -156,7 +164,7 @@ _Juk_ has many KDE libraries dependencies, making it heavy to use on non KDE Des
 
     It is packaged in Debian.
 
-<a name=quodlibet></a>[QuodLibet](http://code.google.com/p/quodlibet/)
+<a name=quodlibet></a>[QuodLibet](https://github.com/quodlibet/quodlibet)
 :   Quod Libet (GPL) is a GTK+-based audio player written in
     Python. It uses {{< iref "streaming#gstreamer" "gstreamer" >}}
     and supports Ogg Vorbis, FLAC, MP3, Musepack/Wavepack, MOD, MP4, TrueAudio, WMA.
@@ -177,7 +185,7 @@ _Juk_ has many KDE libraries dependencies, making it heavy to use on non KDE Des
 
     -   [ExFalso/Quodlibet manual](https://quodlibet.readthedocs.org/en/latest/)
 
-<a name="rhythmbox"></a>[Rhythmbox](http://en.wikipedia.org/wiki/Rhythmbox) (GPL)
+<a name="rhythmbox"></a>[Rhythmbox](http://en.wikipedia.org/wiki/Rhythmbox) (GPL-2.0)
 :   Rhythmbox is a gnome audio player using the
     {{< iref "streaming#gstreamer" "GStreamer" >}} media framework.
 
@@ -202,29 +210,35 @@ _Juk_ has many KDE libraries dependencies, making it heavy to use on non KDE Des
     -   Web Remote Control.
     -   Plays ampache streams through a plugin.
     -   {{< iref "#mpris" "MPRIS" >}} plugin.
+    -   Cue sheet was not supported until a [recent third party plugin
+        ](https://github.com/rocketek/CUEPlugin).
+    -   There is no chapter support,
 
-    Rhythmbox playing a single small mp3 take 90M res / 50M shr (on
-    amd64 in may 2018)
+    Rhythmbox 3.4.7 (2024) playing a single small ogg vorbis take 128M res / 68M shr but
+    it is accompanied of rhythmbox-metadata which uses 290M res /70 shr, so a total of
+    418M res / ~138 shr *approximate because some shared libraries may be common!* on
+    amd64.
 
     -   [Apps/Rhythmbox - GNOME Wiki!](https://wiki.gnome.org/Apps/Rhythmbox/)
-    -   [Rhythmbox · GitLab](https://gitlab.gnome.org/GNOME/rhythmbox/-/tree/master)
-    -   [ArchWiki - Rhythmbox
-        ](https://wiki.archlinux.org/index.php/Rhythmbox)
+    -   [Rhythmbox · GitLab](https://gitlab.gnome.org/GNOME/rhythmbox/)
+    -   [ArchWiki - Rhythmbox](https://wiki.archlinux.org/index.php/Rhythmbox)
 
-<a name="sayonara"></a>[Sayonara](https://sayonara-player.com/index.php) (GPL-3.O)
+<a name="sayonara"></a>[Sayonara](https://sayonara-player.com/) (GPL-3.O)
 :   is a small C++/QT music player,using {{< iref "streaming#gstreamer" "GStreamer" >}}.
 
     Sayonara supports {{< iref "#mpris" "MPRIS" >}}, lyrics and allow streaming from
     soundcloud, last.fm, Soma.fm, internet streams, radio broadcasting.
 
+    It includes a tag editor, a  mp3/ogg.vorbis/ogg.opus converter, and supports lyrics.
 
-    Sayonara is in Debian since bullseye. for previous releases there is a
-    [PPA repository for Sayonara
-    ](https://launchpad.net/~lucioc/+archive/ubuntu/sayonara).
-    with i386 and amd64 packages.
+    There is bookmark support, but as far as 1.8.0 on Debian, I did not find any way of
+    adding bookmarks.
 
-    On amd64 _Sayonara_ consume 68M res / 51M shr for _Sayonara
-    1.0.0 in may 2018.
+    There is no cue support and no  chapter support.
+
+    Sayonara is in Debian since bullseye.
+
+    On amd64 _Sayonara_ 1.8.0 (2024) consume 212M res / 188M shr
 
     -   [Sayonara Player · GitLab](https://gitlab.com/luciocarreras/sayonara-player)
 
@@ -241,42 +255,44 @@ _Juk_ has many KDE libraries dependencies, making it heavy to use on non KDE Des
     be controlled from android phone, and many
     [features](https://www.strawberrymusicplayer.org/#features), playing all formats
     recopgnized by {{< iref "streaming#gstreamer" "GStreamer" >}},
-    and can read all playlists including cue sheet.
+    and can read all playlists including cue sheet. It has no bookmarking and do not
+    display Chapters.
 
-    Strawberry is not yet in Debian, but the project provides Debian packages, and
-    Appimages built with QT5 or Qt6.
-
+    Strawberry is in Debian.
     -   [GitHub - Strawberry](https://github.com/strawberrymusicplayer/strawberry)
 
-    On AMD64 in 2021 the memory footprints of _strawberry v0.9.3_ idle is 146M resident /
-    100M shared.
+    On AMD64 in 2024 the memory footprints of _strawberry v1.0.23_ playing one small ogg
+    file is 222M resident / 152M shared. *more than Clementine*
 
 ## Other music players
-[alsaplayer](http://www.alsaplayer.org/)
+[alsaplayer](https://github.com/alsaplayer/alsaplayer)
 :   AlsaPlayer (GPL v3) <a name="alsaplayer"></a> is a PCM player. The Input Plugins include:
     MP2, MP3, WAV, CDDA, OGG, MPEG, MAD, CDDA, MikMod, and audiofile.
     The Output Plugins include: Alsa, OSS and OSS/Lite, Esound, Sparc,
-    SGI, and JACK. Alsaplayer development stopped in 2004 with version
-    0.99.75, but seem to begin again in 2007 with a new gtk2 interface,
-    and has slept again the next year
+    SGI, and JACK.
+
+    It has a text interface and a GTK+ one.
+
+    Alsaplayer and numerous plugins are in Debian.
 
 <a href="amarok"></a>{{< wp "Amarok_(software)"  "Amarok" >}} (GPL)
-:   said to be a very good audio player with a QT user interface,
-    but is quite heavy and targeted to KDE. Amarok has been redesigned
-    between v1.4 and v2.0, and many forks from previous version 1.4
-    where done. The development stalled at 2.8 and marok was bound to QT4, as it was not
-    updated it was [dropped from Debian](https://tracker.debian.org/pkg/amarok).
-    But the development is kicking up again, and the release 3.0 should be using QT5 (or
-    QT6?).
+:   said to be a very good audio player with a QT user interface, but is quite heavy and
+    targeted to KDE. Amarok has been redesigned between v1.4 and v2.0, and many forks
+    from previous version 1.4 where done. In year 2018 he development stalled at 2.9
+    which was bound to QT4, as it was not updated it was dropped from Debian, but 6
+    years later the development kicked up, and a new release 3.0 was delivered built
+    against QT5, and in 2024 amarok
+    [reappeared in Debian](https://tracker.debian.org/pkg/amarok).
 
-    -   _Amarok_ requires _KDE runtime_, which is a very heavy
-        dependency, if your desktop is not KDE.
-    -   {{< iref "#clementine" "Clementine" >}}
-        is a fork of the version 1.4
-        wich also uses Qt ( but QT5) and replaced the use of ffmpeg libraries by
+    -   _Amarok_ requires many KDE libraries, which may be an heavy dependency, if your
+        desktop is not KDE.
+    -   {{< iref "#clementine" "Clementine" >}} is a fork of the version 1.4
+        which also uses QT5 and replaced the use of ffmpeg libraries by
         {{< iref "streaming#gstreamer" "GStreamer" >}}, and dropped the KDE
-        dependencies. {{< iref "#strawberry" "Strawberry" >}} is a further fork of
-        Clementine and share many features with it.
+        dependencies.
+
+        {{< iref "#strawberry" "Strawberry" >}} is a further fork of Clementine and
+        share many features with it.
     -   {{< iref "#exaile" "Exaile" >}} is a GTK+ clone of amarok.
     -   _Amarok_ is the primary client for {{< iref "streaming#ampache" "Ampache" >}}
         this feature is not shared by the above derivatives.
@@ -297,12 +313,11 @@ _Juk_ has many KDE libraries dependencies, making it heavy to use on non KDE Des
      -   Podcast
      -   Play UPnP / DLNA streams
 
-[Aqualung](http://aqualung.factorial.hu/home.html)
+[Aqualung](https://aqualung.jeremyevans.net/) (GPL-2.0)
 :   Aqualung (GPL) is a Gtk music player.
     Features:
-    -   Play all sample-based, uncompressed formats, mod, mp3, Ogg
-        Vorbis, Ogg Speex, flac, Musepack, Monkey's Audio, WavPack,
-        and via ffmpeg AC3, AAC, WMA.
+    -   Play all sample-based, uncompressed formats, mod, mp3, Ogg Vorbis, Ogg Speex,
+        flac, Musepack, Monkey's Audio, WavPack, and via ffmpeg AC3, AAC, WMA.
     -   Output on oss, jack, alsa, pulseaudio and can resample
     -   Audio CD play and ripping  with on-the-fly conversion to WAV,
         FLAC, Ogg Vorbis or CBR/VBR MP3 and tagging of the created files
@@ -311,18 +326,11 @@ _Juk_ has many KDE libraries dependencies, making it heavy to use on non KDE Des
     -   Remote control through CLI commands
 
     If Aqualung has many dependancies upon sound libraries, it has
-    none to desktop but Gtk. It is no longer in Debian since wheezy.
+    none to desktop but Gtk. It is no longer in Debian since. 2014
 
     -   [GitHub - Aqualung](https://github.com/jeremyevans/aqualung)
     -   [Aqualung Documentation
         ](http://aqualung.jeremyevans.net/manual/aqualung-doc.html).
-
-[aRts](http://arts-project.org)
-:   aRts (Analog Real-Time Synthesizer) is a sound system for KDE.
-    aRts creates and processes sound using small modules that do
-    certain tasks. aRts modules can create waveforms (oscillators),
-    play samples, filter data, add signals, perform effects like
-    delay/flanger/chorus, or output the data to a soundcard.
 
 <a name="audacious"></a>[Audacious](http://audacious-media-player.org/)
 :   Audacious is an GPL, XMMS like app written in QT5 or GTK 2, that
@@ -339,14 +347,17 @@ _Juk_ has many KDE libraries dependencies, making it heavy to use on non KDE Des
         wav, midi, CD audio;
     -   output to oss4, alsa, esound, jack, pulseaudio, sndio, sdl
     -   support for transcoding and streaming.
+    -   lyric support through a default plugin.
     -   Controlled through DBUS, accept {{< iref "#mpris" "MPRIS" >}} protocol.
     -   Can be controlled with Conky.
     -   Includes the client {{< man "audtool" >}}_ to sends commands to a running
         instance of Audacious.
-    -   curses clients like [Audtty](http://audtty.alioth.debian.org/) _packaged in
-        debian but the source code can no longer be accessed in 2021_.
+    -   curses clients like [Audtty](http://audtty.alioth.debian.org/) *packaged in
+        debian*.
+    -   cue file support through the cue plugin included in default plugins.
+    -   No support for chapters (as far as 4.3.1).
 
-
+    Audacious 4.3.1 (2024) uses 71M res. / 61M shr.
     <!-- Audacious has a light memory footprint but seems somewhat processor
     demanding, I have no measure but I see my load average climbing
     each time I use it, more than other players.
@@ -357,34 +368,29 @@ _Juk_ has many KDE libraries dependencies, making it heavy to use on non KDE Des
 
     The development seems to have slow down, at the end of version 3.x which was based
     by default on GTK2 and was developed during the years 2011-2019, but become again
-    active in 2020 with the release of version 4.0 which is now based on QT5 with GTK2
+    active in 2020 with the release of version 4.0 which is now based on QT6 with GTK3
     optional fallback.
 
     -   [Audacious Home page](http://audacious-media-player.org/),
     -   [audacious-plugins · GitHub
         ](https://github.com/audacious-media-player/audacious-plugins/tree/master/src)
-    -   [GitHub - Audacious
-        ](https://github.com/audacious-media-player/audacious).
-    -   [ArchWiki - Audacious
-        ](https://wiki.archlinux.org/index.php/Audacious)
+    -   [GitHub - Audacious](https://github.com/audacious-media-player/audacious).
+    -   [ArchWiki - Audacious](https://wiki.archlinux.org/index.php/Audacious)
 
 
 <a name="deadbeef"></a>[DeaDBeeF](https://deadbeef.sourceforge.io/) (GPL v2)
 :   is a C lang maudio player for Mp3, ogg vorbis,  flac, ape, wv/iso.wv, wav,
     m4a/m4b/mp4 (aac and alac), mpc, tta, cd audio, and  more.
 
-    It reads and write tags in any format,  supports Shoutcast/Icecast and MMS, and
-    {{< iref "tag_management#cuesheet" "cuesheet" >}}. _Deadbeef_ is not in Debian, but provides Debian packages for amd64.
+    It reads and write tags in any format,  supports Shoutcast/Icecast and MMS, Chapters
+    and {{< iref "tag_management#cuesheet" "cuesheet" >}}.
+
+      _Deadbeef_ is not in Debian, but provides Debian packages for amd64.
 
     There are plugins for Pulseaudio, Jack, Mpris2.
 
     -   [Deadbeef - GitHub](https://github.com/DeaDBeeF-Player/deadbeef)
     -   Wikipedia:  {{< wp "Deadbeef" >}}
-
-
-[Gradio](https://github.com/haecker-felix/gradio)
-:   Gradio is a GTK3 app for finding and listening to internet radio stations.
-    [ArchWiki - Gradio](https://wiki.archlinux.org/index.php/Gradio)
 
 
 [Goggles Music Manager](https://gogglesmm.github.io/) ( GPL-3.0 License )
@@ -398,8 +404,8 @@ _Juk_ has many KDE libraries dependencies, making it heavy to use on non KDE Des
 
     As it uses a desktop agnostic UI it has limited dependencies.
 
-    -   [GitHub: goglesmm](https://github.com/gogglesmm/gogglesmm)
-    -   [Goglesmm Ubuntu PPA package](https://launchpad.net/~s.jansen/+archive/ubuntu/gogglesmm)
+    -   [GitHub: gogglesmm](https://github.com/gogglesmm/gogglesmm)
+    -   [Gogglesmm Ubuntu PPA package](https://launchpad.net/~s.jansen/+archive/ubuntu/gogglesmm)
 
 {{< iref "#mpd" "Music Player Daemon" >}}
 :   has a subsection.
@@ -421,44 +427,42 @@ _Juk_ has many KDE libraries dependencies, making it heavy to use on non KDE Des
         {{<iref "streaming#icecast" "Icecast" >}}
     -   {{< iref "#mpris" "MPRIS" >}} (1.0 and 2.0)
     -   Cue sheet
+    -   Chapter
     -   Lyrics
     -   [Extra plugins](http://qmmp.ylsoftware.com/links.php)
 
-    On amd64 _Qmmp v1.4.4 (2021)_ memory footprints are 100M res / 83M shr idle
-    or playing an opus file. It increase when you play more files, and is dependent of
-    the enabled plugins.
+    On amd64 _Qmmp v1.6.2 (2024)_ memory footprints are 177M res / 154M shr idle or
+    playing a small ogg vorbis file. It increase when you play more files, and is
+    dependent of the enabled plugins.
 
-[RealPlayer](http://www.real.com/linux) and [Helix Player](https://helixcommunity.org/)
-:   Helix player is an open source media player, with support for the proprietary format
-    `RealAudio` and `RealVideo` it is known as the proprietary RealPlayer. Mplayer is
-    also known to play real audio and video with the appropriate codec. A test page for
-    real audio and video streams is the
-    [RealAudio and RealVideo Test Clips](http://service.real.com/realplayer/test/)
+[TranscriberAG](http://transag.sourceforge.net/) (GPL-3.0)
+:   assists the manual annotation of speech signals. It provides a GUI for segmenting
+    speech recordings, transcribing them, labeling speech turns, topic changes and
+    acoustic conditions.
 
-[TranscriberAG](http://transag.sourceforge.net/)
-:   assists the manual annotation of speech signals. It
-    provides a GUI for segmenting speech recordings, transcribing them,
-    labeling speech turns, topic changes and acoustic conditions.
+    TranscriberAG supersede the older [transcriber](https://trans.sourceforge.net).
 
     See also {{< iref "#parlatype" "Parlatype" >}}
     -   [eroux/transcriberAG](https://github.com/eroux/transcriber-ag)
 
-[xmcd & cda](http://www.amb.org/xmcd/)
-:   Xmcd is a full-featured CD Player and Ripper, cda is a shell
-    command-line utility which also features a curses-based,
-    screen-oriented mode. xmcd is an alsa compatible application
+[xmcd & cda](https://www.tikan.org/xmcd/) (GPL)
+:   Xmcd is a full-featured CD Player and Ripper, cda is a shell command-line utility
+    which also features a curses-based, screen-oriented mode. xmcd is an alsa compatible
+    application
 
-<a name="xmms2"></a>[Xmms2](https://github.com/xmms2/wiki/wiki)
-:   XMMS2 (GPL) is a music player developped using the
-    client-server model which will provide kde, gtk, and command-line
-    interface.
+<a name="xmms2"></a>[Xmms2](https://github.com/xmms2/wiki/wiki) (GPL and LGPL)
+:   XMMS2 (GPL) is a music player developped using the client-server model which will
+    provide kde, gtk, and command-line interface.
+
     It replaces the old _Xmms_ which was unmaintained and is sticked to gtk-1,
-    It can play mp3, vorbis, aac, alac, wma, mac, sid, mod,
+    It can play through plugins  mp3, vorbis, opus,  aac, alac, wma, mac, sid, mod,
     wav, flac, mpc, speex files. _No support for opus in the stable release_.
     It is provided as a daemon with numerous plugin packages and client.
 
     The documentation for Xmms2 is in the
     [Xmms2 Wiki](https://github.com/xmms2/wiki/wiki)
+
+    It is in Debian along with plugins.
 
     __xmms2__ has numerous clients
     graphic ones for gtk or kde, command line and ncurses clients, and
@@ -485,22 +489,15 @@ _Juk_ has many KDE libraries dependencies, making it heavy to use on non KDE Des
     _xmms2-plugin-daap_.
 
     The stable version of Xmms2 is dated 2011, this 0.8 version is still proposed in the
-    Debian package. The development version is no
-    longer active.
+    Debian package. The development version is 0.9.3 in 2023.
 
     There are few forks of Xmms2: {{< iref "#bmpx" "Bmpx" >}},
     {{< iref "#audacious" "Audacious" >}}.
 
+    -   [XMMS2 Development tree](https://github.com/xmms2/xmms2-devel)
 
 ## Command Line Players {#CLI_players}
 
-<a name="audiopreview"></a> [audiopreview](http://audiopreview.codealpha.net/audiopreview/)
-:   is a simple command line tool based on
-    {{< iref "streaming#gstreamer" "gstreamer" >}}
-    to play previews of audio and video files, and internet streams. It can also be used
-    as a regular media player. It is no longer in Debian since jessie, and the home page
-    went away.
-__
 [cdtool](https://hinterhof.net/cdtool/)
 :   _cdtool_ contains several programs for playing audio CDs and controlling a CD-ROM
     drive from the command line:
@@ -550,11 +547,11 @@ icedax
     _gst123_ is packaged in Debian.
     -   [gst123 - GitHub](https://github.com/swesterfeld/gst123).
 
-<a name="madplay"></a>[madplay(1)
-](http://manpages.debian.org/cgi-bin/man.cgi?query=madplay)
+<a name="madplay"></a>[madplay(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=madplay)
 :   madplay is a command-line MPEG audio decoder and player based
     on the  MAD library {{< iref "sound_libs#item_libmad" "libmad" >}} and the
     [Mad audio decoder](http://www.underbit.com/products/mad/).
+
     madplay reads and decodes one or more input files containing MPEG audio data and
     plays them on the native audio device. It can also output a sound file in cdda,
     aiff, wave, snd, esd, raw formats. _see
@@ -568,7 +565,7 @@ icedax
     It  can also play MPEG audio files from a WWW server.
     _[mpg123(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=mpg123(1))
 
-    [Mpg321](http://sourceforge.net/projects/mpg321)<a name="mpg321"></a>
+    <a name="mpg321"></a>[Mpg321](http://sourceforge.net/projects/mpg321)
     is a GPL replacement
     for Mpg123 which aimed at a truly free software mp3 player, while
     previous versions of mpg123 did not have a clear free opensource license.
@@ -605,16 +602,7 @@ icedax
     You can also use in the same way {{< iref "#mpv" "mpv" >}}
 
 ## Ncurses sound players
-<a name="auditive"></a>auditive
-:   [auditive](http://www.rillion.net/auditive/)
-    is a ncurses {{< iref "streaming#gstreamer" "GStreamer" >}} player written in vala.
-    _last release 2013_.
 
-[Cjukebox](http://muth.org/Robert/Cjukebox/)
-:   is a GPL Python/Curses based management system for audio files
-    and playlists, it uses [Musicus](http://muth.org/Robert/Musicus/)
-    that uses xmms plugins in a non X environment. Development stalled
-    since 2005
 
 <a name="cmus"></a>[cmus](https://cmus.github.io/) (GPL)
 :   cmus (GPL) is a ncurses text player.
@@ -631,16 +619,18 @@ icedax
         [remote controls](https://github.com/cmus/cmus/wiki/remote-control) from web,
         android, command line
     -   {{< iref "#mpris" "MPRIS" >}} support.
-    -   Tiny: cmus 2.7.0 is 24M res. / 17 shr on amd64 (may 2018)
+    -   lyrics support through a perl plugin
+    -   limited cue support *when an external cue sheet has the same name than the audio*.
+    -   Tiny: cmus 2.10.0 (2024) uses 41M res. / 32M shr on amd64
 
     Debian has a _cmus_ and a _cmus-plugin-ffmpeg_ package.
 
-    Cmus has uncommon key binding and unusual help system: you have to type 7 to get
-    help on key-bindings, to know you have to type 7, you just need hit the 7 key! Of
-    course q does not quit, h or ?  does not give help. But to be fair I must say that
-    you are free to configure key-bindings as you want.
+    Cmus has some vi like bindings and some uncommon ones with an unusual help system:
+    you have to type 7 to get
+    help on key-bindings, to know you have to type 7, you just need hit the 7 key!
+    But to be fair I must say that you are free to configure key-bindings as you want.
 
-    It is in active development in 2021 and packaged in Debian.
+    It is in active development in 2024 and packaged in Debian.
     -   [GitHub cmus repository](https://github.com/cmus/cmus)
     -   [cmus wiki](https://github.com/cmus/cmus/wiki)
     -   [Extensions and useful scripts](https://github.com/cmus/cmus/wiki)
@@ -655,6 +645,7 @@ icedax
     -   Cmus supports [remote control](https://github.com/cmus/cmus/wiki/remote-control)
         through a WEB interface or Android, and using {{< iref "#mpris" "MPRIS" >}}
     -   [ArchWiki - Cmus](https://wiki.archlinux.org/index.php/Cmus)
+    -   [cmus - Gentoo wiki](https://wiki.gentoo.org/wiki/Cmus)
     -   [Articles about cmus](https://github.com/cmus/cmus/wiki/reviews)
 
 [MikMod](http://mikmod.sourceforge.net/)
@@ -671,16 +662,20 @@ icedax
 
 <a name="moc"></a>[Moc](http://moc.daper.net/) (GPL)
 :   _Moc_ is an ncurses-based console audio player with ALSA, OSS, SNDIO or JACK
-    outputs.  Supported file formats are: mp3, Ogg Vorbis, FLAC, Musepack (mpc), Speex,
-    Opus, WAVE, AIFF, AU, SVX, Sphere Nist WAV, IRCAM SF, Creative VOC,SID, wavpack,
-    MIDI and modplug.  With the FFmpeg plugin we add (WMA, RealAudio, AAC, MP4).
+    outputs.  Supported file formats are: mp3, Ogg Vorbis, Opus, FLAC, Musepack (mpc),
+    Speex, Opus, WAVE, AIFF, AU, SVX, Sphere Nist WAV, IRCAM SF, Creative VOC,SID,
+    wavpack, MIDI and modplug.  With the FFmpeg plugin we add (WMA, RealAudio, AAC,
+    MP4).
 
     _Moc_ works as a daemon and can be controlled by a command line or via conky, or the
     gui client mentioned below but it is not usable through the network like the music
     servers {{< iref "#mpd" "Mpd" >}} or {{< iref "#xmms2" "Xmms2" >}}.
 
-    In 2021 there is no new release since MOC 2.5.2 and 2.6-alpha3 Released in 2016.
-    Moc uses 6M resident.
+    MOC 2.5.2 and 2.6-alpha3 Released in 2016, this is still the last stables and
+    development release in 2024.
+
+    Moc is among the lighter music player moc 2.6.0 (2024) uses 17M resident / 15M
+    shared when playing a small ogg vorbis.
 
     -   [Moc wikipedia page](http://en.wikipedia.org/wiki/Music_On_Console)
     -   [MOC Home page](http://moc.daper.net/)
@@ -691,12 +686,18 @@ icedax
     -   [MocIcon](http://mocicon.sourceforge.net/) is a simple GTK+ Music On Console tray
         icon. _Last release 2010._
     -   [moc-pris](https://github.com/progwolff/moc-mpris) is a mpris bridge for moc.
-    -   [Exo](https://github.com/loimu/exo) (GPL-3.0) is a C++ QT frontend for MOC
+    -   [mocp-bookmark-manager.sh
+        ](https://github.com/i-love-coffee-i-love-tea/mocp-bookmark-manager.sh)
+        a shell script to create and manage bookmarks in moc.
+    -   [Exo-player](https://github.com/loimu/exo) (GPL-3.0) is a C++ QT frontend for MOC
         and {{< iref "#cmus" "Cmus" >}}.
         it supports Lyrics from web, {{< iref "#mpris" "MPRISv2" >}}, bookmarks, OSD with
         an additional Python script.
 
-<a name="mp3blaster"></a>[mp3blaster](http://mp3blaster.sourceforge.net/) (GPL 2.0)
+        Exo packages for Ubuntu are available in
+        [Blaze PPA](https://launchpad.net/~blaze/+archive/ubuntu/main)
+
+<a name="mp3blaster"></a>[mp3blaster](https://github.com/stragulus/mp3blaster) (GPL 2.0)
 :   An interactive text-console based ogg, mp3, sid and wav player, with playlist
     management. As a ncurses application his memory requirements are low 3.5M resident.
     _mp3blaster_ last release was in 2014, and the development seems stopped since 2017.
@@ -745,13 +746,13 @@ __ogg123__, __oggdec__
     -   [MusikCube user guide](https://github.com/clangen/musikcube/wiki/user-guide)
     -   [MusikCube wiki](https://github.com/clangen/musikcube/wiki)
 
+        The development of musikcube is active in 2024.
+
+    Musikcube 3.0.4 (2024) uses 40M res / 31 shr when playing a small ogg vorbis file.
 [play]( http://git.sysphere.org/play/)
 :   A curses front-end written in python for various audio players based
     on cplay. _last commit 2013._
 
-[Orpheus](http://thekonst.net/en/orpheus)
-:   is a GPL text mode menu- and window-driven audio player application for CDs,
-    internet stream broadcasts and files in MP3 and Vorbis OGG format. It is in debian.
 
 [Radiotray-NG](https://github.com/ebruck/radiotray-ng) (GPL-3.0)
 :   is a simple music streaming player that lives on the system tray. By clicking on the
@@ -771,9 +772,8 @@ All these packages are in Melpa.
 See also [EmacsWiki: MusicPlayers](http://www.emacswiki.org/emacs/MusicPlayers)
 
 [Bongo](https://github.com/dbrock/bongo/) (GPL)
-:   Bongo is a music player for emacs that was developped in parallel
-    with EMMS. Bongo can use VLC,
-    mpg321, ogg123, speexdec. Bongo has an
+:   Bongo is a music player for emacs that was developped in parallel with EMMS. Bongo
+    can use VLC, mpg321, ogg123, speexdec. Bongo has an
     [emacswiki page](http://www.emacswiki.org/emacs/Bongo).
 
 <a name="emms"></a>[EMMS](http://www.emacswiki.org/cgi-bin/emacs.pl/EMMS) (GPL)
@@ -793,7 +793,18 @@ See also [EmacsWiki: MusicPlayers](http://www.emacswiki.org/emacs/MusicPlayers)
 [vlc.el](https://github.com/xuchunyang/vlc.el)
 :   control VLC through VLC HTTP interface.
 
+[empv.el](https://github.com/isamert/empv.el) (GPL-3.0)
+:   An Emacs media player, media library manager, radio player, YouTube frontend
+    empv supports lyrics, it integrates with *embark* and *consult*.
 
+ [mpv.el](https://github.com/kljohann/mpv.el) (GPL-3.0)
+ :   control mpv via IPC to facilitate note taking.
+
+[ready-player](https://github.com/xenodium/ready-player) (GPL-3.0)
+:   A lightweight major mode to open media (audio/video) files in an Emacs buffer.
+    Playback is handled by your favourite command line utility. ready-player-mode will
+    try to use either mpv, vlc, ffplay, or mplayer (in that order), but you can
+    customize that.
 
 # Music Player Daemon {#mpd}
 ## MPD Server
@@ -1285,6 +1296,8 @@ Mpv also drop _mencoder_, but replace it with internal
 -   Wikipedia: {{< wp "Mpv_(media_player)"  "MPV" >}}
 -   [Archwiki -  Mpv](https://wiki.archlinux.org/index.php/Mpv)
 -   [Gentoo Wiki - Mpv](https://wiki.gentoo.org/wiki/Mpv)
+-   [awesome-mpv](https://github.com/stax76/awesome-mpv)
+    A curated list of awesome mpv resources.
 
 There is a Debian package _mpv_, but mpv developpers
 [recommand to use a newer version](https://mpv.io/installation/)
@@ -1297,6 +1310,8 @@ _Mpv_ can be used in Wayland for hardware video acceleration under Wayland use
 make
 sudo make install
 ~~~
+
+mpv 0.37.0 (2024) playing a small ogg vorbis file uses 79M res / 56M shr.
 
 #### Mpv frontends
 
@@ -1313,9 +1328,20 @@ see also the [list on Wikipedia
     ](http://www.smplayer.info/en/supported-formats-and-codecs), it can
     play YouTube videos. And support [chromecast
     ](https://blog.smplayer.info/category/chromecast/) since v17.1
-    this need you have Chrome or Chromium installed. SMPlayer is in Debian.
+    this need you have Chrome or Chromium installed.
+
+    Smplayer support {{< iref "tag_management#chapter" "Chapters" >}}
+      {{< iref "tag_management#bookmark" "Bookmarks" >}}
+    and {{< iref "tag_management#cuesheet" "CUE Sheets" >}}
+
+    SMPlayer is in Debian.
 -   [SMPlayer Blog](https://blog.smplayer.info/)
 -   [Wikipedia: SMPlayer](https://en.wikipedia.org/wiki/SMPlayer).
+
+
+Smplayer playing a small ogg vorbis uses for the smplayer UI 97M res / 88M shared and
+you need to add the palyer, for mpv it is 78M res / 56 shr making a total of 175M
+resident *It is reasonable to think that mpv and the gui don't share code*.
 
 [celluloid](https://celluloid-player.github.io/) (GPL-3.0)
 :   is a  GTK+ frontend for mpv.
