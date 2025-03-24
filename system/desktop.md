@@ -619,7 +619,7 @@ The themes are the same than for i3 you find them in
 
 ## Wayland desktop components {#wayland_desktop_components}
 
-In the {{iref "images" "Image page" >}} you can find the
+In the {{< iref "images" "Image page" >}} you can find the
 {{< iref "images#wayland_image_viewers" "wayland image viewers" >}}
 and {{< iref "images#wayland-screeshot" "wayland screenshot tools" >}}
 
@@ -640,7 +640,8 @@ is a extended list of apps and scripts for swaywm.
 The Nix overlay [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)
 has built many wayland tools. _List in the Readme_
 
-See also {{< iref "#wayland_remote_desktop" "Wayland remote desktop" >}}
+See also {{< iref "xorg#wayland_remote_desktop" "Wayland remote desktop" >}}
+for the vnc and rdp servers and clients.
 
 See below the {{< iref "#wayland_menus" "dmenu/rofi alternatives" >}} and above the
 {{< iref "#wayland_clipboard" "Wayland clipboard tools" >}}.
@@ -675,39 +676,38 @@ See below the {{< iref "#wayland_menus" "dmenu/rofi alternatives" >}} and above 
     <a name="paper"></a>[Paper](https://gitlab.com/cubocore/paper)
     _still in alpha in end 2020._
 
--   <a name=grim"></a>[grim](https://github.com/emersion/grim) (MIT Licence)
+-   <a name="grim"></a>[grim](https://github.com/emersion/grim) (MIT Licence)
     Grab images from a Wayland compositor. Works with slurp and with sway.
     [![packaging](https://repology.org/badge/tiny-repos/grim.svg?header=packages)
     ](https://repology.org/project/grim/versions).
 -   <a name="kanshi"></a>[kanshi](https://sr.ht/~emersion/kanshi/) (MIT License)
     Dynamic display configuration for wayland compositors. Kanshi allows you to define
-    output profiles that are automatically enabled and disabled on hotplug. _in Debian._
--   [nwg-shell](https://nwg-piotr.github.io/nwg-shell/)
-    a GTK3-based shell for sway.
--   <a name="slurp"></a>[slurp](https://github.com/emersion/slurp) (MIT License)
-    Select a region in a Wayland compositor. Used by {{< iref "#grim" "grim" >}},
-    {{< iref "#wf-recorder" "wf-recorder" >}}, and other capture tools.
-    [![packaging](https://repology.org/badge/tiny-repos/slurp.svg?header=packages)
-    ](https://repology.org/project/slurp/versions).
--   [wev](https://git.sr.ht/~sircmpwn/wev) (MIT License)
-    wayland event viewer analagous to the X11 tool xev.
-    _In Debian and [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)._
+    output profiles that are automatically enabled and disabled on hotplug. _in Debian_
+    [![packaging](https://repology.org/badge/tiny-repos/kanshi.svg?header=packages)
+    ](https://repology.org/project/kanshi/versions).
 -   [wshowkeys](https://git.sr.ht/~sircmpwn/wshowkeys)
      Displays keypresses on screen on supported Wayland compositors.
--   [wf-recorder](https://github.com/ammen99/wf-recorder) (MIT License)
+-   <a name="wf-recorder">[wf-recorder](https://github.com/ammen99/wf-recorder) (MIT License)
     screen recorder for wlroots based compositors. _in Debian and
-        [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)._
--   [wdisplays](https://github.com/cyclopsian/wdisplays) (GPL-3.0)
+    [![packaging](https://repology.org/badge/tiny-repos/wf-recorder.svg?header=packages)
+    ](https://repology.org/project/wf-recorder/versions).
+-   [wl-screenrec](https://github.com/russelltg/wl-screenrec)
+    High performance wlroots rust screen recording software, featuring hardware encoding,
+    to use when your harware has vaapi encode support.
+    [![packaging](https://repology.org/badge/tiny-repos/wlscreenrec.svg?header=packages)
+    ](https://repology.org/project/wlscreenrec/versions).
+-   [wdisplays](https://github.com/cyclopsian/wdisplays) (GPL-3.0
     GUI display configurator for wlroots compositors. _In Debian._
+    [![packaging](https://repology.org/badge/tiny-repos/wdisplays.svg?header=packages)
+    ](https://repology.org/project/wdisplays/versions).
 -   [wlr-randr](https://github.com/emersion/wlr-randr) (MIT License)
     An xrandr clone for wlroots compositors. _in Debian and
-        [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)_.
--   [wlvncc](https://github.com/any1/wlvncc) (ISC License)
-    A Wayland Native VNC Client. _In
-        [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)._
+    [![packaging](https://repology.org/badge/tiny-repos/wlr-randr.svg?header=packages)
+    ](https://repology.org/project/wlr-randr/versions).
 -   [wtype](https://github.com/atx/wtype) (MIT License)
     xdotool type for wayland. _in Debian and
-        [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)._
+   [![packaging](https://repology.org/badge/tiny-repos/wtype.svg?header=packages)
+   ](https://repology.org/project/wtype/versions).
 
 
 # Desktop components {#desktop_components}
@@ -873,7 +873,8 @@ Rofi is in Debian.
 -   [Derek Taylor  dmscripts](https://gitlab.com/dwt1/dmscripts) (GPL 3)
     a collection of scripts for dmenu, fzf, rofi.
 
-[lbonn / rofi](https://github.com/lbonn/rofi) is a fork of rofi which adds
+Rofi don't support wayland, it was first planned, but now wayland development moved to a
+fork [lbonn / rofi](https://github.com/lbonn/rofi) which adds
 [Wayland support](https://github.com/lbonn/rofi#wayland-support).
 
 
@@ -898,9 +899,11 @@ See also the list in [awsome Wayland - launchers
 
 -  <a name="bemenu"></a> [bemenu](https://github.com/Cloudef/bemenu) (GPLv3 and LGPLv3)
     is an dynamic menu library and client program inspired by dmenu.
-    It has a ncurses, x11, and wayland backend.
-    You can use it with {{< iref "#j4-menu-desktop" "j4-menu-desktop" >}} for a desktop
-    files menu.
+    It has ncurses, x11, and wayland backend, provided as distinct libraries; so you
+    need only the one which fit with your desktop.
+
+    *bemenu* can be used with {{< iref "#j4-menu-desktop" "j4-menu-desktop" >}} for a
+    desktop files menu.
     -   [bemenu API documentation](http://cloudef.pw/bemenu/).
 -   [dmenu-wl](https://github.com/nyyManni/dmenu-wayland) (MIT License)
     dmenu for wayland (wlroots) compositors.
@@ -926,15 +929,18 @@ See also the list in [awsome Wayland - launchers
     ](https://github.com/colemickens/nixpkgs-wayland).
 -   [wlogout](https://github.com/ArtsyMacaw/wlogout)
     A wayland based logout menu in GTK+.
+-   [yofi](https://github.com/l4l/yofi) (MIT License)
+    is a minimalistic menu for wayland written in Rust.
 
 ### Dzen {#dzen}
 [Dzen](https://github.com/robm/dzen) (MIT License)
 is a notification and menuing program for X11 that requires only X11.  It is designed to
 be scriptable in any language and integrate well with light window managers. A _dzen_
-daemon takes only 1.5M res/1.1M shr. It is no more developed since 2013,
-[nezd](https://github.com/telser/nezd) is a fork of dzen _with last commit in 2019_.
+daemon takes only 1.5M res/1.1M shr. It is no more developed since 2013.
 
-_dzen2_ is in Debian.
+The debian version is a fork of dzen, to maintain it up-to-date with Debian/Ubuntu,
+hosted on launchpad
+[dzen2](https://git.launchpad.net/ubuntu/+source/dzen2/tree/).
 
 -   The [Dzen Wiki](https://github.com/robm/dzen/wiki) gives many examples of using
     _dzen_ as system monitor, with simple scripts.
@@ -1193,7 +1199,7 @@ Some newer command line apps to manage selection in X11:
     contents of clipboard. This fork adds support for the Wayland clipboard.
 
 Some clipboard managers in the following section have also a wayland support, but for
-most of them by using Xwayland.
+most of them by using Xwayland, but clipcat which has now native wayland support.
 
 ### Clipboard managers
 A list is in [Archwiki Clipboard/Managers
@@ -1203,9 +1209,7 @@ A list is in [Archwiki Clipboard/Managers
 -   [clipcat](https://github.com/xrelkd/clipcat) (GPL-3.0)
     is a clipboard manager written in Rust, written with a Client-Server architecture.
 
-    A [wayland support](https://github.com/xrelkd/clipcat/issues/1) is in progress.
-    In august 2021 the wayland fork live in
-    [Icelk / clipcat](https://github.com/Icelk/clipcat).
+    An experimental wayland support has been added beginning 2025.
 -   [clipit](https://github.com/shantzu/ClipIt)
     is a lightweight GTK3 clipboard manager forked from
     {{< iref "#parcellite" "parcellite" >}}.
@@ -1259,7 +1263,7 @@ A list is in [Archwiki Clipboard/Managers
 
 -  [redguardtoo/cliphist](https://github.com/redguardtoo/cliphist)
    is an emacs package by [Chen Bin (reguardtoo)](https://github.com/redguardtoo)
-   to paste from clipboard manager into Emacs
+   to paste from parcellite, clipit, greenclip clipboard managers into Emacs
 
 ### Clipboard sharing {#clipboard_share}
 
