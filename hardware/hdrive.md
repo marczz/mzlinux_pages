@@ -201,17 +201,13 @@ where you find {{< iref "filesystems#lvm" "LVM" >}}.
     ](https://wiki.archlinux.org/index.php/Partitioning#Partitioning_tools),
     [fstab](https://wiki.archlinux.org/index.php/Fstab),
     [swap](https://wiki.archlinux.org/index.php/Swap).
--   <a name="parted"></a>
-    [Gnu Parted](https://www.gnu.org/software/parted/)
-    is a program for creating and manipulating partition tables.
-    It support  ext2, ext3, ext4,  fat16, fat32, hfs, hfs+, hfsx, linux-swap, NTFS
-    reiserfs, ufs, btrfs
+-   <a name="parted"></a> [Gnu Parted](https://www.gnu.org/software/parted/)
+    is a program for creating and manipulating partition tables.  It support ext2, ext3,
+    ext4, fat16, fat32, hfs, hfs+, hfsx, linux-swap, NTFS reiserfs, ufs, btrfs
     -   [manual
         ](https://www.gnu.org/software/parted/manual/html_node/index.html)
     -   [ArchWiki: Gnu Parted
         ](https://wiki.archlinux.org/index.php/GNU_Parted)
-    -   [Parted Cheat-Sheet
-        ](http://www.troubleshooters.com/linux/parted_cheat.htm)
         by Steve litt.
 -   <a name="gparted"></a>{{< wp "Gparted" >}} is the gnome front end for libparted. It supports
     btrfs, ext2 / ext3 / ext4, fat16 / fat32,  hfs / hfs+,  linux-swap, lvm2 pv, nilfs2,
@@ -221,20 +217,23 @@ where you find {{< iref "filesystems#lvm" "LVM" >}}.
     -   [gparted manual](https://gparted.org/display-doc.php?name=help-manual)
     -   [ArchWiki: GParted
         ](https://wiki.archlinux.org/index.php/GParted)
-    -   {{< iref "#gparted_live" "GParted Live" >}}
-        is a small bootable GNU/Linux distribution for x86 based computers.
+    -   {{< iref "#gparted_live" "GParted Live" >}} is a small bootable GNU/Linux
+        distribution.
 
-    Gparted as far as 2023 does not support wayland, to use it in Xwayland, as you need
-    to launch it as root, you have to add access to your X server with :
+    recent Gparted support wayland. To use it in Xwayland, as root, you have to add
+    access to your X server with :
     ``` shell
     xhost +SI:localuser:root
     ```
+    To use it with the wayland support, you launch
+    ``` shell
+    sudo -E gparted
+    ```
+    preserving environment with =-E= allow it to find your Wayland display.
 
--   [ArchWiki: fdisk and gdisk
-    ](https://wiki.archlinux.org/index.php/Fdisk)
+-   [ArchWiki: fdisk and gdisk](https://wiki.archlinux.org/index.php/Fdisk)
 -   [GPT fdisk Tutorial](http://www.rodsbooks.com/gdisk/),
-    [An sgdisk Walkthrough
-    ](http://www.rodsbooks.com/gdisk/sgdisk-walkthrough.html)
+    [An sgdisk Walkthrough](http://www.rodsbooks.com/gdisk/sgdisk-walkthrough.html)
     by Rod Smith.
 -   [Gnome Disk](https://wiki.gnome.org/Apps/Disks)
     or _gnome-disk-utility_
