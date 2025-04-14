@@ -195,16 +195,20 @@ See also {{< iref "org-mode" "Org Mode" >}}.
     editor. Zile has no UTF-8 support. _Packaged in Debian._
 
 # Elisp {#elisp}
+<!-- [[denote:20241209T093455][elisp notes]] -->
+
+See also {{< iref "programming_languages#lisp" "Common Lisp" >}}
 -   [gnu: An Introduction to Programming in Emacs Lisp
     ](http://www.gnu.org/software/emacs/manual/html_mono/eintr.html).
 -   [gnu: Emacs Lisp Manual](http://www.gnu.org/software/emacs/manual/html_node/elisp/)
 -   [EmacsWiki](http://www.emacswiki.org/):
-    The [code category](http://www.emacswiki.org/cgi-bin/emacs-en?CategoryCode)
+    The [code category](https://www.emacswiki.org/emacs/CategoryCode)
     includes a list of resources:
     [Learn Emacs Lisp](https://www.emacswiki.org/emacs/LearnEmacsLisp);
     it also provides an
     [ElispCookbook](http://www.emacswiki.org/emacs/ElispCookbook)
--   [GNU Emacs Common Lisp Emulation](http://www.gnu.org/software/emacs/manual/html_mono/cl.html)
+-   [GNU Emacs Common Lisp Emulation
+    ](http://www.gnu.org/software/emacs/manual/html_mono/cl.html)
 -   Nic Ferrier's [Tips on Emacs Lisp programming
     ](http://nic.ferrier.me.uk/blog/2012_07/tips-and-tricks-for-emacslisp)
 -   [Xah Emacs Lisp Tutorial](http://ergoemacs.org/emacs/elisp.html)
