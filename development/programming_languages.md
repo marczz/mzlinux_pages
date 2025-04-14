@@ -425,8 +425,25 @@ multithreaded programming.
     [articles tagged clojure](http://www.bradcypert.com/tag/clojure/)
     from his Blog.
 -   [How I Start clojure](http://howistart.org/posts/clojure/1)
--   [Category Clojure - Rosetta Code
-    ](http://rosettacode.org/wiki/Category:Clojure)
+-   [Category Clojure - Rosetta Code](http://rosettacode.org/wiki/Category:Clojure)
+
+## Common Lisp {#lisp}
+See also {{< iref "#scheme" "Scheme" >}}, {{< iref "#clojure" "Clojure" >}},
+{{< iref "emacs#elisp" "Emacs Lisp" >}}
+
+-   Wikipedia: {{< wp "Lisp_(programming_language)"  "Lisp" >}},
+    {{< wp "Common Lisp" >}}.
+-   [Church Of Turing - The Landscape of Lisp
+    ](https://churchofturing.github.io/landscapeoflisp.html)
+    give an overview and references to the languages of the lisp family,
+     {{< iref "#scheme" "Scheme, Racket" >}}, {{< iref "#clojure" "Clojure" >}},
+     {{< iref "emacs#elisp" "Emacs Lisp" >}}, Common Lisp,
+
+-   [CLISP](http://clisp.cons.org/)
+-   [Practical Common Lisp](https://gigamonkeys.com/book/)
+    book available for free.
+-   [Lisp cookbook](https://lispcookbook.github.io/cl-cookbook/).
+
 
 # D Programming Language
 -   Wikipedia: {{< wp "D(programming_language)"  "D Programming Language" >}}
@@ -434,7 +451,7 @@ multithreaded programming.
     as a re-engineering of C++, and as C++ is an object-oriented,
     imperative, multi-paradigm system programming language
 
-# Go
+# Go {#go}
 -   {{< wp "Go_(programming_language)"  "Go" >}} is a compiled, garbage-collected,
     concurrent programming language developed by Google.
 -   [Go Home Page](http://golang.org/)
@@ -561,7 +578,7 @@ libraries.
 -   [Haxe Home](http://haxe.org/).
 
 
-# Lua
+# Lua {#lua}
 -   Wikipedia {{< wp "Lua (programming language)"  "Lua" >}}
 -   [lua](http://www.lua.org/) (MIT License) [
     [lua projects](http://www.lua.org/uses.html)]
@@ -618,6 +635,9 @@ libraries.
     is a wrapper around the ncurses library for terminal programming.
 -   [GopherLua](https://github.com/yuin/gopher-lua) (MIT License)
     is a Lua VM and compiler written in Go.
+
+## Fennel {#fennel}
+[Fennel](https://fennel-lang.org/) embed in lua the lisp syntax and macro system.
 
 # Mirah
 -   Wikipedia: {{< wp "Mirah_%28programming_language%29"  "Mirah" >}}
@@ -715,8 +735,7 @@ new bindings from C code.
     Generates a GitHub documentation website for Nim projects
     [gh_nimrod_doc_pagesusage guide ](http://gradha.github.io/gh_nimrod_doc_pages/)
 
-
-# Perl
+# Perl {#perl}
 
 -   Wikipedia: {{< wp "Perl" >}}
 -   [PERL Home](http://www.perl.com/) (GPL or Artistic License)
@@ -739,7 +758,7 @@ new bindings from C code.
     {{< wp "Category:Logic programming" >}}
 -   [SWI-Prolog: Edinburgh compatible Prolog compiler](http://www.swi-prolog.org/)
 
-# R
+# R {#R}
 
 [R](https://www.r-project.org/) is a language and environment for statistical computing
 and graphics.
@@ -748,7 +767,7 @@ and graphics.
 -   [R (programming language) - Wikipedia
     ](https://en.wikipedia.org/wiki/R_(programming_language))
 
-# Ruby
+# Ruby {#ruby}
 _Ruby is covered by GPL or the GPL compatible {{< wp "Ruby License" >}}_
 
 -   Wikipedia:  {{< wp "Ruby_(programming_language)"  "Ruby" >}}
@@ -846,7 +865,7 @@ The JavaScript backend is able to preserve most of the dynamic
 semantics, while other backends require you write fully typed Python
 code
 
-There is a package in Debian, but the developpement seemed to have
+There is a package in Debian, but the development seemed to have
 stopped in 2015.
 
 -   [Rusthon Wiki Home](https://github.com/rusthon/Rusthon/wiki)
@@ -865,7 +884,7 @@ functional programming and compile to java byte code.  Scala speed compare with 
 speed in
 [The computer language benchmarks game](http://shootout.alioth.debian.org/)
 
-# Scheme
+# Scheme {#scheme}
 
 -   Wikipedia: {{< wp "Scheme (programming language)"  "Scheme" >}}
 -   [Revised6 Report on the Algorithmic Language Scheme (R6RS)
@@ -920,15 +939,6 @@ speed in
     object system, multibyte support; and network, threads, dbm, sxml,
     opengl, gtk bindings.
 -   [sawfish](http://sawfish.wikia.com/wiki/Main_Page) lisp window manager
-
-## Lisp
--   Wikipedia: {{< wp "Lisp_(programming_language)"  "Lisp" >}},
-    {{< wp "Common Lisp" >}}.
--   [CLISP](http://clisp.cons.org/)
--   [Practical Common Lisp](https://gigamonkeys.com/book/)
-    book available for free.
--   [Lisp cookbook](https://lispcookbook.github.io/cl-cookbook/).
-
 
 ## Scheme as preprocessor
 -   [BRL, the Beautiful Report Language](http://brl.sourceforge.net/)
