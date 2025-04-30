@@ -689,11 +689,14 @@ See below the {{< iref "#wayland_menus" "dmenu/rofi alternatives" >}} and above 
      Displays keypresses on screen on supported Wayland compositors.
 -   <a name="wf-recorder">[wf-recorder](https://github.com/ammen99/wf-recorder) (MIT License)
     screen recorder for wlroots based compositors. _in Debian and
-    [![packaging](https://repology.org/badge/tiny-repos/wf-recorder.svg?header=packages)
+    [![packaging](https://repology.org/badge/tiny-repos/wf-recorder.svg?header=packages).
+
+    Other screencasting utilities are in
+    {{< iref "video_edit#creencasting" "screncasting section" >}}.
     ](https://repology.org/project/wf-recorder/versions).
--   [wl-screenrec](https://github.com/russelltg/wl-screenrec)
+-   [wl-screenrec](https://github.com/russelltg/wl-screenrec) (Apache 2.0 License)
     High performance wlroots rust screen recording software, featuring hardware encoding,
-    to use when your harware has vaapi encode support.
+    to use when your hardware has {{< wp "vaapi" >}} encode support.
     [![packaging](https://repology.org/badge/tiny-repos/wlscreenrec.svg?header=packages)
     ](https://repology.org/project/wlscreenrec/versions).
 -   [wdisplays](https://github.com/cyclopsian/wdisplays) (GPL-3.0
