@@ -343,15 +343,11 @@ See also {{< iref "#webcam" "Webcam" >}}.
     {{< wp "Comparison of screencasting software" >}}.
 -   [ArchWiki: list of screencasting software
     ](https://wiki.archlinux.org/title/Screen_capture#Screencast_software)
-
--   {{< iref "ffmpeg" "ffmpeg" >}} or {{< iref "ffmpeg" "libav" >}}
-    can be used for screencasting as described in
-    [Screencasts in Ubuntu, part 2: FFmpeg
-    ](http://polishlinux.org/linux/ubuntu/screencasts-in-ubuntu-part-2/)
-    by Marcin Seredyński and [FFmpeg screen capture- ArchWiki
-    ](https://wiki.archlinux.org/title/FFmpeg#Screen_capture).
+-   The use of {{< iref "ffmpeg" "ffmpeg" >}} for screencasting is described in the
+    section  {{< iref "ffmpeg#screencasting" "ffmpeg screencasting" >}}
 -   {{< iref "media_players#vlc" "VLC" >}} allows screen capture.
-
+-   [screencasting applications compatible with xdg-desktop-portal-wlr
+    ](https://github.com/emersion/xdg-desktop-portal-wlr/wiki/Screencast-Compatibility)
 -   [blue-recorder](https://github.com/xlmnxp/blue-recorder) (GPL-3.0)
     is a screen recorder written in Rust built using GTK+ 3 and ffmpeg, based on Green
     Recorder. It allows recording audio and video on Wayland and save them in mkv, avi,
@@ -363,7 +359,7 @@ See also {{< iref "#webcam" "Webcam" >}}.
     a simple screen recorder for Linux built using Python, GTK+ 3 and ffmpeg. Supports
     Wayland & Xorg
 -   [Kooha](https://github.com/SeaDve/Kooha) (GPL-3.0)
-    is a GTK4 screen recorder using pipewire and gstreamer. _Koha_ can record
+    is a GTK4 screen recorder using pipewire and gstreamer. _Kooha_ can record
     microphone, desktop audio, or both; it can save the stream in webm, gif, mp4 and
     matroska; it supports both X11 and Wayland. A Flatpak package is available.
 -   [peek](https://github.com/phw/peek)  (GPL-3.0)
@@ -418,12 +414,23 @@ See also {{< iref "#webcam" "Webcam" >}}.
     is a screen recorder  build in python. The old 2010 Python 2 is obsolete, but
     [matthayes / vnc2flv - Github](https://github.com/matthayes/vnc2flv) is a port to
     Python 3. _last release 2018_
+-   [xdp-screen-cast.py](https://gitlab.gnome.org/-/snippets/19) xdp + gstreamer python
+    script for pipewire.
 -   [xvidcap](http://xvidcap.sourceforge.net/)
     (GPL) is a screen recording utility using FFMPEG's libavcodec/libavformat.
     _Obsolete, last release 2006 last commit 2009._
 -   [wayfarer](https://github.com/stronnag/wayfarer) (GPL-3.0)
     GTK4 screen recorder for GNOME / Wayland / pipewire. Wayfarer official supporty is
     for Gnome Desktop.
+-   <a name="wf-recorder">[wf-recorder](https://github.com/ammen99/wf-recorder) (MIT License)
+    screen recorder for wlroots based compositors. _in Debian and
+    [![packaging](https://repology.org/badge/tiny-repos/wf-recorder.svg?header=packages)
+    ](https://repology.org/project/wf-recorder/versions).
+-   [wl-screenrec](https://github.com/russelltg/wl-screenrec) (Apache 2.0 License)
+    High performance wlroots rust screen recording software, featuring hardware encoding,
+    to use when your hardware has {{< wp "vaapi" >}} encode support.
+    [![packaging](https://repology.org/badge/tiny-repos/wlscreenrec.svg?header=packages)
+    ](https://repology.org/project/wlscreenrec/versions).
 
 # Video recording
 -   {{< wp "OBS Studio" >}} (GPL-2.0) is a streaming and recording program Written in C,
