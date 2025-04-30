@@ -211,12 +211,6 @@ in wiki.python.org](https://wiki.python.org/moin/GlobalInterpreterLock).
     {{< iref "#mock_objects" "mock libraries section" >}}
     for alternatives.
 -   <a name="venv_module"></a>
-    [venv](http://docs.python.org/3/library/venv.html) is
-    a port to standard library of
-    {{< iref "#virtualenv" "virtualenv" >}}, it is available
-    since python 3.3 and is used with the `python -m venv` or with
-    `pyvenv` script.<br />
--   <a name="venv_module"></a>
     [venv](http://docs.python.org/3/library/venv.html) -
     [PyMOTW Page](https://pymotw.com/3/venv/)
     is
@@ -588,15 +582,17 @@ List of build tools:
     by Doug Hellmann is a framework for building command line
     programs. It uses setuptools entry points to provide subcommands,
     output formatters, and other extensions.
--   -<a name="click"></a[Click](https://click.palletsprojects.com/) (BSD License)
+-   -<a name="click"></a>[Click](https://click.palletsprojects.com/) (BSD License)
     ([GitHub - Click](https://github.com/pallets/click))
     is a Python package for creating command line interfaces.  It provides arbitrary
     nesting of commands, automatic help page generation, lazy loading of subcommands at
-    runtime.  It is an alternative to {{< iref "#docopt" Docopt >}} and
+    runtime.  It is an alternative to {{< iref "#docopt" "Docopt" >}} and
     {{< iref "#argparse" "Argparse" >}}.  It is in Debian as many
     _python(3)-click-*_ packages.
 
-    {{< iref "#typer" "Typer" >}} adds a layer on top of Click.
+    -   {{< iref "#typer" "Typer" >}} adds a layer on top of Click.
+    -   {{< iref "#trogon" "Trogon" >}} generates a terminal user interfaces for your
+        Click CLI.
 
 -   [Clime](http://clime.mosky.tw/) (MIT License)
     converts any module into a multi-command CLI program without any
@@ -1306,6 +1302,32 @@ They are compared in two threads from 2014 and 2015 of _HackerNews_:
     _active in 2022_.
     -   [Mario Documentation](https://python-mario.readthedocs.io).
     -   [Mario Add-Ons](https://mario-addons.readthedocs.io)
+
+## Terminal
+### Textualize {#textualize}
+[Textualize](https://www.textualize.io/) group open source projects to build lean python
+terminal applications.
+
+-   [Textual](https://textual.textualize.io/) (MIT license)
+    lean application framework for Python. Build sophisticated user interfaces with a
+    simple Python API. Run your apps in the terminal and a web browser.
+-   [Textual - GitHub](https://github.com/Textualize/textual) (MIT license)
+-   [Baca](https://github.com/wustho/baca) (GPL-3.0)
+    a TUI abook reader for Epub, Epub3, Mobi & Azw with regexp search and hyperlinks.
+-   [Elia](https://github.com/darrenburns/elia) (Apache2 License)
+    Terminal user interface for interacting with large language models like ChatGPT,
+    Claude, Llama 3, Phi 3, Mistral, Gemma and more.
+-   [Frogmouth](https://github.com/Textualize/frogmouth) (MIT license)
+    Markdown viewer / browser for your terminal with browser-like navigation stack,
+    history, bookmarks, and table of contents.
+-   [RecoverPy: ](https://github.com/PabloLec/RecoverPy) (GPL-3.0)
+    Terminal application to interactively find and recover deleted or overwritten files
+    by scanning disk blocks.
+-   [Rich](https://github.com/Textualize/rich) (MIT license)
+    Python library for rich text and beautiful formatting in the terminal.
+-   <a name= "trogon"></a>[trogon](https://github.com/Textualize/trogon) (MIT license)
+    Easily turn your {{< iref "#click" "Click CLI" >}} into a powerful terminal
+    application.
 
 ## Test Libraries {#test_libs}
 -   [awesome test automation - python
