@@ -13,8 +13,6 @@ J{{< iref "html#css" "css section" >}} since Epub uses css.
 The EPUB format Home is the {{< iref "#ipdf" "IPDF" >}}.
 
 -   Wikipedia {{< wp "EPUB" >}}
--   [Epub Zone](http://epubzone.org/)
-    all things EPUB.
 -   [Kobo ePub Guidelines on Github
     ](https://github.com/kobolabs/epub-spec/)
 -   [edutechwiki: epub](http://edutechwiki.unige.ch/en/EPub) has a lot
@@ -101,7 +99,7 @@ The EPUB format Home is the {{< iref "#ipdf" "IPDF" >}}.
 -   [glyphIgo](https://github.com/pettarin/glyphIgo)  MIT License
     is a tool by Alberto Pettarin aimed to deal with fonts
     in EPUB eBooks.*The last release is from 2015*
--   [Sigil](https://github.com/Sigil-Ebook/Sigil) (GPL)
+-   <a name="sigil"><a>[Sigil](https://github.com/Sigil-Ebook/Sigil) (GPL)
     is an ebook editor. It supports EPUB2 and EPUB3.
     -   [Sigil User Guide (epub)](https://sigil-ebook.com/sigil-user-guide).
     -   [Sygil Plugin Index](http://www.mobileread.com/forums/showthread.php?t=247431).
@@ -140,16 +138,11 @@ The EPUB format Home is the {{< iref "#ipdf" "IPDF" >}}.
 -   [Baca](https://github.com/wustho/baca) (GPL-3.0)
     a TUI ebook reader  built in
     {{< iref "python_libraries#textualize" "Python Textualize" >}}
-    wich supports Epub, Epub3, Mobi & Azw and features regexp search and hyperlinks.
--   [EPUBReader](http://www.epubread.com/en/) is a Firefox addon to
-    read epub in the browser.
--   [FBReader](https://fbreader.org/) (private source since 2015)
-    is a linux, ios, and android program that read epub, part of epub3, mobi and fb2
-    (2.0).. It uses
-    [libunibreak]https://github.com/adah1972/libunibreak).
+    which supports Epub, Epub3, Mobi & Azw. It features regexp search and hyperlinks, and
+    has a dark and a light color scheme.
 -   [Calibre E-book Viewer](https://manual.calibre-ebook.com/viewer.html)
     is the ebook viewer from the {{< iref "#calibre" "Calibre suite" >}}.
-    *Calibre-viewer" supports bookmrks and allow to add notes to highlights, and export
+    *Calibre-viewer* supports bookmrks and allow to add notes to highlights, and export
     them to the Calibre library.
 -   [CoolReader](https://github.com/buggins/coolreader) (GPL)
     is a android and linux ebook reader. It support the following formats: FB2, TXT,
@@ -162,15 +155,41 @@ The EPUB format Home is the {{< iref "#ipdf" "IPDF" >}}.
     describe the requirement and process to build a release from a provided Debian
     source package.
 
-    The sourceforge project is obsolete, and not updated since 2012.
+    It is no more developed on sourceforge, the project is obsolete, and not updated
+    since 2012.
+-   [Bookworm](https://babluboy.github.io/bookworm/)
+    is an ebook reader for Linux, based on Gnustep. It supports many formats: epub, pdf,
+    mobi, cbr, fb2; and bookmarks and annotations.
+-   [epy](https://github.com/wustho/epy)
+    a CLI Ebook (epub2, epub3, fb2, mobi) Reader which supports Epub, Epub3, fb2, Mobi,
+    Azw, Awz3. It allows to bookmark, query an external dictionnary, multiple color
+    profiles.
+    It support text to speech with either mimic, picowave or mpv + tts.
+-   [FBReader](https://fbreader.org/) (private source since 2015)
+    is a linux, ios, and android program that read epub, part of epub3, mobi and fb2
+    (2.0).. It uses
+    [libunibreak]https://github.com/adah1972/libunibreak).
+-   [Foliate](https://johnfactotum.github.io/foliate/)
+    is an ebook reader with many features including:
+    -   View .epub, .mobi, .azw, and .azw3 files in two-page view or scrolled view
+    -   Fetch books from online catalogs using OPDS feeds
+    -   Customize font, line-spacing, margins, and brightness
+    -   Light, sepia, dark, and invert mode, or your own custom themes
+    -   Reading progress slider with chapter marks and reading time prediction
+    -   Bookmarks and annotations
+    It is available in FlatHub, Snap store and is packaged in Debian.
 -   [koreader](https://github.com/koreader/koreader) (AGPL 3.0)
     An ebook reader application supporting PDF, DjVu, EPUB, FB2, running on e-readers,
     Linux  and Android devices
 -   [Lucidor](http://lucidor.org/lucidor/)
-    is a xul Epub reader, it neads either Firefox or XULRunner.  it can also convert web
-    feeds and web pages into e-books.  The lucidor site provide a Debian package.  There
-    is also a Pale *no longer Firefox* plugin named
+    is a xul Epub reader. it can also convert web feeds and web pages into e-books.  The
+    lucidor site provide a Debian package.  There is also a Pale *no longer Firefox*
+    plugin named
     [LuciFox](http://lucidor.org/lucifox/) (GPL).
+
+There are also many browser addons to read epub in the browser, either for Chrome and
+derivatives like Brave, or Firefox, like
+[EPUBReader](http://www.epubread.com/en/) for Firefox
 
 # Structured text to EPUB {#structured_to_epub}
 {{< iref "rest#sphinx" "Sphinx" >}} can output to epub.
