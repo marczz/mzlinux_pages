@@ -1322,41 +1322,27 @@ encryption, and desktop sharing.
 There are many clients for Tox protocol you find a
 [comparison of their features in Tox wiki](https://wiki.tox.chat/clients#features):
 
--   [Antidote](https://antidote.im/) (MIT License) for iOS.
--   [Antox](https://wiki.tox.chat/clients/antox)
-    (Apache License) written in scala for Android.
--   [gtox](https://github.com/KoKuToru/gTox) (GPL)
-    a C++/QT client for linux.
--   Miranda Ng the windows messenger has a [plugin for Tox
-    ](http://forum.miranda-ng.org/index.php?topic=2502.0).
--   [qtox](https://wiki.tox.chat/clients/qtox) (GPL)
-    a client in C++/QT for linux, windows, OS X. It has Debian
-    package in the project home.
-    -   [qtox GitHub repository](https://github.com/tux3/qTox).
--   [RaTox](http://ratox.2f30.org/) (MIT Licence)
-    is a no-gui, Linux and BSD FIFO client that communicate
-    through named pipes. _unmaintained_
--   [Ricin](https://ricin.im/) (GPL)
-    a VALA/GTK3 client for linux.It is in the Debian
-    repo of Tox.
--   [Toxic](https://wiki.tox.chat/clients/toxic) (GPL)
+-   [Atox](https://github.com/evilcorpltd/aTox/) (GPL-3.0)
+    client for Android, available in F-Droid and Google Play.
+-   Miranda Ng the windows messenger [support Tox
+    ](https://wiki.miranda-ng.org/index.php?title=Plugin:Tox/en).
+-   [Toxic](https://wiki.tox.chat/clients/toxic) (GPL-3.0)
     a C/ncurses command-line Tox client for Linux, BSD, OS X.
-    It is in the Debian repo of Tox.
--   [Toxygen](https://wiki.tox.chat/clients/toxygen) is a Linux, OSX
-    and Windoze Tox client written in Python3. It is in the Debian
-    repo of Tox.
-    -   [ToxygenGitHub repository
-        ](https://github.com/toxygen-project/toxygen)
--   [tox-prpl](http://tox.dhs.org/) (GPL)
-    is a Tox Protocol Plugin For Pidgin / libpurple.
+    Available in many distributions
+    [![packaging](https://repology.org/badge/tiny-repos/toxic.svg?header=packages)
+    ](https://repology.org/project/toxic/versions).
+    As the Debian version may be outdated, it can be installed from NixPkgs
+-   [Toxygen](https://github.com/toxygen-project/toxygen) (GPL-3.0)
+    is a Linux, OSX and Windoze Tox client written in Python3.
+    *Toxygen is no more updated since 2020.*
 -   *Toxy* for Windows
--   [µTox](https://wiki.tox.chat/clients/utox) (GPL) It is in the
-    Debian repo of Tox.
--   [XwinTox](https://wiki.tox.chat/clients/xwintox) (GPL or AGPL)
-    a C++/FLTK client for Linux and other unixes.
+-   [µTox](https://github.com/uTox/uTox) (MIT)
+    light tox client for Linux.
+    [![packaging](https://repology.org/badge/tiny-repos/utox.svg?header=packages)
+    ](https://repology.org/project/utox/versions).
 
 
-# Cryptocat {#cryptocat}
+# Crypocat {#cryptocat}
 
 {{< wp "CryptocatCryptocat" >}} (GPL) is a javascript encrypted online chatting
 application created by {{< wp "Nadim Kobeissi" >}}.
@@ -1411,11 +1397,17 @@ multi-user chat, file search, file sharing file sharing, forums, link
 sharing, Retroshare mail.
 
 It is available on Windows, Linux, OS X, FreeBSD.  Retroshare is
-available for Linux (many distributions), Windows, Mac OS,
-Android. It is not in Debian but a Debian repository is provided.
+available for Linux either in the distribution
+[![packaging](https://repology.org/badge/tiny-repos/retroshare.svg?header=packages)
+](https://repology.org/project/retroshare/versions), or in the [OBS repository
+](https://build.opensuse.org/project/show/network:retroshare).
+It is also available for Windows and Mac OS. Android build is described in the
+documentation, but the available Android and IOS clients are outdated, and as far as
+2025 are not currently developed (
+[RetroShare for Android/IOS needs Developers · Issue #2489 · RetroShare/RetroShare
+](https://github.com/RetroShare/RetroShare/issues/2489)).
 
-
--   [RetroShare Home Page](http://retroshare.net)
+-   [RetroShare Home Page](https://retroshare.cc)
 -   [Retroshare Documentation
     ](https://retroshare.readthedocs.io/en/latest/)
 -   [Retroshare GitHub repo
