@@ -263,14 +263,14 @@ rely on {{< wp "Anonymous P2P" >}}, mainly through {{< wp "I2P" >}}; or on
     "Azureus (Vuze) BitTorrent client" >}}, it keeps compatibility with traditional
     BitTorrent clients, but is aimed at using {{< wp "F2F" >}} network in order that
     your data is shared with friends, shared with some friends but not others, and so
-    forth.  OneSwarm download are available for Linux, Windoze and Mac OS X.
-    _Developpement of OneSwarm stopped in 2012_
-    -   [OneSwarm Home](http://www.oneswarm.org/).
+    forth. _Developpement of OneSwarm stopped in 2012_
     -   [GitHub OneSwarm](https://github.com/CSEMike/OneSwarm)
-    -   [OneSwarm Wiki](https://github.com/CSEMike/OneSwarm/wiki)
 -   [OnionShare](https://onionshare.org/) (GPL)
-    is a python tool that lets you securely and anonymously share a file of
-    any size. A PPA repository provides `.deb` packages.
+    is a python tool that lets you securely and anonymously share a file of any size.
+    It is available in many distributions including Debian
+    [![packaging](https://repology.org/badge/tiny-repos/onionshare.svg?header=packages)
+    ](https://repology.org/project/onionshare/versions);
+    as well as F-Droid, IOS App store and testflight.
     -   [GitHub - OnionShare](https://github.com/micahflee/onionshare).
     -   [OnionShare Wiki](https://github.com/micahflee/onionshare/wiki)
         provides the OnionShare Manual.
@@ -279,12 +279,10 @@ rely on {{< wp "Anonymous P2P" >}}, mainly through {{< wp "I2P" >}}; or on
     fo big files with 1GB or more.  Your privacy is protected with anonymous tunnels and
     only your direct friends might learn which files you download. In contrast with many
     P2P / F2F / I2P software it's developpement is active.
-
+    <!--  [[file:../../../../../../../../srv/nfs_share/sync_folders/misc/mznotes/content/docs/mzlinux/social_networks/xmpp.md::Retroshare {#retroshare}][xmpp: retroshare]] -->
     It is referenced {{< iref "xmpp#retroshare" "in the Xmpp Page" >}}
--   {{< wp "Robert" >}} is a file sharing application that relies upon the
-    security and encryption of peers and tunnels inside of I2P.
--   {{< iref "xmpp#tox" "Tox" >}}
-    out of instant messaging and video call allow ptivate and secure
+-   {{< iref "xmpp#tox" "Tox" >}}  <!-- [[file:../../../../../../../../srv/nfs_share/sync_folders/misc/mznotes/content/docs/mzlinux/social_networks/xmpp.md::Tox Protocol {#tox}][xmpp - Tox]] -->
+    out of instant messaging and video call Tox allows private and secure
     file sharing. Tox has clients for Linux, Windoze, OS X, FreeBSD,
     Android, IOS. See the {{< iref "xmpp#tox" "Tox entry in the Xmpp Page" >}}
 
@@ -305,19 +303,31 @@ Take care than most {{< iref "#webtorrent" "WebTorrent" >}}
 based application don't offer encryption or any privacy, your file can
 be viewed by any body having or guessing the URL or magnet Link.
 
--   [justbeamit](https://www.justbeamit.com/) is a P2P file transfer
-    service. It has no encryption or password protection.
-    transfer from and to android work.
--   [reep.io](https://reep.io/) _no longer available ?_
-    is a P2P file transfer service, which
-    works with browsers supporting webrtc, namely chrome, firefox, or
-    opera.  The file is encrypted and sent directly.
-    Both browsers must remain open during the full transfer. A
-    password protection is available.
-    transfer from android with dolphin or chrome work but UC is rejected.
--   [ShareDrop](https://www.sharedrop.io/) is a P2P WebRtc file transfer web
-    application.
-    It allows to share directly on the lan or via an URL on wan.
+-   [PairDrop](https://pairdrop.net/) (GPL-3.0)
+    is a P2P WebRtc file transfer web application.
+    It allows to share directly on the lan, it uses WebRTC signaling server, but files are
+    sent directly from pair to pair; they are encrypted during the transfert.
+
+    When a pair is behind a NAT (behind a router) the contents are channeled through a TURN server.
+    To communicate on the wan the devices are first paired by creating long secrets on
+    each pair.
+
+    There is a pairdrop-cli to send files or text with PairDrop via command-line
+    interface.
+
+    A Progressive Web Application *PWA* is available Linux Chromium browsers, Firefox
+    through a plugin, Android Chrome and ios Safari.
+
+    -   [PairDrop - GitHub](https://github.com/schlagmichdoch/pairdrop).
+    -   [PairDrop FAQ](https://github.com/schlagmichdoch/PairDrop/blob/master/docs/faq.md).
+    -   Pairdrop can be hosted [locally with Docker
+        ](https://github.com/schlagmichdoch/PairDrop/blob/master/docs/host-your-own.md).
+    -   [PairdropWebExtension](https://github.com/ueen/PairdropWebExtension)
+        on Chromium based browser displays a popup with the Pairdrop website so you can
+        receive files and texts easily.
+    -   [snapdrop-android](https://github.com/fm-sys/snapdrop-android) (GPL-3.0)
+        Android client for local file sharing via https://pairdrop.net, available on F-Droid.
+
 -   <a name="sendanywhere"></a> [Send Anywhere](https://send-anywhere.com/) (
     Private License)
     is mainly a P2P service, but also include cloud storage to free the sender from the
@@ -341,60 +351,42 @@ be viewed by any body having or guessing the URL or magnet Link.
     use the classic web interface.
 -   [Tresorit Send](https://send.tresorit.com/)
     web app to  send files with end-to-end encryption, free for use until a storage of
-    3G, with file max size of 500MB.
+    5G.
 -   [Feem](https://www.feem.io/index.html)
     is an alternative to SendAnywhere but the free plan is quite limited and you have to
     subscribe a plan of 5$/yr for up to 4 non ios device plus 5$/y for one Appleid on
     ios.
--   [Instashare](http://instashareapp.com/droid.html) an other alternative, but no
-    client for Linux.
--   [Dukto R6](https://www.msec.it/blog/dukto/) (GPL)
-    application for transfer on lan between Android, Mac, Linux, Windows, and third
-    party ios app. Do not need an internet connection.
-    -   [Sourceforge project page](https://sourceforge.net/projects/dukto/)
-        _Last update 2013_.
--   {{< iref "task_management#pushbullet" "Pushbullet" >}} allows to transfer small
-    files up to 25MB. The company produce also a dedicated free wifi file transfer app
-    for Android, ios was dropped in 2021  [Portal  (Google Play)
-    ](https://play.google.com/store/apps/details?id=com.pushbullet.android.portal)
+-   [Instashare
+    ](https://www.benq.com/en-us/business/support/products/ifp/instashare/download.html)
+    an other alternative, but no client for Linux.
 -   See also {{< iref "sip#jami" "Jami">}} _previously Ring_ a communication software
     with file sharing.
 
--   They are many other WebTorrent clients in the browser, but for most of them your
-    file are public and without protection.
+-   They are many other WebTorrent clients in the browser, for some of them your
+    file are public and without protection, others uses the WebRTC encryption.
 
     To use it in wan, you have also to use a port which is not blocked by the firewall.
     You can also use it in lan on a port non available on wan, to mitigate the risk of
     your data being spied.
 
-    Among them:
+    Many WebTorrent applications were created when WebTorrent become popular and are no
+    longer updated since 10 years, few of them are maintained among them:
     -   The reference implementation [instant.io](https://instant.io/) (
         [gitHub](https://github.com/feross/instant.io)) share by info hash
         url or magnet link;
-    -   [Lunik Instant Share](https://github.com/Lunik/Instant-Share) similar to
-        _instant.io_ but only with info hash url; _the demo site is down_
+    -   [justbeamit](https://www.justbeamit.com/) is a P2P file transfer
+        service. It has no encryption or password protection.
+        transfer from and to android work.
     -   [file-pizza](https://file.pizza/) (
         [GitHub](https://github.com/kern/filepizza)) can use the
         [Twillo STUN-TURN nat traversal service
         ](https://www.twilio.com/stun-turn) and generates info url human
         readable, all WebRTC communications are automatically encrypted
         using public-key cryptography;
-    -   [Squidl.ink](http://Squidl.ink/)
-        ([GitHub](https://github.com/darkenvy/Squidl.ink));
-    -   [P2PDrop](http://app.p2pdrop.com/profile)
-        ([GitHub](https://github.com/ajainvivek/P2PDrop)) has support for
-        user registration, you select the peers with which you share your
-        file.
     -   [peertransfer](https://github.com/perguth/peertransfer)
         Send a file p2p and e2e encrypted in your browser using WebRTC.
         A [hosted instance of Peertransfer](https://perguth.github.io/peertransfer/)
         is available
-    -   [sharefest](https://sharefest.me/) _now  abandoned_ was a WebRTC file sharing
-        application with STUN NAT traversal. The [Sharefest source Repository
-        ](https://github.com/peer5/sharefest) is still on GitHub.
-
-    -   [awesome-webrtc](https://github.com/openrtc-io/awesome-webrtc)
-        gives a list of WebRTC resources, but it is no longer updated since 2017
 
     Most of the previous applications have the ability to directly preview a media in
     the browser. Many other applications listed in the
