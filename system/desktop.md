@@ -1190,8 +1190,12 @@ Some newer command line apps to manage selection in X11:
     that implements a clipboard manager.
 -   [cliphist](https://github.com/sentriz/cliphist) (GPL-3.0)
     a Golang clipboard history “manager” for Wayland.
-    -   The [Releases](https://github.com/sentriz/cliphist/releases) includes
-        binaries for x386, amd64 and arm.
+
+    The [Releases](https://github.com/sentriz/cliphist/releases) includes
+    binaries for x386, amd64 and arm,there are also packages
+    [![packaging](https://repology.org/badge/tiny-repos/cliphist.svg?header=packages)
+    ](https://repology.org/project/cliphist/versions).
+
 -   [clipman](https://github.com/yory8/clipman) (GPL v3.0)
     is a basic Golang clipboard manager for Wayland, with support for persisting copy
     buffers after an application exits. It is in Debian.
@@ -1388,12 +1392,14 @@ on the window property like {{< man "xwininfo" >}} or {{< man "xprop" >}}.
 
     It is packaged in Debian.
 -   [Devilspie2](https://www.nongnu.org/devilspie2) (GPL)
-    is a a window matching utility, allowing the user to perform scripted actions on
+    is a a X window matching utility, allowing the user to perform scripted actions on
     windows as they are created. For example you can script a terminal program to always
     be positioned at a specific screen position, or automatically position a window on a
     specific workspace.
 
-    Devilspie2 is in Debian, _active in 2022_.
+    Wayland is not supported by Devillspie2.
+
+    Devilspie2 is in Debian, _active in 2025_.
     -   [Devilspie2 Home](https://www.nongnu.org/devilspie2/).
     -   [devilspie2 - GitHub](https://github.com/dsalt/devilspie2)
 
