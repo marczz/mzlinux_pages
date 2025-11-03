@@ -375,7 +375,9 @@ private_ projects.
 -   [How to Use GitHub
     ](https://www.gun.io/blog/how-to-github-fork-branch-and-pull-request)
     Fork, Branch, Track, Squash and Pull Requests, a guide by Taylor Veino.
+-   [GitHub Docs](https://docs.github.com/en).
 -   [GitHub Help](https://help.github.com/en).
+-   [GitHub Copilot documentation](https://docs.github.com/en/copilot).
 -   [GitHub cheat-sheet](https://github.com/tiimgreen/GitHub-cheat-sheet).
 -   Awesome lists:
     -   [Awesome GitHub](https://github.com/Kikobeats/awesome-github)
@@ -402,7 +404,7 @@ private_ projects.
     -   [FastGit - ArchWiki](https://wiki.archlinux.org/index.php/FastGit).
 -   [Forge](https://github.com/magit/forge) (GPL)
     by Jonas Bernoulli _tarsius_. Work with Git forges, such as Github and Gitlab, from
-    the comfort of {{< Iref "#Magit" "Magit" >}}
+    the comfort of {{< iref "#Magit" "Magit" >}}
     -   [Forge User and Developer Manual](https://magit.vc/manual/forge/)
 
 ### Gist {#gist}
@@ -989,6 +991,30 @@ See {{< iref "#ediff" "above for emacs frontends" >}}:
     hosted version of diffscope
     [trydiscope](https://github.com/lamby/trydiffoscope)
     both diffscope and trydiffscope are in Debian.
+-   [diffr](https://github.com/mookid/diffr) (MIT License)
+    is a Rust diff viewer that works hunk by hunk, recomputing the diff on a
+    word-by-word basis. It is an improvement of the git contrib
+    {{< iref "#diff-highlight" "diff-highlight" >}}.
+-   [difftastic](https://github.com/wilfred/difftastic?tab=readme-ov-file) (MIT License)
+    a structural diff written in Rust that understands syntax of over 30 programming
+    languages.
+
+    Difftastic can be used an external diff command in git by adding to your git command
+    `-c diff.external=difft` or by
+    [defining aliases
+    ](https://difftastic.wilfred.me.uk/git.html#regular-usage),
+    or setting it as your default diff tool, or a
+    [named difftool](https://difftastic.wilfred.me.uk/git.html#difftool).
+
+    Difftastic can be built with cargo, binaries are also provided on the Releases page,
+   and it is packaged in the following repos:
+   [![packaging](https://repology.org/badge/tiny-repos/difftastic.svg?header=packages)
+   ](https://repology.org/project/difftastic/versions).
+
+    -   [Difftastic, the Fantastic Diff – Wilfred Hughes::Blog
+        ](https://www.wilfred.me.uk/blog/2022/09/06/difftastic-the-fantastic-diff/)
+    -   [Difftastic - Home](https://difftastic.wilfred.me.uk/)
+    -   [Difftastic Manual](https://difftastic.wilfred.me.uk/introduction.html)
 -   [Diffuse](http://diffuse.sourceforge.net/) (GPL)
     is a diff GUI tool written in python GTKxs. Diffuse can retrieve revisions of files from
     Bazaar, CVS, Darcs, Git, Mercurial, Monotone, RCS, Subversion, and SVK repositories
@@ -1027,10 +1053,6 @@ See {{< iref "#ediff" "above for emacs frontends" >}}:
     -   [Pretty Diff Online Interface](http://prettydiff.com/)
     -   [Pretty Diff Documentation
         ](http://prettydiff.com/documentation.xhtml)
--   [diffr](https://github.com/mookid/diffr) (MIT License)
-    is a Rust diff viewer that works hunk by hunk, recomputing the diff on a
-    word-by-word basis. It is an improvement of the git contrib
-    {{< iref "#diff-highlight" "diff-highlight" >}}.
 -   [tkdiff](http://sourceforge.net/projects/tkdiff/)
     is a gui for diff written in TK that provides a
     side-by-side diff view.
