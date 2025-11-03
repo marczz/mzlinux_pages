@@ -26,7 +26,7 @@ Presently most desktop environment use either {{< wp "Qt_(framework)"  "QT" >}} 
 a {{< iref "#window_manager" "window manager" >}}
 and a {{< iref "#file_manager" "file-manager" >}}.
 
-Some [window manager]((#window_manager "internal reference") are inseparable
+Some [window manager](#window_manager "internal reference") are inseparable
 from the desktop environment they use as _i3_, _fluxbox_, _awesome_
 and many light window manager. You will find an entry for them in the
 {{< iref "#window_manager" "window manager section" >}}
@@ -37,6 +37,10 @@ You find a nice [comparison of memory footprints of  light linux desktops
 
 Wikipedia {{< wp "Comparison of X Window System desktop environments" >}}
 gives also some information on the size of each-one.
+
+-  Archwiki:
+   [Desktop environment](https://wiki.archlinux.org/title/Desktop_environment),
+   [Comparison of desktop environments](https://wiki.archlinux.org/title/Comparison_of_desktop_environments)
 
 ## Main stream desktop environment
 
@@ -144,25 +148,17 @@ See also the the
 
     The light window managers are also compared with full environments
     in the {{< wp "Comparison of X Window System desktop environments" >}}.
--   [ArchWiki - Window manager
-    ](https://wiki.archlinux.org/index.php/Window_manager)
+-   [ArchWiki - Window manager](https://wiki.archlinux.org/index.php/Window_manager)
 -   [ArchLinux list of Window Managers
     ](https://wiki.archlinux.org/index.php/Window_Manager)
 -   [ArchLinux Comparison of Tiling Window Managers
     ](https://wiki.archlinux.org/index.php/Comparison_of_Tiling_Window_Managers)
--   [Window Managers for X]((http://xwinman.org/),
-    is an outdated comparaison of main window managers, with their characteristic. The
-    [comparison page](http://xwinman.org/comparisons.php)
-    compare the features and resource requirements. I also give some
-    resident memory size on my amd64 on this page.
--   [Matchbox
-    ](https://www.yoctoproject.org/tools-resources/projects/matchbox)
+-   [Matchbox](https://www.yoctoproject.org/tools-resources/projects/matchbox)
     is a base
     environment for the X Window System running on non-desktop embedded
     platforms. Matchbox is now part of the
     [Yocto Project](https://www.yoctoproject.org/) that provides tools
     to create custom Linux-based systems for embedded products.
-
 
 -   {{< wp "Compiz" >}} is a {{< wp "Compositing window manager" >}} that can be used
     with gnome or KDE.
@@ -715,6 +711,9 @@ See below the {{< iref "#wayland_menus" "dmenu/rofi alternatives" >}} and above 
 
 # Desktop components {#desktop_components}
 
+-   [Cursor themes - ArchWiki](https://wiki.archlinux.org/title/Cursor_themes).
+-   [Icons - ArchWiki](https://wiki.archlinux.org/title/Icons).
+
 ## Panels {#panels}
 The  distinction between taskbar, panel, and status bar is not clear, as some status bar
 offer menus, system tray, launcher, volume-control ... On the other side panels can also
@@ -841,8 +840,8 @@ in Debian.
     dmenu_edit, dmenu_menu, dmenu_mpc, dmenu_netctl, dmenu_raise, dmenu_raise_or_run,
     dmenu_run_recent.
 -  John Sagotsky [dmenu toys](http://sagotsky.github.io/2013/10/11/dmenu-toys.html)
-   is a blog page from _2013_ some scripts using dmenu or rofi, described here, and many
-   others are available in his [dotfiles and scripts - GitHub
+   is a blog page from _2013_ some scripts using dmenu or {{< iref "#rofi" "rofi" >}},
+   described here, and many others are available in his [dotfiles and scripts - GitHub
    ](https://github.com/sagotsky/.dotfiles/).
 
    Among them
@@ -858,8 +857,17 @@ It was written by Sean Pringle and later expanded by [Dave Davenport
 
 Rofi can act as a drop-in dmenu replacement and provides
 extra features, like a run-dialog, ssh-launcher, ....
-Rofi is in Debian.
+
+Rofi support wayland since version 2.0, where the
+[lbonn fork of rofi](https://github.com/lbonn/rofi) which adds
+[Wayland support](https://github.com/lbonn/rofi#wayland-support)
+was merged with Rofi mainline.
+
+[![packaging](https://repology.org/badge/tiny-repos/rofi.svg?header=packages)
+](https://repology.org/project/rofi/versions).
+
 -   [GitHub - davatorium/rofi](https://github.com/davatorium/rofi)
+-   [Rofi Documentation](https://davatorium.github.io/rofi/)
 -   [Rofi - manpage](https://github.com/davatorium/rofi/blob/master/doc/rofi.1.markdown),
 -   [Rofi wiki](https://github.com/davatorium/rofi/wiki).
 -   [Rofi scripts index](https://github.com/davatorium/rofi/wiki/User-scripts)
@@ -871,14 +879,11 @@ Rofi is in Debian.
     Dave Davenport notification system.
 -   [jluttine/rofi-power-menu](https://github.com/jluttine/rofi-power-menu)
     Configurable power menu mode for Rofi and dmenu.
--   [rofi-blezz](https://github.com/davatorium/rofi-blezz) is a plugin for rofi that
-    emulates [blezz](https://github.com/Blezzing/blezz) the guided Keystroke Launcher.
+-   [rofi-blezz](https://github.com/davatorium/rofi-blezz) is a plugin for
+    {{< iref "#rofi" "rofi" >}} that emulates [blezz](https://github.com/Blezzing/blezz)
+    the guided Keystroke Launcher.
 -   [Derek Taylor  dmscripts](https://gitlab.com/dwt1/dmscripts) (GPL 3)
     a collection of scripts for dmenu, fzf, rofi.
-
-Rofi don't support wayland, it was first planned, but now wayland development moved to a
-fork [lbonn / rofi](https://github.com/lbonn/rofi) which adds
-[Wayland support](https://github.com/lbonn/rofi#wayland-support).
 
 
 ### dmenu alternatives
@@ -897,6 +902,9 @@ fork [lbonn / rofi](https://github.com/lbonn/rofi) which adds
         ](https://kupferlauncher.github.io/Documentation/).
 
 ### wayland dmenu/rofi alternatives {#wayland_menus}
+{{< iref "#rofi" "rofi" >}} works on Wayland sinve v 2.0, but it was previously confined
+to X11, an many Wayland alternatives have been developped.
+
 See also the list in [awsome Wayland - launchers
 ](https://github.com/natpen/awesome-wayland#launchers).
 
@@ -916,8 +924,8 @@ See also the list in [awsome Wayland - launchers
 -  <a name="lbonn_rofi"></a> [lbonn/rofi](https://github.com/lbonn/rofi) (MIT License)
     a rofi fork with wayland support.
 -  <a name="tofi"></a> [tofi](https://github.com/philj56/tofi) (MIT License)
-    fast and simple dmenu / rofi replacement for wlroots-based Wayland compositors.
-    _tofi_ is in Debian.
+    fast and simple dmenu / {{< iref "#rofi" "rofi" >}} replacement for wlroots-based
+    Wayland compositors.  _tofi_ is in Debian.
 -   <a name="wofi"></a>[wofi](https://hg.sr.ht/~scoopta/wofi) (GPL-3.0)
     a launcher/menu program for wlroots based wayland compositors such as sway.
     The documentation is in the man pages. There are packages for most distribution
