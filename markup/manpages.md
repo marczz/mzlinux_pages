@@ -243,7 +243,7 @@ the [git Repository
 -   <a name="tdlr"></a>The [TLDR pages](https://tldr.sh/) are a community effort to
     simplify the man pages with practical examples.
     -   [GitHub - tldr-pages/tldr](https://github.com/tldr-pages/tldr).
-    -   There are [many clients](https://github.com/tldr-pages/tldr/wiki/TLDR-clients)
+    -   There are [many clients](https://github.com/tldr-pages/tldr/wiki/tldr-pages-clients)
         in numerous programming languages, mainly console clients, but also web clients,
         and android and ios clients.
 -   [bro pages](http://bropages.org/) is a web site with community driven
@@ -270,7 +270,7 @@ the [git Repository
         curl https://cheat.sh/rsync
         curl https://cht.sh/tr
         ```
-    -   [Rico Sta. Cruz](https://github.com/rstacruz) has written
+-   [Rico Sta. Cruz](https://github.com/rstacruz) has written
     more than 380 cheat sheets that you can find on [devhints.io](https://devhints.io/).
 
     They are written in markdown, with a
