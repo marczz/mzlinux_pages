@@ -2,6 +2,8 @@
 title: Tag, playlist, lyrics Management
 ---
 
+<!-- [[file:../../../../content-org/notes/media_notes/sound_notes.org::#tags][Tags Notes]] -->
+
 # References
 
 -   [id3.org - ID3 tags Home](http://id3.org/) has references for the
@@ -191,6 +193,10 @@ libid3tag (GPL)
     [mad](http://www.underbit.com/products/mad/) project. both ID3v1
     and the various versions of ID3v2.
 
+mp4v2 (Mozilla public license)
+:   [mp4v2](https://github.com/enzo1982/mp4v2) is a C/C++ library to create, modify and
+    read MP4 files.
+
 <a name="mutagen"></a>[mutagen](https://bitbucket.org/lazka/mutagen) (GPL)
 :   Mutagen is a Python module to handle audio metadata it comes with a GTK frontend
     named {{< iref "#exfalso" "ExFalso" >}}.  It supports AIFF, AAC, ASF, FLAC, MP4,
@@ -243,7 +249,7 @@ Linux music players support Cue sheets: {{< iref "media_players#amarok" "Amarok"
 {{< iref "media_players#audacious" "Audacious" >}} through the .cue plugin,
 {{< iref "media_players#clementine" "Clementine" >}},
 {{< iref "media_players#deadbeef" "DeaDBeef" >}},
-{{< iref "media_players#cmus" "cmus" >}},
+{{< iref "media_players#cmus" "cmus" >}}*partial support*,
 {{< iref "media_players#guayadeque" "Guayadeque" >}},
 {{< iref "media_players#kodi" "Kodi" >}},
 {{< iref "media_players#mpd" "MPD" >}},
@@ -275,7 +281,7 @@ tag.
     is a java tool to convert Audacity label files to .cue files.
 -   [lbl2cue / cue2lbl](http://grimblefritz.com/audacity/)
     are two php script scripts to convert audacity label files to .cue files and .cue
-    files to label files. The work online at the previous address.
+    files to label files. They are available online at the previous address.
 -   [labelcue](http://forum.audacityteam.org/download/file.php?id=3489)
     is a bash script to convet labe to cue. It needs some
     [bc functions (from pixelbeat)](http://www.pixelbeat.org/scripts/bc).
@@ -322,9 +328,10 @@ Few clients have cue sheet support, you can use cantata and ncmpcpp.
 -   [cuetools](http://developer.berlios.de/projects/cuetools) is a set of
     utilities to manipulate cue files.
 
-## Bookmarks
+## Bookmarks {#bookmark}
 The following players have bookmarks: amarok, banshee, exaile thru plugin, quodlibet,
-vlc.
+{{< iref "media_player#moc" "Moc" >}},
+{{< iref "media_player#vlc" "VLC" >}}, {{< iref "media_player#smplayer" "Smplayer" >}}.
 
 Exaile has only one bookmark list, no export, no edit, clementine has none.
 
@@ -350,59 +357,81 @@ with the following structure:
     #EXTVLCOPT:stop-time=1100
     video2.mp4
 
+{{< iref "media_player#smplayer" "Smplayer" >}} can add bookmark with a key shortcut
+Ctrl-A by default, or the menu under the *Browse" section, this menu allows also to edit bookmarks.
+
+You may prefer to use {{< iref "#chapter" "Chapters" >}} which is a portable
+bookmarking solution with a format which depend on the container, but stable across
+players with chapter support.
+
+But bookmark are used for short term tasks, and have usually a life cycle a lot shorter
+than chapter.
+
 All the previous bookmarking solutions are specific to a software piece and not
 shareable, with an other media player.
 
-## Chapters, Podcasts
-The ogg format has a
-[chapter extension ](https://wiki.xiph.org/Chapter_Extension)
-wich record navigation points for a media file. They are used for
+## Chapters {#chapter}
+Chapters record navigation points for a media file. They are used for
 [enhanced podcasts](https://en.wikipedia.org/wiki/Podcast#Enhanced_podcasts)
 or
 [podcasts novels or podcast audiobooks
 ](https://en.wikipedia.org/wiki/Podcast#Podcast_novels)
-The podcast is then called an {{< wp "Oggcast" >}}
 
-See also _auphonic.com_ :
-[Chapter Marks for MP3, MP4 Audio and Vorbis Comment (Enhanced Podcasts)
-](https://auphonic.com/blog/2013/07/03/chapter-marks-and-enhanced-podcasts/)
-and [Podcast Comparison, Part 3: Ogg Vorbis Metadata (Vorbis Comment)
-](https://auphonic.com/blog/2012/01/22/podcast-comparison-part-3-ogg-vorbis-metadata-vorbis-comment/).
+Chapters are available in many containers MP4, Matroska (MKV), Ogg.
 
-The first post contains example files to demonstrate chapters in MP4 (M4A), MP3, Ogg
-Vorbis, Opus.
-
-
-The ogg chapter extension is similar to the
-[matroska chapter extension
-](http://savvyadmin.com/adding-chapters-to-videos-using-mkv-containers/)
-other metadata can be stored in
-{{< wp "Vorbis comment" >}}.
-
-A vorbis chapter is only a comment like:
+A chapter is only a comment like:
 
     CHAPTER001=00:00:00.000
     CHAPTER001NAME=Chapter 1
     CHAPTER002=01:00:00.000
     CHAPTER002NAME=Chapter 2
 
-They are recognized by vlc.
-They are not used by exaile, smplayer, clementine.
+-   [Chapter Marks for MP3, MP4 Audio and Vorbis Comment (Enhanced Podcasts)
+    ](https://auphonic.com/blog/2013/07/03/chapter-marks-and-enhanced-podcasts/)
+     from [auphonic.com](https://auphonic.com/).
+    this post contains example files to demonstrate chapters in MP4 (M4A), MP3, Ogg
+    Vorbis, Opus.
+-   [matroska chapter extension
+    ](http://savvyadmin.com/adding-chapters-to-videos-using-mkv-containers/)
+-   [Ogg chapter extension ](https://wiki.xiph.org/Chapter_Extension)
+-   [Podcast Comparison, Part 3: Ogg Vorbis Metadata (Vorbis Comment)
+    ](https://auphonic.com/blog/2012/01/22/podcast-comparison-part-3-ogg-vorbis-metadata-vorbis-comment/).
+-   [Auphonic Blog: Automatically generate Shownotes, Summaries and Chapters from
+    Recordings
+    ](https://auphonic.com/blog/2023/06/12/auto-generate-shownotes-summaries-and-chapters-from-recordings/)
+    uses AI to add chapters and shownotes.
+
+The name {{< wp "Vorbis Comment" >}} may be misleading, it is the format of comments
+{{used in Ogg containers for vorbis, opus, speex theora. In ogg containers the chapters
+are embedded in vorbis comments.
+
+On Linux chapters are recognized by {{< iref "media_players#vlc" "VLC" >}},
+{{< iref "media_players#qmmp" "Qmmp" >}},
+{{< iref  "media_players#mpv" "mpv" >}} with a plugin.
+
+They are not used by exaile, smplayer, clementine, strawberry, sayonara, Rhythmbox.
+
+Nevertheless with the players that support cue file and no chapter you can extract the
+metadata with:
+```sh
+ffmpeg -i audio_file.m4b -f ffmetadata audio_file.meta
+```
+and generate a cue file based on these metadata.
 
 On Android you can use the open source
-[AntennaPod](https://play.google.com/store/apps/details?id=de.danoeh.antennapod)
-to display chapter marks with URLs in MP3 and Ogg Vorbis files.
+[Voice Audiobook Player](https://f-droid.org/en/packages/de.ph1b.audiobook/)
+to read audiobooks and navigate by chapters.
 
+[AntennaPod](https://f-droid.org/en/packages/de.danoeh.antennapod/)
+is a podcast client which displays chapter marks with URLs.
+
+## Podcasts
 See also [Podcast Client Feature Comparison Matrix
 ](https://docs.google.com/spreadsheets/d/1c2L14UVH1xtN4iDG4awheLbMgPCQgaKEamUauWs1gps/edit).
 where it is said that neither amarok, banshee, gpodder, miro,
 rythmnbox, hpodder (_obsolete_) support chapters; and gpodder is the
 only one to support bookmarks. Most IOS clients have support for
 chapters.
-
--   [id3v2 ChapterTool](http://id3v2-chap-tool.sourceforge.net/)
-    is a java application to  embed chapter information in a MP3 file
-    it is no longer maintained (previously developed by the BBC).
 
 -   [gPodder](http://gpodder.org/) (GPL) is a python software
     that downloads and manages, and play audio and video podcasts.
@@ -413,23 +442,42 @@ chapters.
         ](https://github.com/gpodder/gpodder)
     -   [How to run the latest git development version of gPodder
         ](http://wiki.gpodder.org/wiki/Git)
+-   [awesome-mpv - Playback](https://github.com/stax76/awesome-mpv#playback)
+    list many chapter scripts for mpv.
 
 ## Audiobook
-Audiobooks use often the {{< wp "MPEG-4_Part_14"  "MPEG-4" >}} format.
+Audiobooks use often the {{< wp "MPEG-4" >}} part 14 {{< wp "MP4 file format" >}}.
 
-Audiobooks can also use an other format and a
-{{< iref "#cuesheet" "cue sheet" >}}.
+Audiobooks can also use an other format and a {{< iref "#cuesheet" "cue sheet" >}}.
+
+For encoding we may use {{< iref "ffmpeg" "ffmpeg" >}} or
+{{ iref "sound_edit#faac" "ffac" >}}.
 
 -   [ArchWiki: audiobook](https://wiki.archlinux.org/index.php/Audiobook)
     present how to create ios compatible audiobooks, that is, how to
-    convert to AAC and {{< wp "mp4b" >}} using command line tools like
-    [MP4Box](https://gpac.wp.imt.fr/mp4box/) _from the GPAC package_,
+    convert to AAC and {{< wp "MP4_file_format"  "mp4b" >}} using command line tools like
+    [MP4Box](https://wiki.gpac.io/MP4Box/MP4Box/) _from the GPAC package_,
     faac encoder and the tools in the package mp4v2-utils.
 -   [Audio Book Creator - abc](http://www.ausge.de/ausge-download/abc-info-english)
-    creates iPod compatible audiobooks including chapters.
--   [GPAC - Open Source multimedia framework](https://gpac.wp.imt.fr/)
-    provide [MP4Box multimedia packager](https://gpac.wp.imt.fr/mp4box/).
+    creates iPod compatible audiobooks including chapters. The licence is not given in
+    the home page nor a link to the source code. The maintenance is unknown.
+-   [GPAC - Open Source multimedia framework](https://gpac.io/) (LGPL)
+    provide [MP4Box multimedia packager](https://wiki.gpac.io/MP4Box/MP4Box/).
     It is in the Debian Package _gpac_.
+    -   [GPAC Wiki](https://wiki.gpac.io/)
+-   [Libation](https://github.com/rmcrackan/Libation/) (GPL-3.0)
+    an open source Audible audiobook manager that can download audiobooks and remove
+    DRM. œ:w
+-   [m4b-tool](https://github.com/sandreas/m4b-tool) (MIT license)
+    is a command line utility to merge, split and chapterize audiobook files such as
+    mp3, ogg, flac, m4a or m4b.
+-   [m4b-merge](https://github.com/djdembeck/m4b-merge) (GPL-3.0)
+    A python CLI tool which outputs consistently sorted, tagged, single m4b files.
+-   [inAudible-NG/tables](https://github.com/inAudible-NG/tables)
+    a rainbow table password cracker with tables suited to audible activation bytes.
+-   [m4b-tool](https://github.com/sandreas/m4b-tool) (MIT license)
+    command line utility to merge, split and chapterize audiobook files such as mp3,
+    ogg, flac, m4a or m4b
 
 ## WebVTT
 [WebVTT: The Web Video Text Tracks Format](https://w3c.github.io/webvtt) support
