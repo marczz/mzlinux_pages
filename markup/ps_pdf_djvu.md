@@ -82,8 +82,7 @@ See also the {{< iref "cups" "Cups Page" >}}.
     ](https://fr.wikisource.org/wiki/Aide:Cr%C3%A9er_un_fichier_DjVu/M%C3%A9thodes_compl%C3%A8tes),
     [Créer un fichier DjVu à partir d’un pdf de Google Books
     ](https://fr.wikisource.org/wiki/Aide:Cr%C3%A9er_un_fichier_DjVu/%C3%80_partir_d%E2%80%99un_pdf_de_Google_Books).
--   [PDF, PS and DjVu - ArchWiki
-    ](https://wiki.archlinux.org/index.php/PDF,_PS_and_DjVu).
+-   [PDF, PS and DjVu - ArchWiki](https://wiki.archlinux.org/index.php/PDF,_PS_and_DjVu).
 -   _Djview4_ is the standard reader for djvu, {{< iref "#evince" "Evince" >}},
     {{< iref "#atril" "Atril"  >}},  {{< iref "#okular" "Okular" >}}
     _but not epdfview_ can also display djvu.
@@ -122,8 +121,7 @@ formats in
 [PDF/X in a Nutshell](https://www.pdfa.org/resource/pdfx-in-a-nutshell/),
 [PDF/UA in a Nutshell](https://www.pdfa.org/resource/pdfua-in-a-nutshell/).
 
--   [PDF, PS and DjVu - ArchWiki
-    ](https://wiki.archlinux.org/index.php/PDF,_PS_and_DjVu#Create_a_PDF_from_images)
+-   [PDF, PS and DjVu - ArchWiki](https://wiki.archlinux.org/index.php/PDF,_PS_and_DjVu)
     Contains also a tutorial for command line PDF manipulation under the section
     [Command Snippets](https://wiki.archlinux.org/title/PDF,_PS_and_DjVu#Command_Snippets)
 -   {{< wp "OpenXPS" >}} is a page description format created by microsoft to
@@ -139,8 +137,8 @@ formats in
     [Screen Presentation Tools](http://me.in-berlin.de/~miwie/presentations/html/index.html)
     review that has a section on pdf representation _updated 2014_.
 -   Font extraction is dealed with a detailled tutorial in the answer of the
-    StackOverflow question [How can I extract embedded fonts from a PDF as valid font
-    files?
+    StackOverflow question
+    [How can I extract embedded fonts from a PDF as valid font files?
     ](http://stackoverflow.com/questions/3488042/how-can-i-extract-embedded-fonts-from-a-pdf-as-valid-font-files)
     there is also a web service [ExtractPDF.com ](http://www.extractpdf.com/) but we
     have to know that in PDFs there are never font metric files (.pfm or .afm files)
@@ -198,6 +196,9 @@ synchronization library. This include
     {{< iref "#poppler" "poppler libraries" >}} for rendering pdf files.
 
     It uses djvulibre library for rendering djvu files.
+-   [koreader](https://github.com/koreader/koreader) (AGPL 3.0)
+    An ebook reader application supporting PDF, DjVu, EPUB, FB2, running on e-readers,
+    Linux  and Android devices
 -   <a name="pdf_js"></a>[PDF.js](https://github.com/mozilla/pdf.js)  (Apache License)
     is a javascript PDF Viewer for html5 browsers, it is embedded in Firefox to provide
     the new [Firefox built-in PDF viewer
@@ -399,8 +400,7 @@ corresponding PostScript code. PdfMark is introduced in the
 [pdfmark primer](http://extras.springer.com/1998/978-3-642-72032-1/PDF/PRIMER.PDF)
 available in the springer extra materials,
 
-It is a chapter of the book _Web publishing with Acrobat/PDF_ by
-Thomas Merz.
+It is a chapter of the book _Web publishing with Acrobat/PDF_ by Thomas Merz.
 
 You can also refer to the tutorial
 [Enhancing the Text in Text Fields using Pdfmarks
@@ -419,11 +419,9 @@ If you want to adapt pdf to e-readers, smartphones, small tablets you can refer 
 *Willus* page
 [PDF Conversion Tips for e-readers](https://willus.org/k2pdfopt/pdf_conversion.shtml).
 
--   <a name="cpdf"></a>[CPDF](https://community.coherentpdf.com/)
-    ([Non-Commercial Use License
-    ](https://github.com/coherentgraphics/cpdf-binaries/blob/master/LICENSE))
+-   <a name="cpdf"></a>[CPDF](https://community.coherentpdf.com/) (AGPL-3.0)
     _Coherent PDF Command Line Tools Community Release_
-    allow you to manipulate existing PDF files in a variety of ways.  merge, or split,
+    allow you to manipulate existing PDF files in a variety of ways.  Merge, or split,
     encrypt and decrypt, scale, crop, rotate pages, read and set document info and
     metadata, losslessly compress PDF files.
 
@@ -432,8 +430,9 @@ If you want to adapt pdf to e-readers, smartphones, small tablets you can refer 
     - [CPDF Manual](https://www.coherentpdf.com/cpdfmanual/cpdfmanual.html)
       ([pdf](http://www.coherentpdf.com/cpdfmanual.pdf))
     -   [CPDF Examples](http://www.coherentpdf.com/usage-examples.html)
-    -   [Binaries for Linux, OSX, Windows (Github)
+    -   [Binaries for Linux, OSX, Windows (GitHub)
         ](https://github.com/coherentgraphics/cpdf-binaries)
+    -   [cpdf-source](https://github.com/johnwhitington/cpdf-source)
 -   {{< iref "images#exactimage" "Exact Image" >}} in the Image section
     is a fast C++ image processing library. it contains some pdf
     processing tools:
@@ -970,6 +969,9 @@ Many software have bookmarking support {{< iref "#llpp" "llpp" >}},
 {{< iref "#zathura" "Zathura" >}},  {{< iref "#evince" "Evince" >}},
 {{< iref "#qpdfview" "Qpdfview" >}}, {{< iref "#atril" "Atril"  >}},
 {{< iref "#okular" "Okular" >}} ...
+
+-  [HandyOutliner for DjVu / PDF](https://handyoutlinerfo.sourceforge.net/)
+   is a mono program to create and modify bookmarks in pdf and djvu documents.
 
 ## PDF Annotations {#pdf_annotations}
 PDF annotations are in
