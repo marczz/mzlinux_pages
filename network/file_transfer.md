@@ -155,8 +155,8 @@ Many applications are listed in [List of download managers - ArchWiki
 -   <a name=aria2></a>[aria2](https://aria2.github.io/)
     is a utility for downloading files. The supported protocols are
     HTTP(S), FTP, SFTP, BitTorrent, and {{< wp "Metalink" >}}.
-    -   [ArchWiki: aria2
-        ](https://wiki.archlinux.org/index.php/Aria2).
+    -   [Aria2 Manual](https://aria2.github.io/manual/en/html/index.html).
+    -   [ArchWiki: aria2](https://wiki.archlinux.org/index.php/Aria2).
     -   see also [Metalink client feature comparison
         ](https://en.wikipedia.org/wiki/Metalink#Metalink_client_feature_comparison)
 -   {{< iref "#wget" "wget" >}}
