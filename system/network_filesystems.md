@@ -91,6 +91,8 @@ filesystems via NFS. are in the {{< iref "IP#dhcp" "Dhcp protocol section" >}}.
     ](https://help.ubuntu.com/community/SettingUpNFSHowTo), and
     [Ubuntu: nfsv4](https://help.ubuntu.com/community/NFSv4Howto)
     explain the NFS v4 configuration
+-   [Deploying an NFS server Red Hat Enterprise Linux 9
+    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/configuring_and_using_network_file_services/deploying-an-nfs-server_configuring-and-using-network-file-services)
 -   Van Emery: [NFSv3 mini-HOWTO
     ](http://www.vanemery.com/Linux/NFS-Van.html).
     [Learning NFSv4 with Fedora Core 2
@@ -224,6 +226,8 @@ is easier.
     [Samba/ServerSimple](https://wiki.debian.org/Samba/ServerSimple),
 -   [Gentoo Wiki: Samba](https://wiki.gentoo.org/wiki/Samba),
     [Samba/Samba 4 Migration](https://wiki.gentoo.org/wiki/Samba/Samba_4_Migration),
+-   [Using Samba as a server Red Hat Enterprise Linux 9
+    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/configuring_and_using_network_file_services/assembly_using-samba-as-a-server_configuring-and-using-network-file-services)
 -   [The Unofficial Samba HOWTO](http://www.oregontechsupport.com/samba/) _2013_
 -   [SMB HOWTO](https://tldp.org/HOWTO/SMB-HOWTO.html) is old _2000_.
 -   [CIFS Explained](http://www.codefx.com/CIFS_Explained.htm)
@@ -346,10 +350,14 @@ See also {{< iref "clouds" "Cloud Storage" >}}.
     an open source high availability cluster stack grouping
     [Corosync](http://clusterlabs.org/corosync.html),
     [Pacemaker](http://clusterlabs.org/pacemaker/),
-    [DRBD](https://linbit.com/), [ScanCore](https://www.alteeve.com/w/ScanCore).
+    {{< iref "#drbd" "DRBD" >}}, [ScanCore](https://www.alteeve.com/w/ScanCore).
 -   Gentoo Wiki: [Corosync](https://wiki.gentoo.org/wiki/Corosync),
     [Heartbeat](https://wiki.gentoo.org/wiki/Heartbeat),
     [Pacemaker](https://wiki.gentoo.org/wiki/Pacemaker).
+-   [Configuring and managing high availability clusters Red Hat Enterprise Linux 9
+    ](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/configuring_and_managing_high_availability_clusters/index)
+-   [Introduction to High Availability - Ubuntu Server documentation
+    ](https://documentation.ubuntu.com/server/explanation/intro-to/high-availability/#introduction-to-high-availability).
 
 # Distributed filesystems {#distributed_filesystems}
 
@@ -391,33 +399,27 @@ There are packages for main distributions,
 including a kernel module and a user space software.
 Since Lenny DRDB is part of Debian.
 
--   [Linbit Docs – DRDB User Guide 9.0
-    ](https://docs.linbit.com/docs/users-guide-9.0/),
-    [DRDB User Guide 8.4](https://docs.linbit.com/docs/users-guide-8.4/)
--   [Suse High Availability Guide: DRDB
-    ](https://www.suse.com/documentation/sle_ha/singlehtml/book_sleha/book_sleha.html#sec.ha.drbd)
-    also available in [Suse Administration Guide - DRDB
-    ](https://www.suse.com/documentation/sle-ha-12/book_sleha/data/cha_ha_drbd.html).
--   [Suse SLE: Highly Available NFS Storage with DRBD and Pacemaker
-    ](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha_techguides/book_sleha_techguides.html).
--   [Debian Wiki - DrBd](https://wiki.debian.org/DrBd)
--   [Ubuntu Help - DRBD](https://help.ubuntu.com/lts/serverguide/drbd.html)
+-   [Linbit Docs – DRBD User Guide 9.0
+    ](https://linbit.com/drbd-user-guide/drbd-guide-9_0-en/).
+-   [SLE High Availanility 15 SP7 | Quick Start Guides
+    ](https://documentation.suse.com/sle-ha/15-SP7/html/SLE-HA-all/book-sleha-quickstarts.html).
+        -   [SLE HA 15 SP7 | Highly Available NFS Storage with DRBD and Pacemaker
+            ](https://documentation.suse.com/sle-ha/15-SP7/html/SLE-HA-all/article-nfs-storage.html).
+        -   [SLE High Availability 15 SP7 | Administration Guide | DRBD](https://documentation.suse.com/sle-ha/15-SP7/html/SLE-HA-all/cha-ha-drbd.html)
+-   [Debian Wiki - DrBd](https://wiki.debian.org/DrBd) _old article for drdb 8.3.7_.
+-   [Ubuntu Help - DRBD
+    ](https://documentation.ubuntu.com/server/how-to/high-availability/install-drbd/).
 -   [Thomas Krenn - HA Cluster with Heartbeat, Pacemaker, DRBD and LXC
-    ](https://www.thomas-krenn.com/en/wiki/HA_Cluster_with_Linux_Containers_based_on_Heartbeat,_Pacemaker,_DRBD_and_LXC).
+    ](https://www.thomas-krenn.com/en/wiki/HA_Cluster_with_Linux_Containers_based_on_Heartbeat,_Pacemaker,_DRBD_and_LXC)
+    *2012*.
 -   [HowToForge - High Availability NFS With DRBD + Heartbeat
     ](https://www.howtoforge.com/high-availability-nfs-with-drbd-plus-heartbeat)
--   [Manual HA Cluster with Linux Containers, DRBD and Btrfs
-    ](https://petrovs.info/2014/11/28/ha-cluster-with-linux-containers/)
-    by Blagovest Petrov.
 -   [How to Setup MariaDB High Availability with Heartbeat and DRBD on Ubuntu
     ](https://www.howtoforge.com/tutorial/ubuntu-drbd-heartbeat-high-availability/)
--   [Gentoo Wiki - DRBD with OCFS2](https://wiki.gentoo.org/wiki/DRBD_with_OCFS2)
+    *old documentation on ubuntu 16.04*.
 -   [Atlantic.Net - How to: DRBD Replication and Configuration
     ](https://www.atlantic.net/cloud-hosting/how-to-drbd-replication-configuration/)
--   [SUPINFO - Installation et configuration de DRBD
-    ](https://www.supinfo.com/articles/single/2140-installation-configuration-drbd),
-    [Mise en place d'un SAN ISCSI sous linux avec DRBD
-    ](https://www.supinfo.com/articles/single/3921-mise-place-san-iscsi-linux-avec-drbd)
+    *2015*.
 
 ## Glusterfs {#glusterfs}
 {{< wp "GlusterFS" >}} (GPL and LGPL)
@@ -639,7 +641,8 @@ There is a Tahoe-LAFS Debian Package.
     *is tagged as obsolete*.
 -   [Simple Linux Cluster - Tyler's Guides
     ](https://tylersguides.com/guides/simple-linux-cluster/)
--   [Linux High Availability _HA_](http://linux-ha.org/wiki/Main_Page).
+-   [Keepalived](https://github.com/acassen/keepalived) (GPL-2.0)
+    loadbalancing and high-availability to Linux.
 
 ## Pacemaker
 [Pacemaker](http://clusterlabs.org/pacemaker/) (GPL)
