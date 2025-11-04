@@ -11,6 +11,13 @@ See also {{< iref "xorg" "Xorg and Wayland" >}}.
 [[file:../../../../content-org/notes/system_notes/keyboard_notes.org][Keyboard Notes]]
 -->
 
+# References for both Console and Xorg/Wayland
+
+-   [Debian Wiki - Keyboard](https://wiki.debian.org/Keyboard)
+-   [Keyboard input - ArchWiki](https://wiki.archlinux.org/title/Keyboard_input)
+-   [Configuring keyboards - LQWiki
+    ](https://wiki.linuxquestions.org/wiki/Configuring_keyboards#Enabling_Keyboard_Multimedia_Keys)
+
 # XKB {#xkb}
 
 -   Wikipedia: {{< wp "X keyboard extension" >}}
@@ -71,7 +78,8 @@ _most entries target both console and Xorg_
 -   [How to configure input
     ](https://xorg-team.pages.debian.net/xorg/howto/configure-input.html)
     for an X server, keyboard, mouse,
--   [Keyboard input - ArchWiki](https://wiki.archlinux.org/index.php/Keyboard_input)
+-   [Keyboard input - ArchWiki](https://wiki.archlinux.org/title/Keyboard_input)
+-   [Input remap utilities - ArchWiki](https://wiki.archlinux.org/title/Input_remap_utilities)
 -   [Xbindkeys](https://wiki.archlinux.org/index.php/Xbindkeys)
     is a program that allows to bind commands to certain keys or key combinations on the
     keyboard. Xbindkeys is independent of the window manager and desktop environment.
@@ -135,6 +143,15 @@ In a wayland compositor libinput is configured by the compositor. For Sway it is
 -   [Mapping the Mouse Buttons onto the Keyboard in XFree86
     ](http://www.geocities.jp/fred_b_maciel/kbd/kbd-e.html)
 
+# Console Keyboard Configuration {#console}
+
+-   [Linux console/Keyboard configuration - ArchWiki
+    ](https://wiki.archlinux.org/index.php/Linux_console/Keyboard_configuration)
+-   [loadkeys, dumpkeys 6 Tony Lawrence
+    ](https://www.aplawrence.com/Words2005/2005_05_03.html)  _2005_.
+-   [The Linux keyboard and console HOWTO
+    ](http://tldp.org/HOWTO/Keyboard-and-Console-HOWTO.html) _2002_
+    by Andries Brouwer (
 
 # Keyboard Layout {#keyboard_layout}
 -   Wikipedia {{< wp "Keyboard layout" >}}, {{< wp "QWERTY" >}}, {{< wp "AZERTY" >}},
