@@ -208,6 +208,10 @@ area
     Disk usage on the iotop - simple top-like I/O monitor local host.
     It is in Debian.
 
+[stressant · GitLab](https://gitlab.com/anarcat/stressant)
+:   stress-testing tool, built on the top  of existing software and tries to cover
+    disk, CPU and processor. It is part of Grml and packaged for Debian.
+
 [systat](http://sebastien.godard.pagesperso-orange.fr/)
 :   is a suite of system monitoring tools. It is provided as a
     _systat_ Debian package.  The utilities include sar, sadf, mpstat,
@@ -374,20 +378,29 @@ See also the section {{< iref "nettools#traffic_shaping" "Traffic shaping" >}}
     is a TCP traffic generator for testing and benchmarking.
     Compared to similar tools like {{< iref "#iperf" "iperf" >}} or
     {{< iref "#netperf" "netperf" >}} it features a distributed architecture.
+
     It is packaged in debian.
 -   [iftop]( http://www.ex-parrot.com/pdw/iftop/) (GPL)
     is a ncurses tool that listens to network traffic on a named
     interface and displays a table of current bandwidth usage by
     pairs of hosts. Ifttop is in Debian.
 -   <a name="iperf"></a>[iperf2](https://sourceforge.net/projects/iperf2/)
-    Measure TCP and UDP bandwidth performance,
+    and [iperf3](https://github.com/esnet/iperf)
+    are software to measure TCP and UDP bandwidth performance,
     allowing the tuning of various parameters and characteristics.
-    It is a software [distinct from iperf3
+    *iperf2* is a software [distinct from iperf3
     ](https://iperf2.sourceforge.io/IperfCompare.html).
 
     Iperf is similar with {{< iref "#netperf" "netperf" >}},
     and {{< iref "#flowgrind" "Flowgrind" >}}, but this last tool has a ditributed
     architecture.
+
+    -   [Public iPerf3 servers](https://iperf.fr/iperf-servers.php)
+    -   [iPerf3 Server List](https://iperf3serverlist.net/)
+        the source is on
+        [public-iperf3-servers GitHub](https://github.com/R0GGER/public-iperf3-servers)
+    -   [Speedtest || iperf by OVHCloud](https://proof.ovh.net/) is a web speedtest and
+        also a free iperf3 server. Many locations over the world can be selected.
     -   [iperf3 - GitHub](https://github.com/esnet/iperf).
     In Debian *iperf2* is packaged as iperf, an iperf3 package is also available.
 -   <a name="mtrg"></a>[MRTG](http://oss.oetiker.ch/mrtg/) (GPL)
@@ -396,22 +409,24 @@ See also the section {{< iref "nettools#traffic_shaping" "Traffic shaping" >}}
     generates HTML pages which provide a live visual representation of
     this traffic.
     -    {{< wp "Mrtg"  "Wikipedia: Mrtg" >}}
--   <a name="netdata"></a>[netdata
-    ](https://github.com/firehol/netdata) (GPL)
-    is a distributed real-time performance and health monitoring tool.
-    It collects data in realtime (per second), and produce a real-time
-    interactive web representation of them.
-    Netdata is part of the {{< iref "firewall#firehol" "FireHol project" >}}
-    and is in Debian.
--   <a name="netperf"></a>[netperf](http://www.netperf.org/netperf/)
+-   <a name="netdata"></a>[netdata](https://github.com/firehol/netdata) (GPL)
+    is a distributed real-time performance and health monitoring tool.  It collects data
+    in realtime (per second), and produce a real-time interactive web representation of
+    them.  Netdata is part of the {{< iref "firewall#firehol" "FireHol project" >}} and
+    is in Debian.
+-   <a name="netperf"></a>[netperf](https://github.com/HewlettPackard/netperf) (MIT License)
     is a benchmark that can be used to measure the performance of many different types
     of networking. It provides tests for both unidirecitonal throughput, and end-to-end
     latency.  It is in Debian section _non-free_.
 
+    Netperf is an old app last v 2.7.0 is from 2015, and since it has only merged pull
+    requests. The web site seems no longer available.
+
     A distributed alternative to *netperf* is {{< iref "#flowgrind" "Flowgrind" >}}.
--   [ntop](http://www.ntop.org/products/ntop/)
-    is a network traffic probe that shows the network usage.
-    Ntop can use a web interface. Ntop is in Debian.
+-   [ntop](http://www.ntop.org/products/ntop/) (GPL-3.0)
+    is a network traffic probe that shows the network usage.  Ntop can use a web
+    interface. Ntopng is in Debian.
+    -   [ntopng - GitHub](https://github.com/ntop/ntopng)
 -   {{< wp "Snmp"  "SNMP - Simple Network Management Protocol" >}}
     SNMP is a set of standards from IETF used to monitor network-attached devices.
     -   [Linux Home Networking](http://www.linuxhomenetworking.com/wiki/index.php/
