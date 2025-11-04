@@ -6,7 +6,7 @@ See also {{< iref "irc" "IRC" >}},
 {{< iref "xmpp" "XMPP" >}},
 {{< iref "sip" "SIP" >}},
 {{< iref "social_networks" "Social Networks" >}},
-{{< iref "file_sharing" "File Sharing" >}}.
+{{<iref  "file_sharing" "File Sharing" >}}.
 <!-- [[file:/share/sync_folders/misc/mznotes/content/docs/mzlinux/social_networks/file_sharing.md][file_sharing.md]]
 -->
 -----------------
@@ -162,45 +162,98 @@ normal and web peers.
     [GitHub Repository](https://github.com/feross/webtorrent-desktop)
 
 # WebRTC {#webrtc}
-is a collection of communications protocols and application
-programming interfaces that enable real-time communication over
-peer-to-peer connections for browsers and mobile
+is a collection of communications protocols and application programming interfaces that
+enable real-time communication over peer-to-peer connections for browsers and mobile
 applications.
 
-WebRTC is supported by Chrome ≥ 28, Firefox ≥ 22, Opera ≥ 18 , Safari
-≥ 11, Vivaldi ≥ 1.9,
+WebRTC is supported by Chrome ≥ 28, Brave, Firefox ≥ 22, Opera ≥ 18 , Safari
+≥ 11, Vivaldi ≥ 1.9, edge ≥ 12 ,
 
 On android it is supported by Chrome ≥ 28, Firefox ≥ 24 , Opera ≥ 12.
+
+On IOS ≥ 11 Safari.
 
 WebRTC is used for {{< iref "#webtorrent" "WebTorrents" >}},
 {{< iref "#p2p_file_transfer" "P2P File Transfer" >}} and
 {{< iref "#webrtc_conference" "WebRTC Video Conferences" >}}.
 
+WebRTC use for transport as application layer the
+{{< wp "Secure Real-time Transport Protocol" >}} *SRTP* the security layer is ensured by
+{{wp "Datagram Transport Layer Security" >}}, a variant of TLS adapted to udp instead of
+TCP. DTLS ensures the authenticity of the peers through certificate exchange, and
+exchange the secret master cryptographic keys and the keys are derived on each side by
+applying applying the key derivation function from a single master key, so the session
+keys that will be used for the subsequent data transfer are never exchanged.
+
+Then SRTP uses a strong 128 bits AES to encrypt datagrams, an HMAC tag appended to each
+packet ensure message authentication, integrity protection, and replay protection.
+
+This prevents an attacker from tampering with or re-injecting previously transmitted
+data packets.
+
+The SRTP security depends on the robustness of the implementations, and many breaches,
+technically called CVE *Common vulnerabilities exposure* have been found in Google
+chrome and Firefox.
+
+The WebRTC API includes no provisions for signaling, that is discovering peers to
+connect to and determine how to establish connections among them.
+
+Applications use {{< wp "Interactive Connectivity Establishment" >}} *ICE*
+for connections and are responsible for managing session.
+
+{{< wp "Session Traversal Utilities for NAT" >}} *STUN* is a standardized protocol
+for such address discovery including NAT classification. A client sends a request to a
+STUN server on the internet, which replies with the client’s public address and port.
+
+{{< wp "Traversal Using Relays around NAT" >}} *TURN* places a third-party server to
+relay messages between two clients when direct media traffic between peers is not
+allowed by a firewall.
+
+The exchange of connection metadata, including ICE candidates, encryption details and
+media capabilities (codecs, resolution), is formatted using the Session Description
+Protocol (SDP), this SDP message is used for the initial handshake.
+
+ICE which is not part of WebRTC protocol but is implemented by each application, is the
+Achilles' heel of WebRTC application, and the target of MITM attacks which would
+allow eavesdropping and information leakage; and the session hijacking and
+impersonation.
+
+As writing a new webRTC by using npm libraries for the encryption and signaling server
+is not a complex task, so there are plenty webRTC file transfer application, some are
+created and never updated; it may be difficult to know if they were only a coding
+exercise, if they have vulnerability, or even if they have be audited, the same for the
+used libraries. It is why I don't include old short lived applications in the following
+lists.
+
+For pair discovery the applications use a distinct techniques.
+-   For lan, the pair discovery uses techniques like mDNS to gather potential pairs. Some
+    file transfert application are exclusively targeted to local area network, like
+    {{< iref "#localsend" "localsend" >}}, even without the complication of the signaling
+    server needed on WAN, some applications may still exhibit some vulnerability, like
+    the [LocalSend File Transfer Vulnerability
+    ](https://securityvulnerability.io/vulnerability/CVE-2025-27142)
+    in a previous release.
+-   On wan a centralized signaling server acts as a temporary meeting point, relaying
+    the SDP offer/answer and ICE candidates between the peers. Once a direct connection
+    is found, the data stream bypasses the server entirely, flowing directly from peer
+    to peer.  The security of this model is primarily dependent on the trustworthiness
+    of the signaling and relay servers.
+
 -   Wikipedia: {{< wp "WebRTC" >}}
+-   [ WebRTC for the Curious](https://webrtcforthecurious.com/)
 -   [Getting Started with WebRTC
-    ](https://www.html5rocks.com/en/tutorials/webrtc/basics/)
+    ](https://www.html5rocks.com/en/tutorials/webrtc/basics/) *2012*.
 -   Chrome developpers [WebRTC Home](https://webrtc.org/)
 -   [The WebRTC project on GitHub](https://github.com/webrtc)
     has [WebRTC samples](https://webrtc.github.io/samples/)
-    [Awesome WebRTC](http://awesome.openrtc.io/)
-    is a list of awesome WebRTC modules and resources.
 -   [WebRTC Experiment](https://www.webrtc-experiment.com/)
-    includes many Tutorials and multiple samples of WebRTC
-    applications including Video Multi-user Conferencing applications,
-    File Sharing, Screen Sharing, messaging and more.
-    There is also a [Firefox extension
-    ](https://addons.mozilla.org/en-US/firefox/addon/enable-screen-capturing/)
-    to allow screen sharing with webrtc-experiment pages.
+    includes many Tutorials and multiple samples of WebRTC applications including Video
+    Multi-user Conferencing applications, File Sharing, Screen Sharing, messaging and
+    more.
 -   [WebRTC Hacks](https://webrtchacks.com/)
     is a blog on WebRTC.
--   [Korben](https://korben.info/) :
-    [Toutes les bonnes raisons d’utiliser WebRTC dans vos projets
-    ](https://korben.info/toutes-les-bonnes-raisons-dutiliser-webrtc-dans-vos-projets.html)
--   Chrome has extensions to do [WebRTC Desktop Sharing
-    ](https://chrome.google.com/webstore/detail/webrtc-desktop-sharing/)
-    there is also a [WebRTC Screen Sharing
-    ](https://www.webrtc-experiment.com/Pluginfree-Screen-Sharing/)
-    that you can also use on Firefox.
+-   [Awesome WebRTC](https://github.com/nuzulul/awesome-webrtc)
+    is a list of awesome WebRTC modules and resources.
 
 # P2P file sharing software {#p2p_file_sharing}
 See also {{< iref "file_transfer" "File Transfer" >}},
@@ -299,24 +352,52 @@ interface with transfer in {{< wp "WebRTC" >}}, mainly those built on
 For uploading on android with the web interface see
 {{< iref "clouds#android_web_upload" "this note" >}}.
 
-Take care than most {{< iref "#webtorrent" "WebTorrent" >}}
-based application don't offer encryption or any privacy, your file can
-be viewed by any body having or guessing the URL or magnet Link.
+Take care than for most {{< iref "#webtorrent" "WebTorrent" >}}
+your file can be viewed by any body having or guessing the URL or magnet Link.
+
+-   [list of WebRTC file transfert application - Awesome WebRTc
+    ](https://github.com/nuzulul/awesome-webrtc?tab=readme-ov-file#file-transfer).
+
+-   <a name="localsend"></a>
+    [localsend](https://github.com/localsend/localsend) (Apache-2.0 license)
+    is a cross-platform a Flutter/Dart app that enables secure communication between
+    devices over your local network using a REST API and HTTPS encryption. LocalSend
+    doesn't require an internet connection or third-party servers.
+
+    A client for android is available in F-droid, for ios in AppStore, for Linux there
+    are packages is some distributions, including a Nix package.
+    [![packaging](https://repology.org/badge/tiny-repos/localsend.svg?header=packages)
+    ](https://repology.org/project/localsend/versions),
+    a Deb package is in the releases, it is also available in FlatHub.
+
+    Localsend before version 1.17.0 had a [File Transfer Vulnerability
+    ](https://securityvulnerability.io/vulnerability/CVE-2025-27142).
+
+    -   [LocalSend Web App](https://github.com/localsend/web),
+        is a web app integrating WebRTC and WebSockets to share files with other
+        LocalSend peers. The README tell it can communicate native version.
+        but I have experienced the [issue #9](https://github.com/localsend/web/issues/9).
+        -   [LocalSend Web public instance](https://web.localsend.org/).
+    -   [joecalsend](https://git.kittencollective.com/nebkor/joecalsend) (Apache
+        License) is a Rust/Ratatui implementation of the LocalSend protocol, which
+        provides a TUI. I allows to use localsend on headless servers, as as far as 2025
+        the localsend CLI is not available (see
+        [issue 31498](https://github.com/localsend/localsend/discussions/1498)).
 
 -   [PairDrop](https://pairdrop.net/) (GPL-3.0)
     is a P2P WebRtc file transfer web application.
-    It allows to share directly on the lan, it uses WebRTC signaling server, but files are
-    sent directly from pair to pair; they are encrypted during the transfert.
+    It allows to share directly on the lan, it uses WebRTC signaling server, files are
+    sent directly from pair to pair; they are encrypted during the transfer.
 
-    When a pair is behind a NAT (behind a router) the contents are channeled through a TURN server.
-    To communicate on the wan the devices are first paired by creating long secrets on
-    each pair.
+    When a pair is behind a NAT (behind a router) the contents are channeled through a
+    TURN server.  To communicate on the wan the devices are first paired by creating
+    long secrets on each pair.
 
     There is a pairdrop-cli to send files or text with PairDrop via command-line
     interface.
 
-    A Progressive Web Application *PWA* is available Linux Chromium browsers, Firefox
-    through a plugin, Android Chrome and ios Safari.
+    A Progressive Web Application *PWA* is available, as well as extension for Linux
+    Chromium browsers, Firefox, Android Chrome and ios Safari.
 
     -   [PairDrop - GitHub](https://github.com/schlagmichdoch/pairdrop).
     -   [PairDrop FAQ](https://github.com/schlagmichdoch/PairDrop/blob/master/docs/faq.md).
@@ -331,34 +412,33 @@ be viewed by any body having or guessing the URL or magnet Link.
 -   <a name="sendanywhere"></a> [Send Anywhere](https://send-anywhere.com/) (
     Private License)
     is mainly a P2P service, but also include cloud storage to free the sender from the
-    contraint that both browser need to be open during all the transfer time.
+    constraint that both browser need to be open during all the transfer time.
 
-    You can transfer up to 1G for the web service, up to 20G using a dedicated desktop
-    app (windows, ios, android, linux, chrome extension).Registering is not deemed, and
-    the applications are free.
+    You can transfer up to 10G, registering is not deemed.
+
+    There are dedicated desktop app for windows, ios, android, linux, chrome extension.
 
     File transfer using the 6-digit key transfers files directly between the two devices
     in P2P, and does not store files on the server.
 
     For link sharing and send to device, files are encrypted and uploaded to the server
-    temporarily.
+    temporarily. With the free plan you can store up to 50GB, with a maximum file size
+    of 10GB. The Send Anywhere link is valid by default for 48h, that you can extend up
+    to 1 month.
 
-    The Send Anywhere link is valid 48h.  For gmail you can send up to 10GB stored in
-    the cloud for 7 days.
+    There are paid plans beginning at 6€/month for 200GB storage and 20GB/file. *prices
+        from Aug 2025*.
+
+    Send-Anywhere paid plans prices and features are not competitive compared to
+    Tresorit or cloud storages.
 
     Note that the web interface is unavailable with an android user-agent, we are
     supposed to download the android apk. When setting the user-agent to desktop we can
     use the classic web interface.
--   [Tresorit Send](https://send.tresorit.com/)
-    web app to  send files with end-to-end encryption, free for use until a storage of
-    5G.
--   [Feem](https://www.feem.io/index.html)
+-   [Feem](https://www.feem.io/index.html) (Private License)
     is an alternative to SendAnywhere but the free plan is quite limited and you have to
-    subscribe a plan of 5$/yr for up to 4 non ios device plus 5$/y for one Appleid on
+    subscribe a plan of 5 $/yr for up to 4 non ios device plus 5$/y for one Appleid on
     ios.
--   [Instashare
-    ](https://www.benq.com/en-us/business/support/products/ifp/instashare/download.html)
-    an other alternative, but no client for Linux.
 -   See also {{< iref "sip#jami" "Jami">}} _previously Ring_ a communication software
     with file sharing.
 
@@ -392,6 +472,147 @@ be viewed by any body having or guessing the URL or magnet Link.
     the browser. Many other applications listed in the
     [WebTorrent FAQ](https://webtorrent.io/faq) are dedicated to music or video
     streaming.
+
+### Wormhole protocol {#wormhole_protocol}
+The {{< wp "Wormhole_(protocol)" "Wormhole Protocol" >}} makes it possible to get
+arbitrary-sized files and directories (or short pieces of text) from one computer to
+another. The two endpoints are identified by using identical "wormhole codes".
+
+The protocol tries to create a direct connection between the two ends, but if that
+fails, it uses a centralized relay server to ferry data between two separate TCP streams
+(one to each client).The Transit Relay is a host which offers TURN
+{{< wp "Traversal Using Relays around NAT" >}} like services for magic-wormhole instances.
+
+Wormhole uses [SPAKE2](https://datatracker.ietf.org/doc/rfc9383/)
+{{< wp "Password-Authenticated Key agreement" >}} a family of cryptographic algorithms
+that uses a short low-entropy password to establish a strong high-entropy shared key.
+
+Wormhole requires a “Mailbox Server” (also known as the “Rendezvous Server”): a simple
+WebSocket-based relay that delivers messages from one client to another. This allows the
+wormhole codes to omit IP addresses and port numbers. The default is a a freely
+available public Applications which desire more reliability can easily run their own
+relay.
+
+-   <a name="magic-wormhole"></a>
+    [magic-wormhole](https://github.com/magic-wormhole/magic-wormhole) (MIT License)
+    is the reference python library and command-line tool named also wormhole.
+    -   Magic Wormhole is available an all main distributions
+        [![packaging](https://repology.org/badge/tiny-repos/wormhole.svg?header=packages)
+        ](https://repology.org/project/wormhole/versions).
+    -   Rust Magic Wormhole is also available
+        [![packaging](https://repology.org/badge/tiny-repos/magic-wormhole-rs.svg?header=packages)
+        ](https://repology.org/project/magic-wormhole-rs/versions),
+        as well as the rust client
+        [![packaging](https://repology.org/badge/tiny-repos/rust:magic-wormhole-cli.svg?header=packages)
+        ](https://repology.org/project/rust%3Amagic-wormhole-cli/versions).
+    -   The optional relay server is also packaged
+        [![packaging](https://repology.org/badge/tiny-repos/magic-wormhole-transit-relay.svg?header=packages)
+        ](https://repology.org/project/magic-wormhole-transit-relay/versions).
+
+    -   [Magic-Wormhole documentation
+        ](https://magic-wormhole.readthedocs.io/en/latest/index.html)
+    -   Magic-Wormhole can [perform transferts over Tor
+        ](https://magic-wormhole.readthedocs.io/en/latest/tor.html).
+
+The wormhole protocol has many [End User / Client Applications
+](https://magic-wormhole.readthedocs.io/en/latest/ecosystem.html#end-user-client-applications)
+in rust, go, haskell; which are alternatives to the reference python application provided
+with the magic-wormhole library.
+
+-   <a name="wormhole-william"></a>
+    [wormhole-william](https://github.com/psanford/wormhole-william) (MIT License)
+    a Go implementation of the wormhole protocol, compatible with magic-wormhole.
+
+    Binaries are provided in the releases page and in some distributions including
+    Debian,
+    [![packaging](https://repology.org/badge/tiny-repos/wormhole-william.svg?header=packages)
+    ](https://repology.org/project//versions).
+-   [rymdport](https://github.com/Jacalz/rymdport) (GPL-3.0)
+    a magic-wormhole compatible GUI application written in Go.
+
+    Rymdport is only packaged in few distributions
+    [![packaging](https://repology.org/badge/tiny-repos/rymdport.svg?header=packages)
+    ](https://repology.org/project/yhttps://github.com/Jacalz/rymdport/versions).
+    but binaries are in the release, it is also available on FlatHub, and Go compiling is
+    always quite easy.
+-   [Warp](https://gitlab.gnome.org/World/warp) (GPL-3.0)
+    is a Gnome GUI application for WormHole protocol. It is available in many distributions
+    [![packaging](https://repology.org/badge/tiny-repos/warp.svg?header=packages)
+    ](https://repology.org/project/warp/versions).
+    As it is a Gnome project if your desktop don't use Gnome applications it can pull
+    many dependencies, but the recommended installation is via a Flatpak binary which is
+    available on FlatHub or for the last daily build on the gitlab repository.
+-   [Winden](https://github.com/LeastAuthority/winden) (MIT License)
+    is a web application for the magic-wormhole protocol.
+    You can host Winden with docker or use it on the public server
+    [winden.app](https://winden.app/).
+
+    Winden is compatible with other magic-wormhole clients but if you are using the
+    [winden.app](https://winden.app/) site you need to set the mailbox server to
+    wss://mailbox.mw.leastauthority.com/v1 and the relay server to
+    tcp://relay.mw.leastauthority.com:4001.
+
+    So to send or receive from  {{< iref "#magic-wormhole" "magic-wormhole" >}} to winden
+    or {{< iref "#destiny" "destiny" >}} you should use:
+    ``` sh
+    wormhole --relay-url wss://mailbox.mw.leastauthority.com/v1 \
+             --transit-helper tcp:relay.mw.leastauthority.com:4001
+    ```
+
+For mobile we find
+-   [wormhole-william-mobile](https://github.com/psanford/wormhole-william-mobile) (MIT License)
+    is the android application for {{< iref "#wormhole-william" "wormhole-william" >}}
+    written in Go and [GioUi](https://gioui.org/) available on the
+    playstore, an apk is also in the releases.
+-   [wormhole](https://gitlab.com/lukas-heiligenbrunner/wormhole) (GPL-3.0)
+    for android, written in Flutter and rustup, available on the Google playstore.
+-   [ivox-wormhole](https://github.com/iyox-studios/iyox-Wormhole) (GPL-3.0)
+    for android written in rust and flutter. Available on F-Droid and Google PlayStore.
+-   <a name="destiny"></a>i
+    [Destiny](https://github.com/LeastAuthority/destiny) (MIT License)
+    a  cross-platform Magic Wormhole graphical client build in Go with
+    [Flutter](https://flutter.dev/) available on Android (Google Play & F-Droid), IOS
+    App Store, Linux, Windows, MacOS.
+
+    The Linux binaries are available as an AppImage.
+
+    As described above for Winden to ensure compatibility with other magic-wormhole you
+    should use the leastauthority mailbox and servers, as described in the
+    [FAQ](https://github.com/LeastAuthority/destiny/blob/main/FAQ.md#more-help).
+
+## Other WormHole applications
+We group here some applications inspired by magic-wormhole and using also
+[PAKE](https://datatracker.ietf.org/doc/rfc9383/) but are not compatible with
+magic-wormhole.
+
+-   [webwormhole](https://github.com/saljam/webwormhole) (BSD Licence)
+    a WebRTC application, using also PAKE but with the [CPACE
+    ](https://tools.ietf.org/id/draft-haase-cpace-01.html) implementation.
+    It provides a command line and Firefox and Chrome extensions.
+
+    The command line is available in NixPkgs
+    [![packaging](https://repology.org/badge/tiny-repos/webwormhole.svg?header=packages)
+    ](https://repology.org/project/webwormhole/versions),
+    or can be compiled with Go.
+
+    -   [WebWormhole](https://webwormhole.com/) a public web server to use webwormhole.
+-   [croc](https://github.com/schollz/croc) (MIT License)
+    is a file transfert tool written in go inspired by
+    {{< iref "#magic-wormhole" "magic-wormhole" >}} but not compatible with it.
+    The author wanted to avoid python *at a time where other go, rust, haskell clients
+        where not yet available* and ensure to resume interrupted transferts.
+
+    The croc binaries are available in many distributions
+    [![packaging](https://repology.org/badge/tiny-repos/croc.svg?header=packages)
+    ](https://repology.org/project/croc/versions),
+    including NixPkgs and termux (not Debian as far as 2024), and an android application
+    is available on F-Droid.
+-   [wormhole.app](https://wormhole.app/) (Private Source)
+    is a web public server to transfer files, the [encryption protocol is open source
+    ](https://github.com/webtorrent/wormhole-crypto), the files are stored on their
+    server.
+    -   [wormhole.app security](https://wormhole.app/security)
+
 
 # P2P WebRTC conferencing. {#webrtc_conference}
 
