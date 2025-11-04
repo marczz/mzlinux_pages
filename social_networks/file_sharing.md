@@ -22,7 +22,7 @@ but that works also.
 -   Wikipedia: {{< wp "File hosting service" >}}
 -   [Send large files: 10 free tools
     ](http://www.creativebloq.com/design-tools/send-large-files-clients-free-tools-3132117)
-    _february 2016_
+    _February 2016_
 -   [15 Super Quick Ways to Share Files Without Cloud Storage
     ](http://www.makeuseof.com/tag/15-super-quick-ways-share-files-without-cloud-storage/)
 -   [Alternatives to Send Anywhere](http://alternativeto.net/software/send-anywhere/)
@@ -32,49 +32,48 @@ but that works also.
     limit, but deleted after 6 months of inactivity. No registration
     necessary but file password protection, expiration dates and
     download limits are available to registered users.
--   [filesharing24.com](https://filesharing24.com/) up to 5GB kept
-    24h, password protection available. Transfers are encrypted.
-    Worked to send from android with uc browser, (no file manager for
-    chrome or dolphin)
 -   [mozilla/send](https://github.com/mozilla/send) (Mozilla Public Licence)
     share file from firefox with encryption and a link that expires.
     The main instance [Firefox Send](https://send.firefox.com/) allowed a maximum of 1GB
-    without registration and 2.5GB with registration. The repository is now archived,
+    without registration and 2.5GB with registration. The service was stopped by Mozilla
+    in 2021, the repository is now archived,
     and the extension no longer available.
--   Free file sending service [dl.free.fr] (http://dl.free.fr).
-    An javascript free web interface
-    [is also available](http://dl.free.fr/index_nojs.pl)
-
-    We can also send files by ftp on `dl.free.fr` the login is the email address where
-    we receive the name for the download.
-
-    The files are not deleted until there is at least one download per period
-    of at least 30 days (depending on the space available on the servers). The maximum
-    size per file uploaded by FTP is 10GB. and 1GO on the web.  Files are password
-    protected.
--   [Hightail](https://www.hightail.com/) up to 50MB encrypted. Needs
-    to register. free 100MB/upload, max 2G; other plans are expensive.
+-   [Free Transfert](https://transfert.free.fr/) Free file sending service,
+    Free transfert is available to everybody, for sending files up to 10GB, with a
+    retention time of 7days. If you are a Free mobile or Freebox user there is no size
+    limit and the maximal time is 30 days.  The sender either get an https link, or it
+    can be sent by email and both the sender and receiver receive by mail a download
+    link. The transfert can optionally be password protected.
 -   {{< iref "#lufi" "Lufi free hosted instances" >}} see
     {{< iref "#lufi" "below" >}}
 -   {{< iref "#lutim" "Lutim free hosted instance" >}} for image sharing.
--   [mediafire](http://www.mediafire.com/) 3€/month 1TB permanent
-    storage, 20GB per file; free plan add supported up to 10GB.
+-   [mediafire](http://www.mediafire.com/) 5.88$/month 1TB permanent
+    storage, 50GB per file; free plan add supported up to 10GB. *checked Aug 2025*.
 -   [Send Anywhere](https://send-anywhere.com/) described
     {{< iref "p2p#sendanywhere" "in the P2P file sharing section" >}} is
     mainly a P2P service, but it includes cloud storage to free the
-    user from the contraint that both browser need to be open during
+    user from the constraint that both browser need to be open during
     all the transfer time.
+-   [Tresorit Send](https://send.tresorit.com/)
+    web app to  send files with end-to-end encryption and an optional Password
+    protection. You can revoke access through a link, and you have an access log.
+    The servers are in Swiss. It is free for use until a storage of 5G.
+    [tresorit.com](https://tresorit.com/) *personnal lite* 4€/month offer 50GB encrypted
+    storage, 2GB maximum file size with encrypted sharing via links, *personnal
+        essential* for 10€/month gives 1TB of storage, 10GB maximum file size; *business*
+    16€/month for a single user 6TB encrypted storage, and 15GB maximum file size.
+    *Prices from Aug. 2025*.
 -   [Ufile.io](https://ufile.io/) up to 5G kept 30 days
     for the free service.No registration, encrypted. The download is
     by url, with a speed limit of 1MB/s so 1G has a minimal time of
     1000s ie 17mn. Paid plans are expensive.
--   [wetransfer](https://www.wetransfer.com/) up to 2G, 7 days for
+-   [wetransfer](https://www.wetransfer.com/) up to 3G, 7 days, 10 transferts/month for
     free account, No encryption or password protection. It is one of
-    the more used site for file exchange, but to get 20G and password
-    without even encryption, you have to pay 120$ annual!
+    the more used site for file exchange, but to get unlimited transferts and password
+    without even encryption, you have to pay 19€/month *checked Aug 2025*.
 -   [wikisend](http://wikisend.com/) up to 100MB, free, no registration
     necessary, password protection, default save time 7 days, when
-    registered it can be set up to 90 days.
+    registered it can be set up to 90 days. *checked Aug 2025*.
 
 ## Web file sharing servers
 _They are self-hosted solutions._
@@ -90,16 +89,10 @@ _They are self-hosted solutions._
     an optional password protection. You can Access BoZoN on a
     smartphone with your browser, and use a qrcode to share your link
     with smartphone users. You can share a whole folder and Download
-    its contents into a zip.
--   [Coquelicot](https://coquelicot.potager.org/) (AGPL)
-    _one-click_ file sharing with a focus on privacy. While being uploaded, files are
-    written to the disk using symmetric encryption. The encryption key is either part
-    of the download URL, or specified by the uploader. More details in the
-    [Readme](https://coquelicot.potager.org/README). Coquelicot is written in ruby.
-    The last release is from 2016, it was packaged in Debian until stretch.
+    its contents into a zip. *Last commit 2018.*
 -   <a name="fex"></a>[F*EX](http://fex.rus.uni-stuttgart.de/) (Artistic Licence)
-    _Frams' Fast File EXchange_ is a PERL service to send big files
-    between two users. The sender uploads the file to the F*EX server
+        _Frams' Fast File EXchange_ is a PERL service to send big files
+        between two users. The sender uploads the file to the F*EX server
     using a WWW upload form and the recipient automatically gets a
     notification e-mail with a download-URL. _Fex_ is in a Debian
     package, the client utilities are in a separate package _fex-utils_.
@@ -128,10 +121,22 @@ _They are self-hosted solutions._
     ([Beerware License](https://en.wikipedia.org/wiki/Beerware))
     is a PHP File sharing service. A database is not necessary.
     -   [File 2 Link instance - dl.zici.fr](https://dl.zici.fr/)
--   [Jirafeau](https://gitlab.com/mojo42/Jirafeau) (AGPL)
+-   [Jirafeau](https://gitlab.com/jirafeau/Jirafeau) (AGPL)
     is a self-hosted php web service for file sharing, it uses no
     database, files can be protected by password and encrypted, and
     have expiration time for downloads.
+
+-   <a name="localsend"></a>[localsend](https://github.com/localsend/localsend)
+    is a cross-platform app that enables secure communication between devices using a
+    REST API and HTTPS encryption. Unlike other messaging apps that rely on external
+    servers, LocalSend doesn't require an internet connection or third-party servers.
+
+    A client for android is available in F-droid, for ios in AppStore, for Linux there
+    is a Deb package in the releases, it is also available as in FlatHub, and as a Nix
+    package.
+
+    - [LocalSend Web App](https://github.com/localsend/web)
+
 -   <a name="lufi"></a>[Lufi](https://framagit.org/luc/lufi/) (AGPL)
     is a Perl server application of file sharing. The files are encrypted in the browser
     and stored on the server. All the encryption/decryption processes take place in your
@@ -224,8 +229,13 @@ highlighting,
 
 
 -   [pastebin.com](https://pastebin.com/) has syntax highlighting, expiration dates,
-    private posts, ads, see wikipedia {{< wp "Pastebin.com" >}} for more informations.
-    [API](https://pastebin.com/api), many official
+    private posts, ads, see wikipedia {{< wp "Pastebin.com" >}} for more information.
+
+    Posts are by default public, but can be set protected, or private protected by a password; registered users
+    can list, edit delete their post. The maximal size is 0.5MB, there is no maximum
+    expiry time.
+
+    *pastebin* provides an [API](https://pastebin.com/api), many official
     [command line clients](https://pastebin.com/tools#pastebincl)
     written in many programming languages. The [original code
     ](https://github.com/lordelph/pastebin) is available in GitHub.
@@ -235,7 +245,7 @@ highlighting,
     -   For android: [Pastebin for Android
         ](https://play.google.com/store/apps/details?id=com.jmz.pastedroidapp).
     -   For linux an old client written in Python2
-        [pastbin-cl](https://github.com/tupton/pastebin-cl)
+        [pastebin-cl](https://github.com/tupton/pastebin-cl)
     -   [elpastebin](https://github.com/nicferrier/elpastebin) or _pastebin.el_
         is an interface to _pastebin.com_ see also
         [EmacsWiki: pastebin](https://www.emacswiki.org/emacs/pastebin) for other
@@ -274,27 +284,47 @@ highlighting,
     -   [pinnwand documentation](https://pinnwand.readthedocs.io/en/latest/)
     -   {{< iref "#wgetpaste" "wgetpaste">}} can paste to _bpaste_.
 
--   <a name="dpaste.com"></a>[Dpaste.com](https://dpaste.com/) (closed source)
-    is a pastebin on a python / Django application. It has code syntax highlighting with
-    _pygments_.
+-   <a name="dpaste.com"></a>[Dpaste.com](https://dpaste.com/) (closed source) is a
+    pastebin on a python, Django, postgresql application. It has code syntax
+    highlighting with _pygments_.
 
+    The posts are *private* by default, the word *private* used on the site should be
+    better understood as *unlisted*, the url is random and unpublished.
+    Users can create accounts, registered users can lists their private items, make them
+    public, and edit/delete  them.
+
+    The size is limited to 1MB, maximum expiry range 1 year.
+
+    -   [dpaste - help](https://dpaste.com/help/)
+    -   [dpaste - API documentation](https://dpaste.com/api/v2/)
+    ```sh
+        $ curl -si -F 'content=<-' http://dpaste.com/api/v2/ \
+          | grep ^Location: | colrm 1 10
+    ```
     Dpaste.com has many [Scripts, Tools, Integrations](https://dpaste.com/help)
     including:
+    -   [dpaste-cli](https://gitlab.com/paul_bissex/dpaste-cli)
+        The official dpaste.com CLI written in GO py Paul Bissex, the author of dpaste.
     -   [dpaste.sh](https://hg.sr.ht/~paulbissex/dpaste-tools/) (MIT Licence)
         command-line client for creating dpaste items from stdin.
     -   [dpaste.el](https://github.com/gregnewman/dpaste.el)
         is an emacs client to post a region or buffer to
         dpaste.com and put the paste URL into the kill-ring.
-    -   {{< iref "#webpaste.el"  "webpaste.el" >}} supports _dpaste.com_.
+    -   {{< iref "#webpaste.el"  "webpaste.el" >}} supports _dpaste.com_, there is also
+        a dedicated emacs client [dpaste.el](https://github.com/gregnewman/dpaste.el).
     -   {{< iref "#wgetpaste"  "wgetpaste" >}} supports _dpaste.com_.
--   < a name="dpaste.org"></a>[Dpaste.org](https://dpaste.org/) ( MIT License )
-        is a django application implementing a pastebin.
+-   <a name="dpaste.org"></a>[Dpaste.org](https://dpaste.org/) ( MIT License )
+    is a django application implementing a pastebin.
+    _paste.org_ was previously named _paste.de_.
 
-        _paste.org_ was previously named _paste.de_.
+    dpaste.org can syntax hihlight the items, they can be deleted by everyone, and have
+    no maximum expiry.
+
+    Their are no privacy options, the posts seems to be always unlisted.
 
     -   [pastebin.mozilla.org the Mozilla Community Pastebin
         ](https://pastebin.mozilla.org/) is an other instance of _dpaste.org_.
-    -   [dpaste.org API](https://dpaste.readthedocs.io/en/latest/api.html)
+    -   [dpaste.org API](https://docs.dpaste.org/api/)
         You can paste your file content to the API via curl,
         directly from the command line:
         ``` sh
@@ -303,19 +333,31 @@ highlighting,
         https://dpaste.de/ke2pB
         ```
     -   [dpaste.org - GitHub](https://github.com/bartTC/dpaste)
-    -   [dpaste.org documentation](https://dpaste.readthedocs.io/en/latest/)
+    -   [dpaste.org documentation](https://docs.dpaste.org/) document the installation,
+        maintenance of the dpaste django server.
     -   [dpaste_de.el](https://github.com/theju/dpaste_de.el) is an emacs package to
         paste to _paste.org_. _in ELPA_
     -   {{< iref "#webpaste.el"  "webpaste.el" >}} has support for dpaste.org.
+-   **Hastebin.com**  was a MIT Licensed FOSS alternative to pastebin.com.
 
--   [Hastebin](https://hastebin.com/about) (MIT License)
-    is a FOSS alternative to pastebin.com.
-    -   [Haste server](https://github.com/seejohnrun/haste-server)
+    Since its acquisition in 2022 by *Toptal* the new online site is
+    [Toptal Hastebin](https://www.toptal.com/developers/hastebin) running a private code
+    base.
+
+    The posts content expire in 7 days, and the posts are unlisted.
+
+    -   [Toptal Hastbin API](https://www.toptal.com/developers/hastebin/documentation)
+    -   [Haste server](https://github.com/seejohnrun/haste-server) (MIT License)
         is written in node.js, you can use as backend the filesystem, reddis, Postgres,
         MongoDB, Memcached, RethinkDB, Google Datastore, Amazon S3.
         A Docker build is also available.
-    -   [haste-client](https://github.com/seejohnrun/haste-client)  is a ruby CLI for
-        Haste.
+
+        The GitHub repository is archived since 2025. The Toptal firm has acquired
+        Hastebin in 2022, and a new *Toptal* version of Hastebin was announced, and put
+        in use by *Toptal* in 2025, this new version seems closed source.
+    -   [haste-client](https://github.com/seejohnrun/haste-client) (MIT License) is a
+        ruby CLI for Haste. Like the server, the client repository has been archived in
+        2025.
     -   You can also use a simple bash function:
         ``` sh
         haste() { a=$(cat); curl -X POST -s -d "$a" https://hastebin.com/documents |\
@@ -346,19 +388,19 @@ highlighting,
         is a lightweight hastebin alternative with no frontend JS dependency.
         -   [mkr bin server](https://github.com/MKRhere/bin) ( MIT License )
             in node.js, use  mogoDB backend.
--   [Paste.ee](https://paste.ee) is a free pastebin with no ads, SSL,
-    IPv6, [API](https://pastee.github.io/docs/),
-    [CLI programs](https://paste.ee/wiki/Programs). It is the CentOs pastbin.
-
-    It is an instance of [Stikked](https://paste.centos.org/about) an Open-Source PHP
-    Pastebin, with features like Syntaxhighlighting for many languages, including live
-    syntax highlighting with CodeMirror, Paste replies and diff view between the
-    original paste and the reply, API, anti-spam, themes, multilanguage.
+-   [Stikked](https://github.com/claudehohl/Stikked) ( [WTFPL](http://www.wtfpl.net/))
+    is an Open-Source PHP Pastebin, with features like Syntaxhighlighting for many
+    languages, including live syntax highlighting with CodeMirror, Paste replies and
+    diff view between the original paste and the reply, API, anti-spam, themes,
+    multilingual. *Stikked* servers allow an SSL, and IPV6 connection, they are ads free.
 
     A _Stikked_ instance needs a web server, a database: MySQL, Postgres or sqlite, PHP and
     PHP GD.
-    -   [Stikked - GitHub](https://github.com/claudehohl/Stikked)
-        ( [WTFPL](http://www.wtfpl.net/))
+
+    -   [CentOs Pastebin Service](https://pastebin.centos.org/) is an
+        [instance of *Stikked* ](https://paste.centos.org/about)
+    -   [Paste.ee](https://paste.ee) is an instance of stikked
+    -  [Pastee API](https://pastee.github.io/docs/),
     -   For Linux there is [past-ee-cli](https://git.meow.tf/paste-ee/cli) written in
         go. The releases includes binaries and rpm and deb packages.
     -   [Run Your Own Pastebin with Stikked
@@ -387,6 +429,12 @@ highlighting,
 
     {{< iref "#bins" "bins" >}} from the same author is a command line client with
     _paste_ support.
+-   [paste.sr.ht](https://paste.sr.ht) is the pastebin of the [sourcehut](sr.ht) users.
+    -   [paste.sr.ht documentation](https://man.sr.ht/paste.sr.ht/) give the
+        installation of your own
+        [paste.sr.ht server](https://git.sr.ht/~sircmpwn/paste.sr.ht), and the API.
+   -    [spaste](https://github.com/wgrr/spaste) is a go client for *paste.sr.ht*.
+   -    [srht.el](https://sr.ht/~akagi/srht.el/) an elisp emacs client.
 -   [pastemyst](https://paste.myst.rs/) (MPL-2.0 License)
     is a pastebin with syntax highlighting, and optional encryption.
     -   [pastemyst - GitHub](https://github.com/codemyst/pastemyst)
@@ -423,7 +471,7 @@ highlighting,
     -   [pastery.vim](https://github.com/skorokithakis/pastery.vim) and
         [vim-pastery](https://github.com/fishbullet/vim-pastery).
     -   [bakeit](https://github.com/skorokithakis/bakeit) (MIT License) a python client.
-    -   [rust-bakeit](https://gitlab.com/stavros/rust-bakeit) is a port of _bkeit_ to
+    -   [rust-bakeit](https://gitlab.com/stavros/rust-bakeit) is a port of _bakeit_ to
         rust.
 -   {{< iref "#teknik"  "Teknik" >}} has a   [Pastebin](https://paste.teknik.io)
     with a [paste shell script
@@ -451,6 +499,12 @@ highlighting,
 Some pastebin listed above have also, an access from curl, the following light pastebin
 don't have syntx highlighting.
 
+-   [0x0.st](https://0x0.st/) a pastbin server with an API wich alloxs to use it via
+    curl, or whatever http request able program.
+
+    The documentation is on the [0x0.st Home Page](https://0x0.st/)  Home Page
+    -   [mia/0x0 - 0x0.st software](https://git.0x0.st/mia/0x0)
+        (European Union Public Licence v. 1.2)
 -   <a name="ix.io"></a>[ix.io](http://ix.io/) (said open source, but unpublished source!)
     is a command line pastebin.
 
@@ -470,7 +524,7 @@ don't have syntx highlighting.
     [ix.el](https://github.com/theanalyst/ix.el) _in MELPA_ which snd the selection or
     entire buffer to ix.io, the url is notified in the minibuffer and saved in the kill
     ring.
--   [clbin.com](https://clbin.com/) _no source available?_
+-   <a name="clbin"></a>[clbin.com](https://clbin.com/) _no source available?_
     is a command line pastebin similar to _ix.io_.
 
     You use it with curl in the same way than _ix.io_
@@ -482,14 +536,21 @@ don't have syntx highlighting.
     ](https://gist.github.com/GermainZ/9177423) and an [emacs interface
     ](https://gist.github.com/welliam/9788acbc2d46530a8a9974ab7fc2afa8).
 -   [localpaste](https://github.com/petermaloney/localpaste) (GPL-2.0)
-    is a python clone of clbin.
--   [paste.c-net.org](https://paste.c-net.org/)
+    is a python clone of clbin.*last commit 2015*
 -   <a name="sprunge"></a>[sprunge](http://sprunge.us/) is a python command line
     pastebin that you use with:
 
         <command> | curl -F 'sprunge=<-' http://sprunge.us
 
-    -   [sprunge source at GitHub](https://github.com/rupa/sprunge).
+    It can be also accessed from some pastebin client like {{< iref "#bins" "bins" >}},
+    {{< iref "#pastebinit" "pastebinit" >}}, {{< iref "#webpaste.el" "webpaste.el" >}}.
+
+    *The server at sprunge.us experiences repeated failures with a 500 Internal Server
+    error (checked february 2025).* *{{< iref "#ix.io" "ix.io" >}} which provide the
+    same functionalities may be preferred.
+    -   [sprunge source at GitHub](https://github.com/rupa/sprunge) (WTFPL License).
+    -   [sprunge.el](https://github.com/tomjakubowski/sprunge.el) [GPL-3.0)
+        small elisp interface to *sprunge.us*
 -   [el-sprunge](https://github.com/eschulte/el-sprunge) (GPL-3.0)
     An emacs powered command line paste server with Emacs highlighting in the style of
     sprunge.  Pastes may be submitted to the server from the command line using `curl'
@@ -501,7 +562,9 @@ don't have syntx highlighting.
     syntax highlighting append "?foo" to the returned URL and the server will return the
     paste highlighted with "foo-mode".
 -   [paste.c-net.org](https://paste.c-net.org/) (no source available)
-    is a pastebin that allows pasting binary files.
+    is a pastebin, that allows pasting binary files, providing an API that you can use
+    with curl, nc, a bash function, or any program that can send POST/GET requests.
+
     It is used with curl like this:
     ``` sh
     $ curl -s --data 'Hello World!' 'https://paste.c-net.org/'
@@ -518,13 +581,15 @@ don't have syntx highlighting.
     ```
     The [author](https://blog.dhampir.no/content/binary-pastebin) gives no information
     on the program source.
+    -  [pbenc](https://paste.c-net.org/pbenc) is a bash script to encode your paste
+       before submitting.
 -   [termbin](http://termbin.com/) is a command line pastebin that
     requires only _netcat_, you use it like this:
 
         <command> | nc termbin.com 9999
 
-    [fiche the termbin source on GitHub](https://github.com/solusipse/fiche)
-    is a 484 sloc C program. _fiche_ support ipv6. It is packaged ind Debian.
+    [*fiche* the termbin source on GitHub](https://github.com/solusipse/fiche)
+    is a 484 sloc C program. _fiche_ support ipv6. It is packaged in Debian.
 
     There is also an Android termbin application.
 
@@ -554,28 +619,24 @@ don't have syntx highlighting.
     {{< iref "#paste.gg" "paste.gg"  >}}.
 
     A compiled binary is provided in the Release.
--   <a name="pastebinit"></a>[pastebinit](https://help.ubuntu.com/community/Pastebinit)
-    can use
-    [pastebin.ca](http://pastebin.ca) _unavailable_,
-    {{< iref "#dpaste.org" "pastebin.mozilla.org" >}}_,
+-   <a name="pastebinit"></a>[pastebinit](https://github.com/pastebinit/pastebinit/)
+    (GPL-2.0) can use:
+    {{< iref "#dpaste.org" "dpaste.org" >}}_,
     {{< iref "#paste_debian" "paste.debian.net" >}},
-    paste.drizzle.org _unavailable_,
+    [bpaste (bpa.st)](https://bpa.st/),
     [paste.kde.org](https://paste.kde.org/) _gitlab snippet_,
-    paste.openstack.org _renamed_ [paste.opendev.org](https://paste.opendev.org/),
-    paste.pocoo.org _retired service_,
-    paste.ubuntu.org.cn,
+    [paste.opendev.org](https://paste.opendev.org/),
+    [paste.ubuntu.org.cn](https://paste.ubuntu.org.cn/),
     [paste.ubuntu.com](http://paste.ubuntu.com),
     [pastie.org](http://pastie.org/) _syntax highlighting, closed source, no https_,
     [Paste2](https://paste2.org/) _syntax highlighting, unknown software_,
-    pb.daviey.com _unavailable_,
-    slexy.org _ads powered_, {{< iref "#sprunge" " sprunge.us" >}},
-    [yourpaste.net](http://yourpaste.net) _unavailable_,
-
+    [p.defaul.lt](https://p.defau.lt/new.html),
+    {{< iref "#sprunge" " sprunge.us" >}},
 
     To see all services do `pastebinit -l` or look at  [all conf files
-    ](http://bazaar.launchpad.net/~pastebinit-developers/pastebinit/trunk/files/head:/pastebin.d/).
+    ](https://github.com/pastebinit/pastebinit/tree/master/pastebin.d).
 
-    There is a pastbinit Debian package.
+    There is a pastebinit Debian package.
 -   [sleeksnap](https://pastee.github.io/docs/) written in java dedicated to screenshots.
 -   <a name="uguush"></a>[uguush](https://gitlab.com/jschx/uguush/-/tree/master) (MIT
     License) is a shell command-line uploader for [uguu](https://uguu.se/),
@@ -588,8 +649,9 @@ don't have syntx highlighting.
     -   [Wgetpaste gentoo manual](https://wiki.gentoo.org/wiki/Wgetpaste)
     -   [wgetpaste source](https://wgetpaste.zlin.dk/)
 
--   [ix.io syntax highlighter](https://github.com/xero/ix.io-syntax) highlight code
-    pastes on sprunge or clbin.
+-   [ix.io syntax highlighter](https://github.com/xero/ix.io-syntax)
+    a chrome extension to highlight code pastes on ix.io, p.defau.lt, sprunge or
+    clbin. *Last Commit 2015*
 
 ### Emacs pastebin cli {emacs_pastebin_cli}
 -   [dpaste.el](https://github.com/gregnewman/dpaste.el) (GPL-2.0)
@@ -610,10 +672,12 @@ don't have syntx highlighting.
     {{< iref "#ix.io" "ix.io" >}}, [paste.rs](https://paste.rs),
     {{< iref "#dpaste.com" "dpaste.com" >}},
     {{< iref "#dpaste.org" "dpaste.org" >}},
-    [paste.mozilla.org](https://paste.mozilla.org/), gist,
+    [paste.mozilla.org](https://paste.mozilla.org/),
+    [paste.ubuntu.com](https://paste.ubuntu.com),
+    [gist.github.com](https://gist.github.com),
     [bpa.st](https://bpa.st/).
 
-## Crypted pastbin {#crypted_bin}
+## Crypted pastebin {#crypted_bin}
 <!-- [[file:/share/sync_folders/misc/mznotes/content-org/weblinks/network.org::*Privatebin][My list of Privatebin services]] -->
 
 Some pastebin offer encryption
@@ -623,8 +687,10 @@ Some pastebin offer encryption
     move to censor content and pass on the IP addresses of people posting on its site
     to law enforcement authorities.
     It is said to use real 256bit AES encryption, which takes place directly in your
-    browser. At launch in 2012 it was said powered by ZeroBin, but now all information
-    pages on the site is only the same _Lorem ipsum dolor_ blob.
+    browser. At launch in 2012 it was said powered by ZeroBin, there is no information
+    now on the software used. but the interface looks like the one of
+    {{< iref "#privatebin" "PrivateBin" >}} and it is listed in the
+    [PrivateBin Instance Directory](https://privatebin.info/directory/).
 -   <a name="privatebin"></a>[PrivateBin](https://privatebin.info/) (Zlib/libpng license)
     is a minimalist, opensource online pastebin/discussion board where the server has
     zero knowledge of hosted data. Data is encrypted/decrypted in the browser using 256
@@ -637,8 +703,10 @@ Some pastebin offer encryption
 
     -   [PrivateBin - GitHub](https://github.com/PrivateBin/PrivateBin/).
     -   [PrivateBin Instance Directory](https://privatebin.info/directory/)
--   [PBinCLI](https://github.com/r4sas/PBinCLI)
-    is a Python 3 private bin client.
+
+    - [Third party clients · PrivateBin/PrivateBin Wiki · GitHub](https://github.com/PrivateBin/PrivateBin/wiki/Third-party-clients)
+    -   [PBinCLI](https://github.com/r4sas/PBinCLI)
+        is a Python 3 private bin client.
 
 
 ## Codepad {#codepad}
@@ -680,7 +748,7 @@ See also voice and video calling {{< iref "sip#jitsi" "Jitsi" >}},
 
 ## Collaborative editors
 -  See also {{< iref "#codepad" "codepad" >}} in the
-   {{< iref "#pastbin" "pastbin list" >}}).
+   {{< iref "#pastebin" "pastebin list" >}}).
 
 ### Etherpad {#etherpad}
 [Etherpad](http://etherpad.org/) (Apache License)
