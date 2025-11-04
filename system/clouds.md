@@ -80,7 +80,7 @@ See also
 
     _JetS3t_ is packaged in Debian, but only the old version that is no more maintained,
     as of 2023 the new fork which is stalled is not used.
--   <a name="minio"></a>[MinIO Client (mc)](https://github.com/minio/mc)  (Apache Licence)
+-   <a name="miniocli"></a>[MinIO Client (mc)](https://github.com/minio/mc)  (Apache Licence)
     provides a modern alternative to UNIX commands like ls, cat, cp, mirror, diff, find
     etc. It supports filesystems and Amazon S3 compatible cloud storage service.
     Home.
@@ -104,7 +104,7 @@ See also
     -   _s3cmd_ is built for S3 but it is also usable with s3 compatible object storage
         with a proper configuration file, like
         {{< iref "#scaleway_storage" "scaleway object storage" >}},
-        {{< iref "#minio" "Minio" >}} or
+        {{< iref "network_filesystems#minio" "Minio" >}} or
         {{< iref "#eucalyptus" "Eucalyptus" >}} like explained in
         [how to use s3cmd with an eucalyptus instance
         ](https://github.com/eucalyptus/eucalyptus/wiki/HowTo-use-s3cmd-with-Eucalyptus).
@@ -207,14 +207,6 @@ storage. It provides storage beginning at 1TB at a uniform price of 30$ 1T/y *De
 They have a [price comparator](https://www.idrive.com/object-storage-e2/pricing) with
 amazon S3, Microsoft Azure, and Google Cloud.
 
-## Minio {#minio}
-{{< wp "Minio" >}} (Apache Licence) is a cloud storage server written in golang
-compatible with Amazon S3. A docker image is provided.
-
--  Minio - GitHub](https://github.com/minio/minio).
--  [Minio Documentation](https://docs.min.io/).
--  See {{< iref "#minio" "above" >}} for the minio client *mc*.
-
 ## Openstack {#openstack}
 
 -   Wikipedia: {{< wp "OpenStack" >}} (Apache License) is a cloud computing
@@ -287,10 +279,14 @@ compatible with Amazon S3. A docker image is provided.
 
     Incomming trafic _internal and external_ as Internal outgoing traffic to other
     Elements products in the same region is free, external outgoing trafic is free for
-    first 75GB the 0.01 € per GB/month.
+    first 75GB then 0.01 € per GB/month.
 -   [Glacier Cold Storage](https://www.scaleway.com/en/c14-cold-storage/)
-    0.002€ GB/month. Archiving and recovering from C14 Cold Storage’s Glacier class to
-    Object Storage’s Standard class is free of charge.
+    0.002€ GB/month. Archiving from C14 Cold Storage’s Glacier class to
+    Object Storage’s Standard class is free of charge, but recovering to standard class
+    is 0.009€/G.
+
+    Combined with the downloading from standard class downloading from Glacier costs
+    0.0
 
     *The prices are from December 2023*
 
@@ -641,7 +637,7 @@ windows, android, iphone clients.
 
     You can [s3 compatible tools
     ](https://cloudblogs.microsoft.com/opensource/2017/11/09/s3cmd-amazon-s3-compatible-apps-azure-storage/)
-    by using {{< iref "#minio" "Minio" >}} as bridge.
+    by using {{< iref "network_filesystems#minio" "Minio" >}} as bridge.
 -   [BarracudaDrive](http://barracudaserver.com/products/BarracudaDrive/)
     self hosted cloud on private server or
     [low end box](http://www.lowendbox.com/).
@@ -711,77 +707,11 @@ See also the  {{< iref "#s3_clients" "S3 specific clients" >}}, that can be used
 compatible clouds or through a proxy like {{< iref "#s3proxy" "S3Proxy" >}}.
 
 ## Virtual File systems {#cloud_vfs}
--   [S3QL](https://github.com/s3ql/s3ql/) (GPL)
-    is a file system that stores all its data online using storage
-    services  like  Google  Storage,   Amazon  S3 and S3 compatible,  OpenStack,
-    Blackblaze B2, local filesystem.
-
-    S3QL offers all posix features of a local file system, it supports hardlinks,
-    symlinks, standard unix permissions, extended attributes.
-
-    _S3QL_ deduplicate and compress data, it allows an optional AES encryption,
-    It allows Copy-on-Write/Snapshotting.
-
-    _S3QL_ is packaged in Debian.
-    -   [S3QL User’s Guide](http://www.rath.org/s3ql-docs/index.html)
-    -   [s3ql Wiki](https://github.com/s3ql/s3ql/wiki) includes
-        a comparison of S3QL and other S3 file systems.
--   <a name="s3fs"></a>[s3fs](https://github.com/s3fs-fuse/s3fs-fuse) (GPL)
-    is a C++ software which allows Linux and macOS to mount an S3 bucket via FUSE. s3fs
-    preserves the native object format for files. It is also compatible with Google
-    Cloud Storage, and other S3-based object stores. _S3Fs_ is packaged in Debian.
-
-    See also the alternatives {{< iref "#yas3fs" "YAS3FS" >}} and
-    {{< iref "#goofys" "goofys" >}}.
-    -   {{< iref "python_libraries#pyfilesystem" "PyFilesystem" >}} is a Python module
-        that provides a simplified common interface to many types of filesystem, like
-        FTPfs, WebdavFs, tarFs, ZipFs,... including
-        [support for f3fs](https://www.pyfilesystem.org/page/s3fs/).
--   <a name="yas3fs"></a>[YAS3FS](https://github.com/danilop/yas3fs) (MIT Licence)
-    (Yet Another S3-backed File System) is a Filesystem in Userspace (FUSE) interface
-    to Amazon S3. It is a rewritting in python of {{< iref "#s3fs" "s3fs" >}} which
-    adds a distributed cache
-    synchronized by Amazon SNS notifications. A web console is provided to easily
-    monitor the nodes of a cluster.
--   <a name="goofys"></a>[goofys](https://github.com/kahing/goofys) (Apache License)
-    similar to {{< iref "#s3fs" "s3fs" >}} but written in go. It features better
-    performance, and less POSIX compliance than {{< iref "#s3fs" "s3fs" >}}.
-
-    It works with Ceph (ex: Digital Ocean Spaces, DreamObjects, gridscale), EMC
-    Atmos Google Cloud Storage, OpenStack Swift, {{< iref "#s3proxy" "S3Proxy" >}},
-    {{< iref "#Minio" "Minio" >}} (limited), Wasabi,Scaleway, Azure.
-
-    Prebuilt binaries are available in the GitHub release page.
--   [s3backer](https://github.com/archiecobbs/s3backer) (GPL)
-    is a filesystem that contains a single file backed by Amazon S3.  The blocks of
-    the file are stored as S3 objects.  It provides a single normal file having a
-    fixed size which is used to mount a loopback device then s3backer acts a virtual
-    hard disk device.  _S3backer_ is packaged in Debian.
 -   <a name="s3proxy"></a>[s3proxy](https://github.com/gaul/s3proxy) (Apache License)
     is a Java software that provides S3 API and proxies requests, from S3 to Backblaze
     B2, EMC Atmos, Google Cloud, Microsoft Azure, and OpenStack Swift, and on-disk
     storage filesystem.  It can be used with the others S3 tools.
     There is a Docker image, or it can be used directly with java.
-
-
-### OpenDedup – SDFS {#opendedup}
-[OpenDedup – SDFS](https://opendedup.org/odd/) (GPL)
-is a POSIX compliant filesystem hat performs inline deduplication to local disk or
-cloud object storage. It works natively with the applications such as backup, when
-you do copy data, it dedupes, compresses, encrypts, and saves your data on disk or
-in the cloud. It can perform file level snapshots, and replication; with
-replication, only unique blocks  that are not shared between the two SDFS volumes
-are replicated.
-
--   SDFS works with AWS S3, AWS Glacier, Azure, Google, and most S3 compliant backends.
--   SDFS uses strong AES-CBC 256 bit encrytion, either when using local block
-    storage _in this case metadata is not encrypted_, or when data is sent to the
-    cloud all data, metadata, and hash table entries are encrypted before the data
-    is sent.
--   [SDFS works with Backblaze B2
-    ](https://opendedup.org/odd/2018/04/04/backblaze-b2-enabled/)
--   [Administration Guide – OpenDedup
-    ](https://opendedup.org/odd/administration-guide/)
 
 
 ### Rclone {#rclone}
@@ -791,7 +721,7 @@ is a command line program to sync files and directories to and from Amazon Drive
 S3, Backblaze B2, Box, Ceph, Citrix share files, DigitalOcean Spaces, Dreamhost,
 Dropbox, GetSky, Google Drive, Google Cloud Storage, Google Photos, Hubic, Jottacloud,
 IBM COS S3, Kiifr, Mail.ru cloud, Memset Memstore, Mega, Memory, Microsoft Azure,
-Microsoft OneDrive, {{< iref "#Minio" "Minio" >}}, NextCloud, OVH, OpenDrive, Openstack
+Microsoft OneDrive, {{< iref "network_filesystems#Minio" "Minio" >}}, NextCloud, OVH, OpenDrive, Openstack
 Swift, Oracle Cloud Storage, ownCloud, pCloud, premiumize.me, put.io, QingStor,
 Rackspace cloud files, Scaleway, StackPath, SugarSync Wasabi, Yandex Disk, HTTP (read
 only), FTP, SFTP, WebDav, the local filesystem.
@@ -1001,9 +931,6 @@ For a rough estimate you may use
 [Wasabi cost estimator](https://wasabi.com/cloud-storage-pricing/#cost-estimates)
 or [backblaze cost calculator](https://www.backblaze.com/b2/cloud-storage-pricing.html)
 which includes a comparison with S3, microsoft azure and google cloud.
-b.
-
-
 
 ## Object storage
 
@@ -1020,8 +947,8 @@ b.
 ## Cold Storage
 | Provider                | price TB/y | put 1TB | download 1T | API Fees | checked |
 |-------------------------|-----------:|--------:|------------:|:---------|--------:|
-| [OVH openstack] Archive |      29.5€ |   11.2€ |       11.2€ |          |         |
-| [Scaleway] Glacier      |        24€ |       - |       13.8€ |          |         |
+| [OVH openstack] Archive |      29.5€ |   11.2€ |       11.2€ |          |   12/23 |
+| [Scaleway] Glacier      |        24€ |       - |       19.5€ |          |   12/23 |
 |                         |            |         |             |          |         |
 
 *I d'ont put idrive here, as it is not a cold storage, but it's low price make it
