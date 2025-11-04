@@ -615,18 +615,21 @@ package.
     screen or a remote computer and saves as a Flash Video (FLV)
     file.
     -   [vnc2flv GitHub repository](https://github.com/baijum/vnc2flv).
--   [Remina](https://remmina.org) (GPL)
-     is a Gnome remote desktop client written in GTK+, which supports multiple network
-     protocols, Currently RDP, {{< iref "#vnc" "VNC" >}}, {{< iref "#spice" "SPICE" >}},
-     {{< iref "#x2go" "NX" >}}, {{< iref "#xdmcp" "XDMCP" >}},  {{< iref "ssh" "SSH" >}}
-     and EXEC. It is in Debian and also provided as _Flatpak_ or _Snap_ package.
+-   <a name="remina"></a>[Remina](https://remmina.org) (GPL)
+    is a Gnome remote desktop client written in GTK+, which supports multiple network
+    protocols, Currently RDP, {{< iref "#vnc" "VNC" >}}, {{< iref "#spice" "SPICE" >}},
+    {{< iref "#x2go" "NX" >}}, {{< iref "#xdmcp" "XDMCP" >}},  {{< iref "ssh" "SSH" >}}
+    and EXEC. As GTK software it  works wit both Xorg and Wayland.
+
+    It is in Debian and also provided as _Flatpak_ or _Snap_ package.
+    [![packaging](https://repology.org/badge/tiny-repos/remina.svg?header=packages)
+    ](https://repology.org/project/remina/versions).
      -   [Remmina GitLab repository](https://gitlab.com/Remmina/Remmina)
      -   [Remmina Wiki](https://gitlab.com/Remmina/Remmina/wikis/home)
      -   [Remmina - ArchWiki](https://wiki.archlinux.org/index.php/Remmina)
 -   [Veyon](https://veyon.io/) (GPL) previously _ITALC_
-    is a vnc based software that lets you view and control other
-    computers in your network. It is aimed to pupils computer control
-    and viewing by a teacher. the
+    is a vnc based software that lets you view and control other computers in your
+    network. It is aimed to pupils computer control and viewing by a teacher. the
     [Veyon Documentation](https://docs.veyon.io/en/latest/)
     is the main documentation source for the veyon software.
 -   [Gitso](http://code.google.com/p/gitso/) (GPL)
@@ -634,6 +637,11 @@ package.
     to another's screen of a person that offer support. It is
     available in windows, linux, OSX. The project is no longer active since _2010_ but it
     is still in Debian.
+-   <a name="gvncviewer"></a>**gvncviewer** is part of the
+    [gtk-vnc](https://wiki.gnome.org/Projects(2f)gtk(2d)vnc.html) (GPL) gnome project.
+    It is an asynchronous client thaks to it's  coroutine architecture. It supports RFB
+    protocols 3.3 through 3.8 and the VeNCrypt authentication extension providing
+    SSL/TLS encryption with x509 certificate authentication.
 -   <a name="virtualgl">[VirtualGL](https://virtualgl.org/Main/HomePage) (GPL)
     gives any Linux or Unix remote display software the ability to run OpenGL
     applications with full hardware acceleration.
@@ -648,26 +656,38 @@ package.
 
 
 ## Wayland Remote desktop {#wayland_remote_desktop}
-The  {{< iref "#inbrowser_vnc" "in browser HTML/JS/CSS Clients" >}}
-can be used in wayland.
 
+### Servers
 -   [wayvnc](https://github.com/any1/wayvnc) ( ISC License )
     A VNC server for wlroots based Wayland compositors.
-    _In [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)._
--   [neatvnc](https://github.com/any1/neatvnc)  ( open source!)
-    VNC server library.
-     _In [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)._
+   [![packaging](https://repology.org/badge/tiny-repos/wayvnc.svg?header=packages)
+   ](https://repology.org/project/wayvnc/versions).
+   -   [neatvnc](https://github.com/any1/neatvnc) (ISC License)
+       VNC library powering *wayvnc*
+   [![packaging](https://repology.org/badge/tiny-repos/neatvnc.svg?header=packages)
+   ](https://repology.org/project/neatvnc/versions).
 -   The Gnome wayland compositor and X11 window manager
     {{< iref "desktop#mutter" "Mutter" >}} support VNC as explained in
     [Mutter/RemoteDesktop - GNOME Wiki!](https://wiki.gnome.org/Projects/Mutter/RemoteDesktop)
 -   [Waypipe](https://gitlab.freedesktop.org/mstoeckl/waypipe/)
-    is a proxy for Waylan clients. It forwards Wayland messages and serializes
+    is a proxy for Wayland clients. It forwards Wayland messages and serializes
     changes to shared memory buffers over a single socket. This makes application
     forwarding similar to `ssh -X` feasible.
     -  The network protocol is explained in the author
        [M. Stoeckl's blog](https://mstoeckl.com/notes/gsoc/blog.html)
        _In [nixpkgs-wayland](https://github.com/colemickens/nixpkgs-wayland)._
 
+### Clients
+The  {{< iref "#inbrowser_vnc" "in browser HTML/JS/CSS Clients" >}}
+can be used in wayland.
+
+The GTK3 clients {{< iref "#remina" "Remina" >}}, and {{< iref "#gvncviewer" >}},
+can run in a Wayland environement or an Xorg one.
+
+-   [wlvncc](https://github.com/any1/wlvncc) (ISC License)
+    A Wayland Native VNC Client. _In
+   [![packaging](https://repology.org/badge/tiny-repos/wlvncc.svg?header=packages)
+   ](https://repology.org/project/wlvncc/versions).
 
 ## NX and X2Go {#x2go}
 
