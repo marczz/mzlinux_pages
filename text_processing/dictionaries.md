@@ -96,27 +96,37 @@ See also Wikipedia {{< wp "Comparison of machine translation applications" >}}.
 -   [List of Dictionary and thesaurus applications - ArchWiki
     ](https://wiki.archlinux.org/title/List_of_applications/Documents#Dictionary_and_thesaurus)
 
--   <a name="goldendict"></a>[GoldenDict](http://goldendict.org/) (GPL)
+-   <a name="goldendict"></a>
+    [GoldenDict-ng](https://xiaoyifang.github.io/goldendict-ng/) (GPL-3.0)
     is a dictionary reader in C/qt4/libwebkit4 with a very large support of formats (see
     [GoldenDict home page](http://goldendict.org/)).
-    It supports multiple dictionary file formats: Babylon (.bgl) files with images and
-    resources, {{< iref "#stardict" "StarDict" >}} (.ifo / .dict / .idx / .syn)
-    dictionaries, Dictd (.index / .dict / .dz) dictionary files, ABBYY Lingvo (.dsl)
-    source files, together with abbreviation files, ABBYY Lingvo (.lsa /.dat) audio
-    archives. It can also look up in remote Wikipedia, Wiktionary, or any other
-    MediaWiki-based sites.
+
+    Goldendict-ng is a fork of the previous [GoldenDict](http://goldendict.org/)
+    project.
+    Compared to GoldenDict the GoldenDict-ng fork brings many enhancements: webengine
+    with latest html/css feature support, >4GB dictionary, xapian as fulltext engine,
+    Qt6, performance optimization,
+    [anki integration](https://xiaoyifang.github.io/goldendict-ng/topic_anki/).
+    Nevertheless the original
+    [GoldenDict project on GitHub](https://github.com/goldendict).
+    is still developped in 2025.
+
+    Goldendict [supports multiple dictionary file formats
+    ](https://xiaoyifang.github.io/goldendict-ng/dictformats/)
+    : Babylon (.bgl) files with images and resources,
+    {{< iref "#stardict" "StarDict" >}} (.ifo / .dict / .idx / .syn) dictionaries, Dictd
+    (.index / .dict / .dz) dictionary files, ABBYY Lingvo (.dsl) source files, together
+    with abbreviation files, ABBYY Lingvo (.lsa /.dat) audio archives. It can also look
+    up in remote Wikipedia, Wiktionary, or any other MediaWiki-based sites.
+
     The android application is not covered by the GPL and is proprietary.
-    A GoldenDict package is in Debian.
-    -   [GitHub: GoldenDict](https://github.com/goldendict).
+
+    A GoldenDictng package is in Debian.
+    -   [GitHub - goldendict-ng](https://github.com/xiaoyifang/goldendict-ng)
     -   [GoldenDict - ArchWiki](https://wiki.archlinux.org/title/GoldenDict)
     -   [gcl (goldendict command line)](https://github.com/dohliam/gdcl)
         is a ruby  command-line interface for searching GoldenDict
         dictionaries.
--   <a name="goldendict-ng"></a>[GoldenDict
-    ](https://xiaoyifang.github.io/goldendict-ng/) (GPL)
-    is a fork of {{< iref "#goldendict" "GoldenDict" >}}.
-    It [supports many dictionary format
-    ](https://xiaoyifang.github.io/goldendict-ng/dictformats/)
 
     local dictionaries:
     -   [MDict](https://www.mdict.cn/) (.mdx/.mdd)
@@ -139,10 +149,6 @@ See also Wikipedia {{< wp "Comparison of machine translation applications" >}}.
     -   [DICT](https://en.wikipedia.org/wiki/DICT) protocol
     -   LinguaLibre/Forvo pronunciations
 
-    Compared to GoldenDict the GoldenDict-ng fork brings many enhancements: webengine
-    with latest html/css feature support, >4GB dictionary, xapian as fulltext engine,
-    Qt6, performance optimization,
-    [anki integration](https://xiaoyifang.github.io/goldendict-ng/topic_anki/).
 
     A GoldenDict-ng package is in Debian.
 -   [PtkDic and GTKDict](http://swaj.net/ptkdic/)<a name="ptkdic"></a>
