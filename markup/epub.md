@@ -2,29 +2,23 @@
 title: Epub
 ---
 
-See also the related {{< iref "html" "html section" >}} and the
-J{{< iref "html#css" "css section" >}} since Epub uses css.
-<!-- Other pages
-[[file:../../../../content-org/weblinks/e-text.org::+hugo_front_matter_format: yaml][E-text in weblinks]],
-[[file:../../../../content-org/notes/text_processing_notes/ebookreaders.org::+hugo_front_matter_format: yaml][Ebook Readers in Notes]]
--->
+See also the related {{< iref "html" "html section" >}} and the J{{< iref "html#css"
+"css section" >}} since Epub uses css.  <!-- Other pages [[file:../../../../content-org/weblinks/e-text.org::+hugo_front_matter_format: yaml][E-text in weblinks]], [[file:../../../../content-org/notes/text_processing_notes/ebookreaders.org::+hugo_front_matter_format: yaml][Ebook
+Readers in Notes]] -->
 
 # Epub Format
 The EPUB format Home is the {{< iref "#ipdf" "IPDF" >}}.
 
 -   Wikipedia {{< wp "EPUB" >}}
--   [Kobo ePub Guidelines on Github
-    ](https://github.com/kobolabs/epub-spec/)
--   [edutechwiki: epub](http://edutechwiki.unige.ch/en/EPub) has a lot
-    of information on the epub format and applications to deal with
-    it.
+-   [Kobo ePub Guidelines on Github ](https://github.com/kobolabs/epub-spec/)
+-   [edutechwiki: epub](http://edutechwiki.unige.ch/en/EPub) has a lot of information on
+    the epub format and applications to deal with it.
 
 ## IPDF - International Digital Publishing Forum {#ipdf}
 [IPDF - International Digital Publishing Forum](http://idpf.org) Pages:
 -   [EPUB Home](http://www.idpf.org/epub/)
--   EPUB2 is now considered as obsolete and was superseded by  EPUB
-    3.0 in October, 2011, the last specifications are
-    from year 2010: there are
+-   EPUB2 is now considered as obsolete and was superseded by EPUB 3.0 in October, 2011,
+    the last specifications arefrom year 2010: there are
     [Open Publication Structure (OPS) 2.0.1 v1.0
     ](http://www.idpf.org/epub/20/spec/OPS_2.0_latest.htm),
     [Open Packaging Format (OPF) 2.0.1 v1.0
@@ -151,41 +145,68 @@ The EPUB format Home is the {{< iref "#ipdf" "IPDF" >}}.
 
     Android apk are available in the release directory, and also in F-Droid store.
 
-    The git repository
-    describe the requirement and process to build a release from a provided Debian
-    source package.
+    The git repository describe the requirement and process to build a release from a
+    provided Debian source package.
 
-    It is no more developed on sourceforge, the project is obsolete, and not updated
-    since 2012.
--   [Bookworm](https://babluboy.github.io/bookworm/)
+    It is no more developed on Sourceforge, the project is obsolete, and not updated
+    since 2012, the GitHub fork still receive maintenance commits..
+-   [Bookworm](https://babluboy.github.io/bookworm/) (GPL-3.0)
     is an ebook reader for Linux, based on Gnustep. It supports many formats: epub, pdf,
     mobi, cbr, fb2; and bookmarks and annotations.
+
+    Bookworm is available in an Ubuntu PPA, and as a Flatpak.
+
+    -   [GitHub - bookworm](https://github.com/babluboy/bookworm/)
 -   [epy](https://github.com/wustho/epy)
     a CLI Ebook (epub2, epub3, fb2, mobi) Reader which supports Epub, Epub3, fb2, Mobi,
-    Azw, Awz3. It allows to bookmark, query an external dictionnary, multiple color
+    Azw, Awz3. It allows to bookmark, query an external dictionary, multiple color
     profiles.
     It support text to speech with either mimic, picowave or mpv + tts.
+
+    *On October 2025 he development seems on hold from 06/23.*
 -   [FBReader](https://fbreader.org/) (private source since 2015)
     is a linux, ios, and android program that read epub, part of epub3, mobi and fb2
     (2.0).. It uses
     [libunibreak]https://github.com/adah1972/libunibreak).
--   [Foliate](https://johnfactotum.github.io/foliate/)
+-   [Foliate](https://johnfactotum.github.io/foliate/) (GPL-3.0)
     is an ebook reader with many features including:
     -   View .epub, .mobi, .azw, and .azw3 files in two-page view or scrolled view
     -   Fetch books from online catalogs using OPDS feeds
     -   Customize font, line-spacing, margins, and brightness
     -   Light, sepia, dark, and invert mode, or your own custom themes
     -   Reading progress slider with chapter marks and reading time prediction
-    -   Bookmarks and annotations
+    -   Bookmarks and annotations (see how they are stored [in the foliate faq
+        ](https://github.com/johnfactotum/foliate/blob/gtk4/docs/faq.md#how-are-notes-and-bookmarks-stored).
+
     It is available in FlatHub, Snap store and is packaged in Debian.
+    [![packaging](https://repology.org/badge/tiny-repos/foliate.svg?header=packages)
+    ](https://repology.org/project/foliate/versions).
+
+    -   [foliate faq](https://github.com/johnfactotum/foliate/blob/gtk4/docs/faq.md).
+
 -   [koreader](https://github.com/koreader/koreader) (AGPL 3.0)
     An ebook reader application supporting PDF, DjVu, EPUB, FB2, running on e-readers,
     Linux  and Android devices
+
+   [![packaging](https://repology.org/badge/tiny-repos/koreader.svg?header=packages)
+   ](https://repology.org/project/koreader/versions).
 -   [Lucidor](http://lucidor.org/lucidor/)
     is a xul Epub reader. it can also convert web feeds and web pages into e-books.  The
     lucidor site provide a Debian package.  There is also a Pale *no longer Firefox*
     plugin named
     [LuciFox](http://lucidor.org/lucifox/) (GPL).
+-   [Thorium 3 Reader](https://thorium.edrlab.org/en/) (BSD-3-Clause license)
+    EPUB reader for Windows 10 and 11, MacOS and Linux.
+    -   [EdrLab software; Thorium Reader](https://www.edrlab.org/software/thorium-reader/)
+    -   [GitHub - edrlab/thorium-reader](https://github.com/edrlab/thorium-reader).
+    -   [Thorium Reader for Desktop user's guide
+        ](https://thorium-web.pages.dev/read/thorium-reader-user-guide-english),
+        The epub user guide can also be downloaded and opened inside Thorium Reader.
+    -   [Awesome Readium](https://readium.org/awesome-readium/)
+    -   [Readium Mobile – EDRLab](https://www.edrlab.org/software/readium-mobile/) a
+        toolkit with an android and ios application.
+    -   [d-i-t-a/R2D2BC](https://github.com/d-i-t-a/R2D2BC) is an
+        implementation of the Readium v2 EPUB reader for the web.
 
 There are also many browser addons to read epub in the browser, either for Chrome and
 derivatives like Brave, or Firefox, like
