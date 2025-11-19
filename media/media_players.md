@@ -783,7 +783,7 @@ See also [EmacsWiki: MusicPlayers](http://www.emacswiki.org/emacs/MusicPlayers)
     [mpv extension of emms](https://github.com/momomo5717/emms-player-simple-mpv),
     or any simple player available as unix command line client.
 
-[ffmpeg-mplayer](https://github.com/jcs-elpa/ffmpeg-player) (GPL-3.0)
+[ffmpeg-player](https://github.com/jcs-elpa/ffmpeg-player) (GPL-3.0)
 :   Play video from emacs using ffmpeg.
 
 [playerctl.el](https://github.com/thomasluquet/playerctl.el)
@@ -1191,6 +1191,15 @@ can be run standalone, as well as as a plugin for several browsers. Gnash can us
 {{< iref "streaming#gstreamer" "GStreamer" >}} or ffmpeg as codec support library.
 
 ### Gnome Videos {#gnome_videos}
+The Totem application renamed Gnome Videos is being replaced by a new Video App named
+[ShowTime](https://apps.gnome.org/Showtime/) which also use Gstreamer but with a GTK4
+interface, while Totem is still GTK3 based.
+
+ShowTime is [available in FlatHub](https://flathub.org/en/apps/org.gnome.Showtime).
+it is also available in Debian.
+-   [GNOME / Video Player · GitLab](https://gitlab.gnome.org/GNOME/showtime)
+
+
 {{< wp "GNOME_Videos" >}} (GPL) previously named <a name="totem"></a> _Totem_ is a GTK+
 media player (audio and video) for GNOME based on
 {{< iref "streaming#gstreamer" "GStreamer" >}}, it can play all mainstream media formats
@@ -1206,14 +1215,12 @@ _Totem_.
 On an Amd64 in may 2018 Totem take 82M res / 46shr for a single ogg
 track; 116M res / 57M shr for a tv broadcast on DLNA.
 
--   [Videos -  Gnome Home](https://wiki.gnome.org/Apps/Videos)
+-   [Videos -  Gnome Help](https://help.gnome.org/totem/index.html)
+-   [GNOME / totem · GitLab](https://gitlab.gnome.org/GNOME/totem)
 -   [Totem Manual](https://help.gnome.org/users/totem/stable/index.html.en)
--   [Totem Plugins](https://help.gnome.org/users/totem/stable/totem-plugins.html.en) :
-    [YouTube Browser
-    ](https://help.gnome.org/users/totem/stable/totem-plugins.html.en#totem-plugins-youtube)
-    allows you to search and browse YouTube, and play YouTube videos directly in Totem
-    Movie Player.
--   [Totem Gitlab repository](https://gitlab.gnome.org/GNOME/totem).
+-   [Totem Plugins are in the Debian Package *totem-plugins*
+    *YouTube Browser* allows you to search and browse YouTube, and play YouTube videos
+    directly in Totem Movie Player.
 
 Totem can play UpNP, DAAP, Jamendo, Youtube, vimeo and more through the
 [Grilo](https://developer.gnome.org/grilo/) plugin.
@@ -1241,10 +1248,13 @@ _LightSpark_ is in Debian.
 
 ### MPlayer  {#mplayer}
 
-[Mplayer](http://www.mplayerhq.hu/) (GPL) is a movie player. It plays most video formats
-as well as DVDs.  Its big feature is the wide range of supported output drivers.a
+[Mplayer](https://www.mplayerhq.hu/) (GPL) is a movie player. It plays most video formats
+as well as DVDs.  Its big feature is the wide range of supported output drivers.
 
-Mplayer is compatible with{{< iref "ffmpeg" "FFmpeg" >}}
+Mplayer is compatible with{{< iref "ffmpeg" "FFmpeg" >}}.
+
+The development of mplayer slowed down, since the fork of mplayer2, now renamed
+{{< iref "#mpv" "mpv" >}}.
 
 The supported codecs are:
 
@@ -1258,16 +1268,14 @@ The supported codecs are:
 -   XAnim: are the best codecs (full screen, hardware YUV zoom)
     fordecoding 3ivx and Indeo 3/4/5 movies
 
-**gmplayer** is MPlayer with a graphical user interface;
-
 {{< iref "#smplayer" "SMPlayer" >}} (GPL) is a GUI for mplayer or {{< iref "#mpv" "mpv" >}}.
 
-{{< iref "video_edit#mencoder" "mencoder" >}}
-is the encoder included in the mplayer distribution.
+{{< iref "video_edit#mencoder" "mencoder" >}} is the encoder included in the mplayer
+distribution.
 
 **References:**
 
--   [MPlayer Home page](https://www.MPlayerHQ.hu/design7/),
+-   [MPlayer Home page](https://www.mpLayerhq.hu/),
 -   [Mplayer documentation](https://www.mplayerhq.hu/DOCS/HTML/en/),
 -   [MPlayer Features](https://www.mplayerhq.hu/design7/info.html).
 -   [mplayer(1)](http://manpages.debian.org/cgi-bin/man.cgi?query=mplayer(1))
@@ -1280,36 +1288,56 @@ is the encoder included in the mplayer distribution.
 [Mpv](https://mpv.io/) (LGPLv2.1+ and GPLv2+)
 is a media player based on MPlayer and MPlayer2.
 
-_MPlayer2_ was a fork of mplayer, that the internal gui _gmplayer_ and the encoder
-_mencoder_; and use shared libratries instead of embedding {{< iref "ffmpeg" "ffmpeg"
->}}.  It is dead and replaced with mpv.
+_MPlayer2_ was a fork of mplayer which use shared libraries instead of embedding
+{{< iref "ffmpeg" "ffmpeg" >}}.
 
-Mpv also drop _mencoder_, but replace it with internal
-[encoding](https://mpv.io/manual/stable/#encoding) facilities.  There are numerous other
-[differences of mpv with mplayer and mplayer2
-](https://github.com/mpv-player/mpv/blob/master/DOCS/mplayer-changes.rst).
+It was replaced with mpv.
+
+-   The mplayer internal GUI is replaced by the
+    yy[on screen controller](https://mpv.io/manual/stable/#on-screen-controller).
+-   Mpv replaces _mencoder_ with internal
+    [encoding](https://mpv.io/manual/stable/#encoding) facilities.
+-   There are numerous other [differences of mpv with mplayer and mplayer2
+    ](https://github.com/mpv-player/mpv/blob/master/DOCS/mplayer-changes.rst).
 
 -   [Mpv source (GitHub)](https://github.com/mpv-player/mpv)
 -   [Mpv manual](https://mpv.io/manual/stable/),
     [FAQ](https://github.com/mpv-player/mpv/wiki/FAQ) and
-    [Wiki](https://github.com/mpv-player/mpv/wiki).
+-   [Mpv Wiki](https://github.com/mpv-player/mpv/wiki).
+-   [User Scripts · mpv Wiki](https://github.com/mpv-player/mpv/wiki/User-Scripts)
 -   Wikipedia: {{< wp "Mpv_(media_player)"  "MPV" >}}
 -   [Archwiki -  Mpv](https://wiki.archlinux.org/index.php/Mpv)
 -   [Gentoo Wiki - Mpv](https://wiki.gentoo.org/wiki/Mpv)
 -   [awesome-mpv](https://github.com/stax76/awesome-mpv)
     A curated list of awesome mpv resources.
+-   [mpv_sponsorblock](https://github.com/po5/mpv_sponsorblock) (GPL-3.0)
+    mpv script to skip sponsored segments of YouTube videos.
+-   [mpv-ytpb](https://github.com/xymaxim/mpv-ytpb) (MIT License)
+    An mpv hook to play and rewind YouTube live streams without leaving a player.
+-   [ff2mpv](https://github.com/woodruffw/ff2mpv) (MIT License)
+    is a Firefox/Chrome add-on for playing URLs in mpv.
 
-There is a Debian package _mpv_, but mpv developpers
+There is a Debian package _mpv_, but mpv developers
 [recommand to use a newer version](https://mpv.io/installation/)
-in deb-multimedia.
+in deb-multimedia, or [Fruit's APT repository](https://fruit.je/apt).
 
 _Mpv_ can be used in Wayland for hardware video acceleration under Wayland use
 `--gpu-context=wayland`. If you compile it specifically for wayland use:
-~~~
+~~~ sh
 ./configure --disable-x11 --disable-sdl --enable-wayland --disable-libass
 make
 sudo make install
 ~~~
+
+<a name="mpv-dlna"> Mpv can play DLNA with the help of plugins:
+-   [DLNAmpvRenderer](https://github.com/PCigales/DLNAmpvRenderer) (GPL-3.0)
+    A script in Python 3 to turn mpv into a DLNA / UPnP renderer.
+-   [mpvDLNA](https://github.com/chachmu/mpvDLNA)
+    A plugin to allow mpv to browse and watch content hosted on DLNA servers
+-   [Macast](https://github.com/xfangfang/Macast) (GPL-3.0)
+    Macast is an application which using mpv as DLNA Media Renderer, it is available for
+    Linux, MacOs and Windows.
+    -   [Macast Wiki](https://github.com/xfangfang/Macast/wiki/)
 
 mpv 0.37.0 (2024) playing a small ogg vorbis file uses 79M res / 56M shr.
 
@@ -1347,13 +1375,18 @@ resident *It is reasonable to think that mpv and the gui don't share code*.
 :   is a  GTK+ frontend for mpv.
     -   [GitHub - celluloid](https://github.com/celluloid-player/celluloid)
 
-<a name="mpv_pseudo-gui"></a>pseudo-gui mode
-:   Mpv provides a _pseudo-gui mode_ that you get by starting it with:
+<a name="mpv_pseudo-gui"></a> mpv pseudo-gui.
+:   Mpv always features an
+    [on screen controller](https://mpv.io/manual/stable/#on-screen-controller).
+     To make easier to use it provides a [pseudo-gui mode
+     ](https://mpv.io/manual/stable/#pseudo-gui-mode) in which it starts with some
+     settings changed to behave slightly more like a GUI mode.
 
+    You get the *pseudo GUI mode* by starting mpv with:
+    ~~~ sh
         $ mpv  --player-operation-mode=pseudo-gui
-
+    ~~~
     or by using the `mpv.desktop` file
-
 
 ### Streamlink {#streamlink}
 [Streamlink](https://streamlink.github.io/index.html) ( BSD-2-Clause License )
@@ -1363,7 +1396,7 @@ streams in video players, such as {{< iref "#vlc" "VLC" >}},
 {{< iref  "#mpv" "Mpv" >}}.
 
 Most of the big streaming services are supported, such as: Twitch, YouTube, Livestream,
-Dailymotion, facebook, pluzz, vimeo, and a [huge list of site supporting plugins
+Dailymotion,  pluzz, vimeo, and a [huge list of site supporting plugins
 ](https://streamlink.github.io/plugin_matrix.html).
 
 Streamlink is in Debian.
@@ -1372,6 +1405,7 @@ _Streamlink_ was forked from the now dead _Livestreamer_ project.
 
 -   [Streamlink - GitHub](https://github.com/streamlink/streamlink)
 -   [Streamlink documentation](https://streamlink.github.io/index.html)
+    -   [Command-Line Interface](https://streamlink.github.io/cli.html)
 -   [Streamlink - ArchWiki](https://wiki.archlinux.org/title/Streamlink)
 
 ## VideoLAN {#vlc}
