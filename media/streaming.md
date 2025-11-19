@@ -43,7 +43,8 @@ See also {{< iref "ffmpeg" "FFmpeg section" >}},
     applications to an audio device, as well as allowing them to share audio between
     themselves.
     -   Wikipedia {{< wp "JACK Audio Connection Kit" >}}
-    -   [ArchWiki: JACK Audio Connection Kit
+    -   [JACK Audio Connection Kit - ArchWiki
+        ](https://wiki.archlinux.org/title/JACK_Audio_Connection_Kit)
 
 
 ## PulseAudio {#pulseaudio}
@@ -141,8 +142,8 @@ Wikipedia has a {{< wp "Pulseaudio" >}} page.
     is a systray-applet that allows you to control the volume level of the default sink
     and mute or unmute it.  pa-applet is not a replacement to padevchooser and
     pavucontrol, but offer basic functions for regular desktop usage.
--   Pulseaudio can stream to UPnP / DLNA with
-    {{< iref "#pulseaudio" "pulseaudio-dlna" >}}.
+-   The Pulseaudio and Pipewire client parec can stream to Chromecast with
+    {{< iref "#mkchromecast" "MkChromecast" >}}.
 
 ## PipeWire {#pipewire}
 -   [PipeWire / pipewire · GitLab](https://gitlab.freedesktop.org/pipewire/pipewire)
@@ -542,26 +543,22 @@ and broadcasting of digital media which is used by {{< wp "DLNA" >}} devices.
 -   [Complete Guide to wifi - UPnP DLNA Network Audio
     ](https://www.computeraudiophile.com/ca/ca-academy/the-complete-guide-to-hifi-upnp-dlna-network-audio/)
 -   [Open Connectivity - UPnP standards & architecture
-    ][https://openconnectivity.org/developer/specifications/upnp-resources/upnp)
+    ](https://openconnectivity.org/developer/specifications/upnp-resources/upnp).
 
 ## UPnP Media servers {#upnp_servers}
 -   Wikipedia:
     {{< wp "Comparison of UPnP AV media servers" >}},
     {{< wp "List of UPnP AV media servers and clients" >}}
--   [BRisa](http://brisa.garage.maemo.org/) is an UPnP framework written
-    in Python. It provides a Media Server and Media Renderer to play medias,
-    and a Media Applet to start/stop media servers/renderers. _no
-    longer active_
 -   <a name="coherence"></a>[Coherence](https://github.com/coherence-project/Coherence)
     (MIT License) was an UPnP/DLNA Framework that provides a
-    server. Coherence developper resigned, and the development ceased
-    in 2014, but there are some maintenance commits in the repository that merge the
-    change made by  {{< iref "#cohen" "Cohen" >}} a fork of
-    _Coherence_
+    server. Coherence developer resigned, and the development ceased
+    in 2014.  {{< iref "#cohen" "Cohen" >}} is a fork of _Coherence_.
     -   [Github: Coherence
         ](https://github.com/coherence-project/Coherence)
-        record the last state of the abandonned Coherence project.
+        record the last state of the abandoned Coherence project.
 -   <a name="cohen"></a>[Cohen](https://cohen.readthedocs.io/en/latest/) (MIT License).
+    is a DLNA/UPnP Media Server written in Python, providing several UPnP MediaServers
+    and MediaRenderers.
     -   [Github: Cohen](https://github.com/unintended/Cohen).
     -   [Cohen manual](https://cohen.readthedocs.org/en/latest/)
     -   [Cohen](https://pypi.python.org/pypi/Cohen) is on Pypi.
@@ -595,9 +592,10 @@ and broadcasting of digital media which is used by {{< wp "DLNA" >}} devices.
 
     -   Wikipedia: {{< wp "Jellyfin" >}}.
     -   [Jellyfin Documentation](https://jellyfin.org/docs/)
-    -   [Plugins | Jellyfin
-        ](https://jellyfin.org/docs/general/server/plugins/index.html)a
+    -   [Plugins | Jellyfin](https://jellyfin.org/docs/general/server/plugins/index.html).
     -   [Jellyfin - GitHub](https://github.com/jellyfin/jellyfin)
+    -   [jellyfin-mpv-shim](https://github.com/jellyfin/jellyfin-mpv-shim)
+        is a MPV Cast Client for Jellyfin.
 -   <a name="gerbera"></a>[Gerbera](https://gerbera.io/)  (GPL)
     is an upnp media server written in C++, the continuation of
    [MediaTomb](https://sourceforge.net/projects/mediatomb/)
@@ -608,19 +606,16 @@ and broadcasting of digital media which is used by {{< wp "DLNA" >}} devices.
 -   {{< iref "media_players#mythtv" "MythTV" >}}
     has a [builtin UPnP server](https://www.mythtv.org/wiki/UPnP).
 -   <a name="pulseaudio-dlna"></a>__Pulseaudio-DLNA__ (GPL-3.0)
-    is a lightweight streaming server which brings DLNA / UPNP and Chromecast support to
+    was a lightweight streaming server which brings DLNA / UPNP and Chromecast support to
     PulseAudio. It can stream your current PulseAudio playback to different UPNP devices
     (UPNP Media Renderers) or Chromecasts in your network.
     It is packaged in Debian.
     -   [GitHub - masmu/pulseaudio-dlna](https://github.com/masmu/pulseaudio-dlna)
-        The repository of the author of pulseaudio DLNA, no longer maintained since 2018, still in
-        python 2.
+        The repository of the author of pulseaudio DLNA, no longer maintained since
+        2018, still in python 2.
     -   [GitHub - joecksma/pulseaudio-dlna](https://github.com/joecksma/pulseaudio-dlna)
-        python 3 fork on which are based the recent debian packages.
-    -   [How to stream audio to chromecast or dlna / upnp device using pulseaudio-dnla
-        ](http://www.webupd8.org/2016/03/how-to-stream-audio-to-chromecast-or.html)
-    -   [How To Use pulseaudio-dlna To Stream Audio To Chromecast Devices
-        ](https://www.linuxuprising.com/2020/10/how-to-use-pulseaudio-dlna-to-stream.html)
+        python 3 fork, whose development stopped in 2020. Debian packages until removal
+        were using this repo.
 -   [ReadyMedia previously MiniDLNA](http://sourceforge.net/projects/minidlna/) (GPL)
     is server software with the aim of being fully compliant with DLNA/UPnP-AV
     clients. It is developed by a NETGEAR employee for the ReadyNAS product
@@ -636,7 +631,7 @@ and broadcasting of digital media which is used by {{< wp "DLNA" >}} devices.
 
 -   [Universal Media Sever](http://www.universalmediaserver.com/) (GPL-2.0)
     is a  Java UpNP server which was forked and is the continuation of
-    [PS3 Media Server]((https://github.com/ps3mediaserver/ps3mediaserver), which is not
+    [PS3 Media Server](https://github.com/ps3mediaserver/ps3mediaserver), which is not
     maintained since 2016.
 
     It allows transcoding using
@@ -723,15 +718,16 @@ Taken from the [Rygel Wiki - features
 
     A newer fork of _djmount_ is [djmount - GitHub](https://github.com/mwilck/djmount/),
     this fork has several fixes including the transition from libupnp3 to libupnp6.
-    _This fork has no commit since 2017 (checked in 2021)_.
--   [eezpnp](http://www.eezupnp.de/) (Free but not open source ?)
+    _This fork has no commit since 2017 (checked in 2025)_.
+-   [eezpnp](http://www.eezupnp.de/) (Free under a [custom
+    license](https://www.eezupnp.de/license.html)  is it open source?)
     is a control point written in Java.
 -   [gmrender-resurrect](https://github.com/hzeller/gmrender-resurrect)  (GPL)
     is an UPnP media renderer for Linux, It provides UPnP controllers to render media
     content from a UPnP media server.  It is a fork of
     [GMediaRender](http://gmrender.nongnu.org/) which was no longer maintained
     since 2007.  _gmrender-resurrect_ is in the Debian package _gmediarender_, _it is
-    active in 2021_.
+    active in 2025_.
 -   _rygel-playbin_ is a media renderer par of the {{< iref "#rygel" "Rygel" >}}
     upnp media server.
 -   [simple-dlna-browser
@@ -761,12 +757,15 @@ These streaming server acts as  UPnP media renderers.
     -   [Upmpdcli downloads](https://www.lesbonscomptes.com/upmpdcli/downloads.html).
 -   {{< iref "media_players#rhythmbox" "Rhythmbox" >}} can play UPnP medias, and DAAP
     via a plugin which uses _libdmapsharing_.
--   {{< iref "media_players#totem" "Totem" >}} has a [DLNA plugins
+-   {{< iref "media_players#gnome_videos" "Totem" >}} has a [DLNA plugins
     ](https://help.gnome.org/users/totem/stable/totem-plugins.html.en#totem-plugins-coherence)
+    *No longer available?*
     for {{< iref "#coherence" "coherence project" >}} or
-    {{<  iref "#cohen"  "cohen" >}} which allows it to work as UPnP media client.
+    {{< iref "#cohen"  "cohen" >}} which allows it to work as UPnP media client.
 -   {{< iref "media_players#vlc" "VLC" >}} can play UPnP medias since 1.2.0 release.
 -   {{< iref "media_players#kodi" "Kodi" >}} can play UPnP medias.
+-   {{< iref "media_players#mpv" "Mpv" >}} can be
+    {{< iref "media_players#mpv-dlna" "used as an DLNA Renderer" >}}.
 
 ## Hardware including an UPNP renderer
 
@@ -937,36 +936,27 @@ Chrome.
 
 
 ## Casting an audio or video file or url {#casting_apps}
--   [Mkchromecast](http://mkchromecast.com/)
+-   <a href="mkchromecast"></a>[Mkchromecast](http://mkchromecast.com/) (MIT License)
     is a python application to cast a file to  Google Cast devices or Sonos speakers.
-    It can play any sound that you can send to pulseaudio using
-    _parec_, it can also use
-    _ffmpeg_ or _avconv_ to play a file or an url.
+    It can play any sound that you can send to pulseaudio or pipewire using _parec_,
+    it can also [cast to google cast with ALSA
+    ](https://github.com/muammar/mkchromecast/wiki/ALSA), without using Pulseaudio.
+
+    It can use _ffmpeg_ or _avconv_ to play a file or an url.
     It has a Linux deb
     package, that you can find also in Debian.
-    -   [GitHub - Mkchromecast
-        ](https://github.com/muammar/mkchromecast)
-    -   _pulsaudio_ can be replaced with alsa, see
-        [Alsa support
-        ](https://github.com/muammar/mkchromecast/wiki/ALSA)
--   [GitHub - gnomecast](https://github.com/keredson/gnomecast).
+    -   [GitHub - Mkchromecast](https://github.com/muammar/mkchromecast)
+    -   [Mkchromecast Wiki](https://github.com/muammar/mkchromecast/wiki)
+-   [GitHub - gnomecast](https://github.com/keredson/gnomecast) (GPL-3.0).
     is a GUI for casting a video file it can transcode any unsupported
     format that _ffmpeg_ accept, and has support for subtitle.
--   [GitHub - skorokithakis/catt](https://github.com/skorokithakis/catt)
-    (BSD License)
+-   [GitHub - skorokithakis/catt](https://github.com/skorokithakis/catt) (BSD licensœe)
     a python CLI to cast videos local or remote, or websites.
-    It can cast any source [supported by youtube-dl
-    ](http://rg3.github.io/youtube-dl/supportedsites.html).
-    It has support for local or remote subtitle.
-    There are commands to pause, resume, seek to some time, change
-    volume of the current video played by chromecast.
--   [castnow](https://github.com/xat/castnow) (MIT Licence)
-    is a node CLI to cast a local file or an URL.
-    The author and maintainer step down in 2017 and is seeking a
-    new maintainer.
--   Pulseaudio can stream to Chromecast ( and UPnP / DLNA) with
-    {{< iref "#pulseaudio" "pulseaudio-dlna" >}}
-    streaming server.
+    -   It can cast any source
+        [supported by yt-dl](https://ytdl-org.github.io/youtube-dl/supportedsites.html).
+    -   It has support for local or remote subtitle.
+    -   There are commands to pause, resume, seek to some time, change
+        volume of the current video played by chromecast.
 -   [Transformer votre Raspberry Pi en Chromecast
     ](https://www.supinfo.com/articles/single/7029--transformer-votre-raspberry-pi-chromecast).
 
@@ -990,7 +980,6 @@ Some media players have built-in support for Chromecast like
 {{< iref "media_players#emby" "Emby" >}}.
 
 Other players that use pulseaudio as output device can use
-{{< iref "#pulseaudio-dlna" "pulseaudio-dlna" >}} or
 {{< iref "#mkchromecast" "mkchromecast" >}}
 this can be used for instance with mpd, mpv, mplayer2, ffmpeg.
 
