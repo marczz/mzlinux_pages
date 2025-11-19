@@ -46,11 +46,9 @@ There are three API for hardware video acceleration:
     ](https://wiki.debian.org/HardwareVideoAcceleration#NVENC.2FNVDEC).
 
 # Intel Graphics
--   Wikipedia <a class="WpRef" href="https://en.wikipedia.org/wiki/Intel_Quick_Sync_Video"
-    title="Wikipedia - Intel_Quick_Sync_Video">Intel Quick Sync Video</a> has a table of
-    <a class="WpRef" href="https://en.wikipedia.org/wiki/Intel_Quick_Sync_Video#Hardware_decoding_and_encoding"
-    title="Wikipedia - /ntel_Quick_Sync_Video#Hardware_decoding_and_encoding"">
-    Hardware decoding and encoding</a> that you can also find in the following Intel.com pages.
+-   Wikipedia {{< wp "Intel Quick Sync Video" >}} has a table of
+    {{< wp "Intel_Quick_Sync_Video#Hardware_decoding_and_encoding" "Hardware_decoding_and_encoding" >}}
+    that you can also find in the following Intel.com pages.
 -   [Intel graphics - ArchWiki](https://wiki.archlinux.org/title/Intel_graphics).
 -   [Intel - Gentoo wiki](https://wiki.gentoo.org/wiki/Intel).
 -   [VAAPI support on Intel GPU
