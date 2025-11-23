@@ -129,11 +129,13 @@ The EPUB format Home is the {{< iref "#ipdf" "IPDF" >}}.
         ](http://ebooklib.readthedocs.org/en/latest/)
 
 # Epub Readers
--   [Baca](https://github.com/wustho/baca) (GPL-3.0)
+-   <a name="baca"></a>[Baca](https://github.com/wustho/baca) (GPL-3.0)
     a TUI ebook reader  built in
     {{< iref "python_libraries#textualize" "Python Textualize" >}}
     which supports Epub, Epub3, Mobi & Azw. It features regexp search and hyperlinks, and
-    has a dark and a light color scheme.
+    has a dark and a light color scheme, but lack some basic features like toc,
+    bookmarks, chapter support zoom; features that are present in the
+    {{< iref "epy" "epy epub reader" >}} by the same author / Benawi Adha/.
 -   [Calibre E-book Viewer](https://manual.calibre-ebook.com/viewer.html)
     is the ebook viewer from the {{< iref "#calibre" "Calibre suite" >}}.
     *Calibre-viewer* supports bookmrks and allow to add notes to highlights, and export
@@ -157,13 +159,15 @@ The EPUB format Home is the {{< iref "#ipdf" "IPDF" >}}.
     Bookworm is available in an Ubuntu PPA, and as a Flatpak.
 
     -   [GitHub - bookworm](https://github.com/babluboy/bookworm/)
--   [epy](https://github.com/wustho/epy)
+-   <a name="epy"></a>[epy](https://github.com/wustho/epy) (GPL-3.0)
     a CLI Ebook (epub2, epub3, fb2, mobi) Reader which supports Epub, Epub3, fb2, Mobi,
-    Azw, Awz3. It allows to bookmark, query an external dictionary, multiple color
-    profiles.
+    Azw, Awz3. It allows to display toc, bookmark, query an external dictionary,
+    multiple color profiles.
     It support text to speech with either mimic, picowave or mpv + tts.
 
-    *On October 2025 he development seems on hold from 06/23.*
+    *On December 2025 he development seems on hold from 06/23.*
+
+    The same author / Benawi Adha/ also wrote {{< iref "baca" "baca epub reader" >}}.
 -   [FBReader](https://fbreader.org/) (private source since 2015)
     is a linux, ios, and android program that read epub, part of epub3, mobi and fb2
     (2.0).. It uses
